@@ -9,30 +9,16 @@
       %p= "WARNING: #{warning}"
     = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, onchange: 'toggleFields(this.value);'
 
-  #defaultPoemHoc{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
-    = f.label :default_poem, 'Default Poem'
-    = f.select :default_poem, options_for_select(@level.class.hoc_poems, @level.default_poem)
+  #hocPoems{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
+    = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.hoc_poems}
 
-  #defaultPoemTimeCapsule{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
-    = f.label :default_poem, 'Default Poem'
-    = f.select :default_poem, options_for_select(@level.class.time_capsule_poems, @level.default_poem)
-
-
-  #dropdownPoems{class: ('collapse' if @level.standalone_app_name == 'poetry')}
-    = f.label :dropdown_poems, 'Available Poems'
-    %p If you would like to customize the available poems in the level, select poems here. Otherwise, all poems will be available.
-    %p
-      Select
-      %a.select_all{href: '#'} all
-      \/
-      %a.select_none{href: '#'} none
-      (shift-click or cmd-click to select multiple).
-    = f.select :dropdown_poems, (@level.class.poems_for_subtype(@level.standalone_app_name)), {}, {multiple: true}
+  #timeCapsulePoems{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
+    = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.time_capsule_poems}
 
 :javascript
   function toggleFields(val) {
-    const defaultPoemHoc = document.getElementById('defaultPoemHoc');
-    const defaultPoemTimeCapsule = document.getElementById('defaultPoemTimeCapsule');
+    const defaultPoemHoc = document.getElementById('hocPoems');
+    const defaultPoemTimeCapsule = document.getElementById('timeCapsulePoems');
     if (val.toLowerCase() === 'poetry') {
       defaultPoemHoc.classList.add('collapse');
       defaultPoemTimeCapsule.classList.add('collapse');

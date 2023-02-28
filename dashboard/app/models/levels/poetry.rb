@@ -27,6 +27,7 @@
 class Poetry < GamelabJr
   before_save :check_default_poem
   before_save :check_dropdown_poems
+  validate :check_default_poem_in_dropdown
 
   serialized_attrs %w(
     default_poem
@@ -40,6 +41,13 @@ class Poetry < GamelabJr
 
   def check_dropdown_poems
     self.dropdown_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
+  end
+
+  def check_default_poem_in_dropdown
+    if default_poem.present? && Poetry.subtypes_with_poems.include?(standalone_app_name) &&
+      dropdown_poems && !dropdown_poems.empty? && !dropdown_poems.include?(default_poem)
+      errors.add(:default_poem, "is not in dropdown poem list")
+    end
   end
 
   # Poetry levels use the same shared_functions as GamelabJr
