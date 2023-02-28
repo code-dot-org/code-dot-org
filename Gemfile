@@ -320,7 +320,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', ' ~> 2.2.1'
+gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = -> do
