@@ -80,12 +80,6 @@ Abusive.args = {
   isAbusive: true
 };
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  ...defaultArgs,
-  icon: 'https://studio.code.org/blockly/media/skins/pvz/static_avatar.png'
-};
-
 export const WithPublishButton = Template.bind({});
 WithPublishButton.args = {
   ...defaultArgs,
