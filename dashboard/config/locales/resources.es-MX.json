@@ -3762,26 +3762,43 @@
           "type": "Vídeo"
         },
         "exemplar_1_-_lights_and_music/csd/2022": {
+          "name": "Ejemplo 1 - Luces y Música",
+          "url": "https://docs.google.com/document/d/1JGY-WC_C0yFcu0kn_vvc_0GyPCsTTXXpj0sqDPmtYlM/view",
           "type": "Ejemplo"
         },
         "exemplar_2_-_magic_unicorn/csd/2022": {
+          "name": "Ejemplo 2 - Unicornio Mágico",
+          "url": "https://docs.google.com/document/d/13HfVzjOrDS95zGngC_qPmT1f5JgCyCCt_WwmJcUhU0Q/view",
           "type": "Ejemplo"
         },
         "exemplar_3_-_red_light_green_light/csd/2022": {
+          "name": "Ejemplo 3 - Luz Roja, Luz Verde",
+          "url": "https://docs.google.com/document/d/1bZaa_cBl2O0U0h_3AxbsTD83HZ7swlwZKAo7bWDG4AU/view",
           "type": "Ejemplo"
         },
         "peer_review_-_human_device_interaction/csd/2022": {
+          "name": "Revisión por Pares - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1lfEr8muFsAGldj7DHMxl8jVsUA_7Pb4LIaFNMWWvNaw/view",
           "type": "Recurso"
         },
         "project_guide_-_human_device_interaction/csd/2022": {
+          "name": "Guía de Proyecto - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/edit",
           "type": "Guía de Actividades"
         },
         "project_human_device_interaction/csd/2022": {
           "name": "Proyecto: Interacción entre Dispositivos Humanos",
+          "url": "https://docs.google.com/presentation/d/1DVJFjMABrb6FHUl4nxCJVNRzSnbQlg9MDUzVcGQ9HGc/template/preview",
           "type": "Diapositivas"
         },
         "rubric_-_human_device_interaction/csd/2022": {
+          "name": "Rúbrica - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view",
           "type": "Rúbrica"
+        },
+        "student_checklist_-_human_device_interaction/csd/2022": {
+          "name": "Lista de Control del Alumno - Interacción Persona-Dispositivo",
+          "url": "https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/edit#"
         },
         "analog_sensors/csd/2022": {
           "name": "Sensores analógicos",
@@ -3789,6 +3806,8 @@
           "type": "Recurso"
         },
         "board_sensors/csd/2022": {
+          "name": "Sensores de Placa",
+          "url": "https://docs.google.com/presentation/d/1dZX6FtRlz2s56be72O64w5dYrsUZTKi9fn9QWFfgzIU/template/preview",
           "type": "Diapositivas"
         },
         "changing_sensor_scale/csd/2022": {
@@ -3803,6 +3822,7 @@
         },
         "accelerometer/csd/2022": {
           "name": "Acelerómetro ",
+          "url": "https://docs.google.com/presentation/d/1cjP0GFe-rfJ4Ym6-EDvxPKfGp7unHQlaBSIioVk7d24/template/preview",
           "type": "Diapositivas"
         },
         "accelerometer_events/csd/2022": {
@@ -3822,6 +3842,7 @@
         },
         "making_music/csd/2022": {
           "name": "Crear música",
+          "url": "https://docs.google.com/presentation/d/1Wk8g6JKrrP7h9j4PiIZllIR3csZ6Umvs3hMI2CfIVRY/template/preview",
           "type": "Diapositivas"
         },
         "playing_notes/csd/2022": {
@@ -3846,14 +3867,17 @@
         },
         "functions_2/csd/2022": {
           "name": "Funciones",
+          "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/template/preview",
           "type": "Diapositivas"
         },
         "functions_3/csd/2022": {
           "name": "Funciones",
+          "url": "https://youtu.be/TUdtGzQge3M",
           "type": "Vídeo"
         },
         "functions_with_parameters/csd/2022": {
           "name": "Funciones con parámetros",
+          "url": "https://youtu.be/5UMKeMPCa7E",
           "type": "Vídeo"
         },
         "functions_5/csd/2022": {
@@ -3862,24 +3886,38 @@
           "type": "Recurso"
         },
         "exemplar_1_-_city_silhouette/csd/2022": {
+          "name": "Ejemplo 1 - Silueta de Ciudad",
+          "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
           "type": "Ejemplo"
         },
         "exemplar_2_-_dual_landscape_painting/csd/2022": {
+          "name": "Ejemplo 2 - Pintura de Paisaje Doble",
+          "url": "https://docs.google.com/document/d/1DXCfmdONjv-rnwGe6If2V-nudI1IHBPO-RsgvwMEH38/view",
           "type": "Ejemplo"
         },
         "exemplar_3_-_monster_puppet/csd/2022": {
+          "name": "Ejemplo 3 - Marioneta Monstruo",
+          "url": "https://docs.google.com/document/d/1sCprlRW21NWc9UlBwhzG_oumuaererhJcTbUYTFeav4/view",
           "type": "Ejemplo"
         },
         "mini-project_interactive_art/csd/2022": {
+          "name": "Mini-Proyecto: Arte Interactivo",
+          "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/template/preview",
           "type": "Diapositivas"
         },
         "project_guide_-_interactive_art/csd/2022": {
+          "name": "Guía de Proyecto - Arte Interactivo",
+          "url": "https://docs.google.com/document/d/1LOGlXauYbwVj3b1G3Hfm67-1Y_5sGmlcWHmr7J5CKcA/view",
           "type": "Guía de Actividades"
         },
         "student_rubric_-_interactive_art/csd/2022": {
+          "name": "Rúbrica del Alumno - Arte Interactivo",
+          "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
           "type": "Rúbrica"
         },
         "student_example_projects/csd/2022": {
+          "name": "Ejemplos de Proyectos de Alumnos",
+          "url": "https://drive.google.com/drive/folders/19XYyV6BN1ZP8X2jPdk3_e38bZTtiLChY?usp=sharing",
           "type": "Recurso"
         },
         "circuits_and_leds/csd/2022": {
@@ -3888,6 +3926,8 @@
           "type": "Recurso"
         },
         "physical_outputs_and_leds/csd/2022": {
+          "name": "Salidas Físicas y LEDs",
+          "url": "https://docs.google.com/presentation/d/16AB6Hx-qVP6lDBDeA98o2FXuixHGC3Fe-H_Iai3p7Mc/template/preview",
           "type": "Diapositivas"
         },
         "circuits_and_buttons/csd/2022": {
@@ -3896,30 +3936,46 @@
           "type": "Recurso"
         },
         "physical_inputs_and_buttons/csd/2022": {
+          "name": "Entradas Físicas y Botones",
+          "url": "https://docs.google.com/presentation/d/10VuZBg7i751vsiV4frb4H95thqoYeifUnvHOD-dubBM/template/preview",
           "type": "Diapositivas"
+        },
+        "peer_review_-_prototype_an_innovation/csd/2022": {
+          "name": "Revisión por pares - Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/view"
         },
         "project_prototype_an_innovation/csd/2022": {
           "name": "Proyecto: crear el prototipo de una innovación",
+          "url": "https://docs.google.com/presentation/d/1Jl-6hwZ12QDCCA0ut621BZVQERV73V-xgymPb5IE1Ws/template/preview",
           "type": "Diapositivas"
         },
         "prototype_an_innovation/csd/2022": {
           "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1txsg24iWQjTuw-I1gHOMdrf7dqiSjXrHoWOGlBtF-Hg/edit#",
           "type": "Rúbrica"
         },
         "prototype_an_innovation_-_student_checklist/csd/2022": {
-          "name": "Prototipo de una innovación - Lista de comprobación del estudiante"
+          "name": "Prototipo de una innovación - Lista de comprobación del estudiante",
+          "url": "https://docs.google.com/document/d/1ifmTs7Xjlyk1jQUwYsrTny9OJK4kjCCfCgqsYHTNzX4/view"
         },
         "prototype_an_innovation_1/csd/2022": {
           "name": "Prototipo de una Innovación",
+          "url": "https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/view",
           "type": "Guía de Actividades"
         },
         "prototype_an_innovation_example_1/csd/2022": {
+          "name": "Prototipo de una Innovación - Ejemplo 1",
+          "url": "https://docs.google.com/document/d/1lujGcifyqK4lNZzeCMQaZ68EL90qx0tc5z6Q9pZHl1c/edit",
           "type": "Ejemplo"
         },
         "prototype_an_innovation_example_2/csd/2022": {
+          "name": "Prototipo de una Innovación - Ejemplo 2",
+          "url": "https://docs.google.com/document/d/1IfD9qlxTNGIsY3cgspUKtN3g2K93EZLGaUczG-Y00Dk/edit",
           "type": "Ejemplo"
         },
         "prototype_an_innovation_example_3/csd/2022": {
+          "name": "Prototipo de una Innovación - Ejemplo 3",
+          "url": "https://docs.google.com/document/d/1somgJ2TOLqsV5zFe0BgQtC29Mv3ignYsa34zf4PI_VU/edit",
           "type": "Ejemplo"
         },
         "all_code_3/csd/2022": {
