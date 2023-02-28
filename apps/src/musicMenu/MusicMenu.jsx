@@ -38,6 +38,14 @@ const optionsList = [
       {value: 'false', description: "Don't show upload option."},
       {value: 'true', description: 'Show upload option.'}
     ]
+  },
+  {
+    name: 'show-instructions',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't show instructions."},
+      {value: 'true', description: 'Show instructions.'}
+    ]
   }
 ];
 

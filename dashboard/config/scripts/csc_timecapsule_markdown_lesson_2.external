@@ -6,17 +6,22 @@ markdown <<MARKDOWN
 ##Plan Your Time Capsule
 
 <div>
-<img src="https://images.code.org/179efa82b25c0dd386fe69ad8da267af-image-1675887704385.png" style="float:left; width:20%; padding-top:10px; padding-right:30px;"/>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
 
-Today you will write your own time capsule poem. 
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>It's time to plan your own time capsule poem.</strong>
+</h4>
 
-You will create a digital treasure box of information about your life right now to share with the future. **It's like sending a message to your future self and your future friends that explains life right now.**
+>You should include:
+> - What you like to do 
+> - What is important to you
+> - What is currently happening in your community 
+> - A few current world events
 
-As you plan, think about all the things you like to do and the things that are important to you. Add details about what's currently happening in your community and the world.
+**Need help starting your poem?** Use <a href="https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview" target="_blank">this resource</a>.
 
-Think about the backgrounds, text effects, sounds, sprites, and events you may use to make your digital time capsule an immersive experience.
+**Just need some inspiration?** Use <a href="https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview" target="_blank">this resource</a>.
 
-**In the next lesson, you will code your time capsule poem.**
-
-
+</div>
 MARKDOWN

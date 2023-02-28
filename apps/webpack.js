@@ -16,6 +16,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'keyboard-navigation'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
   path.resolve(__dirname, 'node_modules', 'blockly'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
@@ -76,7 +77,7 @@ const nodePolyfillConfig = {
 var baseConfig = {
   plugins: [...nodePolyfillConfig.plugins],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       '@cdo/locale': path.resolve(
@@ -224,6 +225,11 @@ var baseConfig = {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       }
     ],
     noParse: [/html2canvas/]

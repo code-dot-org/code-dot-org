@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>CSコネクションのアクティビティを終了または他の教室のオプションを探していますか？ <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">フィードバック</a>とその他レッスンのアイデアをここで共有してください！</em>
+
+{{ visit_partial_event_logger }}

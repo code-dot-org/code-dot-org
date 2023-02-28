@@ -513,13 +513,13 @@ FactoryGirl.define do
     trait :teacher_participants do
       participant_type 'teacher'
       login_type 'email'
-      grade 'pl'
+      grades ['pl']
     end
 
     trait :facilitator_participants do
       participant_type 'facilitator'
       login_type 'email'
-      grade 'pl'
+      grades ['pl']
     end
   end
 
@@ -879,6 +879,8 @@ FactoryGirl.define do
     end
   end
 
+  # WARNING: Using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
