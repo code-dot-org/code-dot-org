@@ -13,7 +13,7 @@ export default function SingleSectionSetUp({
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
 
   return (
-    <div id="single-section-set-up">
+    <div>
       <h2>{i18n.classSection()}</h2>
       <label>
         {i18n.className()}
