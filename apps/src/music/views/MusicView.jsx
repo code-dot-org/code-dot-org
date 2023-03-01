@@ -180,8 +180,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resetCode();
 
     this.setPlaying(false);
-
-    this.player.clearAllSoundEvents();
   };
 
   onBlockSpaceChange = e => {
@@ -192,7 +190,7 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.Events.BLOCK_DRAG) {
-      this.player.stopAndCancelPreviews();
+      this.player.cancelPreviews();
       return;
     }
 
@@ -397,9 +395,7 @@ class UnconnectedMusicView extends React.Component {
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
           value={{
-            getSoundEvents: () => this.player.getSoundEvents(),
-            convertMeasureToSeconds: measure =>
-              this.player.convertMeasureToSeconds(measure),
+            getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
             getTypeForId: id => this.player.getTypeForId(id)
