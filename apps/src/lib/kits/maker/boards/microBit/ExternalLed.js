@@ -7,13 +7,13 @@ export default class ExternalLed {
   }
 
   on() {
-    this.board.setDigitalOutput(this.pin, 1);
-    this.isOn = true;
+    clearInterval(this.blinkIntervalID); // If blink was called, turn blink off.
+    this.setDigitalOutputOn();
   }
 
   off() {
     clearInterval(this.blinkIntervalID); // If blink was called, turn blink off.
-    this.clearDigitalOutput();
+    this.setDigitalOutputOff();
   }
 
   toggle() {
@@ -23,14 +23,19 @@ export default class ExternalLed {
   blink(delay) {
     // toggleInternal only calls on clearDigitalOutput, not off so that it doesn't turn off blinking.
     const toggleInternal = () => {
-      return this.isOn ? this.clearDigitalOutput() : this.on();
+      return this.isOn ? this.setDigitalOutputOff() : this.setDigitalOutputOn();
     };
     this.off(); // Reset Led.
     this.blinkIntervalID = setInterval(toggleInternal.bind(this), delay);
   }
 
-  clearDigitalOutput() {
+  setDigitalOutputOff() {
     this.board.setDigitalOutput(this.pin, 0);
     this.isOn = false;
+  }
+
+  setDigitalOutputOn() {
+    this.board.setDigitalOutput(this.pin, 1);
+    this.isOn = true;
   }
 }
