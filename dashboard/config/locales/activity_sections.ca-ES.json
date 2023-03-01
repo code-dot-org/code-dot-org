@@ -1815,25 +1815,41 @@
           "name": "Vocabulari clau"
         },
         "4ec90698-6e58-4695-8fec-298eea182910": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "En aquest curs aprendrem a programar. La programació ens permet crear aplicacions, jocs, pàgines web, simulacions i moltes altres coses que fem servir als ordinadors."
         },
         "e49cc3d9-d33e-4a2c-a549-9ba972b2bffa": {
           "tips": [
             "Les idees de reflexió es poden posar en pràctica de moltes maneres. Escriure a la llibreta o parlar-ne (en grups o en parelles) són molt bones opcions!"
           ]
         },
+        "08317767-3cec-4407-9692-449dcd0b9cec": {
+          "description": "Quan es dissenyen les aplicacions i els jocs, es té en compte l’usuari. L’usuari sou vosaltres o qualsevol persona que faci servir l’aplicació. Els creadors han pensat com s’haurien de fer servir les seves aplicacions, però l’usuari té opcions per poder decidir. Avui veurem com (i per què) els desenvolupadors d’aplicacions i de jocs ens permeten prendre decisions."
+        },
         "a64d1695-0afd-4534-a16c-a790006e0193": {
           "tips": [
-            null
+            "Aquesta lliçó ve acompanyada de diapositives en què apareixen aplicacions inventades per fomentar el debat. Podeu complementar o substituir els exemples de manera que concordin més amb els interessos dels alumnes."
           ]
+        },
+        "7d9676bf-c752-4032-a629-1aa3b48c7298": {
+          "description": "Podem veure que, en totes aquestes aplicacions, l'usuari pot prendre decisions sobre com la vol fer servir. Aquestes opcions fan que hi hagi més persones que tinguin ganes de fer servir l'aplicació."
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
           "progression_name": "Vídeo: Introducció al Laboratori d'Sprites"
         },
+        "6e47923a-1f07-4c2d-a55a-c45a35a823e9": {
+          "name": "Explorem aplicacions"
+        },
         "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
           "tips": [
-            null
+            "Si és la primera vegada que fan servir Code.org, dediqueu uns minuts a ajudar-los a entendre com fer servir la pàgina web i iniciar sessió amb els seus comptes."
           ]
+        },
+        "1a098222-2063-4b01-8d00-34170d233880": {
+          "name": "Posada en comú"
+        },
+        "c345c420-5657-4fc7-bce8-b3bba7ebee53": {
+          "name": "Proposa una millora"
         },
         "b747bce4-9f61-4265-a886-568636e698e4": {
           "name": "Reflexió"
@@ -1857,7 +1873,7 @@
         },
         "3f88f7fc-f308-44e8-ad91-df97a9080361": {
           "tips": [
-            null
+            "En aquest curs hi ha moltes lliçons que inclouen nivells de “desenvolupament d’habilitats” i de “pràctica”. Pel que fa a l’avaluació, tots els alumnes han de completar la secció de desenvolupament d’habilitats. Els nivells de pràctica es poden fer servir per diferenciar o oferir més opcions als alumnes."
           ],
           "progression_name": "Desenvolupament d'habilitats"
         },
@@ -1866,7 +1882,7 @@
         },
         "98dedd12-1d66-41ed-9629-e30265862d45": {
           "tips": [
-            null
+            "Els nivells de joc lliure donen als alumnes l'oportunitat de posar ràpidament en pràctica tot el que han anat aprenent d'una manera creativa. L'objectiu és que experimentin amb les seves idees, i si voleu, podeu animar-los a compartir la feina amb els altres i col·laborar entre ells."
           ],
           "progression_name": "Joc lliure: Fem una escena"
         },
@@ -1876,10 +1892,14 @@
         "7a087d45-10fc-429d-96be-3463e5a67f48": {
           "description": "Avui heu après a escriure codi per crear programes al Laboratori d'Sprites.\n\n**Programa** - Un algorisme que ha estat codificat com alguna cosa que pot ser executada per una màquina.\n\n**Algorisme** - La llista de passos necessaris per fer una tasca."
         },
+        "e270db37-e123-4995-8e60-a5d7e9f1e6f2": {
+          "description": "**Feu això:** Repasseu o expliqueu la paraula **algorisme**: una llista de passos necessaris per fer una tasca."
+        },
         "d954cdfd-7126-43ca-a817-12ef8812a38a": {
           "name": "Seguim l'algorisme"
         },
         "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
+          "description": "Avui començarem amb un joc ràpid. En aquest joc, us donaré totes les ordres que heu de seguir, i vosaltres heu de seguir **l'algorisme**. Les ordres començaran sempre amb “comenceu” o “pareu”. Si us dic que comenceu a fer alguna cosa, heu d'iniciar aquest comportament i seguir fent-lo fins que us digui que pareu. També us puc dir que ho “pareu tot”, i llavors haureu de deixar de fer tots els comportaments que us hauré anat donant. Farem 3 rondes i, després de cada ronda, us faré un parell de preguntes.",
           "tips": [
             "Assegureu-vos de deixar una mica d'espai entre ordres. Per a cadascuna d'aquestes seccions, considereu executar tota la seqüència sense parlar-ne, i tornar-la a repetir un cop tothom hagi tingut l'oportunitat de comentar i processar qualsevol confusió."
           ]
@@ -1899,7 +1919,7 @@
         },
         "d5632c3a-b496-41b6-a90f-1c738211a438": {
           "tips": [
-            null
+            "Les opcions de joc lliure d'aquesta lliçó són com les de la lliçó anterior. De fet, el codi que hagin escrit a la lliçó anterior es traslladarà a la d'avui. La diferència principal és que ara tenen blocs addicionals a la caixa d'eines i els hauran de fer servir per tal que els seus programes siguin més interessants o complexos."
           ],
           "progression_name": "Joc lliure: Fem una escena interactiva"
         },
@@ -1911,9 +1931,13 @@
           "description": "**Objectiu:** Avui, els alumnes  crearan la seva pròpia mascota virtual. Començaran dibuixant o seleccionant un vestit nou per a un sprite, i després crearan esdeveniments per tal que les interaccions de l'usuari desencadenin accions i comportaments en l'sprite. "
         },
         "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
+          "description": "#### Trencaclosques en línia\n\n**Transició:** Feu que els alumnes passin als ordinadors. Animeu-los a seguir les instruccions de cada trencaclosques. Expliqueu-los que es tracta d'una activitat creativa, destinada a ajudar-los a aprendre com funciona el Laboratori d'Sprites.",
           "tips": [
             "Animeu als alumnes a que, quan tinguin problemes o dubtes, primer preguntin al company. Si no queda resolt, poden anar a un grup proper, que potser ja sap la resposta. Feu que els alumnes descriguin el problema que tenen davant:\n\n-   Què se suposa que ha de fer?\n-   Què fa?\n-   I això, que et diu?"
           ]
+        },
+        "428a4506-b3e9-418c-9351-455bc0eacd55": {
+          "description": "\\*\\* Recordatori:\\*\\* Si els trencaclosques es poden compartir, recordeu als alumnes que només comparteixin la seva feina amb la família o els amics propers."
         },
         "29dc277a-e2ce-49f2-bc02-9f0c6cd0b490": {
           "progression_name": "Exploració"
@@ -1926,6 +1950,9 @@
         },
         "6007c0c9-9fe0-4bf5-9861-e64847bd3161": {
           "name": "Reflexió"
+        },
+        "73bf4d55-3d84-4105-868f-eb0a20a55388": {
+          "description": "### Proporcionar energia a la teva mascota virtual (60-90 minuts)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Informàtica + Arts i llengua + Ciència**\n\n[Proporcionar energia a la teva mascota virtual](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) és una activitat opcional alineada amb els estàndards de nova generació d’Arts i llengua anglesa, Matemàtiques i Ciències escrita per la nostra comunitat de docents. Els alumnes crearan un model científic que mostra com la seva mascota virtual rebrà l’energia que necessita per sobreviure.\n\n_Estàndards abordats:_\n\n-   **CCSS.ELA.RI.5.7:** aprofitar la informació de diverses fonts impreses o digitals, demostrant la capacitat de trobar una resposta a una pregunta ràpidament, o de resoldre un problema de manera eficient.\n\n-   **CCSS.ELA.RI.5.9:** integrar informació de diversos textos sobre el mateix tema per escriure’n o parlar-ne amb coneixement. \n\n-   **5- PS3-1:** fer servir diversos models per descriure que l’energia que hi ha al menjar dels animals (la qual fan servir per repara el cos, créixer, moure’s i mantenir la temperatura corporal) en un moment passat va ser energia solar.\n\n-   **5-LS2-1:** desenvolupar un model per descriure el moviment de la matèria entre plantes, animals, descomponedors i el medi ambient.\n\n-   **SL.5.5:** incloure components multimèdia (per exemple, gràfics i so) i presentacions virus als quan sigui apropiat per millorar el desenvolupament d’idees o temes principals."
         },
         "a39aeb31-f24a-4a70-b481-9fb3172e76cb": {
           "tips": [
@@ -2274,6 +2301,9 @@
         },
         "e56da37d-683e-4dc5-89f1-da5e039357d9": {
           "progression_name": "Miniprojecte: Coses sobre mi"
+        },
+        "163b611c-e2ba-4242-8842-33cb5c319a9b": {
+          "name": "Posada en comú"
         },
         "f3d434b2-d9ce-4dce-b77b-2ed20f99734b": {
           "name": "Reflexió"
@@ -3308,6 +3338,9 @@
         "c5b1c51f-e863-4951-9163-1777993f687b": {
           "name": "Reflexió",
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Què t'ha semblat la lliçó?\n-   Què t'ha semblat crear una escena més creativa?\n-   T'ha costat acabar una lliçó en què no hi havia respostes correctes ni incorrectes?"
+        },
+        "3c242de5-2944-4439-a772-10f0e2bfd48a": {
+          "name": "Explorem aplicacions"
         },
         "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -8397,6 +8430,9 @@
             null
           ]
         },
+        "44a7d11e-02bc-4522-b65e-35d4764cb060": {
+          "name": "Posada en comú"
+        },
         "f12fbcf7-5d63-4105-a269-f198663ecdfa": {
           "tips": [
             null
@@ -10625,27 +10661,57 @@
           "name": "Reflexió"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "En aquest curs aprendrem a programar. La programació ens permet crear aplicacions, jocs, pàgines web, simulacions i moltes altres coses que fem servir als ordinadors."
+        },
+        "ae9c68f5-dc04-4e99-917b-e2ba8424692f": {
+          "description": "\\*\\*Feu això: \\*\\* Amb les diapositives de la lliçó o a la pissarra, feu una taula de dues columnes on la de l’esquerra porti de títol “Aplicacions i jocs preferits” i la de la dreta es tituli “Per què ens agraden”. Feu un cas d’exemple i demaneu als alumnes que en suggereixin d’altres per anar afegint-les. A mesura que vagin explicant per què els agrada una aplicació, reformuleu les explicacions de manera que se centrin en les _opcions_ i els casos en què l’usuari por _decidir_ com vol fer servir l’aplicació. Quan comencin a veure que els usuaris prefereixen poder prendre decisions, podeu donar l’activitat per acabada."
+        },
+        "bee82cce-d1ce-452a-b733-b9e750e54b90": {
+          "description": "Quan es dissenyen les aplicacions i els jocs, es té en compte l’usuari. L’usuari sou vosaltres o qualsevol persona que faci servir l’aplicació. Els creadors han pensat com s’haurien de fer servir les seves aplicacions, però l’usuari té opcions per poder decidir. Avui veurem com (i per què) els desenvolupadors d’aplicacions i de jocs ens permeten prendre decisions."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "description": "**Feu això:** Mostreu la diapositiva de “Decisions de l’usuari” que trobareu a l’apartat de “Recursos”.\n\n**Debat:** En cada aplicació o joc que veieu, quina decisió creieu que el creador de l’aplicació permet que prengui l’usuari?\n\n**Objectiu:** Els alumnes haurien de comentar les decisions concretes que l’usuari pot prendre, no per què creuen que serveix l’aplicació. Per exemple, Talk Box permet que els usuaris escullin un avatar o representació digital de si mateixos. Aquesta opció està molt bé perquè fa que l’usuari senti que l’aplicació està feta pensant en ell.",
           "tips": [
-            null
+            "Aquesta lliçó ve acompanyada de diapositives en què apareixen aplicacions inventades per fomentar el debat. Podeu complementar o substituir els exemples de manera que concordin més amb els interessos dels alumnes."
           ]
+        },
+        "75264b2e-950d-4494-9313-aa20451bfd50": {
+          "description": "Podem veure que, en totes aquestes aplicacions, l'usuari pot prendre decisions sobre com la vol fer servir. Aquestes opcions fan que hi hagi més persones que tinguin ganes de fer servir l'aplicació."
+        },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": "**Reflexió:** Quin és el joc o aplicació que més us agrada? Quines opcions us permet prendre?"
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
+          "description": "**Feu això:** Reproduïu el vídeo **\\*Introducció al Laboratori d'Sprites**.",
           "progression_name": "Vídeo: Introducció al Laboratori d'Sprites"
         },
+        "24a7b06d-f1c9-47fb-b723-8e7894957e27": {
+          "description": "Aviat aprendrem a programar i farem els nostres propis projectes al Laboratori d’Sprites. Començarem veient què es pot fer. Avui, vosaltres sereu els usuaris! La vostra tasca és jugar i fer servir els programes d’exemple que trobareu a la pàgina de Code.org. A mesura que els aneu provant, haureu de descriure els vestits dels sprites que veieu i quines decisions podeu prendre com a usuaris."
+        },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
+          "name": "Explorem aplicacions",
+          "description": "_Exploreu un mínim de 3 programes del Laboratori d’Sprites a Code.org. Per cada programa, feu una llista dels sprites que veieu i descriviu les decisions que heu pres com a usuari._\n\n**Feu això:** \n\n-   Doneu a cada alumne (o grup) una còpia física o digital de la fitxa **\\*Explorem aplicacions**.\n\n-   Indiqueu als alumnes que vagin al nivell 2 de Code Studio (Exploració: aplicacions d’exemple).\n\n-   Plantegeu-vos si us cal fer una aplicació d’exemple tots junts abans de posar-los a fer la tasca tots sols.",
           "tips": [
-            null
+            "Si és la primera vegada que fan servir Code.org, dediqueu uns minuts a ajudar-los a entendre com fer servir la pàgina web i iniciar sessió amb els seus comptes."
           ]
         },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Posada en comú",
+          "description": "**Debat:** Quines han estat les decisions més interessants que heu pogut prendre amb aquestes aplicacions? Hi ha hagut algun moment en què us hauria agradat canviar alguna cosa però no us hagin donat l’opció?\n\n**Objectiu:** Els alumnes haurien de poder mencionar algunes de les decisions concretes que han pres i comentar per què creuen que el creador ha donat l’opció de prendre aquestes decisions. Algunes que caldria mencionar són les paraules que introdueix l’usuari (com a Chat Bot), el tipus d’sprites que es fan servir (com al joc de La col·leccionista), o la manera en què s’interactua amb alguna cosa."
+        },
+        "efa336e3-b101-4300-9bce-45771a6e114d": {
+          "name": "Proposa una millora",
+          "description": "**Pregunta:** Penseu en una aplicació que hàgiu fet servir i en quines altres decisions podria prendre l’usuari per tal de millorar-la\n\nSegons el temps de què disposeu, feu que els alumnes reflexionin sobre la qüestió anterior a través d’un o més dels mètodes següents:\n\n-   Demaneu voluntaris que comparteixin idees per contribuir a una conversa amb tot el grup.\n-   Formeu parelles o grups reduïts perquè en parlin.\n-   Que facin un pòster o un dibuix amb les seves idees."
+        },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
-          "name": "Reflexió"
+          "name": "Reflexió",
+          "description": "Avui hem après de quines maneres els creadors d’aplicacions permeten que els usuaris prenguin decisions. També hem descobert els Sprites. El Sprites són gràfics que apareixen en pantalla i que tenen diferents propietats, com ara la mida, la rotació i la ubicació. Els Sprites també tenen un vestit que determina el seu aspecte."
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "description": "**Preguntes: (trieu-ne una)**\n\n-   Podeu posar un exemple d'una decisió que us agradaria poder prendre en els jocs o aplicacions que feu servir?\n-   Quin tipus d'aplicació o joc us agradaria crear?",
           "tips": [
-            null
+            "Les idees de reflexió es poden posar en pràctica de moltes maneres. Escriure a la llibreta o parlar-ne (en grups o en parelles) són molt bones opcions!"
           ]
         },
         "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
@@ -10673,7 +10739,7 @@
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "description": "#### Desenvolupament d'habilitats i pràctica (20 minuts)\n\n**Transició:** Feu que els alumnes passin als ordinadors i iniciïn sessió.\n\nAquestes activitats són adients per aprenentatge autònom o programació per parelles.\n\nPrimer han de fer els nivells de desenvolupament d'habilitats, i després podran fer servir el temps que els quedi fent les activitats de pràctica que vulguin.",
           "tips": [
-            null
+            "En aquest curs hi ha moltes lliçons que inclouen nivells de “desenvolupament d’habilitats” i de “pràctica”. Pel que fa a l’avaluació, tots els alumnes han de completar la secció de desenvolupament d’habilitats. Els nivells de pràctica es poden fer servir per diferenciar o oferir més opcions als alumnes."
           ],
           "progression_name": "Desenvolupament d'habilitats"
         },
@@ -10683,7 +10749,7 @@
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "description": "#### Joc Lliure (10 minuts)\n\n**Transició:** Ara, els alumnes han de passar al nivell final a la lliçó, on podran fer el seu propi projecte.",
           "tips": [
-            null
+            "Els nivells de joc lliure donen als alumnes l'oportunitat de posar ràpidament en pràctica tot el que han anat aprenent d'una manera creativa. L'objectiu és que experimentin amb les seves idees, i si voleu, podeu animar-los a compartir la feina amb els altres i col·laborar entre ells."
           ],
           "progression_name": "Joc lliure: Fem una escena"
         },
@@ -10694,8 +10760,12 @@
         "84a55315-a3fb-4f8c-a451-b167ff8700cb": {
           "description": "#### Escriure\n\nDemanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\nQuin consell li donaries a un amic que volgués crear els seus propis programes al Laboratori d'Sprites?"
         },
+        "18cec2c2-3023-4456-b199-32f93d8b5287": {
+          "description": "**Feu això:** Repasseu o expliqueu la paraula **algorisme**: una llista de passos necessaris per fer una tasca."
+        },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
           "name": "Seguim l'algorisme",
+          "description": "Avui començarem amb un joc ràpid. En aquest joc, us donaré totes les ordres que heu de seguir, i vosaltres heu de seguir **l'algorisme**. Les ordres començaran sempre amb “comenceu” o “pareu”. Si us dic que comenceu a fer alguna cosa, heu d'iniciar aquest comportament i seguir fent-lo fins que us digui que pareu. També us puc dir que ho “pareu tot”, i llavors haureu de deixar de fer tots els comportaments que us hauré anat donant. Farem 3 rondes i, després de cada ronda, us faré un parell de preguntes.",
           "tips": [
             "Assegureu-vos de deixar una mica d'espai entre ordres. Per a cadascuna d'aquestes seccions, considereu executar tota la seqüència sense parlar-ne, i tornar-la a repetir un cop tothom hagi tingut l'oportunitat de comentar i processar qualsevol confusió."
           ]
@@ -10722,7 +10792,7 @@
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
           "description": "#### Joc lliure (10 minuts)\n\n**Transició:** Els alumnes han de passar al nivell final de la lliçó, on trobaran les mateixes opcions de joc lliure que a les lliçons anteriors. Animeu-los a afegir esdeveniments als seus projectes de de l'últim cop, o a que comencin un projecte nou.",
           "tips": [
-            null
+            "Les opcions de joc lliure d'aquesta lliçó són com les de la lliçó anterior. De fet, el codi que hagin escrit a la lliçó anterior es traslladarà a la d'avui. La diferència principal és que ara tenen blocs addicionals a la caixa d'eines i els hauran de fer servir per tal que els seus programes siguin més interessants o complexos."
           ],
           "progression_name": "Joc lliure: Fem una escena interactiva"
         },
@@ -10734,16 +10804,21 @@
           "description": "#### Escriure\n\nDemanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\nLes tecles de fletxes són una forma de fer que un programa sigui més interactiu. De quines altres maneres podríem fer que l'usuari tingui cert control sobre el que passa en una aplicació o un joc?"
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Repasseu què són els _esdeveniments_ i els _comportaments_ en programació, i presenteu l'eina \"Vestits\" del Laboratori d'Sprites, amb la qual podran dibuixar els seus propis vestits.\n\n**Revisió:** Feu preguntes als alumnes sobre esdeveniments i comportaments.\n\n-   Recordeu què és un esdeveniment?\n\n-   Recordeu què és un comportament?\n\n-   Recordeu alguns dels comportaments que heu fet servir? Què fan?\n    -   \"patrullar\"\n    -   \"tremolar\"\n    -   \"girar a la dreta/esquerra\"\n\n**Demostració:** Comenceu ensenyant el Nivell 1 de la lliçó d'avui als alumnes.\n\n**Pensar/Emparellar:** Demaneu als alumnes que prediguin què passarà quan s'executi el codi, i que ho comentin amb els companys del costats. Executeu el codi i analitzeu el resultat.\n\n**Demostració:** Mostreu el Nivell 2. Demostreu breument com fer el següent: \n\n-   Navegar entre les pestanyes de _Codi_ i _Vestits_\n-   Dibuixar un vestit\n-   Triar un vestit de la biblioteca de vestits\n-   Canviar el vestit de l'sprite de la mascota virtual per un de personalitzat"
         },
         "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8": {
           "name": "Mascota virtual al Laboratori d'Sprites",
           "description": "**Objectiu:** Avui, els alumnes  crearan la seva pròpia mascota virtual. Començaran dibuixant o seleccionant un vestit nou per a un sprite, i després crearan esdeveniments per tal que les interaccions de l'usuari desencadenin accions i comportaments en l'sprite. "
         },
         "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
+          "description": "#### Trencaclosques en línia\n\n**Transició:** Feu que els alumnes passin als ordinadors. Animeu-los a seguir les instruccions de cada trencaclosques. Expliqueu-los que es tracta d'una activitat creativa, destinada a ajudar-los a aprendre com funciona el Laboratori d'Sprites.",
           "tips": [
             "Animeu als alumnes a que, quan tinguin problemes o dubtes, primer preguntin al company. Si no queda resolt, poden anar a un grup proper, que potser ja sap la resposta. Feu que els alumnes descriguin el problema que tenen davant:\n\n-   Què se suposa que ha de fer?\n-   Què fa?\n-   I això, que et diu?"
           ]
+        },
+        "7a70ca98-817b-49cf-87dd-37c1e69d6d8c": {
+          "description": "\\*\\* Recordatori:\\*\\* Si els trencaclosques es poden compartir, recordeu als alumnes que només comparteixin la seva feina amb la família o els amics propers."
         },
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "Exploració"
@@ -10755,7 +10830,11 @@
           "progression_name": "Joc lliure"
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
-          "name": "Reflexió"
+          "name": "Reflexió",
+          "description": "**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Què us ha semblat?\n-   Quines altres opcions us agradaria que pogués fer la vostra mascota?"
+        },
+        "fcaf009c-58ce-43f6-bb24-dfdae991fdd2": {
+          "description": "### Proporcionar energia a la teva mascota virtual (60-90 minuts)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Informàtica + Arts i llengua + Ciència**\n\n[Proporcionar energia a la teva mascota virtual](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) és una activitat opcional alineada amb els estàndards de nova generació d’Arts i llengua anglesa, Matemàtiques i Ciències escrita per la nostra comunitat de docents. Els alumnes crearan un model científic que mostra com la seva mascota virtual rebrà l’energia que necessita per sobreviure.\n\n_Estàndards abordats:_\n\n-   **CCSS.ELA.RI.5.7:** aprofitar la informació de diverses fonts impreses o digitals, demostrant la capacitat de trobar una resposta a una pregunta ràpidament, o de resoldre un problema de manera eficient.\n\n-   **CCSS.ELA.RI.5.9:** integrar informació de diversos textos sobre el mateix tema per escriure’n o parlar-ne amb coneixement. \n\n-   **5- PS3-1:** fer servir diversos models per descriure que l’energia que hi ha al menjar dels animals (la qual fan servir per repara el cos, créixer, moure’s i mantenir la temperatura corporal) en un moment passat va ser energia solar.\n\n-   **5-LS2-1:** desenvolupar un model per descriure el moviment de la matèria entre plantes, animals, descomponedors i el medi ambient.\n\n-   **SL.5.5:** incloure components multimèdia (per exemple, gràfics i so) i presentacions virus als quan sigui apropiat per millorar el desenvolupament d’idees o temes principals."
         },
         "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
           "name": "Vocabulari clau"
@@ -14673,7 +14752,7 @@
           "name": "Reflexió",
           "description": "**Idea:**\n\nPenseu en l’activitat o el passatemps que heu explicat al principi de la classe. Escriviu instruccions que comencin amb “començar” i “parar” per fer que algú actuï com si estigués fent aquesta activitat. No oblideu que de vegades hauran de parar de fer una cosa per començar a fer-ne una altra.",
           "tips": [
-            null
+            "Les idees de reflexió es poden posar en pràctica de moltes maneres. Escriure a la llibreta o parlar-ne (en grups o en parelles) són molt bones opcions!"
           ]
         },
         "b75bc492-bca4-410c-8c94-8d1c919597c3": {
@@ -14813,6 +14892,7 @@
           "progression_name": "Miniprojecte: Coses sobre mi"
         },
         "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Posada en comú",
           "description": "Comproveu que els alumnes no hagin compartit cap informació privada als seus pòsters interactius. Si teniu temps, poden compartir els pòsters ja comprovats per parelles o en grups reduïts. Si no, feu que alguns ensenyin la seva feina a tota la classe.\n\nAcabeu insistint en la importància de saber la diferència entre la informació personal i la privada, i que es poden divertir molt i ser molt creatius a internet sense haver de compartir informació arriscada sobre ells mateixos."
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {

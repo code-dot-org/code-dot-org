@@ -373,8 +373,31 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         grade: desired_grade,
       }
-      assert_equal desired_grade, returned_section.grade
+      assert_equal [desired_grade], returned_section.grades
     end
+  end
+
+  [["K", "1", "2"], ["3", "4", "K"], ["5", "6", "7"], ["Other", "K", "10"]].each do |desired_grades|
+    test "can set grade to #{desired_grades} during creation" do
+      sign_in @teacher
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        grades: desired_grades,
+      }
+      assert_equal desired_grades.sort, returned_section.grades.sort
+    end
+  end
+
+  test "grades takes precedence over grade during creation" do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      grade: "1",
+      grades: ["K", "2", "3"]
+    }
+    assert_equal ["K", "2", "3"], returned_section.grades
   end
 
   %w(student teacher facilitator).each do |desired_type|
@@ -405,7 +428,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       grade: nil,
     }
-    assert_nil returned_section.grade
+    assert_nil returned_section.grades
+  end
+
+  test "default grades is nil" do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      grades: nil,
+    }
+    assert_nil returned_section.grades
   end
 
   test "create section without participant type gives error" do
@@ -426,7 +459,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_nil returned_section.grade
+    assert_nil returned_section.grades
+  end
+
+  test 'cannot pass invalid grades' do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      grades: ['13'],
+    }
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_section.grades
   end
 
   test 'creates a six-letter section code' do
@@ -739,7 +785,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       user: @teacher,
       script_id: @script_in_preview_state.id,
       login_type: Section::LOGIN_TYPE_WORD,
-      grade: "1",
+      grades: ["1"],
       lesson_extras: true,
       pairing_allowed: false,
       hidden: true
@@ -764,7 +810,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil(section_with_script.script_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
-    assert_equal("K", section_with_script.grade)
+    assert_equal(["K"], section_with_script.grades)
     assert_equal(false, section_with_script.lesson_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
@@ -775,6 +821,27 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     }
     section_with_script = Section.find(section_with_script.id)
     assert_equal(true, section_with_script.lesson_extras)
+  end
+
+  test "update: can update grades for section you own" do
+    UnitGroup.stubs(:course_assignable?).returns(true)
+
+    sign_in @teacher
+    section_with_script = create(
+      :section,
+      user: @teacher,
+      grades: ["1"],
+    )
+
+    post :update, params: {
+      id: section_with_script.id,
+      grades: ["K"],
+    }
+    assert_response :success
+
+    section_with_script.reload
+
+    assert_equal(["K"], section_with_script.grades)
   end
 
   test "update: name is ignored if empty or all whitespace" do

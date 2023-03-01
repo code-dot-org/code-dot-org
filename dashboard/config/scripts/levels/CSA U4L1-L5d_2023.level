@@ -2,11 +2,11 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "Create your own drawing in your scene!\r\n\r\n✅ **TO DO #1:** In `MuralScene.java`(#e7e8ea), write the `makeDrawing()`(#e7e8ea) method to draw shapes to create your drawing.\r\n\r\n::: details [**🔦 How can I animate my drawing?**]\r\n  \r\nTry using the `pause()`(#e7e8ea) or `clear()`(#e7e8ea) methods to turn your scene into an animation!\r\n\r\n* Call the `pause()`(#e7e8ea) method after drawing each image or after drawing a set of images.\r\n\r\n* Call the `clear()`(#e7e8ea) method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.\r\n:::\r\n&nbsp;\r\n\r\n⚠️ **Don't forget!** Call the `Theater.playScenes(yourSceneObject)`(#e7e8ea) method to play the scene.\r\n\r\n💡 **TIP:** Check out the documentation for the `Scene`(#e7e8ea) class in the **Documentation** tab ⬆️ for help with drawing shapes and changing the colors of your shapes.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
+    "csa_view_mode": "theater",
     "start_sources": {
       "Runner.java": {
         "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
@@ -16,13 +16,16 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Create a Drawing",
+    "bubble_choice_description": "Use the drawing methods in the `Scene` class to create your own drawing in your scene.",
+    "thumbnail_url": "https://images.code.org/484db3a1ef84a307c689983cccbb7a79-f673d59dd083de78688656873a5878e8-image-1650483273404.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:17:11.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:17:11.836+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L5c_2023\"},{\"changed_at\":\"2023-02-17 18:17:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:17:11.836+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L5c_2023\"},{\"changed_at\":\"2023-02-17 18:17:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:33:06 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:34:13 +0000\",\"changed\":[\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:39:37 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

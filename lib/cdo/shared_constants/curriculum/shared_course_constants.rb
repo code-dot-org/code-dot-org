@@ -82,7 +82,9 @@ module Curriculum
       {
         module: 'Module',
         course: 'Course',
-        standalone_unit: 'Standalone Unit'
+        standalone_unit: 'Standalone Unit',
+        hoc: 'Hour of Code',
+        pl: 'Professional Learning'
       }
     ).freeze
 

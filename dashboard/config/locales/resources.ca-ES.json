@@ -370,10 +370,12 @@
           "type": "Diapositives"
         },
         "exploring_apps/coursef/2022": {
+          "name": "Explorem aplicacions",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "Recurs"
         },
         "exploring_apps_1/coursef/2022": {
+          "name": "Explorem aplicacions",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "Respostes"
         },
@@ -2689,10 +2691,12 @@
           "type": "Recurs"
         },
         "exploring_apps/coursef/2021": {
+          "name": "Explorem aplicacions",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "Recurs"
         },
         "exploring_apps_1/coursef/2021": {
+          "name": "Explorem aplicacions",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "Respostes"
         },

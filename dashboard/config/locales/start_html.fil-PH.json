@@ -1644,6 +1644,42 @@
           "night": "gabi",
           "dusk": "Takipsilim",
           "Predict": "Hula"
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Gawin akong mas malaki at kulay asul!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me red!": "Gawin akong pula!",
+          "Make me blue!": "Gawin akong asul!",
+          "Write code to change my text!": "Sumulat ng code upang baguhin ang text ko!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Berde-hin!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Flashlight na App"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "Kabayo!",
+          "You Choose!": "Pumili Ka!",
+          "Animal Sound Board!!!": "Board ng Tunog ng Hayop!!!",
+          "Monkey!": "Unggoy!",
+          "Tiger!": "Tigre!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This!": "Ito!",
+          "This or That?!": "Ito o Iyon?!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This!": "Ito!",
+          "This or That?!": "Ito o Iyon?!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This!": "Ito!",
+          "This or That?!": "Ito o Iyon?!",
+          "You clicked this!": "Na-click mo ito!"
         }
       }
     }
