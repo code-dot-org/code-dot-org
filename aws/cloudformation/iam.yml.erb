@@ -4,9 +4,19 @@ Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
   Note: Admin permissions are required to manage some admin-only resources in this stack.
 Parameters:
-  GoogleDeveloperIDs:
+  # Google ID parameters are defined in this template, use String placeholder during initial stack creation.
+  DeveloperGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleDeveloperIDs
+    Description: SSM Parameter with a list of Google ID's for users granted Developer access.
+  ContributorGoogleIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleContributorIDs
+    Description: SSM Parameter with a list of Google ID's for users granted Contributor access.
+  BillingGoogleIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleBillingIDs
+    Description: SSM Parameter with a list of Google ID's for users granted Billing access.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -157,7 +167,7 @@ Resources:
             StringEquals:
               accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
             ForAnyValue:StringEquals:
-              accounts.google.com:sub: !Ref GoogleDeveloperIDs
+              accounts.google.com:sub: !Ref DeveloperGoogleIDs
         - Effect: Allow
           Principal: {Service: ec2.amazonaws.com}
           Action: sts:AssumeRole
@@ -301,6 +311,171 @@ Resources:
               - 'redshift:DescribeClusterSnapshots'
               - 'redshift:DescribeClusterSubnetGroups'
             Resource: '*'
+
+  ContributorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Contributor
+      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
+      Path: /engineering/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref ContributorGoogleIDs
+      ManagedPolicyArns:
+        - !Ref ContributorS3Policy
+        - !Ref ContributorSecretsPolicy
+
+  GoogleContributorIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/GoogleContributorIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted contributor access.
+  
+  ContributorS3Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: ContributorS3Policy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowUserToSeeBucketList
+            Effect: Allow
+            Action:
+              - s3:ListAllMyBuckets
+              - s3:GetBucketLocation
+            Resource:
+              - arn:aws:s3:::*
+          - Sid: AllowListingCertainBucketsObjects
+            Effect: Allow
+            Action:
+              - s3:ListBucket
+              - s3:ListBucketVersions
+            Resource:
+              - arn:aws:s3:::cdo-v3-sources
+              - arn:aws:s3:::cdo-v3-assets
+              - arn:aws:s3:::cdo-v3-animations
+              - arn:aws:s3:::cdo-v3-files
+            Condition:
+              StringLike: {
+                "s3:prefix": [
+                    "",
+                    "sources_development/*",
+                    "assets_development/*",
+                    "animations_development/*",
+                    "files_development/*"
+                ],
+                "s3:delimiter": [
+                    "/"
+                ]
+              }
+          - Sid: AllowNeededS3ActionsInCertainBucketFolders
+            Effect: Allow
+            Action:
+              - s3:AbortMultipartUpload
+              - s3:DeleteObject
+              - s3:DeleteObjectTagging
+              - s3:DeleteObjectVersion
+              - s3:DeleteObjectVersionTagging
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectTagging
+              - s3:GetObjectTorrent
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:GetObjectVersionForReplication
+              - s3:GetObjectVersionTagging
+              - s3:GetObjectVersionTorrent
+              - s3:PutObject
+              - s3:PutObjectTagging
+              - s3:PutObjectVersionTagging
+              - s3:RestoreObject
+            Resource:
+              - arn:aws:s3:::cdo-v3-sources/sources_development/*
+              - arn:aws:s3:::cdo-v3-assets/assets_development/*
+              - arn:aws:s3:::cdo-v3-animations/animations_development/*
+              - arn:aws:s3:::cdo-v3-files/files_development/*
+          - Sid: AllowListingToAnimationLibraryBucket
+            Effect: Allow
+            Action:
+              - s3:ListBucket
+              - s3:ListBucketVersions
+            Resource:
+              - arn:aws:s3:::cdo-animation-library
+          - Sid: AllowReadOnlyToAnimationLibraryBucket
+            Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectTagging
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:GetObjectVersionTagging
+            Resource:
+              - arn:aws:s3:::cdo-animation-library/*
+  
+  ContributorSecretsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: ContributorSecretsPolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource:
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
+
+  BillingRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Billing
+      Description: Google-federated AWS Role for finance, granting limited access to the Billing console.
+      Path: /admin/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref BillingGoogleIDs
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
+
+  GoogleBillingIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/GoogleBillingIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted billing access.
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
