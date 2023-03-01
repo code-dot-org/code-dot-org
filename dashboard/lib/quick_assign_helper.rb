@@ -52,7 +52,7 @@ module QuickAssignHelper
   # We want to organize the course offerings by their headers then sort those headers
   # according to the logic in compare_headers above
   # The offerings within a header will be sorted alphabetically by display_name.
-  # Any course_offerings that do not a header will be ignored.
+  # Any course_offerings that do not have a header will be ignored.
   def self.group_hoc_and_pl_offerings(course_offerings, user, locale)
     data = {}
     course_offerings.each do |co|
