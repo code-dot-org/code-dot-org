@@ -1253,11 +1253,11 @@ class BlocklyTest < ActiveSupport::TestCase
       :blockly,
       name: 'test localized_start_html',
     )
-    start_html = '<div><button id="leftBottomButton"></button><label >Outfit Picker</label></div>'
+    start_html = '<div><button id="leftBottomButton"></button><label>Outfit Picker</label></div>'
     localized_start_html = level.localized_start_html(start_html)
 
     # Output should use <button></button> instead of <button />
-    expected_output = '<div><button id="leftBottomButton"></button><label >Outfit Picker</label></div>'
+    expected_output = '<div><button id="leftBottomButton"></button><label>Outfit Picker</label></div>'
     assert_equal expected_output, localized_start_html
   end
 end
