@@ -89,14 +89,13 @@
     pointerEvent: function(type, options) {
       options = $.extend(
         {
-          pointerType: 'mouse',
+          pointerType: "mouse",
           pointerId: 1,
-          isPrimary: true,
+          isPrimary: true
         },
         options
       );
       return new PointerEvent(type, options);
-
     },
 
     mouseEvent: function(type, options) {
@@ -371,7 +370,7 @@
       }
 
       if ($.contains(document, target)) {
-        this.simulateEvent(target, "pointerup", eventOptions);
+        this.simulateEvent(target.ownerDocument, "pointerup", eventOptions);
         this.simulateEvent(target, "click", eventOptions);
       } else {
         this.simulateEvent(document, "pointerup", eventOptions);
