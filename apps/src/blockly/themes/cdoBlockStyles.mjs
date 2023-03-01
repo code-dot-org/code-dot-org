@@ -1,6 +1,6 @@
-// Whenever updating the styles in this file, be sure to also update the styles
-// in cdoAccessible.js as well. The accessible styles can be generated using
-// accessibleColors.mjs.
+// IMPORTANT! Whenever updating the styles in this file, be sure to also update
+// the styles in cdoAccessible.js as well. The accessible styles can be generated
+// using accessibleColors.mjs.
 // From this directory in your terminal, enter:
 // - yarn add nearest-color
 // - node accessibleColors.mjs

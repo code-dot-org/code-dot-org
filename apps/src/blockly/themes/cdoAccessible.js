@@ -1,13 +1,14 @@
 import GoogleBlockly from 'blockly/core';
 
-// Whenever updating ./cdoBlockStyles.mjs, be sure to also update the styles
-// here as well. The accessible styles can be generated using accessibleColors.mjs.
+// IMPORTANT! Whenever updating ./cdoBlockStyles.mjs, be sure to also update
+// the styles here as well. The accessible styles can be generated using
+// accessibleColors.mjs.
 // From this directory in your terminal, enter:
 // - yarn add nearest-color
 // - node accessibleColors.mjs
 // - yarn remove nearest-color
-// Copy the values output by the script into cdoAccessible and commit both changes together.
 
+// Copy the values output by the script below.
 const accessibleColors = {
   list_blocks: {colourPrimary: '#6B069F'},
   logic_blocks: {colourPrimary: '#009175'},
