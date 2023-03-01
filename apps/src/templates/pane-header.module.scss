@@ -51,9 +51,18 @@
     background-color: #606060;
     color: #bfbfbf;
     border: none;
+
+    span {
+      color: #bfbfbf;
+    }
+
     &:hover {
       background-color: #606060;
       color: color.$white;
+
+      span {
+        color: color.$white;
+      }
     }
   }
 

@@ -127,6 +127,11 @@ export const PaneButton = Radium(function(props) {
     className
   );
 
+  // There are specific styles for Minecraft lab (some rules with !important from external package)
+  // so in order not to break Minecraft labs, it's better to leave PaneButton a div
+  const Tag = isMinecraft ? 'div' : 'button';
+  const tagSpecificProps = isMinecraft ? {role: 'button'} : {type: 'button'};
+
   function renderIcon() {
     const {iconClass, icon} = props;
 
@@ -160,9 +165,9 @@ export const PaneButton = Radium(function(props) {
   }
 
   return (
-    <button
+    <Tag
+      {...tagSpecificProps}
       className={buttonClassNames}
-      type="button"
       disabled={isDisabled}
       tabIndex="0"
       id={id}
@@ -176,7 +181,7 @@ export const PaneButton = Radium(function(props) {
         {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
-    </button>
+    </Tag>
   );
 });
 PaneButton.propTypes = {
