@@ -42,3 +42,22 @@
   font-size: 24px;
   padding: 12px;
 }
+
+.tableBody {
+  padding: 10px;
+  display: grid;
+}
+
+.courseHeaders {
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  left: 10px;
+}
+
+.radio {
+  min-height: 40px;
+  display: grid;
+  align-content: center;
+}

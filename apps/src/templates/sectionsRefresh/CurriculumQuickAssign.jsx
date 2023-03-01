@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
@@ -12,7 +13,7 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl'
 };
 
-export default function CurriculumQuickAssign() {
+export default function CurriculumQuickAssign(updateSection) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
@@ -119,11 +120,16 @@ export default function CurriculumQuickAssign() {
         <QuickAssignTable
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
+          updateSection={() => updateSection}
         />
       )}
     </div>
   );
 }
+
+CurriculumQuickAssign.propTypes = {
+  updateSection: PropTypes.func.isRequired
+};
 
 const styles = {
   buttonStyle: {
