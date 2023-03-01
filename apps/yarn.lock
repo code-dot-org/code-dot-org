@@ -1340,10 +1340,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.6.tgz#70ec691789dd660cfe9e1dc7c6778984d952d9b3"
-  integrity sha512-fCeTdXMwN8wj7YoPYfjY8G5iU8kUPRmR8kVSLQJKyVRrGnZHunTKG5sfhjjJqDTIkqx++tM1PnNt6KI2oEYtbw==
+"@code-dot-org/blockly@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.7.tgz#17ff18fe3bc98167ffcc8407602d7f70bc48f6ee"
+  integrity sha512-Ropozjv61fjtvB80v2B8QmOscADffAbvXyQqLOEI/zNPPdNGb5Scq/5c0Om/viPdZOOobYN+3A4rXNKjYLipFQ==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"

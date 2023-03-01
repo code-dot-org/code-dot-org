@@ -199,16 +199,6 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      // Stop all when_run sounds that are still to play, because if they
-      // are still valid after the when_run code is re-executed, they
-      // will be scheduled again.
-      this.stopAllSoundsStillToPlay();
-
-      // Also clear all when_run sounds from the events list, because it
-      // will be recreated in its entirely when the when_run code is
-      // re-executed.
-      this.player.clearWhenRunEvents();
-
       this.isExecutingPlay = false;
       this.executeCompiledSong();
 
@@ -262,6 +252,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   executeCompiledSong = () => {
+    // Clear the events list of when_run sounds, because it will be
+    // populated next.
+    this.player.clearWhenRunEvents();
+
     this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
@@ -273,7 +267,6 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
 
     this.compileSong();
-    this.player.clearWhenRunEvents();
 
     this.isExecutingPlay = true;
     this.executeCompiledSong();
@@ -286,21 +279,11 @@ class UnconnectedMusicView extends React.Component {
   stopSong = () => {
     this.player.stopSong();
 
-    // reset the timeline view.
-    this.player.clearWhenRunEvents();
     this.isExecutingPlay = false;
     this.executeCompiledSong();
 
-    // Clear the events list, and hence the visual timeline, of any
-    // user-triggered sounds.
-    this.player.clearTriggeredEvents();
-
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
-  };
-
-  stopAllSoundsStillToPlay = () => {
-    this.player.stopAllSoundsStillToPlay();
   };
 
   handleKeyUp = event => {
@@ -403,6 +386,7 @@ class UnconnectedMusicView extends React.Component {
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
             getTypeForId: id => this.player.getTypeForId(id),
+            getLastMeasure: () => this.player.getLastMeasure(),
             getIsExecutingPlay: () => this.getIsExecutingPlay()
           }}
         >
