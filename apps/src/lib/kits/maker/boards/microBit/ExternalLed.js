@@ -21,12 +21,12 @@ export default class ExternalLed {
   }
 
   blink(delay) {
-    // simpleToggle only calls on clearDigitalOutput, not off so that it doesn't turn off blinking.
-    const simpleToggle = () => {
+    // toggleInternal only calls on clearDigitalOutput, not off so that it doesn't turn off blinking.
+    const toggleInternal = () => {
       return this.isOn ? this.clearDigitalOutput() : this.on();
     };
     this.off(); // Reset Led.
-    this.blinkIntervalID = setInterval(simpleToggle.bind(this), delay);
+    this.blinkIntervalID = setInterval(toggleInternal.bind(this), delay);
   }
 
   clearDigitalOutput() {
