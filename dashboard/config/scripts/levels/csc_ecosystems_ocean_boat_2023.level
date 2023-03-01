@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-22T20:21:58.000Z",
-  "level_num": "custom",
-  "user_id": 18528,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -12,7 +8,8 @@
       "GamelabJr"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "oceanSetup"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -47,8 +44,12 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:58.490+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2\"}]",
+  "created_at": "2023-02-22T20:21:58.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:58.490+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2\"},{\"changed_at\":\"2023-02-28 15:09:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
