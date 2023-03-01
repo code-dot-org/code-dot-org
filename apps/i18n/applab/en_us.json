@@ -392,6 +392,8 @@
   "makerSetupSignIn": "Open up the Code.org Maker App and sign in to Code.org.",
   "makerSetupPageTitle": "CS Discoveries Maker Toolkit IT Setup",
   "makerSetupUnsupportedBrowser": "Your current browser is not supported at this time. Please install the latest version of [Google Chrome](https://www.google.com/chrome/browser).",
+  "makerSetupUpdateMBFirmata": "Update micro:bit",
+  "makerSetupUpdateMBFirmataDescription": "Update micro:bit with latest version of Firmata",
   "makerSetupVerifyComponents": "Oh no! Something unexpected went wrong while verifying the board components.",
   "makerSetupWebSerialConnectToComputer": "Connect the Circuit Playground to your computer.",
   "makerSetupWebSerialConnectToBoardButton": "Press the “Connect to Board” button below.",
