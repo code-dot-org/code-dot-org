@@ -4,6 +4,11 @@ import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
+/*
+Represents the (collection of) tables in Curriculum Quick Assign.
+They display side by side as if they were columns, but leaving them
+as independent tables makes styling them simpler.
+*/
 export default function QuickAssignTable({
   marketingAudience,
   courseOfferings,
@@ -36,6 +41,11 @@ export default function QuickAssignTable({
     );
   };
 
+  /*
+  Responsible for rendering the category headers and calling the next
+  function to render the course offerings. This 'key=' uses the header as
+  a unique identifier, not to be confused with a JSON key (above).
+  */
   const renderRows = courseData => {
     const headers = Object.keys(courseData);
     return headers.map(header => (
@@ -48,6 +58,10 @@ export default function QuickAssignTable({
     ));
   };
 
+  /*
+  Redners all the radio type inputs within each table. Only one can be
+  selected at a time. Selecting one immediately calls updateCourse.
+  */
   const renderOfferings = courseValues => {
     const values = courseValues.map(cv => cv.display_name);
     return values.map(display_name => (
