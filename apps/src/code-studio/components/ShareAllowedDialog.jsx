@@ -87,7 +87,8 @@ class ShareAllowedDialog extends React.Component {
     onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
-    userSharingDisabled: PropTypes.bool
+    userSharingDisabled: PropTypes.bool,
+    inRestrictedShareMode: PropTypes.bool
   };
 
   state = {
@@ -181,6 +182,7 @@ class ShareAllowedDialog extends React.Component {
       canPrint,
       canPublish,
       isPublished,
+      inRestrictedShareMode,
       canShareSocial,
       appType,
       selectedSong,
@@ -194,6 +196,9 @@ class ShareAllowedDialog extends React.Component {
       channelId
     } = this.props;
 
+    // inRestrictedShareMode overrides canPublish and canShareSocial
+    const publishAllowed = canPublish && !inRestrictedShareMode;
+    const socialShareAllowed = canShareSocial && !inRestrictedShareMode;
     const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
@@ -335,7 +340,7 @@ class ShareAllowedDialog extends React.Component {
                     <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
                     <span>{i18n.sendToPhone()}</span>
                   </a>
-                  {canPublish && !isPublished && (
+                  {publishAllowed && !isPublished && (
                     <button
                       type="button"
                       id="share-dialog-publish-button"
@@ -349,7 +354,7 @@ class ShareAllowedDialog extends React.Component {
                       {i18n.publish()}
                     </button>
                   )}
-                  {canPublish && isPublished && (
+                  {publishAllowed && isPublished && (
                     <PendingButton
                       id="share-dialog-unpublish-button"
                       isPending={isUnpublishPending}
@@ -368,7 +373,7 @@ class ShareAllowedDialog extends React.Component {
                     </a>
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
-                  {canShareSocial && !isUnpublishPending && (
+                  {socialShareAllowed && !isUnpublishPending && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -417,10 +422,17 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-                {canPublish && !isPublished && !hasThumbnail && (
+                {publishAllowed && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
                     <span style={{fontSize: 12}} className="thumbnail-warning">
                       {i18n.thumbnailWarning()}
+                    </span>
+                  </div>
+                )}
+                {inRestrictedShareMode && (
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.restrictedShareInfo()}
                     </span>
                   </div>
                 )}
@@ -555,7 +567,8 @@ export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
     isOpen: state.shareDialog.isOpen,
-    isUnpublishPending: state.shareDialog.isUnpublishPending
+    isUnpublishPending: state.shareDialog.isUnpublishPending,
+    inRestrictedShareMode: state.project.inRestrictedShareMode
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
