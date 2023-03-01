@@ -1,5 +1,7 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
@@ -19,10 +21,7 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
         sections={{}}
-        section={{
-          ...testSection,
-          participantType: 'student'
-        }}
+        section={testSection}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -58,10 +57,7 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
         sections={{}}
-        section={{
-          ...noStudentsSection,
-          participantType: 'student'
-        }}
+        section={noStudentsSection}
         isSaveInProgress={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
@@ -99,8 +95,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.picture,
-          participantType: 'student'
+          loginType: SectionLoginType.picture
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -139,8 +134,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.picture,
-          participantType: 'student'
+          loginType: SectionLoginType.picture
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -179,8 +173,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.email,
-          participantType: 'student'
+          loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -204,8 +197,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.email,
-          participantType: 'student'
+          loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -229,8 +221,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.google_classroom,
-          participantType: 'student'
+          loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -254,8 +245,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.google_classroom,
-          participantType: 'student'
+          loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -279,8 +269,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...testSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -304,8 +293,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -331,8 +319,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -358,8 +345,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -384,8 +370,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -410,8 +395,7 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{
           ...noStudentsSection,
-          loginType: SectionLoginType.clever,
-          participantType: 'student'
+          loginType: SectionLoginType.clever
         }}
         isSaveInProgress={false}
         hiddenLessonState={{}}
@@ -423,5 +407,111 @@ describe('EditSectionForm', () => {
     );
     const lessonExtrasField = wrapper.find('LessonExtrasField');
     assert.equal(lessonExtrasField.length, 1);
+  });
+
+  it('sends completed events when save is clicked', () => {
+    const wrapper = shallow(
+      <EditSectionForm
+        isNewSection={true}
+        initialUnitId={7}
+        initialCourseVersionId={5}
+        initialCourseOfferingId={3}
+        title="Create a new section"
+        handleSave={async () => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
+        sections={{}}
+        section={testSection}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    wrapper.find('Button[text="Save"]').simulate('click');
+    assert(analyticsSpy.calledTwice);
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
+    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
+      sectionCurriculumLocalizedName:
+        courseOfferings[testSection.courseOfferingId].display_name,
+      sectionCurriculumVersionYear: '2017',
+      sectionGrade: testSection.grades[0],
+      sectionLockSelection: testSection.restrictSection,
+      sectionName: testSection.name,
+      sectionPairProgramSelection: testSection.pairingAllowed,
+      sectionUnitId: null
+    });
+
+    assert.equal(
+      analyticsSpy.getCall(1).firstArg,
+      'Section Curriculum Assigned'
+    );
+    assert.deepEqual(analyticsSpy.getCall(1).lastArg, {
+      sectionName: testSection.name,
+      sectionId: testSection.id,
+      sectionLoginType: testSection.loginType,
+      previousUnitId: 7,
+      previousCourseId: 3,
+      previousCourseVersionId: 5,
+      previousVersionYear: '2022',
+      newUnitId: null,
+      newCourseId: courseOfferings[testSection.courseOfferingId].id,
+      newCourseVersionId: Object.values(
+        courseOfferings[testSection.courseOfferingId].course_versions
+      ).find(cv => cv.key === '2017').id,
+      newVersionYear: '2017'
+    });
+
+    analyticsSpy.restore();
+  });
+
+  it('sends cancelled event when cancel is clicked', () => {
+    const wrapper = shallow(
+      <EditSectionForm
+        isNewSection={true}
+        initialUnitId={7}
+        initialCourseVersionId={5}
+        initialCourseOfferingId={3}
+        title="Create a new section"
+        handleSave={async () => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
+        sections={{}}
+        section={testSection}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    wrapper.find('Button[text="Cancel"]').simulate('click');
+    assert(analyticsSpy.calledOnce);
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
+    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
+      sectionCurriculumLocalizedName:
+        courseOfferings[testSection.courseOfferingId].display_name,
+      sectionCurriculumVersionYear: '2017',
+      sectionGrade: testSection.grades[0],
+      sectionLockSelection: testSection.restrictSection,
+      sectionName: testSection.name,
+      sectionPairProgramSelection: testSection.pairingAllowed,
+      sectionUnitId: null
+    });
+
+    analyticsSpy.restore();
   });
 });

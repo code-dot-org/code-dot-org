@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ Untuk mendapatkan pengalaman terbaik dengan semua konten Code.org, kami sarankan
 | **Untuk menggunakan Internet Simulator**                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Untuk menggunakan Web Lab**                                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Untuk menggunakan Tombol Berbagi Google Classroom**                                   | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                             | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Detail Dukungan untuk Ponsel dan Tablet
 
@@ -100,7 +101,7 @@ Kami menggunakan [YouTube](https://www.youtube.com) untuk menyematkan video ke C
 
 Sebelum memulai kursus online Code.org, cobalah memutar video berikut untuk memastikan bahwa Anda sudah siap melakukannya.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Inilah pemutar video yang digunakan dalam kurikulum. Pemutar ini akan mencoba menampilkan video melalui YouTube dan, jika YouTube diblokir, akan menampilkan video yang dihosting oleh Code.org dengan menggunakan pemutar "fallback" kami.
 

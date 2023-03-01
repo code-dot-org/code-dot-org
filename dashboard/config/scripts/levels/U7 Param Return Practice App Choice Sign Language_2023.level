@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-10-19T18:21:59.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -75,7 +71,6 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "true",
-    "makerlab_enabled": "false",
     "long_instructions": "<img src=\"https://images.code.org/3d06b57bcb3ba95619d4c6049fb1f376-image-1649451037700.png\" style=\"float:right; width:250px\">\r\n\r\n### Sign Language Quiz \r\n\r\nThis app allows the user to test their knowledge of the sign language alphabet. The user enter a text guess based on the image. Then an output of a smiley or frowny face is shown. If the answer is incorrect the correct answer is given.\r\n\r\n# Do This\r\n\r\nRewrite the `checkAnswer` function to integrate a parameter so that the `selection` global variable is no longer necessary.\r\n\r\n\r\n",
     "parent_level_id": 18132,
     "mini_rubric": "false",
@@ -90,12 +85,16 @@
     "display_name": "Sign Language Quiz",
     "bubble_choice_description": "Rewrite a function so that one of the global variables is no longer necessary.",
     "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sign_language_A.svg/91px-Sign_language_A.svg.png",
-    "encrypted_examples": "BvStPkaYlCDlSnOwZKbGYXzyTLzm/NCwtFKhzvSih+qMFkJtWMuTxeqO0ava\nxJzW2Ym4NsFa+Ni790Sop6gXfg==\n",
+    "encrypted_examples": "7fnJ2akzx0JOzUIM50lC+jia1Ijie2n6lRPK5lxDbqpAF0AdlwrRPsZmicIs\nz+s4zAZtqQX/asjKmP6/PKfrNw==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-10-19T18:21:59.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:21:59.508+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice App Choice Sign Language\\\"\"],\"cloned_from\":\"U7 Param Return Practice App Choice Sign Language\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:21:59.508+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice App Choice Sign Language\\\"\"],\"cloned_from\":\"U7 Param Return Practice App Choice Sign Language\"},{\"changed_at\":\"2022-11-18 01:00:00 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

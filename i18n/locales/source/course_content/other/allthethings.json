@@ -516,7 +516,14 @@
   },
   "https://studio.code.org/s/allthethings/lessons/18/levels/9": {
     "short_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
-    "long_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\nEnd of instructions that are long."
+    "long_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\nEnd of instructions that are long.",
+    "start_html": {
+      "Button": "Button",
+      "text": "text",
+      "Option 1": "Option 1",
+      "Option 2": "Option 2",
+      "multiline text area initial contents ": "multiline text area initial contents "
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/18/levels/10": {
     "short_instructions": "Backed by a template #1. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script). ",
@@ -529,7 +536,11 @@
   },
   "https://studio.code.org/s/allthethings/lessons/18/levels/12": {
     "short_instructions": "This level cloned from \"U3 Digital Assistant Target\"",
-    "long_instructions": "# Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\n\n# Introduction to the Digital Assistant\n\n**While digital assistants may seem like magic, they are just elaborate computer programs that parse, or process, text** looking for combinations of words to make decisions about what to reply.\n\nOver the next few lessons, **you're going to build up your own digital assistant that responds \"intelligently\" to a user's question**, by making a decision about what to reply based on the contents.\n\nYou'll now **explore a demo digital assistant**, Movie Bot, that represents the kind of program that you'll build up to. Try out some of the prompts below and also try your own. You'll quickly find the limits of what this program can and can't do.\n\n# Do this\n\n**Run Movie Bot. In the _'enter your question here'_ input, type each of the following prompts and hit 'enter'**\n\n-   'help'\n-   'What is the best PG comedy movie ever?'\n-   'What PG comedy movie should I watch next?'\n-   'Could you please tell me the best romance movie?'\n-   'I waNT To WatCH a MovIE!!!'\n-   'What is the capital of Kentucky?'\n-   Play around! Ask more questions of Movie Bot and make a prediction about what logic it's using to reply"
+    "long_instructions": "# Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\n\n# Introduction to the Digital Assistant\n\n**While digital assistants may seem like magic, they are just elaborate computer programs that parse, or process, text** looking for combinations of words to make decisions about what to reply.\n\nOver the next few lessons, **you're going to build up your own digital assistant that responds \"intelligently\" to a user's question**, by making a decision about what to reply based on the contents.\n\nYou'll now **explore a demo digital assistant**, Movie Bot, that represents the kind of program that you'll build up to. Try out some of the prompts below and also try your own. You'll quickly find the limits of what this program can and can't do.\n\n# Do this\n\n**Run Movie Bot. In the _'enter your question here'_ input, type each of the following prompts and hit 'enter'**\n\n-   'help'\n-   'What is the best PG comedy movie ever?'\n-   'What PG comedy movie should I watch next?'\n-   'Could you please tell me the best romance movie?'\n-   'I waNT To WatCH a MovIE!!!'\n-   'What is the capital of Kentucky?'\n-   Play around! Ask more questions of Movie Bot and make a prediction about what logic it's using to reply",
+    "start_html": {
+      "Movie Bot": "Movie Bot",
+      "Ask me a question.": "Ask me a question."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/18/levels/13": {
     "short_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
@@ -567,7 +578,11 @@
     "teacher_markdown": "The constraint of working with only 4 commands is important. (See: “What’s the Point?” below.) If students come to the class with prior knowledge of programming they might try to go outside these constraints to reduce the number of lines of code.  \n\n                                    If you see students using commands beyond the 4 provided - or using parameters with those commands like: `moveForward(150)`, you should tell them that they are not solving the problem; the problem is to create the images using only the 4 commands provided."
   },
   "https://studio.code.org/s/allthethings/lessons/18/levels/21": {
-    "long_instructions": "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## You try it -- Text Password Checker\n\n**Key idea**: You can use `==` to compare strings as well as numbers.  \n\n-   Let's use an if-statement in an event handler to compare text that a user inputs in a UI element.\n\n**The setup:**\n\n-   Note the setup in Design Mode\n-   There are two images: a red lock, and a green \"unlock\".\n-   The green \"unlock\" is _hidden_ at the start.\n\n## Do this:\n\n**Add an if-statement to the event handler to check the password and display the \"unlock\" only if the password is correct** \n\n-   You can use `==` to compare the text you get from the *password\\_input* text box and a string you want to use as the password. The boolean expression you should use should look like this:\n\n[][0]\n\n-   If the user entered the correct password then **show** the green \"unlock\" and **hide** the red lock.\n    -   We've provide the code to hide and show the images. You just need to add the if-statement.\n-   Otherwise do nothing.  They can try again."
+    "long_instructions": "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n\n## You try it -- Text Password Checker\n\n**Key idea**: You can use `==` to compare strings as well as numbers.  \n\n-   Let's use an if-statement in an event handler to compare text that a user inputs in a UI element.\n\n**The setup:**\n\n-   Note the setup in Design Mode\n-   There are two images: a red lock, and a green \"unlock\".\n-   The green \"unlock\" is _hidden_ at the start.\n\n## Do this:\n\n**Add an if-statement to the event handler to check the password and display the \"unlock\" only if the password is correct** \n\n-   You can use `==` to compare the text you get from the *password\\_input* text box and a string you want to use as the password. The boolean expression you should use should look like this:\n\n[][0]\n\n-   If the user entered the correct password then **show** the green \"unlock\" and **hide** the red lock.\n    -   We've provide the code to hide and show the images. You just need to add the if-statement.\n-   Otherwise do nothing.  They can try again.",
+    "start_html": {
+      "Enter The Passphrase": "Enter The Passphrase",
+      "Login": "Login"
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/18/levels/22": {
     "long_instructions": "# It's a Word Search\n\nOn the left side of the screen, click \"Run\" to start the word search.\n\nWorking with a team find the following words in the grid. They may be horizontal, vertical, or diagonal in any direction. \n\n-   DEFINE \n-   PREPARE\n-   TRY\n-   REFLECT\n-   PROBLEM\n-   SOLVE\n-   COMPUTER\n-   SCIENCE\n\n Once you have found the words (or your teacher calls time), click \"Finish\" to move to the next activity."
@@ -2287,7 +2302,7 @@
     }
   },
   "https://studio.code.org/s/allthethings/lessons/32/levels/1": {
-    "long_instructions": "Make an awesome web page!\n\n1.  Look at the web page we gave you to start with. Look how lame it is. 1996 just called and wants its web page back. But don't get depressed - YOU can fix it!\n2.  Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\n3.  Add a text-align attribute to the body style in style.css to center the image and text horizontally\n4.  Change index.html to include an inspiring hashtag\n5.  Add a color attribute to the p style in style.css to make the inspiring hashtag white\n6.  Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
+    "long_instructions": "Make an awesome web page!\n\n1.  Look at the web page we gave you to start with. Let's improve it!\n2.  Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\n3.  Add a text-align attribute to the body style in style.css to center the image and text horizontally\n4.  Change index.html to include an inspiring hashtag\n5.  Add a color attribute to the p style in style.css to make the inspiring hashtag white\n6.  Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
   },
   "https://studio.code.org/s/allthethings/lessons/33/levels/1": {
     "sublevels": {
@@ -2557,7 +2572,7 @@
       "AllTheThings_StandaloneVideo": {
       },
       "Web Lab 1": {
-        "long_instructions": "Make an awesome web page!\r\n\r\n1. Look at the web page we gave you to start with. Look how lame it is. 1996 just called and wants its web page back. But don't get depressed - YOU can fix it!\r\n2. Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\r\n3. Add a text-align attribute to the body style in style.css to center the image and text horizontally\r\n4. Change index.html to include an inspiring hashtag\r\n5. Add a color attribute to the p style in style.css to make the inspiring hashtag white\r\n6. Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
+        "long_instructions": "Make an awesome web page!\r\n\r\n1. Look at the web page we gave you to start with. Let's improve it!\r\n2. Add a background-color attribute in the body style in style.css to make the page background color 'darkcyan'\r\n3. Add a text-align attribute to the body style in style.css to center the image and text horizontally\r\n4. Change index.html to include an inspiring hashtag\r\n5. Add a color attribute to the p style in style.css to make the inspiring hashtag white\r\n6. Add a font-size attribute to the p style in style.css to make your inspiring hashtag REALLY BIG! (Try 24px and 3em and see what happens.)"
       },
       "Overworld Chop Tree - allthethings": {
         "short_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the “destroy block” command to chop it down."
@@ -2790,7 +2805,26 @@
   },
   "https://studio.code.org/s/allthethings/lessons/44/levels/5": {
     "display_name": "Word Search",
-    "long_instructions": "# The Neighborhood Set-Up Widget\n\nThis widget creates a JSON string that can be copied to a level to display a specific layout of The Neighborhood.\n\n1.  Use the slider to select the size of the Neighborhood. \n2.  Click on a tile to select it. \n3.  Choose a category from the dropdown, and click on a tile to set the image to the selected tile. \n\nMany images are bigger than 1x1. In these cases, you will need to select each individual tile and place them one by one.\n\nThe final step is to copy the output and paste it in the appropriate field in a level on Levelbuilder.\n\n## Edit an existing level\n\n1.  Copy the JSON string from the field in levelbuilder\n2.  Paste the data in a one-line converter like [this one][0]. \n3.  Copy the string from the converter.\n4.  Click the \"Manual\" button. \n5.  Paste in the String.\n6.  Click each tile to edit as normal. "
+    "long_instructions": "# The Neighborhood Set-Up Widget\n\nThis widget creates a JSON string that can be copied to a level to display a specific layout of The Neighborhood.\n\n1.  Use the slider to select the size of the Neighborhood. \n2.  Click on a tile to select it. \n3.  Choose a category from the dropdown, and click on a tile to set the image to the selected tile. \n\nMany images are bigger than 1x1. In these cases, you will need to select each individual tile and place them one by one.\n\nThe final step is to copy the output and paste it in the appropriate field in a level on Levelbuilder.\n\n## Edit an existing level\n\n1.  Copy the JSON string from the field in levelbuilder\n2.  Paste the data in a one-line converter like [this one][0]. \n3.  Copy the string from the converter.\n4.  Click the \"Manual\" button. \n5.  Paste in the String.\n6.  Click each tile to edit as normal. ",
+    "start_html": {
+      "8": "8",
+      "32": "32",
+      "Categories": "Categories",
+      "Benches": "Benches",
+      "Blue House": "Blue House",
+      "Bodega": "Bodega",
+      "Food Truck": "Food Truck",
+      "Landscape": "Landscape",
+      "Painter": "Painter",
+      "Red House": "Red House",
+      "Sidewalk": "Sidewalk",
+      "Taxi": "Taxi",
+      "Wall": "Wall",
+      "Other Objects": "Other Objects",
+      "Selected Paint Can Amount: 0": "Selected Paint Can Amount: 0",
+      "Manual": "Manual",
+      "DEBUG CONSOLE": "DEBUG CONSOLE"
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/44/levels/6": {
     "long_instructions": "This is a sample Java Lab level.",

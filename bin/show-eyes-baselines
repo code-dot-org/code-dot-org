@@ -85,7 +85,7 @@ end
 
 def main
   if ARGV.length != 2
-    $stderr.puts "usage: #{$0} <branch_name_1> <branch_name_2>"
+    warn "usage: #{$0} <branch_name_1> <branch_name_2>"
     exit(1)
   end
 

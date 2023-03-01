@@ -1,6 +1,13 @@
 import React from 'react';
 import {action} from '@storybook/addon-actions';
 import {UnconnectedLibraryTable as LibraryTable} from './LibraryTable';
+import {reduxStore} from '../../../.storybook/decorators';
+import {Provider} from 'react-redux';
+
+export default {
+  title: 'LibraryTable',
+  component: LibraryTable
+};
 
 const personalProjectsList = [
   {
@@ -36,22 +43,15 @@ const DEFAULT_PROPS = {
   unpublishProjectLibrary: action('unpublishing')
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('Projects/LibraryTable', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Libraries',
-        description: 'Table of currently published project libraries',
-        story: () => <LibraryTable {...DEFAULT_PROPS} />
-      },
-      {
-        name: 'No libraries',
-        description: 'Display when the user has no published project libraries',
-        story: () => (
-          <LibraryTable {...DEFAULT_PROPS} personalProjectsList={[]} />
-        )
-      }
-    ]);
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <LibraryTable {...DEFAULT_PROPS} {...args} />
+  </Provider>
+);
+
+export const Default = Template.bind({});
+
+export const NoLibraries = Template.bind({});
+NoLibraries.args = {
+  personalProjectsList: []
 };

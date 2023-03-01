@@ -49,8 +49,9 @@ class AnimationPicker extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -121,9 +122,12 @@ class AnimationPicker extends React.Component {
           navigable={this.props.navigable}
           defaultQuery={this.props.defaultQuery}
           hideBackgrounds={this.props.hideBackgrounds}
-          canDraw={this.props.canDraw}
+          hideCostumes={this.props.hideCostumes}
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
+          shouldRestrictAnimationUpload={
+            this.props.shouldRestrictAnimationUpload
+          }
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}

@@ -1,5 +1,6 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
+  before_action :redirect_unit_group, only: [:show, :index]
   before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
   before_action :find_reference_guides, only: [:show, :edit, :edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
@@ -80,6 +81,16 @@ class ReferenceGuidesController < ApplicationController
       where(course_version_id: course_version_id, parent_reference_guide_key: parent_key).
       order('position').
       last&.position || 0) + 1
+  end
+
+  def redirect_unit_group
+    course_name = params[:course_course_name]
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if UnitGroup.family_names.include?(course_name)
+      unit_group = UnitGroup.latest_stable_version(course_name)
+      redirect_to action: params[:action], course_course_name: unit_group.name, key: params[:key] if unit_group
+    end
   end
 
   def find_reference_guide

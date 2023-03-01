@@ -8,6 +8,7 @@ import React from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
 import {getStore} from '@cdo/apps/redux';
+import i18n from '@cdo/locale';
 
 class ChallengeDialog extends React.Component {
   static propTypes = {
@@ -66,7 +67,11 @@ class ChallengeDialog extends React.Component {
         hideCloseButton={true}
         hideBackdrop={this.props.hideBackdrop}
       >
-        <img className="modal-image" src={this.props.avatar} />
+        <img
+          className="modal-image"
+          src={this.props.avatar}
+          alt={i18n.cheeringInstructorAltText()}
+        />
         <div
           style={{
             ...styles.banner,

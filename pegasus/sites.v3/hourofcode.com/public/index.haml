@@ -95,8 +95,7 @@ social:
     .wrapper
       %h2=hoc_s(:hoc_live_join_us)
       %h3=hoc_s(:hoc_homepage_join_the_movement_description)
-      -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
-        = view :home_signup, hoc_mode: hoc_mode
+      = view :home_signup, hoc_mode: hoc_mode
 
   -# What is HoC?
   -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.

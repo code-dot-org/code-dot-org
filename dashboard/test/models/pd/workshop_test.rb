@@ -583,7 +583,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_start' do
     # 5 workshops in date order, each with 1-5 sessions (only the first matters)
-    workshops = 5.times.map do |i|
+    workshops = Array.new(5) do |i|
       build :workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
     end
     # save out of order
@@ -883,7 +883,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     # 2 enrollments without attendance
-    enrollments = 2.times.map do
+    enrollments = Array.new(2) do
       create :pd_enrollment, workshop: @workshop
     end
 

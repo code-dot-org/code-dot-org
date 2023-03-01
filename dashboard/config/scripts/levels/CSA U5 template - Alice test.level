@@ -25,16 +25,13 @@
       "chai.jpg": "b458b7b8-aa84-417f-914b-e0fb079ab764.jpg",
       "cricket.jpg": "aead0704-3a48-4e8b-80b6-57ce4a3fc9fb.jpg",
       "Screen Shot 2022-11-04 at 1.24.16 PM.png": "54fcc5d2-d832-41e2-8f0c-89ae325bd3eb.png"
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2022-11-08T06:04:37.000Z",
   "level_num": "custom",
+  "game_id": 68,
+  "created_at": "2022-11-08T06:04:37.000Z",
   "user_id": 16889,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2022-11-08T06:04:37.156+00:00\",\"changed\":[\"cloned from \\\"CSA U5 Personal Narrative PBT 2022\\\"\"],\"cloned_from\":\"CSA U5 Personal Narrative PBT 2022\"},{\"changed_at\":\"2022-11-08 06:04:47 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:06:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:06:55 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:07:15 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:07:17 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:07:55 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:09:29 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:09:52 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:10:37 +0000\",\"changed\":[\"name\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

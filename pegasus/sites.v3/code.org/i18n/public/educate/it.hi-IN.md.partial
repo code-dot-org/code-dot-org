@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ theme: responsive
 | **इंटरनेट सिम्युलेटर का उपयोग करने के लिए**                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **वेब लैब का उपयोग करने के लिए**                                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **गूगल क्लासरूम शेयर बटन का उपयोग करने के लिए**                                  | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                      | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## मोबाइल और टैबलेट समर्थन विवरण
 
@@ -100,7 +101,7 @@ theme: responsive
 
 Code.org के ऑनलाइन पाठ्यक्रमों को शुरू करने से पहले, यह सुनिश्चित करने के लिए नीचे दिए गए वीडियो के प्लेबैक का परीक्षण करें कि आप शुरू करने के लिए तैयार हैं।
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 यह पूरे पाठ्यक्रम में उपयोग किया जाने वाला प्लेयर है। यह YouTube के जरिए वीडियो दिखाने का प्रयास करेगा और, यदि YouTube ब्लॉक है, तो इसके बजाय हमारे "fallback" प्लेयर का उपयोग करके Code.org द्वारा होस्ट किए गए वीडियो दिखाएं।
 

@@ -4,11 +4,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {
+  FormGroup,
+  Button,
+  ControlLabel,
+  HelpBlock,
+  Alert
+} from 'react-bootstrap';
 import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
+import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -23,6 +30,7 @@ const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const CSP = 'CS Principles';
+const ADMINCOUNSELOR = 'Admin/Counselor Workshop';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -40,12 +48,14 @@ const DESCRIBE_ROLES = [
   'Other'
 ];
 
-const ROLES = [
+const CSF_ROLES = [
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
   'Librarian'
 ].concat(DESCRIBE_ROLES);
+
+const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
 
 const GRADES_TEACHING = [
   'Pre-K',
@@ -109,7 +119,9 @@ export default class EnrollForm extends React.Component {
       first_name: this.props.first_name,
       email: this.props.email,
       isSubmitting: false,
-      errors: {}
+      errors: {},
+      showFormErrorMessage: false,
+      submissionErrorMessage: ''
     };
   }
 
@@ -149,9 +161,13 @@ export default class EnrollForm extends React.Component {
   };
 
   handleClickRegister = () => {
+    this.setState({showFormErrorMessage: false});
+    this.setState({submissionErrorMessage: ''});
     if (this.validateRequiredFields()) {
       this.setState({isSubmitting: true});
       this.submit();
+    } else {
+      this.setState({showFormErrorMessage: true});
     }
   };
 
@@ -275,6 +291,11 @@ export default class EnrollForm extends React.Component {
       data: JSON.stringify(params),
       complete: result => {
         this.setState({isSubmitting: false});
+        result?.responseJSON?.workshop_enrollment_status === 'error' &&
+          this.setState({
+            submissionErrorMessage:
+              result?.responseJSON?.error_message || 'unknown error'
+          });
         this.props.onSubmissionComplete(result);
       }
     });
@@ -378,6 +399,10 @@ export default class EnrollForm extends React.Component {
       'I don’t have experience teaching any of these courses'
     ]);
 
+    const roles =
+      (this.props.workshop_course === CSF && CSF_ROLES) ||
+      (this.props.workshop_course === ADMINCOUNSELOR && ADMIN_COUNSELOR_ROLES);
+
     return (
       <form id="enroll-form">
         <p>
@@ -451,7 +476,8 @@ export default class EnrollForm extends React.Component {
           school_info={this.state.school_info}
           errors={this.state.errors}
         />
-        {this.props.workshop_course === CSF && (
+        {(this.props.workshop_course === CSF ||
+          this.props.workshop_course === ADMINCOUNSELOR) && (
           <FormGroup>
             <FormGroup
               validationState={
@@ -470,7 +496,7 @@ export default class EnrollForm extends React.Component {
                 placeholder={null}
                 value={this.state.role}
                 onChange={this.handleRoleChange}
-                options={ROLES.map(r => ({value: r, label: r}))}
+                options={roles.map(r => ({value: r, label: r}))}
               />
               <HelpBlock>{this.state.errors.role}</HelpBlock>
               {this.state && DESCRIBE_ROLES.includes(this.state.role) && (
@@ -482,22 +508,24 @@ export default class EnrollForm extends React.Component {
                 />
               )}
             </FormGroup>
-            <ButtonList
-              id="grades_teaching"
-              key="grades_teaching"
-              answers={gradesTeaching}
-              groupName="grades_teaching"
-              label={gradesLabel}
-              onChange={this.handleChange}
-              selectedItems={this.state.grades_teaching}
-              validationState={
-                this.state.errors.hasOwnProperty('grades_teaching')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={this.state.errors.grades_teaching}
-              type="check"
-            />
+            {this.props.workshop_course !== ADMINCOUNSELOR && (
+              <ButtonList
+                id="grades_teaching"
+                key="grades_teaching"
+                answers={gradesTeaching}
+                groupName="grades_teaching"
+                label={gradesLabel}
+                onChange={this.handleChange}
+                selectedItems={this.state.grades_teaching}
+                validationState={
+                  this.state.errors.hasOwnProperty('grades_teaching')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorText={this.state.errors.grades_teaching}
+                type="check"
+              />
+            )}
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&
@@ -742,6 +770,21 @@ export default class EnrollForm extends React.Component {
         >
           Register
         </Button>
+        {this.state.showFormErrorMessage && (
+          <p style={{color: color.bootstrap_v3_error_text}}>
+            Form errors found. Please check your responses above.
+          </p>
+        )}
+        {this.state.submissionErrorMessage && (
+          <Alert bsStyle="danger" style={{marginTop: 10}}>
+            <p>
+              Sorry, we were unable to enroll you in this workshop because
+              {' ' + this.state.submissionErrorMessage}. Please double check
+              your responses, and if the problem persists, contact{' '}
+              <a href="mailto:support@code.org">support@code.org</a>.
+            </p>
+          </Alert>
+        )}
         <br />
         <br />
         <br />

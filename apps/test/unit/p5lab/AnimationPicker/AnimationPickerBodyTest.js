@@ -9,6 +9,7 @@ import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPi
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
+import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 
 const emptyFunction = function() {};
 
@@ -24,14 +25,15 @@ describe('AnimationPickerBody', function() {
     hideAnimationNames: false,
     navigable: true,
     hideBackgrounds: false,
-    canDraw: true,
+    hideCostumes: false,
     defaultQuery: {
       categoryQuery: '',
       searchQuery: ''
     },
     selectedAnimations: [],
     onAnimationSelectionComplete: emptyFunction,
-    pickerType: PICKER_TYPE.gamelab
+    pickerType: PICKER_TYPE.gamelab,
+    shouldRestrictAnimationUpload: false
   };
 
   describe('upload warning', function() {
@@ -98,30 +100,39 @@ describe('AnimationPickerBody', function() {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideBackgrounds={true} />
       );
-      const items = body.find(AnimationPickerListItem);
-      expect(items.length).to.equal(4);
+      const pickerItems = body.find(AnimationPickerListItem);
+      expect(pickerItems.length).to.equal(3);
+      const uploadButton = body.find(AnimationUploadButton);
+      expect(uploadButton.length).to.equal(1);
     });
 
     it('does shows backgrounds if not hideBackgrounds', function() {
       const body = shallow(<AnimationPickerBody {...defaultProps} />);
-      const items = body.find(AnimationPickerListItem);
-      expect(items.length).to.equal(5);
+      const pickerItems = body.find(AnimationPickerListItem);
+      expect(pickerItems.length).to.equal(4);
+      const uploadButton = body.find(AnimationUploadButton);
+      expect(uploadButton.length).to.equal(1);
+    });
+
+    it('does not show uplaod button if hideUploadButton', function() {
+      const body = shallow(
+        <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
+      );
+      const uploadButton = body.find(AnimationUploadButton);
+      expect(uploadButton.length).to.equal(0);
     });
 
     it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function() {
       const body = shallow(
         <AnimationPickerBody
           {...defaultProps}
-          canDraw={false}
           navigable={false}
+          defaultQuery={{
+            categoryQuery: 'backgrounds',
+            searchQuery: ''
+          }}
         />
       );
-      body.setProps({
-        defaultQuery: {
-          categoryQuery: 'backgrounds',
-          searchQuery: ''
-        }
-      });
       const items = body.find(AnimationPickerListItem);
       expect(items.length).to.equal(1);
     });

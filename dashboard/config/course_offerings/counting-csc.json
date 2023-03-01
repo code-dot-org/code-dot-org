@@ -3,5 +3,9 @@
   "display_name": "Counting Activity",
   "category": "csc",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
+  "grade_levels": "3,4,5",
+  "header": "CS Connections"
 }

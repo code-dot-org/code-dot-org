@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-ecosystem",
-    "serialized_at": "2022-11-04 17:49:17 UTC",
+    "serialized_at": "2023-02-08 23:22:32 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1502,6 +1502,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_survey_L1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1773,6 +1776,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_survey_L2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2069,6 +2075,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_survey_L3"
+        ]
       },
       "bonus": false,
       "seeding_key": {

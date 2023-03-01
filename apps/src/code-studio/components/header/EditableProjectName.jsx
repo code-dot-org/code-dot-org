@@ -16,7 +16,8 @@ import NameFailureError from '../../NameFailureError';
 export const styles = {
   buttonWrapper: {
     float: 'left',
-    display: 'flex'
+    display: 'flex',
+    margin: 0
   },
   buttonSpacing: {
     marginTop: 0,
@@ -72,6 +73,23 @@ class UnconnectedEditProjectName extends React.Component {
     savingName: false
   };
 
+  componentDidMount() {
+    this.nameChangeInput.focus();
+
+    // Cancel when ESC key is released.
+    this.nameChangeInput.addEventListener('keyup', this.onCancel);
+  }
+
+  componentWillUnmount() {
+    this.nameChangeInput.removeEventListener('keyup', this.onCancel);
+  }
+
+  onCancel = event => {
+    if (event.code === 'Escape') {
+      this.props.finishEdit();
+    }
+  };
+
   saveNameChange = () => {
     if (this.state.savingName) {
       return;
@@ -106,37 +124,44 @@ class UnconnectedEditProjectName extends React.Component {
       });
   };
 
+  onSubmit = event => {
+    event.preventDefault();
+    this.saveNameChange();
+  };
+
   render() {
     // Use an uncontrolled input for the "rename" operation so our UI tests
     // can easily interface with it
     return (
-      <div style={styles.buttonWrapper}>
-        <div className="project_name_wrapper header_text">
-          <input
-            type="text"
-            className="project_name header_input"
-            maxLength="100"
-            defaultValue={this.props.projectName}
-            ref={input => {
-              this.nameChangeInput = input;
-            }}
-          />
-        </div>
-        <button
-          type="button"
-          className="project_save header_button header_button_light no-mc"
-          onClick={this.saveNameChange}
-          disabled={this.state.savingName}
-          style={styles.buttonSpacing}
-        >
-          {i18n.save()}
-        </button>
+      <>
+        <form onSubmit={this.onSubmit} style={styles.buttonWrapper}>
+          <div className="project_name_wrapper header_text">
+            <input
+              type="text"
+              className="project_name header_input"
+              maxLength="100"
+              defaultValue={this.props.projectName}
+              ref={input => {
+                this.nameChangeInput = input;
+              }}
+            />
+          </div>
+          <button
+            type="button"
+            className="project_save header_button header_button_light no-mc"
+            onClick={this.saveNameChange}
+            disabled={this.state.savingName}
+            style={styles.buttonSpacing}
+          >
+            {i18n.save()}
+          </button>
+        </form>
         <NameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.props.unsetNameFailure}
         />
-      </div>
+      </>
     );
   }
 }

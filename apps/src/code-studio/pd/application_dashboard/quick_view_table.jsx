@@ -18,7 +18,6 @@ export class QuickViewTable extends React.Component {
     applications: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool
   };
@@ -47,8 +46,6 @@ export class QuickViewTable extends React.Component {
       applicationsDelta: {}
     };
   }
-
-  showLocked = () => this.props.viewType === 'facilitator';
 
   handlePrincipalApprovalButtonsChange = (
     applicationId,
@@ -130,9 +127,7 @@ export class QuickViewTable extends React.Component {
         },
         cell: {
           formatters: [
-            status =>
-              getApplicationStatuses(this.props.viewType)[status] ||
-              _.upperFirst(status)
+            status => getApplicationStatuses()[status] || _.upperFirst(status)
           ],
           transforms: [
             status => ({
@@ -143,93 +138,61 @@ export class QuickViewTable extends React.Component {
       }
     );
 
-    if (this.showLocked()) {
-      columns.push({
-        property: 'locked',
-        cell: {
-          formatters: [this.formatBoolean]
-        },
+    columns.push(
+      {
+        property: 'principal_approval_state',
         header: {
-          label: 'Locked?',
+          label: 'Admin Approval State',
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [
+            // Only show 'Incomplete' or 'Complete' states. Otherwise, the principal_approval_not_required
+            // field shows required states.
+            principal_approval_state =>
+              principal_approval_state?.startsWith(
+                PrincipalApprovalState.inProgress
+              ) ||
+              principal_approval_state?.startsWith(
+                PrincipalApprovalState.complete
+              )
+                ? principal_approval_state
+                : ''
+          ]
+        }
+      },
+      {
+        property: 'principal_approval_not_required',
+        header: {
+          label: 'Admin Approval Required',
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [this.formatPrincipalApprovalCell]
+        }
+      },
+      {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Guidelines',
           transforms: [sortable]
         }
-      });
-    }
-
-    if (this.props.viewType === 'teacher') {
-      columns.push(
-        {
-          property: 'principal_approval_state',
-          header: {
-            label: 'Admin Approval State',
-            transforms: [sortable]
-          },
-          cell: {
-            formatters: [
-              // Only show 'Incomplete' or 'Complete' states. Otherwise, the principal_approval_not_required
-              // field shows required states.
-              principal_approval_state =>
-                principal_approval_state?.startsWith(
-                  PrincipalApprovalState.inProgress
-                ) ||
-                principal_approval_state?.startsWith(
-                  PrincipalApprovalState.complete
-                )
-                  ? principal_approval_state
-                  : ''
-            ]
-          }
-        },
-        {
-          property: 'principal_approval_not_required',
-          header: {
-            label: 'Admin Approval Required',
-            transforms: [sortable]
-          },
-          cell: {
-            formatters: [this.formatPrincipalApprovalCell]
-          }
-        },
-        {
-          property: 'meets_criteria',
-          header: {
-            label: 'Meets Guidelines',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'meets_scholarship_criteria',
-          header: {
-            label: 'Meets Scholarship Requirements',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'friendly_scholarship_status',
-          header: {
-            label: 'Scholarship Teacher?',
-            transforms: [sortable]
-          }
+      },
+      {
+        property: 'meets_scholarship_criteria',
+        header: {
+          label: 'Meets Scholarship Requirements',
+          transforms: [sortable]
         }
-      );
-    } else {
-      columns.push(
-        {
-          property: 'meets_criteria',
-          header: {
-            label: 'Meets Criteria',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'total_score',
-          header: {
-            label: 'Total Score',
-            transforms: [sortable]
-          }
+      },
+      {
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable]
         }
-      );
-    }
+      }
+    );
 
     [
       {property: 'notes', label: 'General Notes'},

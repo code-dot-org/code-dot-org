@@ -837,6 +837,7 @@ vi-VN:
   volunteer_engineer_submission_distance_16: 10 dặm
   volunteer_engineer_submission_distance_24: 15 dặm
   volunteer_engineer_submission_distance_32: 20 dặm
+  volunteer_engineer_submission_distance_80: 50 dặm
   volunteer_engineer_submission_num_volunteers_5: 5 tình nguyện viên
   volunteer_engineer_submission_num_volunteers_10: 10 tình nguyện viên
   volunteer_engineer_submission_num_volunteers_25: 25 tình nguyện viên
@@ -2393,8 +2394,13 @@ vi-VN:
   hoc_overview_dance_2019_subtitle: Code một Bữa Tiệc Khiêu Vũ để chia sẻ với bạn
     bè của bạn. Với sự góp mặt của Katy Perry, Shawn Mendes, Panic! At The Disco,
     Lil Nas X, Jonas Brothers, Nicki Minaj, và 34 nghệ sĩ khác!
+  hoc_overview_dance_2022_subtitle: Hãy lập trình một Bữa tiệc khiêu vũ để chia sẻ
+    với bạn bè của bạn. Với sự góp mặt của Beyoncé, Harry Styles, Lizzo, Lil Nas X,
+    Selena Gomez, âm nhạc từ “Encanto” của Disney và nhiều nghệ sĩ khác!
   hoc_overview_hello_world_2022_subtitle: Hãy chọn trong bốn chủ đề thú vị để lập
     trình các nhân vật tương tác trong thế giới do chính bạn tạo ra.
+  hoc_overview_hello_world_2022_alt_text: Phi hành gia hoạt hình và các nhân vật động
+    vật nổi xung quanh một hình minh họa của trái đất
   hoc_overview_title: Các hoạt động Giờ lập trình đến từ Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Giờ lập trình</a> là phong
     trào toàn cầu tiếp cận hàng chục triệu học sinh ở hơn 180 quốc gia. Bất kỳ ai,
@@ -2472,11 +2478,20 @@ vi-VN:
     một hội thảo Giờ Lập trình miễn phí. Đối với người tham gia ở tất cả các cấp độ
     kỹ năng, lứa tuổi từ 6 tuổi trở lên.
   hoc2018_mc_educators_box3_button: Tìm một hội thảo
+  hoc2022_mc_educators_box3_desc_markdown: 'Hãy tận dụng điều này theo nhu cầu [khóa
+    học miễn phí](%{free_course_link}) hoặc đăng ký toàn bộ lớp học để tham dự hội
+    thảo Giờ lập trình trực tiếp với giáo viên khách mời. Được cung cấp nhiều lần
+    trong CSEW, ngày 6–11 tháng 12. '
+  hoc2022_mc_educators_box3_button: Đăng ký ngay
   hoc2018_mc_educators_box4_title: Tiếp cận nhiều nguồn tài nguyên về khoa học máy
     tính hơn
   hoc2018_mc_educators_box4_desc: Tạo ra thay đổi trong cộng đồng của bạn với những
     nguồn tài nguyên kỹ năng số và giáo dục khoa học máy tính từ Microsoft.
   hoc2018_mc_educators_box4_button: Khám phá các tài nguyên
+  hoc2022_mc_educators_box4_desc: Truyền lửa đam mê ngành STEM cho học viên K-12 với
+    200 giờ chương trình khoa học máy tính, từ khối đến python, được hỗ trợ phát triển
+    chuyên môn.
+  hoc2022_mc_educators_box4_button: Tiếp tục học
   hoc2018_mc_watch_videos: Trước khi bạn bắt đầu, hãy xem một trong những video truyền
     cảm hứng này
   hoc2018_mc_videos_more: Thêm <a href='%{inspiring_videos_playlist}'>video truyền
@@ -2660,6 +2675,15 @@ vi-VN:
   hoc2021_mc_mee_ai_title: AI For Good (AI vì những điều tốt đẹp)
   hoc2021_mc_mee_ai_description: 'Khám phá AI với học viên của bạn và học cách viết
     code trong Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Minecraft Thoát khỏi công trình
+  hoc2022_mc_mee_description: 'Hãy thoát khỏi biệt thự bí ẩn trước bình minh và nhận
+    một triệu viên ngọc lục bảo! Hướng dẫn Minecraft Giờ lập trình mới hiện đã có
+    trong Minecraft: Phiên bản giáo dục cho Windows, Mac, Chromebook, iPad và điện
+    thoại. Hãy bắt đầu với các tài liệu, khóa đào tạo và video miễn phí dành cho giáo
+    viên. '
+  hoc2022_mc_mee_timecraft_description: 'Hãy du hành ngược về quá khứ để giải cứu
+    tương lai trong bài học lập trình miễn phí trong Minecraft: Phiên bản giáo dục
+    này.'
   footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
     các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
     / hoặc các quốc gia khác.
@@ -2748,6 +2772,10 @@ vi-VN:
   ai_ecs: 'ECS: Trí tuệ nhân tạo (AI)'
   ai_ecs_description: Học phần thay thế mới cho chương trình Khám phá Khoa học Máy
     tính (ECS).
+  ai_aiedu_intro: 'AiEdu: Giới thiệu về trí tuệ nhân tạo'
+  ai_aiedu_intro_description: Giới thiệu về AI là một chương trình giảng dạy miễn
+    phí, sáng tạo và phù hợp với văn hóa, nơi sinh viên phát triển kiến thức khái
+    niệm về AI là gì và cách nó được sử dụng trong thế giới thực.
   ai_elements: Các yếu tố của AI
   ai_elements_description: Loạt các khóa học trực tuyến miễn phí do Reaktor và Đại
     học Helsinki tổ chức.
@@ -2772,10 +2800,18 @@ vi-VN:
     nhiều cách để thử nghiệm khoa học máy tính!
   hoc2022_cta_primary: Xem thông tin mới
   hoc2022_cta_secondary: Thử các hoạt động khác
+  hoc2022_landing_page_explore_title: Khám phá
   hoc2022_landing_page_explore_description: 'Hãy mở ra cánh cửa tới những chân trời
     mới với khoa học máy tính! '
+  hoc2022_landing_page_play_title: Chơi
   hoc2022_landing_page_play_description: Hãy chiếm sân và ghi bàn nào!
   hoc2022_landing_page_create_title: Tạo
   hoc2022_landing_page_create_description: Hãy làm gì đó thật độc đáo và tuyệt vời
     nào!
+  hoc2022_landing_page_banner_alt_left: Người ngoài hành tinh nhảy múa bên cạnh Sao
+    Thổ trong không gian
+  hoc2022_landing_page_banner_alt_right: Robot rê bóng trong không gian trước tên
+    lửa đang cất cánh
   try_it_yourself: Bạn tự mình thử đi!
+  try_an_activity: Thử một hoạt động
+  see_more_activities: Thử các hoạt động khác

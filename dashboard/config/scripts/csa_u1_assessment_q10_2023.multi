@@ -33,3 +33,7 @@ III. `Cookie` is a subclass of `Dessert`
 
 IV. `Cookie` is a superclass of `Food`
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The name of the superclass is indicated after the `extends` keyword. In this example, `Dessert` is a subclass of the `Food` class and `Cookie` is a subclass of the `Dessert` class.
+MARKDOWN

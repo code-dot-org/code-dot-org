@@ -29,15 +29,15 @@ social:
 
 # Connexions en l'Informatique
 
-Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
+Notre dernier programme fait le lien entre l'apprentissage de l'informatique et d'autres matières comme les mathématiques, la littérature, les sciences et les études sociales. Grâce à Connexions en Informatique, les classes de la maternelle à la 12e année explorent leurs matières habituelles de nouvelles façons amusants !
 
 ## Modules
 
-CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
+Les modules Connexions en l'Informatique sont une série structurée de leçons qui intègrent l'apprentissage de l'informatique dans des matières de base telles que la littérature, les mathématiques et les sciences. Ces modules sont alignés sur les normes dans toutes les matières et aboutissent à un projet multidisciplinaire.
 
-They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
+Parfaits pour les enseignants qui souhaitent intégrer l'informatique dans leurs plans de cours pour d'autres matières, ainsi que pour ceux en informatique qui souhaitent renforcer ce que les élèves apprennent dans d'autres matières.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Littérature", duration: "5 heures", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codage par la poésie", right_description: "Associez l'informatique et la poésie dans votre classe grâce à cette série de leçons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
 <aside>
   <h3><strong>Feedback</strong></h3>
@@ -53,7 +53,7 @@ They're perfect for teachers who'd like to incorporate computer science into the
 
 ## Sample Projects
 
-Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
+Continues à faire des liens entre l'informatique et les matières traditionnelles avec nos projets multidisciplinaires. Ils ne nécessitent que 1 à 2 heures d'enseignement et sont idéaux pour tout enseignant cherchant à développer des projets spécifiques à un sujet qui s'intègrent dans leur programme d'études existant.
 
 <em>Astuce : Ces projets demandent une certaine compréhension des bases de l'informatique, nous vous recommandons donc de terminer notre activité Heure de Code Hello World avant de commencer !</em>
 
@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Finished a CS Connection activity and/or looking for more options for your classroom? Please <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> and ideas for more lessons here!</em>
+
+{{ visit_partial_event_logger }}

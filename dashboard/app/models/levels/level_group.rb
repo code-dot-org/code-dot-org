@@ -69,10 +69,12 @@ class LevelGroup < DSLDefined
       @levels_offset = levels_offset
     end
 
-    attr_reader :page_number
-    attr_reader :levels_and_texts_offset
-    attr_reader :levels_and_texts
-    attr_reader :levels_offset
+    attr_reader(
+      :page_number,
+      :levels_and_texts_offset,
+      :levels_and_texts,
+      :levels_offset
+    )
 
     def levels
       levels_and_texts.reject {|l| l.is_a?(External)}

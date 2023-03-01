@@ -195,7 +195,7 @@ class Documents < Sinatra::Base
   def update_actionview_assigns
     view_assigns = {}
     instance_variables.each do |name|
-      view_assigns[name[1..-1]] = instance_variable_get(name)
+      view_assigns[name[1..]] = instance_variable_get(name)
     end
     @actionview.assign(view_assigns)
   end
@@ -291,14 +291,14 @@ class Documents < Sinatra::Base
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, {body: body.join('').html_safe})
+      body render_template(template, {body: body.join.html_safe})
     end
 
     theme = @header['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, {body: body.join('').html_safe})
+      body render_template(template, {body: body.join.html_safe})
     end
   end
 
@@ -447,7 +447,12 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
+        # Negotiate for a locale specific partial
+        found = []
+        ["#{uri}.#{request.locale}", uri].each do |search_uri|
+          found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), search_uri, extnames)
+          break unless found.empty?
+        end
         return found.first unless found.empty?
       end
 
@@ -517,7 +522,7 @@ class Documents < Sinatra::Base
 
         path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
         if path
-          request.env[:splat_path_info] = uri[parent.length..-1]
+          request.env[:splat_path_info] = uri[parent.length..]
           return path
         end
 
@@ -557,7 +562,7 @@ class Documents < Sinatra::Base
           # Symbolize the keys of the locals hash; previously, we supported
           # using either symbols or strings in locals hashes but ActionView
           # only allows symbols.
-          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
+          result = @actionview.render(inline: result, type: extension[1..], locals: locals.symbolize_keys)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at

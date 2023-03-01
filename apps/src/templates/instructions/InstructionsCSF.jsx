@@ -125,7 +125,7 @@ class InstructionsCSF extends React.Component {
    * again, we want to increase height.
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
-    this.adjustRenderedHeight(nextProps);
+    this.debouncedAdjustRenderedHeight(nextProps);
   }
 
   UNSAFE_componentWillUpdate(nextProps) {

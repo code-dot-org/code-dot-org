@@ -1,12 +1,16 @@
 function addSixBlock() {
     //For Validation
     if(typeof checkValidation === 'function' && checkValidation()) {
-      var newEventObj = {
-        blockName: 'addTwo',
+      var newBlockObj = {
+        blockName: 'addSix',
         input: input
       };
-      addFunctionEvent(newEventObj);
+      addFunctionBlock(newBlockObj);
     }
-    input = input + 6;
-    output = input;
+    if(typeof output === 'undefined') {
+      output = input;
+    }
+    //This structure makes validation code easier
+    input = output;
+    output = input + 6;
 }

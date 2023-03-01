@@ -376,17 +376,15 @@ export default class LibraryPublisher extends React.Component {
         <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
           <Button
-            __useDeprecatedTag
             id="ui-test-publish-library"
-            style={{marginTop: 20}}
+            style={styles.button}
             onClick={this.validateAndPublish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
           {onShareTeacherLibrary && (
             <Button
-              __useDeprecatedTag
               id="ui-test-manage-libraries"
-              style={{marginTop: 20, marginLeft: 10}}
+              style={{...styles.button, marginLeft: 10}}
               onClick={onShareTeacherLibrary}
               text={i18n.manageLibraries()}
               color={Button.ButtonColor.gray}
@@ -394,9 +392,8 @@ export default class LibraryPublisher extends React.Component {
           )}
           {alreadyPublished && (
             <Button
-              __useDeprecatedTag
               id="ui-test-unpublish-library"
-              style={styles.unpublishButton}
+              style={{...styles.button, ...styles.unpublishButton}}
               onClick={this.unpublish}
               text={i18n.unpublish()}
               color={Button.ButtonColor.red}
@@ -450,7 +447,10 @@ const styles = {
   },
   unpublishButton: {
     right: 0,
-    marginTop: 20,
     position: 'absolute'
+  },
+  button: {
+    margin: 0,
+    marginTop: 20
   }
 };

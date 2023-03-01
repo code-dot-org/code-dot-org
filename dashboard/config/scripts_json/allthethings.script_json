@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-17 13:34:48 UTC",
+    "serialized_at": "2022-11-30 15:22:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5758,6 +5758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Poetry HOC Project"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5779,6 +5782,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Poetry Project"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5800,6 +5806,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_no_modal_function_editor"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5821,6 +5830,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_modal_function_editor"
+        ]
       },
       "bonus": false,
       "seeding_key": {

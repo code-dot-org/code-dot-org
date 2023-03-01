@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csa",
-    "serialized_at": "2022-10-14 17:36:21 UTC",
+    "serialized_at": "2023-01-09 23:49:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -95,6 +95,66 @@
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Module 5 post-work: The Unit 5 Project",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Module 6 post-work: String methods in Unit 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "Module 7 post-work: The Unit 7 project",
+      "name": "Module 7 post-work: The Unit 7 project",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+      "name": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -142,6 +202,54 @@
       "seeding_key": {
         "lesson_activity.key": "46f71c3b-1aea-4d6d-baa1-6fa2da9d5a15",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "9745b375-4a9d-425c-99e3-66fb254d3b39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "660b38a8-f7fe-497f-aa5a-e6041c05acec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "0ff002ff-594e-4924-b86e-94b871b225e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ff002ff-594e-4924-b86e-94b871b225e4",
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022"
+      }
+    },
+    {
+      "key": "ab17386b-83c7-4c81-9230-39883d38f21a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ab17386b-83c7-4c81-9230-39883d38f21a",
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022"
       }
@@ -367,6 +475,182 @@
       "seeding_key": {
         "activity_section.key": "da7c2fd9-65ef-4c04-af13-1b928825b34a",
         "lesson_activity.key": "46f71c3b-1aea-4d6d-baa1-6fa2da9d5a15"
+      }
+    },
+    {
+      "key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 5 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "2a3272dd-4b79-474d-87f0-f651c875017e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Unit 5 Project (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd",
+      "position": 4,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd",
+        "lesson_activity.key": "9745b375-4a9d-425c-99e3-66fb254d3b39"
+      }
+    },
+    {
+      "key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6",
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec"
+      }
+    },
+    {
+      "key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849",
+      "position": 2,
+      "properties": {
+        "progression_name": "Strings in Unit 6 (~50 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849",
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec"
+      }
+    },
+    {
+      "key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd",
+        "lesson_activity.key": "660b38a8-f7fe-497f-aa5a-e6041c05acec"
+      }
+    },
+    {
+      "key": "30e95b92-60c5-44a9-b8ee-6378caafb93a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 7 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "30e95b92-60c5-44a9-b8ee-6378caafb93a",
+        "lesson_activity.key": "0ff002ff-594e-4924-b86e-94b871b225e4"
+      }
+    },
+    {
+      "key": "76de167b-2b6c-457a-807f-18b05a0ac615",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Managment"
+      },
+      "seeding_key": {
+        "activity_section.key": "76de167b-2b6c-457a-807f-18b05a0ac615",
+        "lesson_activity.key": "0ff002ff-594e-4924-b86e-94b871b225e4"
+      }
+    },
+    {
+      "key": "b10a82ff-a806-44e6-b936-7c53969aa5d5",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Unit 7 Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5",
+        "lesson_activity.key": "0ff002ff-594e-4924-b86e-94b871b225e4"
+      }
+    },
+    {
+      "key": "c19b5e61-7ba9-448c-96be-0cb11cdf0475",
+      "position": 4,
+      "properties": {
+        "progression_name": "Building Project Management Skills"
+      },
+      "seeding_key": {
+        "activity_section.key": "c19b5e61-7ba9-448c-96be-0cb11cdf0475",
+        "lesson_activity.key": "0ff002ff-594e-4924-b86e-94b871b225e4"
+      }
+    },
+    {
+      "key": "7c80ed50-e47b-48b0-ba10-7b7b7c4fd971",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c80ed50-e47b-48b0-ba10-7b7b7c4fd971",
+        "lesson_activity.key": "0ff002ff-594e-4924-b86e-94b871b225e4"
+      }
+    },
+    {
+      "key": "15e6a5f1-31e5-4232-befa-6a411c35a8a3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 8 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "15e6a5f1-31e5-4232-befa-6a411c35a8a3",
+        "lesson_activity.key": "ab17386b-83c7-4c81-9230-39883d38f21a"
+      }
+    },
+    {
+      "key": "936fabf0-7fe5-4b22-bb7b-6a4e789cae9f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Preparing to support students (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "936fabf0-7fe5-4b22-bb7b-6a4e789cae9f",
+        "lesson_activity.key": "ab17386b-83c7-4c81-9230-39883d38f21a"
+      }
+    },
+    {
+      "key": "70750c15-6494-4be4-b1b3-ffbb1d65c363",
+      "position": 3,
+      "properties": {
+        "progression_name": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363",
+        "lesson_activity.key": "ab17386b-83c7-4c81-9230-39883d38f21a"
+      }
+    },
+    {
+      "key": "f4916212-05b1-4bbc-844a-7bdb274fbd7e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 8 Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4916212-05b1-4bbc-844a-7bdb274fbd7e",
+        "lesson_activity.key": "ab17386b-83c7-4c81-9230-39883d38f21a"
       }
     }
   ],
@@ -1127,6 +1411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-overview-2022"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1149,6 +1436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-applying the rubric-2022"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -1171,6 +1461,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-reflection"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -1193,6 +1486,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-additional-FRQ-resources-2022"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -1215,6 +1511,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-unit-5-frq-2022"
+        ],
         "progression": "FRQ Day in Code.org's Unit 5 (~20 minutes)"
       },
       "bonus": false,
@@ -1237,6 +1536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-skills-reflection"
+        ],
         "progression": "FRQ Skills (~5 minutes)"
       },
       "bonus": false,
@@ -1259,6 +1561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-wrap-up-2022"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,
@@ -1273,6 +1578,733 @@
       },
       "level_keys": [
         "vpl-csa-module-4-wrap-up-2022"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-5-overview-2022"
+        ],
+        "progression": "Module 5 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-overview-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-overview-2022"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection"
+        ],
+        "progression": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-filter-reflection"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter"
+        ],
+        "progression": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-make-your-own-filter"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-5-project-reflection"
+        ],
+        "progression": "The Unit 5 Project (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-project-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-project-reflection"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project"
+        ],
+        "progression": "The Unit 5 Project (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-2022-making-changes-to-u5-project"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-5-wrap-up-2022"
+        ],
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-wrap-up-2022"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-overview-2022"
+        ],
+        "progression": "Module 6 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-overview-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-overview-2022"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-ap-subset"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-ap-subset"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-ap-subset"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-u6l7-level1-clone"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-notice-wonder-reflection"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-substring-method-video"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-u6l8-level1-clone"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-compareto-method-video"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+        ],
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-wrap-up-2022"
+        ],
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-wrap-up-2022"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 7 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-overview_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "30e95b92-60c5-44a9-b8ee-6378caafb93a"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-overview_-f"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Managment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "76de167b-2b6c-457a-807f-18b05a0ac615"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-what-is-pm-video_-f"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Managment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "76de167b-2b6c-457a-807f-18b05a0ac615"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-f"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-unit-7-project-text_-f"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-clone-projects-level_-f"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-unit-7-project-structure-2022-text_-f"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 7 Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-project-planning-reflection_-f"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Project Management Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "c19b5e61-7ba9-448c-96be-0cb11cdf0475"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-vocabulary-of-pm-video_-f"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Project Management Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "c19b5e61-7ba9-448c-96be-0cb11cdf0475"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-2022-putting-it-all-together-reflection_-f"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-7-wrap-up_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7c80ed50-e47b-48b0-ba10-7b7b7c4fd971"
+      },
+      "level_keys": [
+        "vpl-csa-module-7-wrap-up_-f"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-overviews_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "15e6a5f1-31e5-4232-befa-6a411c35a8a3"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-overviews_-f"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing to support students (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "936fabf0-7fe5-4b22-bb7b-6a4e789cae9f"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-feelings-reflection_-f"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-what-you-expect-reflection_-f"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-ap-exam-breakdown_-f"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-administering-reflection_-f"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-wrap-up_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "f4916212-05b1-4bbc-844a-7bdb274fbd7e"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-wrap-up_-f"
       ]
     }
   ],
@@ -1719,6 +2751,378 @@
         "lesson_group.key": "",
         "script.name": "vpl-csa-2022",
         "activity_section.key": "da7c2fd9-65ef-4c04-af13-1b928825b34a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-overview-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-overview-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "e97bc7a5-e4bf-4d04-b4ab-c88f0696e837"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-filter-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-make-your-own-filter",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "2a3272dd-4b79-474d-87f0-f651c875017e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-project-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-project-reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-2022-making-changes-to-u5-project",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7e975aaf-2d9d-4c52-aee3-749fa532ca9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-wrap-up-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "68068edf-f14a-413d-88f6-2e8e5d4f9fbd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-overview-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-overview-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "6b5249ce-506f-4e1d-9af6-36e2bfe9f8d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-ap-subset",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-ap-subset"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-u6l7-level1-clone",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-notice-wonder-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-substring-method-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-u6l8-level1-clone",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-compareto-method-video",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-notice-wonder-2-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "91d60770-26e3-4dc9-8ec1-ed35cc0d3849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-wrap-up-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "ae8c1e6a-ec29-4003-a367-7f51effe8edd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-overview_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-overview_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "30e95b92-60c5-44a9-b8ee-6378caafb93a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-what-is-pm-video_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-what-is-pm-video_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "76de167b-2b6c-457a-807f-18b05a0ac615"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-day-in-the-life-of-pm-video_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "76de167b-2b6c-457a-807f-18b05a0ac615"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-unit-7-project-text_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-text_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-clone-projects-level_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-clone-projects-level_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-unit-7-project-structure-2022-text_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-unit-7-project-structure-2022-text_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-project-planning-reflection_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-project-planning-reflection_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "b10a82ff-a806-44e6-b936-7c53969aa5d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-vocabulary-of-pm-video_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-vocabulary-of-pm-video_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "c19b5e61-7ba9-448c-96be-0cb11cdf0475"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-2022-putting-it-all-together-reflection_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-2022-putting-it-all-together-reflection_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "c19b5e61-7ba9-448c-96be-0cb11cdf0475"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-7-wrap-up_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-7-wrap-up_-f"
+        ],
+        "lesson.key": "Module 7 post-work: The Unit 7 project",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "7c80ed50-e47b-48b0-ba10-7b7b7c4fd971"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-overviews_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-overviews_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "15e6a5f1-31e5-4232-befa-6a411c35a8a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-feelings-reflection_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "936fabf0-7fe5-4b22-bb7b-6a4e789cae9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-what-you-expect-reflection_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-ap-exam-breakdown_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-administering-reflection_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "70750c15-6494-4be4-b1b3-ffbb1d65c363"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-wrap-up_-f",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-wrap-up_-f"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2022",
+        "activity_section.key": "f4916212-05b1-4bbc-844a-7bdb274fbd7e"
       }
     }
   ],

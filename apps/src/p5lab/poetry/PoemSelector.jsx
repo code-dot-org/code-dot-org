@@ -12,8 +12,8 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
-import {POEMS, PoetryStandaloneApp} from './constants';
-import {getPoem} from './poem';
+import {PoetryStandaloneApp} from './constants';
+import {getPoem, getPoems, shouldAlphabetizePoems} from './poem';
 import * as utils from '@cdo/apps/utils';
 
 const poemShape = PropTypes.shape({
@@ -47,38 +47,33 @@ export function PoemEditor(props) {
   }, [props.isOpen, error]);
 
   const body = (
-    <div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.title()}</label>
+    <form style={{margin: 0}}>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.title()}</span>
         <input
           style={styles.input}
           value={title}
           onChange={event => setTitle(event.target.value)}
         />
-      </div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.author()}</label>
+      </label>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.author()}</span>
         <input
           style={styles.input}
           value={author}
           onChange={event => setAuthor(event.target.value)}
         />
-      </div>
-      <div style={{...styles.modalContainer, paddingTop: 0}}>
-        <div style={styles.label} />
-        <div style={{...styles.input, ...styles.warning}}>
-          {msg.authorWarning()}
-        </div>
-      </div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.poem()}</label>
+      </label>
+      <div style={styles.warning}>{msg.authorWarning()}</div>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.poem()}</span>
         <textarea
           style={styles.input}
           value={poem}
           onChange={event => setPoem(event.target.value)}
         />
-      </div>
-    </div>
+      </label>
+    </form>
   );
 
   const onSave = () => {
@@ -144,7 +139,7 @@ PoemEditor.defaultProps = {
 function PoemSelector(props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  if (appOptions.level.standaloneAppName !== PoetryStandaloneApp.PoetryHoc) {
+  if (appOptions.level.standaloneAppName === PoetryStandaloneApp.Poetry) {
     return null;
   }
 
@@ -183,11 +178,16 @@ function PoemSelector(props) {
   };
 
   const getPoemOptions = () => {
-    const options = Object.keys(POEMS)
+    let options = Object.keys(getPoems())
       .map(poemKey => getPoem(poemKey))
-      .filter(poem => !poem.locales || poem.locales.includes(appOptions.locale))
-      .sort((a, b) => (a.title > b.title ? 1 : -1))
-      .map(poem => ({value: poem.key, label: poem.title}));
+      .filter(
+        poem => !poem.locales || poem.locales.includes(appOptions.locale)
+      );
+
+    if (shouldAlphabetizePoems()) {
+      options.sort((a, b) => (a.title > b.title ? 1 : -1));
+    }
+    options = options.map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
     options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
     // Add blank option that just says "Choose a Poem" to the top of the dropdown.
@@ -246,10 +246,10 @@ const styles = {
   input: {
     flex: 2
   },
-  modalContainer: {
+  labelContainer: {
     display: 'flex',
-    justifyContent: 'flex-end',
-    padding: 10
+    justifyContent: 'space-between',
+    padding: '10px 10px 0 10px'
   },
   error: {
     color: color.red,
@@ -258,7 +258,9 @@ const styles = {
     marginRight: 5
   },
   warning: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    textAlign: 'end',
+    padding: '0 10px 10px 0'
   }
 };
 

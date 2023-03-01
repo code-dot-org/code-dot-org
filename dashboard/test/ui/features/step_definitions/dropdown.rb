@@ -15,9 +15,10 @@ And /^I press dropdown number (\d+)$/ do |n|
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|
-  if visibility == "visible"
+  case visibility
+  when "visible"
     expected = 'block'
-  elsif visibility == "hidden"
+  when "hidden"
     expected = 'none'
   else
     raise "unexpected visibility"

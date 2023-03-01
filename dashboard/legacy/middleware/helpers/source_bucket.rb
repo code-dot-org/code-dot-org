@@ -24,6 +24,10 @@ class SourceBucket < BucketHelper
     0
   end
 
+  def self.main_json_filename
+    MAIN_JSON_FILENAME
+  end
+
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
   # Copies the animations at the given version and makes them the current version.

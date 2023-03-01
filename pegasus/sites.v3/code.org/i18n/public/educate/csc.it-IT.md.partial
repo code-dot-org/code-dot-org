@@ -47,8 +47,8 @@ Sono perfetti per gli insegnanti che intendono inserire l'informatica all'intern
 
 {{ csc_module, title: "Ecosistemi marini (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "8-10 anni", subject: "Scienze", duration: "4 ore", description: "Ripristina l'equilibrio di un ecosistema marino prossimo al sovrasfruttamento.", button_text: "Scopri di più", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
 {{ csc_module, title: "Trapunte a stella (Star Quilts, beta)", image: "/images/csc/landing/module_star_quilts.png", grades: "8-10 anni", subject: "Matematica", duration: "4 ore", description: "Progetta nell'ambiente dell'artista un classico motivo a stella usato nelle trapunte dei nativi americani.", button_text: "Scopri di più", url: "https://studio.code.org/s/csc-starquilts-2022" }}
-{{ csc_module, title: "Storytelling (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "8-10 anni", subject: "Letteratura e arte", duration: "4 ore", description: "Confronta storie provenienti da tutto il mondo e crea la tua animazione di questi racconti.", button_text: "Scopri di più", url: "https://studio.code.org/s/csc-fables-2022" }}
-{{ csc_module, title: "Time Capsule (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "8-10 anni", subject: "Studi sociali", duration: "4 ore", description: "Crea un'esperienza immersiva con una capsula del tempo e condividi la storia attuale.", button_text: "Scopri di più", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
+{{ csc_module, title: "Animazione di storie (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "8-10 anni", subject: "Letteratura e arte", duration: "4 ore", description: "Confronta storie provenienti da tutto il mondo e crea la tua animazione di questi racconti.", button_text: "Scopri di più", url: "https://studio.code.org/s/csc-fables-2022" }}
+{{ csc_module, title: "Capsula del tempo (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "8-10 anni", subject: "Studi sociali", duration: "4 ore", description: "Crea un'esperienza immersiva con una capsula del tempo e condividi la storia attuale.", button_text: "Scopri di più", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
 {{ clearfix }}
 
 ## Esempi di progetti
@@ -77,3 +77,5 @@ Le nostre attività brevi rappresentano un modo rapido e interessante per creare
 {{ clearfix }}
 
 <em>Hai terminato un'attività del curriculum Informatica interdisciplinare e/o stai cercando altre risorse per la tua classe? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Condividi i tuoi commenti</a> ed eventuali idee per nuove lezioni!</em>
+
+{{ visit_partial_event_logger }}
