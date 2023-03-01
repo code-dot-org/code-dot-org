@@ -285,6 +285,9 @@ export default class P5Lab {
           this.isBlockly
         )
       );
+      // If we reset a puzzle, it no longer has any custom uploads.
+      // Therefore we can set restricted share mode to false.
+      project.sourceHandler.setInRestrictedShareMode(false);
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
