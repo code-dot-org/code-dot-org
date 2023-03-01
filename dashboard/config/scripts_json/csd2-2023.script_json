@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-02-28 00:57:57 UTC",
+    "serialized_at": "2023-02-28 23:43:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -481,7 +481,7 @@
       "key": "fb4a44ae-9f33-4c95-9932-899369d8064b",
       "position": 1,
       "properties": {
-        "name": "Before the Lesson [TODO]"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "fb4a44ae-9f33-4c95-9932-899369d8064b",
@@ -491,11 +491,24 @@
       }
     },
     {
-      "key": "1fd11786-b963-4aa8-8e60-aa2b98f72c56",
+      "key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469",
       "position": 2,
       "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469",
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2023"
+      }
+    },
+    {
+      "key": "1fd11786-b963-4aa8-8e60-aa2b98f72c56",
+      "position": 3,
+      "properties": {
         "duration": 5,
-        "name": "Warm Up [TODO]"
+        "name": "Warm Up - Option 2"
       },
       "seeding_key": {
         "lesson_activity.key": "1fd11786-b963-4aa8-8e60-aa2b98f72c56",
@@ -506,7 +519,7 @@
     },
     {
       "key": "071058b3-b0e0-4a0c-b0e3-5f2bb9c94f14",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -520,7 +533,7 @@
     },
     {
       "key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1413,11 +1426,168 @@
       }
     },
     {
+      "key": "2d091572-d54e-4a4d-b9a8-fde3e646f8cb",
+      "position": 1,
+      "properties": {
+        "duration": "15",
+        "name": "Option 1",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem Solving Process.\n\n**Option 1** is for classrooms that have **not been introduced** to the Problem Solving Process. The warm up is longer than normal because it introduces the Problem Solving Process through a brief activity and a video.\n\n**Option 2** is for classrooms that **have been introduced** to the Problem Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem Solving Process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d091572-d54e-4a4d-b9a8-fde3e646f8cb",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "14cc9d9b-cc88-4f50-811f-7848eebc51c3",
+      "position": 2,
+      "properties": {
+        "description": "In this unit, we'll be learning how to design websites to solve problems. The word \"problem\" can refer to lots of different situations - I could say I have a problem for homework, a problem with my brother, and a problem with my car, and all three mean very different things.",
+        "duration": "10",
+        "name": "Problem Solving Word Search",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14cc9d9b-cc88-4f50-811f-7848eebc51c3",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "66d56252-7907-4063-8380-be7450fb5afa",
+      "position": 3,
+      "properties": {
+        "description": "**Prompt:**  What's an example of a problem you've had to solve recently?"
+      },
+      "seeding_key": {
+        "activity_section.key": "66d56252-7907-4063-8380-be7450fb5afa",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
+      "position": 4,
+      "properties": {
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd2/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "1c6b33ef-f8d7-459f-af1b-979ab7e2dab2",
+      "position": 5,
+      "properties": {
+        "description": "When we build websites, we'll also face problems to solve. So today, we are going to learn about and practice an effective strategy for when we need to solve problems. We'll start with a simple problem: solving a word search.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c6b33ef-f8d7-459f-af1b-979ab7e2dab2",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "0978b444-9ef1-43dc-a814-de5d2bc3c995",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What is the problem you are trying to solve when you do a word search?*\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What are the different strategies that someone could use for finding words. What are the pros and cons of each strategy?*\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down"
+      },
+      "seeding_key": {
+        "activity_section.key": "0978b444-9ef1-43dc-a814-de5d2bc3c995",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "41b10c88-2203-4df2-b9cc-99706e0a1c72",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is important to let the students know that if at any time the strategy they picked is not working, they should feel free to go back to the list of strategies and pick a different one, making sure to put a number next to the new strategy. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41b10c88-2203-4df2-b9cc-99706e0a1c72",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "77429d97-f86a-451e-9eb0-c478a534c7c7",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts: \n1) Were you successful in solving this word search problem? How do you know? \n2) What strategy did you pick and how did it work for you?\n3) Did anyone change strategies at any point … why or why not?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you lead this discussion, you may choose to do a quick raise of hand poll to find out who was successful, or on track to be successful if they didn’t get a chance to finish. Additionally, you can also instruct students to pick two of the questions to answer. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "77429d97-f86a-451e-9eb0-c478a534c7c7",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "42b8de2d-9e7a-4e13-bd2c-bcf7eb26ca81",
+      "position": 9,
+      "properties": {
+        "description": "**Discussion Goal:** This discussion serves as a way to get students to reflect on how they did solving this problem and to give students a moment to recognize if they changed strategies and why or if they would solve a problem like this differently next time. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "42b8de2d-9e7a-4e13-bd2c-bcf7eb26ca81",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "3e82967b-8d4f-401c-9dc5-21b4afa88d5b",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides.",
+        "duration": "5",
+        "name": "The Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good point to remind students that the problem solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it, but going back to the “Prepare” and “Try” steps again.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e82967b-8d4f-401c-9dc5-21b4afa88d5b",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
+      "key": "cd999f19-2644-4089-bb73-0c424aa67ee8",
+      "position": 11,
+      "properties": {
+        "description": "Now that we're familiar with the problem solving process, let's explore how we can use it when designing websites.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cd999f19-2644-4089-bb73-0c424aa67ee8",
+        "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469"
+      }
+    },
+    {
       "key": "c9174999-b4dc-4280-aaa8-99156f1412ae",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?\n\n**Discussion Goal:** The goal of the discussion is to help students see web development as a form of self-expression and communication, and to set an expectation that they have something valuable to contribute. While some students may want to share something silly, encourage students to consider that they have something valuable to say and that others can benefit from it. This discussion should set a positive atmosphere that respects the diversity of perspectives that the group can bring.",
-        "name": "Journal"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem Solving Process.\n\n**Option 2** is for classrooms that **have been introduced** to the Problem Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem Solving Process."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c9174999-b4dc-4280-aaa8-99156f1412ae",
@@ -1428,7 +1598,10 @@
       "key": "eee677c8-b4a3-4756-b243-700cab59443c",
       "position": 2,
       "properties": {
-        "description": "Allow students to share out their contributions to the group."
+        "description": "In this unit, we'll be learning how to design websites to solve problems. Today, we are going to remind ourselves about the Problem Solving Process and how it can be applied when we get design websites.",
+        "duration": "5",
+        "name": "Revisit The Problem Solving Process",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "eee677c8-b4a3-4756-b243-700cab59443c",
@@ -1439,22 +1612,10 @@
       "key": "2201a072-ce57-4606-85e6-e0323b592c23",
       "position": 3,
       "properties": {
-        "description": "There are lots of ways that people share with the world.  Today, we're going to look at how people use web pages to share what they have to say.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use\n- **Try:** Sketching the website out before creating it\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
       },
       "seeding_key": {
         "activity_section.key": "2201a072-ce57-4606-85e6-e0323b592c23",
-        "lesson_activity.key": "1fd11786-b963-4aa8-8e60-aa2b98f72c56"
-      }
-    },
-    {
-      "key": "6a7a6d24-1e22-4372-ae57-f51d8939669b",
-      "position": 4,
-      "properties": {
-        "description": "**Question of the Day:  Why do people create web pages?**"
-      },
-      "seeding_key": {
-        "activity_section.key": "6a7a6d24-1e22-4372-ae57-f51d8939669b",
         "lesson_activity.key": "1fd11786-b963-4aa8-8e60-aa2b98f72c56"
       }
     },
@@ -1475,7 +1636,7 @@
       "key": "a0212ac3-fb3d-4d8c-9aa6-12d638bfd76d",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the Web Design for Users activity guide to each student. There is an A and a B version with different users for the second activity, but it doesn't matter which one students get.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1562,7 +1723,7 @@
       "key": "304c8cc2-2414-445e-abc5-6a0edec43bd3",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design."
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd2/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
       },
       "seeding_key": {
         "activity_section.key": "304c8cc2-2414-445e-abc5-6a0edec43bd3",
@@ -1616,6 +1777,18 @@
       },
       "seeding_key": {
         "activity_section.key": "cb88b39c-cbf2-4823-8b02-a569635b6dc5",
+        "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
+      }
+    },
+    {
+      "key": "e05fbf8d-2aa7-49f0-8439-911da6edbb60",
+      "position": 3,
+      "properties": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis velit vitae sapien tincidunt lobortis. Donec cursus ipsum ac tempus viverra. Phasellus mauris lorem, feugiat non tincidunt in, ornare vitae enim. Morbi gravida est et magna eleifend congue. Cras dapibus consequat neque, tempus tempus leo blandit eget. \n\n[r the_problem_solving_process/csd2/2023]\n\n[r problem_solving_and_design/csd2/2023]\n\n[r _warm_up_word_search/csd2/2023]\n\n[r web_design_for_users_b_/csd2/2023]\n\n[r web_design_template/csd2/2023]\n\n[r exploring_web_pages_2/csd2/2023]\n\n[r web_design_for_users_b_/csd2/2023]\n[r web_design_template/csd2/2023]\n[r exploring_web_pages_2/csd2/2023]\n[r exploring_web_pages_1/csd2/2023]",
+        "name": "Tess testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "e05fbf8d-2aa7-49f0-8439-911da6edbb60",
         "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
       }
     },
@@ -2906,7 +3079,7 @@
       "key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\r\n\r\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\r\n\r\n**Key Vocabulary:**\r\n\r\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\r\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\r\n\r\n**Share:** Have groups add their properties to their journals or to the class \"CSS Properties\" poster."
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their journals or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
@@ -3501,7 +3674,7 @@
       "key": "45c4d5a9-f94d-4938-bae7-d615b30289bc",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\r\n\r\n**Journal 3-2-1:**\r\n\r\n* What are **3** ways you can use images to make your site better?\r\n* What are **2** challenges in adding images to a website?\r\n* What is **1** way you can respect people's rights when using images?",
+        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
@@ -3883,7 +4056,7 @@
       "key": "ba7c9fbc-51a4-4ba0-adc7-150b75e17a45",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\r\n\r\n\r\n**Journal:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\r\n\r\n**Prompt:** How might you want to use these new styles in your personal web page?"
+        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\n\n**Prompt:** How might you want to use these new styles in your personal web page?"
       },
       "seeding_key": {
         "activity_section.key": "ba7c9fbc-51a4-4ba0-adc7-150b75e17a45",
@@ -5356,7 +5529,7 @@
       "key": "aba70e57-df7c-48fc-9d42-f318dce36de6",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**\r\n\r\n\r\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -5926,6 +6099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 heading explore_2023"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6623,6 +6799,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images explore_2023"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -8949,6 +9128,19 @@
   ],
   "resources": [
     {
+      "name": "(Warm Up) Word Search",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/view",
+      "key": "_warm_up_word_search",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_warm_up_word_search"
+      }
+    },
+    {
       "name": "Body Styling",
       "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
       "key": "body_styling",
@@ -9597,6 +9789,19 @@
       }
     },
     {
+      "name": "Problem Solving and Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_and_design",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
       "name": "Project - Personal Web Page",
       "url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/template/preview",
       "key": "project_-_personal_web_page",
@@ -9805,6 +10010,19 @@
       },
       "seeding_key": {
         "resource.key": "text_properties"
+      }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
+      "key": "the_problem_solving_process",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process"
       }
     },
     {
@@ -10137,6 +10355,12 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
+        "resource.key": "_warm_up_word_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
         "resource.key": "exploring_web_pages_1"
       }
     },
@@ -10144,6 +10368,18 @@
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
         "resource.key": "exploring_web_pages_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "resource.key": "the_problem_solving_process"
       }
     },
     {
