@@ -1,6 +1,7 @@
 /** @file Type definitions (React and otherwise) specific to Gamelab */
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import {P5LabInterfaceMode} from './constants';
 
 /**
  * @typedef {Object} Vector2
@@ -45,6 +46,16 @@ const Vector2 = PropTypes.shape({
  * a UUID.
  */
 export const AnimationKey = PropTypes.string;
+
+/**
+ * @typedef {Object} CurrentAnimations
+ * @property {AnimationKey} default - The animation key for Animations (Game Lab) or Costumes (Sprite Lab)
+ * @property {AnimationKey} background - The animation key for Backgrounds (Sprite Lab)
+ */
+export const CurrentAnimations = PropTypes.shape({
+  [P5LabInterfaceMode.ANIMATION]: AnimationKey.isRequired,
+  [P5LabInterfaceMode.BACKGROUND]: AnimationKey.isRequired
+});
 
 /**
  * A subset of AnimationProps that gets saved with the project JSON.

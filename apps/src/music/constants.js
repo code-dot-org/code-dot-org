@@ -36,3 +36,12 @@ export const Triggers = [
     keyboardKey: '6'
   }
 ];
+
+export const BlockMode = {
+  ADVANCED: 'Advanced',
+  SIMPLE: 'Simple',
+  SIMPLE2: 'Simple2',
+  TRACKS: 'Tracks'
+};
+
+export const DEFAULT_SOUND = 'dance/groovy_beat';

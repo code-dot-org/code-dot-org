@@ -9,19 +9,135 @@
           "name": "เกมแล๊บ (Game Lab)",
           "categories": {
             "game_lab": {
-              "name": "เกมแล๊บ (Game Lab)"
+              "name": "เกมแล๊บ (Game Lab)",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "สไปรท์"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "สไปรท์"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ขาวดำ"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "เล่นไฟล์เสียง MP3 จาก URL ที่กำหนด"
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "วงก้นหอย"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "กลุ่ม"
+              "name": "กลุ่ม",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "สไปรท์"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "สไปรท์"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "สไปรท์"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "สี"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "สี"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "การวาด"
+              "name": "การวาด",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "สตาร์"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "คณิตศาสตร์"
+              "name": "คณิตศาสตร์",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
+                    },
+                    "max": {
+                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
+                    },
+                    "max": {
+                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "ตัวแปร"
+              "name": "ตัวแปร",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "กำหนดค่าให้กับตัวแปรที่ประกาศไว้ก่อนหน้านี้"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "ประกาศตัวแปรด้วยชื่อที่กำหนด"
+                },
+                "declareAssign_x": {
+                  "short_description": "ประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปร"
+                }
+              }
             },
             "functions": {
               "name": "ฟังก์ชัน"
@@ -31,14 +147,202 @@
         "applab": {
           "name": "แอ๊ปแล็บ",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "หดตัวและขยายตัว"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "ฟังก์ชัน"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "เล่นไฟล์เสียง MP3 จาก URL ที่กำหนด"
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "ข้อมูล"
+              "name": "ข้อมูล",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ฟังก์ชัน"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ฟังก์ชัน"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "คณิตศาสตร์"
+              "name": "คณิตศาสตร์",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
+                    },
+                    "max": {
+                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
+                    },
+                    "max": {
+                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "ตัวแปร"
+              "name": "ตัวแปร",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "ประกาศตัวแปรด้วยชื่อที่กำหนด"
+                },
+                "declareAssign_x": {
+                  "short_description": "ประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปร"
+                },
+                "addPair": {
+                  "return_value": "ไม่มี"
+                }
+              }
             },
             "functions": {
               "name": "ฟังก์ชัน"

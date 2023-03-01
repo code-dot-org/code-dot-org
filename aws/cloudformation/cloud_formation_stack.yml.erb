@@ -2,6 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  BaseDomainName:
+    Type: String
+    Default: code.org
+    Description: Base domain name.
+  DashboardSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
+    Description: Subdomain name for learning platform ("Dashboard").
+  PegasusSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
+    Description: Subdomain name for corporate web site ("Pegasus").
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>

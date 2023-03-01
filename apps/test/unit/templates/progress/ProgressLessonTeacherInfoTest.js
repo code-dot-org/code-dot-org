@@ -47,6 +47,7 @@ describe('ProgressLessonTeacherInfo', () => {
 
     assert.equal(wrapperWithoutPlan.find('Button').length, 0);
     assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
+    assert.equal(wrapperWithPlan.find('Button').props().href, 'foo/bar');
   });
 
   it('updates the lesson url to require login', () => {

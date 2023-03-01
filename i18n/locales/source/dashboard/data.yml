@@ -722,6 +722,38 @@ en:
         csa-pl-compareTo: The compareTo() method
         csc-event-short-intro: Events Short Intro
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Playground Unit Overview
+        csa-day-in-pm-pl: What does a project manager do?
+        csa-pl-intro-to-pm: Introduction to Project Managment
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground Setup
+        csa_object_oriented_programming: 'CSA: Object-Oriented Programming'
+        csa_creating_objects: 'CSA: Creating Objects'
+        csa_calling_methods: 'CSA: Calling Methods'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Inheritance'
+        csa_writing_a_method: 'CSA: Writing a Method'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Code Reviews'
+        csa_conditional_statements: 'CSA: Conditional Statements'
+        csa_printing_in_java: 'CSA: Printing in Java'
+        csa_two_way_selection_and_not: 'CSA: Two-Way Selection and NOT'
+        csa-pl-intro-to-oop: Introduction to Object-Oriented Programming
+        csa-pl-welcome-to-Neighborhood: Welcome to The Neighborhood
+        csa-pl-calling-methods: Calling Methods in Java
+        csa-pl-creating-objects: Creating Objects
+        csa_accessor_methods: 'CSA: Accessor Methods'
+        csa_constructors: 'CSA: Constructors'
+        csa_creating_a_scanner_object: 'CSA: Creating a Scanner Object'
+        csa_creating_variables: 'CSA: Creating Variables'
+        csa_instance_variables_and_attributes: 'CSA: Instance Variables and Attributes'
+        csa_mutator_methods: 'CSA: Mutator Methods'
+        csa_overloaded_constructors: 'CSA: Overloaded Constructors'
+        csa_the_tostring_method: 'CSA: The toString() Method'
+        csa_scanner_class_methods: 'CSA: Scanner Class Methods'
+        csa_for_loops: 'CSA: For Loops'
+        csa_enhanced_for_loops: 'CSA: Enhanced For Loops'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modifying Values in a 1D Array'
+        csa_nested_loops: 'CSA: Nested Loops'
+        csa_one_dimensional_arrays: 'CSA: One-Dimensional (1D) Arrays'
+        csa_polymorphism: 'CSA: Polymorphism'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

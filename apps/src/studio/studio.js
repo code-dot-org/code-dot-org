@@ -3002,6 +3002,17 @@ Studio.runButtonClick = function() {
   Studio.execute();
   Studio.gameState = Studio.GameStates.ACTIVE;
 
+  // We want to save progress any time a student clicks the Run button on a
+  // Free Play level, because they don't have a "success" state like other
+  // level types that would handle this. Since the Run button is already
+  // overloaded in "edit_blocks" mode (when a content editor is making
+  // changes to the level) to act as a "save" button, we don't want to call
+  // this if we're in "edit_blocks" mode.
+  if (!level.edit_blocks && level.freePlay) {
+    // Save progress. Don't display feedback.
+    Studio.sendPuzzleReport(Studio.onReportCompleteNoFeedback);
+  }
+
   if (
     level.freePlay &&
     !level.isProjectLevel &&
@@ -3097,6 +3108,17 @@ Studio.onReportComplete = function(response) {
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
   Studio.displayFeedback();
+};
+
+/**
+ * Function to be called when the service report call is complete
+ * if you don't want to show the feedback dialog.
+ * @param {MilestoneResponse} response - JSON response (if available)
+ */
+Studio.onReportCompleteNoFeedback = function(response) {
+  Studio.response = response;
+  Studio.waitingForReport = false;
+  studioApp().onReportComplete(response);
 };
 
 var registerEventHandler = function(handlers, name, func) {
@@ -3728,7 +3750,7 @@ Studio.resumeExecution = function() {
 Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
-Studio.onPuzzleComplete = function() {
+Studio.sendPuzzleReport = function(onComplete = Studio.onReportComplete) {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
   } else if (
@@ -3737,10 +3759,6 @@ Studio.onPuzzleComplete = function() {
   ) {
     Studio.result = ResultType.SUCCESS;
   }
-
-  // Stop everything on screen
-  Studio.clearEventHandlersKillTickLoop();
-  Studio.movementAudioOff();
 
   if (skin.gridAlignedMovement && Studio.JSInterpreter) {
     // If we've been selecting code as we run, we need to call selectCurrentCode()
@@ -3802,7 +3820,7 @@ Studio.onPuzzleComplete = function() {
       testResult: Studio.testResults,
       program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
-      onComplete: Studio.onReportComplete
+      onComplete: onComplete
     });
   };
 
@@ -3822,6 +3840,14 @@ Studio.onPuzzleComplete = function() {
       }
     });
   }
+};
+
+Studio.onPuzzleComplete = function() {
+  // Stop everything on screen
+  Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
+
+  Studio.sendPuzzleReport();
 };
 
 /* Return the frame count for items or projectiles

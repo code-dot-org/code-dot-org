@@ -48,7 +48,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     <details>
       <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
+      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternative values for secrets normally retrieved from AWS Secrets Manager by modifying ["locals.yml"](locals.yml) (generated in the next step, or via `bundle exec rake install:locals_yml`)
     </details>
 
 1. `bundle exec rake install`
@@ -110,6 +110,11 @@ These steps may need to change over time as 3rd party tools update to have versi
    1. Set up your local MySQL server
       1. Force link 5.7 version via `brew link mysql@5.7 --force`
       2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
+      3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
+          1. `brew services stop mysql@5.7`
+          2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
+          3. `brew services start mysql@5.7`
+          4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
    1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
@@ -627,6 +632,16 @@ If you run into an error message about `Could not find MIME type database in the
 - `brew install shared-mime-info`
 
 (More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
+#### eventmachine
+
+If bundle install fails with an error referencing `eventmachine`, try
+
+- `gem install eventmachine -v ‘[VERSION]’ -- --with-openssl-dir=$(brew --prefix libressl)`
+
+Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
+
+- `gem install eventmachine -v ‘1.2.7’ -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 

@@ -32,6 +32,9 @@
         "csd-2022/collision-detection": {
           "display_name": "Toqquşmanın Aşkarlanması"
         },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Sorğu yaratmaq"
+        },
         "csd-2022/creative-commons-search": {
           "display_name": "Yaradıcı ümumi araşdırma"
         },
@@ -157,6 +160,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Sürət"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Veb Laboratoriyası"
         }
       }
     }

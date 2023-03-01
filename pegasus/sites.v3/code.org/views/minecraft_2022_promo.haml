@@ -7,9 +7,9 @@
   mee_link = "https://aka.ms/HourofCode2022"
   mee_link_text = I18n.t(:hoc2018_mc_educators_box1_button)
 
-.tutorial-promo-container
+.tutorial-promo-container{style: "padding-left: 0"}
   .img-container
-    %img.background-img{src: mee_image}
+    %img.background-img{src: mee_image, style: "border-radius: 0"}
   .col-50.specific-tutorial.right-tutorial{style: "right: 10px; top: 10px; height: initial"}
     .tutorial-box
       %h2.specific-tutorial-heading= mee_title

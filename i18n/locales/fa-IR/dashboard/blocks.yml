@@ -1060,6 +1060,19 @@ fa:
         text: "[SPRITE][0]"
       gamelab_collectibleBehaviors:
         text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            "new Behavior(spinning_right, [])": چرخش به راست
+            "new Behavior(spinning_left, [])": چرخش به چپ
+            "new Behavior(fluttering, [])": بال زدن
+            "new Behavior(jittering, [])": با عصبانیت رفتار کردن
+            "new Behavior(wobbling, [])": تلوتلو خوردن
+            "new Behavior(wandering, [])": گردش کردن
+            "new Behavior(patrolling, [])": گشت‌زنی
+            "new Behavior(moving_west_and_looping, [])": حرکت به سمت غرب و درست کردن حلقه‏
+            "new Behavior(moving_east_and_looping, [])": حرکت به سمت شرق و درست کردن حلقه‏
+            "new Behavior(moving_north_and_looping, [])": حرکت به سمت شمال و درست کردن حلقه‏
+            "new Behavior(moving_south_and_looping, [])": حرکت به سمت جنوب و درست کردن حلقه‏
       gamelab_comment:
         text: 'توضیح: [COMMENT][0]'
       gamelab_costumeImage:
@@ -1359,6 +1372,8 @@ fa:
         text: "[BEHAVIOR][0]"
         options:
           BEHAVIOR:
+            "new Behavior(moving_with_arrow_keys, [])": حرکت با کلیدهای پیکان
+            "new Behavior(driving_with_arrow_keys, [])": رانندگی با کلیدهای پیکان
             draggable(): قابل کشیدن باشد
       gamelab_pointInDirection:
         text: '[SPRITE][0] در جهت [DIRECTION][1]'
@@ -2221,20 +2236,36 @@ fa:
         text: 'اسپرایت [ANIMATION_NAME][0] ، [BEHAVIOR][1] را شروع می‌کند '
         options:
           BEHAVIOR:
+            '"fluttering"': بال زدن
+            '"growing"': رشد کردن
+            '"jittering"': با عصبانیت رفتار کردن
             '"moving_north_and_looping"': حرکت حلقوی به سمت شمال
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_east_and_looping"': حرکت حلقوی به سمت شرق
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
+            '"shrinking"': منقبض شدن
+            '"spinning_left"': چرخش به چپ
+            '"spinning_right"': چرخش به راست
             '"swimming_left_and_right"': شنا
+            '"wandering"': گردش کردن
+            '"wobbling"': تلوتلو خوردن
       Poetry_stopBehavior:
         text: 'اسپرایت [ANIMATION_NAME][0] ، [BEHAVIOR][1] را متوقف می‌کند '
         options:
           BEHAVIOR:
+            '"fluttering"': بال زدن
+            '"growing"': رشد کردن
+            '"jittering"': با عصبانیت رفتار کردن
             '"moving_north_and_looping"': حرکت حلقوی به سمت شمال
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_east_and_looping"': حرکت حلقوی به سمت شرق
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
+            '"shrinking"': منقبض شدن
+            '"spinning_left"': چرخش به چپ
+            '"spinning_right"': چرخش به راست
             '"swimming_left_and_right"': شنا
+            '"wandering"': گردش کردن
+            '"wobbling"': تلوتلو خوردن
             '"all"': "- تمام کارها -"
       Poetry_stringValue:
         text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"

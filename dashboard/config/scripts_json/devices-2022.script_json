@@ -12,13 +12,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2023-01-06 22:31:07 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-02-14 23:03:43 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -196,9 +197,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Question of the Day: How can we use the Problem Solving Process to help us write code for challenging programs?**\n\nThis lesson introduces the problem-solving process that students will use over the course of the unit, Define - Prepare - Try - Reflect. After introducing the steps of the problem-solving process with a simple word search, students are guided through the process of applying each step to three different programming challenges.\n",
-        "preparation": "* Print the Problem Solving Process Handout for each student\n* Print the activity guide for each student\n* Prepare a board and USB cable for each student or pair of students\n* Check the \"Teacher's Lounge\" forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
-        "student_overview": "**Question of the Day: How can we use the Problem Solving Process to help us write code for challenging programs?**\n\nYou will learn about the Problem Solving Process we use in Computer Science and dive into a few strategies to implement each step when programming.\n"
+        "overview": "This lesson introduces the problem-solving process that students will use over the course of the unit, Define - Prepare - Try - Reflect. After introducing the steps of the problem-solving process with a simple word search, students are guided through the process of applying each step to different programming challenges. Students will use this process to help create an app from from scratch with no starter code provided, similar to the Mini-Project in the next lesson.\n\n**Question of the Day: How can we use the Problem Solving Process to help us write code for challenging programs?**",
+        "preparation": "* Print the Problem Solving Process Handout for each student\n* Print the activity guide for each student\n* If using Warm Up Option 1: Print a Word Search for each student\n* Review the exemplars for the two programming challenges in this lesson\n* Prepare a board and USB cable for each student or pair of students\n* Check the \"Teacher's Lounge\" forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "student_overview": "You will learn about the Problem Solving Process we use in Computer Science and dive into a few strategies to implement each step when programming.\n\n**Question of the Day: How can we use the Problem Solving Process to help us write code for challenging programs?**"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -787,7 +788,7 @@
       "key": "5a70717f-df75-42fb-88c6-cce85b565fc6",
       "position": 3,
       "properties": {
-        "duration": 25,
+        "duration": 60,
         "name": "Activity"
       },
       "seeding_key": {
@@ -802,7 +803,7 @@
       "position": 4,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e7eac17f-c14d-4a9f-a382-29dc3dddf4a7",
@@ -1550,7 +1551,7 @@
       "key": "1569750d-8f61-439c-b312-690b49608d34",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). The module is designed to take 2 hours to complete. No previous experience with coding or physical computing is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -2487,7 +2488,12 @@
       "key": "70b6b8a8-7d81-4c7d-a269-9f182cf58a42",
       "position": 1,
       "properties": {
-        "description": "## This option is for those who did NOT complete Computer Science Discoveries’ Unit 1 on the Problem Solving Process.\n"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem Solving Process.\n\n**Option 1** is for classrooms that have **not been introduced** to the Problem Solving Process in Unit 1 of CS Discoveries. The warm up is longer than normal because it introduces the Problem Solving Process through a brief activity and a video.\n\n**Option 2** is for classrooms that **have been introduced** to the Problem Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem Solving Process."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "70b6b8a8-7d81-4c7d-a269-9f182cf58a42",
@@ -2610,7 +2616,12 @@
       "key": "8989e1bf-05f3-4011-b998-6ad801628e43",
       "position": 1,
       "properties": {
-        "description": "## This option is for those who DID complete Computer Science Discoveries’ Unit 1 on the Problem Solving Process.\n"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem Solving Process.\n\n**Option 2** is for classrooms that **have been introduced** to the Problem Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem Solving Process."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8989e1bf-05f3-4011-b998-6ad801628e43",
@@ -2647,7 +2658,7 @@
       "position": 1,
       "properties": {
         "description": "Now that we have a better understanding of how the four Problem Solving Process steps can be used when we are programming, let’s practice!",
-        "duration": "25",
+        "duration": "60",
         "name": "Programming and The Problem Solving Process",
         "remarks": true
       },
@@ -2660,7 +2671,13 @@
       "key": "a3ddc02f-f5c5-41ab-bdcc-d0374c759bc7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r programming_and_the_problem_solving_process_1/devices/2022] activity guide as well as a board and USB cable to students. Direct them to Code Studio, Level 1.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r programming_and_the_problem_solving_process_1/devices/2022] activity guide as well as a board and USB cable to students. Direct them to Code Studio, Level 1.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guiding Through the Process:** Students will complete two challenges by applying the problem-solving process. This first challenge should be teacher-led, bringing the class back together to share and discuss their responses for each step in order to ensure students understand how to effectively apply the Problem-Solving Process to programming problems. The second challenge is optional and an opportunity to apply the Problem-Solving Process on their own before the Mini-Project in the next lesson.\n\n**The Blank Screen:** Students will be given a completed design for their app, but no starter code. This may be familiar to some students who have completed previous Challenge Levels, but may be difficult for some students who aren't sure where to start. The Problem Solving Process is designed to help students break down a problem into smaller steps to get past this \"I don't know where to start\" feeling, and you may need to provide additional support to students who feel overwhelmed by the blank screen and lack of starter code. You can refer to the [Exemplar Activity Guide](https://docs.google.com/document/d/1kQbtzMyQyCs1Z0RQWJ1vU3tzKZ2nvFEn885wMNN3pDE/edit) for examples of how a student might break down the problem into smaller pieces."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a3ddc02f-f5c5-41ab-bdcc-d0374c759bc7",
@@ -2671,11 +2688,12 @@
       "key": "fcc34988-6a6d-42ff-b81a-cd50edcd17f9",
       "position": 3,
       "properties": {
-        "name": "Challenge 1 - The Clicker Game Challenge",
+        "description": "**Overview:** As a class, read the Overview  in the Create a Clicker Game section, which describes the program the class will be making.\n\n**Do This:** Have students look at the Define bullet-points on their Problem Solving Process handout. They can access the example game in Code Studio to familiarize themselves with the game. Then, they should complete the Define section of the handout.",
+        "name": "Challenge 1 - Create a Clicker Game",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students will complete two challenges by applying the problem-solving process. This first challenge should be teacher-led, bringing the class back together to share and discuss their responses for each step in order to ensure students understand how to effectively apply the Problem-Solving Process to programming problems."
+            "markdown": "**Keeping Things Organized:** Students may need help keeping organized and focused on the three key resources used in this lesson:\n- The Problem-Solving Process handout, which is used as a reference for completing the other activity and does not have any student interaction.\n- The Programming and Problem-Solving Process Activity Guide, which students will fill in throughout the lesson.\n- The levels on Code Studio, where students will eventually write their program.\n\nYou may decide to distribute the Problem-Solving Handout digitally or make it into large posters to make it easier for groups to manage their resources."
           }
         ]
       },
@@ -2688,8 +2706,7 @@
       "key": "4ecc46ab-3b97-4e88-8a93-16cd6bcca110",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Direct students to read the user request for Challenge 1 in their activity guide and play with the example app in Code Studio, Level 1 before completing the Define step on their activity guide. Direct students to use the Problem-Solving Process Handout’s “Define” step bullet points as a guide on what to do during this step. \n",
-        "progression_name": "The Clicker Game Problem - \"Define\""
+        "progression_name": "Create a Clicker Game"
       },
       "seeding_key": {
         "activity_section.key": "4ecc46ab-3b97-4e88-8a93-16cd6bcca110",
@@ -2700,7 +2717,7 @@
       "key": "4bedefe0-ec05-4632-9350-484a4260528b",
       "position": 5,
       "properties": {
-        "description": "**Circulate:** Make sure students are using the Define steps from the Problem Solving Handout before filling in the activity guide. You can prompt students to rephrase the task in their own words or identify any skills they are being asked to use to create this app.\n\n**Discuss:** Have pairs share their answers with one another. Then ask several students to share their answers with the class. Record some example answers at the front of the room. \n\n**Discussion Goal:** The purpose of the discussion is to ensure they are understanding how to apply the Define step to a programming challenge. \n\n",
+        "description": "**Circulate:** Make sure students are using the Define steps from the Problem Solving Handout before filling in the activity guide. Focus on having students rephrase the task in their own words or identify any skills they are being asked to use to create this app.\n\n**Discuss:** Have pairs share their answers with one another. Then ask several students to share their answers with the class. Record some example answers at the front of the room. \n\n**Discussion Goal:** Student responses will likely be very similar to the initial overview, but some students may get more specific when describing how the circuit playground reacts - specifically, that the LED starts flashing and it buzzes.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2736,7 +2753,7 @@
       "position": 7,
       "properties": {
         "description": "**Do This:** Direct students to move on to the **Try** step on their activity guide where they will pick which ideas they want to implement. Direct students to use the Problem-Solving Process Handout’s “Try” step bullet points as a guide on what to do during this step. \n\nOnce students have decided on which idea they are going to attempt for the Try step, direct them to Code Studio, Level 2 to “try” solving the problem.",
-        "progression_name": "The Clicker Game Problem - Try\""
+        "progression_name": "Create a Clicker Game"
       },
       "seeding_key": {
         "activity_section.key": "03a22a2c-248c-4859-b57f-b25028392e62",
@@ -2747,7 +2764,13 @@
       "key": "6c7e0934-6d09-412d-a22d-d4e902d7ca5c",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Make sure students are using the Try steps from the Problem Solving Handout, in particular, the \"Test your program often\" and \"Apply appropriate debugging strategies\". You can remind students to go back to the previous step at any point to look at their other ideas for solving the problem if they get stuck.\n"
+        "description": "**Circulate:** Make sure students are using the Try steps from the Problem Solving Handout, in particular, the \"Test your program often\" and \"Apply appropriate debugging strategies\". You can remind students to go back to the previous step at any point to look at their other ideas for solving the problem if they get stuck.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Coding as a Clas:** Depending on how successful students are when coding on their own, feel free to bring the class back together and code the project as a class. As a verified teacher, you can look at the example solution for this level to see what students are being asked to code and prepare to lead a class discussion. Ultimately, having students code this particular project is less important than modeling the Problem-Solving Process and reaffirming the Define - Prepare - Try - Reflect steps, even if that happens as a class instead of individually."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6c7e0934-6d09-412d-a22d-d4e902d7ca5c",
@@ -2832,7 +2855,7 @@
       "key": "0ef8cb1a-510d-46ab-8c17-51359fa032ae",
       "position": 14,
       "properties": {
-        "progression_name": "The Trivia Game Challenge"
+        "progression_name": "Create a Trivia Game"
       },
       "seeding_key": {
         "activity_section.key": "0ef8cb1a-510d-46ab-8c17-51359fa032ae",
@@ -3023,13 +3046,7 @@
       "position": 5,
       "properties": {
         "name": "Code Studio",
-        "progression_name": "Field Collector App",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Viewing Exemplars:** The last level in this sequence includes 3 exemplar projects in the \"For Teachers Only\" section of the level. Because these project use the Circuit Playground, they need to be run in the Maker App on Windows and Mac computers. If you'd like to see these examples working with a circuit playground, we recommend visiting these levels and clicking the links within the Maker App rather than viewing them from the lesson plan."
-          }
-        ]
+        "progression_name": "Field Collector App"
       },
       "seeding_key": {
         "activity_section.key": "1405b5a9-c4d7-4ff3-8b74-37313bc28402",
@@ -6737,7 +6754,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallB_2023"
         ],
-        "progression": "The Clicker Game Problem - \"Define\""
+        "progression": "Create a Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -6762,7 +6779,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallB1_2023"
         ],
-        "progression": "The Clicker Game Problem - Try\""
+        "progression": "Create a Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -6787,7 +6804,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallC_2023"
         ],
-        "progression": "The Trivia Game Challenge"
+        "progression": "Create a Trivia Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -6812,7 +6829,7 @@
         "level_keys": [
           "CSD U6 - ProbSolvProc_ChallC1_2023"
         ],
-        "progression": "The Trivia Game Challenge"
+        "progression": "Create a Trivia Game"
       },
       "bonus": false,
       "seeding_key": {
@@ -12073,12 +12090,13 @@
       }
     },
     {
-      "name": "Physical Computing Word Search",
-      "url": "https://docs.google.com/document/d/1pt1kaDSqrgHnxtOkyu64svHKHdWbTug3UEzEKd0hBeY/edit?usp=sharing",
+      "name": "[Warm Up] Physical Computing Word Search",
+      "url": "https://docs.google.com/document/d/1caC_MUHVHKFZ_CokZ4wMbNJxZOkx6uo4tHqwzKgS_rE/edit",
       "key": "physical_computing_word_search",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide"
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "physical_computing_word_search"
@@ -12158,10 +12176,11 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1JxUYKFQWHSrp-UROJt31xQLUwZPOKQYcsxiHpu5K0hA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1fTZFKc1C93xK5CKuqycNS1nHpnpoCcAjWk4NFqj7bSY/edit",
       "key": "programming_and_the_problem_solving_process",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -12170,10 +12189,11 @@
     },
     {
       "name": "Programming and The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/15XGBsO_8flWsXo6iiq3NdI5iS2YB8SddAV9N1lx_5X4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1LMTg44F4yx0FbbZVdsMZbGR4oZst_DAs_-AvyK-fVl8/edit",
       "key": "programming_and_the_problem_solving_process_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -12485,6 +12505,7 @@
       "key": "the_problem_solving_process",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

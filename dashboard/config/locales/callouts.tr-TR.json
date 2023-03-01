@@ -1690,16 +1690,16 @@
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?"
+          "courseB_artist_loops3_1": "Bu bloklardan araç kutusunda yalnızca birer adet var. Onu nasıl kullanacaksın?"
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz."
+          "courseB_collector_loops1_1": "Hazineyi toplamak için bu bloğu kullanın."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Bir ipucu gerektiğinde ampule tıklayın!"
         },
         "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Yönü değiştirmek için yeşil renkli açılır ok işaretini kullan."
+          "courseB_playlab_events6_a": "Yönü değiştirmek için yeşil renkli açılır menü ok işaretini kullan."
         },
         "courseC19_playLab_EOC3_2021": {
           "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
@@ -1717,7 +1717,7 @@
           "sticker2": "Bunu programınızın ortasına ekleyin."
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz."
+          "courseC_collector_prog1_1": "Araç kutusunda bazı yeni bloklar görüyor musunuz? Merak etmeyin, bunları nasıl kullanacağınızı başka bir derste göstereceğiz."
         },
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "İhtiyacınız olursa araç kutusundan daha fazla blok alabilirsiniz!"
@@ -1738,11 +1738,11 @@
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",
+          "courseC_maze_programming3_2": "Fazla blokları atmak için blokları araç kutusuna doğru \n sürükleyebilirsin.",
           "courseC_maze_programming3_3": "Bu kareler taştan, atılamazlar."
         },
         "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
+          "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane bloğun kaldığını söyler."
         },
         "courseC_maze_programming5_2021": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"

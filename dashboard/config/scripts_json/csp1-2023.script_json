@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-19 18:12:41 UTC",
+    "serialized_at": "2023-02-24 22:02:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -45,8 +45,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Unit 1: Digital Information",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n* **Establishing a Strong Classroom Culture:** This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.\n\n\n* **Empowering \"Deciders\":**  An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be \"deciders\" about the impacts of computing on modern life. Other units will emphasize empowering units as \"creators.\"\n\n### Major Assessment and Projects\n\nThe unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.\n* IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 2.1 Binary Numbers\n* 2.2 Data Compression\n* 5.5 Legal and Ethical Concerns."
+        "display_name": "Unit 1: Digital Information"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit1_2020",
@@ -1903,6 +1902,19 @@
       }
     },
     {
+      "key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e",
+      "position": 2,
+      "properties": {
+        "description": "\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\n\n**Question:** Two schools are merging and to adapt to the increased size of the student body, the school is changing its system for keeping track of all student IDs from a system that uses 4-bit binary numbers to one that uses 8-bit binary numbers (AKA 1 byte). Which of the following best describes what effect this change will have?",
+        "name": "Peer Instruction",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e",
+        "lesson_activity.key": "8e68bdb3-3d9a-4a98-94be-686af315d54d"
+      }
+    },
+    {
       "key": "a4beb150-d403-4c67-988c-26f3b8522dda",
       "position": 1,
       "properties": {
@@ -1963,7 +1975,7 @@
       "key": "7077e810-a7b2-4b13-8e7b-49b66a9ae441",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How many bits would be needed to count all of the students in class today?\r\n\r\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\r\n\r\n**Question:** What are the similarities and differences between the binary and decimal systems?",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** How many bits would be needed to count all of the students in class today?\n\n**Question:** What are the similarities and differences between the binary and decimal systems?",
         "name": "Assessment: Check For Understanding\r",
         "progression_name": "Check for Understanding"
       },
@@ -4168,6 +4180,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4189,6 +4204,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4211,6 +4229,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4233,6 +4254,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4255,6 +4279,59 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Binary 4bit to 8bit CFU 2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Binary 4bit to 8bit CFU 2023"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
+      },
+      "level_keys": [
+        "CSP Binary 4bit to 8bit CFU 2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L5 CFU adding bits_2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 CFU adding bits_2023"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
+      },
+      "level_keys": [
+        "U1L5 CFU adding bits_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L5 CFU how many bits_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4272,33 +4349,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 2,
+      "chapter": 8,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U1L5 CFU adding bits_2023"
+        "level_keys": [
+          "U1L5 CFU bin dec similarities_2023"
         ],
-        "lesson.key": "Binary Numbers",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023",
-        "activity_section.key": "7077e810-a7b2-4b13-8e7b-49b66a9ae441"
-      },
-      "level_keys": [
-        "U1L5 CFU adding bits_2023"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": true,
-      "properties": {
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4316,11 +4374,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer_2023"
+        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -4338,11 +4399,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4360,11 +4424,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU representing fractions_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4382,11 +4449,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4404,11 +4474,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2023"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4426,11 +4499,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2023"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4448,11 +4524,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2023"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4470,11 +4549,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2023"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4492,11 +4574,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2023"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4514,11 +4599,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4536,11 +4624,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4558,11 +4649,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4580,11 +4674,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 RGB2022_2023"
+        ],
         "progression": "RGB Color"
       },
       "bonus": false,
@@ -4602,11 +4699,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1_2023"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4624,11 +4724,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 More Shades of Color2022_2023"
+        ],
         "progression": "More Shades of Color"
       },
       "bonus": false,
@@ -4646,11 +4749,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2_2023"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4668,11 +4774,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3_2023"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4690,11 +4799,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Sampling Widget_2023"
+        ],
         "progression": "Color Sampling Widget"
       },
       "bonus": false,
@@ -4712,11 +4824,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4_2023"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4734,11 +4849,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4756,11 +4874,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 CFU Sampling_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4778,11 +4899,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2023"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -4800,11 +4924,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4822,11 +4949,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4844,11 +4974,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_2023"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4866,11 +4999,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_2023"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4888,11 +5024,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4910,11 +5049,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice Creative Commons2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4932,11 +5074,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4954,11 +5099,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4976,11 +5124,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4998,11 +5149,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp1_2023"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -5020,11 +5174,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022_2023"
+        ],
         "progression": "Unit 1 Exam"
       },
       "bonus": false,
@@ -5093,14 +5250,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U1L5 CFU how many bits_2023",
+        "level.key": "CSP Binary 4bit to 8bit CFU 2023",
         "script_level.level_keys": [
-          "U1L5 CFU how many bits_2023"
+          "CSP Binary 4bit to 8bit CFU 2023"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "7077e810-a7b2-4b13-8e7b-49b66a9ae441"
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
       }
     },
     {
@@ -5108,6 +5265,18 @@
         "level.key": "U1L5 CFU adding bits_2023",
         "script_level.level_keys": [
           "U1L5 CFU adding bits_2023"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 CFU how many bits_2023",
+        "script_level.level_keys": [
+          "U1L5 CFU how many bits_2023"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
@@ -5680,16 +5849,185 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/copy",
-      "key": "csp_unit_1_-_digital_information",
+      "name": "csp_unit_1-10_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
+      "key": "csp_unit_1-10_-_digital_information",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-10_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-11_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/17tFqFTmTE5-l4wq_tw85HdX-jUXJnUMmmm_Vwda5iZQ/",
+      "key": "csp_unit_1-11_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17tFqFTmTE5-l4wq_tw85HdX-jUXJnUMmmm_Vwda5iZQ/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-11_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-12_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/16aEnqzS7m8tH3BNiiXyvtrG63HdZ4Ze-IBWstPh4I7M/",
+      "key": "csp_unit_1-12_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/16aEnqzS7m8tH3BNiiXyvtrG63HdZ4Ze-IBWstPh4I7M/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-12_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-13_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1XBP2agRKCR0jfuw259wpUGjEmwEAHPJ68DDXi3N06Rc/",
+      "key": "csp_unit_1-13_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1XBP2agRKCR0jfuw259wpUGjEmwEAHPJ68DDXi3N06Rc/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-13_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-14_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/",
+      "key": "csp_unit_1-14_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-14_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-1_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1Cn0Vi7QhOzM_Jqdcs6qdKYBPvJdz_xk0q32iwDI9su0/",
+      "key": "csp_unit_1-1_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Cn0Vi7QhOzM_Jqdcs6qdKYBPvJdz_xk0q32iwDI9su0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-1_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-2_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1-JGoj8qbFV72uJKtt53Uhq26pFo__10tT2_iRWWHrRc/",
+      "key": "csp_unit_1-2_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1-JGoj8qbFV72uJKtt53Uhq26pFo__10tT2_iRWWHrRc/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-2_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-3_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/",
+      "key": "csp_unit_1-3_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-3_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-4_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1kQX-HWJjvoapWuFaCuy16t4c6G728wSCWRKRBiGlkzM/",
+      "key": "csp_unit_1-4_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1kQX-HWJjvoapWuFaCuy16t4c6G728wSCWRKRBiGlkzM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-4_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-5_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1UxuW7TzEcAFD0WkCFLlr1PIr1JF0MtjTHCMH6gmCC3o/",
+      "key": "csp_unit_1-5_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1UxuW7TzEcAFD0WkCFLlr1PIr1JF0MtjTHCMH6gmCC3o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-5_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-6_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1n_mCrBc2HPaOYzltye6NP2rIGQnna_x_E3lH3b2K5LE/",
+      "key": "csp_unit_1-6_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1n_mCrBc2HPaOYzltye6NP2rIGQnna_x_E3lH3b2K5LE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-6_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-7_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/",
+      "key": "csp_unit_1-7_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-7_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-8_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/12yTt4gyJpwbwb09FqDWUAdcFC-5_Ox9L0kd1-96inl4/",
+      "key": "csp_unit_1-8_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/12yTt4gyJpwbwb09FqDWUAdcFC-5_Ox9L0kd1-96inl4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-8_-_digital_information"
+      }
+    },
+    {
+      "name": "csp_unit_1-9_-_digital_information",
+      "url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/",
+      "key": "csp_unit_1-9_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1-9_-_digital_information"
       }
     },
     {
@@ -5990,13 +6328,13 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-14_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-4_-_digital_information"
       }
     },
     {
@@ -6032,7 +6370,7 @@
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-7_-_digital_information"
       }
     },
     {
@@ -6056,7 +6394,7 @@
     {
       "seeding_key": {
         "lesson.key": "Circle Square Patterns",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-3_-_digital_information"
       }
     },
     {
@@ -6068,7 +6406,7 @@
     {
       "seeding_key": {
         "lesson.key": "Color Images",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-8_-_digital_information"
       }
     },
     {
@@ -6104,13 +6442,13 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-11_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lossless Compression",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-9_-_digital_information"
       }
     },
     {
@@ -6122,13 +6460,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lossy Compression",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-10_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-5_-_digital_information"
       }
     },
     {
@@ -6140,7 +6478,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-12_-_digital_information"
       }
     },
     {
@@ -6158,7 +6496,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 2",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-13_-_digital_information"
       }
     },
     {
@@ -6206,7 +6544,7 @@
     {
       "seeding_key": {
         "lesson.key": "Representing Information",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-2_-_digital_information"
       }
     },
     {
@@ -6218,7 +6556,7 @@
     {
       "seeding_key": {
         "lesson.key": "Representing Text",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-6_-_digital_information"
       }
     },
     {
@@ -6230,7 +6568,7 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "csp_unit_1-1_-_digital_information"
       }
     },
     {

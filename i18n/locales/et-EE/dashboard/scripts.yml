@@ -1738,6 +1738,17 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For tsükkel
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -1752,7 +1763,11 @@ et:
               display_name: Funktsioonid
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Loendid
             csp_loops:
+              display_name: Tsüklid
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Loendid
+            lessonGroup-3:
               display_name: Tsüklid

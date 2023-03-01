@@ -110,6 +110,9 @@ FactoryGirl.define do
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
+      trait :not_first_sign_in do
+        sign_in_count 2
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
       end
@@ -510,13 +513,13 @@ FactoryGirl.define do
     trait :teacher_participants do
       participant_type 'teacher'
       login_type 'email'
-      grade 'pl'
+      grades ['pl']
     end
 
     trait :facilitator_participants do
       participant_type 'facilitator'
       login_type 'email'
-      grade 'pl'
+      grades ['pl']
     end
   end
 
@@ -876,6 +879,8 @@ FactoryGirl.define do
     end
   end
 
+  # WARNING: Using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
@@ -1460,6 +1465,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
     pl_programs_offered ['CSD', 'CSP']
+    applications_principal_approval RegionalPartner::ALL_REQUIRE_APPROVAL
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do

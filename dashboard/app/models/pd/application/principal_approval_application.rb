@@ -65,7 +65,7 @@ module Pd::Application
     end
 
     def underrepresented_minority_percent
-      sanitize_form_data_hash.select do |k, _|
+      sanitized_form_data_hash.select do |k, _|
         [
           :black,
           :hispanic,
@@ -169,7 +169,7 @@ module Pd::Application
 
     # full_answers plus the other fields from form_data
     def csv_data
-      sanitize_form_data_hash.tap do |hash|
+      sanitized_form_data_hash.tap do |hash|
         additional_text_fields.each do |field_name, option, additional_text_field_name|
           next unless hash.key? field_name
 
@@ -182,17 +182,17 @@ module Pd::Application
     end
 
     def school
-      @school ||= School.includes(:school_district).find_by(id: sanitize_form_data_hash[:school])
+      @school ||= School.includes(:school_district).find_by(id: sanitized_form_data_hash[:school])
     end
 
     def district_name
       school ?
         school.try(:school_district).try(:name).try(:titleize) :
-        sanitize_form_data_hash[:school_district_name]
+        sanitized_form_data_hash[:school_district_name]
     end
 
     def school_name
-      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+      school ? school.name.try(:titleize) : sanitized_form_data_hash[:school_name]
     end
   end
 end

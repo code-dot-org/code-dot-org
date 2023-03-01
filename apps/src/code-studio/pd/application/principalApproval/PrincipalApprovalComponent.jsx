@@ -28,6 +28,8 @@ import {
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -422,6 +424,12 @@ PrincipalApprovalComponent.getErrorMessages = data => {
       formatErrors[key] = 'Must be a valid percent between 0 and 100';
     }
   });
+
+  if (Object.keys(formatErrors).length > 0) {
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT, {
+      'error messages': JSON.stringify(formatErrors)
+    });
+  }
 
   return formatErrors;
 };

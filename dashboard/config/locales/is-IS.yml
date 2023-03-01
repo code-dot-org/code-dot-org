@@ -785,27 +785,18 @@ is:
         Deildu því svo með öðrum.
       audience: Aldur 13+
       cta: Læra hvernig
-    dance:
-      title: Danspartý
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Danspartý
-    hoc:
-      title: Völundarhús
-      body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
+    dance:
+      title: Danspartý
     flappy:
       title: Flappy kóði
       body: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna
         með Flappy kóða!
-    20-hour:
-      title: Hraðnámskeiðið
-      body: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun.
-        Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára,
-        en er skemmtilegt fyrir alla aldurshópa.
-      body_short: Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum
-        2-4.
-    hoc2014:
-      try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
-      try_frozen: Listamaður með Önnu og Elsu úr Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Safn
       body: Skoða safn forrita og mynda sem notendur okkar hafa búið til
@@ -815,19 +806,20 @@ is:
         hreyfimyndir og leiki með hlutum og gagnvirkum leikverum.
       audience: Aldur 13+
       cta: Læra hvernig
+    hero:
+      title: Minecraft
+      body: |-
+        Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
+        Ferðist um Minecraft með kóða.
     hoc-encryption:
       title: Einföld dulkóðun
       body: Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð.
-    weblab:
-      title: Vefsmiðjan (beta)
-      body: Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður
-        með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði.
-      audience: Aldur 13+
-      cta: Læra hvernig
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Völundarhús
+      body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
+    hoc2014:
+      try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
+      try_frozen: Listamaður með Önnu og Elsu úr Frozen
     infinity:
       title: Infinity Leikjasmiðja
       body: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
@@ -837,20 +829,32 @@ is:
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: |-
-        Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
-        Ferðist um Minecraft með kóða.
     sports:
       title: Íþróttir
       body: Búa til körfuboltaleik eða blanda saman íþróttum.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Þjöppun texta
       body: Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til
         að þjappa texta með því að skipta út mynstrum fyrir tákn.
+    weblab:
+      title: Vefsmiðjan (beta)
+      body: Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður
+        með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði.
+      audience: Aldur 13+
+      cta: Læra hvernig
+    widgets:
+      title: Græjur
+      body: Nemendur geta kannað hugtök úr námskeiðinu okkar Grunnhugtök tölvunarfræði
+        verklega með þessum stafrænu tækjum. Notaðu græjurnar einar eða búðu til kennslustundir
+        um einstök hugtök fyrir hópinn.
+      audience: Aldur 14+
+      cta: Læra hvernig
+    unplugged_conditionals:
+      title: Skilyrði
+      body: Lærðu um algrím og skilyrtar yrðingar í þessu verkefni "án tölvu" með
+        því að nota spilastokk.
     unplugged:
       title: Verkefni án tölvu
       audience: Aldur 6+
@@ -859,17 +863,13 @@ is:
         hvort sem tölvur eru til staðar eða ekki í kennslustofunni. Reyndu að nota
         verkefnin sem sjálfstæð námskeið eða sem aukaefni fyrir námskeið í tölvunarfræði.
       body_short: Prófaðu verkefni án tölvu, ef engin tölva er til staðar.
-    unplugged_conditionals:
-      title: Skilyrði
-      body: Lærðu um algrím og skilyrtar yrðingar í þessu verkefni "án tölvu" með
-        því að nota spilastokk.
-    widgets:
-      title: Græjur
-      body: Nemendur geta kannað hugtök úr námskeiðinu okkar Grunnhugtök tölvunarfræði
-        verklega með þessum stafrænu tækjum. Notaðu græjurnar einar eða búðu til kennslustundir
-        um einstök hugtök fyrir hópinn.
-      audience: Aldur 14+
-      cta: Læra hvernig
+    20-hour:
+      title: Hraðnámskeiðið
+      body: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun.
+        Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára,
+        en er skemmtilegt fyrir alla aldurshópa.
+      body_short: Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum
+        2-4.
   landing:
     prerelease_tutorial: Þetta kennsluefni er **beta** útgáfa. Það gæti breyst eftir
       því sem endurgjöf berst og endurbætur eru gerðar.

@@ -1993,6 +1993,10 @@ he:
           lessons:
             lesson-4:
               name: משתנים
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: בשביל לולאות
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
         csd4-2023:
@@ -2037,8 +2041,6 @@ he:
               display_name: פּרוֹיֶקט
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: רשימות
             csp_loops:
               display_name: חזרות
             csp_project:
@@ -2047,8 +2049,14 @@ he:
               display_name: סקר שלאחר הקורס
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: רשימות
             lessonGroup-2:
               display_name: סקר שלאחר הקורס
+            lessonGroup-3:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פּרוֹיֶקט
         csp7-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2066,6 +2074,10 @@ he:
             lessonGroup-2:
               display_name: סקר שלאחר הקורס
         devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        microbit-2022:
           lesson_groups:
             lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'

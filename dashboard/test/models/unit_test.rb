@@ -566,6 +566,45 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal courseg_2017, Unit.latest_assigned_version('courseg', student)
   end
 
+  test 'self.latest_version_with_progress returns nil if user made no progress in any version' do
+    student = create :student
+    family_name = 'fake-script-family'
+    create(:script, name: 'fake-script-family-2023', family_name: family_name, version_year: '2023')
+
+    assert_nil Unit.latest_version_with_progress(family_name, student)
+  end
+
+  test 'self.latest_version_with_progress returns version user made progress in if they made progress in one' do
+    student = create :student
+    family_name = 'fake-script-family'
+    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
+    create :user_script, user: student, script: fake_script_2023, last_progress_at: Time.now
+
+    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
+  end
+
+  test 'self.latest_version_with_progress returns latest version of unit user made progress in' do
+    student = create :student
+    family_name = 'fake-script-family'
+    fake_script_2022 = create(:script, name: 'sample-script-family-2022', family_name: family_name, version_year: '2022')
+    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
+    create :user_script, user: student, script: fake_script_2022, last_progress_at: Time.now
+    create :user_script, user: student, script: fake_script_2023, last_progress_at: Time.now
+
+    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
+  end
+
+  test 'self.latest_version_with_progress returns latest version of unit user made progress in even if most recent progress not in most recent version' do
+    student = create :student
+    family_name = 'fake-script-family'
+    fake_script_2022 = create(:script, name: 'sample-script-family-2022', family_name: family_name, version_year: '2022')
+    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
+    create :user_script, user: student, script: fake_script_2022, last_progress_at: Time.now
+    create :user_script, user: student, script: fake_script_2023, last_progress_at: Time.now - 1.day
+
+    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
+  end
+
   test 'has_other_versions? makes no queries when there is one other unit group version' do
     Unit.stubs(:should_cache?).returns true
 
@@ -1164,10 +1203,10 @@ class UnitTest < ActiveSupport::TestCase
     unit = create :script
     announcement_key = SecureRandom.uuid
     unit.announcements = [{
-      'key': announcement_key,
-      'notice': 'Announcement notice',
-      'details': 'Announcement details',
-      'buttonText': 'Announcement button text'
+      key: announcement_key,
+      notice: 'Announcement notice',
+      details: 'Announcement details',
+      buttonText: 'Announcement button text'
     }]
     unit.save!
 
@@ -1894,6 +1933,8 @@ class UnitTest < ActiveSupport::TestCase
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hoc?
+    refute @csf_unit.hoc?
+    refute @csd_unit.hoc?
   end
 
   test "middle_high?" do

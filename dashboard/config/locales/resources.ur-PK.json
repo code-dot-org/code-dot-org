@@ -148,6 +148,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "ورچوئل اسباق میں ترمیم"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "وسیلہ"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "ہینڈ آؤٹ"
@@ -339,6 +342,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "ورچوئل اسباق میں ترمیم"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "وسیلہ"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "الفاظ کی طاقت: سبق کوئز",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -493,6 +499,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "ورچوئل اسباق میں ترمیم"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "وسیلہ"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "سپر ڈیجیٹل شہری بنیں: سبق کی سلائیڈز",
@@ -1132,6 +1141,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "ورچوئل اسباق میں ترمیم"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "وسیلہ"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "آن لائن بدتمیزی کو روکنا: سبق کی سلائیڈز",

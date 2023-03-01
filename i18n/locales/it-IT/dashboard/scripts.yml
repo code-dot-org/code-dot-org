@@ -344,9 +344,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csp-online-test:
           lesson_groups:
             required:
@@ -905,9 +905,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -1215,9 +1215,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         andrea-test:
           lesson_groups:
             required:
@@ -1560,9 +1560,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd2-pilot:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
           lesson_groups:
@@ -1658,7 +1658,7 @@ it:
         csd4-pilot:
           lesson_groups:
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csp2-pilot:
           lesson_groups:
             content:
@@ -1807,9 +1807,11 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            csd1_3:
+              display_name: Lezioni alternative
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -2121,13 +2123,16 @@ it:
             debugging:
               display_name: Correzione errori (debugging)
         csd1-2021:
+          title: Risoluzione dei problemi e informatica ('21-'22)
           lesson_groups:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            csd1_3:
+              display_name: Lezioni alternative
         csd2-2021:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
           lesson_groups:
@@ -3129,9 +3134,11 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            csd1_3:
+              display_name: Lezioni alternative
         csd2-2022:
           lesson_groups:
             cspSurvey:
@@ -3238,6 +3245,8 @@ it:
               display_name: Sondaggio
             lessonGroup-3:
               display_name: Contenuto
+            lessonGroup-5:
+              display_name: Lezioni alternative
         csa2-2023:
           lessons:
             lesson-4:
@@ -3245,6 +3254,28 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Array unidimensionale (1D)
+            lesson-3:
+              name: Cicli con contatore
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Casuale
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
         hello-world-space-2022:
           title: Ciao mondo - Spazio
         hello-world-soccer-2022:
@@ -3317,7 +3348,7 @@ it:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Liste
+              display_name: Dati
             csp_loops:
               display_name: Cicli
             csp_traversals:
@@ -3326,10 +3357,19 @@ it:
               display_name: Progetto
             lessonGroup-5:
               display_name: Sondaggio Post-corso
+          title: Dati ('22-'23)
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
             lessonGroup-2:
               display_name: Sondaggio Post-corso
+            lessonGroup-3:
+              display_name: Cicli
+            lessonGroup-4:
+              display_name: Traversali
+            lessonGroup-5:
+              display_name: Progetto
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -3348,7 +3388,6 @@ it:
               display_name: Princìpi dell'Informatica - Unità 9
             lessonGroup-2:
               display_name: Sondaggio Post-corso
-          title: Dati ('22-'23)
         csp10-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3360,3 +3399,15 @@ it:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Capitolo 2: Input Hardware'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione a Sviluppo App
+            lessonGroup-3:
+              display_name: Ingressi e uscite

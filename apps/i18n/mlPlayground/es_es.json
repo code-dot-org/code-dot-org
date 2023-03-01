@@ -1,164 +1,30 @@
 {
-  "trainModelButtonText": "Entrenar",
   "navigateForward": "Continuar",
-  "navigateBack": "Volver",
-  "tryAgain": "Intentar de nuevo",
+  "navigateBack": "Atrás",
+  "tryAgain": "Vuelve a intentarlo",
   "navigateDone": "Terminar",
   "saveProgress": "Guardar",
   "correctAnswer": "Correcto",
   "incorrectAnswer": "Incorrecto",
-  "potentialUsesLabel": "Finalidad de Uso",
-  "potentialUsesDescription": "Describe el problema que crees que este modelo puede solucionar o una posible aplicación en la que alguien pueda usar este modelo.",
-  "potentialUsesPlaceholder": "Escribe una breve descripción.",
   "potentialMisusesLabel": "Limitaciones y Advertencias",
-  "potentialMisusesDescription": "Describe cualquier limitación de como el modelo ha sido creado y como debe usarse. Puedes decir algo como \"Evita usar este modelo para...\" o \"Ten cuidado con...\". Algunas cuestiones importantes que considerar:",
-  "potentialMisusesDescriptionRepresent": "¿Representan los datos a todos los usuarios y escenarios posibles?",
-  "potentialMisusesDescriptionEnough": "¿Recogiste suficientes datos para confiar en la precisión del modelo?",
-  "potentialMisusesDescriptionSituations": "¿Hay situaciones en las que este modelo definitivamente no debería usarse?",
-  "potentialMisusesPlaceholder": "Escribe una breve descripción.",
-  "modelNameLabel": "Nombre del modelo",
-  "datasetDescriptionLabel": "Acerca de los Datos",
-  "datasetDescriptionPlaceholder": "¿Cómo se recopilaron los datos? ¿Quién los recopiló? ¿Cuándo se recopilaron?",
-  "saveModelColumnCountLabel": "Descripción de las Columnas",
-  "saveModelFieldRequired": "obligatorio",
-  "saveModelColumnTypeLabel": "etiqueta",
-  "saveModelColumnTypeFeature": "característica",
-  "modelCardAccuracy": "Precisión",
-  "modelCardIntendedUse": "Finalidad de uso",
   "modelCardLimitations": "Limitaciones y Advertencias",
-  "modelCardDatasetDetails": "Acerca de los datos",
-  "modelCardDatasetDetailsSize": "Tamaño del conjunto de datos",
-  "modelCardDatasetDetailsSizeCount": "{rowCount} filas",
-  "modelCardFeaturesAndLabel": "Características y Etiquetas",
-  "modelCardLabel": "Etiqueta",
-  "modelCardPossibleValues": "Valores Posibles",
+  "modelCardLabel": "Etiquetas",
   "modelCardPossibleValuesMinimum": "mín.",
   "modelCardPossibleValuesMaximum": "máx.",
   "modelCardFeatures": "Características",
-  "dataDisplayRowCount": "Hay {rowCount} filas de datos.",
-  "dataDisplayRowCountTruncated": "Hay {rowCount} filas de datos. (Mostrando las primeras {rowLimit} filas)",
-  "columnInspectorDataType": "Tipo de Dato",
   "columnInspectorDescription": "Descripción",
-  "columnDetailsInformation": "Información de la columna",
-  "columnDetailsNumericalTypeError": "Columnas numéricas no pueden contener cadenas de caracteres.",
   "columnDetailsMinimumValue": "mín.",
   "columnDetailsMaximumValue": "máx.",
-  "columnDetailsValueRange": "rango",
-  "columnDetailsTooManyLabels": "{labelCount} valores han sido encontrados en esta columna. Se muestra un gráfico cuando hay {maxLabelCount} o menos.",
-  "selectLabelButton": "Selecciona una etiqueta",
-  "scatterPlotLabel": "Información de la relación",
-  "addFeatureButton": "Añadir una característica",
-  "columnType_numerical": "numérico",
-  "columnType_categorical": "categórico",
-  "selectDatasetUploadFileButton": "Sube {fileType}",
-  "selectDatasetErrorTooFewRows": "Por favor sube un {fileType} con al menos {count} filas.",
-  "selectDatasetErrorTooFewColumns": "Por favor sube un {fileType} con al menos {count} columnas.",
-  "dataCardWarningLargeDataset": "Advertencia: los conjuntos de datos con más de {rowCount} filas ralentizarán la experiencia del usuario.",
-  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {fila eliminada} other {filas eliminadas}} porque {rowCount, plural, one {contenia} other {contenian}} celdas vacías.",
-  "dataCardDefaultHeader": "Detalles",
-  "dataCardSource": "Fuente",
-  "dataCardRowCount": "Filas de datos",
   "dataCardLastUpdated": "Última actualización",
-  "dataCardPotentialUses": "Usos posibles",
-  "dataCardPotentialMisuses": "Malos usos posibles",
-  "saveStatus_success": "¡Tu modelo ha sido guardado!",
-  "saveStatus_failure": "Ha habido un error. Tu modelo no se ha guardado. Por favor, inténtalo de nuevo.",
-  "saveStatus_piiProfanity": "Tu modelo no se pudo guardar porque contiene blasfemias o información personal identificable (por ejemplo, correo electrónico, dirección, número de teléfono).",
   "trainModelHeading": "Entrenamiento",
-  "aiBotAltText": "Robot de I.A.",
-  "aiBotHeadAltText": "Cabeza del robot de I.A.",
-  "aiBotBodyAltText": "Cuerpo del robot de I.A.",
-  "aiBotBeamAltText": "Escáner del robot de I.A.",
-  "animationDescriptionsHeader": "Descripción de la animación",
-  "animationDescriptionsTraining": "Las filas etiquetadas del conjunto de datos de entrenamiento entran en la cabeza del robot de I.A.",
-  "animationDescriptionsTesting": "El robot de I.A. escanea las filas de datos sin etiquetar del conjunto de datos de prueba. Cada vez que una fila pasa por el escáner del robot de I.A., éste hace una predicción añadiendo un valor a la columna de la etiqueta.",
-  "generateResultsHeader": "Probando el modelo",
-  "resultsHeader": "Resultado",
-  "resultsAccuracy": "Precisión",
-  "resultsDetailsButton": "Detalles",
-  "resultsPreviousResults": "Resultados anteriores",
   "resultsTableFeatureHeader": "Características",
-  "resultsTableActualValueHeader": "Real",
-  "resultsTablePredictedValueHeader": "Predicción de la I.A.",
-  "resultsTablePredictionRange": "Las predicciones son +/-{percentage}% del rango",
-  "predictHeader": "¡Pruébalo!",
   "predictButton": "Predecir",
-  "predictAIBotPredicts": "La I.A. predice",
-  "predictPlaceholder": "mín. {minimum}, máx. {maximum}",
-  "crossTabRelationshipHeader": "Información de la relación",
-  "crossTabTooMuchData": "Los datos seleccionados son demasiado grandes para mostrarlos en una tabla.",
   "uniqueOptionsWarningNotice": "Nota",
-  "uniqueOptionsWarningMessage": "Columnas de valores categóricos con más de {valueCount} valores únicos no pueden ser seleccionadas como una etiqueta o característica.",
-  "predictionStatement": "Predice {output} a partir de {inputs}",
   "datasets": {
-    "medical_priority": {
+    "bike_sharing": {
       "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "clima"
-        },
-        "day": {
-          "id": "día"
-        },
-        "shoe": {
-          "id": "zapato"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "cebolla"
-        },
-        "avocado": {
-          "id": "aguacate"
-        },
-        "corn": {
-          "id": "maíz"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "lime": {
-          "id": "lima"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "setas"
-        },
-        "lobster": {
-          "id": "langosta"
-        },
-        "bacon": {
-          "id": "beicon"
-        },
-        "cheese": {
-          "id": "queso"
-        },
-        "meat": {
-          "id": "carne"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        },
-        "music": {
-          "id": "música"
-        },
-        "food": {
-          "id": "comida"
+        "Year": {
+          "id": "Año"
         }
       }
     },
@@ -179,58 +45,6 @@
         }
       }
     },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "fresa"
-        },
-        "lime": {
-          "id": "lima"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
-        },
-        "size": {
-          "id": "tamaño"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "tomate"
-        },
-        "avocado": {
-          "id": "aguacate"
-        },
-        "chicken": {
-          "id": "pollo"
-        },
-        "fruit": {
-          "id": "fruta"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "cheese": {
-          "id": "queso"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Edad"
-        },
-        "Gender": {
-          "id": "Sexo"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "school": {
@@ -241,39 +55,6 @@
         },
         "health": {
           "id": "salud"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pollo"
-        },
-        "lamb": {
-          "id": "cordero"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "cheese": {
-          "id": "queso"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Escribir"
         }
       }
     },
@@ -290,6 +71,9 @@
         },
         "Star": {
           "id": "Estrella"
+        },
+        "Year": {
+          "id": "Año"
         }
       }
     },
@@ -297,176 +81,53 @@
       "fields": {
         "Artist": {
           "id": "Artista"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "personas"
         },
-        "rhino": {
-          "id": "rinoceronte"
-        },
-        "elephant": {
-          "id": "elefante"
-        },
-        "alligator": {
-          "id": "caimán"
-        },
-        "trees": {
-          "id": "árboles"
+        "Year": {
+          "id": "Año"
         }
       }
     },
     "abalone": {
       "fields": {
+        "Sex": {
+          "id": "género",
+          "description": "El sexo del abulón: M, F o I (infante)."
+        },
         "Length": {
-          "id": "Extensión"
+          "id": "Extensión",
+          "description": "Su longitud en el punto más largo en milímetros."
         },
-        "Height": {
-          "id": "Alto"
-        }
-      }
-    },
-    "zoo": {
-    "fields": {
-      "Animal Name": {
-        "id": "Nombre del Animal",
-        "description": "Nombre del animal."
-      },
-      "Hair": {
-        "id": "Pelo",
-        "description": "¿El animal tiene pelo?"
-      },
-      "Feathers": {
-        "id": "Plumas",
-        "description": "¿El animal tiene plumas?"
-      },
-      "Eggs": {
-        "id": "Huevos",
-      "description": "¿El animal pone huevos?"
-      },
-      "Milk": {
-        "id": "Leche",
-      "description": "¿El animal produce leche?"
-      },
-      "Airborne": {
-        "id": "Aéreo",
-        "description": "¿El animal vuela?"
-      },
-      "Aquatic": {
-        "id": "Acuático",
-        "description": "¿El animal vive en el agua?"
-      },
-      "Predator": {
-        "id": "Depredador",
-        "description": "¿El animal es un depredador?"
-      },
-      "Toothed": {
-        "id": "Dentado",
-        "description": "¿El animal tiene dientes?"
-      },
-      "Backbone": {
-        "id": "Vertebrado",
-        "description": "¿El animal es vertebrado?"
-      },
-      "Breathes": {
-        "id": "Respira",
-        "description": "¿El animal respira?"
-      },
-      "Venomous": {
-        "id": "Venenoso",
-        "description": "¿El animal es venenoso?"
-      },
-      "Fins": {
-        "id": "Aletas",
-        "description": "¿El animal tiene aletas?"
-      },
-      "Legs": {
-        "id": "Patas",
-        "description": "¿Cuántas patas tiene el animal?"
-      },
-      "Tail": {
-        "id": "Cola",
-        "description": "¿El animal tiene cola?"
-      },
-      "Domestic": {
-        "id": "Doméstico",
-        "description": "¿El animal es doméstico?"
-      },
-      "Catsize": {
-        "id": "Tamaño de Gato",
-        "description": "¿Es el animal de tamaño similar al de un gato?"
-      },
-      "Class": {
-        "id": "Clase",
-        "description": "¿Qué tipo de animal es?"
-      }
-    },
-    "card": {
-      "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas.",
-      "context": {
-        "potentialUses": "Hay muchas etiquetas posibles, pero una investigación fácil con la que puedes empezar es encontrar que características tienden a relacionarse con que un animal sea venenoso.",
-        "potentialMisuses": "Éste es un conjunto de datos de tan solo 100 animales, puede que haya muchos más animales que no aparezcan reflejados en los datos. ¡Usa los datos con cautela!"
-        }
-      },
-      "name": "Zoológico"
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "ginger": {
-          "id": "pelirroja"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Music": {
-          "id": "Música"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Escribir"
-        },
-        "Empathy": {
-          "id": "Empatía"
-        },
-        "Achievements": {
-          "id": "Logros"
-        },
-        "Age": {
-          "id": "Edad",
-          "description": "Edad"
+        "Diameter": {
+          "id": "Diámetro",
+          "description": "Su diámetro en milímetros."
         },
         "Height": {
           "id": "Alto",
-          "description": "Alto"
+          "description": "Su altura con el caracol en el caparazón en milímetros. "
         },
-        "Gender": {
-          "id": "Sexo",
-          "description": "Sexo"
+        "Whole weight": {
+          "id": "Peso total",
+          "description": "El peso total del adulón en gramos."
+        },
+        "Shucked weight": {
+          "id": "Peso descascarado "
+        },
+        "Viscera weight": {
+          "id": "Peso de las vísceras",
+          "description": "El peso de las vísceras, en gramos."
+        },
+        "Shell weight": {
+          "id": "Peso de la cáscara",
+          "description": "El peso de la cáscara después de secarse, en gramos."
+        },
+        "Rings": {
+          "id": "Anillos",
+          "description": "La edad en años."
         }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "plátano"
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Determina la edad de un abulón."
         }
       }
     },
@@ -474,29 +135,9 @@
       "fields": {
         "Age": {
           "id": "Edad"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
         },
-        "size": {
-          "id": "tamaño"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Music": {
-          "id": "Música"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Country": {
-          "id": "País"
+        "Sex": {
+          "id": "género"
         }
       }
     }

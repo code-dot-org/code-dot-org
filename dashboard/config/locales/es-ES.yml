@@ -3,25 +3,25 @@ es:
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: Este contenido tiene restricciones de edad establecidas y no está
-        disponible para estudiantes jóvenes.
-      teacher_must_accept_terms: Este contenido tiene restricciones de edad establecidas
-        y no está disponible para estudiantes jóvenes. Pídele a tu docente que acepte
-        los Términos de Servicio actualizados para darte acceso a este contenido.
-        Para hacerlo, puede iniciar sesión en Code Studio y hacer clic en el botón
-        "Revisar términos actualizados" cerca de la parte superior de la página de
-        inicio de Code Studio.
-      pair_programmer: En este momento, estás programando de a pares con un estudiante
-        que no tiene acceso a este contenido. Para acceder a este contenido, detén
-        la programación en pareja e inténtalo nuevamente.
+      too_young: Este contenido tiene restricciones de edad y no está disponible para
+        los alumnos más jóvenes.
+      teacher_must_accept_terms: Este contenido tiene restricciones de edad y no está
+        disponible para los alumnos más jóvenes. Pide a tu profesor que acepte las
+        Condiciones del servicio actualizadas para poder acceder a este contenido.
+        Para ello, inicia sesión en Code Studio y pulsa el botón "Revisar las condiciones
+        actualizadas" situado en la parte superior de la página de inicio de Code
+        Studio.
+      pair_programmer: En este momento estás programando por parejas con un alumno
+        que no tiene acceso a este contenido. Para acceder a este contenido, deja
+        de programar por parejas e inténtalo de nuevo.
   activerecord:
     errors:
       models:
         user:
           attributes:
             reset_password_token:
-              invalid: no es válido. Ten en cuenta que cada enlace sólo se puede utilizar
-                una vez para restablecer la contraseña y sólo funcionará el enlace
+              invalid: no es válido. Ten en cuenta que cada enlace sólo puede utilizarse
+                una vez para restablecer tu contraseña, y sólo funcionará el enlace
                 enviado más recientemente.
       messages:
         blank: es requerido
@@ -163,13 +163,13 @@ es:
       [Puedes explorar varias etapas y desafíos](/) sin una cuenta, pero deberás registrarte
       para guardar tu progreso y tus proyectos.
     hoc_already_signed_up_heading: Empezar sin iniciar sesión
-    hoc_already_signed_up_content: ¡Te has registrado para enseñar en la Hora del
-      Código! Tú y tus estudiantes no necesitan iniciar sesión en Code Studio para
-      participar en este evento. Para comenzar, <a href="%{learn_url}">selecciona
-      un tutorial</a> para tus estudiantes y comparte el enlace con ellos.<br/><br/>Si
-      te ha gustado la Hora del Código y quieres seguir avanzando, puedes establecer
-      una contraseña y crear una cuenta de Code Studio debajo para inscribir a tus
-      estudiantes en cualquiera de nuestros <a href="%{educate_url}">cursos largos</a>.
+    hoc_already_signed_up_content: ¡Te has registrado para enseñar una Hora del Código!
+      No es necesario que tú y tus alumnos os registréis en Code Studio para participar
+      en este evento. Para empezar, <a href="%{learn_url}">elige un tutorial</a> para
+      tu clase y comparte el enlace con ellos.<br/><br/>Si te ha gustado la Hora del
+      Código y quieres ir más allá, puedes introducir una contraseña y crear una cuenta
+      de Code Studio a continuación para inscribir a tus alumnos en cualquiera de
+      nuestros <a href="%{educate_url}">cursos más largos</a>.
     hoc_already_signed_up_content_post_hoc: Gracias por apoyar la Hora del Código.
       Para ingresar en Code Studio, tienes que establecer una contraseña para tu cuenta.
       Así podrás guardar tu progreso y administrar tu clase. Podrás asignar cursos
@@ -329,6 +329,7 @@ es:
   teacher_mailer:
     new_teacher_subject: "¡Bienvenido a Code.org!"
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
+    verified_teacher_subject: Verificación de Profesores de Code.org - Satisfactorio
   section:
     your_section:
       one: 'Tu sección:'
@@ -449,6 +450,7 @@ es:
       help_us: Ayudenos
       teach: Enseñar
       about: Acerca de
+      incubator: Incubadora
       legal: Privacidad y Legalidad
       legal_privacy: Política de Privacidad
       legal_cookie_notice: Aviso de Cookies
@@ -760,6 +762,7 @@ es:
     store: Tienda
     cookie_notice: Aviso de Cookies
     view_code: Ver Código
+    locale_select: Seleccionar idioma
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos vídeos y sugerencias
@@ -793,6 +796,11 @@ es:
       weblab_unsupported_locale_storage: Puedes experimentar problemas con el Laboratorio
         web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto
         en modo normal. Disculpa las molestias.
+  deprecation:
+    algebra_lab: 'El plan de estudios y los contenidos de Informática en Álgebra están
+      quedando obsoletos.  En los próximos meses, este laboratorio dejará de estar
+      disponible.  En su lugar, consulta [Bootstrap: Algebra](%{bootstrap_algebra_url}).
+      [Más información](%{cs_algebra_url}).'
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intenta volver a cargar la página
   next_stage: "¡Acabado! Sigue a la siguiente etapa"
@@ -837,35 +845,28 @@ es:
         funcione, y luego comparte tu aplicación en cuestión de segundos.
       audience: Desde 13 años
       cta: Aprende cómo
-    dance:
-      title: Fiesta de Baile
+      image_alt: Un conejito morado con una mochila propulsada por cohetes.
+    applab-intro:
+      image_alt: Una mano golpea el centro de la pantalla de un smartphone. De la
+        pantalla salen luces y destellos.
+    aquatic:
+      title: Minecraft
+      image_alt: Steve y Alex de Minecraft te están mirando.
+    artist:
+      image_alt: La caricatura de una persona sosteniendo un enorme lápiz y dibujando
+        un triángulo.
+    conditionals:
+      image_alt: Dos manos barajando un mazo de cartas.
     dance-2019:
       title: Fiesta de Baile
-    hello-world:
-      title: Hola Mundo
-      body: Elige entre cuatro temas divertidos para codificar personajes interactivos
-        en un mundo creado por ti.
-    poem-art:
-      title: Arte del Poema
-      body: "¡Exprésate! Utiliza el código para crear poemas animados."
-    hoc:
-      title: Laberinto clásico
-      body: Prueba los fundamentos de la Ciencia de la Computación. Millones lo han
-        intentado.
+    dance:
+      title: Fiesta de Baile
     flappy:
       title: Código Flappy
       body: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro
         tutorial de Código Flappy!"
-    20-hour:
-      title: Curso acelerado
-      body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos
-        de programación. El curso está diseñado para su uso en aulas para los grados
-        K-8, pero es divertido aprender en todas las edades.  '
-      body_short: Aprende informática básica con una versión acelerada de los cursos
-        2 a 4.
-    hoc2014:
-      try_new_tutorial: Prueba nuestro nuevo tutorial de la Hora de Code en beta
-      try_frozen: Artista con Anna y Elsa de "Frozen"
+    frozen:
+      title: Frozen
     gallery:
       title: Galería
       body: Ver una galería de aplicaciones y de imágenes de artistas creadas por
@@ -877,20 +878,24 @@ es:
         entre sí.
       audience: Desde 13 años
       cta: Aprende cómo
+    hello-world:
+      title: Hola Mundo
+      body: Elige entre cuatro temas divertidos para codificar personajes interactivos
+        en un mundo creado por ti.
+    hero:
+      title: Minecraft
+      body: "¡Minecraft vuelve a la Hora del Código con una nueva actividad! Viaja
+        a través de Minecraft con código."
     hoc-encryption:
       title: Encriptación Simple
       body: Los estudiantes aprenderán técnicas para crear y revelar mensajes cifrados.
-    weblab:
-      title: Laboratorio web (beta)
-      body: El Laboratorio web es un ambiente de programación en el que puedes crear
-        páginas web simples mediante HTML y CSS. Diseña tus páginas web y comparte
-        tu sitio en cuestión de segundos.
-      audience: Desde 13 años
-      cta: Aprende cómo
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Laberinto clásico
+      body: Prueba los fundamentos de la Ciencia de la Computación. Millones lo han
+        intentado.
+    hoc2014:
+      try_new_tutorial: Prueba nuestro nuevo tutorial de la Hora de Code en beta
+      try_frozen: Artista con Anna y Elsa de "Frozen"
     infinity:
       title: Laboratorio de Juegos Disney Infinity
       body: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado
@@ -902,19 +907,37 @@ es:
       title: Minecraft
       body: Construye tu propia versión de Minecraft. Crea tus propias versiones de
         las gallinas, ovejas, Creepers, zombis y más.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: "¡Minecraft vuelve a la Hora del Código con una nueva actividad! Viaja
-        a través de Minecraft con código."
+    poem-art:
+      title: Arte del Poema
+      body: "¡Exprésate! Utiliza el código para crear poemas animados."
     sports:
       title: Deportes
       body: Elige entre un partido de baloncesto o una combinación de deportes.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Compresión de Texto
-      body: En esta lección, los estudiantes usarán el Widget de Comprensión de Textos
-        para comprimir texto mediante el reemplazo de patrones con símbolos.
+      body: En esta lección, los alumnos utilizarán el Widget de Compresión de Texto
+        para comprimir texto sustituyendo patrones por símbolos.
+    weblab:
+      title: Laboratorio web (beta)
+      body: El Laboratorio web es un ambiente de programación en el que puedes crear
+        páginas web simples mediante HTML y CSS. Diseña tus páginas web y comparte
+        tu sitio en cuestión de segundos.
+      audience: Desde 13 años
+      cta: Aprende cómo
+    widgets:
+      title: Widgets
+      body: Los estudiantes pueden explorar conceptos de nuestro curso de Principios
+        de Ciencias de la Computación de manera práctica mediante estas herramientas
+        digitales. Usa los widgets por tu cuenta o crea una lección con un concepto
+        único para tu clase.
+      audience: Desde 14 años
+      cta: Aprende cómo
+    unplugged_conditionals:
+      title: Condicionales
+      body: Aprende los algoritmos y sentencias condicionales en esta actividad "sin
+        conexión" utilizando una baraja de cartas.
     unplugged:
       title: Lecciones sin conexión
       audience: Desde 4 años
@@ -925,18 +948,13 @@ es:
         de informática.
       body_short: Si no tienes ordenadores, prueba estas lecciones sin conexión en
         tu aula.
-    unplugged_conditionals:
-      title: Condicionales
-      body: Aprende los algoritmos y sentencias condicionales en esta actividad "sin
-        conexión" utilizando una baraja de cartas.
-    widgets:
-      title: Widgets
-      body: Los estudiantes pueden explorar conceptos de nuestro curso de Principios
-        de Ciencias de la Computación de manera práctica mediante estas herramientas
-        digitales. Usa los widgets por tu cuenta o crea una lección con un concepto
-        único para tu clase.
-      audience: Desde 14 años
-      cta: Aprende cómo
+    20-hour:
+      title: Curso acelerado
+      body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos
+        de programación. El curso está diseñado para su uso en aulas para los grados
+        K-8, pero es divertido aprender en todas las edades.  '
+      body_short: Aprende informática básica con una versión acelerada de los cursos
+        2 a 4.
   landing:
     prerelease_tutorial: Este tutorial es una versión **beta**. Es objeto de revisión
       a medida que se reciben comentarios y se hacen mejoras.
@@ -1215,8 +1233,8 @@ es:
       no podrán iniciar sesión en Code Studio, guardar su progreso o imprimir certificados.
       Los docentes pueden imprimir los certificados por adelantado [here](%{url}).'
     minecraft_name: Hora del Código de Minecraft
-    starwars_blocks_name: 'Star Wars: cómo crear una galaxia con el código (bloques)'
-    starwars_javascript_name: 'Star Wars: cómo crear una galaxia con el código (JavaScript)'
+    starwars_blocks_name: 'Star Wars: Construyendo una galaxia con código (Bloques)'
+    starwars_javascript_name: 'Star Wars: Construyendo una galaxia con código (JavaScript)'
     download_message: Descargar %{app_name} para su uso sin conexión (136 MB)
     download_in_Albanian: 'Descargar en albanés:'
     download_in_Arabic: 'Descargar en árabe:'

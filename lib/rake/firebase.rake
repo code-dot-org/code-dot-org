@@ -1,10 +1,12 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :firebase do
   desc 'Compile firebase security rules and store them in the apps package.'
-  task :compile_rules do
+  timed_task_with_logging :compile_rules do
     if rack_env?(:production)
       raise "Cannot compile firebase security rules on production, because npm is not installed.\n"\
         "Instead, upload security rules from the apps package which was downloaded from s3."
@@ -13,7 +15,7 @@ namespace :firebase do
   end
 
   desc 'Uploads compiled security rules to firebase from the apps package.'
-  task :upload_rules do
+  timed_task_with_logging :upload_rules do
     if CDO.firebase_name
       ChatClient.log 'Uploading security rules to firebase...'
       Dir.chdir(dashboard_dir) do
@@ -34,7 +36,7 @@ namespace :firebase do
   end
 
   desc 'Sets config in the firebase database from CDO config params.'
-  task :set_config do
+  timed_task_with_logging :set_config do
     if CDO.firebase_name
       ChatClient.log 'Setting firebase configuration parameters...'
       Dir.chdir(apps_dir) do
@@ -57,7 +59,7 @@ namespace :firebase do
   end
 
   desc 'Clear all channels data, but only on the test machine'
-  task :clear_test_channels do
+  timed_task_with_logging :clear_test_channels do
     if rack_env?(:test) && CDO.firebase_name == 'cdo-v3-test'
       ChatClient.log 'Clearing firebase channels data...'
       url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels.json?auth=#{CDO.firebase_secret}"
@@ -66,11 +68,11 @@ namespace :firebase do
   end
 
   desc 'Compile and upload firebase rules.'
-  task rules: [:compile_rules, :upload_rules]
+  timed_task_with_logging rules: [:compile_rules, :upload_rules]
 
-  task all: [:compile_rules, :upload_rules, :set_config]
-  task ci: [:upload_rules, :set_config, :clear_test_channels]
+  timed_task_with_logging all: [:compile_rules, :upload_rules, :set_config]
+  timed_task_with_logging ci: [:upload_rules, :set_config, :clear_test_channels]
 end
 
 desc 'Compile and upload firebase rules, and set firebase config.'
-task firebase: ['firebase:all']
+timed_task_with_logging firebase: ['firebase:all']

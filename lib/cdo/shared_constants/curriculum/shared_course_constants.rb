@@ -77,6 +77,49 @@ module Curriculum
       other
     ).freeze
 
+    # The curriculum types used in curriculum quick assign
+    COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
+      {
+        module: 'Module',
+        course: 'Course',
+        standalone_unit: 'Standalone Unit',
+        hoc: 'Hour of Code',
+        pl: 'Professional Learning'
+      }
+    ).freeze
+
+    # The headers used to organize course offerings in curriculum quick assign
+    COURSE_OFFERING_HEADERS = OpenStruct.new(
+      {
+        favorites: 'Favorites',
+        labs_and_skills: 'Labs and Skills',
+        minecraft: 'Minecraft',
+        hello_world: 'Hello World',
+        popular_media: 'Popular Media',
+        sports: 'Sports',
+        express: 'Express',
+        csf: 'CS Fundamentals',
+        csc: 'CS Connections',
+        year_long: 'Year Long',
+        csa_labs: 'CSA Labs',
+        self_paced: 'Self-Paced',
+        teacher_led: 'Teacher-Led',
+        collections: 'Collections',
+        virtual_pl: 'Virtual Professional Learning',
+        self_paced_pl: 'Self Paced Professional Learning',
+        other_pl: 'Other Professional Learning'
+      }
+    ).freeze
+
+    # Used in curriculum quick assign
+    COURSE_OFFERING_MARKETING_INITIATIVES = OpenStruct.new(
+      {
+        hoc: 'HOC',
+        csc: 'CSC',
+        csf: 'CSF'
+      }
+    )
+
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be
     # participants in the course. There this will tell you give the participant_audience of the

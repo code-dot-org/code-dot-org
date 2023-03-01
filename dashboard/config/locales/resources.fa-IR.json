@@ -171,6 +171,11 @@
           "name": "اصلاحات درس مجازی ",
           "url": ""
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "بخش Password Power-Up: سناریوهای ...If...Then",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -406,7 +411,7 @@
           "url": ""
         },
         "sprite_lab_documentation/coursef/2022": {
-          "name": "",
+          "name": "مستندات آزمایشگاه اسپرایت",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "منبع"
         },
@@ -418,6 +423,11 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "اصلاحات درس مجازی ",
           "url": ""
+        },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "قدرت کلمات: امتحان درس",
@@ -460,7 +470,7 @@
           "type": "کلید پاسخ"
         },
         "introducing_sprite_lab_1/coursef/2022": {
-          "name": "",
+          "name": "آشنایی با آزمایشگاه اسپرایت",
           "url": "https://youtu.be/yd-9xZ275dM",
           "type": "ویدیو"
         },
@@ -600,7 +610,7 @@
           "type": "منبع"
         },
         "sprite_lab_documentation/coursee/2022": {
-          "name": "",
+          "name": "مستندات آزمایشگاه اسپرایت",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "منبع"
         },
@@ -612,6 +622,11 @@
         "virtual_lesson_modifications/coursee/2022": {
           "name": "اصلاحات درس مجازی ",
           "url": ""
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "یک شهروند فوق دیجیتال باشید: اسلایدهای درس",
@@ -1008,7 +1023,7 @@
           "type": "جزوه"
         },
         "sprite_lab_documentation/express/2022": {
-          "name": "",
+          "name": "مستندات آزمایشگاه اسپرایت",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "منبع"
         },
@@ -1017,7 +1032,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprites_in_action/express/2022": {
-          "name": "",
+          "name": "اسپرایت‌ها در عمل",
           "url": "https://docs.google.com/presentation/d/1VQ6cPVw3lO3ohngyDBGoaiGWUvKLSAtbg6ej-KWnelg/edit?usp=share_link",
           "type": "اسلایدها"
         },
@@ -1381,6 +1396,11 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "اصلاحات درس مجازی ",
           "url": ""
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "name": "",
+          "url": "",
+          "type": "منبع"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "قرار دادن توقفی برای پستی برخط: اسلایدهای درس",
@@ -2367,12 +2387,12 @@
           "type": "اسلایدها"
         },
         "sprite_properties/csd/2022": {
-          "name": "",
+          "name": "ویژگی‌های اسپرایت",
           "url": "",
           "type": "منبع"
         },
         "sprite_properties_1/csd/2022": {
-          "name": "",
+          "name": "ویژگی‌های اسپرایت",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2564,12 +2584,12 @@
           "type": "اسلایدها"
         },
         "collision_detection/csd/2022": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": ""
         },
         "collision_detection_1/csd/2022": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": "منبع"
         },
@@ -2584,7 +2604,7 @@
           "type": ""
         },
         "collision_detection_2/csd/2022": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": "اسلایدها"
         },
@@ -8062,7 +8082,7 @@
           "type": "منبع"
         },
         "sprite_properties/csd/2021": {
-          "name": "",
+          "name": "ویژگی‌های اسپرایت",
           "url": "",
           "type": "منبع"
         },
@@ -8204,7 +8224,7 @@
           "type": "منبع"
         },
         "collision-detection-exemplar-2020/csd/2021": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": ""
         },
@@ -8219,7 +8239,7 @@
           "type": ""
         },
         "collision_detection/csd/2021": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": "منبع"
         },

@@ -214,7 +214,8 @@
           "Star Wars": "Star Wars",
           "Yes": "Áno",
           "No": "Nie",
-          "text": "text"
+          "text": "text",
+          "Musical": "Muzikál"
         },
         "CSD U1 storage movies_2022": {
           "Comedy": "Komédia",
@@ -222,7 +223,8 @@
           "Star Wars": "Star Wars",
           "Yes": "Áno",
           "No": "Nie",
-          "text": "text"
+          "text": "text",
+          "Musical": "Muzikál"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Vymazať",
@@ -231,7 +233,8 @@
           "green": "zelená",
           "black": "čierne",
           "purple": "fialová",
-          "Outfit Picker": "Výber oblečenia"
+          "Outfit Picker": "Výber oblečenia",
+          "What is the weather like today?": "Aké je dnes počasie?"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Vymazať",
@@ -240,7 +243,8 @@
           "green": "zelená",
           "black": "čierne",
           "purple": "fialová",
-          "Outfit Picker": "Výber oblečenia"
+          "Outfit Picker": "Výber oblečenia",
+          "What is the weather like today?": "Aké je dnes počasie?"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -1535,6 +1539,12 @@
           "night": "noc",
           "dusk": "Súmrak",
           "Predict": "Predpoveď"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Koľko krajín..."
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Koľko krajín..."
         }
       }
     }

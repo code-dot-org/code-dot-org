@@ -713,8 +713,8 @@ sk:
         csd_gamelab_if_else: Podmienkové príkazy (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
-        CDEF_Video_SpritesInAction: Postavy v akcii
-        CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
+        CDEF_Video_SpritesInAction: Sprajty v akcii
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprajty v akcii
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
         MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
@@ -750,7 +750,7 @@ sk:
         CSF_Going_Places_Safely: Moja online štvrť
         CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
-        CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
+        CSF_SpriteLab_SpritesInAction_v2: Sprajty v akcii
         csd_debugging: Ladenie
         csd_applab_designmode_short: App Lab  - Dizajnový mód
         csp-pd-welcome: Vitaj v rodine!

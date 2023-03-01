@@ -13,11 +13,11 @@ fr-FR:
   en: Informatique/Sciences informatiques
   computer_science_edweek: Semaine de l'enseignement de l’informatique
   csedweek_dates: Du 3 au 9 décembre 2018
-  csedweek_banner_hoc: 'L’<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+  csedweek_banner_hoc: 'L’<a href="http://hourofcode.com » style="color: white; text-decoration:underline;
     font-weight:bold">Heure de Code</a> arrive. Appel à tous les enseignants et organisateurs
-    -<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    -<a href="http://hourofcode.com » style="color: white; text-decoration:underline;
     font-weight:bold">planifiez votre Heure de Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+  csedweek_banner_teachers: '<a href="/csteacher » style="color: white; text-decoration:
     none; font-weight: 400">Êtes-vous un professeur d’informatique&#160;? Voir les
     autres ressources de la Semaine de l’enseignement de l’informatique</a>'
   csedweek_banner_teachers_text: Êtes-vous un professeur d’informatique ? Consultez
@@ -416,7 +416,7 @@ fr-FR:
     se sont engagés et impliqués à 100%.&#160;» Adam, enseignant"
   homepage_hero_text_stat_loc: 8,5 millions de jeunes filles sont inscrites sur Code.org
   homepage_hero_text_stat_students: "#student_count Comptes d'élèves sur Code.org"
-  homepage_hero_text_stat_served: 'L''Heure de Code : "#served exact nombre exact'
+  homepage_hero_text_stat_served: 'L''Heure de Code : « #served exact nombre exact'
   homepage_hero_hoc_is_coming: L'Heure de Code est en cours de préparation...
   homepage_hero_hoc_is_here: Clique ici pour faire l'Heure de Code
   homepage_slot_text_hoc: L'Heure de Code
@@ -500,7 +500,7 @@ fr-FR:
     de nos priorités et nous faisons réguliérement des mises à jour de notre politique
     de confidentialité, appliquée depuis le 25 Mai.
   homepage_below_hero_announcement_link_text: En savoir plus
-  homepage_higher_power_body: Code une danse au son de "Higher Power" de Coldplay
+  homepage_higher_power_body: Code une danse au son de « Higher Power » de Coldplay
     et tu pourrais avoir l'occasion de voir le groupe en concert !
   contact_form_topic_student: Je suis un élève
   contact_form_topic_parent: Je suis un parent
@@ -946,8 +946,8 @@ fr-FR:
   dashboard_action_print_certificates: Imprimer les certificats
   dashboard_assessments_view: 'Afficher les évaluations dans :'
   dashboard_assessments_none: La plupart des enseignants mesurent les progrès de leurs
-    élèves à l'aide de l'onglet "Afficher les Progrès". Si vous souhaitez donner à
-    vos élèves des évaluations supplémentaires, vous pouvez trouver des questions
+    élèves à l'aide de l'onglet « Afficher les Progrès ». Si vous souhaitez donner
+    à vos élèves des évaluations supplémentaires, vous pouvez trouver des questions
     et des domaines recommandés dans les plans de cours. Ceux-là sont faits en dehors
     de Code.org.
   dashboard_assessments_none_part2: Si vous enseignez au collège ou au lycée, nous
@@ -1104,7 +1104,7 @@ fr-FR:
   dashboard_students_print_page: Imprimer cette page
   dashboard_students_signin_card: Visitez %{join_url} et entrez le code %{section_code}
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Cliquez
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy », target="_blank">Cliquez
     ici</a> pour consulter notre politique de confidentialité, qui peut être partagée
     ou imprimée pour vos élèves.
   dashboard_curriculum_k5_title: Ressources pour les Éducateurs de la Maternelle au
@@ -1127,7 +1127,7 @@ fr-FR:
   dashboard_pre-express: 'Cours Express pour les pré-lecteurs : '
   dashboard_express: 'Cours Express : '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
-    ces leçons "débranchées" </a> dans votre classe.
+    ces leçons « débranchées » </a> dans votre classe.
   dashboard_unplugged_markdown: Si vous n'avez pas d'ordinateur, [essayez ces leçons
     débranchées] (%{unplugged_url}) dans votre classe.
   dashboard_tools: 'Outils: '
@@ -1156,7 +1156,7 @@ fr-FR:
   dashboard_login_picture: Image
   dashboard_login_none: E-mail
   dashboard_stage: étape
-  dashboard_puzzle: Puzzle
+  dashboard_puzzle: Casse-tête
   dashboard_question: Question
   dashboard_response: Réponse
   dashboard_correctness: Justesse
@@ -1281,7 +1281,7 @@ fr-FR:
   next: Suivant
   older_systems: Tutoriels de partenaires fonctionnant sur des systèmes plus anciens
   older_systems_subheading: Il devraient fonctionner sur les anciens navigateurs Web.
-    Pour accéder à tous les tutoriels, mettre à niveau vers un <a href="http://browsehappy.com/"
+    Pour accéder à tous les tutoriels, mettre à niveau vers un <a href="http://browsehappy.com/ »
     target="_blank">navigateur Web moderne.</a>
   mobile_devices: Tutoriels des partenaires pour appareils mobiles
   frozen_name: Code avec Anna et Elsa
@@ -2317,6 +2317,7 @@ fr-FR:
     Merci de mettre votre navigateur à jour avec [l''un des navigateurs compatibles
     avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher
     la page, mais les fonctionnalités risquent d’être compromises. '
+  hourofcode_shortcode: Coder
   flappy_shortcode: battre des ailes
   header_home: Accueil
   header_my_dashboard: Mon Tableau de Bord
@@ -2687,7 +2688,7 @@ fr-FR:
   hoc2018_dance_video2: Soirée Dansante – Événements
   hoc2018_dance_video3: Soirée Dansante – Propriétés
   hoc2018_dance_video4: Soirée Dansante - Félicitations
-  dance_box_higher_power_line_1: Codez une danse au son de "Higher Power" de Coldplay
+  dance_box_higher_power_line_1: Codez une danse au son de « Higher Power » de Coldplay
     et vous pourriez avoir l'occasion de voir le groupe en live!
   dance_box_higher_power_line_2: Visitez <a href="%{path}">code.org/coldplay</a> pour
     plus d'infos
@@ -2848,7 +2849,7 @@ fr-FR:
   ai_try_activity: Essayez l'activité
   outbreak_tile_title: Épidémie
   outbreak_tile_subtitle: Un virus a infecté Monster Town ! Codez un simulateur d'épidémie
-    et faites des prédictions sur ce qui arrivera aux voisins de Monster Town.
+    et faites des prévisions sur ce qui arrivera aux voisins de Monster Town.
   footer_cookie_notice: " Utilisation des cookies"
   hoc2022_banner_title: Découvrir, jouer, créer !
   hoc2022_banner_description: 'Explorez l''univers, marquez des buts, bougez : il

@@ -817,34 +817,18 @@ tr:
         JavaScript ile kodlayın, ardından uygulamanızı saniyeler içinde paylaşın.
       audience: 13 + Yaşlar
       cta: Nasıl olduğunu öğren
-    dance:
-      title: Dans Partisi
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Dans Partisi
-    hello-world:
-      title: Merhaba Dünya
-      body: Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli
-        tema arasından seçim yapın.
-    poem-art:
-      title: Şiir Sanatı
-      body: Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.
-    hoc:
-      title: Klasik Labirent
-      body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
+    dance:
+      title: Dans Partisi
     flappy:
       title: Flappy Kod
       body: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy
         Kod eğitimimizi deneyin!
-    20-hour:
-      title: Hızlandırılmış Kurs
-      body: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
-        tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her
-        yaştan öğrenmek için eğlencelidir.
-      body_short: Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış kurslarımızda
-        öğrenin.
-    hoc2014:
-      try_new_tutorial: Yeni Kod Saati eğitimimizi beta halinde deneyin
-      try_frozen: Frozen'dan Anna ve Elsa ile birlikte bir sanatçı
+    frozen:
+      title: Karlar Ülkesi
     gallery:
       title: Galeri
       body: Kullanıcılarımız tarafından oluşturulan uygulama ve sanatçı resimleri
@@ -855,19 +839,23 @@ tr:
         karakterlerle beraber programlayabileceğin bir uygulama geliştirme ortamıdır.
       audience: 13 + Yaşlar
       cta: Nasıl olduğunu öğren
+    hello-world:
+      title: Merhaba Dünya
+      body: Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli
+        tema arasından seçim yapın.
+    hero:
+      title: Minecraft
+      body: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla
+        Minecraft’ta bir gezintiye çıkın
     hoc-encryption:
       title: Basit şifreleme
       body: Öğrenciler şifreli mesaj yaratma ve şifre kırma tekniklerini öğrenecek.
-    weblab:
-      title: Web Lab (beta)
-      body: Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin
-        bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş.
-      audience: 13 + Yaşlar
-      cta: Nasıl olduğunu öğren
-    frozen:
-      title: Karlar Ülkesi
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klasik Labirent
+      body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
+    hoc2014:
+      try_new_tutorial: Yeni Kod Saati eğitimimizi beta halinde deneyin
+      try_frozen: Frozen'dan Anna ve Elsa ile birlikte bir sanatçı
     infinity:
       title: Infinity Play Lab
       body: Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için
@@ -879,19 +867,35 @@ tr:
       title: Minecraft
       body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde
         programla.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla
-        Minecraft’ta bir gezintiye çıkın
+    poem-art:
+      title: Şiir Sanatı
+      body: Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.
     sports:
       title: Spor
       body: Bir basketbol oyunu yapın veya sporları karıştırın ve eşleştirin.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Metin Sıkıştırma
       body: Bu derste öğrenciler, desenleri sembollerle değiştirerek metni sıkıştırmak
         için Metin Sıkıştırma Widget'ını kullanacaklardır.
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin
+        bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş.
+      audience: 13 + Yaşlar
+      cta: Nasıl olduğunu öğren
+    widgets:
+      title: Araçlar
+      body: Öğrenciler, bu dijital araçları kullanarak Bilgisayar Bilimi İlkeleri
+        kursumuzdaki kavramları uygulamalı olarak keşfedebilirler. Widget'ları kendi
+        başlarına kullanın veya sınıfınız için tek konseptli bir ders oluşturun.
+      audience: 14 yaş üzeri
+      cta: Nasıl olduğunu öğren
+    unplugged_conditionals:
+      title: Koşullar
+      body: Bir deste kart kullanarak bu "bağlantısız" etkinlikte algoritmalar ve
+        koşullu ifadeler hakkında bilgi edinin.
     unplugged:
       title: Bağlantısız dersler
       audience: 4 yaş ve üzeri
@@ -900,17 +904,13 @@ tr:
         öğretebilirsiniz! Bu dersleri tek başına bir ders olarak veya herhangi bir
         bilgisayar bilimi dersi için tamamlayıcı dersler olarak kullanmayı deneyin.
       body_short: Bilgisayarınız yok ise bu bağlantısız dersleri sınıfta kullanın.
-    unplugged_conditionals:
-      title: Koşullar
-      body: Bir deste kart kullanarak bu "bağlantısız" etkinlikte algoritmalar ve
-        koşullu ifadeler hakkında bilgi edinin.
-    widgets:
-      title: Araçlar
-      body: Öğrenciler, bu dijital araçları kullanarak Bilgisayar Bilimi İlkeleri
-        kursumuzdaki kavramları uygulamalı olarak keşfedebilirler. Widget'ları kendi
-        başlarına kullanın veya sınıfınız için tek konseptli bir ders oluşturun.
-      audience: 14 yaş üzeri
-      cta: Nasıl olduğunu öğren
+    20-hour:
+      title: Hızlandırılmış Kurs
+      body: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
+        tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her
+        yaştan öğrenmek için eğlencelidir.
+      body_short: Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış kurslarımızda
+        öğrenin.
   landing:
     prerelease_tutorial: Bu öğretici **betadır**. Geri dönüşler aldıkça ve geliştirildikçe
       düzenlenmeye açıktır.

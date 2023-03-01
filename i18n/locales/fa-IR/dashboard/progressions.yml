@@ -89,6 +89,7 @@ fa:
       Code Your Own Flappy Game: کدنویسی بازی فلاپی خود
       Code Your Page: کدنویسی صفحه خود
       Collector Game: بازی گردآورنده
+      Collision Detection: تشخیص تصادم
       Collisions: تلاقی ها
       Collisions in Games: تلاقی ها در بازی
       Color LEDs: چراغهای رنگی led
@@ -209,6 +210,7 @@ fa:
       Intro to Side Scrollers: معرفی اسکرولرهای کناری
       Intro to Sprites: معرفی اسپرایت ها
       Intro to Variables: معرفی متغیرها
+      Introducing Sprite Lab: آشنایی با آزمایشگاه اسپرایت
       Investigate: وارسی
       Isaac's Survey Data: داده های پیمایش Isaac
       Iteration and Parameters: تکرارها و پارامترها
@@ -274,6 +276,7 @@ fa:
       Multiframe Animations: پویانمایی های چندقابه
       Musical Arrays: آرایه های موسیقیایی
       My Loopy Robotic Friends - Unplugged Activity: دوستان پرحلقه و روباتیک من - فعالیت بدون کار با رایانه
+      My Online Neighborhood: محله برخط من
       My Robotic Friends - Unplugged Activity: دوستان روباتیک من - فعالیت بدون کار با رایانه
       Nested Loops with the Bee: حلقه های تو در تو با the Bee
       New Challenge Introduction: معرفی چالش جدید
@@ -376,6 +379,7 @@ fa:
       Songwriting - Functions Unplugged Activity: 'ترانه سرایی: فعالیت بدون کار با رایانه توابع'
       Sprite Lab Project: پروژه آزمایشگاه اسپرایت
       Sprite Movement: حرکت اسپرایت
+      Sprite Properties: ویژگی‌های اسپرایت
       Sprites and the Draw Loop: اسپرایت ها و حلقه کشیدن
       Star Chaser: تعقیب گر ستاره
       Styling Text: سبک دادن به متن
@@ -443,6 +447,7 @@ fa:
       'Video: Events': 'فیلم: رویدادها'
       'Video: Events in App Lab': 'فیلم: رویدادها در App Lab'
       'Video: Follow The Digital Trail': 'فیلم: پیروی از رد دیجیتال'
+      'Video: For Loops': 'ویدیو: حلقه‌های For'
       'Video: Getting Loopy': 'فیلم: پرحلقه شدن'
       'Video: Happy Maps - Unplugged Activity': 'فیلم: نقشه های شاد - فعالیت بدون کار با رایانه'
       'Video: Harvesting with Conditionals': 'فیلم: برداشت با شرطی ها'

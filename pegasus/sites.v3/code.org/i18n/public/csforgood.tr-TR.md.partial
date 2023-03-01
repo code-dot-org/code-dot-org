@@ -22,7 +22,7 @@ social:
 
 <div class="col-60">
 <p>Bu yılın etkinlikleri – küresel bir salgın, ekonomik durgunluk, ırksal eşitsizliklere karşı dünya çapında protestolar – bize teknolojimizin hem büyük vaatlerini hem de tehlikelerini gösterdi. Bizi bağlantıda tutmak için teknolojiye güveniyoruz (Zoom, kimse var mı?), ancak önyargılı algoritmaların bizi ırk veya cinsiyet temelinde nasıl bölebileceğini de gördük. Bizi bilgilendirmek için teknolojimize güveniyoruz, ancak yanlış bilgiyi yaymanın ne kadar kolay olduğunu da gördük. Üretken kalmak için teknolojimize güveniyoruz, ancak internete erişimi olmayanları geride bıraktık.</p>
-<p>CS ve teknolojinin gerçek dünyada nasıl kullanıldığı ve uygulandığı, bilgisayar bilimi öğrenmenin çok önemli bir parçasıdır. Öğrencilerin dünyanın dört bir yanındaki insanların karşılaştığı bazı zorlukları anlamalarına yardımcı olabilir ve bilgisayar biliminin daha adil ve sürdürülebilir bir dünya yaratmada oynayabileceği rol hakkında derinlemesine düşünmeleri için onlara ilham verebiliriz.</p>
+<p>BB ve teknolojinin gerçek dünyada nasıl kullanıldığı ve uygulandığı, bilgisayar bilimi öğrenmenin çok önemli bir parçasıdır. Öğrencilerin dünyanın dört bir yanındaki insanların karşılaştığı bazı zorlukları anlamalarına yardımcı olabilir ve bilgisayar biliminin daha adil ve sürdürülebilir bir dünya yaratmada oynayabileceği rol hakkında derinlemesine düşünmeleri için onlara ilham verebiliriz.</p>
 </div>
 
 <div style="clear:both"></div>
@@ -37,7 +37,7 @@ social:
 <h2>Öğrencilerinizle #CSforGood'u tartışma</h2>
 <p>Bilgisayar biliminin olumlu sosyal değişim yaratmadaki rolü hakkında sınıfınızda tartışmayı ateşleyecek bazı temalar ve sorular. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Bu tartışma kılavuzunu PDF olarak indirin</a>.</p>
 
-<h3><strong>Sorunları tespit etmek için CS öğreniyoruz</strong></h3>
+<h3><strong>Sorunları tespit etmek için BB öğreniyoruz</strong></h3>
 
 <div class="educate-callout-box" style="width:300px; height:235px; background-color:#7665a0; color:#ffffff; padding:20px; border-radius:15px; float:right; margin-left:20px">
   <p><strong>Sınıfınız bu yıl sanal mı?</strong></p>
@@ -45,7 +45,7 @@ social:
   <p>Ara odaları yoksa paylaşılan bir belge veya slayt grubu kullanın (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">template</a>), her öğrenci grubu için belgenin bölümlerini veya tek bir slaytı belirleme.</p>
 </div>
 
-<p>İçinde yaşamak istediğimiz bir toplum okuşturmak, ele almamız gereken sorunları anlamakla başlar. Sorunları tespit etmek ve hatta tahmin etmek için teknolojiyi kullanabiliriz.</p>
+<p>İçinde yaşamak istediğimiz bir toplumu inşa etmek, ele almamız gereken sorunları anlamakla başlar. Sorunları tespit etmek ve hatta tahmin etmek için teknolojiyi kullanabiliriz.</p>
 <p>Öğrencilere <a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">akıllı telefonların depremleri algılamak için nasıl kullanıldığı</a> hakkındaki bu hikâyeyi okutun ve ardından onları aşağıdaki soruları yanıtlamak için çiftler veya gruplar halinde çalıştırın. Sonra sınıf olarak tartışın.</p>
 <p><i>Tartışma için sorular:</i></p>
 <ul>
@@ -54,7 +54,7 @@ social:
 <li>Bilgisayar bilimi veya teknolojisinin sorunları tespit etmeye yardımcı olabileceği başka yollar nelerdir?</li>
 </ul>
 
-<h3><strong>Yaratıcı çözümler bulmak için CS öğreniyoruz</strong></h3>
+<h3><strong>Yaratıcı çözümler bulmak için BB öğreniyoruz</strong></h3>
 <p>Bilgisayar bilimlerini öğrenmek bize çözüm bulmak için bir temel sağlar. O halde bu hayatın her alanında ve alanında bu temel üzerine inşa edilmiş çözümler tasarlamamızı sağlayan yaratıcılığımızdır.</p>
 <p>Öğrencilere <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">şehir planlamacılarının daha iyi şehirler tasarlamak için Minecraft'ta yapay zekayı nasıl kullandığını</a>, ve ardından aşağıdaki soruları yanıtlamak için çiftler veya gruplar halinde çalıştırın. Sonra sınıf olarak tartışın.</p>
 <p><i>Tartışma için sorular:</i></p>
@@ -65,7 +65,7 @@ social:
 <li>Bir sorunu çözmek için teknolojiyi mutlaka amaçlanmayan bir şekilde kullandığınız bir zaman düşünebiliyor musunuz?</li>
 </ul>
 
-<h3><strong>CS'yi birbirimizle bağlantı kurmak için öğreniyoruz</strong></h3>
+<h3><strong>BB'yi birbirimizle bağlantı kurmak için öğreniyoruz</strong></h3>
 
 <iframe src="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/" id="cbsNewsVideo" allowfullscreen allow="fullscreen" frameborder="0" width="325px" height="183px" style="float:right; margin-left:20px"></iframe>
 
@@ -118,8 +118,8 @@ social:
 
 <a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
 <br>
-<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS İlk Bağlantısız</strong></h3></a>
-<p>Bilgisayar veya internet yok mu? Sorun değil. Bilgisayar biliminin, insanların ayrıyken bağlantıda kalmasına yardımcı olmak gibi sorunları nasıl çözebileceğini keşfetmek için CS İlk Bağlantıısız etkinliklerini deneyin. "Bağlantılı" Çizik etkinlikleri de mevcuttur!</p>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>BB İlk Bağlantısız</strong></h3></a>
+<p>Bilgisayar veya internet yok mu? Sorun değil. Bilgisayar biliminin, insanların ayrıyken bağlantıda kalmasına yardımcı olmak gibi sorunları nasıl çözebileceğini keşfetmek için BB İlk Bağlantıısız etkinliklerini deneyin. "Bağlantılı" Scratch etkinlikleri de mevcuttur!</p>
 <p><i>Google'dan. 2'den 8'e kadar olan sınıflar için.</i></p>
 
 </div>
@@ -127,12 +127,12 @@ social:
 
 <h3>Daha fazla #CSforGood etkinliği ve ders planı:</h3>
 <p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS): Bu çevrimiçi kodlama macerasında, çeşitli öğeleri bulmak ve okyanus tabanında bilimsel veriler toplamak için kod kullanarak sualtı zorluklarıyla denizaltıyı alt edin. 2-8. sınıflarda yeni başlayanlar için kendi kendine rehberli bir eğitim.</p>
-<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">İklim Saati</a> (Vidcode): Bu Kod Saati etkinliğinde, öğrencilere kendi iklim saatlerinin yapımı konusunda rehberlik edilecektir. Nesneler, özellikler, değişkenler, işlevler ve döngülerle ilgilenecek ve dünyaya mesajlarını ve geleceğe yönelik umutlarını iletmek için metni özelleştirecekler. 6. sınıf ve üzeri yeni başlayanlar için kendi kendine rehberli bir eğitim.<p>
+<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">İklim Saati</a> (Vidcode): Bu Hour of Code etkinliğinde, öğrencilere kendi iklim saatlerinin yapımı konusunda rehberlik edilecektir. Nesneler, özellikler, değişkenler, işlevler ve döngülerle ilgilenecek ve dünyaya mesajlarını ve geleceğe yönelik umutlarını iletmek için metni özelleştirecekler. 6. sınıf ve üzeri yeni başlayanlar için kendi kendine rehberli bir eğitim.<p>
 <p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Mutlu Bir Yer Meditasyonu Uygulaması Kodlayın</a> (CodeSpeak Labs): Öğrenciler için stresli bir yıl oldu, ancak farkındalık uygulamak zor olabilir. Sizi "mutlu yerinize" götüren bir meditasyon uygulaması programlamayı öğrenin. 2'den 8'e kadar sınıflarda yeni başlayanlar için. Öğretmen rehberli bir öğretici olarak harika.</p>
 <p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Duyguları: Nazik Oyun Alanı</a> (iRobot): Robotumuz, arkadaşlarla oynarken nazik seçimler yapmayı öğreniyor. Bu oyunda, arka arkaya dört tür karar vererek Kök uygulamasına yardımcı olun. Kök kötü bir seçim yaparsa, baştan başlamak zorunda kalır! Haydi birlikte oynayalım! Anaokulundan 5. sınıfa kadar yeni başlayanlar için. Kök robot isteğe bağlıdır.</p>
 <p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Deniz Kaplumbağalarını Kurtarma</a> (micro:bit): Deniz kaplumbağaları için de güvenli olan sahil yollarında aydınlatma için kullanılabilecek düşük güçlü, kırmızı LED sahil ışığının bir prototipini oluşturun. 6-8. sınıflarda yeni başlayanlar için. Evde öğrenmek için harika.</p>
 <br> 
-<p><a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>! adresinde daha birçok #CSforGood temalı öğretici de dâhil olmak üzere Kodlama Saati etkinliklerinin ve ders planlarının tam listesine bakın!</p>
+<p><a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>! adresinde daha birçok #CSforGood temalı öğretici de dâhil olmak üzere Hour of Code etkinliklerinin ve ders planlarının tam listesine bakın!</p>
 
 <a id="realworld"></a>
 <h2>Daha ileri gidin: İnsanlar gerçek dünyada #CSforgood'u nasıl kullanıyor</h2>

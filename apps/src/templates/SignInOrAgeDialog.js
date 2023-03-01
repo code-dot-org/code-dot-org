@@ -74,11 +74,11 @@ class SignInOrAgeDialog extends Component {
             ref={element => (this.ageDropdown = element)}
           />
           <Button
-            __useDeprecatedTag
             id="uitest-submit-age"
             onClick={this.onClickAgeOk}
             text={i18n.ok()}
             color={Button.ButtonColor.gray}
+            style={styles.okButton}
           />
         </div>
       </div>
@@ -192,6 +192,10 @@ const styles = {
   },
   tooYoungButton: {
     textAlign: 'right'
+  },
+  okButton: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)'
   }
 };
 
