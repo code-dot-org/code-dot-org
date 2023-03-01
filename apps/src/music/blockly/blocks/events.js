@@ -1,12 +1,13 @@
 import {BlockTypes} from '../blockTypes';
+import {TRIGGER_FIELD} from '../constants';
 
 export const whenRun = {
   definition: {
     type: BlockTypes.WHEN_RUN,
+    style: 'setup_blocks',
     message0: 'when run',
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
     tooltip: 'when run',
     helpUrl: ''
   },
@@ -16,11 +17,12 @@ export const whenRun = {
 export const triggeredAt = {
   definition: {
     type: BlockTypes.TRIGGERED_AT,
+    style: 'event_blocks',
     message0: '%1 triggered at %2',
     args0: [
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       },
       {
         type: 'field_variable',
@@ -30,7 +32,6 @@ export const triggeredAt = {
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
     tooltip: 'at trigger',
     extensions: ['dynamic_trigger_extension']
   },
@@ -40,7 +41,7 @@ export const triggeredAt = {
       Blockly.Names.NameType.VARIABLE
     );
     return `
-      ${varName} = MusicPlayer.getPlayheadPosition();
+      ${varName} = MusicPlayer.getCurrentPlayheadPosition();
       \n`;
   }
 };
@@ -52,12 +53,12 @@ export const triggeredAtSimple = {
     args0: [
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       }
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
+    style: 'event_blocks',
     tooltip: 'at trigger',
     extensions: ['dynamic_trigger_extension']
   },
@@ -67,7 +68,7 @@ export const triggeredAtSimple = {
       Blockly.Names.NameType.VARIABLE
     );
     return (
-      `${varName} = MusicPlayer.getPlayheadPosition();\n` +
+      `${varName} = MusicPlayer.getCurrentPlayheadPosition();\n` +
       `currentMeasureLocation = Math.ceil(${varName});\n`
     );
   }

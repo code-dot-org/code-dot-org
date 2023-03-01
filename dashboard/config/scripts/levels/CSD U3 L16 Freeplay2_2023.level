@@ -15,6 +15,7 @@
       "setAnimation": null,
       "sprite.height": null,
       "sprite.width": null,
+      "visible": null,
       "x": null,
       "y": null,
       "rotation": null,
@@ -63,12 +64,12 @@
       "comment_Control": null,
       "comment_Drawing": null,
       "console.log": null,
-      "scale": null,
-      "mouseDidMove": null,
       "mouseDown": null,
-      "mouseIsOver": null,
-      "mouseWentDown": null,
-      "mouseWentUp": null
+      "scale": null,
+      "tint": null,
+      "alpha": null,
+      "debug": null,
+      "mouseDidMove": null
     },
     "edit_code": true,
     "embed": "false",
@@ -142,7 +143,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-06T19:14:02.231+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L13 Freeplay_2023\\\"\"],\"cloned_from\":\"CSD U3 L13 Freeplay_2023\"},{\"changed_at\":\"2022-10-06 20:06:45 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"thumbnail_url\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-08 22:44:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-08 23:05:55 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-06T19:14:02.231+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L13 Freeplay_2023\\\"\"],\"cloned_from\":\"CSD U3 L13 Freeplay_2023\"},{\"changed_at\":\"2022-10-06 20:06:45 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"thumbnail_url\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-08 22:44:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-08 23:05:55 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-18 00:50:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

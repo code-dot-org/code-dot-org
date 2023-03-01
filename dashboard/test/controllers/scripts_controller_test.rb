@@ -954,8 +954,7 @@ class ScriptsControllerTest < ActionController::TestCase
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
-      version_year: '2017',
-      is_maker_unit: 'on'
+      version_year: '2017'
     }
     unit.reload
 
@@ -963,7 +962,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'CSF', unit.curriculum_umbrella
     assert_equal 'my-fam', unit.family_name
     assert_equal '2017', unit.version_year
-    assert unit.is_maker_unit
   end
 
   test 'set and unset all general_params' do
@@ -1640,23 +1638,25 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
+    dogs1 = create :script, name: 'dogs1', family_name: 'dogs', version_year: '1901', is_course: true
     CourseOffering.add_course_offering(dogs1)
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'ui-test-versioned-script'}
+      get :show, params: {id: 'dogs'}
     end
 
     dogs1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    get :show, params: {id: 'ui-test-versioned-script'}
+    get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-script'}
+    dogs2 = create :script, name: 'dogs2', family_name: 'dogs', version_year: '1902', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(dogs2)
+    get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-script'}
+    dogs3 = create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(dogs3)
+    get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
   end
 

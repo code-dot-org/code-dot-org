@@ -145,7 +145,6 @@ class Ability
           (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
-      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
@@ -171,7 +170,7 @@ class Ability
         # Only allow a student to view another student's project
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
-        if level_to_view&.is_a?(Javalab)
+        if level_to_view.is_a?(Javalab)
           project_level_id = level_to_view.project_template_level.try(:id) ||
             level_to_view.id
 
@@ -217,7 +216,6 @@ class Ability
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
-        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
@@ -447,10 +445,9 @@ class Ability
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
-    end
-
-    if user.permission?(UserPermission::CENSUS_REVIEWER)
-      can :manage, Census::CensusInaccuracyInvestigation
+      # let them change abuse scores
+      can :destroy_abuse, :all
+      can :update_file_abuse, :all
     end
 
     if user.admin?

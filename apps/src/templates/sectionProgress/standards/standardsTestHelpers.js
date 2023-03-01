@@ -69,7 +69,7 @@ const teacherSections = {
       name: 'Picture Section',
       createdAt: '2019-10-25T14:24:28.000Z',
       loginType: 'picture',
-      grade: '9',
+      grades: ['9'],
       providerManaged: false,
       lessonExtras: true,
       pairingAllowed: true,

@@ -1,6 +1,7 @@
 {
   "category": "Logic",
   "config": {
+    "style": "logic_blocks",
     "func": "ifTime",
     "blockText": "if {UNIT} is {OP} {N}\n {DO1} {DO2}",
     "inline": true,

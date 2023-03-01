@@ -32,7 +32,7 @@ class Homepage
       next if banner["languages"] && !banner["languages"].include?(request.language)
 
       # We have a banner.  Add the ID to the hash that we return.
-      return banner.merge({"id": banner_id_for_page})
+      return banner.merge({id: banner_id_for_page})
     end
 
     # If we made it to here, none of the potential banners was available.

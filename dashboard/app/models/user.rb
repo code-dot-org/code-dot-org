@@ -245,6 +245,10 @@ class User < ApplicationRecord
 
   before_destroy :soft_delete_channels
 
+  before_validation on: :create, if: -> {gender.present?} do
+    self.gender = Policies::Gender.normalize gender
+  end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
@@ -2503,7 +2507,7 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grade).uniq
+    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for

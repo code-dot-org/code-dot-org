@@ -114,3 +114,5 @@ Les niveaux 2 à 4 utilisent un modèle pré-entraîné fourni par le projet[Flu
 Les niveaux 6 à 8 utilisent une \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Nous examinons chaque composant du poisson (tels que ses yeux, sa bouche, son corps) et assemblons toutes les métadonnées pour les composants (tels que le nombre de dents, la forme du corps) dans un vecteur de nombres pour chaque poisson. Nous utilisons ces vecteurs pour former la SVM. Puis, à partir des données de formation, la SVM sépare « l'espace » de tous les poissons possibles en deux parties, qui correspondent aux classes que nous essayons d'apprendre (comme « bleu » ou « pas bleu »).
 
 [Haut de page](#top)
+
+{{ visit_partial_event_logger }}

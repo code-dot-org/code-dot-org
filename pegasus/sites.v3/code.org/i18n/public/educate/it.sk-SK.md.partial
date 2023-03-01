@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ Pre ten najlepší zážitok zo stránky Code.org odporúčame konzultovať spr�
 | **Pre používanie simulátora internetu**                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Pre používanie Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Pre používanie tlačidla na zdieľanie Google Classroom**        | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                      | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Podrobnosti o podpore mobilných zariadení a tabletov
 
@@ -100,7 +101,7 @@ Na vkladanie videí do Code.org a do [vzdelávacej platformy online](https://stu
 
 Pred začatím kurzov na stránke Code.org, si skúste prehrať video zobrazené nižšie a uistite sa, že všetko prebieha v poriadku.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Tento prehrávač sa používa v celom učebnom pláne. Pokúsi sa vám zobraziť video prostredníctvom služby YouTube a v prípade, že je táto služba zablokovaná, zobrazí video zo „záložného“ prehrávača od Code.org.
 

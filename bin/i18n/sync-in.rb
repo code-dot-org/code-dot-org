@@ -82,9 +82,7 @@ def localize_standards
 
   # Then, for each framework, generate a file for it.
   frameworks.keys.each do |framework|
-    File.open(File.join(standards_content_path, "#{framework}.json"), "w") do |file|
-      file.write(JSON.pretty_generate(frameworks[framework]))
-    end
+    File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
   end
 end
 
@@ -174,9 +172,7 @@ def localize_docs
     end
     # Generate a file containing the string of each Programming Environment.
     FileUtils.mkdir_p(File.dirname(docs_content_file))
-    File.open(docs_content_file, "w") do |file|
-      file.write(JSON.pretty_generate(programming_env_docs.compact))
-    end
+    File.write(docs_content_file, JSON.pretty_generate(programming_env_docs.compact))
   end
 end
 
@@ -223,9 +219,7 @@ def localize_external_sources
     dataset_name = dataset_names[original_dataset['name']]
     final_dataset["name"] = dataset_name if dataset_name
 
-    File.open(dataset_file, "w") do |f|
-      f.write(JSON.pretty_generate(final_dataset))
-    end
+    File.write(dataset_file, JSON.pretty_generate(final_dataset))
   end
 end
 
@@ -241,10 +235,11 @@ end
 def get_i18n_strings(level)
   i18n_strings = {}
 
-  if level.is_a?(DSLDefined)
+  case level
+  when DSLDefined
     text = level.dsl_text
     i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
-  elsif level.is_a?(Level)
+  when Level
     %w(
       display_name
       bubble_choice_description
@@ -475,9 +470,7 @@ def localize_project_content(variable_strings, parameter_strings)
     end
     project_strings.delete_if {|_, value| value.blank?}
 
-    File.open(project_content_file, "w") do |file|
-      file.write(JSON.pretty_generate(project_strings))
-    end
+    File.write(project_content_file, JSON.pretty_generate(project_strings))
   end
 end
 
@@ -591,9 +584,7 @@ def localize_block_content
     blocks[name]['options'] = args_with_options unless args_with_options.empty?
   end
 
-  File.open("dashboard/config/locales/blocks.en.yml", "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-  end
+  File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
 end
 
 def localize_animation_library
@@ -613,9 +604,7 @@ def localize_shared_functions
   shared_functions.sort.each do |func|
     hash[func] = func
   end
-  File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
-  end
+  File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
 end
 
 # Aggregate every CourseOffering record's `key` as the translation key, and
@@ -631,9 +620,7 @@ def localize_course_offerings
 end
 
 def write_dashboard_json(location, hash)
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
-    f.write(JSON.pretty_generate(hash))
-  end
+  File.write(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), JSON.pretty_generate(hash))
 end
 
 def select_redactable(i18n_strings)
@@ -672,15 +659,11 @@ def redact_level_file(source_path)
 
   backup_path = source_path.sub("source", "original")
   FileUtils.mkdir_p File.dirname(backup_path)
-  File.open(backup_path, "w") do |file|
-    file.write(JSON.pretty_generate(redactable_data))
-  end
+  File.write(backup_path, JSON.pretty_generate(redactable_data))
 
   redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
-  File.open(source_path, 'w') do |source_file|
-    source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
-  end
+  File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
 end
 
 def redact_docs

@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ Pentru cea mai bună experiență cu întreg conținutul Code.org, vă recomand�
 | **Pentru utilizarea Simulatorului de Internet**                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Pentru utilizarea Web Lab-ului**                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Pentru utilizarea Butonului de Partajare a Clasei Google**                             | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                              | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Detalii de Sprijinire a Mobilului și a Tabletei
 
@@ -100,7 +101,7 @@ Noi utilizăm [YouTube](https://www.youtube.com) pentru a insera videoclipuri î
 
 Înainte de a începe cursurile online Code.org, testați redarea videoclipului de mai jos pentru a vă asigura că sunteți pregătit.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Acesta este executantul utilizat pe tot parcursul programei. Acesta va încerca să afișeze videoclipul prin YouTube și, dacă YouTube este blocat, va afișa videoclipul găzduit de Code.org folosind în schimb executantul nostru "de rezervă".
 

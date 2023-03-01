@@ -54,6 +54,10 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
+  def teacher_enrollment_receipt__counselor
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
+  end
+
   def teacher_enrollment_receipt__csp_for_returning_teachers
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
@@ -68,18 +72,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     NOTES
 
     mail :teacher_enrollment_receipt, workshop_params: {notes: notes}
-  end
-
-  def teacher_enrollment_reminder__admin
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
-  end
-
-  def teacher_enrollment_receipt__counselor
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
-  end
-
-  def teacher_enrollment_reminder__counselor
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   def teacher_enrollment_receipt__facilitator

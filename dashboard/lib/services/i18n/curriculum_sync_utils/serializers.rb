@@ -137,6 +137,7 @@ module Services::I18n::CurriculumSyncUtils
     class LessonCrowdinSerializer < CrowdinSerializer
       attributes(
         :name,
+        :assessment_opportunities,
         :overview,
         :preparation,
         :purpose,

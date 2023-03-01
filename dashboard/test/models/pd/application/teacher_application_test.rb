@@ -412,7 +412,7 @@ module Pd::Application
 
       # update related field
       Timecop.freeze 1
-      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
+      application.update!(form_data: application.form_data_hash.merge(firstName: 'Garfunkel').to_json)
       assert_status_log(
         [
           {status: 'incomplete', at: 1.second.ago},

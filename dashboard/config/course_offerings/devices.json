@@ -1,7 +1,11 @@
 {
   "key": "devices",
-  "display_name": "devices",
-  "category": "other",
+  "display_name": "Creating Apps for Devices",
+  "category": "maker",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "6,7,8,9,10,11,12",
+  "header": "Teacher-Led"
 }

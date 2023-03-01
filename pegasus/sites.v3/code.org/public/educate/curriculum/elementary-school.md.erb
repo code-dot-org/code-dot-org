@@ -49,7 +49,7 @@ How you teach these courses is up to you - as part of your classroom schedule, w
 # Computer Science Connections
 
 <div class="col-50" style="padding-right: 20px; float: left; margin-top: 10px">
-<img src="/images/csc/csc_elementary.png" alt="CS Connections" width="450">
+<img src="/images/csc/csc_elementary.png" alt="" width="450">
 </div>
 
 
@@ -63,6 +63,9 @@ The curriculum has options for teachers  who’d like to incorporate computer sc
 </div>
 </div>
 <div style="clear: both;"></div>
+
+
+<%= view :maker_microbit_info %>
 
 <%=view :afe_promo_box %>
 
@@ -94,5 +97,5 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 
 <div style="clear:both"></div>
 
-
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::ELEMENTARY_CURRICULUM_PAGE_VISITED_EVENT %>
 

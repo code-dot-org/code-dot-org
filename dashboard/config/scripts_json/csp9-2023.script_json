@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-06 23:44:40 UTC",
+    "serialized_at": "2023-02-08 18:36:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,8 +33,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 9: Data",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n* **The Data Analysis Process:** This unit is built around a data analysis process that helps students break down how data is turned into new information about the world. Some lessons are designed around different steps of this process, like cleaning data or building visualizations. Other lessons focus on ways this process is applied in real-world contexts like citizen science or machine learning. The data analysis process helps provide a consistent reference point as students explore the importance of data analysis in computing. \n\n* **Exploring Data with the Data Visualizer:** The Data Visualizer is a tool built into App Lab that allows students to quickly create visualizations of the data they've added to their projects. The set of possible visualizations is intentionally limited to a few ways to change or modify the chart. This tool aims to encourage exploring the different kinds of questions that can be answered with data visualizations, with a greater emphasis on students' ability to create a variety of visualizations quickly.\n\n\n### Major Assessment and Projects\n\nStudents use the data visualizer to find and present a data story. Using what they've learned about the data analysis process, students either choose a dataset inside the data library or upload one of their own and create visualizations that find interesting patterns that may reveal new insights and knowledge. Students complete an activity guide describing their findings and the process they used in identifying them. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* DAT-2: Programs can be used to process data, which allows users to discover information and create new knowledge.\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 2.3 Extracting Information from Data\n* 2.4 Using Programs with Data\n* 5.3 Computing Bias\n* 5.4 Crowdsourcing"
+        "display_name": "Unit 9: Create PT"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit9_2020",
@@ -56,27 +55,12 @@
   ],
   "lessons": [
     {
-      "key": "CS Principles Post-Course Survey",
-      "name": "CS Principles Post-Course Survey",
+      "key": "Create PT   Review the Task",
+      "name": "Create PT   Review the Task",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023"
-      }
-    },
-    {
-      "key": "Create PT   Review the Task",
-      "name": "Create PT   Review the Task",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org.\r\n\r\nStudents review the Submission Requirements and Scoring Guidelines for the Create PT. Subsequently they review three example scored Create PT submissions with commentary to better understand how the Submission Requirements and Scoring Guidelines are used together. In a wrap-up conversation they identify a piece of advice, a \"gotcha\", and a remaining question they have about the Create PT.",
@@ -86,17 +70,17 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT   Review the Task",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
     {
       "key": "Create PT Deep Dive",
       "name": "Create PT Deep Dive",
-      "absolute_position": 3,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 2,
       "properties": {
         "overview": "This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. ",
         "preparation": "* Print or prepare to distribute digital copies of the Create PT - Survival Guide\n* Review pages 1-5 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3/36488) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
@@ -104,17 +88,17 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
     {
       "key": "Create PT   Make a Plan",
       "name": "Create PT   Make a Plan",
-      "absolute_position": 4,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.",
@@ -123,17 +107,17 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT   Make a Plan",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
     {
       "key": "Create PT - Complete the Task (12 hrs)",
       "name": "Create PT - Complete the Task (12 hrs)",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -144,24 +128,27 @@
       },
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2023"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2023"
       }
     }
   ],
   "lesson_activities": [
-    {
-      "key": "cec88f64-3fbc-4c39-8c63-0daf8272f699",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cec88f64-3fbc-4c39-8c63-0daf8272f699",
-        "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023"
-      }
-    },
     {
       "key": "eb88d32e-6533-4612-b1fd-e431dffff182",
       "position": 1,
@@ -171,7 +158,7 @@
       "seeding_key": {
         "lesson_activity.key": "eb88d32e-6533-4612-b1fd-e431dffff182",
         "lesson.key": "Create PT   Review the Task",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -185,7 +172,7 @@
       "seeding_key": {
         "lesson_activity.key": "2453c42b-4899-4f1a-ad43-85d649ef6830",
         "lesson.key": "Create PT   Review the Task",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -199,7 +186,7 @@
       "seeding_key": {
         "lesson_activity.key": "3b14ae79-69be-428b-b74a-fb3c1273de52",
         "lesson.key": "Create PT   Review the Task",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -213,7 +200,7 @@
       "seeding_key": {
         "lesson_activity.key": "342832df-be0b-4fb7-90f7-a01430ca1868",
         "lesson.key": "Create PT   Review the Task",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -226,7 +213,7 @@
       "seeding_key": {
         "lesson_activity.key": "cd67903a-1cec-481f-9aa0-5fc7f6bed8ae",
         "lesson.key": "Create PT Deep Dive",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -240,7 +227,7 @@
       "seeding_key": {
         "lesson_activity.key": "08d4a9c6-9666-4466-a1d5-73cf09a4f791",
         "lesson.key": "Create PT Deep Dive",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -254,7 +241,7 @@
       "seeding_key": {
         "lesson_activity.key": "f5a998db-ab00-4e83-98c3-e16d8f3a82b8",
         "lesson.key": "Create PT Deep Dive",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -268,7 +255,7 @@
       "seeding_key": {
         "lesson_activity.key": "eea7ca97-a9b3-4cbb-86e3-882868d869c1",
         "lesson.key": "Create PT Deep Dive",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -281,7 +268,7 @@
       "seeding_key": {
         "lesson_activity.key": "492942e5-600f-434d-986c-dacfaa8abbd9",
         "lesson.key": "Create PT   Make a Plan",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -295,7 +282,7 @@
       "seeding_key": {
         "lesson_activity.key": "f5b014c2-67a1-4695-9c60-b2294997e991",
         "lesson.key": "Create PT   Make a Plan",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -309,7 +296,7 @@
       "seeding_key": {
         "lesson_activity.key": "0737f5f1-a81f-4f5b-ae0c-80f2514f3c52",
         "lesson.key": "Create PT   Make a Plan",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -323,7 +310,7 @@
       "seeding_key": {
         "lesson_activity.key": "d024cedf-1c50-42a8-bdf8-989f1038f950",
         "lesson.key": "Create PT   Make a Plan",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -336,7 +323,7 @@
       "seeding_key": {
         "lesson_activity.key": "d22d1f72-5c17-43d2-88cc-60236e572c78",
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -349,7 +336,7 @@
       "seeding_key": {
         "lesson_activity.key": "75ae68bc-6a84-4df1-a3d3-f7dc2471c811",
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -363,7 +350,7 @@
       "seeding_key": {
         "lesson_activity.key": "a92e8031-8fdf-4780-968c-b72fbd6a533d",
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -377,7 +364,7 @@
       "seeding_key": {
         "lesson_activity.key": "115386a5-f5ff-4992-8362-cbf5b2de6352",
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023"
       }
     },
@@ -390,29 +377,24 @@
       "seeding_key": {
         "lesson_activity.key": "0cd2bc0b-9e4e-433e-be44-ea9e6f951e53",
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2023"
+      }
+    },
+    {
+      "key": "cec88f64-3fbc-4c39-8c63-0daf8272f699",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cec88f64-3fbc-4c39-8c63-0daf8272f699",
+        "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2023"
       }
     }
   ],
   "activity_sections": [
-    {
-      "key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf",
-      "position": 1,
-      "properties": {
-        "progression_name": "Post-Course Survey Instructions",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf",
-        "lesson_activity.key": "cec88f64-3fbc-4c39-8c63-0daf8272f699"
-      }
-    },
     {
       "key": "09d5a965-aeed-43c3-9a05-f7d99195c4bc",
       "position": 1,
@@ -1051,11 +1033,103 @@
         "activity_section.key": "57dc9b5a-1130-4b75-98d5-1a4a73380ff3",
         "lesson_activity.key": "0cd2bc0b-9e4e-433e-be44-ea9e6f951e53"
       }
+    },
+    {
+      "key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf",
+        "lesson_activity.key": "cec88f64-3fbc-4c39-8c63-0daf8272f699"
+      }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools2022_2023"
+        ],
+        "progression": "Tech Setup and Tools for Create PT"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools2022_2023"
+        ],
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2023",
+        "activity_section.key": "d1625d9e-29c4-452d-a4e4-c5e8f60c3ee4"
+      },
+      "level_keys": [
+        "csp-pt-tech-setup-and-tools2022_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Create PT Workspace 2020_2023"
+        ],
+        "progression": "Create PT Coding Workspace"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Create PT Workspace 2020_2023"
+        ],
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2023",
+        "activity_section.key": "1b4df5e4-8a40-446e-aad1-4870a7f5291d"
+      },
+      "level_keys": [
+        "Create PT Workspace 2020_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp8_2023"
+        ],
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp8_2023"
+        ],
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2023",
+        "activity_section.key": "57dc9b5a-1130-4b75-98d5-1a4a73380ff3"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp8_2023"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1078,87 +1152,9 @@
       "level_keys": [
         "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
       ]
-    },
-    {
-      "chapter": 2,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Tech Setup and Tools for Create PT"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp-pt-tech-setup-and-tools2022_2023"
-        ],
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023",
-        "activity_section.key": "d1625d9e-29c4-452d-a4e4-c5e8f60c3ee4"
-      },
-      "level_keys": [
-        "csp-pt-tech-setup-and-tools2022_2023"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Create PT Coding Workspace"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Create PT Workspace 2020_2023"
-        ],
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023",
-        "activity_section.key": "1b4df5e4-8a40-446e-aad1-4870a7f5291d"
-      },
-      "level_keys": [
-        "Create PT Workspace 2020_2023"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End-of-Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp8_2023"
-        ],
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023",
-        "activity_section.key": "57dc9b5a-1130-4b75-98d5-1a4a73380ff3"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csp8_2023"
-      ]
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023",
-        "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
-        ],
-        "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023",
-        "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "csp-pt-tech-setup-and-tools2022_2023",
@@ -1166,7 +1162,7 @@
           "csp-pt-tech-setup-and-tools2022_2023"
         ],
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023",
         "activity_section.key": "d1625d9e-29c4-452d-a4e4-c5e8f60c3ee4"
       }
@@ -1178,7 +1174,7 @@
           "Create PT Workspace 2020_2023"
         ],
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023",
         "activity_section.key": "1b4df5e4-8a40-446e-aad1-4870a7f5291d"
       }
@@ -1190,9 +1186,21 @@
           "Student End of Unit Survey_csp8_2023"
         ],
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023",
         "activity_section.key": "57dc9b5a-1130-4b75-98d5-1a4a73380ff3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2023",
+        "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf"
       }
     }
   ],
@@ -1468,16 +1476,55 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/11_P6UAyHrb9THCGmwzIpdvKfmmGa8WryKJfaXrjIOag/copy",
-      "key": "csp_unit_8_-_create_pt_prep",
+      "name": "CSP Unit 9 - Lesson 1 - Review the Task",
+      "url": "https://docs.google.com/presentation/d/1G26cLr6Tr_KWQz5Mkapnn8tbBnMh-nYFKjp0ZnvXLBg/copy",
+      "key": "csp_unit_9_-_lesson_1_-_review_the_task",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/11_P6UAyHrb9THCGmwzIpdvKfmmGa8WryKJfaXrjIOag/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1G26cLr6Tr_KWQz5Mkapnn8tbBnMh-nYFKjp0ZnvXLBg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_1_-_review_the_task"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 2 - Deep Dive",
+      "url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/copy",
+      "key": "csp_unit_9_-_lesson_2_-_deep_dive",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_2_-_deep_dive"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 3 - Make a Plan",
+      "url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/copy",
+      "key": "csp_unit_9_-_lesson_3_-_make_a_plan",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_3_-_make_a_plan"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 4 - Complete the Task",
+      "url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/copy",
+      "key": "csp_unit_9_-_lesson_4_-_complete_the_task_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_4_-_complete_the_task_1"
       }
     },
     {
@@ -1509,7 +1556,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT   Make a Plan",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_3_-_make_a_plan"
       }
     },
     {
@@ -1605,7 +1652,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT   Review the Task",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_1_-_review_the_task"
       }
     },
     {
@@ -1623,7 +1670,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_4_-_complete_the_task_1"
       }
     },
     {
@@ -1641,7 +1688,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_2_-_deep_dive"
       }
     }
   ],

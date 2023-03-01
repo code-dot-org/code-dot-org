@@ -40,10 +40,11 @@ class SmsController < ApplicationController
     )
     head :ok
   rescue Twilio::REST::RestError => e
-    if /The message From\/To pair violates a blacklist rule./.match?(e.message)
+    case e.message
+    when /The message From\/To pair violates a blacklist rule./
       # recipient unsubscribed from twilio, pretend it succeeded
       head :ok
-    elsif /The \'To\' number .* is not a valid phone number\./.match?(e.message)
+    when /The \'To\' number .* is not a valid phone number\./
       head :bad_request
     else
       raise

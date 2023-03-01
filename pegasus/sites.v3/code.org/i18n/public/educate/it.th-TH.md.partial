@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ theme: responsive
 | **เพื่อใช้โปรแกรมจำลองอินเทอร์เน็ต**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **เพื่อใช้งาน Web Lab**                                         | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **เพื่อใช้งานปุ่มแชร์ในโปรแกรม Google Classroom**               | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                     | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## รายละเอียดกอุปกรณ์มือถือและแท็บเล็ตที่รองรับ
 
@@ -100,7 +101,7 @@ theme: responsive
 
 ก่อนที่คุณจะเริ่มหลักสูตรออนไลน์ของ Code.org ให้ทดสอบการเล่นวิดีโอด้านล่างเพื่อให้แน่ใจว่าคุณสามารถเล่นวิดีโอได้
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 เพราะตัวเล่นวิดีโอนี้จะถูกใช้ตลอดหลักสูตร ตัวเล่นนี้พยายามเล่นวิดีโอผ่าน YouTube และหาก YouTube ถูกบล็อก จะแสดงวิดีโอที่ฝังอยู่ใน Code.org โดยใช้โปรแกรมเล่น "สำรอง" ของเราแทน
 

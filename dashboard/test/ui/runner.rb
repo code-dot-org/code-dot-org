@@ -440,8 +440,9 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
-  File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(
+  File.write(
+    status_page_filename,
+    haml_engine.render(
       Object.new,
       {
         api_origin: CDO.studio_url('', scheme_for_environment),
@@ -454,7 +455,7 @@ def generate_status_page(suite_start_time)
         browser_features: browser_features
       }
     )
-  end
+  )
   ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 

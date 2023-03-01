@@ -1105,3 +1105,10 @@ function checkInteractiveSpriteMovement() {
 function checkUsedWhenRun() {
 	console.log(getEventLog());
 }
+
+function checkSpriteHasBehavior(spriteId, behaviorString) {
+  if (spriteId == undefined) { console.log("No sprite ID supplied to checkSpriteHasBehavior"); return; }
+  if (behaviorString == undefined) { console.log("No behavior string supplied to checkSpriteHasBehavior"); return; }
+
+  return member(behaviorString, getBehaviorsForSpriteId(spriteId));
+}

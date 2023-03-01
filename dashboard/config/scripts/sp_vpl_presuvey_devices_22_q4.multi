@@ -1,15 +1,12 @@
 name 'SP-VPL-PreSuvey-Devices-22-Q4'
 title 'Pre-Survey'
 description ''
-question 'How confident do you feel about teaching the Creating Apps for Devices curriculum right now?'
+question 'Which of the following might **prevent** you from teaching the Creating Apps with Devices unit?'
 
-right 'Very unconfident'
-right 'Unconfident'
-right 'Somewhat unconfident'
-right 'Neutral'
-right 'Somewhat confident'
-right 'Confident'
-right 'Very confident'
+right 'Access to a class set of Circuit Playgrounds'
+right 'Access to a class set of laptop or desktop computers'
+right 'All of the above'
+right 'None of the above'
 
 
 markdown <<MARKDOWN

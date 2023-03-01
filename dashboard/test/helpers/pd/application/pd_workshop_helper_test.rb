@@ -93,7 +93,7 @@ module Pd::Application
 
     test 'prefetch scales without additional queries' do
       workshops = create_list :workshop, 10
-      applications = 10.times.map do |i|
+      applications = Array.new(10) do |i|
         create TEACHER_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
       end
 

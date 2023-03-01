@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_24_233909) do
+ActiveRecord::Schema.define(version: 2023_02_14_123814) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -422,6 +422,10 @@ ActiveRecord::Schema.define(version: 2022_10_24_233909) do
     t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
     t.boolean "assignable", default: true, null: false
+    t.string "curriculum_type"
+    t.string "marketing_initiative"
+    t.string "grade_levels"
+    t.string "header"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -1486,6 +1490,7 @@ ActiveRecord::Schema.define(version: 2022_10_24_233909) do
     t.index ["project_type"], name: "storage_apps_project_type_index", length: 191
     t.index ["published_at"], name: "storage_apps_published_at_index"
     t.index ["standalone"], name: "storage_apps_standalone_index"
+    t.index ["storage_id", "state"], name: "storage_apps_storage_id_state_index"
     t.index ["storage_id"], name: "storage_apps_storage_id_index"
   end
 

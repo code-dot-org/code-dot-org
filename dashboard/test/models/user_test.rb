@@ -2178,7 +2178,12 @@ class UserTest < ActiveSupport::TestCase
     end
 
     user.reload
-    assert_equal original_primary_contact_info, user.primary_contact_info
+    if original_primary_contact_info.nil?
+      # starting in Minitest 6, don't use assert_equal to compare nil values
+      assert_nil user.primary_contact_info
+    else
+      assert_equal original_primary_contact_info, user.primary_contact_info
+    end
   end
 
   def upgrade_to_personal_login_params(**args)
@@ -3379,11 +3384,11 @@ class UserTest < ActiveSupport::TestCase
           'script' => {
             'name' => {
               'other' => {
-                'title': 'Unit Other',
+                title: 'Unit Other',
                 'description_short' => 'other-description'
               },
               'pl-other' => {
-                'title': 'PL Unit Other',
+                title: 'PL Unit Other',
                 'description_short' => 'pl-other-description'
               }
             }
@@ -3883,7 +3888,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
-      section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grade: participant_type == 'student' ? '9' : 'pl'
+      section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section
     end
@@ -4747,7 +4752,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'section attempts last reset value resets if more than 24 hours has passed' do
     user = create :user
-    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    user.properties = {section_attempts: 5, section_attempts_last_reset: DateTime.now - 1}
     # invoking display_captcha? will return false without causing section_attempts values to be reset
     assert_equal false, user.display_captcha?
     # now we mimic joining a section, which should reset attempts and then increment
@@ -4794,11 +4799,21 @@ class UserTest < ActiveSupport::TestCase
 
   test 'marketing_segment_data returns expected grades for teacher with sections' do
     teacher = create :teacher
-    create :section, user: teacher, grade: "6"
-    create :section, user: teacher, grade: "6"
-    create :section, user: teacher, grade: "7"
+    create :section, user: teacher, grades: ["6"]
+    create :section, user: teacher, grades: ["6"]
+    create :section, user: teacher, grades: ["7"]
 
     expected_grades = ["6", "7"]
+    marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
+    assert_equal expected_grades.sort, marketing_segment_grades.sort
+  end
+
+  test 'marketing_segment_data returns expected grades for teacher with multi-grade sections' do
+    teacher = create :teacher
+    create :section, user: teacher, grades: ["6", "K", "10"]
+    create :section, user: teacher, grades: ["7", "K", "12"]
+
+    expected_grades = %w(6 K 10 7 12)
     marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
     assert_equal expected_grades.sort, marketing_segment_grades.sort
   end
