@@ -13,7 +13,10 @@ import {
   isWebSerialPort
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
-import DAPjs from 'dapjs';
+import microbitUh from './microbit-uh-umd-min';
+// import DAPjs from './dap-umd.js';
+// import microbitUh from '@microbit/microbit-universal-hex';
+// import DAPjs from 'dapjs';
 
 export default class SetupChecker {
   constructor(webSerialPort) {
@@ -151,6 +154,35 @@ export default class SetupChecker {
 
     const transport = new DAPjs.WebUSB(device);
     const target = new DAPjs.DAPLink(transport);
+
+    // If it is a Universal Hex, separate it, and pick the right one for the connected micro:bit version
+    if (microbitUh.isUniversalHex(this.hexStr)) {
+      let hexV1 = null;
+      let hexV2 = null;
+      let separatedBinaries = microbitUh.separateUniversalHex(this.hexStr);
+      separatedBinaries.forEach(function(hexObj) {
+        if (hexObj.boardId === 0x9900 || hexObj.boardId === 0x9901) {
+          hexV1 = hexObj.hex;
+        } else if (
+          hexObj.boardId === 0x9903 ||
+          hexObj.boardId === 0x9904 ||
+          hexObj.boardId === 0x9905 ||
+          hexObj.boardId === 0x9906
+        ) {
+          hexV2 = hexObj.hex;
+        }
+      });
+      if (microbitId === '9900' || microbitId === '9901') {
+        this.hexStr = hexV1;
+      } else if (
+        microbitId === '9903' ||
+        microbitId === '9904' ||
+        microbitId === '9905' ||
+        microbitId === '9906'
+      ) {
+        this.hexStr = hexV2;
+      }
+    }
 
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
     let hexBuffer = new Uint8Array(this.hexStr.length);

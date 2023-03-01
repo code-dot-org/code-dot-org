@@ -342,18 +342,6 @@ export default class SetupChecklist extends Component {
             stepName={i18n.validationStepBoardConnectable()}
             hideWaitingSteps={true}
           >
-            {experiments.isEnabled('microbit') &&
-              this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-              this.state[STATUS_BOARD_CONNECT] === Status.FAILED && (
-                <input
-                  style={{marginLeft: 9, marginTop: -4, outline: 'none'}}
-                  className="btn"
-                  type="button"
-                  value={applabI18n.makerSetupUpdateMBFirmata()}
-                  onClick={() => this.setupChecker.updateMBFirmata()}
-                  title={applabI18n.makerSetupUpdateMBFirmataDescription()}
-                />
-              )}
             {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
               <div>
@@ -366,6 +354,25 @@ export default class SetupChecklist extends Component {
               </div>
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
+            {experiments.isEnabled('microbit') &&
+              this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+              this.state[STATUS_BOARD_CONNECT] === Status.FAILED && (
+                <input
+                  style={{
+                    marginLeft: 7,
+                    marginRight: 7,
+                    marginTop: 5,
+                    marginBottom: 10,
+                    outline: 'black',
+                    backgroundColor: 'yellow'
+                  }}
+                  className="btn"
+                  type="button"
+                  value={applabI18n.makerSetupUpdateMBFirmata()}
+                  onClick={() => this.setupChecker.updateMBFirmata()}
+                  title={applabI18n.makerSetupUpdateMBFirmataDescription()}
+                />
+              )}
             {this.contactSupport()}
           </ValidationStep>
           {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
