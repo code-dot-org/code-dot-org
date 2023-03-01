@@ -102,6 +102,7 @@ function showCourseOverview() {
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
         userId={userId}
+        participantAudience={courseSummary.participant_audience}
       />
     </Provider>,
     document.getElementById('course_overview')
