@@ -1,14 +1,11 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-22T20:22:29.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "oceanSetup"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -65,11 +62,19 @@
       "csc_ecosystems_multiple_choice_child_2_2_2023"
     ],
     "instructions_icon": "crab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "standalone_app_name": "spritelab"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2023-02-22T20:22:29.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:22:29.151+00:00\",\"changed\":[\"cloned from \\\"csc_multiple_choice_2_2\\\"\"],\"cloned_from\":\"csc_multiple_choice_2_2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:22:29.151+00:00\",\"changed\":[\"cloned from \\\"csc_multiple_choice_2_2\\\"\"],\"cloned_from\":\"csc_multiple_choice_2_2\"},{\"changed_at\":\"2023-02-28 15:11:14 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
