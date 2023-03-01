@@ -124,7 +124,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursed/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/coursed/2022": {
           "name": "디버깅 가이드",
@@ -148,6 +149,9 @@
         },
         "virtual_lesson_modifications/coursed/2022": {
           "name": "가상 레슨 수정"
+        },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "자료"
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "비밀번호 보안 강화: 만약....그러면...시나리오",
@@ -345,6 +349,7 @@
         },
         "curriculum_guide/coursef/2022": {
           "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view",
           "type": "자료"
         },
         "debugging_guide/coursef/2022": {
@@ -372,6 +377,9 @@
         },
         "virtual_lesson_modifications/coursef/2022": {
           "name": "가상 레슨 수정"
+        },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "자료"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "말의 힘: 레슨 퀴즈",
@@ -422,9 +430,11 @@
           "type": "슬라이드"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "블랭크 스페이스 스토리",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "블랭크 스페이스 스토리",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "답안지"
         },
@@ -510,7 +520,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursee/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/coursee/2022": {
           "name": "디버깅 가이드",
@@ -539,6 +550,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "가상 레슨 수정"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "자료"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "슈퍼 디지털 시민 되기 :레슨 슬라이드",
@@ -666,7 +680,8 @@
           "type": "자료"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/courseb/2022": {
           "name": "디버깅 가이드",
@@ -750,9 +765,7 @@
           "type": "감정 이미지"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org에서 학급 섹션 만드는 방법",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "교사용 동영상"
+          "name": "Code.org에서 학급 섹션 만드는 방법"
         },
         "pair_programming/courseb/2022": {
           "name": "페어 프로그래밍",
@@ -1007,7 +1020,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide/coursea/2022": {
           "name": "디버깅 가이드",
@@ -1196,7 +1210,8 @@
           "type": "자료"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1ePwtwiZw0fcxYiwndkfFpRPAOtUm-mz6GTVCop0girM/view"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "디버깅 가이드",
@@ -1220,6 +1235,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "가상 레슨 수정"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "자료"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "온라인 상에서 나쁜 행동을 멈추게 함(STOP): 레슨 슬라이드 ",
@@ -2472,51 +2490,96 @@
           "type": "채점판"
         },
         "ai_what_is_machine_learning_/csd/2022": {
+          "name": "AI: 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "비디오"
+        },
+        "classifying_fish/csd/2022": {
+          "name": "물고기 분류하기",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "머신 러닝 소개",
           "type": "슬라이드"
         },
         "types_of_machine_learning/csd/2022": {
+          "name": "머신 러닝 유형",
           "type": "슬라이드"
         },
+        "types_of_machine_learning_1/csd/2022": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#"
+        },
         "types_of_machine_learning_2/csd/2022": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
           "type": "답안지"
         },
         "innovations_in_ai/csd/2022": {
+          "name": "AI의 혁신",
           "type": "슬라이드"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2022": {
+          "name": "AI의 혁신 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2022": {
+          "name": "AI 연구 영역에서의 혁신 - 학생 리소스",
+          "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#"
         },
         "seeing_ai/csd/2022": {
           "name": "시잉 AI",
+          "url": "https://www.youtube.com/watch?v=DybczED-GKE",
           "type": "비디오"
         },
         "_key_patterns_in_data/csd/2022": {
+          "name": "[KEY] 데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
           "type": "답안지"
         },
         "finding_patterns_in_data/csd/2022": {
+          "name": "데이터에서 패턴 찾기",
           "type": "비디오"
         },
         "patterns_in_data/csd/2022": {
+          "name": "데이터에서의 패턴",
           "type": "슬라이드"
         },
+        "patterns_in_data_1/csd/2022": {
+          "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view"
+        },
         "shoe_survey/csd/2022": {
+          "name": "신발 설문조사",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
           "type": "자료"
         },
         "_key_classification_models/csd/2022": {
+          "name": "[KEY] 분류 모델",
+          "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
           "type": "답안지"
         },
+        "classification_models/csd/2022": {
+          "name": "분류 모델",
+          "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit"
+        },
         "classification_models_1/csd/2022": {
+          "name": "분류 모델",
           "type": "슬라이드"
         },
         "fruit_veggie_cards/csd/2022": {
+          "name": "과일 및 채소 카드",
+          "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
           "type": "자료"
         },
         "_key_training_a_model_in_ai_lab/csd/2022": {
+          "name": "[KEY] AI Lab에서 모델 교육",
+          "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
           "type": "답안지"
         },
         "accuracy_in_ai_lab/csd/2022": {
+          "name": "AI Lab에서의 정확도",
+          "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
           "type": "자료"
         },
         "introduction_to_ai_lab/csd/2022": {
@@ -2528,19 +2591,30 @@
           "type": "비디오"
         },
         "selecting_features/csd/2022": {
+          "name": "특징 선택",
+          "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
           "type": "자료"
+        },
+        "training_a_model_in_ai_lab/csd/2022": {
+          "name": "AI Lab에서 모델 교육",
+          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "AI 랩 교육 및 테스팅",
           "type": "비디오"
         },
         "using_data_with_categorical_features/csd/2022": {
+          "name": "범주형 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
           "type": "자료"
         },
         "importing_a_model_in_app_lab/csd/2022": {
+          "name": "App Lab에서 모델 가져오기",
+          "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
           "type": "자료"
         },
         "importing_models_in_app_lab/csd/2022": {
+          "name": "App Lab에서 모델 가져오기",
           "type": "슬라이드"
         },
         "ai_training_data_bias/csd/2022": {
@@ -2549,9 +2623,15 @@
           "type": "비디오"
         },
         "model_cards/csd/2022": {
+          "name": "모델 카드",
           "type": "슬라이드"
         },
+        "model_cards_1/csd/2022": {
+          "name": "모델 카드"
+        },
         "_key_zoo_models/csd/2022": {
+          "name": "[KEY] 동물원 모델",
+          "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
           "type": "답안지"
         },
         "model_cards_in_ai_lab/csd/2022": {
@@ -2559,103 +2639,213 @@
           "type": "비디오"
         },
         "saving_models_in_ai_lab/csd/2022": {
+          "name": "AI Lab에 모델 저장",
           "type": "슬라이드"
         },
         "selecting_a_label/csd/2022": {
+          "name": "라벨 선택",
+          "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
           "type": "자료"
         },
+        "zoo_models/csd/2022": {
+          "name": "동물원 모델",
+          "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit"
+        },
         "if-statements_in_app_lab/csd/2022": {
+          "name": "App Lab의 If-문",
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
           "type": "비디오"
         },
         "model_cards_in_app_lab/csd/2022": {
+          "name": "App Lab 모델 카드",
           "type": "슬라이드"
         },
         "printable_model_cards/csd/2022": {
           "type": "자료"
         },
         "_key_numerical_accuracy/csd/2022": {
+          "name": "[KEY] 수치 정확도",
+          "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
           "type": "답안지"
         },
         "_key_zombie_prediction/csd/2022": {
+          "name": "[KEY] 좀비 예측",
+          "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
           "type": "답안지"
         },
+        "numerical_accuracy/csd/2022": {
+          "name": "수치 정확도",
+          "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#"
+        },
         "numerical_models/csd/2022": {
+          "name": "수치 모델",
           "type": "슬라이드"
         },
+        "zombie_prediction/csd/2022": {
+          "name": "좀비 예측",
+          "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#"
+        },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
+          "name": "[KEY] - AI Lab의 수치 데이터",
+          "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
           "type": "답안지"
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "type": "슬라이드"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "type": "비디오"
         },
         "using_data_with_numerical_features/csd/2022": {
+          "name": "수치적 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
           "type": "자료"
         },
         "customizing_apps/csd/2022": {
+          "name": "앱 커스터마이징",
           "type": "슬라이드"
         },
         "ai_code_of_ethics/csd/2022": {
+          "name": "AI 윤리 강령",
           "type": "슬라이드"
         },
+        "ai_ethics_research_areas/csd/2022": {
+          "name": "AI 윤리 연구 분야",
+          "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
+        },
         "ai_ethics_research_reflection/csd/2022": {
+          "name": "AI 윤리 연구 점검",
+          "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
           "type": "학생 유인물"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "name": "윤리 및 AI: 동등한 접속 및 알고리즘 편향",
+          "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
           "type": "비디오"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
+          "name": "AI 윤리강령 [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
           "type": "슬라이드"
         },
         "create_an_ml_app/csd/2022": {
+          "name": "ML 앱 만들기",
+          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
           "type": "채점판"
         },
+        "create_an_ml_app_-_project_guide/csd/2022": {
+          "name": "ML 앱 만들기 - 프로젝트 가이드",
+          "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
+        },
         "make_a_machine_learning_app/csd/2022": {
+          "name": "머신 러닝 앱 만들기",
           "type": "슬라이드"
         },
+        "5_why_s_-_activity_guide/csd/2022": {
+          "name": "5가지 이유 - 활동 가이드",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2022": {
+          "name": "앱 브레인스톰 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
         "issue_statements/csd/2022": {
+          "name": "문제 설명문",
           "type": "슬라이드"
         },
         "creating_a_survey/csd/2022": {
+          "name": "설문조사 만들기",
+          "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
           "type": "자료"
         },
         "survey_planning/csd/2022": {
-          "name": "데이터 수집 설계",
+          "name": "설문조사 계획",
           "type": "슬라이드"
+        },
+        "survey_planning_-_activity_guide/csd/2022": {
+          "name": "설문조사 계획 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
+        },
+        "survey_template_google_form_/csd/2022": {
+          "name": "설문조사 템플릿 [구글 양식]",
+          "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
         },
         "creating_a_survey_in_google_forms/csd/2022": {
           "type": "비디오"
         },
         "cleaning_survey_data/csd/2022": {
+          "name": "설문조사 데이터 정리",
           "type": "비디오"
         },
+        "isaac_s_survey_data_-_student_resource/csd/2022": {
+          "name": "Isaac의 설문조사 데이터 - 학생 리소스",
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2022": {
+          "name": "김의 설문조사 데이터 - 학생 리소스",
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
         "survey_data_in_ai_lab/csd/2022": {
+          "name": "AI Lab의 설문조사 데이터",
           "type": "슬라이드"
         },
         "view_and_download_survey_data/csd/2022": {
+          "name": "설문조사 데이터 보기 및 다운로드",
           "type": "비디오"
         },
         "troubleshooting_models/csd/2022": {
+          "name": "문제 해결 모델",
           "type": "슬라이드"
         },
+        "troubleshooting_models_-_activity_guide/csd/2022": {
+          "name": "문제 해결 모델 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
+        },
         "creating_an_app/csd/2022": {
+          "name": "앱 만들기",
           "type": "슬라이드"
         },
         "_template_5_why_s/csd/2022": {
+          "name": "[Template] 5가지 이유",
+          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
           "type": "자료"
         },
         "design_an_ai_app/csd/2022": {
+          "name": "AI 앱 설계",
           "type": "슬라이드"
         },
+        "design_an_ai_app_-_project_guide/csd/2022": {
+          "name": "AI 앱 설계 - 프로젝트 가이드",
+          "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
+        },
         "design_an_ai_app_1/csd/2022": {
+          "name": "AI 앱 설계",
+          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
           "type": "채점판"
         },
+        "exemplar_-_design_an_ai_app/csd/2022": {
+          "name": "예제 - AI 앱 디자인",
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2022": {
+          "name": "예제 - AI 앱 모델 카드 설계",
+          "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2022": {
+          "name": "예제 - AI 앱 프로젝트 가이드 설계",
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
         "model_card_-_digital_template/csd/2022": {
+          "name": "모델 카드 - 디지털 템플릿",
+          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
           "type": "자료"
         },
         "model_card_-_printable_template/csd/2022": {
+          "name": "모델 카드 - 인쇄 가능한 템플릿",
+          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
           "type": "자료"
         },
         "lesson_plans/courseb/2018": {
@@ -3207,10 +3397,12 @@
           "type": "유인물"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "블랭크 스페이스 스토리",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "답안지"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "블랭크 스페이스 스토리",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -4652,81 +4844,180 @@
           "type": "채점판"
         },
         "csd_curriculum_guide/csd/2021": {
+          "name": "CSD 커리큘럼 가이드",
+          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
           "type": "자료"
         },
         "csd_implementation_guide/csd/2021": {
+          "name": "CSD 구현 가이드",
+          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
           "type": "자료"
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "name": "CSD 디버깅 가이드",
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "name": "차별화를 위한 CSD 가이드",
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+        },
+        "all_code_5/csd/2021": {
+          "name": "모든 코드",
+          "url": "/s/csd7-2021/code"
+        },
+        "all_resources_7/csd/2021": {
+          "name": "모든 리소스",
+          "url": "/s/csd7-2021/resources"
+        },
+        "all_standards_7/csd/2021": {
+          "name": "모든 표준",
+          "url": "/s/csd7-2021/standards"
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "전체 어휘",
+          "url": "/s/csd7-2021/vocab"
+        },
+        "classifying_fish/csd/2021": {
+          "name": "물고기 분류하기",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "type": "활동 가이드"
         },
         "introduction_to_machine_learning/csd/2021": {
           "name": "머신 러닝 소개",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
           "type": "슬라이드"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "name": "AI: 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "비디오"
         },
         "types_of_machine_learning/csd/2021": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
           "type": "슬라이드"
         },
+        "types_of_machine_learning_1/csd/2021": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+          "type": "활동 가이드"
+        },
         "types_of_machine_learning_2/csd/2021": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
           "type": "답안지"
         },
         "innovations_in_ai/csd/2021": {
+          "name": "AI의 혁신",
+          "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
           "type": "슬라이드"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2021": {
+          "name": "AI의 혁신 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2021": {
+          "name": "AI 연구 영역에서의 혁신 - 학생 리소스",
+          "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#"
         },
         "seeing_ai/csd/2021": {
           "name": "시잉 AI",
+          "url": "https://www.youtube.com/watch?v=DybczED-GKE",
           "type": "비디오"
         },
         "finding_patterns_in_data/csd/2021": {
+          "name": "데이터에서 패턴 찾기",
+          "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
           "type": "비디오"
         },
         "patterns_in_data/csd/2021": {
+          "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
           "type": "슬라이드"
         },
+        "patterns_in_data_1/csd/2021": {
+          "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
+          "type": "활동 가이드"
+        },
         "shoe_survey/csd/2021": {
+          "name": "신발 설문조사",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
           "type": "자료"
         },
         "patterns_in_data_3/csd/2021": {
+          "name": "[KEY] 데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
           "type": "답안지"
         },
         "_key_classification_models/csd/2021": {
+          "name": "[KEY] 분류 모델",
+          "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
           "type": "답안지"
         },
+        "classification_models/csd/2021": {
+          "name": "분류 모델",
+          "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
+          "type": "활동 가이드"
+        },
         "classification_models_1/csd/2021": {
+          "name": "분류 모델",
+          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
           "type": "슬라이드"
         },
         "fruit_veggie_cards/csd/2021": {
+          "name": "과일 및 채소 카드",
+          "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
           "type": "자료"
         },
         "introduction_to_ai_lab/csd/2021": {
-          "name": "AI 연구실 소개",
+          "name": "AI Lab 소개",
+          "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
           "type": "슬라이드"
         },
         "introduction_to_ai_lab_1/csd/2021": {
-          "name": "AI 연구실 소개",
+          "name": "AI Lab 소개",
+          "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
           "type": "비디오"
         },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "name": "AI Lab에서 모델 교육",
+          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
+          "type": "활동 가이드"
+        },
         "training_and_testing_in_ai_lab/csd/2021": {
-          "name": "AI 랩 교육 및 테스팅",
+          "name": "AI Lab 교육 및 테스팅",
+          "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
           "type": "비디오"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
+          "name": "[KEY] AI Lab에서 모델 교육",
+          "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
           "type": "답안지"
         },
         "accuracy_in_ai_lab/csd/2021": {
+          "name": "AI Lab에서의 정확도",
+          "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
           "type": "자료"
         },
         "selecting_features/csd/2021": {
+          "name": "특징 선택",
+          "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
           "type": "자료"
         },
         "using_data_with_categorical_features/csd/2021": {
+          "name": "범주형 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
           "type": "자료"
         },
         "importing_models_in_app_lab/csd/2021": {
+          "name": "App Lab에서 모델 가져오기",
+          "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
           "type": "슬라이드"
         },
         "importing_a_model_in_app_lab/csd/2021": {
+          "name": "App Lab에서 모델 가져오기",
+          "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
           "type": "자료"
         },
         "ai_training_data_bias/csd/2021": {
@@ -4735,108 +5026,251 @@
           "type": "비디오"
         },
         "model_cards/csd/2021": {
+          "name": "모델 카드",
+          "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
           "type": "슬라이드"
         },
+        "model_cards_1/csd/2021": {
+          "name": "모델 카드",
+          "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
+          "type": "활동 가이드"
+        },
         "model_cards_in_ai_lab/csd/2021": {
-          "name": "AI 랩 모델 카드",
+          "name": "AI Lab 모델 카드",
+          "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
           "type": "비디오"
         },
         "saving_models_in_ai_lab/csd/2021": {
+          "name": "AI Lab에 모델 저장",
+          "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
           "type": "슬라이드"
         },
+        "zoo_models/csd/2021": {
+          "name": "동물원 모델",
+          "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
+          "type": "활동 가이드"
+        },
         "_key_zoo_models/csd/2021": {
+          "name": "[KEY] 동물원 모델",
+          "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
           "type": "답안지"
         },
         "selecting_a_label/csd/2021": {
+          "name": "라벨 선택",
+          "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
           "type": "자료"
         },
         "if-statements_in_app_lab/csd/2021": {
+          "name": "App Lab의 If-문",
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
           "type": "비디오"
         },
         "model_cards_in_app_lab/csd/2021": {
+          "name": "App Lab 모델 카드",
+          "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
           "type": "슬라이드"
+        },
+        "numerical_accuracy_-_activity_guide/csd/2021": {
+          "name": "수치 정확도",
+          "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
+          "type": "활동 가이드"
         },
         "numerical_models/csd/2021": {
+          "name": "수치 모델",
+          "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
           "type": "슬라이드"
         },
+        "zombie_prediction_-_activity_guide/csd/2021": {
+          "name": "좀비 예측",
+          "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
+          "type": "활동 가이드"
+        },
         "zombie_prediction_-_answer_key/csd/2021": {
+          "name": "[KEY] 좀비 예측",
+          "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
           "type": "답안지"
         },
         "_key_numerical_accuracy/csd/2021": {
+          "name": "[KEY] 수치 정확도",
+          "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
           "type": "답안지"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI Lab의 수치 데이터",
+          "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
           "type": "슬라이드"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI Lab의 수치 데이터",
+          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
+          "type": "활동 가이드"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI Lab의 수치 데이터",
+          "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
           "type": "비디오"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
+          "name": "[KEY] - AI Lab의 수치 데이터",
+          "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
           "type": "답안지"
         },
         "using_data_with_numerical_features/csd/2021": {
+          "name": "수치적 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
           "type": "자료"
         },
         "customizing_apps/csd/2021": {
+          "name": "앱 커스터마이징",
+          "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
           "type": "슬라이드"
         },
         "ai_code_of_ethics/csd/2021": {
+          "name": "AI 윤리 강령",
+          "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
           "type": "슬라이드"
         },
+        "ai_ethics_research_areas/csd/2021": {
+          "name": "AI 윤리 연구 분야",
+          "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
+        },
         "ai_ethics_research_reflection/csd/2021": {
+          "name": "AI 윤리 연구 점검",
+          "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
           "type": "학생 유인물"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "name": "윤리 및 AI: 동등한 접속 및 알고리즘 편향",
+          "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
           "type": "비디오"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
+          "name": "AI 윤리강령 [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
           "type": "슬라이드"
         },
+        "create_an_ml_app_-_project_guide/csd/2021": {
+          "name": "ML 앱 만들기 - 프로젝트 가이드",
+          "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
+        },
         "make_a_machine_learning_app/csd/2021": {
+          "name": "머신 러닝 앱 만들기",
+          "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
           "type": "슬라이드"
         },
         "create_an_ml_app/csd/2021": {
-          "type": "채점판"
+          "name": "ML 앱 만들기",
+          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+          "type": "지시문"
+        },
+        "5_why_s_-_activity_guide/csd/2021": {
+          "name": "5가지 이유 - 활동 가이드",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2021": {
+          "name": "앱 브레인스톰 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
         },
         "issue_statements/csd/2021": {
+          "name": "문제 설명문",
+          "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
           "type": "슬라이드"
         },
         "survey_planning/csd/2021": {
-          "name": "데이터 수집 설계",
+          "name": "설문조사 계획",
+          "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
           "type": "슬라이드"
         },
+        "survey_planning_-_activity_guide/csd/2021": {
+          "name": "설문조사 계획 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
+        },
+        "survey_template_google_form_/csd/2021": {
+          "name": "설문조사 템플릿 [구글 양식]",
+          "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
+        },
         "creating_a_survey/csd/2021": {
+          "name": "설문조사 만들기",
+          "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
           "type": "자료"
         },
+        "isaac_s_survey_data_-_student_resource/csd/2021": {
+          "name": "Isaac의 설문조사 데이터 - 학생 리소스",
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2021": {
+          "name": "김의 설문조사 데이터 - 학생 리소스",
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
         "survey_data_in_ai_lab/csd/2021": {
+          "name": "AI Lab의 설문조사 데이터",
+          "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
           "type": "슬라이드"
         },
         "cleaning_survey_data/csd/2021": {
+          "name": "설문조사 데이터 정리",
+          "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
           "type": "비디오"
         },
         "view_and_download_survey_data/csd/2021": {
+          "name": "설문조사 데이터 보기 및 다운로드",
+          "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
           "type": "비디오"
         },
         "troubleshooting_models/csd/2021": {
+          "name": "문제 해결 모델",
+          "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
           "type": "슬라이드"
         },
+        "troubleshooting_models_-_activity_guide/csd/2021": {
+          "name": "문제 해결 모델 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
+        },
         "creating_an_app/csd/2021": {
+          "name": "앱 만들기",
+          "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
           "type": "슬라이드"
         },
         "_template_5_why_s/csd/2021": {
+          "name": "[Template] 5가지 이유",
+          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
           "type": "자료"
         },
         "design_an_ai_app/csd/2021": {
+          "name": "AI 앱 설계",
+          "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
           "type": "슬라이드"
         },
+        "design_an_ai_app_-_project_guide/csd/2021": {
+          "name": "AI 앱 설계 - 프로젝트 가이드",
+          "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
+        },
+        "exemplar_-_design_an_ai_app/csd/2021": {
+          "name": "예제 - AI 앱 디자인",
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2021": {
+          "name": "예제 - AI 앱 모델 카드 설계",
+          "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2021": {
+          "name": "예제 - AI 앱 프로젝트 가이드 설계",
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
         "model_card_-_digital_template/csd/2021": {
+          "name": "모델 카드 - 디지털 템플릿",
+          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
           "type": "자료"
         },
         "model_card_-_printable_template/csd/2021": {
+          "name": "모델 카드 - 인쇄 가능한 템플릿",
+          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
           "type": "자료"
         },
         "design_an_ai_app_1/csd/2021": {
-          "type": "채점판"
+          "name": "AI 앱 설계",
+          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+          "type": "지시문"
         },
         "teacher_forum/csd/2021": {
           "name": "교사용 포럼"

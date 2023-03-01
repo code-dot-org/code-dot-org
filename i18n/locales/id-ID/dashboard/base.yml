@@ -668,29 +668,17 @@ id:
       body_short: "Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik."
       audience: 'Usia 13+'
       cta: 'Pelajari cara'
-    dance:
-      title: 'Pesta Tari'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Pesta Tari'
-    hello-world:
-      title: 'Halo Dunia'
-      body: 'Pilih dari empat tema seru untuk membuat coding karakter yang interaktif di dunia yang kamu ciptakan.'
-    poem-art:
-      title: 'Seni Puisi'
-      body: 'Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.'
-    hoc:
-      title: 'Labirin Klasik'
-      body: 'Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.'
+    dance:
+      title: 'Pesta Tari'
     flappy:
       title: 'Flappy Code'
       body: 'Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba Tutorial Flappy code kami!'
-    20-hour:
-      title: 'Kursus Akselerasi'
-      body: 'Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.'
-      body_short: 'Pelajari ilmu komputer dasar dalam kursus 2-4 versi akselerasi.'
-    hoc2014:
-      try_new_tutorial: 'Coba tutorial Hour of Code baru kami dalam versi beta'
-      try_frozen: 'Artis bersama Anna dan Elsa, dari Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galeri"
       body: "Lihat galeri aplikasi dan gambar artis yang dibuat oleh pengguna kami"
@@ -699,18 +687,21 @@ id:
       body: "Game Lab adalah sebuah lingkungan pemrograman untuk membuat animasi dan permainan sederhana berisikan objek dan karakter yang berinteraksi satu sama lain."
       audience: "Usia 13+"
       cta: "Pelajari cara"
+    hello-world:
+      title: 'Halo Dunia'
+      body: 'Pilih dari empat tema seru untuk membuat kode dari karakter interaktif di dunia yang kamu ciptakan.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
     hoc-encryption:
       title: "Enkripsi sederhana"
       body: "Murid akan mempelajari teknik membuat dan mengurai pesan terenkripsi."
-    weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda dalam hitungan detik."
-      audience: "Usia 13+"
-      cta: "Pelajari cara"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Labirin Klasik'
+      body: 'Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.'
+    hoc2014:
+      try_new_tutorial: 'Coba tutorial Hour of Code baru kami dalam versi beta'
+      try_frozen: 'Artis bersama Anna dan Elsa, dari Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas."
@@ -720,30 +711,39 @@ id:
     minecraft2016:
       title: "Minecraft"
       body: "Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
+    poem-art:
+      title: 'Seni Puisi'
+      body: 'Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.'
     sports:
       title: "Olahraga"
       body: "Buat pertandingan basket atau padu dan padankan lintas olahraga."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "kompresi Teks"
       body: "Dalam pelajaran ini, murid akan menggunakan Text Compression Widget untuk melakukan kompresi teks dengan mengganti pola dengan simbol."
-    unplugged:
-      title: "Pelajaran Unplugged"
-      audience: "Usia 4+"
-      body: "Kami telah menyusun sebuah daftar pelajaran unplugged untuk Anda gunakan dalam kelas. Sekarang Anda bisa mengajarkan dasar-dasar ilmu komputer, entah Anda memiliki komputer di kelas atau tidak! Coba gunakan pelajaran ini sebagai kursus yang berdiri sendiri atau sebagai pelajaran pelengkap untuk sembarang kursus ilmu komputer."
-      body_short: "Jika Anda tidak memiliki komputer, cobalah pelajaran unplugged ini di kelas Anda."
-    unplugged_conditionals:
-      title: "Kondisi"
-      body: "Pelajari algorithm dan pernyataan kondisional dalam aktivitas “unplugged” ini menggunakan tumpukan kartu."
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda dalam hitungan detik."
+      audience: "Usia 13+"
+      cta: "Pelajari cara"
     widgets:
       title: "Widget"
       body: "Murid dapat menjelajahi aneka konsep dari kursus Prinsip-Prinsip Ilmu Komputer kami secara langsung menggunakan alat-alat digital. Gunakan widget sendiri, atau buat pelajaran konsep tunggal untuk kelas Anda."
       audience: "Usia 14+"
       cta: "Pelajari cara"
+    unplugged_conditionals:
+      title: "Kondisi"
+      body: "Pelajari algorithm dan pernyataan kondisional dalam aktivitas “unplugged” ini menggunakan tumpukan kartu."
+    unplugged:
+      title: "Pelajaran Unplugged"
+      audience: "Usia 4+"
+      body: "Kami telah menyusun sebuah daftar pelajaran unplugged untuk Anda gunakan dalam kelas. Sekarang Anda bisa mengajarkan dasar-dasar ilmu komputer, entah Anda memiliki komputer di kelas atau tidak! Coba gunakan pelajaran ini sebagai kursus yang berdiri sendiri atau sebagai pelajaran pelengkap untuk sembarang kursus ilmu komputer."
+      body_short: "Jika Anda tidak memiliki komputer, cobalah pelajaran unplugged ini di kelas Anda."
+    20-hour:
+      title: 'Kursus Akselerasi'
+      body: 'Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.'
+      body_short: 'Pelajari ilmu komputer dasar dalam kursus 2-4 versi akselerasi.'
   landing:
     prerelease_tutorial: "Tutorial ini dalam versi **beta**.  Tutorial ini bisa direvisi kapan saja saat masukan diterima dan perbaikan dibuat."
     report_bug: "Laporkan Bug"

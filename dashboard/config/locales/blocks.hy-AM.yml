@@ -432,3 +432,7 @@ hy:
         text: առաջ ընթանալ
       craft_placeTorch:
         text: Տեղ ջահը
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts

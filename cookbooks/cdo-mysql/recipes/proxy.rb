@@ -52,7 +52,7 @@ template 'proxysql.cnf' do
       {reporting => [3]}
     ],
     data_dir: data_dir,
-    is_aurora: lazy {!!CDO.db_cluster_id},
+    is_aurora: true, # All environments that have ProxySQL enabled used Aurora.
     admin: admin,
     port: proxy_port,
     reporting_port: reporting_port

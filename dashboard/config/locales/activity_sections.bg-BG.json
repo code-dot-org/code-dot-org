@@ -527,26 +527,44 @@
           "progression_name": "Компресия на текста"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Въведение"
+          "name": "Въведение",
+          "description": ""
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Епидемия",
+          "description": "",
           "progression_name": "Епидемия"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
           "progression_name": "Добре Дошли в Града на Чудовищата"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
         "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
           "progression_name": "Изграждане на Умения"
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
           "progression_name": "Мини-Проект: Симулатор на Епидемия"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Свободна игра"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Отражение"
+          "name": "Отражение",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Въведение",
@@ -686,15 +704,28 @@
           "name": "Основна Дейност (Нова)"
         },
         "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Приготвяне на Сцената"
+          "name": "Приготвяне на Сцената",
+          "description": ""
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "",
+          "description": ""
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": ""
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Отражение"
+          "name": "Отражение",
+          "description": ""
         },
         "0bb9cc9e-e99a-4f86-af29-44e022052307": {
           "progression_name": "Примерен Escape Room"
@@ -1084,6 +1115,7 @@
           ]
         },
         "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
+          "name": "Проект за Края на Курса",
           "tips": [
             null
           ]
@@ -1910,6 +1942,9 @@
           "tips": [
             null
           ]
+        },
+        "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
+          "progression_name": "Видео: Художника в Code Studio"
         },
         "b7796885-3fd7-48b7-9a37-60950e9906ee": {
           "progression_name": "Изграждане на Умения"
@@ -2828,8 +2863,14 @@
             null
           ]
         },
+        "9ef7b3af-9635-401c-9c3b-edb314aeab10": {
+          "progression_name": "Видео: Художника в Code Studio"
+        },
         "a3ae6601-d988-4211-bd0f-1a29739732c7": {
           "progression_name": "Изграждане на Умения"
+        },
+        "8b343c8e-4adc-4bf6-aa3a-a574d8a9953e": {
+          "progression_name": "Видео: Цикли в Художник"
         },
         "f6fd7485-d7ca-40e8-9a20-d1f6236db0a4": {
           "progression_name": "Изграждане на Умения"
@@ -3088,8 +3129,14 @@
         "7b804016-339b-43f0-b33b-80f59f2dd53f": {
           "name": "Въведение"
         },
+        "0eec21bd-e3d9-4b20-894b-6d137e886079": {
+          "progression_name": "Видео: Художника в Code Studio"
+        },
         "3d60a400-ed5c-4cda-90f5-9f4ae59c23a4": {
           "progression_name": "Изграждане на Умения"
+        },
+        "500b97cd-5ce3-4068-8f56-800505374f63": {
+          "progression_name": "Видео: Цикли в Художник"
         },
         "fa2be632-6107-465b-a739-2311da75e17f": {
           "progression_name": "Изграждане на Умения"
@@ -6823,6 +6870,9 @@
             null
           ]
         },
+        "debe9954-34ec-44d2-96c4-69f46dc1bca8": {
+          "name": "Вдъхнови се"
+        },
         "bd03e02d-5bc6-4e57-a54a-11b04a5c66f6": {
           "tips": [
             null
@@ -10129,9 +10179,38 @@
           "progression_name": "Отражение"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -10718,6 +10797,9 @@
             null
           ]
         },
+        "6bf24dc0-0251-49fc-b9d2-04603cbb7a06": {
+          "progression_name": "Видео: Художника в Code Studio"
+        },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
           "progression_name": "Изграждане на Умения"
         },
@@ -10975,8 +11057,14 @@
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
           "name": "Въведение"
         },
+        "6d5074a8-2f60-46de-b974-532be01603c4": {
+          "progression_name": "Видео: Художника в Code Studio"
+        },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
           "progression_name": "Изграждане на Умения"
+        },
+        "52392151-808b-48cd-a76b-554587d200ec": {
+          "progression_name": "Видео: Цикли в Художник"
         },
         "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
           "progression_name": "Изграждане на Умения"
@@ -11722,6 +11810,7 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "name": "Проект за Края на Курса",
           "tips": [
             null
           ]
@@ -12545,8 +12634,14 @@
             null
           ]
         },
+        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
+          "progression_name": "Видео: Художника в Code Studio"
+        },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
           "progression_name": "Изграждане на Умения"
+        },
+        "eabc47c6-9f94-4b32-aab1-4a138064532b": {
+          "progression_name": "Видео: Цикли в Художник"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
           "progression_name": "Изграждане на Умения"
@@ -14068,6 +14163,9 @@
           "tips": [
             null
           ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Вдъхнови се"
         },
         "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
           "tips": [

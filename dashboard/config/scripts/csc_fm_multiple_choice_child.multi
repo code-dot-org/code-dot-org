@@ -1,7 +1,7 @@
 name 'csc_fm_multiple_choice_child'
 question 'We have a new function without a name. What should we name this function?'
-wrong 'timesZero', feedback: 'Incorrect.'
-wrong 'timesTwo', feedback: 'Incorrect.'
+wrong 'timesZero', feedback: 'Incorrect. This function should be named **timesFour**.'
+wrong 'timesTwo', feedback: 'Incorrect. This function should be named **timesFour**.'
 right 'timesFour', feedback: 'Correct!'
-wrong 'plusFour', feedback: 'Incorrect.'
+wrong 'plusFour', feedback: 'Incorrect. This function should be named **timesFour**.'
 

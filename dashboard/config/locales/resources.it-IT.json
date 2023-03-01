@@ -143,6 +143,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Modifiche alla lezione virtuale"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Risorse"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Potenziare le password: scenari - Se... Allora...",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -368,6 +371,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Modifiche alla lezione virtuale"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Risorse"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Il potere delle parole: quiz della lezione",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -539,6 +545,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Modifiche alla lezione virtuale"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Risorse"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Diventa un super cittadino digitale - Diapositive delle lezioni",
@@ -753,9 +762,7 @@
           "type": "Emoticon"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Come creare una classe su Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Video per l'insegnante"
+          "name": "Come creare una classe su Code.org"
         },
         "pair_programming/courseb/2022": {
           "name": "Programmazione in coppia",
@@ -1226,6 +1233,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Modifiche alla lezione virtuale"
         },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Risorse"
+        },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Dire STOP alla cattiveria online: diapositive della lezione",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
@@ -1398,6 +1408,9 @@
         "meals_data/csd/2022": {
           "type": "Risorse"
         },
+        "representation_matters/csd/2022": {
+          "type": "Modello"
+        },
         "representation_matters_1/csd/2022": {
           "type": "Guida alle attività"
         },
@@ -1407,8 +1420,17 @@
         "representing_information/csd/2022": {
           "type": "Guida alle attività"
         },
+        "representing_information_1/csd/2022": {
+          "type": "Modello"
+        },
+        "representing_information_2/csd/2022": {
+          "type": "Modello"
+        },
         "patterns_and_representation/csd/2022": {
           "type": "Diapositive"
+        },
+        "ascii/csd/2022": {
+          "type": "Modello"
         },
         "ascii_challenges/csd/2022": {
           "type": "Guida alle attività"
@@ -1428,6 +1450,9 @@
         "binary_and_data/csd/2022": {
           "type": "Video"
         },
+        "representing_numbers/csd/2022": {
+          "type": "Modello"
+        },
         "representing_numbers_2021/csd/2022": {
           "type": "Guida alle attività"
         },
@@ -1436,6 +1461,9 @@
         },
         "activity_guide_-_pet_records/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "pet_records/csd/2022": {
+          "type": "Modello"
         },
         "combining_representations/csd/2022": {
           "type": "Diapositive"
@@ -1455,11 +1483,20 @@
         "computer_science_practices/csd/2022": {
           "type": "Riflessione"
         },
+        "create_a_representation/csd/2022": {
+          "type": "Modello"
+        },
         "create_a_representation_2/csd/2022": {
           "type": "Criteri di valutazione"
         },
+        "create_a_representation_marked_rubrics/csd/2022": {
+          "type": "Modello"
+        },
         "create_a_representation_3/csd/2022": {
           "type": "Diapositive"
+        },
+        "problem_solving_with_data/csd/2022": {
+          "type": "Modello"
         },
         "problem_solving_with_data_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1468,11 +1505,17 @@
           "name": "Risoluzione dei problemi con i dati",
           "type": "Diapositive"
         },
+        "structuring_data/csd/2022": {
+          "type": "Modello"
+        },
         "structuring_data_2021/csd/2022": {
           "type": "Guida alle attività"
         },
         "structuring_data_1/csd/2022": {
           "type": "Diapositive"
+        },
+        "interpreting_data/csd/2022": {
+          "type": "Modello"
         },
         "interpreting_data_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1483,6 +1526,9 @@
         "interpreting_data_3/csd/2022": {
           "type": "Diapositive"
         },
+        "making_decisions_with_data/csd/2022": {
+          "type": "Modello"
+        },
         "making_decisions_with_data_1/csd/2022": {
           "type": "Guida alle attività"
         },
@@ -1491,6 +1537,9 @@
         },
         "making_decisions_with_data_2/csd/2022": {
           "type": "Diapositive"
+        },
+        "automating_data_decisions/csd/2022": {
+          "type": "Modello"
         },
         "automating_data_decisions_1/csd/2022": {
           "type": "Risorse"
@@ -1503,6 +1552,9 @@
         },
         "amazon_and_data/csd/2022": {
           "type": "Video"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "type": "Modello"
         },
         "data_in_the_real_world_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1520,7 +1572,7 @@
           "type": "Video"
         },
         "video_machine_learning/csd/2022": {
-          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "name": "Video - Cos'è l'Apprendimento Automatico (Machine Learning)",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -1539,61 +1591,130 @@
         "make_a_recommendation_2/csd/2022": {
           "type": "Guida al progetto"
         },
+        "peer_review_exemplar_1/csd/2022": {
+          "type": "Modello"
+        },
+        "peer_review_exemplar_2/csd/2022": {
+          "type": "Modello"
+        },
+        "project_guide_exemplar_1/csd/2022": {
+          "type": "Modello"
+        },
+        "sample_marked_rubrics_3/csd/2022": {
+          "type": "Modello"
+        },
         "project_-_make_a_recommendation/csd/2022": {
           "type": "Diapositive"
         },
+        "aluminum_boats/csd/2022": {
+          "name": "Barche in alluminio",
+          "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
+          "type": "Modello"
+        },
         "aluminum_boats_1/csd/2022": {
+          "name": "Barche in alluminio",
+          "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
           "type": "Guida alle attività"
         },
+        "code_org_how-to_videos/csd/2022": {
+          "name": "Video dimostrativi su Code.org",
+          "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
+        },
         "intro_to_problem_solving/csd/2022": {
+          "name": "Introduzione alla risoluzione di problemi",
           "type": "Diapositive"
         },
+        "problem_solving_process/csd/2022": {
+          "name": "Processo di risoluzione dei problemi",
+          "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
+          "type": "Modello"
+        },
         "problem_solving_process_1/csd/2022": {
+          "name": "Processo di risoluzione dei problemi",
+          "url": "https://youtu.be/z7RaFPT3DTE",
           "type": "Video"
         },
+        "problem_solving_process_2/csd/2022": {
+          "name": "Processo di risoluzione dei problemi",
+          "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view?usp=sharing&resourcekey=0-1I3oX1C8Q_P1YAV15vJfOw"
+        },
         "the_problem_solving_process/csd/2022": {
-          "name": "Il Processo di Risoluzione dei Problemi",
+          "name": "Il processo di risoluzione dei problemi",
+          "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
           "type": "Guida alle attività"
         },
         "the_problem_solving_process_1/csd/2022": {
-          "name": "Il Processo di Risoluzione dei Problemi",
+          "name": "Il processo di risoluzione dei problemi",
           "type": "Diapositive"
         },
         "solving_problems/csd/2022": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
           "type": "Soluzione"
         },
         "solving_problems_1/csd/2022": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
           "type": "Guida alle attività"
         },
         "exploring_problem_solving/csd/2022": {
+          "name": "Esplorare la risoluzione dei problemi",
           "type": "Diapositive"
         },
         "what_is_a_computer/csd/2022": {
+          "name": "Cos'è un computer",
+          "url": "https://youtu.be/AG7VeCkT9qA",
           "type": "Video"
         },
         "what_is_a_computer_/csd/2022": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?",
+          "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
+          "type": "Modello"
         },
         "what_is_a_computer_version_a_/csd/2022": {
+          "name": "Cos'è un computer (versione A)",
+          "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
           "type": "Guida alle attività"
         },
         "what_is_a_computer_version_b_/csd/2022": {
+          "name": "Cos'è un computer (versione B)",
+          "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
           "type": "Guida alle attività"
         },
         "what_is_a_computer_1/csd/2022": {
+          "name": "Cos'è un computer",
           "type": "Diapositive"
         },
+        "input_and_output/csd/2022": {
+          "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
+          "type": "Modello"
+        },
         "input_and_output_1/csd/2022": {
+          "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
           "type": "Guida alle attività"
         },
         "input_and_output_2/csd/2022": {
+          "name": "Ingressi e uscite",
           "type": "Diapositive"
         },
+        "apps_with_processing/csd/2022": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
+          "type": "Modello"
+        },
         "apps_with_processing_1/csd/2022": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
           "type": "Guida alle attività"
         },
         "apps_with_processing_2/csd/2022": {
+          "name": "App con elaborazione",
           "type": "Diapositive"
+        },
+        "apps_with_storage/csd/2022": {
+          "type": "Modello"
         },
         "apps_with_storage_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1616,8 +1737,21 @@
         "apps_and_problem_solving_2/csd/2022": {
           "type": "Criteri di valutazione"
         },
+        "peer_review_exemplar/csd/2022": {
+          "type": "Modello"
+        },
+        "project_guide_exemplar/csd/2022": {
+          "type": "Modello"
+        },
+        "sample_marked_rubrics/csd/2022": {
+          "type": "Modello"
+        },
         "project_-_propose_an_app/csd/2022": {
+          "name": "Progetto - Proponi un'app",
           "type": "Diapositive"
+        },
+        "build_a_newspaper_table/csd/2022": {
+          "type": "Modello"
         },
         "build_a_newspaper_table_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1625,11 +1759,17 @@
         "intro_to_problem_solving_newspapers_/csd/2022": {
           "type": "Diapositive"
         },
+        "spaghetti_bridge/csd/2022": {
+          "type": "Modello"
+        },
         "spaghetti_bridge_-_activity_guide/csd/2022": {
           "type": "Guida alle attività"
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
           "type": "Diapositive"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2022": {
+          "type": "Modello"
         },
         "paper_tower/csd/2022": {
           "type": "Guida alle attività"
@@ -1637,7 +1777,11 @@
         "intro_to_problem_solving_paper_towels_/csd/2022": {
           "type": "Diapositive"
         },
+        "exploring_problem_solving_-_animal_theme/csd/2022": {
+          "type": "Modello"
+        },
         "solving_problems_2/csd/2022": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
         "tangrams/csd/2022": {
@@ -1646,7 +1790,11 @@
         "exploring_problem_solving_animals_/csd/2022": {
           "type": "Diapositive"
         },
+        "exploring_problem_solving_-_games_theme/csd/2022": {
+          "type": "Modello"
+        },
         "solving_problems_3/csd/2022": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
         "exploring_problem_solving_games_/csd/2022": {
@@ -1655,17 +1803,24 @@
         "cs_in_entertainment/csd/2022": {
           "type": "Guida alle attività"
         },
+        "cs_in_entertainment_1/csd/2022": {
+          "type": "Modello"
+        },
         "programming_for_entertainment/csd/2022": {
           "type": "Diapositive"
         },
         "drawing_shapes/csd/2022": {
-          "name": "Disegnare Forme"
+          "name": "Disegnare Forme",
+          "type": "Modello"
         },
         "drawing_shapes_version_a_/csd/2022": {
           "type": "Guida alle attività"
         },
         "drawing_shapes_version_b_/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "sample_shape_drawing/csd/2022": {
+          "type": "Modello"
         },
         "plotting_shapes/csd/2022": {
           "type": "Diapositive"
@@ -1748,6 +1903,9 @@
         "captioned_scenes/csd/2022": {
           "type": "Criteri di valutazione"
         },
+        "mini_project_-_captioned_scenes/csd/2022": {
+          "type": "Modello"
+        },
         "sprite_scene_planning/csd/2022": {
           "type": "Guida alle attività"
         },
@@ -1780,6 +1938,9 @@
         },
         "animated_scene_1/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "animated_scene_planning/csd/2022": {
+          "type": "Modello"
         },
         "mini-project_-_animation/csd/2022": {
           "type": "Diapositive"
@@ -1818,6 +1979,12 @@
         "extra_code_in_challenge_levels_1/csd/2022": {
           "type": "Risorse"
         },
+        "interactive_card/csd/2022": {
+          "type": "Modello"
+        },
+        "interactive_card_-_marked_rubrics/csd/2022": {
+          "type": "Modello"
+        },
         "interactive_card_1/csd/2022": {
           "type": "Guida al progetto"
         },
@@ -1843,7 +2010,8 @@
           "type": "Diapositive"
         },
         "collision_detection/csd/2022": {
-          "name": "Rilevamento delle Collisioni"
+          "name": "Rilevamento delle Collisioni",
+          "type": "Modello"
         },
         "collision_detection_1/csd/2022": {
           "name": "Rilevamento delle Collisioni",
@@ -1858,6 +2026,9 @@
         "collision_detection_2/csd/2022": {
           "name": "Rilevamento delle Collisioni",
           "type": "Diapositive"
+        },
+        "mini-project_guide_-_side_scroller/csd/2022": {
+          "type": "Modello"
         },
         "side_scroller/csd/2022": {
           "name": "Scorrimento Laterale",
@@ -1883,6 +2054,9 @@
           "name": "Gioco del Volantino",
           "type": "Criteri di valutazione"
         },
+        "flyer_game_-_project_guide/csd/2022": {
+          "type": "Modello"
+        },
         "flyer_game_1/csd/2022": {
           "name": "Gioco del Volantino",
           "type": "Guida al progetto"
@@ -1905,11 +2079,20 @@
         "the_game_design_process/csd/2022": {
           "type": "Diapositive"
         },
+        "planning_your_platform_game/csd/2022": {
+          "type": "Modello"
+        },
         "planning_your_platform_game_1/csd/2022": {
           "type": "Guida alle attività"
         },
         "using_the_game_design_process/csd/2022": {
           "type": "Diapositive"
+        },
+        "make_your_own_game/csd/2022": {
+          "type": "Modello"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2022": {
+          "type": "Modello"
         },
         "make_your_own_game_1/csd/2022": {
           "type": "Guida al progetto"
@@ -1922,6 +2105,9 @@
         },
         "project_-_design_a_game/csd/2022": {
           "type": "Diapositive"
+        },
+        "exploring_web_pages/csd/2022": {
+          "type": "Modello"
         },
         "exploring_web_pages_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1972,12 +2158,21 @@
           "name": "Liste",
           "type": "Risorse"
         },
+        "peer_review_-_html_web_page/csd/2022": {
+          "type": "Modello"
+        },
+        "project_guide_-_html_project/csd/2022": {
+          "type": "Modello"
+        },
         "mini-project_html_web_page/csd/2022": {
           "type": "Diapositive"
         },
         "digital_footprint/csd/2022": {
           "name": "Orme digitali",
           "type": "Diapositive"
+        },
+        "social_sleuth/csd/2022": {
+          "type": "Modello"
         },
         "social_sleuth_1/csd/2022": {
           "type": "Guida alle attività"
@@ -1999,6 +2194,12 @@
         "styling_text_with_css/csd/2022": {
           "type": "Diapositive"
         },
+        "peer_review_-_your_personal_style/csd/2022": {
+          "type": "Modello"
+        },
+        "project_guide_-_your_personal_style/csd/2022": {
+          "type": "Modello"
+        },
         "your_personal_style/csd/2022": {
           "type": "Criteri di valutazione"
         },
@@ -2013,6 +2214,9 @@
         },
         "creative_commons_overview/csd/2022": {
           "type": "Video"
+        },
+        "licensing_your_work/csd/2022": {
+          "type": "Modello"
         },
         "licensing_your_work_1/csd/2022": {
           "type": "Guida alle attività"
@@ -2032,6 +2236,9 @@
         "define_your_web_page/csd/2022": {
           "type": "Guida alle attività"
         },
+        "define_your_webpage/csd/2022": {
+          "type": "Modello"
+        },
         "websites_for_expression/csd/2022": {
           "type": "Diapositive"
         },
@@ -2041,11 +2248,17 @@
         "personal_web_page_-_prepare/csd/2022": {
           "type": "Guida al progetto"
         },
+        "project_guide_-_personal_web_page_-_prepare/csd/2022": {
+          "type": "Modello"
+        },
         "your_web_page_prepare/csd/2022": {
           "type": "Diapositive"
         },
         "extra_code_in_challenge_levels/csd/2022": {
           "type": "Risorse"
+        },
+        "peer_review_-_personal_website/csd/2022": {
+          "type": "Modello"
         },
         "personal_web_page/csd/2022": {
           "type": "Valutazioni dei parigrado"
@@ -2059,12 +2272,21 @@
         "personal_web_page_1/csd/2022": {
           "type": "Criteri di valutazione"
         },
+        "practices_reflection/csd/2022": {
+          "type": "Modello"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2022": {
+          "type": "Modello"
+        },
         "publishing_your_website/csd/2022": {
           "name": "Pubblicare il tuo sito web",
           "type": "Video"
         },
         "project_-_personal_web_page/csd/2022": {
           "type": "Diapositive"
+        },
+        "websites_for_a_purpose/csd/2022": {
+          "type": "Modello"
         },
         "websites_for_a_purpose_1/csd/2022": {
           "type": "Guida alle attività"
@@ -2078,6 +2300,9 @@
         "video_teamwork/csd/2022": {
           "type": "Video"
         },
+        "website_team_plan/csd/2022": {
+          "type": "Modello"
+        },
         "website_team_plan_1/csd/2022": {
           "type": "Guida alle attività"
         },
@@ -2086,6 +2311,9 @@
         },
         "internet_scavenger_hunt/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "links_and_research/csd/2022": {
+          "type": "Modello"
         },
         "links_and_research_1/csd/2022": {
           "type": "Guida alle attività"
@@ -2105,6 +2333,9 @@
         "plan_a_multi-page_website/csd/2022": {
           "type": "Guida al progetto"
         },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2022": {
+          "type": "Modello"
+        },
         "website_for_a_purpose/csd/2022": {
           "type": "Criteri di valutazione"
         },
@@ -2120,6 +2351,15 @@
         "project_-_website_for_a_purpose/csd/2022": {
           "type": "Diapositive"
         },
+        "peer_review_-_final_personal_website/csd/2022": {
+          "type": "Modello"
+        },
+        "practices_reflection_1/csd/2022": {
+          "type": "Modello"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Modello"
+        },
         "website_for_a_purpose_-_reflect/csd/2022": {
           "type": "Guida al progetto"
         },
@@ -2132,11 +2372,26 @@
         "designing_with_empathy/csd/2022": {
           "type": "Guida alle attività"
         },
+        "designing_with_empathy_1/csd/2022": {
+          "type": "Modello"
+        },
         "designing_with_empathy_2/csd/2022": {
           "type": "Diapositive"
         },
         "reacting_as_your_user/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "reacting_as_your_user_profile_1/csd/2022": {
+          "type": "Modello"
+        },
+        "reacting_as_your_user_profile_2/csd/2022": {
+          "type": "Modello"
+        },
+        "reacting_as_your_user_profile_3/csd/2022": {
+          "type": "Modello"
+        },
+        "reacting_as_your_user_profile_4/csd/2022": {
+          "type": "Modello"
         },
         "understanding_your_user/csd/2022": {
           "type": "Diapositive"
@@ -2144,11 +2399,17 @@
         "the_design_thinking_process/csd/2022": {
           "type": "Video"
         },
+        "user_centered_design_define_prepare_/csd/2022": {
+          "type": "Modello"
+        },
         "user_centered_design_define_prepare_2021/csd/2022": {
           "type": "Guida alle attività"
         },
         "user_centered_design_-_define_and_prepare/csd/2022": {
           "type": "Diapositive"
+        },
+        "user_centered_design_try_reflect_/csd/2022": {
+          "type": "Modello"
         },
         "user_centered_design_try_reflect_2021/csd/2022": {
           "type": "Guida alle attività"
@@ -2167,6 +2428,9 @@
         },
         "user_interfaces/csd/2022": {
           "type": "Diapositive"
+        },
+        "improve_a_screen/csd/2022": {
+          "type": "Modello"
         },
         "improve_a_screen_1/csd/2022": {
           "type": "Guida alle attività"
@@ -2189,11 +2453,17 @@
         "paper_prototypes/csd/2022": {
           "type": "Criteri di valutazione"
         },
+        "sample_marked_rubrics_1/csd/2022": {
+          "type": "Modello"
+        },
         "project_-_paper_prototype/csd/2022": {
           "type": "Diapositive"
         },
         "app_design_kickoff/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "app_design_kickoff_1/csd/2022": {
+          "type": "Modello"
         },
         "designing_apps_for_good/csd/2022": {
           "type": "Diapositive"
@@ -2201,11 +2471,17 @@
         "market_research/csd/2022": {
           "type": "Guida alle attività"
         },
+        "market_research_1/csd/2022": {
+          "type": "Modello"
+        },
         "market_research_2/csd/2022": {
           "type": "Diapositive"
         },
         "explore_ui_elements/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "explore_ui_elements_1/csd/2022": {
+          "type": "Modello"
         },
         "exploring_ui_elements/csd/2022": {
           "type": "Diapositive"
@@ -2220,14 +2496,23 @@
         "paper_prototype_planning/csd/2022": {
           "type": "Guida alle attività"
         },
+        "paper_prototype_planning_1/csd/2022": {
+          "type": "Modello"
+        },
         "build_a_paper_prototype/csd/2022": {
           "type": "Diapositive"
         },
         "paper_prototype_user_testing/csd/2022": {
           "type": "Guida alle attività"
         },
+        "paper_prototype_user_testing_1/csd/2022": {
+          "type": "Modello"
+        },
         "user_test_cases/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "user_test_cases_1/csd/2022": {
+          "type": "Modello"
         },
         "what_s_for_lunch_testing/csd/2022": {
           "type": "Video"
@@ -2283,6 +2568,9 @@
         "bugs_and_features/csd/2022": {
           "type": "Guida alle attività"
         },
+        "bugs_and_features_1/csd/2022": {
+          "type": "Modello"
+        },
         "bugs_and_features_2/csd/2022": {
           "type": "Diapositive"
         },
@@ -2295,8 +2583,20 @@
         "app_presentation/csd/2022": {
           "type": "Criteri di valutazione"
         },
+        "app_presentation_1/csd/2022": {
+          "type": "Modello"
+        },
         "app_presentation_template/csd/2022": {
           "type": "Diapositive"
+        },
+        "peer_review_1/csd/2022": {
+          "type": "Modello"
+        },
+        "peer_review_2/csd/2022": {
+          "type": "Modello"
+        },
+        "sample_marked_rubrics_2/csd/2022": {
+          "type": "Modello"
         },
         "project_-_app_presentation/csd/2022": {
           "type": "Diapositive"
@@ -2371,6 +2671,15 @@
         "variables_and_if_statements/csd/2022": {
           "type": "Diapositive"
         },
+        "exemplar_1_-_loose_papers_app/csd/2022": {
+          "type": "Modello"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2022": {
+          "type": "Modello"
+        },
+        "exemplar_3_-_bird_survey/csd/2022": {
+          "type": "Modello"
+        },
         "mini-project_on-the-go_app/csd/2022": {
           "type": "Diapositive"
         },
@@ -2398,6 +2707,15 @@
         },
         "input_output_devices/csd/2022": {
           "type": "Video"
+        },
+        "exemplar_1_-_lights_and_music/csd/2022": {
+          "type": "Modello"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2022": {
+          "type": "Modello"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2022": {
+          "type": "Modello"
         },
         "peer_review_-_human_device_interaction/csd/2022": {
           "type": "Risorse"
@@ -2470,6 +2788,15 @@
           "name": "Funzioni",
           "type": "Risorse"
         },
+        "exemplar_1_-_city_silhouette/csd/2022": {
+          "type": "Modello"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2022": {
+          "type": "Modello"
+        },
+        "exemplar_3_-_monster_puppet/csd/2022": {
+          "type": "Modello"
+        },
         "mini-project_interactive_art/csd/2022": {
           "type": "Diapositive"
         },
@@ -2502,6 +2829,15 @@
         },
         "prototype_an_innovation_1/csd/2022": {
           "type": "Guida alle attività"
+        },
+        "prototype_an_innovation_example_1/csd/2022": {
+          "type": "Modello"
+        },
+        "prototype_an_innovation_example_2/csd/2022": {
+          "type": "Modello"
+        },
+        "prototype_an_innovation_example_3/csd/2022": {
+          "type": "Modello"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -4944,8 +5280,23 @@
         "designing_with_empathy/csd/2021": {
           "type": "Guida alle attività"
         },
+        "designing_with_empathy_1/csd/2021": {
+          "type": "Modello"
+        },
+        "reacting-as-your-user-exemplar-19/csd/2021": {
+          "type": "Modello"
+        },
         "reacting-as-your-user/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "reacting_as_your_user_profile_2/csd/2021": {
+          "type": "Modello"
+        },
+        "reacting_as_your_user_profile_3/csd/2021": {
+          "type": "Modello"
+        },
+        "reacting_as_your_user_profile_4/csd/2021": {
+          "type": "Modello"
         },
         "user-centered-design-2021/csd/2021": {
           "type": "Guida alle attività"
@@ -4953,8 +5304,14 @@
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
+        "user_centered_design_define_prepare_/csd/2021": {
+          "type": "Modello"
+        },
         "user-centered-design-reflect-2021/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "user_centered_design_try_reflect_/csd/2021": {
+          "type": "Modello"
         },
         "user-interface-screens/csd/2021": {
           "type": "Risorse"
@@ -4964,6 +5321,9 @@
         },
         "user-experience-user/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "improve-a-screen-exemplar-19/csd/2021": {
+          "type": "Modello"
         },
         "paper-prototype-sample-feedback/csd/2021": {
           "type": "Risorse"
@@ -4983,14 +5343,26 @@
         "paper-prototypes/csd/2021": {
           "type": "Criteri di valutazione"
         },
+        "sample_marked_rubrics/csd/2021": {
+          "type": "Modello"
+        },
         "app-design-kickoff-2019/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "app_design_kickoff/csd/2021": {
+          "type": "Modello"
         },
         "market-research/csd/2021": {
           "type": "Guida alle attività"
         },
+        "market_research/csd/2021": {
+          "type": "Modello"
+        },
         "explore-ui-elements/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "explore_ui_elements/csd/2021": {
+          "type": "Modello"
         },
         "paper-prototype-planning/csd/2021": {
           "type": "Guida alle attività"
@@ -5002,6 +5374,9 @@
         "design_mode_elements/csd/2021": {
           "type": "Risorse"
         },
+        "paper_prototype_planning/csd/2021": {
+          "type": "Modello"
+        },
         "user-test-cases/csd/2021": {
           "type": "Guida alle attività"
         },
@@ -5010,6 +5385,12 @@
         },
         "whats-for-lunch-testing/csd/2021": {
           "type": "Video"
+        },
+        "paper_prototype_user_testing/csd/2021": {
+          "type": "Modello"
+        },
+        "user_test_cases/csd/2021": {
+          "type": "Modello"
         },
         "screen-ownership-2021/csd/2021": {
           "type": "Guida alle attività"
@@ -5048,6 +5429,9 @@
         "bugs-and-features-planning/csd/2021": {
           "type": "Guida alle attività"
         },
+        "bugs_and_features/csd/2021": {
+          "type": "Modello"
+        },
         "updating-your-prototype/csd/2021": {
           "type": "Guida alle attività"
         },
@@ -5056,6 +5440,18 @@
         },
         "app-presentation-template/csd/2021": {
           "type": "Diapositive"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "type": "Modello"
+        },
+        "sample_marked_rubrics_1_1/csd/2021": {
+          "type": "Modello"
+        },
+        "peer_review_1/csd/2021": {
+          "type": "Modello"
+        },
+        "peer_review_2/csd/2021": {
+          "type": "Modello"
         },
         "circuit_playground_1/csd/2021": {
           "type": "Risorse"
@@ -5136,6 +5532,9 @@
         "make_a_game_1/csd/2021": {
           "type": "Criteri di valutazione"
         },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "type": "Modello"
+        },
         "introduction_to_arrays/csd/2021": {
           "name": "Introduzione agli array",
           "type": "Video"
@@ -5191,8 +5590,20 @@
         "planning-your-innovation/csd/2021": {
           "type": "Guida al progetto"
         },
+        "peer_review_1_1/csd/2021": {
+          "type": "Modello"
+        },
+        "peer_review_2_1/csd/2021": {
+          "type": "Modello"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "type": "Modello"
+        },
         "unit-5-data-society/csd/2021": {
           "type": "Diapositive"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "type": "Modello"
         },
         "meals-data-resource-2019/csd/2021": {
           "type": "Risorse"
@@ -5202,6 +5613,15 @@
         },
         "representing-information-1/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "representing-information-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
+        "representing_information_2/csd/2021": {
+          "type": "Modello"
+        },
+        "ascii-exemplar-2019/csd/2021": {
+          "type": "Modello"
         },
         "ascii-text/csd/2021": {
           "type": "Risorse"
@@ -5218,6 +5638,12 @@
         "representing-numbers-2021/csd/2021": {
           "type": "Guida alle attività"
         },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
+        "pet-records-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
         "activity-guide-pet-records/csd/2021": {
           "type": "Guida alle attività"
         },
@@ -5233,11 +5659,20 @@
         "medical_records/csd/2021": {
           "type": "Soluzione"
         },
+        "create-a-representation-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
         "unit_5_data_society_1/csd/2021": {
           "type": "Diapositive"
         },
         "create_a_representation/csd/2021": {
           "type": "Criteri di valutazione"
+        },
+        "create_a_representation_marked_rubrics/csd/2021": {
+          "type": "Modello"
+        },
+        "problem-solving-with-data-exemplar-2019/csd/2021": {
+          "type": "Modello"
         },
         "problem-solving-with-data/csd/2021": {
           "type": "Guida alle attività"
@@ -5245,17 +5680,29 @@
         "structuring-data-2021/csd/2021": {
           "type": "Guida alle attività"
         },
+        "structuring_data/csd/2021": {
+          "type": "Modello"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
         "interpreting-data/csd/2021": {
           "type": "Guida alle attività"
         },
         "interpreting-data-1/csd/2021": {
           "type": "Risorse"
         },
+        "making-decisions-with-data-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
         "making-decisions-with-data/csd/2021": {
           "type": "Guida alle attività"
         },
         "problem-solving-process-with-data/csd/2021": {
           "type": "Risorse"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "type": "Modello"
         },
         "data-decisions-resource/csd/2021": {
           "type": "Risorse"
@@ -5272,6 +5719,9 @@
         "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
           "type": "Video"
         },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "type": "Modello"
+        },
         "data-in-the-real-world/csd/2021": {
           "type": "Guida alle attività"
         },
@@ -5279,7 +5729,7 @@
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
-          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "name": "Video - Cos'è l'Apprendimento Automatico (Machine Learning)",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -5295,8 +5745,20 @@
         "solve-a-data-problem/csd/2021": {
           "type": "Guida al progetto"
         },
+        "project_guide_exemplar/csd/2021": {
+          "type": "Modello"
+        },
+        "peer_review_exemplar_1/csd/2021": {
+          "type": "Modello"
+        },
+        "peer_review_exemplar_2/csd/2021": {
+          "type": "Modello"
+        },
         "unit_5_data_society_2/csd/2021": {
           "type": "Diapositive"
+        },
+        "sample_marked_rubrics_3/csd/2021": {
+          "type": "Modello"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum dell'insegnante"
@@ -5304,11 +5766,18 @@
         "cs-entertainment-activity/csd/2021": {
           "type": "Guida alle attività"
         },
+        "cs_in_entertainment/csd/2021": {
+          "type": "Modello"
+        },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "type": "Diapositive"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
-          "name": "Disegnare Forme"
+          "name": "Disegnare Forme",
+          "type": "Modello"
+        },
+        "colored-shape-drawing/csd/2021": {
+          "type": "Modello"
         },
         "drawing_shapes_version_b_/csd/2021": {
           "type": "Guida alle attività"
@@ -5367,6 +5836,9 @@
           "name": "Proprietà del personaggio",
           "type": "Risorse"
         },
+        "mini-project-captioned-scenes-2020/csd/2021": {
+          "type": "Modello"
+        },
         "captioned-scenes/csd/2021": {
           "type": "Criteri di valutazione"
         },
@@ -5387,6 +5859,9 @@
         },
         "the_counter_pattern/csd/2021": {
           "type": "Risorse"
+        },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "type": "Modello"
         },
         "animated-scene-1/csd/2021": {
           "type": "Criteri di valutazione"
@@ -5415,6 +5890,12 @@
           "name": "Dichiarazioni Se/altrimenti",
           "type": "Video"
         },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "type": "Modello"
+        },
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "Guida al progetto"
         },
@@ -5436,7 +5917,8 @@
           "type": "Risorse"
         },
         "collision-detection-exemplar-2020/csd/2021": {
-          "name": "Rilevamento delle Collisioni"
+          "name": "Rilevamento delle Collisioni",
+          "type": "Modello"
         },
         "collision_detection_version_b_/csd/2021": {
           "type": "Guida alle attività"
@@ -5448,6 +5930,9 @@
           "name": "Rilevamento delle Collisioni",
           "type": "Risorse"
         },
+        "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
         "side-scroller-1/csd/2021": {
           "name": "Scorrimento Laterale",
           "type": "Criteri di valutazione"
@@ -5458,6 +5943,9 @@
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "type": "Risorse"
+        },
+        "flyer-game-project-guide-exemplar/csd/2021": {
+          "type": "Modello"
         },
         "flyer-game-1/csd/2021": {
           "name": "Gioco del Volantino",
@@ -5475,6 +5963,15 @@
           "name": "Funzioni",
           "type": "Risorse"
         },
+        "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "make-your-own-game-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "type": "Modello"
+        },
         "make-your-own-game/csd/2021": {
           "type": "Guida al progetto"
         },
@@ -5484,48 +5981,105 @@
         "make_your_own_game/csd/2021": {
           "type": "Criteri di valutazione"
         },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "name": "Barche in alluminio",
+          "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
+          "type": "Modello"
+        },
         "aluminum-boats-activity-guide-2020/csd/2021": {
+          "name": "Barche in alluminio",
+          "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
           "type": "Guida alle attività"
         },
+        "how-to-videos/csd/2021": {
+          "name": "Video dimostrativi su Code.org",
+          "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
+        },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
+          "name": "CSD Unità 1 - Risoluzione dei problemi e informatica",
+          "url": "https://docs.google.com/presentation/d/1shN8hHC5rgEgb09IU_2eYoU1cDBEee924-E7q6RDUcc/copy",
           "type": "Diapositive"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Processo di risoluzione dei problemi",
+          "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
+          "type": "Modello"
+        },
         "problem-solving-process-1/csd/2021": {
+          "name": "Processo di risoluzione dei problemi",
+          "url": "https://youtu.be/z7RaFPT3DTE",
           "type": "Video"
         },
         "the-problem-solving-process/csd/2021": {
-          "name": "Il Processo di Risoluzione dei Problemi",
+          "name": "Il processo di risoluzione dei problemi",
+          "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
           "type": "Guida alle attività"
         },
+        "problem-solving-process/csd/2021": {
+          "name": "Processo di risoluzione dei problemi",
+          "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view?usp=sharing&resourcekey=0-1I3oX1C8Q_P1YAV15vJfOw"
+        },
         "solving-problems-exemplar-2020/csd/2021": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
           "type": "Soluzione"
         },
         "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
           "type": "Guida alle attività"
         },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?",
+          "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
+          "type": "Modello"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
+          "name": "Cos'è un computer",
+          "url": "https://youtu.be/AG7VeCkT9qA",
           "type": "Video"
         },
         "what-is-a-computer-version-b/csd/2021": {
+          "name": "Cos'è un computer (versione B)",
+          "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
           "type": "Guida alle attività"
         },
         "what-is-a-computer-version-a/csd/2021": {
+          "name": "Cos'è un computer (versione A)",
+          "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
           "type": "Guida alle attività"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
+          "type": "Modello"
         },
         "input-and-output-1/csd/2021": {
+          "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
           "type": "Guida alle attività"
         },
+        "processing-2020/csd/2021": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
+          "type": "Modello"
+        },
         "apps-with-processing/csd/2021": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
           "type": "Guida alle attività"
         },
         "what-do-computers-do/csd/2021": {
           "type": "Video"
         },
+        "storage-1/csd/2021": {
+          "type": "Modello"
+        },
         "storage/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "project-propose-an-app-2020/csd/2021": {
+          "type": "Modello"
         },
         "app-proposal-project/csd/2021": {
           "type": "Guida alle attività"
@@ -5533,26 +6087,52 @@
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "type": "Valutazioni dei parigrado"
         },
+        "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "type": "Modello"
+        },
+        "peer_review_exemplar/csd/2021": {
+          "type": "Modello"
+        },
         "apps_and_problem_solving/csd/2021": {
           "type": "Criteri di valutazione"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
           "type": "Risorse"
         },
+        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
+          "type": "Modello"
+        },
         "build-a-newspaper-table/csd/2021": {
           "type": "Guida alle attività"
         },
+        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
+          "type": "Modello"
+        },
         "paper-planes/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "exploring-problem-solving-animal-theme-2020/csd/2021": {
+          "type": "Modello"
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "Risorse"
         },
         "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
+        "exploring-problem-solving-games-theme-2020/csd/2021": {
+          "type": "Modello"
+        },
         "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "type": "Modello"
         },
         "exploring-web-pages/csd/2021": {
           "type": "Guida alle attività"
@@ -5581,6 +6161,12 @@
         "video_debugging/csd/2021": {
           "type": "Video"
         },
+        "project-guide-html-project-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
         "html-web-page-1/csd/2021": {
           "type": "Criteri di valutazione"
         },
@@ -5604,6 +6190,9 @@
           "name": "Orme digitali",
           "type": "Diapositive"
         },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
         "social-sleuth/csd/2021": {
           "type": "Guida alle attività"
         },
@@ -5621,6 +6210,12 @@
         "text_properties/csd/2021": {
           "type": "Risorse"
         },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Criteri di valutazione"
         },
@@ -5629,6 +6224,9 @@
         },
         "your-personal-style/csd/2021": {
           "type": "Guida al progetto"
+        },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "type": "Modello"
         },
         "licensing-your-work-2020/csd/2021": {
           "type": "Guida alle attività"
@@ -5642,11 +6240,26 @@
         "images_in_html/csd/2021": {
           "type": "Risorse"
         },
+        "define-your-webpage-2020/csd/2021": {
+          "type": "Modello"
+        },
         "define-your-web-page/csd/2021": {
           "type": "Guida alle attività"
         },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
         "person-web-page-prepare/csd/2021": {
           "type": "Guida al progetto"
+        },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "type": "Modello"
         },
         "personal-web-page-1/csd/2021": {
           "type": "Valutazioni dei parigrado"
@@ -5667,8 +6280,14 @@
         "extra_code_in_challenge_levels/csd/2021": {
           "type": "Risorse"
         },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "type": "Modello"
+        },
         "websites-for-a-purpose/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "website-team-plan-2020/csd/2021": {
+          "type": "Modello"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
           "type": "Video"
@@ -5678,6 +6297,9 @@
         },
         "website-team-plan/csd/2021": {
           "type": "Guida alle attività"
+        },
+        "links-and-research-1/csd/2021": {
+          "type": "Modello"
         },
         "links-and-research/csd/2021": {
           "type": "Guida alle attività"
@@ -5691,6 +6313,9 @@
         "classes/csd/2021": {
           "type": "Risorse"
         },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Criteri di valutazione"
         },
@@ -5699,6 +6324,15 @@
         },
         "hyperlinks/csd/2021": {
           "type": "Risorse"
+        },
+        "practices-reflection-l21-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
+          "type": "Modello"
+        },
+        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
+          "type": "Modello"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Valutazioni dei parigrado"

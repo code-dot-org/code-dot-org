@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>डांस पार्टी </strong></h3>
-<div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">अपने दोस्तों और परिवार के साथ साझा करने के लिए एक डांस पार्टी कोड करें। जिसमें कैटी पेरी, शॉन मेंडेस, पैनिक होंगे! डिस्को में, लिल नास एक्स, जोनास ब्रदर्स, निकी मिनाज, और 34 और!</div>
-<a class="linktag" id="danceparty" href="/dance" target="_blank"><button>गतिविधि ट्राई करें</button></a>
+<div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">अपने दोस्तों और परिवार के साथ साझा करने के लिए एक डांस पार्टी कोड करें। Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney's "Encanto," से संगीत को प्रदर्शित करते हुए  और बहुत!!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>गतिविधि आजमाएं </button></a>
     </span>
   </div>
 </div>

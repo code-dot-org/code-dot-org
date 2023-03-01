@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {
   PageLabels,
@@ -12,6 +12,8 @@ import {
   PROGRAM_CSA,
   styles as defaultStyles
 } from './TeacherApplicationConstants';
+import PrivacyDialog from '../PrivacyDialog';
+import {PrivacyDialogMode} from '../../constants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -42,6 +44,7 @@ const getProgramName = program => {
 const ProfessionalLearningProgramRequirements = props => {
   const {data} = props;
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
+  const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const hasNoProgramSelected = data.program === undefined;
   const hasNoSchoolInformation = !data.school;
   const hasNotLoadedRegionalPartner = regionalPartner === undefined;
@@ -118,6 +121,57 @@ const ProfessionalLearningProgramRequirements = props => {
     }
   };
 
+  const openPrivacyDialog = event => {
+    // preventDefault so clicking this link inside the label doesn't
+    // also check the checkbox.
+    event.preventDefault();
+    setIsPrivacyDialogOpen(true);
+  };
+
+  const handleClosePrivacyDialog = () => {
+    setIsPrivacyDialogOpen(false);
+  };
+
+  const renderContents = () => {
+    if (hasNoProgramSelected) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 1 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else if (hasNoSchoolInformation) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 2 and select your school before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else if (hasNotLoadedRegionalPartner) {
+      return <Spinner />;
+    } else if (regionalPartnerError) {
+      return (
+        <div style={styles.error} id="partner-workshops-error">
+          <p>
+            An error has prevented us from loading your regional partner and
+            workshop information.
+          </p>
+          <p>
+            Refresh the page to try again. If this persists, please contact{' '}
+            <a href="https://support.code.org/hc/en-us/requests/new">support</a>
+            .
+          </p>
+        </div>
+      );
+    } else {
+      return renderProgramRequirements();
+    }
+  };
+
   const renderProgramRequirements = () => {
     const programConclusion =
       data.program === PROGRAM_CSA
@@ -157,6 +211,7 @@ const ProfessionalLearningProgramRequirements = props => {
             </span>
           )}
         </p>
+
         <LabeledRadioButtonsWithAdditionalTextFields
           name="committed"
           textFieldMap={{
@@ -181,48 +236,29 @@ const ProfessionalLearningProgramRequirements = props => {
             <LabeledLargeInput name="scholarshipReasons" />
           )}
         </div>
+
+        <label className="control-label">Submit your application</label>
+        <LabeledSingleCheckbox
+          name="agree"
+          label={
+            <span>
+              {PageLabels.professionalLearningProgramRequirements.agree.replace(
+                'my local Code.org Regional Partner',
+                regionalPartner
+                  ? regionalPartner.name
+                  : 'my local Code.org Regional Partner'
+              )}{' '}
+              <a onClick={openPrivacyDialog}>Learn more.</a>
+            </span>
+          }
+        />
+        <PrivacyDialog
+          show={isPrivacyDialogOpen}
+          onHide={handleClosePrivacyDialog}
+          mode={PrivacyDialogMode.TEACHER_APPLICATION}
+        />
       </div>
     );
-  };
-
-  const renderContents = () => {
-    if (hasNoProgramSelected) {
-      return (
-        <div style={styles.error}>
-          <p>
-            Please fill out Section 2 and select your program before completing
-            this section.
-          </p>
-        </div>
-      );
-    } else if (hasNoSchoolInformation) {
-      return (
-        <div style={styles.error}>
-          <p>
-            Please fill out Section 1 and select your school before completing
-            this section.
-          </p>
-        </div>
-      );
-    } else if (hasNotLoadedRegionalPartner) {
-      return <Spinner />;
-    } else if (regionalPartnerError) {
-      return (
-        <div style={styles.error} id="partner-workshops-error">
-          <p>
-            An error has prevented us from loading your regional partner and
-            workshop information.
-          </p>
-          <p>
-            Refresh the page to try again. If this persists, please contact{' '}
-            <a href="https://support.code.org/hc/en-us/requests/new">support</a>
-            .
-          </p>
-        </div>
-      );
-    } else {
-      return renderProgramRequirements();
-    }
   };
 
   return (
@@ -232,7 +268,7 @@ const ProfessionalLearningProgramRequirements = props => {
       >
         <FormGroup>
           <h3>
-            Section 3: {SectionHeaders.professionalLearningProgramRequirements}
+            Section 7: {SectionHeaders.professionalLearningProgramRequirements}
           </h3>
 
           {renderContents()}
@@ -275,12 +311,14 @@ ProfessionalLearningProgramRequirements.processPageData = data => {
 
   return changes;
 };
+
 ProfessionalLearningProgramRequirements.associatedFields = [
   ...Object.keys(PageLabels.professionalLearningProgramRequirements),
   'regionalPartnerId',
   'regionalPartnerGroup',
   'regionalPartnerWorkshopIds'
 ];
+
 ProfessionalLearningProgramRequirements.propTypes = {
   options: PropTypes.object.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,

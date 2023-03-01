@@ -814,28 +814,18 @@ uz:
         chiqing, keyin uni bir necha soniya ichida ulashing.
       audience: 13+ yosh
       cta: Qanday qilishni o‘rganing
-    dance:
-      title: Dance Party
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Dance Party
-    hoc:
-      title: Klassik labirint
-      body: Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.
+    dance:
+      title: Dance Party
     flappy:
       title: Flappy o‘yinini yarating
       body: O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code
         darsimizni sinab ko‘ring!
-    20-hour:
-      title: Tezlashtirilgan kurs
-      body: Ushbu 20 soatlik kurs 2-4 kurslarda o‘tiladigan asosiy kompyuter fanlari
-        va dasturlash tushunchalarini qamrab oladi. Kurs 10-18 yoshlilar uchun mo'ljallangan.
-        To‘liq tajriba uchun 2-4 kurslarni o‘ting!
-      body_short: 2-4-kurslarning tezlashtirilgan versiyasida asosiy kompyuter fanlarini
-        o'rganing.
-    hoc2014:
-      try_new_tutorial: Beta-versiyadagi yangi "Daturlash soati" o'quv qo'llanmamizni
-        sinab ko'ring
-      try_frozen: Muzlagan Anna va Elza bilan Rassom
+    frozen:
+      title: Muzlagan (Frozen)
     gallery:
       title: Galereya
       body: Foydalanuvchilarimiz tomonidan yaratilgan dastur va rasmlar galereyasini
@@ -847,21 +837,24 @@ uz:
         dasturiy muhit.
       audience: 13+ yosh
       cta: Qanday qilishni o‘rganing
+    hello-world:
+      body: Siz yaratgan dunyoda interaktiv belgilarni dasturlash uchun to‘rtta qiziqarli
+        mavzularni tanlang.
+    hero:
+      title: Minecraft
+      body: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft
+        bo‘yicha kod bilan sayohat.
     hoc-encryption:
       title: Oddiy Shifrlash
       body: O‘rganuvchilar shifrlangan xabarlarni yaratish va ularni krek qilish usullarini
         o‘rganadilar.
-    weblab:
-      title: Veb-laboratoriya (beta)
-      body: Web Lab - bu HTML va CSS-dan foydalangan holda oddiy veb-sahifalarni yaratishingiz
-        mumkin bo‘lgan dasturiy muhit. Bir necha soniya ichida veb-sahifalaringizni
-        yarating va saytingiz bilan o‘rtoqlashing.
-      audience: 13+ yosh
-      cta: Qanday qilishni o‘rganing
-    frozen:
-      title: Muzlagan (Frozen)
-    starwars:
-      title: Yulduzlar urushi
+    hoc:
+      title: Klassik labirint
+      body: Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.
+    hoc2014:
+      try_new_tutorial: Beta-versiyadagi yangi "Daturlash soati" o'quv qo'llanmamizni
+        sinab ko'ring
+      try_frozen: Muzlagan Anna va Elza bilan Rassom
     infinity:
       title: Cheksiz O‘yin laboratoriyasi
       body: Disney Infinity qahramonlari ishtirokidagi hikoya yoki o‘yin yaratish
@@ -873,19 +866,33 @@ uz:
       title: Minecraft
       body: Minecraft-ning o'z versiyangizda hayvonlarni va boshqa Minecraft jonzotlarini
         dasturlab yarating.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft
-        bo‘yicha kod bilan sayohat.
     sports:
       title: Sport
       body: Basketbol o‘yini yarating yoki sport turlarini aralashtiring va moslashtiring.
+    starwars:
+      title: Yulduzlar urushi
     text-compression:
       title: Matnni Zichlash
       body: Ushbu darsda talabalar Matnni zichlashtirish vidjetidan foydalanib, patternlarni
         belgilar bilan almashtirish orqali matnni zichlashtiradilar.
+    weblab:
+      title: Veb-laboratoriya (beta)
+      body: Web Lab - bu HTML va CSS-dan foydalangan holda oddiy veb-sahifalarni yaratishingiz
+        mumkin bo‘lgan dasturiy muhit. Bir necha soniya ichida veb-sahifalaringizni
+        yarating va saytingiz bilan o‘rtoqlashing.
+      audience: 13+ yosh
+      cta: Qanday qilishni o‘rganing
+    widgets:
+      title: Vidjetlar
+      body: Talabalar ushbu raqamli vositalardan foydalangan holda bizning CS tamoyillari
+        kursidan tushunchalarni o‘rganishi mumkin. Vidjetlardan mustaqil ravishda
+        foydalaning yoki o‘zingizning sinfingiz uchun bitta konsept darsini yarating.
+      audience: 14+ yosh
+      cta: Qanday qilishni o‘rganing
+    unplugged_conditionals:
+      title: Shartli bayonotlar
+      body: Ushbu "kompyutersiz" faoliyatda algoritmlar va shartli bayonotlar haqida
+        kartalar to‘plami yordamida o‘rganing.
     unplugged:
       title: Kompyutersiz darslar
       audience: 4+ yosh
@@ -896,17 +903,13 @@ uz:
         harakat qiling.
       body_short: Agar sizda kompyuterlar bo‘lmasa, ushbu kompyutersiz o‘tiladigan
         darslarni sinfingizda sinab ko‘ring.
-    unplugged_conditionals:
-      title: Shartli bayonotlar
-      body: Ushbu "kompyutersiz" faoliyatda algoritmlar va shartli bayonotlar haqida
-        kartalar to‘plami yordamida o‘rganing.
-    widgets:
-      title: Vidjetlar
-      body: Talabalar ushbu raqamli vositalardan foydalangan holda bizning CS tamoyillari
-        kursidan tushunchalarni o‘rganishi mumkin. Vidjetlardan mustaqil ravishda
-        foydalaning yoki o‘zingizning sinfingiz uchun bitta konsept darsini yarating.
-      audience: 14+ yosh
-      cta: Qanday qilishni o‘rganing
+    20-hour:
+      title: Tezlashtirilgan kurs
+      body: Ushbu 20 soatlik kurs 2-4 kurslarda o‘tiladigan asosiy kompyuter fanlari
+        va dasturlash tushunchalarini qamrab oladi. Kurs 10-18 yoshlilar uchun mo'ljallangan.
+        To‘liq tajriba uchun 2-4 kurslarni o‘ting!
+      body_short: 2-4-kurslarning tezlashtirilgan versiyasida asosiy kompyuter fanlarini
+        o'rganing.
   landing:
     prerelease_tutorial: Ushbu o'quv qo'llanma ** beta-versiyada **. U qayta ko'rib
       chiqilishi kerak, fikr-mulohazalar qabul qilinadi va takomillashtiriladi.
@@ -1282,6 +1285,7 @@ uz:
       colombian_school_city: Maktab shahri
       colombian_school_municipality: Maktab munitsipaliteti
       colombian_chilean_school_name: Maktab nomi
+      chilean_school_id: Maktab ID
       ages: Bu yil qaysi yosh(lar) ni o'qitasiz?
       subjects: Bu yil qaysi fan(lar)ni o'qitasiz?
       resources: Quyidagi CS (informatika) ta'lim manbalaridan qaysi birini ishlatasiz?
@@ -1445,5 +1449,11 @@ uz:
     this_sprite: bu sprayt
   unit_prefix: Bo'lim %{n}
   teacher_feedback: O‘qituvchilarning fikri
+  lesson_lock:
+    error:
+      no_updates: Amalga oshirish uchun yangilanishlar yo'q
+      missing_params: Foydalanuvchi, darajasi va birlik idlarini taqdim etishi kerak
+      cannot_view_locked_answers: Qulflangan paytda javoblarni ko'rib bo'lmaydi
+      forbidden: Foydalanuvchi talabaning qulflanadigan holatini yangilay olmaydi
   pixelation:
     binary: Binarli

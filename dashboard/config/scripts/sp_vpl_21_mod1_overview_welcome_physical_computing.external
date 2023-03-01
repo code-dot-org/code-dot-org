@@ -5,39 +5,35 @@ description 'description here'
 markdown <<MARKDOWN
 # Welcome! 
 
-#### This free self-paced professional learning module is designed for educators who want to get started teaching Code.org curricula. 
+##### This free self-paced professional learning experience is designed for educators who want to get started using Code.org. 
+
+
+
+##### **You will:**
 
 <img src="https://images.code.org/8f8f1dae36b39433164cf3752db52472-image-1628784411625.jpg" alt="Two students laughing next to a laptop" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
 
-
-### **You will:**
-
+* ##### Get an introduction to Code.org’s mission.
 * ##### Learn how to navigate the Code.org website and teacher tools.
-* ##### Set up your course in the Code.org learning platform.
-* ##### Gain a high level understanding of the content, tools, and pedagogy included in the curriculum.
-* ##### Prepare to begin teaching Code.org curricula with your students. 
+* ##### Set up a classroom section.
+* ##### Locate and use course lesson plans and teacher resources.
+* ##### Learn how to access support while teaching Code.org curricula.
 
-### **Suggested time to complete:** 3 hours
+##### **Suggested time to complete:** 80 minutes
 
 <div style="clear:both"/>
 
-## Take the pre-survey
 
-##### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+## Let's get started with Lesson 1!
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
-## Module 1
-
-#### You will begin with a lesson focused on Introducing you to Code.org.
-
-#### **In Lesson 1, you will:**
+##### **You will:**
 
 * ##### Get an introduction to Code.org's mission.
 
-#### **Suggested time to complete the module:** 10 minutes
+##### **Suggested time to complete the lesson:** 10 minutes
 
-# Let's get started!
+
 
 
 MARKDOWN

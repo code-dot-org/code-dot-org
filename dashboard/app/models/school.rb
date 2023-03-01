@@ -478,7 +478,7 @@ class School < ApplicationRecord
     lines_processed = 0
 
     ActiveRecord::Base.transaction do
-      schools = CSV.read(filename, options).each do |row|
+      schools = CSV.read(filename, **options).each do |row|
         break if limit && lines_processed > limit
         lines_processed += 1
         csv_entry = block_given? ? yield(row) : row.to_hash.symbolize_keys

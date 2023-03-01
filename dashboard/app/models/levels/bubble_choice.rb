@@ -79,38 +79,40 @@ class BubbleChoice < DSLDefined
   # @param [Boolean] should_localize If true, translate the summary.
   # @return [Hash]
   def summarize(script_level: nil, user: nil, should_localize: false)
-    user_id = user ? user.id : nil
-    summary = {
-      id: id.to_s,
-      display_name: display_name,
-      description: description,
-      name: name,
-      type: type,
-      teacher_markdown: teacher_markdown,
-      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      user_id = user ? user.id : nil
+      summary = {
+        id: id.to_s,
+        display_name: display_name,
+        description: description,
+        name: name,
+        type: type,
+        teacher_markdown: teacher_markdown,
+        sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
+      }
 
-    if script_level
-      previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-      redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
+      if script_level
+        previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
+        redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
 
-      summary.merge!(
-        {
-          previous_level_url: previous_level_url,
-          redirect_url: redirect_url,
-          script_url: script_url(script_level.script)
-        }
-      )
-    end
-
-    if should_localize
-      %i[display_name description].each do |property|
-        localized_value = I18n.t(property, scope: [:data, :dsls, name], default: nil, smart: true)
-        summary[property] = localized_value unless localized_value.nil?
+        summary.merge!(
+          {
+            previous_level_url: previous_level_url,
+            redirect_url: redirect_url,
+            script_url: script_url(script_level.script)
+          }
+        )
       end
-    end
 
-    summary
+      if should_localize
+        %i[display_name description].each do |property|
+          localized_value = I18n.t(property, scope: [:data, :dsls, name], default: nil, smart: true)
+          summary[property] = localized_value unless localized_value.nil?
+        end
+      end
+
+      summary
+    end
   end
 
   # Summarizes the level's sublevels.

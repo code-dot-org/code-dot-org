@@ -144,7 +144,7 @@
           "display_name": "Interakcie sprajtov"
         },
         "csd-2022/sprite-properties": {
-          "display_name": "Vlastnosti postáv"
+          "display_name": "Vlastnosti sprajtov"
         },
         "csd-2022/sprites": {
           "display_name": "Sprajty"
@@ -169,6 +169,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Rýchlosť"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

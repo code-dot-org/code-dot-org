@@ -841,7 +841,7 @@
           "NEW_Course_4_Bee_For_Loops_7_a": "Попробуй проделать кое-какие расчеты с переменной «счетчик».\n\nЧто нужно сделать со счетчиком у каждого цветка, чтобы уравнять количество нектара, которое необходимо собрать?"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "Блок, который нужно добавить, называется \"установить скорость\". ",
@@ -885,7 +885,7 @@
           "courseE_playLab_scaffold1_c": "Используй блок \"установить фон ???\" для выбора фона для твоих декораций."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Открой выпадающее меню блока события \"при нажатии стрелки \\_\\_\\_\\_\", чтобы изменить направление, контролируемое блоком.",
+          "courseE_playLab_scaffold1_a": "Открой выпадающее меню блока события \"при нажатии стрелки ____\", чтобы изменить направление, контролируемое блоком.",
           "courseE_playLab_scaffold1_b": "У тебя должны быть четыре блока события \"при нажатии стрелки\" с направлением движения, указанным под каждым из них.",
           "courseE_playLab_scaffold1_c": "Закончив, ты сможешь двигать своего героя клавишами со стрелками!"
         },
@@ -906,15 +906,15 @@
           "courseF_artist_variables3_b": "Блок номеров со значением 50 должен находиться только в одном месте: после блока \"установить длину\"."
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_c": "Художник будет двигаться по следующей схеме:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseF_artist_variables4_c": "Художник будет двигаться по следующей схеме:\n\n[][0]",
+          "courseF_artist_variables4_b": "[блок Блокли][0]",
           "courseF_artist_variables4_a": "Твой код не будет сильно отличаться от кода в прошлой головоломке, за исключением того, что тебе потребуется повернуть художника, чтобы он прыгнул вниз, а затем повернуть его обратно, чтобы начертить следующий треугольник."
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Вторая половина кода должна выглядеть почти так же, как первая, за исключением того, что ты будешь поворачивать _налево_, прыгать, а затем поворачивать _направо_.",
           "courseF_artist_variables5_b": "Первая половина кода нарисует три треугольника, а вторая половина нарисует еще три.",
           "courseF_artist_variables5_c": "Начни с копирования кода первой половины своей программы, а затем измени его, чтобы он рисовал показанный рисунок.",
-          "courseF_artist_variables5_d": "Художник будет двигаться по следующей схеме:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Художник будет двигаться по следующей схеме:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Можно пройти всего несколькими путями. Какой из них самый короткий?",
@@ -1478,51 +1478,51 @@
           "courseA_artist_loops_challenge2_c": "Для решения этой головоломки необходимо, чтобы все блоки оказались внутри цикла."
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Простейшим решением было бы переместиться на восток 2 раз, а затем собрать сокровища."
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Простейшим решением было бы переместиться на восток 2 раз, а затем собрать сокровища."
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Простейшим решением было бы переместиться на восток 2 раз, а затем собрать сокровища."
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Простейшим решением было бы переместиться на восток 2 раз, а затем собрать сокровища."
         },
         "courseA_collector_loops2": {
           "courseA_collector_loops2_a": "Прежде, чем собрать хоть какие-либо сокровища, нужно переместиться.",
-          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2018": {
           "courseA_collector_loops2_a": "Прежде, чем собрать хоть какие-либо сокровища, нужно переместиться.",
-          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2019": {
           "courseA_collector_loops2_a": "Прежде, чем собрать хоть какие-либо сокровища, нужно переместиться.",
-          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2020": {
           "courseA_collector_loops2_a": "Прежде, чем собрать хоть какие-либо сокровища, нужно переместиться.",
-          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3": {
           "courseA_collector_loops3_a": "Попробуйте использовать цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
           "courseA_collector_loops3_b": "Учтите, что в цикл [blockly block] можно вложить не один, а несколько блоков."
         },
         "courseA_collector_loops3_2018": {
-          "courseA_collector_loops3_a": "Попробуй использовать цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков."
+          "courseA_collector_loops3_a": "Попробуйте использовать цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Учтите, что в цикл [blockly block] можно вложить не один, а несколько блоков."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков.",
+          "courseA_collector_loops3_b": "Учтите, что в цикл [blockly block] можно вложить не один, а несколько блоков.",
           "courseA_collector_loops3_a": "Попробуй использовать цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!"
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков.",
+          "courseA_collector_loops3_b": "Учтите, что в цикл [blockly block] можно вложить не один, а несколько блоков.",
           "courseA_collector_loops3_a": "Попробуй использовать цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!"
         },
         "courseA_collector_loops4": {
@@ -1530,16 +1530,16 @@
           "courseA_collector_loops4_b": "Не забывайте, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
         },
         "courseA_collector_loops4_2018": {
-          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
-          "courseA_collector_loops4_b": "Не забудь, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
+          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
+          "courseA_collector_loops4_b": "Не забывайте, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
         },
         "courseA_collector_loops4_2019": {
-          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
-          "courseA_collector_loops4_b": "Не забудь, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
+          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
+          "courseA_collector_loops4_b": "Не забывайте, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
         },
         "courseA_collector_loops4_2020": {
-          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
-          "courseA_collector_loops4_b": "Не забудь, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
+          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
+          "courseA_collector_loops4_b": "Не забывайте, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
         },
         "courseA_collector_loops5": {
           "courseA_collector_loops5_a": "Не сможешь найти ответ сразу – возьми лист бумаги и попробуй сообразить, какие стрелки понадобятся, и найти повторяющееся действие.",
@@ -2233,22 +2233,22 @@
         },
         "courseB_collector_loops4": {
           "courseB_collector_loops4_a": "Попробуй использовать кнопку \"Шаг\", чтобы понять, где программа работает не так.",
-          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
+          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
           "courseB_collector_loops4_c": "Лорел нужно пройти вниз и собрать сокровища по окончании цикла \"повторить\"!"
         },
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Попробуй использовать кнопку \"Шаг\", чтобы понять, где программа работает не так.",
-          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
+          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
           "courseB_collector_loops4_c": "Лорел должна спуститься и забрать сокровище после того, как она закончит цикл \"повторить\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Попробуй использовать кнопку \"Шаг\", чтобы понять, где программа работает не так.",
-          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
+          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
           "courseB_collector_loops4_c": "Лорел должна спуститься и забрать сокровище после того, как она закончит цикл \"повторить\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "Попробуй использовать кнопку \"Шаг\", чтобы понять, где программа работает не так.",
-          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
+          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
           "courseB_collector_loops4_c": "Лорел должна спуститься и забрать сокровище после того, как она закончит цикл \"повторить\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops5": {
@@ -4279,7 +4279,7 @@
           "courseC_starWars_loops2_a": "Для повтора кода вытащи цикл \"повторить\", а затем помести в него нужный блок."
         },
         "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2_a": "Для повтора кода вытащи цикл \"повторить\", а затем помести в него нужный блок."
+          "courseC_starWars_loops2_a": "Для повтора кода вытащи цикл \"повторить\", а затем помести в него нужный блок.\n"
         },
         "courseC_starWars_loops4": {
           "courseC_starWars_loops4_c": "Если нажать на маленькую стрелку рядом со словом \"налево\" на блоке поворота, то оно изменится на \"направо\".",
@@ -4302,17 +4302,17 @@
           "courseC_starWars_loops4_b": "У каждого цикла \"повторить\" будет внутри всего одна команда: \"двигаться вперед\"."
         },
         "courseC_starWars_loops4_copy": {
-          "courseC_starWars_loops4_c": "Если нажать на маленькую стрелку рядом со словом \"налево\" на блоке поворота, то оно изменится на \"направо\".",
-          "courseC_starWars_loops4_a": "Используй два блока \"повторить\".",
-          "courseC_starWars_loops4_b": "У каждого цикла \"повторить\" будет внутри всего одна команда: \"двигаться вперед\"."
+          "courseC_starWars_loops4_c": "Если нажать на маленькую стрелку рядом со словом \"налево\" на блоке поворота, то оно изменится на \"направо\".\n",
+          "courseC_starWars_loops4_a": "Используй два блока \"повторить\".\n",
+          "courseC_starWars_loops4_b": "У каждого цикла \"повторить\" будет внутри всего одна команда: \"двигаться вперед\".\n"
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_b": "Для перемещения вниз тебе придется повернуть, а затем переместиться вперед.",
           "courseC_starWars_loops5_a": "Лучший вариант кода начинается с поворота, за которым следуют перемещение вперед, еще один поворот и цикл."
         },
         "courseC_starWars_loops5_copy": {
-          "courseC_starWars_loops5_b": "Для перемещения вниз тебе придется повернуть, а затем переместиться вперед.",
-          "courseC_starWars_loops5_a": "Лучший вариант кода начинается с поворота, за которым следуют перемещение вперед, еще один поворот и цикл."
+          "courseC_starWars_loops5_b": "Для перемещения вниз тебе придется повернуть, а затем переместиться вперед.\n",
+          "courseC_starWars_loops5_a": "Лучший вариант кода начинается с поворота, за которым следуют перемещение вперед, еще один поворот и цикл.\n"
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Попробуй записать все шаги на листе бумаге и найти повторяющееся действие.",
@@ -4331,8 +4331,8 @@
           "courseC_starWars_loops6_b": "Если хочешь, чтобы код был короче, вставь один цикл повтора в другой!\\\\ Это называется \\*\\*вложенным циклом\"."
         },
         "courseC_starWars_loops6_copy": {
-          "courseC_starWars_loops6_a": "Попробуй записать все шаги на листе бумаге и найти повторяющееся действие.",
-          "courseC_starWars_loops6_b": "Если хочешь, чтобы код был короче, вставь один цикл повтора в другой!\\\\ Это называется \\*\\*вложенным циклом\"."
+          "courseC_starWars_loops6_a": "Попробуй записать все шаги на листе бумаге и найти повторяющееся действие.\n",
+          "courseC_starWars_loops6_b": "Если хочешь, чтобы код был короче, вставь один цикл повтора в другой!\\ Это называется **вложенным циклом\".\n"
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Эта схема движения проще, чем кажется! Начни с простой ступеньки лестницы. Позволяет ли эта схема собрать весь металлолом?",
@@ -4355,8 +4355,8 @@
           "courseC_starWars_loops7_c": "Не бойся допустить ошибку! Запусти код и посмотри, что получится, даже если не уверен, что уже решил головоломку."
         },
         "courseC_starWars_loops7_copy": {
-          "courseC_starWars_loops7_a": "Эта схема движения проще, чем кажется! Начни с простой ступеньки лестницы. Позволяет ли эта схема собрать весь металлолом?",
-          "courseC_starWars_loops7_b": "Возникли сложности с этой головоломкой? Попробуй записать все шаги на листе бумаги и найти повторяющееся действие.",
+          "courseC_starWars_loops7_a": "Эта схема движения проще, чем кажется! Начни с простой ступеньки лестницы. Позволяет ли эта схема собрать весь металлолом?\n",
+          "courseC_starWars_loops7_b": "Возникли сложности с этой головоломкой? Попробуй записать все шаги на листе бумаги и найти повторяющееся действие.\n",
           "courseC_starWars_loops7_c": "Не бойся допустить ошибку! Запусти код и посмотри, что получится, даже если не уверен, что уже решил головоломку."
         },
         "courseC_starWars_loops8": {
@@ -4380,9 +4380,9 @@
           "course_starWars_loops8_c": "Взгляни на эту дорожку. ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_copy": {
-          "course_starWars_loops8_a": "Попробуй разбить эту задачу на части. Не торопись. Не пытайся решить ее с первой попытки!",
-          "course_starWars_loops8_b": "Представь, что первая часть этой задачи – задача со ступенькой лестницы. Как ты решал ее раньше?",
-          "course_starWars_loops8_c": "Взгляни на эту дорожку. ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_a": "Попробуй разбить эту задачу на части. Не торопись. Не пытайся решить ее с первой попытки!\n",
+          "course_starWars_loops8_b": "Представь, что первая часть этой задачи – задача со ступенькой лестницы. Как ты решал ее раньше?\n",
+          "course_starWars_loops8_c": "Взгляни на эту дорожку. [][0]\n"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "В цикл \"повторить\" можно вложить не один, а несколько блоков.",
@@ -4981,7 +4981,7 @@
           "courseD_bee_conditionals1_a": "Тебе потребуется использовать блок \"если\", чтобы проверять, скрывается ли под облачком цветок, прежде, чем пытаться собирать нектар."
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "Тебе потребуется использовать блок \"если\", чтобы проверять, скрывается ли под облачком цветок, прежде, чем пытаться собирать нектар."
+          "courseD_bee_conditionals1_a": "Тебе потребуется использовать блок \"если\", чтобы проверять, скрывается ли под облачком цветок, прежде, чем пытаться собирать нектар.\n"
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
@@ -5006,11 +5006,11 @@
           "courseD_bee_conditionals2_c": "Проверять на наличие сот не нужно, под облачком может быть только цветок или пустое место."
         },
         "courseD_bee_conditionals2_copy": {
-          "courseD_bee_conditionals2_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
+          "courseD_bee_conditionals2_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!\n",
           "courseD_bee_conditionals2_a": "Иногда под облачком будет цветок, иногда нет.  Чтобы твой код работал в обоих случаях, обязательно используй оператор «если».",
-          "courseD_bee_conditionals2_b": "Чтобы выбраться из лабиринта, можно использовать цикл \"повторить\" или блок \"пока путь впереди\".",
-          "courseD_bee_conditionals2_c": "Проверять на наличие сот не нужно, под облачком может быть только цветок или пустое место.",
-          "courseD_bee_conditionals2_hintVid2": "Посмотри видео с советами по решению головоломки."
+          "courseD_bee_conditionals2_b": "Чтобы выбраться из лабиринта, можно использовать цикл \"повторить\" или блок \"пока путь впереди\".\n",
+          "courseD_bee_conditionals2_c": "Проверять на наличие сот не нужно, под облачком может быть только цветок или пустое место.\n",
+          "courseD_bee_conditionals2_hintVid2": "Посмотри видео с советами по решению головоломки.\n"
         },
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
@@ -5035,11 +5035,11 @@
           "courseD_bee_conditionals3_c": "Не бойся допустить ошибку! Добавляй блоки, запускай код и смотри, что получится, даже если и не решил еще головоломку."
         },
         "courseD_bee_conditionals3_copy": {
-          "courseD_bee_conditionals3_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
+          "courseD_bee_conditionals3_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!\n",
           "courseD_bee_conditionals3_a": "Обязательно используй оператор «если» для проверки каждого места и выяснения, что там – цветок или ничего.",
-          "courseD_bee_conditionals3_b": "Заставить пчелу двигаться вперед можно с помощью цикла \"повторить\" или цикла \"пока\". Используй любой, какой захочешь!",
+          "courseD_bee_conditionals3_b": "Заставить пчелу двигаться вперед можно с помощью цикла \"повторить\" или цикла \"пока\". Используй любой, какой захочешь!\n",
           "courseD_bee_conditionals3_c": "Не бойся допустить ошибку! Добавляй блоки, запускай код и смотри, что получится, даже если и не решил еще головоломку.",
-          "courseD_bee_conditionals3_hintVid2": "Посмотри видео с советами по решению головоломки."
+          "courseD_bee_conditionals3_hintVid2": "Посмотри видео с советами по решению головоломки.\n"
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
@@ -5064,11 +5064,11 @@
           "courseD_bee_conditionals4_b": "Используй оператор «если» внутри своего цикла для проверки каждого места на наличие нектара."
         },
         "courseD_bee_conditionals4_copy": {
-          "courseD_bee_conditionals4_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
+          "courseD_bee_conditionals4_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!\n",
           "courseD_bee_conditionals4_a": "Ты можешь по-прежнему исходить из того, что облачко имеется над каждым местом, хотя ты и можешь видеть весь путь.",
           "courseD_bee_conditionals4_b": "Используй оператор «если» внутри своего цикла для проверки каждого места на наличие нектара.",
-          "courseD_bee_conditionals4_c": "Твоя задача – использовать блок <xml><block type=\"maze_untilBlocked\"/></xml> для перемещения вперед и проверки на наличие цветка. Если цветок есть, что обязана сделать пчела?",
-          "courseD_bee_conditionals4_hintVid2": "Посмотри видео с советами по решению головоломки."
+          "courseD_bee_conditionals4_c": "Твоя задача – использовать блок [blockly block][0] для перемещения вперед и проверки на наличие цветка. Если цветок есть, что обязана сделать пчела?\n",
+          "courseD_bee_conditionals4_hintVid2": "Посмотри видео с советами по решению головоломки.\n"
         },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
@@ -5093,11 +5093,11 @@
           "courseD_bee_conditionals5_c": "Для продолжения движения по дорожке пчеле потребуется \"двигаться вперед\". В процессе движения пчела должна будет проверять на наличие цветка. \"Если цветок есть\", пчела должна будет \"собрать нектар\"."
         },
         "courseD_bee_conditionals5_copy": {
-          "courseD_bee_conditionals5_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
-          "courseD_bee_conditionals5_a": "Представь себе, что каждая сторона прямоугольной дорожки сама является дорожкой. Создай вложенный цикл с блоком \"повторить\" на внешней стороне и цикл \"пока путь впереди\" – на внутренней. По какому количеству дорожек придется переместиться пчеле, если ей нужно облететь каждую сторону с цветком?",
-          "courseD_bee_conditionals5_c": "У прямоугольника 3 стороны с цветами, поэтому код должен повториться 3 раза. При каждом повторе пчела должна будет продолжать движение по дорожке, \"пока путь впереди\".  Для продолжения движения по дорожке пчеле придется \"двигаться вперед\". Находясь на дорожке, пчела должна будет проверять на наличие цветка. \"Если цветок есть\", пчела должна будет \"собрать нектар\".",
-          "courseD_bee_conditionals5_b": "Внутри блока \"пока путь впереди\" тебе потребуется двигаться вперед и проверять на наличие цветка. Как проверить, нет ли под облачком цветка? Что нужно сделать, если под облачком скрывается цветок?",
-          "courseD_bee_conditionals5_hintVid2": "Посмотри видео с советами по решению головоломки."
+          "courseD_bee_conditionals5_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!\n",
+          "courseD_bee_conditionals5_a": "Представь себе, что каждая сторона прямоугольной дорожки сама является дорожкой. Создай вложенный цикл с блоком \"повторить\" на внешней стороне и цикл \"пока путь впереди\" – на внутренней. По какому количеству дорожек придется переместиться пчеле, если ей нужно облететь каждую сторону с цветком?\n",
+          "courseD_bee_conditionals5_c": "У прямоугольника 3 стороны с цветами, поэтому код должен повториться 3 раза. При каждом повторе пчела должна будет продолжать движение по дорожке, \"пока путь впереди\".  Для продолжения движения по дорожке пчеле придется \"двигаться вперед\". Находясь на дорожке, пчела должна будет проверять на наличие цветка. \"Если цветок есть\", пчела должна будет \"собрать нектар\".\n",
+          "courseD_bee_conditionals5_b": "Внутри блока \"пока путь впереди\" тебе потребуется двигаться вперед и проверять на наличие цветка. Как проверить, нет ли под облачком цветка? Что нужно сделать, если под облачком скрывается цветок?\n",
+          "courseD_bee_conditionals5_hintVid2": "Посмотри видео с советами по решению головоломки.\n"
         },
         "courseD_bee_conditionals6": {
           "courseD_bee_conditionals6_hintVid1": "Не можешь начать, так как нуждаешься в помощи? Посмотри видео!",
@@ -6290,8 +6290,8 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Функция, которую ты пишешь, должна содержать не всю программу, а только ту ее часть, которая рисует квадрат со стороной 100 точек.",
-          "courseD_artist_functions2_c": "Используй зеленый блок \"рисовать квадрат\" для \"вызова\" функции под блоком \"при выполнении\". В противном случае код в твоей функции не запустится.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Включи в свою программу:\n\n-   использование функции;\n-   перемещение вперед на 100 + 75 точек;\n-   использование функции."
+          "courseD_artist_functions2_c": "Используй зеленый блок \"рисовать квадрат\" для \"вызова\" функции под блоком \"при выполнении\". В противном случае код в твоей функции не запустится.\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "Включи в свою программу:\n- использование функции;\n- перемещение вперед на 100 + 75 точек;\n- использование функции."
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Для решения этой головоломки достаточно просто добавить цикл, повторяющий стартовый код 8 раз.\n\nЕсли ты не помнишь, каким был стартовый код, нажми \"начать сначала\" в верхнем правом углу рабочей области.",
@@ -10691,8 +10691,8 @@
           "hw_retro_changePropBy": "Если вы хотите менять размер спрайта несколько раз (используя события), используйте этот блок:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Каждый спрайт имеет **местоположение**. Вы можете выбрать местоположение, нажав на булавку в этом блоке: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Нажмите булавку ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) в блоке местоположения, а затем выберите новое положение для вашего спрайта на экране.\n-   Когда закончите код, нажмите кнопку \"Запуск\".",
-          "remove_hint": "Вы можете убрать спрайта в строке с конкретным номером. Вы можете добавить нового спрайта, который займет его место: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Каждый спрайт имеет **местоположение**. Вы можете выбрать местоположение, нажав на булавку в этом блоке: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Нажмите булавку ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) в блоке местоположения, а затем выберите новое положение для вашего спрайта на экране.\n-   Когда закончите код, нажмите кнопку \"Запуск\".",
+          "remove_hint": "Вы можете убрать спрайта в строке с конкретным номером. Вы можете добавить нового спрайта, который займет его место: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Найдите блок фона, например:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nи найдите блок текстового эффекта, например: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nРазместите эти блоки в рабочем пространстве под `при запуске`.",
@@ -10704,14 +10704,14 @@
           "more_events_hint": "Вы можете использовать в вашей программе больше, чем один эффект. Попробуйте использовать два разных эффекта, соответствующих новым строкам стихотворения. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Найдите этот блок:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nили этот блок: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nРазместите его под `при запуске` в вашем рабочем пространстве.",
-          "more_code": "Добавьте больше эффектов и цветов, которые будут использоваться выбранным звуком. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Найдите этот блок:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nили этот блок: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nРазместите его под `при запуске` в вашем рабочем пространстве.",
+          "more_code": "Добавьте больше эффектов и цветов, которые будут использоваться выбранным звуком. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Добавьте в ваш код блок `спрайт начинает`. Убедитесь, что вы уже создали спрайта, которому назначаете определенное поведение. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Добавьте в ваш код блок `спрайт начинает`. Убедитесь, что вы уже создали спрайта, которому назначаете определенное поведение. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "Эту головоломку можно решить двумя способами!"
@@ -10998,20 +10998,20 @@
           "courseA_artist_loops_challenge2_c": "Для решения этой головоломки необходимо, чтобы все блоки оказались внутри цикла."
         },
         "courseA_collector_loops12022": {
-          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "Простейшим решением было бы переместиться на восток 2 раз, а затем собрать сокровища."
         },
         "courseA_collector_loops22022": {
           "courseA_collector_loops2_a": "Прежде, чем собрать хоть какие-либо сокровища, нужно переместиться.",
-          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops32022": {
           "courseA_collector_loops3_a": "Попробуй использовать цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!",
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков."
+          "courseA_collector_loops3_b": "Учтите, что в цикл [blockly block] можно вложить не один, а несколько блоков."
         },
         "courseA_collector_loops42022": {
-          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
-          "courseA_collector_loops4_b": "Не забудь, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
+          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
+          "courseA_collector_loops4_b": "Не забывайте, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
         },
         "courseA_collector_loops52022": {
           "courseA_collector_loops5_a": "Не сможешь найти ответ сразу – возьми лист бумаги и попробуй сообразить, какие стрелки понадобятся, и найти повторяющееся действие.",
@@ -11293,7 +11293,7 @@
         },
         "courseB_collector_loops42022": {
           "courseB_collector_loops4_a": "Попробуй использовать кнопку \"Шаг\", чтобы понять, где программа работает не так.",
-          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
+          "courseB_collector_loops4_b": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
           "courseB_collector_loops4_c": "Лорел должна спуститься и забрать сокровище после того, как она закончит цикл \"повторить\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops52022": {
@@ -11906,18 +11906,22 @@
           "courseD_artist_nestedLoops4_c": "Используй вложенный цикл, чтобы нарисовать круги 4 раза."
         },
         "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_b": "Чтобы нарисовать круг, тебе потребуется установить цикл повтора на 360-кратное повторение. Внутри цикла переместись вперед на 1 точку и поверни на 1 градус."
+          "courseD_artist_nestedLoops5_b": "Чтобы нарисовать круг, тебе потребуется установить цикл повтора на 360-кратное повторение. Внутри цикла переместись вперед на 1 точку и поверни на 1 градус.",
+          "courseD_artist_nestedLoops5_a": "Нарисовать это легко:\n\n- в цикле надо повторить 4 раза\n  - рисовать круг\n  - отступить вперед на расстояние 50 пикселей\n  - сделать поворот направо на 90 градусов"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "Здесь тебе потребуется использовать вложенные циклы. Прежде всего, используй цикл, чтобы нарисовать квадрат. А что будет делать внешний цикл, если внутренний будет рисовать квадрат?"
+          "courseD_artist_nestedLoops7_a": "Здесь тебе потребуется использовать вложенные циклы. Прежде всего, используй цикл, чтобы нарисовать квадрат. А что будет делать внешний цикл, если внутренний будет рисовать квадрат?",
+          "courseD_artist_nestedLoops7_b": "Сделайте вложенный цикл, и во внутреннем цикле создайте код для рисования квадрата.\n\n- во внешнем цикле надо повторить 6 раз\n  - рисовать квадрат\n  - отступить вперед на расстояние **50 пикселей**\n  - сделать поворот направо на **60 градусов**"
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "Для рисования 8 шестиугольников тебе потребуется поворачивать между ними на **45 градусов**. Почему? Потому, что 360 градусов (полный поворот вокруг), деленные на 8 (количество шестиугольников), будет 45 градусов.",
-          "courseD_artist_nestedLoops8_b": "Если застрянешь, вспомни последнюю головоломку и измени то, что отличается."
+          "courseD_artist_nestedLoops8_b": "Если застрянешь, вспомни последнюю головоломку и измени то, что отличается.",
+          "courseD_artist_nestedLoops8_c": "Сделайте вложенный цикл:\n\n  - во внешнем цикле повторить 8 раз\n    - рисовать шестиугольник\n    - отступить вперед на расстояние **50 пикселей**\n    - сделать поворот направо на **45 градусов**"
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "Начни с того, чтобы использовать вложенный цикл, как и раньше, но на этот раз делай это с квадратами.",
-          "courseD_artist_nestedLoops9_b": "Добавь второй набор вложенных циклов к концу первого набора, но на этот раз используй треугольники."
+          "courseD_artist_nestedLoops9_b": "Добавь второй набор вложенных циклов к концу первого набора, но на этот раз используй треугольники.",
+          "courseD_artist_nestedLoops9_c": "Сделайте два вложенных цикла:\n  - в первом внешнем цикле повторить 8 раз\n    - рисовать квадрат\n    - отступить вперед на расстояние 50 пикселей\n    - сделать поворот направо на 45 градусов\n  - во втором внешнем цикле повторить 8 раз\n    - рисовать треугольник\n    - отступить вперед на расстояние 50 пикселей\n    - сделать поворот направо на 45 градусов"
         },
         "courseD_artist_nestedLoopsFP2022": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nЭто изображение было сделано с помощью одного вложенного цикла, повторяющего шестиугольник (со стороной 50 точек) 15 раз и использующего поворот на 48 градусов.",

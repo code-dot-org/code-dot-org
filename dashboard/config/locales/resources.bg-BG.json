@@ -1383,6 +1383,11 @@
           "name": "Речник",
           "url": "https://curriculum.code.org/csd/unit4/vocab/"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "implementation_guide/coursef/2021": {
           "name": "Ръководство за използване"
         },
@@ -1907,6 +1912,7 @@
           "name": "За циклите"
         },
         "circuits-logic-video/csd/2021": {
+          "name": "Как Компютрите Работят: Вериги & Логика",
           "type": "Видео"
         },
         "physical-prototyping-project/csd/2021": {

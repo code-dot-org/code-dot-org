@@ -1,0 +1,1400 @@
+{
+  "ur-PK": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "جی",
+          "No": "نہيں",
+          "cute": "خوبصورت"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "جی",
+          "No": "نہيں",
+          "cute": "خوبصورت"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "جی",
+          "No": "نہيں",
+          "cute": "خوبصورت"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "جی",
+          "No": "نہيں",
+          "cute": "خوبصورت"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "نام",
+          "Color": "رنگ بھریں",
+          "Food": "غذا",
+          "City": "Shaher",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "نام",
+          "Color": "رنگ بھریں",
+          "Food": "غذا",
+          "City": "Shaher",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing fastest_2021": {
+          "s": "s",
+          "k": "k",
+          "0": "0"
+        },
+        "CSD U1 processing fastest_2022": {
+          "s": "s",
+          "k": "k",
+          "0": "0"
+        },
+        "CSD U1 processing guess_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U1 processing guess_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U1 processing live_2021": {
+          "walking": "چلنا",
+          "bear": "ریچھ",
+          "rat": "چوہا"
+        },
+        "CSD U1 processing live_2022": {
+          "walking": "چلنا",
+          "bear": "ریچھ",
+          "rat": "چوہا"
+        },
+        "CSD U1 processing npark_2021": {
+          "Correct!": "درست!",
+          "Sorry!": "معذرت!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Correct!": "درست!",
+          "Sorry!": "معذرت!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "اسٹار وارز",
+          "Yes": "جی",
+          "No": "نہيں",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "اسٹار وارز",
+          "Yes": "جی",
+          "No": "نہيں",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U1 storage outfit_2021": {
+          "Clear": "کلیئر کریں",
+          "white": "سفید",
+          "pink": "گلابی",
+          "green": "سبز",
+          "black": "سیاہ",
+          "purple": "جامنی"
+        },
+        "CSD U1 storage outfit_2022": {
+          "Clear": "کلیئر کریں",
+          "white": "سفید",
+          "pink": "گلابی",
+          "green": "سبز",
+          "black": "سیاہ",
+          "purple": "جامنی"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "خوش"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "مچھلی"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "شمال",
+          "South": "جنوب",
+          "East": "مشرق",
+          "West": "مغرب"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "درمیانہ"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "بائیں",
+          "right": "درست",
+          "red": "لال",
+          "yellow": "زرد",
+          "green": "سبز",
+          "purple": "جامنی"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "on": "پر",
+          "fast": "تیز",
+          "slow": "سست",
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2222": {
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "بائیں",
+          "right": "درست"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "yellow": "زرد",
+          "green": "سبز",
+          "blue": "نيلا",
+          "orange": "نارنجی"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "خاموش"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "Red": "سرخ",
+          "Blue": "نیلا"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "0": "0",
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "نام"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "خوش"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "ایے",
+          "B": "بی",
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "سکور",
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "نام:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Save": "محفوظ کریں"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "سیاہ",
+          "white": "سفید"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "سیاہ",
+          "white": "سفید"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "خوش"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "عنوان"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "اوپر",
+          "down": "نیچے",
+          "left": "بائیں",
+          "right": "درست"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "نام"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "بند",
+          "on": "پر"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "ٹیکسٹ",
+          "high": "زیادہ",
+          "low": "کم"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "آپ یہ کیا!"
+        },
+        "CSD U6 LED all": {
+          "on": "پر"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "پر"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "پر"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "پر"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 array piano": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "اول"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "اول"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "اول"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "اول"
+        },
+        "CSD U6 change": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 change_2018": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 change_2019": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 change_2021": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "درمیانہ"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "درمیانہ"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "درمیانہ"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "درمیانہ"
+        },
+        "CSD U6 emotion machine example": {
+          "Happy": "خوش"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "خوش"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "خوش"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "خوش"
+        },
+        "CSD U6 frequency": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 get toggle": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 getProperty Demo": {
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Save": "محفوظ کریں"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Save": "محفوظ کریں"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Save": "محفوظ کریں"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Save": "محفوظ کریں"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "جمع کرائیں"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "جمع کرائیں"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "جمع کرائیں"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "جمع کرائیں"
+        },
+        "CSD U6 getters debug": {
+          "slow": "سست",
+          "fast": "تیز",
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "تیز",
+          "slow": "سست",
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "تیز",
+          "slow": "سست",
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "تیز",
+          "slow": "سست",
+          "short": "چحوٹے قد کے",
+          "long": "لمبا",
+          "low": "کم",
+          "high": "زیادہ"
+        },
+        "CSD U6 interval": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 interval_2018": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 interval_2019": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 interval_2021": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 light show": {
+          "on": "پر",
+          "off": "بند"
+        },
+        "CSD U6 light show_2018": {
+          "on": "پر",
+          "off": "بند"
+        },
+        "CSD U6 light show_2019": {
+          "on": "پر",
+          "off": "بند"
+        },
+        "CSD U6 light show_2021": {
+          "on": "پر",
+          "off": "بند"
+        },
+        "CSD U6 params create colors": {
+          "Red": "سرخ",
+          "Blue": "نیلا"
+        },
+        "CSD U6 params create colors_2018": {
+          "Red": "سرخ",
+          "Blue": "نیلا"
+        },
+        "CSD U6 params create colors_2019": {
+          "Red": "سرخ",
+          "Blue": "نیلا"
+        },
+        "CSD U6 params create colors_2021": {
+          "Red": "سرخ",
+          "Blue": "نیلا"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "ٹیکسٹ",
+          "high": "زیادہ",
+          "low": "کم"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "ٹیکسٹ",
+          "high": "زیادہ",
+          "low": "کم"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "ٹیکسٹ",
+          "high": "زیادہ",
+          "low": "کم"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "ٹیکسٹ",
+          "high": "زیادہ",
+          "low": "کم"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "عنوان"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "عنوان"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "عنوان"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "عنوان"
+        },
+        "CSD U6 slider intro": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "چحوٹے قد کے",
+          "long": "لمبا"
+        },
+        "CSD U6 test LED": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "کامیابی!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "کامیابی!"
+        },
+        "CSDU4 Connecting Screens": {
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا"
+        },
+        "CSDU4 Connecting Screens Getting Back": {
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "متعلق",
+          "User": "صارف",
+          "Cancel": "منسوخ کریں",
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Yes": "جی",
+          "No": "نہيں",
+          "Save": "محفوظ کریں"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "متعلق",
+          "User": "صارف",
+          "Cancel": "منسوخ کریں",
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Yes": "جی",
+          "No": "نہيں",
+          "Save": "محفوظ کریں"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "متعلق",
+          "User": "صارف",
+          "Cancel": "منسوخ کریں",
+          "Name:": "نام:",
+          "Red": "سرخ",
+          "Green": "سبز",
+          "Blue": "نیلا",
+          "Yes": "جی",
+          "No": "نہيں",
+          "Save": "محفوظ کریں"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "متعلق",
+          "Why?": "کیوں؟",
+          "I don't know": "مے نی جانتا",
+          "When?": "کب؟"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "متعلق",
+          "Why?": "کیوں؟",
+          "I don't know": "مے نی جانتا",
+          "When?": "کب؟"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "متعلق",
+          "Why?": "کیوں؟",
+          "I don't know": "مے نی جانتا",
+          "When?": "کب؟"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "پوشیدہ"
+        },
+        "CSDU4 List App Demo": {
+          "About": "متعلق",
+          "Cancel": "منسوخ کریں"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "متعلق",
+          "Cancel": "منسوخ کریں"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "متعلق",
+          "Cancel": "منسوخ کریں"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "متعلق",
+          "Submit": "جمع کرائیں",
+          "Why?": "کیوں؟",
+          "When?": "کب؟",
+          "Correct!": "درست!"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "متعلق",
+          "Submit": "جمع کرائیں",
+          "Why?": "کیوں؟",
+          "When?": "کب؟",
+          "Correct!": "درست!"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "متعلق",
+          "Submit": "جمع کرائیں",
+          "Why?": "کیوں؟",
+          "When?": "کب؟",
+          "Correct!": "درست!"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+",
+          "=": "="
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "کامیابی!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "کامیابی!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "کامیابی!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "کامیابی!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "کامیابی!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 piano with notes": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "سی",
+          "D": "ڈی",
+          "E": "مشرق",
+          "F": "ایف",
+          "G": "جی",
+          "A": "ایے",
+          "B": "بی"
+        },
+        "allthethings design mode elements": {
+          "text": "ٹیکسٹ"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd u5 recommender sample": {
+          "Start": "شروع کریں"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "شروع کریں"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "شروع کریں"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "شروع کریں"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-4": {
+          "Correct!": "درست!",
+          "Sorry!": "معذرت!"
+        },
+        "csd-explore ui-4_2022": {
+          "Correct!": "درست!",
+          "Sorry!": "معذرت!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "ml-customize-raspado-2021": {
+          "yes": "جی",
+          "no": "نہيں"
+        },
+        "ml-customize-raspado_2022": {
+          "yes": "جی",
+          "no": "نہيں"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "جاری رکھیے"
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "جاری رکھیے"
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "بیوقوف"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "بیوقوف"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "مغرب",
+          "A": "ایے",
+          "yes": "جی",
+          "no": "نہيں",
+          "head": "سر"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "مغرب",
+          "A": "ایے",
+          "yes": "جی",
+          "no": "نہيں",
+          "head": "سر"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "بیوقوف"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "بیوقوف"
+        },
+        "ml-models in applab-choice if quotes": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "جی",
+          "No": "نہيں",
+          "B": "بی"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "جی",
+          "No": "نہيں",
+          "B": "بی"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "جی",
+          "No": "نہيں"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "جی",
+          "No": "نہيں"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Sports": "کھیل کود"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Sports": "کھیل کود"
+        },
+        "ml-use model card-example3A-2021": {
+          "rain": "بارش",
+          "snow": "برف باری",
+          "cloudy": "بادل دار",
+          "night": "رات",
+          "dusk": "ڈھلتی شام"
+        },
+        "ml-use model card-example3A_2022": {
+          "rain": "بارش",
+          "snow": "برف باری",
+          "cloudy": "بادل دار",
+          "night": "رات",
+          "dusk": "ڈھلتی شام"
+        }
+      }
+    }
+  }
+}

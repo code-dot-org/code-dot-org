@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csd",
-    "serialized_at": "2022-11-04 18:38:36 UTC",
+    "serialized_at": "2022-11-10 20:25:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -747,7 +747,7 @@
       "key": "c7dde980-7092-4b8f-9a9f-629e55131bff",
       "position": 3,
       "properties": {
-        "progression_name": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression_name": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "seeding_key": {
         "activity_section.key": "c7dde980-7092-4b8f-9a9f-629e55131bff",
@@ -3663,7 +3663,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3688,7 +3688,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6 Lesson 2_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3713,7 +3713,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6 Level 3_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3738,7 +3738,7 @@
         "level_keys": [
           "VPL - CSD - Module 8 - U6L6 - Level 4_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3763,7 +3763,7 @@
         "level_keys": [
           "VPL - CSD Module 8  U6L6 Reflection_2022"
         ],
-        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
       "seeding_key": {

@@ -7,15 +7,16 @@
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Maynkraft kodlaşdırma saatı - Dizayner",
           "overview": "Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.",
-          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər kəs üçün [birini çap edin](https://code.org/certificates?script=mc).",
+          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər kəs üçün [birini çap edin](https://studio.code.org/certificates/batch?course=bWM=).",
           "purpose": "Bu dərs kodlaşdırma və proqramlaşdırmanın (bloklardan istifadə etməklə) əsas CS anlayışlarını, eləcə də sadə sazlama üsullarını təqdim edir.",
           "student_overview": "Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar."
         },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Qəhrəmanın səyahəti",
           "overview": "Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.",
-          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Minecraft: Qəhrəmanın Səyahəti](studio.code.org/s/hero/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://code.org/certificates?script=mc) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.",
+          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Minecraft: Qəhrəmanın Səyahəti](studio.code.org/s/hero/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://studio.code.org/certificates/batch?course=bWM=) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.",
           "purpose": "Bu dərs kodlaşdırma və proqramlaşdırmanın əsas CS anlayışlarını (bloklardan istifadə etməklə), həmçinin sadə sazlama üsullarını və funksiyaların necə faydalı ola biləcəyini təqdim edir."
         },
         "poem-art-2021/Poem Art": {
@@ -65,7 +66,7 @@
         "artist/Artist": {
           "name": "Rəssam",
           "overview": "Bu dərsdə şagirdlər ekrandakı rəsmləri tamamlamaq üçün rəssamı idarə edəcəklər. Bu rəssam mərhələsi, tələbələrə '100 piksel irəli hərəkət etmək' və '90 dərəcə sağa dönmək' kimi proqramlaşdırma bloklarından istifadə edərək tədricən çətinlik dərəcəsi artan şəkilləri qurmağa imkan verəcək.",
-          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Artist](https://studio.code.org/s/artist/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://code.org/certificates) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.\n\n-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n\n-   (İstəyə görə) Bulmacaları tamamlamaq üçün istifadə etməli olduqları bucaqları vizuallaşdırmaq üçün sinifiniz üçün iletkilər əldə edin.\n\n-   Hər bir tələbə üçün bir **Turns & Angles - Tələbə Təqdimatı** çap edin.",
+          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Artist](https://studio.code.org/s/artist/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://studio.code.org/certificates/batch) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.\n\n-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n\n-   (İstəyə görə) Bulmacaları tamamlamaq üçün istifadə etməli olduqları bucaqları vizuallaşdırmaq üçün sinifiniz üçün iletkilər əldə edin.\n\n-   Hər bir tələbə üçün bir **Turns & Angles - Tələbə Təqdimatı** çap edin.",
           "purpose": "Bu dərs kodlaşdırma ilə daha çox yaradıcılığı ilhamlandırmaq üçün işləyəcək. Bu dərsin məqsədi proqramlaşdırma blokları və məqsədlərini təqdim etməklə ardıcıllıqla bağlı bilikləri artırmaqdır. Bu zaman tələbələr proqramlaşdırma bloklarından istifadə etməklə piksellər və bucaqlar haqqında öyrənirlər, eyni zamanda ardıcıllıq bacarıqlarını özündə birləşdirirlər. Həmçinin, tələbələr bir kvadrat çəkmək üçün Rəssamın kodlaşdırılması kimi yeni məqsədləri vizuallaşdıra biləcəklər."
         },
         "gumball/Gumball Play Lab": {
@@ -76,7 +77,6 @@
           "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər."
         },
         "dance/Dance Party": {
-          "name": "Rəqs şənliyi",
           "overview": "Bu dərsdə, bütün yaşlardan öyrənənlər kodlaşdırmaya və komputer elminə təhlükəsiz və dəstəkləyici bir mühitdə başlanğıc təcrübələr qazanacaqlar. Bu dərs bütün yaşlardan öyrənənlər üçün dizayn edilmişdir lakin oxumaq tələb etmir. Alət musiqiyə cavab vermək üçün qurulduğundan bu fəaliyyət səs tələb edir.",
           "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   Sinif dəstəyi, endirimli posterlər əldə etmək və ya robototexnika hədiyyəsində iştirak etmək istəyirsinizsə, [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com) (yalnız ABŞ).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n-   Kod Saatı başlamazdan əvvəl bu dərsə rəhbərlik etmək istəyib-istəmədiyinizi müəyyən etmək üçün əlavə dərs planını, [\"The Big Dance Party\"] [4] nəzərdən keçirin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](http://code.org/certificates) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.\n-   (istəyə görə) Tələbələri fəaliyyət zamanı istifadə etmək üçün qulaqlıq gətirməyə həvəsləndirin.",
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
@@ -122,7 +122,7 @@
         "mc/Hour of Code 2015": {
           "name": "Maynkraft Kod Saatı",
           "overview": "Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.",
-          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) və [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Register your Hour of Code event](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://code.org/certificates?script=mc) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.",
+          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) və [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Register your Hour of Code event](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://studio.code.org/certificates/batch?course=bWM=) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.",
           "purpose": "Bu dərs kodlaşdırma və proqramlaşdırmanın (bloklardan istifadə etməklə) əsas CS anlayışlarını, eləcə də sadə sazlama üsullarını təqdim edir.",
           "student_overview": "Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Bu dərs oxumaq üçün kifayət qədər yaşlı (6+ yaş) hər bir tələbə üçün yaxşı işləyir. Gənc öyrənənlər, yəqin ki, dərsliyi bitirməyəcəklər, lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun səviyyəsində oynamaq üçün bir az vaxt tapacaqlar."
         },
@@ -134,6 +134,7 @@
           "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar."
         },
         "applab-intro/Intro to App Lab": {
+          "name": "Proqram laboratoriyasına giriş",
           "overview": "Bu dərslik Tətbiq Laboratoriyasının proqramlaşdırma mühitini proqramların yaradılması və paylaşılması üçün güclü alət kimi tez bir zamanda təqdim etmək üçün nəzərdə tutulmuşdur. Dərslik özü tələbələrə bloklardan və ya mətndən istifadə edərək JavaScript-də düymələr, mətn, şəkillər, səslər və ekranlar yaratmağı və idarə etməyi öyrədir. Təlimin sonunda tələbələrə qurmağa başladıqları layihəni \"Öz macərasını seç\", \"Salamlama kartı\" və ya \"Şəxsiyyət Quiz\" proqramına genişləndirmək üçün vaxt verilir. Onlar, həmçinin code.org/appplab səhifəsində nümayiş olunan daha çox layihə qurmağa davam edə bilərlər.\n\nTətbiq Laboratoriyası ilə Kod Saatını tamamlayaraq əylənin!\n\n**Yaş Uyğunluğu:** Dərslik 13 yaşdan yuxarı tələbələr üçün nəzərdə tutulub. Tələbələrə fərdi səslər və şəkillər yükləməyə imkan verdiyi üçün gənc tələbələr bundan nəzarətsiz istifadə etməməlidir. Tələbələrin məxfiliyini qorumaq üçün, əgər tələbələrinizin yaşı 13-dən azdırsa, siz idarə etdiyiniz bölmədə onlar üçün hesab yaratmayınca, onlar bu təlimatdan istifadə edə bilməyəcəklər.",
           "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n-   Fəaliyyəti tamamlayan hər bir tələbə [sertifikat](http://code.org/certificates) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.",
           "purpose": "Bu dərs tələbələrinizin App Lab ilə ilk addımıdır. Dərsliyin özü geniş funksionallığı olan güclü alətə əlçatan giriş olmalıdır. Tələbələr dərs zamanı müsbət təcrübəyə malik olmalı və daha da əhəmiyyətlisi Tətbiq Laboratoriyasında tikintini davam etdirməyə həvəsləndirilməlidir. Onlar yalnız burada alətin nəyə qadir olduğunu cızırlar, ona görə də daha sonra etmək istədikləri daha mürəkkəb layihələr üçün ilham almaq üçün code.org/appplab səhifəsindən və ya layihə qalereyasından istifadə etməlidirlər."
@@ -159,8 +160,10 @@
           "purpose": "Sıxılmanın əsas prinsipi orijinal məlumatı təmsil etmək üçün daha az bitdən istifadə etmək üçün metod və ya protokol hazırlamaqdır. Bu dərsdə sıxılmış məlumatları təkrar nümunələrdən ibarət “lüğət” ilə təmsil etməyimiz [LZW sıxılma sxemi](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) ilə oxşardır, lakin qeyd etmək lazımdır ki, LZW tələbələrin bu dərsdə etdiklərindən bir qədər fərqlidir. Tələbələr burada öz yollarını icad edirlər. LZW yalnız mətn (zip faylları) üçün deyil, həm də GIF şəkil faylı formatı üçün istifadə olunur."
         },
         "outbreak/Outbreak": {
-          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
-          "purpose": "Əvvəlki dərsdə tələbələr sadə simulyasiyadan məlumatları topladılar və şərh etdilər. Bu dərsdə tələbələr öz simulyasiya modellərini kodlaşdırmaq üçün təlimatlara əməl edəcəklər. Şagirdlərin real dünyada virusun yayılması ilə bağlı əvvəlki bilikləri uydurma ssenariyə tətbiq olunacaq."
+          "overview": "",
+          "preparation": "- Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n- Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Əvvəlki dərsdə tələbələr sadə simulyasiyadan məlumatları topladılar və şərh etdilər. Bu dərsdə tələbələr öz simulyasiya modellərini kodlaşdırmaq üçün təlimatlara əməl edəcəklər. Şagirdlərin real dünyada virusun yayılması ilə bağlı əvvəlki bilikləri uydurma ssenariyə tətbiq olunacaq.",
+          "student_overview": ""
         },
         "sports/Sports": {
           "name": "Özünün idman oyununu kodlaşdır",
@@ -176,7 +179,7 @@
         },
         "basketball/Bounce": {
           "name": "Özünün basketbol oyununu yarat",
-          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Öz Basketbol Oyununuzu Kodlayın](https://studio.code.org/s/basketball/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://code.org/certificates) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.\n\n-   \"Sıçrayan hadisələr - Onlar necə baş verir?\" slayd göyərtəsi (sinfin sonunda tələbələrə təqdim olunacaq).",
+          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com), əgər siz zəbt və ya sinif dəstəyi almaq istəyirsinizsə.\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Öz Basketbol Oyununuzu Kodlayın](https://studio.code.org/s/basketball/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Bu dərs planının sonunda bir və ya bir neçə [Çıxış bileti nümunələri](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) çap edin və ya özünüz yaradın.\n\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](https://studio.code.org/certificates/batch) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.\n\n-   \"Sıçrayan hadisələr - Onlar necə baş verir?\" slayd göyərtəsi (sinfin sonunda tələbələrə təqdim olunacaq).",
           "purpose": "Bu dərs kodlaşdırma və proqramlaşdırmanın (bloklardan istifadə etməklə) əsas CS anlayışlarını, eləcə də sadə sazlama üsullarını təqdim edir. Onlar öyrənəcəklər ki, hadisələr kompüter proqramlarında, xüsusən də video oyunlarında çox yaygındır.\n\nŞagirdlər basketbol oyunu quraraq hadisələr haqqında anlayışlarını inkişaf etdirəcəklər. Şagirdlər ox düymələrinə uyğun olaraq əllə hərəkət etməyi və obyektlər toqquşduqda səs çıxarmağı öyrənəcəklər. Ən sonunda onlar oyunlarını daha unikal etmək üçün fərdiləşdirəcəklər!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
@@ -188,13 +191,14 @@
           "name": "Kod Saatı 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Rəqs şənliyi",
           "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   Sinif dəstəyi, endirimli posterlər əldə etmək və ya robototexnika hədiyyəsində iştirak etmək istəyirsinizsə, [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com) (yalnız ABŞ).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Dance Party](https://studio.code.org/s/dance-2019)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n-   Kod Saatı başlamazdan əvvəl bu dərsə rəhbərlik etmək istəyib-istəmədiyinizi müəyyən etmək üçün əlavə dərs planını, [\"The Big Dance Party\"] [4] nəzərdən keçirin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər kəs üçün [birini çap edin](http://code.org/certificates).\n-   (istəyə görə) Tələbələri fəaliyyət zamanı istifadə etmək üçün qulaqlıq gətirməyə həvəsləndirin.",
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
         },
         "oceans/Oceans": {
           "name": "Okeanlar üçün AI",
           "overview": "Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz, dəstəkləyici mühitdə kodlaşdırma və kompüter elmləri ilə tanış olurlar. Birincisi, tələbələr okeandan zibil çıxarmağa cəhd etmək üçün obyektləri \"balıq\" və ya \"balıq deyil\" kimi təsnif edirlər. Daha sonra tələbələr suya aid olan digər dəniz canlılarını da daxil etmək üçün təlim məlumat dəstini genişləndirməli olacaqlar. Fəaliyyətin ikinci hissəsində tələbələr təsadüfi yaradılan balıq şəkillərinə tətbiq etmək üçün öz etiketlərini seçəcəklər. Bu təlim datası sonra özü yeni şəkilləri etiketləyə bilən maşın öyrənmə modeli üçün istifadə olunur.",
-          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Hour of Code Pedagogator Guide](http://hourofcode.com/resources/how-to/)-ı nəzərdən keçirin.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın.\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir [sertifikat](https://code.org/certificates?script=oceans) çap edin.təlimçi üçün göstərişlər",
+          "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Hour of Code Pedagogator Guide](http://hourofcode.com/resources/how-to/)-ı nəzərdən keçirin.\n-   [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın.\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə sertifikat almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir [sertifikat](https://studio.code.org/certificates/batch?course=b2NlYW5z) çap edin.təlimçi üçün göstərişlər",
           "purpose": "Bu dərs vəsaiti tələbələri **süni intellektin** bir növü olan **maşın öyrənməsi** ilə tez bir zamanda tanış etmək üçün nəzərdə tutulmuşdur. Tələbələr yeni məlumatları təsnif etmək üçün maşın öyrənmə modelini aktivləşdirmək üçün **təlim məlumatlarının** necə istifadə edildiyini araşdıracaqlar. Tələbələr dərs zamanı müsbət təcrübəyə malik olmalı və ən əsası kompüter elmlərini öyrənməyə davam etməlidirlər.",
           "student_overview": "İlk tələbələr okeandan zibil çıxarmaq üçün obyektləri \"balıq\" və ya \"balıq deyil\" kimi təsnif edirlər. Daha sonra tələbələr suya aid olan digər dəniz canlılarını da daxil etmək üçün təlim məlumat dəstini genişləndirməli olacaqlar. Fəaliyyətin ikinci hissəsində tələbələr təsadüfi yaradılan balıq şəkillərinə tətbiq etmək üçün öz etiketlərini seçəcəklər. Bu təlim datası sonra özü yeni şəkilləri etiketləyə bilən maşın öyrənmə modeli üçün istifadə olunur."
         },
@@ -325,13 +329,17 @@
           "name": "Tezlik Analizi"
         },
         "coursed-2022/Password Power-Up": {
+          "name": "Şifrə Gücləndirilməsi",
           "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs ilk olaraq [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tərəfindən yaradılmışdır.\n\nDaha güclü, daha təhlükəsiz onlayn parollar hər kəs üçün yaxşı fikirdir. Bəs biz uşaqlara daha yaxşı parollar yaratmağa və onları yadda saxlamağa necə kömək edə bilərik? Uşaqlara həm təhlükəsiz, həm də yaddaqalan parollar yaratmağa kömək etmək üçün bu dərsdəki məsləhətlərdən istifadə edin.",
-          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.\n-   Şagirdlər üçün yazı kağızı və ya dəftər hazırlayın.",
-          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb."
+          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.\n-   Şagirdlər üçün kağız vəsait və ya dəftər hazırlayın.",
+          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
+          "student_overview": "Bu kursda, şifrələrin sizin məlumatlarınızı necə qoruduğunu və necə yaxşı şifrə yaradmağı öyrənəcəksiniz."
         },
         "coursed-2022/Graph Paper Programming": {
           "name": "Millimetrlik kağızda proqramlaşdırma",
-          "purpose": "Bu fəaliyyətin məqsədi kurs boyu istifadə olunacaq bəzi fundamental proqramlaşdırma anlayışlarını təqdim etməklə yanaşı, tənqidi düşünmə bacarıqları və kurs üçün həyəcan yaratmaqdır. Bağlanmamış fəaliyyətdə ardıcıllıq və alqoritmlər kimi əsas anlayışları sinifə təqdim etməklə, kompüterlərdən qorxan tələbələr hələ də bu mövzularda anlayışın təməlini qura bilərlər. Bu dərsdə tələbələr alqoritmin işlənməsi və onu proqrama kodlaşdırmağı öyrənəcəklər."
+          "overview": "Bu **kontekst-yaradan** dərsdə şagirdlər simvollardan istifadə edərək bir birlərinə grafik vərəqdə damalar rəngləməyi təlim edirlər. Bir birlərini rəsim cəkməyə \"programlaşdirmaqla\" şagirdlər programlaşdirmanın bəzi əsas mövzularını əyləncəli və əlcatan bir yolla təcrübə edirlər.",
+          "purpose": "Bu fəaliyyətin məqsədi kurs boyu istifadə olunacaq bəzi fundamental proqramlaşdırma anlayışlarını təqdim etməklə yanaşı, tənqidi düşünmə bacarıqları və kurs üçün həyəcan yaratmaqdır. Bağlanmamış fəaliyyətdə ardıcıllıq və alqoritmlər kimi əsas anlayışları sinifə təqdim etməklə, kompüterlərdən qorxan tələbələr hələ də bu mövzularda anlayışın təməlini qura bilərlər. Bu dərsdə tələbələr alqoritmin işlənməsi və onu proqrama kodlaşdırmağı öyrənəcəklər.",
+          "student_overview": "Bu dərsdə sinif yoldasınızı rəsm cəkmək ücün programlaşdıracaqsınız."
         },
         "coursed-2022/Introduction to Online Puzzles": {
           "purpose": "Biz başa düşürük ki, hər bir sinifdə hər bir mövzu üçün bir anlayış spektri var. Sinifinizdəki bəzi tələbələr kompüter sehrbazları ola bilər, digərləri isə ümumiyyətlə çox təcrübəyə malik deyillər. Bərabər oyun (və öyrənmə) sahəsi yaratmaq üçün biz D Kursu üçün bu \"Yüksək Mərhələ\"ni hazırlamışıq. Bu, ya giriş, ya da Code.org və əsas informatika anlayışlarından necə istifadə olunacağına dair icmal kimi istifadə edilə bilər. Bu mərhələ D kursuna başlamaq üçün lazım olan bütün ilkin şərtləri əhatə edir."
@@ -479,7 +487,8 @@
         "courseb-2022/Programming with Angry Birds": {
           "name": "Əsəbi quşlarla proqramlaşdırma",
           "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   **\\*Happy Maps** üçün təchizatları tapın və ya yenidən çap edin.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.\n-   Hər bir istiqamətin (N, S, E, W) kifayət qədər **\\*Manipulyativləri** kəsin ki, hər bir cüt tələbəyə iki dəst verin (əgər siz körpü seçimi №1-i seçsəniz).",
-          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir.",
+          "student_overview": "_Angry Bird_'ə  labirintdən keçməyə kömək edəcək proqramlar yaradın."
         },
         "courseb-2022/Programming with Harvester": {
           "name": "Taxılbiçən ilə proqramlaşdırma"
@@ -642,6 +651,7 @@
           "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
         },
         "coursea-2022/Safety in My Online Neighborhood": {
+          "name": "onlayn qonşuluğumdakı təhlükəsizlik",
           "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
           "preparation": "-   Təlimat materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün vərəqələri çap edin.\n-   (İstəyə görə) Sinifdəki ekran üçün şeir afişası çap edin.",
           "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
@@ -873,14 +883,29 @@
         "csd6-2022/Board Events": {
           "name": "İdarə Heyətinin Tədbirləri"
         },
+        "csd6-2022/Mini-Project: On-The-Go App": {
+          "name": "Mini-layihə: sahə tapan proqram"
+        },
         "csd6-2022/Color LEDs": {
           "name": "Rəngli LEDlər"
+        },
+        "csd6-2022/Getting Screen Inputs": {
+          "name": "Ekran girişlərini əldə edərkən"
         },
         "csd6-2022/Making Music": {
           "name": "Musiqi bəstələmək"
         },
         "csd6-2022/Functions": {
           "name": "Funksiyalar"
+        },
+        "csd6-2022/Mini-Project: Interactive Art": {
+          "name": "Mini-layihə: İnteraktiv İncəsənət"
+        },
+        "csd6-2022/Physical Outputs and LEDs": {
+          "name": "Fiziki Çıxışlar və LEDlər"
+        },
+        "csd6-2022/Physical Inputs and Buttons": {
+          "name": "Fiziki Girişlər və Düymələr"
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
@@ -890,6 +915,9 @@
         },
         "csd7-2022/Numerical Data in AI Lab": {
           "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Sorğunun Planlaşdırılması"
         },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
@@ -1191,6 +1219,9 @@
         "csd6-2018/Getting Properties": {
           "name": "Xüsusiyyətləri əldə etmək"
         },
+        "csd6-2018/Project: Make a Game": {
+          "name": "Layihə: Oyun qurun"
+        },
         "csd6-2018/Making Music": {
           "name": "Musiqi bəstələmək"
         },
@@ -1485,6 +1516,9 @@
         "csd6-2019/Getting Properties": {
           "name": "Xüsusiyyətləri əldə etmək"
         },
+        "csd6-2019/Project: Make a Game": {
+          "name": "Layihə: Oyun qurun"
+        },
         "csd6-2019/Making Music": {
           "name": "Musiqi bəstələmək"
         },
@@ -1769,6 +1803,9 @@
         },
         "csd6-2017/Getting Properties_": {
           "name": "Xüsusiyyətləri əldə etmək"
+        },
+        "csd6-2017/Project: Make a Game__": {
+          "name": "Layihə: Oyun qurun"
         },
         "csd6-2017/Making Music_": {
           "name": "Musiqi bəstələmək"
@@ -2367,7 +2404,8 @@
         "courseb-2021/Programming in Maze": {
           "name": "Əsəbi quşlarla proqramlaşdırma",
           "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   **\\*Happy Maps** üçün təchizatları tapın və ya yenidən çap edin.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.\n-   Hər bir istiqamətin (N, S, E, W) kifayət qədər **\\*Manipulyativləri** kəsin ki, hər bir cüt tələbəyə iki dəst verin (əgər siz körpü seçimi №1-i seçsəniz).",
-          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir.",
+          "student_overview": "_Angry Bird_'ə  labirintdən keçməyə kömək edəcək proqramlar yaradın."
         },
         "courseb-2021/Programming in Harvester": {
           "name": "Taxılbiçən ilə proqramlaşdırma"
@@ -2398,6 +2436,7 @@
           "name": "Kurs layihələrinin sonu!"
         },
         "coursea-2021/Safety in My Online Neighborhood": {
+          "name": "onlayn qonşuluğumdakı təhlükəsizlik",
           "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
           "preparation": "-   Təlimat materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün vərəqələri çap edin.\n-   (İstəyə görə) Sinifdəki ekran üçün şeir afişası çap edin.",
           "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
@@ -2498,14 +2537,18 @@
           "purpose": "Bu dərs planlaşdırma tələb edən, həm də geniş yaradıcılığa imkan verən addım-addım prosesdən istifadə edərək, tələbələrə öz dizaynlarının layihəsini yaratmaq üçün yer verir."
         },
         "coursed-2021/lesson-5": {
+          "name": "Şifrə Gücləndirilməsi",
           "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs ilk olaraq [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tərəfindən yaradılmışdır.\n\nDaha güclü, daha təhlükəsiz onlayn parollar hər kəs üçün yaxşı fikirdir. Bəs biz uşaqlara daha yaxşı parollar yaratmağa və onları yadda saxlamağa necə kömək edə bilərik? Uşaqlara həm təhlükəsiz, həm də yaddaqalan parollar yaratmağa kömək etmək üçün bu dərsdəki məsləhətlərdən istifadə edin.",
-          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.\n-   Şagirdlər üçün yazı kağızı və ya dəftər hazırlayın.",
-          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb."
+          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.\n-   Şagirdlər üçün kağız vəsait və ya dəftər hazırlayın.",
+          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
+          "student_overview": "Bu kursda, şifrələrin sizin məlumatlarınızı necə qoruduğunu və necə yaxşı şifrə yaradmağı öyrənəcəksiniz."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Millimetrlik kağızda proqramlaşdırma",
+          "overview": "Bu **kontekst-yaradan** dərsdə şagirdlər simvollardan istifadə edərək bir birlərinə grafik vərəqdə damalar rəngləməyi təlim edirlər. Bir birlərini rəsim cəkməyə \"programlaşdirmaqla\" şagirdlər programlaşdirmanın bəzi əsas mövzularını əyləncəli və əlcatan bir yolla təcrübə edirlər.",
           "preparation": "-   (İstəyə görə) **\\*Fəaliyyətdə olan Dərs** videosuna baxın.\n-   Hər bir tələbə üçün bir **\\*iş vərəqi** və **\\*qiymətləndirmə** çap edin.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
-          "purpose": "Bu fəaliyyətin məqsədi kurs boyu istifadə olunacaq bəzi fundamental proqramlaşdırma anlayışlarını təqdim etməklə yanaşı, tənqidi düşünmə bacarıqları və kurs üçün həyəcan yaratmaqdır. Bağlanmamış fəaliyyətdə ardıcıllıq və alqoritmlər kimi əsas anlayışları sinifə təqdim etməklə, kompüterlərdən qorxan tələbələr hələ də bu mövzularda anlayışın təməlini qura bilərlər. Bu dərsdə tələbələr alqoritmin işlənməsi və onu proqrama kodlaşdırmağı öyrənəcəklər."
+          "purpose": "Bu fəaliyyətin məqsədi kurs boyu istifadə olunacaq bəzi fundamental proqramlaşdırma anlayışlarını təqdim etməklə yanaşı, tənqidi düşünmə bacarıqları və kurs üçün həyəcan yaratmaqdır. Bağlanmamış fəaliyyətdə ardıcıllıq və alqoritmlər kimi əsas anlayışları sinifə təqdim etməklə, kompüterlərdən qorxan tələbələr hələ də bu mövzularda anlayışın təməlini qura bilərlər. Bu dərsdə tələbələr alqoritmin işlənməsi və onu proqrama kodlaşdırmağı öyrənəcəklər.",
+          "student_overview": "Bu dərsdə sinif yoldasınızı rəsm cəkmək ücün programlaşdıracaqsınız."
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
@@ -2752,6 +2795,9 @@
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "AI laboratoriyasında rəqəmsal məlumatlar"
         },
+        "csd7-2021/Survey Planning": {
+          "name": "Sorğunun Planlaşdırılması"
+        },
         "csd7-2021/CS Discoveries Post-Course Survey": {
           "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
         },
@@ -2978,6 +3024,9 @@
         "coursed-2020/End of Course Project": {
           "name": "Kurs layihələrinin sonu!"
         },
+        "coursec-2020/Password Power-Up": {
+          "name": "Şifrə Gücləndirilməsi"
+        },
         "coursec-2020/Programming in Maze": {
           "name": "Əsəbi quşlarla proqramlaşdırma"
         },
@@ -3016,6 +3065,9 @@
         },
         "coursee-2020/End of Course Project": {
           "name": "Kurs layihələrinin sonu!"
+        },
+        "coursea-2020/Safety in My Online Neighborhood": {
+          "name": "onlayn qonşuluğumdakı təhlükəsizlik"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Dartıb buraxmağı oyrən "

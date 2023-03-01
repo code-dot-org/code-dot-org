@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
-import Button from '../../Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {hidePublishDialog, publishProject} from './publishDialogRedux';
+import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
+import color from '@cdo/apps/util/color';
 
 class PublishDialog extends Component {
   static propTypes = {
@@ -28,22 +30,56 @@ class PublishDialog extends Component {
     afterPublish: PropTypes.func
   };
 
+  state = {
+    publishFailedStatus: null
+  };
+
   confirm = () => {
+    this.setState({publishFailedStatus: null});
     if (this.props.onConfirmPublishOverride) {
       this.props.onConfirmPublishOverride();
       return;
     }
     this.props
       .onConfirmPublish(this.props.projectId, this.props.projectType)
-      .then(this.props.afterPublish);
+      .then(this.props.afterPublish)
+      .catch(this.onPublishError);
   };
 
-  close = () => this.props.onClose();
+  close = () => {
+    this.setState({publishFailedStatus: null});
+    this.props.onClose();
+  };
+
+  onPublishError = err => {
+    this.setState({publishFailedStatus: err.status});
+  };
+
+  getErrorMessage = () => {
+    const {publishFailedStatus} = this.state;
+    const {projectType} = this.props;
+    if (!publishFailedStatus) {
+      return null;
+    } else if (
+      publishFailedStatus === 403 &&
+      RestrictedPublishProjectTypes.includes(projectType)
+    ) {
+      return i18n.publishFailedRestrictedShare();
+    } else if (publishFailedStatus === 403) {
+      return i18n.publishFailedForbidden();
+    } else if (publishFailedStatus === 400 || publishFailedStatus === 401) {
+      return i18n.publishFailedNotAllowed();
+    } else {
+      return i18n.publishFailedError();
+    }
+  };
 
   render() {
+    const {isOpen, isPublishPending} = this.props;
+    const errorMessage = this.getErrorMessage();
     return (
       <BaseDialog
-        isOpen={this.props.isOpen}
+        isOpen={isOpen}
         handleClose={this.close}
         useUpdatedStyles
         style={styles.dialog}
@@ -54,22 +90,23 @@ class PublishDialog extends Component {
         <div style={{marginBottom: 10}}>
           {i18n.publishToPublicGalleryWarning()}
         </div>
+        {errorMessage && <div style={styles.error}>{errorMessage}</div>}
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
+            style={{margin: 0}}
           />
           <Button
-            __useDeprecatedTag
             text={i18n.publish()}
             onClick={this.confirm}
             color={Button.ButtonColor.orange}
             className="no-mc"
-            isPending={this.props.isPublishPending}
+            isPending={isPublishPending}
             pendingText={i18n.publishPending()}
+            style={{margin: 0}}
             id="publish-dialog-publish-button"
           />
         </DialogFooter>
@@ -83,6 +120,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
+  },
+  error: {
+    color: color.red
   }
 };
 

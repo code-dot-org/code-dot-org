@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "幅",
+  "dropletBlock_createSprite_param3": "高さ",
+  "dropletBlock_setCollider_param0": "タイプ",
+  "dropletBlock_setCollider_param4": "高さ",
+  "dropletBlock_setColliderEach_param0": "タイプ",
+  "dropletBlock_setColliderEach_param4": "高さ",
+  "reinfFeedbackMsg": "やった！「進め」をクリックして次のレベルへ行きましょう。",
+  "shareGame": "あなたのゲームを共有："
 }

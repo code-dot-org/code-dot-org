@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Upload your own sounds to the **Asset Manager** and play them in your scene!\r\n\r\n::: details [**🔦 Where can I find sounds?**]\r\n  \r\nThe following are some websites where you can find sounds. Sounds must be **.wav** files.\r\n\r\n* <a href=\"https://mixkit.co/\" target=\"_blank\">**Mixkit**</a>\r\n\r\n* <a href=\"https://www.findsounds.com/\" target=\"_blank\">**FindSounds**</a>\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #1:** In `MusicScene.java`(#e7e8ea), write the `playMusic()`(#e7e8ea) method to play the parameter `sound`(#e7e8ea).\r\n\r\n✅ **TO DO #2:** In `TheaterRunner.java`(#e7e8ea), instantiate a `MusicScene`(#e7e8ea) object and call the `playScene()`(#e7e8ea) method with the sound file you uploaded to the **Asset Manager**.\r\n\r\n⚠️ **Don't forget!** Call the `Theater.playScenes(yourSceneObject)`(#e7e8ea) method to play the scene.\r\n\r\n💡 **TIP:** Check out the documentation for the `Scene`(#e7e8ea) class in the **Documentation** tab ⬆️ for help with playing sounds.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Add Your Own Music",
+    "bubble_choice_description": "Add music to the scene displaying a motivational image.",
+    "thumbnail_url": "https://images.code.org/aa4c0ff6a0c26b5b70ef2dd313bc5bca-61716362f895a9834bd8bf610fbf8941-image-1650486321810.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-02-17T18:17:53.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:17:53.317+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L6c_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L6c_2023\"},{\"changed_at\":\"2023-02-17 18:17:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:47:36 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 22:05:34 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

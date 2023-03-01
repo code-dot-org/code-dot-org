@@ -12026,19 +12026,11 @@ cs-CZ:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat se dostane k žaludu. V kódu nejsou žádné chyby.
-          feedback: Špatně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
-            dopředu tolikrát, aby dosáhl na žalud.
         - text: Scrat nedosáhne na žalud, protože se otočí nesprávným směrem.
           correct: true
-          feedback: Správně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
-            dopředu tolikrát, aby došel až k žaludu.
         - text: Scrat nedosáhne na žalud, protože není dostatek bloků `posuv dopředu`.
-          correct: true
-          feedback: Správně. Nejdřív se Scrat otočí nesprávným směrem a pak se neposune
-            dopředu tolikrát, aby došel až k žaludu.
         - text: Scrat se nepohne z prvního bloku.
-          feedback: V tomhle kódu jsou dvě chyby. Nejdřív se Scrat otočí nesprávným
-            směrem a pak se neposune dopředu tolikrát, aby došel až k žaludu.
+          feedback: Scrat nedosáhne na žalud, protože se otočí nesprávným směrem.
         questions:
         - text: Najdi v tomhle kódu chyby. Dojde Scrat až k žaludu, nebo je v kódu
             nějaký problém?

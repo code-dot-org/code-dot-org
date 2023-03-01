@@ -166,18 +166,18 @@ class SectionActionDropdown extends Component {
           <div>{i18n.deleteSectionArchiveSuggestion()}</div>
           <DialogFooter>
             <Button
-              __useDeprecatedTag
               class="ui-test-cancel-delete"
               text={i18n.dialogCancel()}
               onClick={this.onCancelDelete}
               color="gray"
+              style={{margin: 0}}
             />
             <Button
-              __useDeprecatedTag
               class="ui-test-confirm-delete"
               text={i18n.delete()}
               onClick={this.onConfirmDelete}
               color="red"
+              style={{margin: 0}}
             />
           </DialogFooter>
         </BaseDialog>

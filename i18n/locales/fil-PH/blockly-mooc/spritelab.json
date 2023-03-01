@@ -77,7 +77,6 @@
   "didntMoveRight": "Hindi gumalaw pakanan ang tiyanak mo.",
   "didntMoveUp": "Hindi gumalaw pataas ang tiyanak mo.",
   "didntPressKey": "Siguraduhing pindutin ang arrow key pagkatapos pindutin ang *\"Paganahin\"*. Maaari mong i-click ang mga orange na button sa ilalim ng play area o pindutin ang mga key sa keyboard mo.",
-  "errorLoadingAnimation": "Mukhang nahihirapan kaming i-load ang animation mo na \"{animationName}\". Tiyaking mayroon kang magandang koneksyon sa internet at subukang i-reload ang page. Kung magpapatuloy ang problemang ito, posibleng sira ang animation. Sa kasong ito, kailanganin mong magpatuloy sa pamamagitan ng pag-alis ng animation.",
   "eventsOneChange": "Nagbago ang tiyanak mo, ngunit isang beses lang. Subukan ang programa mo sa pamamagitan ng pagpindot sa key nang ilang beses, at tiyaking gamitin ang tamang block. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"sukat\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"nilalang_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Dapat na may eksaktong 3 pag-uugali ang tiyanak mo. Subukang ilipat ang `ihinto lahat` na block sa ibang lugar sa code mo.",
   "foodNotTouchPet": "I-drag ang pagkaing tiyanak mo upang mahawakan nito ang iyong alagang tiyanak.",

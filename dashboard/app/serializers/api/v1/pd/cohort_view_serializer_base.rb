@@ -1,5 +1,4 @@
 class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
-  # Declare attributes individually so we can make :locked a conditional attribute
   attribute :id
   attribute :date_accepted
   attribute :applicant_name
@@ -14,11 +13,6 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
   attribute :notes_3
   attribute :notes_4
   attribute :notes_5
-  attribute :locked, if: :include_locked?
-
-  def locked
-    object.locked?
-  end
 
   def email
     object.user.email
@@ -32,9 +26,5 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     if object.workshop.try(:local_summer?)
       object.registered_workshop? ? 'Yes' : 'No'
     end
-  end
-
-  def include_locked?
-    object.class.can_see_locked_status?(scope[:user])
   end
 end

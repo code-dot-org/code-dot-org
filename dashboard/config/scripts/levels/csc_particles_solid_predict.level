@@ -44,18 +44,15 @@
       "csc_particles_solid_predict_child"
     ],
     "name_suffix": "_-particles",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "//validation"
+    "validation_code": "//validation",
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-10-28T23:18:41.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-10-28T23:18:41.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T23:18:41.511+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_Predict_-particles\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_Predict_-particles\"},{\"changed_at\":\"2022-10-28 23:18:50 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:20:21 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:21:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:27:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 22:39:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-28T23:18:41.511+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_Predict_-particles\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_Predict_-particles\"},{\"changed_at\":\"2022-10-28 23:18:50 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:20:21 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:21:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:27:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 22:39:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:38:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -113,7 +110,136 @@
                               </value>
                               <value name="TEXT1">
                                 <block type="text">
-                                  <field name="TEXT">"This is a solid state. The H2O particles are arranged in a fixed pattern and barely move."</field>
+                                  <field name="TEXT">This is a solid state. The H2O particles are arranged in a fixed pattern and barely move.</field>
+                                </block>
+                              </value>
+                              <value name="NUM">
+                                <block type="math_number">
+                                  <field name="NUM">15</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"scientist_1"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="LabSetup"/>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"steam"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"science_microscope"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="MicroscopeSetup"/>
+              <next>
+                <block type="gamelab_makeNumSprites">
+                  <field name="ANIMATION_NAME">"h2o-01"</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">30</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="ParticlesBlocks_statesOfMatter2">
+                      <field name="COSTUME">"h2o-01"</field>
+                      <field name="BEHAVIOR">"gas"</field>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="LookInMicroscope"/>
+                          <next>
+                            <block type="gamelab_spriteSayTime">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"scientist_1"</field>
+                                </block>
+                              </value>
+                              <value name="TEXT1">
+                                <block type="text">
+                                  <field name="TEXT">This is a gas state. The H2O particles are very light and float around.</field>
+                                </block>
+                              </value>
+                              <value name="NUM">
+                                <block type="math_number">
+                                  <field name="NUM">15</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"water_glass"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"science_microscope"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="MicroscopeSetup"/>
+              <next>
+                <block type="gamelab_makeNumSprites">
+                  <field name="ANIMATION_NAME">"h2o-01"</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">50</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="ParticlesBlocks_statesOfMatter2">
+                      <field name="COSTUME">"h2o-01"</field>
+                      <field name="BEHAVIOR">"liquid"</field>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="LookInMicroscope"/>
+                          <next>
+                            <block type="gamelab_spriteSayTime">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"scientist_1"</field>
+                                </block>
+                              </value>
+                              <value name="TEXT1">
+                                <block type="text">
+                                  <field name="TEXT">This is a liquid state. The H2O particles move around more freely and take on the shape of the container.</field>
                                 </block>
                               </value>
                               <value name="NUM">
@@ -244,135 +370,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"scientist_1"</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="LabSetup"/>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"steam"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"science_microscope"</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="MicroscopeSetup"/>
-              <next>
-                <block type="gamelab_makeNumSprites">
-                  <field name="ANIMATION_NAME">"h2o-01"</field>
-                  <value name="NUM">
-                    <block type="math_number">
-                      <field name="NUM">30</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="ParticlesBlocks_statesOfMatter2">
-                      <field name="COSTUME">"h2o-01"</field>
-                      <field name="BEHAVIOR">"gas"</field>
-                      <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="LookInMicroscope"/>
-                          <next>
-                            <block type="gamelab_spriteSayTime">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"scientist_1"</field>
-                                </block>
-                              </value>
-                              <value name="TEXT1">
-                                <block type="text">
-                                  <field name="TEXT">This is a gas state. The H2O particles are very light and float around.</field>
-                                </block>
-                              </value>
-                              <value name="NUM">
-                                <block type="math_number">
-                                  <field name="NUM">15</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"water_glass"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"science_microscope"</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="MicroscopeSetup"/>
-              <next>
-                <block type="gamelab_makeNumSprites">
-                  <field name="ANIMATION_NAME">"h2o-01"</field>
-                  <value name="NUM">
-                    <block type="math_number">
-                      <field name="NUM">50</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="ParticlesBlocks_statesOfMatter2">
-                      <field name="COSTUME">"h2o-01"</field>
-                      <field name="BEHAVIOR">"liquid"</field>
-                      <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="LookInMicroscope"/>
-                          <next>
-                            <block type="gamelab_spriteSayTime">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"scientist_1"</field>
-                                </block>
-                              </value>
-                              <value name="TEXT1">
-                                <block type="text">
-                                  <field name="TEXT">This is a liquid state. The H2O particles move around more freely and take on the shape of the container.</field>
-                                </block>
-                              </value>
-                              <value name="NUM">
-                                <block type="math_number">
-                                  <field name="NUM">15</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation>

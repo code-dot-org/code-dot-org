@@ -1612,7 +1612,9 @@
   hoc_overview_dance_title: "Potańcówka"
   hoc_overview_dance_subtitle: "Zakoduj potańcówkę, aby podzielić się nią ze znajomymi. Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i 25 innych!"
   hoc_overview_dance_2019_subtitle: "Koduj Potańcówkę, aby podzielić się ze znajomymi. Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj i 34 innych!"
+  hoc_overview_dance_2022_subtitle: "Koduj imprezę taneczną, aby podzielić się nią ze znajomymi. Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka z filmu Disneya „Encanto,” i więcej!"
   hoc_overview_hello_world_2022_subtitle: "Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie."
+  hoc_overview_hello_world_2022_alt_text: "Animowane astronauta i postacie zwierząt unoszące się wokół ilustracji ziemi"
   hoc_overview_title: "Aktywności Godziny Kodowania z Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\"> Godzina Kodowania (Hour of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
   hoc_overview_subtitle_markdown: "[Godzina Kodowania](https://hourofcode.com) to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, może gdziekolwiek zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
@@ -1658,10 +1660,12 @@
   hoc2018_mc_educators_box3_title: "Weź udział w otwartych warsztatach dla uczniów"
   hoc2018_mc_educators_box3_desc: "Odwiedź sklep Microsoftu w Twojej okolicy, aby wziąć udział w otwartych warsztatach poświęconych Godzinie Kodowania. Dla uczestników na dowolnym poziomie umiejętności, w wieku sześciu i więcej lat."
   hoc2018_mc_educators_box3_button: "Znajdź warsztaty"
+  hoc2022_mc_educators_box3_desc_markdown: 'Skorzystaj z tego na żądanie [darmowy kurs](%{free_course_link}) lub zarejestruj całą klasę, aby wziąć udział w warsztatach Hour of Code na żywo z gościnnym nauczycielem. Oferowane wielokrotnie podczas CSEW, Dec 6 - 11. '
   hoc2022_mc_educators_box3_button: "Zarejestruj się teraz"
   hoc2018_mc_educators_box4_title: "Skorzystaj z większej ilości zasobów informatycznych"
   hoc2018_mc_educators_box4_desc: "Powoduj zmiany w swojej społeczności dzięki umiejętnościom cyfrowym i zasobom informatycznym firmy Microsoft."
   hoc2018_mc_educators_box4_button: "Wykorzystuj zasoby"
+  hoc2022_mc_educators_box4_desc: "Inspiruj pasję STEM u uczniów K-12 dzięki 200hr programowi informatyki, od bloku do pytona, wspieranym przez rozwój zawodowy."
   hoc2022_mc_educators_box4_button: "Kontynuuj naukę"
   hoc2018_mc_watch_videos: "Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów"
   hoc2018_mc_videos_more: "Więcej <a href='%{inspiring_videos_playlist}'> inspirujących filmów</a> pokazujących role modeli i gwiazd"
@@ -1778,6 +1782,9 @@
   hoc2021_mc_mee_villages_description: 'Naucz się podstaw kodowania i odkrywaj różnorodność oraz integrację ze swoimi uczniami w Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: "AI Na dobre"
   hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami i naucz się kodować w grze Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: "Posiadłość Minecraft Escape"
+  hoc2022_mc_mee_description: 'Ucieknij z tajemniczej rezydencji o świcie i zarobić milion szmaragdów! Nowy samouczek Minecraft Hour of Code jest już dostępny w Minecraft: Education Edition dla systemów Windows, Mac, Chromebook, Ipad i Mobile. Zacznij korzystać z bezpłatnych zasobów dla nauczycieli, szkolenia, i filmy. '
+  hoc2022_mc_mee_timecraft_description: 'Cofnij się w czasie, aby uratować przyszłość w tej bezpłatnej lekcji kodowania w grze Minecraft: Education Edition.'
   footer_powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
   footer_built_on_github: "Oparty na GitHub firmy Microsoft"
   codebytes_skinny_banner_title: "Dołącz do nas 7-11 grudnia do naszych mini-lekcjach na żywo z CodeBytes!"
@@ -1835,6 +1842,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Uczenie maszynowe dla dzieci'
   ai_ecs: 'ECS: Sztuczna inteligencja (AI)'
   ai_ecs_description: "Nowa alternatywna jednostka programowa dla programu nauczania Odkrywanie Informatyki (ECS)."
+  ai_aiedu_intro: 'AiEdu: Wprowadzenie do sztucznej inteligencji'
+  ai_aiedu_intro_description: "Wprowadzenie do sztucznej inteligencji jest bezpłatne, innowacyjny, kulturowo odpowiedni program nauczania, w którym uczniowie rozwijają konceptualną wiedzę na temat tego, czym jest sztuczna inteligencja i jak jest używana w prawdziwym świecie."
   ai_elements: "Elementy sztucznej inteligencji (AI)"
   ai_elements_description: "Seria bezpłatnych kursów online utworzonych przez Reaktor i Uniwersytet Helsiński."
   ai_cognimates: "Cognimates"
@@ -1850,11 +1859,19 @@
   hoc2022_banner_description: "Eksploruj wszechświat, strzel gola, wykonaj ruch — jest tak wiele sposobów wykorzystania informatyki!"
   hoc2022_cta_primary: "Zobacz, co nowego"
   hoc2022_cta_secondary: "Wypróbuj więcej zajęć"
+  hoc2022_landing_page_explore_title: "Odkrywaj"
   hoc2022_landing_page_explore_description: "Otwórz drzwi do nowych światów dzięki informatyce!"
   hoc2022_landing_page_play_title: "Graj"
   hoc2022_landing_page_play_description: "Weź udział i wygraj!"
   hoc2022_landing_page_create_title: "Utwórz"
   hoc2022_landing_page_create_description: "Stwórz coś dziwnego i wspaniałego!"
+  hoc2022_landing_page_banner_alt_left: "Obcy tańczący obok Saturna w kosmosie"
+  hoc2022_landing_page_banner_alt_right: "Robot dryblujący piłką w przestrzeni przed startującą rakietą"
   try_it_yourself: "Wypróbuj to sam!"
   try_an_activity: "Wypróbuj zajęcia"
   see_more_activities: "Zobacz więcej aktywności"
+  hoc2022_nasa_webb_alt_text: "Ilustracja teleskopu NASA James Webb"
+  hoc2022_nasa_banner_heading: "Dołącz do NASA, aby wziąć udział w specjalnej sesji Godziny Kodowania o informatyce w kosmosie!"
+  hoc2022_nasa_banner_description: "Premiera 10 rano ET, 5 grudnia na kanale YouTube NASA STEM."
+  hoc2022_nasa_banner_heading_posthoc: "Sprawdź specjalny diał Godziny Kodowania NASA o informatyce w kosmosie!"
+  microsoft_logo_alt: "Logo Microsoft"

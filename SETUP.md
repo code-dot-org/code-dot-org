@@ -48,7 +48,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     <details>
       <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, see instructions for i) [AWS Account Login - Getting AWS access for a new user](https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit#heading=h.nbv3dv2smmks) and ii) [Install AWS Command Line Interface v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
+      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternative values for secrets normally retrieved from AWS Secrets Manager by modifying ["locals.yml"](locals.yml) (generated in the next step, or via `bundle exec rake install:locals_yml`)
     </details>
 
 1. `bundle exec rake install`
@@ -61,6 +61,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `bundle exec rake build`
     - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
+    - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
     - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
@@ -77,7 +78,23 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 ### OS X Monterey - including Apple Silicon (M1)
 
-These steps are for OSX devices, including Apple Macbooks running on [Apple Silicon (M1)](https://en.wikipedia.org/wiki/Apple_silicon#M_series), which requires special consideration in order to run natively (without [Rosetta](https://en.wikipedia.org/wiki/Rosetta_(software))). These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+These steps are for OSX devices, including Apple Macbooks running on [Apple Silicon (M1)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). At this time, if you are using an M1 Macbook, we strongly recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+
+These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+
+0. _(M1 Mac users only)_ Install Rosetta 2.
+
+  - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
+  - If not, install Rosetta using
+    - `softwareupdate --install-rosetta` (launches the Rosetta installer) or
+    - `/usr/sbin/softwareupdate --install-rosetta --agree-to-license` (skips installer and license agreement)
+  - Follow these steps to enable Rosetta:
+    - Select the app (Terminal) in Finder from Applications/Utilities.
+    - Right-click on the app (Terminal) and select `Get Info`.
+    - In `General`, check the `Open using Rosetta` checkbox.
+    - Close the Terminal and open it again.
+    - To verify that you are using a Rosetta terminal, run the command `arch` from the command line and it should output `i386`. The native terminal without Rosetta would output `arm64` for the above command. If you still do not see `i386` in the terminal then try restarting your machine. 
+
 
 1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
 
@@ -94,6 +111,11 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
    1. Set up your local MySQL server
       1. Force link 5.7 version via `brew link mysql@5.7 --force`
       2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
+      3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
+          1. `brew services stop mysql@5.7`
+          2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
+          3. `brew services start mysql@5.7`
+          4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
    1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
@@ -105,7 +127,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 1. Install **rbenv** via `brew install rbenv`
 
 1. Install **Ruby**
-    1. For non-M1 systems, running `rbenv install` from the project root directory should be sufficient
+    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
@@ -150,18 +172,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. For Apple Silicon (M1), return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. After cloning, you will need to make the changes below to your [Gemfile.lock](Gemfile.lock) file to switch from `libv8` to `libv8-node` and upgrade `mini_racer`. These changes should not be committed and will unfortunately clutter your `git status`.
-
-   ```text
-   ...
-   libv8-node (15.14.0.0)
-   ...
-   mini_racer (0.4.0)
-     libv8-node (~> 15.14.0.0)
-   ...
-   ```
-
-Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### OS X Catalina
 
@@ -622,6 +633,16 @@ If you run into an error message about `Could not find MIME type database in the
 - `brew install shared-mime-info`
 
 (More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
+#### eventmachine
+
+If bundle install fails with an error referencing `eventmachine`, try
+
+- `gem install eventmachine -v ‘[VERSION]’ -- --with-openssl-dir=$(brew --prefix libressl)`
+
+Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
+
+- `gem install eventmachine -v ‘1.2.7’ -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 

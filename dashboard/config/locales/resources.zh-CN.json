@@ -149,6 +149,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "虚拟课程修改"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "资源"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "密码强化：If...Then...场景",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -374,6 +377,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "虚拟课程修改"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "资源"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "语言的力量：课程测验",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -540,6 +546,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "虚拟课程修改"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "资源"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "成为超级数字公民：课程幻灯片",
@@ -751,9 +760,7 @@
           "type": "情感图像"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "如何在Code.org上创建课堂部分",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "教师视频"
+          "name": "如何在Code.org上创建课堂部分"
         },
         "pair_programming/courseb/2022": {
           "name": "结对编程",
@@ -1220,6 +1227,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "虚拟课程修改"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "资源"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "网上恶意STOP：课程幻灯片",
@@ -2607,9 +2617,14 @@
           "type": "答案要点"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "人工智能实验室中的数值数据",
           "type": "幻灯片"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "人工智能实验室中的数值数据"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "人工智能实验室中的数值数据",
           "type": "视频"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -4786,9 +4801,14 @@
           "type": "答案要点"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "人工智能实验室中的数值数据",
           "type": "幻灯片"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "人工智能实验室中的数值数据"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "人工智能实验室中的数值数据",
           "type": "视频"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {

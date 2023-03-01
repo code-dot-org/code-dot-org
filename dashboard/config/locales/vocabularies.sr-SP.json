@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Отклањање грешака"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
@@ -174,7 +182,24 @@
           "word": "Ауторска права"
         },
         "code/poem-art/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Понашање"

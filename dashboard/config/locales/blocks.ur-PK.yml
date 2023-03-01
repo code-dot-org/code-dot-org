@@ -5,6 +5,8 @@ ur:
       AmysBlocks_setPromptWithChoices:
         text: "{QUESTION} کے ذریعے صارف سے متغیر {VAR} مانگیں جو انتخابات {A}{B}{C}
           رکھتا ہو"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}کہتا ہے{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -988,6 +990,13 @@ ur:
         text: سیٹ اپ
       Dancelab_whenSetup2:
         text: سیٹ اپ
+      DansBlocks_getMicroscope:
+        text: خوردبین میں {INPUT1} ہے
+        options:
+          INPUT1:
+            '1': لیموں کا رس
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} اثر لگائیں۔"
         options:
@@ -1000,10 +1009,20 @@ ur:
             '"starburst"': اسٹاربسٹ
             '"glass"': ٹوٹتا ہوا شیشہ
             '"twinkling"': ٹمٹاتی روشنی
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): ڈریگگایبل ہونے کی وجہ سے
+          INPUT1:
+            '1': لیموں کا رس
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: " {VAR1} {SPRITE1COSTUME} کے ساتھ بات چیت کریں"
+      FunctionBlocks_makeManipulative2:
+        text: نئے {NUM} سپرائٹس {ANIMATION_NAME} بنائیں  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: نئے {NUM} {ANIMATION_NAME} سپرائٹس [BEHAVIOR][2] کی نمائندگی کرتے ہیں
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}کہتا ہے{TEXT1}"
       gamelab_addBehaviorSimple:
         text: سکرائٹ {SPRITE} شروع ہوتا ہے {BEHAVIOR}
       gamelab_addTarget:
@@ -1349,6 +1368,7 @@ ur:
             "'sound://category_space/Pillars_SFX.mp3'": ستون
             "'sound://category_space/Southern_ring_SFX.mp3'": جنوبی حلقه
             "'sound://category_space/Supernova_SFX.mp3'": سپرنووا
+            "'sound://category_space/Tycho_SFX.mp3'": ٹائیکو
       gamelab_playSpeech:
         text: کلام چلائیں {SOUND}
       gamelab_playerBehaviors:
@@ -1941,6 +1961,38 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: خوردبین میں {INPUT1} ہے
+        options:
+          INPUT1:
+            '1': لیموں کا رس
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': لیموں کا رس
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ٹھوس
+            new Behavior(liquid, []): مائع
+            new Behavior(wandering, []): گیس
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} کو {BEHAVIOR} رویے پر سیٹ کریں"
+        options:
+          BEHAVIOR:
+            '"solid"': ٹھوس کا ذرہ
+            '"liquid"': مائع کا ذرہ
+            '"gas"': گیس کا ذرہ
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': ٹھوس کا ذرہ
+            '"liquid"': مائع کا ذرہ
+            '"gas"': گیس کا ذرہ
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2013,6 +2065,21 @@ ur:
             '"sound://category_achievements/peaceful_win_1.mp3"': جیتیں
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': گھومنا
             '"sound://category_achievements/peaceful_win_6.mp3"': ہوا کی جھنکار
+      Poetry_playSoundOptionsSpace:
+        text: پلے آواز {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": بلیک ہول
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": بُلّیٹ کلسٹر
+            "'sound://category_space/Carina_SFX.mp3'": کارینا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": کیسیوپیا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": کریب نیبولا
+            "'sound://category_space/Launch_SFX.mp3'": شروع کریں
+            "'sound://category_space/Lift_Off.mp3'": اوپر اٹھیں
+            "'sound://category_space/Pillars_SFX.mp3'": ستون
+            "'sound://category_space/Southern_ring_SFX.mp3'": جنوبی حلقه
+            "'sound://category_space/Supernova_SFX.mp3'": سپرنووا
+            "'sound://category_space/Tycho_SFX.mp3'": ٹائیکو
       Poetry_setAuthor:
         text: مصنف مقرر کریں {AUTHOR}
       Poetry_setBackground:
@@ -2292,6 +2359,16 @@ ur:
           DIR:
             right: ٹھیک ہے
             left: بائیں بازو
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} اثر لگائیں۔"
+        options:
+          EFFECT:
+            '"bubbles"': بُلبُلے
+            '"confetti"': کاغذی لیریاں
+            '"hearts"': دل
+            '"rain"': بارش
+            '"starburst"': اسٹاربسٹ
+            '"twinkling"': ٹمٹاتی روشنی
       storylab_setHeading:
         text: ہیڈنگ سیٹ کریں {HEADING}
       storylab_setSubheading:

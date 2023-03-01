@@ -1134,7 +1134,10 @@
         "helloworld_food_sizes_soccer-2022": "Tamanho",
         "helloworld_food_sizes_space-2022": "Tamanho",
         "helloworld_food_sounds_soccer-2022": "Sons",
-        "helloworld_food_sounds_space-2022": "Sons"
+        "helloworld_food_sounds_space-2022": "Sons",
+        "helloworld_food_backgrounds": "Clique em Eventos",
+        "helloworld_food_backgrounds_soccer-2022": "Clique em Eventos",
+        "helloworld_food_backgrounds_space-2022": "Clique em Eventos"
       }
     }
   }

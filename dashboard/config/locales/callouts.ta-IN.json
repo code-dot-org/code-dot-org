@@ -1950,6 +1950,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "முதலில் இங்கே கிளிக் செய்யவும்!"
         }
       }
     }

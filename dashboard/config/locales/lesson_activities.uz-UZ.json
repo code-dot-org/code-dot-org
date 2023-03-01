@@ -662,6 +662,9 @@
         "c96ae163-bdf7-40b1-9b39-aa7047d30c2f": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "fd881ec7-eac1-4f8f-b708-7bbefd1d4a66": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
           "name": "Qizdirish"
         },
@@ -679,6 +682,9 @@
         },
         "83904b3e-7ab5-4cb0-9166-38c40c6d06c9": {
           "name": "Wrap Up"
+        },
+        "26389f28-c8e4-44e9-855f-b95094d2dae0": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "88ef108d-c468-473b-baf1-9c6e2ec76ef7": {
           "name": "Qizdirish"
@@ -718,6 +724,9 @@
         },
         "a340f15a-7b7f-4105-803c-f7e1759cced5": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "fa9d8e25-c013-4772-814a-5c7f8f80278d": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
           "name": "Qizdirish"
@@ -770,8 +779,20 @@
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Wrap Up"
         },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
+          "name": "Isitish: Xuddi shu so'z. Turli Ma'no."
+        },
         "5d5fd9dd-ddf2-43b6-b079-90a4951fc484": {
           "name": "Ko‘ring: So‘z kuchi"
+        },
+        "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
+          "name": "Tekshiring: muammo nimada?"
+        },
+        "13324f62-aa57-47e7-a446-9f26c40da904": {
+          "name": "Yakunlash: chiziqni kesib o'tish"
         },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -812,6 +833,9 @@
         "d6ffc021-c32a-41f7-ab5f-f04d9f3ca174": {
           "name": "Wrap Up"
         },
+        "ad38918e-f79e-40b0-a297-5bfbfa61242f": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "944b794e-9bf3-425c-9131-6e4c3662af4f": {
           "name": "Qizdirish"
         },
@@ -820,6 +844,9 @@
         },
         "5eb7bde7-0d2c-4816-b398-1c6a665cdeb9": {
           "name": "Wrap Up"
+        },
+        "39be02fb-09ad-4047-b301-1b645de2d50a": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "78530493-657f-4a50-bd1c-16933b560f2c": {
           "name": "Qizdirish"
@@ -968,6 +995,9 @@
         "e8117fa4-c0ea-4ad9-b368-24ec9f6d4923": {
           "name": "Wrap Up"
         },
+        "3f920d9d-49c0-4a91-af81-7fbb5b9fc757": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "ca73e49f-ddae-48b1-88b4-99adf0c7d092": {
           "name": "Qizdirish"
         },
@@ -976,6 +1006,9 @@
         },
         "f42d12fc-5eb1-4601-9ca8-46e0a3219bf0": {
           "name": "Wrap Up"
+        },
+        "1e9a6f37-f162-4f87-ab30-471ba44cc016": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2": {
           "name": "Qizdirish"
@@ -998,6 +1031,9 @@
         "6a3dbe1e-1e7a-46d4-a84a-2c89274513d8": {
           "name": "Wrap Up"
         },
+        "7d419f10-c436-4f75-b11b-8f83d5d5c791": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "4eec94f8-b49f-4b9a-944a-ab0ad4f03b6e": {
           "name": "Qizdirish"
         },
@@ -1012,6 +1048,9 @@
         },
         "79e1e2e9-dce6-4f3d-b5c8-3d762a776b10": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "5ed04482-6be8-433c-bf16-737461554f43": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "29e0563f-459b-4d33-8100-3677a52b69d0": {
           "name": "Qizdirish"
@@ -1106,6 +1145,18 @@
         "f4c94b25-e0f0-4caa-bebd-1557f771a849": {
           "name": "5 & 6-kun - Loyihani taqdimoti"
         },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
+          "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "5b342453-cd42-4221-8375-618cf1ddb41b": {
+          "name": "Etibor bering: Raqamli Trailni kuzatib boring"
+        },
+        "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
+          "name": "O'yin: Hayvonlarning treklari"
+        },
+        "e0e795f5-7368-4341-ac98-2b68aa5a26a0": {
+          "name": "Qamrab olish: To'xtash & O'ylash vaqti"
+        },
         "15846b35-8b6d-4970-87a4-cc861b66e9cb": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -1135,6 +1186,9 @@
         },
         "02613861-ab47-4a89-a8c5-12dbace2f54e": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "c396e3fc-d4aa-4cb3-9b13-472b50b660fd": {
+          "name": "Kurslararo imkoniyatlar"
         },
         "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
           "name": "Qizdirish"
@@ -1193,6 +1247,9 @@
         "fa7408d8-1dd3-4d8b-a611-f412c92361bd": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "eb3ac5b0-7f9f-4ab5-bc88-cc7d5748b97a": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "7e002958-d294-4986-bfdb-8d5cad5312e5": {
           "name": "Qizdirish"
         },
@@ -1202,6 +1259,9 @@
         "49a16e33-3c0f-40c7-9258-75a3e5ba717c": {
           "name": "Yakun"
         },
+        "4b9fe477-9a99-4cf7-b390-6cfaf046f61d": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "81967def-358e-4733-aedd-9aa01a30d8e8": {
           "name": "Qizdirish"
         },
@@ -1210,6 +1270,9 @@
         },
         "fb19c014-becb-4f19-9669-5591aec2bd2a": {
           "name": "Wrap Up"
+        },
+        "380aca01-c1a9-44eb-978e-f896d033b45c": {
+          "name": "Kurslararo imkoniyatlar"
         },
         "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
           "name": "Qizdirish"
@@ -1234,6 +1297,9 @@
         },
         "2cba77e6-e43d-4690-949f-f0fed16b6528": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "bc267268-7861-46d8-876a-4272d51fa63a": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
           "name": "Qizdirish"
@@ -1271,6 +1337,9 @@
         "f7d39471-7d15-4b89-bde4-6d4846004ccd": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "61a942b7-f5f6-4706-abaa-f7e05643bc93": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "1cd41560-d425-4c55-b269-ced0b1d8d561": {
           "name": "Qizdirish"
         },
@@ -1306,6 +1375,9 @@
         },
         "e231dcbb-0fb2-4c6b-9daa-3457e16e0f80": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "d178a54a-af69-4324-b41d-53bba0b0c945": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
           "name": "Qizdirish"
@@ -1343,6 +1415,9 @@
         "06405457-a7a2-4d06-a86e-49fcd9b68ca0": {
           "name": "Wrap Up"
         },
+        "7d776b69-c8bc-4061-bc09-6f7d4fabadd1": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
           "name": "Qizdirish"
         },
@@ -1372,6 +1447,9 @@
         },
         "d023bf11-e78a-4720-93f3-10031013096e": {
           "name": "Wrap Up"
+        },
+        "d945cc19-522e-494a-9b12-cfc84bf0ba6f": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "26877025-2ce3-4c89-8827-b7519c974edc": {
           "name": "Qizdirish"
@@ -1673,6 +1751,15 @@
         "4676cb43-a1fe-4d36-9f41-82d8516ac46a": {
           "name": "Tomosha qiling: Mening onlayn qo'shnim"
         },
+        "d4e86a51-c366-4b84-81b5-4b956bdb42dc": {
+          "name": "O'qing: Xavfsizlik, qoidalari!"
+        },
+        "854011f5-d6d4-4b11-85de-33e29b599c5d": {
+          "name": "Internet bilan: Sayohat qilishni organing"
+        },
+        "98b13493-1a10-4d3a-9a35-ec61a319bb48": {
+          "name": "To'xtatib turing va o'ylang"
+        },
         "217dee7e-80c0-40a2-b56e-e4df0c5805c6": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -1688,23 +1775,26 @@
         "29d2b8d1-5816-492c-bb32-ac81f88230c0": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "e3543673-fbb0-4ed4-b245-b87e03dac5c5": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "26024df9-6e4f-4347-a9e6-2d28952f5729": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "cb29d1b2-f952-4f72-a718-43126699ac32": {
           "name": "Asosiy mashg‘ulot"
         },
         "05c730d2-8b63-47f0-ba9d-d664b50fa08c": {
-          "name": "Wrap Up"
+          "name": "Yakunlash"
         },
         "7544ca1c-bed3-4846-82dd-1e4efeb05aa6": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "f824456e-fbbf-4107-a086-86cb2c66cdd2": {
-          "name": "O‘tish mashg‘uloti - Birini tanlash"
+          "name": "Koprik faoliyati"
         },
         "64398eb7-46ab-4f42-97ad-3e90882fe3cd": {
           "name": "Asosiy mashg‘ulot"
@@ -1727,6 +1817,9 @@
         "f4c545ed-2b8d-43da-b04e-326dbb97f16e": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "d352a834-02b6-493b-82a9-31c11a819dc8": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
           "name": "Qizdirish"
         },
@@ -1737,7 +1830,7 @@
           "name": "Wrap Up"
         },
         "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
-          "name": "Qizdirish"
+          "name": "Mashq"
         },
         "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
           "name": "Asosiy mashg‘ulot"
@@ -1763,6 +1856,9 @@
         "e3877751-093b-4fb5-a7ed-9de944d000ed": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "a7d18041-fd52-4f8c-a6ee-de62ca0bbf82": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "97af5df7-745a-49e3-bd61-3ddd22defa7c": {
           "name": "Qizdirish"
         },
@@ -1781,6 +1877,9 @@
         "70d17a47-00c8-41f8-aed2-f5aa76a2b9fb": {
           "name": "Wrap Up"
         },
+        "51e205c0-25de-4ff0-8333-32f10f0f6215": {
+          "name": "Kurslararo imkoniyatlar"
+        },
         "e68d3049-5654-4527-9c7b-8dc1426e138d": {
           "name": "Qizdirish"
         },
@@ -1795,6 +1894,9 @@
         },
         "23f581d0-c75d-456e-97cc-28bddf192f50": {
           "name": "Qizdirish"
+        },
+        "a6221538-4aea-417b-ad64-76ff327faf9e": {
+          "name": "Ko'prik faoliyati - Voqealar - birini tanlang"
         },
         "445fc613-92a9-4e73-b905-c0de8f745a0d": {
           "name": "Asosiy mashg‘ulot"
@@ -1847,6 +1949,9 @@
         "162606b4-d220-420b-9703-a3fde0f875bd": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "3a72607b-f645-4ec9-8c22-1d06333363d7": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "69b9baec-7332-406c-837a-fb64ae1fe34d": {
           "name": "Qizdirish"
         },
@@ -1879,6 +1984,9 @@
         },
         "fe040a1c-988d-4d15-a3bc-a4482aee15ad": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "1b5e65d2-6913-4ffa-99c8-c24b9f66c884": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "85aac025-b9a7-410d-aa32-833228487252": {
           "name": "Qizdirish"
@@ -1919,6 +2027,9 @@
         "94065f57-a74c-4669-aba3-4545afc1ac99": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "94a6f332-0114-4c5f-a50a-8ca867c388af": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "b1684e39-7a0d-4473-a2e2-3ca41cf53430": {
           "name": "Qizdirish"
         },
@@ -1927,6 +2038,9 @@
         },
         "ce2af74c-6ea2-4be2-b451-660bca33f7c9": {
           "name": "Wrap Up"
+        },
+        "80232621-bdde-444c-a5a0-3b34841a7204": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "c8520741-98b8-4caf-a698-966ba8b01e4e": {
           "name": "Qizdirish"
@@ -1954,6 +2068,9 @@
         },
         "320641ce-d300-442c-9c02-25d01b79c703": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "1cbfc372-bd13-4e94-b2c7-f334d93014a3": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "7124ed35-c669-491b-8481-6406fa13bd93": {
           "name": "Qizdirish"
@@ -1993,6 +2110,9 @@
         },
         "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
           "name": "Wrap Up"
+        },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Qizdirish"
@@ -6017,6 +6137,9 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Wrap Up"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
           "name": "Ko‘ring: So‘z kuchi"
         },
@@ -6031,6 +6154,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Wrap Up"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Qizdirish"
@@ -6100,6 +6226,9 @@
         },
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Qizdirish"
@@ -6215,6 +6344,9 @@
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Qizdirish"
         },
@@ -6272,6 +6404,9 @@
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Qizdirish"
         },
@@ -6281,6 +6416,9 @@
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
           "name": "Yakun"
         },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Qizdirish"
         },
@@ -6289,6 +6427,9 @@
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Wrap Up"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Qizdirish"
@@ -6314,6 +6455,9 @@
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Qizdirish"
         },
@@ -6338,6 +6482,9 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Wrap Up"
         },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "To'xtatib turing va o'ylang"
+        },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -6352,6 +6499,9 @@
         },
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Qizdirish"
@@ -6392,6 +6542,9 @@
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Qizdirish"
         },
@@ -6428,6 +6581,9 @@
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Qizdirish"
         },
@@ -6446,6 +6602,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Wrap Up"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "e1843002-564c-4803-9eaa-44f48a8e4159": {
           "name": "Qizdirish"
         },
@@ -6460,6 +6619,9 @@
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Qizdirish"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Ko'prik faoliyati - Voqealar - birini tanlang"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Asosiy mashg‘ulot"
@@ -6512,6 +6674,9 @@
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Qizdirish"
         },
@@ -6544,6 +6709,9 @@
         },
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Qizdirish"
@@ -6584,6 +6752,9 @@
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Qizdirish"
         },
@@ -6592,6 +6763,9 @@
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Wrap Up"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Qizdirish"
@@ -6619,6 +6793,9 @@
         },
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Qizdirish"
@@ -6725,6 +6902,9 @@
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Qizdirish"
         },
@@ -6784,6 +6964,9 @@
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Qizdirish"
@@ -6848,6 +7031,9 @@
         "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Qizdirish"
         },
@@ -6883,6 +7069,9 @@
         },
         "1d75c580-140f-4796-9e75-5863162c676b": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Qizdirish"
@@ -6920,6 +7109,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Wrap Up"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Qizdirish"
         },
@@ -6949,6 +7141,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Wrap Up"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Qizdirish"
@@ -7286,6 +7481,9 @@
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Wrap Up"
         },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "077242ad-8c8a-4b24-a139-a5e198abd405": {
           "name": "Qizdirish (ixtiyoriy)"
         },
@@ -7306,6 +7504,9 @@
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Wrap Up"
+        },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Qizdirish"
@@ -7328,6 +7529,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Wrap Up"
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Kursikulyar imkoniyatlar"
+        },
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Qizdirish"
         },
@@ -7342,6 +7546,9 @@
         },
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Kursikulyar imkoniyatlar"
         },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Qizdirish"

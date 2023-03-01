@@ -1104,6 +1104,10 @@ ms:
             required:
               display_name: Gambaran Keseluruhan
         dance-2019:
+          title: Majlis Tari-Menari
+          description_short: Kod Majlis Tari-Menari untuk berkongsi dengan rakan anda.
+            Menampilkan Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzik
+            dari “Encanto,” dan banyak lagi!
           description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan
             rakan anda!
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi
@@ -2269,6 +2273,18 @@ ms:
               name: Java Lab
             lesson-6:
               name: Gelung
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Pemboleh ubah
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Tatasusunan Satu Dimensi (1D)
+        hello-world-space-2022:
+          title: 'Helo Dunia: Ruang'
+        hello-world-soccer-2022:
+          title: 'Helo Dunia: Bola Sepak'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2303,8 +2319,24 @@ ms:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Senarai
+              display_name: Data
             csp_loops:
               display_name: Gelung
             csp_project:
               display_name: Projek
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Senarai
+            lessonGroup-3:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Projek
+        csp-playground:
+          description_audience: Penulis Kurikulum
+          description_short: Untuk mengemas kini pelajaran atau peringkat antara versi
+            kurikulum
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan kepada Makmal Aplikasi

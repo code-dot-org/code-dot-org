@@ -9997,10 +9997,10 @@ zh-CN:
         title: 快速检查标题
       CSD U1 IOSP match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 从互联网上获取当天的天气预报
+        - text: 向用户显示一张好衣服的图片
+        - text: 保留一份可用服装的清单以及在什么类型的天气穿它们
+        - text: 将天气状况与适合该条件的服装相匹配
         questions:
         - text: 输入
         - {}
@@ -10008,10 +10008,10 @@ zh-CN:
         - text: 正在处理中
       CSD U1 IOSP match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 从互联网上获取当天的天气预报
+        - text: 向用户显示一张好衣服的图片
+        - text: 保留一份可用服装的清单以及在什么类型的天气穿它们
+        - text: 将天气状况与适合该条件的服装相匹配
         questions:
         - text: 输入
         - {}
@@ -10019,10 +10019,10 @@ zh-CN:
         - text: 正在处理中
       CSD U1 IOSP match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 从互联网上获取当天的天气预报
+        - text: 向用户显示一张好衣服的图片
+        - text: 保留一份可用服装的清单以及在什么类型的天气穿它们
+        - text: 将天气状况与适合该条件的服装相匹配
         questions:
         - text: 输入
         - {}
@@ -10030,64 +10030,73 @@ zh-CN:
         - text: 正在处理中
       CSD U1 Test PSP match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 决定他们到底想画什么，他们需要什么补给品，以及每个部分由谁来做。
+        - text: 讨论他们喜欢壁画的地方以及如何对其进行改进。
+        - text: 画壁画。
+        - text: 询问老师他们需要创作什么样的壁画，以及需要多大
         questions:
         - text: 准备
         - text: 反思
         - text: 尝试
         - text: 定义
+        content1: 五名学生正在学校旁边画一幅壁画。将他们的所作所为与问题解决过程中的一个步骤相匹配。
       CSD U1 Test PSP match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 决定他们到底想画什么，他们需要什么补给品，以及每个部分由谁来做。
+        - text: 讨论他们喜欢壁画的地方以及如何对其进行改进。
+        - text: 画壁画。
+        - text: 询问老师他们需要创作什么样的壁画，以及需要多大
         questions:
         - text: 准备
         - text: 反思
         - text: 尝试
         - text: 定义
+        content1: 五名学生正在学校旁边画一幅壁画。将他们的所作所为与问题解决过程中的一个步骤相匹配。
       CSD U1 Test PSP match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 决定他们到底想画什么，他们需要什么补给品，以及每个部分由谁来做。
+        - text: 讨论他们喜欢壁画的地方以及如何对其进行改进。
+        - text: 画壁画。
+        - text: 询问老师他们需要创作什么样的壁画，以及需要多大
         questions:
         - text: 准备
         - text: 反思
         - text: 尝试
         - text: 定义
+        content1: 五名学生正在学校旁边画一幅壁画。将他们的所作所为与问题解决过程中的一个步骤相匹配。
       CSD U1 Test define a computer:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 一台利用信息帮助人们完成思考任务的机器
+          correct: true
+        - text: 一台带屏幕和键盘的机器
+        - text: 一台可以连接到互联网的机器
+        - text: 一台用来输入、输出、存储和处理信息的机器
+          correct: true
+        - text: 一台使用电力（来自电缆或电池）的机器
         questions:
-        - {}
+        - text: 以下哪两种是定义计算机的最佳方法？（选择两项）
       CSD U1 Test define a computer_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 一台利用信息帮助人们完成思考任务的机器
+          correct: true
+        - text: 一台带屏幕和键盘的机器
+        - text: 一台可以连接到互联网的机器
+        - text: 一台用来输入、输出、存储和处理信息的机器
+          correct: true
+        - text: 一台使用电力（来自电缆或电池）的机器
         questions:
-        - {}
+        - text: 以下哪两种是定义计算机的最佳方法？（选择两项）
       CSD U1 Test define a computer_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 一台利用信息帮助人们完成思考任务的机器
+          correct: true
+        - text: 一台带屏幕和键盘的机器
+        - text: 一台可以连接到互联网的机器
+        - text: 一台用来输入、输出、存储和处理信息的机器
+          correct: true
+        - text: 一台使用电力（来自电缆或电池）的机器
         questions:
-        - {}
+        - text: 以下哪两种是定义计算机的最佳方法？（选择两项）
       CSD U1 Test define problem:
         answers:
         - correct: true
@@ -10751,7 +10760,7 @@ zh-CN:
         - text: 企鹅
         - text: 青蛙
           correct: true
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10761,7 +10770,7 @@ zh-CN:
         - text: 企鹅
         - text: 青蛙
           correct: true
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10771,7 +10780,7 @@ zh-CN:
         - text: 企鹅
         - text: 青蛙
           correct: true
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10781,7 +10790,7 @@ zh-CN:
           correct: true
         - text: 企鹅
         - text: 青蛙
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10791,7 +10800,7 @@ zh-CN:
           correct: true
         - text: 企鹅
         - text: 青蛙
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -10801,7 +10810,7 @@ zh-CN:
           correct: true
         - text: 企鹅
         - text: 青蛙
-        - {}
+        - text: 长颈鹿
         - {}
         questions:
         - {}
@@ -14978,7 +14987,7 @@ zh-CN:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 我很担心，因为我不擅长数学。
       csp-post-survey-2017-q4:
         answers:
         - correct: true
@@ -15040,17 +15049,26 @@ zh-CN:
         content1: 描述
       csp-post-survey-who-encouraged-csp:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 一位朋友
+          correct: true
+        - text: 一位家长
+          correct: true
+        - text: 另一位家庭成员
+          correct: true
+        - text: 一位老师
+          correct: true
+        - text: 一位辅导员
+          correct: true
+        - text: 学校里的其他人（教练、校长、院长等）
+          correct: true
+        - text: 未列出的其它人
+          correct: true
+        - text: 没有特别的什么人，只是我自己想参加
+          correct: true
+        - text: 我没有选择上这门课
+          correct: true
         questions:
-        - {}
+        - text: 有人鼓励是你选择上这堂课的一个因素吗？如果是这样，谁对你影响最大？（最多选择两个）。
       csp-post-survey-worry-seem-less-capable:
         answers:
         - correct: true
@@ -16315,12 +16333,16 @@ zh-CN:
         - {}
       outside-school-cs:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 我从来没有在校外进行过计算机科学活动
+          correct: true
+        - text: 课后项目
+          correct: true
+        - text: 独立的在线活动
+          correct: true
+        - text: 夏令营或暑期计划
+          correct: true
         questions:
-        - {}
+        - text: 您最近在课余时间参加的计算机科学活动或项目是什么（例如课后课程、在线课程、夏令营或暑期课程）？
       post-assessment survey q31-a-2017b:
         answers:
         - correct: true
@@ -16638,43 +16660,67 @@ zh-CN:
         - {}
       reasons-took-course:
         answers:
+        - text: 我有朋友正在上这门课程。
+          correct: true
+        - text: 我真的很喜欢这位老师
+          correct: true
+        - text: 我想它应该会很有趣
+          correct: true
+        - text: 我想更多地了解计算机科学
+          correct: true
+        - text: 我想它应该会比较容易
+          correct: true
+        - text: 我想它应该会比较有挑战性
+          correct: true
+        - text: 这个班在我的学校有很好的声誉
+          correct: true
+        - text: 有人鼓励我上这门课
+          correct: true
+        - text: 它是我想上的另一门计算课的先修课
+          correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 未列出其它原因
+          correct: true
         questions:
-        - {}
+        - text: 你上这堂课的两个主要原因是什么？（最多选择两个）。
       reasons-took-course-csd_2021:
         answers:
+        - text: 我有朋友正在上这门课程。
+          correct: true
+        - text: 我真的很喜欢这位老师
+          correct: true
+        - text: 我想它应该会很有趣
+          correct: true
+        - text: 我想更多地了解计算机科学
+          correct: true
+        - text: 我想它应该会比较容易
+          correct: true
+        - text: 我想它应该会比较有挑战性
+          correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 未列出其它原因
+          correct: true
         questions:
-        - {}
+        - text: 你上这堂课的两个主要原因是什么？（最多选择两个）。
       reasons-took-course-csd_2022:
         answers:
+        - text: 我有朋友正在上这门课程。
+          correct: true
+        - text: 我真的很喜欢这位老师
+          correct: true
+        - text: 我想它应该会很有趣
+          correct: true
+        - text: 我想更多地了解计算机科学
+          correct: true
+        - text: 我想它应该会比较容易
+          correct: true
+        - text: 我想它应该会比较有挑战性
+          correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 未列出其它原因
+          correct: true
         questions:
-        - {}
+        - text: 你上这堂课的两个主要原因是什么？（最多选择两个）。
       same-ability:
         answers:
         - correct: true
@@ -16711,16 +16757,19 @@ zh-CN:
         - text: 我不了解
           correct: true
         questions:
-        - {}
+        - text: 你在 Code.org 上完成编程课程了吗（不包括 “编程一小时”）？
       taken-other-cs:
         answers:
         - text: 不
           correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 是的，在另一堂课上稍微有点儿
+          correct: true
+        - text: 是的，一门为期一个学期的课程
+          correct: true
+        - text: 是的，一门为期一年的课程
+          correct: true
         questions:
-        - {}
+        - text: 你在学校上过其他计算机科学课吗？
       teacher_encourage:
         answers:
         - text: 是
@@ -16765,7 +16814,7 @@ zh-CN:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 在这门计算机科学课上，我真的可以做我自己。
       will-be-myself-in-cs_2021:
         answers:
         - correct: true
@@ -16776,7 +16825,7 @@ zh-CN:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 在这门计算机科学课上，我真的可以做我自己。
       will-be-myself-in-cs_2022:
         answers:
         - correct: true
@@ -16787,7 +16836,7 @@ zh-CN:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 在这门计算机科学课上，我真的可以做我自己。
       worried-less-capable:
         answers:
         - correct: true
@@ -16798,7 +16847,7 @@ zh-CN:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 我担心别人会认为我在计算机科学方面的能力较差。
       worried-seen-incapable:
         answers:
         - correct: true
@@ -16843,8 +16892,10 @@ zh-CN:
         display_name: 艺术家练习
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: 艺术家练习
+        description: 到目前为止做得非常好！选择您的下一个活动。尽可能多地完成。继续练习函数的使用！
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: 艺术家练习
+        description: 到目前为止做得很好！选择您的下一个活动。尽可能多地完成。继续练习使用嵌套循环！
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: 描述
         markdown: "# 大爆发：创建你自己的模拟\n\n## 欢迎到怪物镇！\n怪物镇通常是一个开心和健康的地方。怪物们喜欢探索和访问朋友。 \n\n<img
@@ -17033,15 +17084,11 @@ zh-CN:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: 斯奎特会被橡子吸引，这说明了这个程序没有缺陷。
-          feedback: 不正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
           correct: true
-          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 斯奎特不会碰到橡子因为没有足够的`向前移动`模块。
-          correct: true
-          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 鼠奎特不会从第一个方块开始移动。
-          feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+          feedback: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
         questions:
         - text: 在代码中寻找缺陷。斯奎特最终拿到了橡子还是中间出了问题？
       courseC_multi_maze_programming8_predict12022:
@@ -17495,3 +17542,16 @@ zh-CN:
           feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
         questions:
         - text: 仔细观察代码。你认为程序运行时会发生什么？
+      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
+        teacher_markdown: |
+          **教师单元末调查：** 在你的学生完成调查之后，我们非常感谢你完成教师调查
+
+          ## [点击这里查看教师调查] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      aiml-ch1-pulse-survey_2021:
+        title: 人工智能和机器学习快速调查！
+      aiml-ch1-pulse-survey_2022:
+        title: 人工智能和机器学习快速调查！
+      aiml-intro-pulse-survey_2021:
+        title: 人工智能和机器学习快速调查！
+      aiml-intro-pulse-survey_2022:
+        title: 人工智能和机器学习快速调查！

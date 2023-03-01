@@ -14,12 +14,22 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید</a>'
   csedweek_banner_teachers_text: "آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید"
   n_have_learned_an_hoc: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه شده</h3>"
+  try_hoc_num_served: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید%{num} ارائه شده</h3>"
+  try_hoc_num_served_markdown: |-
+    # یک ساعت
+    ## کدنویسی را امتحان کنید
+    ###%{num} ارائه‌شده #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "هر کسی می تواند یاد بگیرند."
   learn_now: "همین حالا یاد بگیرید"
   petition_message: "هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته باشد"
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به پیوندید.'
   petition_sign_message_num: "اگر موافق هستید ، نام خود را امضا کنید و به همراه %{num} نفر دیگر به لیست نامه های پست الکترونیکی ما بپیوندید."
   petition_join_others: 'به #دیگران ملحق شوید'
+  petition_join_others_num: "به دیگران %{num} بپیوندید"
   name: "نام"
   email: "ایمیل"
   zipcode: "کدپستی یا کشور"
@@ -44,6 +54,7 @@
   hoc2014_support: "حمایتش کن &#x25BE;"
   hoc2014_whatishoc: "ساعتِ کدنویسی چيست؟"
   csedweek_map_header: "#CSEdWeek / رویداد \"ساعت کدنویسی\" در سرار جهان"
+  csedweek_map_header_num: "%{num} CSEdWeek / رویداد «ساعت کدنویسی» در سرار جهان"
   csedweek_map_signup: "رویدادتان را ثبت کنید"
   csedweek_map_search_placeholder: "جست و جو برای رویداد های \"ساعت کدنویسی\""
   csedweek_map_search_search: "جستجو کن"
@@ -521,6 +532,8 @@
   dashboard_puzzle: "پازل"
   dashboard_question: "سوال"
   dashboard_correctness_correct: "صحیح است"
+  dashboard_submission_submitted: "ثبت‌شده"
+  dashboard_submission_in_progress: "در حال پیش رفت"
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک هفته:'
   stats_hoc_2013_image_alt: "وضعیت کد نویسی در سال 2013"
   dashboard_teacher: "دبیر"
@@ -618,6 +631,20 @@
   course2_name: "دوره 2"
   course3_name: "دورۀ 3"
   course4_name: "دوره 4"
+  coursea-2021_name: دوره A ‏(2021)
+  courseb-2021_name: دوره B ‏(2021)
+  coursec-2021_name: دوره C ‏(2021)
+  coursed-2021_name: دوره D ‏(2021)
+  coursee-2021_name: دوره E ‏(2021)
+  coursef-2021_name: دوره F ‏(2021)
+  coursea-2022_name: دوره A ‏(2022)
+  courseb-2022_name: دوره B ‏(2022)
+  coursec-2022_name: دوره C ‏(2022)
+  coursed-2022_name: دوره D ‏(2022)
+  coursee-2022_name: دوره E ‏(2022)
+  coursef-2022_name: دوره F ‏(2022)
+  express-2021_name: دوره اکسپرس (2021)
+  express-2022_name: دوره اکسپرس (2022)
   accelerated_name: "دوره های سریع"
   20-hour_name: دوره های سریع
   classicmaze_name: "هزارتوی کلاسیک"
@@ -810,6 +837,15 @@
   playlab_shortdescription: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
   infinity_shortdescription: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت."
   artist_shortdescription: "با نقاش چند عکس و طرح باحال بکش!"
+  coursea-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  courseb-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  coursec-2020_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
+  coursea-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  courseb-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  coursec-2021_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
+  coursea-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  courseb-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  coursec-2022_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
   codeorg_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است."
   codeintl_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است."
   thinkersmithspanish_longdescription: "با استفاده از \"واژگان رباتی\" از پیش تعیین شده دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد."
@@ -1050,9 +1086,11 @@
   header_help_us: "به ما کمک کنید"
   header_about: "درباره"
   header_report_bug: "گزارش مشکل"
+  header_legal: "حریم خصوصی و مسائل حقوقی"
   header_legal_privacy: "قوانین حفظ حریم خصوصی"
   header_legal_tos: "شرایط"
   header_tutorials: "آموزش‌ها"
+  sprite_lab_documentation: "مستندات آزمایشگاه اسپرایت"
   header_documentation: "مستندات"
   user_header_label: "سلام %{username}"
   user_header_team: "تیم"
@@ -1065,8 +1103,10 @@
   user_header_gamelab: "کارگاه بازی سازی"
   user_header_playlab: "آزمایشگاه بازی"
   user_header_dance: "جشن و رقص"
+  user_header_spritelab: "آزمایشگاه اسپرایت"
   user_header_minecraft: "ماینکرفت"
   user_header_flappy: "فلاپی"
+  user_header_view_all: "مشاهده همه پروژه‌ها..."
   user_header_view_my_projects: "پروژه های من را ببینید"
   view_all_sections: "مشاهده‌ی همه‌ی بخش‌ها"
   hero_name: 'ماینکرافت: سفر قهرمانان'
@@ -1074,7 +1114,9 @@
   account_sign_up_email_opt_in: "آیا می‌توانیم درباره به‌روزرسانی‌های دوره‌های آموزشی، فرصت‌های محلی یا سایر اخبار علوم رایانه به شما ایمیل بفرستیم؟ (تقریبا یک بار در ماه)"
   account_sign_up_child_accept_terms: "تأیید می کنم که از والدین یا قیم قانونی خود برای استفاده از خدمات Code.org مجوز دارم."
   hoc_overview_dance_title: "جشن و رقص"
+  hoc_overview_dance_2022_subtitle: "یک Dance Party را کدنویسی کرده و با دوستان خود به اشتراک بگذارید. دوره‌ای با همراهی Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez همراه با موسیقی فیلم انکانتو کمپانی دیزنی و کلی چیز دیگه!"
   hoc_overview_hello_world_2022_subtitle: "یکی از چهار تم جالب را انتخاب کنید تا کاراکترهای واکنشگر را در دنیایی که خودتان ایجاد کرده‌اید کدنویسی کنید."
+  hoc_overview_hello_world_2022_alt_text: "فضانورد متحرک و کاراکترهای حیوان که در اطراف تصویری از زمین معلق هستن"
   hoc_overview_start_tutorial: "شروع"
   hoc2018_creativity_create: "ایجاد"
   hoc2018_creativity_homepage: "به تخیل بال پرواز بده و نوآروری را متولد کن. با یک ساعت برنامه‌نویسی و نسخه ویژه خلاقیت خودت، هر چیزی که ممکن است باشد، شروع کن. ویدیو را مشاهده کن."
@@ -1085,6 +1127,10 @@
   hoc2018_mc_designer_description: "جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما"
   hoc2018_mc_start: "شروع"
   hoc2018_mc_educators_box2_button: "دانلود"
+  hoc2022_mc_educators_box3_desc_markdown: 'از این تقاضا [دوره رایگان] (%{free_course_link}) استفاده کنید و یا کل کلاس خود را برای شرکت در یک کارگاه Hour of Code زنده با یک استاد مهمان ثبت‌نام کنید. ارائه شده به شکل چندباره در طول CSEW، 6 تا 11 دسامبر. '
+  hoc2022_mc_educators_box3_button: "ثبت‌نام كنيد"
+  hoc2022_mc_educators_box4_desc: "علاقه به STEM را در دانش‌آموزان K-12 با 200 ساعت دوره آموزشی علوم کامپیوتر (از یادگیری بلوکها تا زبان پایتون) که به شکل حرفه‌ای ایجاد شده بیدار کنید."
+  hoc2022_mc_educators_box4_button: "ادامه آموزش"
   hoc2018_mc_homepage_join_us: "به ما بپیوندید"
   hoc2018_mc_homepage_try_it: "آن را امتحان کنید"
   hoc2018_mc_back: "ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!"
@@ -1099,15 +1145,33 @@
   hoc2018_dance_teacher_resources_tile2_button: "فعالیت کلاسی"
   hoc2018_dance_amazon_about_future_engineer_button: "بیشتر بیاموزید"
   page_not_found_title: "صفحه پیدا نشد"
+  hoc2022_mc_mee_title: "فرار از عمارت ماینکرافت"
+  hoc2022_mc_mee_description: 'از عمارت رازآلود تا زمان طلوع آفتاب فرار کنید و یک میلیون زمرد دریافت کنید! آموزش جدید Hour of Code ماینکرافت حالا در نسخه آموزشی تحت ویندوز، مک، کروم‌بوک، آیپد و موبایل موجود است. با منابع مربیان، آموزشها و ویدئوها کار را شروع کنید. '
+  hoc2022_mc_mee_timecraft_description: 'در این درس رایگان کدنویسی نسخه آموزشی Minecraft برای نجات آینده با ماشین زمان سفر کنید.'
   footer_powered_by_aws: "قدرت گرفته شده توسط وب سرویس های آمازون"
+  footer_built_on_github: "ساخته‌شده در GitHub از طریق مایکروسافت"
   codebytes_skinny_banner_english_only: "فقط انگلیسی"
   footer_privacy_policy: "قوانین حفظ حریم خصوصی"
   footer_about: "درباره"
   footer_partners: "شرکا"
   footer_donate: "کمک مالی بدهید"
+  footer_store: "فروشگاه"
   footer_support: "پشتیبانی"
   footer_terms: "شرایط"
   ai_for_oceans_lesson_plan: "طرح درس"
   ai_activity: "فعالیت"
   ai_description: "توضیحات"
+  outbreak_tile_title: "شیوع"
+  footer_cookie_notice: "اطلاعیه کوکی"
+  hoc2022_banner_title: "بگرد، بازی کن و خلق کن!"
+  hoc2022_banner_description: "جهان را بگرد، امتیاز کسب کن، حرکت ایجاد کن - راه‌های زیادی برای کار با علوم کامپیوتر هست!"
+  hoc2022_landing_page_explore_title: "اکتشاف"
+  hoc2022_landing_page_explore_description: "با علوم کامپیوتر درها را به دنیاهای جدید باز کنید!"
+  hoc2022_landing_page_play_description: "میدون رو در اختیار بگیر و امتیاز کسب کن!"
   hoc2022_landing_page_create_title: "ایجاد"
+  hoc2022_landing_page_create_description: "چیزی عجیب و غریب و خارق‌العاده بساز!"
+  hoc2022_landing_page_banner_alt_left: "رقص بیگانه در کنار زحل در فضا"
+  hoc2022_landing_page_banner_alt_right: "یک ربات یک توپ فوتبال را در فضای مقابل یک موشک که در حال استارت پرواز است دریبل میزند"
+  try_it_yourself: "خودتان امتحان کنید!"
+  try_an_activity: "فعالیتی رو تست کنید"
+  see_more_activities: "مشاهده فعالیت های بیشتر"

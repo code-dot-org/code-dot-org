@@ -1,25 +1,137 @@
 ca:
   data:
     progressions:
+      AI Machine Learning - Video: Aprenentatge automàtica amb IA - Vídeo
+      'AI: Impact on Society - Video': 'IA: Impacte en la societat - Vídeo'
+      'AI: Training Data & Bias - Video': 'IA: Dades d''entrenament i biaixos - Vídeo'
       'Artist: Variables': 'Artista: Variables'
+      Assessment: Avaluació
+      Back and Forth: Anada i tornada
       Bass, Mid, and Treble: Greus, mitjans i aguts
+      Binary Bracelets - Unplugged Activity: Polseres binàries - Activitat sense connexió
+      Challenge: Repte
+      Conditionals with Cards - Unplugged Activity: Condicionals amb cartes - Activitat sense connexió
+      Create your project: Crear el teu propi projecte
       Dance Crews: Grups de dansa
       Debugging: Depuració
       Design Mode: Mode de disseny
+      Designing for Accessibility: Dissenyar per garantir l'accessibilitat
       Drawing: Dibuix
       Events: Esdeveniments
       Example: Exemple
-      For Loops: Per bucles
+      Example Projects: Projectes d'exemple
+      Example projects: Projectes d'exemple
+      Exploration: Exploració
+      'Exploration: Rikki''s Poster': 'Exploració: El pòster de la Rikki'
+      'Exploration: Sample Project': 'Exploració: Projecte de mostra'
+      For Loops: Bucles "for"
       Free Play: Joc lliure
+      'Free Play: Make a Scene': 'Joc lliure: Fem una escena'
+      'Free Play: Make an Interactive Scene': 'Joc lliure: Fem una escena interactiva'
       Functions: Funcions
       Functions with Parameters: Funcions amb Paràmetres
-      Get In Formation: Posa't en formació
+      Get In Formation: Tothom al seu lloc
+      Graph Paper Programming - Unplugged Activity: Programació amb paper quadriculat - Activitat sense connexió
+      How to Make a Sprite: Com crear un sprite
+      Keep On Dancing!: Que el ritme no pari!
+      Lesson Extras: Lliçons addicionals
+      Levels: Nivells
       Lists: Llistes
-      Measures: Mesures
+      Measures: Compassos
+      'Minecraft: Hero''s Journey': 'Minecraft: El viatge de l''heroi'
+      'Mini-Project: About Me': 'Miniprojecte: Coses sobre mi'
+      'Mini-Project: Create a Virtual Pet': 'Mini-Projecte: Fem una mascota virtual'
+      'Mini-Project: Royal Battle': 'Miniprojecte: Batalla real'
+      "Mini-Project: Snowflake #1": "Miniprojecte: Floc de neu 1"
+      "Mini-Project: Snowflake #2": "Miniprojecte: Floc de neu 2"
+      'Mini-Project: Sticker Art': 'Miniprojecte: Art amb adhesius'
+      'Mini-project: Chase Game': 'Miniprojecte: Joc de persecució'
+      'Mini-project: Flappy Game': 'Miniprojecte: Joc amb el Flappy'
+      'Mini-project: Jorge the Dog': 'Miniprojecte: El gosset Jorge'
+      'Mini-project: Sticker Art': 'Miniprojecte: Art amb adhesius'
+      'Mini-project: Sticker Design': 'Miniprojecte: Disseny d''adhesius'
+      More Buttons: Més botons
+      Move It Move it Video  - Unplugged Activity: A moure's - Activitat sense connexió
+      My Online Neighborhood: El meu barri d'internet
+      My Robotic Friends - Unplugged Activity: Els meus amics robòtics - Activitat sense connexió
       Overview: Vista general
       Pair Programming: Programació per parelles
+      Picturing Data: Dades en imatges
+      Planning: Planificació
+      Practice: Pràctica
+      Prediction: Predicció
+      Programming with Rey and BB-8: Programació amb la Rey i el BB-8
+      Project: Projecte
+      Project Guide: Guia del projecte
+      Properties: Propietats
       Quarter Notes: Notes negres
-      Speed it Up, Slow it Down: Vés més ràpid, vés més lent
+      Reflection: Reflexió
+      Relay Programming - Unplugged Activity: Programació amb relleus - Activitat sense connexió
+      Review: Repàs
+      Skill Building: Desenvolupament d'habilitats
+      Skill-Building: Desenvolupament d'habilitats
+      Speed it Up, Slow it Down: Ara ràpid, ara lent
+      Sprite Properties: Propietats de l'sprite
+      Teach AI a New Word: Ensenya una paraula nova a la IA
+      The Harvester: L'agricultora
+      Train an AI to Clean the Ocean: Entrena una IA per netejar l'oceà
+      Using Training Data: Ús de dades d'entrenament
       Variables: Variables
+      Video: Vídeo
+      'Video - Maze Intro: Programming with Blocks': 'Vídeo - Introducció al laberint: Programació amb blocs'
+      'Video:  Debugging with the Step Button': 'Vídeo:  Depurar amb el botó de pas'
+      'Video: "If/Else"': 'Vídeo: “If/Else”'
+      'Video: Artist Intro with JR Hildebrand': 'Vídeo: Introducció a l''Artista amb J. R. Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Vídeo: Introducció a l''Artista amb J. R. Hildebrand'
+      'Video: Code Your Own Flappy Game': 'Vídeo: Programa el teu propi joc amb el Flappy'
+      'Video: Conditionals: If Statements': 'Vídeo: Condicionals: sentències if'
+      'Video: Conditionals: If and If/Else Statements': 'Vídeo: Condicionals: sentències if i if/else'
+      'Video: Dance Party Events': 'Vídeo: Festa de ball - Esdeveniments'
+      'Video: Dance Party Measures': 'Vídeo: Festa de ball - Compassos'
+      'Video: Dance Party Party On!': 'Vídeo: Festa de ball - Que comenci la festa!'
+      'Video: Dance Party Properties': 'Vídeo: Festa de ball - Propietats'
+      'Video: Dance Party Warm Up': 'Vídeo: Festa de ball - Escalfament'
+      'Video: De-bugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: Debugging with Scrat ': 'Vídeo: Depuració amb l''Scrat '
+      'Video: Debugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: Events': 'Vídeo: Esdeveniments'
+      'Video: Follow The Digital Trail': 'Vídeo: Seguim el rastre digital'
+      'Video: How to Make a Sprite': 'Vídeo: Com fer un sprite'
+      'Video: Ice Age Loops': 'Vídeo: Bucles a l''Edat de gel'
+      'Video: Introducing Sprite Lab': 'Vídeo: Introducció al Laboratori d''Sprites'
+      'Video: Introduction to Play Lab': 'Vïdeo: Introducció al Laboratori de Jocs'
+      'Video: Loops in Artist': 'Vídeo: Bucles a l''Artista'
+      'Video: Loops with the Artist': 'Vídeo: Bucles amb l''Artista'
+      'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducció al laberint - Programació amb blocs'
+      'Video: Maze Intro - Programming with Blocks ': 'Vídeo: Introducció al laberint - Programació amb blocs '
+      'Video: Maze Intro: Programming with Blocks': 'Vídeo: Introducció al laberint: Programació amb blocs'
+      'Video: Measures': 'Vídeo: Compassos'
+      'Video: Minecraft - Congratulations': 'Vídeo: Minecraft - Enhorabona'
+      'Video: Minecraft - Functions': 'Vídeo: Minecraft - Funcions'
+      'Video: Minecraft - Repeat Loops': 'Vídeo: Minecraft - Bucles de repetició'
+      'Video: Minecraft - The Agent': 'Vídeo: Minecraft - L''agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Vídeo: Minecraft: Viatge Aquàtic i condicionals'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Vídeo: Minecraft: Viatge Aquàtic - Enhorabona'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Vídeo: Minecraft: Introducció a Viatge Aquàtic'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Vídeo: Minecraft: Viatge Aquàtic i repetir "until"'
+      'Video: Nested Loops': 'Vídeo: Bucles imbricats'
+      'Video: Nested Loops with the Bee': 'Vídeo: Bucles imbricats amb l''abella'
+      'Video: Programming with Blocks': 'Vídeo: Programació amb blocs'
+      'Video: Programming with Rey and BB-8': 'Vídeo: Programació amb la Rey i el BB-8'
+      'Video: Properties': 'Vídeo: Propietats'
+      'Video: Repeat Blocks with BB-8': 'Vídeo: Blocs de repetició amb el BB-8'
+      'Video: Repeat Until Blocks': 'Vídeo: Blocs de repetició "until"'
+      'Video: Repeat Until Statements': 'Vídeo: sentències de repetició "until"'
+      'Video: Sprites in Action': 'Vídeo: Sprites en acció'
+      'Video: Star Wars Project': 'Vídeo: Projecte de La guerra de les galàxies'
+      'Video: The Artist in Code Studio': 'Vídeo: L''artista a Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Vídeo: El gran esdeveniment: Activitat sense connexió'
+      'Video: The Collector': 'Vídeo: La col·leccionista'
+      'Video: The Harvester': 'Vídeo: L''agricultora'
+      'Video: Using the Repeat Block': 'Vídeo: El bloc de repetició'
+      'Video: Warm Up': 'Vídeo: Escalfament'
+      'Video: While Loops with the Farmer': 'Vídeo: Bucles "while" amb l''agricultora'
+      'Video: Wrap-up': 'Vídeo: Recapitulació'
+      Warm Up: Escalfament
       Where'd They Go?: A on han anat?
       Wrap-up: Recapitulació

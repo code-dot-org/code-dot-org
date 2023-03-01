@@ -5,7 +5,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :regional_partner_name,
     :regional_partner_id,
     :update_emails_sent_by_system,
-    :locked,
     :notes,
     :notes_2,
     :notes_3,
@@ -53,10 +52,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def email
     object.user.email
-  end
-
-  def locked
-    object.locked?
   end
 
   # Include the full answers here, unless otherwise specified

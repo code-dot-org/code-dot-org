@@ -5,6 +5,8 @@ fr:
       AmysBlocks_setPromptWithChoices:
         text: demander à l'utilisateur {QUESTION} pour le variable {VAR} de choisir
           entre {A}{B}{C}.
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}dit{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: faire un nouveau sprite {ANIMATION_NAME} à {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -30,8 +32,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -86,8 +88,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -148,8 +150,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -172,8 +174,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -322,8 +324,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -350,8 +352,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -477,8 +479,8 @@ fr:
           COSTUME:
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -606,8 +608,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -680,8 +682,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -716,8 +718,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -743,8 +745,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -760,8 +762,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -785,8 +787,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -820,8 +822,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -865,8 +867,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -998,6 +1000,13 @@ fr:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Le microscope a{INPUT1}
+        options:
+          INPUT1:
+            '1': Jus de citron
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:
@@ -1010,12 +1019,20 @@ fr:
             '"starburst"': Starburst
             '"glass"': Verre brisé
             '"twinkling"': Scintillant
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): peut être déplacé
-            wandering(): se balader
-            shrinking(): se rétrécir
+          INPUT1:
+            '1': Jus de citron
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Communiquez [VAR1]et[0] avec {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: faire un {NUM} nouveau {ANIMATION_NAME}Sprites {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: représente {NUM} nouveaux {ANIMATION_NAME} sprites [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}dit{TEXT1}"
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} se met à {BEHAVIOR}
       gamelab_addTarget:
@@ -1067,7 +1084,7 @@ fr:
           BEHAVIOR:
             new Behavior(spinning_right, []): tournoyer à droite
             new Behavior(spinning_left, []): tournoyer à gauche
-            new Behavior(fluttering, []): flotter
+            new Behavior(fluttering, []): voleter
             new Behavior(jittering, []): gigoter
             new Behavior(wobbling, []): chanceler
             new Behavior(wandering, []): se balader
@@ -1376,6 +1393,7 @@ fr:
             "'sound://category_space/Launch_SFX.mp3'": Lancer
             "'sound://category_space/Pillars_SFX.mp3'": piliers
             "'sound://category_space/Southern_ring_SFX.mp3'": anneau du sud
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: émettre les paroles {SOUND}
       gamelab_playerBehaviors:
@@ -1564,8 +1582,8 @@ fr:
             '"I''m a visitor in this town."': Je suis un visiteur dans cette ville.
             '"If we share, we''ll all have something to eat. "': Si on partage, on
               aura tous quelque chose à manger.
-            '"I''ll trick everyone into giving me their food."': Je vais faire un
-              tour à tout le monde pour les amener à me donner leur nourriture.
+            '"I''ll trick everyone into giving me their food."': Je vais jouer un
+              tour à tout le monde pour les faire me donner leur nourriture.
       gamelab_startAvoiding:
         text: "{SPRITE} se met à éviter {TARGET}"
       gamelab_startFollowing:
@@ -1870,11 +1888,11 @@ fr:
           TEXT1:
             '"Balancing on the "': '"Balancing on the"'
             '"A chubby cat "': '"A chubby cat"'
-            '"The "': '"The "'
+            '"The "': "\"The « "
           TEXT2:
-            '" fence"': '" fence"'
+            '" fence"':  » fence"
             '""': '""'
-            '" breeze blows"': '" breeze blows"'
+            '" breeze blows"':  » breeze blows"
       Mikelab_randomColor:
         text: couleur aléatoire
       Mikelab_removeBehaviorSimple:
@@ -1970,7 +1988,7 @@ fr:
         text: en appuyant sur {KEY}
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -1982,7 +2000,7 @@ fr:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -2002,7 +2020,7 @@ fr:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -2035,8 +2053,39 @@ fr:
         text: installer Monster Town avec{COUNT}monstres
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
+      ParticlesBlocks_getMicroscope:
+        text: Le microscope a{INPUT1}
+        options:
+          INPUT1:
+            '1': Jus de citron
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': Jus de citron
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): Solide
+            new Behavior(liquid, []): Liquide
+            new Behavior(wandering, []): gaz
+      ParticlesBlocks_statesOfMatter2:
+        text: Définir {COSTUME} sur [{BEHAVIOR} comportement
+        options:
+          BEHAVIOR:
+            '"solid"': 'particule solide '
+            '"liquid"': particule liquide
+            '"gas"': particule de gaz
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'particule solide '
+            '"liquid"': particule liquide
+            '"gas"': particule de gaz
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2107,6 +2156,18 @@ fr:
             '"sound://category_achievements/peaceful_win_1.mp3"': Gagner
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Tourbillon
             '"sound://category_achievements/peaceful_win_6.mp3"': Carillons éoliens
+      Poetry_playSoundOptionsSpace:
+        text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": trou noir
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": " amas du boulet"
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopée
+            "'sound://category_space/Launch_SFX.mp3'": Lancer
+            "'sound://category_space/Pillars_SFX.mp3'": piliers
+            "'sound://category_space/Southern_ring_SFX.mp3'": anneau du sud
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: choisir l'auteur {AUTHOR}
       Poetry_setBackground:
@@ -2194,7 +2255,7 @@ fr:
         text: 'Le lutin {ANIMATION_NAME} commence {BEHAVIOR}. '
         options:
           BEHAVIOR:
-            '"fluttering"': flotter
+            '"fluttering"': voleter
             '"growing"': grandir
             '"jittering"': gigoter
             '"shrinking"': se rétrécir
@@ -2207,7 +2268,7 @@ fr:
         text: 'Le lutin {ANIMATION_NAME} arrête {BEHAVIOR}. '
         options:
           BEHAVIOR:
-            '"fluttering"': flotter
+            '"fluttering"': voleter
             '"growing"': grandir
             '"jittering"': gigoter
             '"shrinking"': se rétrécir
@@ -2497,6 +2558,16 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      storylab_setForegroundEffect2:
+        text: Appliquer {EFFECT} effet
+        options:
+          EFFECT:
+            '"bubbles"': Bulles
+            '"confetti"': Confettis
+            '"hearts"': cœurs
+            '"rain"': pluie
+            '"starburst"': Starburst
+            '"twinkling"': Scintillant
       storylab_setHeading:
         text: définir le titre{HEADING}
       storylab_setSubheading:

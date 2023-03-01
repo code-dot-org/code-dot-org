@@ -1,6 +1,13 @@
 # Example configuration file set up with sensible defaults for local development.
 # See `config.yml.erb` for full list of available configuration options.
 
+# Some items in config.yml.erb are resolved via `!Secret`, which retrieves from
+# AWS Secrets Manager. These will be unavailable to external Contributors, but are
+# also not necessary for basic local development. Override them here to avoid
+# errors accessing Secrets Manager.
+#slack_bot_token: localoverride
+#pardot_private_key: localoverride
+
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
 #bundler_use_sudo: false
@@ -107,11 +114,7 @@ use_my_apps: true
 
 
 # Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
-# You should have also run this once:
-#   `gem install mailcatcher`
-# If installation fails on Catalina, see https://github.com/sj26/mailcatcher/issues/430#issuecomment-700207954
-# And this each time you need to start mailcatcher in the background again:
-#   `mailcatcher --ip=0.0.0.0`
+# See development.rb file for information about how to use mailcatcher.
 #use_mailcatcher: true
 
 

@@ -42,7 +42,7 @@ Code.org, teknoloji alanındaki kariyer deneyimlerini paylaşmaları ve bu aland
 
 ## 4. Teknolojik ihtiyaçlarınızı planlayın (bilgisayar kullanmak isteğinize bağlı)
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar **gerekli değildir** ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz.
+En iyi Hour of Code deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar **gerekli değildir** ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz.
 
 **Önceden Plan Yapın!** Etkinlik başlamadan önce aşağıdakileri yapın:
 
@@ -52,13 +52,13 @@ En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. H
 - **Bağlantı hızınız düşük mü?** Videoları tüm etkinliğe izletmeyi planlayın. Böylece her katılımcının kendi videosunu indirmesine gerek kalmayacaktır. Ya da bağlantısız / çevrimdışı aktiviteleri deneyin.
 
 ## 5.  Hour of Code etkinliğinizi ilham verici bir video ile başlatın
-Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın. Bilgisayar programcılığı ve şirketteki görevinizle ilgili ilham kaynaklarınız hakkında daha fazla bilgi paylaşın.
+Hour of Code  etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın. Bilgisayar programcılığı ve şirketteki görevinizle ilgili ilham kaynaklarınız hakkında daha fazla bilgi paylaşın.
 
 **İlham verici bir video gösterin:**
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un olduğu orjinal Code.org videoları ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır).
-- [ Dünya geneli Kod-Saati videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [ Başkan Obama tüm öğrencileri kodlama öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [ Dünya geneli Hour of Code videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Başkan Obama tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Hour of Code aktivitenizi öğrencilere tanıtmak için fikirler:**

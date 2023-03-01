@@ -14,6 +14,7 @@ import {
   increaseEditorFontSize,
   setDisplayTheme
 } from './javalabRedux';
+import CloseOnEscape from './components/CloseOnEscape';
 
 /**
  * Displays the settings options for JavaLab.
@@ -130,8 +131,8 @@ export class UnconnectedJavalabSettings extends Component {
   renderDropdown = () => {
     return (
       <div className={classNames(style.settingsDropdown)}>
-        {this.renderSwitchThemeButton()}
         {this.renderFontSizeSelector()}
+        {this.renderSwitchThemeButton()}
       </div>
     );
   };
@@ -140,8 +141,10 @@ export class UnconnectedJavalabSettings extends Component {
     const {dropdownOpen} = this.state;
 
     return (
-      <div className={style.main}>
-        {dropdownOpen && this.renderDropdown()}
+      <CloseOnEscape
+        className={style.main}
+        handleClose={this.handleClickOutside}
+      >
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
           text={msg.settings()}
@@ -152,7 +155,8 @@ export class UnconnectedJavalabSettings extends Component {
           onClick={this.toggleDropdown}
           isHorizontal
         />
-      </div>
+        {dropdownOpen && this.renderDropdown()}
+      </CloseOnEscape>
     );
   }
 }

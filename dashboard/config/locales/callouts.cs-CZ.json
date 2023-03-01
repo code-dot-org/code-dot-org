@@ -2119,6 +2119,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Nejprve klikněte sem!"
         }
       }
     }

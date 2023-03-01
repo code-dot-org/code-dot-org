@@ -72,7 +72,7 @@
           "student_overview": "In questa lezione, gli studenti acquisiscono un'esperienza introduttiva con l'informatica e creano un gioco utilizzando il codice a blocchi di base.Questa lezione è stata progettata per studenti nelle classi medie, età 10-16, ma può essere adattata per alunni più piccoli o più grandi utilizzando la differenziazione dei suggerimenti forniti."
         },
         "dance/Dance Party": {
-          "name": "Ballando col codice",
+          "name": "Ballando col codice (2018)",
           "overview": "In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.",
           "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare eventi (utilizzando blocchi).",
           "student_overview": "In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica."
@@ -175,7 +175,7 @@
           "name": "L'Ora del Codice 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Ballando col codice (2019)",
+          "name": "Ballando col codice",
           "overview": "In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.",
           "purpose": "Questa lezione introduce i concetti chiave dell'informatica per codificare e programmare eventi (utilizzando blocchi).",
           "student_overview": "In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica."
@@ -433,77 +433,77 @@
         },
         "coursef-2022/The Power of Words": {
           "name": "Il potere delle parole",
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente realizzata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nMan mano che i bambini crescono, inizieranno naturalmente a comunicare di più online. Ma parte di ciò che vedono potrebbe farli sentire feriti, tristi, arrabbiati o addirittura spaventati. Aiuta i tuoi alunni a creare empatia per gli altri e ad apprendere strategie da utilizzare quando si confrontano con il cyberbullismo.",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente realizzata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nMan mano che i bambini crescono, iniziano naturalmente a comunicare di più online. Ma parte di ciò che vedono potrebbe farli sentire feriti, tristi, arrabbiati o addirittura spaventati. Aiuta i tuoi alunni a provare empatia per gli altri e ad apprendere strategie da utilizzare quando si confrontano con il cyberbullismo.",
           "preparation": "-   Esaminare il materiale didattico.\n-   Stampare le schede necessarie per ciascun alunno.\n-   Preparare fogli di carta o quaderni per gli alunni.",
           "purpose": "Il Digital Citizenship Curriculum di Common Sense affronta sei argomenti chiave, basati sulle ultime ricerche su bambini, media e tecnologia. Questa lezione si concentra su cyberbullismo, dramma digitale e incitamento all'odio. Gli studenti affrontano questi argomenti difficili e svolgono il ruolo attivo di sostenitori per costruire comunità online positive e di supporto e combattere la crudeltà online.",
           "student_overview": "Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato."
         },
         "coursef-2022/Introducing Sprite Lab": {
           "name": "Introduzione al Laboratorio dei personaggi",
-          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni discuteranno del ruolo dei computer e della tecnologia nelle loro vite, concentrandosi su come le app e gli strumenti offrano agli utenti la possibilità di scegliere come usarli. Gli alunni esploreranno anche app simili a quelle che realizzeanno in seguito.",
+          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni discutono del ruolo dei computer e della tecnologia nelle loro vite, concentrandosi su come le app e gli strumenti offrano agli utenti la possibilità di scegliere come usarli. Gli alunni esplorano anche app simili a quelle che realizzeanno in seguito.",
           "preparation": "-   Stabilisci le modalità con le quali gli alunni accederanno a Code.org.\n-   Se necessario, crea degli account Code.org per gli alunni.\n-   Assegna agli alunni \"Introduzione al Laboratorio dei Personaggi\".\n-   Stampa delle copie del foglio di lavoro **\\*Esplorazione delle app** (o pubblica la versione digitale sul tuo LMS).",
           "purpose": "La prima lezione riguarda l'entusiasmo degli alunni per il corso e la possibilità di creare collegamenti tra i propri interessi personali e l'informatica.  ",
           "student_overview": "Discuterete il ruolo dei computer e della tecnologia nelle vostre vite con particolare attenzione al modo in cui app e strumenti offrono agli utenti la possibilità di scegliere come usarli."
         },
         "coursef-2022/Making Sprites": {
           "name": "Creazione di personaggi",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavoreranno attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale potranno realizzare quello che vogliono. Gli alunnii scriveranno programmi e impareranno i due concetti al centro del Laboratorio dei personaggi: personaggi e comportamenti. ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
           "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "coursef-2022/Sprites in Action": {
           "name": "Personaggi in azione",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavoreranno attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potranno realizzare quello che desiderano. Gli alunnii scriveranno programmi che rispondono a eventi a tempo e input dell'utente. ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
           "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per rafforzare le competenze della lezione precedente e introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
         "coursef-2022/Mini-Project: Virtual Pet": {
-          "name": "Mini progetto: Animaletto Virtuale",
-          "overview": "Questa lezione è un \"mini progetto\" in cui gli alunni creeranno un animale domestico virtuale interattivo che appare e si comporta come desiderano. Gli alunni useranno lo strumento \"Costumi\" del Laboratorio dei personaggi per personalizzare l'aspetto del loro animale domestico. Utilizzeranno quindi eventi, comportamenti e altri concetti che hanno imparato per dare vita propria al loro animale domestico.",
+          "name": "Mini progetto - Animaletto domestico virtuale",
+          "overview": "Questa lezione è un \"mini progetto\" in cui gli alunni creano un animale domestico virtuale interattivo che appare e si comporta come desiderano. Gli alunni usano lo strumento \"Costumi\" del Laboratorio dei personaggi per personalizzare l'aspetto del loro animale domestico. Utilizzano quindi eventi, comportamenti e altri concetti che hanno imparato, per dare vita propria al loro animale domestico.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione consente agli alunni di applicare i concetti di programmazione delle lezioni precedenti in un altro contesto creativo. ",
           "student_overview": "Crea un animale domestico virtuale interattivo che abbia l'aspetto e il comportamento che desideri! Dai al tuo animale domestico vita propria!"
         },
         "coursef-2022/Blank Space Stories": {
           "name": "Storia delle caselle vuote",
-          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni utilizzeranno storie da completare (simili a Mad Libs®) come contesto per comprendere come i computer raccolgono e memorizzano l'input di un utente, quindi lo useranno in seguito a seconda di come il programma viene eseguito. ",
+          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni utilizzeranno storie da completare (simili a Mad Libs®) come contesto per comprendere come i computer raccolgono e memorizzano l'input di un utente e come lo usano poi durante l'esecuzione del programma.",
           "preparation": "Procurati 6 buste (adatte anche: carta o schede, piegate a metà).  \n\n-   Etichetta la parte anteriore di ogni busta con lettere grandi: oggetto, liquido, numero, aggettivo, parte del corpo, numero\n-   Stampa delle copie del **\\*Foglio di lavoro** per l'alunno (o invia la versione digitale al tuo Learning Management System).",
           "purpose": "Questa lezione fornisce un contesto condiviso che sarà utile per capire come funzionano le variabili quando gli alunni tornano a occuparsi di programmazione.",
           "student_overview": "In questa attività, utilizzerai storie da completare (come in Mad Libs®) per prepararti a comprendere come i computer catturano e memorizzano l'input di un utente, quindi lo utilizzerai in seguito durante l'esecuzione di un programma. "
         },
         "coursef-2022/Text and Prompts": {
           "name": "Testo e richieste all'utente",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni faranno pratica con le variabili nel laboratorio dei personaggi.  ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
           "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
         "coursef-2022/Mini-Project: User Input Programs": {
-          "name": "Mini progetto: programmi basati sull'input dell'utente",
-          "overview": "Gli alunni metteranno in pratica le loro nuove abilità con le variabili in uno dei tre **mini-progetti** senza limite di tempo. Gli alunni esploreranno programmi di esempio, realizzeranno un piano per il proprio progetto e lo programmeranno da zero.",
+          "name": "Mini progetto - Programmi basati sull'input dell'utente",
+          "overview": "Gli alunni mettono in pratica le loro nuove abilità con le variabili in uno dei tre **mini progetti** senza limite di tempo. Gli alunni esplorano programmi di esempio, realizzano un piano per il proprio progetto e lo programmano da zero.",
           "preparation": "-   Stampa la guida alla pianificazione o distribuisci una copia digitale a ogni alunno. Esaminala in anticipo nel caso in cui desideri apportare modifiche per adattarlo alla tua classe.\n\n-   Esamina in anticipo le opzioni del livello 3 per familiarizzare con il flusso che gli alunni dovranno seguire.\n\n-   Questa lezione può essere estesa su più giornate, tienine conto nella pianificazione.",
           "purpose": "Questa lezione non introduce nuove abilità o concetti, ma offre invece agli alunni l'opportunità di mettere in pratica,  in modo creativo, ciò che hanno imparato.",
           "student_overview": "Metti in pratica le tue nuove competenze con variabili, in uno dei tre progetti a senza limiti di tempo."
         },
         "coursef-2022/Simulating Experiments": {
           "name": "Simulazione di esperimenti",
-          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni eseguiranno e raccoglieranno dati da una semplice simulazione nel Laboratorio dei personaggi. Dopo aver eseguito la simulazione più volte, gli alunni avranno l'opportunità di prevedere in che modo la modifica di una variabile nella simulazione potrebbe influire sul risultato e verificare tale ipotesi.",
+          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni eseguono una semplice simulazione nel Laboratorio dei personaggi e ne raccolgono i dati. Dopo aver eseguito la simulazione più volte, gli alunni hanno l'opportunità di prevedere in che modo la modifica di una variabile nella simulazione può influire sul risultato e verificare tale ipotesi.",
           "preparation": "-   Cerca di capire se gli alunni eseguiranno le simulazioni sul proprio computer o se le eseguiranno con tutta classe\n-   Se necessario, preparati a progettare le due simulazioni in questa lezione.",
           "purpose": "In molte discipline scientifiche viene utilizzata l'informatica per eseguire modelli e simulazioni al fine di eseguire esperimenti, raccogliere dati e analizzare tali dati per ottenere informazioni dettagliate. Sebbene la simulazione introdotta in questa lezione sia piuttosto semplificata, può essere utilizzata come punto di partenza per gli alunni per considerare come utilizzare modelli computazionali più sofisticati per verificare le ipotesi.",
           "student_overview": "Esegui simulazioni al computer e fai esperimenti modificando le variabili."
         },
         "coursef-2022/Outbreak": {
-          "name": "Epidemia",
-          "overview": "Questa lezione combina la **palestra delle competenze** sugli eventi con un **mini progetto** in cui gli alunni possono creare la propria simulazione al computer nel Laboratorio dei personaggi. Gli alunni studieranno la simulazione per capire quanto velocemente può diffondersi un virus e cosa si può fare per rallentarlo. ",
+          "name": "Simulazione di epidemia",
+          "overview": "Questa lezione combina la **palestra delle competenze** sugli eventi con un **mini progetto** in cui gli alunni possono creare la propria simulazione al computer nel Laboratorio dei personaggi. Gli alunni studiano la simulazione per capire quanto velocemente può diffondersi un virus e cosa si può fare per rallentarlo. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Nella lezione precedente, gli alunni hanno raccolto e interpretato i dati da una semplice simulazione. In questa lezione, gli alunni seguiranno le istruzioni per codificare il proprio modello di simulazione. Le precedenti conoscenze degli alunni sulle epidemie di virus nel mondo reale verranno applicate a uno scenario fittizio. ",
           "student_overview": "Un virus è arrivato nella Città dei Mostri! Impara a creare un simulatore di virus e aiuta i mostri a guarire."
         },
         "coursef-2022/AI For Oceans": {
           "name": "L'Intelligenza Artificiale per il mare",
-          "overview": "In questa lezione **esplorativa**, gli alunni addestreranno un modello di apprendimento automatico classificando pesci e altri oggetti.",
+          "overview": "In questa lezione **esplorativa**, gli alunni addestrano un modello di apprendimento automatico classificando pesci e altri oggetti.",
           "purpose": "Questo tutorial è stato progettato per introdurre rapidamente gli alunni all'apprendimento automatico, un tipo di intelligenza artificiale. Gli alunni esploreranno come vengono utilizzati i dati di addestramento per consentire a un modello di apprendimento automatico di classificare i nuovi dati. Gli alunni dovrebbero avere un'esperienza positiva durante il tutorial e, cosa più importante, dovrebbero essere motivati a continuare ad imparare l'informatica.",
           "student_overview": "Classifica gli oggetti come \"pesce\" o \"non pesce\" per tentare di rimuovere la spazzatura dall'oceano. Quindi, espandi il tuo set di dati di addestramento per includere altre creature marine che vivono nell'acqua. Nella seconda parte dell'attività, scegli le tue etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono usati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di assegnare da solo le etichette alle nuove immagini."
         },
@@ -516,7 +516,7 @@
         },
         "coursef-2022/End of Course Project": {
           "name": "Progetto di fine corso",
-          "overview": "Questa è una lezione **progetto**: accompagna gli alunni nella progettazione, nello sviluppo e nella presentazione di nuovi progetti!",
+          "overview": "Questa è una **lezione-progetto**: accompagna gli alunni nella progettazione, nello sviluppo e nella presentazione di nuovi progetti!",
           "preparation": "-   Dedica del tempo alla creazione del tuo progetto con l'Artista e il Laboratorio dei personaggi. Acquisisci familiarità con le capacità e i limiti di ogni strumento.\n-   Modifica la griglia per adattarla agli obiettivi della tua classe e stampane una copia per ogni alunno.\n-   Modifica il foglio di lavoro per la progettazione del progetto per adattarlo alla tua classe e stampa un pacchetto per ogni alunno.",
           "purpose": "Alcuni alunni potrebbero essere impazienti di iniziare subito a costruire i loro progetti, ma questa lezione li aiuterà a trasformare le loro idee in una corretta pianificazione. Questa struttura manterrà i più sognatori coi piedi a terra ed illuminerà la strada a coloro a cui sembrerà di brancolare nel buio. Fornisci agli alunni tutto il tempo per costruire e rivedere i loro progetti. I tentativi e gli errori inevitabilmente coinvolti in questa lezione insegneranno la risoluzione dei problemi e la persistenza.",
           "student_overview": "Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!"
@@ -543,7 +543,7 @@
           "student_overview": "Impara come creare e modificare i personaggi."
         },
         "coursee-2022/Hello World: Food": {
-          "name": "Ciao Mondo"
+          "name": "Ciao mondo"
         },
         "coursee-2022/Mini-Project: About Me": {
           "name": "Mini progetto - A proposito di me",
@@ -929,7 +929,7 @@
         },
         "pre-express-2022/Sequencing with Scrat": {
           "name": "Sequenze di istruzioni con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare uno scoiattolo da un lato di un labirinto e farlo arrivare fino alla posizione della ghianda. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Assicurati che ogni studente abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Programma Scrat per fargli raggiungere la ghianda."
@@ -942,27 +942,27 @@
         },
         "pre-express-2022/Programming with Rey and BB-8": {
           "name": "Programmare con Rey e BB-8",
-          "overview": "Questa lezione è una  **palestra delle competenze** nella quale gli alunni metteranno in pratica, in modi più complessi, le competenze appena acquisite nella programmazione, per affrontare insieme a BB-8 un percorso impegnativo.",
+          "overview": "Questa lezione è una  **palestra delle competenze** nella quale gli alunni mettono in pratica, in modi più complessi, le competenze appena acquisite nella programmazione, per affrontare insieme a BB-8 un percorso impegnativo.",
           "preparation": "-   Riproponi la lezione per trovare eventuali aree problematiche per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Sempre allo scopo di fornire le competenze fornite, in questa lezione viene fornito agli alunni un nuovo ambiente per far pratica con le abilità che stanno acquisendo. I fan di Star Wars salteranno di gioia quando vedranno questi esercizi. Ogni esercizio di questa serie è stato aggiunto per approfondire i concetti di base che saranno utilizzati per il resto del corso."
         },
         "pre-express-2022/Programming with Harvester": {
           "name": "Programmare con la contadina",
-          "overview": "Questa lezione è una  **palestra delle competenze** nella quale gli alunni applicheranno i concetti di programmazione che hanno appreso all'ambiente della contadina. Gli alunni continueranno a sviluppare abilità di algoritmo sequenziale e inizieranno a utilizzare il processo di debug. ",
+          "overview": "Questa lezione è una  **palestra delle competenze** nella quale gli alunni applicano all'ambiente della contadina i concetti di programmazione precedentemente appresi. Gli alunni continuano ad approfondire i concetti di algoritmo sequenziale e iniziano ad esercitarsi con il processo di correzione degli errori (debugging).",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità nella correzione dei problemi e continueranno a sviluppare le loro capacità di programmazione.",
           "student_overview": "Aiuta la contadina a raccogliere le verdure lungo il percorso."
         },
         "pre-express-2022/Loops with Scrat": {
           "name": "Cicli con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni si eserciteranno in esercizi sui cicli di programmazione, nei quali l'obiettivo è aiutare lo scoiattolo a raggiungere la ghianda.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni si esercitano con le istruzioni di ripetizione (cicli), con l'obiettivo di aiutare lo scoiattolo a raggiungere la ghianda.",
           "preparation": "-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con la programmazione \"a blocchi\". L'uso dei _cicli_ è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che si ripetono e che devono essere ricondotti ad un ciclo.",
           "student_overview": "Aiuta Scrat a coprire con più terra usando i cicli."
         },
         "pre-express-2022/Loops with Laurel": {
           "name": "Cicli con la collezionista",
-          "overview": "In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco `Prendi diamanti` per aiutarla nel suo viaggio.",
+          "overview": "In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco `Prendi diamante` per aiutarla nel suo compito.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre agli alunni una maggiore pratica con i cicli e li incoraggia a inserire più blocchi all'interno di un ciclo `ripeti` mentre cercano di raccogliere più diamanti possibile."
         },
@@ -982,7 +982,7 @@
         },
         "pre-express-2022/On the Move with Events": {
           "name": "In movimento con gli eventi",
-          "overview": "Questa lezione è un \"mini progetto\": gli alunni avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
+          "overview": "Questa lezione è un \"mini progetto\": gli alunni hanno l'opportunità di imparare ad us gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno appreso per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente.",
           "student_overview": "Crea il tuo gioco o la tua storia."
@@ -1186,14 +1186,64 @@
         "csd5-2022/Problem Solving and Data": {
           "name": "Risoluzione dei problemi con i dati"
         },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi",
+          "overview": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**\n\nIn questa lezione, gli studenti lavorano in gruppo per progettare barche in carta di alluminio che sostengano il maggior numero possibile di centesimi. I gruppi hanno a disposizione due turni per lavorare sulle proprie barche, con l'obiettivo di vincere più centesimi rispetto al primo round. La struttura dell'attività prevede diverse fasi del processo di risoluzione dei problemi, sulle quali gli studenti verranno istruiti con maggiori dettagli nella lezione successiva. Alla fine della lezione gli studenti riflettono sulla propria esperienza con l'attività e creano collegamenti con le tipologie di risoluzione dei problemi da utilizzare per il resto del corso\n\n**Sono disponibili anche versioni alternative di questa lezione.** \n\n-   [Tavolo di giornali](/s/csd1-2022/lessons/9/)\n-   [Ponte di spaghetti](/s/csd1-2022/lessons/10/)\n-   [Torre di carta](/s/csd1-2022/lessons/11/)",
+          "purpose": "Questa lezione è una divertente introduzione alla risoluzione di problemi, in modalità aperta, collaborativa e creativa, che sarà utile per gli studenti nel resto di questa unità e del corso. Il problema delle barche in alluminio potrebbe essere facilmente sostituito da qualsiasi altro problema che richieda agli studenti di definire i propri obiettivi, elaborare un piano, sperimentare una soluzione, valutare i risultati e da qui migliorare di volta in volta. Il fatto che il problema scelto sia «non computazionale» è intenzionale. L'informatica è fondamentalmente una disciplina che risolve problemi e, in questa fase, astenersi dai tradizionali problemi informatici aiuta a impostare questa classe come una classe focalizzata sulla risoluzione dei problemi in generale, in cui l'informatica è un nuovo «strumento» per aiutare ad affrontare determinati tipi di problemi. "
+        },
         "csd1-2022/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi",
+          "overview": "**Domanda del giorno: quali sono alcuni dei comuni passaggi che possiamo percorrere per risolvere diversi tipi di problemi?**\n\nQuesta lezione introduce il processo formale di risoluzione dei problemi che gli studenti utilizzeranno nel corso dell'anno, Definisci - Prepara - Prova - Rifletti. La lezione ha inizio con la richiesta agli studenti di riflettere su tutti i diversi tipi di problemi incontrati nella vita quotidiana. Agli studenti vengono quindi mostrate le quattro fasi del processo di risoluzione dei problemi; essi lavorano insieme per mettere in relazione queste fasi astratte con le loro effettive esperienze di risoluzione dei problemi. Gli studenti mettono prima in relazione questi passaggi con le attività problematiche della lezione precedente, poi con un problema che sono bravi a risolvere, quindi con un problema che vogliono migliorare. Alla fine della lezione la classe raccoglie un elenco di strategie generalmente utili per ogni fase del processo da apporre sui cartelloni che verranno utilizzati durante l'unità e durante l'anno.",
+          "purpose": "Questa lezione mira a mettere in relazione il processo formale di risoluzione dei problemi che gli studenti utilizzeranno durante il corso, con alcune esperienze di vita reale in cui hanno già messo in pratica la risoluzione dei problemi. Le unità future di CS Discoveries presenteranno problemi in contesti che possono essere familiari o meno. Un processo strutturato di risoluzione dei problemi sarà uno strumento importante per aiutare gli studenti ad andare avanti di fronte a sfide nuove e complesse.",
+          "student_overview": "**Domanda del giorno: quali sono alcuni passaggi comuni che possiamo usare per risolvere molti problemi di diversa natura?**\n\nImparerai a conoscere il processo di risoluzione dei problemi che utilizziamo in informatica e ti immergerai in alcune strategie per implementare ogni fase. "
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi",
+          "overview": "**Domanda del giorno: come possiamo applicare il processo di risoluzione dei problemi a molte tipologie diverse di problemi?**\n\nIn questa lezione gli studenti applicano il processo di risoluzione dei problemi a tre diversi problemi per comprendere meglio il valore di ogni fase. Porteranno a termine una ricerca di parole, organizzeranno i posti a sedere per una festa di compleanno e riprogetteranno un'aula. I problemi diventano sempre più complessi e sempre meno definiti per evidenziare come il processo di risoluzione dei problemi sia particolarmente utile nell'affrontare queste tipologie di problemi. La lezione si conclude con gli studenti che riflettono sulla loro esperienza con il processo di risoluzione dei problemi. Dovranno motivare l'inserimento di ogni fase e raccoglieranno idee su domande o strategie che possano aiutarli a definire meglio i problemi aperti, poiché questo è spesso il passaggio più critico.\n\nIl completamento di questa lezione richiederà probabilmente due o più lezioni. I primi due problemi possono rientrare in una sola lezione, ma il terzo dovrà essere spostato a un secondo giorno.\n\n**Sono disponibili anche versioni alternative di questa lezione.** \n\n-   [Tema animale](/s/csd1-2022/lessons/12/)\n-   [Tema dei giochi](/s/csd1-2022/lessons/13/)",
+          "purpose": "Con questa lezione gli studenti otterranno una maggiore pratica sul processo di risoluzione dei problemi nell'ambito di contesti diversi. Servirà a sottolineare il fatto che il processo di risoluzione dei problemi è particolarmente utile quando si affrontano problemi mal definiti. Alla fine della lezione, le riunioni conclusive volte a generare idee metteranno a disposizione degli studenti alcune strategie e domande che possono porre per definire meglio i problemi da soli, poiché questo è spesso il passaggio più critico. I problemi illustrati in questa lezione aiutano anche a stimolare una discussione nella lezione seguente sui tipi di problemi che i computer sono più adatti a risolvere.",
+          "student_overview": "**Domanda del giorno: come possiamo applicare il processo di risoluzione dei problemi a diverse tipologie di problemi?**\n\nOggi applicherai il processo di risoluzione dei problemi a tre diversi problemi che diventeranno sempre più complessi!"
         },
         "csd1-2022/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?",
+          "overview": "**Domanda del giorno: cos'è un computer?**\n\nIn questa lezione gli studenti sviluppano una definizione preliminare di computer. Per iniziare la lezione, la classe esaminerà le possibili definizioni per un computer e annoterà i risultati di queste riflessioni sulla lavagna. Successivamente, gli studenti lavoreranno in gruppo per ordinare le immagini su un cartellone secondo la categorizzazione «è un computer» o «non è un computer». I gruppi metteranno i loro cartelloni in giro per la stanza e spiegheranno brevemente le loro motivazioni per la scelta di alcune delle loro categorizzazioni più problematiche. L'insegnante introdurrà quindi una definizione del computer e consentirà agli studenti di revisionare i propri cartelloni secondo la nuova definizione.",
+          "purpose": "Questa lezione si basa sul tema della risoluzione dei problemi delle lezioni precedenti e si concentra sui dettagli di come l'informatica viene utilizzata nella risoluzione dei problemi. In questa lezione, gli studenti comprenderanno le caratteristiche di un computer e il fatto che esso utilizzi i dati come parte del processo di risoluzione dei problemi. Le prossime lezioni tratteranno in modo più approfondito le caratteristiche dei problemi basati sui dati e il modo in cui i computer li risolvono.",
+          "student_overview": "**Domanda del giorno: cos'è un computer?**\n\nIn questa lezione, lavorerai in gruppo per capire cosa rende un computer un computer!"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Ingressi e uscite",
+          "overview": "**Domanda del giorno: in che modo i computer utilizzano i dati in ingresso e in uscita per ottenere e per fornire i dati di cui hanno bisogno per risolvere i problemi?**\n\nIn questa lezione gli studenti prendono in esame il modo in cui i computer ottengono e forniscono dati all'utente tramite input e output. Gli studenti considerano innanzitutto quali dati sarebbero necessari per risolvere un «problema di pensiero», quindi utilizzano tali dati per produrre una raccomandazione. Quindi identificano i dati in ingresso e in uscita di quel processo. Successivamente, gli studenti prendono in considerazione un'app che partecipa allo stesso processo e determinano in che modo l'app fa entrare e uscire dati. Infine, prendono in considerazione altri tipi di dati in ingresso e in uscita che i computer possono utilizzare per aiutare a risolvere i problemi.",
+          "purpose": "Nella lezione precedente gli studenti hanno iniziato a riflettere sulle funzionalità che possono aiutare a classificare i dispositivi come computer. Questa lezione introduce i concetti di input e output (dati in ingresso e dati in uscita), come una di queste funzionalità e consente agli studenti di identificare diversi metodi di input o output nelle app più comuni.",
+          "student_overview": "**Domanda del giorno: in che modo i computer utilizzano dati in ingresso e in uscita per ottenere e fornire i dati di cui hanno bisogno per risolvere i problemi?**\n\nIn questa lezione imparerai come i computer ottengono e forniscono dati da parte e in favore dell'utente attraverso vari ingressi e uscite. "
+        },
+        "csd1-2022/Processing": {
+          "name": "Elaborazione",
+          "overview": "\\*\\*Domanda del giorno: quali sono i diversi modi in cui i computer possono elaborare i dati? \\*\\*\n\nQuesta lezione introduce gli studenti a quattro tipi comuni di elaborazione: if/then (condizionali), ricerca di una corrispondenza (ricerca), conteggio e confronto. Gli studenti vengono inizialmente introdotti ai tipi di elaborazione tramite diverse app di esempio. Quindi esaminano altre app per determinare il tipo di elaborazione utilizzato da ciascuna di esse. Quindi pensano alla propria app e decidono quali tipi di elaborazione dovrebbero funzionare. Infine, faranno una riflessione di gruppo su altri tipi di elaborazione che potrebbero essere utili ma che non sono stati inclusi nella lezione principale.",
+          "purpose": "Questa lezione introduce il concetto di elaborazione nell'ambito della risoluzione di problemi computazionali. La definizione di elaborazione presentata in questa lezione è intenzionalmente accessibile. Gli studenti dovrebbero capire che l'elaborazione è tutto ciò che un computer fa per trasformare gli ingressi in uscite e che ci sono molti modi diversi in cui i computer possono svolgere questo lavoro. L'obiettivo di questa lezione non è far scrivere agli studenti degli algoritmi specifici per le app di esempio.",
+          "student_overview": "**Domanda del giorno: quali sono i diversi modi in cui i computer possono elaborare i dati?**\n\nIn questa lezione, imparerai a conoscere i quattro tipi di elaborazione che i computer possono utilizzare per trasformare gli ingressi in uscite.  "
         },
         "csd1-2022/Storage": {
-          "name": "Archiviazione"
+          "name": "Archiviazione",
+          "overview": "**Domanda del giorno: perché l'archiviazione è una parte importante del processo di elaborazione?**\n\nQuesta lezione introduce il componente finale del modello di calcolo dell'unità: l'archiviazione. Dopo aver provato un'app «scelta di abiti», gli studenti discutono quali dati devono essere archiviati nell'app rispetto a quelle inserite ogni volta che l'app viene eseguita. Quindi esaminano una serie di app e utilizzano le loro decisioni su cosa archiviare per creare linee guida per decidere quali dati archiviare. Quindi esaminano i quattro componenti del modello di elaborazione di questo capitolo: ingressi, uscite, archiviazione ed elaborazione. In seguito, hanno un'ultima opportunità per rivedere le loro decisioni su quali oggetti dovrebbero essere classificati come «computer» rispetto alle prime pagine del capitolo. La lezione si conclude con una riflessione sulle loro idee relative alle app e su come potrebbe essere utilizzato lo spazio di archiviazione."
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
+        },
+        "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Tavolo di giornali (Lezione alternativa 1)"
+        },
+        "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Ponte di spaghetti (Lezione alternativa 1)"
+        },
+        "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Torre di carta (Lezione alternativa 1)"
+        },
+        "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema degli animali (Lezione alternativa 3)",
+          "purpose": "Con questa lezione gli studenti otterranno una maggiore pratica sul processo di risoluzione dei problemi nell'ambito di contesti diversi. Servirà a sottolineare il fatto che il processo di risoluzione dei problemi è particolarmente utile quando si affrontano problemi mal definiti. Alla fine della lezione, le riunioni conclusive volte a generare idee metteranno a disposizione degli studenti alcune strategie e domande che possono porre per definire meglio i problemi da soli, poiché questo è spesso il passaggio più critico. I problemi illustrati in questa lezione aiutano anche a stimolare una discussione nella lezione seguente sui tipi di problemi che i computer sono più adatti a risolvere."
+        },
+        "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema dei giochi (lezione alternativa 3)",
+          "purpose": "Con questa lezione gli studenti otterranno una maggiore pratica sul processo di risoluzione dei problemi nell'ambito di contesti diversi. Servirà a sottolineare il fatto che il processo di risoluzione dei problemi è particolarmente utile quando si affrontano problemi mal definiti. Alla fine della lezione, le riunioni conclusive volte a generare idee metteranno a disposizione degli studenti alcune strategie e domande che possono porre per definire meglio i problemi da soli, poiché questo è spesso il passaggio più critico. I problemi illustrati in questa lezione aiutano anche a stimolare una discussione nella lezione seguente sui tipi di problemi che i computer sono più adatti a risolvere."
         },
         "csd3-2022/Drawing in Game Lab": {
           "name": "Disegnare in Sviluppo Giochi"
@@ -1265,7 +1315,7 @@
           "name": "Programmare con Rey e BB-8"
         },
         "courseb-2018/Loops: My Loopy Robotic Friends": {
-          "name": "I miei ripetitivi amici robotici (per i più piccoli)"
+          "name": "I miei ciclici amici robotici (per i più piccoli)"
         },
         "courseb-2018/Loops in Ice Age": {
           "name": "Cicli con Scrat"
@@ -1367,7 +1417,7 @@
           "name": "Istruzioni condizionali con l'ape"
         },
         "coursed-2018/Conditionals & Loops in Harvester": {
-          "name": "Istruzioni condizionali & cicli con la contadina"
+          "name": "Istruzioni condizionali con la contadina"
         },
         "coursed-2018/Digital Citizenship": {
           "name": "Cittadinanza digitale"
@@ -1436,7 +1486,7 @@
           "name": "Divertirsi con i cicli con contatore"
         },
         "coursef-2018/For Loops in Bee": {
-          "name": "Cicli con contatore con l'Ape"
+          "name": "Cicli con contatore con l'ape"
         },
         "coursef-2018/For Loops in Artist": {
           "name": "Cicli con contatore con l'artista"
@@ -1517,10 +1567,10 @@
           "name": "Istruzioni condizionali con l'ape"
         },
         "express-2018/Conditionals & Loops in Harvester": {
-          "name": "Istruzioni condizionali & cicli con la contadina"
+          "name": "Istruzioni condizionali con la contadina"
         },
         "express-2018/Functions: Songwriting": {
-          "name": "Scrittura musicale di un programma"
+          "name": "Composizione di canzoni"
         },
         "express-2018/Functions in Minecraft": {
           "name": "Funzioni con Minecraft"
@@ -1562,7 +1612,7 @@
           "name": "Divertirsi con i cicli con contatore"
         },
         "express-2018/For Loops in Bee": {
-          "name": "Cicli con contatore con l'Ape"
+          "name": "Cicli con contatore con l'ape"
         },
         "express-2018/For Loops in Artist": {
           "name": "Cicli con contatore con l'artista"
@@ -1646,7 +1696,7 @@
           "name": "Realizza un gioco con Star Wars"
         },
         "coursee-2018/Functions: Songwriting": {
-          "name": "Scrittura musicale di un programma"
+          "name": "Composizione di canzoni"
         },
         "coursee-2018/Functions in Minecraft": {
           "name": "Funzioni con Minecraft"
@@ -1766,7 +1816,7 @@
           "name": "Programmare con Rey e BB-8"
         },
         "pre-express-2018/Loops: My Loopy Robotic Friends": {
-          "name": "I miei ripetitivi amici robotici (per i più piccoli)"
+          "name": "I miei ciclici amici robotici (per i più piccoli)"
         },
         "pre-express-2018/Loops in Ice Age": {
           "name": "Cicli con Scrat"
@@ -1822,11 +1872,26 @@
         "csd2-2018/Lists": {
           "name": "Liste"
         },
+        "csd1-2018/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi"
+        },
         "csd1-2018/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi"
+        },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2018/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2018/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2018/Processing": {
+          "name": "Elaborazione"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Cittadinanza digitale - Il mio quartiere digitale"
@@ -1940,7 +2005,7 @@
           "name": "Cicli \"fino a che\" nel labirinto"
         },
         "coursed-2019/Conditionals & Loops in Harvester": {
-          "name": "Istruzioni condizionali & cicli con la contadina"
+          "name": "Istruzioni condizionali con la contadina"
         },
         "coursed-2019/Unplugged: Binary": {
           "name": "Immagini binarie"
@@ -1958,10 +2023,10 @@
           "name": "Funzioni con Minecraft"
         },
         "coursef-2019/Learning Sprites with Sprite Lab": {
-          "name": "Pesce che nuota, nel Laboratorio dei personaggi"
+          "name": "Pesce che nuota - Laboratorio dei personaggi"
         },
         "coursef-2019/Events with Sprite Lab": {
-          "name": "La festa di ballo degli alieni con il Laboratorio dei personaggi"
+          "name": "La festa degli alieni - Laboratorio dei personaggi"
         },
         "coursef-2019/Loops with the Artist": {
           "name": "Disegnare con i cicli"
@@ -1988,7 +2053,7 @@
           "name": "Divertirsi con i cicli con contatore"
         },
         "coursef-2019/For Loops in Bee": {
-          "name": "Cicli con contatore con l'Ape"
+          "name": "Cicli con contatore con l'ape"
         },
         "coursef-2019/For Loops in Artist": {
           "name": "Cicli con contatore con l'artista"
@@ -2015,7 +2080,7 @@
           "name": "Disegnare con i cicli"
         },
         "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
+          "name": "Istruzioni condizionali con Minecraft - Viaggio acquatico"
         },
         "coursee-2019/Conditionals": {
           "name": "Istruzioni condizionali con la contadina"
@@ -2024,10 +2089,10 @@
           "name": "Simone Dice"
         },
         "coursee-2019/Learning Sprites with Sprite Lab": {
-          "name": "Pesce che nuota, nel Laboratorio dei personaggi"
+          "name": "Pesce che nuota - Laboratorio dei personaggi"
         },
         "coursee-2019/Alien Dance Party with Sprite Lab": {
-          "name": "La festa di ballo degli alieni con il Laboratorio dei personaggi"
+          "name": "La festa degli alieni - Laboratorio dei personaggi"
         },
         "coursee-2019/Private and Personal Information": {
           "name": "Dati personali e altri dati"
@@ -2045,7 +2110,7 @@
           "name": "Cicli annidati con Frozen"
         },
         "coursee-2019/Functions: Songwriting": {
-          "name": "Scrittura musicale di un programma"
+          "name": "Composizione di canzoni"
         },
         "coursee-2019/Functions in Minecraft": {
           "name": "Funzioni con Minecraft"
@@ -2096,13 +2161,13 @@
           "name": "Cicli \"mentre\" con la contadina"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
+          "name": "Istruzioni condizionali con Minecraft - Viaggio acquatico"
         },
         "express-2019/Until Loops in Maze": {
           "name": "Cicli \"fino a che\" nel labirinto"
         },
         "express-2019/Conditionals & Loops in Harvester": {
-          "name": "Istruzioni condizionali & cicli con la contadina"
+          "name": "Istruzioni condizionali con la contadina"
         },
         "express-2019/Functions in Minecraft": {
           "name": "Funzioni con Minecraft"
@@ -2123,13 +2188,13 @@
           "name": "Modifica delle Variabili con l'Artista"
         },
         "express-2019/For Loops in Bee": {
-          "name": "Cicli con contatore con l'Ape"
+          "name": "Cicli con contatore con l'ape"
         },
         "express-2019/For Loops in Artist": {
           "name": "Cicli con contatore con l'artista"
         },
         "express-2019/Learning Sprites with Sprite Lab": {
-          "name": "Pesce che nuota, nel Laboratorio dei personaggi"
+          "name": "Pesce che nuota - Laboratorio dei personaggi"
         },
         "express-2019/Alien Dance Party with Sprite Lab": {
           "name": "Discoteca Aliena"
@@ -2260,11 +2325,26 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Funzioni con parametri"
         },
+        "csd1-2019/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi"
+        },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi"
+        },
+        "csd1-2019/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2019/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2019/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2019/Processing": {
+          "name": "Elaborazione"
+        },
+        "csd1-2019/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
         },
         "csd2-2019/Digital Footprint": {
           "name": "Orme digitali"
@@ -2791,14 +2871,29 @@
         "csd2-2017/Lists": {
           "name": "Liste"
         },
+        "csd1-2017/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi"
+        },
         "csd1-2017/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi"
+        },
+        "csd1-2017/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2017/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2017/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2017/Processing": {
+          "name": "Elaborazione"
         },
         "csd1-2017/Storage": {
           "name": "Archiviazione"
+        },
+        "csd1-2017/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellazione Bianco e Nero Tutorial"
@@ -3023,7 +3118,7 @@
           "name": "Labirinto: Istruzioni Condizionali"
         },
         "course3/Songwriting": {
-          "name": "Scrittura musicale di un programma"
+          "name": "Composizione di canzoni"
         },
         "course3/Dice Race": {
           "name": "Gara con i Dadi"
@@ -3305,7 +3400,7 @@
           "student_overview": "Esegui simulazioni al computer e fai esperimenti modificando le variabili."
         },
         "coursef-2021/lesson-5": {
-          "name": "Epidemia",
+          "name": "Simulazione di epidemia",
           "overview": "Questa lezione combina la **palestra delle competenze** sugli eventi con un **mini progetto** in cui gli alunni possono creare la propria simulazione al computer nel Laboratorio dei personaggi. Gli alunni studiano la simulazione per capire quanto velocemente può diffondersi un virus e cosa si può fare per rallentarlo. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Nella lezione precedente, gli alunni hanno raccolto e interpretato i dati da una semplice simulazione. In questa lezione, gli alunni seguiranno le istruzioni per codificare il proprio modello di simulazione. Le precedenti conoscenze degli alunni sulle epidemie di virus nel mondo reale verranno applicate a uno scenario fittizio. ",
@@ -4182,14 +4277,69 @@
         "csd3-2021/Functions": {
           "name": "Funzioni"
         },
+        "csd1-2021/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi",
+          "overview": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**\n\nIn questa lezione, gli studenti lavorano in gruppo per progettare barche in carta di alluminio che sostengano il maggior numero possibile di centesimi. I gruppi hanno a disposizione due turni per lavorare sulle proprie barche, con l'obiettivo di vincere più centesimi rispetto al primo round. La struttura dell'attività prevede diverse fasi del processo di risoluzione dei problemi, sulle quali gli studenti verranno istruiti con maggiori dettagli nella lezione successiva. Alla fine della lezione gli studenti riflettono sulla propria esperienza con l'attività e creano collegamenti con le tipologie di risoluzione dei problemi da utilizzare per il resto del corso\n\n**Sono disponibili anche versioni alternative di questa lezione.** \n\n-   [Tavolo di giornali](/s/csd1-2021/lessons/9/)\n-   [Ponte di spaghetti](/s/csd1-2021/lessons/10/)\n-   [Torre di carta](/s/csd1-2021/lessons/11/)",
+          "preparation": "**Per ciascun gruppo**\n\n-   2 fogli quadrati di carta di alluminio da 12/13 cm di lato\n-   1 contenitore che può contenere 7-13 cm di acqua \n-   Diversi asciugamani di carta o stracci che possono essere posizionati sotto il contenitore \n-   15 monetine (centesimi)\n-   Una copia della guida alle attività\n\n**Per l'insegnante**\n\n-   1 contenitore che può contenere 7-13 cm di acqua \n-   50 monetine (centesimi)\n-   Asciugamani o stracci di carta extra ",
+          "purpose": "Questa lezione è una divertente introduzione alla risoluzione di problemi, in modalità aperta, collaborativa e creativa, che sarà utile per gli studenti nel resto di questa unità e del corso. Il problema delle barche in alluminio potrebbe essere facilmente sostituito da qualsiasi altro problema che richieda agli studenti di definire i propri obiettivi, elaborare un piano, sperimentare una soluzione, valutare i risultati e da qui migliorare di volta in volta. Il fatto che il problema scelto sia «non computazionale» è intenzionale. L'informatica è fondamentalmente una disciplina che risolve problemi e, in questa fase, astenersi dai tradizionali problemi informatici aiuta a impostare questa classe come una classe focalizzata sulla risoluzione dei problemi in generale, in cui l'informatica è un nuovo «strumento» per aiutare ad affrontare determinati tipi di problemi. "
+        },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi",
+          "overview": "**Domanda del giorno: quali sono alcuni dei comuni passaggi che possiamo percorrere per risolvere diversi tipi di problemi?**\n\nQuesta lezione introduce il processo formale di risoluzione dei problemi che gli studenti utilizzeranno nel corso dell'anno, Definisci - Prepara - Prova - Rifletti. La lezione ha inizio con la richiesta agli studenti di riflettere su tutti i diversi tipi di problemi incontrati nella vita quotidiana. Agli studenti vengono quindi mostrate le quattro fasi del processo di risoluzione dei problemi; essi lavorano insieme per mettere in relazione queste fasi astratte con le loro effettive esperienze di risoluzione dei problemi. Gli studenti mettono prima in relazione questi passaggi con le attività problematiche della lezione precedente, poi con un problema che sono bravi a risolvere, quindi con un problema che vogliono migliorare. Alla fine della lezione la classe raccoglie un elenco di strategie generalmente utili per ogni fase del processo da apporre sui cartelloni che verranno utilizzati durante l'unità e durante l'anno.",
+          "preparation": "Per ogni studente \n\n-   Stampa una copia della Guida alle attività\n\nPer la classe\n\n-   Cartellone\n-   Pennarelli/matite colorate",
+          "purpose": "Questa lezione mira a mettere in relazione il processo formale di risoluzione dei problemi che gli studenti utilizzeranno durante il corso, con alcune esperienze di vita reale in cui hanno già messo in pratica la risoluzione dei problemi. Le unità future di CS Discoveries presenteranno problemi in contesti che possono essere familiari o meno. Un processo strutturato di risoluzione dei problemi sarà uno strumento importante per aiutare gli studenti ad andare avanti di fronte a sfide nuove e complesse.",
+          "student_overview": "**Domanda del giorno: quali sono alcuni passaggi comuni che possiamo usare per risolvere molti problemi di diversa natura?**\n\nImparerai a conoscere il processo di risoluzione dei problemi che utilizziamo in informatica e ti immergerai in alcune strategie per implementare ogni fase. "
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi",
+          "overview": "**Domanda del giorno: come possiamo applicare il processo di risoluzione dei problemi a molte tipologie diverse di problemi?**\n\nIn questa lezione gli studenti applicano il processo di risoluzione dei problemi a tre diversi problemi per comprendere meglio il valore di ogni fase. Porteranno a termine una ricerca di parole, organizzeranno i posti a sedere per una festa di compleanno e riprogetteranno un'aula. I problemi diventano sempre più complessi e sempre meno definiti per evidenziare come il processo di risoluzione dei problemi sia particolarmente utile nell'affrontare queste tipologie di problemi. La lezione si conclude con gli studenti che riflettono sulla loro esperienza con il processo di risoluzione dei problemi. Dovranno motivare l'inserimento di ogni fase e raccoglieranno idee su domande o strategie che possano aiutarli a definire meglio i problemi aperti, poiché questo è spesso il passaggio più critico.\n\nIl completamento di questa lezione richiederà probabilmente due o più lezioni. I primi due problemi possono rientrare in una sola lezione, ma il terzo dovrà essere spostato a un secondo giorno.\n\n**Sono disponibili anche versioni alternative di questa lezione.** \n\n-   [Tema animale](/s/csd1-2021/lessons/12/)\n-   [Tema dei giochi](/s/csd1-2021/lessons/13/)",
+          "preparation": "-   Stampa la guida alle attività per ciascuno studente\n-   Fogli per gli appunti, per il problema della festa di compleanno\n-   Cartellone per annotare, durante la discussione conclusiva, la strategia di definizione dei problemi",
+          "purpose": "Con questa lezione gli studenti otterranno una maggiore pratica sul processo di risoluzione dei problemi nell'ambito di contesti diversi. Servirà a sottolineare il fatto che il processo di risoluzione dei problemi è particolarmente utile quando si affrontano problemi mal definiti. Alla fine della lezione, le riunioni conclusive volte a generare idee metteranno a disposizione degli studenti alcune strategie e domande che possono porre per definire meglio i problemi da soli, poiché questo è spesso il passaggio più critico. I problemi illustrati in questa lezione aiutano anche a stimolare una discussione nella lezione seguente sui tipi di problemi che i computer sono più adatti a risolvere.",
+          "student_overview": "**Domanda del giorno: come possiamo applicare il processo di risoluzione dei problemi a diverse tipologie di problemi?**\n\nOggi applicherai il processo di risoluzione dei problemi a tre diversi problemi che diventeranno sempre più complessi!"
         },
         "csd1-2021/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?",
+          "overview": "**Domanda del giorno: cos'è un computer?**\n\nIn questa lezione gli studenti sviluppano una definizione preliminare di computer. Per iniziare la lezione, la classe esaminerà le possibili definizioni per un computer e annoterà i risultati di queste riflessioni sulla lavagna. Successivamente, gli studenti lavoreranno in gruppo per ordinare le immagini su un cartellone secondo la categorizzazione «è un computer» o «non è un computer». I gruppi metteranno i loro cartelloni in giro per la stanza e spiegheranno brevemente le loro motivazioni per la scelta di alcune delle loro categorizzazioni più problematiche. L'insegnante introdurrà quindi una definizione del computer e consentirà agli studenti di revisionare i propri cartelloni secondo la nuova definizione.",
+          "preparation": "**Per ogni gruppo** \n\n-   Stampa più copie della guida alle attività. Nota che ci sono due serie di immagini, ma ogni gruppo ha bisogno di un solo set.\n-   Forbici (se non avrai avuto tempo di ritagliare le foto prima della lezione) \n-   Cartoncino per cartelloni\n-   Pennarelli o matite colorate \n-   Colla o nastro adesivo per attaccare le immagini ",
+          "purpose": "Questa lezione si basa sul tema della risoluzione dei problemi delle lezioni precedenti e si concentra sui dettagli di come l'informatica viene utilizzata nella risoluzione dei problemi. In questa lezione, gli studenti comprenderanno le caratteristiche di un computer e il fatto che esso utilizzi i dati come parte del processo di risoluzione dei problemi. Le prossime lezioni tratteranno in modo più approfondito le caratteristiche dei problemi basati sui dati e il modo in cui i computer li risolvono.",
+          "student_overview": "**Domanda del giorno: cos'è un computer?**\n\nIn questa lezione, lavorerai in gruppo per capire cosa rende un computer un computer!"
+        },
+        "csd1-2021/Input and Output": {
+          "name": "Ingressi e uscite",
+          "overview": "**Domanda del giorno: in che modo i computer utilizzano i dati in ingresso e in uscita per ottenere e per fornire i dati di cui hanno bisogno per risolvere i problemi?**\n\nIn questa lezione gli studenti prendono in esame il modo in cui i computer ottengono e forniscono dati all'utente tramite input e output. Gli studenti considerano innanzitutto quali dati sarebbero necessari per risolvere un «problema di pensiero», quindi utilizzano tali dati per produrre una raccomandazione. Quindi identificano i dati in ingresso e in uscita di quel processo. Successivamente, gli studenti prendono in considerazione un'app che partecipa allo stesso processo e determinano in che modo l'app fa entrare e uscire dati. Infine, prendono in considerazione altri tipi di dati in ingresso e in uscita che i computer possono utilizzare per aiutare a risolvere i problemi.",
+          "preparation": "-   Preparare copie della guida alle attività",
+          "purpose": "Nella lezione precedente gli studenti hanno iniziato a riflettere sulle funzionalità che possono aiutare a classificare i dispositivi come computer. Questa lezione introduce i concetti di input e output (dati in ingresso e dati in uscita), come una di queste funzionalità e consente agli studenti di identificare diversi metodi di input o output nelle app più comuni.",
+          "student_overview": "**Domanda del giorno: in che modo i computer utilizzano dati in ingresso e in uscita per ottenere e fornire i dati di cui hanno bisogno per risolvere i problemi?**\n\nIn questa lezione imparerai come i computer ottengono e forniscono dati da parte e in favore dell'utente attraverso vari ingressi e uscite. "
+        },
+        "csd1-2021/Processing": {
+          "name": "Elaborazione",
+          "overview": "\\*\\*Domanda del giorno: quali sono i diversi modi in cui i computer possono elaborare i dati? \\*\\*\n\nQuesta lezione introduce gli studenti a quattro tipi comuni di elaborazione: if/then (condizionali), ricerca di una corrispondenza (ricerca), conteggio e confronto. Gli studenti vengono inizialmente introdotti ai tipi di elaborazione tramite diverse app di esempio. Quindi esaminano altre app per determinare il tipo di elaborazione utilizzato da ciascuna di esse. Quindi pensano alla propria app e decidono quali tipi di elaborazione dovrebbero funzionare. Infine, faranno una riflessione di gruppo su altri tipi di elaborazione che potrebbero essere utili ma che non sono stati inclusi nella lezione principale.",
+          "purpose": "Questa lezione introduce il concetto di elaborazione nell'ambito della risoluzione di problemi computazionali. La definizione di elaborazione presentata in questa lezione è intenzionalmente accessibile. Gli studenti dovrebbero capire che l'elaborazione è tutto ciò che un computer fa per trasformare gli ingressi in uscite e che ci sono molti modi diversi in cui i computer possono svolgere questo lavoro. L'obiettivo di questa lezione non è far scrivere agli studenti degli algoritmi specifici per le app di esempio.",
+          "student_overview": "**Domanda del giorno: quali sono i diversi modi in cui i computer possono elaborare i dati?**\n\nIn questa lezione, imparerai a conoscere i quattro tipi di elaborazione che i computer possono utilizzare per trasformare gli ingressi in uscite.  "
         },
         "csd1-2021/Storage": {
-          "name": "Archiviazione"
+          "name": "Archiviazione",
+          "overview": "**Domanda del giorno: perché l'archiviazione è una parte importante del processo di elaborazione?**\n\nQuesta lezione introduce il componente finale del modello di calcolo dell'unità: l'archiviazione. Dopo aver provato un'app «scelta di abiti», gli studenti discutono quali dati devono essere archiviati nell'app rispetto a quelle inserite ogni volta che l'app viene eseguita. Quindi esaminano una serie di app e utilizzano le loro decisioni su cosa archiviare per creare linee guida per decidere quali dati archiviare. Quindi esaminano i quattro componenti del modello di elaborazione di questo capitolo: ingressi, uscite, archiviazione ed elaborazione. In seguito, hanno un'ultima opportunità per rivedere le loro decisioni su quali oggetti dovrebbero essere classificati come «computer» rispetto alle prime pagine del capitolo. La lezione si conclude con una riflessione sulle loro idee relative alle app e su come potrebbe essere utilizzato lo spazio di archiviazione."
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Tavolo di giornali (Lezione alternativa 1)"
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Ponte di spaghetti (Lezione alternativa 1)"
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Torre di carta (Lezione alternativa 1)"
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema degli animali (Lezione alternativa 3)",
+          "purpose": "Con questa lezione gli studenti otterranno una maggiore pratica sul processo di risoluzione dei problemi nell'ambito di contesti diversi. Servirà a sottolineare il fatto che il processo di risoluzione dei problemi è particolarmente utile quando si affrontano problemi mal definiti. Alla fine della lezione, le riunioni conclusive volte a generare idee metteranno a disposizione degli studenti alcune strategie e domande che possono porre per definire meglio i problemi da soli, poiché questo è spesso il passaggio più critico. I problemi illustrati in questa lezione aiutano anche a stimolare una discussione nella lezione seguente sui tipi di problemi che i computer sono più adatti a risolvere."
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema dei giochi (lezione alternativa 3)",
+          "purpose": "Con questa lezione gli studenti otterranno una maggiore pratica sul processo di risoluzione dei problemi nell'ambito di contesti diversi. Servirà a sottolineare il fatto che il processo di risoluzione dei problemi è particolarmente utile quando si affrontano problemi mal definiti. Alla fine della lezione, le riunioni conclusive volte a generare idee metteranno a disposizione degli studenti alcune strategie e domande che possono porre per definire meglio i problemi da soli, poiché questo è spesso il passaggio più critico. I problemi illustrati in questa lezione aiutano anche a stimolare una discussione nella lezione seguente sui tipi di problemi che i computer sono più adatti a risolvere."
         },
         "csd2-2021/Digital Footprint": {
           "name": "Orme digitali"
@@ -4453,7 +4603,7 @@
           "name": "Disegnare con i cicli"
         },
         "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
+          "name": "Istruzioni condizionali con Minecraft - Viaggio acquatico"
         },
         "coursee-2020/Conditionals": {
           "name": "Istruzioni condizionali con la contadina"
@@ -4462,10 +4612,10 @@
           "name": "Simone Dice"
         },
         "coursee-2020/Learning Sprites with Sprite Lab": {
-          "name": "Pesce che nuota, nel Laboratorio dei personaggi"
+          "name": "Pesce che nuota - Laboratorio dei personaggi"
         },
         "coursee-2020/Alien Dance Party with Sprite Lab": {
-          "name": "La festa di ballo degli alieni con il Laboratorio dei personaggi"
+          "name": "La festa degli alieni - Laboratorio dei personaggi"
         },
         "coursee-2020/Private and Personal Information": {
           "name": "Dati personali e altri dati"
@@ -4483,7 +4633,7 @@
           "name": "Cicli annidati con Frozen"
         },
         "coursee-2020/Functions: Songwriting": {
-          "name": "Scrittura musicale di un programma"
+          "name": "Composizione di canzoni"
         },
         "coursee-2020/Functions in Minecraft": {
           "name": "Funzioni con Minecraft"
@@ -4540,10 +4690,10 @@
           "name": "Funzioni con Minecraft"
         },
         "coursef-2020/Learning Sprites with Sprite Lab": {
-          "name": "Pesce che nuota, nel Laboratorio dei personaggi"
+          "name": "Pesce che nuota - Laboratorio dei personaggi"
         },
         "coursef-2020/Events with Sprite Lab": {
-          "name": "La festa di ballo degli alieni con il Laboratorio dei personaggi"
+          "name": "La festa degli alieni - Laboratorio dei personaggi"
         },
         "coursef-2020/Loops with the Artist": {
           "name": "Disegnare con i cicli"
@@ -4579,7 +4729,7 @@
           "name": "Divertirsi con i cicli con contatore"
         },
         "coursef-2020/For Loops in Bee": {
-          "name": "Cicli con contatore con l'Ape"
+          "name": "Cicli con contatore con l'ape"
         },
         "coursef-2020/For Loops in Artist": {
           "name": "Cicli con contatore con l'artista"

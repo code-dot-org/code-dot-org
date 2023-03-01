@@ -808,7 +808,7 @@
           "NEW_Course_4_Bee_For_Loops_8_a": "Wenn deine Schleife hochzählt, wird die Schrittweite bei jedem Durchlauf zu deiner Zählervariablen addiert.<br><br>\n\nWas musst du zu jeder Zahl addieren, um die nächste Zahl zu erhalten?"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
@@ -824,8 +824,8 @@
           "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "OPD-K5-forloops-1": {
-          "courseF_bee_for1_a": "Zieh einen violetten Nummernblock in das leere Feld der ‚Wiederholen\\`-Schleife, um zu bestimmen, wie oft er wiederholt werden soll.",
-          "courseF_bee_for1_b": "Du benötigen zwei Blöcke in deiner ‚Wiederholen\\`-Schleife, um den gesamten Nektar zu sammeln."
+          "courseF_bee_for1_a": "Zieh einen violetten Nummernblock in das leere Feld der ‚Wiederholen`-Schleife, um zu bestimmen, wie oft er wiederholt werden soll.",
+          "courseF_bee_for1_b": "Du benötigen zwei Blöcke in deiner ‚Wiederholen`-Schleife, um den gesamten Nektar zu sammeln."
         },
         "OPD-K5-forloops-2": {
           "courseF_bee_for2_a": "Wenn dich das verwirrt, arbeite an einer Blüte nach der anderen und teste deinen Code dabei häufig.",
@@ -837,7 +837,7 @@
           "courseF_bee_for4_c": "Achte darauf, dass du die `Zähl`-Variable in deiner verschachtelten `Wiederholen`-Schleife verwendest, um genügend Nektar zu erhalten!"
         },
         "OPD-K5-forloops-6": {
-          "courseF_bee_for6_a": "Denk daran, eine `Zähl'-Variable innerhalb deiner`Wiederholen'-Schleife zu verwenden.",
+          "courseF_bee_for6_a": "Denk daran, eine `Zähl'-Variable innerhalb deiner `Wiederholen'-Schleife zu verwenden.",
           "courseF_bee_for6_b": "Innerhalb deiner \"Für\"-Schleife benötigst du einen \"Vorwärts\"-Befehl und eine Schleife zum Sammeln des Nektars.",
           "courseF_bee_for6_c": "Deine Schleife muss von **5** bis **1** zählen."
         },
@@ -848,7 +848,7 @@
         },
         "OPD-K5-projects-2": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
-          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird\\` ein, damit deine Figur am Anfang des Programms erscheint.",
+          "courseE_playLab_scaffold1_b": "Füge den Baustein `Figur einfügen` unter wenn ausgeführt wird` ein, damit deine Figur am Anfang des Programms erscheint.",
           "courseE_playLab_scaffold1_c": "Verwende `Hintergrund ???? erstellen`, um einen Hintergrund für deine Szene zu wählen."
         },
         "OPD-K5-projects-3": {
@@ -861,7 +861,7 @@
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_a": "Um in diesem Dreieck einen Innenwinkel von 60 Grad zu erreichen, vergiss nicht, den Künstler um 120 Grad zu drehen.",
-          "grade5_artist_variables_triangles1_b": "Verwende die `Wiederholen`-Schleife\\`, um deinen Code zu verkürzen.",
+          "grade5_artist_variables_triangles1_b": "Verwende die `Wiederholen`-Schleife`, um deinen Code zu verkürzen.",
           "grade5_artist_variables_triangles1_c": "Du willst dich in deiner Schleife um 50 Pixel vorwärts bewegen und dich dann um 120 Grad nach links drehen."
         },
         "OPD-K5-variables-2": {
@@ -870,18 +870,18 @@
         },
         "OPD-K5-variables-5": {
           "courseF_artist_variables3_a": "Die Variable `Länge` wird an zwei Stellen in deinem Code verwendet: In der Seitenlänge deines Dreiecks und in dem Abstand, um den du dich zwischen den Dreiecken vorwärts bewegst.",
-          "courseF_artist_variables3_b": "Ein Zahlen-Block mit dem Wert 50 sollte nur an einer Stelle stehen: nach dem `Länge bestimmen` Block."
+          "courseF_artist_variables3_b": "Ein Zahlen-Block mit dem Wert 50 sollte nur an einer Stelle stehen: nach dem `Länge bestimmen` Block.\n"
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Dein Code wird nicht viel anders sein als im letzten Puzzle, außer dass du den Zeichner drehen musst, um herunterzuspringen, und ihn dann zurückdrehen musst, um dich darauf vorzubereiten, das nächste Dreieck zu zeichnen.",
-          "courseF_artist_variables4_c": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
-          "courseF_artist_variables5_a": "Die zweite Hälfte deines Codes sollte fast genauso aussehen wie die erste Hälfte, außer dass du dich _nach_links\\_ drehen, springen und dann _nach_rechts\\_ drehen wirst.",
+          "courseF_artist_variables5_a": "Die zweite Hälfte deines Codes sollte fast genauso aussehen wie die erste Hälfte, außer dass du dich _nach_links_ drehen, springen und dann _nach_rechts_ drehen wirst.",
           "courseF_artist_variables5_b": "Die erste Hälfte deines Codes wird drei Dreiecke zeichnen, die zweite Hälfte die anderen drei.",
           "courseF_artist_variables5_c": "Beginne damit, den Code in der ersten Hälfte deines Programms zu duplizieren, und ändere ihn dann so, dass das gezeigte Muster entsteht.",
-          "courseF_artist_variables5_d": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Dies ist das Muster, dem dein Künstler folgen wird: \n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Es gibt ein paar Wege, die du einschlagen kannst. Welcher ist der Kürzeste?",
@@ -4888,7 +4888,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
           "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
-          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
@@ -5522,8 +5522,8 @@
         },
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine `if‘-Anweisung.",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife` oder eine `solange ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
           "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5552,7 +5552,7 @@
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!\n",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5582,7 +5582,7 @@
           "courseD_bee_conditionals4_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg übersehen kannst.",
           "courseD_bee_conditionals4_b": "Verwende eine `if`-Anweisung innerhalb deiner Schleife, um jedes Platz auf Nektar zu überprüfen.",
-          "courseD_bee_conditionals4_c": "Mit dem <xml><block type=\"maze_untilBlocked\"/></xml> Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
+          "courseD_bee_conditionals4_c": "Mit dem [blockly block][0] Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
           "courseD_bee_conditionals4_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals5": {
@@ -5609,7 +5609,7 @@
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein außen und einer \\`Solange ein Weg vor dir liegt‘-Schleife innen. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
+          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein außen und einer `Solange ein Weg vor dir liegt‘-Schleife innen. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
           "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code `wiederhole 3 mal` benötigt. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange ein Weg vor dir liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene nach Blüten Ausschau halten. `wenn an der Blume`, muss die Biene mit `hole Nektar`,Nektar holen.",
           "courseD_bee_conditionals5_b": "Im Baustein `solange ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
           "courseD_bee_conditionals5_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
@@ -7042,8 +7042,8 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Die Funktion, die du schreibst, sollte nicht dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat mit 100 Pixel langen Seiten zeichnet.",
-          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Dein Programm sollte: \n\n-   die Funktion verwenden \n-   um 100 + 75 Pixel vorwärts bewegen\n-   die Funktion verwenden"
+          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "Dein Programm sollte: \n\n- die Funktion verwenden \n- um 100 + 75 Pixel vorwärts bewegen\n- die Funktion verwenden"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Um diese Aufgabe zu lösen, musst du nur eine Schleife hinzufügen, die den Startercode 8 Mal wiederholt. \n\nWenn du dich nicht mehr erinnern kannst, wie der Startercode aussieht, klicke oben rechts im Arbeitsbereich auf \"Neu starten\".",
@@ -10590,7 +10590,8 @@
           "storyboard_behavior_example": "_Hinweis:_ Um dem Sprite eine Verhaltensweise zu geben, verwendest du den Baustein `Sprite beginnt`mit einem grünen Verhalten-Baustein wie z. B. `nach rechts drehen`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "In diesem Level musst du keine Codes ändern."
+          "hw_no_changes": "In diesem Level musst du keine Codes ändern.",
+          "hw_click_sprites": "Klicken Sie auf die Sprites, während das Programm läuft."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "Versuche einen Baustein `Kostüm ändern` unter einem Baustein `beim Klicken` zu verbinden.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10618,7 +10619,8 @@
           "storyboard_behavior_example": "_Hinweis:_ Um dem Sprite eine Verhaltensweise zu geben, verwendest du den Baustein `Sprite beginnt`mit einem grünen Verhalten-Baustein wie z. B. `nach rechts drehen`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "In diesem Level musst du keine Codes ändern."
+          "hw_no_changes": "In diesem Level musst du keine Codes ändern.",
+          "hw_click_sprites": "Klicken Sie auf die Sprites, während das Programm läuft."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "Versuche einen Baustein `Kostüm ändern` unter einem Baustein `beim Klicken` zu verbinden.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10646,7 +10648,8 @@
           "storyboard_behavior_example": "_Hinweis:_ Um dem Sprite eine Verhaltensweise zu geben, verwendest du den Baustein `Sprite beginnt`mit einem grünen Verhalten-Baustein wie z. B. `nach rechts drehen`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "In diesem Level musst du keine Codes ändern."
+          "hw_no_changes": "In diesem Level musst du keine Codes ändern.",
+          "hw_click_sprites": "Klicken Sie auf die Sprites, während das Programm läuft."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "Versuche einen Baustein `Kostüm ändern` unter einem Baustein `beim Klicken` zu verbinden.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10671,7 +10674,8 @@
           "storyboard_behavior_example": "_Hinweis:_ Um dem Sprite eine Verhaltensweise zu geben, verwendest du den Baustein `Sprite beginnt`mit einem grünen Verhalten-Baustein wie z. B. `nach rechts drehen`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "In diesem Level musst du keine Codes ändern."
+          "hw_no_changes": "In diesem Level musst du keine Codes ändern.",
+          "hw_click_sprites": "Klicken Sie auf die Sprites, während das Programm läuft."
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "Versuche einen Baustein `Kostüm ändern` unter einem Baustein `beim Klicken` zu verbinden.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10693,8 +10697,8 @@
           "hw_retro_changePropBy": "Wenn du die Größe eines Sprites immer wieder ändern möchtest (mit Ereignissen), verwende diesen Baustein:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Jedes Sprite hat eine **Position**. Du kannst die Position mit dem Pin auf diesem Baustein festlegen: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klicke auf den Pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) auf dem Positionsblock und wähle dann eine neue Position für dein Sprite auf dem Bildschirm aus.\n-   Klicke auf die Schaltfläche \"Ausführen\", wenn dein Code fertig ist.",
-          "remove_hint": "Du kannst ein Sprite in einer bestimmten Zeilennummer entfernen. Füge stattdessen ein neues Sprite hinzu: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Jedes Sprite hat eine **Position**. Du kannst die Position mit dem Pin auf diesem Baustein festlegen: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Klicke auf den Pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) auf dem Positionsblock und wähle dann eine neue Position für dein Sprite auf dem Bildschirm aus.\n-   Klicke auf die Schaltfläche \"Ausführen\", wenn dein Code fertig ist.",
+          "remove_hint": "Du kannst ein Sprite in einer bestimmten Zeilennummer entfernen. Füge stattdessen ein neues Sprite hinzu: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Finde einen Hintergrund-Baustein wie diesen:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nund einen Text-Effekt wie hier: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nVerbinde die Bausteine unter `beim Ausführen` in deinen Arbeitsbereich.",
@@ -10706,14 +10710,14 @@
           "more_events_hint": "Du kannst in deinem Programm mehr als ein Ereignis verwenden. Versuche es mit zwei Ereignissen mit unterschiedlichen Effekten, die zur neuen Zeile des Gedichts passen.  \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Finde diesen Baustein:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\noder diesen Baustein: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nVerbinde ihn unter `beim Ausführen` in deinem Arbeitsbereich.",
-          "more_code": "Füge weitere Effekte und Farben hinzu, die zu dem von dir gewählten Sound passen. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Finde diesen Baustein:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\noder diesen Baustein: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nVerbinde ihn unter `beim Ausführen` in deinem Arbeitsbereich.",
+          "more_code": "Füge weitere Effekte und Farben hinzu, die zu dem von dir gewählten Sound passen. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Füge einen Baustein `Sprite beginnt` zu deinem Code hinzu. Vergiss nicht, du solltest bereits ein Sprite erstellt haben, das du mit diesem Verhalten ausstatten kannst.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Füge einen Baustein `Sprite beginnt` zu deinem Code hinzu. Vergiss nicht, du solltest bereits ein Sprite erstellt haben, das du mit diesem Verhalten ausstatten kannst.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Finde diesen Baustein und klicke auf `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nWas passiert, wenn die Zahl `25` ist? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Finde diesen Baustein und klicke auf `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nWas passiert, wenn die Zahl `25` ist? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "Damit die Pizza etwas sagt, verbindest du Code-Bausteine wie diesen:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -12525,7 +12529,7 @@
           "courseF_bee_variables_4_2021_1": "Anstatt 1 zu der Variable zu addieren, füge jetzt jedes Mal 2 hinzu."
         },
         "courseF_events_choice_pufferfish_-2022-2": {
-          "changeProp": "Du benötigst dafür auch diesen Block: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "Du brauchst auch diesen Block:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Du benötigst dafür auch diesen Block: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -12534,7 +12538,7 @@
           "behavior_list": "Probiere Verhaltensweisen wie „nach Osten bewegen und eine Schleife machen“, \"nach rechts drehen\" und \"herumfliegen\"."
         },
         "courseF_text_choice_multiprompt_-2022-2": {
-          "when_answered_var": "Versuche, die Bezeichnung der Variablen im Block \"Wenn beantwortet\" zu ändern. Da es mehrere Eingabeaufforderungen gibt, verwende die Bezeichnung für die _letzte_ Eingabeaufforderung, die beantwortet wird.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Versuche, die Bezeichnung der Variablen im Block \"Wenn beantwortet\" zu ändern. Da es mehrere Eingabeaufforderungen gibt, verwende die Bezeichnung für die *letzte* Eingabeaufforderung, die beantwortet wird.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">????</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -12578,10 +12582,12 @@
           "storyboard_behavior_example": "_Hinweis:_ Um dem Sprite eine Verhaltensweise zu geben, verwendest du den Baustein `Sprite beginnt`mit einem grünen Verhalten-Baustein wie z. B. `nach rechts drehen`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click_soccer-2022": {
-          "hw_no_changes": "In diesem Level musst du keine Codes ändern."
+          "hw_no_changes": "In diesem Level musst du keine Codes ändern.",
+          "hw_click_sprites": "Klicken Sie auf die Sprites, während das Programm läuft."
         },
         "helloworld_food_click_space-2022": {
-          "hw_no_changes": "In diesem Level musst du keine Codes ändern."
+          "hw_no_changes": "In diesem Level musst du keine Codes ändern.",
+          "hw_click_sprites": "Klicken Sie auf die Sprites, während das Programm läuft."
         },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_costumes": "Versuche einen Baustein `Kostüm ändern` unter einem Baustein `beim Klicken` zu verbinden.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -12614,6 +12620,29 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Um die Größe eines Sprites zu ändern, kannst du diesen Baustein verwenden:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Wenn du die Größe eines Sprites immer wieder ändern möchtest (mit Ereignissen), verwende diesen Baustein:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Damit das Sprite etwas sagt, verbinde die Codeblöcke wie folgt:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Damit das Sprite etwas sagt, verbinde die Codeblöcke wie folgt:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseF_clicker_finish_-2022-2": {
+          "clicker_backsgrounds_hint": "Mach dein Spiel auffällig, indem du den Hintergrund jedes Mal, wenn ein Sprite angeklickt wird, auf eine `zufällige Farbe` einstellst.\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <field name=\"CONDITION\">\"when\"</field>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <field name=\"ANIMATION\">\"gold coin\"</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackground\">\n        <value name=\"COLOR\">\n          <block type=\"gamelab_randomColor\"></block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "clicker_sounds_hint": "Füge Sounds zu verschiedenen Teilen deines Spiels hinzu, indem du unter jedem Event einen `Play-Sound`-Block verbindest.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n<block type=\"gamelab_spriteClicked\">\n    <field name=\"CONDITION\">\"when\"</field>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <field name=\"ANIMATION\">\"gold coin\"</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n    <block type=\"gamelab_atTime\">\n    <field name=\"UNIT\">\"seconds\"</field>\n    <value name=\"N\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">10</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "clicker_extend_hint": "Willst du ein längeres Spiel? Erstelle nach Ablauf einer bestimmten Zeit immer mehr Sprites.\n\n<xml><block type=\"gamelab_atTime\">\n    <field name=\"UNIT\">\"seconds\"</field>\n    <value name=\"N\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">3</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_makeNumSprites\">\n        <field name=\"ANIMATION_NAME\">\"gold coin\"</field>\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <field name=\"NUM\">5</field>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "clicker_remove_hint": "Wenn dein Spiel endet, kannst du alle verbleibenden Sprites wie folgt entfernen:\n\n<xml><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n      <field name=\"NUM\">10</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_destroy\">\n      <value name=\"THIS\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"gold coin\"</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "courseF_clicker_score_-2022-2": {
+          "print_variable_hint": "Du kannst eine Variable wie folgt setzen:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"variables_get\">\n      <field name=\"VAR\">score</field>\n    </block>\n  </value>\n</block></xml>",
+          "print_score_challenge_hint": "Du kannst anderen Text wie folgt mit deiner Variablen kombinieren:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"gamelab_textJoin\">\n      <field name=\"TEXT1\">You got </field>\n      <value name=\"TEXT2\">\n        <block type=\"gamelab_textVariableJoin\">\n          <field name=\"VAR\">score</field>\n          <value name=\"TEXT2\">\n            <block type=\"text\">\n              <field name=\"TEXT\"> points!</field>\n            </block>\n          </value>\n        </block>\n      </value>\n    </block>\n  </value>\n</block></xml>"
+        },
+        "courseF_variables2_click_-2022-2": {
+          "change_var_when_click_hint": "Damit das Sprite jedes Mal einen anderen Wert ausgibt, füge diesen Block unter dem Ereignisblock „Wenn angeklickt“ hinzu.\n\n<xml><block type=\"math_change\">\n      <field name=\"VAR\">???</field>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_variables2_set_-2022-2": {
+          "set_block_hint": "Du kannst eine Variable wie folgt setzen:\n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>",
+          "say_variable_hint": "Du kannst ein Sprite den Wert einer Variablen wie folgt sagen lassen:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>"
         }
       }
     }

@@ -149,6 +149,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Изменения виртуального урока"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Ресурс"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Повышение надежности пароля: Сценарии Если...То...",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -374,6 +377,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Изменения виртуального урока"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Ресурс"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Сила слов: Контрольная работа к уроку",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -537,6 +543,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Изменения виртуального урока"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Ресурс"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Быть Цифровым супергражданином",
@@ -756,9 +765,7 @@
           "type": "Изображения Эмоций"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Как создать раздел класса на Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Видео для Преподавателя"
+          "name": "Как создать раздел класса на Code.org"
         },
         "pair_programming/courseb/2022": {
           "name": "Программирование в парах",
@@ -1263,6 +1270,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Ресурс"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Стоп грубости в Интернете: Слайды урока",

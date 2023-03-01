@@ -227,6 +227,12 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
         },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": ""
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": ""
+        },
         "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
           "description": "Kodlangan dastur sifatida qadamlar ketma-ketligini qayta tuzing"
         },
@@ -341,17 +347,53 @@
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."
         },
+        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
+          "description": "Qanday turdagi bayonotlarni onlayn aytish to'g'ri va qaysi biri yo'qligini aniqlang."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Dizayn jarayonida foydalanuvchining ahamiyatini tasvirlab bering."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Ishlayotgan kompyuter dasturida spritlarni aniqlang."
+        },
         "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
         },
         "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
           "description": "foydalanuvchi ma'lumotlariga javob beradigan dasturlarni ishlab chiqish."
         },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Dasturda \"Ishga tushirish\" tugmasini bosganimizda o'zgaruvchining qanday aniqlanishi, saqlanishi va olinishi o'rtasidagi munosabatni aniqlang."
+        },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "O'zgaruvchini e'lon qilish"
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Dasturda o'zgaruvchini bir necha marta chaqirish."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "O'zgaruvchiga qiymat bering"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "O'zgaruvchilardan takliflar bilan birgalikda foydalaning."
+        },
         "b155264b-806c-417e-bd5f-2fd91b6093ec": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
         },
         "72c8cd33-c097-48d6-9178-3b146fdc243a": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
+        },
+        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
+          "description": "Sprite Lab dasturlarini yarating, bu erda spritlar guruhlarda yaratiladi va voqealar yordamida alohida nazorat qilinadi."
+        },
+        "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
+          "description": "Sprite Lab-da ball to'plash uchun spritlarni olib tashlash mumkin bo'lgan klik o'yinini yarating"
+        },
+        "9da7b378-c4e9-4184-b58a-61dfdad47357": {
+          "description": "Ma'lumotni saqlaydigan va vaqt o'tishi bilan o'zgarib turadigan o'zgaruvchi yarating"
+        },
+        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
+          "description": "Sprite Lab-da o'yinchining ballini kuzatish uchun alohida boshqariladigan bir nechta spritlar va o'zgaruvchilar yordamida o'z kollektor o'yinlarini yarating."
         },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Sun'iy intellektni boshqarish hayotida o‘ynaydigan rolni ko‘rib chiqing."
@@ -581,8 +623,17 @@
         "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
           "description": "Murakkab shakllarni oddiy qismlarga ajrating."
         },
+        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
+          "description": "Yangi spritlar yarating va ularga kostyumlar va xatti-harakatlarni belgilang."
+        },
         "0e3791df-3c03-4b83-9943-d3b57110dea1": {
           "description": "\"sprite\"ni ekrandagi ko‘chirish va o‘zgartirish mumkin bo‘lgan belgi yoki obyekt sifatida belgilang."
+        },
+        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
+          "description": "Yangi spritlar yarating va ularga kostyumlar va xatti-harakatlarni belgilang."
+        },
+        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
+          "description": "Spritlar va xatti-harakatlardan foydalanib animatsiya yarating."
         },
         "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
@@ -692,6 +743,12 @@
         "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
           "description": "Funksiya dasturni soddalashtirishga yordam berishi mumkinligini anglang."
         },
+        "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
+          "description": "Sprite Lab-da ball to'plash uchun spritlarni olib tashlash mumkin bo'lgan klik o'yinini yarating"
+        },
+        "54f59612-1695-4ba2-bbf4-c03862b02924": {
+          "description": "Ma'lumotni saqlaydigan va vaqt o'tishi bilan o'zgarib turadigan o'zgaruvchi yarating"
+        },
         "75953ae5-c4fa-40d3-85e1-deb508c32847": {
           "description": "Mavjud o‘zgaruvchilarga qiymatlarni belgilang."
         },
@@ -706,6 +763,12 @@
         },
         "d800c885-0e72-4325-a176-68612c826131": {
           "description": "Ish vaqti davomida miqdorlarni o‘zgartirish uchun o‘zgaruvchilarni ishlatishi mumkin bo‘lgan joylarni aniqlang."
+        },
+        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
+          "description": "Turli qiymatlar bilan tsiklni bir necha marta o'zgartirish uchun for looplaridan foydalaning."
+        },
+        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
+          "description": "Qachon for tsiklidan foydalanishni va qachon takrorlash va while sikllari kabi boshqa sikllardan foydalanishni bilib oling."
         },
         "546d4a38-5abb-402c-9e61-bef13a71001d": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."
@@ -791,8 +854,17 @@
         "d2669646-8580-4bb3-a6e0-54961b42a029": {
           "description": "Ketma-ketliklar va hodisa-ishlovchilar yordamida animatsion, interaktiv hikoya yarating."
         },
+        "086d6899-da60-486b-a9f7-89715397d81c": {
+          "description": "Internetda xavfsiz sayohat qilish qoidalarini tushuntiring."
+        },
+        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
+          "description": "Internetda xavfsiz qolish haqiqiy dunyoda xavfsiz qolish bilan qanday o'xshashligini solishtiring."
+        },
+        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+          "description": "Internetdan uzoq joylarga tashrif buyurish va yangi narsalarni o'rganish uchun foydalanish mumkinligini bilib oling."
+        },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
-          "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."
+          "description": "Talabalar ni kompyuter laboratoriyasi da  nima kutilishini bilib oling."
         },
         "d386bcb1-393c-46bc-8524-7380583d6ebb": {
           "description": "Kompyuter sichqonchasi, trekpad yoki sensorli ekranga tegishli terminologiyadan foydalaning."
@@ -801,7 +873,7 @@
           "description": "Algoritmni dasturga tarjima qilish"
         },
         "4d08a4a4-7475-4257-a955-62768629b65e": {
-          "description": "Ketma-ket ko‘rsatmalardagi xato yoki xatolarni aniqlang va ularga murojaat qiling"
+          "description": "Ketma-ket ko‘rsatmalardagi xato va muammolarni aniqlang va ularga murojaat qiling"
         },
         "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
           "description": "Dekodlash va boshqa birov tomonidan yaratilgan dasturni ishga tushirish"
@@ -874,6 +946,9 @@
         },
         "12be98ac-b495-4379-94d1-6cdd7395776a": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Kompyuter fanlari tushunchalarini ochiq loyihada qo'llang."
         },
         "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
           "description": "Ko‘rsatmalar yaratishda aniqlikka rioya qiling"
@@ -985,6 +1060,12 @@
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": ""
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": ""
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."
@@ -1144,6 +1225,15 @@
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Vaqt cheklanganligi yoki xatoliklar kabi to‘siqlarni yengib o‘tish."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Internetdan uzoq joylarga tashrif buyurish va yangi narsalarni o'rganish uchun foydalanish mumkinligini bilib oling."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Internetda xavfsiz qolish haqiqiy dunyoda xavfsiz qolish bilan qanday o'xshashligini solishtiring."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Internetda xavfsiz sayohat qilish qoidalarini tushuntiring."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."

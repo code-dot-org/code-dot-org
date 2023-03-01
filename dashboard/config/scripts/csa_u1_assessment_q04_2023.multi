@@ -1,17 +1,14 @@
 name 'CSA U1 Assessment q04_2023'
 
-wrong 'I only'
-right 'III only'
-wrong 'I and II'
-wrong 'II and III'
-wrong 'I, II, and III'
+wrong 'An object\'s attributes are specified in a class.'
+wrong 'A `Student` object would likely have a `gpa` attribute that represents the current GPA.'
+wrong 'Each `Student` object knows its GPA but not the GPA of other `Student` objects.'
+right 'Attributes are specified by the class\'s methods.'
 
 markdown <<MARKDOWN
-Which of the following are inherited when one class extends another?
+Which of the following statements is false?
+MARKDOWN
 
-I. private attributes
-
-II. public constructors
-
-III. public methods
+teacher_markdown <<MARKDOWN
+Methods specify the behaviors that an object can perform.
 MARKDOWN

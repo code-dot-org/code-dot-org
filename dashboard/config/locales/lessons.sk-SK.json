@@ -12,14 +12,14 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Hodina kódu Minecraft dizajnér",
           "overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Minecraft: Dizajnér](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://code.org/certificates?script=mc). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Minecraft: Dizajnér](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch?course=bWM=). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi kódovania a programovania (pomocou blokov), pričom spoznajú aj jednoduché techniky ladenia.",
           "student_overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie."
         },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Cesta hrdinu",
           "overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Minecraft: Cesta hrdinu](studio.code.org/s/hero/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://code.org/certificates?script=mc). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Minecraft: Cesta hrdinu](studio.code.org/s/hero/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch?course=bWM=). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi kódovania a programovania (pomocou blokov), pričom spoznajú aj jednoduché techniky ladenia a dozvedia sa, na čo sú užitočné funkcie.",
           "student_overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí."
         },
@@ -37,6 +37,7 @@
           "student_overview": "V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov."
         },
         "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Ahoj Svet: Futbal",
           "overview": "V tejto lekcii sa žiaci naučia základy informatiky programovaním v Sprite Labe. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Žiaci sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych žiakov. Viac informácií nájdete na [úvodnej stránke Hello World.](https://code.org/helloworld)",
           "preparation": "-   Prezrite si úlohy a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na stránke [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom kurze.",
           "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov.",
@@ -73,7 +74,7 @@
         "artist/Artist": {
           "name": "Umelec",
           "overview": "V tejto lekcii budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke. V tomto súbore úloh budú žiaci vytvárať postupne čoraz náročnejšie obrázky pomocou programovacích blokov ako `posuň sa dopredu o 100 pixelov` a `otoč sa vpravo o 90 stupňov`.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Umelec](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný.\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické\n\n-   (Nepovinné) Zaobstarajte pre žiakov uhlomery, aby si vedeli lepšie predstaviť uhly, ktoré potrebujú na vyriešenie úloh.\n\n-   Vytlačte pre každého žiaka materiál **Otáčanie a uhly**.",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Umelec](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný.\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické\n\n-   (Nepovinné) Zaobstarajte pre žiakov uhlomery, aby si vedeli lepšie predstaviť uhly, ktoré potrebujú na vyriešenie úloh.\n\n-   Vytlačte pre každého žiaka materiál **Otáčanie a uhly**.",
           "purpose": "Táto lekcia motivuje žiakov k tvorivejšiemu programovaniu. Jej cieľom je poskytnúť žiakom nové vedomosti o postupnostiach tým, že im predstaví nové programovacie bloky a nové úlohy. V tomto prípade sa žiaci pomocou nových programovacích blokov naučia viac o pixeloch a uhloch, popri čom si precvičia svoju schopnosť pracovať s postupnosťami. Žiaci tiež budú schopní vizualizovať si nové ciele, napríklad keď treba Umelca naprogramovať tak, aby nakreslil štvorec.",
           "student_overview": "Programuj Umelca a vytváraj nádherné obrázky."
         },
@@ -85,7 +86,6 @@
           "student_overview": "V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov."
         },
         "dance/Dance Party": {
-          "name": "Tanečná Párty",
           "overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.",
           "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Tanečná párty](https://studio.code.org/s/dance/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n-   Prečítajte si doplnkový plán lekcie [Veľká tanečná párty](studio.code.org/s/dance-unplugged/lessons/1) a rozhodnite sa, či by ste si pred Hodinou kódu nechceli so žiakmi prejsť ešte aj túto lekciu.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](http://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n-   (Nepovinné) Motivujte žiakov k tomu, aby si na aktivitu priniesli slúchadlá.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
@@ -113,6 +113,7 @@
           "student_overview": "V rámci tejto lekcie sa žiaci dozvedia, prečo je šifrovanie dôležité, a spoznajú jednoduché techniky prelomenia (alebo crackingu) tajných správ. Sami skúsia prelomiť správu zašifrovanú klasickou Cézarovou šifrou aj šifrou s náhodnou substitúciou. Žiaci by mali pochopiť, že v čase výkonných výpočtových nástrojov je potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie posolstvo tejto lekcie spočíva v tom, aby si žiaci uvedomili, ako a prečo hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť kvalitné šifrovanie nie je ľahké. Žiaci budú zasvätení do úvah, na čo všetko je potrebné myslieť pri vytváraní silného šifrovania, ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť sa na ochranu súkromia pri posielaní dát po internete je dôležitá pre každého používateľa internetu."
         },
         "hello-world-space-2022/Hello World: Food": {
+          "name": "Ahoj Svet: Vesmír",
           "overview": "V tejto lekcii sa žiaci naučia základy informatiky programovaním v Sprite Labe. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Žiaci sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych žiakov. Viac informácií nájdete na [úvodnej stránke Hello World.](https://code.org/helloworld)",
           "preparation": "-   Prezrite si úlohy a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na stránke [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom kurze.",
           "purpose": "Cieľom tejto lekcie je pripraviť žiakov na vytváranie jednoduchých programovacích projektov v Sprite Labe. Vďaka týmto vedomostiam môžu žiaci vytvárať projekty na ľubovoľnú tému, napríklad z inej učebnej oblasti alebo na niečo, čo sa ich osobne týka. Navštívte stránku [Medzipredmetové vzťahy a informatika](https://code.org/educate/csc), kde nájdete nápady, ako začleniť informatiku do iných predmetov.",
@@ -135,7 +136,7 @@
         "mc/Hour of Code 2015": {
           "name": "Minecraft Hodina Kódu",
           "overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Minecraft: Dobrodruh](studio.code.org/s/mc/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://code.org/certificates?script=mc). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Minecraft: Dobrodruh](studio.code.org/s/mc/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch?course=bWM=). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi kódovania a programovania (pomocou blokov), pričom spoznajú aj jednoduché techniky ladenia.",
           "student_overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie."
         },
@@ -181,7 +182,7 @@
         },
         "sports/Sports": {
           "overview": "V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Naprogramuj si vlastný zápas](https://studio.code.org/s/sports/lessons/1/levels/1) \n-   Skôr než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   Prečítajte si prezentáciu „Udalosti v Bounce – Ako fungujú?“ (žiakom sa pustí na konci hodiny).",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Naprogramuj si vlastný zápas](https://studio.code.org/s/sports/lessons/1/levels/1) \n-   Skôr než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   Prečítajte si prezentáciu „Udalosti v Bounce – Ako fungujú?“ (žiakom sa pustí na konci hodiny).",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi kódovania a programovania (pomocou blokov), pričom spoznajú aj jednoduché techniky ladenia. Dozvedia sa, že udalosti sú v počítačových programoch – najmä videohrách – veľmi bežné. \n\nUdalosti sú veľmi bežné v počítačových programoch, obzvlášť vo videohrách.\n\nPočas tejto lekcie si budú žiaci rozvíjať svoje poznatky o udalostiach tým, že naprogramujú športovú počítačovú hru. Naučia sa, ako naprogramovať pohyb objektu športového vybavenia pomocou šípok a ako naprogramovať, aby sa pri stretnutí objektov ozval zvuk. Na konci budú mať príležitosť prispôsobiť si hru tak, aby bola jedinečnejšia.",
           "student_overview": "Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú! "
         },
@@ -195,7 +196,7 @@
         "basketball/Bounce": {
           "name": "Vytvor si vlastný basketbalový zápas",
           "overview": "V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Vytvor si vlastný basketbalový zápas](https://studio.code.org/s/basketball/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   Prečítajte si prezentáciu „Udalosti v Bounce – Ako fungujú?“ (žiakom sa pustí na konci hodiny).",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Vytvor si vlastný basketbalový zápas](https://studio.code.org/s/basketball/lessons/1/levels/1) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Vytlačte si jeden alebo viacero [výstupných lístkov](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing), ktoré na konci aktivity rozdáte žiakom, alebo si vytvorte vlastný. \n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   Prečítajte si prezentáciu „Udalosti v Bounce – Ako fungujú?“ (žiakom sa pustí na konci hodiny).",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi kódovania a programovania (pomocou blokov), pričom spoznajú aj jednoduché techniky ladenia. Dozvedia sa, že udalosti sú v počítačových programoch – najmä videohrách – veľmi bežné.  \n\nŽiaci si budú rozvíjať svoje poznatky o udalostiach tým, že naprogramujú basketbalovú počítačovú hru. Naučia sa, ako naprogramovať pohyb ruky pomocou šípok a ako naprogramovať, aby sa pri stretnutí objektov ozval zvuk. Na konci budú mať príležitosť prispôsobiť si hru tak, aby bola jedinečnejšia.",
           "student_overview": "Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú! "
         },
@@ -210,6 +211,7 @@
           "name": "Hodina Kódu 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Tanečná Párty",
           "overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.",
           "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady dobrej praxe pre úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Tanečná párty](https://studio.code.org/s/dance-2019) \n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n-   Prečítajte si doplnkový plán lekcie [Veľká tanečná párty](https://studio.code.org/s/dance-unplugged/lessons/1) a rozhodnite sa, či by ste si pred Hodinou kódu nechceli so žiakmi prejsť ešte aj túto lekciu.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](http://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n-   (Nepovinné) Motivujte žiakov k tomu, aby si na aktivitu priniesli slúchadlá.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
@@ -218,7 +220,7 @@
         "oceans/Oceans": {
           "name": "AI pomáha oceánom",
           "overview": "V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Najprv roztriedi objekty na \"ryby\" a \"ostatné\" a pokúsi sa vyčistiť oceán od neporiadku. Potom bude ich úlohou rozšíriť cvičný dátový súbor o ďalšie morské živočíchy. V druhej časti aktivity budú vyberať vlastné značky, ktoré pridajú k obrázkom náhodne vytvorených rýb. Tieto cvičné dáta poslúžia pre tréning modelu strojového učenia, ktorý by potom mal nové obrázky označovať automaticky.",
-          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com).\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci.\n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať certifikát. Vopred vytlačte po jednom [certifikáte](https://code.org/certificates?script=oceans) pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
+          "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/). \n-   [Zaregistrujte svoje podujatie Hodiny kódu](http://hourofcode.com).\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci.\n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať certifikát. Vopred vytlačte po jednom [certifikáte](https://studio.code.org/certificates/batch?course=b2NlYW5z) pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
           "purpose": "Cieľom tohto kurzu je poskytnúť žiakom rýchly úvod do **strojového učenia**, čo je typ **umelej inteligencie**. Žiaci preskúmajú, ako sa používajú **trénovacie údaje** na to, aby model strojového učenia dokázal klasifikovať nové údaje. Žiaci by mali získať pozitívne skúsenosti počas tohto kurzu a, čo je ešte dôležitejšie, mali by byť motivovaní ďalej sa učiť informatiku. "
         },
         "k5-onlinepd-2019/Sequencing": {
@@ -422,7 +424,7 @@
           "student_overview": "V tejto lekcii budeš písať programy a učiť sa o sprajtoch (postavách) a správaní."
         },
         "coursef-2022/Sprites in Action": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "overview": "V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.",
           "preparation": "Prejdite si úrovne a prezrite si prezentáciu k lekcii.",
           "purpose": "Cieľom tejto lekcie je upevniť vedomosti žiakov z predchádzajúcej lekcie a predstaviť im programovanie pomocou udalostí. V tomto kurze budú udalosti pre žiakov hlavným spôsobom na upravenie toho, ako programy fungujú s plynúcim časom alebo v reakcii na používateľa.",
@@ -713,7 +715,7 @@
           "student_overview": "V tejto lekcii budeš písať programy a učiť sa o sprajtoch (postavách) a správaní."
         },
         "express-2022/Sprites in Action": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "overview": "V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.",
           "preparation": "Prejdite si úrovne a prezrite si prezentáciu k lekcii.",
           "purpose": "Cieľom tejto lekcie je predstaviť žiakom programovanie pomocou udalostí. V tomto kurze budú udalosti pre žiakov hlavným spôsobom na upravenie toho, ako programy fungujú s plynúcim časom alebo v reakcii na používateľa.",
@@ -1181,10 +1183,10 @@
           "student_overview": "**Otázka dňa: Ako sa informatika využíva pre zábavu?**\n\nV tejto lekcii preskúmaš, akú úlohu zohráva informatika a najmä programovanie v zábavnom priemysle a pri sebavyjadrovaní."
         },
         "csd3-2022/Plotting Shapes": {
-          "name": "Tvorba tvarov",
-          "overview": "\\*\\*Otázka dňa: Ako môžeme jasne povedať, ako niečo nakresliť na obrazovku?\n\nŽiaci skúmajú problémy spojené s dávaním pokynov na kreslenie pomocou tvarov a používajú nástroj, ktorý predstavuje, ako sa k tomuto problému pristupuje v Game Labe. Úvodná zahrievacia aktivita rýchlo demonštruje problémy s poskytovaním informácií o polohe bez nejakého spoločného referenčného bodu. V hlavnej aktivite žiaci skúmajú nástroj Game Lab, ktorý umožňuje žiakom interaktívne umiestňovať tvary na mriežku 400 x 400 v Game Labe. Potom striedavo dávajú partnerovi pokyny, ako pomocou tohto nástroja nakresliť skrytý obrázok, pričom zohľadňujú mnohé výzvy, s ktorými sa žiaci stretnú pri programovaní v Game Labe. Pred záverečnou diskusiou si žiaci môžu podľa vlastného uváženia vytvoriť vlastný obrázok, o ktorom budú hovoriť.",
+          "name": "Kreslenie tvarov",
+          "overview": "\\*\\*Otázka dňa: Ako môžeme dať jasné pokyny, ako niečo nakresliť na obrazovku?\n\nŽiaci skúmajú problémy spojené s dávaním pokynov na kreslenie pomocou tvarov a používajú nástroj, ktorý predstavuje, ako sa k tomuto problému pristupuje v Game Labe. Úvodná zahrievacia aktivita rýchlo demonštruje problémy s poskytovaním informácií o polohe bez nejakého spoločného referenčného bodu. V hlavnej aktivite žiaci skúmajú nástroj Game Lab, ktorý umožňuje žiakom interaktívne umiestňovať tvary na mriežku 400 x 400 v Game Labe. Potom striedavo dávajú partnerovi pokyny, ako pomocou tohto nástroja nakresliť skrytý obrázok, pričom zohľadňujú mnohé výzvy, s ktorými sa žiaci stretnú pri programovaní v Game Labe. Pred záverečnou diskusiou si žiaci môžu podľa vlastného uváženia vytvoriť vlastný obrázok, o ktorom budú hovoriť.",
           "purpose": "Hlavným cieľom tejto lekcie je oboznámiť žiakov so súradnicovým systémom, ktorý budú používať v Game Labe. Žiaci môžu mať obmedzené skúsenosti s používaním súradnicovej siete alebo môžu mať problémy s „prevrátenou“ osou y v Game Labe. Nástroj na kreslenie tiež núti žiakov premýšľať o ďalších funkciách Game Labu, s ktorými sa žiaci stretnú, keď začnú programovať v nasledujúcej lekcii. Medzi ne patrí potreba zohľadniť poradie pri kreslení, potreba určiť farbu a skutočnosť, že kruhy sa umiestňujú podľa svojho stredu a štvorce podľa ľavého horného rohu. Na konci tejto aktivity by mali byť žiaci pripravení využiť to, čo sa naučili o oznamovaní polohy, pri programovaní, ktorému sa budú venovať v nasledujúcej lekcii.",
-          "student_overview": "**Otázka dňa: Ako dokážeme jasne komunikovať, ako niečo nakresliť na obrazovke?**\n\nV tejto lekcii preskúmaš výzvy, ktoré musí človek prekonať, keď chce jasne odkomunikovať pokyny. V prostredí Game Lab budeš kresliť tvary na mriežke."
+          "student_overview": "**Otázka dňa: Ako môžeme dať jasné pokyny, ako niečo nakresliť na obrazovku?**\n\nV tejto lekcii preskúmaš výzvy, ktoré musí človek prekonať, keď chce jasne odkomunikovať pokyny. V prostredí Game Lab budeš kresliť tvary na mriežke."
         },
         "csd3-2022/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe",
@@ -1194,7 +1196,7 @@
         },
         "csd3-2022/Shapes and Parameters": {
           "name": "Tvary a parametre",
-          "overview": "\\*\\*Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?\n\nV tejto lekcii žiaci pokračujú v rozvíjaní svojich vedomostí o Game Labe úpravou šírky a výšky tvarov, ktoré používajú na kreslenie. Hodina sa začína diskusiou, ktorá prepája rozšírené možnosti blokov (napr. rôzne veľkosti tvarov) s potrebou väčšieho počtu vstupov do blokov alebo „parametrov“. Žiaci sa naučia kresliť pomocou verzií blokov [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/) a [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/), ktoré obsahujú parametre šírky a výšky. Naučia sa tiež používať blok [\\`background()\\`(#4dd0e1)](/docs/gamelab/background/).",
+          "overview": "\\*\\*Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?\n\nV tejto lekcii žiaci pokračujú v rozvíjaní svojich vedomostí o Game Labe úpravou šírky a výšky tvarov, ktoré používajú na kreslenie. Hodina sa začína diskusiou, ktorá prepája rozšírené možnosti blokov (napr. rôzne veľkosti tvarov) s potrebou väčšieho počtu vstupov do blokov alebo „parametrov“. Žiaci sa naučia kresliť pomocou verzií blokov [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/) a [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/), ktoré obsahujú parametre šírky a výšky. Naučia sa tiež používať blok [\\`background()\\`(#4dd0e1)](/docs/gamelab/background/).",
           "purpose": "Táto lekcia dáva žiakom možnosť mierne rozšíriť svoje zručnosti v kreslení a zároveň pokračovať v rozvíjaní všeobecných programovacích zručností. Budú musieť uvažovať o súradnicovej rovine x-y, zvážiť poradie v kóde a mierne zvýšiť zložitosť svojich programov. Táto hodina by mala byť zameraná predovšetkým na budovanie zručností.",
           "student_overview": "**Otázka dňa: Ako dokážeme pomocou parametrov zadať počítaču konkrétnejšie pokyny?**\n\nV tejto lekcii budeš pokračovať s prácou v prostredí Game Lab a lepšie sa oboznámiš s kreslením tvarov na obrazovke vďaka tomu, že budeš upravovať parametre tvarov, pomocou ktorých kreslíš obrázky. "
         },
@@ -1217,14 +1219,14 @@
           "student_overview": "**Otázka dňa: Ako nám dokážu sprajty pomôcť uchovávať v našich programoch väčšie množstvo údajov?**\n\nDnes sa naučíš o sprajtoch, ktoré ti umožnia nielen uchovávať v programe rôzne druhy informácií, ale aj vytvárať zaujímavejšie a zábavnejšie obrázky!"
         },
         "csd3-2022/Sprite Properties": {
-          "name": "Vlastnosti postáv",
+          "name": "Vlastnosti sprajtov",
           "overview": "**Otázka dňa: Ako môžeme použiť vlastnosti sprajtu na zmenu jeho vzhľadu na obrazovke?**\n\nŽiaci si rozšíria svoje poznatky o sprajtoch tým, že budú pracovať s vlastnosťami sprajtu.  Žiaci začnú tým, že si zopakujú, čo je to sprajt, a potom prejdú do Game Labu, kde si viac precvičia prácu so sprajtmi a použijú ich vlastnosti na zmenu ich vzhľadu. Potom sa zamyslia nad súvislosťami medzi vlastnosťami a premennými.",
           "purpose": "Na poslednej lekcii, na ktorej sa žiaci zoznámili so sprajtmi, sa zamerali najmä na vytváranie sprajtov a priraďovanie animácií. V tejto lekcii sa začnú zaoberať tým, čo robí zo sprajtov takú mocnú programovú štruktúru – že majú vlastnosti, ktoré sa dajú meniť počas behu programu. To je základom pre väčšinu toho, čo budú žiaci robiť vo zvyšnej časti tematického celku, pokiaľ ide o prístup k vlastnostiam sprajtu a manipuláciu s nimi s cieľom vytvoriť zaujímavé správanie vo svojich programoch.",
           "student_overview": "**Otázka dňa: Ako dokážeme pomocou vlastností sprajtov meniť ich vzhľad na obrazovke?**\n\nV tejto lekcii budeš pokračovať v práci so sprajtmi – budeš im meniť vzhľad pomocou vlastností. "
         },
         "csd3-2022/Text": {
           "name": "Text",
-          "overview": "\\*\\*Otázka dňa: Ako môžeme použiť text na zlepšenie našich scén a animácií?\n\nTáto lekcia predstavuje textové príkazy Game Labu a poskytuje žiakom viac praktických skúseností s používaním súradnicovej roviny a parametrov. Na začiatku lekcie majú žiaci za úlohu napísať titulok ku komiksu vytvorenému v Game Labe. Potom prejdú do Code Studia, kde si precvičia umiestňovanie textu na obrazovku a ovládanie ďalších vlastností textu, napríklad veľkosti. Žiaci, ktorí ukončia hodnotenie skôr, môžu pokračovať v učení sa náročnejších blokov týkajúcich sa vlastností textu. ",
+          "overview": "\\*\\*Otázka dňa: Ako môžeme vylepšiť svoje scény a animácie pomocou textu?\n\nTáto lekcia predstavuje textové príkazy Game Labu a poskytuje žiakom viac praktických skúseností s používaním súradnicovej roviny a parametrov. Na začiatku lekcie majú žiaci za úlohu napísať titulok ku komiksu vytvorenému v Game Labe. Potom prejdú do Code Studia, kde si precvičia umiestňovanie textu na obrazovku a ovládanie ďalších vlastností textu, napríklad veľkosti. Žiaci, ktorí ukončia hodnotenie skôr, môžu pokračovať v učení sa náročnejších blokov týkajúcich sa vlastností textu. ",
           "purpose": "Táto lekcia uvádza text, ktorý budú žiaci potrebovať, keď začnú vytvárať zložitejšie programy (napr. hry s výsledkovou tabuľkou). Ide o posledný typ prvku, ktorý budú žiaci umiestňovať na obrazovku. Potom sa žiaci zamerajú na to, ako môžu ovládať pohyb a interakcie týchto prvkov.",
           "student_overview": "**Otázka dňa: Ako si môžeme pomocou textu zlepšiť scény a animácie?**\n\nV tejto lekcii sa naučíš využívať textové príkazy prostredia Game Lab na pridanie popisu k scéne. "
         },
@@ -1259,13 +1261,13 @@
           "student_overview": "**Otázka dňa: Ako dokážu programy reagovať na zmeny, keď už sú spustené?**\n\nV tejto lekcii sa naučíš o logických výrazoch a podmienených príkazoch. Tie ti umožnia vyvárať programy, ktoré fungujú rôzne v závislosti od toho, či je podmienka splnená alebo nie."
         },
         "csd3-2022/Keyboard Input": {
-          "name": "Stlačenie kláves ako vstup",
+          "name": "Vstup z klávesnice",
           "overview": "**Otázka dňa: Ako môžu naše programy reagovať na vstupy od používateľa?**\n\nPo úvode do logických výrazov a príkazov _if_ v predchádzajúcej lekcii sa žiaci oboznámia s novým blokom s názvom [\\`keyDown()\\`(#fff176)](/docs/gamelab/keyDown/), ktorý vracia boolovskú hodnotu a možno ho použiť v podmienených príkazoch na pohyb sprajtov po obrazovke. Na konci tejto lekcie budú žiaci písať programy, ktoré prijímajú vstupy z klávesnice od používateľa na ovládanie sprajtov na obrazovke.",
           "purpose": "Jedným z bežných spôsobov, ako sa používajú podmienky, je kontrola rôznych typov používateľských vstupov, najmä stlačení klávesov. Ak má používateľ možnosť interakcie s programom, robí ho zaujímavejším a dynamickejším. Bez interakcie používateľa je veľmi ťažké vytvoriť hru. Preto je zavedenie podmienených príkazov a vstupov používateľa na rozhodovanie rozhodujúcim krokom k vytvoreniu hry.",
           "student_overview": "**Otázka dňa: Ako dokáže program reagovať na vstupy používateľa?**\n\nV tejto lekcii sa naučíš používať blok keyDown(), ktorý tvojim programom umožní reagovať na vstupy používateľa. "
         },
         "csd3-2022/Mouse Input": {
-          "name": "Vstup myši",
+          "name": "Vstup pomocou myši",
           "overview": "\\*\\*Otázka dňa: Aké sú ďalšie spôsoby, ktorými môže počítač reagovať na vstupy používateľa?\n\nV tejto lekcii žiaci pokračujú v skúmaní spôsobov použitia podmienených príkazov na prijímanie vstupov od používateľa. Okrem príkazov z klávesnice, ktoré sa naučili včera, sa žiaci oboznámia s niekoľkými spôsobmi prijímania vstupu pomocou myši. Rozšíria tiež svoje chápanie podmienených príkazov o príkaz „else“, ktorý umožňuje počítaču spustiť určitú časť kódu, keď je podmienka pravdivá, a inú časť kódu, keď nie je.",
           "purpose": "Žiaci sa naučili robiť jednoduché rozhodnutia pomocou podmienených príkazov. Niekedy však chceme robiť rozhodnutia na základe toho, či podmienka, na ktorú sme sa pôvodne pýtali, bola nepravdivá. Vtedy prichádzajú na rad príkazy else. Príkazy else sú druhým príkazom, ktorý je pripojený k príkazu if. Príkazy else sa vykonajú, keď podmienky, ku ktorým sú pripojené, sú nepravdivé.\n\nTento koncept sa zavádza spolu s niekoľkými novými príkazmi vstupu pomocou myši, čo umožňuje žiakom postupne vytvárať programy, ktoré využívajú vstup rôznymi spôsobmi.",
           "student_overview": "**Otázka dňa: Akými ďalšími spôsobmi dokáže počítač reagovať na vstupy používateľa?**\n\nV tejto lekcii získaš ďalšie poznatky o podmienkach „ak“, oboznámiš sa s podmienkami „ak/tak“ a dozvieš sa o tom, ako dokážeme pomocou myši získať od používateľa vstupy, ktoré sa dajú využiť v podmienených príkazoch. "
@@ -1289,10 +1291,10 @@
           "student_overview": "**Otázka dňa: Ako dokáže programovanie zjednodušiť komplikované problémy?**\n\nV tejto lekcii sa budeš učiť o detekcii kolízií tým, že sa pozrieš na to, ako dokáže počítač pomocou matematiky, polohy sprajtov a ich veľkosti určiť, či sa sprajty dotýkajú alebo nie. "
         },
         "csd3-2022/Mini-Project - Side Scroller": {
-          "name": "Miniprojekt – Side-scroller",
+          "name": "Miniprojekt – Plošinovka",
           "overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nŽiaci využijú to, čo sa naučili o detekcii kolízií a nastavovaní rýchlosti, na vytvorenie jednoduchej plošinovky. Po prezretí vzorovej hry tohto typu sa žiaci zamyslia nad tým, aký druh hry by chceli vytvoriť, a potom pomocou štruktúrovaného postupu naprogramujú hru v Code Studiu.",
           "purpose": "Na tejto hodine majú žiaci možnosť kreatívnejšie využiť získané poznatky. Povzbuďte žiakov, aby venovali čas častiam aktivity, ktoré ich zaujímajú, pokiaľ spĺňajú požiadavky zadania. Túto lekciu možno skrátiť alebo predĺžiť v závislosti od časových možností.",
-          "student_overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nV tejto lekcii využiješ získané vedomosti o rýchlosti a detekcii kolízií na vytvorenie jednoduchej počítačovej hry typu side-scroller!"
+          "student_overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nV tejto lekcii využiješ získané vedomosti o rýchlosti a detekcii kolízií na vytvorenie jednoduchej počítačovej hry plošinovky!"
         },
         "csd3-2022/Complex Sprite Movement": {
           "name": "Komplexný pohyb sprajtov",
@@ -1319,13 +1321,13 @@
           "student_overview": "**Otázka dňa: Ako môžu programátori využiť funkcie na vytvorenie vlastných abstrakcií?**\n\nV tejto lekcii sa naučíte, ako lepšie zorganizovať svoj kód pomocou funkcií, aby bol kód programu čitateľnejší a aby ste odstránili opakujúce sa bloky kódu. "
         },
         "csd3-2022/The Game Design Process": {
-          "name": "Proces tvorby hry",
+          "name": "Proces návrhu hry",
           "overview": "**Otázka dňa: Ako vám plán uľahčí uskutočnenie veľkého projektu?**\n\nNa tejto hodine sa žiaci oboznámia s postupom, ktorý budú používať pri navrhovaní hier po zvyšok tematického celku. Tento proces sa sústreďuje na sprievodcu projektom, ktorý od žiakov vyžaduje, aby definovali svoje sprajty, premenné a funkcie predtým, ako začnú programovať svoju hru. Na začiatku tejto vyučovacej hodiny si žiaci zahrajú hru v Game Labe, v ktorej je skrytý kód. Diskutujú o tom, aké by podľa nich mali byť sprajty, premenné a funkcie na vytvorenie hry. Potom dostanú vyplneného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov realizácie hry. Žiaci potom prechádzajú týmto procesom cez sériu úrovní. Na konci hodiny majú žiaci možnosť hru vylepšiť, aby bola podľa ich predstáv.",
           "purpose": "Táto lekcia približuje viacsnímkové animácie a je prvou lekciou zo série zameranej na proces tvorby softvéru.\n\nZatiaľ čo predchádzajúce lekcie sa zameriavali na používanie abstrakcií na zvládnutie zložitosti kódu, táto lekcia sa zameriava na zvládnutie zložitosti procesu vývoja softvéru. Vyučovacia hodina výrazne podporuje proces vývoja softvéru tým, že žiakom poskytuje vyplneného sprievodcu projektom, ponúka východiskový kód a sprevádza žiakov jeho implementáciou. V ďalších lekciách budú musieť žiaci samostatne dokončiť väčšiu časť tohto sprievodcu a pri záverečnom projekte budú postupovať podľa tohto procesu do značnej miery samostatne.",
           "student_overview": "**Otázka dňa: Ako vám plán uľahčí uskutočnenie veľkého projektu?**\n\nNa tejto hodine sa zoznámite s postupom, ktorý budete používať počas zvyšku tohto tematického celku pri navrhovaní hier. "
         },
         "csd3-2022/Using the Game Design Process": {
-          "name": "Využitie procesu na tvorbu hry",
+          "name": "Využitie procesu návrhu hry",
           "overview": "**Otázka dňa:  Ako môže proces riešenia problémov pomôcť programátorom zvládnuť veľké projekty?**\n\nV rámci tejto viacdňovej lekcie žiaci použijú proces riešenia problémov z 1. lekcie na vytvorenie plošinovej skákacej hry. Na začiatku si pozrú príklad plošinovej skákačky a potom definujú, ako bude vyzerať ich hra. Potom pomocou štruktúrovaného procesu naplánujú pozadia, premenné, sprajty a funkcie, ktoré budú potrebovať na realizáciu svojej hry. Po napísaní kódu hry sa žiaci zamyslia nad tým, ako by sa hra dala vylepšiť, a tieto zmeny implementujú.",
           "purpose": "Žiaci sa už naučili všetky programové štruktúry, ktoré potrebujú na vytvorenie hry. V tejto lekcii si zopakujú mnohé z týchto pojmov a zároveň sa oboznámia so štruktúrovaným postupom, ktorý im pomôže zvládnuť prácu. Nadväzuje na používanie sprievodcu projektom v predchádzajúcej lekcii tým, že žiaci samostatne dokončia väčšiu časť tohto sprievodcu projektom predtým, ako ho použijú na vytvorenie hry. Táto aktivita pripravuje žiakov na napísanie vlastnej hry od základov pre záverečný projekt.",
           "student_overview": "**Otázka dňa:  Ako môže proces riešenia problémov pomôcť programátorom zvládnuť veľké projekty?**\n\nV rámci tejto viacdňovej lekcie použijete proces riešenia problémov na vytvorenie plošinovej skákacej hry."
@@ -2129,7 +2131,7 @@
           "name": "Programovanie pre zábavu"
         },
         "csd3-2018/Plotting Shapes": {
-          "name": "Tvorba tvarov"
+          "name": "Kreslenie tvarov"
         },
         "csd3-2018/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
@@ -2159,7 +2161,7 @@
           "name": "Podmienené príkazy"
         },
         "csd3-2018/Keyboard Input": {
-          "name": "Stlačenie kláves ako vstup"
+          "name": "Vstup z klávesnice"
         },
         "csd3-2018/Other Forms of Input": {
           "name": "Ďalšie formy vstupov"
@@ -2183,10 +2185,10 @@
           "name": "Funkcie"
         },
         "csd3-2018/The Game Design Process": {
-          "name": "Proces tvorby hry"
+          "name": "Proces návrhu hry"
         },
         "csd3-2018/Using the Game Design Process": {
-          "name": "Využitie procesu na tvorbu hry"
+          "name": "Využitie procesu návrhu hry"
         },
         "csd3-2018/Project - Design a Game": {
           "name": "Projekt – Vytvor si vlastnú hru"
@@ -2678,7 +2680,7 @@
           "name": "Programovanie pre zábavu"
         },
         "csd3-2019/Plotting Shapes": {
-          "name": "Tvorba tvarov"
+          "name": "Kreslenie tvarov"
         },
         "csd3-2019/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
@@ -2708,7 +2710,7 @@
           "name": "Podmienené príkazy"
         },
         "csd3-2019/Keyboard Input": {
-          "name": "Stlačenie kláves ako vstup"
+          "name": "Vstup z klávesnice"
         },
         "csd3-2019/Other Forms of Input": {
           "name": "Ďalšie formy vstupov"
@@ -2732,10 +2734,10 @@
           "name": "Funkcie"
         },
         "csd3-2019/The Game Design Process": {
-          "name": "Proces tvorby hry"
+          "name": "Proces návrhu hry"
         },
         "csd3-2019/Using the Game Design Process": {
-          "name": "Využitie procesu na tvorbu hry"
+          "name": "Využitie procesu návrhu hry"
         },
         "csd3-2019/Project - Design a Game": {
           "name": "Projekt – Vytvor si vlastnú hru"
@@ -3248,7 +3250,7 @@
           "name": "Programovanie pre zábavu"
         },
         "csd3-2017/Plotting Shapes": {
-          "name": "Tvorba tvarov"
+          "name": "Kreslenie tvarov"
         },
         "csd3-2017/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe"
@@ -3278,7 +3280,7 @@
           "name": "Podmienené príkazy"
         },
         "csd3-2017/Keyboard Input": {
-          "name": "Stlačenie kláves ako vstup"
+          "name": "Vstup z klávesnice"
         },
         "csd3-2017/Other Forms of Input": {
           "name": "Ďalšie formy vstupov"
@@ -3302,10 +3304,10 @@
           "name": "Funkcie"
         },
         "csd3-2017/The Game Design Process": {
-          "name": "Proces tvorby hry"
+          "name": "Proces návrhu hry"
         },
         "csd3-2017/Using the Game Design Process": {
-          "name": "Využitie procesu na tvorbu hry"
+          "name": "Využitie procesu návrhu hry"
         },
         "csd3-2017/Project - Design a Game": {
           "name": "Projekt – Vytvor si vlastnú hru"
@@ -3767,7 +3769,7 @@
           "student_overview": "V tejto lekcii budeš písať programy a učiť sa o sprajtoch (postavách) a správaní."
         },
         "coursef-2021/lesson-8": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "overview": "V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.",
           "preparation": "Prejdite si úrovne a prezrite si prezentáciu k lekcii.",
           "purpose": "Cieľom tejto lekcie je upevniť vedomosti žiakov z predchádzajúcej lekcie a predstaviť im programovanie pomocou udalostí. V tomto kurze budú udalosti pre žiakov hlavným spôsobom na upravenie toho, ako programy fungujú s plynúcim časom alebo v reakcii na používateľa.",
@@ -4271,7 +4273,7 @@
           "student_overview": "V tejto lekcii budeš písať programy a učiť sa o sprajtoch (postavách) a správaní."
         },
         "express-2021/lesson-3": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "overview": "V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.",
           "preparation": "Prejdite si úrovne a prezrite si prezentáciu k lekcii.",
           "purpose": "Cieľom tejto lekcie je predstaviť žiakom programovanie pomocou udalostí. V tomto kurze budú udalosti pre žiakov hlavným spôsobom na upravenie toho, ako programy fungujú s plynúcim časom alebo v reakcii na používateľa.",
@@ -4765,10 +4767,10 @@
           "student_overview": "**Otázka dňa: Ako sa informatika využíva pre zábavu?**\n\nV tejto lekcii preskúmaš, akú úlohu zohráva informatika a najmä programovanie v zábavnom priemysle a pri sebavyjadrovaní."
         },
         "csd3-2021/Plotting Shapes": {
-          "name": "Tvorba tvarov",
-          "overview": "\\*\\*Otázka dňa: Ako môžeme jasne povedať, ako niečo nakresliť na obrazovku?\n\nŽiaci skúmajú problémy spojené s dávaním pokynov na kreslenie pomocou tvarov a používajú nástroj, ktorý predstavuje, ako sa k tomuto problému pristupuje v Game Labe. Úvodná zahrievacia aktivita rýchlo demonštruje problémy s poskytovaním informácií o polohe bez nejakého spoločného referenčného bodu. V hlavnej aktivite žiaci skúmajú nástroj Game Lab, ktorý umožňuje žiakom interaktívne umiestňovať tvary na mriežku 400 x 400 v Game Labe. Potom striedavo dávajú partnerovi pokyny, ako pomocou tohto nástroja nakresliť skrytý obrázok, pričom zohľadňujú mnohé výzvy, s ktorými sa žiaci stretnú pri programovaní v Game Labe. Pred záverečnou diskusiou si žiaci môžu podľa vlastného uváženia vytvoriť vlastný obrázok, o ktorom budú hovoriť.",
+          "name": "Kreslenie tvarov",
+          "overview": "\\*\\*Otázka dňa: Ako môžeme dať jasné pokyny, ako niečo nakresliť na obrazovku?\n\nŽiaci skúmajú problémy spojené s dávaním pokynov na kreslenie pomocou tvarov a používajú nástroj, ktorý predstavuje, ako sa k tomuto problému pristupuje v Game Labe. Úvodná zahrievacia aktivita rýchlo demonštruje problémy s poskytovaním informácií o polohe bez nejakého spoločného referenčného bodu. V hlavnej aktivite žiaci skúmajú nástroj Game Lab, ktorý umožňuje žiakom interaktívne umiestňovať tvary na mriežku 400 x 400 v Game Labe. Potom striedavo dávajú partnerovi pokyny, ako pomocou tohto nástroja nakresliť skrytý obrázok, pričom zohľadňujú mnohé výzvy, s ktorými sa žiaci stretnú pri programovaní v Game Labe. Pred záverečnou diskusiou si žiaci môžu podľa vlastného uváženia vytvoriť vlastný obrázok, o ktorom budú hovoriť.",
           "purpose": "Hlavným cieľom tejto lekcie je oboznámiť žiakov so súradnicovým systémom, ktorý budú používať v Game Labe. Žiaci môžu mať obmedzené skúsenosti s používaním súradnicovej siete alebo môžu mať problémy s „prevrátenou“ osou y v Game Labe. Nástroj na kreslenie tiež núti žiakov premýšľať o ďalších funkciách Game Labu, s ktorými sa žiaci stretnú, keď začnú programovať v nasledujúcej lekcii. Medzi ne patrí potreba zohľadniť poradie pri kreslení, potreba určiť farbu a skutočnosť, že kruhy sa umiestňujú podľa svojho stredu a štvorce podľa ľavého horného rohu. Na konci tejto aktivity by mali byť žiaci pripravení využiť to, čo sa naučili o oznamovaní polohy, pri programovaní, ktorému sa budú venovať v nasledujúcej lekcii.",
-          "student_overview": "**Otázka dňa: Ako dokážeme jasne komunikovať, ako niečo nakresliť na obrazovke?**\n\nV tejto lekcii preskúmaš výzvy, ktoré musí človek prekonať, keď chce jasne odkomunikovať pokyny. V prostredí Game Lab budeš kresliť tvary na mriežke."
+          "student_overview": "**Otázka dňa: Ako môžeme dať jasné pokyny, ako niečo nakresliť na obrazovku?**\n\nV tejto lekcii preskúmaš výzvy, ktoré musí človek prekonať, keď chce jasne odkomunikovať pokyny. V prostredí Game Lab budeš kresliť tvary na mriežke."
         },
         "csd3-2021/Drawing in Game Lab": {
           "name": "Kreslenie v Game Labe",
@@ -4779,7 +4781,7 @@
         },
         "csd3-2021/Shapes and Parameters": {
           "name": "Tvary a parametre",
-          "overview": "\\*\\*Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?\n\nV tejto lekcii žiaci pokračujú v rozvíjaní svojich vedomostí o Game Labe úpravou šírky a výšky tvarov, ktoré používajú na kreslenie. Hodina sa začína diskusiou, ktorá prepája rozšírené možnosti blokov (napr. rôzne veľkosti tvarov) s potrebou väčšieho počtu vstupov do blokov alebo „parametrov“. Žiaci sa naučia kresliť pomocou verzií blokov [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/) a [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/), ktoré obsahujú parametre šírky a výšky. Naučia sa tiež používať blok [\\`background()\\`(#4dd0e1)](/docs/gamelab/background/).",
+          "overview": "\\*\\*Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?\n\nV tejto lekcii žiaci pokračujú v rozvíjaní svojich vedomostí o Game Labe úpravou šírky a výšky tvarov, ktoré používajú na kreslenie. Hodina sa začína diskusiou, ktorá prepája rozšírené možnosti blokov (napr. rôzne veľkosti tvarov) s potrebou väčšieho počtu vstupov do blokov alebo „parametrov“. Žiaci sa naučia kresliť pomocou verzií blokov [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/) a [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/), ktoré obsahujú parametre šírky a výšky. Naučia sa tiež používať blok [\\`background()\\`(#4dd0e1)](/docs/gamelab/background/).",
           "preparation": "-   Skontrolujte postup v úrovni v Code Studiu",
           "purpose": "Táto lekcia dáva žiakom možnosť mierne rozšíriť svoje zručnosti v kreslení a zároveň pokračovať v rozvíjaní všeobecných programovacích zručností. Budú musieť uvažovať o súradnicovej rovine x-y, zvážiť poradie v kóde a mierne zvýšiť zložitosť svojich programov. Táto hodina by mala byť zameraná predovšetkým na budovanie zručností.",
           "student_overview": "**Otázka dňa: Ako dokážeme pomocou parametrov zadať počítaču konkrétnejšie pokyny?**\n\nV tejto lekcii budeš pokračovať s prácou v prostredí Game Lab a lepšie sa oboznámiš s kreslením tvarov na obrazovke vďaka tomu, že budeš upravovať parametre tvarov, pomocou ktorých kreslíš obrázky. "
@@ -4813,7 +4815,7 @@
         },
         "csd3-2021/Text": {
           "name": "Text",
-          "overview": "\\*\\*Otázka dňa: Ako môžeme použiť text na zlepšenie našich scén a animácií?\n\nTáto lekcia predstavuje textové príkazy Game Labu a poskytuje žiakom viac praktických skúseností s používaním súradnicovej roviny a parametrov. Na začiatku lekcie majú žiaci za úlohu napísať titulok ku komiksu vytvorenému v Game Labe. Potom prejdú do Code Studia, kde si precvičia umiestňovanie textu na obrazovku a ovládanie ďalších vlastností textu, napríklad veľkosti. Žiaci, ktorí ukončia hodnotenie skôr, môžu pokračovať v učení sa náročnejších blokov týkajúcich sa vlastností textu. ",
+          "overview": "\\*\\*Otázka dňa: Ako môžeme vylepšiť svoje scény a animácie pomocou textu?\n\nTáto lekcia predstavuje textové príkazy Game Labu a poskytuje žiakom viac praktických skúseností s používaním súradnicovej roviny a parametrov. Na začiatku lekcie majú žiaci za úlohu napísať titulok ku komiksu vytvorenému v Game Labe. Potom prejdú do Code Studia, kde si precvičia umiestňovanie textu na obrazovku a ovládanie ďalších vlastností textu, napríklad veľkosti. Žiaci, ktorí ukončia hodnotenie skôr, môžu pokračovať v učení sa náročnejších blokov týkajúcich sa vlastností textu. ",
           "purpose": "Táto lekcia uvádza text, ktorý budú žiaci potrebovať, keď začnú vytvárať zložitejšie programy (napr. hry s výsledkovou tabuľkou). Ide o posledný typ prvku, ktorý budú žiaci umiestňovať na obrazovku. Potom sa žiaci zamerajú na to, ako môžu ovládať pohyb a interakcie týchto prvkov.",
           "student_overview": "**Otázka dňa: Ako si môžeme pomocou textu zlepšiť scény a animácie?**\n\nV tejto lekcii sa naučíš využívať textové príkazy prostredia Game Lab na pridanie popisu k scéne. "
         },
@@ -4849,13 +4851,13 @@
           "student_overview": "**Otázka dňa: Ako dokážu programy reagovať na zmeny, keď už sú spustené?**\n\nV tejto lekcii sa naučíš o logických výrazoch a podmienených príkazoch. Tie ti umožnia vyvárať programy, ktoré fungujú rôzne v závislosti od toho, či je podmienka splnená alebo nie."
         },
         "csd3-2021/Keyboard Input": {
-          "name": "Stlačenie kláves ako vstup",
+          "name": "Vstup z klávesnice",
           "overview": "**Otázka dňa: Ako môžu naše programy reagovať na vstupy od používateľa?**\n\nPo úvode do logických výrazov a príkazov _if_ v predchádzajúcej lekcii sa žiaci oboznámia s novým blokom s názvom [\\`keyDown()\\`(#fff176)](/docs/gamelab/keyDown/), ktorý vracia boolovskú hodnotu a možno ho použiť v podmienených príkazoch na pohyb sprajtov po obrazovke. Na konci tejto lekcie budú žiaci písať programy, ktoré prijímajú vstupy z klávesnice od používateľa na ovládanie sprajtov na obrazovke.",
           "purpose": "Jedným z bežných spôsobov, ako sa používajú podmienky, je kontrola rôznych typov používateľských vstupov, najmä stlačení klávesov. Ak má používateľ možnosť interakcie s programom, robí ho zaujímavejším a dynamickejším. Bez interakcie používateľa je veľmi ťažké vytvoriť hru. Preto je zavedenie podmienených príkazov a vstupov používateľa na rozhodovanie rozhodujúcim krokom k vytvoreniu hry.",
           "student_overview": "**Otázka dňa: Ako dokáže program reagovať na vstupy používateľa?**\n\nV tejto lekcii sa naučíš používať blok keyDown(), ktorý tvojim programom umožní reagovať na vstupy používateľa. "
         },
         "csd3-2021/Mouse Input": {
-          "name": "Vstup myši",
+          "name": "Vstup pomocou myši",
           "overview": "\\*\\*Otázka dňa: Aké sú ďalšie spôsoby, ktorými môže počítač reagovať na vstupy používateľa?\n\nV tejto lekcii žiaci pokračujú v skúmaní spôsobov použitia podmienených príkazov na prijímanie vstupov od používateľa. Okrem príkazov z klávesnice, ktoré sa naučili včera, sa žiaci oboznámia s niekoľkými spôsobmi prijímania vstupu pomocou myši. Rozšíria tiež svoje chápanie podmienených príkazov o príkaz „else“, ktorý umožňuje počítaču spustiť určitú časť kódu, keď je podmienka pravdivá, a inú časť kódu, keď nie je.",
           "purpose": "Žiaci sa naučili robiť jednoduché rozhodnutia pomocou podmienených príkazov. Niekedy však chceme robiť rozhodnutia na základe toho, či podmienka, na ktorú sme sa pôvodne pýtali, bola nepravdivá. Vtedy prichádzajú na rad príkazy else. Príkazy else sú druhým príkazom, ktorý je pripojený k príkazu if. Príkazy else sa vykonajú, keď podmienky, ku ktorým sú pripojené, sú nepravdivé.\n\nTento koncept sa zavádza spolu s niekoľkými novými príkazmi vstupu pomocou myši, čo umožňuje žiakom postupne vytvárať programy, ktoré využívajú vstup rôznymi spôsobmi.",
           "student_overview": "**Otázka dňa: Akými ďalšími spôsobmi dokáže počítač reagovať na vstupy používateľa?**\n\nV tejto lekcii získaš ďalšie poznatky o podmienkach „ak“, oboznámiš sa s podmienkami „ak/tak“ a dozvieš sa o tom, ako dokážeme pomocou myši získať od používateľa vstupy, ktoré sa dajú využiť v podmienených príkazoch. "
@@ -4881,10 +4883,10 @@
           "student_overview": "**Otázka dňa: Ako dokáže programovanie zjednodušiť komplikované problémy?**\n\nV tejto lekcii sa budeš učiť o detekcii kolízií tým, že sa pozrieš na to, ako dokáže počítač pomocou matematiky, polohy sprajtov a ich veľkosti určiť, či sa sprajty dotýkajú alebo nie. "
         },
         "csd3-2021/Mini-Project: Side Scroller": {
-          "name": "Miniprojekt – Side-scroller",
+          "name": "Miniprojekt – Plošinovka",
           "overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nŽiaci využijú to, čo sa naučili o detekcii kolízií a nastavovaní rýchlosti, na vytvorenie jednoduchej plošinovky. Po prezretí vzorovej hry tohto typu sa žiaci zamyslia nad tým, aký druh hry by chceli vytvoriť, a potom pomocou štruktúrovaného postupu naprogramujú hru v Code Studiu.",
           "purpose": "Na tejto hodine majú žiaci možnosť kreatívnejšie využiť získané poznatky. Povzbuďte žiakov, aby venovali čas častiam aktivity, ktoré ich zaujímajú, pokiaľ spĺňajú požiadavky zadania. Túto lekciu možno skrátiť alebo predĺžiť v závislosti od časových možností.",
-          "student_overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nV tejto lekcii využiješ získané vedomosti o rýchlosti a detekcii kolízií na vytvorenie jednoduchej počítačovej hry typu side-scroller!"
+          "student_overview": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**\n\nV tejto lekcii využiješ získané vedomosti o rýchlosti a detekcii kolízií na vytvorenie jednoduchej počítačovej hry plošinovky!"
         },
         "csd3-2021/Complex Sprite Movement": {
           "name": "Komplexný pohyb sprajtov",
@@ -4911,14 +4913,14 @@
           "student_overview": "**Otázka dňa: Ako môžu programátori využiť funkcie na vytvorenie vlastných abstrakcií?**\n\nV tejto lekcii sa naučíte, ako lepšie zorganizovať svoj kód pomocou funkcií, aby bol kód programu čitateľnejší a aby ste odstránili opakujúce sa bloky kódu. "
         },
         "csd3-2021/The Game Design Process": {
-          "name": "Proces tvorby hry",
+          "name": "Proces návrhu hry",
           "overview": "**Otázka dňa: Ako vám plán uľahčí uskutočnenie veľkého projektu?**\n\nNa tejto hodine sa žiaci oboznámia s postupom, ktorý budú používať pri navrhovaní hier po zvyšok tematického celku. Tento proces sa sústreďuje na sprievodcu projektom, ktorý od žiakov vyžaduje, aby definovali svoje sprajty, premenné a funkcie predtým, ako začnú programovať svoju hru. Na začiatku tejto vyučovacej hodiny si žiaci zahrajú hru v Game Labe, v ktorej je skrytý kód. Diskutujú o tom, aké by podľa nich mali byť sprajty, premenné a funkcie na vytvorenie hry. Potom dostanú vyplneného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov realizácie hry. Žiaci potom prechádzajú týmto procesom cez sériu úrovní. Na konci hodiny majú žiaci možnosť hru vylepšiť, aby bola podľa ich predstáv.",
           "preparation": "-   Vytlačte kópie sprievodcu projektom, ak budete žiakom rozdávať fyzické kópie.  Upozorňujeme, že tento sprievodca projektom je zámerne vyplnený. (Pozrite si poznámky v učebnom pláne.)",
           "purpose": "Táto lekcia približuje viacsnímkové animácie a je prvou lekciou zo série zameranej na proces tvorby softvéru.\n\nZatiaľ čo predchádzajúce lekcie sa zameriavali na používanie abstrakcií na zvládnutie zložitosti kódu, táto lekcia sa zameriava na zvládnutie zložitosti procesu vývoja softvéru. Vyučovacia hodina výrazne podporuje proces vývoja softvéru tým, že žiakom poskytuje vyplneného sprievodcu projektom, ponúka východiskový kód a sprevádza žiakov jeho implementáciou. V ďalších lekciách budú musieť žiaci samostatne dokončiť väčšiu časť tohto sprievodcu a pri záverečnom projekte budú postupovať podľa tohto procesu do značnej miery samostatne.",
           "student_overview": "**Otázka dňa: Ako vám plán uľahčí uskutočnenie veľkého projektu?**\n\nNa tejto hodine sa zoznámite s postupom, ktorý budete používať počas zvyšku tohto tematického celku pri navrhovaní hier. "
         },
         "csd3-2021/Using the Game Design Process": {
-          "name": "Využitie procesu na tvorbu hry",
+          "name": "Využitie procesu návrhu hry",
           "overview": "**Otázka dňa:  Ako môže proces riešenia problémov pomôcť programátorom zvládnuť veľké projekty?**\n\nV rámci tejto viacdňovej lekcie žiaci použijú proces riešenia problémov z 1. lekcie na vytvorenie plošinovej skákacej hry. Na začiatku si pozrú príklad plošinovej skákačky a potom definujú, ako bude vyzerať ich hra. Potom pomocou štruktúrovaného procesu naplánujú pozadia, premenné, sprajty a funkcie, ktoré budú potrebovať na realizáciu svojej hry. Po napísaní kódu hry sa žiaci zamyslia nad tým, ako by sa hra dala vylepšiť, a tieto zmeny implementujú.",
           "preparation": "-   Vytlačte jednu kópiu sprievodcu projektom pre každého žiaka alebo dvojicu žiakov",
           "purpose": "Žiaci sa už naučili všetky programové štruktúry, ktoré potrebujú na vytvorenie hry. V tejto lekcii si zopakujú mnohé z týchto pojmov a zároveň sa oboznámia so štruktúrovaným postupom, ktorý im pomôže zvládnuť prácu. Nadväzuje na používanie sprievodcu projektom v predchádzajúcej lekcii tým, že žiaci samostatne dokončia väčšiu časť tohto sprievodcu projektom predtým, ako ho použijú na vytvorenie hry. Táto aktivita pripravuje žiakov na napísanie vlastnej hry od základov pre záverečný projekt.",

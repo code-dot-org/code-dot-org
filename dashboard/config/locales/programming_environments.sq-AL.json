@@ -4,11 +4,62 @@
       "programming_environments": {
         "gamelab": {
           "categories": {
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Ngjyra"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Ngjyra"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matematikë"
+              "name": "Matematikë",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    },
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    },
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "variabla"
+              "name": "variabla",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Përcaktoji një vlerë variablës së deklaruar më përpara"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Deklaron një variabël dhe emrin përkatës"
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
+                }
+              }
             },
             "functions": {
               "name": "funksione"
@@ -19,14 +70,78 @@
           "name": "Laboratori i Aplikacioneve",
           "description": "Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "të dhëna"
+              "name": "të dhëna",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematikë"
+              "name": "Matematikë",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    },
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    },
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "variabla"
+              "name": "variabla",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Deklaron një variabël dhe emrin përkatës"
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
+                },
+                "addPair": {
+                  "return_value": "Asnjë"
+                }
+              }
             },
             "functions": {
               "name": "funksione"

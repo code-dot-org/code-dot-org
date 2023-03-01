@@ -43,6 +43,8 @@ nl:
   hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
   hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
     play, and create with us.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Leer vandaag, bouw een mooiere morgen.  "
@@ -157,6 +159,10 @@ nl:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -539,6 +545,10 @@ nl:
     bij miljoenen leerlingen over de hele wereld die de computerwetenschappelijke
     onderwijsweek vieren met de Hour of Code. We openen de inschrijving voor de jaarlijkse
     viering in oktober.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organiseer een 'Hour of Code' tijdens %{campaign_date}, en meld hem
     hier aan.
   signup_name_label: Je naam
@@ -584,6 +594,7 @@ nl:
   signup_send_posters_address_placeholder: Dit adres zal niet worden gedeeld op onze
     kaart
   signup_event_type_in_school: In een school
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Buiten de school
   signup_event_type_at_home: Home
   signup_submit_census_label: Inzenden
@@ -1055,6 +1066,10 @@ nl:
   footer_menu_terms: Voorwaarden
   footer_menu_privacy: Privacybeleid
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: "'Hour of Code'-activiteiten"
   learn_banner_blurb: Probeer een één uur durende tutorial ontworpen voor alle leeftijden
     in meer dan 45 talen.  Vervoeg miljoenen studenten en leraren in meer dan 180
@@ -1067,9 +1082,6 @@ nl:
     of <a id=''teacher_banner_howto''> Lees de How-To gids</a>'
   learn_banner_teachers_markdown: "  Docenten: [Host een uur](%{host_url}) of [lees
     de gids](%{howto_url})  "
-  learn_robotics_banner_heading: ROBOTICA
-  learn_robotics_banner_blurb: Heb je robots? Gebruik ze met de onderstaande activiteiten
-    en maak een tastbaar 'Hour of Code' voor leerlingen van alle leeftijden!
   tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -1492,12 +1504,12 @@ nl:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -5810,7 +5822,7 @@ nl:
     omarmen de diversiteit die ons allemaal uniek en speciaal maakt.
   tutorial_dance2019_string_detail_grades: Vanaf groep 4
   tutorial_danceparty_string_detail_grades: Vanaf groep 4
-  tutorial_chibitronics_string_detail_grades: Grades 2-5
+  tutorial_chibitronics_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_athlete_string_detail_grades: Vanaf groep 4
   tutorial_moana_string_detail_grades: Vanaf groep 4
   tutorial_star-wars_string_detail_grades: Vanaf groep 4
@@ -5857,12 +5869,12 @@ nl:
   tutorial_tynkermult_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: do-not-show
-  tutorial_tynkerpup_string_detail_grades: Grades 2-5
+  tutorial_tynkerpup_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_livecode_string_detail_grades: Grades 9+
   tutorial_cocomgame_string_detail_grades: Vanaf groep 4
-  tutorial_tynkerspin_string_detail_grades: Grades 2-5
+  tutorial_tynkerspin_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_code-avengers_string_detail_grades: Graad 6 en hoger
-  tutorial_tynkercq_string_detail_grades: Grades 2-5
+  tutorial_tynkercq_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_cmgame_string_detail_grades: Graad 6 en hoger
   tutorial_codesters_string_detail_grades: do-not-show
   tutorial_qrm_string_detail_grades: Graad 6 en hoger
@@ -5896,7 +5908,7 @@ nl:
   tutorial_tynkerright_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_touchdevelop_string_detail_grades: do-not-show
   tutorial_tynkercc_string_detail_grades: Graad 6 en hoger
-  tutorial_bamboo_string_detail_grades: Grades 2-5
+  tutorial_bamboo_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_robojav_string_detail_grades: Graad 6 en hoger
   tutorial_roboba_string_detail_grades: Graad 6 en hoger
   tutorial_knodsnake_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
@@ -5944,7 +5956,7 @@ nl:
   tutorial_baubles_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Vanaf groep 4
-  tutorial_fufafit_string_detail_grades: Grades 2-5
+  tutorial_fufafit_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_ozodance_string_detail_grades: All ages
   tutorial_codingrobotics_string_detail_grades: Pre-reader - Grade 5
   tutorial_box_string_detail_grades: do-not-show
@@ -5968,12 +5980,12 @@ nl:
   tutorial_vidcodeio_string_detail_grades: Vanaf groep 4
   tutorial_tlcbrain_string_detail_grades: Graad 6 en hoger
   tutorial_hopquiz_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_unfortunate_string_detail_grades: Grades 2-5
+  tutorial_unfortunate_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_cha_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_elaseq_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_introrobo_string_detail_grades: Grades 2-5
+  tutorial_introrobo_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_tlcinvis_string_detail_grades: Vanaf groep 4
   tutorial_tlcjflap_string_detail_grades: Graad 6 en hoger
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
@@ -5982,7 +5994,7 @@ nl:
   tutorial_ticklel_string_detail_grades: Vanaf groep 4
   tutorial_spiralsdash_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_ghdebug_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_tlckk_string_detail_grades: Grades 2-5
+  tutorial_tlckk_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_firstcomp_string_detail_grades: Pre-reader - Grade 1
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6005,7 +6017,7 @@ nl:
   tutorial_tynkercan_string_detail_grades: Vanaf groep 4
   tutorial_grokflags_string_detail_grades: Graad 6 en hoger
   tutorial_robomind_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_adventureq_string_detail_grades: Grades 2-5
+  tutorial_adventureq_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_khan-es_string_detail_grades: Graad 6 en hoger
   tutorial_kpt_string_detail_grades: Graad 6 en hoger
   tutorial_kpl_string_detail_grades: Graad 6 en hoger
@@ -6019,13 +6031,13 @@ nl:
   tutorial_mky_string_detail_grades: Vanaf groep 4
   tutorial_pirates_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_csfirst_string_detail_grades: Vanaf groep 4
-  tutorial_loopedy_string_detail_grades: Grades 2-5
+  tutorial_loopedy_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_scratch_string_detail_grades: Grades 2-5
+  tutorial_scratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: Graad 6 en hoger
@@ -6035,7 +6047,7 @@ nl:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: Grades 2-5
+  tutorial_thinkersmith-es_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_pixie_string_detail_grades: Vanaf groep 4
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6050,8 +6062,8 @@ nl:
   tutorial_tap_string_detail_grades: Vanaf groep 4
   tutorial_cintl_string_detail_grades: do-not-show
   tutorial_itchstop_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_tynkerpn_string_detail_grades: Grades 2-5
-  tutorial_tynkerpd_string_detail_grades: Grades 2-5
+  tutorial_tynkerpn_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_tynkerpd_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_persistence_string_detail_grades: Pre-reader+
   tutorial_getloopy_string_detail_grades: Pre-reader+
   tutorial_createface_string_detail_grades: Vanaf groep 4
@@ -6078,7 +6090,7 @@ nl:
   tutorial_computeit_string_detail_grades: Vanaf groep 4
   tutorial_codesterssj_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_cmchat_string_detail_grades: Graad 6 en hoger
-  tutorial_tynkerdb_string_detail_grades: Grades 2-5
+  tutorial_tynkerdb_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_cmbuild_string_detail_grades: Graad 6 en hoger
   tutorial_robotrattle_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_codestersh_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6090,7 +6102,7 @@ nl:
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_cmdodo_string_detail_grades: Grades 3-5
-  tutorial_tynkerspace_string_detail_grades: Grades 2-5
+  tutorial_tynkerspace_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+
   tutorial_codehsvr_string_detail_grades: Graad 6 en hoger
@@ -6105,7 +6117,7 @@ nl:
   tutorial_codehsjsgraph_string_detail_grades: Grades 9+
   tutorial_thunkable_string_detail_grades: Graad 6 en hoger
   tutorial_hopcrossyroad_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_switchglitch_string_detail_grades: Grades 2-5
+  tutorial_switchglitch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_codecar_string_detail_grades: Graad 6 en hoger
   tutorial_codesterscp_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_grokpetblock_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
@@ -6114,7 +6126,7 @@ nl:
   tutorial_codesterscr_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_grokdisease_string_detail_grades: Grades 9+
   tutorial_techec_string_detail_grades: University
-  tutorial_rgbegin_string_detail_grades: Grades 2-5
+  tutorial_rgbegin_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_myradream_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_thinkfun_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_hopfireworks_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6122,7 +6134,7 @@ nl:
   tutorial_codehspython_string_detail_grades: Graad 6 en hoger
   tutorial_codehsjava_string_detail_grades: Grades 9+
   tutorial_techioda_string_detail_grades: University
-  tutorial_grokmonster_string_detail_grades: Grades 2-5
+  tutorial_grokmonster_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_techmjs_string_detail_grades: University
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
@@ -6130,18 +6142,18 @@ nl:
   tutorial_groktunnel_string_detail_grades: Graad 6 en hoger
   tutorial_stemcod_string_detail_grades: Graad 6 en hoger
   tutorial_techikb_string_detail_grades: University
-  tutorial_kanostreet_string_detail_grades: Grades 2-5
-  tutorial_codemojijs_string_detail_grades: Grades 2-5
+  tutorial_kanostreet_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_codemojijs_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
   tutorial_gpbcatapult_string_detail_grades: Graad 6 en hoger
   tutorial_quorumastro_string_detail_grades: Graad 6 en hoger
-  tutorial_alicewonder_string_detail_grades: Grades 2-5
+  tutorial_alicewonder_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_rginter_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_cssgrid_string_detail_grades: Graad 6 en hoger
   tutorial_jshero_string_detail_grades: Grades 9+
-  tutorial_codemojipy_string_detail_grades: Grades 2-5
+  tutorial_codemojipy_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_nclabdrone_string_detail_grades: Graad 6 en hoger
   tutorial_gpbcircle_string_detail_grades: Graad 6 en hoger
   tutorial_gpbpaint_string_detail_grades: Graad 6 en hoger
@@ -6172,11 +6184,11 @@ nl:
   tutorial_isavesanta_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_iorder_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_ianimate_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_iloveada_string_detail_grades: Grades 2-5
+  tutorial_iloveada_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_kodflash_string_detail_grades: Pre-reader - Grade 5
-  tutorial_kodchoose_string_detail_grades: Grades 2-5
+  tutorial_kodchoose_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_kodpizzapre_string_detail_grades: Pre-reader - Grade 1
-  tutorial_kodpizza_string_detail_grades: Grades 2-5
+  tutorial_kodpizza_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_kodwomen_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_tfunplug_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_lbvariables_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6188,9 +6200,9 @@ nl:
   tutorial_lbpotato_string_detail_grades: Vanaf groep 4
   tutorial_lbguitar_string_detail_grades: Vanaf groep 4
   tutorial_lbio_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_wonpuppy_string_detail_grades: Grades 2-5
+  tutorial_wonpuppy_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_woncue_string_detail_grades: Vanaf groep 4
-  tutorial_wonzoo_string_detail_grades: Grades 2-5
+  tutorial_wonzoo_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_wontrip_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
   tutorial_wonsecret_string_detail_grades: Graad 6 en hoger
@@ -6229,10 +6241,10 @@ nl:
   tutorial_bcjs2_string_detail_grades: Grades 9+
   tutorial_3dbearmars_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bitsboxyak_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_blockscadbargraphs_string_detail_grades: Grades 2-5
-  tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
+  tutorial_blockscadbargraphs_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_blockscadbirdhouses_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_blockscadclock_string_detail_grades: Grades 9+
-  tutorial_blockscaddinner_string_detail_grades: Grades 2-5
+  tutorial_blockscaddinner_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_blockscadicecream_string_detail_grades: Graad 6 en hoger
   tutorial_blockscadpizza_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_blockscadsugar_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
@@ -6243,20 +6255,20 @@ nl:
   tutorial_bpenglishvid_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bphealthscratch_string_detail_grades: Vanaf groep 4
   tutorial_bphealthvid_string_detail_grades: Graad 6 en hoger
-  tutorial_bpmathscratch_string_detail_grades: Grades 2-5
+  tutorial_bpmathscratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bpmathvid_string_detail_grades: Graad 6 en hoger
   tutorial_bpmlkscratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bpmlkvid_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
+  tutorial_bpsafetyscratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bpsafetyvid_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
+  tutorial_bpsciencescratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bpsciencevid_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_bptechscratch_string_detail_grades: Graad 6 en hoger
   tutorial_bptechvid_string_detail_grades: Graad 6 en hoger
   tutorial_caflags_string_detail_grades: Graad 6 en hoger
-  tutorial_matariki_string_detail_grades: Grades 2-5
+  tutorial_matariki_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_carestaurant_string_detail_grades: Vanaf groep 4
-  tutorial_casea_string_detail_grades: Grades 2-5
+  tutorial_casea_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_cashield_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_ccwslimer_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
@@ -6294,8 +6306,8 @@ nl:
   tutorial_groklearningpython_string_detail_grades: Grades 9+
   tutorial_htmltimetravel_string_detail_grades: Grades 9+
   tutorial_hp_flappy_string_detail_grades: Grades 9+
-  tutorial_appytappin_string_detail_grades: Grades 2-5
-  tutorial_icipher_string_detail_grades: Grades 2-5
+  tutorial_appytappin_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_icipher_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_iguess_string_detail_grades: Pre-reader - Grade 5
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6304,7 +6316,7 @@ nl:
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
-  tutorial_designgames_string_detail_grades: Grades 2-5
+  tutorial_designgames_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
   tutorial_wizard_string_detail_grades: Graad 6 en hoger
   tutorial_mbscratchcards_string_detail_grades: Vanaf groep 4
@@ -6320,19 +6332,19 @@ nl:
   tutorial_ozotroll_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_peblioart_string_detail_grades: Grades 9+
   tutorial_astropi_string_detail_grades: Graad 6 en hoger
-  tutorial_rgart_string_detail_grades: Grades 2-5
-  tutorial_rgengineer_string_detail_grades: Grades 2-5
-  tutorial_rgmath_string_detail_grades: Grades 2-5
-  tutorial_rgscience_string_detail_grades: Grades 2-5
-  tutorial_rgtech_string_detail_grades: Grades 2-5
+  tutorial_rgart_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_rgengineer_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_rgmath_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_rgscience_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_rgtech_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_robotmagic3d_string_detail_grades: Graad 6 en hoger
   tutorial_robotmagicflappy_string_detail_grades: Grades 9+
   tutorial_scratchadventure_string_detail_grades: Vanaf groep 4
   tutorial_scratchtalk_string_detail_grades: Vanaf groep 4
-  tutorial_scratchjrstory_string_detail_grades: Grades 2-5
+  tutorial_scratchjrstory_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_spherocommunity_string_detail_grades: Grades 2-5
+  tutorial_spherocommunity_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_spherofunctions_string_detail_grades: Graad 6 en hoger
   tutorial_spheroinfrared_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_spherolightsensor_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -6355,17 +6367,17 @@ nl:
   tutorial_gcevents_string_detail_grades: Graad 6 en hoger
   tutorial_gcloops_string_detail_grades: Graad 6 en hoger
   tutorial_gcvariables_string_detail_grades: Graad 6 en hoger
-  tutorial_beanything_string_detail_grades: Grades 2-5
+  tutorial_beanything_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_change_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_cooking_string_detail_grades: Grades 2-5
+  tutorial_cooking_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_crystal_string_detail_grades: Vanaf groep 4
   tutorial_landscape_string_detail_grades: Graad 6 en hoger
-  tutorial_pets_string_detail_grades: Grades 2-5
-  tutorial_petvet_string_detail_grades: Grades 2-5
+  tutorial_pets_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_petvet_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_superhero_string_detail_grades: Graad 6 en hoger
   tutorial_vidcodeplastic_string_detail_grades: Graad 6 en hoger
   tutorial_vidcodetypeface_string_detail_grades: Graad 6 en hoger
-  tutorial_washustorm_string_detail_grades: Grades 2-5
+  tutorial_washustorm_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
   tutorial_googlerookie_string_detail_grades: Graad 6 en hoger
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
@@ -6457,7 +6469,7 @@ nl:
   tutorial_ozobotcolor1_string_detail_grades: Vanaf groep 4
   tutorial_scigirlspixels_string_detail_grades: Vanaf groep 4
   tutorial_kcjheroines_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_ozobotvalue_string_detail_grades: Grades 2-5
+  tutorial_ozobotvalue_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_icodebytes_string_detail_grades: Pre-reader
   tutorial_clfashion2_string_detail_grades: Graad 6 en hoger
   tutorial_ai4all_string_detail_grades: Graad 6 en hoger
@@ -6468,7 +6480,7 @@ nl:
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
   tutorial_clfashion1_string_detail_grades: Graad 6 en hoger
-  tutorial_irobottraffic_string_detail_grades: Grades 2-5
+  tutorial_irobottraffic_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_edisonmystery_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_microbitseaturtles_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_ozobotknow_string_detail_grades: Vanaf groep 4
@@ -6477,7 +6489,7 @@ nl:
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
   tutorial_firiavirtual_string_detail_grades: Graad 6 en hoger
   tutorial_irobotguesscode_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_ozobotnouns_string_detail_grades: Grades 2-5
+  tutorial_ozobotnouns_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_nasa3d_string_detail_grades: Graad 6 en hoger
   tutorial_blupants_string_detail_grades: Graad 6 en hoger
   tutorial_legodance_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
@@ -6848,8 +6860,7 @@ nl:
   tutorial_codehsjsapp_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_gfmihi_string_platforms: Alle moderne browsers
   tutorial_hopdropphone_string_platforms: iPad, iPhone
-  tutorial_techfaa_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_techfaa_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codehsjsgraph_string_platforms: Chrome, Firefox, Safari
   tutorial_thunkable_string_platforms: Alle moderne browsers
   tutorial_hopcrossyroad_string_platforms: iPad, iPhone
@@ -6858,14 +6869,11 @@ nl:
   tutorial_codecar_string_platforms: Chrome, Firefox
   tutorial_codesterscp_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_grokpetblock_string_platforms: Alle moderne browsers
-  tutorial_techbim_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
-  tutorial_techfpp_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_techbim_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_techfpp_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codesterscr_string_platforms: Alle moderne browsers
   tutorial_grokdisease_string_platforms: Alle moderne browsers
-  tutorial_techec_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_techec_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_rgbegin_string_platforms: Chrome, Firefox
   tutorial_myradream_string_platforms: Alle moderne browsers
   tutorial_thinkfun_string_platforms: Chrome, Firefox, Safari
@@ -6873,29 +6881,20 @@ nl:
   tutorial_grokspace_string_platforms: Alle moderne browsers
   tutorial_codehspython_string_platforms: Chrome, Firefox, Safari
   tutorial_codehsjava_string_platforms: Chrome, Firefox, Safari
-  tutorial_techioda_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_techioda_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_grokmonster_string_platforms: Alle moderne browsers
-  tutorial_techmjs_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
-  tutorial_techga_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
-  tutorial_techioan_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
-  tutorial_techiogsr_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_techmjs_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_techga_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_techioan_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_techiogsr_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_groktunnel_string_platforms: Alle moderne browsers
   tutorial_stemcod_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
-  tutorial_techikb_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_techikb_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_kanostreet_string_platforms: Alle moderne browsers
   tutorial_codemojijs_string_platforms: Alle moderne browsers
-  tutorial_techapf_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
-  tutorial_techfpjs_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
-  tutorial_techlinq_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_techapf_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_techfpjs_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_techlinq_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_gpbcatapult_string_platforms: Alle moderne browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone, Screen reader
@@ -7263,14 +7262,12 @@ nl:
     kabel
   tutorial_educativechatbot_string_platforms: Alle moderne browsers
   tutorial_educodebasics_string_platforms: Alle moderne browsers
-  tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_codehsdesign_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
   tutorial_gamefrootdistance_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_codesterscovid_string_platforms: All modern browsers, Screen reader
   tutorial_ttbunker_string_platforms: Chrome
-  tutorial_cuttle_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_cuttle_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_bsdjokes_string_platforms: Chrome
   tutorial_rptree_string_platforms: Chrome, Firefox
   tutorial_codestersunity_string_platforms: All modern browsers, Screen reader
@@ -7281,12 +7278,10 @@ nl:
   tutorial_cafarming_string_platforms: Chrome, Firefox
   tutorial_blocksmithyeti_string_platforms: Alle moderne browsers
   tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
-  tutorial_codehslitter_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_codehslitter_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_bsdocean_string_platforms: Chrome
   tutorial_itchplatformer_string_platforms: Alle moderne browsers
-  tutorial_codejika_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_codejika_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_gamefrootclicker_string_platforms: Alle moderne browsers, iPad, zonder
     kabel
   tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
@@ -7317,12 +7312,10 @@ nl:
   tutorial_clfashion1_string_platforms: Alle moderne browsers
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
   tutorial_edisonmystery_string_platforms: Webgebaseerd, Android tablet, iPad
-  tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_microbitseaturtles_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_ozobotknow_string_platforms: Alle moderne browsers
   tutorial_imagilabs_string_platforms: Android phone, iPhone, Unplugged
-  tutorial_irobotsimulator_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_irobotsimulator_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_irobotkind_string_platforms: Alle moderne browsers
   tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
   tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
@@ -7338,7 +7331,7 @@ nl:
   tutorial_irobotphone_string_platforms: Alle moderne browsers
   tutorial_codeguppydraw_string_platforms: Alle moderne browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: Webgebaseerd, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -8026,26 +8019,26 @@ nl:
   tutorial_codeguppydraw_string_detail_platforms: ''
   tutorial_codejumper_string_detail_platforms: ''
   tutorial_meeempathy_string_detail_platforms: ''
-  tutorial_dance2019_string_detail_programming_languages: Blocks
-  tutorial_danceparty_string_detail_programming_languages: Blocks
-  tutorial_chibitronics_string_detail_programming_languages: Blocks
-  tutorial_athlete_string_detail_programming_languages: Blocks
-  tutorial_moana_string_detail_programming_languages: Blocks
+  tutorial_dance2019_string_detail_programming_languages: 'Blokken '
+  tutorial_danceparty_string_detail_programming_languages: 'Blokken '
+  tutorial_chibitronics_string_detail_programming_languages: 'Blokken '
+  tutorial_athlete_string_detail_programming_languages: 'Blokken '
+  tutorial_moana_string_detail_programming_languages: 'Blokken '
   tutorial_star-wars_string_detail_programming_languages: Blocks, JavaScript
   tutorial_gumadventure_string_detail_programming_languages: Blocks, Scratch
-  tutorial_mchoc_string_detail_programming_languages: Blocks
+  tutorial_mchoc_string_detail_programming_languages: 'Blokken '
   tutorial_vidnews_string_detail_programming_languages: JavaScript
-  tutorial_kodable-pre_string_detail_programming_languages: Blocks
+  tutorial_kodable-pre_string_detail_programming_languages: 'Blokken '
   tutorial_highseas_string_detail_programming_languages: Blocks, Scratch
   tutorial_capython_string_detail_programming_languages: Python
-  tutorial_frzn_string_detail_programming_languages: Blocks
+  tutorial_frzn_string_detail_programming_languages: 'Blokken '
   tutorial_cocom_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_play-lab_string_detail_programming_languages: Blocks
-  tutorial_boxisland_string_detail_programming_languages: Blocks
+  tutorial_play-lab_string_detail_programming_languages: 'Blokken '
+  tutorial_boxisland_string_detail_programming_languages: 'Blokken '
   tutorial_textcomp_string_detail_programming_languages: Language independent
   tutorial_encryption_string_detail_programming_languages: Language independent
   tutorial_kanopixel_string_detail_programming_languages: JavaScript, Coffeescript
-  tutorial_foos_string_detail_programming_languages: Blocks
+  tutorial_foos_string_detail_programming_languages: 'Blokken '
   tutorial_tynkerdd_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_tynkerana_string_detail_programming_languages: Blocks, Tynker, JavaScript,
@@ -8053,33 +8046,33 @@ nl:
   tutorial_vidcard_string_detail_programming_languages: JavaScript
   tutorial_spritebox_string_detail_programming_languages: Blocks, Java, iOS/Swift
   tutorial_tynkerch_string_detail_programming_languages: JavaScript
-  tutorial_lightbot_string_detail_programming_languages: Blocks
+  tutorial_lightbot_string_detail_programming_languages: 'Blokken '
   tutorial_hoc_string_detail_programming_languages: do-not-show
-  tutorial_code_string_detail_programming_languages: Blocks
+  tutorial_code_string_detail_programming_languages: 'Blokken '
   tutorial_tinspire_string_detail_programming_languages: TI Basic
   tutorial_itchbounceball_string_detail_programming_languages: Blocks, Scratch
   tutorial_vidclim_string_detail_programming_languages: JavaScript
   tutorial_matlab_string_detail_programming_languages: MATLAB
-  tutorial_flap_string_detail_programming_languages: Blocks
-  tutorial_galaxy_string_detail_programming_languages: Blocks
-  tutorial_inf_string_detail_programming_languages: Blocks
+  tutorial_flap_string_detail_programming_languages: 'Blokken '
+  tutorial_galaxy_string_detail_programming_languages: 'Blokken '
+  tutorial_inf_string_detail_programming_languages: 'Blokken '
   tutorial_tynkersol_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_itchg_string_detail_programming_languages: Blocks
+  tutorial_itchg_string_detail_programming_languages: 'Blokken '
   tutorial_como_string_detail_programming_languages: CoffeeScript
   tutorial_processfound_string_detail_programming_languages: Java
   tutorial_tynkerhomo_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_art_string_detail_programming_languages: Blocks
+  tutorial_art_string_detail_programming_languages: 'Blokken '
   tutorial_tynkerbrick_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_itchbio_string_detail_programming_languages: Blocks
-  tutorial_itchj_string_detail_programming_languages: Blocks
-  tutorial_tickleo_string_detail_programming_languages: Blocks
+  tutorial_itchbio_string_detail_programming_languages: 'Blokken '
+  tutorial_itchj_string_detail_programming_languages: 'Blokken '
+  tutorial_tickleo_string_detail_programming_languages: 'Blokken '
   tutorial_hopgeo_string_detail_programming_languages: Hopscotch
   tutorial_tynkermult_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_monster_string_detail_programming_languages: Blocks
+  tutorial_monster_string_detail_programming_languages: 'Blokken '
   tutorial_tynkerapp_string_detail_programming_languages: do-not-show
   tutorial_tynkerpup_string_detail_programming_languages: Blocks, Tynker
   tutorial_livecode_string_detail_programming_languages: Language independent
@@ -8103,10 +8096,10 @@ nl:
   tutorial_codestersturtle_string_detail_programming_languages: Python
   tutorial_penjee_string_detail_programming_languages: Python
   tutorial_trinket_string_detail_programming_languages: Blocks, Kano Code
-  tutorial_frogger_string_detail_programming_languages: Blocks
+  tutorial_frogger_string_detail_programming_languages: 'Blokken '
   tutorial_tynkereco_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_mitedarc_string_detail_programming_languages: Blocks
+  tutorial_mitedarc_string_detail_programming_languages: 'Blokken '
   tutorial_khan_string_detail_programming_languages: JavaScript
   tutorial_tynkerd_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
@@ -8115,14 +8108,14 @@ nl:
   tutorial_codestersbasketball_string_detail_programming_languages: Python
   tutorial_nclkarel_string_detail_programming_languages: Karel (simplified Python)
   tutorial_buildpong_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_tynkerdrones_string_detail_programming_languages: Blocks
+  tutorial_tynkerdrones_string_detail_programming_languages: 'Blokken '
   tutorial_carla_string_detail_programming_languages: Coffeescript
   tutorial_zulama_string_detail_programming_languages: JavaScript
   tutorial_capost_string_detail_programming_languages: HTML, CSS
-  tutorial_marco_string_detail_programming_languages: Blocks
+  tutorial_marco_string_detail_programming_languages: 'Blokken '
   tutorial_codestersflappybike_string_detail_programming_languages: Python
   tutorial_kanopong_string_detail_programming_languages: JavaScript
-  tutorial_tynkerright_string_detail_programming_languages: Blocks
+  tutorial_tynkerright_string_detail_programming_languages: 'Blokken '
   tutorial_touchdevelop_string_detail_programming_languages: do-not-show
   tutorial_tynkercc_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
@@ -8134,9 +8127,9 @@ nl:
   tutorial_silent_string_detail_programming_languages: JavaScript
   tutorial_robomesh_string_detail_programming_languages: Blokken, Python
   tutorial_amaze_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_codestersds_string_detail_programming_languages: Blocks
+  tutorial_codestersds_string_detail_programming_languages: 'Blokken '
   tutorial_knodtext_string_detail_programming_languages: Python
-  tutorial_alicegar_string_detail_programming_languages: Blocks
+  tutorial_alicegar_string_detail_programming_languages: 'Blokken '
   tutorial_codesterstransform_string_detail_programming_languages: Python
   tutorial_flexfrog_string_detail_programming_languages: CSS
   tutorial_codemoji_string_detail_programming_languages: do-not-show
@@ -8154,20 +8147,20 @@ nl:
   tutorial_ticklep_string_detail_programming_languages: do-not-show
   tutorial_bbot_string_detail_programming_languages: Visual programming language
   tutorial_scratchg_string_detail_programming_languages: Language independent
-  tutorial_sjforest_string_detail_programming_languages: Blocks
-  tutorial_sjgreet_string_detail_programming_languages: Blocks
-  tutorial_sjsunset_string_detail_programming_languages: Blocks
+  tutorial_sjforest_string_detail_programming_languages: 'Blokken '
+  tutorial_sjgreet_string_detail_programming_languages: 'Blokken '
+  tutorial_sjsunset_string_detail_programming_languages: 'Blokken '
   tutorial_fufafrenz_string_detail_programming_languages: Language independent
   tutorial_bbcgeo_string_detail_programming_languages: do-not-show
   tutorial_chspixel_string_detail_programming_languages: JavaScript
-  tutorial_hummingbird_string_detail_programming_languages: Blocks
+  tutorial_hummingbird_string_detail_programming_languages: 'Blokken '
   tutorial_recoloring_string_detail_programming_languages: Coffee Script (Pencil Code)
   tutorial_bbcchem_string_detail_programming_languages: do-not-show
   tutorial_floalgo_string_detail_programming_languages: Language independent
   tutorial_flocond_string_detail_programming_languages: Blocks, Language independent
   tutorial_floloops_string_detail_programming_languages: Blocks, Language independent
   tutorial_pgts_string_detail_programming_languages: Language independent
-  tutorial_ozo_string_detail_programming_languages: Blocks
+  tutorial_ozo_string_detail_programming_languages: 'Blokken '
   tutorial_bbcla_string_detail_programming_languages: do-not-show
   tutorial_bbcsci_string_detail_programming_languages: do-not-show
   tutorial_tlctour_string_detail_programming_languages: Language independent
@@ -8177,7 +8170,7 @@ nl:
   tutorial_bbcart_string_detail_programming_languages: do-not-show
   tutorial_tlcknight_string_detail_programming_languages: Language independent
   tutorial_fufafit_string_detail_programming_languages: Language independent
-  tutorial_ozodance_string_detail_programming_languages: Blocks
+  tutorial_ozodance_string_detail_programming_languages: 'Blokken '
   tutorial_codingrobotics_string_detail_programming_languages: Language independent
   tutorial_box_string_detail_programming_languages: do-not-show
   tutorial_hopgame_string_detail_programming_languages: Hopscotch
@@ -8190,18 +8183,18 @@ nl:
   tutorial_tlcemo_string_detail_programming_languages: Language independent
   tutorial_crd_string_detail_programming_languages: Language independent
   tutorial_bbcbio_string_detail_programming_languages: do-not-show
-  tutorial_ticklebb8_string_detail_programming_languages: Blocks
+  tutorial_ticklebb8_string_detail_programming_languages: 'Blokken '
   tutorial_grok_string_detail_programming_languages: do-not-show
   tutorial_ijournalist_string_detail_programming_languages: HTML, CSS
   tutorial_bbcmusic_string_detail_programming_languages: do-not-show
-  tutorial_secretcodes_string_detail_programming_languages: Blocks
+  tutorial_secretcodes_string_detail_programming_languages: 'Blokken '
   tutorial_tlchex_string_detail_programming_languages: Language independent
-  tutorial_tickles_string_detail_programming_languages: Blocks
-  tutorial_ozogame_string_detail_programming_languages: Blocks
+  tutorial_tickles_string_detail_programming_languages: 'Blokken '
+  tutorial_ozogame_string_detail_programming_languages: 'Blokken '
   tutorial_vidcodeio_string_detail_programming_languages: Language independent
   tutorial_tlcbrain_string_detail_programming_languages: Language independent
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
-  tutorial_unfortunate_string_detail_programming_languages: Blocks
+  tutorial_unfortunate_string_detail_programming_languages: 'Blokken '
   tutorial_cha_string_detail_programming_languages: Language independent
   tutorial_elaseq_string_detail_programming_languages: Language independent
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
@@ -8210,14 +8203,14 @@ nl:
   tutorial_tlcinvis_string_detail_programming_languages: Language independent
   tutorial_tlcjflap_string_detail_programming_languages: Language independent
   tutorial_procolor_string_detail_programming_languages: Language independent
-  tutorial_spiralsfinch_string_detail_programming_languages: Blocks
+  tutorial_spiralsfinch_string_detail_programming_languages: 'Blokken '
   tutorial_ozoi_string_detail_programming_languages: Language independent
-  tutorial_ticklel_string_detail_programming_languages: Blocks
-  tutorial_spiralsdash_string_detail_programming_languages: Blocks
-  tutorial_ghdebug_string_detail_programming_languages: Blocks
+  tutorial_ticklel_string_detail_programming_languages: 'Blokken '
+  tutorial_spiralsdash_string_detail_programming_languages: 'Blokken '
+  tutorial_ghdebug_string_detail_programming_languages: 'Blokken '
   tutorial_tlckk_string_detail_programming_languages: Language independent
   tutorial_firstcomp_string_detail_programming_languages: Language independent
-  tutorial_mazefinch_string_detail_programming_languages: Blocks
+  tutorial_mazefinch_string_detail_programming_languages: 'Blokken '
   tutorial_tlccc_string_detail_programming_languages: Language independent
   tutorial_tlcdoodle_string_detail_programming_languages: Language independent
   tutorial_tlcpunch_string_detail_programming_languages: Language independent
@@ -8234,57 +8227,57 @@ nl:
   tutorial_tynkerarc_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_grokffpython_string_detail_programming_languages: Python
-  tutorial_grokffblock_string_detail_programming_languages: Blocks
+  tutorial_grokffblock_string_detail_programming_languages: 'Blokken '
   tutorial_grokeliza_string_detail_programming_languages: Python
   tutorial_tynkercan_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_grokflags_string_detail_programming_languages: Python
-  tutorial_robomind_string_detail_programming_languages: Blocks
-  tutorial_adventureq_string_detail_programming_languages: Blocks
+  tutorial_robomind_string_detail_programming_languages: 'Blokken '
+  tutorial_adventureq_string_detail_programming_languages: 'Blokken '
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
   tutorial_kpl_string_detail_programming_languages: JavaScript
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
-  tutorial_app-inventor_string_detail_programming_languages: Blocks
-  tutorial_blockly_string_detail_programming_languages: Blocks
+  tutorial_app-inventor_string_detail_programming_languages: 'Blokken '
+  tutorial_blockly_string_detail_programming_languages: 'Blokken '
   tutorial_tynker_string_detail_programming_languages: do-not-show
-  tutorial_baypt_string_detail_programming_languages: Blocks
+  tutorial_baypt_string_detail_programming_languages: 'Blokken '
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: CoffeeScript
   tutorial_pirates_string_detail_programming_languages: Blocks, Pirate code
   tutorial_csfirst_string_detail_programming_languages: Scratch
-  tutorial_loopedy_string_detail_programming_languages: Blocks
+  tutorial_loopedy_string_detail_programming_languages: 'Blokken '
   tutorial_dsw_string_detail_programming_languages: do-not-show
   tutorial_dswb_string_detail_programming_languages: do-not-show
   tutorial_ssw_string_detail_programming_languages: do-not-show
   tutorial_sswb_string_detail_programming_languages: do-not-show
   tutorial_kodable-unplugged_string_detail_programming_languages: Language independent
   tutorial_scratch_string_detail_programming_languages: Language independent
-  tutorial_bayes_string_detail_programming_languages: Blocks
+  tutorial_bayes_string_detail_programming_languages: 'Blokken '
   tutorial_gumball_string_detail_programming_languages: do-not-show
   tutorial_hrm_string_detail_programming_languages: Assembly
   tutorial_ice-age_string_detail_programming_languages: do-not-show
   tutorial_koapp_string_detail_programming_languages: do-not-show
-  tutorial_lightbot-intl_string_detail_programming_languages: Blocks
+  tutorial_lightbot-intl_string_detail_programming_languages: 'Blokken '
   tutorial_rmc_string_detail_programming_languages: do-not-show
   tutorial_smc_string_detail_programming_languages: do-not-show
   tutorial_minecraft-2016_string_detail_programming_languages: do-not-show
   tutorial_thinkersmith-es_string_detail_programming_languages: JavaScript
-  tutorial_pixie_string_detail_programming_languages: Blocks
+  tutorial_pixie_string_detail_programming_languages: 'Blokken '
   tutorial_play_string_detail_programming_languages: do-not-show
-  tutorial_robomind-nl_string_detail_programming_languages: Blocks
+  tutorial_robomind-nl_string_detail_programming_languages: 'Blokken '
   tutorial_spheroi_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherol_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherov_string_detail_programming_languages: Blocks, JavaScript
   tutorial_swb_string_detail_programming_languages: do-not-show
   tutorial_build-a-galaxy_string_detail_programming_languages: do-not-show
-  tutorial_alicesims_string_detail_programming_languages: Blocks
+  tutorial_alicesims_string_detail_programming_languages: 'Blokken '
   tutorial_tchr_string_detail_programming_languages: do-not-show
-  tutorial_robogame_string_detail_programming_languages: Blocks
+  tutorial_robogame_string_detail_programming_languages: 'Blokken '
   tutorial_tap_string_detail_programming_languages: Blocks, Tynker, JavaScript, Python
   tutorial_cintl_string_detail_programming_languages: do-not-show
-  tutorial_itchstop_string_detail_programming_languages: Blocks
+  tutorial_itchstop_string_detail_programming_languages: 'Blokken '
   tutorial_tynkerpn_string_detail_programming_languages: Blocks, Tynker
   tutorial_tynkerpd_string_detail_programming_languages: Blocks, Tynker
   tutorial_persistence_string_detail_programming_languages: Language independent
@@ -8294,7 +8287,7 @@ nl:
   tutorial_moveit_string_detail_programming_languages: Language independent
   tutorial_bigevent_string_detail_programming_languages: Language independent
   tutorial_gpp_string_detail_programming_languages: Language independent
-  tutorial_foosgame_string_detail_programming_languages: Blocks
+  tutorial_foosgame_string_detail_programming_languages: 'Blokken '
   tutorial_solopython_string_detail_programming_languages: Python
   tutorial_kodableint_string_detail_programming_languages: Language independent, Symbols
   tutorial_kodableadv_string_detail_programming_languages: Language independent, Javascript
@@ -8308,58 +8301,58 @@ nl:
   tutorial_soloweb_string_detail_programming_languages: HTML, CSS
   tutorial_khanweb_string_detail_programming_languages: HTML & CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_googlelogo_string_detail_programming_languages: Blocks
-  tutorial_playtune_string_detail_programming_languages: Blocks
+  tutorial_googlelogo_string_detail_programming_languages: 'Blokken '
+  tutorial_playtune_string_detail_programming_languages: 'Blokken '
   tutorial_computeit_string_detail_programming_languages: Language independent
   tutorial_codesterssj_string_detail_programming_languages: Blokken, Python
   tutorial_cmchat_string_detail_programming_languages: Python
   tutorial_tynkerdb_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_cmbuild_string_detail_programming_languages: CoffeeScript
-  tutorial_robotrattle_string_detail_programming_languages: Blocks
+  tutorial_robotrattle_string_detail_programming_languages: 'Blokken '
   tutorial_codestersh_string_detail_programming_languages: Blokken, Python
   tutorial_codehsdigipixel_string_detail_programming_languages: Language independent
-  tutorial_ccbinary_string_detail_programming_languages: Blocks
+  tutorial_ccbinary_string_detail_programming_languages: 'Blokken '
   tutorial_codehsturtle_string_detail_programming_languages: Python
-  tutorial_grokhd_string_detail_programming_languages: Blocks
+  tutorial_grokhd_string_detail_programming_languages: 'Blokken '
   tutorial_grokem_string_detail_programming_languages: Python
   tutorial_kodmaze_string_detail_programming_languages: Language independent
   tutorial_codestersa_string_detail_programming_languages: Python
   tutorial_cmdodo_string_detail_programming_languages: CoffeeScript
   tutorial_tynkerspace_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_gfbloons_string_detail_programming_languages: Blocks
+  tutorial_gfbloons_string_detail_programming_languages: 'Blokken '
   tutorial_raspipong_string_detail_programming_languages: Python
   tutorial_codehsvr_string_detail_programming_languages: JavaScript
   tutorial_codesterstp_string_detail_programming_languages: Blokken, Python
   tutorial_codestersbb_string_detail_programming_languages: Blokken, Python
-  tutorial_gfcrossyroad_string_detail_programming_languages: Blocks
-  tutorial_googleww_string_detail_programming_languages: Blocks
+  tutorial_gfcrossyroad_string_detail_programming_languages: 'Blokken '
+  tutorial_googleww_string_detail_programming_languages: 'Blokken '
   tutorial_codehsjsapp_string_detail_programming_languages: JavaScript
-  tutorial_gfmihi_string_detail_programming_languages: Blocks
+  tutorial_gfmihi_string_detail_programming_languages: 'Blokken '
   tutorial_hopdropphone_string_detail_programming_languages: Hopscotch
   tutorial_techfaa_string_detail_programming_languages: JavaScript, Language independent
   tutorial_codehsjsgraph_string_detail_programming_languages: JavaScript
-  tutorial_thunkable_string_detail_programming_languages: Blocks
+  tutorial_thunkable_string_detail_programming_languages: 'Blokken '
   tutorial_hopcrossyroad_string_detail_programming_languages: Hopscotch
   tutorial_switchglitch_string_detail_programming_languages: Language independent
   tutorial_codecar_string_detail_programming_languages: C/C++
   tutorial_codesterscp_string_detail_programming_languages: Blokken, Python
-  tutorial_grokpetblock_string_detail_programming_languages: Blocks
+  tutorial_grokpetblock_string_detail_programming_languages: 'Blokken '
   tutorial_techbim_string_detail_programming_languages: Language independent
   tutorial_techfpp_string_detail_programming_languages: Python
   tutorial_codesterscr_string_detail_programming_languages: Python
   tutorial_grokdisease_string_detail_programming_languages: Python
   tutorial_techec_string_detail_programming_languages: JavaScript
-  tutorial_rgbegin_string_detail_programming_languages: Blocks
-  tutorial_myradream_string_detail_programming_languages: Blocks
+  tutorial_rgbegin_string_detail_programming_languages: 'Blokken '
+  tutorial_myradream_string_detail_programming_languages: 'Blokken '
   tutorial_thinkfun_string_detail_programming_languages: Language independent
   tutorial_hopfireworks_string_detail_programming_languages: Hopscotch
-  tutorial_grokspace_string_detail_programming_languages: Blocks
+  tutorial_grokspace_string_detail_programming_languages: 'Blokken '
   tutorial_codehspython_string_detail_programming_languages: Python
   tutorial_codehsjava_string_detail_programming_languages: Java
   tutorial_techioda_string_detail_programming_languages: Language independent
-  tutorial_grokmonster_string_detail_programming_languages: Blocks
+  tutorial_grokmonster_string_detail_programming_languages: 'Blokken '
   tutorial_techmjs_string_detail_programming_languages: JavaScript
   tutorial_techga_string_detail_programming_languages: Language independent
   tutorial_techioan_string_detail_programming_languages: Java
@@ -8372,39 +8365,39 @@ nl:
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
   tutorial_techlinq_string_detail_programming_languages: C#
-  tutorial_gpbcatapult_string_detail_programming_languages: Blocks
+  tutorial_gpbcatapult_string_detail_programming_languages: 'Blokken '
   tutorial_quorumastro_string_detail_programming_languages: Quorum
   tutorial_alicewonder_string_detail_programming_languages: JavaScript
-  tutorial_rginter_string_detail_programming_languages: Blocks
+  tutorial_rginter_string_detail_programming_languages: 'Blokken '
   tutorial_cssgrid_string_detail_programming_languages: CSS
   tutorial_jshero_string_detail_programming_languages: JavaScript
   tutorial_codemojipy_string_detail_programming_languages: iOS/Swift, Python
   tutorial_nclabdrone_string_detail_programming_languages: Python
-  tutorial_gpbcircle_string_detail_programming_languages: Blocks
-  tutorial_gpbpaint_string_detail_programming_languages: Blocks
+  tutorial_gpbcircle_string_detail_programming_languages: 'Blokken '
+  tutorial_gpbpaint_string_detail_programming_languages: 'Blokken '
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python, Lua,
     CoffeeScript
-  tutorial_beetik_string_detail_programming_languages: Blocks
+  tutorial_beetik_string_detail_programming_languages: 'Blokken '
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: Blocks, JavaScript, Python
   tutorial_codehsrn_string_detail_programming_languages: JavaScript
   tutorial_codehswd_string_detail_programming_languages: HTML
   tutorial_turtlerobot_string_detail_programming_languages: Language independent
-  tutorial_ozoevo_string_detail_programming_languages: Blocks
+  tutorial_ozoevo_string_detail_programming_languages: 'Blokken '
   tutorial_ozoexped_string_detail_programming_languages: OzoCodes
-  tutorial_ozojourney_string_detail_programming_languages: Blocks
+  tutorial_ozojourney_string_detail_programming_languages: 'Blokken '
   tutorial_ozocodes_string_detail_programming_languages: OzoCodes
   tutorial_ozoeclipse_string_detail_programming_languages: Blocks, OzoCodes
   tutorial_ozosimulator_string_detail_programming_languages: Language independent
-  tutorial_ozoalgorithm_string_detail_programming_languages: Blocks
-  tutorial_ozotimer_string_detail_programming_languages: Blocks
+  tutorial_ozoalgorithm_string_detail_programming_languages: 'Blokken '
+  tutorial_ozotimer_string_detail_programming_languages: 'Blokken '
   tutorial_ozohabits_string_detail_programming_languages: OzoCodes
-  tutorial_ozoprogram_string_detail_programming_languages: Blocks
-  tutorial_ozopair_string_detail_programming_languages: Blocks
-  tutorial_codesnoopy_string_detail_programming_languages: Blocks
+  tutorial_ozoprogram_string_detail_programming_languages: 'Blokken '
+  tutorial_ozopair_string_detail_programming_languages: 'Blokken '
+  tutorial_codesnoopy_string_detail_programming_languages: 'Blokken '
   tutorial_applabintro_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_cslartist_string_detail_programming_languages: Blocks
-  tutorial_cslscratchjr_string_detail_programming_languages: Blocks
+  tutorial_cslartist_string_detail_programming_languages: 'Blokken '
+  tutorial_cslscratchjr_string_detail_programming_languages: 'Blokken '
   tutorial_floevents_string_detail_programming_languages: Language independent
   tutorial_florobot_string_detail_programming_languages: Language independent
   tutorial_isavesanta_string_detail_programming_languages: Blocks, Scratch
@@ -8417,48 +8410,48 @@ nl:
   tutorial_kodpizza_string_detail_programming_languages: Language independent
   tutorial_kodwomen_string_detail_programming_languages: Language independent
   tutorial_tfunplug_string_detail_programming_languages: Language independent
-  tutorial_lbvariables_string_detail_programming_languages: Blocks
-  tutorial_lbfunctions_string_detail_programming_languages: Blocks
-  tutorial_lblogic_string_detail_programming_languages: Blocks
-  tutorial_lbworld_string_detail_programming_languages: Blocks
-  tutorial_lbloops_string_detail_programming_languages: Blocks
-  tutorial_lbtug_string_detail_programming_languages: Blocks
-  tutorial_lbpotato_string_detail_programming_languages: Blocks
-  tutorial_lbguitar_string_detail_programming_languages: Blocks
-  tutorial_lbio_string_detail_programming_languages: Blocks
-  tutorial_wonpuppy_string_detail_programming_languages: Blocks
+  tutorial_lbvariables_string_detail_programming_languages: 'Blokken '
+  tutorial_lbfunctions_string_detail_programming_languages: 'Blokken '
+  tutorial_lblogic_string_detail_programming_languages: 'Blokken '
+  tutorial_lbworld_string_detail_programming_languages: 'Blokken '
+  tutorial_lbloops_string_detail_programming_languages: 'Blokken '
+  tutorial_lbtug_string_detail_programming_languages: 'Blokken '
+  tutorial_lbpotato_string_detail_programming_languages: 'Blokken '
+  tutorial_lbguitar_string_detail_programming_languages: 'Blokken '
+  tutorial_lbio_string_detail_programming_languages: 'Blokken '
+  tutorial_wonpuppy_string_detail_programming_languages: 'Blokken '
   tutorial_woncue_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_wonzoo_string_detail_programming_languages: Blocks
-  tutorial_wontrip_string_detail_programming_languages: Blocks
-  tutorial_woncollect_string_detail_programming_languages: Blocks
+  tutorial_wonzoo_string_detail_programming_languages: 'Blokken '
+  tutorial_wontrip_string_detail_programming_languages: 'Blokken '
+  tutorial_woncollect_string_detail_programming_languages: 'Blokken '
   tutorial_wonsecret_string_detail_programming_languages: Blocks, JavaScript
   tutorial_hsscience_string_detail_programming_languages: Hopscotch
   tutorial_popculture_string_detail_programming_languages: Language independent
-  tutorial_legorobust_string_detail_programming_languages: Blocks
-  tutorial_legoplants_string_detail_programming_languages: Blocks
-  tutorial_legopark_string_detail_programming_languages: Blocks
-  tutorial_legodetect_string_detail_programming_languages: Blocks
-  tutorial_legolight_string_detail_programming_languages: Blocks
+  tutorial_legorobust_string_detail_programming_languages: 'Blokken '
+  tutorial_legoplants_string_detail_programming_languages: 'Blokken '
+  tutorial_legopark_string_detail_programming_languages: 'Blokken '
+  tutorial_legodetect_string_detail_programming_languages: 'Blokken '
+  tutorial_legolight_string_detail_programming_languages: 'Blokken '
   tutorial_alexa_string_detail_programming_languages: JavaScript
   tutorial_grokpetmicro_string_detail_programming_languages: Python, MicroPython
-  tutorial_pirateplunder_string_detail_programming_languages: Blocks
+  tutorial_pirateplunder_string_detail_programming_languages: 'Blokken '
   tutorial_cadj_string_detail_programming_languages: Language independent
-  tutorial_cacrazy_string_detail_programming_languages: Blocks
+  tutorial_cacrazy_string_detail_programming_languages: 'Blokken '
   tutorial_cajump_string_detail_programming_languages: Language independent
-  tutorial_carest_string_detail_programming_languages: Blocks
+  tutorial_carest_string_detail_programming_languages: 'Blokken '
   tutorial_accai_string_detail_programming_languages: Language independent
   tutorial_vceclipse_string_detail_programming_languages: JavaScript
-  tutorial_pmzero_string_detail_programming_languages: Blocks
+  tutorial_pmzero_string_detail_programming_languages: 'Blokken '
   tutorial_hsela_string_detail_programming_languages: Hopscotch
-  tutorial_ticklear_string_detail_programming_languages: Blocks
-  tutorial_bcrobot_string_detail_programming_languages: Blocks
-  tutorial_bcsnow_string_detail_programming_languages: Blocks
+  tutorial_ticklear_string_detail_programming_languages: 'Blokken '
+  tutorial_bcrobot_string_detail_programming_languages: 'Blokken '
+  tutorial_bcsnow_string_detail_programming_languages: 'Blokken '
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Scratch
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
   tutorial_spheroit_string_detail_programming_languages: Blocks, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_blocklygames_string_detail_programming_languages: Blocks
+  tutorial_blocklygames_string_detail_programming_languages: 'Blokken '
   tutorial_spherohello_string_detail_programming_languages: JavaScript
   tutorial_spheroarcade_string_detail_programming_languages: iOS/Swift
   tutorial_bcpy1_string_detail_programming_languages: Python
@@ -8468,14 +8461,14 @@ nl:
   tutorial_3dbearmars_string_detail_programming_languages: Language independent (can
     be taught in multiple languages), Uses 3D modeling in augmented reality
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
-  tutorial_blockscadbargraphs_string_detail_programming_languages: Blocks
-  tutorial_blockscadbirdhouses_string_detail_programming_languages: Blocks
-  tutorial_blockscadclock_string_detail_programming_languages: Blocks
-  tutorial_blockscaddinner_string_detail_programming_languages: Blocks
-  tutorial_blockscadicecream_string_detail_programming_languages: Blocks
-  tutorial_blockscadpizza_string_detail_programming_languages: Blocks
-  tutorial_blockscadsugar_string_detail_programming_languages: Blocks
-  tutorial_bsgridlight_string_detail_programming_languages: Blocks
+  tutorial_blockscadbargraphs_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadbirdhouses_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadclock_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscaddinner_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadicecream_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadpizza_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadsugar_string_detail_programming_languages: 'Blokken '
+  tutorial_bsgridlight_string_detail_programming_languages: 'Blokken '
   tutorial_bpartscratch_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bpartvid_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bpenglishscratch_string_detail_programming_languages: Blocks, JavaScript
@@ -8492,17 +8485,17 @@ nl:
   tutorial_bpsciencevid_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bptechscratch_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bptechvid_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_caflags_string_detail_programming_languages: Blocks
-  tutorial_matariki_string_detail_programming_languages: Blocks
-  tutorial_carestaurant_string_detail_programming_languages: Blocks
-  tutorial_casea_string_detail_programming_languages: Blocks
-  tutorial_cashield_string_detail_programming_languages: Blocks
-  tutorial_ccwslimer_string_detail_programming_languages: Blocks
-  tutorial_codinggalaxy_string_detail_programming_languages: Blocks
-  tutorial_boatrace_string_detail_programming_languages: Blocks
+  tutorial_caflags_string_detail_programming_languages: 'Blokken '
+  tutorial_matariki_string_detail_programming_languages: 'Blokken '
+  tutorial_carestaurant_string_detail_programming_languages: 'Blokken '
+  tutorial_casea_string_detail_programming_languages: 'Blokken '
+  tutorial_cashield_string_detail_programming_languages: 'Blokken '
+  tutorial_ccwslimer_string_detail_programming_languages: 'Blokken '
+  tutorial_codinggalaxy_string_detail_programming_languages: 'Blokken '
+  tutorial_boatrace_string_detail_programming_languages: 'Blokken '
   tutorial_ccplay_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_grinch_string_detail_programming_languages: Blocks
-  tutorial_codehsart_string_detail_programming_languages: Blocks
+  tutorial_grinch_string_detail_programming_languages: 'Blokken '
+  tutorial_codehsart_string_detail_programming_languages: 'Blokken '
   tutorial_codehsbitcoin_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codehsblockchain_string_detail_programming_languages: Language independent
@@ -8511,12 +8504,12 @@ nl:
     (can be taught in multiple languages)
   tutorial_codehscollision_string_detail_programming_languages: JavaScript
   tutorial_codehsmath_string_detail_programming_languages: Python
-  tutorial_codehsmusic_string_detail_programming_languages: Blocks
-  tutorial_codehssports_string_detail_programming_languages: Blocks
+  tutorial_codehsmusic_string_detail_programming_languages: 'Blokken '
+  tutorial_codehssports_string_detail_programming_languages: 'Blokken '
   tutorial_codemojipizza_string_detail_programming_languages: JavaScript
   tutorial_moonlander_string_detail_programming_languages: CoffeeScript
-  tutorial_sushicards_string_detail_programming_languages: Blocks
-  tutorial_codesparkcreate_string_detail_programming_languages: Blocks
+  tutorial_sushicards_string_detail_programming_languages: 'Blokken '
+  tutorial_codesparkcreate_string_detail_programming_languages: 'Blokken '
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blokken, Python
   tutorial_codesterslogo_string_detail_programming_languages: Python
@@ -8528,12 +8521,12 @@ nl:
   tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
-  tutorial_edisonspider_string_detail_programming_languages: Blocks
-  tutorial_edisonspotlight_string_detail_programming_languages: Blocks
+  tutorial_edisonspider_string_detail_programming_languages: 'Blokken '
+  tutorial_edisonspotlight_string_detail_programming_languages: 'Blokken '
   tutorial_firiapython_string_detail_programming_languages: Python
-  tutorial_gamefrootsquid_string_detail_programming_languages: Blocks
-  tutorial_duckpiano_string_detail_programming_languages: Blocks
-  tutorial_gpsound_string_detail_programming_languages: Blocks
+  tutorial_gamefrootsquid_string_detail_programming_languages: 'Blokken '
+  tutorial_duckpiano_string_detail_programming_languages: 'Blokken '
+  tutorial_gpsound_string_detail_programming_languages: 'Blokken '
   tutorial_groklearningpython_string_detail_programming_languages: Python
   tutorial_htmltimetravel_string_detail_programming_languages: HTML and CSS
   tutorial_hp_flappy_string_detail_programming_languages: Blocks, hyperPad Visual
@@ -8542,11 +8535,11 @@ nl:
   tutorial_icipher_string_detail_programming_languages: ''
   tutorial_iguess_string_detail_programming_languages: ''
   tutorial_imake_string_detail_programming_languages: Unplugged
-  tutorial_imorse_string_detail_programming_languages: Blocks
+  tutorial_imorse_string_detail_programming_languages: 'Blokken '
   tutorial_kanohp_string_detail_programming_languages: Blocks, JavaScript
   tutorial_khanwebpages_string_detail_programming_languages: HTML/CSS
-  tutorial_kibobowl_string_detail_programming_languages: Blocks
-  tutorial_kibodance_string_detail_programming_languages: Blocks
+  tutorial_kibobowl_string_detail_programming_languages: 'Blokken '
+  tutorial_kibodance_string_detail_programming_languages: 'Blokken '
   tutorial_buildcharacters_string_detail_programming_languages: JavaScript, Language
     independent (can be taught in multiple languages)
   tutorial_designgames_string_detail_programming_languages: JavaScript, Language independent
@@ -8554,56 +8547,56 @@ nl:
   tutorial_makelevels_string_detail_programming_languages: JavaScript, Language independent
     (can be taught in multiple languages)
   tutorial_wizard_string_detail_programming_languages: JavaScript
-  tutorial_mbscratchcards_string_detail_programming_languages: Blocks
+  tutorial_mbscratchcards_string_detail_programming_languages: 'Blokken '
   tutorial_mbswiftplaygrounds_string_detail_programming_languages: iOS/Swift
-  tutorial_mbbuttons_string_detail_programming_languages: Blocks
-  tutorial_meteor_string_detail_programming_languages: Blocks
-  tutorial_ballbounce_string_detail_programming_languages: Blocks
-  tutorial_mitcodi_string_detail_programming_languages: Blocks
-  tutorial_mitdoodle_string_detail_programming_languages: Blocks
-  tutorial_talktome_string_detail_programming_languages: Blocks
+  tutorial_mbbuttons_string_detail_programming_languages: 'Blokken '
+  tutorial_meteor_string_detail_programming_languages: 'Blokken '
+  tutorial_ballbounce_string_detail_programming_languages: 'Blokken '
+  tutorial_mitcodi_string_detail_programming_languages: 'Blokken '
+  tutorial_mitdoodle_string_detail_programming_languages: 'Blokken '
+  tutorial_talktome_string_detail_programming_languages: 'Blokken '
   tutorial_mobilecspmap_string_detail_programming_languages: Blocks, App Inventor
-  tutorial_ozorandom_string_detail_programming_languages: Blocks
-  tutorial_ozotroll_string_detail_programming_languages: Blocks
+  tutorial_ozorandom_string_detail_programming_languages: 'Blokken '
+  tutorial_ozotroll_string_detail_programming_languages: 'Blokken '
   tutorial_peblioart_string_detail_programming_languages: JavaScript
   tutorial_astropi_string_detail_programming_languages: Python
-  tutorial_rgart_string_detail_programming_languages: Blocks
-  tutorial_rgengineer_string_detail_programming_languages: Blocks
-  tutorial_rgmath_string_detail_programming_languages: Blocks
-  tutorial_rgscience_string_detail_programming_languages: Blocks
-  tutorial_rgtech_string_detail_programming_languages: Blocks
+  tutorial_rgart_string_detail_programming_languages: 'Blokken '
+  tutorial_rgengineer_string_detail_programming_languages: 'Blokken '
+  tutorial_rgmath_string_detail_programming_languages: 'Blokken '
+  tutorial_rgscience_string_detail_programming_languages: 'Blokken '
+  tutorial_rgtech_string_detail_programming_languages: 'Blokken '
   tutorial_robotmagic3d_string_detail_programming_languages: Blocks, JavaScript
   tutorial_robotmagicflappy_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_scratchadventure_string_detail_programming_languages: Blocks
-  tutorial_scratchtalk_string_detail_programming_languages: Blocks
+  tutorial_scratchadventure_string_detail_programming_languages: 'Blokken '
+  tutorial_scratchtalk_string_detail_programming_languages: 'Blokken '
   tutorial_scratchjrstory_string_detail_programming_languages: 'ScratchJr. '
   tutorial_scratchjrtwinkle_string_detail_programming_languages: ScratchJr.
   tutorial_spherocomm_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherocommunity_string_detail_programming_languages: Blocks, Draw
   tutorial_spherofunctions_string_detail_programming_languages: JavaScript
-  tutorial_spheroinfrared_string_detail_programming_languages: Blocks
-  tutorial_spherolightsensor_string_detail_programming_languages: Blocks
-  tutorial_spheromansion_string_detail_programming_languages: Blocks
-  tutorial_roadblocks_string_detail_programming_languages: Blocks
+  tutorial_spheroinfrared_string_detail_programming_languages: 'Blokken '
+  tutorial_spherolightsensor_string_detail_programming_languages: 'Blokken '
+  tutorial_spheromansion_string_detail_programming_languages: 'Blokken '
+  tutorial_roadblocks_string_detail_programming_languages: 'Blokken '
   tutorial_spherotext2_string_detail_programming_languages: JavaScript
   tutorial_spherotext3_string_detail_programming_languages: JavaScript
   tutorial_spherotext4_string_detail_programming_languages: JavaScript
-  tutorial_spheroraptor_string_detail_programming_languages: Blocks
+  tutorial_spheroraptor_string_detail_programming_languages: 'Blokken '
   tutorial_stempiday_string_detail_programming_languages: JavaScript
   tutorial_stemplanetoids_string_detail_programming_languages: JavaScript
   tutorial_stempong_string_detail_programming_languages: JavaScript
   tutorial_algobot_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
-  tutorial_thunkableapps_string_detail_programming_languages: Blocks
+  tutorial_thunkableapps_string_detail_programming_languages: 'Blokken '
   tutorial_toxicodedot_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
-  tutorial_gcactions_string_detail_programming_languages: Blocks
-  tutorial_gccomparators_string_detail_programming_languages: Blocks
-  tutorial_gcconditions_string_detail_programming_languages: Blocks
-  tutorial_gccreate_string_detail_programming_languages: Blocks
-  tutorial_gcevents_string_detail_programming_languages: Blocks
-  tutorial_gcloops_string_detail_programming_languages: Blocks
-  tutorial_gcvariables_string_detail_programming_languages: Blocks
+  tutorial_gcactions_string_detail_programming_languages: 'Blokken '
+  tutorial_gccomparators_string_detail_programming_languages: 'Blokken '
+  tutorial_gcconditions_string_detail_programming_languages: 'Blokken '
+  tutorial_gccreate_string_detail_programming_languages: 'Blokken '
+  tutorial_gcevents_string_detail_programming_languages: 'Blokken '
+  tutorial_gcloops_string_detail_programming_languages: 'Blokken '
+  tutorial_gcvariables_string_detail_programming_languages: 'Blokken '
   tutorial_beanything_string_detail_programming_languages: Blocks, Tynker
   tutorial_change_string_detail_programming_languages: Blocks, Tynker
   tutorial_cooking_string_detail_programming_languages: Blocks, Tynker
@@ -8615,17 +8608,17 @@ nl:
   tutorial_superhero_string_detail_programming_languages: HTML, CSS
   tutorial_vidcodeplastic_string_detail_programming_languages: JavaScript
   tutorial_vidcodetypeface_string_detail_programming_languages: JavaScript
-  tutorial_washustorm_string_detail_programming_languages: Blocks
+  tutorial_washustorm_string_detail_programming_languages: 'Blokken '
   tutorial_activitypackets_string_detail_programming_languages: Blocks, Wonder, Xylo,
     Blockly
-  tutorial_googlerookie_string_detail_programming_languages: Blocks
+  tutorial_googlerookie_string_detail_programming_languages: 'Blokken '
   tutorial_tommyturtle_string_detail_programming_languages: Language independent
-  tutorial_mazyad_string_detail_programming_languages: Blocks
+  tutorial_mazyad_string_detail_programming_languages: 'Blokken '
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
-  tutorial_duckrace_string_detail_programming_languages: Blocks
-  tutorial_allcancodeapps_string_detail_programming_languages: Blocks
+  tutorial_duckrace_string_detail_programming_languages: 'Blokken '
+  tutorial_allcancodeapps_string_detail_programming_languages: 'Blokken '
   tutorial_n2y_string_detail_programming_languages: Unplugged
-  tutorial_microsoftarcade_string_detail_programming_languages: Blocks
+  tutorial_microsoftarcade_string_detail_programming_languages: 'Blokken '
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
   tutorial_toxicodepython_string_detail_programming_languages: Python
@@ -8633,74 +8626,74 @@ nl:
     Lua, CoffeeScript
   tutorial_vidcodedate_string_detail_programming_languages: JavaScript
   tutorial_codemonkeyspace_string_detail_programming_languages: CoffeeScript
-  tutorial_codespeakhappy_string_detail_programming_languages: Blocks
+  tutorial_codespeakhappy_string_detail_programming_languages: 'Blokken '
   tutorial_grokimage_string_detail_programming_languages: Python
   tutorial_icomputelearn_string_detail_programming_languages: Blocks, JavaScript,
     Scratch
-  tutorial_rpstress_string_detail_programming_languages: Blocks
+  tutorial_rpstress_string_detail_programming_languages: 'Blokken '
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
   tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
-  tutorial_scigirlsquest_string_detail_programming_languages: Blocks
-  tutorial_codespeakbreathe_string_detail_programming_languages: Blocks
+  tutorial_scigirlsquest_string_detail_programming_languages: 'Blokken '
+  tutorial_codespeakbreathe_string_detail_programming_languages: 'Blokken '
   tutorial_vidcodeface_string_detail_programming_languages: JavaScript
   tutorial_educodemaze_string_detail_programming_languages: JavaScript
   tutorial_educoderace_string_detail_programming_languages: JavaScript
-  tutorial_codespeakchatbot_string_detail_programming_languages: Blocks
-  tutorial_gamefrootgames_string_detail_programming_languages: Blocks
-  tutorial_codespeakgrandparent_string_detail_programming_languages: Blocks
+  tutorial_codespeakchatbot_string_detail_programming_languages: 'Blokken '
+  tutorial_gamefrootgames_string_detail_programming_languages: 'Blokken '
+  tutorial_codespeakgrandparent_string_detail_programming_languages: 'Blokken '
   tutorial_educodekingdom_string_detail_programming_languages: JavaScript
   tutorial_codehsdata_string_detail_programming_languages: JavaScript
   tutorial_educodecake_string_detail_programming_languages: HTML + CSS
   tutorial_ttsecond_string_detail_programming_languages: JavaScript
   tutorial_bsdtrivia_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_csfirstdialogue_string_detail_programming_languages: Blocks, Scratch
-  tutorial_codemonkeybeaver_string_detail_programming_languages: Blocks
+  tutorial_codemonkeybeaver_string_detail_programming_languages: 'Blokken '
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Blocks
+  tutorial_itchspace_string_detail_programming_languages: 'Blokken '
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Blocks
+  tutorial_itchfish_string_detail_programming_languages: 'Blokken '
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_codespeaktime_string_detail_programming_languages: Blocks
-  tutorial_itchwebcam_string_detail_programming_languages: Blocks
-  tutorial_itchball_string_detail_programming_languages: Blocks
+  tutorial_codespeaktime_string_detail_programming_languages: 'Blokken '
+  tutorial_itchwebcam_string_detail_programming_languages: 'Blokken '
+  tutorial_itchball_string_detail_programming_languages: 'Blokken '
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Blocks
+  tutorial_itchshapes_string_detail_programming_languages: 'Blokken '
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
   tutorial_htmlacademyphp_string_detail_programming_languages: PHP
-  tutorial_gamefrootdistance_string_detail_programming_languages: Blocks
+  tutorial_gamefrootdistance_string_detail_programming_languages: 'Blokken '
   tutorial_codesterscovid_string_detail_programming_languages: Python
   tutorial_ttbunker_string_detail_programming_languages: JavaScript
   tutorial_cuttle_string_detail_programming_languages: Blocks, Language independent
     (can be taught in multiple languages)
   tutorial_bsdjokes_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_rptree_string_detail_programming_languages: Blocks
+  tutorial_rptree_string_detail_programming_languages: 'Blokken '
   tutorial_codestersunity_string_detail_programming_languages: Python
   tutorial_codesterssoccer_string_detail_programming_languages: Python
   tutorial_breakoutlock_string_detail_programming_languages: Blocks, Language independent
     (can be taught in multiple languages)
-  tutorial_thunkablemask_string_detail_programming_languages: Blocks
+  tutorial_thunkablemask_string_detail_programming_languages: 'Blokken '
   tutorial_cafarming_string_detail_programming_languages: Theory course on impacts
     of computing.
   tutorial_blocksmithyeti_string_detail_programming_languages: JavaScript
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Blocks
+  tutorial_itchplatformer_string_detail_programming_languages: 'Blokken '
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_gamefrootclicker_string_detail_programming_languages: Blocks
+  tutorial_gamefrootclicker_string_detail_programming_languages: 'Blokken '
   tutorial_rmagicequity_string_detail_programming_languages: Blocks, JavaScript
   tutorial_ttfreestyle_string_detail_programming_languages: JavaScript
   tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
@@ -8712,15 +8705,15 @@ nl:
     be taught in multiple languages)
   tutorial_irobotpicture_string_detail_programming_languages: No specific programming
     languages required; unplugged decoding activity with words/phrases
-  tutorial_kcjmyself_string_detail_programming_languages: Blocks
+  tutorial_kcjmyself_string_detail_programming_languages: 'Blokken '
   tutorial_nearpodalgorithms_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_kibodrop_string_detail_programming_languages: Blocks
+  tutorial_kibodrop_string_detail_programming_languages: 'Blokken '
   tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
     and Color Codes
   tutorial_scigirlspixels_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_kcjheroines_string_detail_programming_languages: Blocks
+  tutorial_kcjheroines_string_detail_programming_languages: 'Blokken '
   tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
   tutorial_icodebytes_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
@@ -8729,35 +8722,35 @@ nl:
     taught in multiple languages)
   tutorial_cldata_string_detail_programming_languages: Language independent (can be
     taught in multiple languages)
-  tutorial_spheroinputs_string_detail_programming_languages: Blocks
-  tutorial_edisoncount_string_detail_programming_languages: Blocks
-  tutorial_spheroloops_string_detail_programming_languages: Blocks
-  tutorial_kiboprogram_string_detail_programming_languages: Blocks
+  tutorial_spheroinputs_string_detail_programming_languages: 'Blokken '
+  tutorial_edisoncount_string_detail_programming_languages: 'Blokken '
+  tutorial_spheroloops_string_detail_programming_languages: 'Blokken '
+  tutorial_kiboprogram_string_detail_programming_languages: 'Blokken '
   tutorial_hellorubycsin60_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_clfashion1_string_detail_programming_languages: SQL
   tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
-  tutorial_edisonmystery_string_detail_programming_languages: Blocks
+  tutorial_edisonmystery_string_detail_programming_languages: 'Blokken '
   tutorial_microbitseaturtles_string_detail_programming_languages: Blocks, JavaScript,
     Python
   tutorial_ozobotknow_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
   tutorial_imagilabs_string_detail_programming_languages: Python
-  tutorial_irobotsimulator_string_detail_programming_languages: Blocks
-  tutorial_irobotkind_string_detail_programming_languages: Blocks
+  tutorial_irobotsimulator_string_detail_programming_languages: 'Blokken '
+  tutorial_irobotkind_string_detail_programming_languages: 'Blokken '
   tutorial_firiavirtual_string_detail_programming_languages: Python
   tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
   tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
   tutorial_blupants_string_detail_programming_languages: Blokken, Python
-  tutorial_legodance_string_detail_programming_languages: Blocks
+  tutorial_legodance_string_detail_programming_languages: 'Blokken '
   tutorial_nearpodcoding_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
     a spreadsheet.
-  tutorial_legojourney_string_detail_programming_languages: Blocks
-  tutorial_legohopper_string_detail_programming_languages: Blocks
-  tutorial_catrobatembroidery_string_detail_programming_languages: Blocks
+  tutorial_legojourney_string_detail_programming_languages: 'Blokken '
+  tutorial_legohopper_string_detail_programming_languages: 'Blokken '
+  tutorial_catrobatembroidery_string_detail_programming_languages: 'Blokken '
   tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
   tutorial_codejumper_string_detail_programming_languages: Unplugged
@@ -8846,9 +8839,9 @@ nl:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9250,15 +9243,15 @@ nl:
   tutorial_codehstriangle_string_detail_grades: Graad 6 en hoger
   tutorial_ttwhitehouse_string_detail_grades: Vanaf groep 4
   tutorial_modulo_string_detail_grades: Graad 6 en hoger
-  tutorial_codingtown_string_detail_grades: Grades 2-5
-  tutorial_kanoart_string_detail_grades: Grades 2-5
+  tutorial_codingtown_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_kanoart_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_dragonscript_string_detail_grades: Grades 9+
   tutorial_uwcloud_string_detail_grades: Vanaf groep 4
   tutorial_htmlmuffin_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_microsoftpizza_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_stemc_blckhole_string_detail_grades: Grades 9+
   tutorial_careconfigure_string_detail_grades: Graad 6 en hoger
-  tutorial_rpiscratch_string_detail_grades: Grades 2-5
+  tutorial_rpiscratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_ozaria_string_detail_grades: Vanaf groep 4
   tutorial_ttovum_string_detail_grades: Graad 6 en hoger
   tutorial_ttpassage_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -9304,7 +9297,7 @@ nl:
   tutorial_modvariables_string_detail_grades: Graad 6 en hoger
   tutorial_codestersmicro_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_codestersdata_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_ikodexmas_string_detail_grades: Grades 2-5
+  tutorial_ikodexmas_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_rpisensehat_string_detail_grades: Graad 6 en hoger
   tutorial_mee_string_detail_grades: Vanaf groep 4
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
@@ -9345,8 +9338,7 @@ nl:
   tutorial_tynkermars_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_vidcodemap_string_platforms: Alle moderne browsers
-  tutorial_robotmagicfarm_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_robotmagicfarm_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codehstriangle_string_platforms: Alle moderne browsers
   tutorial_ttwhitehouse_string_platforms: Chrome, Firefox
   tutorial_modulo_string_platforms: PCs
@@ -9515,33 +9507,33 @@ nl:
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_ai-oceans_string_detail_platforms: ''
-  tutorial_scratchimagine_string_detail_programming_languages: Blocks
+  tutorial_scratchimagine_string_detail_programming_languages: 'Blokken '
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
-  tutorial_scratchcartoon_string_detail_programming_languages: Blocks
-  tutorial_codemonkeyjr_string_detail_programming_languages: Blocks
+  tutorial_scratchcartoon_string_detail_programming_languages: 'Blokken '
+  tutorial_codemonkeyjr_string_detail_programming_languages: 'Blokken '
   tutorial_bananatales_string_detail_programming_languages: Python
-  tutorial_scratchtales_string_detail_programming_languages: Blocks
+  tutorial_scratchtales_string_detail_programming_languages: 'Blokken '
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
     so no language
   tutorial_kodablebeach_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_tynkeren_string_detail_programming_languages: Blocks
+  tutorial_tynkeren_string_detail_programming_languages: 'Blokken '
   tutorial_tynkerjavapro_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
-  tutorial_pbskids_string_detail_programming_languages: Blocks
+  tutorial_pbskids_string_detail_programming_languages: 'Blokken '
   tutorial_nclabdata_string_detail_programming_languages: Structured Query Language
     (SQL), specifically PostgreSQL
   tutorial_grasshopperphoto_string_detail_programming_languages: JavaScript
   tutorial_tynkerpyland_string_detail_programming_languages: Python
-  tutorial_codeitimages_string_detail_programming_languages: Blocks
+  tutorial_codeitimages_string_detail_programming_languages: 'Blokken '
   tutorial_hyperpadenemy_string_detail_programming_languages: hyperPad Visual Programming
   tutorial_tynkerpro_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_trashtag_string_detail_programming_languages: Blocks
+  tutorial_trashtag_string_detail_programming_languages: 'Blokken '
   tutorial_casiege_string_detail_programming_languages: Security theory based
-  tutorial_thunkableyeet_string_detail_programming_languages: Blocks
+  tutorial_thunkableyeet_string_detail_programming_languages: 'Blokken '
   tutorial_vidcodedeal_string_detail_programming_languages: JavaScript
   tutorial_codehsgeno_string_detail_programming_languages: Python
   tutorial_hyperpadpong_string_detail_programming_languages: hyperPad Visual Programming
@@ -9557,7 +9549,7 @@ nl:
   tutorial_ttwhitehouse_string_detail_programming_languages: SCSS, CSS
   tutorial_modulo_string_detail_programming_languages: Lua
   tutorial_codingtown_string_detail_programming_languages: JavaScript
-  tutorial_kanoart_string_detail_programming_languages: Blocks
+  tutorial_kanoart_string_detail_programming_languages: 'Blokken '
   tutorial_dragonscript_string_detail_programming_languages: JavaScript, HTML
   tutorial_uwcloud_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
@@ -9572,7 +9564,7 @@ nl:
   tutorial_tynkerhtmlen_string_detail_programming_languages: HTML, CSS
   tutorial_ttfrog_string_detail_programming_languages: Blocks, JavaScript
   tutorial_codemojijava_string_detail_programming_languages: Java
-  tutorial_ccfirewall_string_detail_programming_languages: Blocks
+  tutorial_ccfirewall_string_detail_programming_languages: 'Blokken '
   tutorial_htmljs_string_detail_programming_languages: JavaScript
   tutorial_ttaqueducts_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_vtgame_string_detail_programming_languages: Nederlands
@@ -9593,25 +9585,25 @@ nl:
   tutorial_modlighthouse_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_spherogreen_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_ozopopstar_string_detail_programming_languages: Blocks
-  tutorial_eddesign_string_detail_programming_languages: Blocks
+  tutorial_ozopopstar_string_detail_programming_languages: 'Blokken '
+  tutorial_eddesign_string_detail_programming_languages: 'Blokken '
   tutorial_edshapeup_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
-  tutorial_ozocolor_string_detail_programming_languages: Blocks
-  tutorial_icomputeeggs_string_detail_programming_languages: Blocks
-  tutorial_rootunplugged_string_detail_programming_languages: Blocks
-  tutorial_rgtreasure_string_detail_programming_languages: Blocks
+  tutorial_ozocolor_string_detail_programming_languages: 'Blokken '
+  tutorial_icomputeeggs_string_detail_programming_languages: 'Blokken '
+  tutorial_rootunplugged_string_detail_programming_languages: 'Blokken '
+  tutorial_rgtreasure_string_detail_programming_languages: 'Blokken '
   tutorial_peblioportraits_string_detail_programming_languages: JavaScript
-  tutorial_rootcodebreak_string_detail_programming_languages: Blocks
-  tutorial_microbit14_string_detail_programming_languages: Blocks
+  tutorial_rootcodebreak_string_detail_programming_languages: 'Blokken '
+  tutorial_microbit14_string_detail_programming_languages: 'Blokken '
   tutorial_barobomoon_string_detail_programming_languages: Blocks, C/C++
-  tutorial_eddog_string_detail_programming_languages: Blocks
-  tutorial_microbit15_string_detail_programming_languages: Blocks
+  tutorial_eddog_string_detail_programming_languages: 'Blokken '
+  tutorial_microbit15_string_detail_programming_languages: 'Blokken '
   tutorial_unity_string_detail_programming_languages: C#
-  tutorial_blockscadtarget_string_detail_programming_languages: Blocks
-  tutorial_tcadicicles_string_detail_programming_languages: Blocks
-  tutorial_blockscadscale_string_detail_programming_languages: Blocks
-  tutorial_tcadloops_string_detail_programming_languages: Blocks
+  tutorial_blockscadtarget_string_detail_programming_languages: 'Blokken '
+  tutorial_tcadicicles_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadscale_string_detail_programming_languages: 'Blokken '
+  tutorial_tcadloops_string_detail_programming_languages: 'Blokken '
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
   tutorial_modvariables_string_detail_programming_languages: Language independent
@@ -9620,7 +9612,7 @@ nl:
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_mee_string_detail_programming_languages: Blocks
+  tutorial_mee_string_detail_programming_languages: 'Blokken '
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
   tutorial_ai-oceans_string_detail_programming_languages: "  AI en machine learning
@@ -9708,7 +9700,7 @@ nl:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -9920,10 +9912,12 @@ nl:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10224,15 +10218,15 @@ nl:
   tutorial_edisonblueprint_string_detail_grades: Graad 6 en hoger
   tutorial_edisonmaze_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_milnefunctions_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_sasmap_string_detail_grades: Grades 2-5
+  tutorial_sasmap_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_firstrobotics_string_detail_grades: Graad 6 en hoger
   tutorial_sasdata_string_detail_grades: Vanaf groep 4
   tutorial_carnegiesensabot_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_robotical4_string_detail_grades: Grades 2-5
+  tutorial_robotical4_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_kinderadd_string_detail_grades: Pre-reader - Grade 5
   tutorial_imagipython_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_robotical2_string_detail_grades: Pre-reader - Grade 5
-  tutorial_robotical3_string_detail_grades: Grades 2-5
+  tutorial_robotical3_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_blockscadvirus_string_detail_grades: Graad 6 en hoger
   tutorial_robotical1_string_detail_grades: Pre-reader - Grade 5
   tutorial_irobotshapes_string_detail_grades: Pre-reader
@@ -10240,8 +10234,7 @@ nl:
   tutorial_irobottools_string_detail_grades: Pre-reader
   tutorial_kindercar_string_detail_grades: Pre-reader
   tutorial_caavatar_string_detail_grades: Graad 6 en hoger
-  tutorial_hello_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_hello_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_raspispace_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_codemonkeyjump_string_platforms: Alle moderne browsers
   tutorial_poemart_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -10253,8 +10246,7 @@ nl:
   tutorial_microsoftforest_string_platforms: Alle moderne browsers
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Alle moderne browsers
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: All modern browsers, Screen reader
   tutorial_codeartportrait_string_platforms: Webgebaseerd, Android tablet, iPad
@@ -10263,17 +10255,14 @@ nl:
   tutorial_codespeakpassword_string_platforms: Alle moderne browsers
   tutorial_kodableshapes_string_platforms: All modern browsers, iPad, iPhone
   tutorial_nasabinary_string_platforms: Unplugged, Screen reader
-  tutorial_3dmaker_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_3dmaker_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_itchstart_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_hopsub_string_platforms: iPad, iPhone
   tutorial_itchmundos_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_itchtenacity_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_kcjskiing_string_platforms: Alle moderne browsers
-  tutorial_groksecurity_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_creaticode_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_groksecurity_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_creaticode_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_kcjhockey_string_platforms: Alle moderne browsers
   tutorial_ttdungeon_string_platforms: Chrome, Firefox
   tutorial_ccai_string_platforms: Alle moderne browsers
@@ -10287,8 +10276,7 @@ nl:
   tutorial_kcjarchery_string_platforms: Alle moderne browsers
   tutorial_ttsprouts_string_platforms: Chrome, Firefox
   tutorial_ttmaze_string_platforms: Chrome, Firefox
-  tutorial_codetribe_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_codetribe_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_ttcanyon_string_platforms: Chrome, Firefox
   tutorial_kcjxtrail_string_platforms: Alle moderne browsers
   tutorial_codespeakroad_string_platforms: Chrome
@@ -10307,8 +10295,7 @@ nl:
   tutorial_microbitpet_string_platforms: All modern browsers, Screen reader
   tutorial_spherotriad_string_platforms: Android tablet, iPad, Android phone, iPhone,
     Windows 10, macOS, ChromeOS
-  tutorial_spheropassword_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_spheropassword_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codequilt_string_platforms: Alle moderne browsers
   tutorial_ozoshape1_string_platforms: Alle moderne browsers
   tutorial_ozoshape2_string_platforms: Alle moderne browsers
@@ -10432,95 +10419,95 @@ nl:
   tutorial_irobottools_string_detail_platforms: ''
   tutorial_kindercar_string_detail_platforms: KIBO Robot Kit
   tutorial_caavatar_string_detail_platforms: ''
-  tutorial_hello_string_detail_programming_languages: Blocks
+  tutorial_hello_string_detail_programming_languages: 'Blokken '
   tutorial_raspispace_string_detail_programming_languages: Blocks, Scratch
-  tutorial_codemonkeyjump_string_detail_programming_languages: Blocks
-  tutorial_poemart_string_detail_programming_languages: Blocks
+  tutorial_codemonkeyjump_string_detail_programming_languages: 'Blokken '
+  tutorial_poemart_string_detail_programming_languages: 'Blokken '
   tutorial_kodablehero_string_detail_programming_languages: JavaScript, iOS/Swift,
     Language independent (can be taught in multiple languages)
   tutorial_cacloud_string_detail_programming_languages: Theory Based
   tutorial_blocksmithbot_string_detail_programming_languages: JavaScript
-  tutorial_hatchmario_string_detail_programming_languages: Blocks
-  tutorial_microsoftforest_string_detail_programming_languages: Blocks
+  tutorial_hatchmario_string_detail_programming_languages: 'Blokken '
+  tutorial_microsoftforest_string_detail_programming_languages: 'Blokken '
   tutorial_blackbirdscreen_string_detail_programming_languages: JavaScript
   tutorial_toxicodecompute2_string_detail_programming_languages: Python
   tutorial_minecrafttimecraft_string_detail_programming_languages: Blokken, Python
   tutorial_blackbirdtether_string_detail_programming_languages: JavaScript
-  tutorial_ob_string_detail_programming_languages: Blocks
+  tutorial_ob_string_detail_programming_languages: 'Blokken '
   tutorial_codeartportrait_string_detail_programming_languages: JavaScript, p5.js
   tutorial_shelly_string_detail_programming_languages: A Logo-like language
-  tutorial_weavly_string_detail_programming_languages: Blocks
+  tutorial_weavly_string_detail_programming_languages: 'Blokken '
   tutorial_codespeakpassword_string_detail_programming_languages: Python
   tutorial_kodableshapes_string_detail_programming_languages: JavaScript, Language
     independent (can be taught in multiple languages)
   tutorial_nasabinary_string_detail_programming_languages: Binary code
-  tutorial_3dmaker_string_detail_programming_languages: Blocks
-  tutorial_itchstart_string_detail_programming_languages: Blocks
+  tutorial_3dmaker_string_detail_programming_languages: 'Blokken '
+  tutorial_itchstart_string_detail_programming_languages: 'Blokken '
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: Blocks
-  tutorial_itchtenacity_string_detail_programming_languages: Blocks
-  tutorial_kcjskiing_string_detail_programming_languages: Blocks
+  tutorial_itchmundos_string_detail_programming_languages: 'Blokken '
+  tutorial_itchtenacity_string_detail_programming_languages: 'Blokken '
+  tutorial_kcjskiing_string_detail_programming_languages: 'Blokken '
   tutorial_groksecurity_string_detail_programming_languages: None - no programming
     required
-  tutorial_creaticode_string_detail_programming_languages: Blocks
-  tutorial_kcjhockey_string_detail_programming_languages: Blocks
+  tutorial_creaticode_string_detail_programming_languages: 'Blokken '
+  tutorial_kcjhockey_string_detail_programming_languages: 'Blokken '
   tutorial_ttdungeon_string_detail_programming_languages: Algorithms
   tutorial_ccai_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_bsdai_string_detail_programming_languages: HTML, CSS and JavaScript
   tutorial_stemdata_string_detail_programming_languages: JavaScript, Includes option
     to download and analyze data in Google Sheets and Excel
-  tutorial_thunkableinfo_string_detail_programming_languages: Blocks
+  tutorial_thunkableinfo_string_detail_programming_languages: 'Blokken '
   tutorial_educodespace_string_detail_programming_languages: JavaScript
-  tutorial_kcjtennis_string_detail_programming_languages: Blocks
+  tutorial_kcjtennis_string_detail_programming_languages: 'Blokken '
   tutorial_robotmagictower_string_detail_programming_languages: Blocks, JavaScript
   tutorial_ttdragons_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_kcjarchery_string_detail_programming_languages: Blocks
+  tutorial_kcjarchery_string_detail_programming_languages: 'Blokken '
   tutorial_ttsprouts_string_detail_programming_languages: JavaScript, C#
   tutorial_ttmaze_string_detail_programming_languages: JavaScript
   tutorial_codetribe_string_detail_programming_languages: JavaScript, HTML and CSS.
   tutorial_ttcanyon_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_kcjxtrail_string_detail_programming_languages: Blocks
-  tutorial_codespeakroad_string_detail_programming_languages: Blocks
+  tutorial_kcjxtrail_string_detail_programming_languages: 'Blokken '
+  tutorial_codespeakroad_string_detail_programming_languages: 'Blokken '
   tutorial_educodelair_string_detail_programming_languages: JavaScript
   tutorial_ibmhourofz_string_detail_programming_languages: Python, COBOL
-  tutorial_gamefrootbacteria_string_detail_programming_languages: Blocks
+  tutorial_gamefrootbacteria_string_detail_programming_languages: 'Blokken '
   tutorial_educodeforest_string_detail_programming_languages: JavaScript
   tutorial_educodehorus_string_detail_programming_languages: JavaScript
-  tutorial_codespeakpokemon_string_detail_programming_languages: Blocks
+  tutorial_codespeakpokemon_string_detail_programming_languages: 'Blokken '
   tutorial_stemholiday_string_detail_programming_languages: JavaScript, HTML5
   tutorial_codespeakpixel_string_detail_programming_languages: JavaScript
   tutorial_codespellsnexus_string_detail_programming_languages: Blocks, JavaScript,
     Racket
-  tutorial_carnegieslime_string_detail_programming_languages: Blocks
-  tutorial_ozotown_string_detail_programming_languages: Blocks
-  tutorial_milnedash_string_detail_programming_languages: Blocks
+  tutorial_carnegieslime_string_detail_programming_languages: 'Blokken '
+  tutorial_ozotown_string_detail_programming_languages: 'Blokken '
+  tutorial_milnedash_string_detail_programming_languages: 'Blokken '
   tutorial_microbitpet_string_detail_programming_languages: Python, MakeCode
-  tutorial_spherotriad_string_detail_programming_languages: Blocks
-  tutorial_spheropassword_string_detail_programming_languages: Blocks
-  tutorial_codequilt_string_detail_programming_languages: Blocks
-  tutorial_ozoshape1_string_detail_programming_languages: Blocks
-  tutorial_ozoshape2_string_detail_programming_languages: Blocks
+  tutorial_spherotriad_string_detail_programming_languages: 'Blokken '
+  tutorial_spheropassword_string_detail_programming_languages: 'Blokken '
+  tutorial_codequilt_string_detail_programming_languages: 'Blokken '
+  tutorial_ozoshape1_string_detail_programming_languages: 'Blokken '
+  tutorial_ozoshape2_string_detail_programming_languages: 'Blokken '
   tutorial_hopescape_string_detail_programming_languages: Blocks, Hopscotch
   tutorial_ozorace_string_detail_programming_languages: Ozobot Color Codes
   tutorial_ozoequestrian_string_detail_programming_languages: Color Codes
-  tutorial_irobotpizza_string_detail_programming_languages: Blocks
+  tutorial_irobotpizza_string_detail_programming_languages: 'Blokken '
   tutorial_ai4alldance_string_detail_programming_languages: No programming required.
   tutorial_ai4allneural_string_detail_programming_languages: No programming required.
   tutorial_spheroinout_string_detail_programming_languages: None - color tiles
-  tutorial_edisonblueprint_string_detail_programming_languages: Blocks
-  tutorial_edisonmaze_string_detail_programming_languages: Blocks
-  tutorial_milnefunctions_string_detail_programming_languages: Blocks
-  tutorial_sasmap_string_detail_programming_languages: Blocks
+  tutorial_edisonblueprint_string_detail_programming_languages: 'Blokken '
+  tutorial_edisonmaze_string_detail_programming_languages: 'Blokken '
+  tutorial_milnefunctions_string_detail_programming_languages: 'Blokken '
+  tutorial_sasmap_string_detail_programming_languages: 'Blokken '
   tutorial_firstrobotics_string_detail_programming_languages: Blocks, OnbotJava
   tutorial_sasdata_string_detail_programming_languages: 'No programming languages. '
-  tutorial_carnegiesensabot_string_detail_programming_languages: Blocks
-  tutorial_robotical4_string_detail_programming_languages: Blocks
+  tutorial_carnegiesensabot_string_detail_programming_languages: 'Blokken '
+  tutorial_robotical4_string_detail_programming_languages: 'Blokken '
   tutorial_kinderadd_string_detail_programming_languages: Tangible KIBO blocks
   tutorial_imagipython_string_detail_programming_languages: Python
   tutorial_robotical2_string_detail_programming_languages: This makes use of a paper
     printout of the Marty Controller
-  tutorial_robotical3_string_detail_programming_languages: Blocks
-  tutorial_blockscadvirus_string_detail_programming_languages: Blocks
+  tutorial_robotical3_string_detail_programming_languages: 'Blokken '
+  tutorial_blockscadvirus_string_detail_programming_languages: 'Blokken '
   tutorial_robotical1_string_detail_programming_languages: Language independent (can
     be taught in multiple languages), Color cards are used to command the device featured
     in the video and to instruct partners.
@@ -10537,19 +10524,20 @@ nl:
   tutorial_icomputefireworks_longdescription: Create your own fireworks display using
     code.
   tutorial_icomputefireworks_language: English, English (UK)
-  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_icomputefireworks_string_platforms: Alle moderne browsers
   tutorial_icomputefireworks_string_detail_platforms: ''
-  tutorial_icomputefireworks_string_detail_programming_languages: Blocks
+  tutorial_icomputefireworks_string_detail_programming_languages: 'Blokken '
   tutorial_rpccw_name: 'Code Club World: Make cool stuff with free coding games and
     activities'
-  tutorial_rpledfirefly_name: 'LED firefly: Meet the Raspberry Pi Pico'
+  tutorial_rpledfirefly_name: 'LED vuurvliegje: ontdek de Raspberry Pi Pico'
   tutorial_rpcharting_name: 'Charting champions: The power of Python lists'
   tutorial_rpsolar_name: 'Solar system simulator: Python models and dictionaries'
   tutorial_rpwebcards_name: 'Flip treat webcards: Create interactive hover cards that
     flip'
-  tutorial_codeclubhworld_name: 'Hello world: Say hello to Python coding'
-  tutorial_codeclubspells_name: 'Broadcasting spells: Scratch coding beyond the basics'
+  tutorial_codeclubhworld_name: 'Hallo wereld: zeg hallo tegen Python programmeren'
+  tutorial_codeclubspells_name: 'Spreuken uitzenden: coderen met Scratch voorbij de
+    basis'
   tutorial_coderdojoanime_name: 'Anime expressions: Create and style a webpage for
     an anime drawing tutorial'
   tutorial_coderdojotarget_name: 'Target practice: Introduction to Python graphics'
@@ -10581,7 +10569,7 @@ nl:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: Goblins en Glory
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -10643,12 +10631,17 @@ nl:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
-  tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
-    basic electronic components to create a blinking LED firefly. Write MicroPython
-    code to light your firefly and create a switch from jumper wires to mimic fireflies
-    in the wild when the switch is closed.
+  tutorial_rpledfirefly_longdescription: Gebruik een Raspberry Pi Pico microcontroller
+    en simpele elektronische componenten om een knipperend LED vuurvliegje te maken.
+    Schrijf MicroPython code om je vuurvliegje op te laten lichten en maak een schakelaar
+    met jumperwires om vuurvliegjes in het wild na te doen als de schakelaar gesloten
+    is.
   tutorial_rpcharting_longdescription: Discover the power of lists in the Python programming
     language by storing Olympic medal data then use the pygal library to create an
     interactive chart. Use data analysis skills to uncover patterns and anomalies.
@@ -10658,13 +10651,14 @@ nl:
   tutorial_rpwebcards_longdescription: Create a set of webcards that flip when you
     hover over them. Use CSS styling and animations then customise with fancy fonts
     and colour gradients.
-  tutorial_codeclubhworld_longdescription: Write Python text-based code to create
-    an interactive project with user input that prints text and emoji. Use variables
-    to store text and numbers, and functions to organize your code.
-  tutorial_codeclubspells_longdescription: Use Scratch blocks to code a wand that
-    casts spells to turn sprites into toads, grow, and shrink them. Edit and reverse
-    sound to make spell sound effects. Broadcast spell messages so that multiple sprites
-    transform when the message is received.
+  tutorial_codeclubhworld_longdescription: Schrijf Python tekstgebaseerde code om
+    een interactief project te creëren met gebruikersinput die tekst en emoties printen.
+    Gebruik variabelen om tekst en cijfers op te slaan en functies om je code te organiseren.
+  tutorial_codeclubspells_longdescription: Gebruik Scratch blokken om een toverstok
+    te programmeren die spreukenzegt die sprites in padden verandert, laat groeien
+    en laat krimpen. Wijzig en draai geluiden om om spreuk geluidseffecten te maken.
+    Zend spreukboodschappen uit zodat meerdere sprites veranderen als ze de boodschap
+    ontvangen.
   tutorial_coderdojoanime_longdescription: Create a responsive webpage with text and
     images for an anime drawing tutorial. Use HTML to structure the webpage and CSS
     styles to apply layout, colour palettes and fonts.
@@ -10755,12 +10749,13 @@ nl:
     Sphero BOLT! Explore how additive color theory works by adding different values
     of red, green, and blue to make many different colors. Learn how you can use your
     BOLT's sensors to measure its orientation and change colors.
-  tutorial_codecombatesports_longdescription: Competitive coding has never been so
-    epic! Learn the skills you need to play like the pros in our Esports Bootcamp.
-    No coding experience needed. Start by training in the dungeon and discovering
-    the coding strategies and tactics you'll need to compete. After honing your skills,
-    put your code to the test in our esports arena against other players worldwide!
-    Are you our next AI League grand champion?
+  tutorial_codecombatesports_longdescription: Competitieve codering was nog nooit
+    zo episch! Leer de vaardigheden die je nodig hebt om te spelen als de profs in
+    onze Esports Bootcamp. Geen codeerervaring nodig. Begin met trainen in de kerker
+    en ontdek de codeerstrategieën en -tactieken die je nodig hebt om te concurreren.
+    Nadat je je vaardigheden hebt aangescherpt, kun je je code testen in onze esports-arena
+    tegen andere spelers over de hele wereld! Ben jij onze volgende AI League grote
+    kampioen?
   tutorial_spherodigdisplay_longdescription: Digital Displays are all around us, from
     phones to computer monitors to television to modern billboards. But how do they
     work? Dig into the graphic technology behind digital displays and get hands-on
@@ -10779,10 +10774,11 @@ nl:
     should have the opportunity to learn to code and aims to accomplish this using
     braille code blocks with SAS CodeSnaps - a collaborative coding environment that
     can get an entire classroom coding with just a single iPad and a Sphero robot.
-  tutorial_codecombatgoblins_longdescription: We need your help! Embark on an epic
-    quest where you take control of the game through your powers of programming. Become
-    the hero, unlock loot, and expand your arsenal of code to rescue the town. Then
-    use AI strategies to assemble a party for a final goblin boss battle!
+  tutorial_codecombatgoblins_longdescription: We hebben je hulp nodig! Begeef je op
+    een epische zoektocht waarbij je de controle over het spel overneemt door je programmeertalen.
+    Word de held, ontgrendel buit en breid je arsenaal aan code uit om de stad te
+    redden. Gebruik vervolgens AI-strategieën om een ​​feest samen te stellen voor
+    een laatste gevecht met de goblinbaas!
   tutorial_scratchstorytelling_longdescription: Animate your own story with Scratch!
     Add sprites, backgrounds, and interactive graphic effects to bring your story
     to life. Includes an educator facilitation guide, Scratch project tutorial, and
@@ -10984,13 +10980,25 @@ nl:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
-  tutorial_rpccw_string_detail_grades: Grades 2-5
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
+  tutorial_rpccw_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_rpledfirefly_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_rpcharting_string_detail_grades: Grades 9+
   tutorial_rpsolar_string_detail_grades: Grades 9+
   tutorial_rpwebcards_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_codeclubhworld_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_codeclubspells_string_detail_grades: Grades 2-5
+  tutorial_codeclubspells_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_coderdojoanime_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_coderdojotarget_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_creaticodescratch_string_detail_grades: Graad 6 en hoger
@@ -11002,10 +11010,10 @@ nl:
   tutorial_edisonmusical_string_detail_grades: Graad 6 en hoger
   tutorial_codemonkeydiglit_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bsdrockpaper_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_microbitreaction_string_detail_grades: Grades 2-5
+  tutorial_microbitreaction_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_kinderanimal_string_detail_grades: Pre-reader - Grade 5
   tutorial_kindersinger_string_detail_grades: Pre-reader - Grade 5
-  tutorial_microbitwwn_string_detail_grades: Grades 2-5
+  tutorial_microbitwwn_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_grokcyberlive_string_detail_grades: Graad 6 en hoger
   tutorial_codemojimaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codemojisnake_string_detail_grades: Pre-reader - Grade 5
@@ -11028,14 +11036,14 @@ nl:
   tutorial_madpicturethis_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_mindmakersmaps_string_detail_grades: Grades 9+
   tutorial_mindmakersjorel_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_mindmakersroboland_string_detail_grades: Grades 2-5
+  tutorial_mindmakersroboland_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_mindmakersrobolandjr_string_detail_grades: Pre-reader - Grade 1
   tutorial_codehsdraw_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_codehscamouflage_string_detail_grades: Pre-reader - Grade 5
   tutorial_firiapythoncodex_string_detail_grades: Pre-reader +
   tutorial_bekidscoding_string_detail_grades: Pre-reader - Grade 5
   tutorial_rodocodehr_string_detail_grades: Pre-reader - Grade 5
-  tutorial_microbitdice_string_detail_grades: Grades 2-5
+  tutorial_microbitdice_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_madflashcard_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_madappwars_string_detail_grades: Graad 6 en hoger
   tutorial_kodablepuppies_string_detail_grades: Pre-reader - Grade 5
@@ -11070,36 +11078,33 @@ nl:
   tutorial_coderzfarm_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_intelinofield_string_detail_grades: Pre-reader - Grade 5
   tutorial_cablockchain_string_detail_grades: Graad 6 en hoger
-  tutorial_nasaparachute_string_detail_grades: Grades 2-5
+  tutorial_nasaparachute_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_nasascratch_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_nasaorbit_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_nasapackage_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_nasalunar_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_meeestate_string_detail_grades: Vanaf groep 4
-  tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone
+  tutorial_imagipixelart_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_kcjhealth_string_detail_grades: Graad 6 en hoger
+  tutorial_msftwakanda_string_detail_grades: Graad 6 en hoger
+  tutorial_nafbrand_string_detail_grades: Grades 9+
+  tutorial_rpccw_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_rpledfirefly_string_platforms: Alle moderne browsers
   tutorial_rpcharting_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_rpsolar_string_platforms: Webgebaseerd, Android tablet, iPad
-  tutorial_rpwebcards_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_rpwebcards_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codeclubhworld_string_platforms: Webgebaseerd, Android tablet, iPad
-  tutorial_codeclubspells_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_coderdojoanime_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_coderdojotarget_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
-  tutorial_creaticodescratch_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_codeclubspells_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_coderdojoanime_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_coderdojotarget_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_creaticodescratch_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_bbsierpinski_string_platforms: Alle moderne browsers
   tutorial_bbstopwatch_string_platforms: Alle moderne browsers
   tutorial_idrpatterns_string_platforms: Alle moderne browsers
   tutorial_idrshapes_string_platforms: Alle moderne browsers
   tutorial_edisondetect_string_platforms: Alle moderne browsers
   tutorial_edisonmusical_string_platforms: Alle moderne browsers
-  tutorial_codemonkeydiglit_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_codemonkeydiglit_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_bsdrockpaper_string_platforms: Chrome, Firefox
   tutorial_microbitreaction_string_platforms: Alle moderne browsers
   tutorial_kinderanimal_string_platforms: Unplugged
@@ -11113,13 +11118,10 @@ nl:
   tutorial_carnegiespike_string_platforms: Alle moderne browsers
   tutorial_spheroincolor_string_platforms: Unplugged
   tutorial_kcjdominos_string_platforms: Alle moderne browsers
-  tutorial_spherocolortheory_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_spherocolortheory_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codecombatesports_string_platforms: Alle moderne browsers
-  tutorial_spherodigdisplay_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
-  tutorial_spherorvrincolor_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_spherodigdisplay_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_spherorvrincolor_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_clbinary_string_platforms: Unplugged
   tutorial_sascollabcode_string_platforms: iPad
   tutorial_codecombatgoblins_string_platforms: Alle moderne browsers
@@ -11135,50 +11137,38 @@ nl:
   tutorial_codehsdraw_string_platforms: Unplugged
   tutorial_codehscamouflage_string_platforms: Unplugged
   tutorial_firiapythoncodex_string_platforms: Chrome
-  tutorial_bekidscoding_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_rodocodehr_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_microbitdice_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_bekidscoding_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_rodocodehr_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_microbitdice_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_madflashcard_string_platforms: Alle moderne browsers
   tutorial_madappwars_string_platforms: Alle moderne browsers
-  tutorial_kodablepuppies_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_kodablepuppies_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_googlesuperhero_string_platforms: Alle moderne browsers
   tutorial_googlename _string_platforms: Alle moderne browsers
   tutorial_carnegiezillah_string_platforms: Alle moderne browsers
   tutorial_nasachspacejam_string_platforms: Alle moderne browsers
-  tutorial_hatchxrsolar_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_hatchxrspace_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_hatchxrtrex_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
-  tutorial_blocksmithguinea_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_hatchxrsolar_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_hatchxrspace_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_hatchxrtrex_string_platforms: Webgebaseerd Android tablet iPad
+  tutorial_blocksmithguinea_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_pickcodeshapes_string_platforms: Alle moderne browsers
   tutorial_codesterssketch_string_platforms: Alle moderne browsers
-  tutorial_pickcodechatbot_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_pickcodechatbot_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codestersfish_string_platforms: Alle moderne browsers
   tutorial_codestershedgehog_string_platforms: Alle moderne browsers
   tutorial_pickcodeggame_string_platforms: Alle moderne browsers
   tutorial_codestersdino_string_platforms: Alle moderne browsers
   tutorial_pickcodemtpaint_string_platforms: Alle moderne browsers
-  tutorial_microsoftcarnival_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_microsoftcarnival_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_thunkablescavenger_string_platforms: Alle moderne browsers
   tutorial_codeillusionfund_string_platforms: Chrome
   tutorial_codeillusiongoofybeg_string_platforms: Chrome
   tutorial_codeillusiongoofyint_string_platforms: Chrome
-  tutorial_robotmagicescape_string_platforms: All modern browsers, Android tablet,
-    iPad, Windows phone, Android phone, iPhone
+  tutorial_robotmagicescape_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codespeakclimate_string_platforms: Alle moderne browsers
   tutorial_codespeaktwinkle_string_platforms: Android tablet, iPad, Windows phone,
     Android phone, iPhone
-  tutorial_coinbasecrypto_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+  tutorial_coinbasecrypto_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_codespeakcomp_string_platforms: Alle moderne browsers
   tutorial_codespeaksnake_string_platforms: Android tablet, iPad, Windows phone, Android
     phone, iPhone
@@ -11193,8 +11183,12 @@ nl:
   tutorial_nasaorbit_string_platforms: Alle moderne browsers
   tutorial_nasapackage_string_platforms: Alle moderne browsers
   tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Alle moderne browsers
+  tutorial_msftwakanda_string_platforms: Alle moderne browsers
+  tutorial_nafbrand_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11288,22 +11282,27 @@ nl:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
-  tutorial_rpccw_string_detail_programming_languages: Blocks
-  tutorial_rpledfirefly_string_detail_programming_languages: Python
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
+  tutorial_rpccw_string_detail_programming_languages: 'Blokken '
+  tutorial_rpledfirefly_string_detail_programming_languages: Offline Thonny Python
+    editor
   tutorial_rpcharting_string_detail_programming_languages: Python
   tutorial_rpsolar_string_detail_programming_languages: Python
   tutorial_rpwebcards_string_detail_programming_languages: HTML, CSS
   tutorial_codeclubhworld_string_detail_programming_languages: Python
-  tutorial_codeclubspells_string_detail_programming_languages: Blocks
+  tutorial_codeclubspells_string_detail_programming_languages: 'Blokken '
   tutorial_coderdojoanime_string_detail_programming_languages: HTML, CSS
   tutorial_coderdojotarget_string_detail_programming_languages: Python
-  tutorial_creaticodescratch_string_detail_programming_languages: Blocks
+  tutorial_creaticodescratch_string_detail_programming_languages: 'Blokken '
   tutorial_bbsierpinski_string_detail_programming_languages: JavaScript
   tutorial_bbstopwatch_string_detail_programming_languages: JavaScript
-  tutorial_idrpatterns_string_detail_programming_languages: Blocks
-  tutorial_idrshapes_string_detail_programming_languages: Blocks
-  tutorial_edisondetect_string_detail_programming_languages: Blocks
-  tutorial_edisonmusical_string_detail_programming_languages: Blocks
+  tutorial_idrpatterns_string_detail_programming_languages: 'Blokken '
+  tutorial_idrshapes_string_detail_programming_languages: 'Blokken '
+  tutorial_edisondetect_string_detail_programming_languages: 'Blokken '
+  tutorial_edisonmusical_string_detail_programming_languages: 'Blokken '
   tutorial_codemonkeydiglit_string_detail_programming_languages: Digital Literacy
   tutorial_bsdrockpaper_string_detail_programming_languages: Python
   tutorial_microbitreaction_string_detail_programming_languages: Blocks, Python, MakeCode
@@ -11312,49 +11311,49 @@ nl:
   tutorial_microbitwwn_string_detail_programming_languages: Blocks, Python, MakeCode
   tutorial_grokcyberlive_string_detail_programming_languages: Cybersecurity concepts
   tutorial_codemojimaze_string_detail_programming_languages: Unplugged, Sequences
-  tutorial_codemojisnake_string_detail_programming_languages: Blocks
-  tutorial_carnegietoxibots_string_detail_programming_languages: Blocks
-  tutorial_carnegieiris_string_detail_programming_languages: Blocks
-  tutorial_carnegiespike_string_detail_programming_languages: Blocks
+  tutorial_codemojisnake_string_detail_programming_languages: 'Blokken '
+  tutorial_carnegietoxibots_string_detail_programming_languages: 'Blokken '
+  tutorial_carnegieiris_string_detail_programming_languages: 'Blokken '
+  tutorial_carnegiespike_string_detail_programming_languages: 'Blokken '
   tutorial_spheroincolor_string_detail_programming_languages: Language independent,
     Color tiles
   tutorial_kcjdominos_string_detail_programming_languages: JavaScript
-  tutorial_spherocolortheory_string_detail_programming_languages: Blocks
+  tutorial_spherocolortheory_string_detail_programming_languages: 'Blokken '
   tutorial_codecombatesports_string_detail_programming_languages: JavaScript, Python,
     Lua, CoffeeScript
-  tutorial_spherodigdisplay_string_detail_programming_languages: Blocks
-  tutorial_spherorvrincolor_string_detail_programming_languages: Blocks
+  tutorial_spherodigdisplay_string_detail_programming_languages: 'Blokken '
+  tutorial_spherorvrincolor_string_detail_programming_languages: 'Blokken '
   tutorial_clbinary_string_detail_programming_languages: Unplugged
   tutorial_sascollabcode_string_detail_programming_languages: Blocks, Tactile braille
     blocks
   tutorial_codecombatgoblins_string_detail_programming_languages: JavaScript, Python,
     Lua, CoffeeScript
-  tutorial_scratchstorytelling_string_detail_programming_languages: Blocks
+  tutorial_scratchstorytelling_string_detail_programming_languages: 'Blokken '
   tutorial_crayolasymbols_string_detail_programming_languages: Unplugged
   tutorial_crayoladrawacode_string_detail_programming_languages: Unplugged
   tutorial_crayolafollowmycode_string_detail_programming_languages: Unplugged
   tutorial_madpicturethis_string_detail_programming_languages: Unplugged, HTML
-  tutorial_mindmakersmaps_string_detail_programming_languages: Blocks
-  tutorial_mindmakersjorel_string_detail_programming_languages: Blocks
-  tutorial_mindmakersroboland_string_detail_programming_languages: Blocks
-  tutorial_mindmakersrobolandjr_string_detail_programming_languages: Blocks
-  tutorial_codehsdraw_string_detail_programming_languages: Blocks
-  tutorial_codehscamouflage_string_detail_programming_languages: Blocks
+  tutorial_mindmakersmaps_string_detail_programming_languages: 'Blokken '
+  tutorial_mindmakersjorel_string_detail_programming_languages: 'Blokken '
+  tutorial_mindmakersroboland_string_detail_programming_languages: 'Blokken '
+  tutorial_mindmakersrobolandjr_string_detail_programming_languages: 'Blokken '
+  tutorial_codehsdraw_string_detail_programming_languages: 'Blokken '
+  tutorial_codehscamouflage_string_detail_programming_languages: 'Blokken '
   tutorial_firiapythoncodex_string_detail_programming_languages: Python
-  tutorial_bekidscoding_string_detail_programming_languages: Blocks
-  tutorial_rodocodehr_string_detail_programming_languages: Blocks
+  tutorial_bekidscoding_string_detail_programming_languages: 'Blokken '
+  tutorial_rodocodehr_string_detail_programming_languages: 'Blokken '
   tutorial_microbitdice_string_detail_programming_languages: Blocks, Python, MakeCode
   tutorial_madflashcard_string_detail_programming_languages: HTML, CSS
   tutorial_madappwars_string_detail_programming_languages: HTML, CSS
   tutorial_kodablepuppies_string_detail_programming_languages: C/C++, JavaScript,
     iOS/Swift
-  tutorial_googlesuperhero_string_detail_programming_languages: Blocks
-  tutorial_googlename _string_detail_programming_languages: Blocks
-  tutorial_carnegiezillah_string_detail_programming_languages: Blocks
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
-  tutorial_hatchxrsolar_string_detail_programming_languages: Blocks
-  tutorial_hatchxrspace_string_detail_programming_languages: Blocks
-  tutorial_hatchxrtrex_string_detail_programming_languages: Blocks
+  tutorial_googlesuperhero_string_detail_programming_languages: 'Blokken '
+  tutorial_googlename _string_detail_programming_languages: 'Blokken '
+  tutorial_carnegiezillah_string_detail_programming_languages: 'Blokken '
+  tutorial_nasachspacejam_string_detail_programming_languages: 'Blokken '
+  tutorial_hatchxrsolar_string_detail_programming_languages: 'Blokken '
+  tutorial_hatchxrspace_string_detail_programming_languages: 'Blokken '
+  tutorial_hatchxrtrex_string_detail_programming_languages: 'Blokken '
   tutorial_blocksmithguinea_string_detail_programming_languages: Blocks, JavaScript
   tutorial_pickcodeshapes_string_detail_programming_languages: JavaScript
   tutorial_codesterssketch_string_detail_programming_languages: Python
@@ -11364,28 +11363,32 @@ nl:
   tutorial_pickcodeggame_string_detail_programming_languages: JavaScript
   tutorial_codestersdino_string_detail_programming_languages: Python
   tutorial_pickcodemtpaint_string_detail_programming_languages: JavaScript
-  tutorial_microsoftcarnival_string_detail_programming_languages: Blocks
-  tutorial_thunkablescavenger_string_detail_programming_languages: Blocks
+  tutorial_microsoftcarnival_string_detail_programming_languages: 'Blokken '
+  tutorial_thunkablescavenger_string_detail_programming_languages: 'Blokken '
   tutorial_codeillusionfund_string_detail_programming_languages: Computer Basics /
     Fundamentals of a PC
   tutorial_codeillusiongoofybeg_string_detail_programming_languages: JavaScript
   tutorial_codeillusiongoofyint_string_detail_programming_languages: JavaScript
   tutorial_robotmagicescape_string_detail_programming_languages: Blocks,JavaScript
   tutorial_codespeakclimate_string_detail_programming_languages: HTML
-  tutorial_codespeaktwinkle_string_detail_programming_languages: Blocks
+  tutorial_codespeaktwinkle_string_detail_programming_languages: 'Blokken '
   tutorial_coinbasecrypto_string_detail_programming_languages: Cryptocurrency concepts
-  tutorial_codespeakcomp_string_detail_programming_languages: Blocks
-  tutorial_codespeaksnake_string_detail_programming_languages: Blocks
-  tutorial_prstemalexa_string_detail_programming_languages: Blocks
-  tutorial_coderzfarm_string_detail_programming_languages: Blocks
+  tutorial_codespeakcomp_string_detail_programming_languages: 'Blokken '
+  tutorial_codespeaksnake_string_detail_programming_languages: 'Blokken '
+  tutorial_prstemalexa_string_detail_programming_languages: 'Blokken '
+  tutorial_coderzfarm_string_detail_programming_languages: 'Blokken '
   tutorial_intelinofield_string_detail_programming_languages: Unplugged
   tutorial_cablockchain_string_detail_programming_languages: Computational Thinking
   tutorial_nasaparachute_string_detail_programming_languages: Unplugged, Binary Code
-  tutorial_nasascratch_string_detail_programming_languages: Blocks
-  tutorial_nasaorbit_string_detail_programming_languages: Blocks
-  tutorial_nasapackage_string_detail_programming_languages: Blocks
+  tutorial_nasascratch_string_detail_programming_languages: 'Blokken '
+  tutorial_nasaorbit_string_detail_programming_languages: 'Blokken '
+  tutorial_nasapackage_string_detail_programming_languages: 'Blokken '
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blokken, Python
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: 'Blokken '
+  tutorial_msftwakanda_string_detail_programming_languages: 'Blokken '
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -11442,6 +11445,13 @@ nl:
   all: All
   dont_know: I don't know
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

@@ -884,7 +884,7 @@
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "Blok, który musisz dodać, nazywa się \"ustaw prędkość\". ",
-          "courseC_flappy_events2_b": "Połącz blok \\`\"ustaw prędkość\" z blokiem \"po uruchomieniu\", aby rozwiązać tę łamigłówkę."
+          "courseC_flappy_events2_b": "Połącz blok `\"ustaw prędkość\" z blokiem \"po uruchomieniu\", aby rozwiązać tę łamigłówkę."
         },
         "OPD-K5-events-4": {
           "courseC_flappy_events3_a": "Jeśli coś nie działa prawidłowo, upewnij się, że bloki połączone są z odpowiednimi zdarzeniami w obszarze roboczym."
@@ -911,7 +911,7 @@
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_a": "Nie zapominaj o używaniu zmiennej \"licznik\" w zagnieżdżonej pętli \"powtórz\".",
           "courseF_bee_for6_b": "W pętli \"dla\", być może będziesz dysponować komendę \"idź do przodu\" oraz pętlę, aby zbierać nektar.",
-          "courseF_bee_for6_c": "Twoja pętla powinna odliczać **\\*od 5 do 1**."
+          "courseF_bee_for6_c": "Twoja pętla powinna odliczać ***od 5 do 1**."
         },
         "OPD-K5-forloops-7": {
           "courseF_bee_for7_a": "Twoja pętla \"dla\" będzie musiała liczyć od 1 do 7 o 2.",
@@ -924,7 +924,7 @@
           "courseE_playLab_scaffold1_c": "Użyj \"ustaw tło ???\", aby wybrać tło dla Twojej sceny."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Wyciągnij menu rozwijane zdarzenia \"Gdy strzałka **\\_**\", aby zmienić kierunek elementów sterujących blokiem.",
+          "courseE_playLab_scaffold1_a": "Wyciągnij menu rozwijane zdarzenia \"Gdy strzałka _____\", aby zmienić kierunek elementów sterujących blokiem.",
           "courseE_playLab_scaffold1_b": "Powinieneś mieć cztery bloki zdarzeń \"kiedy strzałka\" z kierunkiem poruszania się pod każdym z nich.",
           "courseE_playLab_scaffold1_c": "Kiedy skończysz, będziesz mógł poruszać swoim bohaterem przy pomocy klawiszy strzałek!"
         },
@@ -945,15 +945,15 @@
           "courseF_artist_variables3_b": "Blok liczby o wartości 50 powinien być tylko w jednym miejscu. Po bloku \"ustaw długość\"."
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_c": "To jest wzorzec, zgodnie z którym będzie podążał Twój artysta:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
+          "courseF_artist_variables4_c": "To jest wzorzec, zgodnie z którym będzie podążał Twój artysta:\n\n[][0]",
           "courseF_artist_variables4_a": "Twój kod nie będzie się bardzo różnić od tego, w poprzedniej łamigłówce, z wyjątkiem tego, że będziesz musiał zmienić zachowanie artysty na skok w dół, a następnie zmienić jego zachowanie, by przygotował się do narysowania kolejnego trójkąta.",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Druga połowa Twojego kodu powinna wyglądać prawie tak samo, jak pierwsza połowa z wyjątkiem tego że będziesz się obracać  _w lewo_, skacząc, a następnie obracać się _w prawo_.",
           "courseF_artist_variables5_b": "Pierwsza połowa kodu będzie służyć do narysowania trzech trójkątów, a druga połowa do narysowania pozostałych trzech. ",
           "courseF_artist_variables5_c": "Rozpocznij od powielania kodu w pierwszej połowie Twojego programu, następnie zmień go tak, aby zrealizować pokazany układ.",
-          "courseF_artist_variables5_d": "To jest wzorzec, zgodnie z którym będzie podążał Twój artysta:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "To jest wzorzec, zgodnie z którym będzie podążał Twój artysta:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Do wyboru masz kilka ścieżek. Która jest najkrótsza?",
@@ -4352,7 +4352,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Spróbuj zapisać wszystkie ruchy na kartce papieru i znaleźć wzorzec.",
-          "courseC_starWars_loops6_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\\\To się nazywa  **pętla zagnieżdżona**."
+          "courseC_starWars_loops6_b": "Jeśli chcesz użyć mniej kodu, możesz umieścić jedną pętlę \"powtórz\" w drugiej! !\\To się nazywa  **pętla zagnieżdżona**."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Ten wzorzec wygląda na trudniejszy niż jest w rzeczywistości! Rozpocznij od prostego stopnia schodów. Czy to obejmuje cały złom?",
@@ -4402,7 +4402,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Pomyśl o tym problemie małymi partiami. Nie spiesz się. Nie musisz rozwiązać go przy pierwszej próbie!",
           "course_starWars_loops8_b": "Pomyśl o pierwszej połowie problemu jako o problemie stopni schodów. Jak to rozwiązałeś wcześniej?",
-          "course_starWars_loops8_c": "Rzuć okiem na tę ścieżkę.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Rzuć okiem na tę ścieżkę.\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Wewnątrz pętli \"powtórz\" możesz umieścić więcej niż jeden blok.",
@@ -5078,7 +5078,7 @@
           "courseD_bee_conditionals4_hintVid1": "Potrzebujesz pomocy, aby zacząć? Obejrzyj film!",
           "courseD_bee_conditionals4_a": "Możesz traktować każde miejsce tak, jakby była nad nim chmura, nawet jeśli widzisz całą ścieżkę.",
           "courseD_bee_conditionals4_b": "Użyj instrukcji \"jeśli\" wewnątrz pętli, aby sprawdzić każde miejsce pod kątem nektaru.",
-          "courseD_bee_conditionals4_c": "Wykorzystując blok <xml><block type=\"maze_untilBlocked\"/></xml>, powinieneś przemieszczać się do przodu i wypatrywać kwiatka. Co powinna zrobić pszczółka, jeśli będzie kwiatek?",
+          "courseD_bee_conditionals4_c": "Wykorzystując blok [blockly block][0], powinieneś przemieszczać się do przodu i wypatrywać kwiatka. Co powinna zrobić pszczółka, jeśli będzie kwiatek?",
           "courseD_bee_conditionals4_hintVid2": "Obejrzyj ten film, jako pomoc w rozwiązaniu tej łamigłówki."
         },
         "courseD_bee_conditionals5": {
@@ -6282,7 +6282,7 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Funkcja, którą piszesz, nie powinna zawierać całego Twojego programu, tylko jego część, która rysuje kwadrat o bokach 100 pikseli.",
           "courseD_artist_functions2_c": "Użyj zielonego bloku \"narysuj kwadrat\", aby \"wywołać\" swoją funkcję pod blokiem \"po uruchomieniu\". W przeciwnym razie, kod Twojej funkcji nie uruchomi się. ",
-          "courseD_artist_functions2_a": "Twój program powinien:\n\n-   uzyć funkcji, \n-   przesunąć do przodu o 100 + 75 pikseli\n-   użyć funkcji"
+          "courseD_artist_functions2_a": "Twój program powinien:\n\n- uzyć funkcji, \n- przesunąć do przodu o 100 + 75 pikseli\n- użyć funkcji"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Aby rozwiązać tę łamigłówkę, musisz dodać pętlę, która powtarza kod startowy 8 razy.\n\nJeśli nie pamiętasz kodu startowego, kliknij \"rozpocznij od nowa\" w prawym górnym rogu obszaru roboczego.",
@@ -10646,7 +10646,7 @@
         },
         "helloworld_animals_sizes": {
           "storyboard_changePropBy": "Jeśli chcesz zmieniać rozmiar duszka na okrągło (ze zdarzeniami), użyj tego bloku: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:"
+          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
           "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10673,7 +10673,7 @@
         },
         "helloworld_emoji_sizes": {
           "storyboard_changePropBy": "Jeśli chcesz zmieniać rozmiar duszka na okrągło (ze zdarzeniami), użyj tego bloku: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:"
+          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_backgrounds": {
           "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10700,7 +10700,7 @@
         },
         "helloworld_food_sizes": {
           "storyboard_changePropBy": "Jeśli chcesz zmieniać rozmiar duszka na okrągło (ze zdarzeniami), użyj tego bloku: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:"
+          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
           "hello_world_background": "Możesz zmienić tło, łącząc blok „ustaw tło” pod blokiem zdarzenia „po kliknięciu”:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10727,10 +10727,10 @@
         },
         "helloworld_retro_sizes": {
           "hw_retro_changePropBy": "Jeśli chcesz zmieniać rozmiar duszka na okrągło (ze zdarzeniami), użyj tego bloku: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
-          "hw_retro_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:"
+          "hw_retro_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_freeplay": {
           "burst_effect_animals": "Aby uzyskać dodatkową zabawę, sprawdź zupełnie nowy blok „stwórz efekt” w kategorii **Duszki**!\n\n<xml>\n  <block type=\"gamelab_makeBurst\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">10</title>\n      </block>\n    </value>\n  </block>\n</xml>"
@@ -10742,20 +10742,20 @@
           "hello-world-first-solution-bear": "Aby niedźwiedź coś powiedział, połącz bloki kodu w ten sposób:\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_events": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_emoji_freeplay": {
           "burst_effect_emoji": "Aby uzyskać dodatkową zabawę, sprawdź zupełnie nowy blok „stwórz efekt” w kategorii **Duszki**!\n\n<xml>\n  <block type=\"gamelab_makeBurst\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">10</title>\n      </block>\n    </value>\n  </block>\n</xml>"
         },
         "helloworld_food_events": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_retro_events": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "poetry_hoc_sounds": {
-          "more_code": "Dodaj więcej efektów i kolorów, aby dopasować się do wybranego dźwięku.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>",
-          "poetry_sound_hint": "Znajdź ten blok:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\n\nPołącz ten blok pod 'po uruchomieniu' w swoim obszarze roboczym."
+          "more_code": "Dodaj więcej efektów i kolorów, aby dopasować się do wybranego dźwięku.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>",
+          "poetry_sound_hint": "Znajdź ten blok:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\n\nPołącz ten blok pod 'po uruchomieniu' w swoim obszarze roboczym."
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Znajdź blok tła taki, jak ten:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\ni znajdź blok efektu tekstowego taki, jak ten:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nPodłącz te bloki pod „po uruchomieniu” w swoim obszarze roboczym.",
@@ -10768,10 +10768,10 @@
           "do_effect_hint": "Ten nowy blok „spowoduj efekt” doda nowy efekt raz.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\nMożesz ułożyć więcej niż jeden „spowoduj efekt” jeden nad drugim, aby efekt trwał dłużej.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Dodaj blok „duszek zaczyna” do swojego kodu. Upewnij się, że już stworzyłeś duszka, któremu nadajesz zachowanie. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Dodaj blok „duszek zaczyna” do swojego kodu. Upewnij się, że już stworzyłeś duszka, któremu nadajesz zachowanie. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Znajdź ten blok i kliknij `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nCo się dzieje, gdy ta liczba to '25'?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Znajdź ten blok i kliknij `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nCo się dzieje, gdy ta liczba to '25'?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Będziesz również potrzebować tego bloku:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -10783,8 +10783,8 @@
           "behavior_list": "Spróbuj użyć zachowań takich jak \"przemieszczanie się na wschód i powtarzanie w pętli\" i \"chodzenie\"."
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Każdy duszek ma **położenie**. Możesz ustawić położenie, klikając pinezkę na tym bloku:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Kliknij pinezkę ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) w bloku lokalizacji, a następnie wybierz nową pozycję dla swojego duszka na ekranie.\n-   Po ukończeniu kodu naciśnij przycisk „Uruchom”.",
-          "remove_hint": "Możesz usunąć duszka pod określonym numerem linii. Możesz dodać nowego duszka na jego miejsce:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Każdy duszek ma **położenie**. Możesz ustawić położenie, klikając pinezkę na tym bloku:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Kliknij pinezkę ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) w bloku lokalizacji, a następnie wybierz nową pozycję dla swojego duszka na ekranie.\n-   Po ukończeniu kodu naciśnij przycisk „Uruchom”.",
+          "remove_hint": "Możesz usunąć duszka pod określonym numerem linii. Możesz dodać nowego duszka na jego miejsce:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "Czy chcesz wypróbować inne wielokąty? \n\nUżyj liczby boków w swoim bloku `powtórz` i kąt w bloku `obracaj`.\nWypróbuj poniższe:\n\n|    Kształt    | Boki |  Kąt |\n| :-----------: | :--: | :--: |\n|    trójkąt    |   3  | 120° |\n|    kwadrat    |   4  |  90° |\n|   pięciokąt   |   5  |  72° |\n|   sześciokąt  |   6  |  60° |\n|    ośmiokąt   |   8  |  45° |\n| dziewięciokąt |   9  |  40° |\n| dziesięciokąt |  10  |  36° |"
@@ -12669,7 +12669,7 @@
           "courseC_maze_programming1_b": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
         },
         "coursee_helloworld_events": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "Aby pizza coś mówiła, połącz bloki kodu w ten sposób:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -12701,10 +12701,10 @@
           "hello_world_costumes": "Spróbuj połączyć blok „zmień kostium” pod blokiem zdarzenia „po kliknięciu”.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_events_soccer-2022": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_events_space-2022": {
-          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:"
+          "hello_world_click": "Połącz blok `powiedz` pod blokiem zdarzenia `kiedy kliknięty`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "Aby zmienić lokalizację duszka, kliknij pinezkę na bloku lokalizacji, a następnie kliknij w miejsce, w którym ma się znaleźć.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -12719,11 +12719,11 @@
           "storyboard_costume": "Upewnij się, że kostiumy pasują do każdego duszka.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_soccer-2022": {
-          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:",
+          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "Jeśli chcesz zmieniać rozmiar duszka na okrągło (ze zdarzeniami), użyj tego bloku: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_space-2022": {
-          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:",
+          "storyboard_setProp": "Aby ustawić rozmiar duszka tylko raz, możesz użyć tego bloku:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Jeśli chcesz zmieniać rozmiar duszka na okrągło (ze zdarzeniami), użyj tego bloku: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_food_say_soccer-2022": {

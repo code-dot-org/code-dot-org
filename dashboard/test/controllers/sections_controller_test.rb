@@ -194,4 +194,9 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_redirected_to section_path(id: @picture_section.code)
   end
+
+  test_user_gets_response_for :new, user: nil, response: :forbidden
+  test_user_gets_response_for :new, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, user: :student, response: :forbidden
+  test_user_gets_response_for :new, user: :admin, response: :success
 end

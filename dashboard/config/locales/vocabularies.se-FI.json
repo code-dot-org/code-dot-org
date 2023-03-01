@@ -2,6 +2,14 @@
   "se-FI": {
     "data": {
       "vocabularies": {
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "input/coursef/2022": {
           "word": "Inputa"
         },
@@ -31,6 +39,26 @@
         },
         "copyright/csd/2022": {
           "word": "Dahkkivuoigatvuohta"
+        },
+        "code/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "input/coursef/2021": {
           "word": "Inputa"

@@ -1682,6 +1682,18 @@ se:
               display_name: Iskkadeapmi
             lessonGroup-3:
               display_name: Sisdoallu
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1724,3 +1736,11 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at

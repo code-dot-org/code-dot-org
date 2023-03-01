@@ -1,11 +1,11 @@
 name 'csc_physical_change_chem'
 title 'Physical Change Check For Understanding'
 
-question 'How did the particles change after the wood was chopped into smaller pieces?'
-wrong 'The wood particles turned into gas when chopped smaller.'
-wrong 'The wood particles turned into liquid when chopped smaller.'
-wrong 'The wood particles turned into something different when chopped smaller.'
-right 'The wood particles did not change- they are still solid wood.'
+question 'How did the particles change after the wood was burned?'
+wrong 'The wood particles turned into gas when burned.'
+wrong 'The wood particles turned into liquid when burned.'
+right 'The wood particles turned into something different when burned.'
+wrong 'The wood particles did not change- they are still solid wood.'
 
 markdown <<MARKDOWN
 

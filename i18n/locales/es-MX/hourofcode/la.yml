@@ -43,6 +43,8 @@ la:
   hoc2022_codeorg_title: Celebra la Hora del Código con la NASA y más
   hoc2022_codeorg_description: "¡La décima edición de la Hora del Código es algo fuera
     de serie! Ven a explorar, jugar y crear con nosotros."
+  social_hoc2022_dance: "¡Con música de Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, la película de Disney «Encanto» y más!"
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
   hoc2020_header: Aprende hoy y construye un mejor futuro.
@@ -160,6 +162,10 @@ la:
   social_coldplay_title: Crea con Coldplay y Code.org
   social_coldplay_desc: "¡Muéstranos tus mejores movimientos! Programa, baila, comparte
     con el mundo y podrás ganar."
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hora del Código En Vivo
   hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
   hoc_live_learn_title: Aprende con la Hora del Código En Vivo
@@ -177,14 +183,14 @@ la:
   hoc_overview_oceans_tutorial_desc: Aprende sobre la inteligencia artificial (IA),
     aprendizaje automático, datos de entrenamiento y sesgos, mientras exploras cuestiones
     éticas y cómo la IA se puede usar para abordar problemas mundiales.
-  hoc_overview_csc_header: Introducción a Conexiones de Informática
+  hoc_overview_csc_header: Introducción a Conexiones a las Ciencias de la Computación
   hoc_overview_csc_desc: Nuestro plan de estudios más reciente destaca las conexiones
     entre las ciencias de la computación y otras asignaturas como matemáticas, idiomas,
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
   hoc_danceparty_alt_text: Personajes animados bailando al ritmo de la música bajo
-    el texto "Codifica tu propia fiesta de baile".
+    el texto "Programa tu propia fiesta de baile".
   hoc_ai_alt_text: Un personaje flotante de inteligencia artificial, de color blanco,
     con una antena, un escáner en la parte inferior y una cara LED
   hoc_banner_alt_text: Cartel de la Hora del Código
@@ -553,6 +559,10 @@ la:
     de estudiantes de todo el mundo que celebran La Semana por la Educación en Ciencias
     de la Computación con la Hora del Código. Abriremos la inscripción para la celebración
     anual en octubre.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organiza una Hora del Código del %{campaign_date} y regístrate.
   signup_name_label: Tu nombre
   signup_name_error: El nombre es obligatorio.
@@ -576,7 +586,7 @@ la:
   signup_whole_school_flag_label: Este evento es para toda una escuela
   signup_your_event: Inscribe tu evento
   signup_host_an_hour: Organiza una Hora del Código
-  signup_match_volunteer: Ayúdame a encontrar un ingeniero de software local que inspire
+  signup_match_volunteer: Ayúdame a encontrar un miembro de la localidad para inspirar
     a mis estudiantes
   signup_email_preference_opt_in: "¿Podemos enviarte actualizaciones de cursos de
     Code.org, oportunidades locales u otras noticias sobre ciencias de la computación
@@ -599,6 +609,7 @@ la:
   signup_send_posters_address_placeholder: No compartiremos esta dirección en nuestro
     mapa
   signup_event_type_in_school: En una escuela
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Fuera de la escuela
   signup_event_type_at_home: Página principal
   signup_submit_census_label: Enviar
@@ -1078,7 +1089,13 @@ la:
   footer_menu_terms: Términos
   footer_menu_privacy: Política de privacidad
   footer_menu_cookie: Aviso de Cookies
-  learn_banner_heading: Actividades de la Hora del Código
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
+  learn_banner_heading: |-
+    Hora del Código
+    Actividades
   learn_banner_blurb: Prueba estos tutoriales de una hora diseñados para todas las
     edades en más de 45 idiomas. Únete a millones de estudiantes y profesores en más
     de 180 países comenzando con una Hora del Código.
@@ -1090,11 +1107,6 @@ la:
     del Código</a> o <a id=''teacher_banner_howto''>lee la Guía para hacerlo</a>.'
   learn_banner_teachers_markdown: 'Para profesores: [Organiza una hora](%{host_url})
     o [lee la Guía Práctica](%{howto_url})'
-  learn_robotics_banner_heading: Robótica y circuitos
-  learn_robotics_banner_blurb: "¿Tienes robots o kits de computación física? ¡Utilízalos
-    con las siguientes actividades y prepara una tarea tangible de la Hora del Código
-    para estudiantes de todas las edades! Algunas actividades ofrecen un simulador
-    para que puedas comenzar sin hardware."
   tutorial_dance2019_name: Fiesta de Baile 2019
   tutorial_danceparty_name: Fiesta de baile
   tutorial_chibitronics_name: 'Chibitronics: Historia ilustrada'
@@ -7810,8 +7822,7 @@ la:
   tutorial_irobotphone_string_platforms: Todos los navegadores modernos
   tutorial_codeguppydraw_string_platforms: Todos los navegadores modernos
   tutorial_codejumper_string_platforms: Sin conexión, Lector de pantalla
-  tutorial_meeempathy_string_platforms: Todos los navegadores modernos, tablets Android,
-    iPad
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chip Chibitronics Chibi y LEDs Circuit
@@ -9349,11 +9360,11 @@ la:
     en Python mientras creas tu propio anuncio de servicio público. Elige un tema
     que consideres importante y diseña tu propio anuncio animado o interactivo para
     compartir información crítica sobre cómo generar un impacto positivo en el mundo.
-  tutorial_googlehero_longdescription: Convierta a un héroe cotidiano de tu vida o
-    comunidad en un superhéroe al programarlo para volar sobre edificios, girar, trabajar
-    con un compañero o compañera y gana puntos tocando objetos en un juego. En 'Codifica
-    a tu héroe,' muestra los poderes especiales de tu héroe y tu propia creatividad
-    con CS First y Scratch.
+  tutorial_googlehero_longdescription: 'Convierte a un héroe cotidiano de tu vida
+    o de la comunidad en un superhéroe: prográmalo para que pueda volar sobre edificios,
+    girar, trabajar con un compañero y ganar puntos cuando toque objetos en un videojuego.
+    En Code Your Hero, puedes presumir los poderes especiales de tu héroe y tu propia
+    creatividad con CS First y Scratch.'
   tutorial_codestersbball_longdescription: Aprende los conceptos básicos de programación
     en Python mientras creas tu propio juego de baloncesto. Aprenderás a agregar fondos
     y sprites, y usar eventos para controlar el movimiento de los sprites en el escenario.
@@ -10824,8 +10835,7 @@ la:
   tutorial_microsoftforest_string_platforms: Todos los navegadores modernos
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Todos los navegadores modernos
-  tutorial_minecrafttimecraft_string_platforms: iPad, Ordenadores (Windows PC, Mac),
-    Android (Chromebooks), iPad, Lector de pantalla
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Todos los navegadores modernos
   tutorial_codeartportrait_string_platforms: Todos los navegadores modernos, tablets
@@ -11126,7 +11136,7 @@ la:
   tutorial_rpsolar_name: 'Solar system simulator: Python models and dictionaries'
   tutorial_rpwebcards_name: 'Flip treat webcards: Create interactive hover cards that
     flip'
-  tutorial_codeclubhworld_name: 'Hello world: Say hello to Python coding'
+  tutorial_codeclubhworld_name: 'Hola Mundo: Di hola en python'
   tutorial_codeclubspells_name: 'Broadcasting spells: Scratch coding beyond the basics'
   tutorial_coderdojoanime_name: 'Anime expressions: Create and style a webpage for
     an anime drawing tutorial'
@@ -11140,7 +11150,7 @@ la:
   tutorial_edisonmusical_name: Edison's musical talents
   tutorial_codemonkeydiglit_name: Digital Literacy - Mini Course
   tutorial_bsdrockpaper_name: Rock, Paper, Scissors with Python
-  tutorial_microbitreaction_name: micro:bit reaction game
+  tutorial_microbitreaction_name: Juego de reacción
   tutorial_kinderanimal_name: KIBO the Playful Animal
   tutorial_kindersinger_name: KIBO the Singer
   tutorial_microbitwwn_name: micro:bit which way now? activity
@@ -11153,13 +11163,14 @@ la:
   tutorial_spheroincolor_name: indi Color Contest
   tutorial_kcjdominos_name: Simulating Dominos Using JavaScript
   tutorial_spherocolortheory_name: Additive Color Theory (RGB) with BOLT
-  tutorial_codecombatesports_name: 'Esports Bootcamp: AI League'
+  tutorial_codecombatesports_name: 'Campo de entrenamiento de deportes electrónicos:
+    AI League'
   tutorial_spherodigdisplay_name: The Technology of Digital Displays with littleBits
   tutorial_spherorvrincolor_name: RVR+ in Color!
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: Duendes y Gloria
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11168,8 +11179,8 @@ la:
   tutorial_crayolafollowmycode_name: 'Unplugged Coding from Crayola Education: Follow
     My Code'
   tutorial_madpicturethis_name: Picture This! HTML Decoded
-  tutorial_mindmakersmaps_name: Maps
-  tutorial_mindmakersjorel_name: Jorel's Brother
+  tutorial_mindmakersmaps_name: Mapas
+  tutorial_mindmakersjorel_name: El hermano de Jorel
   tutorial_mindmakersroboland_name: Roboland
   tutorial_mindmakersrobolandjr_name: Roboland Jr
   tutorial_codehsdraw_name: Drawing and Scratch
@@ -11177,12 +11188,12 @@ la:
   tutorial_firiapythoncodex_name: Python with CodeX
   tutorial_bekidscoding_name: bekids Coding Challenges
   tutorial_rodocodehr_name: 'Rodocodo: Code Hour'
-  tutorial_microbitdice_name: micro:bit dice
+  tutorial_microbitdice_name: micro:bit dado
   tutorial_madflashcard_name: Deconstructing Code in a Flash(card)
   tutorial_madappwars_name: App Wars
   tutorial_kodablepuppies_name: 'Robots and Puppies '
-  tutorial_googlesuperhero_name: Build a Superhero
-  tutorial_googlename _name: Design Your Name
+  tutorial_googlesuperhero_name: Crea un superhéroe
+  tutorial_googlename _name: Diseña tu nombre
   tutorial_carnegiezillah_name: Zillah Beats
   tutorial_nasachspacejam_name: NASA's Space Jam
   tutorial_hatchxrsolar_name: Build a 3D/AR Solar System
@@ -11199,11 +11210,12 @@ la:
   tutorial_pickcodemtpaint_name: 'Pickcode: Mobius Triangle Painting'
   tutorial_microsoftcarnival_name: Code a Carnival
   tutorial_thunkablescavenger_name: Build a Scavenger Hunt App with Code Blocks
-  tutorial_codeillusionfund_name: 'Disney Codeillusion: Computer Fundamentals'
-  tutorial_codeillusiongoofybeg_name: 'Disney Codeillusion: Game Development Adventure
-    with Goofy for Beginners'
-  tutorial_codeillusiongoofyint_name: 'Disney Codeillusion: Game Development Adventure
-    with Goofy for Intermediates'
+  tutorial_codeillusionfund_name: 'Disney Codeillusion: Fundamentos de las Ciencias
+    de la Computación'
+  tutorial_codeillusiongoofybeg_name: 'Disney Codeillusion: Aventura de desarrollo
+    de juegos con Goofy para principiantes'
+  tutorial_codeillusiongoofyint_name: 'Disney Codeillusion: Aventura de desarrollo
+    de juegos con Goofy para intermedios'
   tutorial_robotmagicescape_name: 'Escape Room: Code with Bots'
   tutorial_codespeakclimate_name: Create a Website to Spread Awareness About Climate
     Change
@@ -11212,7 +11224,7 @@ la:
   tutorial_codespeakcomp_name: Build a Composting Game in Scratch
   tutorial_codespeaksnake_name: 'Coding Snake: Story Time with ScratchJr'
   tutorial_prstemalexa_name: Alexa in Space
-  tutorial_coderzfarm_name: 'Code Farm: Plant a Garden'
+  tutorial_coderzfarm_name: 'Hora del código: Planta un jardín'
   tutorial_intelinofield_name: 'intelino Mission: Field Trip'
   tutorial_cablockchain_name: New Kids on the Blockchain
   tutorial_nasaparachute_name: 'NASA: Mars Perseverance Parachute Coding Activity'
@@ -11221,6 +11233,10 @@ la:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -11236,9 +11252,9 @@ la:
   tutorial_rpwebcards_longdescription: Create a set of webcards that flip when you
     hover over them. Use CSS styling and animations then customise with fancy fonts
     and colour gradients.
-  tutorial_codeclubhworld_longdescription: Write Python text-based code to create
-    an interactive project with user input that prints text and emoji. Use variables
-    to store text and numbers, and functions to organize your code.
+  tutorial_codeclubhworld_longdescription: Escribe en código basado en texto de Python
+    un proyecto interactivo en donde el usuario entre texto y emoji. Utiliza variables
+    para almacenar texto y números, y funciones para organizar el código.
   tutorial_codeclubspells_longdescription: Use Scratch blocks to code a wand that
     casts spells to turn sprites into toads, grow, and shrink them. Edit and reverse
     sound to make spell sound effects. Broadcast spell messages so that multiple sprites
@@ -11284,8 +11300,8 @@ la:
   tutorial_bsdrockpaper_longdescription: Use the Python programming language to build
     a 'Rock, Paper, Scissors' game. Don't worry if you have never tried Python, we
     will walk you through each step.
-  tutorial_microbitreaction_longdescription: Make a micro:bit reaction game with real
-    physical switches made from scrap cardboard and kitchen foil.
+  tutorial_microbitreaction_longdescription: "¡Haz un juego de reacción con interruptores
+    auténticos y físicos que puedes golpear tan fuerte como quieras!"
   tutorial_kinderanimal_longdescription: In this lesson, students will turn KIBO into
     a playful animal that moves in response to a program the children create. Students
     can also experiment with KIBO's input and output options to take it further.
@@ -11333,12 +11349,13 @@ la:
     Sphero BOLT! Explore how additive color theory works by adding different values
     of red, green, and blue to make many different colors. Learn how you can use your
     BOLT's sensors to measure its orientation and change colors.
-  tutorial_codecombatesports_longdescription: Competitive coding has never been so
-    epic! Learn the skills you need to play like the pros in our Esports Bootcamp.
-    No coding experience needed. Start by training in the dungeon and discovering
-    the coding strategies and tactics you'll need to compete. After honing your skills,
-    put your code to the test in our esports arena against other players worldwide!
-    Are you our next AI League grand champion?
+  tutorial_codecombatesports_longdescription: "¡La programación competitiva nunca
+    ha sido tan épica! Aprende las habilidades que necesitas para jugar como los profesionales
+    en nuestro Bootcamp de Esports. No se necesita experiencia en codificación. Comienza
+    entrenando en la mazmorra y descubriendo las estrategias y tácticas de programación
+    que necesitarás para competir. ¡Después de perfeccionar tus habilidades, pon a
+    prueba tu código en nuestro campo de esports contra otros jugadores de todo el
+    mundo! ¿Eres nuestro próximo gran campeón de la AI League?"
   tutorial_spherodigdisplay_longdescription: Digital Displays are all around us, from
     phones to computer monitors to television to modern billboards. But how do they
     work? Dig into the graphic technology behind digital displays and get hands-on
@@ -11357,10 +11374,11 @@ la:
     should have the opportunity to learn to code and aims to accomplish this using
     braille code blocks with SAS CodeSnaps - a collaborative coding environment that
     can get an entire classroom coding with just a single iPad and a Sphero robot.
-  tutorial_codecombatgoblins_longdescription: We need your help! Embark on an epic
-    quest where you take control of the game through your powers of programming. Become
-    the hero, unlock loot, and expand your arsenal of code to rescue the town. Then
-    use AI strategies to assemble a party for a final goblin boss battle!
+  tutorial_codecombatgoblins_longdescription: "¡Necesitamos tu ayuda! Embárcate en
+    una misión épica en la que tomas el control del juego a través de tus poderes
+    de programación. Conviértete en el héroe, desbloquea el botín y amplía tu arsenal
+    de códigos para rescatar la ciudad. ¡Luego usa estrategias de IA para armar un
+    grupo para una batalla final contra el jefe goblin!"
   tutorial_scratchstorytelling_longdescription: Animate your own story with Scratch!
     Add sprites, backgrounds, and interactive graphic effects to bring your story
     to life. Includes an educator facilitation guide, Scratch project tutorial, and
@@ -11386,17 +11404,15 @@ la:
     programs. To win, you will have to interpret each map and program not only the
     movements, but adapt to the unexpected using sensors for obstacles and natural
     events such as weather, temperature, and the passage of time. Have a good trip!
-  tutorial_mindmakersjorel_longdescription: The fun universe of Jorel's Brother is
-    now under your control! But for that, you need to master the fundamentals of programming
-    and develop skills like algorithmic thinking, problem decomposition, pattern identification
-    and abstraction... work hard and maybe you'll find out the name of Jorel's brother!
-  tutorial_mindmakersroboland_longdescription: Program the weird and fun robots Mustachebot
-    and Ladybot! You help them overcome challenges, and they help you develop computational
-    thinking. The more advanced the challenge, the more you learn about algorithms,
-    decomposition, patterns, and abstraction... Work hard and have fun!
-  tutorial_mindmakersrobolandjr_longdescription: Program the weird and funny robots
-    Mustachebot and Ladybot. Whenever you manage to solve a challenge, you get a little
-    green ball and move on to the next one. Capriche!
+  tutorial_mindmakersjorel_longdescription: Programa al hermano Jorel, a la abuela
+    Juju y a otros divertidos personajes para superar retos que desarrollan el pensamiento
+    computacional
+  tutorial_mindmakersroboland_longdescription: "¡Programa los divertidos robots Robogote
+    y Robochica! Usted les ayuda a superar los retos y ellos le ayudan a desarrollar
+    el pensamiento computacional..."
+  tutorial_mindmakersrobolandjr_longdescription: "¡Programa los divertidos robots
+    Robogote y Robochica! Usted les ayuda a superar los retos y ellos le ayudan a
+    desarrollar el pensamiento computacional..."
   tutorial_codehsdraw_longdescription: Create your own drawing program in Scratch
     using keyboard and mouse inputs. Anyone will be able to use it make fun and creative
     digital art!
@@ -11415,7 +11431,7 @@ la:
     game for 4-11 year olds. It teaches the fundamentals of coding such as sequencing,
     debugging, loops and functions. It also teaches techniques for solving problems
     so children become more confident, independent learners.'
-  tutorial_microbitdice_longdescription: Shake your micro:bit to make random numbers.
+  tutorial_microbitdice_longdescription: Agita tu micro:bit para generar números aleatorios.
   tutorial_madflashcard_longdescription: This lesson exposes students to HTML and
     CSS code and provides them the opportunity to interact with it and see their results
     in real-time.
@@ -11428,11 +11444,11 @@ la:
     of love and attention. Students will program Carebots to help with the responsibility
     of being a new paw-rent using coding concepts such as functions and conditional
     statements.
-  tutorial_googlesuperhero_longdescription: Convierta a un héroe cotidiano de tu vida
-    o comunidad en un superhéroe al programarlo para volar sobre edificios, girar,
-    trabajar con un compañero o compañera y gana puntos tocando objetos en un juego.
-    En 'Codifica a tu héroe,' muestra los poderes especiales de tu héroe y tu propia
-    creatividad con CS First y Scratch.
+  tutorial_googlesuperhero_longdescription: 'Convierte a un héroe cotidiano de tu
+    vida o de la comunidad en un superhéroe: prográmalo para que pueda volar sobre
+    edificios, girar, trabajar con un compañero y ganar puntos cuando toque objetos
+    en un videojuego. En Code Your Hero, puedes presumir los poderes especiales de
+    tu héroe y tu propia creatividad con CS First y Scratch.'
   tutorial_googlename _longdescription: Elige un nombre y da vida a las letras de
     la palabra mediante el código. Elige un apodo, el nombre de una mascota, un animal,
     un deporte, un lugar o un pasatiempo.
@@ -11497,17 +11513,18 @@ la:
   tutorial_thunkablescavenger_longdescription: Learn to build your own Scavenger Hunt
     app in Thunkable, and use your app to hunt for items on your mobile device as
     soon as your code is complete.
-  tutorial_codeillusionfund_longdescription: Enter into the magical world of coding
-    and computer science as you learn and familiarize yourself with the fundamentals
-    of a computer! This will include practicing clicking and scrolling, dragging and
-    dropping, copy and pasting and typing.
-  tutorial_codeillusiongoofybeg_longdescription: Embark on a magical coding adventure
-    with Goofy! Learn how to draw, color and move shapes, as well as load images and
-    sounds as you master the basics of Game Development using JavaScript.
-  tutorial_codeillusiongoofyint_longdescription: 'Create your very own interactive,
-    digital band with Goofy as you explore the joy of Game Development using JavaScript.
-    This activity will build on what you learned in our introductory activity, Disney
-    Codeillusion: Game Development Adventure with Goofy for Beginners.'
+  tutorial_codeillusionfund_longdescription: Adéntrate en el mágico mundo de la codificación
+    y la informática mientras aprendes y te familiarizas con los fundamentos de un
+    ordenador. Esto incluirá la práctica de hacer clic y desplazarse, arrastrar y
+    soltar, copiar y pegar y escribir.
+  tutorial_codeillusiongoofybeg_longdescription: "¡Embárcate en una mágica aventura
+    de codificación con Goofy! Aprende a dibujar, colorear y mover formas, así como
+    a cargar imágenes y sonidos mientras dominas los fundamentos del desarrollo de
+    juegos con JavaScript."
+  tutorial_codeillusiongoofyint_longdescription: 'Crea tu propia banda digital interactiva
+    con Goofy mientras exploras el placer del desarrollo de juegos utilizando JavaScript.
+    Esta actividad se basará en lo aprendido en nuestra actividad introductoria, Disney
+    Codeillusion: Aventura de desarrollo de juegos con Goofy para principiantes.'
   tutorial_robotmagicescape_longdescription: Escape from a haunted 3D room with help
     from programmable bots.
   tutorial_codespeakclimate_longdescription: Learn how to responsibly build a basic
@@ -11525,8 +11542,8 @@ la:
     video covering voice AI basics, and then build a voice AI-powered program in MIT
     App Inventor that says 'Hello Moon' and a program that can recite random space
     facts. The lesson ends with a vocabulary review and discussion.
-  tutorial_coderzfarm_longdescription: Program a robot to plant a garden, and learn
-    how robots help farmers in the real world.
+  tutorial_coderzfarm_longdescription: Programa un robot para plantar un jardín y
+    aprende cómo los robots ayudan a los agricultores en el mundo real.
   tutorial_intelinofield_longdescription: Learn to program the intelino smart train
     unplugged with action snaps and complete the mission of driving students across
     town on their field trip.
@@ -11562,6 +11579,18 @@ la:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Prelector - Grado 5
   tutorial_rpledfirefly_string_detail_grades: Grados 6-8
   tutorial_rpcharting_string_detail_grades: A partir de Grado 9
@@ -11654,6 +11683,10 @@ la:
   tutorial_nasapackage_string_detail_grades: Grados 6-8
   tutorial_nasalunar_string_detail_grades: Grados 6-8
   tutorial_meeestate_string_detail_grades: A partir de Grado 2
+  tutorial_imagipixelart_string_detail_grades: Grados 2-8
+  tutorial_kcjhealth_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_msftwakanda_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_nafbrand_string_detail_grades: A partir de Grado 9
   tutorial_rpccw_string_platforms: Todos los navegadores modernos, tablets Android,
     iPad, teléfonos Windows, teléfonos Android, iPhone
   tutorial_rpledfirefly_string_platforms: Todos los navegadores modernos
@@ -11774,8 +11807,13 @@ la:
   tutorial_nasaorbit_string_platforms: Todos los navegadores modernos
   tutorial_nasapackage_string_platforms: Todos los navegadores modernos
   tutorial_nasalunar_string_platforms: Todos los navegadores modernos, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Todos los navegadores modernos
+  tutorial_msftwakanda_string_platforms: Todos los navegadores modernos
+  tutorial_nafbrand_string_platforms: Todos los navegadores modernos, tablets Android,
+    iPad, teléfonos Windows, teléfonos Android, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11870,6 +11908,10 @@ la:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Bloques
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11888,10 +11930,12 @@ la:
   tutorial_edisonmusical_string_detail_programming_languages: Bloques
   tutorial_codemonkeydiglit_string_detail_programming_languages: Digital Literacy
   tutorial_bsdrockpaper_string_detail_programming_languages: Python
-  tutorial_microbitreaction_string_detail_programming_languages: Blocks, Python, MakeCode
+  tutorial_microbitreaction_string_detail_programming_languages: Editor de MakeCode
+    o de Python
   tutorial_kinderanimal_string_detail_programming_languages: Sin conexión
   tutorial_kindersinger_string_detail_programming_languages: Sin conexión
-  tutorial_microbitwwn_string_detail_programming_languages: Blocks, Python, MakeCode
+  tutorial_microbitwwn_string_detail_programming_languages: Editor de MakeCode o de
+    Python
   tutorial_grokcyberlive_string_detail_programming_languages: Cybersecurity concepts
   tutorial_codemojimaze_string_detail_programming_languages: Unplugged, Sequences
   tutorial_codemojisnake_string_detail_programming_languages: Bloques
@@ -11923,7 +11967,8 @@ la:
   tutorial_firiapythoncodex_string_detail_programming_languages: Python
   tutorial_bekidscoding_string_detail_programming_languages: Bloques
   tutorial_rodocodehr_string_detail_programming_languages: Bloques
-  tutorial_microbitdice_string_detail_programming_languages: Blocks, Python, MakeCode
+  tutorial_microbitdice_string_detail_programming_languages: Editor de MakeCode o
+    de Python
   tutorial_madflashcard_string_detail_programming_languages: HTML, CSS
   tutorial_madappwars_string_detail_programming_languages: HTML, CSS
   tutorial_kodablepuppies_string_detail_programming_languages: C/C++, JavaScript,
@@ -11931,7 +11976,7 @@ la:
   tutorial_googlesuperhero_string_detail_programming_languages: Bloques
   tutorial_googlename _string_detail_programming_languages: Bloques
   tutorial_carnegiezillah_string_detail_programming_languages: Bloques
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Bloques
   tutorial_hatchxrsolar_string_detail_programming_languages: Bloques
   tutorial_hatchxrspace_string_detail_programming_languages: Bloques
   tutorial_hatchxrtrex_string_detail_programming_languages: Bloques
@@ -11946,8 +11991,8 @@ la:
   tutorial_pickcodemtpaint_string_detail_programming_languages: JavaScript
   tutorial_microsoftcarnival_string_detail_programming_languages: Bloques
   tutorial_thunkablescavenger_string_detail_programming_languages: Bloques
-  tutorial_codeillusionfund_string_detail_programming_languages: Computer Basics /
-    Fundamentals of a PC
+  tutorial_codeillusionfund_string_detail_programming_languages: Conceptos básicos
+    de informática / Fundamentos de un PC
   tutorial_codeillusiongoofybeg_string_detail_programming_languages: JavaScript
   tutorial_codeillusiongoofyint_string_detail_programming_languages: JavaScript
   tutorial_robotmagicescape_string_detail_programming_languages: Blocks,JavaScript
@@ -11966,6 +12011,10 @@ la:
   tutorial_nasapackage_string_detail_programming_languages: Bloques
   tutorial_nasalunar_string_detail_programming_languages: Bloques, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloques, Python
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Bloques
+  tutorial_msftwakanda_string_detail_programming_languages: Bloques
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: No pudimos encontrar su escuela. Por favor, ingresa más
     información.
   school_name: Nombre de la escuela
@@ -12025,6 +12074,13 @@ la:
   all: Todos
   dont_know: No sé
   language_label: Idioma
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Árabe
     az: Azerí

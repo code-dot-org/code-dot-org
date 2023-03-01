@@ -16,10 +16,13 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'keyboard-navigation'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
+  path.resolve(__dirname, 'node_modules', 'blockly'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'johnny-five'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
+  path.resolve(__dirname, 'node_modules', 'firmata'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
   path.resolve(__dirname, 'node_modules', 'vmsg'),
@@ -74,7 +77,7 @@ const nodePolyfillConfig = {
 var baseConfig = {
   plugins: [...nodePolyfillConfig.plugins],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       '@cdo/locale': path.resolve(
@@ -149,7 +152,8 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
-      '@cdo/storybook': path.resolve(__dirname, '.storybook')
+      '@cdo/storybook': path.resolve(__dirname, '.storybook'),
+      serialport: false
     }
   },
   module: {
@@ -221,6 +225,11 @@ var baseConfig = {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       }
     ],
     noParse: [/html2canvas/]
@@ -306,8 +315,7 @@ function storybookConfig(sbConfig) {
           envConstants.NODE_ENV || 'development'
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
-      }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
+      })
     ]
   };
 }
@@ -376,8 +384,7 @@ var karmaConfig = _.extend({}, baseConfig, {
         'kits',
         'maker',
         'StubChromeSerialPort.js'
-      ),
-      serialport: false
+      )
     })
   }),
   externals: {
@@ -388,12 +395,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     cheerio: 'window',
     'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true,
-
-    // The below are necessary for serialport import to not choke during webpack-ing.
-    fs: '{}',
-    child_process: true,
-    bindings: true
+    'react/lib/ReactContext': true
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -464,7 +466,6 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
       ...plugins
     ],
     watch: watch,

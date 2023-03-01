@@ -43,6 +43,8 @@ ms:
   hoc2022_codeorg_title: Raikan Hour of Code dengan NASA dan banyak lagi
   hoc2022_codeorg_description: Hour of Code ke-10 berada di luar dunia ini! Mari terokai,
     bermain, dan mencipta bersama kami.
+  social_hoc2022_dance: Menampilkan Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, muzik dari “Encanto,” dan banyak lagi!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Belajar hari ini, untuk membina masa depan lebih cerah.  '
@@ -161,6 +163,10 @@ ms:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod
@@ -558,6 +564,10 @@ ms:
     menyertai berjuta-juta pelajar di seluruh dunia untuk meraikan Minggu Pendidikan
     Sains Komputer dengan Jam Kod. Kita akan membuka pendaftaran untuk sambutan tahunan
     pada bulan Oktober.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Anjurkan Acara Hour of Code sepanjang %{campaign_date}, dan daftar
     di sini.
   signup_name_label: Nama anda
@@ -605,6 +615,7 @@ ms:
   signup_send_posters_address_placeholder: Alamat ini tidak akan dikongsi pada peta
     kami
   signup_event_type_in_school: Di sekolah
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Di luar sekolah
   signup_event_type_at_home: Laman Utama
   signup_submit_census_label: Hantar
@@ -1090,6 +1101,10 @@ ms:
   footer_menu_terms: Terma
   footer_menu_privacy: Dasar Privasi
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: 1 Jam Pengaturacaraan
   learn_banner_blurb: Cubalah suatu tutorial sejam yang direka bagi semua peringkat
     umur dalam lebih daripada 45 bahasa. Sertai berjuta-juta pelajar dan guru dari
@@ -1102,11 +1117,6 @@ ms:
     sejam</a> atau <a id=''teacher_banner_howto''>baca Panduan Cara</a>'
   learn_banner_teachers_markdown: 'Guru: [Host an hour](%{host_url}) atau [read the
     How-To Guide](%{howto_url})'
-  learn_robotics_banner_heading: Litar dan Robotik
-  learn_robotics_banner_blurb: Mempunyai robot atau kit pengkomputeran fizikal? Gunakan
-    mereka dalam aktiviti-aktiviti berikut dan melakukan suatu Hour of Code yang sesuai
-    untuk pelajar-pelajar dari mana-mana umur! Beberapa aktiviti turut menawarkan
-    suatu simulator supaya anda boleh bermula tanpa mempunyai sebarang perkakasan.
   tutorial_dance2019_name: Majlis Tari-Menari 2019
   tutorial_danceparty_name: Majlis Tari-Menari
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -7813,7 +7823,7 @@ ms:
   tutorial_irobotphone_string_platforms: Semua pelayar moden
   tutorial_codeguppydraw_string_platforms: Semua pelayar moden
   tutorial_codejumper_string_platforms: Nirplag, Pembaca skrin
-  tutorial_meeempathy_string_platforms: Semua pelayar moden, tablet Android, iPad
+  tutorial_meeempathy_string_platforms: iPad, Komputer (Windows PC, Mac)
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Cip Chibitronics Chibi dan LED Pelekat
@@ -10234,7 +10244,7 @@ ms:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10446,10 +10456,12 @@ ms:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10777,8 +10789,7 @@ ms:
   tutorial_microsoftforest_string_platforms: Semua pelayar moden
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Semua pelayar moden
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: iPad, Komputer (Windows PC, Mac)
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Semua pelayan moden, Pembaca skrin
   tutorial_codeartportrait_string_platforms: Semua pelayar moden, tablet Android,
@@ -11100,13 +11111,13 @@ ms:
   tutorial_spheroincolor_name: indi Color Contest
   tutorial_kcjdominos_name: Simulating Dominos Using JavaScript
   tutorial_spherocolortheory_name: Additive Color Theory (RGB) with BOLT
-  tutorial_codecombatesports_name: 'Esports Bootcamp: AI League'
+  tutorial_codecombatesports_name: 'Esports Bootcamp: Liga AI'
   tutorial_spherodigdisplay_name: The Technology of Digital Displays with littleBits
   tutorial_spherorvrincolor_name: RVR+ in Color!
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: Bunian dan Kemuliaan
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11168,6 +11179,10 @@ ms:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -11280,12 +11295,13 @@ ms:
     Sphero BOLT! Explore how additive color theory works by adding different values
     of red, green, and blue to make many different colors. Learn how you can use your
     BOLT's sensors to measure its orientation and change colors.
-  tutorial_codecombatesports_longdescription: Competitive coding has never been so
-    epic! Learn the skills you need to play like the pros in our Esports Bootcamp.
-    No coding experience needed. Start by training in the dungeon and discovering
-    the coding strategies and tactics you'll need to compete. After honing your skills,
-    put your code to the test in our esports arena against other players worldwide!
-    Are you our next AI League grand champion?
+  tutorial_codecombatesports_longdescription: Pengekodan kompetitif tidak pernah sebegitu
+    epik! Ketahui kemahiran yang anda perlukan untuk bermain seperti pakar dalam Kem
+    Esports Bootcamp kami. Tiada pengalaman pengekodan diperlukan. Mulakan dengan
+    latihan di penjara bawah tanah dan temui strategi dan taktik pengekodan yang anda
+    perlukan untuk bersaing. Selepas mengasah kemahiran anda, uji kod anda dalam arena
+    sukan kami terhadap pemain lain di seluruh dunia! Adakah anda juara besar Liga
+    AI kami yang seterusnya?
   tutorial_spherodigdisplay_longdescription: Digital Displays are all around us, from
     phones to computer monitors to television to modern billboards. But how do they
     work? Dig into the graphic technology behind digital displays and get hands-on
@@ -11304,10 +11320,11 @@ ms:
     should have the opportunity to learn to code and aims to accomplish this using
     braille code blocks with SAS CodeSnaps - a collaborative coding environment that
     can get an entire classroom coding with just a single iPad and a Sphero robot.
-  tutorial_codecombatgoblins_longdescription: We need your help! Embark on an epic
-    quest where you take control of the game through your powers of programming. Become
-    the hero, unlock loot, and expand your arsenal of code to rescue the town. Then
-    use AI strategies to assemble a party for a final goblin boss battle!
+  tutorial_codecombatgoblins_longdescription: Kami perlukan bantuan anda! Mulakan
+    usaha epik di mana anda mengawal permainan melalui kuasa pengaturcaraan anda.
+    Jadilah wira, buka kunci rampasan dan kembangkan senjata kod anda untuk menyelamatkan
+    bandar. Kemudian gunakan strategi AI untuk mengumpulkan parti untuk pertempuran
+    bos jembalang terakhir!
   tutorial_scratchstorytelling_longdescription: Animate your own story with Scratch!
     Add sprites, backgrounds, and interactive graphic effects to bring your story
     to life. Includes an educator facilitation guide, Scratch project tutorial, and
@@ -11509,6 +11526,18 @@ ms:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Gred 2-5
   tutorial_rpledfirefly_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_rpcharting_string_detail_grades: Gred 9+
@@ -11601,6 +11630,10 @@ ms:
   tutorial_nasapackage_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_nasalunar_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_meeestate_string_detail_grades: Gred 2+
+  tutorial_imagipixelart_string_detail_grades: 'Gred 2-8 '
+  tutorial_kcjhealth_string_detail_grades: Gred 6+
+  tutorial_msftwakanda_string_detail_grades: Gred 6+
+  tutorial_nafbrand_string_detail_grades: Gred 9+
   tutorial_rpccw_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
     Windows, telefon Android, iPhone
   tutorial_rpledfirefly_string_platforms: Semua pelayar moden
@@ -11718,8 +11751,13 @@ ms:
   tutorial_nasaorbit_string_platforms: Semua pelayar moden
   tutorial_nasapackage_string_platforms: Semua pelayar moden
   tutorial_nasalunar_string_platforms: Semua pelayan moden, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: iPad, Komputer (Windows PC, Mac)
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Semua pelayar moden
+  tutorial_msftwakanda_string_platforms: Semua pelayar moden
+  tutorial_nafbrand_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
+    Windows, telefon Android, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11813,6 +11851,10 @@ ms:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Blok
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11876,7 +11918,7 @@ ms:
   tutorial_googlesuperhero_string_detail_programming_languages: Blok
   tutorial_googlename _string_detail_programming_languages: Blok
   tutorial_carnegiezillah_string_detail_programming_languages: Blok
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Blok
   tutorial_hatchxrsolar_string_detail_programming_languages: Blok
   tutorial_hatchxrspace_string_detail_programming_languages: Blok
   tutorial_hatchxrtrex_string_detail_programming_languages: Blok
@@ -11911,6 +11953,10 @@ ms:
   tutorial_nasapackage_string_detail_programming_languages: Blok
   tutorial_nasalunar_string_detail_programming_languages: Blok, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blok, Python
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Blok
+  tutorial_msftwakanda_string_detail_programming_languages: Blok
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: Kami tidak dapat menemui sekolah anda. Sila masukkan lebih
     banyak maklumat.
   school_name: Nama sekolah
@@ -11974,6 +12020,13 @@ ms:
   all: Semua
   dont_know: Saya tidak tahu
   language_label: Bahasa
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

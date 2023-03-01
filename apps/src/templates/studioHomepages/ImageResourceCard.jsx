@@ -48,7 +48,7 @@ class ImageResourceCard extends Component {
           <Button
             __useDeprecatedTag
             href={link}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={buttonText}
             style={styles.button}
           />
@@ -71,8 +71,9 @@ const styles = {
     marginBottom: 20,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.border_gray,
-    background: color.teal
+    borderColor: color.neutral_dark20,
+    background: color.neutral_light,
+    color: color.neutral_dark
   },
   image: {
     width: 158
@@ -93,7 +94,6 @@ const styles = {
     fontSize: 24,
     paddingBottom: 10,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
     whiteSpace: 'nowrap'
   },
   callout: {
@@ -108,7 +108,6 @@ const styles = {
     fontSize: 14,
     lineHeight: '21px',
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
     height: 80
   },
   button: {

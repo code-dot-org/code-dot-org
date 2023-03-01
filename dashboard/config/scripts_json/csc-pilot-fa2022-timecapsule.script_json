@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-timecapsule",
-    "serialized_at": "2022-11-04 17:37:56 UTC",
+    "serialized_at": "2023-02-06 19:23:16 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -451,7 +451,7 @@
       "key": "f9de1311-9371-4b65-b362-b3623ad9eec0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites add to your time capsule story?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in bringing a short story to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n\n- **Time Capsule** - A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. \n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites enhance your time capsule story?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in bringing a short story to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
         "duration": "10",
         "name": "Bringing a Time Capsule to Life"
       },
@@ -487,7 +487,6 @@
       "key": "96e3a694-fae1-4319-a586-14671ce19774",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n\n- **Time Capsule** - A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. "
       },
       "seeding_key": {
         "activity_section.key": "96e3a694-fae1-4319-a586-14671ce19774",
@@ -1154,6 +1153,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_survey_L1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1375,6 +1377,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_survey_L3"
+        ]
       },
       "bonus": false,
       "seeding_key": {

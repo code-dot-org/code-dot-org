@@ -238,7 +238,7 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Compresión sin pérdidas",
+          "word": "Compresión sin Pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
         },
         "event/outbreak/unversioned": {
@@ -878,7 +878,7 @@
         },
         "parameter/csd/2022": {
           "word": "Parámetro",
-          "definition": "Información adicional proporcionada como entrada a un bloque para personalizar su funcionalidad"
+          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
         },
         "variable/csd/2022": {
           "word": "Variable",
@@ -987,7 +987,8 @@
           "word": "Pantalla de Usuario"
         },
         "innovation/csd/2022": {
-          "word": "Innovación"
+          "word": "Innovación",
+          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
         },
         "circuit/csd/2022": {
           "word": "Circuito",

@@ -422,3 +422,7 @@ bn:
         text: সামনে এগিয়ে যান
       craft_placeTorch:
         text: মশাল বসান
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': হরতন

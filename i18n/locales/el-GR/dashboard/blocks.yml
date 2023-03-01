@@ -2,6 +2,8 @@
 el:
   data:
     blocks:
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}πες{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -979,6 +981,13 @@ el:
         text: αρχικοποίηση
       Dancelab_whenSetup2:
         text: αρχικοποίηση
+      DansBlocks_getMicroscope:
+        text: Το μικροσκόπιο έχει {INPUT1}
+        options:
+          INPUT1:
+            '1': χυμός λεμονιού
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -987,12 +996,20 @@ el:
             '"hearts"': καρδιές
             '"rain"': βροχή
             '"starburst"': Οδοντωτός σύνδεσμος
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): είναι συρόμενο
-            wandering(): περιπλάνηση
-            shrinking(): συρρικνώνεται
+          INPUT1:
+            '1': χυμός λεμονιού
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Επικοινωνία {VAR1} με {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: δημιουργήστε {NUM} νέα {ANIMATION_NAME} ξωτικά  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: αντιπροσωπεύστε {NUM} νέος {ANIMATION_NAME} ξωτικά [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}πες{TEXT1}"
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_addTarget:
@@ -1273,6 +1290,7 @@ el:
             "'sound://category_space/Pillars_SFX.mp3'": κολώνες
             "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
             "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
+            "'sound://category_space/Tycho_SFX.mp3'": Κρατήρας Τάικο
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1768,6 +1786,38 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Το μικροσκόπιο έχει {INPUT1}
+        options:
+          INPUT1:
+            '1': χυμός λεμονιού
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': χυμός λεμονιού
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): στερεό
+            new Behavior(liquid, []): υγρό
+            new Behavior(wandering, []): αέριο
+      ParticlesBlocks_statesOfMatter2:
+        text: Ορίστε το {COSTUME} σε συμπεριφορά {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': 'στερεό σωματίδιο '
+            '"liquid"': υγρό σωματίδιο
+            '"gas"': αέριο σωματίδιο
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'στερεό σωματίδιο '
+            '"liquid"': υγρό σωματίδιο
+            '"gas"': αέριο σωματίδιο
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1792,6 +1842,21 @@ el:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': καμπάνα
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': πήδα
+      Poetry_playSoundOptionsSpace:
+        text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": μαύρη τρύπα
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": σύγκρουση γαλαξιών
+            "'sound://category_space/Carina_SFX.mp3'": Τρόπις
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Κασσιόπη
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Νεφέλωμα του Καρκίνου
+            "'sound://category_space/Launch_SFX.mp3'": εκτόξευση
+            "'sound://category_space/Lift_Off.mp3'": απογείωση
+            "'sound://category_space/Pillars_SFX.mp3'": κολώνες
+            "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
+            "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
+            "'sound://category_space/Tycho_SFX.mp3'": Κρατήρας Τάικο
       Poetry_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:
@@ -2050,6 +2115,14 @@ el:
           DIR:
             right: δεξιά ↻
             left: αριστερά ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts"': καρδιές
+            '"rain"': βροχή
+            '"starburst"': Οδοντωτός σύνδεσμος
       storylab_setHeading:
         text: ορίστε επικεφαλίδα {HEADING}
       storylab_setSubheading:

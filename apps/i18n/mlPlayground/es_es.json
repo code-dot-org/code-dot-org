@@ -1,0 +1,145 @@
+{
+  "navigateForward": "Continuar",
+  "navigateBack": "Atrás",
+  "tryAgain": "Vuelve a intentarlo",
+  "navigateDone": "Terminar",
+  "saveProgress": "Guardar",
+  "correctAnswer": "Correcto",
+  "incorrectAnswer": "Incorrecto",
+  "potentialMisusesLabel": "Limitaciones y Advertencias",
+  "modelCardLimitations": "Limitaciones y Advertencias",
+  "modelCardLabel": "Etiquetas",
+  "modelCardPossibleValuesMinimum": "mín.",
+  "modelCardPossibleValuesMaximum": "máx.",
+  "modelCardFeatures": "Características",
+  "columnInspectorDescription": "Descripción",
+  "columnDetailsMinimumValue": "mín.",
+  "columnDetailsMaximumValue": "máx.",
+  "dataCardLastUpdated": "Última actualización",
+  "trainModelHeading": "Entrenamiento",
+  "resultsTableFeatureHeader": "Características",
+  "predictButton": "Predecir",
+  "uniqueOptionsWarningNotice": "Nota",
+  "datasets": {
+    "bike_sharing": {
+      "fields": {
+        "Year": {
+          "id": "Año"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Categoría"
+        },
+        "Description": {
+          "id": "Descripción"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "escuela"
+        },
+        "age": {
+          "id": "edad"
+        },
+        "health": {
+          "id": "salud"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Puntuación"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Name": {
+          "id": "Nombre"
+        },
+        "Star": {
+          "id": "Estrella"
+        },
+        "Year": {
+          "id": "Año"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        },
+        "Year": {
+          "id": "Año"
+        }
+      }
+    },
+    "abalone": {
+      "fields": {
+        "Sex": {
+          "id": "género",
+          "description": "El sexo del abulón: M, F o I (infante)."
+        },
+        "Length": {
+          "id": "Extensión",
+          "description": "Su longitud en el punto más largo en milímetros."
+        },
+        "Diameter": {
+          "id": "Diámetro",
+          "description": "Su diámetro en milímetros."
+        },
+        "Height": {
+          "id": "Alto",
+          "description": "Su altura con el caracol en el caparazón en milímetros. "
+        },
+        "Whole weight": {
+          "id": "Peso total",
+          "description": "El peso total del adulón en gramos."
+        },
+        "Shucked weight": {
+          "id": "Peso descascarado "
+        },
+        "Viscera weight": {
+          "id": "Peso de las vísceras",
+          "description": "El peso de las vísceras, en gramos."
+        },
+        "Shell weight": {
+          "id": "Peso de la cáscara",
+          "description": "El peso de la cáscara después de secarse, en gramos."
+        },
+        "Rings": {
+          "id": "Anillos",
+          "description": "La edad en años."
+        }
+      },
+      "card": {
+        "context": {
+          "potentialUses": "Determina la edad de un abulón."
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Edad"
+        },
+        "Sex": {
+          "id": "género"
+        }
+      }
+    }
+  }
+}

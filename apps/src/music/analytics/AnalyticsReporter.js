@@ -7,9 +7,15 @@ import {
   flush
 } from '@amplitude/analytics-browser';
 import {BlockTypes} from '@cdo/apps/music/blockly/blockTypes';
+import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
+/**
+ * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
+ * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
+ * outside of Music Lab, check {@link apps/src/lib/util/AnalyticsReporter}.
+ */
 export default class AnalyticsReporter {
   constructor() {
     this.sessionInProgress = false;
@@ -97,24 +103,22 @@ export default class AnalyticsReporter {
     let triggerBlocksCount = 0;
     let triggerBlocksWithCode = 0;
     blocks.forEach(block => {
-      if (block.type === BlockTypes.TRIGGERED_AT) {
+      if (
+        [
+          BlockTypes.TRIGGERED_AT,
+          BlockTypes.TRIGGERED_AT_SIMPLE,
+          BlockTypes.TRIGGERED_AT_SIMPLE2,
+          BlockTypes.NEW_TRACK_ON_TRIGGER
+        ].includes(block.type)
+      ) {
         triggerBlocksCount++;
         if (block.getChildren().length > 0) {
           triggerBlocksWithCode++;
         }
       }
 
-      if (
-        block.type === BlockTypes.PLAY_SOUND ||
-        block.type === BlockTypes.PLAY_SAMPLE
-      ) {
-        // Name of the sound is the third input
-        this.soundsUsed.add(
-          block
-            .getInput('sound')
-            .getFieldRow()[2]
-            .getValue()
-        );
+      if (block.getField(FIELD_SOUNDS_NAME)) {
+        this.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
       }
     });
 

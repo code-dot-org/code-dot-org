@@ -271,6 +271,7 @@ fil:
   teacher_mailer:
     new_teacher_subject: 'Maligayang pagdating sa Code.org!'
     delete_teacher_subject: 'Abiso sa Code.org: Ang iyong account ay tinanggal'
+    verified_teacher_subject: 'Code.org Pagpapatunay Ng Guro- Matagumpay'
   section:
     your_section:
       one: 'Iyong seksyon:'
@@ -610,6 +611,7 @@ fil:
     store: 'Tindahan'
     cookie_notice: 'Paunawa ng Cookie'
     view_code: 'Tingnan ang code'
+    locale_select: "Pumili ng Lingguwahe"
   reference_area:
     title: 'Nangangailangan ng tulong?'
     subtitle: 'Tingnan ang mga video na ito at ang mga hint'
@@ -634,6 +636,8 @@ fil:
       applab_unsupported_tablet: "Ang App Lab ay mas mainam na gamitin sa desktop o laptop na kompyuter na mayroong mouse at keyboard. Maaring makaranas ka ng mga problema sa paggamit ng kagamitang ito sa iyong kasalukuyang device."
       gamelab_unsupported_tablet: "Ang Game Lab ay mas mainam gamitin sa desktop o laptop na kompyuter na may mouse at keyboard. Maaring makaranas ka ng mga problema sa paggamit ng kagamitang ito sa iyong kasalukuyang device."
       weblab_unsupported_locale_storage: "Maaring makaranas ka ng mga problema sa paggamit ng Web Lab sa Private Browsing na mode. Paki-load ulit ang iyong proyekto sa normal na mode. Ipagpaumanhin niyo po ang abala."
+  deprecation:
+    algebra_lab: "CS sa Algebra kurikulum at nilalaman ay hindi na ginagamit. Sa loob ng susunod na ilang buwan, ang lab na ito ay hindi na magagamit. Pakiusap tingnan ang [Bootstrap: Algebra](%{bootstrap_algebra_url}) sa halip. [Matuto nang higit pa] (%{cs_algebra_url})."
   slow_loading: 'Ito ay tumatagal pa sa karaniwan...'
   try_reloading: 'Subukang i-reload ang pahina'
   next_stage: 'Tapos na! Magpatuloy sa susunod na yugto'
@@ -672,29 +676,17 @@ fil:
       body_short: "Mag-design ng app, mag-code gamit ang blocks o Javascript para mapagana ito, at pagkatapos ibahagi ang iyong app sa ilang segundo lang."
       audience: 'Edad 13+'
       cta: 'Pag-aralang kung paano'
-    dance:
-      title: 'Dance Party'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Dance Party'
-    hello-world:
-      title: 'Hello World'
-      body: 'Pumili mula sa apat na nakakatuwang tema para mag-code ng mga interactive na karakter sa mundong nilikha mo.'
-    poem-art:
-      title: 'Sining ng Tula'
-      body: 'Ipahayag ang iyong sarili! Gumamit ng code upang lumikha ng mga animated na tula.'
-    hoc:
-      title: 'Klasiko na Maze'
-      body: 'Subukan ang mga pangunahing konsepto ng computer science. Milyon-milyon ang sumubok nito.'
+    dance:
+      title: 'Dance Party'
     flappy:
       title: 'Flappy Code'
       body: 'Gusto mong magsulat ng sarili mong laro sa loob ng hindi hihigit sa 10 minuto? Subukan ang aming Flappy Code na tutorial!'
-    20-hour:
-      title: 'Pinabilis na Kurso'
-      body: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat ng edad. '
-      body_short: 'Alamin ang mga pangunahing konsepto ng computer science sa pinabilis na bersyon ng mga kursong 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Subukan ang aming bagong Oras ng Code tutorial nasa beta'
-      try_frozen: 'Mga artista kasama sina Anna at Elsa, mula sa Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galeriya"
       body: "Tingnan ang isang galeriya ng mga app at larawan ng mga artista na nilikha na aming mga user"
@@ -703,18 +695,21 @@ fil:
       body: "Ang Game Lab ay isang programming environment kung saan makakagawa ka ng simpleng mga animation at laro gamit ang objects at mga karakter na maaring makipag-ugnayan sa bawat isa."
       audience: "Edad 13+"
       cta: "Pag-aralang kung paano"
+    hello-world:
+      title: 'Hello World'
+      body: 'Pumili mula sa apat na nakakatuwang tema para mag-code ng mga interactive na karakter sa mundong nilikha mo.'
+    hero:
+      title: "Minecraft"
+      body: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
     hoc-encryption:
       title: "Simpleng Pag-encrypt"
       body: "Matutunan ng mga estudyante ang mga pamamaraan sa paglikha at pag-crack sa mga naka-encrypt na mga mensahe."
-    weblab:
-      title: "Web Lab (beta)"
-      body: "Ang Web Lab ay isang programming environment kung saan maari kang gumawa ng simpleng web pages gamit ang HTML at CSS. Idisenyo ang iyong mga web pages at ibahagi ang iyong site sa ilang segundo."
-      audience: "Edad 13+"
-      cta: "Pag-aralang kung paano"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Klasiko na Maze'
+      body: 'Subukan ang mga pangunahing konsepto ng computer science. Milyon-milyon ang sumubok nito.'
+    hoc2014:
+      try_new_tutorial: 'Subukan ang aming bagong Oras ng Code tutorial nasa beta'
+      try_frozen: 'Mga artista kasama sina Anna at Elsa, mula sa Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity."
@@ -724,30 +719,39 @@ fil:
     minecraft2016:
       title: "Minecraft"
       body: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
+    poem-art:
+      title: 'Sining ng Tula'
+      body: 'Ipahayag ang iyong sarili! Gumamit ng code upang lumikha ng mga animated na tula.'
     sports:
       title: "Mga Palakasan"
       body: "Gumawa ka ng basketbol na laro o mix at match sa mga palakasan."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Compression ng Text"
       body: "Sa leksyon na ito, ang mga estudyante ay gagamit ng mga Text Compression Widget para mag-compress ng tekso sa pamamagitan ng pagpalit ng mga patterns sa mga simbolo."
-    unplugged:
-      title: "Naka-unplug na mga Leksyon"
-      audience: "Edad 4+"
-      body: "Nagtitipon kami ng mga lista ng naka-unplug na mga leksyon para magamit mo sa iyong mga silid-aralan. Ngayon maari mo nang ituro ang mga pangunahing konsepto ng computer science, mayroon ka mang kompyuter sa iyong silid-aralan o wala! Subukang gumamit sa mga leksyong ito isip stand-alone na kurso o katuwang sa mga leskyon ng kahit anong kurso ng computer science."
-      body_short: "Kung wala kang mga komputer, subukan ang mga naka-unplug na mga leksyon sa iyong silid-aralan."
-    unplugged_conditionals:
-      title: "Mga conditional"
-      body: "Mag-aral tungkol sa mga algoritmo at mga kondisyonal na mga pahayag sa loob ng \"unplugged\" na mga aktibidad gamit ang isang kaha ng mga baraha."
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Ang Web Lab ay isang programming environment kung saan maari kang gumawa ng simpleng web pages gamit ang HTML at CSS. Idisenyo ang iyong mga web pages at ibahagi ang iyong site sa ilang segundo."
+      audience: "Edad 13+"
+      cta: "Pag-aralang kung paano"
     widgets:
       title: "Mga Widget"
       body: "Ang mga estudyante ay maaring magsiyasat sa mga konsepto mula sa ating mga Prinsipyo ng Computer Science na hands-on na kurso gamit ang mga digital na mga kagamitan. Gamitin ang mga widgets nang sila lang, o gumawa ng solong-konsepto na leskyon para sa iyong klase."
       audience: "Edad 14+"
       cta: "Pag-aralang kung paano"
+    unplugged_conditionals:
+      title: "Mga conditional"
+      body: "Mag-aral tungkol sa mga algoritmo at mga kondisyonal na mga pahayag sa loob ng \"unplugged\" na mga aktibidad gamit ang isang kaha ng mga baraha."
+    unplugged:
+      title: "Naka-unplug na mga Leksyon"
+      audience: "Edad 4+"
+      body: "Nagtitipon kami ng mga lista ng naka-unplug na mga leksyon para magamit mo sa iyong mga silid-aralan. Ngayon maari mo nang ituro ang mga pangunahing konsepto ng computer science, mayroon ka mang kompyuter sa iyong silid-aralan o wala! Subukang gumamit sa mga leksyong ito isip stand-alone na kurso o katuwang sa mga leskyon ng kahit anong kurso ng computer science."
+      body_short: "Kung wala kang mga komputer, subukan ang mga naka-unplug na mga leksyon sa iyong silid-aralan."
+    20-hour:
+      title: 'Pinabilis na Kurso'
+      body: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat ng edad. '
+      body_short: 'Alamin ang mga pangunahing konsepto ng computer science sa pinabilis na bersyon ng mga kursong 2-4.'
   landing:
     prerelease_tutorial: "Nasa **beta** ang tutorial na ito. Napapailalim ito sa rebisyon habang ang feedback ay natanggap at mga pagpapabuti ay ginawa."
     report_bug: "I-report ang Bug"
@@ -1046,6 +1050,8 @@ fil:
         not_listed: 'Hindi nakalista ang gustong termino'
         none: 'Mas mabuti na hindi sagutin'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
@@ -1160,4 +1166,21 @@ fil:
       forbidden: "Hindi ma-update ng user ang naka-lock na estado ng mag-aaral"
   reset_predict_progress_button: "Tanggalin ang Sagot"
   pixelation:
+    raw_format: "Format Ng Raw"
+    raw_format_alt: "Tingnan ang mga bits nang walang anumang format"
+    readable_format: "Nababasa Na Format"
+    readable_format_alt: "Tingnan ang mga bits na naghiwalay sa pixel"
+    save_image: "I-save ang Imahe"
+    actual_size: "Aktwal Na Laki"
+    image_file_format_header: "Format Ng File Ng Imahe"
+    image_file_format_width: "Lapad: 1 byte"
+    image_file_format_height: "Taas: 1 byte"
+    image_file_format_bits_per_pixel: "Mga Bits sa bawat Pixel: 1 byte"
+    image_file_format_data_a: "mga piraso ng data ng pixel"
+    image_file_format_data_b: "N = Lapad * Taas * Bits sa bawat Pixel"
+    image_width: "Lapad Ng Imahe"
+    image_height: "Taas Ng Imahe"
+    bits_per_pixel_header: "Mga Piraso sa bawat Pixel"
     binary: "Binary"
+    hexadecimal: "Hexadecimal"
+    pixel_format_header: "Format Ng Pixel"

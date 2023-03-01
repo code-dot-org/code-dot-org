@@ -14,7 +14,7 @@
         "csp": "Les Principes de l’Informatique",
         "20-hour": "Introduction accélérée au cours d’informatique",
         "flappy": "Flappy l'oiseau",
-        "jigsaw": "Puzzle",
+        "jigsaw": "Casse-tête",
         "algebrab": "Informatique en algèbre",
         "algebra": "Informatique en algèbre",
         "applab-intro": "Introduction au Labo des Applis",
@@ -49,6 +49,7 @@
         "csa-self-paced-pl": "Comment les enseignants du cours CSA pilot peuvent naviguer sur Code.org",
         "outbreak-csc": "Épidémie",
         "poem-art": "Art du poème",
+        "hello-world-emoji": "Bonjour tout le monde : Emoji",
         "edit-code": "Modifier le Code",
         "tesstest921": "tesstest921",
         "hello-world-csc": "hello-world-csc",
@@ -64,7 +65,10 @@
         "step": "étape",
         "coursee-ramp": "cours - accéléré",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "foot"
+        "soccer": "foot",
+        "hello-world-space": "Bonjour tout le monde : Espace",
+        "hello-world-soccer": "Bonjour tout le monde : Football",
+        "playground": "Terrain de jeux"
       }
     }
   }

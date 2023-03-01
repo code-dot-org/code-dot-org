@@ -14,10 +14,10 @@ fr:
           productif que d'attendre des occasions plus avancées futures.
       Unplug2:
         title: Algorithmique
-        desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
-          les quatre étapes de la pensée computationnelle. Après une brève introduction,
+        desc: Seulement munis de papier et de feutres, les élèves vont apprendre les
+          quatre étapes de la pensée computationnelle. Après une brève introduction,
           ils seront séparées en groupes pour créer des instructions à partir desquelles
-          d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue
+          d'autres élèves devront dessiner un monstre précis (extrait d'un catalogue
           de monstres pré-établis). L'intégralité de cette tâche doit être décomposée,
           puis les équipes étudieront les monstres du catalogue pour trouver un schéma,
           s'écarter des détails des différents monstres, puis utiliser ces informations
@@ -27,7 +27,7 @@ fr:
           représente-t-il ce que la première équipe avait prévu ?
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En se programmant les uns les autres pour créer des images, les étudiants
+        desc: En se programmant les uns les autres pour créer des images, les élèves
           commenceront à comprendre ce qu'est réellement la programmation. Au début
           du cours, les élèves devront échanger des instructions pour colorier chaque
           carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
@@ -110,7 +110,7 @@ fr:
           hauteur ou soutenir un certain poids), et les élèves discutent du fait de
           persévérer lorsque les choses se compliquent.
       GettingLoopy:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
@@ -149,7 +149,7 @@ fr:
           en papier. Cette leçon se concentre également sur l'informatique, en général,
           et le rôle essentiel que jouent les algorithmes.
       BinaryBracelets:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -169,7 +169,7 @@ fr:
           (portions de code que l’on utilise encore et encore) pour créer des capteurs
           de soleil à l’aide de ficelles et de perles.
       SongwritingParameters:
-        title: Écriture de chansons
+        title: Écrire des chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
           ce que sont la définition et l’appel de fonctions.
       DiceRace:
@@ -211,7 +211,7 @@ fr:
           leurs différences, afin de pouvoir en faire abstraction. Ces histoires abrégées
           deviennent des modèles pour de nouvelles histoires folles et amusantes.
       ForLoopFun:
-        title: Jouer avec les Boucles « Pour »
+        title: "« Pour » s'amuser en boucle"
         desc: Nous savons que les boucles nous permettent de répéter des choses encore
           et encore, mais désormais nous allons apprendre à utiliser les boucles avec
           des structures supplémentaires intégrées.
@@ -273,25 +273,25 @@ fr:
         title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
-        title: Activité "Déconnectée"
-        desc: Dans cette leçon, tu "programmeras" tes amis!
+        title: Activité Déconnectée
+        desc: Dans cette leçon, tu « programmeras » tes amis!
       courseB_unplugged_loopyMRF:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis
           mais, cette fois, avec des boucles !
       courseC_Unplugged_ScreenOutTheMean:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       courseD_unplugged_digitalCitizenship:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education : Information Privée et Personnelle '
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       courseF_unplugged_powerOfWords:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       deeper learning description:
@@ -334,12 +334,12 @@ fr:
           en papier. Cette leçon se concentre également sur l'informatique, en général,
           et le rôle essentiel que jouent les algorithmes.
       courseC_unplugged_gettingLoopy:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       courseC_unplugged_binaryBracelets:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -349,14 +349,14 @@ fr:
           un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
           reproduction d’un dessin.
       courseD_unplugged_relayProgramming:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Les élèves effectuent une course de relais, où ils traversent rapidement
           le jardin pour aller écrire un algorithme, basé sur une image de « Programmation
           sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à
           la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour
           retourner à ce point.
       courseD_unplugged_conditionalsCards:
-        title: Instructions conditionnelles avec des cartes
+        title: Les instructions conditionnelles avec des cartes
         desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point
@@ -388,7 +388,7 @@ fr:
           de problèmes répandue en informatique, et toute la classe accomplit ainsi
           une tâche plus efficacement que si un élève l'avait tentée seul.
       courseE_unplugged_songwriting:
-        title: Écriture de chansons
+        title: Écrire des chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
           ce que sont la définition et l’appel de fonctions.
       courseF_unplugged_tangrams:
@@ -405,7 +405,7 @@ fr:
           la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
           le concept.
       courseF_unplugged_forLoopFun:
-        title: Jouer avec les Boucles « Pour »
+        title: "« Pour » s'amuser en boucle"
         desc: Nous savons que les boucles nous permettent de répéter des choses encore
           et encore, mais désormais nous allons apprendre à utiliser les boucles avec
           des structures supplémentaires intégrées.
@@ -449,10 +449,10 @@ fr:
           un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
           reproduction d’un dessin.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       Conditionals_2018:
@@ -481,12 +481,12 @@ fr:
           en papier. Cette leçon se concentre également sur l'informatique, en général,
           et le rôle essentiel que jouent les algorithmes.
       GettingLoopy_2018:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       BinaryBracelets_2018:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -504,11 +504,11 @@ fr:
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
           défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les étudiants devraient
+          en particulier dans les environnements numériques. Les élèves devraient
           être encouragés à respecter les droits des artistes, qui constituent un
           élément important de leur citoyenneté numérique.
       RelayProgramming_2018:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
           puis passera rapidement à une course contre la montre, pendant laquelle
           les élèves formeront des équipes et travailleront ensemble à la rédaction
@@ -543,13 +543,13 @@ fr:
           un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
           reproduction d’un dessin.
       RelayProgramming_2018_2019:
-        title: Programmation de relais
+        title: Programmation en relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
           puis passera rapidement à une course contre la montre, pendant laquelle
           les élèves formeront des équipes et travailleront ensemble à la rédaction
           d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       BinaryImages_2019:
         title: Images Binaires
@@ -560,7 +560,7 @@ fr:
           ordinateur peut stocker des informations encore plus complexes (telles que
           les images et les couleurs) également en binaire.
       courseE_unplugged_privateInformation_2019:
-        title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        title: Informations Privées et Personnelles
         desc: Développée par Common Sense Education, cette leçon traite de la différence
           entre les informations qui peuvent être partagées, en toute sécurité, en
           ligne, et les informations qui ne le peuvent pas.
@@ -572,7 +572,7 @@ fr:
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
           and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
           défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les étudiants devraient
+          en particulier dans les environnements numériques. Les élèves devraient
           être encouragés à respecter les droits des artistes, qui constituent un
           élément important de leur citoyenneté numérique.
       Internet_2019:
@@ -584,12 +584,12 @@ fr:
 '
         desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
-        title: Tourner en Rond
+        title: Affaire bouclée
         desc: Cette leçon présente le concept de programmation des boucles (instructions
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activité "Déconnectée"
+        title: Activité Déconnectée
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
           méchant en ligne.
       BigEvent_2019:
@@ -599,7 +599,7 @@ fr:
           appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
           en fonction du bouton choisi.
       BinaryBracelets_2019:
-        title: Les bracelets binaires
+        title: Bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -641,10 +641,10 @@ fr:
           la promotion de l'expression créative et le besoin d'être juste avec le
           travail créatif.
       GraphingData_2019:
-        title: Représenter les Données
+        title: Se représenter les Données
         desc: Dans cette leçon, les élèves collecteront des données à partir d’un
           projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire
-          des prédictions.
+          des prévisions.
       courseE_unplugged_accessAbility_2019:
         title: 'Capacité d''Accès
 

@@ -46,6 +46,7 @@ te:
           have an email address)](%{url})
         username: వినియోగదారు పేరు
         password: పాస్వర్డ్
+        verified_teacher: ధృవీకరించబడిన ఉపాధ్యాయుడు
         password_confirmation: పాస్వర్డ్ నిర్ధారణ
         current_password: ప్రస్తుత పాస్వర్డ్
         locale: భాష
@@ -211,6 +212,7 @@ te:
     user:
       signin: సైన్ ఇన్
       signup: ఒక అకౌంట్ సృష్టించండి
+      create: సృష్టించు
       dance: డాన్స్ పార్టీ
     popup:
       prizes_link: మరింత సమాచారం
@@ -238,10 +240,13 @@ te:
     tab: వీడియో.
     notes: వీడియో లేదా? నోట్స్ చూపించు.
   upsell:
-    dance:
-      title: డాన్స్ పార్టీ
     dance-2019:
       title: డాన్స్ పార్టీ
+    dance:
+      title: డాన్స్ పార్టీ
+    hello-world:
+      body: మీరు సృష్టించే ప్రపంచంలో సంభాషణాత్మక అక్షరాంశాలను కోడ్ చేయడానికి నాలుగు
+        సరదా థీముల నుండి ఎంచుకోండి.
   landing:
     help_support: సహాయం మరియు మద్దతు
   dialog:
@@ -269,3 +274,9 @@ te:
       ఆధునీకరణతో ఉండడానికై ఈ ఖాతాకు మీ ఇమెయిల్ ని అనుసంధానం చేయండి!"
     link_your_email: మీ ఇమెయిల్ అనుసంధానం చేయండి
     not_now: 'ఇప్పుడే కాదు '
+  lesson_lock:
+    error:
+      no_updates: నిర్వర్తించడానికి అప్‌డేట్‌లు ఏవీ లేవు
+      missing_params: యూజర్, స్థాయి, మరియు యూనిట్ ఐడి లను విధిగా ఇవ్వాలి
+      cannot_view_locked_answers: లాక్ చేయబడి ఉన్నప్పుడు జవాబులను చూడలేరు
+      forbidden: యూజరు, విద్యార్థి యొక్క లాక్ చేయదగిన స్థితిని అప్‌డేట్ చేయలేరు

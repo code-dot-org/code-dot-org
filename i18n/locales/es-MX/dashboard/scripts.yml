@@ -2151,7 +2151,7 @@ es-MX:
         frozen-2018-test-b:
           title: Nuevo guión de Frozen
         aquatic:
-          title: 'Minecraft: Voyage Aquatic'
+          title: 'Minecraft: Viaje Acuático'
           description_short: "¡Usa tu creatividad y habilidades para resolver problemas para explorar y construir mundos bajo el agua con códigos!"
           description: "¡Minecraft está de vuelta con una nueva actividad! Usa tu creatividad y tu capacidad de resolver problemas para explorar y construir mundos acuáticos a través del código."
           student_description: "¡Minecraft está de vuelta con una nueva actividad! Usa tu creatividad y tu capacidad de resolver problemas para explorar y construir mundos acuáticos a través del código."
@@ -2929,7 +2929,7 @@ es-MX:
           title: Detector de colisiones
         dance-2019:
           title: Fiesta de baile (remix 2019)
-          description_short: "¡Con la presencia de Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj y muchos más!"
+          description_short: Programa una Fiesta de Baile para compartir con tus amigos. Con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de la película de Disney“Encanto,” and more!
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           student_description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           name: baile 2019
@@ -4030,7 +4030,7 @@ es-MX:
             lessonGroup-7:
               display_name: Impactos de la computación
           name: Curso E - 2021
-          student_description: Comienza a codificar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
+          student_description: Comienza a programar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
         coursef-2021:
           title: Curso F (2021)
           description: Hemos creado el Curso F para estudiantes en el 5° grado. Al comenzar este curso los estudiantes aprenderán sobre las decisiones que la gente toma cuando utilizan las aplicaciones. Luego, los estudiantes aprenderán a crear diferentes tipos de aplicaciones con multiples opciones para los usuarios usando el Laboratorio de Sprites. En las próximas lecciones del curso, los estudiantes aprenderán conceptos mas avanzados, como los variables y los bucles "para". Los estudiantes tendrán más autonomía y la oportunidad de tomar sus propias decisiones a través del curso. Los estudiantes terminaran el curso con proyectos interactivos y obras de arte que podrán compartir con sus amigos/as y familiares.
@@ -4058,7 +4058,7 @@ es-MX:
             lessonGroup-7:
               display_name: Ciudadanía digital
           name: Curso F - 2021
-          student_description: Aprende a codificar con sprites, variables y bucles y discute el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+          student_description: Aprende a programar con sprites, variables y bucles y discute el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
         express-2021:
           title: Curso Express (2021)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -4066,7 +4066,7 @@ es-MX:
           description_audience: 'Edades: 9 a 18'
           lesson_groups:
             csf_warmup:
-              display_name: Calentamiento
+              display_name: Actividad previa
             csf_sequencing:
               display_name: Secuencias
             csf_loops:
@@ -4916,9 +4916,15 @@ es-MX:
           description: Los estudiantes aprenderán que los eventos son una forma útil de controlar cuándo ocurre una acción e incluso que se pueden usar para que varias cosas actúen de forma sincronizada. En programación, puedes utilizar eventos para responder a un usuario que lo controla (como presionar botones o hacer clic con el ratón). Los eventos pueden hacer que tu programa sea más interesante e interactivo.
           student_description: Los estudiantes aprenderán a pensar en controlar sus acciones mediante eventos. Los eventos se utilizan mucho en programación y deberían ser fáciles de reconocer después de esta lección.
         csc-things:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Papel de borrador
           name: csc-cosas
           title: CSC Descarga Mental
           description: 'Se trata de un trabajo en proceso :) '
+          lessons:
+            lesson-2:
+              name: cubierta del libro
         poetry-hoc2:
           name: poesía-hoc2
           title: Poesía HoC v2
@@ -5363,7 +5369,7 @@ es-MX:
               display_name: Obsoleto
           title: Curso E (2022)
           description: Hemos creado el curso E para los alumnos de cuarto curso. El curso comienza con una introducción a la herramienta de programación Laboratorio de Sprite. Los alumnos aprenderán a realizar proyectos divertidos e interactivos que refuerzan lo que aprenderán sobre la seguridad en línea. Después de estas lecciones, los estudiantes se involucrarán en una codificación más compleja. Los estudiantes aprenderán sobre bucles anidados, funciones y condicionales. Al final del curso, los estudiantes combinarán estos conceptos para resolver desafiantes rompecabezas. El curso termina con un proyecto abierto en el que los alumnos crean un juego o un dibujo.
-          student_description: Comienza a codificar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
+          student_description: Comienza a programar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
           description_short: Aprende los fundamentos de los sprites, los bucles anidados y las funciones.
           description_audience: De 8 a 12 años
           name: cursoe-2022
@@ -5383,7 +5389,7 @@ es-MX:
               display_name: Proyecto de fin de curso
           title: Curso F (2022)
           description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
-          student_description: Aprende a codificar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+          student_description: Aprende a programar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
           description_audience: De 9 a 13 años
           name: cursof-2022
@@ -5568,8 +5574,8 @@ es-MX:
           title: Curso F (2022)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
-          description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
-          student_description: Aprende a codificar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+          description: "Creamos el Curso F para alumnos de quinto grado. El curso comienza por observar cómo los usuarios toman decisiones en las aplicaciones que utilizan. Luego, los estudiantes aprenden a hacer una variedad de aplicaciones de Sprite Lab que también ofrecen opciones para el usuario. En las lecciones posteriores del curso, los estudiantes aprenderán sobre variables en una variedad de contextos. A lo largo de este curso se les da mayor autonomía y más opciones a lo largo de este curso. Al finalizar el curso, los alumnos habrán creado proyectos interactivos para compartir con sus amigos y familiares.\n\n## Primavera 2022 Open Preview\n\nEsta nueva versión del Curso F incluye tres nuevas lecciones, ¡y necesitamos tus comentarios! Las nuevas lecciones son:\n\n-   Lección 9 - Muchos sprites - [dar comentarios](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)\n-   Lección 10 - Contar con variables - [dar comentarios](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)\n-   Lección 11 - Mini-proyecto: Juego de coleccionista - [dar comentarios](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)\n\nTenga en cuenta que estas nuevas lecciones pueden cambiar entre ahora y julio de 2022. Agradecemos cualquier comentario. Los cursos A-E de Fundamentos de CS (2022) se lanzarán en julio de 2022.\n\nTambién hemos agregado una cubierta de diapositivas completa que cubre todas las lecciones del Curso F. ¡También damos la bienvenida a su [feedback](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) en las diapositivas de la lección!"
+          student_description: Aprende a programar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5762,6 +5768,10 @@ es-MX:
           lessons:
             lesson-7:
               name: Introducción a los Sprites
+            lesson-8:
+              name: Informática Física PSP
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           name: csc-piloto-2022-ecosistemas
         csc-pilot-2022-timecapsule:
@@ -6093,6 +6103,12 @@ es-MX:
           lessons:
             lesson-2:
               name: 'Trabajo posterior al Módulo 2: Entendiendo el contenido de la Unidad 4'
+            lesson-4:
+              name: 'Módulo 4 post-trabajo: Arrays 2D en la Unidad 5 y FRQs'
+            lesson-5:
+              name: 'Módulo 5 post-trabajo: Proyecto de la Unidad 5'
+            lesson-6:
+              name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -6138,6 +6154,20 @@ es-MX:
           lessons:
             lesson-2:
               name: 'Trabajo posterior del Módulo 3: El Teatro y los conjuntos de datos de la Unidad 4'
+            lesson-3:
+              name: 'Módulo 4 post-trabajo: FRQs y Unidad 5'
+            lesson-4:
+              name: 'Módulo 5 post-trabajo: Proyecto de la Unidad 5'
+            lesson-5:
+              name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
+            lesson-6:
+              name: 'Módulo 7 post-trabajo: Proyecto de la Unidad 7'
+            lesson-7:
+              name: 'Módulo 8 post-trabajo: Preparando a los alumnos para el examen AP'
+            lesson-8:
+              name: 'Módulo 8 post-trabajo: Preparando a los alumnos para el examen AP'
+            lesson-9:
+              name: Módulo X
           name: csa-borrador-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
@@ -6273,10 +6303,48 @@ es-MX:
           description_short: Los estudiantes se preparan para el examen AP CSA practicando estrategias para las preguntas de opción múltiple y de respuesta libre.
         csa1-2023:
           lessons:
+            lesson-1:
+              name: Bienvenido a CSA
+            lesson-3:
+              name: Proyecto Arte en el Asfalto [Versión de 1 día]
             lesson-2:
               name: Laboratorio Java
+            lesson-4:
+              name: El Barrio
+            lesson-5:
+              name: Navegando y Pintando
             lesson-6:
               name: Bucles
+            lesson-7:
+              name: Herencia
+            lesson-8:
+              name: Métodos de escritura
+            lesson-9:
+              name: Estilo de Programación y Comentarios
+            lesson-10:
+              name: Sentencias de Selección
+            lesson-11:
+              name: Estrategias de Depuración
+            lesson-12:
+              name: Descomposición y Diseño
+            lesson-13:
+              name: Declaraciones de Selección Bidireccional
+            lesson-14:
+              name: Instanciación de Objetos
+            lesson-15:
+              name: Métodos con Parámetros
+            lesson-16:
+              name: Código Fuente Abierto
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 1
+            lesson-18:
+              name: Proyecto Arte en el Asfalto - Día 2
+            lesson-19:
+              name: Proyecto Arte en el Asfalto - Día 3
+            lesson-20:
+              name: Práctica FRQ
+            lesson-21:
+              name: Evaluación de la Unidad 1
           lesson_groups:
             lessonGroup-2:
               display_name: Encuesta
@@ -6288,10 +6356,52 @@ es-MX:
               display_name: Lecciones alternativas
           title: Programación Orientada a Objetos
         csa2-2023:
+          lessons:
+            lesson-1:
+              name: Atributos
+            lesson-4:
+              name: Variables
+            lesson-9:
+              name: Imprimiendo objetos
+            lesson-11:
+              name: Práctica FRQ
+            lesson-12:
+              name: Evaluación de la unidad 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Estructura y Diseño de la Clase
         csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrices Unidimensionales (1D)
+            lesson-3:
+              name: Bucles Para
+            lesson-11:
+              name: Práctica FRQ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Arrays y Algoritmos
         csa4-2023:
+          lessons:
+            lesson-9:
+              name: Aleatorio
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Condiciones y Lógica
         csa5-2023:
           title: Arrays Bidimensionales
@@ -6397,9 +6507,9 @@ es-MX:
           description: "Los alumnos están motivados si se sienten conectados con el material que están estudiando. Una forma de hacer que el contenido de la informática sea relevante, significativo, relacionable y emocionante es incorporar conjuntos de datos del mundo real en las tareas de programación práctica.\n\nLos datos son valores. Los valores por sí mismos no son conocimiento, el conocimiento es lo que se obtiene del estudio de los datos. Este laboratorio está diseñado para animar a los alumnos a obtener conocimientos sobre un tema de su interés examinando un conjunto de datos disponibles libremente en la web. Para obtener conocimientos a partir de los datos en este laboratorio, los alumnos plantearán una pregunta, buscarán un conjunto de datos sobre ese tema y luego procesarán esos datos para determinar la respuesta a su pregunta.\n\n### Conexión con el Mundo Real\n\nSer capaz de acceder y procesar datos es una parte importante de muchas industrias. Ya sea para determinar la mejor asignación de recursos o para decidir qué nuevo producto crear, el análisis de datos es un componente necesario de esas conversaciones. Por suerte, existen herramientas que ayudan a leer y procesar datos, y este laboratorio presentará una de estas herramientas a los estudiantes y les pedirá que utilicen datos existentes del mundo real para responder a una pregunta de su propio interés."
           student_description: Los datos son valores. Los valores por sí mismos no son conocimiento, el conocimiento es lo que se obtiene al estudiar los datos. Este laboratorio está diseñado para animarte a obtener conocimientos sobre un tema de tu interés examinando un conjunto de datos de libre acceso en la web. Para obtener conocimientos a partir de los datos en este laboratorio, plantearás una pregunta, buscarás un conjunto de datos sobre ese tema y luego procesarás esos datos para determinar la respuesta a tu pregunta.
         hello-world-space-2022:
-          title: Espacio Hola Mundo
+          title: 'Hola Mundo: Espacio'
         hello-world-soccer-2022:
-          title: Hola Mundo Fútbol
+          title: 'Hola Mundo: Fútbol'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6479,6 +6589,16 @@ es-MX:
           lessons:
             lesson-1:
               name: Hitos de EE.UU.
+        csc-playground:
+          lessons:
+            lesson-2:
+              name: Partículas - Lección 1
+            lesson-3:
+              name: Partículas - Lección 2
+            lesson-4:
+              name: Partículas - Lección 3
+            lesson-5:
+              name: Partículas - Lección 4
         self-paced-pl-physical-computing2:
           lessons:
             lesson-5:
@@ -6530,7 +6650,7 @@ es-MX:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listas
+              display_name: Datos
             csp_loops:
               display_name: Bucles
             csp_traversals:
@@ -6539,20 +6659,26 @@ es-MX:
               display_name: Proyecto
             lessonGroup-5:
               display_name: Encuesta de final de curso
-          title: Listas, Bucles y Recorridos ('21-'22)
+          title: Datos ('21-'22)
           description: Esta unidad describe las listas, los bucles y los recorridos, y explora el modo en que pueden utilizarse para crear aplicaciones que almacenen y procesen grandes cantidades de información. Aprende a programar con la biblioteca de datos en Laboratorio de Aplicaciones y completa un proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar un programa sobre cualquier tema que elijas.
-          student_description: Esta unidad describe las listas, los bucles y los recorridos, y explora el modo en que pueden utilizarse para crear aplicaciones que almacenen y procesen grandes cantidades de información. Aprende a programar con la biblioteca de datos en Laboratorio de Aplicaciones y completa un proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar un programa sobre cualquier tema que elijas.
+          student_description: 'En esta unidad aprenderás cómo el análisis de datos ayuda a convertir los datos en bruto en información útil sobre el mundo. Aprendes a utilizar la visualización de datos para encontrar patrones dentro de los conjuntos de datos y aprendes cómo este proceso de análisis de datos se utiliza en contextos como los datos abiertos o el aprendizaje automático para ayudar a tomar decisiones o aprender más sobre nuestro mundo. En el proyecto de la unidad, analizarás un conjunto de datos de tu elección y presentarás tus conclusiones. '
           description_short: Aprende a crear aplicaciones que utilicen listas, bucles y recorridos para almacenar y procesar grandes cantidades de información.
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unidad 6: Algoritmos'
+              display_name: Listas
             lessonGroup-2:
               display_name: Encuesta de final de curso
-          title: Algoritmos ('21-'22)
+            lessonGroup-3:
+              display_name: Bucles
+            lessonGroup-4:
+              display_name: Recorridos
+            lessonGroup-5:
+              display_name: Proyecto
+          title: Listas, Bucles y Recorridos ('21-'22)
           description: Esta unidad es una rápida exploración de cómo los informáticos diseñan algoritmos para resolver problemas y cómo analizan la velocidad de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica a través de una variedad de actividades prácticas y descubre cómo se está aplicando en la informática moderna.
-          student_description: Esta unidad es una rápida exploración de cómo los informáticos diseñan algoritmos para resolver problemas y cómo analizan la velocidad de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica a través de una variedad de actividades prácticas y descubre cómo se está aplicando en la informática moderna.
-          description_short: Diseñar y analizar algoritmos para entender cómo funcionan y por qué algunos se consideran mejores que otros.
+          student_description: Esta unidad describe las listas, los bucles y los recorridos, y explora el modo en que pueden utilizarse para crear aplicaciones que almacenen y procesen grandes cantidades de información. Aprende a programar con la biblioteca de datos en Laboratorio de Aplicaciones y completa un proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar un programa sobre cualquier tema que elijas.
+          description_short: Aprende a crear aplicaciones que utilicen listas, bucles y recorridos para almacenar y procesar grandes cantidades de información.
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -6571,9 +6697,9 @@ es-MX:
               display_name: PT de creación
             lessonGroup-3:
               display_name: Encuesta de final de curso
-          title: Crear PT - Preparación ('21-'22)
-          description: En esta unidad se prepara y se realiza la AP Create Performance Task. Cada lección contiene enlaces a documentos y actividades útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
-          student_description: En esta unidad se prepara y se realiza la AP Create Performance Task. Cada lección contiene enlaces a documentos y actividades útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          title: Ciberseguridad e Impactos Globales ('21-'22)
+          description: En esta unidad aprenderás cómo las innovaciones informáticas han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad y las formas en que se utilizan la encriptación y otras técnicas para protegerlos. A lo largo de la unidad participa en una conferencia sobre la "escuela del futuro" en la que tú y un equipo hacéis una propuesta sobre la mejor manera de mejorar la vida escolar con las innovaciones informáticas.
+          student_description: En esta unidad aprenderás cómo las innovaciones informáticas han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad y las formas en que se utilizan la encriptación y otras técnicas para protegerlos. A lo largo de la unidad participa en una conferencia sobre la "escuela del futuro" en la que tú y un equipo hacéis una propuesta sobre la mejor manera de mejorar la vida escolar con las innovaciones informáticas.
           description_short: Practica y completa la Create Performance Task (PT).
         csp9-2023:
           lesson_groups:
@@ -6581,20 +6707,20 @@ es-MX:
               display_name: 'Unidad 9: Datos'
             lessonGroup-2:
               display_name: Encuesta de final de curso
-          title: Datos ('21-'22)
-          description: 'En esta unidad aprenderás cómo el análisis de datos ayuda a convertir los datos en bruto en información útil sobre el mundo. Aprendes a utilizar la visualización de datos para encontrar patrones dentro de los conjuntos de datos y aprendes cómo este proceso de análisis de datos se utiliza en contextos como los datos abiertos o el aprendizaje automático para ayudar a tomar decisiones o aprender más sobre nuestro mundo. En el proyecto de la unidad, analizarás un conjunto de datos de tu elección y presentarás tus conclusiones. '
-          student_description: 'En esta unidad aprenderás cómo el análisis de datos ayuda a convertir los datos en bruto en información útil sobre el mundo. Aprendes a utilizar la visualización de datos para encontrar patrones dentro de los conjuntos de datos y aprendes cómo este proceso de análisis de datos se utiliza en contextos como los datos abiertos o el aprendizaje automático para ayudar a tomar decisiones o aprender más sobre nuestro mundo. En el proyecto de la unidad, analizarás un conjunto de datos de tu elección y presentarás tus conclusiones. '
-          description_short: Explora y visualiza conjuntos de datos de una gran variedad de temas mientras buscas patrones e intentas aprender más sobre el mundo que te rodea.
+          title: Crear PT - Preparación ('21-'22)
+          description: En esta unidad se prepara y se realiza la AP Create Performance Task. Cada lección contiene enlaces a documentos y actividades útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          student_description: En esta unidad se prepara y se realiza la AP Create Performance Task. Cada lección contiene enlaces a documentos y actividades útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          description_short: Practica y completa la Create Performance Task (PT).
         csp10-2023:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidad 10: Ciberseguridad e impactos globales'
             lessonGroup-2:
               display_name: Encuesta de final de curso
-          title: Ciberseguridad e Impactos Globales ('21-'22)
-          description: En esta unidad aprenderás cómo las innovaciones informáticas han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad y las formas en que se utilizan la encriptación y otras técnicas para protegerlos. A lo largo de la unidad participa en una conferencia sobre la "escuela del futuro" en la que tú y un equipo hacéis una propuesta sobre la mejor manera de mejorar la vida escolar con las innovaciones informáticas.
-          student_description: En esta unidad aprenderás cómo las innovaciones informáticas han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad y las formas en que se utilizan la encriptación y otras técnicas para protegerlos. A lo largo de la unidad participa en una conferencia sobre la "escuela del futuro" en la que tú y un equipo hacéis una propuesta sobre la mejor manera de mejorar la vida escolar con las innovaciones informáticas.
-          description_short: Investigar y debatir la actualidad en la intersección de los datos, las políticas públicas, el derecho, la ética y el impacto social.
+          title: Algoritmos ('21-'22)
+          description: Esta unidad es una rápida exploración de cómo los informáticos diseñan algoritmos para resolver problemas y cómo analizan la velocidad de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica a través de una variedad de actividades prácticas y descubre cómo se está aplicando en la informática moderna.
+          student_description: Esta unidad es una rápida exploración de cómo los informáticos diseñan algoritmos para resolver problemas y cómo analizan la velocidad de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica a través de una variedad de actividades prácticas y descubre cómo se está aplicando en la informática moderna.
+          description_short: Diseñar y analizar algoritmos para entender cómo funcionan y por qué algunos se consideran mejores que otros.
         csp-post-survey-2023:
           title: Encuesta de fin de curso de Principios de Ciencias de la Computación
           description: Esta unidad contiene la Encuesta Final del Curso de Principios de Informática.
@@ -6626,3 +6752,109 @@ es-MX:
           title: 'Módulo 2: Navegando por Code.org'
         self-paced-pl-csa3-2023:
           title: Soporte para la programación basada en texto
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: 'Unidad 1: Proyectos'
+            lesson-2:
+              name: 'Unidad 2: Proyectos'
+            lesson-3:
+              name: 'Unidad 3: Proyectos'
+            lesson-4:
+              name: 'Unidad 4: Proyectos'
+            lesson-5:
+              name: 'Unidad 5: Proyectos'
+            lesson-6:
+              name: 'Unidad 6: Proyectos'
+            lesson-7:
+              name: 'Unidad 7: Proyectos'
+            lesson-8:
+              name: 'Unidad 8: Proyectos'
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Partículas
+        csp-playground:
+          title: CSP Playground
+          description_audience: Autores del Curriculum
+          description_short: Para organizar las actualizaciones de las lecciones o los niveles entre las versiones del plan de estudios
+        csc-pilot-fa2022-particles:
+          title: Partículas
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de hardware en la informática y cómo los diferentes sensores pueden proporcionar una entrada y salida más eficaz que el tradicional teclado, ratón y monitor. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, desarrollarás programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo aproximado puede conducir a un producto terminado. La unidad concluye con un reto de diseño para utilizar el Circuit Playground como base para una innovación de su propio diseño.
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Contenido del Taller
+            lesson-1:
+              name: Apertura del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-2:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para Enseñar la Unidad 1
+          title: Preparación para Enseñar la Unidad 1
+          description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+          student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"

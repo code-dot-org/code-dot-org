@@ -11,13 +11,15 @@ import AnimationPickerListItem, {
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
-  filterOutBackgrounds
+  filterAnimations
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
+import AnimationUploadButton from './AnimationUploadButton.jsx';
+import experiments from '@cdo/apps/util/experiments';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -35,9 +37,10 @@ export default class AnimationPickerBody extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
-    pickerType: PropTypes.string.isRequired
+    pickerType: PropTypes.string.isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired
   };
 
   state = {
@@ -48,8 +51,26 @@ export default class AnimationPickerBody extends React.Component {
 
   componentDidMount() {
     this.scrollListContainer = React.createRef();
+    if (this.props.defaultQuery) {
+      const currentPage = 0;
+      const {results, pageCount} = this.searchAssetsWrapper(
+        currentPage,
+        this.props.defaultQuery
+      );
+      let nextQuery = this.props.defaultQuery || {
+        categoryQuery: '',
+        searchQuery: ''
+      };
+      this.setState({
+        ...nextQuery,
+        currentPage,
+        results,
+        pageCount
+      });
+    }
   }
 
+  // Can be safely removed once the 'backgroundsTab' experiment is removed.
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.defaultQuery !== nextProps.defaultQuery) {
       const currentPage = 0;
@@ -69,7 +90,6 @@ export default class AnimationPickerBody extends React.Component {
       });
     }
   }
-
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
 
@@ -105,9 +125,7 @@ export default class AnimationPickerBody extends React.Component {
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
-      if (this.props.hideBackgrounds) {
-        newResults = filterOutBackgrounds(newResults);
-      }
+      newResults = filterAnimations(newResults, this.props);
 
       this.setState({
         results: [...(results || []), ...newResults],
@@ -122,9 +140,7 @@ export default class AnimationPickerBody extends React.Component {
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       searchQuery
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({searchQuery, currentPage, results, pageCount});
   };
 
@@ -134,9 +150,7 @@ export default class AnimationPickerBody extends React.Component {
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({categoryQuery, currentPage, results, pageCount});
   };
 
@@ -207,9 +221,15 @@ export default class AnimationPickerBody extends React.Component {
       is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
-      onAnimationSelectionComplete
+      onAnimationSelectionComplete,
+      shouldRestrictAnimationUpload
     } = this.props;
 
+    const searching = searchQuery !== '';
+    const inCategory = categoryQuery !== '';
+    const isBackgroundsTab =
+      this.props.pickerType === 'backgrounds' &&
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD);
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
@@ -232,9 +252,9 @@ export default class AnimationPickerBody extends React.Component {
           placeholderText={msg.animationSearchPlaceholder()}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
-        {(searchQuery !== '' || categoryQuery !== '') && (
+        {(searching || inCategory) && (
           <div className={style.navigation}>
-            {categoryQuery !== '' && (
+            {inCategory && (
               <div className={style.breadCrumbs}>
                 {this.props.navigable && (
                   <span
@@ -256,25 +276,27 @@ export default class AnimationPickerBody extends React.Component {
             onScroll={this.handleScroll}
           >
             {' '}
-            {(searchQuery !== '' || categoryQuery !== '') &&
-              results.length === 0 && (
-                <div className={style.emptyResults}>
-                  {msg.animationPicker_noResultsFound()}
-                </div>
-              )}
-            {((searchQuery === '' && categoryQuery === '') ||
-              (results.length === 0 && this.props.canDraw)) && (
+            {(searching || inCategory) && results.length === 0 && (
+              <div className={style.emptyResults}>
+                {msg.animationPicker_noResultsFound()}
+              </div>
+            )}
+            {((!searching && (!inCategory || isBackgroundsTab)) ||
+              results.length === 0) && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
+                  isBackgroundsTab={isBackgroundsTab}
                   icon="pencil"
                   onClick={onDrawYourOwnClick}
                 />
                 {!hideUploadOption && (
-                  <AnimationPickerListItem
-                    label={msg.animationPicker_uploadImage()}
-                    icon="upload"
-                    onClick={onUploadClick}
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldRestrictAnimationUpload={
+                      shouldRestrictAnimationUpload
+                    }
+                    isBackgroundsTab={isBackgroundsTab}
                   />
                 )}
               </div>

@@ -59,6 +59,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Dífhabhtú"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Cód"
         },
@@ -204,7 +212,24 @@
           "word": "Meaisínfhoghlaim"
         },
         "code/poem-art/unversioned": {
-          "word": "Cód"
+          "word": "Cód",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Iompar"

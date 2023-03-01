@@ -2,10 +2,22 @@ name 'U4L3 CFU Variables Randomness Psuedocode2022_2023'
 editor_experiment ''
 title 'AP Pseudocode: Variables'
 description ''
-wrong '1 1 20 20'
-wrong '2 2 11 11'
-wrong '10 10 10 10'
-right '10 5 10 5'
+wrong '1  
+1  
+20  
+20'
+wrong '2  
+2  
+11  
+11'
+wrong '10  
+10  
+10  
+10'
+right '10  
+5  
+10  
+5'
 
 markdown <<MARKDOWN
 ## AP Reference Sheet 

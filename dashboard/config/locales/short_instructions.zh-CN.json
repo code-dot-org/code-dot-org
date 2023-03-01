@@ -2167,7 +2167,7 @@
         "courseD_bee_conditionals3_2018": "帮助蜜蜂采集所有的花蜜。\n\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。",
         "courseD_bee_conditionals3_2019": "帮助蜜蜂采集所有的花蜜。\n\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。",
         "courseD_bee_conditionals3_2020": "帮助蜜蜂采集所有的花蜜。\n\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。",
-        "courseD_bee_conditionals3_copy": "帮助蜜蜂采集所有的花蜜。\n\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。",
+        "courseD_bee_conditionals3_copy": "帮助蜜蜂采集所有的花蜜。\n\n\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。",
         "courseD_bee_conditionals4": "使用尽可能少的模块来收集所有的花蜜。",
         "courseD_bee_conditionals4_2018": "使用尽可能少的模块来收集所有的花蜜。",
         "courseD_bee_conditionals4_2019": "使用尽可能少的模块来收集所有的花蜜。",
@@ -2580,7 +2580,7 @@
         "courseE_artist_functions2_2018": "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 ",
         "courseE_artist_functions2_2019": "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 ",
         "courseE_artist_functions2_2020": "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 ",
-        "courseE_artist_functions2_copy": "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 ",
+        "courseE_artist_functions2_copy": "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 \n",
         "courseE_artist_functions3": "可以通过添加重复模块来绘制此画。",
         "courseE_artist_functions3_2018": "构建一个能创造这个星星的函数。",
         "courseE_artist_functions3_2019": "构建一个能创造这个星星的函数。",
@@ -4506,7 +4506,8 @@
         "helloworld_food_sizes_soccer-2022": "让我们学习改变精灵图的大小。",
         "helloworld_food_sizes_space-2022": "让我们学习改变精灵图的大小。",
         "helloworld_food_sounds_soccer-2022": "让我们学习如何播放声音。",
-        "helloworld_food_sounds_space-2022": "让我们学习如何播放声音。"
+        "helloworld_food_sounds_space-2022": "让我们学习如何播放声音。",
+        "courseD_artist_nestedLoops32022": "使用你的新技能，快速画出这座建筑物的最后一排窗户。\n\n窗口是 20 个像素的正方形，每个方块间隔 20 个像素。"
       }
     }
   }

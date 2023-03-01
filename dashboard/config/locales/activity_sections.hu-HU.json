@@ -26,7 +26,7 @@
           "progression_name": "Negyedek"
         },
         "2ab803d8-6973-49d0-b987-e023b6780b6b": {
-          "progression_name": "Basszus, közép- és magashangok"
+          "progression_name": "Basszus, közép, magas"
         },
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Gyorsítás, lassítás"
@@ -575,10 +575,12 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Bevezető",
-          "description": "**Beszéljétek meg:**\n\n-   _Mit tudunk a vírus terjedéséről?_\n-   _Miért terjedhet a vírus gyorsabban egy városban?_\n-   _Mi segíthet lassítani a vírus terjedését?_\n\nEnnek a megbeszélésnek az a célja, hogy a tanulók felfrissítsék előzetes tudásukat és felírják ötleteik a táblára. Ez egyben lehetőség arra is, hogy megvizsgáljunk néhány tévhitet a vírusok terjedésével kapcsolatban."
+          "description": "**Beszéljétek meg:**\n\n- _Mit tudunk a vírus terjedéséről?_\n- _Miért terjedhet a vírus gyorsabban egy városban?_\n- _Mi segíthet lassítani a vírus terjedését?_\n\nEnnek a megbeszélésnek az a célja, hogy a tanulók felfrissítsék előzetes tudásukat és felírják ötleteik a táblára. Ez egyben lehetőség arra is, hogy megvizsgáljunk néhány tévhitet a vírusok terjedésével kapcsolatban."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
-          "description": "\\_A mai leckében a Szörnyvárosba látogattok, ahol egy vírusjárvány készül kitörni. Dr. Szörnynek szüksége van a segítségetekre a vírus terjedésének lassításához.\n\n_Egy járványszimulátort készítetek a Sprite laboratóriumban, és ezt felhasználva megértitek a vírus terjedését. Majd abban is segítetek, hogy a szörnyek újra egészségesek legyenek!_"
+          "name": "",
+          "description": "_A mai leckében a Szörnyvárosba látogattok, ahol egy vírusjárvány készül kitörni. Dr. Szörnynek szüksége van a segítségetekre a vírus terjedésének lassításához.\n\n_Egy járványszimulátort készítetek a Sprite laboratóriumban, és ezt felhasználva megértitek a vírus terjedését. Majd abban is segítetek, hogy a szörnyek újra egészségesek legyenek!_",
+          "progression_name": ""
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "description": "**Mit kell tenni:** Olvassátok el az osztállyal a _Üdvözlünk a Szörnyvárosban_ című könyvet.",
@@ -588,7 +590,7 @@
           "description": "**Mit kell tenni:** Az előző leckére építve ismételjétek át a diákokkal a szókincset, a **modelleket és szimulációkat**. A szimuláció egy folyamat vagy egy rendszer számítógépes modellje."
         },
         "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "Ma egy olyan helyet fogunk életre kelteni kódolással, mint a Szörnyváros. Ebben a szimulációban sprite-okat használtok a szörnyek ábrázolására. A sprite-ok különböző jelmezeket viselnek, ezekkel közlik velünk, hogy betegek-e vagy egészségesek. A szörnyek mozgatásához viselkedéseket is használtok. Végül pedig eseményeket, amikkel a sprite-ok jelmezét tudjátok megváltoztatni, amikor két sprite összeér a képernyőn. Ez mutatja azt, amikor az egyik szörny átadja a vírust egy másiknak. Meg tudjátok jósolni, hogy mi fog történni a Szörnyváros szomszédaival, és segítetek nekik visszanyerni az egészségüket!\\_ "
+          "description": "Ma egy olyan helyet fogunk életre kelteni kódolással, mint a Szörnyváros. Ebben a szimulációban sprite-okat használtok a szörnyek ábrázolására. A sprite-ok különböző jelmezeket viselnek, ezekkel közlik velünk, hogy betegek-e vagy egészségesek. A szörnyek mozgatásához viselkedéseket is használtok. Végül pedig eseményeket, amikkel a sprite-ok jelmezét tudjátok megváltoztatni, amikor két sprite összeér a képernyőn. Ez mutatja azt, amikor az egyik szörny átadja a vírust egy másiknak. Meg tudjátok jósolni, hogy mi fog történni a Szörnyváros szomszédaival, és segítetek nekik visszanyerni az egészségüket!_ "
         },
         "df13fa93-37df-4188-837d-462c48179625": {
           "description": "**Mit kell tenni:** Ültesd a diákokat a számítógépükhöz, és vegyék a készségfejlesztő részt, és kövessék az egyes szintekhez tartozó utasításokat. Ha a tanulók hamarabb végeznek ezzel a résszel, akkor a kódolással való kísérletezést folytathatják a 6. szinten, amíg az egész osztály készen nem áll a következő szintre.",
@@ -605,11 +607,11 @@
           "description": "_Szimulációk segítségével könnyen meg lehet ismerni olyan dolgokat, amelyek a való világban nehezen megfigyelhetőek. Segítenek a tudósoknak problémákat megoldani, a problémamegoldás módját megtalálni, és új ötleteket biztonságosan és hatékonyan letesztelni. A szimulációtok segítségével megmutathatjátok, hogyan néz ki egy víruskitörés a Szörnyvárosban._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Beszéljétek meg:**\n\n-   Miért hasznosak a szimulációk a való világban? \n-   Hogyan segítenek a szimulációk megérteni a körülöttünk lévő világot? \n-   Hogyan lehet ötletek tesztelését szimulációk segítségével javítani? \n\nA megbeszélés célja a diákokkal megértetni, hogy szimulációk segítségével komplex rendszereket lehet modellezni interaktív módon. Azt is látniuk kell, hogy szimulációk segítségével az emberek gyorsan, olcsón és biztonságosan tesztelhetik ötleteiket. "
+          "description": "**Beszéljétek meg:**\n\n- Miért hasznosak a szimulációk a való világban? \n- Hogyan segítenek a szimulációk megérteni a körülöttünk lévő világot? \n- Hogyan lehet ötletek tesztelését szimulációk segítségével javítani? \n\nA megbeszélés célja a diákokkal megértetni, hogy szimulációk segítségével komplex rendszereket lehet modellezni interaktív módon. Azt is látniuk kell, hogy szimulációk segítségével az emberek gyorsan, olcsón és biztonságosan tesztelhetik ötleteiket. "
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Tükrözés",
-          "description": "**Segítség:**\n\n-   Miben hasonlít ez a szimuláció a való világhoz? Miben különbözik?\n-   Mit változtatnál meg a szimulációdban, mit adnál hozzá a szimulációdhoz?"
+          "description": "**Segítség:**\n\n- Miben hasonlít ez a szimuláció a való világhoz? Miben különbözik?\n- Mit változtatnál meg a szimulációdban, mit adnál hozzá a szimulációdhoz?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Bevezető",
@@ -698,7 +700,7 @@
           "progression_name": "Negyedek"
         },
         "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
-          "progression_name": "Basszus, közép- és magashangok"
+          "progression_name": "Basszus, közép, magas"
         },
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Gyorsítás, lassítás"
@@ -762,20 +764,25 @@
         "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
           "name": "Fő tevékenység (új)"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
           "tips": [
             "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás][0] segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+          "name": "",
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n- **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás][0] segítségével tartja meg.  \n\n- **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n- **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Helló világ"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n-   Mit mondhatnának még a sprite-jaitok?\n-   Mit csináljanak a sprite-ok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n- Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n- Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n- Mit mondhatnának még a sprite-jaitok?\n- Mit csináljanak a sprite-ok, amikor rákattintotok?\n- Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Tükrözés",
@@ -1596,6 +1603,9 @@
             null
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Felfedezés"
+        },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Példa projektekre"
         },
@@ -1968,6 +1978,9 @@
         "26e345f8-d754-44a5-9197-e0554116562e": {
           "name": "Tükrözés"
         },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Felfedezés"
+        },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Példa projektekre"
         },
@@ -1990,14 +2003,21 @@
           ]
         },
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
+          "name": "Kulcsszavak: ",
+          "description": "-   **digitális lábnyom**: lista az online tevékenységiedről, beleértve a felkeresett webhelyeket és az általad megosztott tartalmaidat\n-   **állandóság**: valami, ami örökké tart\n-   **személyes információ**: rólad szóló információ, ami alapján beazonosítható vagy\n-   **nyomvonal**: ösvény vagy útvonal\n\n**A lecke előtt**: Vágd ki a négyzeteket a [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) táblából, az egyes állatok négyzeteit külön kupacokba rendezve.\n\n**Mondd**: _Ma egy videót fogunk megnézni, aminek a címe \"Kövesd a digitális nyomvonalról\".  Hallott már valaki közületek a \"nyomvonalról\"?_\n\nKérd meg a tanulókat, hogy döntsék el, hogy a nyomvonal _egy ösvény vagy egy útvonal, amin követhető vagy_. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
           "progression_name": "Videó: Digitális nyomok követése"
         },
+        "f49f8c12-9094-46d3-ace0-c593eef41ab9": {
+          "description": "**Megtekintés** a [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) video on [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). A videó közben a tanulók nagyon figyeljenek azokra az információkra, melyek alkalmasak az online megosztásra és melyek nem.\n\n**Mondd**: \\_A videóban a digitális lábnyomról van szó. Mi a digitális lábnyom? \\_\n\nBeszéld meg a tanulókkal, hogy egy **digitális lábnyom** egy _adat (vagy nyom) arról, amit a gyerek online csinál, beleértve a meglátogatott webhelyeket és az általa megosztott dolgokat_! ([Slide 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))\n\n**Kérdés**: \\_Milyen információkat NEM szabad online megosztani? \\_\n\nMiután a diákoknak lehetőségük volt megosztásra, indulhat a [Slide 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) és tisztázzátok: _Személyes információ_ például a _teljes név, lakcím, telefonszám, az életkor, a születésnap, de az iskola neve is._\n\nDefiniáld a **személyes információt**: \\_információk rólad, amelyek felhasználhatók annak azonosítására, hogy pontosan ki vagy. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Kérdés**: \\_Milyen információk alkalmasak online megosztásra? \\_\n\nMiután a tanulóknak lehetőségük volt megosztásra, indulhat a [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) és tisztázzátok: _Személyes adat_ például a _hobbi, a kedvenc dolgok._"
+        },
         "0d42ae11-f1d5-498b-b68f-f559173be646": {
+          "name": "Hol rontottam el?",
           "tips": [
             null
           ]
         },
         "2f04713f-ee5f-4ad7-8696-b8b8b6683fb6": {
+          "description": "**Beszéljétek meg:** Kérdezd meg a diákokat, hogy szerintük te hogyan érzed magad, ha nem tudnak válaszolni egy kérdésedre. Azt sugallhatják, hogy \"őrült” vagy \"szomorú”. Ahelyett, hogy azt mondanád, hogy \"nem”, írd le, hogy kissé őrültnek érezted magad, egy kicsit szomorúnak, és kissé zavartnak. Amikor ezeket az érzelmeket összerakod, \"frusztrációnak” nevezett érzést kapsz. Amikor \"frusztrált” vagy, őrült vagy, szomorú, vagy zavart - és kísértésbe eshetsz, hogy feladd -, de a frusztráció természetes érzés, és arra utal, hogy tanulni készülsz valamit! Ahelyett, hogy abbahagynád, gyakorold a kitartást! Próbálkozz újra és újra. Néhány alkalom után meg fogod érteni, hogy a hibakeresés megoldja a problémáidat!",
           "tips": [
             null
           ]
@@ -2062,7 +2082,11 @@
           "name": "Tükrözés"
         },
         "4709a0b0-10cf-444a-95c2-79194cef926d": {
-          "name": "Bevezető"
+          "name": "Bevezető",
+          "description": "#### Szójegyzék\n\nEz a lecke három új és fontos fogalmat tartalmaz:\n\n-   **Bug** - _Mondd velem: bogárka._\n\nValami, ami rosszul működik. Egy hiba.\n\n-   **Debugging** - _Mondd velem: bogártalanítás._\n\nMagyarul hibakeresés. Meg kell találáni a hibát és javítani kell.\n\n-   **Perzisztencia** - _Mondd velem: perzisztencia._ \n\nMagyarul kitartás. Sokféleképpen kell próbálkozni, különböző módszereket kipróbálva, akár többször is."
+        },
+        "e4f833fe-43bb-4538-8ceb-e014712357b2": {
+          "name": "Programozás az aratóval"
         },
         "90d01840-ab32-4ff1-9603-1a400df6c870": {
           "tips": [
@@ -2089,6 +2113,9 @@
         },
         "aed1d975-8125-46e1-b0dd-6c636c59a8f2": {
           "name": "Tükrözés"
+        },
+        "72a55c86-9f78-4968-bac1-a2e6b3278fa1": {
+          "name": "Ismételd utánam"
         },
         "d9e76adf-9b37-4e7d-b1b2-0910919aa6d3": {
           "progression_name": "Videó: Elszabadul a pörgés"
@@ -2212,6 +2239,9 @@
           "tips": [
             null
           ]
+        },
+        "fb86d63a-88cc-40a1-a21e-eef2197c9587": {
+          "name": "Királyi csata eseményekkel"
         },
         "415d59cc-8ee3-4a80-95fe-0099c6a3515c": {
           "progression_name": "Videó: Bevezetés a Play laborba"
@@ -3091,6 +3121,9 @@
         "951923b1-6912-477c-b97f-b4f9d6f71f62": {
           "name": "Bevezető"
         },
+        "4751f547-860d-4156-abbd-9730989185de": {
+          "name": "Programozás az aratóval"
+        },
         "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
           "tips": [
             null
@@ -3262,6 +3295,9 @@
         },
         "813d23e7-c45b-4fe4-b010-6f03fe92e572": {
           "name": "Bevezető"
+        },
+        "7f720bee-3f9a-4837-805d-3686a97947ba": {
+          "name": "Királyi csata eseményekkel"
         },
         "f030f807-4ee3-45a2-901b-dc4a5c465a1e": {
           "progression_name": "Miniprojekt: Királyi csata"
@@ -12539,11 +12575,11 @@
           "description": "Tudtad, hogy az informatika nagyon kreatív tud lenni? Valójában kóddal művészetet is létre lehet hozni. Emlékeztetőül: a kód olyan utasítások összessége, amelyeket a számítógép képes megérteni. Ahogyan a festék színeinek kiválasztása, úgy a kód megírása is lehetőséget adhat a kreativitásod kifejezésére! \n\nMa a költészetet fogjuk használni a kreatív kódolás ösztönzésére. Tudja valaki, mi az a költészet? Van kedvenc verse vagy költője? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset][0], és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
+          "description": "** Olvassatok együtt verset:** Olvassatok el együtt [néhány verset][0], és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Versművészet",
-          "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n-   **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n-   **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n-   **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n-   **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n-   **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
+          "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n- **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n- **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n- **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n- **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n- **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
           "description": "#### Szintenkénti támogatás\n\n**1. szint:** Bátorítsd a tanulókat, hogy olvassák végig a verset. Ezután kérd meg a tanulókat, hogy találjanak olyan háttérszínt vagy hatást, amely megfelel az általuk választott vers hangulatának.\n\n**2. szint:** Ebben a példában a tanulók először olvassák el a verset egyedül, majd nyomják meg a Futtatás gombot. Megkérdezheted a tanulót, hogy a programozó által választott hang és effektek illeszkednek-e a vers hangulatához. Kérd meg a tanulókat, hogy fejtsék ki véleményüket.\n\n**3. szint:** Ez a szint a hangokat mutatja be, a tanulók használhatnak fejhallgatót, ha van. \n\n**4. szint:** Kérd meg a tanulókat, hogy olvassák el a verset, és keressék meg azt a sort, ahol a vers hangulata megváltozik, vagy ahol a költő új képet vezet be. Az eseményblokk segítségével adjanak megfelelő effekteket a vers azonosított soraihoz.\n\n**5. szint:** Ebben a példában a tanulók először olvassák el a verset egyedül, majd nyomják meg a Futtatás gombot. Kérdezd meg a tanulót, hogy a képek illeszkednek-e a vers szavaihoz. Kérd meg őket, hogy fejtsék ki véleményüket.\n\n**6., 7., 8. szint:** Lásd az \"Dicsérd a hibákat\" című részt az Általános támogatás szakaszban. Bátorítsd a tanulókat, hogy az eseményblokkokkal egynél több átmenetet tartalmazó programokat építsenek.\n\n**9. szint:** Bátorítsd a tanulókat, hogy olvassák végig a legördülő menüben található összes verset, hogy találjanak egyet, amelyik tetszik nekik. Mondd el a tanulóknak, hogy ezen az utolsó szinten elkészített verseiket megoszthatják barátaikkal és családtagjaikkal. Itt az ideje, hogy összerakjuk a kódolási és az ELA készségeket! "
@@ -13065,14 +13101,21 @@
           ]
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "name": "Kulcsszavak: ",
+          "description": "-   **digitális lábnyom**: lista az online tevékenységiedről, beleértve a felkeresett webhelyeket és az általad megosztott tartalmaidat\n-   **állandóság**: valami, ami örökké tart\n-   **személyes információ**: rólad szóló információ, ami alapján beazonosítható vagy\n-   **nyomvonal**: ösvény vagy útvonal\n\n**A lecke előtt**: Vágd ki a négyzeteket a [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) táblából, az egyes állatok négyzeteit külön kupacokba rendezve.\n\n**Mondd**: _Ma egy videót fogunk megnézni, aminek a címe \"Kövesd a digitális nyomvonalról\".  Hallott már valaki közületek a \"nyomvonalról\"?_\n\nKérd meg a tanulókat, hogy döntsék el, hogy a nyomvonal _egy ösvény vagy egy útvonal, amin követhető vagy_. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
           "progression_name": "Videó: Digitális nyomok követése"
         },
+        "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
+          "description": "**Megtekintés** a [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) video on [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). A videó közben a tanulók nagyon figyeljenek azokra az információkra, melyek alkalmasak az online megosztásra és melyek nem.\n\n**Mondd**: \\_A videóban a digitális lábnyomról van szó. Mi a digitális lábnyom? \\_\n\nBeszéld meg a tanulókkal, hogy egy **digitális lábnyom** egy _adat (vagy nyom) arról, amit a gyerek online csinál, beleértve a meglátogatott webhelyeket és az általa megosztott dolgokat_! ([Slide 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))\n\n**Kérdés**: \\_Milyen információkat NEM szabad online megosztani? \\_\n\nMiután a diákoknak lehetőségük volt megosztásra, indulhat a [Slide 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) és tisztázzátok: _Személyes információ_ például a _teljes név, lakcím, telefonszám, az életkor, a születésnap, de az iskola neve is._\n\nDefiniáld a **személyes információt**: \\_információk rólad, amelyek felhasználhatók annak azonosítására, hogy pontosan ki vagy. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Kérdés**: \\_Milyen információk alkalmasak online megosztásra? \\_\n\nMiután a tanulóknak lehetőségük volt megosztásra, indulhat a [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) és tisztázzátok: _Személyes adat_ például a _hobbi, a kedvenc dolgok._"
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "Hol rontottam el?",
           "tips": [
             null
           ]
         },
         "7d459337-19c7-4d00-a1de-ec2286ea373c": {
+          "description": "**Beszéljétek meg:** Kérdezd meg a diákokat, hogy szerintük te hogyan érzed magad, ha nem tudnak válaszolni egy kérdésedre. Azt sugallhatják, hogy \"őrült” vagy \"szomorú”. Ahelyett, hogy azt mondanád, hogy \"nem”, írd le, hogy kissé őrültnek érezted magad, egy kicsit szomorúnak, és kissé zavartnak. Amikor ezeket az érzelmeket összerakod, \"frusztrációnak” nevezett érzést kapsz. Amikor \"frusztrált” vagy, őrült vagy, szomorú, vagy zavart - és kísértésbe eshetsz, hogy feladd -, de a frusztráció természetes érzés, és arra utal, hogy tanulni készülsz valamit! Ahelyett, hogy abbahagynád, gyakorold a kitartást! Próbálkozz újra és újra. Néhány alkalom után meg fogod érteni, hogy a hibakeresés megoldja a problémáidat!",
           "tips": [
             null
           ]
@@ -13139,6 +13182,9 @@
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
           "name": "Bevezető"
         },
+        "478f0185-2792-46bb-8d0d-e88788ebb722": {
+          "name": "Programozás az aratóval"
+        },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
             null
@@ -13164,6 +13210,9 @@
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Tükrözés"
+        },
+        "8d66f089-ec12-474c-9410-cff9a1d9042a": {
+          "name": "Ismételd utánam"
         },
         "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
           "progression_name": "Videó: Elszabadul a pörgés"
@@ -13287,6 +13336,9 @@
           "tips": [
             null
           ]
+        },
+        "707682de-e28a-4f30-8033-e5568bc30572": {
+          "name": "Királyi csata eseményekkel"
         },
         "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
           "progression_name": "Videó: Bevezetés a Play laborba"
@@ -13996,7 +14048,11 @@
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Tükrözés"
         },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "Hol rontottam el?"
+        },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
+          "description": "**Beszéljétek meg:** Kérdezd meg a diákokat, hogy szerintük te hogyan érzed magad, ha nem tudnak válaszolni egy kérdésedre. Azt sugallhatják, hogy \"őrült” vagy \"szomorú”. Ahelyett, hogy azt mondanád, hogy \"nem”, írd le, hogy kissé őrültnek érezted magad, egy kicsit szomorúnak, és kissé zavartnak. Amikor ezeket az érzelmeket összerakod, \"frusztrációnak” nevezett érzést kapsz. Amikor \"frusztrált” vagy, őrült vagy, szomorú, vagy zavart - és kísértésbe eshetsz, hogy feladd -, de a frusztráció természetes érzés, és arra utal, hogy tanulni készülsz valamit! Ahelyett, hogy abbahagynád, gyakorold a kitartást! Próbálkozz újra és újra. Néhány alkalom után meg fogod érteni, hogy a hibakeresés megoldja a problémáidat!",
           "tips": [
             null
           ]
@@ -15165,6 +15221,9 @@
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
           "name": "Bevezető"
         },
+        "0684b025-9c16-437c-936c-d9743cad2d94": {
+          "name": "Programozás az aratóval"
+        },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
             null
@@ -15336,6 +15395,9 @@
         },
         "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
           "name": "Bevezető"
+        },
+        "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
+          "name": "Királyi csata eseményekkel"
         },
         "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
           "progression_name": "Miniprojekt: Királyi csata"

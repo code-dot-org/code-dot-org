@@ -1058,17 +1058,34 @@ en:
             '1': lemon juice
             '3': baking soda
             '5': both
+      DansBlocks_testRectangle:
+        text: 'make rectangle x: [X][0] y: [Y][1] w: [W][2] h: [H][3] color: [COLOR][4]'
+      FunctionBlocks_addEightBlock:
+        text: addEight
+      FunctionBlocks_addFiveBlock:
+        text: addFive
+      FunctionBlocks_addFourBlock:
+        text: addFour
+      FunctionBlocks_addNineBlock:
+        text: addNine
+      FunctionBlocks_addOneBlock:
+        text: addOne
+      FunctionBlocks_addSevenBlock:
+        text: addSeven
+      FunctionBlocks_addSixBlock:
+        text: addSix
+      FunctionBlocks_addThreeBlock:
+        text: addThree
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
       FunctionBlocks_communicate:
         text: Communicate [VAR1][0] with [SPRITE1COSTUME][1]
       FunctionBlocks_makeManipulative2:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites  [BEHAVIOR][2]
       FunctionBlocks_representManipulative:
-        text: represent [NUM][0] new [ANIMATION_NAME][1] sprites [BEHAVIOR][2]
-        options:
-          BEHAVIOR:
-            draggable(): being draggable
-            wandering(): wandering
-            shrinking(): shrinking
+        text: represent [NUM][0] new [ANIMATION_NAME][1] sprites
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] represent [NUM][0] new [ANIMATION_NAME][1] sprites"
       FunctionBlocks_spriteSayVar:
         text: "[SPRITE][0]say[TEXT1][1]"
       gamelab_addBehaviorSimple:
@@ -2240,6 +2257,23 @@ en:
             '"sound://category_achievements/peaceful_win_1.mp3"': win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': whirl
             '"sound://category_achievements/peaceful_win_6.mp3"': wind chimes
+      Poetry_playSoundOptionsSpace:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       Poetry_setAuthor:
         text: set author [AUTHOR][0]
       Poetry_setBackground:
@@ -2644,6 +2678,16 @@ en:
             left: left ↺
       storylab_clearHeadings:
         text: clear headings
+      storylab_setForegroundEffect2:
+        text: do [EFFECT][0] effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"rain"': rain
+            '"starburst"': starburst
+            '"twinkling"': twinkling
       storylab_setHeading:
         text: set heading [HEADING][0]
       storylab_setPromptWithChoice:

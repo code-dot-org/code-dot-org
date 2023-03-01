@@ -22,22 +22,22 @@ class Services::RegistrationReminder
   # reminder email now.
   # @return [Enumerable<Pd::Application::ApplicationBase>]
   def self.applications_needing_first_reminder
-    # The 'accepted_no_cost_registration' email was sent at least two weeks ago
+    # The 'accepted' email was sent at least one week ago
     # No 'registration_reminder' has been sent yet.
-    # Not enrolled in a workshop since the 'accepted_no_cost_registration' email was sent
+    # Not enrolled in a workshop since the 'accepted' email was sent
     applications_awaiting_enrollment.
-      where("accepted_no_cost_registration.sent_at <= ?", 2.weeks.ago).
-      where("registration_reminder.id is null")
+      where("accepted.sent_at <= ?", 1.week.ago).
+      where(registration_reminder: {id: nil})
   end
 
   # Locate all applications that are eligible to receive their second workshop registration
   # reminder email now.
   # @return [Enumerable<Pd::Application::ApplicationBase>]
   def self.applications_needing_second_reminder
-    # Both 'accepted_no_cost_registration' and 'registration_reminder' emails were sent.
+    # Both 'accepted' and 'registration_reminder' emails were sent.
     # Only one 'registration_reminder' email has been sent.
     # The 'registration_reminder' email was sent at least one week ago.
-    # Not enrolled in a workshop since the 'accepted_no_cost_registration' email was sent.
+    # Not enrolled in a workshop since the 'accepted' email was sent.
     applications_awaiting_enrollment.
       where('registration_reminder.sent_at <= ?', 1.week.ago).
       reject {|a| a.emails.where(email_type: 'registration_reminder').count > 1}
@@ -53,9 +53,9 @@ class Services::RegistrationReminder
     # - SELECT DISTINCT since we never want to list an application more than once.
     Pd::Application::ApplicationBase.
       joins(<<~SQL).
-        inner join pd_application_emails accepted_no_cost_registration
-        on pd_applications.id = accepted_no_cost_registration.pd_application_id
-        and accepted_no_cost_registration.email_type = 'accepted_no_cost_registration'
+        inner join pd_application_emails accepted
+        on pd_applications.id = accepted.pd_application_id
+        and accepted.email_type = 'accepted'
       SQL
       joins(<<~SQL).
         left outer join pd_application_emails registration_reminder
@@ -65,10 +65,10 @@ class Services::RegistrationReminder
       joins(<<~SQL).
         left outer join pd_enrollments
         on pd_applications.user_id = pd_enrollments.user_id
-        and pd_enrollments.created_at >= accepted_no_cost_registration.sent_at
+        and pd_enrollments.created_at >= accepted.sent_at
       SQL
       where("pd_applications.created_at >= ?", REMINDER_START_DATE).
-      where('pd_enrollments.id is null').
+      where(pd_enrollments: {id: nil}).
       distinct
   end
 end

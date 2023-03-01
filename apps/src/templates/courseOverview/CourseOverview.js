@@ -31,6 +31,8 @@ import SafeMarkdown from '../SafeMarkdown';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class CourseOverview extends Component {
   static propTypes = {
@@ -60,6 +62,7 @@ class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
+    participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -71,6 +74,10 @@ class CourseOverview extends Component {
     const showRedirectDialog =
       props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    analyticsReporter.sendEvent(EVENTS.COURSE_OVERVIEW_PAGE_VISITED_EVENT, {
+      'unit group name': props.name
+    });
   }
 
   onChangeVersion = versionId => {
@@ -133,7 +140,8 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn
+      isSignedIn,
+      participantAudience
     } = this.props;
 
     const showNotification =
@@ -210,11 +218,12 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             id={id}
-            title={title}
+            courseName={title}
             teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             isInstructor={viewAs === ViewType.Instructor}
+            participantAudience={participantAudience}
           />
         </div>
         {scripts.map((script, index) => (

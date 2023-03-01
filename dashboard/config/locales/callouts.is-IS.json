@@ -1819,9 +1819,6 @@
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
-        "courseC_artist_prog2_2021": {
-          "slider": "Hér getur þú látið forritið þitt keyra hægar."
-        },
         "CSD U3 Variables Predict Where XY_2021": {
           "grid": "Smelltu hér til að sýna grindina."
         },
@@ -2278,6 +2275,37 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nýr kubbur!"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Hér getur þú látið forritið þitt keyra hægar."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Notaðu þennan kubb til að láta kvika tala.",
+          "hello_world_make_sprite": "Notaðu þennan kubb til að búa til kvika."
         }
       }
     }

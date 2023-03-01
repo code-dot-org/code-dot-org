@@ -28,6 +28,7 @@ export default function PreviewPaneHeader({
           isRtl={false}
           style={styles.transparent}
           leftJustified
+          ariaLabel={isCollapsed ? i18n.showPreview() : i18n.hidePreview()}
         />
       </PaneSection>
       <PaneSection className={'pane-header-section pane-header-section-center'}>

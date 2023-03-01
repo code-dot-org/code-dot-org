@@ -3,26 +3,34 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Physical Computing
+# Teaching Creating Apps for Devices
 
-##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Physical Computing unit. 
+##### Welcome! This professional learning experience is designed help you prepare to teach Code.org's Creating Apps for Devices unit. 
 
 <img src="https://images.code.org/3b3e70c43d22260c1cd76d409a94f0b3-image-1654802658623.png" alt="Image of a Circuit Playground" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
-## In this module, you will:
+## You will:
 
-* ##### Get an introduction to Physical Computing.
+* ##### Get an introduction to Creating Apps for Devices.
+* ##### Set up your Circuit Playground.
 * ##### Practice key concepts included in the unit.
-* ##### Engage with App Lab and the Circuit Playground.
-* ##### Explore end of chapter projects.
+* ##### Preview end of chapter projects.
+* ##### Consider the role of the teacher in a computer science classroom.
 
 
-### **Suggested time:** 90 minutes
+### **Suggested time:** 100 minutes
 
-##### **NOTE:** You will need a Circuit Playground to complete this module. 
+##### **NOTE:** You will need a Circuit Playground to complete this professional learning experience. 
 
-## Let's get started!
+# Let's get started with the first lesson!
+
+## You will:
+
+* ##### Get an introduction to Creating Apps for Devices.
+* ##### Set up your Circuit Playground.
+
+### **Suggested time:** 20 minutes
 
 <div style="clear:both"/>
 

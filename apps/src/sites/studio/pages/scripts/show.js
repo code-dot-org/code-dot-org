@@ -120,6 +120,7 @@ function initPage() {
         showAssignButton={scriptData.show_assign_button}
         isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}
+        userType={scriptData.user_type}
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
@@ -132,6 +133,8 @@ function initPage() {
         }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
+        publishedState={scriptData.publishedState}
+        participantAudience={scriptData.participantAudience}
       />
     </Provider>,
     mountPoint

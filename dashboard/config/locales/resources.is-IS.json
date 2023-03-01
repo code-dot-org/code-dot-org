@@ -247,11 +247,23 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Myndband"
         },
+        "all_resources/coursea/2022": {
+          "url": "/s/coursea-2022/resources"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/coursea-2022/standards"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/coursea-2022/vocab"
+        },
         "implementation_guide/coursea/2022": {
           "name": "Leiðarvísir innleiðingar"
         },
         "teacher_forum/coursea/2022": {
           "name": "Kennaraspjall"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "type": "Myndband"
@@ -1098,6 +1110,11 @@
         },
         "vocabulary_3/csd/2017": {
           "name": "Orðaforði"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "implementation_guide/coursef/2021": {
           "name": "Leiðarvísir innleiðingar"

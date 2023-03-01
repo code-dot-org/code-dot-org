@@ -2509,7 +2509,7 @@ ka-GE:
         - text: ლურჯი
         - text: მწვანე
         - {}
-        - {}
+        - text: ყვითელი
         - {}
         - text: წითელი
         questions:
@@ -8917,7 +8917,7 @@ ka-GE:
         - {}
         - {}
         - text: სხვა
-        - {}
+        - text: N/A
         questions:
         - {}
       pre-assessment survey q28:

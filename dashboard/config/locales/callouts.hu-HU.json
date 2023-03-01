@@ -699,11 +699,11 @@
           "snowflake_dropdown": "Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!"
         },
         "frozen line": {
-          "run": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat!",
+          "run": "Nyomd meg a \"Futtatás” gombot, hogy kipróbáld a programodat!",
           "move_elsa_forward": "Húzd a \"menj előre\" blokkot és illeszd azt a \"futtatáskor\" blokk alá ahhoz, hogy Elsa előre lépjen"
         },
         "frozen perpendicular": {
-          "turn_elsa": "Használd a \"fordítsd\" blokkot Elsa elfordításához. A legördülő menüben lévő szám határozza meg, hogy Elsa mennyire fordul el"
+          "turn_elsa": "Használd a \"fordulj\" blokkot Elsa elfordításához. A legördülő menüben lévő szám határozza meg, hogy Elsa mennyire fordul el"
         },
         "frozen snowflake branch": {
           "frozen_snowflake_branch": "Használd a \"hozz létre egy hópehely ágat\" blokkot"
@@ -1207,7 +1207,7 @@
           "gradek_adventurer_loops2_1": "Ez a szám azt mondja el, hogy ezek közül a blokkok közül mennyit használhatsz a feladvány megoldásához."
         },
         "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+          "courseC_maze_programming2_1": "Ez itt az eszköztár, de hívhatnánk akár szerszámosládának vagy toolboxnak is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
         },
         "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "Kattints a villanykörtére, ha segítségre van szükséged!"
@@ -1368,6 +1368,98 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Új blokk!"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Kattints a kék gombra a kinyitáshoz és a bezáráshoz."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Miután a blokkokat egymáshoz csatlakoztattad, nyomj \"Futtatás\" gombra, hogy elinduljon a program!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "Használd ezt a blokkot, hogy egy kincset felvegyél.  "
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Ide kattints legelőször!"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "Milyen kódot kell beírnod ebbe a függvénybe?",
+          "courseF_bee_functions_challenge1_2": "Az \"nektár vagy méz ellenőrzése” függvényt felhasználhatod, ha átszerkeszted kicsit, hogy képes legyen több mézet is készíteni."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "Milyen kódot kell beírnod ebbe a függvénybe?",
+          "courseF_bee_functions_challenge1_2": "Az \"nektár vagy méz ellenőrzése” függvényt felhasználhatod, ha átszerkeszted kicsit, hogy képes legyen több mézet is készíteni."
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "Kattints a \"szerkesztés” gombra a függvény frissítéséhez, hogy a magasság paramétert használja."
         }
       }
     }

@@ -1383,6 +1383,7 @@ cs:
               display_name: Přehled
         dance-2019:
           title: Taneční večírek (2019)
+          description_short: Naprogramujte si taneční párty ke sdílení se svými přáteli. K vidění a slyšení bude Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disneyho „Encanto,“ a další!
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
           student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
           name: dance-2019
@@ -2684,6 +2685,30 @@ cs:
           lesson_groups:
             lessonGroup-3:
               display_name: Obsah
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Proměnné
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Jednorozměnrá (1D) pole
+            lesson-3:
+              name: Cykly "For"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        hello-world-space-2022:
+          title: 'Hello World: Prostora'
+        hello-world-soccer-2022:
+          title: 'Hello World: Fotbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2747,12 +2772,35 @@ cs:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Seznamy
+              display_name: Data
             csp_loops:
               display_name: Cykly
             csp_project:
+              display_name: Projekt
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Seznamy
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-5:
               display_name: Projekt
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
               display_name: '9.  lekce: Data'
+        csp-playground:
+          description_audience: Pisatelé životopisů
+          description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi životopisu
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab

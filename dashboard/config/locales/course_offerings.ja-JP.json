@@ -63,7 +63,10 @@
         "step": "ステップ",
         "coursee-ramp": "コースランプ",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "サッカー"
+        "soccer": "サッカー",
+        "hello-world-space": "ハローワールド:スペース",
+        "hello-world-soccer": "ハローワールド:サッカー",
+        "playground": "遊び場"
       }
     }
   }

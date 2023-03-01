@@ -138,11 +138,11 @@ fr:
           name: infini
         algebrademo:
           title: Démo de l'algèbre
-          description: Une poignée de puzzles pour montrer l'environnement et le langage
-            de programmation utilisé dans Code.org CS en algèbre
-          description_short: Une poignée de puzzles pour montrer l'environnement et
+          description: Une poignée de casse-têtes pour montrer l'environnement et
             le langage de programmation utilisé dans Code.org CS en algèbre
-          student_description: Une poignée de puzzles pour montrer l'environnement
+          description_short: Une poignée de casse-têtes pour montrer l'environnement
+            et le langage de programmation utilisé dans Code.org CS en algèbre
+          student_description: Une poignée de casse-têtes pour montrer l'environnement
             et le langage de programmation utilisé dans Code.org CS en algèbre
         netsim:
           title: Simulateur d'Internet
@@ -183,11 +183,11 @@ fr:
             ? Essaie notre tutoriel de Code Flappy !
           name: flappy
         jigsaw:
-          title: Puzzle
-          description: Essaie notre tutoriel pour les pièces de puzzle
-          description_short: Essaie notre tutoriel pour les pièces de puzzle
-          student_description: Essaie notre tutoriel pour les pièces de puzzle
-          name: pièces de Puzzle
+          title: Casse-tête
+          description: Essaie notre tutoriel pour les pièces de casse-tête
+          description_short: Essaie notre tutoriel pour les pièces de casse-tête
+          student_description: Essaie notre tutoriel pour les pièces de casse-tête
+          name: pièces de Casse-tête
         step:
           title: Étape
           description: Tutoriel par étapes
@@ -202,19 +202,19 @@ fr:
           student_description: Découvre les bases des sciences informatiques grâce
             aux personnages de Angry Birds et de Plants vs  Zombies !
         CodeStudioPuzzleChallenge:
-          title: Défi des énigmes de Code Studio
-          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux
-            !
+          title: Défi des casse-têtes de Code Studio
+          description: Essayez ces amusantes casse-têtes de codage. Faites de votre
+            mieux !
           description_short: Relevez le défi !
-          student_description: Essayez ces amusantes énigmes de codage. Faites de
-            votre mieux !
+          student_description: Essayez ces amusantes casse-têtes de codage. Faites
+            de votre mieux !
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutoriel - Défi d'énigmes sur Code Studio
-          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux
-            !
+          title: Tutoriel - Défi d' casse-têtes sur Code Studio
+          description: Essayez ces amusantes casse-têtes de codage. Faites de votre
+            mieux !
           description_short: Relevez le défi !
-          student_description: Essayez ces amusantes énigmes de codage. Faites de
-            votre mieux !
+          student_description: Essayez ces amusantes casse-têtes de codage. Faites
+            de votre mieux !
         algebraPD:
           title: Informatique en DP d'algèbre
         algPDmiami:
@@ -788,25 +788,25 @@ fr:
         applab-1hour:
           title: 1 Heure d'Atelier au Labo des Applis
           description_audience: Les Collégiens et les Lycéens
-          description: Cet atelier est conçu pour donner aux étudiants une introduction
-            de base au Labo des Applis en 1 heure. Les étudiants devraient être en
-            mesure de venir avec différents antécédents en informatique et avoir du
-            plaisir à créer quelque chose.
-          student_description: Cet atelier est conçu pour donner aux étudiants une
-            introduction de base au Labo des Applis en 1 heure. Les étudiants devraient
-            être en mesure de venir avec différents antécédents en informatique et
-            avoir du plaisir à créer quelque chose.
+          description: Cet atelier est conçu pour donner aux élèves une introduction
+            de base au Labo des Applis en 1 heure. Les élèves devraient être en mesure
+            de venir avec différents antécédents en informatique et avoir du plaisir
+            à créer quelque chose.
+          student_description: Cet atelier est conçu pour donner aux élèves une introduction
+            de base au Labo des Applis en 1 heure. Les élèves devraient être en mesure
+            de venir avec différents antécédents en informatique et avoir du plaisir
+            à créer quelque chose.
         applab-2hour:
           title: Atelier de 2 Heures au Labo des Applis
           description_audience: Les Collégiens et les Lycéens
-          description: Cet atelier est conçu pour donner aux étudiants une introduction
-            de base au Labo des Applis en 2 heures. Les étudiants devraient être en
-            mesure de venir avec différents antécédents en informatique et avoir du
-            plaisir à créer quelque chose.
-          student_description: Cet atelier est conçu pour donner aux étudiants une
-            introduction de base au Labo des Applis en 2 heures. Les étudiants devraient
-            être en mesure de venir avec différents antécédents en informatique et
-            avoir du plaisir à créer quelque chose.
+          description: Cet atelier est conçu pour donner aux élèves une introduction
+            de base au Labo des Applis en 2 heures. Les élèves devraient être en mesure
+            de venir avec différents antécédents en informatique et avoir du plaisir
+            à créer quelque chose.
+          student_description: Cet atelier est conçu pour donner aux élèves une introduction
+            de base au Labo des Applis en 2 heures. Les élèves devraient être en mesure
+            de venir avec différents antécédents en informatique et avoir du plaisir
+            à créer quelque chose.
         workshop-maker:
           title: Atelier Maker Toolkit
           description_audience: Enseignants participant à un Atelier Maker Toolkit,
@@ -889,12 +889,12 @@ fr:
           title: CSD Unité 3 (OBSOLÈTE)
           description_short: 2016/2017 Ébauche de CSD Unité 3
           description: Voici l'ébauche originale de CSD Unité 3, publiée à l'automne
-            2016. À moins que vous n'ayez des étudiants qui utilisent, actuellement,
+            2016. À moins que vous n'ayez des élèves qui utilisent, actuellement,
             ce cours, vous devriez plutôt utiliser la version mise à jour de cette
             unité à studio.code.org/s/csd3-2019 - cette ébauche originale restera
             disponible jusqu'au 1er juillet 2017.
           student_description: Voici l'ébauche originale de CSD Unité 3, publiée à
-            l'automne 2016. À moins que vous n'ayez des étudiants qui utilisent, actuellement,
+            l'automne 2016. À moins que vous n'ayez des élèves qui utilisent, actuellement,
             ce cours, vous devriez plutôt utiliser la version mise à jour de cette
             unité à studio.code.org/s/csd3-2019 - cette ébauche originale restera
             disponible jusqu'au 1er juillet 2017.
@@ -961,7 +961,7 @@ fr:
           assignment_family_title: Cours B
           description_audience: 'Âges : 5 à 8 ans'
           description_short: Une introduction à l'informatique pour les pré-lecteurs.
-            (Semblable au Cours A, mais avec plus de variété pour les étudiants plus
+            (Semblable au Cours A, mais avec plus de variété pour les élèves plus
             âgés.)
           description: Apprends les bases de l'informatique et de la sécurité sur
             internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
@@ -1430,12 +1430,12 @@ fr:
           description_short: Version alternative de l'unité CSP 3 pour le groupe d'expérimentation
             A sur les étiquettes de sous-objectif.  
           description: Cette unité présente les concepts fondamentaux de la programmation
-            informatique, pour les étudiants du Groupe A de Sous-Objectifs.
+            informatique, pour les élèves du Groupe A de Sous-Objectifs.
           lesson_groups:
             csp3_1:
               display_name: 'Chapitre 1 : Langages de Programmation et Algorithmes'
           student_description: Cette unité présente les concepts fondamentaux de la
-            programmation informatique, pour les étudiants du Groupe A de Sous-Objectifs.
+            programmation informatique, pour les élèves du Groupe A de Sous-Objectifs.
         new-express:
           title: Nouveau Script Express
           lesson_groups:
@@ -1515,7 +1515,7 @@ fr:
               display_name: Évaluation du Chapitre
         pwc:
           title: Le Programme d'Études, Accède à Ton Potentiel, de PwC
-          description: Chez PwC, nous croyons que tous les étudiants ont le potentiel
+          description: Chez PwC, nous croyons que tous les élèves ont le potentiel
             d'être les leaders et la main-d'œuvre axée sur la technologie de demain.
             Accède à Ton Potentiel est notre engagement d'aider à combler l'écart
             d'opportunités en dotant les jeunes, en particulier ceux des communautés
@@ -1523,10 +1523,10 @@ fr:
             de carrière dont ils ont besoin pour changer la trajectoire de leur vie.
             Dans le cadre de notre engagement, nous sommes ravis de lancer notre programme
             d'études de technologie et de carrières, Accède à Ton Potentiel, au collège.
-          student_description: Chez PwC, nous croyons que tous les étudiants ont le
-            potentiel d'être les leaders et la main-d'œuvre axée sur la technologie
-            de demain. Accède à Ton Potentiel est notre engagement d'aider à combler
-            l'écart d'opportunités en dotant les jeunes, en particulier ceux des communautés
+          student_description: Chez PwC, nous croyons que tous les élèves ont le potentiel
+            d'être les leaders et la main-d'œuvre axée sur la technologie de demain.
+            Accède à Ton Potentiel est notre engagement d'aider à combler l'écart
+            d'opportunités en dotant les jeunes, en particulier ceux des communautés
             défavorisées, des compétences financières, technologiques et de sélection
             de carrière dont ils ont besoin pour changer la trajectoire de leur vie.
             Dans le cadre de notre engagement, nous sommes ravis de lancer notre programme
@@ -1569,9 +1569,9 @@ fr:
             cspSurvey:
               display_name: Enquête
         csp3-reovery:
-          title: récupération du travail des étudiants sur csp3 sous la mer
+          title: récupération du travail des élèves sur csp3 sous la mer
         csp3-recovery:
-          title: Récupération du travail des étudiants sur CSP3 sous la mer
+          title: Récupération du travail des élèves sur CSP3 sous la mer
         aws-demo:
           title: Démonstration de AWS
         valentine:
@@ -1737,13 +1737,13 @@ fr:
           title: Examen Préparatoire à CSP AP
           description_short: Examen Préparatoire à CSP AP
           description: 'Cette page contient des copies de toutes les questions d''évaluation
-            à choix multiples parues dans les unités 1 à 5 du cours. Les étudiants
-            voudront, peut-être, s''entraîner pour l''examen à choix multiples en
-            repassant ces petits tests.  '
+            à choix multiples parues dans les unités 1 à 5 du cours. Les élèves voudront,
+            peut-être, s''entraîner pour l''examen à choix multiples en repassant
+            ces petits tests.  '
           student_description: 'Cette page contient des copies de toutes les questions
             d''évaluation à choix multiples parues dans les unités 1 à 5 du cours.
-            Les étudiants voudront, peut-être, s''entraîner pour l''examen à choix
-            multiples en repassant ces petits tests.  '
+            Les élèves voudront, peut-être, s''entraîner pour l''examen à choix multiples
+            en repassant ces petits tests.  '
         coursec-2018:
           title: Cours C (2018)
           assignment_family_title: Cours C
@@ -3194,13 +3194,13 @@ fr:
           description_short: Ce module se concentre sur les normes d'études scientifiques
             et sociales du CE2. En science, ils considèrent les normes de vie qui
             englobent les habitats, les écosystèmes, les espèces indigènes et les
-            espèces envahissantes. En études sociales, les étudiants contemplent les
+            espèces envahissantes. En études sociales, les élèves contemplent les
             branches du gouvernement de la Floride et la façon dont les citoyens de
             tous les jours peuvent influer sur les politiques locales et étatiques.
           description: Ce module se concentre sur les normes d'études scientifiques
             et sociales du CE2. En science, ils considèrent les normes de vie qui
             englobent les habitats, les écosystèmes, les espèces indigènes et les
-            espèces envahissantes. En études sociales, les étudiants contemplent les
+            espèces envahissantes. En études sociales, les élèves contemplent les
             branches du gouvernement de la Floride et la façon dont les citoyens de
             tous les jours peuvent influer sur les politiques locales et étatiques.
           lesson_groups:
@@ -3222,7 +3222,7 @@ fr:
           student_description: Ce module se concentre sur les normes d'études scientifiques
             et sociales du CE2. En science, ils considèrent les normes de vie qui
             englobent les habitats, les écosystèmes, les espèces indigènes et les
-            espèces envahissantes. En études sociales, les étudiants contemplent les
+            espèces envahissantes. En études sociales, les élèves contemplent les
             branches du gouvernement de la Floride et la façon dont les citoyens de
             tous les jours peuvent influer sur les politiques locales et étatiques.
         csp1-pilot-staging:
@@ -3338,7 +3338,7 @@ fr:
             cspSurvey:
               display_name: Enquête
         csp-post-survey-2018:
-          title: Enquête (2018 - 2019) Post-Cours auprès des étudiants de CSP
+          title: Enquête (2018 - 2019) Post-Cours auprès des élèves de CSP
           description_audience: Étudiants en CSP
           description_short: Enquête Post-Cours CSP auprès des Étudiants
           description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org.
@@ -3606,8 +3606,9 @@ fr:
           title: Détecteur de Collision
         dance-2019:
           title: Soirée Dansante (2019)
-          description_short: Avec Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-            Nas X, Jonas Brothers, Nicki Minaj, et 34 autres artistes !
+          description_short: Organises une soirée dansante à partager avec tes amis
+            et ta famille. Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+            de la musique de « Encanto » de Disney et bien plus encore !
           description: Codez votre propre soirée dansante à partager avec vos amis
             !
           student_description: Codez votre propre soirée dansante à partager avec
@@ -4219,19 +4220,19 @@ fr:
               display_name: Contenu
         virustest:
           title: Simulation d'une épidémie
-          description_short: Utilisez Sprite Lab pour créer une simulation à partir
-            d'une épidémie de virus.
+          description_short: Utilisez le Labo des Sprites pour créer une simulation
+            à partir d'une épidémie de virus.
         outbreak:
           lesson_groups:
             outbreak:
               display_name: Simulation de l'épidémie
           title: Simulateur d'épidémie
-          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une
-            épidémie de virus. '
-          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie
-            de virus. '
+          description_short: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
+          description: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
           name: épidémie
-          student_description: 'Utilisez Sprite Lab pour programmer la simulation
+          student_description: 'Utilisez le Labo des Sprites pour programmer la simulation
             d''une épidémie de virus. '
         2021drafting:
           lesson_groups:
@@ -4255,15 +4256,15 @@ fr:
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous allez vous exercer
             à utiliser un processus de résolution de problèmes pour résoudre une série
-            d'énigmes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez
-            comment les ordinateurs entrent, sortent, stockent et traitent les informations
-            pour aider les humains à résoudre des problèmes.  L'unité se termine par
-            un projet dans lequel vous concevez une application qui aide à résoudre
-            un problème de votre choix. \n\n\\*\\*Conseils pour la mise en œuvre de
-            l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être terminé avant toute
-            autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies
-            pour certaines leçons de l'unité 1, selon le contexte de votre classe.\n-
-            \  Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+            d' casse-têtes, de défis et de scénarios du monde réel. Ensuite, vous
+            apprendrez comment les ordinateurs entrent, sortent, stockent et traitent
+            les informations pour aider les humains à résoudre des problèmes.  L'unité
+            se termine par un projet dans lequel vous concevez une application qui
+            aide à résoudre un problème de votre choix. \n\n\\*\\*Conseils pour la
+            mise en œuvre de l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être
+            terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives
+            sont fournies pour certaines leçons de l'unité 1, selon le contexte de
+            votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             et le [Guide de mise en œuvre](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
             pour plus d'informations sur cette unité.\n\nTraduit avec www.DeepL.com/Translator
             (version gratuite)"
@@ -4486,6 +4487,13 @@ fr:
               display_name: Enquête
         coursea-2021:
           title: Cours A (2021)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lesson_groups:
@@ -4504,6 +4512,15 @@ fr:
             que tu peux partager.
         courseb-2021:
           title: Cours B (2021)
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
           description_short: Une introduction à l'informatique pour les pré-lecteurs.
             Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
@@ -4526,6 +4543,12 @@ fr:
             que tu peux partager.
         coursec-2021:
           title: Cours C (2021)
+          description: Nous avons développé le Cours C pour des élèves de CE1. Les
+            élèves créeront des programmes avec du séquençage, des boucles et des
+            événements. Ils examineront des techniques de résolution de problèmes
+            et élaboreront des stratégies pour créer des communautés positives en
+            ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs
+            qu'ils pourront partager.
           description_short: Apprendre les rudiments de l’informatique et de créer
             vos propres œuvres d’art, vos histoires et vos jeux.
           description_audience: 'Âges: 6 à 10 ans'
@@ -4550,6 +4573,11 @@ fr:
             crée ton propre jeu ou ta propre histoire que tu peux partager !
         coursed-2021:
           title: Cours D (2021)
+          description: Nous avons créé le cours D pour les élèves de CE2. Le cours
+            commence par un examen des notions abordées dans les cours précédents,
+            dont les boucles et les événements. Par la suite, les élèves développeront
+            leur compréhension des algorithmes, des boucles imbriquées, des boucles
+            « tant que », des instructions conditionnelles, et bien plus encore.
           description_short: Learn about conditional statements. Create your own art,
             games, and even a dance party.
           description_audience: 'Àges : 7 à 11 ans'
@@ -4570,7 +4598,19 @@ fr:
               display_name: Projet de fin de cours
             lessonGroup-6:
               display_name: Citoyenneté Numérique
+          student_description: Découvre les boucles, les instructions conditionnelles
+            et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
         coursee-2021:
+          title: Cours E (2021)
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours
+            commence par une introduction à l'outil de programmation Labo des Sprites.
+            Les élèves apprendront à créer des projets amusants et interactifs qui
+            renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
+            de ces leçons, les élèves se mettront à faire du codage plus complexe.
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
+            conditionnelles. À la fin du cours, les élèves associeront ces notions
+            pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
+            libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
           description_audience: 'Âge : 8 à 12 ans'
           lesson_groups:
             ramp_up:
@@ -4589,7 +4629,22 @@ fr:
               display_name: Projet de fin de cours
             lessonGroup-7:
               display_name: L'impact de l'informatique
+          student_description: Mets-toi à coder avec les algorithmes, les événements,
+            les boucles, les instructions conditionnelleset les fonctions ! À la fin
+            de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
+            partager avec tes amis et ta famille.
         coursef-2021:
+          title: Cours F (2021)
+          description: On a créé le Cours F pour des élèves de CM2. Le cours commence
+            en examinant la manière dont les utilisateurs font des choix au sein des
+            applications qu'ils utilisent. Les élèves apprendront ensuite à créer
+            diverses applications avec le Labo des Sprites qui proposent aussi des
+            choix aux utilisateurs. Plus on progresse vers la fin des leçons du cours,
+            plus les élèves découvriront des notions avancées, dont les variables
+            et les boucles « pour ». Les élèves jouiront d'une plus grande autonomie
+            et de plus de choix tout au long de ce cours. À la fin du cours, les élèves
+            auront créé des projets interactifs ou des œuvres d'art à partager avec
+            leurs amis et leur famille.
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
@@ -4600,6 +4655,8 @@ fr:
               display_name: Citoyenneté Numérique
             csf_variables:
               display_name: Les Boucles « Pour »
+            csf_data:
+              display_name: Données et Simulations
             csf_for_loops:
               display_name: Les Boucles « Pour »
             csf_sprites:
@@ -4612,6 +4669,10 @@ fr:
               display_name: supprimer
             lessonGroup-7:
               display_name: Citoyenneté Numérique
+          student_description: Apprends à coder avec les sprites, les variables et
+            les boucles tout en parlant des impacts sociétaux de l'informatique et
+            de l'internet. À la fin de ce cours, tu vas concevoir et créer un projet
+            que tu pourras partager avec tes amis et ta famille par la suite.
         express-2021:
           title: Cours Express (2021)
           description: Apprends l'informatique en essayant les cours ici à ton propre
@@ -4625,7 +4686,7 @@ fr:
           description_audience: 'Âges : de 9 à 18 ans'
           lesson_groups:
             csf_warmup:
-              display_name: Warm-up (Séance d’échauffement)
+              display_name: Séance d’échauffement
             csf_sequencing:
               display_name: Séquencement
             csf_loops:
@@ -4747,11 +4808,11 @@ fr:
           lesson_groups:
             contagion:
               display_name: Contagion
-          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une
-            épidémie de virus. '
-          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie
-            de virus. '
-          student_description: 'Utilisez Sprite Lab pour programmer la simulation
+          description_short: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
+          description: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
+          student_description: 'Utilisez le Labo des Sprites pour programmer la simulation
             d''une épidémie de virus. '
         csa1-pilot:
           lesson_groups:
@@ -5019,6 +5080,8 @@ fr:
               display_name: Démos et ressources
         tesstest921:
           name: tesstest921
+        hello-world-emoji:
+          title: 'Bonjour tout le monde : Emoji'
         hello-world-batman:
           title: Bonjour tout le monde !
         csa4-exemplars:
@@ -5044,9 +5107,9 @@ fr:
         spritelab-effects-challenge:
           name: spritelab-effets-défi
           title: Défi de l'effet Sprite
-          description_audience: Utilisateurs intermédiaires/avancés de Sprite Lab
+          description_audience: Utilisateurs intermédiaires/avancés du Labo des Sprites
           description_short: Relevez le défi de créer votre propre effet de sprite
-            avec Sprite Lab !
+            avec le Labo des Sprites !
         csa-u8-dev:
           lesson_groups:
             lessonGroup-2:
@@ -5107,6 +5170,8 @@ fr:
           description_audience: De la Sixième à la Terminale
         poem-art-2021:
           title: Art du poème
+        hello-world-emoji-2021:
+          title: 'Bonjour tout le monde : Emoji'
         explore-data-1-2021:
           title: Données de visualisation
         counting-csc-2021:
@@ -5173,6 +5238,13 @@ fr:
             lessonGroup-5:
               display_name: Projet de fin de cours
           title: Cours A (2022)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5264,6 +5336,15 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Projet de fin de cours
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5284,6 +5365,13 @@ fr:
               display_name: Données
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours C (2022)
+          description: Nous avons développé le Cours C pour des élèves de CE1. Les
+            élèves créeront des programmes avec du séquençage, des boucles et des
+            événements. Ils examineront des techniques de résolution de problèmes
+            et élaboreront des stratégies pour créer des communautés positives en
+            ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs
+            qu'ils pourront partager.
           student_description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
             de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
@@ -5337,7 +5425,14 @@ fr:
               display_name: Instructions conditionnelles
             end_of_course_project:
               display_name: Projet de fin de cours
-          title: Cours D (2021)
+          title: Cours D (2022)
+          description: Nous avons créé le cours D pour les élèves de CE2. Le cours
+            commence par un examen des notions abordées dans les cours précédents,
+            dont les boucles et les événements. Par la suite, les élèves développeront
+            leur compréhension des algorithmes, des boucles imbriquées, des boucles
+            « tant que », des instructions conditionnelles, et bien plus encore.
+          student_description: Découvre les boucles, les instructions conditionnelles
+            et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
           description_short: Learn about conditional statements. Create your own art,
             games, and even a dance party.
           description_audience: 'Àges : 7 à 11 ans'
@@ -5357,6 +5452,20 @@ fr:
               display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours E (2022)
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours
+            commence par une introduction à l'outil de programmation Labo des Sprites.
+            Les élèves apprendront à créer des projets amusants et interactifs qui
+            renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
+            de ces leçons, les élèves se mettront à faire du codage plus complexe.
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
+            conditionnelles. À la fin du cours, les élèves associeront ces notions
+            pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
+            libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          student_description: Mets-toi à coder avec les algorithmes, les événements,
+            les boucles, les instructions conditionnelleset les fonctions ! À la fin
+            de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
+            partager avec tes amis et ta famille.
           description_audience: 'Âge : 8 à 12 ans'
         coursef-2022:
           lesson_groups:
@@ -5366,8 +5475,11 @@ fr:
               display_name: Citoyenneté Numérique
             lessonGroup-8:
               display_name: Variables
+            csf_data:
+              display_name: Données et Simulations
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours F (2022)
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
@@ -5448,8 +5560,11 @@ fr:
               display_name: Sprites
             lessonGroup-8:
               display_name: Variables
+            csf_data:
+              display_name: Données et Simulations
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours F (2022)
           description_audience: 'Àges : 9 à 13 ans'
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux
             de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
@@ -5621,7 +5736,7 @@ fr:
           description: "Résolution de problèmes et informatique est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous allez appliquer
-            un processus de résolution de problèmes pour résoudre une série d'énigmes,
+            un processus de résolution de problèmes pour résoudre une série d' casse-têtes,
             de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment
             les ordinateurs entrent, sortent, stockent et traitent les informations
             pour aider les humains à résoudre des problèmes.  L'unité se termine par
@@ -5786,6 +5901,39 @@ fr:
               display_name: Contenu
             lessonGroup-5:
               display_name: Leçons alternatives
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Tableaux unidimensionnels (1D)
+            lesson-3:
+              name: Les Boucles « Pour »
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Random
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        hello-world-space-2022:
+          title: 'Bonjour tout le monde : Espace'
+        hello-world-soccer-2022:
+          title: 'Bonjour tout le monde : Football'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5861,7 +6009,7 @@ fr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listes
+              display_name: Données
             csp_loops:
               display_name: Boucles
             csp_traversals:
@@ -5873,9 +6021,15 @@ fr:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unité 6 : Les Algorithmes'
+              display_name: Listes
             lessonGroup-2:
               display_name: Suivi d'après cours
+            lessonGroup-3:
+              display_name: Boucles
+            lessonGroup-4:
+              display_name: Parcours
+            lessonGroup-5:
+              display_name: Projet
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -5904,3 +6058,24 @@ fr:
               display_name: Suivi d'après cours
         csp-post-survey-2023:
           title: CS PrincipPrincipleses Enquête Post-Cours
+        csp-playground:
+          title: CSP Terrain de Jeux
+          description_audience: Rédacteurs de programmes
+          description_short: Pour effectuer des mises à jour de leçons ou de niveaux
+            entre deux versions du programme de formation.
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties

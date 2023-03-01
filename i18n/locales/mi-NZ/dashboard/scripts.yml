@@ -606,7 +606,10 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
+        dance-2019:
+          title: Te Pāti Kanikani
         dance-extras-2019:
+          title: Me Kanikani Tonu
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
           student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
         csp4-preview:
@@ -1172,6 +1175,24 @@ mi:
           lesson_groups:
             lessonGroup-3:
               display_name: Ihirangi
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Ngā Taurangi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Mō Ngā Koromeke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1182,7 +1203,11 @@ mi:
               display_name: Ngā Taumahi
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Ngā Rārangi
             csp_loops:
+              display_name: Ngā Koromeke
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ngā Rārangi
+            lessonGroup-3:
               display_name: Ngā Koromeke

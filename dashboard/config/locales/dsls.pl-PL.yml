@@ -13527,21 +13527,12 @@ pl-PL:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat dotrze do żołędzia. Nie ma żadnych błędów w kodzie.
-          feedback: Niepoprawnie. Najpierw Scrat skręca w złą stronę, a następnie
-            Scrat nie idzie na przód odpowiednią ilość razy, by dotrzeć do żołędzia
         - text: Scrat nie dotrze do żołędzia, bo skręca w złą stronę.
           correct: true
-          feedback: Brawo! Najpierw, Scrat skręca w złą stronę, a następnie Scrat
-            nie idzie na przód odpowiednią ilość razy, by dotrzeć do żołędzia
         - text: Scrat nie dotrze do żołędzia, ponieważ nie ma wystarczającej liczby
             bloków `idź do przodu`.
-          correct: true
-          feedback: Brawo! Najpierw, Scrat skręca w złą stronę, a następnie Scrat
-            nie idzie na przód odpowiednią ilość razy, by dotrzeć do żołędzia
         - text: Scrat nie zejdzie z pierwszego bloku.
-          feedback: Są dwa błędy w tym kodzie. Najpierw Scrat skręca w złą stronę,
-            a następnie Scrat nie idzie do przodu odpowiednią ilość razy, by dotrzeć
-            do żołędzia
+          feedback: Scrat nie dotrze do żołędzia, bo skręca w złą stronę.
         questions:
         - text: Poszukaj błędów w tym kodzie. Czy Scrat dotrze do żołędzia, czy będzie
             miał z tym problem?
