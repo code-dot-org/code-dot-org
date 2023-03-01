@@ -299,12 +299,12 @@ module AWS
     # @return [String] a direct link to the file in the S3 console
     # @raise [Exception] if the provided link isn't a presigned S3 URL
     def self.get_console_link_from_presigned(presigned_url)
-      presidned_regex = /^https\:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
-      unless presigned_url.match(presidned_regex)
+      presigned_regex = /^https\:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
+      unless presigned_url.match(presigned_regex)
         raise ArgumentError.new("expected presigned S3 URL like 'https://bucket-name.s3.amazonaws.com/prefix/filename?with=any&query=params'")
       end
 
-      captured = presidned_regex.match(presigned_url)
+      captured = presigned_regex.match(presigned_url)
       bucket = captured[1]
       prefix = captured[2]
 
