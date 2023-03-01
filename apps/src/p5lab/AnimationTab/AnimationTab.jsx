@@ -21,7 +21,9 @@ class AnimationTab extends React.Component {
     channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
+    // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
     hideUploadOption: PropTypes.bool.isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
@@ -52,7 +54,8 @@ class AnimationTab extends React.Component {
       labType,
       libraryManifest,
       onColumnWidthsChange,
-      pickerType
+      pickerType,
+      shouldRestrictAnimationUpload
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
     if (currentAnimation) {
@@ -98,6 +101,7 @@ class AnimationTab extends React.Component {
             hideCostumes={hideCostumes}
             pickerType={pickerType}
             defaultQuery={defaultQuery}
+            shouldRestrictAnimationUpload={shouldRestrictAnimationUpload}
           />
         )}
       </div>
