@@ -345,8 +345,7 @@ export function getToolbox() {
         {
           Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.VALUE_REST_DURATION
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
           ],
           Control: [
             BlockTypes.TRIGGERED_AT_SIMPLE2,
@@ -367,8 +366,7 @@ export function getToolbox() {
         Play: [
           BlockTypes.PLAY_SOUND_IN_TRACK,
           BlockTypes.VALUE_SAMPLE,
-          BlockTypes.REST_IN_TRACK,
-          BlockTypes.VALUE_REST_DURATION
+          BlockTypes.REST_IN_TRACK
         ],
         Control: ['controls_repeat_ext'],
         Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
