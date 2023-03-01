@@ -66,6 +66,7 @@ const TeacherApplication = props => {
   };
 
   const onInitialize = () => {
+    analyticsReporter.sendEvent(EVENTS.TEACHER_APP_STARTED_EVENT);
     sendFirehoseEvent(userId, 'started-teacher-application');
   };
 
