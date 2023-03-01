@@ -2336,3 +2336,7 @@ ms:
           description_audience: Penulis Kurikulum
           description_short: Untuk mengemas kini pelajaran atau peringkat antara versi
             kurikulum
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan kepada Makmal Aplikasi

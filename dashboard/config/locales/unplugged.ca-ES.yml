@@ -224,13 +224,13 @@ ca:
           un grup d'ordres predefinides per dirigir els seus companys a reproduir
           un dibuix.
       courseD_unplugged_relayProgramming:
-        title: Programació en relleus
+        title: Programació amb relleus
         desc: Els estudiants executen una cursa de relleus on corren a través del
           pati per escriure un algoritme basat en la imatge "Programació de paper
           quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
           un error han d'esborrar-ho tot fins el principi.
       courseD_unplugged_conditionalsCards:
-        title: Condicionals amb targetes
+        title: Condicionals amb cartes
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
           un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
           obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
@@ -330,8 +330,10 @@ ca:
           i emmagatzemades de diferents maneres.
       MoveItMoveIt_2018:
         title: A moure's!
+      courseE_unplugged_CnC_2018:
+        title: Compartir continguts digitals
       RelayProgramming_2018:
-        title: Programació en relleus
+        title: Programació amb relleus
       courseB_unplugged_MRF_2019:
         title: Els meus amics robòtics
       courseB_unplugged_loopyMRF_2019:
@@ -347,7 +349,7 @@ ca:
           un grup d'ordres predefinides per dirigir els seus companys a reproduir
           un dibuix.
       RelayProgramming_2018_2019:
-        title: Programació en relleus
+        title: Programació amb relleus
       courseD_unplugged_digitalCitizenship_2019:
         title: Activitat sense connexió
       BinaryImages_2019:
@@ -357,6 +359,10 @@ ca:
           en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
           idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
           informació complexa (com ara imatges i colors) en binari, també.
+      courseE_unplugged_privateInformation_2019:
+        title: Informació privada i personal
+      courseE_unplugged_CnC_2019:
+        title: Compartir continguts digitals
       GettingLoopy_2019:
         title: Fent bucles
         desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions

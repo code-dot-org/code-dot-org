@@ -10081,7 +10081,7 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
+        - text: Output
         - text: Archiviazione
         - text: Elaborazione
       CSD U1 IOSP match_2021:
@@ -10092,7 +10092,7 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
+        - text: Output
         - text: Archiviazione
         - text: Elaborazione
       CSD U1 IOSP match_2022:
@@ -10103,7 +10103,7 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
+        - text: Output
         - text: Archiviazione
         - text: Elaborazione
       CSD U1 Test PSP match:

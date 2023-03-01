@@ -1,3 +1,5 @@
+@import "color.scss";
+
 .classNameTextField {
   width: 100%;
 }
@@ -5,4 +7,38 @@
 .buttonsContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.buttonRow {
+  // ensure we have height when we only have our toggle (which is floated)
+  min-height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsInRow {
+  display: flex;
+  align-items: center;
+}
+
+.multiTables {
+  display: flex;
+}
+
+.table {
+  background-color: $neutral_dark10;
+  margin: 4px;
+  flex: 1 1 0px;
+}
+
+.headerRow {
+  background-color: $brand_primary_default;
+  color: $white;
+}
+
+.headerCell {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 12px;
 }

@@ -207,10 +207,12 @@
           "21": "21"
         },
         "CSD U1 storage friends_2021": {
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "Friend Finder": "Il trovamico"
         },
         "CSD U1 storage friends_2022": {
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "Friend Finder": "Il trovamico"
         },
         "CSD U1 storage movies_2021": {
           "Star Wars": "Guerre Stellari",
@@ -230,7 +232,8 @@
           "pink": "rosa",
           "green": "verde",
           "black": "nero",
-          "purple": "viola"
+          "purple": "viola",
+          "Outfit Picker": "App: scelta di abiti"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Cancella",
@@ -238,7 +241,8 @@
           "pink": "rosa",
           "green": "verde",
           "black": "nero",
-          "purple": "viola"
+          "purple": "viola",
+          "Outfit Picker": "App: scelta di abiti"
         },
         "CSD U2 RGB intro": {
           "1": "1",

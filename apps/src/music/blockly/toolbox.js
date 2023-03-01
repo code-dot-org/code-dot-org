@@ -2,6 +2,7 @@ import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
+import {PRIMARY_SOUND_INPUT_NAME} from './constants';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -32,9 +33,60 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE
   },
+  [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2
+  },
+  [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+    inputs: {
+      measures: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1
+          }
+        }
+      }
+    }
+  },
+  [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER
+  },
+  [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL
+  },
+  [BlockTypes.REPEAT_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.REPEAT_SIMPLE2,
+    inputs: {
+      times: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1
+          }
+        }
+      }
+    }
+  },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
-    type: BlockTypes.PLAY_SOUND_IN_TRACK
+    type: BlockTypes.PLAY_SOUND_IN_TRACK,
+    inputs: {
+      [PRIMARY_SOUND_INPUT_NAME]: {
+        shadow: {
+          type: BlockTypes.VALUE_SAMPLE
+        }
+      }
+    }
+  },
+  [BlockTypes.VALUE_SAMPLE]: {
+    kind: 'block',
+    type: BlockTypes.VALUE_SAMPLE
   },
   [BlockTypes.REST_IN_TRACK]: {
     kind: 'block',
@@ -79,6 +131,10 @@ const toolboxBlocks = {
   [BlockTypes.TRIGGERED_AT_SIMPLE]: {
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE
+  },
+  [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.TRIGGERED_AT_SIMPLE2
   },
   [BlockTypes.FOR_LOOP]: {
     kind: 'block',
@@ -224,7 +280,7 @@ const toolboxBlocks = {
   }
 };
 
-function generateToolbox(categoryBlocksMap, includeVariables) {
+function generateToolbox(categoryBlocksMap, options) {
   const toolbox = {
     kind: 'categoryToolbox',
     contents: []
@@ -245,12 +301,21 @@ function generateToolbox(categoryBlocksMap, includeVariables) {
     });
   }
 
-  if (includeVariables) {
+  if (options?.includeVariables) {
     toolbox.contents.push({
       kind: 'category',
       name: 'Variables',
       cssConfig: baseCategoryCssConfig,
       custom: 'VARIABLE'
+    });
+  }
+
+  if (options?.includeFunctions) {
+    toolbox.contents.push({
+      kind: 'category',
+      name: 'Functions',
+      cssConfig: baseCategoryCssConfig,
+      custom: 'PROCEDURE'
     });
   }
 
@@ -268,6 +333,22 @@ export function getToolbox() {
           'controls_repeat_ext'
         ]
       });
+    case BlockMode.SIMPLE2:
+      return generateToolbox(
+        {
+          Play: [
+            BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
+          ],
+          Control: [
+            BlockTypes.TRIGGERED_AT_SIMPLE2,
+            BlockTypes.PLAY_SOUNDS_TOGETHER,
+            BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+            BlockTypes.REPEAT_SIMPLE2
+          ]
+        },
+        {includeFunctions: true}
+      );
     case BlockMode.TRACKS:
       return generateToolbox({
         Tracks: [
@@ -275,7 +356,11 @@ export function getToolbox() {
           BlockTypes.NEW_TRACK_AT_MEASURE,
           BlockTypes.NEW_TRACK_ON_TRIGGER
         ],
-        Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
+        Play: [
+          BlockTypes.PLAY_SOUND_IN_TRACK,
+          BlockTypes.VALUE_SAMPLE,
+          BlockTypes.REST_IN_TRACK
+        ],
         Control: ['controls_repeat_ext'],
         Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
         Logic: ['controls_if', 'logic_compare']
@@ -294,7 +379,7 @@ export function getToolbox() {
           ],
           Logic: ['controls_if', 'logic_compare']
         },
-        true
+        {includeVariables: true}
       );
   }
 
