@@ -6,7 +6,7 @@ export const AnalyticsContext = React.createContext(null);
 
 type PlayerUtils = Pick<
   MusicPlayer,
-  'getPlaybackEvents' | 'getTracksMetadata' | 'getLengthForId' | 'getTypeForId'
+  'getPlaybackEvents' | 'getTracksMetadata' | 'getLengthForId' | 'getTypeForId' | 'getLastMeasure'
 >;
 
 /** Provides access to commonly used MusicPlayer APIs (without exposing the entire player) */
@@ -16,5 +16,6 @@ export const PlayerUtilsContext: React.Context<
   getPlaybackEvents: () => [],
   getTracksMetadata: () => ({}),
   getLengthForId: () => 0,
-  getTypeForId: () => null
+  getTypeForId: () => null,
+  getLastMeasure: () => 0
 });
