@@ -259,7 +259,7 @@ export const playSoundInTrack = {
 export const restInTrack = {
   definition: {
     type: BlockTypes.REST_IN_TRACK,
-    message0: 'rest for %1 measures',
+    message0: 'rest for %1',
     args0: [
       {
         type: 'input_value',

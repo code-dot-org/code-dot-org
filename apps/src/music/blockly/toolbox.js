@@ -101,9 +101,9 @@ const toolboxBlocks = {
     inputs: {
       measures: {
         shadow: {
-          type: 'math_number',
+          type: BlockTypes.VALUE_REST_DURATION,
           fields: {
-            NUM: 1
+            [FIELD_REST_DURATION_NAME]: '1'
           }
         }
       }
@@ -367,7 +367,8 @@ export function getToolbox() {
         Play: [
           BlockTypes.PLAY_SOUND_IN_TRACK,
           BlockTypes.VALUE_SAMPLE,
-          BlockTypes.REST_IN_TRACK
+          BlockTypes.REST_IN_TRACK,
+          BlockTypes.VALUE_REST_DURATION
         ],
         Control: ['controls_repeat_ext'],
         Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
