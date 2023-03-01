@@ -51,7 +51,7 @@ export default class MusicPlayer {
   private bpm: number;
   private playbackEvents: PlaybackEvent[];
   private lastTriggeredMeasure: number;
-  private lastScheduledMeasure: number;
+  private lastWhenRunMeasure: number;
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
@@ -65,7 +65,7 @@ export default class MusicPlayer {
     this.samplePlayer = new SamplePlayer();
     this.library = {groups: []};
     this.lastTriggeredMeasure = 0;
-    this.lastScheduledMeasure = 0;
+    this.lastWhenRunMeasure = 0;
   }
 
   /**
@@ -117,9 +117,9 @@ export default class MusicPlayer {
 
     const endingMeasure = measure + soundData.length - 1;
     if (insideWhenRun) {
-      this.lastScheduledMeasure = Math.max(
+      this.lastWhenRunMeasure = Math.max(
         endingMeasure,
-        this.lastScheduledMeasure
+        this.lastWhenRunMeasure
       );
     } else {
       this.lastTriggeredMeasure = Math.max(
@@ -198,7 +198,7 @@ export default class MusicPlayer {
 
     // If playing, stop all non-triggered samples that have not yet been played.
     this.samplePlayer.stopAllSamplesStillToPlay();
-    this.lastScheduledMeasure = 0;
+    this.lastWhenRunMeasure = 0;
   }
 
   getPlaybackEvents(): PlaybackEvent[] {
@@ -206,7 +206,7 @@ export default class MusicPlayer {
   }
 
   getLastMeasure(): number {
-    return Math.max(this.lastScheduledMeasure, this.lastTriggeredMeasure);
+    return Math.max(this.lastWhenRunMeasure, this.lastTriggeredMeasure);
   }
 
   // Returns the current playhead position, in floating point for an exact position,
