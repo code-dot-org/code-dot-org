@@ -20,6 +20,7 @@ import {
   playSoundsSequential,
   repeatSimple2
 } from './blocks/simple2';
+import {valueRestDuration} from './blocks/play';
 
 // All blocks
 const blockList = [
@@ -42,7 +43,8 @@ const blockList = [
   newTrackOnTrigger,
   playSoundInTrack,
   restInTrack,
-  valueSample
+  valueSample,
+  valueRestDuration
 ];
 
 const MUSIC_BLOCKS = {};

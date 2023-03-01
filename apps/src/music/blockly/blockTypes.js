@@ -20,5 +20,6 @@ export const BlockTypes = {
   NEW_TRACK_ON_TRIGGER: 'new_track_on_trigger',
   PLAY_SOUND_IN_TRACK: 'play_sound_in_track',
   REST_IN_TRACK: 'rest_in_track',
-  VALUE_SAMPLE: 'value_sample'
+  VALUE_SAMPLE: 'value_sample',
+  VALUE_REST_DURATION: 'value_rest_duration'
 };

@@ -2,7 +2,7 @@ import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
-import {PRIMARY_SOUND_INPUT_NAME} from './constants';
+import {FIELD_REST_DURATION_NAME, PRIMARY_SOUND_INPUT_NAME} from './constants';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -43,12 +43,19 @@ const toolboxBlocks = {
     inputs: {
       measures: {
         shadow: {
-          type: 'math_number',
+          type: BlockTypes.VALUE_REST_DURATION,
           fields: {
-            NUM: 1
+            [FIELD_REST_DURATION_NAME]: '1'
           }
         }
       }
+    }
+  },
+  [BlockTypes.VALUE_REST_DURATION]: {
+    kind: 'block',
+    type: BlockTypes.VALUE_REST_DURATION,
+    fields: {
+      [FIELD_REST_DURATION_NAME]: '1'
     }
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
@@ -338,7 +345,8 @@ export function getToolbox() {
         {
           Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.VALUE_REST_DURATION
           ],
           Control: [
             BlockTypes.TRIGGERED_AT_SIMPLE2,
