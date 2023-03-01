@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {Radio} from 'react-bootstrap';
 
 export default function QuickAssignTable({
   marketingAudience,
@@ -40,7 +39,7 @@ export default function QuickAssignTable({
   const renderRows = courseData => {
     const headers = Object.keys(courseData);
     return headers.map(header => (
-      <tr>
+      <tr key={header}>
         <td className={moduleStyles.courseHeaders}>
           {header}
           {renderOfferings(Object.values(courseData[header]))}
@@ -52,22 +51,27 @@ export default function QuickAssignTable({
   const renderOfferings = courseValues => {
     const values = courseValues.map(cv => cv.display_name);
     return values.map(display_name => (
-      <Radio
-        className={moduleStyles.radio}
-        name={display_name}
-        value={display_name}
-        checked={assignedCourse === display_name}
-        onChange={() => {
-          setAssignedCourse(display_name);
-        }}
-      >
-        {display_name}
-      </Radio>
+      <div className={moduleStyles.flexDisplay} key={display_name}>
+        <input
+          id={display_name}
+          className={moduleStyles.radio}
+          type="radio"
+          name={display_name}
+          value={display_name}
+          checked={assignedCourse === display_name}
+          onChange={() => {
+            setAssignedCourse(display_name);
+          }}
+        />
+        <label className={moduleStyles.label} htmlFor={display_name}>
+          {display_name}
+        </label>
+      </div>
     ));
   };
 
   return (
-    <div className={moduleStyles.multiTables}>
+    <div className={moduleStyles.flexDisplay}>
       {!!courseOfferings[marketingAudience][curriculumTypes.course] &&
         renderTable(curriculumTypes.course, i18n.courses())}
       {!!courseOfferings[marketingAudience][curriculumTypes.module] &&

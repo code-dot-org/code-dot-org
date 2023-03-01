@@ -22,8 +22,28 @@
   align-items: center;
 }
 
-.multiTables {
+.buttonsInRow .buttonStyle {
+  background-color: $white;
+  padding: 10px;
+  color: inherit;
+  border: none;
+  font-size: 14px;
+}
+
+.buttonsInRow .buttonStyle:hover {
+  color: $brand_primary_default;
+}
+
+.flexDisplay {
   display: flex;
+}
+
+.buttonsInRow .input {
+  margin: 0 5px 0 200px;
+}
+
+.buttonsInRow .decideLater {
+  margin-top: 5px;
 }
 
 .table {
@@ -56,8 +76,12 @@
   left: 10px;
 }
 
-.radio {
+.flexDisplay .radio {
   min-height: 40px;
-  display: grid;
-  align-content: center;
+  margin: 0 0 0 0;
+}
+
+.label {
+  margin: 10px 0 0 5px;
+  text-align: center;
 }
