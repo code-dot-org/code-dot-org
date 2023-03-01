@@ -463,7 +463,7 @@ class Blockly < Level
     end
 
     # returning the children of body removes extra <html><body> tags added by parsing with ::HTML
-    start_html_doc.xpath("//body").children.to_html(encoding: 'UTF-8')
+    start_html_doc.xpath("//body").children.to_html(encoding: 'UTF-8', save_with: 0)
   end
 
   def localized_authored_hints
