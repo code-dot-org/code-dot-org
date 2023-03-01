@@ -206,7 +206,6 @@ Dashboard::Application.routes.draw do
       passwords: 'passwords'
     }
     get 'discourse/sso' => 'discourse_sso#sso'
-    post '/auth/lti', to: 'lti_provider#sso'
 
     root to: "home#index"
     get '/home_insert', to: 'home#home_insert'

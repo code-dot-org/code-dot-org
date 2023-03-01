@@ -155,8 +155,6 @@ gem 'cancancan', '~> 3.1.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/instructure/ims-lti/pull/90
-gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
 gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
 gem 'omniauth-facebook', '~> 4.0.0'
