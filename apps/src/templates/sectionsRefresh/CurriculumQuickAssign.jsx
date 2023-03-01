@@ -8,7 +8,8 @@ export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
   MIDDLE: 'middle',
   HIGH: 'high',
-  HOC: 'hoc'
+  HOC: 'hoc',
+  PL: 'pl'
 };
 
 export default function CurriculumQuickAssign() {
@@ -41,6 +42,10 @@ export default function CurriculumQuickAssign() {
     setMarketingAudience(marketingAudience);
     setDecideLater(false);
   };
+
+  // To distinguish between types of tables: HOC & PL vs Grade Bands
+  const isGradeBand =
+    marketingAudience !== (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL);
 
   return (
     <div>
@@ -110,14 +115,11 @@ export default function CurriculumQuickAssign() {
           </label>
         </div>
       </div>
-      {marketingAudience && courseOfferings && (
-        <div>
-          <h5>{marketingAudience}</h5>
-          <QuickAssignTable
-            marketingAudience={marketingAudience}
-            courseOfferings={courseOfferings}
-          />
-        </div>
+      {marketingAudience && isGradeBand && courseOfferings && (
+        <QuickAssignTable
+          marketingAudience={marketingAudience}
+          courseOfferings={courseOfferings}
+        />
       )}
     </div>
   );

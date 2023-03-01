@@ -2,11 +2,11 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "Draw a tree in your scene!\r\n\r\n✅ **TO DO #1:** In `TreeScene.java`(#e7e8ea), write the `drawTrunk()`(#e7e8ea) method to draw the trunk of the tree at `(150, 200)`(#e7e8ea) with a width of `50`(#e7e8ea) and height of `150`(#e7e8ea).\r\n\r\n✅ **TO DO #2:** In `TreeScene.java`(#e7e8ea), write the `drawLeaves()`(#e7e8ea) method to draw the leaves of the tree with a width of `100`(#e7e8ea) and height of `100`(#e7e8ea).\r\n\r\n* Position the first circle at `(90, 170)`(#e7e8ea)\r\n\r\n* Position the second circle at `(160, 170)`(#e7e8ea)\r\n\r\n* Position the third circle at `(125, 110)`(#e7e8ea)\r\n\r\n::: details [**🔦 How can I animate my drawing?**]\r\n  \r\nTry using the `pause()`(#e7e8ea) or `clear()`(#e7e8ea) methods to turn your scene into an animation!\r\n\r\n* Call the `pause()`(#e7e8ea) method after drawing each image or after drawing a set of images.\r\n\r\n* Call the `clear()`(#e7e8ea) method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.\r\n:::\r\n&nbsp;\r\n\r\n⚠️ **Don't forget!** Call the `Theater.playScenes(yourSceneObject)`(#e7e8ea) method to play the scene.\r\n\r\n💡 **TIP:** Check out the documentation for the `Scene`(#e7e8ea) class in the **Documentation** tab ⬆️ for help with drawing shapes and changing the colors of the trunk and leaves.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
+    "csa_view_mode": "theater",
     "start_sources": {
       "Runner.java": {
         "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
@@ -16,13 +16,16 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Draw a Tree",
+    "bubble_choice_description": "Use the drawing methods in the `Scene` class to draw a tree in your scene.",
+    "thumbnail_url": "https://images.code.org/6ccd5e3d151c834e55be151d0e121ef8-8aeb319eec46e6c1c63e2484b9a58d0f-image-1650479135101.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:16:40.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:16:40.199+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4d_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L4d_2023\"},{\"changed_at\":\"2023-02-17 18:16:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:16:40.199+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4d_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L4d_2023\"},{\"changed_at\":\"2023-02-17 18:16:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:06:14 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:06:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:39:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

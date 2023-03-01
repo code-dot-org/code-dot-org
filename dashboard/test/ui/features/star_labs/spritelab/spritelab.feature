@@ -26,7 +26,7 @@ Scenario: Losing the first level
 Scenario: Winning the first level
   Then I press dropdown number 6
   And the dropdown is visible
-  And I select item 1 from the dropdown
+  And I select item 0 from the dropdown
   And I wait for 1 seconds
   Then the dropdown is hidden
   And I press "runButton"

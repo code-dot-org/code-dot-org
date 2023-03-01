@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -7,9 +7,10 @@ import TimelineTrackEvents from './TimelineTrackEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
+import {PlayerUtilsContext} from '../context';
 
 const barWidth = 60;
-const numMeasures = 30;
+const minNumMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
@@ -17,6 +18,12 @@ const eventVerticalSpace = 2;
  * Renders the music playback timeline.
  */
 const Timeline = ({isPlaying, currentPlayheadPosition}) => {
+  const playerUtils = useContext(PlayerUtilsContext);
+  const measuresToDisplay = Math.max(
+    minNumMeasures,
+    playerUtils.getLastMeasure()
+  );
+
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
     // we will limit each row's height to the size that would allow
@@ -46,8 +53,11 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
     getEventHeight
   };
 
-  // Generate an array containing measure numbers from 1..numMeasures.
-  const arrayOfMeasures = Array.from({length: numMeasures}, (_, i) => i + 1);
+  // Generate an array containing measure numbers from 1..measuresToDisplay.
+  const arrayOfMeasures = Array.from(
+    {length: measuresToDisplay},
+    (_, i) => i + 1
+  );
 
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
