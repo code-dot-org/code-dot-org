@@ -1,31 +1,47 @@
 function monitorButtonPresses () {
-  var boxWidth = 100;
-  var boxHeight = 50;
-  var boxX = 400 - boxWidth;
-  var boxY = 0;
-  var boxXMid = boxX + (boxWidth / 2);
-  var boxYMid = boxY + boxHeight / 2;
+  var compassWidth = 70;
+  var midpoint = compassWidth/2.8;
+  var compassX = 350;
+  var compassY = 50;
   var fontSize = 16;
-  noStroke();
-  fill(rgb(50, 50, 50, 0.5));
-  rect(boxX, boxY, boxWidth, boxHeight);
-  fill("white");
+  //make circle
+  fill(rgb(200, 200, 200, 0.75));
+  strokeWeight(3);
+  stroke("gray");
+  ellipse(compassX, compassY, compassWidth);
+  //make NSEW black text
   textSize(fontSize);
+  noStroke();
+  fill("black");
+  textAlign(CENTER, TOP);
+  text("N", compassX, compassY - midpoint);
+  textAlign(CENTER, BOTTOM);
+  text("S", compassX, compassY + midpoint);
+  textAlign(LEFT, CENTER);
+  text("W", compassX - midpoint, compassY);
+  textAlign(RIGHT, CENTER);
+  text("E", compassX + midpoint, compassY);
+  //highlight text to white when arrow pressed
   if (keyDown("up")) {
+    fill("white");
     textAlign(CENTER, TOP);
-    text("NORTH", boxXMid, boxY);
+    text("N", compassX, compassY - midpoint);
   }
   if (keyDown("down")) {
+    fill("white");
     textAlign(CENTER, BOTTOM);
-    text("SOUTH", boxXMid, boxY + boxHeight);
+    text("S", compassX, compassY + midpoint);
   }
   if (keyDown("left")) {
+    fill("white");
     textAlign(LEFT, CENTER);
-    text("WEST", boxX, boxYMid);
+    text("W", compassX - midpoint, compassY);
   }
   if (keyDown("right")) {
+    fill("white");
     textAlign(RIGHT, CENTER);
-    text("EAST", boxX + boxWidth, boxYMid);
+    text("E", compassX + midpoint, compassY);
   }
+  drawSprites();
 }
 other.push(monitorButtonPresses);
