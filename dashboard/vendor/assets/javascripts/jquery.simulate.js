@@ -350,8 +350,9 @@
         dx = options.dx || (options.x !== undefined ? options.x - x : 0),
         dy = options.dy || (options.y !== undefined ? options.y - y : 0),
         moves = options.moves || 3;
+      const eventType = Blockly?.version === "Google" ? "pointer" : "mouse";
 
-      this.simulateEvent(target, "pointerdown", eventOptions);
+      this.simulateEvent(target, eventType + "down", eventOptions);
 
       for (; i < moves; i++) {
         x += dx / moves;
@@ -362,7 +363,11 @@
           clientY: Math.round(y)
         };
 
-        this.simulateEvent(target.ownerDocument, "pointermove", eventOptions);
+        this.simulateEvent(
+          target.ownerDocument,
+          eventType + "move",
+          eventOptions
+        );
       }
 
       if (options.skipDrop) {
@@ -370,10 +375,14 @@
       }
 
       if ($.contains(document, target)) {
-        this.simulateEvent(target.ownerDocument, "pointerup", eventOptions);
+        this.simulateEvent(
+          target.ownerDocument,
+          eventType + "up",
+          eventOptions
+        );
         this.simulateEvent(target, "click", eventOptions);
       } else {
-        this.simulateEvent(document, "pointerup", eventOptions);
+        this.simulateEvent(document, eventType + "up", eventOptions);
       }
     }
   });
