@@ -243,13 +243,11 @@ class MultipleSectionsAssigner extends Component {
         </a>
         <div style={{textAlign: 'right'}}>
           <Button
-            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={onClose}
             color={Button.ButtonColor.gray}
           />
           <Button
-            __useDeprecatedTag
             id="confirm-assign"
             text={i18n.confirmAssignment()}
             style={{marginLeft: 5}}
