@@ -9,18 +9,18 @@
  * Date: Sun Dec 9 12:15:33 2012 -0500
  */
 
-(function($, undefined) {
+(function ($, undefined) {
   var rkeyEvent = /^key/,
     rmouseEvent = /^(?:mouse|contextmenu|touch)|click/,
     rpointerEvent = /^pointer/;
 
-  $.fn.simulate = function(type, options) {
-    return this.each(function() {
+  $.fn.simulate = function (type, options) {
+    return this.each(function () {
       new $.simulate(this, type, options);
     });
   };
 
-  $.simulate = function(elem, type, options) {
+  $.simulate = function (elem, type, options) {
     var method = $.camelCase("simulate-" + type);
 
     this.target = elem;
@@ -67,12 +67,12 @@
   });
 
   $.extend($.simulate.prototype, {
-    simulateEvent: function(elem, type, options) {
+    simulateEvent: function (elem, type, options) {
       var event = this.createEvent(type, options);
       this.dispatchEvent(elem, type, event, options);
     },
 
-    createEvent: function(type, options) {
+    createEvent: function (type, options) {
       if (rkeyEvent.test(type)) {
         return this.keyEvent(type, options);
       }
@@ -86,7 +86,7 @@
       }
     },
 
-    pointerEvent: function(type, options) {
+    pointerEvent: function (type, options) {
       options = $.extend(
         {
           pointerType: "mouse",
@@ -98,7 +98,7 @@
       return new PointerEvent(type, options);
     },
 
-    mouseEvent: function(type, options) {
+    mouseEvent: function (type, options) {
       var event, eventDoc, doc, body;
       options = $.extend(
         {
@@ -149,7 +149,7 @@
           body = eventDoc.body;
 
           Object.defineProperty(event, "pageX", {
-            get: function() {
+            get: function () {
               return (
                 options.clientX +
                 ((doc && doc.scrollLeft) || (body && body.scrollLeft) || 0) -
@@ -158,7 +158,7 @@
             }
           });
           Object.defineProperty(event, "pageY", {
-            get: function() {
+            get: function () {
               return (
                 options.clientY +
                 ((doc && doc.scrollTop) || (body && body.scrollTop) || 0) -
@@ -184,7 +184,7 @@
       return event;
     },
 
-    keyEvent: function(type, options) {
+    keyEvent: function (type, options) {
       var event;
       options = $.extend(
         {
@@ -250,7 +250,7 @@
       return event;
     },
 
-    dispatchEvent: function(elem, type, event) {
+    dispatchEvent: function (elem, type, event) {
       if (elem.dispatchEvent) {
         elem.dispatchEvent(event);
       } else if (elem.fireEvent) {
@@ -258,7 +258,7 @@
       }
     },
 
-    simulateFocus: function() {
+    simulateFocus: function () {
       var focusinEvent,
         triggered = false,
         element = $(this.target);
@@ -279,7 +279,7 @@
       element.unbind("focus", trigger);
     },
 
-    simulateBlur: function() {
+    simulateBlur: function () {
       var focusoutEvent,
         triggered = false,
         element = $(this.target);
@@ -292,7 +292,7 @@
       element[0].blur();
 
       // blur events are async in IE
-      setTimeout(function() {
+      setTimeout(function () {
         // IE won't let the blur occur if the window is inactive
         if (element[0].ownerDocument.activeElement === element[0]) {
           element[0].ownerDocument.body.focus();
@@ -338,7 +338,7 @@
   }
 
   $.extend($.simulate.prototype, {
-    simulateDrag: function() {
+    simulateDrag: function () {
       var i = 0,
         target = this.target,
         options = this.options,
@@ -350,8 +350,9 @@
         dx = options.dx || (options.x !== undefined ? options.x - x : 0),
         dy = options.dy || (options.y !== undefined ? options.y - y : 0),
         moves = options.moves || 3;
+      const eventType = Blockly?.version === "Google" ? "pointer" : "mouse";
 
-      this.simulateEvent(target, "pointerdown", eventOptions);
+      this.simulateEvent(target, eventType + "down", eventOptions);
 
       for (; i < moves; i++) {
         x += dx / moves;
@@ -362,7 +363,11 @@
           clientY: Math.round(y)
         };
 
-        this.simulateEvent(target.ownerDocument, "pointermove", eventOptions);
+        this.simulateEvent(
+          target.ownerDocument,
+          eventType + "move",
+          eventOptions
+        );
       }
 
       if (options.skipDrop) {
@@ -370,10 +375,14 @@
       }
 
       if ($.contains(document, target)) {
-        this.simulateEvent(target.ownerDocument, "pointerup", eventOptions);
+        this.simulateEvent(
+          target.ownerDocument,
+          eventType + "up",
+          eventOptions
+        );
         this.simulateEvent(target, "click", eventOptions);
       } else {
-        this.simulateEvent(document, "pointerup", eventOptions);
+        this.simulateEvent(document, eventType + "up", eventOptions);
       }
     }
   });
