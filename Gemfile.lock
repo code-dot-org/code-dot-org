@@ -97,15 +97,6 @@ GIT
       image_optim (~> 0.19)
 
 GIT
-  remote: https://github.com/wjordan/ims-lti.git
-  revision: 39203db48428ab943547363b13da56b02a19d905
-  ref: oauth_051
-  specs:
-    ims-lti (1.1.12)
-      builder
-      oauth (>= 0.4.5, < 0.6)
-
-GIT
   remote: https://github.com/wjordan/lograge.git
   revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
   ref: debug_exceptions
@@ -604,7 +595,6 @@ GEM
     nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    oauth (0.5.1)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
@@ -1008,7 +998,6 @@ DEPENDENCIES
   image_optim_pack (~> 0.5.0)!
   image_optim_rails (~> 0.4.0)
   image_size
-  ims-lti!
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
   jumphash
