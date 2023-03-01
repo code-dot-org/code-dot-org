@@ -82,7 +82,8 @@ describe('ExternalLed', function() {
         isOn: false
       });
       clock = sinon.useFakeTimers();
-      sinon.spy(led, 'toggle_');
+      sinon.spy(led, 'setDigitalOutputOn');
+      sinon.spy(led, 'setDigitalOutputOff');
     });
 
     after(() => {
@@ -92,12 +93,13 @@ describe('ExternalLed', function() {
 
     it(`calls toggle_ every set interval`, () => {
       led.blink(100);
+      expect(led.setDigitalOutputOff).to.have.been.calledOnce;
       clock.tick(100);
-      expect(led.toggle_).to.have.been.calledOnce;
+      expect(led.setDigitalOutputOn).to.have.been.calledOnce;
       clock.tick(100);
-      expect(led.toggle_).to.have.been.calledTwice;
+      expect(led.setDigitalOutputOff).to.have.been.calledTwice;
       clock.tick(100);
-      expect(led.toggle_).to.have.been.calledThrice;
+      expect(led.setDigitalOutputOn).to.have.been.calledTwice;
     });
   });
 });
