@@ -326,6 +326,13 @@ describe('entry tests', () => {
     }
   };
 
+  config.ts = {
+    default: {
+      tsconfig: './tsconfig.json',
+      src: ['./src/**/*.ts', './src/**/*.tsx']
+    }
+  };
+
   config.sass = {
     all: {
       options: {
@@ -1243,6 +1250,7 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
+        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
       ],
       options: {
