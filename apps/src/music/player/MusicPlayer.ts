@@ -50,7 +50,8 @@ interface TrackMetadata {
 export default class MusicPlayer {
   private bpm: number;
   private playbackEvents: PlaybackEvent[];
-  private lastMeasure: number;
+  private lastTriggeredMeasure: number;
+  private lastScheduledMeasure: number;
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
@@ -63,7 +64,8 @@ export default class MusicPlayer {
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
     this.library = {groups: []};
-    this.lastMeasure = 0;
+    this.lastTriggeredMeasure = 0;
+    this.lastScheduledMeasure = 0;
   }
 
   /**
@@ -113,10 +115,18 @@ export default class MusicPlayer {
       return;
     }
 
-    this.lastMeasure = Math.max(
-      measure + soundData.length - 1,
-      this.lastMeasure
-    );
+    const endingMeasure = measure + soundData.length - 1;
+    if (insideWhenRun) {
+      this.lastScheduledMeasure = Math.max(
+        endingMeasure,
+        this.lastScheduledMeasure
+      );
+    } else {
+      this.lastTriggeredMeasure = Math.max(
+        endingMeasure,
+        this.lastTriggeredMeasure
+      );
+    }
 
     const soundEvent: SoundEvent = {
       type: 'sound',
@@ -170,7 +180,6 @@ export default class MusicPlayer {
   stopSong() {
     this.samplePlayer.stopPlayback();
     this.clearTriggeredEvents();
-    this.lastMeasure = 0;
   }
 
   /**
@@ -189,7 +198,7 @@ export default class MusicPlayer {
 
     // If playing, stop all non-triggered samples that have not yet been played.
     this.samplePlayer.stopAllSamplesStillToPlay();
-    this.lastMeasure = 0;
+    this.lastScheduledMeasure = 0;
   }
 
   getPlaybackEvents(): PlaybackEvent[] {
@@ -197,7 +206,7 @@ export default class MusicPlayer {
   }
 
   getLastMeasure(): number {
-    return this.lastMeasure;
+    return Math.max(this.lastScheduledMeasure, this.lastTriggeredMeasure);
   }
 
   // Returns the current playhead position, in floating point for an exact position,
@@ -356,6 +365,8 @@ export default class MusicPlayer {
         delete this.tracksMetadata[trackId];
       }
     });
+
+    this.lastTriggeredMeasure = 0;
   }
 
   private getSoundForId(id: string): SoundData | null {
