@@ -722,8 +722,8 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
 
     assert_equal level_path, assigns(:level).filename
-    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
-    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split.first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split.first
   end
 
   test "should allow rename of new level" do

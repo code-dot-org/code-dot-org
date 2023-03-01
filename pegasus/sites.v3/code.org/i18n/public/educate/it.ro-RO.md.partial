@@ -101,7 +101,7 @@ Noi utilizăm [YouTube](https://www.youtube.com) pentru a insera videoclipuri î
 
 Înainte de a începe cursurile online Code.org, testați redarea videoclipului de mai jos pentru a vă asigura că sunteți pregătit.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Acesta este executantul utilizat pe tot parcursul programei. Acesta va încerca să afișeze videoclipul prin YouTube și, dacă YouTube este blocat, va afișa videoclipul găzduit de Code.org folosind în schimb executantul nostru "de rezervă".
 

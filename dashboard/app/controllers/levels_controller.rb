@@ -117,9 +117,9 @@ class LevelsController < ApplicationController
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
     @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%").or(@levels.where('levels.level_num LIKE ?', "%#{params[:name]}%")) if params[:name]
-    @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
-    @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
-    @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
+    @levels = @levels.where(levels: {type: params[:level_type]}) if params[:level_type].present?
+    @levels = @levels.joins(:script_levels).where(script_levels: {script_id: params[:script_id]}) if params[:script_id].present?
+    @levels = @levels.left_joins(:user).where(levels: {user_id: params[:owner_id]}) if params[:owner_id].present?
   end
 
   # GET /levels/1
@@ -141,7 +141,7 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    if @level.properties['encrypted']&.is_a?(String)
+    if @level.properties['encrypted'].is_a?(String)
       @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
     end
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
@@ -200,7 +200,7 @@ class LevelsController < ApplicationController
     should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
-      toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
+      toolbox_blocks = "<xml>#{blocks.join}</xml>"
     end
 
     validation = @level.respond_to?(:validation) ? @level.validation : nil
@@ -288,7 +288,12 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
 
     if @level.save
-      redirect = params["redirect"] || level_url(@level, show_callouts: 1)
+      reset = !!params[:reset]
+      redirect = if reset
+                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                 else
+                   params["redirect"] || level_url(@level, show_callouts: 1)
+                 end
       render json: {redirect: redirect}
     else
       log_save_error(@level)

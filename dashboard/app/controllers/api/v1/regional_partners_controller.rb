@@ -87,9 +87,10 @@ class Api::V1::RegionalPartnersController < ApplicationController
     unless ['none', 'all'].include? regional_partner_value
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
-      if role == 'csd_teachers'
+      case role
+      when 'csd_teachers'
         return regional_partner&.cohort_capacity_csd
-      elsif role == 'csp_teachers'
+      when 'csp_teachers'
         return regional_partner&.cohort_capacity_csp
       end
     end

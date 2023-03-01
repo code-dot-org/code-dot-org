@@ -100,3 +100,5 @@ Levels 2-4 use a pretrained model provided by the [TensorFlow](https://www.tenso
 Levels 6-8 use a [Support-Vector Machine] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").
 
 [[Back to top]](#top)
+
+{{ visit_partial_event_logger }}

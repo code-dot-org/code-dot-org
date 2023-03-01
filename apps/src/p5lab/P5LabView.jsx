@@ -24,6 +24,7 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Top-level React wrapper for GameLab
@@ -70,10 +71,13 @@ class P5LabView extends React.Component {
   }
 
   getChannelId() {
+    let channelId;
+
     if (dashboard && dashboard.project) {
-      return dashboard.project.getCurrentId();
+      channelId = dashboard.project.getCurrentId();
     }
-    return undefined;
+
+    return channelId;
   }
 
   componentDidMount() {
@@ -85,8 +89,24 @@ class P5LabView extends React.Component {
     });
   }
 
+  // TODO: When we remove the backgrounds_and_upload experiment
+  // we can get rid of hideUploadOption
   shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations.
+    // Teachers should always be allowed to upload animations,
+    // and we are currently enabling it for students under an experiment flag.
+    if (
+      this.props.currentUserType === 'teacher' ||
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+    ) {
+      return false;
+    }
+
+    return this.props.isBlockly;
+  }
+
+  // Teachers and users of non-blockly labs should always be allowed to upload animations
+  // with no restrictions. Otherwise, if users upload animations we will disable publish and remix.
+  shouldRestrictAnimationUpload() {
     if (this.props.currentUserType === 'teacher') {
       return false;
     }
@@ -129,6 +149,8 @@ class P5LabView extends React.Component {
     // We don't want to show backgrounds if we're looking for costumes in Sprite Lab.
     const hideBackgrounds = !this.props.isBackground && this.props.isBlockly;
     const hideCostumes = this.props.isBackground && this.props.isBlockly;
+    const channelId = this.getChannelId();
+
     return (
       <div style={codeModeStyle}>
         <div
@@ -143,11 +165,12 @@ class P5LabView extends React.Component {
             hidePauseButton={this.props.hidePauseButton}
             onPromptAnswer={this.props.onPromptAnswer}
           />
-          {this.getChannelId() && (
+          {channelId && (
             <AnimationPicker
-              channelId={this.getChannelId()}
+              channelId={channelId}
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.shouldHideAnimationUpload()}
+              shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -187,6 +210,7 @@ class P5LabView extends React.Component {
       // Navigate to the backgrounds animation category.
       defaultQuery.categoryQuery = 'backgrounds';
     }
+    const isBackgroundMode = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     return allowAnimationMode &&
       (interfaceMode === P5LabInterfaceMode.ANIMATION ||
         interfaceMode === P5LabInterfaceMode.BACKGROUND) ? (
@@ -195,15 +219,10 @@ class P5LabView extends React.Component {
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}
+        shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
-        hideBackgrounds={
-          this.props.isBlockly &&
-          interfaceMode !== P5LabInterfaceMode.BACKGROUND
-        }
-        hideCostumes={
-          this.props.isBlockly &&
-          interfaceMode === P5LabInterfaceMode.BACKGROUND
-        }
+        hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
+        hideCostumes={isBackgroundMode}
         labType={this.props.labType}
         pickerType={
           this.props.isBackground

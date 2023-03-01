@@ -28,4 +28,10 @@ describe('SectionsSetUpContainer', () => {
         .props().text
     ).to.equal('Save class sections');
   });
+
+  it('renders curriculum quick assign', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
+  });
 });

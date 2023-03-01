@@ -3,5 +3,9 @@
   "display_name": "Hour of Code - Dance Party - Unplugged",
   "category": "hoc",
   "is_featured": false,
-  "assignable": false
+  "assignable": false,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null
 }

@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Add music to the scene!\r\n\r\n✅ **TO DO #1:** In `FashionScene.java`(#e7e8ea), write the `playMusic()`(#e7e8ea) method to play the parameter `sound`(#e7e8ea).\r\n\r\n✅ **TO DO #2:** In `TheaterRunner.java`(#e7e8ea), instantiate a `FashionScene`(#e7e8ea) object and call the `playScene()`(#e7e8ea) method with the `\"happyMusic.wav\"`(#e7e8ea) sound file in the **Asset Manager**.\r\n\r\n⚠️ **Don't forget!** Call the `Theater.playScenes(yourSceneObject)`(#e7e8ea) method to play the scene.\r\n\r\n💡 **TIP:** Check out the documentation for the `Scene`(#e7e8ea) class in the **Documentation** tab ⬆️ for help with playing sounds.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Music for a Fashion Scene",
+    "bubble_choice_description": "Add music to the scene displaying a fashion image.",
+    "thumbnail_url": "https://images.code.org/a6ed20239841b9fe50023374652a3453-742aec84c33b68901a2e945be7a430e2-image-1650485103229.jpg"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-02-17T18:17:21.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:17:21.884+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5d_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L5d_2023\"},{\"changed_at\":\"2023-02-17 18:17:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:42:32 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:43:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
