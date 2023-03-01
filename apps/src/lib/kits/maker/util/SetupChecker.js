@@ -13,10 +13,11 @@ import {
   isWebSerialPort
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
-import microbitUh from './microbit-uh-umd-min';
-// import DAPjs from './dap-umd.js';
-// import microbitUh from '@microbit/microbit-universal-hex';
-// import DAPjs from 'dapjs';
+import {
+  isUniversalHex,
+  separateUniversalHex
+} from '@microbit/microbit-universal-hex';
+import {DAPLink, WebUSB} from 'dapjs';
 
 export default class SetupChecker {
   constructor(webSerialPort) {
@@ -118,20 +119,17 @@ export default class SetupChecker {
     }
   }
 
-  updateMBFirmata() {
+  async updateMBFirmata() {
     console.log('inside SetupChecker.js');
-    return fetch('https://downloads.code.org/maker/microbit-firmata-v1.2.hex')
-      .then(response => {
-        this.hexStr = response.text();
-        return this.hexStr;
+    await fetch('https://downloads.code.org/maker/microbit-firmata-v1.2.hex')
+      .then(res => {
+        return res.text();
       })
-      .then(() => {
-        this.selectDevice();
+      .then(res => {
+        this.hexStr = res;
       })
-      .then(() => {
-        this.update();
-      })
-      .catch(error => console.log(error));
+      .then(() => this.selectDevice())
+      .catch(err => console.log(err));
   }
 
   // Choose a device
@@ -152,14 +150,13 @@ export default class SetupChecker {
       return;
     }
 
-    const transport = new DAPjs.WebUSB(device);
-    const target = new DAPjs.DAPLink(transport);
-
+    const transport = new WebUSB(device);
+    const target = new DAPLink(transport);
     // If it is a Universal Hex, separate it, and pick the right one for the connected micro:bit version
-    if (microbitUh.isUniversalHex(this.hexStr)) {
+    if (isUniversalHex(this.hexStr)) {
       let hexV1 = null;
       let hexV2 = null;
-      let separatedBinaries = microbitUh.separateUniversalHex(this.hexStr);
+      let separatedBinaries = separateUniversalHex(this.hexStr);
       separatedBinaries.forEach(function(hexObj) {
         if (hexObj.boardId === 0x9900 || hexObj.boardId === 0x9901) {
           hexV1 = hexObj.hex;
@@ -172,16 +169,16 @@ export default class SetupChecker {
           hexV2 = hexObj.hex;
         }
       });
-      if (microbitId === '9900' || microbitId === '9901') {
-        this.hexStr = hexV1;
-      } else if (
-        microbitId === '9903' ||
-        microbitId === '9904' ||
-        microbitId === '9905' ||
-        microbitId === '9906'
-      ) {
-        this.hexStr = hexV2;
-      }
+      // if (microbitId === '9900' || microbitId === '9901') {
+      //   this.hexStr = hexV1;
+      // } else if (
+      //   microbitId === '9903' ||
+      //   microbitId === '9904' ||
+      //   microbitId === '9905' ||
+      //   microbitId === '9906'
+      // ) {
+      //   this.hexStr = hexV2;
+      // }
     }
 
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
