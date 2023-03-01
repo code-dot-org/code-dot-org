@@ -13,7 +13,7 @@ export default function SingleSectionSetUp({
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
 
   return (
-    <div>
+    <div id="single-section-set-up">
       <h2>{i18n.classSection()}</h2>
       <label>
         {i18n.className()}
@@ -33,7 +33,6 @@ export default function SingleSectionSetUp({
         values={section.grades || []}
         setValues={g => updateSection('grades', g)}
       />
-      <br />
     </div>
   );
 }

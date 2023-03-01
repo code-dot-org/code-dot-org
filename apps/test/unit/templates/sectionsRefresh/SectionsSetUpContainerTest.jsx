@@ -58,7 +58,7 @@ describe('SectionsSetUpContainer', () => {
     sinon.restore();
   });
 
-  it('makes an ajax request when save is clocked', () => {
+  it('makes an ajax request when save is clicked', () => {
     sinon
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')

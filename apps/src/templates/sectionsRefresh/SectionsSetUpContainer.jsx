@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
 const FORM_ID = 'sections-set-up-container';
-const SECTIONS_API = '/sections';
+const SECTIONS_API = '/api/v1/sections';
 
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
@@ -44,13 +44,21 @@ const saveSection = (e, section) => {
   const csrfToken = document.querySelector('meta[name="csrf-token"]')
     .attributes['content'].value;
 
+  // TODO: remove this once login_type and participant_type are hooked up to
+  // the form.
+  const section_data = {
+    login_type: 'word',
+    participant_type: 'student',
+    ...section
+  };
+
   fetch(SECTIONS_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'X-CSRF-Token': csrfToken
     },
-    body: JSON.stringify({section})
+    body: JSON.stringify(section_data)
   })
     .then(response => response.json())
     .then(data => {
