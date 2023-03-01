@@ -6,7 +6,7 @@ export const AnalyticsContext = React.createContext(null);
 
 type PlayerUtils = Pick<
   MusicPlayer,
-  'getPlaybackEvents' | 'getTracksMetadata' | 'getLengthForId' | 'getTypeForId'
+  'getPlaybackEvents' | 'getTracksMetadata' | 'getLengthForId' | 'getTypeForId' | 'getLastMeasure'
 >;
 
 interface Other {
@@ -21,5 +21,6 @@ export const PlayerUtilsContext: React.Context<
   getTracksMetadata: () => ({}),
   getLengthForId: () => 0,
   getTypeForId: () => null,
+  getLastMeasure: () => 0,
   getIsExecutingPlay: () => false
 });
