@@ -15,7 +15,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.1.0'
+gem 'rails', '6.1.4.7'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
