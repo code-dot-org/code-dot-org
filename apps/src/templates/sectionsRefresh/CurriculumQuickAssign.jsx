@@ -13,7 +13,7 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl'
 };
 
-export default function CurriculumQuickAssign(updateSection) {
+export default function CurriculumQuickAssign({updateSection}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
@@ -120,7 +120,7 @@ export default function CurriculumQuickAssign(updateSection) {
         <QuickAssignTable
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
-          updateSection={() => updateSection}
+          updateCourse={course => updateSection('course', course)}
         />
       )}
     </div>
