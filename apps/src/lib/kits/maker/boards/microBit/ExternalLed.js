@@ -21,7 +21,6 @@ export default class ExternalLed {
   }
 
   blink(delay) {
-    // toggleInternal only calls on clearDigitalOutput, not off so that it doesn't turn off blinking.
     const toggleInternal = () => {
       return this.isOn ? this.setDigitalOutputOff() : this.setDigitalOutputOn();
     };
