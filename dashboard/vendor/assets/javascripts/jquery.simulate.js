@@ -11,7 +11,8 @@
 
 (function($, undefined) {
   var rkeyEvent = /^key/,
-    rmouseEvent = /^(?:mouse|contextmenu|touch|pointer|MSPointer)|click/;
+    rmouseEvent = /^(?:mouse|contextmenu|touch)|click/,
+    rpointerEvent = /^pointer/;
 
   $.fn.simulate = function(type, options) {
     return this.each(function() {
@@ -79,6 +80,22 @@
       if (rmouseEvent.test(type)) {
         return this.mouseEvent(type, options);
       }
+
+      if (rpointerEvent.test(type)) {
+        return this.pointerEvent(type, options);
+      }
+    },
+
+    pointerEvent: function(type, options) {
+      options = $.extend(
+        {
+          pointerType: "mouse",
+          pointerId: 1,
+          isPrimary: true
+        },
+        options
+      );
+      return new PointerEvent(type, options);
     },
 
     mouseEvent: function(type, options) {
@@ -320,42 +337,8 @@
     };
   }
 
-  var touchMappings = {};
-  if ("ontouchstart" in document.documentElement) {
-    touchMappings = {
-      mousedown: "touchstart",
-      mousemove: "touchmove",
-      mouseup: "touchend"
-    };
-  } else if (window.navigator.pointerEnabled) {
-    // IE 11+ support
-    touchMappings = {
-      mousedown: "pointerdown",
-      mousemove: "pointermove",
-      mouseup: "pointerup"
-    };
-  } else if (window.navigator.msPointerEnabled) {
-    // IE 10 support
-    touchMappings = {
-      mousedown: "MSPointerDown",
-      mousemove: "MSPointerMove",
-      mouseup: "MSPointerUp"
-    };
-  }
-
   $.extend($.simulate.prototype, {
     simulateDrag: function() {
-      if (
-        window.Blockly &&
-        Blockly.version === "Google" &&
-        window["PointerEvent"]
-      ) {
-        touchMappings = {
-          mousedown: "pointerdown",
-          mousemove: "pointermove",
-          mouseup: "pointerup"
-        };
-      }
       var i = 0,
         target = this.target,
         options = this.options,
@@ -363,34 +346,28 @@
           options.handle === "corner" ? findCorner(target) : findCenter(target),
         x = Math.floor(center.x),
         y = Math.floor(center.y),
-        coord = { clientX: x, clientY: y },
+        eventOptions = { clientX: x, clientY: y },
         dx = options.dx || (options.x !== undefined ? options.x - x : 0),
         dy = options.dy || (options.y !== undefined ? options.y - y : 0),
         moves = options.moves || 3;
+      const eventType = Blockly?.version === "Google" ? "pointer" : "mouse";
 
-      // Note that this is not an ideal simulation since we are not generating all the
-      // "legacy" mouse events, as described in #1 at
-      // http://www.html5rocks.com/en/mobile/touchandmouse/.  This is because the blockly-core
-      // code calls preventDefault on that set after it handles one, but there's not an easy
-      // way to handle this kind of cancellation from this simulator.
-      function simulateEvent(obj, target, name, param) {
-        if (name in touchMappings) {
-          name = touchMappings[name];
-        }
-        obj.simulateEvent(target, name, param);
-      }
-      simulateEvent(this, target, "mousedown", coord);
+      this.simulateEvent(target, eventType + "down", eventOptions);
 
       for (; i < moves; i++) {
         x += dx / moves;
         y += dy / moves;
 
-        coord = {
+        eventOptions = {
           clientX: Math.round(x),
           clientY: Math.round(y)
         };
 
-        simulateEvent(this, target.ownerDocument, "mousemove", coord);
+        this.simulateEvent(
+          target.ownerDocument,
+          eventType + "move",
+          eventOptions
+        );
       }
 
       if (options.skipDrop) {
@@ -398,10 +375,14 @@
       }
 
       if ($.contains(document, target)) {
-        simulateEvent(this, target, "mouseup", coord);
-        simulateEvent(this, target, "click", coord);
+        this.simulateEvent(
+          target.ownerDocument,
+          eventType + "up",
+          eventOptions
+        );
+        this.simulateEvent(target, "click", eventOptions);
       } else {
-        simulateEvent(this, document, "mouseup", coord);
+        this.simulateEvent(document, eventType + "up", eventOptions);
       }
     }
   });
