@@ -6,7 +6,7 @@ import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/Curriculu
 
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
-    const wrapper = shallow(<CurriculumQuickAssign />);
+    const wrapper = shallow(<CurriculumQuickAssign updateSection={() => {}} />);
 
     expect(wrapper.find('h3').length).to.equal(1);
     expect(wrapper.find('h5').length).to.equal(1);
@@ -24,7 +24,7 @@ describe('CurriculumQuickAssign', () => {
   });
 
   it('updates caret direction when clicked', () => {
-    const wrapper = shallow(<CurriculumQuickAssign />);
+    const wrapper = shallow(<CurriculumQuickAssign updateSection={() => {}} />);
 
     expect(
       wrapper
@@ -45,7 +45,7 @@ describe('CurriculumQuickAssign', () => {
   });
 
   it('clears decide later when marketing audience selected', () => {
-    const wrapper = mount(<CurriculumQuickAssign />);
+    const wrapper = mount(<CurriculumQuickAssign updateSection={() => {}} />);
 
     expect(wrapper.find('input').props().checked).to.equal(false);
     wrapper.find('input').simulate('change');

@@ -15,6 +15,7 @@ describe('QuickAssignTable', () => {
       <QuickAssignTable
         marketingAudience={MARKETING_AUDIENCE.ELEMENTARY}
         courseOfferings={elementarySchoolCourseOffering}
+        updateCourse={() => {}}
       />
     );
 
@@ -27,6 +28,7 @@ describe('QuickAssignTable', () => {
       <QuickAssignTable
         marketingAudience={MARKETING_AUDIENCE.HIGH}
         courseOfferings={highSchoolCourseOfferings}
+        updateCourse={() => {}}
       />
     );
     expect(wrapper.find('table').length).to.equal(2);
