@@ -463,7 +463,12 @@ class Blockly < Level
     end
 
     # returning the children of body removes extra <html><body> tags added by parsing with ::HTML
-    start_html_doc.xpath("//body").children.to_html(encoding: 'UTF-8', save_with: 0)
+    # the save_with option prevents the to_html method from pretty printing and adding newlines
+    # see: https://github.com/premailer/premailer/issues/345
+    start_html_doc.xpath("//body").children.to_html(
+      encoding: 'UTF-8',
+      save_with: Nokogiri::XML::Node::SaveOptions::DEFAULT_HTML ^ Nokogiri::XML::Node::SaveOptions::FORMAT
+    )
   end
 
   def localized_authored_hints
