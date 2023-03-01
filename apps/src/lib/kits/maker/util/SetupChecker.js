@@ -13,11 +13,13 @@ import {
   isWebSerialPort
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
+import DAPjs from 'dapjs';
 
 export default class SetupChecker {
   constructor(webSerialPort) {
     this.port = null;
     this.boardController = null;
+    this.hexStr = null;
     if (webSerialPort) {
       this.port = webSerialPort;
     }
@@ -112,4 +114,57 @@ export default class SetupChecker {
       releaseRefs();
     }
   }
+
+  updateMBFirmata() {
+    console.log('inside SetupChecker.js');
+    return fetch('https://downloads.code.org/maker/microbit-firmata-v1.2.hex')
+      .then(response => {
+        this.hexStr = response.text();
+        return this.hexStr;
+      })
+      .then(() => {
+        this.selectDevice();
+      })
+      .then(() => {
+        this.update();
+      })
+      .catch(error => console.log(error));
+  }
+
+  // Choose a device
+  selectDevice = async () => {
+    try {
+      const device = await navigator.usb.requestDevice({
+        filters: [{vendorId: 0x0d28, productId: 0x0204}]
+      });
+      await this.update(device);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Update a device with the firmware image
+  update = async device => {
+    if (!this.hexStr) {
+      return;
+    }
+
+    const transport = new DAPjs.WebUSB(device);
+    const target = new DAPjs.DAPLink(transport);
+
+    // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
+    let hexBuffer = new Uint8Array(this.hexStr.length);
+    for (let i = 0; i < this.hexStr.length; i++) {
+      hexBuffer[i] = this.hexStr.charCodeAt(i);
+    }
+
+    try {
+      // Push binary to board
+      await target.connect();
+      await target.flash(hexBuffer);
+      await target.disconnect();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 }
