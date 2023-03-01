@@ -1,97 +1,39 @@
 import GoogleBlockly from 'blockly/core';
 
-// The colors here come Martin Krzywinski's 24-color palette for colorblindness:
-// http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
-// http://mkweb.bcgsc.ca/colorblind/palettes/24.color.blindness.palette.txt
-// Each color in our standard palette was mapped to a new "nearest" color from the safe palette.
-// For now, this is a manual process but we could also automate this using:
-// https://github.com/dtao/nearest-color
+// IMPORTANT! Whenever updating ./cdoBlockStyles.mjs, be sure to also update
+// the styles here as well. The accessible styles can be generated using
+// accessibleColors.mjs.
+// From this directory in your terminal, enter:
+// - yarn add nearest-color
+// - node accessibleColors.mjs
+// - yarn remove nearest-color
 
-// Intentionally overriden styles from Google Blockly.
-const coreBlocklyOverrides = {
-  colour_blocks: {
-    colourPrimary: '#009FFA'
-  },
-  list_blocks: {
-    colourPrimary: '#6B069F'
-  },
-  logic_blocks: {
-    colourPrimary: '#005FCC'
-  },
-  loop_blocks: {
-    colourPrimary: '#FF2E95'
-  },
-  math_blocks: {
-    colourPrimary: '#00489E'
-  },
-  procedure_blocks: {
-    colourPrimary: '#009503'
-  },
-  text_blocks: {
-    colourPrimary: '#009175'
-  },
-  variable_blocks: {
-    colourPrimary: '#AB0D61'
-  }
-};
-
-// Used for Sprite Lab (and all related level subtypes), and Dance.
-const spriteLabAccessibleStyles = {
-  behavior_blocks: {
-    colourPrimary: '#00AF8E'
-  },
-  location_blocks: {
-    colourPrimary: '#FFB935'
-  },
-  sprite_blocks: {
-    colourPrimary: '#B20725'
-  }
-};
-
-// Used only for Dance Party
-const danceAccessibleStyles = {
-  dance_blocks: {
-    colourPrimary: '#8E06CD'
-  }
-};
-
-// Experimental MusicLab styles. Subject to change.
-const musicLabAccessibleStyles = {
-  flow_blocks: {
-    colourPrimary: '#00AF8E'
-  },
-  music_blocks: {
-    colourPrimary: '#6B069F'
-  }
-};
-
-// Standard CDO palette of block colors used across labs
-const cdoCustomAccessibleStyles = {
-  default: {
-    colourPrimary: '#00CBA7'
-  },
-  event_blocks: {
-    colourPrimary: '#00B408'
-  },
-  setup_blocks: {
-    colourPrimary: '#FF8735'
-  },
-  world_blocks: {
-    colourPrimary: '#6B069F'
-  },
-  ...spriteLabAccessibleStyles,
-  ...danceAccessibleStyles,
-  ...musicLabAccessibleStyles
-};
-
-export const cdoAccessibleBlockStyles = {
-  ...coreBlocklyOverrides,
-  ...cdoCustomAccessibleStyles
+// Copy the values output by the script below.
+const accessibleColors = {
+  list_blocks: {colourPrimary: '#6B069F'},
+  logic_blocks: {colourPrimary: '#009175'},
+  math_blocks: {colourPrimary: '#00489E'},
+  text_blocks: {colourPrimary: '#00735C'},
+  variable_blocks: {colourPrimary: '#AB0D61'},
+  colour_blocks: {colourPrimary: '#005FCC'},
+  loop_blocks: {colourPrimary: '#FF2E95'},
+  procedure_blocks: {colourPrimary: '#009503'},
+  default: {colourPrimary: '#0079FA'},
+  comment_blocks: {colourPrimary: '#8E06CD'},
+  event_blocks: {colourPrimary: '#007702'},
+  setup_blocks: {colourPrimary: '#FF4235'},
+  world_blocks: {colourPrimary: '#460B70'},
+  behavior_blocks: {colourPrimary: '#005745'},
+  location_blocks: {colourPrimary: '#DE0D2E'},
+  sprite_blocks: {colourPrimary: '#B20725'},
+  dance_blocks: {colourPrimary: '#B40AFC'},
+  flow_blocks: {colourPrimary: '#00306F'},
+  music_blocks: {colourPrimary: '#810D49'}
 };
 
 export default GoogleBlockly.Theme.defineTheme('cdoaccessible', {
   base: GoogleBlockly.Themes.Classic,
-  blockStyles: cdoAccessibleBlockStyles,
+  blockStyles: accessibleColors,
   categoryStyles: {},
   componentStyles: {
     toolboxBackgroundColour: '#DDDDDD'
