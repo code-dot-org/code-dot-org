@@ -10,7 +10,15 @@ import moduleStyles from './sections-refresh.module.scss';
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
 const useSections = () => {
-  const [sections, setSections] = useState([{}]);
+  // added "default properties" for any new section
+  const [sections, setSections] = useState([
+    {
+      pairingAllowed: true,
+      restrictSection: false,
+      ttsAutoplayEnabled: false,
+      lessonExtras: true
+    }
+  ]);
 
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {
