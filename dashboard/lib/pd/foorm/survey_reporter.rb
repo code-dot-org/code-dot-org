@@ -146,12 +146,15 @@ module Pd::Foorm
       [parsed_forms, summarized_answers]
     end
 
-    # Gets the raw data needed for summarizing workshop survey results.
+    # Gets the raw data needed for summarizing survey results of workshop participants.
     # @param workshop id, the workshop to get data from
     # @return array of [WorkshopSurveyFoormSubmissions, FoormSubmissions, FoormForms]
     #   for the given workshop id.
     def self.get_raw_data_for_workshop(workshop_id, facilitator_id=nil)
-      ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
+      ws_submissions = Pd::WorkshopSurveyFoormSubmission.
+        where(pd_workshop_id: workshop_id).
+        joins(:foorm_submission).
+        where('foorm_submissions.form_name' => Pd::WorkshopSurveyFoormConstants::ALL_PARTICIPANT_SURVEY_CONFIG_PATHS)
       if facilitator_id
         ws_submissions = ws_submissions.where(facilitator_id: facilitator_id).or(ws_submissions.where(facilitator_id: nil))
       end
