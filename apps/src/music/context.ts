@@ -4,23 +4,25 @@ import MusicPlayer from './player/MusicPlayer';
 /** Provides access to the Analytics reporter object */
 export const AnalyticsContext = React.createContext(null);
 
+/** Provicess access to commonly used APIs related to the playing state. */
+export const ExecutionContext = React.createContext(null);
+
 type PlayerUtils = Pick<
   MusicPlayer,
-  'getPlaybackEvents' | 'getTracksMetadata' | 'getLengthForId' | 'getTypeForId' | 'getLastMeasure'
+  | 'getPlaybackEvents'
+  | 'getTracksMetadata'
+  | 'getLengthForId'
+  | 'getTypeForId'
+  | 'getLastMeasure'
 >;
-
-interface Other {
-  getIsExecutingPlay: () => boolean
-};
 
 /** Provides access to commonly used MusicPlayer APIs (without exposing the entire player) */
 export const PlayerUtilsContext: React.Context<
-  PlayerUtils & Other
-> = React.createContext<PlayerUtils & Other>({
+  PlayerUtils
+> = React.createContext<PlayerUtils>({
   getPlaybackEvents: () => [],
   getTracksMetadata: () => ({}),
   getLengthForId: () => 0,
   getTypeForId: () => null,
-  getLastMeasure: () => 0,
-  getIsExecutingPlay: () => false
+  getLastMeasure: () => 0
 });

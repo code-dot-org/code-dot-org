@@ -13,7 +13,11 @@ import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from '../context';
+import {
+  AnalyticsContext,
+  ExecutionContext,
+  PlayerUtilsContext
+} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -61,7 +65,7 @@ class UnconnectedMusicView extends React.Component {
     // used to differentiate tracks created on the same trigger
     this.triggerCount = 0;
 
-    this.isExecutingPlay = false;
+    this.isExecutingForPlay = false;
 
     // Set default for instructions position.
     let instructionsPosIndex = 1;
@@ -199,8 +203,7 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.isExecutingPlay = false;
-      this.executeCompiledSong();
+      this.executeCompiledSong({executingForPlay: true});
 
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
@@ -251,7 +254,9 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
-  executeCompiledSong = () => {
+  executeCompiledSong = options => {
+    this.isExecutingForPlay = options.executingForPlay;
+
     // Clear the events list of when_run sounds, because it will be
     // populated next.
     this.player.clearWhenRunEvents();
@@ -259,8 +264,8 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
-  getIsExecutingPlay = () => {
-    return this.isExecutingPlay;
+  getIsExecutingForPlay = () => {
+    return this.isExecutingForPlay;
   };
 
   playSong = () => {
@@ -268,8 +273,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.compileSong();
 
-    this.isExecutingPlay = true;
-    this.executeCompiledSong();
+    this.executeCompiledSong({executingForPlay: true});
 
     this.player.playSong();
 
@@ -279,8 +283,8 @@ class UnconnectedMusicView extends React.Component {
   stopSong = () => {
     this.player.stopSong();
 
-    this.isExecutingPlay = false;
-    this.executeCompiledSong();
+    this.isExecutingForPlay = false;
+    this.executeCompiledSong({executingForPlay: false});
 
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
@@ -386,47 +390,50 @@ class UnconnectedMusicView extends React.Component {
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
             getTypeForId: id => this.player.getTypeForId(id),
-            getLastMeasure: () => this.player.getLastMeasure(),
-            getIsExecutingPlay: () => this.getIsExecutingPlay()
+            getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <div id="music-lab-container" className={moduleStyles.container}>
-            {this.state.showInstructions &&
-              instructionsPosition === InstructionsPositions.TOP &&
-              this.renderInstructions(InstructionsPositions.TOP)}
-
-            {this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                true,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-
-            <div className={moduleStyles.middleArea}>
+          <ExecutionContext.Provider
+            value={{getIsExecutingForPlay: () => this.getIsExecutingForPlay()}}
+          >
+            <div id="music-lab-container" className={moduleStyles.container}>
               {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.LEFT &&
-                this.renderInstructions(InstructionsPositions.LEFT)}
+                instructionsPosition === InstructionsPositions.TOP &&
+                this.renderInstructions(InstructionsPositions.TOP)}
 
-              <div id="blockly-area" className={moduleStyles.blocklyArea}>
-                <div className={moduleStyles.topButtonsContainer}>
-                  <TopButtons
-                    clearCode={this.clearCode}
-                    uploadSound={file => this.soundUploader.uploadSound(file)}
-                  />
+              {this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  true,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
+
+              <div className={moduleStyles.middleArea}>
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.LEFT &&
+                  this.renderInstructions(InstructionsPositions.LEFT)}
+
+                <div id="blockly-area" className={moduleStyles.blocklyArea}>
+                  <div className={moduleStyles.topButtonsContainer}>
+                    <TopButtons
+                      clearCode={this.clearCode}
+                      uploadSound={file => this.soundUploader.uploadSound(file)}
+                    />
+                  </div>
+                  <div id="blockly-div" />
                 </div>
-                <div id="blockly-div" />
+
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.RIGHT &&
+                  this.renderInstructions(InstructionsPositions.RIGHT)}
               </div>
 
-              {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.RIGHT &&
-                this.renderInstructions(InstructionsPositions.RIGHT)}
+              {!this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  false,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
             </div>
-
-            {!this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                false,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-          </div>
+          </ExecutionContext.Provider>
         </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );
