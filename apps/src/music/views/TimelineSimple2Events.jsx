@@ -125,6 +125,7 @@ const TimelineSimple2Events = ({
             }
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
+            skipContext={eventData.skipContext}
             currentPlayheadPosition={currentPlayheadPosition}
           />
         ))}
