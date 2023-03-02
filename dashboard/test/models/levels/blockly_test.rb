@@ -1246,4 +1246,18 @@ class BlocklyTest < ActiveSupport::TestCase
     parsed_xml = Nokogiri::XML(localized_block_xml, &:noblanks)
     assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
   end
+
+  test 'keeps tags expanded when localizing start_html' do
+    level = create(
+      :level,
+      :blockly,
+      name: 'test localized_start_html',
+    )
+    start_html = '<div><button id="leftBottomButton"></button><label>Outfit Picker</label></div>'
+    localized_start_html = level.localized_start_html(start_html)
+
+    # Output should use <button></button> instead of <button />
+    expected_output = '<div><button id="leftBottomButton"></button><label>Outfit Picker</label></div>'
+    assert_equal expected_output, localized_start_html
+  end
 end

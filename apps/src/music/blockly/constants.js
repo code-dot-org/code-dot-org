@@ -12,6 +12,7 @@ export const EXTRA_SOUND_INPUT_PREFIX = 'extra_sound_input_';
 export const EXTRA_SAMPLE_FIELD_PREFIX = 'extra_sample';
 export const TRIGGER_FIELD = 'trigger';
 export const PRIMARY_SOUND_INPUT_NAME = 'primary_sound';
+export const FIELD_REST_DURATION_NAME = 'rest_duration';
 
 // Types
 

@@ -1,8 +1,9 @@
 import React from 'react';
+import AnalyticsReporter from './analytics/AnalyticsReporter';
 import MusicPlayer from './player/MusicPlayer';
 
 /** Provides access to the Analytics reporter object */
-export const AnalyticsContext = React.createContext(null);
+export const AnalyticsContext: React.Context<AnalyticsReporter | null> = React.createContext<AnalyticsReporter | null>(null);
 
 /** Provicess access to commonly used APIs related to the playing state. */
 type PlayingInfo = {
