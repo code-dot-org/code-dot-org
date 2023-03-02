@@ -28,7 +28,7 @@ interface FunctionContext {
 }
 
 interface SkipContext {
-  maybeSkipSound: boolean;
+  insideRandom: boolean;
   skipSound: boolean;
 }
 
