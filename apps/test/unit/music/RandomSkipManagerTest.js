@@ -10,7 +10,7 @@ describe('Music random skip manager tests', function() {
     randomSkipManager.init();
 
     assert.deepEqual(randomSkipManager.getSkipContext(), {
-      maybeSkipSound: false,
+      insideRandom: false,
       skipSound: false
     });
 
@@ -20,21 +20,21 @@ describe('Music random skip manager tests', function() {
       randomSkipManager.beginRandomContext(2, 1);
 
         assert.deepEqual(randomSkipManager.getSkipContext(), {
-          maybeSkipSound: true,
+          insideRandom: true,
           skipSound: true
         });
 
         randomSkipManager.beginRandomContext(2, 1);
 
           assert.deepEqual(randomSkipManager.getSkipContext(), {
-            maybeSkipSound: true,
+            insideRandom: true,
             skipSound: true
           });
 
           randomSkipManager.next();
 
           assert.deepEqual(randomSkipManager.getSkipContext(), {
-            maybeSkipSound: true,
+            insideRandom: true,
             skipSound: true
           });
 
@@ -45,7 +45,7 @@ describe('Music random skip manager tests', function() {
         // This context will be played.
 
         assert.deepEqual(randomSkipManager.getSkipContext(), {
-          maybeSkipSound: true,
+          insideRandom: true,
           skipSound: false
         });
 
@@ -53,7 +53,7 @@ describe('Music random skip manager tests', function() {
         randomSkipManager.beginRandomContext(2, 1);
 
           assert.deepEqual(randomSkipManager.getSkipContext(), {
-            maybeSkipSound: true,
+            insideRandom: true,
             skipSound: true
           });
 
@@ -62,7 +62,7 @@ describe('Music random skip manager tests', function() {
           // This context will be played.
 
           assert.deepEqual(randomSkipManager.getSkipContext(), {
-            maybeSkipSound: true,
+            insideRandom: true,
             skipSound: false
           });
 

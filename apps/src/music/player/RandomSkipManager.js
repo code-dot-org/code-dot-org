@@ -20,13 +20,13 @@ export default class RandomSkipSequencer {
     if (this.stack.length > 0) {
       const currentEntry = this.stack[this.stack.length - 1];
       return {
-        maybeSkipSound: true,
+        insideRandom: true,
         skipSound:
           currentEntry.skipSound ||
           currentEntry.randomIndex !== currentEntry.currentIndex
       };
     } else {
-      return {maybeSkipSound: false, skipSound: false};
+      return {insideRandom: false, skipSound: false};
     }
   }
 
