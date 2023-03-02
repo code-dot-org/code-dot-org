@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2023-02-28 15:59:25 UTC",
+    "serialized_at": "2023-03-01 19:59:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -178,6 +178,48 @@
     },
     {
       "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "animal behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "bdcb698e-d109-485a-8804-55a906397d02"
+      },
+      "level_keys": [
+        "animal behaviors"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "animal behaviors2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "bdcb698e-d109-485a-8804-55a906397d02"
+      },
+      "level_keys": [
+        "animal behaviors2"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -201,7 +243,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -225,7 +267,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -249,7 +291,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -273,7 +315,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -297,7 +339,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -321,7 +363,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -345,7 +387,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -369,7 +411,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -393,7 +435,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -435,6 +477,30 @@
         "level.key": "Colors Example",
         "script_level.level_keys": [
           "Colors Example"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "bdcb698e-d109-485a-8804-55a906397d02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "animal behaviors",
+        "script_level.level_keys": [
+          "animal behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "bdcb698e-d109-485a-8804-55a906397d02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "animal behaviors2",
+        "script_level.level_keys": [
+          "animal behaviors2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
