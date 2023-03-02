@@ -23,7 +23,7 @@ export default class SetupChecker {
   constructor(webSerialPort) {
     this.port = null;
     this.boardController = null;
-    this.hexStr = null;
+    // this.hexStr = null;
     if (webSerialPort) {
       this.port = webSerialPort;
     }
@@ -118,19 +118,85 @@ export default class SetupChecker {
       releaseRefs();
     }
   }
+  updateMBFirmata = async () => {
+    const result = await fetch(
+      'https://downloads.code.org/maker/microbit-firmata-v1.2.hex'
+    );
+    if (!result.ok) {
+      throw new Error('Failed to download hex file');
+    }
+    const downloadAsText = await result.text();
+    const device = await navigator.usb.requestDevice({
+      filters: [{vendorId: 0x0d28, productId: 0x0204}]
+    });
 
-  async updateMBFirmata() {
-    console.log('inside SetupChecker.js');
-    await fetch('https://downloads.code.org/maker/microbit-firmata-v1.2.hex')
-      .then(res => {
-        return res.text();
-      })
-      .then(res => {
-        this.hexStr = res;
-      })
-      .then(() => this.selectDevice())
-      .catch(err => console.log(err));
-  }
+    const transport = new WebUSB(device);
+    const target = new DAPLink(transport);
+
+    // Detect micro:bit version and select the right Intel Hex for micro:bit V1 or V2
+    const microbitId = device.serialNumber.substring(0, 4);
+
+    let chosenPart;
+
+    // It might be better to look at the micro:bit version first and then download the right
+    // hex part for it. Use the splitter to create the two parts.
+    if (isUniversalHex(downloadAsText)) {
+      let hexV1 = null;
+      let hexV2 = null;
+      const separatedBinaries = separateUniversalHex(downloadAsText);
+      separatedBinaries.forEach(function(hexObj) {
+        if (hexObj.boardId === 0x9900 || hexObj.boardId === 0x9901) {
+          hexV1 = hexObj.hex;
+        } else if (
+          hexObj.boardId === 0x9903 ||
+          hexObj.boardId === 0x9904 ||
+          hexObj.boardId === 0x9905 ||
+          hexObj.boardId === 0x9906
+        ) {
+          hexV2 = hexObj.hex;
+        }
+      });
+      if (microbitId === '9900' || microbitId === '9901') {
+        chosenPart = hexV1;
+      } else if (
+        microbitId === '9903' ||
+        microbitId === '9904' ||
+        microbitId === '9905' ||
+        microbitId === '9906'
+      ) {
+        chosenPart = hexV2;
+      }
+    } else {
+      throw new Error('Download unexpectedly not universal hex');
+    }
+    if (!chosenPart) {
+      throw new Error('Did not find matching hex part; this should not happen');
+    }
+
+    const chosenPartAsBytes = new TextEncoder().encode(chosenPart);
+    try {
+      console.log('about to connect');
+      await target.connect();
+      console.log('about to flash');
+      await target.flash(chosenPartAsBytes);
+      console.log('about to disconnect');
+      await target.disconnect();
+    } catch (error) {
+      console.log(JSON.stringify(error));
+    }
+  };
+  // async updateMBFirmata() {
+  //   console.log('inside SetupChecker.js');
+  //   await fetch('https://downloads.code.org/maker/microbit-firmata-v1.2.hex')
+  //     .then(res => {
+  //       return res.text();
+  //     })
+  //     .then(res => {
+  //       this.hexStr = res;
+  //     })
+  //     .then(() => this.selectDevice())
+  //     .catch(err => console.log(err));
+  // }
 
   // Choose a device
   selectDevice = async () => {
@@ -171,6 +237,8 @@ export default class SetupChecker {
           hexObj.boardId === 0x9906
         ) {
           hexV2 = hexObj.hex;
+        } else {
+          throw new Error('Download unexpectedly not universal hex');
         }
       });
       if (microbitId === '9900' || microbitId === '9901') {
@@ -186,15 +254,16 @@ export default class SetupChecker {
     }
 
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
-    let hexBuffer = new Uint8Array(this.hexStr.length);
-    for (let i = 0; i < this.hexStr.length; i++) {
-      hexBuffer[i] = this.hexStr.charCodeAt(i);
-    }
+    // let hexBuffer = new Uint8Array(this.hexStr.length);
+    // for (let i = 0; i < this.hexStr.length; i++) {
+    //   hexBuffer[i] = this.hexStr.charCodeAt(i);
+    // }
+    let hexAsBytes = new TextEncoder().encode(this.hexStr);
 
     try {
       // Push binary to board
       await target.connect();
-      await target.flash(hexBuffer);
+      await target.flash(hexAsBytes);
       await target.disconnect();
     } catch (error) {
       console.log(error);
