@@ -394,6 +394,9 @@
         if (name in touchMappings) {
           name = touchMappings[name];
         }
+        if (name === "pointerup") {
+          target = target.ownerDocument;
+        }
         obj.simulateEvent(target, name, param);
       }
       simulateEvent(this, target, "mousedown", coord);
@@ -415,7 +418,7 @@
       }
 
       if ($.contains(document, target)) {
-        simulateEvent(this, target.ownerDocument, "mouseup", coord);
+        simulateEvent(this, target, "mouseup", coord);
         simulateEvent(this, target, "click", coord);
       } else {
         simulateEvent(this, document, "mouseup", coord);
