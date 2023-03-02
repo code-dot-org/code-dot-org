@@ -27,10 +27,15 @@ interface FunctionContext {
   uniqueInvocationId: number;
 }
 
+interface SkipContext {
+  maybeSkipSound: boolean;
+  skipSound: boolean;
+}
+
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
-  skipContext: any;
+  skipContext?: SkipContext;
 }
 
 interface TrackMetadata {
@@ -105,7 +110,7 @@ export default class MusicPlayer {
     insideWhenRun: boolean,
     trackId?: string,
     functionContext?: FunctionContext,
-    skipContext?: any
+    skipContext?: SkipContext
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
