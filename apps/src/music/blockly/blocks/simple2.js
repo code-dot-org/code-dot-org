@@ -43,10 +43,9 @@ export class GeneratorHelpersSimple2 {
       name: 'when_run',
       uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
     };
-    var __maybeSkipSound = false;
-    var __skipSound = false;
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
+    RandomSkipManager.init();
     ${functionCallsCode}
     ${functionImplementationsCode}
   `;
@@ -88,10 +87,9 @@ export const whenRunSimple2 = {
         name: 'when_run',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
-      var __maybeSkipSound = false;
-      var __skipSound = false;
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
+      RandomSkipManager.init();
     `
 };
 
@@ -117,13 +115,12 @@ export const triggeredAtSimple2 = {
         name: '${block.getFieldValue(TRIGGER_FIELD)}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
-      var __maybeSkipSound = false;
-      var __skipSound = false;
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
         )
       );
+      RandomSkipManager.init();
     `
 };
 
@@ -151,16 +148,14 @@ export const playSoundAtCurrentLocationSimple2 = {
   },
   generator: block =>
     `
-      //if (!__skipSound) {
       MusicPlayer.playSoundAtMeasureById(
         "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
         ProgramSequencer.getCurrentMeasure(),
         __insideWhenRun,
         null,
         __currentFunction,
-        {maybeSkipSound: __maybeSkipSound, skipSound: __skipSound}
+        RandomSkipManager.getSkipContext()
       );
-      //}
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
@@ -278,38 +273,20 @@ export const playSoundsRandom = {
       currentBlock = currentBlock.getNextBlock();
     }
 
-    const randomVar = Blockly.JavaScript.nameDB_.getDistinctName(
-      'random',
-      Blockly.Names.NameType.VARIABLE
-    );
-
-    let code = `var ${randomVar} = Math.floor(Math.random() * ${
-      resultArray.length
-    });`;
-
-    for (const [resultIndex, result] of resultArray.entries()) {
-      const lastMaybeSkipSoundVar = Blockly.JavaScript.nameDB_.getDistinctName(
-        '__lastMaybeSkipSound',
-        Blockly.Names.NameType.VARIABLE
-      );
-      const lastSkipSoundVar = Blockly.JavaScript.nameDB_.getDistinctName(
-        '__lastSkipSound',
-        Blockly.Names.NameType.VARIABLE
-      );
+    let code = '';
+    for (const result of resultArray) {
       code += `
-        ${lastMaybeSkipSoundVar} = __maybeSkipSound;
-        ${lastSkipSoundVar} = __skipSound;
-        __maybeSkipSound = true;
-        __skipSound = __skipSound || ${randomVar} !== ${resultIndex};
         ${result}
-        __maybeSkipSound = ${lastMaybeSkipSoundVar};
-        __skipSound = ${lastSkipSoundVar};
+        RandomSkipManager.next();
         `;
     }
 
-    return ` ProgramSequencer.playTogether();
+    return `
+      ProgramSequencer.playTogether();
+      RandomSkipManager.beginRandomContext(${resultArray.length});
       ${code}
       ProgramSequencer.endTogether();
+      RandomSkipManager.endRandomContext();
       `;
   }
 };

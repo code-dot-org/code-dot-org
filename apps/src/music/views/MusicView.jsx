@@ -8,6 +8,7 @@ import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
 import ProgramSequencer from '../player/ProgramSequencer';
+import RandomSkipManager from '../player/RandomSkipManager';
 import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -58,6 +59,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
+    this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
@@ -203,7 +205,7 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.executeCompiledSong({executingForPlay: true});
+      this.executeCompiledSong({executingForPlay: false});
 
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
@@ -250,6 +252,7 @@ class UnconnectedMusicView extends React.Component {
     return this.musicBlocklyWorkspace.compileSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
+      RandomSkipManager: this.randomSkipManager,
       getTriggerCount: () => this.triggerCount
     });
   };
