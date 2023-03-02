@@ -6,6 +6,7 @@ import {
   FIELD_REST_DURATION_NAME
 } from '../constants';
 import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
+import {getCodeForSingleBlock} from '../blockUtils';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -43,6 +44,7 @@ export class GeneratorHelpersSimple2 {
     };
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
+    RandomSkipManager.init();
     ${functionCallsCode}
     ${functionImplementationsCode}
   `;
@@ -86,6 +88,7 @@ export const whenRunSimple2 = {
       };
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
+      RandomSkipManager.init();
     `
 };
 
@@ -116,6 +119,7 @@ export const triggeredAtSimple2 = {
           MusicPlayer.getCurrentPlayheadPosition()
         )
       );
+      RandomSkipManager.init();
     `
 };
 
@@ -138,7 +142,8 @@ export const playSoundAtCurrentLocationSimple2 = {
         ProgramSequencer.getCurrentMeasure(),
         __insideWhenRun,
         null,
-        __currentFunction
+        __currentFunction,
+        RandomSkipManager.getSkipContext()
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
@@ -218,6 +223,52 @@ export const playSoundsSequential = {
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endSequential();
       `
+};
+
+export const playSoundsRandom = {
+  definition: {
+    type: BlockTypes.PLAY_SOUNDS_RANDOM,
+    message0: 'play random',
+    args0: [],
+    message1: '%1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'code'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'flow_blocks',
+    tooltip: 'play sound randomly',
+    helpUrl: ''
+  },
+  generator: block => {
+    const resultArray = [];
+    let currentBlock = block.getInputTargetBlock('code');
+    while (currentBlock) {
+      const codeForBlock = getCodeForSingleBlock(currentBlock);
+      resultArray.push(codeForBlock);
+      currentBlock = currentBlock.getNextBlock();
+    }
+
+    let code = '';
+    for (const result of resultArray) {
+      code += `
+        ${result}
+        RandomSkipManager.next();
+        `;
+    }
+
+    return `
+      ProgramSequencer.playTogether();
+      RandomSkipManager.beginRandomContext(${resultArray.length});
+      ${code}
+      ProgramSequencer.endTogether();
+      RandomSkipManager.endRandomContext();
+      `;
+  }
 };
 
 export const repeatSimple2 = {
