@@ -5,13 +5,13 @@ import MusicPlayer from './player/MusicPlayer';
 export const AnalyticsContext = React.createContext(null);
 
 /** Provicess access to commonly used APIs related to the playing state. */
-type ExecutionInfo = {
-  getIsExecutionPlay: () => boolean;
+type PlayingInfo = {
+  isPlaying: () => boolean;
 };
 
-export const ExecutionContext: React.Context<
-  ExecutionInfo
-> = React.createContext<ExecutionInfo>({getIsExecutionPlay: () => false});
+export const PlayingContext: React.Context<
+  PlayingInfo
+> = React.createContext<PlayingInfo>({isPlaying: () => false});
 
 type PlayerUtils = Pick<
   MusicPlayer,

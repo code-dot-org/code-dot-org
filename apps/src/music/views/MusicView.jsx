@@ -14,11 +14,7 @@ import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
-import {
-  AnalyticsContext,
-  ExecutionContext,
-  PlayerUtilsContext
-} from '../context';
+import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -66,8 +62,6 @@ class UnconnectedMusicView extends React.Component {
     // Increments every time a trigger is pressed;
     // used to differentiate tracks created on the same trigger
     this.triggerCount = 0;
-
-    this.isExecutingForPlay = false;
 
     // Set default for instructions position.
     let instructionsPosIndex = 1;
@@ -205,7 +199,7 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.executeCompiledSong({executingForPlay: this.state.isPlaying});
+      this.executeCompiledSong();
 
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
@@ -257,9 +251,7 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
-  executeCompiledSong = options => {
-    this.isExecutingForPlay = options.executingForPlay;
-
+  executeCompiledSong = () => {
     // Clear the events list of when_run sounds, because it will be
     // populated next.
     this.player.clearWhenRunEvents();
@@ -267,8 +259,8 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
-  getIsExecutingForPlay = () => {
-    return this.isExecutingForPlay;
+  isPlaying = () => {
+    return this.state.isPlaying;
   };
 
   playSong = () => {
@@ -276,7 +268,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.compileSong();
 
-    this.executeCompiledSong({executingForPlay: true});
+    this.executeCompiledSong();
 
     this.player.playSong();
 
@@ -286,7 +278,7 @@ class UnconnectedMusicView extends React.Component {
   stopSong = () => {
     this.player.stopSong();
 
-    this.executeCompiledSong({executingForPlay: false});
+    this.executeCompiledSong();
 
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
@@ -395,9 +387,7 @@ class UnconnectedMusicView extends React.Component {
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <ExecutionContext.Provider
-            value={{getIsExecutingForPlay: () => this.getIsExecutingForPlay()}}
-          >
+          <PlayingContext.Provider value={{isPlaying: () => this.isPlaying()}}>
             <div id="music-lab-container" className={moduleStyles.container}>
               {this.state.showInstructions &&
                 instructionsPosition === InstructionsPositions.TOP &&
@@ -435,7 +425,7 @@ class UnconnectedMusicView extends React.Component {
                   instructionsPosition === InstructionsPositions.RIGHT
                 )}
             </div>
-          </ExecutionContext.Provider>
+          </PlayingContext.Provider>
         </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );
