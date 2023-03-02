@@ -516,9 +516,13 @@ redshift_password:
 devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+
 db_cluster_id: !StackSecret
 db_proxy_reporting_endpoint: !StackSecret
 db_writer_endpoint: !StackSecret
+# FOLLOW ON: Transition from the above naming convention to the `db_endpoint_[type]` convention below.
+db_endpoint_writer: PLACEHOLDER
+db_endpoint_proxy_reporting: PLACEHOLDER
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
