@@ -326,6 +326,13 @@ html[dir="rtl"] .editor-column {
   border-top: 1px solid #ddd;
 }
 
+// TODO: For phase 1.5 we'll need to remove this styles
+#codeWorkspace #clear-console-header {
+  span {
+    color: #4d575f;
+  }
+}
+
 // #codeWorkspace.readonly is used when we are displaying a workspace but it
 // is not editable (like someone else project), or when app is running
 #codeWorkspace.readonly,
