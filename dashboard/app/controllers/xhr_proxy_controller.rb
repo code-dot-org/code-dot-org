@@ -46,6 +46,7 @@ class XhrProxyController < ApplicationController
     api.nookipedia.com
     api.opencagedata.com
     api.open-notify.org
+    api.open-meteo.com
     api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
@@ -66,6 +67,7 @@ class XhrProxyController < ApplicationController
     api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
+    bnefoodtrucks.com.au
     ch.tetr.io
     code.org
     covidtracking.com
