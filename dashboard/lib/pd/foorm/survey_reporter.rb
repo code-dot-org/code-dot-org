@@ -3,6 +3,7 @@ module Pd::Foorm
   class SurveyReporter
     include Constants
     include Pd::WorkshopConstants
+    include Pd::WorkshopSurveyFoormConstants
     extend Helper
 
     # Calculates report for a given workshop id.
@@ -143,7 +144,7 @@ module Pd::Foorm
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.
         where(pd_workshop_id: workshop_id).
         joins(:foorm_submission).
-        where('foorm_submissions.form_name' => Pd::WorkshopSurveyFoormConstants::ALL_PARTICIPANT_SURVEY_CONFIG_PATHS)
+        where(foorm_submissions: {form_name: ALL_PARTICIPANT_SURVEY_CONFIG_PATHS})
       if facilitator_id
         ws_submissions = ws_submissions.where(facilitator_id: facilitator_id).or(ws_submissions.where(facilitator_id: nil))
       end
