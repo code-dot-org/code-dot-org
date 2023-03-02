@@ -197,16 +197,6 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      // Stop all when_run sounds that are still to play, because if they
-      // are still valid after the when_run code is re-executed, they
-      // will be scheduled again.
-      this.stopAllSoundsStillToPlay();
-
-      // Also clear all when_run sounds from the events list, because it
-      // will be recreated in its entirely when the when_run code is
-      // re-executed.
-      this.player.clearWhenRunEvents();
-
       this.executeCompiledSong();
 
       this.analyticsReporter.onBlocksUpdated(
@@ -255,6 +245,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   executeCompiledSong = () => {
+    // Clear the events list of when_run sounds, because it will be
+    // populated next.
+    this.player.clearWhenRunEvents();
+
     this.musicBlocklyWorkspace.executeCompiledSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
@@ -267,10 +261,6 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      // Clear the events list of when_run sounds, because it will be
-      // populated next.
-      this.player.clearWhenRunEvents();
-
       this.executeCompiledSong();
     }
 
@@ -281,17 +271,8 @@ class UnconnectedMusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
-
-    // Clear the events list, and hence the visual timeline, of any
-    // user-triggered sounds.
-    this.player.clearTriggeredEvents();
-
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
-  };
-
-  stopAllSoundsStillToPlay = () => {
-    this.player.stopAllSoundsStillToPlay();
   };
 
   handleKeyUp = event => {
@@ -393,7 +374,8 @@ class UnconnectedMusicView extends React.Component {
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id)
+            getTypeForId: id => this.player.getTypeForId(id),
+            getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
           <div id="music-lab-container" className={moduleStyles.container}>
