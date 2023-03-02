@@ -9505,6 +9505,8 @@ en:
               name: NEW- Function Machines - Lesson 3
             lesson-5:
               name: NEW- Function Machines - Lesson 4
+            lesson-6:
+              name: Ecosystems Test
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -10192,7 +10194,9 @@ en:
           description: ''
           student_description: ''
         csc-adaptations-2023:
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: Animal Behaviors for Survival
           lesson_groups: {}
           name: csc-adaptations-2023
           title: Animal Adaptations
