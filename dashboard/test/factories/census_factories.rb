@@ -32,7 +32,7 @@ FactoryGirl.define do
   end
 
   factory :census_school, parent: :school do
-    state {Census::StateCsOffering::SUPPORTED_STATES.first}
+    state 'AK'
     is_high_school
     transient do
       school_year 2017
@@ -73,24 +73,6 @@ FactoryGirl.define do
     trait :with_census_override_nil do
       after(:create) do |school, evaluator|
         create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: nil
-      end
-    end
-
-    trait :with_ap_cs_offering do
-      after(:create) do |school, evaluator|
-        create :ap_school_code, :with_ap_cs_offering, school: school, school_year: evaluator.school_year
-      end
-    end
-
-    trait :with_ib_cs_offering do
-      after(:create) do |school, evaluator|
-        create :ib_school_code, :with_ib_cs_offering, school: school, school_year: evaluator.school_year
-      end
-    end
-
-    trait :with_state_cs_offering do
-      after(:create) do |school, evaluator|
-        create :state_cs_offering, school: school, school_year: evaluator.school_year
       end
     end
 

@@ -39,12 +39,8 @@ class School < ApplicationRecord
 
   has_many :school_stats_by_year
   has_many :school_info
-  has_many :state_cs_offering, class_name: 'Census::StateCsOffering', foreign_key: :state_school_id, primary_key: :state_school_id
   has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
-
-  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
-  has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
 
@@ -442,16 +438,6 @@ class School < ApplicationRecord
     end
   end
 
-  def load_state_cs_offerings(offerings_to_load, is_dry_run)
-    offerings_to_load.each do |offering|
-      new_offering = offering.slice(:course, :school_year)
-      new_offering[:state_school_id] = state_school_id
-      Census::StateCsOffering.create!(new_offering) unless is_dry_run
-    end
-
-    return state_cs_offering.reload
-  end
-
   # format a list of schools to a string
   def self.pretty_print_school_list(schools)
     schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")
@@ -473,8 +459,6 @@ class School < ApplicationRecord
     updated_schools_attribute_frequency = {}
     unchanged_schools = 0
     duplicate_schools = []
-    state_cs_offerings_deleted_count = 0
-    state_cs_offerings_reloaded_count = 0
     lines_processed = 0
 
     ActiveRecord::Base.transaction do
@@ -496,13 +480,6 @@ class School < ApplicationRecord
             duplicate_schools << csv_entry
           end
         elsif !db_entry.nil? && update_existing
-          old_state_school_id = db_entry.state_school_id.clone
-
-          # skip DB query if state school ID not in provided set of data
-          has_state_cs_offerings = csv_entry.key?(:state_school_id) ?
-            db_entry.state_cs_offering.any? :
-            false
-
           db_entry.assign_attributes(csv_entry)
 
           if db_entry.changed?
@@ -519,30 +496,11 @@ class School < ApplicationRecord
                 updated_schools_attribute_frequency[attribute] = 1
             end
 
-            # We need to delete and reload state_cs_offerings
-            # if we're going to update the state_school_id for a given school.
-            deleted_state_cs_offerings = []
-            if has_state_cs_offerings && db_entry.changed.include?('state_school_id')
-              deleted_state_cs_offerings = Census::StateCsOffering.where(state_school_id: old_state_school_id).destroy_all unless is_dry_run
-              state_cs_offerings_deleted_count += deleted_state_cs_offerings.count
-            end
-
             begin
               db_entry.update!(csv_entry)
             rescue ActiveRecord::RecordNotUnique
               CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
               duplicate_schools << csv_entry
-            end
-
-            if deleted_state_cs_offerings.any?
-              reloaded_state_cs_offerings = db_entry.load_state_cs_offerings(deleted_state_cs_offerings, is_dry_run)
-              state_cs_offerings_reloaded_count += reloaded_state_cs_offerings.count
-
-              # Check and see if old and new are the same
-              reconstituted = reloaded_state_cs_offerings.pluck(:course, :school_year)
-              original = deleted_state_cs_offerings.pluck(:course, :school_year)
-              failure = ((reconstituted - original) + (original - reconstituted)).any?
-              raise "Mismatch between state CS offerings deleted and recreated for NCES ID #{db_entry.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
             end
           else
             unchanged_schools += 1
@@ -560,7 +518,6 @@ class School < ApplicationRecord
         "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
         "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (apart from specified ignored attributes).\n"\
         "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
-        "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
       if updated_schools_attribute_frequency.any?
         summary_message <<
