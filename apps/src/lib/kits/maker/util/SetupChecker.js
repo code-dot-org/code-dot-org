@@ -152,6 +152,10 @@ export default class SetupChecker {
 
     const transport = new WebUSB(device);
     const target = new DAPLink(transport);
+
+    // Detect micro:bit version and select the right Intel Hex for micro:bit V1 or V2
+    const microbitId = device.serialNumber.substring(0, 4);
+
     // If it is a Universal Hex, separate it, and pick the right one for the connected micro:bit version
     if (isUniversalHex(this.hexStr)) {
       let hexV1 = null;
@@ -169,16 +173,16 @@ export default class SetupChecker {
           hexV2 = hexObj.hex;
         }
       });
-      // if (microbitId === '9900' || microbitId === '9901') {
-      //   this.hexStr = hexV1;
-      // } else if (
-      //   microbitId === '9903' ||
-      //   microbitId === '9904' ||
-      //   microbitId === '9905' ||
-      //   microbitId === '9906'
-      // ) {
-      //   this.hexStr = hexV2;
-      // }
+      if (microbitId === '9900' || microbitId === '9901') {
+        this.hexStr = hexV1;
+      } else if (
+        microbitId === '9903' ||
+        microbitId === '9904' ||
+        microbitId === '9905' ||
+        microbitId === '9906'
+      ) {
+        this.hexStr = hexV2;
+      }
     }
 
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
