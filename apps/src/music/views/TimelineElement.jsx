@@ -31,11 +31,11 @@ const TimelineElement = ({
   const length = playerUtils.getLengthForId(soundId);
 
   const isInsideRandom = skipContext?.insideRandom;
-  const isSkipping =
+  const isSkipSound =
     executionContext.getIsExecutingForPlay() && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
-    !isSkipping &&
+    !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + length;
@@ -45,15 +45,15 @@ const TimelineElement = ({
       className={classNames(
         moduleStyles.timelineElement,
         typeToColorClass[playerUtils.getTypeForId(soundId)],
-        isCurrentlyPlaying && moduleStyles.timelineElementPlaying
+        isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
+        isInsideRandom && moduleStyles.timelineElementInsideRandom,
+        isSkipSound && moduleStyles.timelineElementSkipSound
       )}
       style={{
         width: barWidth * length - 4,
         height,
         top,
-        left,
-        ...(isInsideRandom && {borderColor: '#a1a1a1'}),
-        ...(isSkipping && {backgroundColor: '#808080'})
+        left
       }}
     >
       &nbsp;
