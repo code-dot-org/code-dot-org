@@ -1,0 +1,20 @@
+name 'csc_animal_adaptations_intro'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Survival Behaviors
+
+Animals have developed behaviors and actions to help them survive. Some animals can move very fast, some hibernate during the winter and others try to stay in groups. 
+
+##Example
+Picture/Gif
+
+##Example
+Picture/Gif
+
+##Example
+Picture/Gif
+
+
+MARKDOWN
