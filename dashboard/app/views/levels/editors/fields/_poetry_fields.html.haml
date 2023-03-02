@@ -1,3 +1,10 @@
+- content_for :body_scripts do
+  - poems = {}
+  - poetry_poems = @level.class.poems_for_subtype('poetry_hoc')
+  - time_capsule_poems =  @level.class.poems_for_subtype('time_capsule')
+  - script_data = { poems: {poetry_hoc: poetry_poems, time_capsule: time_capsule_poems}.to_json }
+  %script{src: webpack_asset_path('js/levels/editors/fields/_poetry_fields.js'), data: script_data}
+
 %h1.control-legend{data: {toggle: "collapse", target: "#poetry_fields"}}
   Poetry Fields
 
@@ -7,26 +14,31 @@
     %p Poetry HOC and Time Capsule levels have a poem dropdown above the playspace and auto-animate the poem.
     - if local_assigns[:warning]
       %p= "WARNING: #{warning}"
-    = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, onchange: 'toggleFields(this.value);'
+    = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, {class: 'poem-subtype-dropdown'}
 
-  #hocPoems{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
-    = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.hoc_poems.sort}
 
-  #timeCapsulePoems{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
-    = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.time_capsule_poems}
+  #defaultPoem{class: ('collapse' if @level.standalone_app_name == 'poetry')}
+    = f.label :default_poem, 'Default Poem'
+    = f.select :default_poem, options_for_select(@level.class.poems_for_subtype(@level.standalone_app_name), @level.default_poem)
 
-:javascript
-  function toggleFields(val) {
-    const defaultPoemHoc = document.getElementById('hocPoems');
-    const defaultPoemTimeCapsule = document.getElementById('timeCapsulePoems');
-    if (val.toLowerCase() === 'poetry') {
-      defaultPoemHoc.classList.add('collapse');
-      defaultPoemTimeCapsule.classList.add('collapse');
-    } else if (val.toLowerCase() === 'poetry_hoc') {
-      defaultPoemTimeCapsule.classList.add('collapse');
-      defaultPoemHoc.classList.remove('collapse');
-    } else if (val.toLowerCase() === 'time_capsule') {
-      defaultPoemTimeCapsule.classList.remove('collapse');
-      defaultPoemHoc.classList.add('collapse');
-    }
-  }
+-#   #hocPoems{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
+-#     = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.hoc_poems.sort}
+
+-#   #timeCapsulePoems{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
+-#     = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.time_capsule_poems}
+
+-# :javascript
+-#   function toggleFields(val) {
+-#     const defaultPoemHoc = document.getElementById('hocPoems');
+-#     const defaultPoemTimeCapsule = document.getElementById('timeCapsulePoems');
+-#     if (val.toLowerCase() === 'poetry') {
+-#       defaultPoemHoc.classList.add('collapse');
+-#       defaultPoemTimeCapsule.classList.add('collapse');
+-#     } else if (val.toLowerCase() === 'poetry_hoc') {
+-#       defaultPoemTimeCapsule.classList.add('collapse');
+-#       defaultPoemHoc.classList.remove('collapse');
+-#     } else if (val.toLowerCase() === 'time_capsule') {
+-#       defaultPoemTimeCapsule.classList.remove('collapse');
+-#       defaultPoemHoc.classList.add('collapse');
+-#     }
+-#   }
