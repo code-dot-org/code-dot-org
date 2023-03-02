@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-02-28 23:43:47 UTC",
+    "serialized_at": "2023-03-01 20:03:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -494,7 +494,7 @@
       "key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469",
       "position": 2,
       "properties": {
-        "name": "Warm Up"
+        "name": "Warm Up - Option 1"
       },
       "seeding_key": {
         "lesson_activity.key": "a6b64ae4-7d5f-4078-b2b0-9dfd00e55469",
@@ -1429,8 +1429,6 @@
       "key": "2d091572-d54e-4a4d-b9a8-fde3e646f8cb",
       "position": 1,
       "properties": {
-        "duration": "15",
-        "name": "Option 1",
         "tips": [
           {
             "type": "teachingTip",
@@ -1551,7 +1549,7 @@
       "key": "3e82967b-8d4f-401c-9dc5-21b4afa88d5b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n- **Define:** when we put into our own words what the problem of a word search is and what the goal is\n- **Prepare:** the brainstorming of different strategies that could be used to solve a word search\n- **Try:** when we picked a strategy and tried to find the words\n- **Reflect:** when we reflected on how they did at the end",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1612,7 +1610,7 @@
       "key": "2201a072-ce57-4606-85e6-e0323b592c23",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use\n- **Try:** Sketching the website out before creating it\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use, or sketching out the website\n- **Try:** Creating a basic version of the website that may not have all of the features\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
       },
       "seeding_key": {
         "activity_section.key": "2201a072-ce57-4606-85e6-e0323b592c23",
@@ -1665,7 +1663,7 @@
       "position": 4,
       "properties": {
         "description": "\n**Code Studio:** Direct students to the \"Sample Web Pages\" level on Code Studio.",
-        "progression_name": "Sample Personal Web Pages"
+        "progression_name": "Sample Web Pages"
       },
       "seeding_key": {
         "activity_section.key": "c255a733-9244-48ed-a227-eee0659fa4a5",
@@ -1712,7 +1710,13 @@
       "properties": {
         "description": "Now we've been asked to design a website ourself for a client. We can create our own design, but it should meet the needs of our user.",
         "name": "Designing a Website",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note on Timing:** Depending on how long the warm-up took, especially if the class watched the problem-solving video, you may run out of time to fully complete this activity. That's okay! It can be something students come back to as they progress throughout the unit, or you may decide to extend this activity into a new class period and stretch-out the design and feedback process. This task can be implemented in a variety of ways to match the constraints of the classroom."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "20ff45fc-855e-4cdd-a9db-6001cbafd618",
@@ -1773,22 +1777,10 @@
       "key": "cb88b39c-cbf2-4823-8b02-a569635b6dc5",
       "position": 2,
       "properties": {
-        "description": "**Question of the Day:  Why do people create web pages?**"
+        "description": "**Question of the Day:** How can we choose websites based on the needs of a user?"
       },
       "seeding_key": {
         "activity_section.key": "cb88b39c-cbf2-4823-8b02-a569635b6dc5",
-        "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
-      }
-    },
-    {
-      "key": "e05fbf8d-2aa7-49f0-8439-911da6edbb60",
-      "position": 3,
-      "properties": {
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis velit vitae sapien tincidunt lobortis. Donec cursus ipsum ac tempus viverra. Phasellus mauris lorem, feugiat non tincidunt in, ornare vitae enim. Morbi gravida est et magna eleifend congue. Cras dapibus consequat neque, tempus tempus leo blandit eget. \n\n[r the_problem_solving_process/csd2/2023]\n\n[r problem_solving_and_design/csd2/2023]\n\n[r _warm_up_word_search/csd2/2023]\n\n[r web_design_for_users_b_/csd2/2023]\n\n[r web_design_template/csd2/2023]\n\n[r exploring_web_pages_2/csd2/2023]\n\n[r web_design_for_users_b_/csd2/2023]\n[r web_design_template/csd2/2023]\n[r exploring_web_pages_2/csd2/2023]\n[r exploring_web_pages_1/csd2/2023]",
-        "name": "Tess testing"
-      },
-      "seeding_key": {
-        "activity_section.key": "e05fbf8d-2aa7-49f0-8439-911da6edbb60",
         "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
       }
     },
@@ -5877,7 +5869,7 @@
         "level_keys": [
           "CSD Web Sample Pages_2023"
         ],
-        "progression": "Sample Personal Web Pages"
+        "progression": "Sample Web Pages"
       },
       "bonus": false,
       "seeding_key": {
@@ -9277,8 +9269,8 @@
       }
     },
     {
-      "name": "[TODO] Exploring Web Pages",
-      "url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/template/preview",
+      "name": "Exploring Web Pages",
+      "url": "https://docs.google.com/presentation/d/158pMxcRgqMvMSyMRVZyAyiEcRY_XfO8DM40dQLg4TyY/template/preview",
       "key": "exploring_web_pages_2",
       "properties": {
         "audience": "Teacher",
@@ -11380,7 +11372,7 @@
     {
       "key": "0d039da4-6026-442a-a61a-92cde155234a",
       "properties": {
-        "description": "Identify the reasons someone might visit a given website"
+        "description": "Create a prototype of a web design to meet the needs of a user"
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
@@ -11430,7 +11422,7 @@
     {
       "key": "1edc2bc5-6616-45a4-8a7e-5b2af44bb086",
       "properties": {
-        "description": "Identify the reasons someone might create a given website"
+        "description": "Identify features of a web design that match the needs of users"
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",

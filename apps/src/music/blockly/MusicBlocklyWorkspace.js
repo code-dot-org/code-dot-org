@@ -197,7 +197,7 @@ export default class MusicBlocklyWorkspace {
         ].includes(block.type)
       ) {
         if (!this.compiledEvents.tracks) {
-          this.events.tracks = {code: ''};
+          this.compiledEvents.tracks = {code: ''};
         }
         this.compiledEvents.tracks.code += Blockly.JavaScript.blockToCode(
           block
