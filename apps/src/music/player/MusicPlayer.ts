@@ -27,9 +27,15 @@ interface FunctionContext {
   uniqueInvocationId: number;
 }
 
+interface SkipContext {
+  insideRandom: boolean;
+  skipSound: boolean;
+}
+
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
+  skipContext?: SkipContext;
 }
 
 interface TrackMetadata {
@@ -103,7 +109,8 @@ export default class MusicPlayer {
     measure: number,
     insideWhenRun: boolean,
     trackId?: string,
-    functionContext?: FunctionContext
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
@@ -134,7 +141,8 @@ export default class MusicPlayer {
       triggered: !insideWhenRun,
       when: measure,
       trackId,
-      functionContext
+      functionContext,
+      skipContext
     };
 
     this.playbackEvents.push(soundEvent);
@@ -388,6 +396,11 @@ export default class MusicPlayer {
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
+
+      if (soundEvent.skipContext?.skipSound) {
+        return [];
+      }
+
       return [
         {
           sampleId: soundEvent.id,
