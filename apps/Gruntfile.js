@@ -717,6 +717,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_droplet.js',
     'levels/editors/fields/_grid':
       './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_poetry_fields':
+      './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
     'levels/editors/fields/_preload_assets':
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
