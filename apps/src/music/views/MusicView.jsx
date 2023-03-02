@@ -205,7 +205,7 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.executeCompiledSong({executingForPlay: false});
+      this.executeCompiledSong({executingForPlay: this.state.isPlaying});
 
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
@@ -286,7 +286,6 @@ class UnconnectedMusicView extends React.Component {
   stopSong = () => {
     this.player.stopSong();
 
-    this.isExecutingForPlay = false;
     this.executeCompiledSong({executingForPlay: false});
 
     this.setState({isPlaying: false, currentPlayheadPosition: 0});

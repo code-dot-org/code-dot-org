@@ -14,6 +14,7 @@ describe('Music random skip manager tests', function() {
       skipSound: false
     });
 
+    // Preserve the indentation:
     // prettier-ignore
     {
       // Override to play index 1.
