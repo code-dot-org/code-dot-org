@@ -40,20 +40,6 @@ const toolboxBlocks = {
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-    inputs: {
-      measures: {
-        shadow: {
-          type: BlockTypes.VALUE_REST_DURATION,
-          fields: {
-            [FIELD_REST_DURATION_NAME]: '1'
-          }
-        }
-      }
-    }
-  },
-  [BlockTypes.VALUE_REST_DURATION]: {
-    kind: 'block',
-    type: BlockTypes.VALUE_REST_DURATION,
     fields: {
       [FIELD_REST_DURATION_NAME]: '1'
     }
@@ -98,15 +84,8 @@ const toolboxBlocks = {
   [BlockTypes.REST_IN_TRACK]: {
     kind: 'block',
     type: BlockTypes.REST_IN_TRACK,
-    inputs: {
-      measures: {
-        shadow: {
-          type: BlockTypes.VALUE_REST_DURATION,
-          fields: {
-            [FIELD_REST_DURATION_NAME]: '1'
-          }
-        }
-      }
+    fields: {
+      [FIELD_REST_DURATION_NAME]: '1'
     }
   },
   [BlockTypes.NEW_TRACK_AT_START]: {

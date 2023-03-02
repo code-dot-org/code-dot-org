@@ -1,12 +1,11 @@
 import {BlockTypes} from '../blockTypes';
-import Globals from '../../globals';
 import {
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
-  FIELD_SOUNDS_TYPE
+  FIELD_REST_DURATION_NAME
 } from '../constants';
-import {DEFAULT_SOUND} from '../../constants';
+import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -124,17 +123,7 @@ export const playSoundAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'play %1',
-    args0: [
-      {
-        type: FIELD_SOUNDS_TYPE,
-        name: FIELD_SOUNDS_NAME,
-        getLibrary: () => Globals.getLibrary(),
-        playPreview: (id, onStop) => {
-          Globals.getPlayer().previewSound(id, onStop);
-        },
-        currentValue: DEFAULT_SOUND
-      }
-    ],
+    args0: [fieldSoundsDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
@@ -163,12 +152,7 @@ export const playRestAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'rest for %1',
-    args0: [
-      {
-        type: 'input_value',
-        name: 'measures'
-      }
-    ],
+    args0: [fieldRestDurationDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
@@ -179,11 +163,7 @@ export const playRestAtCurrentLocationSimple2 = {
   generator: block =>
     `
       ProgramSequencer.updateMeasureForPlayByLength(
-        ${Blockly.JavaScript.valueToCode(
-          block,
-          'measures',
-          Blockly.JavaScript.ORDER_ASSIGNMENT
-        )}
+        ${block.getFieldValue(FIELD_REST_DURATION_NAME)}
       );
     `
 };
