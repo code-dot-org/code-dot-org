@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-import {PlayerUtilsContext, ExecutionContext} from '../context';
+import {PlayerUtilsContext, PlayingContext} from '../context';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
 
@@ -26,13 +26,12 @@ const TimelineElement = ({
   currentPlayheadPosition
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const executionContext = useContext(ExecutionContext);
+  const playingContext = useContext(PlayingContext);
 
   const length = playerUtils.getLengthForId(soundId);
 
   const isInsideRandom = skipContext?.insideRandom;
-  const isSkipSound =
-    executionContext.getIsExecutingForPlay() && skipContext?.skipSound;
+  const isSkipSound = playingContext.isPlaying() && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
     !isSkipSound &&
