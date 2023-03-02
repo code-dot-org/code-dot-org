@@ -259,10 +259,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
-  isPlaying = () => {
-    return this.state.isPlaying;
-  };
-
   playSong = () => {
     this.player.stopSong();
 
@@ -387,7 +383,7 @@ class UnconnectedMusicView extends React.Component {
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <PlayingContext.Provider value={{isPlaying: () => this.isPlaying()}}>
+          <PlayingContext.Provider value={{isPlaying: this.state.isPlaying}}>
             <div id="music-lab-container" className={moduleStyles.container}>
               {this.state.showInstructions &&
                 instructionsPosition === InstructionsPositions.TOP &&
