@@ -63,7 +63,7 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "What makes these sprites talk?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the sprites while the program is running.\",\"hint_id\":\"hw_click_sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5ccdc39ffb113caab99c572f56a16df/helloworld_food_click.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to change any of the code in this level.\",\"hint_id\":\"hw_no_changes\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ec039212f05e3efb2779a92da1ee94a/helloworld_food_click.mp3\"}]",
-    "instructions_icon": "bird",
+    "instructions_icon": "purplebunny",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
@@ -78,7 +78,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:19:41.658+00:00\",\"changed\":[\"cloned from \\\"helloworld_bunny_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_bunny_click_ecosystems\"},{\"changed_at\":\"2023-02-28 16:52:11 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"start_animations\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:52:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:54:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:57:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:59:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:19:41.658+00:00\",\"changed\":[\"cloned from \\\"helloworld_bunny_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_bunny_click_ecosystems\"},{\"changed_at\":\"2023-02-28 16:52:11 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"start_animations\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:52:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:54:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:57:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:59:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 18:22:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 18:25:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -105,7 +105,7 @@
           </value>
         </block>
         <block type="gamelab_spriteSay">
-          <field name="SPEECH">My beak is pointy and strong so I can peck holes into trees to find insects to eat.</field>
+          <field name="SPEECH">My beak is pointy and strong to find insects in tree bark.</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"birdside_10"</field>
