@@ -6,12 +6,12 @@ export const AnalyticsContext = React.createContext(null);
 
 /** Provicess access to commonly used APIs related to the playing state. */
 type PlayingInfo = {
-  isPlaying: () => boolean;
+  isPlaying: boolean;
 };
 
 export const PlayingContext: React.Context<
   PlayingInfo
-> = React.createContext<PlayingInfo>({isPlaying: () => false});
+> = React.createContext<PlayingInfo>({isPlaying: false});
 
 type PlayerUtils = Pick<
   MusicPlayer,

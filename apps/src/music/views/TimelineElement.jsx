@@ -31,7 +31,7 @@ const TimelineElement = ({
   const length = playerUtils.getLengthForId(soundId);
 
   const isInsideRandom = skipContext?.insideRandom;
-  const isSkipSound = playingContext.isPlaying() && skipContext?.skipSound;
+  const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
     !isSkipSound &&
