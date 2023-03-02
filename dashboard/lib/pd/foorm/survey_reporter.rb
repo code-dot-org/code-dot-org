@@ -65,17 +65,6 @@ module Pd::Foorm
       result_data
     end
 
-    # Get rollup for all survey results for the given course
-    def self.get_rollup_for_course(course_name, questions_to_summarize, facilitators)
-      workshop_ids = Pd::Workshop.where(course: course_name).where.not(started_at: nil, ended_at: nil).pluck(:id)
-      return get_rollup_for_workshop_ids(
-        workshop_ids,
-        questions_to_summarize,
-        false,
-        facilitators
-      )
-    end
-
     # Given set of facilitators and a course name, return average responses for given
     # questions across all workshops each facilitator has run.
     # @param object {facilitator_id: facilitator_name,...} specifying facilitators to include
