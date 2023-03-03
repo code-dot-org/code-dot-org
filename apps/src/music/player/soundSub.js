@@ -1,3 +1,5 @@
+import {InsertEffects} from './soundEffects';
+
 // audio
 var audioContext = null;
 
@@ -101,63 +103,8 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  let lastNode = source;
-
-  if (effects.volume === 'low') {
-    const volume = audioContext.createGain();
-    volume.gain.value = 0.4;
-
-    // Connect the last node to this one.
-    lastNode.connect(volume);
-
-    // This is now the last node.
-    lastNode = volume;
-  }
-
-  if (effects.filter === 'on') {
-    const filter = audioContext.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.value = 800;
-
-    // Connect the last node to this one.
-    lastNode.connect(filter);
-
-    // This is now the last node.
-    lastNode = filter;
-  }
-
-  if (effects.delay === 'on') {
-    // Create a node that does nothing so we can join the two outputs
-    // to it.
-    const output = audioContext.createGain();
-    output.gain.value = 1;
-
-    const delay = audioContext.createDelay();
-    delay.delayTime.value = 0.25;
-
-    const dry = audioContext.createGain();
-    const wet = audioContext.createGain();
-    const feedback = audioContext.createGain();
-    feedback.gain.value = 0.3;
-
-    lastNode.connect(dry);
-    dry.connect(output);
-
-    const filter = audioContext.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.value = 4000;
-
-    lastNode.connect(filter);
-    filter.connect(delay);
-    delay.connect(feedback);
-    feedback.connect(filter);
-
-    delay.connect(wet);
-    wet.connect(output);
-
-    // This is now the last node.
-    lastNode = output;
-  }
+  // Insert effects, attaching them to source.
+  const lastNode = InsertEffects(audioContext, effects, source);
 
   // Connect the last node to output.
   lastNode.connect(audioContext.destination);
