@@ -1,0 +1,24 @@
+// Custom styles for code.org/blockchain
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'breakpoints';
+
+// Hero banner
+.hero-banner-basic {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  img {
+    @media screen and (max-width: $width-md) {
+      display: block;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+  }
+}
