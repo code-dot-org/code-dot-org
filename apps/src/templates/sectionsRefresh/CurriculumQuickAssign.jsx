@@ -13,7 +13,7 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl'
 };
 
-export default function CurriculumQuickAssign({updateSection}) {
+export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
@@ -32,7 +32,7 @@ export default function CurriculumQuickAssign({updateSection}) {
   */
   const toggleDecideLater = () => {
     setDecideLater(!decideLater);
-    updateSection('course', '');
+    updateSection('course', {});
     if (marketingAudience !== '') {
       setMarketingAudience('');
     } else {
@@ -123,6 +123,7 @@ export default function CurriculumQuickAssign({updateSection}) {
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
           updateCourse={course => updateSection('course', course)}
+          sectionCourse={sectionCourse}
         />
       )}
     </div>
@@ -130,5 +131,6 @@ export default function CurriculumQuickAssign({updateSection}) {
 }
 
 CurriculumQuickAssign.propTypes = {
-  updateSection: PropTypes.func.isRequired
+  updateSection: PropTypes.func.isRequired,
+  sectionCourse: PropTypes.object
 };

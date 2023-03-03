@@ -17,6 +17,7 @@ describe('QuickAssignTable', () => {
         marketingAudience={MARKETING_AUDIENCE.ELEMENTARY}
         courseOfferings={elementarySchoolCourseOffering}
         updateCourse={() => {}}
+        sectionCourse={{}}
       />
     );
 
@@ -30,6 +31,7 @@ describe('QuickAssignTable', () => {
         marketingAudience={MARKETING_AUDIENCE.HIGH}
         courseOfferings={highSchoolCourseOfferings}
         updateCourse={() => {}}
+        sectionCourse={{}}
       />
     );
     expect(wrapper.find('table').length).to.equal(2);
@@ -44,6 +46,7 @@ describe('QuickAssignTable', () => {
         marketingAudience={MARKETING_AUDIENCE.HIGH}
         courseOfferings={highSchoolCourseOfferings}
         updateCourse={updateSpy}
+        sectionCourse={{}}
       />
     );
 
@@ -53,5 +56,24 @@ describe('QuickAssignTable', () => {
       target: {value: 'Computer Science A', checked: true}
     });
     expect(updateSpy).to.have.been.called;
+  });
+
+  it('automatically checks correct radio button if course is already assigned', () => {
+    const wrapper = mount(
+      <QuickAssignTable
+        marketingAudience={MARKETING_AUDIENCE.HIGH}
+        courseOfferings={highSchoolCourseOfferings}
+        updateCourse={() => {}}
+        sectionCourse={{displayName: 'Computer Science A'}}
+      />
+    );
+
+    const radio = wrapper.find("input[value='Computer Science A']");
+    expect(radio.props().checked).to.be.true;
+    // and verify that the next door radio is checked=false
+    expect(
+      wrapper.find("input[value='Computer Science Discoveries']").props()
+        .checked
+    ).to.be.false;
   });
 });

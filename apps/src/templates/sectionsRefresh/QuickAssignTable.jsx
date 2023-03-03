@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
@@ -12,16 +12,9 @@ as independent tables makes styling them simpler.
 export default function QuickAssignTable({
   marketingAudience,
   courseOfferings,
-  updateCourse
+  updateCourse,
+  sectionCourse
 }) {
-  const [assignedCourse, setAssignedCourse] = useState('');
-
-  useEffect(() => {
-    if (assignedCourse) {
-      updateCourse(assignedCourse);
-    }
-  }, [assignedCourse]);
-
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
   const renderTable = (key, title) => {
@@ -72,9 +65,9 @@ export default function QuickAssignTable({
           type="radio"
           name={display_name}
           value={display_name}
-          checked={assignedCourse === display_name}
+          checked={sectionCourse?.displayName === display_name}
           onChange={() => {
-            setAssignedCourse(display_name);
+            updateCourse({displayName: display_name});
           }}
         />
         <label className={moduleStyles.label} htmlFor={display_name}>
@@ -99,5 +92,6 @@ export default function QuickAssignTable({
 QuickAssignTable.propTypes = {
   courseOfferings: PropTypes.object.isRequired,
   marketingAudience: PropTypes.string.isRequired,
-  updateCourse: PropTypes.func.isRequired
+  updateCourse: PropTypes.func.isRequired,
+  sectionCourse: PropTypes.object
 };
