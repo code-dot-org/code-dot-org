@@ -369,7 +369,7 @@ export default class SetupChecklist extends Component {
                   className="btn"
                   type="button"
                   value={applabI18n.makerSetupUpdateMBFirmata()}
-                  onClick={() => this.setupChecker.updateMBFirmata()}
+                  onClick={() => this.setupChecker.updateMBFirmata('versioned')}
                   title={applabI18n.makerSetupUpdateMBFirmataDescription()}
                 />
               )}
