@@ -20,6 +20,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import Button from '../../../../templates/Button';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -357,18 +358,11 @@ export default class SetupChecklist extends Component {
             {experiments.isEnabled('microbit') &&
               this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
               this.state[STATUS_BOARD_CONNECT] === Status.FAILED && (
-                <input
-                  style={{
-                    marginLeft: 7,
-                    marginRight: 7,
-                    marginTop: 5,
-                    marginBottom: 10,
-                    outline: 'black',
-                    backgroundColor: 'yellow'
-                  }}
-                  className="btn"
-                  type="button"
-                  value={applabI18n.makerSetupUpdateMBFirmata()}
+                <Button
+                  text={applabI18n.makerSetupUpdateMBFirmata()}
+                  color={Button.ButtonColor.orange}
+                  size={Button.ButtonSize.medium}
+                  style={downloadButtonStyle}
                   onClick={() => this.setupChecker.updateMBFirmata('versioned')}
                   title={applabI18n.makerSetupUpdateMBFirmataDescription()}
                 />
@@ -403,4 +397,8 @@ const styles = {
   suggestionHeader: {
     marginTop: 15
   }
+};
+
+const downloadButtonStyle = {
+  textAlign: 'center'
 };
