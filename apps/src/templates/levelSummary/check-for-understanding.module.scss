@@ -1,0 +1,23 @@
+.studentAnswerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.studentAnswer {
+  padding: 8px;
+  margin-bottom: 12px;
+  background-color: #ccc; // TODO
+  display: block;
+
+  p {
+    margin: 0;
+  }
+}
