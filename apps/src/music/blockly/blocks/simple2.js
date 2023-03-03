@@ -180,19 +180,21 @@ export const playRestAtCurrentLocationSimple2 = {
 export const setEffectAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'set effect %1 at current measure',
+    message0: 'set %1 to %2 at current measure',
     args0: [
       {
         type: 'field_dropdown',
         name: 'EFFECT',
         options: [
-          ['low volume', 'volume_low'],
-          ['normal volume', 'volume_normal'],
-          ['some filtering', 'filter_on'],
-          ['no filtering', 'filter_off'],
-          ['some delay', 'delay_on'],
-          ['no delay', 'delay_off']
+          ['volume', 'volume'],
+          ['filter', 'filter'],
+          ['delay', 'delay']
         ]
+      },
+      {
+        type: 'field_dropdown',
+        name: 'VALUE',
+        options: [['normal', ''], ['medium', 'medium'], ['low', 'low']]
       }
     ],
     inputsInline: true,
@@ -203,9 +205,8 @@ export const setEffectAtCurrentLocationSimple2 = {
     helpUrl: ''
   },
   generator: block => {
-    const fieldValues = block.getFieldValue('EFFECT').split('_');
-    const effectName = fieldValues[0];
-    const effectValue = fieldValues[1];
+    const effectName = block.getFieldValue('EFFECT');
+    const effectValue = block.getFieldValue('VALUE');
     return `
       __effects.${effectName} = '${effectValue}';
     `;
