@@ -9,7 +9,7 @@
 # requests and use this script:
 # https://docs.google.com/document/d/1-Gk66udFdzqvYyT6J-1d5HPSbkVCIQWzxMLyVKF3fuk/edit
 
-if ARGV.length < 1 or ARGV.length > 2
+if ARGV.length.empty? || ARGV.length > 2
   puts 'Usage: ./bin/oneoff/purge_accounts/purge_users ./bin/oneoff/purge_accounts/yyyy-mm-dd-users.csv [commit]'
   puts 'The CSV needs a column with "user_id" with User ids.'
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
@@ -68,4 +68,8 @@ end
 
 safety_violations.each do |id|
   puts "WARNING: User #{id} cannot be purged due to violation of a safety constraint."
+end
+
+if not_found.any?
+  puts "WARNING: Found #{not_found.count} ids that do not actually exist. These were not affected."
 end
