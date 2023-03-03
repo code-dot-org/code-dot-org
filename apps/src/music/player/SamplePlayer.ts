@@ -148,6 +148,9 @@ export default class SamplePlayer {
     soundApi.StopSound(PREVIEW_GROUP);
   }
 
+  /**
+   * Stops all non-triggered samples that have not yet been played.
+   */
   stopAllSamplesStillToPlay() {
     if (!this.isPlaying) {
       return;

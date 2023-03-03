@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "angelina-playground",
-    "serialized_at": "2023-02-24 00:36:25 UTC",
+    "serialized_at": "2023-03-02 03:29:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -209,8 +209,19 @@
       }
     },
     {
-      "key": "623ee432-c38f-4678-87ee-a18e96e4789c",
+      "key": "99641234-92ff-4ee2-bd19-75b04bbf2129",
       "position": 2,
+      "properties": {
+        "progression_name": "vocab flash card"
+      },
+      "seeding_key": {
+        "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129",
+        "lesson_activity.key": "ec84671c-709d-4e0b-87d3-a84e7a74d70d"
+      }
+    },
+    {
+      "key": "623ee432-c38f-4678-87ee-a18e96e4789c",
+      "position": 3,
       "properties": {
         "description": "[`rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation)\n\n[`randomNumber();`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)\n\n[`x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`y`(#f78183)](/docs/ide/gamelab/expressions/y)\n\n[`x = ___;`(#BB77C7)](/docs/ide/gamelab/expressions/assign_x)\n\n[`noFill()`(#4dd0e1)](/docs/ide/gamelab/expressions/noFill)\n\n[`stroke()`(#4dd0e1)](/docs/ide/gamelab/expressions/stroke)\n\n[`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse)\n\n[`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight)\n\n[`scale`(#f78183)](/docs/ide/gamelab/expressions/scale)\n\n[`background()`(#4dd0e1)](/docs/ide/gamelab/expressions/background)\n\n[`console.log()`(#BB77C7)](/docs/ide/gamelab/expressions/console.log)\n\n[`text()`(#4dd0e1)](/docs/ide/gamelab/expressions/text)\n\n[`if ()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock)\n\n[`___ < ___`(#FFB74D)](/docs/ide/gamelab/expressions/lessThanOperator)\n\n[`setAnimation(label)`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`var sprite = createSprite(x, y)`(#f78183)](/docs/ide/gamelab/expressions/createSprite)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`World.mouseY`(#fff176)](/docs/ide/gamelab/expressions/World.mouseY)\n\n[`if () / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`World.frameRate`(#fff176)](/docs/ide/gamelab/expressions/World.frameRate)\n\n[`mouseDidMove()`(#fff176)](/docs/ide/gamelab/expressions/mouseDidMove)\n\n[`velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\n\n[`rotationSpeed`(#f78183)](/docs/ide/gamelab/expressions/rotationSpeed)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.isTouching()`(#f78183)](/docs/ide/gamelab/expressions/isTouching)\n\n[`debug`(#f78183)](/docs/ide/gamelab/expressions/debug)\n\n[`setCollider()`(#f78183)](/docs/ide/gamelab/expressions/setCollider)\n\n[`sprite.displace()`(#f78183)](/docs/ide/gamelab/expressions/displace)\n\n[`sprite.collide()`(#f78183)](/docs/ide/gamelab/expressions/collide)\n\n[`sprite.bounce()`(#f78183)](/docs/ide/gamelab/expressions/bounce)\n\n[`sprite.bounceOff()`(#f78183)](/docs/ide/gamelab/expressions/bounceOff)\n\n[`sprite.bounciness`(#f78183)](/docs/ide/gamelab/expressions/bounciness)\n\n[`myFunction();`(#68D995)](/docs/ide/gamelab/expressions/callMyFunction)\n\n[`function myFunction() {}`(#68D995)](/docs/ide/gamelab/expressions/functionParams_none)"
       },
@@ -1022,6 +1033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "web lab angelina experiment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1043,6 +1057,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Angelina's Place to Build Levels"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1056,6 +1073,28 @@
       },
       "level_keys": [
         "Angelina's Place to Build Levels"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "vocab flash card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PSP U3 Sample"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
+      },
+      "level_keys": [
+        "PSP U3 Sample"
       ]
     }
   ],
@@ -1478,6 +1517,18 @@
         "lesson_group.key": "",
         "script.name": "angelina-playground",
         "activity_section.key": "59b83b1c-6ade-44b5-be50-96eec2803e3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PSP U3 Sample",
+        "script_level.level_keys": [
+          "PSP U3 Sample"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "angelina-playground",
+        "activity_section.key": "99641234-92ff-4ee2-bd19-75b04bbf2129"
       }
     }
   ],
