@@ -7,6 +7,22 @@
 // - yarn remove nearest-color
 // Copy the values output by the script into cdoAccessible and commit both changes together.
 
+// These are the core Blockly styles that we have historically never overridden.
+const coreBlocklyStyles = {
+  logic_blocks: {
+    colourPrimary: '#5b80a5'
+  },
+  math_blocks: {
+    colourPrimary: '#5b67a5'
+  },
+  text_blocks: {
+    colourPrimary: '#5ba58c'
+  },
+  variable_blocks: {
+    colourPrimary: '#a55b99'
+  }
+};
+
 // Intentionally overriden styles from Google Blockly.
 // We do not override list, logic, math, text, or variable blocks.
 const coreBlocklyOverrides = {
@@ -34,33 +50,16 @@ const spriteLabStyles = {
   }
 };
 
-// Used only for Dance Party
-const danceStyles = {
-  dance_blocks: {
-    colourPrimary: '#7435b2'
-  }
-};
-
-// Experimental MusicLab styles. Subject to change.
-const musicLabStyles = {
-  flow_blocks: {
-    colourPrimary: '#418eb6'
-  },
-  music_blocks: {
-    colourPrimary: '#5b67a5'
-  }
-};
-
 // Standard CDO palette of block colors used across labs
 const cdoCustomStyles = {
   default: {
     colourPrimary: '#00b0bc'
   },
-  comment_blocks: {
-    colourPrimary: '#b2b2b2'
-  },
   event_blocks: {
     colourPrimary: '#00bc3e'
+  },
+  lab_blocks: {
+    colourPrimary: '#7435b2'
   },
   setup_blocks: {
     colourPrimary: '#fca400'
@@ -68,12 +67,11 @@ const cdoCustomStyles = {
   world_blocks: {
     colourPrimary: '#5b5ba5'
   },
-  ...spriteLabStyles,
-  ...danceStyles,
-  ...musicLabStyles
+  ...spriteLabStyles
 };
 
 export default {
+  ...coreBlocklyStyles,
   ...coreBlocklyOverrides,
   ...cdoCustomStyles
 };

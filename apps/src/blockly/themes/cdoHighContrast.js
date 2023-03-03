@@ -34,23 +34,6 @@ const spriteLabHighContrastStyles = {
   }
 };
 
-// Used only for Dance Party
-const danceHighContrastStyles = {
-  dance_blocks: {
-    colourPrimary: '#622C98'
-  }
-};
-
-// Experimental MusicLab styles. Subject to change.
-const musicLabHighContrastStyles = {
-  flow_blocks: {
-    colourPrimary: '#2E6988'
-  },
-  music_blocks: {
-    colourPrimary: '#4B568B'
-  }
-};
-
 // Standard CDO palette of block colors used across labs
 const cdoCustomHighContrastStyles = {
   default: {
@@ -62,18 +45,19 @@ const cdoCustomHighContrastStyles = {
   event_blocks: {
     colourPrimary: '#007325'
   },
+  lab_blocks: {
+    colourPrimary: '#622C98'
+  },
   setup_blocks: {
     colourPrimary: '#996300'
   },
   world_blocks: {
     colourPrimary: '#4A4A88'
   },
-  ...spriteLabHighContrastStyles,
-  ...danceHighContrastStyles,
-  ...musicLabHighContrastStyles
+  ...spriteLabHighContrastStyles
 };
 
-export const cdoHighContrastBlockStyles = {
+const cdoHighContrastBlockStyles = {
   ...coreBlocklyOverrides,
   ...cdoCustomHighContrastStyles
 };
