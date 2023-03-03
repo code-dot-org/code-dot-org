@@ -7,12 +7,15 @@ export const MenuOptionStates = {
   DISABLED: 'disabled',
   HIDDEN: 'hidden'
 };
+
 export const Themes = {
   MODERN: 'modern',
   DARK: 'dark',
   MUSICLAB_DARK: 'musiclabdark',
   HIGH_CONTRAST: 'highContrast',
-  ACCESSIBLE: 'accessible'
+  PROTONOPIA: 'protonopia',
+  DEUTERANOPIA: 'deuteranopia',
+  TRITANOPIA: 'tritanopia'
 };
 
 // Used for custom field type ClampedNumber(,)

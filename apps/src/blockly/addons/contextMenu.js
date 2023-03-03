@@ -169,8 +169,16 @@ const themes = [
     label: msg.blocklyHighContrastTheme()
   },
   {
-    name: Themes.ACCESSIBLE,
-    label: msg.blocklyAccessibleTheme()
+    name: Themes.PROTONOPIA,
+    label: msg.blocklyProtonopiaTheme()
+  },
+  {
+    name: Themes.DEUTERANOPIA,
+    label: msg.blocklyDeuteranopiaTheme()
+  },
+  {
+    name: Themes.TRITANOPIA,
+    label: msg.blocklyTritanopiaTheme()
   }
 ];
 /**
