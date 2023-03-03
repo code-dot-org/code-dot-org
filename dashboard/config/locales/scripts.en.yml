@@ -9816,6 +9816,8 @@ en:
               name: Particles
             lesson-3:
               name: Sprite Lab Building Demo
+            lesson-4:
+              name: ecosystems
           lesson_groups: {}
           name: amy-playground
           title: Amy's Place To Do Stuff
