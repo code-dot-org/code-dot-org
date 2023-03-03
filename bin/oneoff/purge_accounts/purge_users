@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'csv'
+
 # This script will purge accounts given a CSV file with the column of 'user_id'.
 # You must supply the CSV file as the first argument and it will do a "dry run"
 # and report found and not found ids. Supplying "for-real" as the second
@@ -15,8 +17,6 @@ if ARGV.length.empty? || ARGV.length > 2
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
   exit 1
 end
-
-require 'csv'
 
 ids = []
 begin
