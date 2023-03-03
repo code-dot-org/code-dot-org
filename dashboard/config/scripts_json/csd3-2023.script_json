@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-02-22 18:48:06 UTC",
+    "serialized_at": "2023-03-02 21:32:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -54,14 +54,14 @@
   "lessons": [
     {
       "key": "Programming for Entertainment",
-      "name": "Programming for Entertainment",
+      "name": "Programming for a Purpose",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson is intended to kick off this programming unit in a way that engages students of all backgrounds and interests. Though the endpoint of this unit asks students to develop a game, we avoid starting out with a strong emphasis on _video_ games and instead, we attempt to broaden students' perspective about how programming is a relevant form of entertainment or self-expression that is personally engaging. Students are first asked to consider the \"problems\" of boredom and self-expression and to reflect on how they approach those problems in their own lives. From there, students will explore how computer science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self-expression.\n\n**Question of the Day:** How is computer science used in entertainment?\n",
+        "overview": "To kick off a unit devoted to problem-solving and developing animations and games, students begin by investigating the design of different animations and games. Students look at a variety of apps and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an app design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.\n\n**Question of the Day:** How can we design animations and games based on the needs of a user?\n\n",
         "preparation": "* Review the research resources linked in Code Studio\n* Print a copy of the activity guide for each group of three students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How is computer science used in entertainment?\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
       },
@@ -610,8 +610,7 @@
       "key": "7c3c87b3-d067-49ac-be07-19be26932566",
       "position": 2,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "name": "Warm Up - Option 1"
       },
       "seeding_key": {
         "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566",
@@ -621,8 +620,21 @@
       }
     },
     {
-      "key": "49af5826-3668-40a1-bfb2-22a40cf195a6",
+      "key": "035ed59d-ca3d-48eb-8ed6-d5b06658f57d",
       "position": 3,
+      "properties": {
+        "name": "Warm Up - Option 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "035ed59d-ca3d-48eb-8ed6-d5b06658f57d",
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "49af5826-3668-40a1-bfb2-22a40cf195a6",
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -636,7 +648,7 @@
     },
     {
       "key": "a27c5c4f-395d-46a1-99f5-0adcc3f2880b",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1796,8 +1808,12 @@
       "key": "0da339bb-26d7-495a-8660-4a697cce770a",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What is your favorite form of entertainment, and what problem does it solve for you?",
-        "name": "The Entertainment Problem\r"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options**: This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem-Solving Process.\n\nOption 1 is for classrooms that have not been introduced to the Problem-Solving Process. The warm-up is longer than normal because it introduces the Problem-Solving Process through a brief activity and a video.\n\nOption 2 is for classrooms that have been introduced to the Problem-Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem Solving Process.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0da339bb-26d7-495a-8660-4a697cce770a",
@@ -1808,7 +1824,10 @@
       "key": "8cc9f685-35dd-4cf2-a373-f904dc3bdd4a",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share out their ideas with the group.\n\n**Discussion Goal:** The goal here is to get students to reflect more critically on why people seek out entertainment. Students are likely to come up with \"boredom\" as a common answer, but push them to think more deeply about what their chosen form of entertainment actually does for them - what problem does it solve? Potential answers include:\n\n* Connection with others\n* Learning or experiencing new things\n* Sparking creativity\n* An escape from reality"
+        "description": "In this unit, we'll be learning how to build interactive animations and games. While creating these animations and games, you might encounter some problems. The word \"problem\" can refer to lots of different situations - I could say I have a problem for homework, a problem with my brother, and a problem with my car, and all three mean very different things.\n",
+        "duration": "10",
+        "name": "Problem Solving Word Search",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "8cc9f685-35dd-4cf2-a373-f904dc3bdd4a",
@@ -1819,7 +1838,7 @@
       "key": "69154734-5b41-4f61-b1e4-b594d29dbcda",
       "position": 3,
       "properties": {
-        "description": "**Question of the Day: How is computer science used in entertainment?**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd3/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "69154734-5b41-4f61-b1e4-b594d29dbcda",
@@ -1827,11 +1846,140 @@
       }
     },
     {
+      "key": "4b60be93-b30f-4fbb-9ae4-56f89576f14c",
+      "position": 4,
+      "properties": {
+        "description": "Since we will most likely be faced with some problems to solve in this unit, today, we are going to learn about and practice an effective strategy for when we need to solve problems. We'll start with a simple problem: solving a word search.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4b60be93-b30f-4fbb-9ae4-56f89576f14c",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "64c5abe6-12f3-492f-a248-d0cd37dd88f7",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What is the problem you are trying to solve when you do a word search?\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are the different strategies that someone could use for finding words? What are the pros and cons of each strategy?\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down\n\n**Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is important to let the students know that if at any time the strategy they picked is not working, they should feel free to go back to the list of strategies and pick a different one, making sure to put a number next to the new strategy.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "64c5abe6-12f3-492f-a248-d0cd37dd88f7",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "7b5f053b-a61a-437d-a9a3-718b9222ae3d",
+      "position": 6,
+      "properties": {
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts:\n* Were you successful in solving this word search problem? How do you know?\n* What strategy did you pick and how did it work for you?\n* Did anyone change strategies at any point … why or why not?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you lead this discussion, you may choose to do a quick raise of hand poll to find out who was successful, or on track to be successful if they didn’t get a chance to finish. Additionally, you can also instruct students to pick two of the questions to answer.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7b5f053b-a61a-437d-a9a3-718b9222ae3d",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "80d4cefa-0955-4660-9501-173edb7e9b12",
+      "position": 7,
+      "properties": {
+        "description": "**Discussion Goal:** This discussion serves as a way to get students to reflect on how they did solving this problem and to give students a moment to recognize if they changed strategies and why or if they would solve a problem like this differently next time.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "80d4cefa-0955-4660-9501-173edb7e9b12",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "122ed1c3-ec23-4041-ba57-4f6ad839c7ec",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n* Define: when we put into our own words what the problem of a word search is and what the goal is\n* Prepare: the brainstorming of different strategies that could be used to solve a word search\n* Try: when we picked a strategy and tried to find the words\n* Reflect: when we reflected on how they did at the end\n\n",
+        "duration": "5",
+        "name": "The Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good point to remind students that the problem-solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it but going back to the “Prepare” and “Try” steps again.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "122ed1c3-ec23-4041-ba57-4f6ad839c7ec",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc",
+      "position": 9,
+      "properties": {
+        "description": "Now that we're familiar with the problem-solving process, let's explore how we can use it when designing animations and games.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc",
+        "lesson_activity.key": "7c3c87b3-d067-49ac-be07-19be26932566"
+      }
+    },
+    {
+      "key": "4e059912-6281-4c30-90e0-e7a72698f1da",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem-Solving Process.\n\nOption 2 is for classrooms that have been introduced to the Problem-Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem-Solving Process.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4e059912-6281-4c30-90e0-e7a72698f1da",
+        "lesson_activity.key": "035ed59d-ca3d-48eb-8ed6-d5b06658f57d"
+      }
+    },
+    {
+      "key": "1453b310-bcd2-40f0-adde-103053cb08b1",
+      "position": 2,
+      "properties": {
+        "description": "In this unit, we'll be learning how to build animations and games. Today, we are going to remind ourselves about the Problem Solving Process and eventually we will apply it to the animations and games we create.\n",
+        "duration": "5",
+        "name": "Revisit The Problem Solving Process",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1453b310-bcd2-40f0-adde-103053cb08b1",
+        "lesson_activity.key": "035ed59d-ca3d-48eb-8ed6-d5b06658f57d"
+      }
+    },
+    {
+      "key": "17a48c0f-7b6a-4cd4-bffb-ebda8581cc72",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Based on what you know about the Problem-Solving Process, what do you think each step could look like when designing an animation or game?\n\n**Discussion Goal:** Even though students haven't designed animations or games yet, guide students to imagine the steps involved from having the first inspiration for an animation or game to having it created. Some ideas may include:\n* Define: Deciding what you want to make an animation or game about or who you want to make it for\n* Prepare: Looking at similar animations and games and deciding what kinds of colors, images, or characters you want to use, or sketching out the animation/game interface, or even planning out how to program the animation/game\n* Try: Creating a basic version of the animation/game (even if it doesn’t have all of the features)\n* Reflect: Showing it to friends to get feedback and improving the animation/game design\n\nAs students finish discussing, transition to the main activity.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "17a48c0f-7b6a-4cd4-bffb-ebda8581cc72",
+        "lesson_activity.key": "035ed59d-ca3d-48eb-8ed6-d5b06658f57d"
+      }
+    },
+    {
       "key": "8f1f8696-860e-47b7-bf09-6c3241c9c79b",
       "position": 1,
       "properties": {
-        "description": "Whether it's movies, music, art, games, or any number of other options, we have many types of entertainment open to us. Today, we're going to look at how computer science plays a role in some of these different fields.",
-        "name": "CS in Entertainment\r",
+        "description": "In this unit, we are going to learn how to create animations and games, which starts with thinking about who we're creating an animation or game for. Sometimes we make animations and games about our own personal interests, but we should also think about designing them for other people. Eventually, we will think about applying the problem-solving process to help us actually program our animations and games, but today, we are going to focus on how to apply the problem-solving process when *designing* animations and games to meet the needs of our users and ourselves.\n",
+        "name": "Recommending Animations and Games",
         "remarks": true
       },
       "seeding_key": {
@@ -1843,11 +1991,11 @@
       "key": "691d3e87-b63b-4010-886e-9df4e9d7e2fd",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three. Consider allowing students to group based on common interest as each group will be exploring a field of entertainment together.\n\n**Distribute:** Give each group a copy of the activity guide.",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd3/2023] activity guide to each student. \n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\n"
           }
         ]
       },
@@ -1857,70 +2005,10 @@
       }
     },
     {
-      "key": "d829c5aa-8d4c-49d3-935f-763cc60b8460",
+      "key": "3ede0a38-72eb-4dc6-853e-90db7ddd0c70",
       "position": 3,
       "properties": {
-        "description": "#### Entertainment Exploration\n\nDuring this activity student groups will do some light research into the role that CS and programming play in various fields of entertainment. The primary goal of this activity is to broaden students' perspectives about how programming can be used to make fun or entertaining things. Some of the fields that students could research (such as art, animation, and games) can be directly connected to programs they will write later in this unit, while others may serve more as an inspiration for how the skills that they learn here may be applied in different domains.\n\n#### Topics\n\nIn the activity guide there are a number of potential fields for research. These specific fields were chosen to go along with resources that are provided on Code Studio, but you can have students look into other fields if they wish."
-      },
-      "seeding_key": {
-        "activity_section.key": "d829c5aa-8d4c-49d3-935f-763cc60b8460",
-        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
-      }
-    },
-    {
-      "key": "f5c425b4-d478-4710-b28f-6d3d25d235ab",
-      "position": 4,
-      "properties": {
-        "description": "Have students begin researching their topics on the internet. At this point, you may decide to distribute the [r cs_in_entertainment_research_areas/csd3/2023] to students if you've vetted the resources ahead of time to make sure they are school appropriate and unblocked.",
-        "name": "Researching your Topic\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5c425b4-d478-4710-b28f-6d3d25d235ab",
-        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
-      }
-    },
-    {
-      "key": "f970d01c-783c-4084-9028-a22e74e9a3f4",
-      "position": 5,
-      "properties": {
-        "description": "**Circulate** As students search the web, they may need support in staying focused on the research task. The goal of this exploration is twofold:\n\n  * First, develop a deeper understanding of how programming is used in the chosen field. How is computer technology changing this field, and what are some of the problems that people are trying to solve with technology?\n  * Second, identify some interesting applications of CS or facts to share. What are some cool things that people are doing in this field that make use of CS?\n\n\n#### Interesting Information\n\nOnce groups have learned a bit about how CS is used in their chosen field, they can complete the second page of the activity guide, which asks them to do the following:\n\n* **What Problem Does It Solve?:** \"Problem\" in this context can be fairly broad. It might be simplifying an otherwise laborious or complex task, doing things that wouldn't otherwise be possible, or any number of things that make this form of entertainment more accessible to end users.\n* **How is it an Improvement?:** This could be tightly coupled with the answer to the previous question. Push students to consider how their form of entertainment was created before programming was prevalent.\n* **An Interesting Fact or Use:** Share something fun or interesting about how CS is used in this field.\n* **An Open Question:** It's likely that students come away with more questions than answers after just some quick research. Encourage them to reflect on what they don't yet know, and what questions they'd still like answered.\n\n\n**Share:** Give groups a minute each to share their findings.",
-        "name": "Research Notes\r",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The activity guide can be used to assess whether students were able to identify how computer science is used in a field of entertainment, especially looking at the research notes and the reflection questions on the second page."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f970d01c-783c-4084-9028-a22e74e9a3f4",
-        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
-      }
-    },
-    {
-      "key": "530c98d7-b080-4a07-901d-6034925028fb",
-      "position": 6,
-      "properties": {
-        "description": "In this unit, we're going to have a chance to create our own entertainment through animations and games using a tool called Game Lab. Here are some samples of programs made using the Game Lab tool.",
-        "name": "Exploring Games with Game Lab\r",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "530c98d7-b080-4a07-901d-6034925028fb",
-        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
-      }
-    },
-    {
-      "key": "3ede0a38-72eb-4dc6-853e-90db7ddd0c70",
-      "position": 7,
-      "properties": {
-        "description": "**Display:** Show either as a whole class, or let students explore independently, the example programs at the end of this lesson's Code Studio progression. These programs are designed to show a variety of different kinds of programs that it's possible to make in Game Lab.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "While some of these examples are pulled directly from lessons that students will complete later in the unit, a few of them use commands or techniques that aren't explicitly covered in the course. You can view the source for all of these programs in order to support students who may want to incorporate some of these techniques later on.\r\n\r\n"
-          }
-        ]
+        "description": "**Overview:** Have students read through the directions on the first page of the activity guide. The first part of this activity asks students to match different users to an animation or game template that suits their needs. Students will need to visit Code Studio to view the templates.\n\n**Code Studio:** Direct students to the \"Sample Animation and Games\" levels on Code Studio.\n"
       },
       "seeding_key": {
         "activity_section.key": "3ede0a38-72eb-4dc6-853e-90db7ddd0c70",
@@ -1928,10 +2016,34 @@
       }
     },
     {
-      "key": "700cff86-e325-4b4b-858a-2fd8b7912603",
-      "position": 8,
+      "key": "11c537ee-7543-4422-b6ce-ac3a31cb5662",
+      "position": 4,
       "properties": {
-        "progression_name": "Sample Programs"
+        "progression_name": "Sample Animations and Games",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While most of these examples are pulled directly from lessons that students will complete later in the unit, a couple of them use commands or techniques that aren't explicitly covered in the course. You can view the source for all of these programs in order to support students who may want to incorporate some of these techniques later on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662",
+        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
+      }
+    },
+    {
+      "key": "700cff86-e325-4b4b-858a-2fd8b7912603",
+      "position": 5,
+      "properties": {
+        "description": "**Circulate:** Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing each template. This is a great place to discuss different animation and game designs and the needs of each user.\n\nThis activity guide asks students to consider why people make animations and games and what sorts of interests can be expressed with them.\n",
+        "progression_name": "Sample Animations and Games",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe animations and games are intentionally simple, to help set expectations about the animations and games that students will be creating over the course of the unit.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603",
@@ -1939,11 +2051,63 @@
       }
     },
     {
+      "key": "e60cec32-198f-4215-b92a-58eb39e4a7a2",
+      "position": 6,
+      "properties": {
+        "description": "**Share Out:** Have students discuss the following questions in small groups before bringing them to a full class discussion:\n* Which users were the easiest to find matches for?\n* Which users were the hardest to find matches for?\n\nBased on your observations while circulating, you should also identify a few specific users to ask the class to discuss, especially users for whom multiple students chose different templates for that user. Encourage students to hear different justifications for their choices, emphasizing that the rationale is more important than the choice itself.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "As students discuss their reasoning for their choices, check to ensure that they are identifying the particular user's needs and characteristics, rather than general reasons to prefer a certain app or game. You may want to challenge students to distinguish their own needs and preferences from those of the described users.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e60cec32-198f-4215-b92a-58eb39e4a7a2",
+        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
+      }
+    },
+    {
+      "key": "94b8272d-94f8-4376-bdd6-24382bcc2f5c",
+      "position": 7,
+      "properties": {
+        "description": "Now we've been asked to design an animation or game ourselves for a client. We can create our own design, but it should meet the needs of our users.\n",
+        "name": "Designing an Animation or Game",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note on Timing:** Depending on how long the warm-up took, especially if the class watched the problem-solving video, you may run out of time to fully complete this activity. That's okay! It can be something students come back to as they progress throughout the unit, or you may decide to extend this activity into a new class period and stretch out the design and feedback process. This task can be implemented in a variety of ways to match the constraints of the classroom.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94b8272d-94f8-4376-bdd6-24382bcc2f5c",
+        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
+      }
+    },
+    {
+      "key": "e92c0c58-b850-44dc-90e5-0916bb630442",
+      "position": 8,
+      "properties": {
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic animation/game design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd3/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Following the Problem-Solving Process:** You can use student responses on the activity guide to determine how well they followed each step of the problem-solving process. This process will be reinforced throughout the unit, especially on projects.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e92c0c58-b850-44dc-90e5-0916bb630442",
+        "lesson_activity.key": "49af5826-3668-40a1-bfb2-22a40cf195a6"
+      }
+    },
+    {
       "key": "88749839-4617-413e-8f21-d727c457f75a",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How is computer science used in entertainment?**\r\n\r\n**Journal:** Based on what you saw today, both in your research and the example apps, what kinds of programs are you most interested in learning to create?",
-        "name": "Looking Forward\r"
+        "description": "**Question of the Day:**  How can we design animations and games based on the needs of a user?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Reflect - What was one thing that you think your design does well to meet the needs of the user? What’s an area that you think can still be improved to meet the needs of your user?\n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different.\n"
       },
       "seeding_key": {
         "activity_section.key": "88749839-4617-413e-8f21-d727c457f75a",
@@ -6987,23 +7151,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Entertainment Sample 4_2023"
-        ],
-        "progression": "Sample Programs"
+        "progression": "Sample Animations and Games"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 4_2023"
+          "CSD U3 PSP Sample 1_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       },
       "level_keys": [
-        "CSD U3 Entertainment Sample 4_2023"
+        "CSD U3 PSP Sample 1_2023"
       ]
     },
     {
@@ -7012,23 +7173,20 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Entertainment Sample 3_2023"
-        ],
-        "progression": "Sample Programs"
+        "progression": "Sample Animations and Games"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 3_2023"
+          "CSD U3 PSP Sample 2_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       },
       "level_keys": [
-        "CSD U3 Entertainment Sample 3_2023"
+        "CSD U3 PSP Sample 2_2023"
       ]
     },
     {
@@ -7037,23 +7195,20 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Entertainment Sample 1_2023"
-        ],
-        "progression": "Sample Programs"
+        "progression": "Sample Animations and Games"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 1_2023"
+          "CSD U3 PSP Sample 3_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       },
       "level_keys": [
-        "CSD U3 Entertainment Sample 1_2023"
+        "CSD U3 PSP Sample 3_2023"
       ]
     },
     {
@@ -7062,27 +7217,46 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Entertainment Sample 2_2023"
-        ],
-        "progression": "Sample Programs"
+        "progression": "Sample Animations and Games"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 2_2023"
+          "CSD U3 PSP Sample 4_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       },
       "level_keys": [
-        "CSD U3 Entertainment Sample 2_2023"
+        "CSD U3 PSP Sample 4_2023"
       ]
     },
     {
       "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Animations and Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L1 PSP Sample 5"
+        ],
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
+      },
+      "level_keys": [
+        "CSD U3L1 PSP Sample 5"
+      ]
+    },
+    {
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7107,7 +7281,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7132,7 +7306,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7157,7 +7331,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7182,7 +7356,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7207,7 +7381,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7232,7 +7406,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7257,7 +7431,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7282,7 +7456,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7307,7 +7481,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7332,7 +7506,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7357,7 +7531,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7382,7 +7556,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7407,7 +7581,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7432,7 +7606,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7457,7 +7631,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7482,7 +7656,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7507,7 +7681,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7532,7 +7706,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7557,7 +7731,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7582,7 +7756,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7607,7 +7781,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7632,7 +7806,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7657,7 +7831,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7682,7 +7856,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7707,7 +7881,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7732,7 +7906,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7757,7 +7931,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7782,7 +7956,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7807,7 +7981,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7832,7 +8006,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7857,7 +8031,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7882,7 +8056,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7907,7 +8081,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7932,7 +8106,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7957,7 +8131,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7982,7 +8156,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8007,7 +8181,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8032,7 +8206,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8057,7 +8231,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8082,7 +8256,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8107,7 +8281,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -8132,7 +8306,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8157,7 +8331,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8182,7 +8356,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8207,7 +8381,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8232,7 +8406,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8257,7 +8431,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8282,7 +8456,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8307,7 +8481,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8332,7 +8506,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8357,7 +8531,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8382,7 +8556,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8407,7 +8581,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8432,7 +8606,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8457,7 +8631,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8482,7 +8656,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8507,7 +8681,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8532,7 +8706,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8557,7 +8731,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8582,7 +8756,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8607,7 +8781,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8632,7 +8806,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8657,7 +8831,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8682,7 +8856,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8707,7 +8881,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8732,7 +8906,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8757,7 +8931,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8782,7 +8956,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8807,7 +8981,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8832,7 +9006,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8857,7 +9031,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8882,7 +9056,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8907,7 +9081,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8932,7 +9106,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8957,7 +9131,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8982,7 +9156,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9007,7 +9181,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9032,7 +9206,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9057,7 +9231,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9082,7 +9256,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9107,7 +9281,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9132,7 +9306,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9157,7 +9331,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9182,7 +9356,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9207,7 +9381,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9232,7 +9406,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9257,7 +9431,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9282,7 +9456,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9307,7 +9481,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9332,7 +9506,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9357,7 +9531,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9382,7 +9556,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9407,7 +9581,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9432,7 +9606,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9457,7 +9631,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9482,7 +9656,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9507,7 +9681,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9532,7 +9706,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9557,7 +9731,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9582,7 +9756,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9607,7 +9781,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9632,7 +9806,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9657,7 +9831,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9682,7 +9856,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9707,7 +9881,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -9732,7 +9906,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9757,7 +9931,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9782,7 +9956,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9807,7 +9981,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9832,7 +10006,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9857,7 +10031,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9882,7 +10056,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9907,7 +10081,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9932,7 +10106,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9957,7 +10131,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9982,7 +10156,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10007,7 +10181,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10032,7 +10206,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10057,7 +10231,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10082,7 +10256,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10107,7 +10281,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10132,7 +10306,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -10157,7 +10331,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -10182,7 +10356,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10207,7 +10381,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -10232,7 +10406,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10257,7 +10431,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10282,7 +10456,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10307,7 +10481,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10332,7 +10506,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10357,7 +10531,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10382,7 +10556,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10407,7 +10581,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10432,7 +10606,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10457,7 +10631,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10482,7 +10656,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 142,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10507,7 +10681,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 143,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10532,7 +10706,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 144,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10557,7 +10731,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 145,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10582,7 +10756,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 146,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10607,7 +10781,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 147,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10632,7 +10806,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 148,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10657,7 +10831,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 149,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10682,7 +10856,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 150,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10707,7 +10881,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 151,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10732,7 +10906,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 152,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10757,7 +10931,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 153,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10782,7 +10956,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 154,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -10807,7 +10981,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 155,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10832,7 +11006,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 156,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10857,7 +11031,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 157,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10882,7 +11056,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 158,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10907,7 +11081,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 159,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10932,7 +11106,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 160,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10957,7 +11131,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 161,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10982,7 +11156,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 162,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11007,7 +11181,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 163,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11032,7 +11206,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 164,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11057,7 +11231,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 165,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11082,7 +11256,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 166,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11107,7 +11281,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 167,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11132,7 +11306,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 168,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11157,7 +11331,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 169,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11182,7 +11356,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 170,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11207,7 +11381,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 171,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11232,11 +11406,14 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 172,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD_U3L24 Prediction"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -11254,7 +11431,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 173,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11279,7 +11456,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 174,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11304,7 +11481,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 175,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11329,7 +11506,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 176,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11354,7 +11531,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 177,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11379,7 +11556,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 178,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11404,7 +11581,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 179,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11429,7 +11606,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 180,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -11454,7 +11631,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 181,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11479,7 +11656,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 182,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11504,7 +11681,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 183,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11529,7 +11706,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 184,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11554,7 +11731,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 185,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11579,7 +11756,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 186,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11604,7 +11781,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 187,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11629,7 +11806,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 188,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11654,7 +11831,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 189,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11679,7 +11856,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11704,7 +11881,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11729,7 +11906,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -11754,7 +11931,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -11779,7 +11956,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 194,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11804,7 +11981,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 195,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11829,7 +12006,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 196,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11854,7 +12031,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 197,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11879,7 +12056,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 198,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11904,7 +12081,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 199,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11929,7 +12106,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 200,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -11954,7 +12131,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 201,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11979,7 +12156,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 202,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12004,7 +12181,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 203,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12029,7 +12206,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 204,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12054,7 +12231,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 205,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12079,7 +12256,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 206,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12104,7 +12281,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 207,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12129,7 +12306,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 208,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12154,7 +12331,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 209,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12179,7 +12356,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 210,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12204,7 +12381,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 211,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12229,7 +12406,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 212,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12254,7 +12431,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 213,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12279,7 +12456,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 214,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12304,7 +12481,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 215,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12329,7 +12506,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 216,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12354,7 +12531,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 217,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12379,7 +12556,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 218,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12404,7 +12581,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 219,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12429,7 +12606,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 220,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12454,7 +12631,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 221,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12479,7 +12656,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 222,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12504,7 +12681,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 223,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12529,7 +12706,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 224,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12554,7 +12731,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 225,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12581,50 +12758,62 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "CSD U3 Entertainment Sample 4_2023",
+        "level.key": "CSD U3 PSP Sample 1_2023",
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 4_2023"
+          "CSD U3 PSP Sample 1_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Entertainment Sample 3_2023",
+        "level.key": "CSD U3 PSP Sample 2_2023",
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 3_2023"
+          "CSD U3 PSP Sample 2_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Entertainment Sample 1_2023",
+        "level.key": "CSD U3 PSP Sample 3_2023",
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 1_2023"
+          "CSD U3 PSP Sample 3_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Entertainment Sample 2_2023",
+        "level.key": "CSD U3 PSP Sample 4_2023",
         "script_level.level_keys": [
-          "CSD U3 Entertainment Sample 2_2023"
+          "CSD U3 PSP Sample 4_2023"
         ],
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "700cff86-e325-4b4b-858a-2fd8b7912603"
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L1 PSP Sample 5",
+        "script_level.level_keys": [
+          "CSD U3L1 PSP Sample 5"
+        ],
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "11c537ee-7543-4422-b6ce-ac3a31cb5662"
       }
     },
     {
@@ -15270,6 +15459,30 @@
   ],
   "resources": [
     {
+      "name": "(Warm Up) Word Search",
+      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/edit?usp=sharing",
+      "key": "_warm_up_word_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_warm_up_word_search"
+      }
+    },
+    {
+      "name": "(Warm Up) Word Search [KEY]",
+      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/edit?usp=share_link",
+      "key": "_warm_up_word_search_key_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_warm_up_word_search_key_"
+      }
+    },
+    {
       "name": "Animated Scene",
       "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
       "key": "animated_scene",
@@ -15317,6 +15530,18 @@
       },
       "seeding_key": {
         "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "App Design for Users",
+      "url": "https://docs.google.com/document/d/1T1rHB9UzmWg26DW1QLzJWGE6_ONfBCIi5F6pdX4rGmU/edit?usp=sharing",
+      "key": "app_design_for_users",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "app_design_for_users"
       }
     },
     {
@@ -15483,43 +15708,6 @@
       },
       "seeding_key": {
         "resource.key": "conditionals"
-      }
-    },
-    {
-      "name": "CS in Entertainment",
-      "url": "https://docs.google.com/document/d/1YMy0llsitAMGPrtoZBirnmsEpEG7G-OeU9HFC1rAUu8/edit",
-      "key": "cs_in_entertainment",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "cs_in_entertainment"
-      }
-    },
-    {
-      "name": "CS in Entertainment",
-      "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
-      "key": "cs_in_entertainment_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "cs_in_entertainment_1"
-      }
-    },
-    {
-      "name": "CS in Entertainment Research Areas",
-      "url": "https://docs.google.com/document/d/1aXtDOsP5YMC3cVanVUQkKrY7T4amDiB3bwxHxBuQEPA/edit",
-      "key": "cs_in_entertainment_research_areas",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_in_entertainment_research_areas"
       }
     },
     {
@@ -16100,15 +16288,27 @@
       }
     },
     {
-      "name": "Programming for Entertainment",
-      "url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/template/preview",
-      "key": "programming_for_entertainment",
+      "name": "Problem Solving and Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/edit?usp=sharing",
+      "key": "problem_solving_and_design",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "name": "Programming for a Purpose",
+      "url": "https://docs.google.com/presentation/d/1lR2Il6bOm-OHQltTtHO5XJ_p0q2J-3dye_RiCZW-sGY/template/preview",
+      "key": "programming_for_a_purpose",
       "properties": {
         "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "programming_for_entertainment"
+        "resource.key": "programming_for_a_purpose"
       }
     },
     {
@@ -16424,6 +16624,19 @@
       }
     },
     {
+      "name": "The Problem Solving Process ",
+      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
+      "key": "the_problem_solving_process",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
       "name": "Using the Game Design Process",
       "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview",
       "key": "using_the_game_design_process",
@@ -16508,6 +16721,18 @@
       },
       "seeding_key": {
         "resource.key": "velocity_and_the_counter_pattern"
+      }
+    },
+    {
+      "name": "App Design Template ",
+      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
+      "key": "web_design_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_design_template"
       }
     }
   ],
@@ -16785,25 +17010,43 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs_in_entertainment"
+        "resource.key": "_warm_up_word_search"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs_in_entertainment_1"
+        "resource.key": "_warm_up_word_search_key_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs_in_entertainment_research_areas"
+        "resource.key": "app_design_for_users"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "programming_for_entertainment"
+        "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "programming_for_a_purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "web_design_template"
       }
     },
     {

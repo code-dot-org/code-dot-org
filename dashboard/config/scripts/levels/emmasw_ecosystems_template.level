@@ -18,7 +18,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# This will be the Ecosystems video\r\nTesting oceanSetup for Ecosystems",
+    "long_instructions": "# TEMPLATE FOR ECOSYSTEMS",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -39,18 +39,85 @@
   },
   "level_num": "custom",
   "game_id": 64,
-  "created_at": "2023-03-01T20:46:46.000Z",
+  "created_at": "2023-03-02T19:32:11.000Z",
   "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-03-01T20:46:46.338+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_template_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_template_2023\"},{\"changed_at\":\"2023-03-01 20:46:51 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 20:47:39 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 20:48:08 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 20:49:34 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 20:51:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 20:06:04 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 22:59:41 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 23:23:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-02T19:32:11.115+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_template_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_template_2023\"},{\"changed_at\":\"2023-03-02 19:32:16 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 19:36:07 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 19:37:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 19:39:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 20:02:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 20:04:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 20:19:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-02 20:20:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
+        <block type="when_run" deletable="false" movable="false">
           <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="oceanSetupWithFish"/>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_everyInterval">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="addAlgae"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="addAlgae">addAlgae</field>
+          <statement name="STACK">
+            <block type="gamelab_makeNumSprites">
+              <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">10</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setProp">
+                  <field name="PROPERTY">"scale"</field>
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"green-sea-plant-2"</field>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_number">
+                      <field name="NUM">30</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"fish_10"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"green-sea-plant-2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_destroy"/>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="oceanSetupWithFish">oceanSetupWithFish</field>
+          <statement name="STACK">
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"background_underwater_17"</field>
               <next>
@@ -88,74 +155,74 @@
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"underseadeco_25"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":110,"y":371}</field>
+                            <block type="gamelab_makeNumSprites">
+                              <field name="ANIMATION_NAME">"fish_10"</field>
+                              <value name="NUM">
+                                <block type="math_number">
+                                  <field name="NUM">10</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"underseadeco_24"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":43,"y":358}</field>
+                                <block type="gamelab_setProp">
+                                  <field name="PROPERTY">"scale"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"fish_10"</field>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <field name="NUM">40</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_makeNumSprites">
-                                      <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
-                                      <value name="NUM">
-                                        <block type="math_number">
-                                          <field name="NUM">10</field>
+                                    <block type="gamelab_addBehaviorSimple">
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"fish_10"</field>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_behavior_get">
+                                          <mutation/>
+                                          <field name="VAR" id="wandering">wandering</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="gamelab_setProp">
-                                          <field name="PROPERTY">"scale"</field>
-                                          <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"green-sea-plant-2"</field>
-                                            </block>
-                                          </value>
-                                          <value name="VAL">
+                                        <block type="gamelab_makeNumSprites">
+                                          <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
+                                          <value name="NUM">
                                             <block type="math_number">
-                                              <field name="NUM">30</field>
+                                              <field name="NUM">10</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_makeNumSprites">
-                                              <field name="ANIMATION_NAME">"fish_10"</field>
-                                              <value name="NUM">
+                                            <block type="gamelab_setProp">
+                                              <field name="PROPERTY">"scale"</field>
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"green-sea-plant-2"</field>
+                                                </block>
+                                              </value>
+                                              <value name="VAL">
                                                 <block type="math_number">
-                                                  <field name="NUM">10</field>
+                                                  <field name="NUM">30</field>
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="gamelab_setProp">
-                                                  <field name="PROPERTY">"scale"</field>
-                                                  <value name="SPRITE">
-                                                    <block type="gamelab_allSpritesWithAnimation">
-                                                      <field name="ANIMATION">"fish_10"</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="VAL">
-                                                    <block type="math_number">
-                                                      <field name="NUM">30</field>
+                                                <block type="gamelab_makeNewSpriteAnon">
+                                                  <field name="ANIMATION_NAME">"underseadeco_25"</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":110,"y":371}</field>
                                                     </block>
                                                   </value>
                                                   <next>
-                                                    <block type="gamelab_addBehaviorSimple">
-                                                      <value name="SPRITE">
-                                                        <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"fish_10"</field>
-                                                        </block>
-                                                      </value>
-                                                      <value name="BEHAVIOR">
-                                                        <block type="gamelab_behavior_get">
-                                                          <mutation/>
-                                                          <field name="VAR" id="wandering">wandering</field>
+                                                    <block type="gamelab_makeNewSpriteAnon">
+                                                      <field name="ANIMATION_NAME">"underseadeco_24"</field>
+                                                      <value name="LOCATION">
+                                                        <block type="gamelab_location_picker">
+                                                          <field name="LOCATION">{"x":43,"y":358}</field>
                                                         </block>
                                                       </value>
                                                     </block>
@@ -179,7 +246,7 @@
                 </block>
               </next>
             </block>
-          </next>
+          </statement>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>

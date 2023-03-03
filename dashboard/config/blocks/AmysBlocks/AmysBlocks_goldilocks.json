@@ -1,0 +1,39 @@
+{
+  "category": "CSC",
+  "config": {
+    "func": "goldilocks",
+    "blockText": " if {NUM}{STATEMENT}{SPRITE}",
+    "args": [
+      {
+        "name": "NUM",
+        "options": [
+          [
+            "too much",
+            ">15"
+          ],
+          [
+            "just right",
+            "75"
+          ],
+          [
+            "too little",
+            "<5"
+          ]
+        ]
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      },
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}
