@@ -35,7 +35,7 @@ describe('CurriculumQuickAssign', () => {
     wrapper
       .find('Button')
       .at(0)
-      .simulate('click');
+      .simulate('click', {preventDefault: () => {}});
     expect(
       wrapper
         .find('Button')
