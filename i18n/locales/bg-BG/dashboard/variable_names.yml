@@ -8,6 +8,7 @@ bg:
       Green: Зелено
       Red: Червено
       actor: актьор
+      adjective: прилагателно
       age: възраст
       animal1score: животно1точки
       animal1speed: животно1скорост
@@ -20,12 +21,15 @@ bg:
       bit: бит
       blue1: синьо1
       blue2: синьо2
+      body-part: част-от-тялото
       bodylength: дължинанатяло
       buttonHeight: бутонВисочина
+      buttonMargin: бутонПоле
       buttonWidth: бутонШирочина
       cat_score: котка_точки
       cat_speed: котка_скорост
       cats: котки
+      centerToPadLeft: центрирайКъмЛяво
       choice: избор
       circ: кръг
       codeName: кодИме
@@ -34,6 +38,7 @@ bg:
       controllerWidth: контролерШирочина
       counter: брояч
       counter2: брояч2
+      currentActor: текущАктьор
       direction: посока
       dog_score: куче_точки
       dog_speed: куче_скорост
@@ -42,6 +47,7 @@ bg:
       enemy_speed: враг_скорост
       energy: енергия
       firstName: първоИме
+      footlength: дължинакрак
       gather: съберете
       green1: зелено1
       green2: зелено2
@@ -54,14 +60,21 @@ bg:
       leglength: крак_дължина
       length: дължина
       level: ниво
+      marginX: полеХ
+      marginY: полеY
       meal: ястие
       myName: моетоИме
       name: Име
       nectar: нектар
       nectars: нектар
+      number: число
+      object: обект
+      padYOffset: padYОтместване
+      parts: части
       planet: планета
       player_score: играч_точки
       points: точки
+      punchLine: поанта
       random: случаен
       red1: червено1
       red2: червено2
@@ -74,12 +87,16 @@ bg:
       screenHeight: екранВисочина
       screenWidth: екранШирина
       set sides: задайте страни
+      setupSimScore1: задайТочкиСимулация1
+      setupSimScore2: задайТочкиСимулация2
       shout: викам
       sides: страни
       size: размер
       speed: скорост
       startX: стартX
       startY: стартY
+      stopped-left: спрян-отляво
+      time: време
       type: тип
       variable: променлива
       width: широчина

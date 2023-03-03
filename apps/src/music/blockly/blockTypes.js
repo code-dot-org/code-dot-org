@@ -14,6 +14,8 @@ export const BlockTypes = {
     'play_rest_at_current_location_simple2',
   PLAY_SOUNDS_TOGETHER: 'play_sounds_together',
   PLAY_SOUNDS_SEQUENTIAL: 'play_sounds_sequential',
+  PLAY_SOUNDS_RANDOM: 'play_sounds_random',
+  REPEAT_SIMPLE2: 'repeat_simple2',
   NEW_TRACK_AT_START: 'new_track_at_start',
   NEW_TRACK_AT_MEASURE: 'new_track_at_measure',
   NEW_TRACK_ON_TRIGGER: 'new_track_on_trigger',

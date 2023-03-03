@@ -114,3 +114,5 @@ Nivelurile 2-4 utilizează un model instruit în prealabil, pus la dispoziție d
 Nivelurile 6-8 utilizează o \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Analizăm fiecare componentă a peștilor (cum ar fi ochii, gura, corpul) și asamblăm toate meta-datele pentru componente (cum ar fi numărul de dinți, forma corpului) într-un vector de numere pentru fiecare pește. Folosim acești vectori pentru a instrui SVM. Pe baza datelor de instruire, SVM separă „spațiul” tuturor peștilor posibili în două părți, care corespund claselor pe care încercăm să le învățăm (cum ar fi „albastru” sau „nu e albastru”).
 
 [[Sus]](#top)
+
+{{ visit_partial_event_logger }}

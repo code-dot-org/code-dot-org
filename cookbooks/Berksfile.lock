@@ -44,8 +44,6 @@ DEPENDENCIES
     path: cdo-tippecanoe
   cdo-users
     path: cdo-users
-  cdo-varnish
-    path: cdo-varnish
   chef-client
   chef_client_updater (>= 3.3.2)
   ntp
@@ -118,7 +116,7 @@ GRAPH
     redisio (>= 0.0.0)
   cdo-repository (0.2.41)
     cdo-github-access (>= 0.0.0)
-  cdo-ruby (0.2.54)
+  cdo-ruby (0.2.68)
     apt (>= 0.0.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.12)
@@ -127,8 +125,6 @@ GRAPH
   cdo-tippecanoe (0.1.13)
     ark (>= 0.0.0)
   cdo-users (0.1.45)
-    apt (>= 0.0.0)
-  cdo-varnish (0.3.320)
     apt (>= 0.0.0)
   chef-client (12.3.4)
     cron (>= 4.2.0)

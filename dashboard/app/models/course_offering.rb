@@ -35,6 +35,10 @@ class CourseOffering < ApplicationRecord
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
+  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
+  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
+  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -234,5 +238,26 @@ class CourseOffering < ApplicationRecord
 
   def csd?
     key == 'csd'
+  end
+
+  def hoc?
+    category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
+  def grade_levels_list
+    return [] if grade_levels.nil?
+    grade_levels.strip.split(',')
+  end
+
+  def elementary_school_level?
+    grade_levels_list.any? {|g| ELEMENTARY_SCHOOL_GRADES.include?(g)}
+  end
+
+  def middle_school_level?
+    grade_levels_list.any? {|g| MIDDLE_SCHOOL_GRADES.include?(g)}
+  end
+
+  def high_school_level?
+    grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
   end
 end

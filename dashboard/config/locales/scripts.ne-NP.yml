@@ -1466,6 +1466,10 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:

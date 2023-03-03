@@ -301,16 +301,7 @@ export default class MicroBitBoard extends EventEmitter {
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
-    this.dynamicComponents_.forEach(component => {
-      // For now, these are _always_ Leds.  Complain if they're not.
-      if (component instanceof ExternalLed) {
-        component.off();
-      } else if (component instanceof ExternalButton) {
-        // No special cleanup required for button
-      } else {
-        throw new Error('Added an unsupported component to dynamic components');
-      }
-    });
+    this.resetDynamicComponents();
     this.dynamicComponents_.length = 0;
 
     if (this.prewiredComponents_) {
@@ -350,7 +341,22 @@ export default class MicroBitBoard extends EventEmitter {
     });
   }
 
+  resetDynamicComponents() {
+    this.dynamicComponents_.forEach(component => {
+      // For now, these are _always_ Leds.  Complain if they're not.
+      if (component instanceof ExternalLed) {
+        // Make sure the LED is turned off.
+        component.off();
+      } else if (component instanceof ExternalButton) {
+        // No special cleanup is required for ExternalButton.
+      } else {
+        throw new Error('Added an unsupported component to dynamic components');
+      }
+    });
+    this.dynamicComponents_.length = 0;
+  }
   reset() {
+    this.resetDynamicComponents();
     cleanupMicroBitComponents(
       this.prewiredComponents_,
       this.dynamicComponents_,

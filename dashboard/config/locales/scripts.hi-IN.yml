@@ -4996,6 +4996,10 @@ hi:
               name: एक-आयामी (1D) ऐरे
             lesson-3:
               name: फॉर लूप्स
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: बेतरतीब
         hello-world-space-2022:
           title: 'हेलो वर्ल्ड: स्पेस'
         hello-world-soccer-2022:

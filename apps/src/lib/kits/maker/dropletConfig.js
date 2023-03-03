@@ -532,7 +532,7 @@ const microBitBlocks = [
     func: 'ledScreen.display',
     category: MICROBIT_CATEGORY,
     params: [
-      '[\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1]\n]'
+      '[\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1])\n]'
     ],
     paletteParams: ['boardArray']
   },
