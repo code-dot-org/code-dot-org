@@ -38,6 +38,21 @@ class CourseScript extends Component {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
+  state = {
+    confirmationMessageOpen: false
+  };
+
+  onReassignConfirm = () => {
+    this.setState({
+      confirmationMessageOpen: true
+    });
+    setTimeout(() => {
+      this.setState({
+        confirmationMessageOpen: false
+      });
+    }, 15000);
+  };
+
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
@@ -139,6 +154,7 @@ class CourseScript extends Component {
                   courseVersionId={courseVersionId}
                   assignmentName={title}
                   sectionName={selectedSection.name}
+                  reassignConfirm={this.onReassignConfirm}
                 />
               )}
           </span>
