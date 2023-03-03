@@ -3,7 +3,9 @@ class SectionsController < ApplicationController
   before_action :load_section_by_code, only: [:log_in, :show]
 
   def new
-    return head :forbidden unless current_user&.admin
+    # return head :forbidden unless current_user&.admin
+
+    redirect_to '/home' unless params[:loginType] && params[:participantType]
   end
 
   def show
