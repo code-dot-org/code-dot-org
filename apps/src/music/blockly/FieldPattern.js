@@ -74,10 +74,9 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = 'white';
-    this.newDiv_.style.width = '300px';
+    this.newDiv_.style.width = '400px';
     this.newDiv_.style.backgroundColor = 'black';
     this.newDiv_.style.padding = '5px';
-    this.newDiv_.style.cursor = 'pointer';
 
     return this.newDiv_;
   }
