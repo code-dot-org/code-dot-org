@@ -7,7 +7,7 @@ export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
-  effects: any;
+  effects?: {};
 }
 
 interface PlayingSample {

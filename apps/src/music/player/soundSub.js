@@ -103,8 +103,13 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  // Insert effects, attaching them to source.
-  const lastNode = InsertEffects(audioContext, effects, source);
+  let lastNode;
+  if (effects) {
+    // Insert effects, attaching them to source.
+    lastNode = InsertEffects(audioContext, effects, source);
+  } else {
+    lastNode = source;
+  }
 
   // Connect the last node to output.
   lastNode.connect(audioContext.destination);

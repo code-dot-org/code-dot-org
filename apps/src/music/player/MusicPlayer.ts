@@ -36,7 +36,7 @@ interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
   skipContext?: SkipContext;
-  effects: any;
+  effects?: {};
 }
 
 interface TrackMetadata {
@@ -112,7 +112,7 @@ export default class MusicPlayer {
     trackId?: string,
     functionContext?: FunctionContext,
     skipContext?: SkipContext,
-    effects?: any
+    effects?: {}
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
