@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './soundsPanel.module.scss';
+import classNames from 'classnames';
+import styles from './patternPanel.module.scss';
 //import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 /*
@@ -57,11 +58,22 @@ const PatternPanel = ({
     onChange(currentValue);
   };
 
+  const getCellClasses = (sound, tick) => {
+    const isSet = getGridPointSet(sound, tick);
+    const isHighlighted = !isSet && (tick - 1) % 4 === 0;
+
+    return classNames(
+      styles.cell,
+      isSet && styles.activeCell,
+      isHighlighted && styles.highlightedCell
+    );
+  };
+
   // Generate an array containing tick numbers from 1..16.
   const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
   return (
-    <div className={styles.soundsPanel}>
+    <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
         {group.folders
           .filter(folder => folder.type === 'kit')
@@ -73,16 +85,18 @@ const PatternPanel = ({
       </select>
       {currentFolder.sounds.map((sound, soundIndex) => {
         return (
-          <div key={soundIndex}>
-            <div style={{display: 'inline-block', width: 60}}>{sound.name}</div>
+          <div className={styles.row} key={soundIndex}>
+            <div className={styles.name}>{sound.name}</div>
             {arrayOfTicks.map((tick, tickIndex) => {
               return (
                 <div
-                  style={{display: 'inline-block', width: 15}}
+                  className={styles.outerCell}
                   onClick={() => toggleGridPoint(sound, tick)}
-                  key={tickIndex}
                 >
-                  {getGridPointSet(sound, tick) ? 'x' : 'o'}
+                  <div
+                    className={getCellClasses(sound, tick)}
+                    key={tickIndex}
+                  />
                 </div>
               );
             })}
