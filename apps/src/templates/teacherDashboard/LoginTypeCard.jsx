@@ -29,10 +29,7 @@ class LoginTypeCard extends Component {
       description: descriptionStyle
     } = styles;
     if (this.state.hover) {
-      cardStyle = {...cardStyle, borderColor: color.dark_charcoal};
-      titleStyle = {...titleStyle, color: color.dark_charcoal};
-      subtitleStyle = {...subtitleStyle, color: color.dark_charcoal};
-      descriptionStyle = {...descriptionStyle, color: color.dark_charcoal};
+      cardStyle = {...cardStyle, background: color.neutral_light};
     }
 
     return (
@@ -44,7 +41,7 @@ class LoginTypeCard extends Component {
         className={this.props.className}
       >
         <div>
-          <div style={titleStyle}>{title}</div>
+          <h4 style={titleStyle}>{title}</h4>
           {subtitle && <div style={subtitleStyle}>{subtitle}</div>}
           <div style={descriptionStyle}>{description}</div>
         </div>
@@ -56,48 +53,44 @@ class LoginTypeCard extends Component {
 const styles = {
   card: {
     overflow: 'hidden',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    display: 'inline-block',
     boxSizing: 'border-box',
     // Set width to form a three-column layout on 970px teacher dashboard.
     width: 312,
-    // Uniform height, even in different rows
-    flex: '0 0 auto',
     minHeight: 150,
-    padding: 16,
-    marginBottom: 5,
-    marginLeft: 5,
+    padding: 8,
+    margin: '8px 0',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.border_gray,
-    borderRadius: 5,
-    background: color.white
+    borderColor: color.neutral_dark20,
+    borderRadius: 1,
+    background: color.neutral_white,
+    cursor: 'pointer'
   },
   title: {
-    paddingBottom: 6,
-    fontSize: 24,
+    paddingBottom: 4,
+    marginBottom: 0,
+    fontSize: '1.5em',
+    lineHeight: '18px',
+    fontFamily: '"Barlow Semi Condensed Medium", sans-serif',
+    zIndex: 2,
+    color: color.neutral_dark
+  },
+  subtitle: {
+    paddingBottom: 0,
+    fontSize: 12,
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
     zIndex: 2,
-    color: color.charcoal
-  },
-  subtitle: {
-    paddingBottom: 12,
-    fontSize: 14,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 4r", sans-serif',
-    zIndex: 2,
-    color: color.charcoal
+    color: color.neutral_dark
   },
   description: {
-    paddingTop: 10,
-    paddingBottom: 5,
-    fontSize: 13,
+    paddingTop: 12,
+    fontSize: 12,
     lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.charcoal
+    color: color.neutral_dark
   }
 };
 export default LoginTypeCard;
