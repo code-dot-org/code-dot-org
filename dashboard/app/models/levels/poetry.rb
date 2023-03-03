@@ -103,21 +103,21 @@ class Poetry < GamelabJr
   end
 
   # Used to get all available poems for a Poetry level.
-  def self.poem_keys_for_subtype(subtype)
+  def self.poems_for_subtype(subtype)
     case subtype
     when 'poetry_hoc'
-      poem_key_filter(hoc_poems)
+      hoc_poems
     when 'time_capsule'
-      poem_key_filter(time_capsule_poems)
+      time_capsule_poems
     else
       []
     end
   end
 
-  def self.poem_key_filter(poem_list)
+  def self.poem_keys_for_subtype(subtype)
     # get the keys out of a poem list. Assumes each entry
     # in the list is a 2 element array
-    poem_list.map {|poem| poem[1]}
+    poems_for_subtype(subtype).map {|poem| poem[1]}
   end
 
   def self.hoc_poems
