@@ -100,7 +100,8 @@ use_my_apps: true
 # Credentials for connecting to Firebase to use data blocks or data browser
 # in Applab.
 #firebase_name: 'cdo-v3-dev'
-#firebase_secret:
+#firebase_secret: localoverride
+#firebase_shared_secret localoverride
 
 
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a

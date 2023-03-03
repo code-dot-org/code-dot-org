@@ -20,6 +20,12 @@
   &Unfocused {
     background-color: color.$lighter_purple;
     color: color.$dark_charcoal;
+
+    button {
+      span {
+        color: color.$dark_charcoal;
+      }
+    }
   }
 }
 
