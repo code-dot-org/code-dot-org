@@ -68,6 +68,22 @@ section.bg-secondary { background-color: $brand_secondary_light; }
   -webkit-font-smoothing: antialiased;
 }
 
+// Line divider for use between sections
+div.divider {
+  max-width: 960px;
+  margin: 1em auto;
+
+  @media screen and (max-width: $width-md) {
+    padding: 0 2em;
+  }
+
+  hr {
+    border-top: 1px solid $neutral_dark60;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 // Paragraphs
 p {
   color: $neutral-dark;
