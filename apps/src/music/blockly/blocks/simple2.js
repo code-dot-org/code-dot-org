@@ -180,7 +180,7 @@ export const playRestAtCurrentLocationSimple2 = {
 export const setEffectAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'set %1 to %2 at current measure',
+    message0: 'set %1 to %2',
     args0: [
       {
         type: 'field_dropdown',
