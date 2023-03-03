@@ -302,6 +302,7 @@ class Blockly < Level
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
         set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
+        # set_unless_nil(level_options, 'startBlocks', localized_start_blocks(level_options['startBlocks']))
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
@@ -469,6 +470,23 @@ class Blockly < Level
       encoding: 'UTF-8',
       save_with: Nokogiri::XML::Node::SaveOptions::DEFAULT_HTML ^ Nokogiri::XML::Node::SaveOptions::FORMAT
     )
+  end
+
+  def localized_start_blocks(start_blocks)
+    return unless start_blocks
+    localized_blocks = start_blocks.dup
+    start_blocks_text = start_blocks.scan(/"([^"]*)"/)
+    # match any element that contains text
+    start_blocks_text.each do |element|
+      localized_text = I18n.t(
+        element,
+        scope: [:data, :start_html, name],
+        default: element,
+        smart: true
+      )
+      localized_blocks.gsub!(element[0], localized_text[0]) if localized_text
+    end
+    localized_blocks
   end
 
   def localized_authored_hints
