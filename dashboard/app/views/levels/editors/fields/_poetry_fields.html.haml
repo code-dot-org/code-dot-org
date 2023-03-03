@@ -16,7 +16,6 @@
       %p= "WARNING: #{warning}"
     = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, {class: 'poem-subtype-dropdown'}
 
-
   #defaultPoem{class: ('collapse' if @level.standalone_app_name == 'poetry')}
     = f.label :default_poem, 'Default Poem'
     = f.select :default_poem, options_for_select(@level.class.poems_for_subtype(@level.standalone_app_name), @level.default_poem)
@@ -30,25 +29,3 @@
       %a.select_none{href: '#'} no
       (shift-click or cmd-click to select multiple).
     = f.select :dropdown_poems, (@level.class.poems_for_subtype(@level.standalone_app_name)), {}, {multiple: true}
-
--#   #hocPoems{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
--#     = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.hoc_poems.sort}
-
--#   #timeCapsulePoems{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
--#     = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.time_capsule_poems}
-
--# :javascript
--#   function toggleFields(val) {
--#     const defaultPoemHoc = document.getElementById('hocPoems');
--#     const defaultPoemTimeCapsule = document.getElementById('timeCapsulePoems');
--#     if (val.toLowerCase() === 'poetry') {
--#       defaultPoemHoc.classList.add('collapse');
--#       defaultPoemTimeCapsule.classList.add('collapse');
--#     } else if (val.toLowerCase() === 'poetry_hoc') {
--#       defaultPoemTimeCapsule.classList.add('collapse');
--#       defaultPoemHoc.classList.remove('collapse');
--#     } else if (val.toLowerCase() === 'time_capsule') {
--#       defaultPoemTimeCapsule.classList.remove('collapse');
--#       defaultPoemHoc.classList.add('collapse');
--#     }
--#   }
