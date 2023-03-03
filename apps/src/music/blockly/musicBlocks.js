@@ -19,6 +19,7 @@ import {
   playRestAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  playSoundsRandom,
   repeatSimple2
 } from './blocks/simple2';
 
@@ -37,6 +38,7 @@ const blockList = [
   playRestAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  playSoundsRandom,
   repeatSimple2,
   forLoop,
   newTrackAtStart,
