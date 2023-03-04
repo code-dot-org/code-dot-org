@@ -11,13 +11,7 @@ const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
  * custom Blockly Field {@link FieldSounds}
  */
 
-const PatternPanel = ({
-  library,
-  initValue,
-  playingPreview,
-  onChange,
-  onPreview
-}) => {
+const PatternPanel = ({library, initValue, onChange}) => {
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
   const currentValue = {...initValue};
@@ -107,9 +101,7 @@ const PatternPanel = ({
 PatternPanel.propTypes = {
   library: PropTypes.object.isRequired,
   initValue: PropTypes.object.isRequired,
-  playingPreview: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  onPreview: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired
 };
 
 export default PatternPanel;

@@ -13,7 +13,6 @@ class FieldPattern extends GoogleBlockly.Field {
     super(options.currentValue);
 
     this.options = options;
-    this.playingPreview = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
   }
@@ -90,24 +89,6 @@ class FieldPattern extends GoogleBlockly.Field {
       <PatternPanel
         library={this.options.getLibrary()}
         initValue={this.getValue()}
-        playingPreview={this.playingPreview}
-        onPreview={value => {
-          this.playingPreview = value;
-          this.renderContent();
-
-          this.options.playPreview(value, () => {
-            // If the user starts another preview while one is
-            // already playing, it will have started playing before
-            // we get this stop event.  We want to wait until the
-            // new preview stops before we reactivate the button, and
-            // so we don't clear out this.playingPreview unless the
-            // stop event coming in is for the actively playing preview.
-            if (this.playingPreview === value) {
-              this.playingPreview = null;
-            }
-            this.renderContent();
-          });
-        }}
         onChange={value => {
           this.setValue(value);
         }}
