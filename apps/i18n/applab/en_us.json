@@ -363,7 +363,7 @@
   "makerSetupCircuitPlaygroundDescription": "The Adafruit [Circuit Playground Express](https://www.adafruit.com/product/3399) (and the older [Circuit Playground Classic](https://www.adafruit.com/product/3000)) is a programmable circuit board with a variety of sensors, components, and includes 10 color LEDs and a mini-speaker.",
   "makerSetupCircuitPlaygroundImageAltText": "The Circuit Playground board is a circular circuit board with a USB connector at the top rim, 14 connection pins along the rim, 10 LED lights, two buttons and multiple sensors.",
   "makerSetupCircuitPlaygroundTitle": "The Circuit Playground",
-  "makerSetupConnectWithWebSerial": "The Circuit Playground and micro:bit can connect directly to computers while using Google Chrome or Microsoft Edge browsers.",
+  "makerSetupConnectWithWebSerial": "The Circuit Playground and micro:bit can connect directly to computers while using Google Chrome or Microsoft Edge browsers. WebSerial is the recommended way to connect to your board.",
   "makerSetupDownloadAndInstall": "Download and install the Code.org Maker App using the download button above.",
   "makerSetupDownloadProblem": "There was a problem getting your download link.",
   "makerSetupFetchingVersion": "Getting the latest version...",

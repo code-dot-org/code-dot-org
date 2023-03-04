@@ -45,8 +45,8 @@ export default class SetupInstructions extends React.Component {
     return (
       <Provider store={getStore()}>
         <div>
-          <Downloads />
           <ConnectionInstructions />
+          <Downloads />
           <Support />
         </div>
       </Provider>
