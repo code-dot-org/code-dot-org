@@ -32,11 +32,18 @@ interface SkipContext {
   skipSound: boolean;
 }
 
+type EffectValue = 'normal' | 'medium' | 'low';
+export interface Effects {
+   volume?: EffectValue;
+   filter?: EffectValue;
+   delay?: EffectValue;
+}
+
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
   skipContext?: SkipContext;
-  effects?: {};
+  effects?: Effects;
 }
 
 interface TrackMetadata {
@@ -112,7 +119,7 @@ export default class MusicPlayer {
     trackId?: string,
     functionContext?: FunctionContext,
     skipContext?: SkipContext,
-    effects?: {}
+    effects?: Effects
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
