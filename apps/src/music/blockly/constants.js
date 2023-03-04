@@ -13,6 +13,8 @@ export const EXTRA_SAMPLE_FIELD_PREFIX = 'extra_sample';
 export const TRIGGER_FIELD = 'trigger';
 export const PRIMARY_SOUND_INPUT_NAME = 'primary_sound';
 export const FIELD_REST_DURATION_NAME = 'rest_duration';
+export const FIELD_EFFECTS_NAME = 'name';
+export const FIELD_EFFECTS_VALUE = 'value';
 
 // Types
 
