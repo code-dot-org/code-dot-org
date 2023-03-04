@@ -3,12 +3,13 @@ import {
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
-  FIELD_SOUNDS_TYPE,
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_TYPE,
-  FIELD_REST_DURATION_NAME
+  FIELD_REST_DURATION_NAME,
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE
 } from '../constants';
-import {DEFAULT_SOUND, DEFAULT_PATTERN} from '../../constants';
+import {DEFAULT_PATTERN} from '../../constants';
 import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
 import Globals from '../../globals';
@@ -26,6 +27,7 @@ export class GeneratorHelpersSimple2 {
         name: '${functionName}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.playSequential();
       ${functionCode}
       ProgramSequencer.endSequential();
@@ -47,6 +49,7 @@ export class GeneratorHelpersSimple2 {
       name: 'when_run',
       uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
     };
+    var __effects = {};
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
     RandomSkipManager.init();
@@ -91,6 +94,7 @@ export const whenRunSimple2 = {
         name: 'when_run',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
       RandomSkipManager.init();
@@ -148,7 +152,8 @@ export const playSoundAtCurrentLocationSimple2 = {
         __insideWhenRun,
         null,
         __currentFunction,
-        RandomSkipManager.getSkipContext()
+        RandomSkipManager.getSkipContext(),
+        __effects
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
@@ -210,6 +215,42 @@ export const playRestAtCurrentLocationSimple2 = {
         ${block.getFieldValue(FIELD_REST_DURATION_NAME)}
       );
     `
+};
+
+export const setEffectAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'set %1 to %2',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: FIELD_EFFECTS_NAME,
+        options: [
+          ['volume', 'volume'],
+          ['filter', 'filter'],
+          ['delay', 'delay']
+        ]
+      },
+      {
+        type: 'field_dropdown',
+        name: FIELD_EFFECTS_VALUE,
+        options: [['normal', ''], ['medium', 'medium'], ['low', 'low']]
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'music_blocks',
+    tooltip: 'set effect',
+    helpUrl: ''
+  },
+  generator: block => {
+    const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
+    const effectValue = block.getFieldValue(FIELD_EFFECTS_VALUE);
+    return `
+      __effects.${effectName} = '${effectValue}';
+    `;
+  }
 };
 
 export const playSoundsTogether = {

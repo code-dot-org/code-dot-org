@@ -166,7 +166,7 @@ en:
             ### Pick your content
 
             ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
-          version_title: "'21-'22"
+          version_title: ''
         csa-pilot-facilitator:
           title: CSA Pilot Facilitators
           description_short: ''
@@ -227,7 +227,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: "'22-'23"
+          version_title: ''
         csd-2022:
           title: Computer Science Discoveries ('22-'23)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
