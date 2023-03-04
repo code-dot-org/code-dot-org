@@ -2,7 +2,11 @@ import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
-import {FIELD_REST_DURATION_NAME, PRIMARY_SOUND_INPUT_NAME} from './constants';
+import {
+  FIELD_REST_DURATION_NAME,
+  PRIMARY_SOUND_INPUT_NAME,
+  FIELD_EFFECTS_NAME
+} from './constants';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -48,21 +52,21 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
-      ['EFFECT']: 'volume'
+      [FIELD_EFFECTS_NAME]: 'volume'
     }
   },
   [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
-      ['EFFECT']: 'filter'
+      [FIELD_EFFECTS_NAME]: 'filter'
     }
   },
   [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
-      ['EFFECT']: 'delay'
+      [FIELD_EFFECTS_NAME]: 'delay'
     }
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
