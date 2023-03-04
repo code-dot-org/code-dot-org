@@ -50,6 +50,8 @@ interface PatternEvent extends PlaybackEvent {
   type: 'pattern';
   id: 'pattern';
   value: any;
+  skipContext?: SkipContext;
+  effects?: Effects;
 }
 
 interface TrackMetadata {
@@ -173,7 +175,9 @@ export default class MusicPlayer {
     measure: number,
     insideWhenRun: boolean,
     trackId?: string,
-    functionContext?: FunctionContext
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
@@ -195,7 +199,9 @@ export default class MusicPlayer {
       triggered: !insideWhenRun,
       when: measure,
       trackId,
-      functionContext
+      functionContext,
+      skipContext,
+      effects
     };
 
     this.playbackEvents.push(patternEvent);
@@ -203,25 +209,6 @@ export default class MusicPlayer {
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
     }
-
-    /*
-    for (let patternEvent of pattern.events) {
-      const soundEvent = {
-        type: EventType.PLAY,
-        id: pattern.kit + '/' + patternEvent.src,
-        insideWhenRun,
-        when: measure + patternEvent.tick / 16,
-        trackId,
-        functionContext
-      };
-
-      this.soundEvents.push(soundEvent);
-
-      if (this.isPlaying) {
-        this.playSoundEvent(soundEvent);
-      }
-    }
-  */
   }
 
   /**
@@ -500,11 +487,12 @@ export default class MusicPlayer {
 
       for (let event of patternEvent.value.events) {
         const resultEvent = {
-          sampleId: kit + '/' + event.src,
+          sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
             patternEvent.when + event.tick / 16
           ),
-          triggered: patternEvent.triggered
+          triggered: patternEvent.triggered,
+          effects: patternEvent.effects
         };
 
         results.push(resultEvent);
