@@ -171,7 +171,7 @@ export const playPatternAtCurrentLocationSimple2 = {
       {
         type: FIELD_PATTERN_TYPE,
         name: FIELD_PATTERN_NAME,
-        getLibrary: () => Globals.getLibrary(),
+        getLibrary: Globals.getLibrary,
         currentValue: DEFAULT_PATTERN
       }
     ],
@@ -189,7 +189,9 @@ export const playPatternAtCurrentLocationSimple2 = {
         ProgramSequencer.getCurrentMeasure(),
         __insideWhenRun,
         null,
-        __currentFunction
+        __currentFunction,
+        RandomSkipManager.getSkipContext(),
+        __effects
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         1

@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './patternPanel.module.scss';
-//import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+// Generate an array containing tick numbers from 1..16.
+const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
 /*
  * Renders a UI for designing a pattern. This is currently used within a
@@ -25,7 +27,7 @@ const PatternPanel = ({
     folder => folder.path === currentValue.kit
   );
 
-  const toggleGridPoint = (sound, tick) => {
+  const toggleEvent = (sound, tick) => {
     console.log(sound.src, tick);
 
     const index = currentValue.events.findIndex(
@@ -42,11 +44,11 @@ const PatternPanel = ({
     onChange(currentValue);
   };
 
-  const getGridPointSet = (sound, tick) => {
-    const index = currentValue.events.findIndex(
+  const hasEvent = (sound, tick) => {
+    const element = currentValue.events.find(
       event => event.src === sound.src && event.tick === tick
     );
-    return index !== -1;
+    return !!element;
   };
 
   const handleFolderChange = event => {
@@ -59,7 +61,7 @@ const PatternPanel = ({
   };
 
   const getCellClasses = (sound, tick) => {
-    const isSet = getGridPointSet(sound, tick);
+    const isSet = hasEvent(sound, tick);
     const isHighlighted = !isSet && (tick - 1) % 4 === 0;
 
     return classNames(
@@ -69,34 +71,29 @@ const PatternPanel = ({
     );
   };
 
-  // Generate an array containing tick numbers from 1..16.
-  const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
-
   return (
     <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
         {group.folders
           .filter(folder => folder.type === 'kit')
-          .map((folder, folderIndex) => (
-            <option key={folderIndex} value={folder.path}>
+          .map(folder => (
+            <option key={folder.path} value={folder.path}>
               {folder.name}
             </option>
           ))}
       </select>
-      {currentFolder.sounds.map((sound, soundIndex) => {
+      {currentFolder.sounds.map(sound => {
         return (
-          <div className={styles.row} key={soundIndex}>
+          <div className={styles.row} key={sound.src}>
             <div className={styles.name}>{sound.name}</div>
-            {arrayOfTicks.map((tick, tickIndex) => {
+            {arrayOfTicks.map(tick => {
               return (
                 <div
                   className={styles.outerCell}
-                  onClick={() => toggleGridPoint(sound, tick)}
+                  onClick={() => toggleEvent(sound, tick)}
+                  key={tick}
                 >
-                  <div
-                    className={getCellClasses(sound, tick)}
-                    key={tickIndex}
-                  />
+                  <div className={getCellClasses(sound, tick)} />
                 </div>
               );
             })}
