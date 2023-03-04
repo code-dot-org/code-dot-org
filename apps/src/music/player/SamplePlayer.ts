@@ -1,4 +1,5 @@
 import MusicLibrary from './MusicLibrary';
+import {Effects} from './MusicPlayer';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -7,7 +8,7 @@ export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
-  effects?: {};
+  effects?: Effects;
 }
 
 interface PlayingSample {
