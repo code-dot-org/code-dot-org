@@ -185,7 +185,6 @@ export default class MusicPlayer {
     }
     if (
       !value ||
-      //this.soundList.indexOf(`${this.groupPrefix}/${id}`) === -1 ||
       !measure
     ) {
       console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);

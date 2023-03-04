@@ -8,7 +8,7 @@ const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
 /*
  * Renders a UI for designing a pattern. This is currently used within a
- * custom Blockly Field {@link FieldSounds}
+ * custom Blockly Field {@link FieldPattern}
  */
 
 const PatternPanel = ({library, initValue, onChange}) => {

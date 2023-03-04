@@ -5,8 +5,8 @@ import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 
 /**
- * A custom field that renders the sample previewing and choosing UI, used in
- * various "play_sound"-related blocks. The UI is rendered by {@link PatternPanel}.
+ * A custom field that renders the pattern editing UI, used in the
+ * "play_pattern" block. The UI is rendered by {@link PatternPanel}.
  */
 class FieldPattern extends GoogleBlockly.Field {
   constructor(options) {
