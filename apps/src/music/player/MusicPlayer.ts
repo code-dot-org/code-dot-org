@@ -32,10 +32,18 @@ interface SkipContext {
   skipSound: boolean;
 }
 
+type EffectValue = 'normal' | 'medium' | 'low';
+export interface Effects {
+   volume?: EffectValue;
+   filter?: EffectValue;
+   delay?: EffectValue;
+}
+
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
   skipContext?: SkipContext;
+  effects?: Effects;
 }
 
 interface TrackMetadata {
@@ -110,7 +118,8 @@ export default class MusicPlayer {
     insideWhenRun: boolean,
     trackId?: string,
     functionContext?: FunctionContext,
-    skipContext?: SkipContext
+    skipContext?: SkipContext,
+    effects?: Effects
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
@@ -142,7 +151,8 @@ export default class MusicPlayer {
       when: measure,
       trackId,
       functionContext,
-      skipContext
+      skipContext,
+      effects
     };
 
     this.playbackEvents.push(soundEvent);
@@ -405,7 +415,8 @@ export default class MusicPlayer {
         {
           sampleId: soundEvent.id,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
-          triggered: soundEvent.triggered
+          triggered: soundEvent.triggered,
+          effects: soundEvent.effects
         }
       ];
     }
