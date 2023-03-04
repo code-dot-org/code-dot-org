@@ -29,10 +29,13 @@ export function InsertEffects(audioContext, effects, lastNode) {
     output.gain.value = 1;
 
     const delay = audioContext.createDelay();
+
+    // At 120 beats per minute, 0.25 seconds is half a beat.
     delay.delayTime.value = 0.25;
 
     const dry = audioContext.createGain();
     const wet = audioContext.createGain();
+
     const feedback = audioContext.createGain();
     feedback.gain.value = effects.delay === 'low' ? 0.1 : 0.3;
 
