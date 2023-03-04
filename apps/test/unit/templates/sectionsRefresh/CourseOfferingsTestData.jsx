@@ -123,3 +123,107 @@ export const highSchoolCourseOfferings = {
     }
   }
 };
+
+// Keeping 4 categories to be able to test the uneven split of headers
+export const hocCourseOfferings = {
+  hoc: {
+    Favorites: [
+      {
+        id: 55,
+        key: 'oceans',
+        display_name: 'AI for Oceans',
+        course_versions: [
+          {
+            id: 1072,
+            key: 'unversioned',
+            version_year: 'unversioned',
+            name: 'AI for Oceans',
+            path: '/s/oceans',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      },
+      {
+        id: 60,
+        key: 'poem-art',
+        display_name: 'Poem Art',
+        course_versions: [
+          {
+            id: 1086,
+            key: '2021',
+            version_year: '2021',
+            name: 'Poem Art',
+            path: '/s/poem-art-2021',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
+    ],
+    'Hello World': [
+      {
+        id: 43,
+        key: 'hello-world-animals',
+        display_name: 'Hello World: Animals',
+        course_versions: [
+          {
+            id: 1033,
+            key: '2021',
+            version_year: '2021',
+            name: 'Hello World: Animals',
+            path: '/s/hello-world-animals-2021',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
+    ],
+    'Labs and Skills': [
+      {
+        id: 48,
+        key: 'hoc-encryption',
+        display_name: 'Hour of Code: Simple Encryption',
+        course_versions: [
+          {
+            id: 1043,
+            key: 'unversioned',
+            version_year: 'unversioned',
+            name: 'Hour of Code: Simple Encryption',
+            path: '/s/hoc-encryption',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
+    ],
+    'Popular Media': [
+      {
+        id: 69,
+        key: 'starwars',
+        display_name: 'Star Wars: Building a Galaxy With Code (Javascript)',
+        course_versions: [
+          {
+            id: 1120,
+            key: 'unversioned',
+            version_year: 'unversioned',
+            name: 'Star Wars: Building a Galaxy With Code (Javascript)',
+            path: '/s/starwars',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
+    ]
+  }
+};
