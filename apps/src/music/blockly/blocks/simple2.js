@@ -4,15 +4,16 @@ import {
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
-  FIELD_PATTERN_TYPE,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE
 } from '../constants';
-import {DEFAULT_PATTERN} from '../../constants';
-import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
+import {
+  fieldSoundsDefinition,
+  fieldPatternDefinition,
+  fieldRestDurationDefinition
+} from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
-import Globals from '../../globals';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -167,14 +168,8 @@ export const playPatternAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'play pattern %1',
-    args0: [
-      {
-        type: FIELD_PATTERN_TYPE,
-        name: FIELD_PATTERN_NAME,
-        getLibrary: Globals.getLibrary,
-        currentValue: DEFAULT_PATTERN
-      }
-    ],
+    args0: [fieldPatternDefinition],
+
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
