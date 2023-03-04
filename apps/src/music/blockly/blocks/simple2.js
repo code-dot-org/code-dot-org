@@ -3,7 +3,9 @@ import {
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
-  FIELD_REST_DURATION_NAME
+  FIELD_REST_DURATION_NAME,
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE
 } from '../constants';
 import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
@@ -184,7 +186,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     args0: [
       {
         type: 'field_dropdown',
-        name: 'EFFECT',
+        name: FIELD_EFFECTS_NAME,
         options: [
           ['volume', 'volume'],
           ['filter', 'filter'],
@@ -193,7 +195,7 @@ export const setEffectAtCurrentLocationSimple2 = {
       },
       {
         type: 'field_dropdown',
-        name: 'VALUE',
+        name: FIELD_EFFECTS_VALUE,
         options: [['normal', ''], ['medium', 'medium'], ['low', 'low']]
       }
     ],
@@ -205,8 +207,8 @@ export const setEffectAtCurrentLocationSimple2 = {
     helpUrl: ''
   },
   generator: block => {
-    const effectName = block.getFieldValue('EFFECT');
-    const effectValue = block.getFieldValue('VALUE');
+    const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
+    const effectValue = block.getFieldValue(FIELD_EFFECTS_VALUE);
     return `
       __effects.${effectName} = '${effectValue}';
     `;
