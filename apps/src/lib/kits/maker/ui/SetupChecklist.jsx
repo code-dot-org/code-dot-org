@@ -27,6 +27,7 @@ const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
+const STATUS_BOARD_UPDATE_FIRMATA = 'statusBoardUpdateFirmata';
 
 const MICROBIT_FIRMATA_URL =
   'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
@@ -43,7 +44,8 @@ const initialState = {
   [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
-  [STATUS_BOARD_COMPONENTS]: Status.WAITING
+  [STATUS_BOARD_COMPONENTS]: Status.WAITING,
+  [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING
 };
 
 export default class SetupChecklist extends Component {
@@ -201,6 +203,15 @@ export default class SetupChecklist extends Component {
     }
   }
 
+  updateMBFirmata() {
+    this.spin(STATUS_BOARD_UPDATE_FIRMATA);
+    this.spin(STATUS_BOARD_CONNECT);
+    this.setupChecker.updateMBFirmata().then(() => {
+      this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
+      console.log('success!');
+    });
+  }
+
   componentDidMount() {
     this.detect();
   }
@@ -341,7 +352,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
-            hideWaitingSteps={true}
+            hideWaitingSteps={false}
           >
             {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
@@ -357,18 +368,42 @@ export default class SetupChecklist extends Component {
             {!linuxPermissionError && this.installFirmwareSketch()}
             {experiments.isEnabled('microbit') &&
               this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-              this.state[STATUS_BOARD_CONNECT] === Status.FAILED && (
+              this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
+              this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING && (
                 <Button
                   text={applabI18n.makerSetupUpdateMBFirmata()}
                   color={Button.ButtonColor.orange}
                   size={Button.ButtonSize.medium}
                   style={downloadButtonStyle}
-                  onClick={() => this.setupChecker.updateMBFirmata('versioned')}
+                  onClick={() => this.updateMBFirmata('versioned')}
                   title={applabI18n.makerSetupUpdateMBFirmataDescription()}
                 />
               )}
-            {this.contactSupport()}
           </ValidationStep>
+          {experiments.isEnabled('microbit') &&
+            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+            this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING && (
+              <ValidationStep
+                stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
+                stepName={'Updating Firmata'}
+                hideWaitingSteps={false}
+                alwaysShowChildren={true}
+              >
+                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                  Status.ATTEMPTING && (
+                  <div>
+                    <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
+                  </div>
+                )}
+                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                  Status.SUCCEEDED && (
+                  <div>
+                    <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
+                  </div>
+                )}
+              </ValidationStep>
+            )}
+          {this.contactSupport()}
           {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}

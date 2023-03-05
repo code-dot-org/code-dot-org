@@ -30,10 +30,6 @@ import {
   MAKER_TOOLKIT,
   DOWNLOAD_PREFIX
 } from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import {
-  isUniversalHex,
-  separateUniversalHex
-} from '@microbit/microbit-universal-hex';
 import {DAPLink, WebUSB} from 'dapjs';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -386,53 +382,6 @@ export default class MicroBitBoard extends EventEmitter {
 
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
     let hexAsBytes = new TextEncoder().encode(hexStr);
-
-    MicroBitBoard.flashDevice(target, hexAsBytes);
-  }
-
-  static async updateMBFirmataUniversal() {
-    const device = await navigator.usb.requestDevice({
-      filters: [{vendorId: 0x0d28, productId: 0x0204}]
-    });
-    const microbitVersion = MicroBitBoard.detectMicrobitVersion(device);
-    const firmataUrl = `${DOWNLOAD_PREFIX}microbit-firmata-universal-ver1.2.hex`;
-    const result = await fetch(firmataUrl);
-
-    if (!result.ok) {
-      throw new Error('Failed to download hex file');
-    }
-    const hexStr = await result.text();
-    const transport = new WebUSB(device);
-    const target = new DAPLink(transport);
-    let hexFile = null;
-
-    // Since this is a Universal Hex, separate it, and pick the right one for the connected micro:bit version
-    if (isUniversalHex(hexStr)) {
-      const v1MicrobitBoardIds = [0x9900, 0x9901];
-      const v2MicrobitBoardIds = [0x9903, 0x9904, 0x9905, 0x9906];
-      let separatedBinaries = separateUniversalHex(hexStr);
-      separatedBinaries.forEach(function(hexObj) {
-        if (
-          (v1MicrobitBoardIds.includes(hexObj.boardId) &&
-            microbitVersion === 'v1') ||
-          (v2MicrobitBoardIds.includes(hexObj.boardId) &&
-            microbitVersion === 'v2')
-        ) {
-          hexFile = hexObj.hex;
-        }
-      });
-    } else {
-      throw new Error('Download unexpectedly not universal hex');
-    }
-    if (!hexFile) {
-      throw new Error('Did not find matching hex part; this should not happen');
-    }
-    // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
-    let hexAsBytes = new TextEncoder().encode(hexStr);
-    MicroBitBoard.flashDevice(target, hexAsBytes);
-  }
-
-  static async flashDevice(target, hexAsBytes) {
     try {
       // Push binary to board
       await target.connect();

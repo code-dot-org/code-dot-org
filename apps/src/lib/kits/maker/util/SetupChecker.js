@@ -13,7 +13,6 @@ import {
   isWebSerialPort
 } from './boardUtils';
 import MicroBitBoard, {
-  updateMBFirmataUniversal,
   updateMBFirmataVersioned
 } from '../boards/microBit/MicroBitBoard';
 
@@ -116,11 +115,7 @@ export default class SetupChecker {
     }
   }
 
-  updateMBFirmata(option) {
-    if (option === 'versioned') {
-      updateMBFirmataVersioned();
-    } else if (option === 'universal') {
-      updateMBFirmataUniversal();
-    }
+  async updateMBFirmata() {
+    return updateMBFirmataVersioned();
   }
 }
