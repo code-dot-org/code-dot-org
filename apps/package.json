@@ -254,7 +254,6 @@
     "@codemirror/view": "^6.1.2",
     "@dsco_/link": "^1.1.2",
     "@lezer/highlight": "^1.0.0",
-    "@microbit/microbit-universal-hex": "^0.2.2",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "ace-builds": "^1.4.12",
     "blockly": "~9.1.1",

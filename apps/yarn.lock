@@ -1804,11 +1804,6 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@microbit/microbit-universal-hex@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@microbit/microbit-universal-hex/-/microbit-universal-hex-0.2.2.tgz#623e814d771cbd9cd70ef6b7500f75f00b5a07ec"
-  integrity sha512-qyFt8ATgxAyPkNz9Yado4HXEeCctwP/8L1/v2hFLeVUqw/HFqVqV4piJbqRMmyOefMcQ9OyVPhLXjtbKn9063Q==
-
 "@microsoft/immersive-reader-sdk@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@microsoft/immersive-reader-sdk/-/immersive-reader-sdk-1.1.0.tgz#8e8dc0789f552d3fedea22716c5b4843bf95a708"
