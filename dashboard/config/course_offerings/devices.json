@@ -4,8 +4,12 @@
   "category": "maker",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Standalone Unit",
+  "curriculum_type": null,
   "marketing_initiative": null,
-  "grade_levels": "6,7,8,9,10,11,12",
-  "header": "Teacher-Led"
+  "grade_levels": null,
+  "header": null,
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null
 }

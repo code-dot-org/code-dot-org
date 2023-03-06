@@ -5,7 +5,11 @@
   "is_featured": true,
   "assignable": true,
   "curriculum_type": null,
-  "marketing_initiative": "HOC",
+  "marketing_initiative": null,
   "grade_levels": null,
-  "header": "Hello World"
+  "header": null,
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null
 }
