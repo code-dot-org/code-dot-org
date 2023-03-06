@@ -38,6 +38,7 @@ const EVENTS = {
 
   // Marketing site pages
   TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
+  ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
 
   // Sections
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
