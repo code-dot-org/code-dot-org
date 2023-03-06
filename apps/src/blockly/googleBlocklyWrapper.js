@@ -26,7 +26,7 @@ import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
 import {
-  CdoProtonopiaTheme,
+  CdoProtanopiaTheme,
   CdoDeuteranopiaTheme,
   CdoTritanopiaTheme
 } from './themes/cdoAccessibleThemes';
@@ -299,7 +299,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.MODERN]: CdoTheme,
     [Themes.DARK]: CdoDarkTheme,
     [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
-    [Themes.PROTONOPIA]: CdoProtonopiaTheme,
+    [Themes.PROTANOPIA]: CdoProtanopiaTheme,
     [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.MUSICLAB_DARK]: MusicLabTheme

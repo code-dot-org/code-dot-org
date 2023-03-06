@@ -169,8 +169,8 @@ const themes = [
     label: msg.blocklyHighContrastTheme()
   },
   {
-    name: Themes.PROTONOPIA,
-    label: msg.blocklyProtonopiaTheme()
+    name: Themes.PROTANOPIA,
+    label: msg.blocklyProtanopiaTheme()
   },
   {
     name: Themes.DEUTERANOPIA,

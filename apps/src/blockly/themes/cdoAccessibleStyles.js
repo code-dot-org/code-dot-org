@@ -7,7 +7,7 @@
 // - yarn remove nearest-color
 
 // Copy the values output by the script below.
-export const protonopiaBlockStyles = {
+export const protanopiaBlockStyles = {
   default: {colourPrimary: '#009175'},
   setup_blocks: {colourPrimary: '#FF4235'},
   event_blocks: {colourPrimary: '#009503'},

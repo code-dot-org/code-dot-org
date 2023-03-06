@@ -1,15 +1,15 @@
 import GoogleBlockly from 'blockly/core';
 import {
   deuteranopiaBlockStyles,
-  protonopiaBlockStyles,
+  protanopiaBlockStyles,
   tritanopiaBlockStyles
 } from './cdoAccessibleStyles';
 
-export const CdoProtonopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdoprotonopia',
+export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
+  'cdoprotanopia',
   {
     base: GoogleBlockly.Themes.Classic,
-    blockStyles: protonopiaBlockStyles,
+    blockStyles: protanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
       toolboxBackgroundColour: '#DDDDDD'

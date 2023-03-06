@@ -13,7 +13,7 @@ export const Themes = {
   DARK: 'dark',
   MUSICLAB_DARK: 'musiclabdark',
   HIGH_CONTRAST: 'highContrast',
-  PROTONOPIA: 'protonopia',
+  PROTANOPIA: 'protanopia',
   DEUTERANOPIA: 'deuteranopia',
   TRITANOPIA: 'tritanopia'
 };

@@ -7,13 +7,13 @@ import nearestColor from 'nearest-color';
 // The above list was filtered down to just those that provide adequate contrast with white text.
 
 export const themes = {
-  PROTONOPIA: 'protonopia',
+  PROTANOPIA: 'protanopia',
   DEUTERANOPIA: 'deuteranopia',
   TRITANOPIA: 'tritanopia'
 };
 
 const accessiblePalettes = {
-  [themes.PROTONOPIA]: {
+  [themes.PROTANOPIA]: {
     color01Primary: '#460B70',
     color01Secondary: '#00306F',
     color02Primary: '#6B069F',
