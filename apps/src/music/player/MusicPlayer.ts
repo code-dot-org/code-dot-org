@@ -48,10 +48,18 @@ interface SoundEvent extends PlaybackEvent {
   effects?: Effects;
 }
 
+interface PatternTickEvent {
+  tick: number;
+  src: string;
+}
+
 interface PatternEvent extends PlaybackEvent {
   type: 'pattern';
   id: 'pattern';
-  value: any;
+  value: {
+    kit: string;
+    events: PatternTickEvent[];
+  }
   skipContext?: SkipContext;
   effects?: Effects;
 }

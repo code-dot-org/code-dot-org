@@ -27,8 +27,6 @@ const PatternPanel = ({library, initValue, onChange}) => {
   const currentFolder = findFolder(currentValue.kit);
 
   const toggleEvent = (sound, tick) => {
-    console.log(sound.src, tick);
-
     const index = currentValue.events.findIndex(
       event => event.src === sound.src && event.tick === tick
     );
