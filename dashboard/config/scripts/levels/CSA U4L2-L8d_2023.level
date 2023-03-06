@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The `Concert`(#e7e8ea) represents a band's concert during a tour and has instance variables for the location and attendance of the concert.\r\n\r\n✅ **TO DO #1:** In `Concert.java`(#e7e8ea),\r\n\r\n1. Declare and initialize a static variable called `maxAttendance`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. In the constructor, check if the parameter `attendance`(#e7e8ea) is greater than `maxAttendance`(#e7e8ea). If this is update, update the `maxAttendance`(#e7e8ea) to the value passed to the parameter `attendance`(#e7e8ea).\r\n\r\n3. Write a static method called `getMaxAttendance()`(#e7e8ea) that returns a `String`(#e7e8ea) containing the text `\"The max attendance at an event is {maxAttendance}!\"`(#e7e8ea), where `maxAttendance`(#e7e8ea) is the largest attendance at an event.\r\n\r\n✅ **TO DO #2:** In `ConcertRunner.java`(#e7e8ea), create multiple `Concert`(#e7e8ea) objects, such as:\r\n\r\n* Location: Dallas, Attendance: 58,669\r\n\r\n* Location: Glendale, Attendance: 42,849\r\n\r\n* Location: Chicago, Attendance: 107,072\r\n\r\n* Location: Philadelphia, Attendance: 57,415\r\n\r\n* Location: Tampa, Attendance: 55,980\r\n\r\n✅ **TO DO #3:** Call the `getMaxAttendance()`(#e7e8ea) method and return the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with declaring and initializing a constant and writing a static method.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,20 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/constants",
+      "/courses/csa-2023/guides/static-methods"
+    ],
+    "display_name": "Concert Attendance",
+    "bubble_choice_description": "Use static variables and methods to keep track of the largest attendance at any of a band's concerts.",
+    "thumbnail_url": "https://images.code.org/2b62ee7ec67bf693828df827febbe849-concert.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:26:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:26:56.795+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8c_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L8c_2023\"},{\"changed_at\":\"2023-02-17 18:26:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:26:56.795+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8c_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L8c_2023\"},{\"changed_at\":\"2023-02-17 18:26:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 19:19:03 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
