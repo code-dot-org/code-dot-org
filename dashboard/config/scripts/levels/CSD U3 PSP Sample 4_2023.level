@@ -3,7 +3,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "true",
-    "long_instructions": "# App Design Template 4\r\n\r\nPress \"Run\" to play the game on the left. The template includes one character, various objects to collect and others to avoid, and a score.\r\n\r\nYou can make the character jump with the space bar.\r\n\r\nThis template game has more features than the previous game template. These include:\r\n* The character has to find a specific object first before it can start collecting items and earning points. \r\n* The character can jump on and squash objects in addition to avoiding them. \r\n* The objects to avoid can also decrease the score if the character touches them.",
+    "long_instructions": "# Animation and Game Design Template D\r\n\r\nRefer to your activity guide to recommend a template to each client based on their needs.\r\n\r\nYou can make the character jump with the space bar.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,7 +47,10 @@
     ],
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "display_name": "Template D",
+    "bubble_choice_description": "Interactive side-scroller game template.",
+    "thumbnail_url": "https://images.code.org/9818a4bada15aa886349c00266a19e71-template4.png"
   },
   "game_id": 50,
   "published": true,
@@ -55,7 +58,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-02T19:15:01.391+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Entertainment Sample 2_2023\\\"\"],\"cloned_from\":\"CSD U3 Entertainment Sample 2_2023\"},{\"changed_at\":\"2023-03-02 19:25:15 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-02 19:29:34 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-02T19:15:01.391+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Entertainment Sample 2_2023\\\"\"],\"cloned_from\":\"CSD U3 Entertainment Sample 2_2023\"},{\"changed_at\":\"2023-03-02 19:25:15 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-02 19:29:34 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 23:33:57 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 23:35:01 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-04 00:39:35 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-04 00:48:44 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-04 00:54:29 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

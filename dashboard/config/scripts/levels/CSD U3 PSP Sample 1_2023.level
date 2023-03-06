@@ -176,9 +176,9 @@
     "edit_code": true,
     "encrypted_examples": "Hyx5WBwpaW84kgVQlkOPxN4mHkJyRf7bqqggRDNDp23qhfZWJyJ2QcnZrEWR\nkh7C\n",
     "embed": "true",
-    "long_instructions": "# App Design Template 1\r\n\r\nAn animated scene with characters, shapes, colors, and text!\r\n",
+    "long_instructions": "# Animation and Game Design Template A\r\n\r\nRefer to your activity guide to recommend a template to each client based on their needs.",
     "instructions_important": "false",
-    "display_name": "Sprite Scenes",
+    "display_name": "Template A",
     "start_blocks": "// Create alien sprites and assign animations\r\nvar alienBlue = createSprite(100, 200);\r\nalienBlue.setAnimation(\"alienBlue\");\r\nvar alienGreen = createSprite(250, 275);\r\nalienGreen.setAnimation(\"alienGreen\");\r\nWorld.frameRate = 5;\r\n\r\nfunction draw() {\r\n  // Draw space background and planets\r\n  background(\"darkblue\");\r\n\r\n  alienBlue.rotation = randomNumber(-5, 5);\r\n  alienGreen.scale = 1 + (randomNumber(-1, 1) / 10);\r\n  \r\n  noStroke();\r\n  fill(\"yellow\");\r\n  ellipse(375, -50, 300, 300);\r\n\r\n  fill(\"darkgreen\");\r\n  ellipse(125, 75, 100, 100);\r\n\r\n  fill(\"blue\");\r\n  ellipse(350, 350, 150, 150)\r\n\r\n  // Add joke text\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"What kind of music do planets sing?\", 25, 125);\r\n  text(\"Neptunes!\", 200, 200);\r\n\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -217,7 +217,9 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "bubble_choice_description": "Animated scene template.",
+    "thumbnail_url": "https://images.code.org/f2c70d785e9aaa6a153cc402bdaffbee-template1.png"
   },
   "game_id": 50,
   "published": true,
@@ -225,7 +227,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-02T19:03:00.045+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Entertainment Sample 3_2023\\\"\"],\"cloned_from\":\"CSD U3 Entertainment Sample 3_2023\"},{\"changed_at\":\"2023-03-02 19:03:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-02 19:05:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-02T19:03:00.045+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Entertainment Sample 3_2023\\\"\"],\"cloned_from\":\"CSD U3 Entertainment Sample 3_2023\"},{\"changed_at\":\"2023-03-02 19:03:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-02 19:05:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 23:31:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 23:36:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-04 00:41:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-04 00:45:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-04 00:53:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
