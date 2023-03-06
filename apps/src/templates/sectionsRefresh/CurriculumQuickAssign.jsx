@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
@@ -12,7 +13,7 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl'
 };
 
-export default function CurriculumQuickAssign() {
+export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
@@ -27,9 +28,11 @@ export default function CurriculumQuickAssign() {
   /*
   When toggling 'decide later', clear out marketing audience or assign one to make
   the table appear again automatically.
+  Additionally, erase any previously selected course assignment.
   */
   const toggleDecideLater = () => {
     setDecideLater(!decideLater);
+    updateSection('course', {});
     if (marketingAudience !== '') {
       setMarketingAudience('');
     } else {
@@ -55,7 +58,7 @@ export default function CurriculumQuickAssign() {
         <div className={moduleStyles.buttonsInRow}>
           <Button
             id={'uitest-elementary-button'}
-            style={styles.buttonStyle}
+            className={moduleStyles.buttonStyle}
             text={i18n.courseBlocksGradeBandsElementary()}
             size={Button.ButtonSize.large}
             icon={
@@ -63,13 +66,14 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() =>
-              updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY)
-            }
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
+            }}
           />
           <Button
             id={'uitest-middle-button'}
-            style={styles.buttonStyle}
+            className={moduleStyles.buttonStyle}
             text={i18n.courseBlocksGradeBandsMiddle()}
             size={Button.ButtonSize.large}
             icon={
@@ -77,11 +81,14 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE)}
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE);
+            }}
           />
           <Button
             id={'uitest-high-button'}
-            style={styles.buttonStyle}
+            className={moduleStyles.buttonStyle}
             text={i18n.courseBlocksGradeBandsHigh()}
             size={Button.ButtonSize.large}
             icon={
@@ -89,11 +96,14 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.HIGH)}
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.HIGH);
+            }}
           />
           <Button
             id={'uitest-hoc-button'}
-            style={styles.buttonStyle}
+            className={moduleStyles.buttonStyle}
             text={i18n.courseOfferingHOC()}
             size={Button.ButtonSize.large}
             icon={
@@ -101,16 +111,19 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.HOC)}
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.HOC);
+            }}
           />
           <input
             checked={decideLater}
-            style={styles.inputStyle}
+            className={moduleStyles.input}
             type="checkbox"
             id="decide-later"
             onChange={toggleDecideLater}
           />
-          <label style={styles.decideLaterStyle} htmlFor="decide-later">
+          <label className={moduleStyles.decideLater} htmlFor="decide-later">
             {i18n.decideLater()}
           </label>
         </div>
@@ -119,24 +132,15 @@ export default function CurriculumQuickAssign() {
         <QuickAssignTable
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
+          updateCourse={course => updateSection('course', course)}
+          sectionCourse={sectionCourse}
         />
       )}
     </div>
   );
 }
 
-const styles = {
-  buttonStyle: {
-    backgroundColor: 'white',
-    padding: 10,
-    color: 'inherit',
-    border: 'none',
-    fontSize: 14
-  },
-  inputStyle: {
-    margin: '0px 5px 0px 200px'
-  },
-  decideLaterStyle: {
-    marginTop: '5px'
-  }
+CurriculumQuickAssign.propTypes = {
+  updateSection: PropTypes.func.isRequired,
+  sectionCourse: PropTypes.object
 };

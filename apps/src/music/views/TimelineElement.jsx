@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-import {PlayerUtilsContext} from '../context';
+import {PlayerUtilsContext, PlayingContext} from '../context';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
 
@@ -22,13 +22,19 @@ const TimelineElement = ({
   top,
   left,
   when,
+  skipContext,
   currentPlayheadPosition
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
+  const playingContext = useContext(PlayingContext);
 
   const length = playerUtils.getLengthForId(soundId);
 
+  const isInsideRandom = skipContext?.insideRandom;
+  const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
+
   const isCurrentlyPlaying =
+    !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + length;
@@ -38,7 +44,9 @@ const TimelineElement = ({
       className={classNames(
         moduleStyles.timelineElement,
         typeToColorClass[playerUtils.getTypeForId(soundId)],
-        isCurrentlyPlaying && moduleStyles.timelineElementPlaying
+        isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
+        isInsideRandom && moduleStyles.timelineElementInsideRandom,
+        isSkipSound && moduleStyles.timelineElementSkipSound
       )}
       style={{
         width: barWidth * length - 4,
@@ -59,6 +67,7 @@ TimelineElement.propTypes = {
   top: PropTypes.number.isRequired,
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
+  skipContext: PropTypes.object,
   currentPlayheadPosition: PropTypes.number.isRequired
 };
 
