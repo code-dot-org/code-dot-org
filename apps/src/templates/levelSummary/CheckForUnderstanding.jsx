@@ -30,16 +30,26 @@ const CheckForUnderstanding = ({
   ];
 
   return (
-    <div className="free-response">
+    <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
-      <a href={currentLevel.url} icon="arrow-left">
-        &lt;-- Back to level
-      </a>
-      {nextLevel && (
-        <a href={nextLevel.url} icon="arrow-right">
-          Next level --&gt;
+      <div className={styles.navLinks}>
+        <a
+          className={styles.navLinkLeft}
+          href={currentLevel.url}
+          icon="arrow-left"
+        >
+          &lt; Back to level
         </a>
-      )}
+        {nextLevel && (
+          <a
+            className={styles.navLinkRight}
+            href={nextLevel.url}
+            icon="arrow-right"
+          >
+            Next level &gt;
+          </a>
+        )}
+      </div>
 
       {/* Question Title */}
       {data.level.properties.title && <h1>{data.level.properties.title}</h1>}
@@ -48,16 +58,18 @@ const CheckForUnderstanding = ({
       <SafeMarkdown markdown={questionMarkdown} />
 
       {/* Question Inputs */}
-      <textarea
-        className="response"
-        id={`level_${data.level.id}`}
-        placeholder={
-          data.level.properties.placeholder || 'Enter your answer here'
-        }
-        style={{height: height + 'px'}}
-        readOnly={true}
-        defaultValue={data.last_attempt}
-      />
+      {data.level.type === 'FreeResponse' && (
+        <textarea
+          className={styles.freeResponse}
+          id={`level_${data.level.id}`}
+          placeholder={
+            data.level.properties.placeholder || 'Enter your answer here'
+          }
+          style={{height: height + 'px'}}
+          readOnly={true}
+          defaultValue={data.last_attempt}
+        />
+      )}
 
       {/* Student Responses */}
       <h2>Student Responses</h2>

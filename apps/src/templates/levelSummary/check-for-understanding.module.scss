@@ -1,3 +1,36 @@
+@import "color.scss";
+
+.summaryContainer {
+  max-width: 970px;
+  margin: auto;
+
+  h1,
+  h2 {
+    color: $neutral_dark;
+    margin-top: 12px;
+  }
+
+  p,
+  label,
+  ul,
+  ol,
+  li {
+    color: $neutral_dark;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  textarea.freeResponse {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+}
+
+.summaryContainer.left-aligned {
+  margin-left: 0;
+}
+
 .studentAnswerContainer {
   display: flex;
   flex-direction: row;
@@ -14,10 +47,24 @@
 .studentAnswer {
   padding: 8px;
   margin-bottom: 12px;
-  background-color: #ccc; // TODO
+  background-color: $lightest_cyan; // TODO
   display: block;
 
   p {
     margin: 0;
+  }
+}
+
+.navLinks {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-decoration: underline;
+
+  a.navLinkLeft {
+    // TODO
+  }
+
+  a.navLinkRight {
+    float: right;
   }
 }
