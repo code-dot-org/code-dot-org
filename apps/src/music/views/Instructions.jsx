@@ -7,27 +7,21 @@ import {AnalyticsContext} from '../context';
 /**
  * Renders the Music Lab instructions component.
  */
-const Instructions = ({instructions, baseUrl, vertical, right}) => {
-  const [currentPanel, setCurrentPanel] = useState(0);
+const Instructions = ({
+  progression,
+  currentPanel,
+  lastMessage,
+  onNextPanel,
+  baseUrl,
+  vertical,
+  right
+}) => {
   const [showBigImage, setShowBigImage] = useState(false);
 
-  const getPreviousPanel = () => {
-    return currentPanel > 0 ? currentPanel - 1 : null;
-  };
-
   const getNextPanel = () => {
-    return currentPanel + 1 < instructions?.groups[0].panels.length
+    return currentPanel + 1 < progression.panels.length
       ? currentPanel + 1
       : null;
-  };
-
-  const changePanel = nextPanel => {
-    const nextPanelIndex = nextPanel ? getNextPanel() : getPreviousPanel();
-
-    if (nextPanelIndex !== null) {
-      setCurrentPanel(nextPanelIndex);
-      setShowBigImage(false);
-    }
   };
 
   const imageClicked = () => {
@@ -40,11 +34,10 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const previousPanel = getPreviousPanel();
   const nextPanel = getNextPanel();
 
-  const progressText = instructions
-    ? `${currentPanel + 1}/${instructions.groups[0].panels.length}`
+  const progressText = progression
+    ? `${currentPanel + 1}/${progression.panels.length}`
     : '';
 
   return (
@@ -55,12 +48,13 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
         vertical && moduleStyles.vertical
       )}
     >
-      {instructions && (
+      {progression && (
         <InstructionsPanel
-          panel={instructions.groups[0].panels[currentPanel]}
+          panel={progression.panels[currentPanel]}
+          lastMessage={lastMessage}
           vertical={vertical}
           baseUrl={baseUrl}
-          path={instructions.groups[0].path}
+          path={progression.path}
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
@@ -69,6 +63,7 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
       <div className={moduleStyles.bottom}>
         <div className={moduleStyles.progressText}>{progressText}</div>
         <div>
+          {/*
           <button
             type="button"
             onClick={() => changePanel(false)}
@@ -79,16 +74,20 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
           >
             Previous
           </button>
-          <button
-            type="button"
-            onClick={() => changePanel(true)}
-            className={classNames(
-              moduleStyles.button,
-              nextPanel !== null && moduleStyles.buttonActive
-            )}
-          >
-            Next
-          </button>
+          */}
+          {onNextPanel && (
+            <button
+              type="button"
+              onClick={() => onNextPanel()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNext,
+                nextPanel !== null && moduleStyles.buttonActive
+              )}
+            >
+              Next
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -96,7 +95,10 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
 };
 
 Instructions.propTypes = {
-  instructions: PropTypes.object,
+  progression: PropTypes.object,
+  currentPanel: PropTypes.number,
+  lastMessage: PropTypes.string,
+  onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
   right: PropTypes.bool
@@ -104,6 +106,7 @@ Instructions.propTypes = {
 
 const InstructionsPanel = ({
   panel,
+  lastMessage,
   vertical,
   baseUrl,
   path,
@@ -165,6 +168,7 @@ const InstructionsPanel = ({
         )}
       >
         {panel.text}
+        <div className={moduleStyles.lastMessage}>{lastMessage}</div>
       </div>
     </div>
   );
@@ -172,6 +176,7 @@ const InstructionsPanel = ({
 
 InstructionsPanel.propTypes = {
   panel: PropTypes.object.isRequired,
+  lastMessage: PropTypes.string,
   baseUrl: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   imageClicked: PropTypes.func.isRequired,

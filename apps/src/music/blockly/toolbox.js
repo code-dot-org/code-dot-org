@@ -302,9 +302,23 @@ function generateToolbox(categoryBlocksMap, options) {
   };
 
   for (const category of Object.keys(categoryBlocksMap)) {
+    // Skip if we aren't allowing anything from this category.
+    if (options?.allowList && !options?.allowList[category]) {
+      continue;
+    }
+
     const categoryContents = [];
 
     for (const blockName of categoryBlocksMap[category]) {
+      // Skip if we aren't allowing this block.
+      if (
+        options?.allowList &&
+        options?.allowList[category] &&
+        !options?.allowList[category].includes(blockName)
+      ) {
+        continue;
+      }
+
       categoryContents.push(toolboxBlocks[blockName]);
     }
 
@@ -326,18 +340,21 @@ function generateToolbox(categoryBlocksMap, options) {
   }
 
   if (options?.includeFunctions) {
-    toolbox.contents.push({
-      kind: 'category',
-      name: 'Functions',
-      cssConfig: baseCategoryCssConfig,
-      custom: 'PROCEDURE'
-    });
+    // Skip if functions are not allowed.
+    if (!options.allowList || options.allowList['Functions']) {
+      toolbox.contents.push({
+        kind: 'category',
+        name: 'Functions',
+        cssConfig: baseCategoryCssConfig,
+        custom: 'PROCEDURE'
+      });
+    }
   }
 
   return toolbox;
 }
 
-export function getToolbox() {
+export function getToolbox(allowList) {
   switch (getBlockMode()) {
     case BlockMode.SIMPLE:
       return generateToolbox({
@@ -368,7 +385,7 @@ export function getToolbox() {
             BlockTypes.REPEAT_SIMPLE2
           ]
         },
-        {includeFunctions: true}
+        {includeFunctions: true, allowList: allowList}
       );
     case BlockMode.TRACKS:
       return generateToolbox({
