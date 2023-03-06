@@ -15,9 +15,11 @@ class LoginTypeCard extends Component {
     hover: false
   };
 
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover});
-  };
+  // Toggle hover is not working properly when component is rendered with mouse already 'over' the component.
+  // In order for hover to work properly - set on/off hover implicitly.
+  onHover = () => this.setState({hover: true});
+
+  offHover = () => this.setState({hover: false});
 
   render() {
     const {title, subtitle, description, onClick} = this.props;
@@ -36,8 +38,8 @@ class LoginTypeCard extends Component {
       <div
         style={cardStyle}
         onClick={onClick}
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}
+        onMouseEnter={this.onHover}
+        onMouseLeave={this.offHover}
         className={this.props.className}
       >
         <div>
@@ -69,6 +71,7 @@ const styles = {
   },
   title: {
     paddingBottom: 4,
+    marginTop: 8,
     marginBottom: 0,
     fontSize: '1.5em',
     lineHeight: '18px',
