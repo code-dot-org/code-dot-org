@@ -325,4 +325,9 @@ export default class MusicBlocklyWorkspace {
       }
     }
   }
+
+  updateToolbox(allowList) {
+    const toolbox = getToolbox(allowList);
+    this.workspace.updateToolbox(toolbox);
+  }
 }
