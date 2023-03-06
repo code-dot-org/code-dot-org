@@ -50,7 +50,7 @@ describe('AnimationPickerBody', function() {
 
     it('does not show an upload warning if upload button is hidden', function() {
       const body = shallow(
-        <AnimationPickerBody {...defaultProps} hideUploadOption={false} />
+        <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
       );
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(0);
@@ -103,7 +103,7 @@ describe('AnimationPickerBody', function() {
       expect(uploadButton.length).to.equal(1);
     });
 
-    it('does not show uplaod button if hideUploadButton', function() {
+    it('does not show upload button if hideUploadButton', function() {
       const body = shallow(
         <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
       );
