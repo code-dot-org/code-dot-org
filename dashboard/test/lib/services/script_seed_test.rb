@@ -24,6 +24,7 @@ module Services
     # When adding a new model that is serialized, update this test to include the model, generate new json,
     # save it to test-serialize-seeding-json.script_json, and eyeball the changes to see that they look right.
     test 'serialize_seeding_json' do
+      refute true
       script = create_script_tree(name_prefix: 'test-serialize-seeding-json')
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
