@@ -158,7 +158,6 @@ class SetupChecklist extends Component {
         trackEvent('MakerSetup', 'ConnectionError');
         if (console && typeof console.error === 'function') {
           console.error(error);
-          console.log();
         }
       })
 
@@ -353,7 +352,7 @@ class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
-            hideWaitingSteps={false}
+            hideWaitingSteps={true}
           >
             {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
