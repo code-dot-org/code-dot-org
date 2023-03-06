@@ -2,8 +2,11 @@ import GoogleBlockly from 'blockly/core';
 import HighContrastTheme from '@blockly/theme-highcontrast';
 
 // Intentionally overriden styles from Google Blockly.
-// We do not override list, logic math, text, or variable blocks.
+// We do not override list, math, text, or variable blocks.
 const coreBlocklyOverrides = {
+  logic_blocks: {
+    colourPrimary: '#007FAD'
+  },
   colour_blocks: {
     colourPrimary: '#006E96',
     colourSecondary: '99C5D5',
