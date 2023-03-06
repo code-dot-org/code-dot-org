@@ -31,6 +31,8 @@ import {
   DOWNLOAD_PREFIX
 } from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import {DAPLink, WebUSB} from 'dapjs';
+import {getStore} from '@cdo/apps/redux';
+import {setMicrobitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -40,6 +42,10 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
  * @implements MakerBoard
  */
 export default class MicroBitBoard extends EventEmitter {
+  // Static variable used to help with updating the Firmata percent progress.
+  // State value 'microbitFirmataUpdatePercent' is only updated when this static variable changes.
+  static firmataUpdatePercent = 0;
+
   constructor(port) {
     super();
 
@@ -380,6 +386,11 @@ export default class MicroBitBoard extends EventEmitter {
     const transport = new WebUSB(device);
     const target = new DAPLink(transport);
 
+    MicroBitBoard.firmataUpdatePercent = 0;
+    target.on(DAPLink.EVENT_PROGRESS, progress => {
+      MicroBitBoard.getPercentUpdateComplete(progress);
+    });
+
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
     let hexAsBytes = new TextEncoder().encode(hexStr);
     try {
@@ -392,6 +403,21 @@ export default class MicroBitBoard extends EventEmitter {
       console.log(error);
     }
   }
+
+  static getPercentUpdateComplete = progress => {
+    if (progress) {
+      let percentComplete = Math.ceil(progress * 100);
+      // 'progress' is a decimal value between 0.0 and 1.0 indicating the Firmata update percent completion.
+      // If the rounded value is different from the value stored in the static variable
+      // 'firmataUpdatePercent', then we update the corresponding state value.
+      if (percentComplete !== MicroBitBoard.firmataUpdatePercent) {
+        MicroBitBoard.firmataUpdatePercent = percentComplete;
+        getStore().dispatch(
+          setMicrobitFirmataUpdatePercent(` ${percentComplete.toString()}%`)
+        );
+      }
+    }
+  };
 
   resetDynamicComponents() {
     this.dynamicComponents_.forEach(component => {

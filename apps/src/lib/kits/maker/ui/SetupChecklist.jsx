@@ -1,7 +1,7 @@
 /** @file Maker Board setup checker */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
@@ -48,7 +48,7 @@ const initialState = {
   [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING
 };
 
-export default class SetupChecklist extends Component {
+class SetupChecklist extends Component {
   constructor(props) {
     super(props);
     const {webSerialPort} = this.props;
@@ -61,7 +61,8 @@ export default class SetupChecklist extends Component {
 
   static propTypes = {
     webSerialPort: PropTypes.object,
-    stepDelay: PropTypes.number
+    stepDelay: PropTypes.number,
+    firmataPercentComplete: PropTypes.string
   };
 
   fail(selector) {
@@ -176,7 +177,7 @@ export default class SetupChecklist extends Component {
    */
   detectStep(stepKey, stepWork) {
     this.spin(stepKey);
-    return promiseWaitFor(this.props.stepDelay || 200)
+    return delayPromise(this.props.stepDelay || 200)
       .then(stepWork)
       .then(() => this.succeed(stepKey))
       .catch(error => {
@@ -388,6 +389,7 @@ export default class SetupChecklist extends Component {
                 stepName={'Updating Firmata'}
                 hideWaitingSteps={false}
                 alwaysShowChildren={true}
+                updatePercentComplete={this.props.firmataPercentComplete}
               >
                 {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
                   Status.ATTEMPTING && (
@@ -422,11 +424,9 @@ export default class SetupChecklist extends Component {
   }
 }
 
-function promiseWaitFor(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
-}
+export default connect(state => ({
+  firmataPercentComplete: state.microbit.microbitFirmataUpdatePercent
+}))(SetupChecklist);
 
 const styles = {
   suggestionHeader: {
