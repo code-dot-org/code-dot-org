@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-03-01 20:03:50 UTC",
+    "serialized_at": "2023-03-03 19:13:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2546,8 +2546,9 @@
       "key": "e11751ae-1cc7-496f-9f0d-9d7a4dc6c86e",
       "position": 4,
       "properties": {
-        "description": "After you have checked the designs, allow students to log into Code Studio and code their pages. They will have a chance to review all of the tags they have learned before they start on their web pages. They can complete these activities as a review or use them as resources while they work on their projects.",
-        "name": "Step 3: Try - Develop your Page\r"
+        "description": "Many of you are ready to start creating your own projects. One thing that could make this challenging is the _blank screen effect_: unlike previous levels, you won’t have any starter code or direction on what to create! This means you might not be sure what exactly you’re supposed to do, or you might run into bugs you need to fix which can be frustrating. Luckily, we can also use the problem solving process to help with these types of problems as well!",
+        "name": "Step 3: Try - Develop your Page\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "e11751ae-1cc7-496f-9f0d-9d7a4dc6c86e",
@@ -2555,9 +2556,33 @@
       }
     },
     {
-      "key": "07f440b9-35bc-4fa0-b8e4-54ec1153908b",
+      "key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
       "position": 5,
       "properties": {
+        "description": "**Distribute:**  Hand out a copy of the Problem Solving Process with Programming to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
+        "lesson_activity.key": "aabe0a2e-f6e5-430a-990e-6e5116657f7a"
+      }
+    },
+    {
+      "key": "f944f97b-bf02-4f52-80de-3e24b93cbf3c",
+      "position": 6,
+      "properties": {
+        "description": "If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f944f97b-bf02-4f52-80de-3e24b93cbf3c",
+        "lesson_activity.key": "aabe0a2e-f6e5-430a-990e-6e5116657f7a"
+      }
+    },
+    {
+      "key": "07f440b9-35bc-4fa0-b8e4-54ec1153908b",
+      "position": 7,
+      "properties": {
+        "description": "**Code Studio:** Allow students to log into Code Studio and begin coding their pages. They will have a chance to review all of the tags they have learned before they start on their web pages. They can complete these activities as a review or use them as resources while they work on their projects.",
         "progression_name": "Review: HTML"
       },
       "seeding_key": {
@@ -2566,8 +2591,36 @@
       }
     },
     {
+      "key": "d8282b6e-949f-4472-9d97-6f1b5ef8824e",
+      "position": 8,
+      "properties": {
+        "progression_name": "Code Your Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8282b6e-949f-4472-9d97-6f1b5ef8824e",
+        "lesson_activity.key": "aabe0a2e-f6e5-430a-990e-6e5116657f7a"
+      }
+    },
+    {
+      "key": "19bcd800-fd77-490b-9aba-bc79c141b93d",
+      "position": 9,
+      "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem Solving Process for Programming when they get stuck or are unsure of what to do next. Not all bullets in the Problem Solving Process will be applicable to every problem a student has. Instead, encourage them to pick one or two from each category to try each time they are stuck",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "19bcd800-fd77-490b-9aba-bc79c141b93d",
+        "lesson_activity.key": "aabe0a2e-f6e5-430a-990e-6e5116657f7a"
+      }
+    },
+    {
       "key": "fbf994dd-d94d-4ce3-8ef4-b93078c88c50",
-      "position": 6,
+      "position": 10,
       "properties": {
         "progression_name": "Challenge: Lists"
       },
@@ -2577,25 +2630,8 @@
       }
     },
     {
-      "key": "d8282b6e-949f-4472-9d97-6f1b5ef8824e",
-      "position": 7,
-      "properties": {
-        "progression_name": "Code Your Page",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d8282b6e-949f-4472-9d97-6f1b5ef8824e",
-        "lesson_activity.key": "aabe0a2e-f6e5-430a-990e-6e5116657f7a"
-      }
-    },
-    {
       "key": "4e1a8180-2c1c-4cee-a486-c22bdd6f8e09",
-      "position": 8,
+      "position": 11,
       "properties": {
         "progression_name": "Review Your Page"
       },
@@ -2606,7 +2642,7 @@
     },
     {
       "key": "8acbd974-5694-4288-a43a-086f1ed13685",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "Students should have a chance to think about what they liked best about their pages.  You may also want to allow students to formally or informally present their work to the rest of the class.",
         "name": "Step 4: Reflect\r",
@@ -2624,7 +2660,7 @@
     },
     {
       "key": "2b9177e7-9293-4b41-a2ef-4f18b48c2ab2",
-      "position": 10,
+      "position": 13,
       "properties": {
         "description": "As part of this project, you may give students the opportunity to give feedback to their peers using the Peer Review form.  This will likely extend the project by at least one day.",
         "name": "Peer Feeedback\r"
@@ -3208,7 +3244,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**The Problem Solving Process:** Remind students of the Problem Solving Process for Programming if they find themselves getting stuck or encountering bugs. The guide is available in the Help and Tips section of each level.\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           }
         ]
       },
@@ -4265,7 +4301,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**The Problem Solving Process:** Remind students of the Problem Solving Process for Programming if they find themselves getting stuck or encountering bugs. The guide is available in the Help and Tips section of each level.\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           }
         ]
       },
@@ -9120,6 +9156,30 @@
   ],
   "resources": [
     {
+      "name": "[Key] (Warm Up) Word Search",
+      "url": "https://drive.google.com/file/d/1BFVsoww-8Y0zM9kxTe0Z1jUuPMQLLslq/view?usp=share_link",
+      "key": "_key_warm_up_word_search",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_warm_up_word_search"
+      }
+    },
+    {
+      "name": "[Key] Web Design for Users",
+      "url": "https://docs.google.com/document/d/1vPvu5pwsbKRbjhm80TPBDhHU6_FdwPAXy818SdTWrtA/edit#",
+      "key": "_key_web_design_for_users",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_web_design_for_users"
+      }
+    },
+    {
       "name": "(Warm Up) Word Search",
       "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/view",
       "key": "_warm_up_word_search",
@@ -9794,6 +9854,19 @@
       }
     },
     {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit",
+      "key": "problem_solving_process_with_programming",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
       "name": "Project - Personal Web Page",
       "url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/template/preview",
       "key": "project_-_personal_web_page",
@@ -10347,6 +10420,18 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
+        "resource.key": "_key_warm_up_word_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "resource.key": "_key_web_design_for_users"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
         "resource.key": "_warm_up_word_search"
       }
     },
@@ -10527,6 +10612,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "project_guide_-_html_project"
       }
     },
@@ -10540,6 +10631,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Your Personal Style",
         "resource.key": "peer_review_-_your_personal_style"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "problem_solving_process_with_programming"
       }
     },
     {
@@ -10696,6 +10793,12 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "practices_reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "problem_solving_process_with_programming"
       }
     },
     {
