@@ -58,10 +58,13 @@
 .navLinks {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-decoration: underline;
+
+  a {
+    text-decoration: underline;
+  }
 
   a.navLinkLeft {
-    // TODO
+    float: left;
   }
 
   a.navLinkRight {

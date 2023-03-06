@@ -8,6 +8,7 @@ import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSe
 import styles from './check-for-understanding.module.scss';
 
 const CheckForUnderstanding = ({
+  isRtl,
   viewAs,
   selectedSection,
   students,
@@ -46,7 +47,7 @@ const CheckForUnderstanding = ({
       {/* Top Nav Links */}
       <div className={styles.navLinks}>
         <a
-          className={styles.navLinkLeft}
+          className={styles.navLinkBack}
           href={currentLevel.url}
           icon="arrow-left"
         >
@@ -54,7 +55,7 @@ const CheckForUnderstanding = ({
         </a>
         {nextLevel && (
           <a
-            className={styles.navLinkRight}
+            className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
             href={nextLevel.url}
             icon="arrow-right"
           >
@@ -128,6 +129,7 @@ const CheckForUnderstanding = ({
 };
 
 CheckForUnderstanding.propTypes = {
+  isRtl: PropTypes.boolean,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -147,8 +149,10 @@ export default connect(
     const currentLesson = state.progress.lessons.find(
       l => l.id === state.progress.currentLessonId
     );
+    console.log(state);
 
     return {
+      isRtl: state.isRtl,
       viewAs: state.viewAs,
       selectedSection:
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
