@@ -37,9 +37,9 @@ describe('AnimationPickerBody', function() {
   };
 
   describe('upload warning', function() {
-    it('shows an upload warning if the user is under 13', function() {
+    it('shows an upload warning if the upload button is visible', function() {
       const body = shallow(
-        <AnimationPickerBody {...defaultProps} is13Plus={false} />
+        <AnimationPickerBody {...defaultProps} hideUploadOption={false} />
       );
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(1);
@@ -48,20 +48,9 @@ describe('AnimationPickerBody', function() {
       );
     });
 
-    it('shows an upload warning if the user age is not known', function() {
+    it('does not show an upload warning if upload button is hidden', function() {
       const body = shallow(
-        <AnimationPickerBody {...defaultProps} is13Plus={undefined} />
-      );
-      const warnings = body.find(WarningLabel);
-      expect(warnings).to.have.length(1);
-      expect(warnings.children().text()).to.equal(
-        msg.animationPicker_warning()
-      );
-    });
-
-    it('does not show an upload warning if the user is 13 or older', function() {
-      const body = shallow(
-        <AnimationPickerBody {...defaultProps} is13Plus={true} />
+        <AnimationPickerBody {...defaultProps} hideUploadOption={false} />
       );
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(0);

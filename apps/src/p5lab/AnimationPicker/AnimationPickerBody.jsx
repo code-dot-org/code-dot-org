@@ -25,7 +25,6 @@ const MAX_SEARCH_RESULTS = 40;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
-    is13Plus: PropTypes.bool,
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
@@ -218,7 +217,6 @@ export default class AnimationPickerBody extends React.Component {
     const {searchQuery, categoryQuery, results} = this.state;
     const {
       hideUploadOption,
-      is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
       onAnimationSelectionComplete,
@@ -245,7 +243,7 @@ export default class AnimationPickerBody extends React.Component {
         <h1 style={dialogStyles.title}>
           {msg.animationPicker_title({assetType})}
         </h1>
-        {!is13Plus && !hideUploadOption && (
+        {!hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
