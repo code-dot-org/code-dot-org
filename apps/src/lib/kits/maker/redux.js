@@ -12,8 +12,7 @@ const MakerState = Immutable.Record({
   enabled: false,
   connectionState: DISCONNECTED,
   connectionError: null,
-  usingFakeBoardNextTime: false,
-  microbitFirmataUpdatePercent: ''
+  usingFakeBoardNextTime: false
 });
 
 // Selectors
@@ -82,13 +81,6 @@ export function useFakeBoardOnNextRun() {
   return {type: USE_FAKE_BOARD_ON_NEXT_RUN};
 }
 
-const SET_MICROBIT_FIRMATA_UPDATE_PERCENT =
-  'microbit/SET_MICROBIT_FIRMATA_UPDATE_PERCENT';
-export const setMicrobitFirmataUpdatePercent = percent => ({
-  type: SET_MICROBIT_FIRMATA_UPDATE_PERCENT,
-  percent
-});
-
 // Reducer
 export function reducer(state = new MakerState(), action) {
   if (action.type === ENABLE) {
@@ -112,11 +104,6 @@ export function reducer(state = new MakerState(), action) {
     });
   } else if (action.type === USE_FAKE_BOARD_ON_NEXT_RUN) {
     return state.set('usingFakeBoardNextTime', true);
-  } else if (action.type === SET_MICROBIT_FIRMATA_UPDATE_PERCENT) {
-    return {
-      ...state,
-      microbitFirmataUpdatePercent: action.percent
-    };
   }
 
   return state;

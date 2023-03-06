@@ -32,7 +32,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
-import {setMicrobitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/redux';
+import {setMicrobitFirmataUpdatePercent} from '@cdo/apps/code-studio/microbitRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
