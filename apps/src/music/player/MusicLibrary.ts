@@ -2,7 +2,7 @@ export default interface MusicLibrary {
   groups: FolderGroup[];
 }
 
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'pattern';
+export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
 
 export interface SoundData {
   name: string;
