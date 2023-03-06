@@ -21,6 +21,8 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 
+// Checks if experiment is enabled and navigates to the new section setup page
+// if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
   if (
     experiments.isEnabled('sectionSetupRefresh') &&
@@ -70,6 +72,7 @@ const AddSectionDialog = ({
   };
 
   const onLoginTypeSelection = loginType => {
+    // Oauth section types should use the roster dialog, not the section setup page
     if (
       [
         SectionLoginType.picture,
