@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The `SoundLoader.read()`(#e7e8ea) method in The Theater extracts samples from sound files and returns a 1D array of `double`(#e7e8ea) values representing each sample.\r\n\r\nWrite a static method to combine two sounds into one.\r\n\r\n✅ **TO DO #1:** In `SoundEditor.java`(#e7e8ea), write a static method called `combineSounds()`(#e7e8ea) that returns a new 1D array containing the samples from the first sound followed by the samples from the second sound. The `combineSounds()`(#e7e8ea) method should\r\n\r\n* Have a parameter `double[] firstSound`(#e7e8ea) for the first sound and `double[] secondSound`(#e7e8ea) for the second sound.\r\n\r\n* Return a new 1D array containing the values from the parameter `firstSound`(#e7e8ea) followed by the values from the parameter `secondSound`(#e7e8ea).\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\ncreate double array called combinedSound that is the length of firstSound + secondSound\r\n\r\nnewSoundIndex = 0\r\n\r\nloop from 0 to firstSound.length\r\n  combinedSound[newSoundIndex] = firstSound[index]\r\n  newSoundIndex++\r\n  \r\nloop from 0 to secondSound.length\r\n  combinedSound[newSoundIndex] = secondSound[index]\r\n  newSoundIndex++\r\n\r\nreturn combinedSound\r\n```\r\n:::\r\n&nbsp;\r\n\r\n✅ **TO DO #2:** In `SoundRunner.java`(#e7e8ea),\r\n\r\n1. Declare and initialize a 1D array of `double`(#e7e8ea) values that stores the samples extracted from the `\"welcome.wav\"`(#e7e8ea) sound file.\r\n\r\n2. Declare and initialize a 1D array of `double`(#e7e8ea) values that stores the samples extracted from the `\"beat.wav\"`(#e7e8ea) sound file.\r\n\r\n3. Declare and initialize a 1D array of `double`(#e7e8ea) values called `newSound`(#e7e8ea) that stores the sound returned from calling the `combineSounds()`(#e7e8ea) method.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with writing a static method.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,20 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/static-methods"
+    ],
+    "video_key": "csa_static_methods",
+    "display_name": "Combine Sounds",
+    "bubble_choice_description": "Write a static method to combine two sounds into one.",
+    "thumbnail_url": "https://images.code.org/0bc6a9c78cafd85438c4475174e6d17f-image-1650634348178.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:25:57.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:25:57.760+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L7b_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L7b_2023\"},{\"changed_at\":\"2023-02-17 18:25:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:25:57.760+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L7b_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L7b_2023\"},{\"changed_at\":\"2023-02-17 18:25:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 18:28:06 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 18:48:41 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

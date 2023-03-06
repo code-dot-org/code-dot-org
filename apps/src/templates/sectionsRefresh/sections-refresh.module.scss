@@ -1,3 +1,5 @@
+@import "color.scss";
+
 .classNameTextField {
   width: 100%;
 }
@@ -9,7 +11,7 @@
 
 .buttonRow {
   // ensure we have height when we only have our toggle (which is floated)
-  min-height: 50;
+  min-height: 50px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -18,4 +20,68 @@
 .buttonsInRow {
   display: flex;
   align-items: center;
+}
+
+.buttonsInRow .buttonStyle {
+  background-color: $white;
+  padding: 10px;
+  color: inherit;
+  border: none;
+  font-size: 14px;
+}
+
+.buttonsInRow .buttonStyle:hover {
+  color: $brand_primary_default;
+}
+
+.flexDisplay {
+  display: flex;
+}
+
+.buttonsInRow .input {
+  margin: 0 5px 0 200px;
+}
+
+.buttonsInRow .decideLater {
+  margin-top: 5px;
+}
+
+.table {
+  background-color: $neutral_dark10;
+  margin: 4px;
+  flex: 1 1 0px;
+}
+
+.headerRow {
+  background-color: $brand_primary_default;
+  color: $white;
+}
+
+.headerCell {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 12px;
+}
+
+.tableBody {
+  padding: 10px;
+  display: grid;
+}
+
+.courseHeaders {
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  left: 10px;
+}
+
+.flexDisplay .radio {
+  min-height: 40px;
+  margin: 0 0 0 0;
+}
+
+.label {
+  margin: 10px 0 0 5px;
+  text-align: center;
 }

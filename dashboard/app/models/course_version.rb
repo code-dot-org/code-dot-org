@@ -214,6 +214,6 @@ class CourseVersion < ApplicationRecord
   end
 
   def hoc?
-    course_offering&.category == 'hoc'
+    !!course_offering&.hoc?
   end
 end

@@ -13,7 +13,7 @@ const TimelineSimple2Events = ({
   getEventHeight
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getSoundEvents();
+  const soundEvents = playerUtils.getPlaybackEvents();
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -125,6 +125,7 @@ const TimelineSimple2Events = ({
             }
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
+            skipContext={eventData.skipContext}
             currentPlayheadPosition={currentPlayheadPosition}
           />
         ))}

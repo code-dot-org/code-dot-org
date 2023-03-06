@@ -2,7 +2,11 @@ import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
-import {PRIMARY_SOUND_INPUT_NAME} from './constants';
+import {
+  FIELD_REST_DURATION_NAME,
+  PRIMARY_SOUND_INPUT_NAME,
+  FIELD_EFFECTS_NAME
+} from './constants';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -40,15 +44,29 @@ const toolboxBlocks = {
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-    inputs: {
-      measures: {
-        shadow: {
-          type: 'math_number',
-          fields: {
-            NUM: 1
-          }
-        }
-      }
+    fields: {
+      [FIELD_REST_DURATION_NAME]: '1'
+    }
+  },
+  [BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'volume'
+    }
+  },
+  [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'filter'
+    }
+  },
+  [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'delay'
     }
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
@@ -58,6 +76,10 @@ const toolboxBlocks = {
   [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL
+  },
+  [BlockTypes.PLAY_SOUNDS_RANDOM]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_RANDOM
   },
   [BlockTypes.REPEAT_SIMPLE2]: {
     kind: 'block',
@@ -91,15 +113,8 @@ const toolboxBlocks = {
   [BlockTypes.REST_IN_TRACK]: {
     kind: 'block',
     type: BlockTypes.REST_IN_TRACK,
-    inputs: {
-      measures: {
-        shadow: {
-          type: 'math_number',
-          fields: {
-            NUM: 1
-          }
-        }
-      }
+    fields: {
+      [FIELD_REST_DURATION_NAME]: '1'
     }
   },
   [BlockTypes.NEW_TRACK_AT_START]: {
@@ -340,10 +355,16 @@ export function getToolbox() {
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
           ],
+          Effects: [
+            BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2
+          ],
           Control: [
             BlockTypes.TRIGGERED_AT_SIMPLE2,
             BlockTypes.PLAY_SOUNDS_TOGETHER,
             BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+            BlockTypes.PLAY_SOUNDS_RANDOM,
             BlockTypes.REPEAT_SIMPLE2
           ]
         },

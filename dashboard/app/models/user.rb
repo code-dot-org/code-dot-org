@@ -2507,7 +2507,7 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grade).uniq
+    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
