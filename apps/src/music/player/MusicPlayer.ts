@@ -1,6 +1,8 @@
 import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+
 // Using require() to import JS in TS files
+const DEFAULT_PATTERN_LENGTH = require('../constants').DEFAULT_PATTERN_LENGTH;
 const soundApi = require('./sound');
 
 // Default to 4/4 time
@@ -395,7 +397,7 @@ export default class MusicPlayer {
   getLengthForId(id: string): number | null {
     // Hack to allow patterns to render in the same way as samples. Will undo this when tweaking pattern timeline UI.
     if (id === 'pattern') {
-      return 1;
+      return DEFAULT_PATTERN_LENGTH;
     }
 
     const sound = this.getSoundForId(id);

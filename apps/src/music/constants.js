@@ -52,3 +52,5 @@ export const DEFAULT_PATTERN = {
   kit: 'glitch',
   events: []
 };
+
+export const DEFAULT_PATTERN_LENGTH = 1;

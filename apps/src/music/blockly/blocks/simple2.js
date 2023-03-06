@@ -14,6 +14,7 @@ import {
   fieldRestDurationDefinition
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
+import {DEFAULT_PATTERN_LENGTH} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -189,7 +190,7 @@ export const playPatternAtCurrentLocationSimple2 = {
         __effects
       );
       ProgramSequencer.updateMeasureForPlayByLength(
-        1
+        ${DEFAULT_PATTERN_LENGTH}
       );
     `
 };
