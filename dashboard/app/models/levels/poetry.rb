@@ -40,7 +40,7 @@ class Poetry < GamelabJr
 
   def sanitize_dropdown_poems
     self.dropdown_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
-    return if !Poetry.subtypes_with_poems.include?(standalone_app_name) || dropdown_poems.empty?
+    return if !Poetry.subtypes_with_poems.include?(standalone_app_name) || (dropdown_poems && dropdown_poems.empty?)
     # filter out any invalid poems from dropdown_poems
     self.dropdown_poems = dropdown_poems & Poetry.poem_keys_for_subtype(standalone_app_name)
   end
