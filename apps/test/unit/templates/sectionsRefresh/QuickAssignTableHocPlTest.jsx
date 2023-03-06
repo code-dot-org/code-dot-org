@@ -20,7 +20,7 @@ describe('QuickAssignTable', () => {
     expect(wrapper.contains(i18n.courseOfferingHOC())).to.be.true;
   });
 
-  it('renders two headers in the first table', () => {
+  it('renders extra two headers in the first and second tables', () => {
     const wrapper = shallow(
       <QuickAssignTableHocPl
         marketingAudience={MARKETING_AUDIENCE.HOC}
@@ -30,18 +30,26 @@ describe('QuickAssignTable', () => {
       />
     );
     expect(wrapper.find('table').length).to.equal(3);
+    // First header displays in table 0
     expect(
       wrapper
         .find('table')
         .at(0)
-        .contains('AI for Oceans')
+        .contains('Favorites')
     ).to.be.true;
-    // Course offering under second header displays in table 0
+    // Fourth header displays in table 0
     expect(
       wrapper
         .find('table')
         .at(0)
-        .contains('Hello World: Animals')
+        .contains('Popular Media')
+    ).to.be.true;
+    // Fifth header displays in table 1
+    expect(
+      wrapper
+        .find('table')
+        .at(1)
+        .contains('Sports')
     ).to.be.true;
   });
 });

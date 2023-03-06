@@ -67,12 +67,9 @@ export default function QuickAssignTableHocPl({
     // If the headers don't evenly divide, distribute extras starting at table 0
     var extraHeaderCount = overflowCount > tableIndex ? 1 : 0;
     for (var i = 0; i < minHeadersPerTable + extraHeaderCount; i++) {
-      const index = tableIndex * minHeadersPerTable + i;
+      const index = i * TABLE_COUNT + tableIndex;
       const header = headers[index];
-      offerings = {
-        ...offerings,
-        [header]: courseOfferings[marketingAudience][headers[index]]
-      };
+      offerings[header] = courseOfferings[marketingAudience][headers[index]];
     }
     return offerings;
   };

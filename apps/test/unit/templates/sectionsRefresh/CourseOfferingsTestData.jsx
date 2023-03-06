@@ -224,6 +224,62 @@ export const hocCourseOfferings = {
           }
         ]
       }
+    ],
+    Sports: [
+      {
+        id: 11,
+        key: 'basketball',
+        display_name: 'Choose your team and make a basketball game',
+        course_versions: [
+          {
+            id: 819,
+            key: 'unversioned',
+            version_year: 'unversioned',
+            name: 'Choose your team and make a basketball game',
+            path: '/s/basketball',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      },
+      {
+        id: 68,
+        key: 'sports',
+        display_name: 'Code your own sports game',
+        course_versions: [
+          {
+            id: 1115,
+            key: 'unversioned',
+            version_year: 'unversioned',
+            name: 'Code your own sports game',
+            path: '/s/sports',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      },
+      {
+        id: 33,
+        key: 'dance-extras',
+        display_name: 'Keep On Dancing (2018)',
+        course_versions: [
+          {
+            id: 990,
+            key: 'unversioned',
+            version_year: 'unversioned',
+            name: 'Keep On Dancing (2018)',
+            path: '/s/dance-extras',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
     ]
   }
 };
