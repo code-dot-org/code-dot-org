@@ -75,16 +75,16 @@ const CheckForUnderstanding = ({
 
       <div className={styles.studentAnswerContainer}>
         <div className={styles.column}>
-          {responseColumns[0].map(response => (
-            <div className={styles.studentAnswer}>
+          {responseColumns[0].map((response, index) => (
+            <div key={`1${index}`} className={styles.studentAnswer}>
               <p>{response.text}</p>
             </div>
           ))}
         </div>
 
         <div className={styles.column}>
-          {responseColumns[1].map(response => (
-            <div className={styles.studentAnswer}>
+          {responseColumns[1].map((response, index) => (
+            <div key={`2${index}`} className={styles.studentAnswer}>
               <p>{response.text}</p>
             </div>
           ))}
@@ -111,7 +111,7 @@ CheckForUnderstanding.propTypes = {
   students: PropTypes.arrayOf(PropTypes.object),
   sections: PropTypes.array, // TODO
   currentLevelId: PropTypes.string,
-  levels: PropTypes.array // TODO
+  levels: PropTypes.object // TODO
 };
 
 export default connect(
