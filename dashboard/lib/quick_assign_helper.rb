@@ -1,5 +1,5 @@
 module QuickAssignHelper
-  def self.course_offerings(user, locale)
+  def self.course_offerings(user, locale, participant_type)
     offerings = {}
 
     assignable_offerings = CourseOffering.assignable_course_offerings(user)
@@ -12,6 +12,11 @@ module QuickAssignHelper
     offerings[:middle] = group_grade_level_offerings(assignable_middle_offerings, user, locale)
     offerings[:high] = group_grade_level_offerings(assignable_high_offerings, user, locale)
     offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale)
+
+    unless participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      assignable_pl_offerings = assignable_offerings.filter {|co|  co.get_participant_audience != 'student' && Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include?(co.get_participant_audience)}
+      offerings[:pl] = group_hoc_and_pl_offerings(assignable_pl_offerings, user, locale)
+    end
 
     offerings
   end
