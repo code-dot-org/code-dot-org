@@ -3,6 +3,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import header from './headerRedux';
 import project from './projectRedux';
 import app from './appRedux';
+import microbit from './microbitRedux';
 import progress from './progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import lessonLock from './lessonLockRedux';
@@ -35,7 +36,8 @@ registerReducers({
   projects,
   verifiedInstructor,
   currentUser,
-  arrowDisplay
+  arrowDisplay,
+  microbit
 });
 
 export {getStore};
