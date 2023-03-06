@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import styles from './check-for-understanding.module.scss';
 
 const CheckForUnderstanding = ({
+  viewAs,
   selectedSection,
   students,
   sections,
@@ -15,6 +17,16 @@ const CheckForUnderstanding = ({
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const nextLevel = levels.find(l => l.position === currentLevel.position + 1);
+
+  // To avoid confusion, if a teacher tries to view the summary as a student,
+  // send them back to the level in Participant mode instead.
+  if (viewAs === ViewType.Participant) {
+    const paramString = document.location.search
+      .replace('view=summary', '')
+      .replace('&&', '&')
+      .replace('?&', '?');
+    document.location.replace(currentLevel.url + paramString);
+  }
 
   const data = getScriptData('summary');
   console.log(data);
@@ -116,6 +128,7 @@ const CheckForUnderstanding = ({
 };
 
 CheckForUnderstanding.propTypes = {
+  viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
@@ -136,6 +149,7 @@ export default connect(
     );
 
     return {
+      viewAs: state.viewAs,
       selectedSection:
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
       students: state.teacherSections.selectedStudents,
