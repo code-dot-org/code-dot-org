@@ -2,7 +2,6 @@ import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 
 // Using require() to import JS in TS files
-const DEFAULT_PATTERN_LENGTH = require('../constants').DEFAULT_PATTERN_LENGTH;
 const soundApi = require('./sound');
 
 // Default to 4/4 time
@@ -55,7 +54,6 @@ interface PatternTickEvent {
 
 interface PatternEvent extends PlaybackEvent {
   type: 'pattern';
-  id: 'pattern';
   value: {
     kit: string;
     events: PatternTickEvent[];
@@ -202,7 +200,6 @@ export default class MusicPlayer {
     }
 
     const patternEvent: PatternEvent = {
-      id: 'pattern',
       type: 'pattern',
       value,
       triggered: !insideWhenRun,
@@ -403,11 +400,6 @@ export default class MusicPlayer {
   }
 
   getLengthForId(id: string): number | null {
-    // Hack to allow patterns to render in the same way as samples. Will undo this when tweaking pattern timeline UI.
-    if (id === 'pattern') {
-      return DEFAULT_PATTERN_LENGTH;
-    }
-
     const sound = this.getSoundForId(id);
     if (sound === null) {
       console.warn(`Could not find sound with ID: ${id}`);
@@ -417,11 +409,6 @@ export default class MusicPlayer {
   }
 
   getTypeForId(id: string): SoundType | null {
-    // Hack to allow patterns to render in the same way as samples. Will undo this when tweaking pattern timeline UI.
-    if (id === 'pattern') {
-      return 'pattern';
-    }
-
     const sound = this.getSoundForId(id);
     if (sound === null) {
       console.warn(`Could not find sound with ID: ${id}`);
