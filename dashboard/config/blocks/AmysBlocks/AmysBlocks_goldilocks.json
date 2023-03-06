@@ -2,34 +2,35 @@
   "category": "CSC",
   "config": {
     "func": "goldilocks",
-    "blockText": " if {NUM}{STATEMENT}{SPRITE}",
+    "blockText": " if {NUM}{SPRITE}{STATEMENT}",
     "args": [
       {
         "name": "NUM",
         "options": [
           [
             "too much",
-            ">15"
+            "\"too much\""
           ],
           [
             "just right",
-            "75"
+            "\"just right\""
           ],
           [
             "too little",
-            "<5"
+            "\"too little\""
           ]
         ]
       },
       {
-        "name": "STATEMENT",
-        "statement": true
-      },
-      {
         "name": "SPRITE",
         "type": "Sprite"
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
       }
     ],
+    "style": "logic_blocks",
     "color": [
       197,
       0.88,
