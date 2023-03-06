@@ -45,7 +45,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"26011c62-5b03-40bf-ab79-45f29d704e3c\",\"19c05b84-24a8-47d0-b42a-476bf58d51f4\",\"e64dea53-4162-4952-8da6-ce4cc8feaffa\"],\"propsByKey\":{\"e64dea53-4162-4952-8da6-ce4cc8feaffa\":{\"name\":\"whale-1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":189},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:06:40.000Z\",\"pngLastModified\":\"2022-04-11T21:06:40.000Z\",\"version\":\"zCc7IogcbHrLkIfF5CaSY.h8DKLxZnBW\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/zCc7IogcbHrLkIfF5CaSY.h8DKLxZnBW/whale-1.png\",\"sourceSize\":{\"x\":400,\"y\":189}},\"19c05b84-24a8-47d0-b42a-476bf58d51f4\":{\"name\":\"whale-4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":183},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:07:06.000Z\",\"pngLastModified\":\"2022-04-11T21:51:52.000Z\",\"version\":\"wr20GPxFd_WZI5F.9pBP2vHXHUpUrhak\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wr20GPxFd_WZI5F.9pBP2vHXHUpUrhak/whale-4.png\",\"sourceSize\":{\"x\":400,\"y\":183}},\"26011c62-5b03-40bf-ab79-45f29d704e3c\":{\"name\":\"world-map\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-04-12T13:44:17.000Z\",\"pngLastModified\":\"2022-04-11T21:04:30.000Z\",\"version\":\"j9QOdpWu.JzqROzGFFPd5pXDSbNOdgaG\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/j9QOdpWu.JzqROzGFFPd5pXDSbNOdgaG/world-map.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
     "hide_custom_blocks": "true",
-    "long_instructions": "##Whale Migration\r\n\r\n- Make the whale move 10 pixels north when the up key is pressed\r\n\r\n",
+    "long_instructions": "**Whales have evolved to swim north to cooler waters during the hot summer.** \r\n\r\n- Assign a new behavior to your sprite with a `sprite begins`(#5ED5DD) `moving with arrow keys`(#6AF36C) block. \r\n- Press `Run`(#FFBD46). Use the **arrow keys** to move the whale north to cooler waters.\r\n\r\n***\r\n**Bonus:** Add a `when up pressed`(#6AF36C) event and a `sprite say`(#5ED5DD) block so the whale explains why it's moving north.\r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -79,13 +79,13 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2023-03-01T22:16:56.000Z",
-  "user_id": 182,
   "published": true,
+  "created_at": "2023-03-01T22:16:56.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-01T22:16:56.231+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_movement_1\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_movement_1\"},{\"changed_at\":\"2023-03-01 22:17:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:18:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:19:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:20:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:36:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:45:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:53:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:53:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:54:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:55:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-01T22:16:56.231+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_movement_1\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_movement_1\"},{\"changed_at\":\"2023-03-01 22:17:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:18:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:19:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:20:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:36:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:45:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:53:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:53:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:54:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 22:55:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 17:12:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 17:14:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 17:18:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 17:19:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 17:20:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:24:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:31:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:33:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:33:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:35:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:38:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -101,7 +101,7 @@
                   <field name="ANIMATION_NAME">"whale-4"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                      <field name="LOCATION">{"x":112,"y":209}</field>
+                      <field name="LOCATION">{"x":165,"y":266}</field>
                     </block>
                   </value>
                 </block>
@@ -1434,7 +1434,20 @@
           <field name="ANIMATION_NAME">"whale-4"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-              <field name="LOCATION">{"x":200,"y":200}</field>
+              <field name="LOCATION">{"x":165,"y":266}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"whale-4"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get">
+              <mutation/>
+              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
             </block>
           </value>
         </block>
@@ -1442,16 +1455,11 @@
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
         </block>
-        <block type="gamelab_moveInDirection">
-          <field name="DIRECTION">"North"</field>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">We migrate north in summer.</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"whale-4"</field>
-            </block>
-          </value>
-          <value name="DISTANCE">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">10</field>
             </block>
           </value>
         </block>
