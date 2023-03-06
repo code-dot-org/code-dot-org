@@ -201,6 +201,9 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
   test "new redirects to home if loginType and participantType are not present" do
+    user = create :admin
+    sign_in user
+
     get :new
     assert_redirected_to '/home'
 
