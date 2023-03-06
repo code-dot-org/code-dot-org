@@ -16,8 +16,10 @@ import {
   triggeredAtSimple2,
   playSoundAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
+  setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  playSoundsRandom,
   repeatSimple2
 } from './blocks/simple2';
 
@@ -33,8 +35,10 @@ const blockList = [
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
+  setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  playSoundsRandom,
   repeatSimple2,
   forLoop,
   newTrackAtStart,

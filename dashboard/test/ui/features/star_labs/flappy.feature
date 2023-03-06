@@ -6,7 +6,7 @@ Scenario: Solving puzzle 1
   Given I am on "http://studio.code.org/flappy/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I drag Google Blockly block "1" to block "0"
+  And I drag block "flap" to block "whenClick"
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.gravity = -1, Flappy.onMouseDown(), true;"
   Then I wait to see ".modal"
@@ -16,7 +16,7 @@ Scenario: Solving puzzle 2
   Given I am on "http://studio.code.org/flappy/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I drag Google Blockly block "4" to block "2"
+  And I drag block "endGame" to block "whenCollideGround"
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
   Then I wait to see ".modal"
