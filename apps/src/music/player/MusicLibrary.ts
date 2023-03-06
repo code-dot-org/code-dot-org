@@ -13,6 +13,7 @@ export interface SoundData {
 
 interface SoundFolder {
   name: string;
+  type?: 'kit';
   path: string;
   imageSrc: string;
   sounds: SoundData[];

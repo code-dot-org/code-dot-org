@@ -152,9 +152,9 @@ class UnconnectedMusicView extends React.Component {
 
   loadLibrary = async () => {
     if (AppConfig.getValue('local-library') === 'true') {
-      const defaultLibraryFilename = 'music-library';
-      const defaultCode = require(`@cdo/static/music/${defaultLibraryFilename}.json`);
-      return defaultCode;
+      const localLibraryFilename = 'music-library';
+      const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
+      return localLibrary;
     } else {
       const libraryParameter = AppConfig.getValue('library');
       const libraryFilename = libraryParameter

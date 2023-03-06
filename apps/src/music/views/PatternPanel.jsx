@@ -12,14 +12,19 @@ const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
  */
 
 const PatternPanel = ({library, initValue, onChange}) => {
+  const findFolder = path => {
+    const folder = library.groups[0].folders.find(
+      folder => folder.path === path
+    );
+    return folder;
+  };
+
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
   const currentValue = {...initValue};
 
   const group = library.groups[0];
-  const currentFolder = library.groups[0].folders.find(
-    folder => folder.path === currentValue.kit
-  );
+  const currentFolder = findFolder(currentValue.kit);
 
   const toggleEvent = (sound, tick) => {
     console.log(sound.src, tick);
@@ -47,9 +52,7 @@ const PatternPanel = ({library, initValue, onChange}) => {
 
   const handleFolderChange = event => {
     const value = event.target.value;
-    const folder = library.groups[0].folders.find(
-      folder => folder.path === value
-    );
+    const folder = findFolder(value);
     currentValue.kit = folder.path;
     onChange(currentValue);
   };
