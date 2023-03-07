@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-04 17:00:21 UTC",
+    "serialized_at": "2023-03-07 04:44:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,9 +29,21 @@
   },
   "lesson_groups": [
     {
-      "key": "csp_unit6_2020",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Pre-Unit Interest Inventory"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "key": "csp_unit6_2020",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Lists"
       },
@@ -43,7 +55,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Loops"
       },
@@ -55,7 +67,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Traversals"
       },
@@ -67,7 +79,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Project"
       },
@@ -79,7 +91,7 @@
     {
       "key": "lessonGroup-2",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Post-Course Survey"
       },
@@ -91,9 +103,24 @@
   ],
   "lessons": [
     {
+      "key": "Lists, Loops, and Traversals Pre-Survey",
+      "name": "Lists, Loops, and Traversals Pre-Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
       "key": "Lists Explore",
       "name": "Lists Explore",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -114,7 +141,7 @@
     {
       "key": "Lists Investigate",
       "name": "Lists Investigate",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -134,7 +161,7 @@
     {
       "key": "Lists Practice",
       "name": "Lists Practice",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -154,7 +181,7 @@
     {
       "key": "Lists Make",
       "name": "Lists Make",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -174,7 +201,7 @@
     {
       "key": "Loops Explore",
       "name": "Loops Explore",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -195,7 +222,7 @@
     {
       "key": "Loops Investigate",
       "name": "Loops Investigate",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -215,7 +242,7 @@
     {
       "key": "Loops Practice",
       "name": "Loops Practice",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -235,7 +262,7 @@
     {
       "key": "Loops Make",
       "name": "Loops Make",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -255,7 +282,7 @@
     {
       "key": "Traversals Explore",
       "name": "Traversals Explore",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -276,7 +303,7 @@
     {
       "key": "Traversals Investigate",
       "name": "Traversals Investigate",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -296,7 +323,7 @@
     {
       "key": "Traversals Practice",
       "name": "Traversals Practice",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -316,7 +343,7 @@
     {
       "key": "Traversals Make",
       "name": "Traversals Make",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -336,7 +363,7 @@
     {
       "key": "Project   Hackathon Part 1",
       "name": "Project   Hackathon Part 1",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -357,7 +384,7 @@
     {
       "key": "Project   Hackathon Part 2",
       "name": "Project   Hackathon Part 2",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -378,7 +405,7 @@
     {
       "key": "Project   Hackathon Part 3",
       "name": "Project   Hackathon Part 3",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
@@ -399,7 +426,7 @@
     {
       "key": "Project   Hackathon Part 4",
       "name": "Project   Hackathon Part 4",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
@@ -420,7 +447,7 @@
     {
       "key": "Project   Hackathon Part 5",
       "name": "Project   Hackathon Part 5",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
@@ -441,7 +468,7 @@
     {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 18,
@@ -461,7 +488,7 @@
     {
       "key": "CS Principles Post-Course Survey",
       "name": "CS Principles Post-Course Survey",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 19,
@@ -475,6 +502,18 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "aa3022d7-ce74-4e8f-b117-57b7f155dd6c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa3022d7-ce74-4e8f-b117-57b7f155dd6c",
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023"
+      }
+    },
     {
       "key": "e8b8c82a-55cf-48fa-876b-6120dbb12c4f",
       "position": 1,
@@ -1485,6 +1524,16 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "e833377a-e394-4e67-9506-531421b49278",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e833377a-e394-4e67-9506-531421b49278",
+        "lesson_activity.key": "aa3022d7-ce74-4e8f-b117-57b7f155dd6c"
+      }
+    },
     {
       "key": "f2474e60-f70a-4e05-9fee-fca37293385c",
       "position": 1,
@@ -5477,6 +5526,27 @@
       "level_keys": [
         "csp-post-survey-2021-markdown-with-link-to-survey_csp6_2023"
       ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 5 Pre-Unit Survey_23"
+        ],
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023",
+        "activity_section.key": "e833377a-e394-4e67-9506-531421b49278"
+      },
+      "level_keys": [
+        "CSP Unit 5 Pre-Unit Survey_23"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6246,6 +6316,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp6-2023",
         "activity_section.key": "69fb7633-53ca-43f9-944a-b51055d07e2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 5 Pre-Unit Survey_23",
+        "script_level.level_keys": [
+          "CSP Unit 5 Pre-Unit Survey_23"
+        ],
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023",
+        "activity_section.key": "e833377a-e394-4e67-9506-531421b49278"
       }
     }
   ],
