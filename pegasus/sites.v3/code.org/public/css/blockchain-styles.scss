@@ -22,3 +22,16 @@
     }
   }
 }
+
+.blockchain-lessons .action-block__wrapper.action-block__wrapper--three-col {
+
+  .action-block.action-block--one-col:last-child {
+    margin-right: auto;
+    margin-left: 1.35em;
+
+    @media screen and (max-width: $width-md) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
