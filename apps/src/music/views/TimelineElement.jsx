@@ -3,20 +3,22 @@ import React, {useContext} from 'react';
 import {PlayerUtilsContext, PlayingContext} from '../context';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
   beat: moduleStyles.timelineElementPurple,
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
-  fx: moduleStyles.timelineElementYellow
+  fx: moduleStyles.timelineElementYellow,
+  pattern: moduleStyles.timelineElementPink
 };
 
 /**
  * Renders a single element (sound) in the timeline
  */
 const TimelineElement = ({
-  soundId,
+  eventData,
   barWidth,
   height,
   top,
@@ -28,7 +30,10 @@ const TimelineElement = ({
   const playerUtils = useContext(PlayerUtilsContext);
   const playingContext = useContext(PlayingContext);
 
-  const length = playerUtils.getLengthForId(soundId);
+  const length =
+    eventData.type === 'pattern'
+      ? DEFAULT_PATTERN_LENGTH
+      : playerUtils.getLengthForId(eventData.id);
 
   const isInsideRandom = skipContext?.insideRandom;
   const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
@@ -39,11 +44,17 @@ const TimelineElement = ({
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + length;
 
+  const colorType =
+    eventData.type === 'pattern'
+      ? 'pattern'
+      : playerUtils.getTypeForId(eventData.id);
+  const colorClass = typeToColorClass[colorType];
+
   return (
     <div
       className={classNames(
         moduleStyles.timelineElement,
-        typeToColorClass[playerUtils.getTypeForId(soundId)],
+        colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
         isSkipSound && moduleStyles.timelineElementSkipSound
@@ -61,7 +72,7 @@ const TimelineElement = ({
 };
 
 TimelineElement.propTypes = {
-  soundId: PropTypes.string.isRequired,
+  eventData: PropTypes.object.isRequired,
   barWidth: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   top: PropTypes.number.isRequired,

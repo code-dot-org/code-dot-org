@@ -27,6 +27,14 @@ const optionsList = [
     ]
   },
   {
+    name: 'local-library',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use online library file.'},
+      {value: 'true', description: 'Use local library file.'}
+    ]
+  },
+  {
     name: 'library',
     type: 'string',
     description: 'Use a specific music library file.'
