@@ -174,7 +174,7 @@ export const playPatternAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play pattern',
     helpUrl: ''
   },
@@ -238,7 +238,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'set effect',
     helpUrl: ''
   },
