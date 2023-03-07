@@ -106,6 +106,7 @@ class AnimationPicker extends React.Component {
     }
 
     const contextName = this.contextSpecificName();
+    console.log(`upload in progress? ${this.props.uploadInProgress}`);
 
     return (
       <div>
@@ -132,6 +133,7 @@ class AnimationPicker extends React.Component {
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
           isOpen={this.state.exitingDialog}
+          uncloseable={this.props.uploadInProgress}
           backdropStyle={{
             top: -15,
             right: -15,
@@ -159,9 +161,11 @@ class AnimationPicker extends React.Component {
   }
 
   render() {
+    console.log(`upload in progress? ${this.props.uploadInProgress}`);
     if (!this.props.visible) {
       return null;
     }
+    console.log('it is visible');
 
     return (
       <BaseDialog

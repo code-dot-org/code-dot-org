@@ -28,6 +28,8 @@ const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
+const SHOWING_UPLOAD_WARNING = 'AnimationPicker/SHOWING_UPLOAD_WARNING';
+const EXITED_UPLOAD_WARNING = 'AnimationPicker/EXITED_UPLOAD_WARNING';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -68,6 +70,16 @@ export default function reducer(state, action) {
   }
   if (action.type === HIDE) {
     return initialState;
+  }
+  if (action.type === SHOWING_UPLOAD_WARNING) {
+    return _.assign({}, state, {
+      uploadInProgress: true
+    });
+  }
+  if (action.type === EXITED_UPLOAD_WARNING) {
+    return _.assign({}, state, {
+      uploadInProgress: false
+    });
   }
   if (action.type === BEGIN_UPLOAD) {
     return _.assign({}, state, {
@@ -139,6 +151,29 @@ export function beginUpload(filename) {
   return {
     type: BEGIN_UPLOAD,
     filename: filename
+  };
+}
+
+/**
+ * We are showing the pre-upload warning. Mark the upload as in progress.
+ * @returns  {{type: string}}
+ */
+export function showingUploadWarning() {
+  console.log('in showingUploadWarning');
+  return {
+    type: SHOWING_UPLOAD_WARNING
+  };
+}
+
+/**
+ * The user exited the upload warning without approving upload. Don't mark the upload
+ * as in-progress anymore.
+ * @returns  {{type: string}}
+ */
+export function exitedUploadWarning() {
+  console.log('in exitedUploadWarning');
+  return {
+    type: EXITED_UPLOAD_WARNING
   };
 }
 

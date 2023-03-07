@@ -8,6 +8,10 @@ import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
 import {refreshInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux.js';
+import {
+  exitedUploadWarning,
+  showingUploadWarning
+} from '../redux/animationPicker.js';
 
 /**
  * Render the animation upload button. If the project should restrict uploads
@@ -44,12 +48,17 @@ export function UnconnectedAnimationUploadButton({
           showRestrictedUploadWarning
             ? project.isPublished()
               ? () => setIsPublishedWarningModalOpen(true)
-              : () => setIsUploadModalOpen(true)
+              : showUploadModal
             : onUploadClick
         }
         isBackgroundsTab={isBackgroundsTab}
       />
     );
+  }
+
+  function showUploadModal() {
+    setIsUploadModalOpen(true);
+    showingUploadWarning();
   }
 
   // Warning dialog that says if you upload, you can no longer share and remix,
@@ -145,6 +154,7 @@ export function UnconnectedAnimationUploadButton({
     setRestrictedShareConfirmed(false);
     setNoPIIConfirmed(false);
     setIsUploadModalOpen(false);
+    exitedUploadWarning();
   }
 
   return (
