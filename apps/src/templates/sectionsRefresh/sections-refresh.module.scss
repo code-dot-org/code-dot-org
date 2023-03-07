@@ -22,8 +22,28 @@
   align-items: center;
 }
 
-.multiTables {
+.buttonsInRow .buttonStyle {
+  background-color: $white;
+  padding: 10px;
+  color: inherit;
+  border: none;
+  font-size: 14px;
+}
+
+.buttonsInRow .buttonStyle:hover {
+  color: $brand_primary_default;
+}
+
+.flexDisplay {
   display: flex;
+}
+
+.buttonsInRow .input {
+  margin: 0 5px 0 200px;
+}
+
+.buttonsInRow .decideLater {
+  margin-top: 5px;
 }
 
 .table {
@@ -35,10 +55,34 @@
 .headerRow {
   background-color: $brand_primary_default;
   color: $white;
+  height: 42px;
 }
 
 .headerCell {
   font-weight: 500;
   font-size: 24px;
   padding: 12px;
+}
+
+.tableBody {
+  padding: 10px;
+  display: grid;
+}
+
+.courseHeaders {
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  left: 10px;
+}
+
+.flexDisplay .radio {
+  min-height: 40px;
+  margin: 0 0 0 0;
+}
+
+.label {
+  margin: 10px 0 0 5px;
+  text-align: center;
 }
