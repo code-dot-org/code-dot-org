@@ -25,7 +25,6 @@ const Template = args => (
 );
 
 export const ViewWithNoCurrentParentEmail = Template.bind({});
-ViewWithNoCurrentParentEmail.args = {};
 
 export const ViewWithCurrentParentEmail = Template.bind({});
 ViewWithCurrentParentEmail.args = {
