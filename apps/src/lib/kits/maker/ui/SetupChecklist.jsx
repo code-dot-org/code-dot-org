@@ -8,7 +8,6 @@ import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
-import color from '@cdo/apps/util/color';
 import {
   isWindows,
   isChrome,
@@ -381,10 +380,8 @@ class SetupChecklist extends Component {
                   <div>
                     <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
                     <p>
-                      <span style={styles.highlightedText}>
-                        <strong>{applabI18n.makerSetupClickRedetect()}</strong>
-                        &nbsp;
-                      </span>
+                      <strong>{applabI18n.makerSetupClickRedetect()}</strong>
+                      &nbsp;
                       {applabI18n.makerSetupConfirmConnection()}
                     </p>
                   </div>
@@ -448,9 +445,6 @@ export default connect(state => ({
 const styles = {
   suggestionHeader: {
     marginTop: 15
-  },
-  highlightedText: {
-    color: color.realgreen
   }
 };
 
