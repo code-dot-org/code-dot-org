@@ -110,11 +110,11 @@ module Cdo
       host
     end
 
-    def dashboard_host
+    def dashboard_site_host
       site_host('studio.code.org')
     end
 
-    def pegasus_host
+    def pegasus_site_host
       site_host('code.org')
     end
 
