@@ -16,47 +16,48 @@ const DEFAULT_PROPS = {
   onSubmit: action('onSubmit')
 };
 
-export default storybook =>
-  storybook.storiesOf('ChangeUserTypeForm', module).addStoryTable([
-    {
-      name: 'convert student to teacher account',
-      story: () => (
-        <ChangeUserTypeForm
-          {...DEFAULT_PROPS}
-          values={{
-            currentEmail: 'batman@bat.cave',
-            emailOptIn: 'yes'
-          }}
-        />
-      )
-    },
-    {
-      name: 'with validation errors',
-      story: () => (
-        <ChangeUserTypeForm
-          {...DEFAULT_PROPS}
-          values={{
-            currentEmail: 'robin@bat.cave',
-            emailOptIn: 'no'
-          }}
-          validationErrors={{
-            currentEmail: 'Robin, get out of here!',
-            emailOptIn: 'No email for you.'
-          }}
-        />
-      )
-    },
-    {
-      name: 'disabled',
-      story: () => (
-        <ChangeUserTypeForm
-          {...DEFAULT_PROPS}
-          values={{
-            currentEmail: 'currently-saving@bat.cave',
-            emailOptIn: 'yes'
-          }}
-          disabled={true}
-        />
-      )
-    }
-  ]);
+export default {
+  title: 'ChangeUserTypeForm',
+  component: ChangeUserTypeForm
+};
+
+const container = {
+  margin: 'auto',
+  width: '50%',
+  padding: '10px'
+};
+
+const Template = args => (
+  <div style={container}>
+    <ChangeUserTypeForm {...DEFAULT_PROPS} {...args} />;
+  </div>
+);
+
+export const ConvertStudentToTeacher = Template.bind({});
+ConvertStudentToTeacher.args = {
+  values: {
+    currentEmail: 'batman@bat.cave',
+    emailOptIn: 'yes'
+  }
+};
+
+export const WithValidationErrors = Template.bind({});
+WithValidationErrors.args = {
+  values: {
+    currentEmail: 'robin@bat.cave',
+    emailOptIn: 'no'
+  },
+  validationErrors: {
+    currentEmail: 'Robin, get out of here!',
+    emailOptIn: 'No email for you.'
+  }
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  values: {
+    currentEmail: 'currently-saving@bat.cave',
+    emailOptIn: 'yes'
+  },
+  disabled: true
+};
