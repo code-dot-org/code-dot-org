@@ -1,13 +1,9 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-09-19T21:30:37.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Extra Code: Line Break\r\n\r\nIn some situations, like a poem or a list, you'll want to start a new line inside the same paragraph, like you might do in poetry.  You can use the line break `<br>` tag for this.\r\n\r\n# Do This\r\n* Read the HTML and look for where the line break `<br>` code is used to separate the lines in the poem.\r\n* Add two more line breaks to separate out the other lines in the poem.\r\n\r\n**Tip:** The `<br>` tag is useful for writing addresses or poems.\r\n\r\n**Note:** Use the `<br>` tag to enter line breaks, not to separate paragraphs. Always separate each paragraph with its own set of `<p>` and `</p>` tags!",
+    "long_instructions": "# Extra Code: Line Break\r\n\r\nIn some situations, like a poem or a list, you'll want to start a new line inside the same paragraph, like you might do in poetry.  You can use the line break `<br>` tag for this.\r\n\r\n# Do This\r\n1) Read the HTML and look for where the line break `<br>` code is used to separate the lines in the poem.\r\n2) Add two more line breaks to separate out the other lines in the poem.\r\n\r\n**Tip:** The `<br>` tag is useful for writing addresses or poems.\r\n\r\n**Note:** Use the `<br>` tag to enter line breaks, not to separate paragraphs. Always separate each paragraph with its own set of `<p>` and `</p>` tags!",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
@@ -21,10 +17,15 @@
     "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs",
     "thumbnail_url": "https://images.code.org/c1fb2198202517b8ddfe3ccb9865ca3e-image-1562863985170.JPG",
     "parent_level_id": 18817,
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "validation_enabled": "false"
   },
+  "game_id": 58,
   "published": true,
+  "created_at": "2022-09-19T21:30:37.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T21:30:37.330+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings line break_2022\\\"\"],\"cloned_from\":\"CSD Web Headings line break_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T21:30:37.330+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings line break_2022\\\"\"],\"cloned_from\":\"CSD Web Headings line break_2022\"},{\"changed_at\":\"2023-02-17 23:17:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

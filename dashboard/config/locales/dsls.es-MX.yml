@@ -12064,7 +12064,7 @@ es-MX:
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: La planta rodadora comenzará a caer
+        - text: " La planta rodadora comenzará a rodar"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
@@ -25690,7 +25690,7 @@ es-MX:
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
-        - text: " La planta rodadora comenzará a dar vueltas"
+        - text: " La planta rodadora comenzará a rodar"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.

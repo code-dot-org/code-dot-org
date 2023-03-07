@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `Solver`(#e7e8ea) represents a person that participated in the <a href=\"https://www.worldcubeassociation.org/\" target=\"_blank\">**World Cube Association**</a> competition and has instance variables for the name of the person and the time it took them to solve a Rubik's Cube in centiseconds.\r\n\r\n✅ **TO DO #1:** In `Solver.java`(#e7e8ea),\r\n\r\n1. Declare and initialize a static variable called `fastestTime`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. In the `Solver`(#e7e8ea) constructor, check if the parameter `time`(#e7e8ea) is greater than `fastestTime`(#e7e8ea). If this is `true`(#e7e8ea), update `fastestTime`(#e7e8ea) to the value passed to the parameter `time`(#e7e8ea).\r\n\r\n3. Write a static method called `getFastestTime()`(#e7e8ea) that returns a `String`(#e7e8ea) containing the text `\"The fastest time so far is {fastestTime}\"`(#e7e8ea), where `fastestTime`(#e7e8ea) is the fastest time of all `Solver`(#e7e8ea) objects.\r\n\r\n✅ **TO DO #2:** In `SolverRunner.java`(#e7e8ea), create several `Solver`(#e7e8ea) objects, such as:\r\n\r\n* Name: Max Park, Time: 363\r\n\r\n* Name: Asher Kim-Magierek, Time: 389\r\n\r\n* Name: Max Siauw, Time: 403\r\n\r\n* Name: Patrick Ponce, Time: 424\r\n\r\n* Name: Tanzer Balimtas, Time: 464\r\n\r\n✅ **TO DO #3:** In `SolverRunner.java`(#e7e8ea), call the `getFastestTime()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with declaring and initializing a constant and writing a static method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/constants",
+      "/courses/csa-2023/guides/static-methods"
+    ],
+    "display_name": "Rubik's Cube Solvers",
+    "bubble_choice_description": "Use static variables and methods to keep track of the fastest time it has taken someone to solve a Rubik's Cube.",
+    "thumbnail_url": "https://images.code.org/396c695350dff06816a14f6f7df1470f-cube_of_rubik_1.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-02-17T18:26:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:26:46.389+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8b_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L8b_2023\"},{\"changed_at\":\"2023-02-17 18:26:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 19:12:24 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

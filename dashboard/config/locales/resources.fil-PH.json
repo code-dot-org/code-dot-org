@@ -1041,7 +1041,11 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Introduksiyon sa AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introduksiyon sa AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
@@ -1949,7 +1953,11 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Introduksiyon sa AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introduksiyon sa AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {

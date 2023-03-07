@@ -51,7 +51,7 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "code/poem-art/2021": {
-          "word": "ModeCodi"
+          "word": "Codi"
         },
         "event/poem-art/2021": {
           "word": "Esdeveniment",
@@ -109,7 +109,7 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "code/artist/unversioned": {
-          "word": "ModeCodi",
+          "word": "Codi",
           "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
         },
         "debugging/artist/unversioned": {
@@ -225,7 +225,7 @@
           "definition": ""
         },
         "code/sports/unversioned": {
-          "word": "ModeCodi"
+          "word": "Codi"
         },
         "debugging/sports/unversioned": {
           "word": "Depuració",
@@ -290,6 +290,10 @@
         "program/dance-2019/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "algorithm/coursed/2022": {
           "word": "Algorisme",
@@ -363,8 +367,13 @@
           "word": "Sprite",
           "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
         },
+        "user/coursef/2022": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
         "algorithm/coursef/2022": {
-          "word": "Algorisme"
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
         },
         "behavior/coursef/2022": {
           "word": "Comportament"
@@ -379,6 +388,10 @@
         },
         "variable/coursef/2022": {
           "word": "Variable"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "internet/coursef/2022": {
           "word": "Internet"
@@ -417,7 +430,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "copyright/coursee/2022": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
         "define/coursee/2022": {
           "word": "Defineix"
@@ -729,10 +743,19 @@
           "word": "Funció"
         },
         "copyright/csd/2022": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
+        },
+        "user/csd/2022": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
+        "machine_learning/csd/2022": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "code/poem-art/unversioned": {
-          "word": "ModeCodi",
+          "word": "Codi",
           "definition": ""
         },
         "event/poem-art/unversioned": {
@@ -755,8 +778,13 @@
           "word": "Sprite",
           "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
         },
+        "user/coursef/2021": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
         "algorithm/coursef/2021": {
-          "word": "Algorisme"
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
         },
         "behavior/coursef/2021": {
           "word": "Comportament",
@@ -780,6 +808,10 @@
         "repeat/coursef/2021": {
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -1128,6 +1160,10 @@
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
+        "algorithm/coursee/2021": {
+          "word": "algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca"
+        },
         "behavior/coursee/2021": {
           "word": "Comportament",
           "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
@@ -1141,7 +1177,8 @@
           "definition": "Una acció que fa que passi alguna cosa."
         },
         "copyright/coursee/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
         "loop/coursee/2021": {
           "word": "Bucle",
@@ -1169,6 +1206,14 @@
         },
         "define/coursee/2021": {
           "word": "Defineix"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
+        "user/csd/2021": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
         },
         "bug/csd/2021": {
           "word": "Bug / error",
@@ -1201,7 +1246,8 @@
           "word": "Funció"
         },
         "copyright/csd/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         }
       }
     }

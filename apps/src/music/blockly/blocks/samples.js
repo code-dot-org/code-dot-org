@@ -1,15 +1,17 @@
 import {BlockTypes} from '../blockTypes';
-import Globals from '../../globals';
 import {
-  DEFAULT_SOUND,
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
-  EXTRA_SAMPLE_FIELD_PREFIX,
-  FIELD_SOUNDS_TYPE,
+  EXTRA_SOUND_INPUT_PREFIX,
+  FIELD_REST_DURATION_NAME,
+  FIELD_SOUNDS_NAME,
   PLAY_MULTI_MUTATOR,
+  PRIMARY_SOUND_INPUT_NAME,
+  SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
   TRIGGER_FIELD
 } from '../constants';
+import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -47,18 +49,10 @@ const getCurrentTrackId = ctx => {
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     message0: 'play %1 at measure %2',
     args0: [
-      {
-        type: FIELD_SOUNDS_TYPE,
-        name: 'sound',
-        getLibrary: () => Globals.getLibrary(),
-        playPreview: (id, onStop) => {
-          Globals.getPlayer().previewSound(id, onStop);
-        },
-        currentValue: DEFAULT_SOUND
-      },
+      fieldSoundsDefinition,
       {
         type: 'input_value',
         name: 'measure'
@@ -72,7 +66,7 @@ export const playSound = {
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sound') +
+    ctx.getFieldValue(FIELD_SOUNDS_NAME) +
     '", ' +
     Blockly.JavaScript.valueToCode(
       ctx,
@@ -88,17 +82,7 @@ export const playSoundAtCurrentLocation = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
     message0: 'play %1',
-    args0: [
-      {
-        type: FIELD_SOUNDS_TYPE,
-        name: 'sound',
-        getLibrary: () => Globals.getLibrary(),
-        playPreview: (id, onStop) => {
-          Globals.getPlayer().previewSound(id, onStop);
-        },
-        currentValue: DEFAULT_SOUND
-      }
-    ],
+    args0: [fieldSoundsDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
@@ -108,7 +92,7 @@ export const playSoundAtCurrentLocation = {
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sound') +
+    ctx.getFieldValue(FIELD_SOUNDS_NAME) +
     '", ' +
     'currentMeasureLocation' +
     ', ' +
@@ -123,7 +107,7 @@ export const setCurrentLocationNextMeasure = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'go to next measure',
     helpUrl: ''
   },
@@ -215,7 +199,7 @@ export const newTrackOnTrigger = {
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
       TRACK_NAME_FIELD
-    )}", Math.ceil(MusicPlayer.getPlayheadPosition()), false);\n`;
+    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), false);\n`;
   }
 };
 
@@ -225,27 +209,35 @@ export const playSoundInTrack = {
     message0: 'play %1',
     args0: [
       {
-        type: FIELD_SOUNDS_TYPE,
-        name: 'sound',
-        getLibrary: () => Globals.getLibrary(),
-        playPreview: (id, onStop) => {
-          Globals.getPlayer().previewSound(id, onStop);
-        },
-        currentValue: DEFAULT_SOUND
+        type: 'input_value',
+        name: PRIMARY_SOUND_INPUT_NAME,
+        check: SOUND_VALUE_TYPE
       }
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     mutator: PLAY_MULTI_MUTATOR,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
   generator: ctx => {
-    const allSounds = [`"${ctx.getFieldValue('sound')}"`];
-    for (let i = 0; i < ctx.extraSampleCount_; i++) {
-      allSounds.push(`"${ctx.getFieldValue(EXTRA_SAMPLE_FIELD_PREFIX + i)}"`);
+    const allSounds = [
+      `"${Blockly.JavaScript.valueToCode(
+        ctx,
+        PRIMARY_SOUND_INPUT_NAME,
+        Blockly.JavaScript.ORDER_ATOMIC
+      )}"`
+    ];
+    for (let i = 0; i < ctx.extraSoundInputCount_; i++) {
+      allSounds.push(
+        `"${Blockly.JavaScript.valueToCode(
+          ctx,
+          EXTRA_SOUND_INPUT_PREFIX + i,
+          Blockly.JavaScript.ORDER_ATOMIC
+        )}"`
+      );
     }
     return `MusicPlayer.addSoundsToTrack(${getCurrentTrackId(
       ctx
@@ -256,24 +248,32 @@ export const playSoundInTrack = {
 export const restInTrack = {
   definition: {
     type: BlockTypes.REST_IN_TRACK,
-    message0: 'rest for %1 measures',
-    args0: [
-      {
-        type: 'input_value',
-        name: 'measures'
-      }
-    ],
+    message0: 'rest for %1',
+    args0: [fieldRestDurationDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks'
+    style: 'lab_blocks'
   },
   generator: ctx =>
-    `MusicPlayer.addRestToTrack(${getCurrentTrackId(
-      ctx
-    )}, ${Blockly.JavaScript.valueToCode(
-      ctx,
-      'measures',
-      Blockly.JavaScript.ORDER_ASSIGNMENT
+    `MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
+      FIELD_REST_DURATION_NAME
     )});\n`
+};
+
+/**
+ * Value block for a sample
+ */
+export const valueSample = {
+  definition: {
+    type: BlockTypes.VALUE_SAMPLE,
+    message0: '%1',
+    args0: [fieldSoundsDefinition],
+    style: 'lab_blocks',
+    output: SOUND_VALUE_TYPE
+  },
+  generator: ctx => [
+    ctx.getFieldValue(FIELD_SOUNDS_NAME),
+    Blockly.JavaScript.ORDER_ATOMIC
+  ]
 };

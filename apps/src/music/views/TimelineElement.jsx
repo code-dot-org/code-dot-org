@@ -1,31 +1,66 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-import {PlayerUtilsContext} from '../context';
+import {PlayerUtilsContext, PlayingContext} from '../context';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
   beat: moduleStyles.timelineElementPurple,
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
-  fx: moduleStyles.timelineElementYellow
+  fx: moduleStyles.timelineElementYellow,
+  pattern: moduleStyles.timelineElementPink
 };
 
 /**
  * Renders a single element (sound) in the timeline
  */
-const TimelineElement = ({soundId, barWidth, height, top, left}) => {
+const TimelineElement = ({
+  eventData,
+  barWidth,
+  height,
+  top,
+  left,
+  when,
+  skipContext,
+  currentPlayheadPosition
+}) => {
   const playerUtils = useContext(PlayerUtilsContext);
+  const playingContext = useContext(PlayingContext);
+
+  const length =
+    eventData.type === 'pattern'
+      ? DEFAULT_PATTERN_LENGTH
+      : playerUtils.getLengthForId(eventData.id);
+
+  const isInsideRandom = skipContext?.insideRandom;
+  const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
+
+  const isCurrentlyPlaying =
+    !isSkipSound &&
+    currentPlayheadPosition !== 0 &&
+    currentPlayheadPosition >= when &&
+    currentPlayheadPosition < when + length;
+
+  const colorType =
+    eventData.type === 'pattern'
+      ? 'pattern'
+      : playerUtils.getTypeForId(eventData.id);
+  const colorClass = typeToColorClass[colorType];
 
   return (
     <div
       className={classNames(
         moduleStyles.timelineElement,
-        typeToColorClass[playerUtils.getTypeForId(soundId)]
+        colorClass,
+        isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
+        isInsideRandom && moduleStyles.timelineElementInsideRandom,
+        isSkipSound && moduleStyles.timelineElementSkipSound
       )}
       style={{
-        width: barWidth * playerUtils.getLengthForId(soundId) - 4,
+        width: barWidth * length - 4,
         height,
         top,
         left
@@ -37,11 +72,14 @@ const TimelineElement = ({soundId, barWidth, height, top, left}) => {
 };
 
 TimelineElement.propTypes = {
-  soundId: PropTypes.string.isRequired,
+  eventData: PropTypes.object.isRequired,
   barWidth: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  top: PropTypes.number,
-  left: PropTypes.number
+  top: PropTypes.number.isRequired,
+  left: PropTypes.number,
+  when: PropTypes.number.isRequired,
+  skipContext: PropTypes.object,
+  currentPlayheadPosition: PropTypes.number.isRequired
 };
 
 export default TimelineElement;

@@ -326,6 +326,13 @@ describe('entry tests', () => {
     }
   };
 
+  config.ts = {
+    default: {
+      tsconfig: './tsconfig.json',
+      src: ['./src/**/*.ts', './src/**/*.tsx']
+    }
+  };
+
   config.sass = {
     all: {
       options: {
@@ -596,6 +603,11 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
+    'devise/registrations/_sign_up':
+      './src/sites/studio/pages/devise/registrations/_sign_up.js',
+    'devise/shared/_oauth_links':
+      './src/sites/studio/pages/devise/shared/_oauth_links.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -667,7 +679,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
@@ -703,6 +717,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_droplet.js',
     'levels/editors/fields/_grid':
       './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_poetry_fields':
+      './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
     'levels/editors/fields/_preload_assets':
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
@@ -762,8 +778,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/weblab-test':
-      './src/sites/code.org/pages/public/educate/weblab-test.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -772,6 +786,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/public/administrators':
+      './src/sites/code.org/pages/public/administrators.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
@@ -785,6 +801,8 @@ describe('entry tests', () => {
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
     'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
+    'code.org/views/analytics_event_log_helper':
+      './src/sites/code.org/pages/views/analytics_event_log_helper.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -807,8 +825,6 @@ describe('entry tests', () => {
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/workshop_survey/new':
-      './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':
       './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new':
@@ -877,9 +893,6 @@ describe('entry tests', () => {
 
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
-
-    'census_reviewers/review_reported_inaccuracies':
-      './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
@@ -1241,6 +1254,7 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
+        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
       ],
       options: {

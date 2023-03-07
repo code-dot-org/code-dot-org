@@ -33,7 +33,7 @@ class Poetry < GamelabJr
   )
 
   def check_default_poem
-    self.default_poem = nil unless standalone_app_name == 'poetry_hoc'
+    self.default_poem = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
   end
 
   # Poetry levels use the same shared_functions as GamelabJr
@@ -42,7 +42,11 @@ class Poetry < GamelabJr
   end
 
   def self.standalone_app_names
-    [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc']]
+    [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc'],  ['Time Capsule', 'time_capsule']]
+  end
+
+  def self.subtypes_with_poems
+    %w(poetry_hoc time_capsule)
   end
 
   def self.skins
@@ -81,6 +85,17 @@ class Poetry < GamelabJr
   end
 
   # Used by levelbuilders to set a default poem on a Poetry level.
+  def self.poems_for_subtype(subtype)
+    case subtype
+    when 'poetry_hoc'
+      hoc_poems
+    when 'time_capsule'
+      time_capsule_poems
+    else
+      []
+    end
+  end
+
   def self.hoc_poems
     [
       ['', ''],
@@ -106,6 +121,22 @@ class Poetry < GamelabJr
       ['An Afternoon Nap', 'lomeli1'],
       ['An Ode to Imagery', 'lomeli2'],
       ['Nothing Gold Can Stay', 'frost']
+    ]
+  end
+
+  def self.time_capsule_poems
+    [
+      ['', ''],
+      ['1990 - My Poem 1', 'pat'],
+      ['2020 - My Poem 2', 'erin'],
+      ['2021 - My Poem 3', 'aryanna'],
+      ['2023 - My Poem 4', 'tj'],
+      ['1905 - The Turn of the Century ', 'erik'],
+      ['1963 - March on Washington', 'aaron'],
+      ['1969 - Inspiring Dreams', 'noemi'],
+      ['1969 - Hope for Peace', 'ken'],
+      ['1980 - Bring Us Together', 'mike'],
+      ['1990 - Mary W. Jackson ', 'jess'],
     ]
   end
 end

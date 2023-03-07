@@ -8,12 +8,13 @@ import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
 import ProgramSequencer from '../player/ProgramSequencer';
+import RandomSkipManager from '../player/RandomSkipManager';
 import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import moduleStyles from './music.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from '../context';
+import moduleStyles from './music-view.module.scss';
+import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -34,6 +35,13 @@ const instructionPositionOrder = [
   InstructionsPositions.RIGHT
 ];
 
+/**
+ * Top-level container for Music Lab. Manages all views on the page as well as the
+ * Blockly workspace and music player.
+ *
+ * TODO: Split up this component into a pure view and class/component that manages
+ * application state.
+ */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
     // populated by Redux
@@ -47,8 +55,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
+    this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     // Increments every time a trigger is pressed;
@@ -70,11 +78,10 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       instructions: null,
       isPlaying: false,
-      startPlayingAudioTime: null,
-      currentAudioElapsedTime: 0,
+      currentPlayheadPosition: 0,
       updateNumber: 0,
       timelineAtTop: false,
-      showInstructions: true,
+      showInstructions: false,
       instructionsPosIndex
     };
   }
@@ -109,12 +116,15 @@ class UnconnectedMusicView extends React.Component {
       Globals.setPlayer(this.player);
     });
 
-    this.loadInstructions().then(instructions => {
-      this.setState({
-        instructions: instructions,
-        showInstructions: !!instructions
+    // Only attempt to load instructions if configured to.
+    if (AppConfig.getValue('show-instructions') === 'true') {
+      this.loadInstructions().then(instructions => {
+        this.setState({
+          instructions: instructions,
+          showInstructions: !!instructions
+        });
       });
-    });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -135,19 +145,25 @@ class UnconnectedMusicView extends React.Component {
   updateTimer = () => {
     if (this.state.isPlaying) {
       this.setState({
-        currentAudioElapsedTime: this.player.getCurrentAudioElapsedTime()
+        currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
       });
     }
   };
 
   loadLibrary = async () => {
-    const libraryParameter = AppConfig.getValue('library');
-    const libraryFilename = libraryParameter
-      ? `music-library-${libraryParameter}.json`
-      : 'music-library.json';
-    const response = await fetch(baseUrl + libraryFilename);
-    const library = await response.json();
-    return library;
+    if (AppConfig.getValue('local-library') === 'true') {
+      const localLibraryFilename = 'music-library';
+      const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
+      return localLibrary;
+    } else {
+      const libraryParameter = AppConfig.getValue('library');
+      const libraryFilename = libraryParameter
+        ? `music-library-${libraryParameter}.json`
+        : 'music-library.json';
+      const response = await fetch(baseUrl + libraryFilename);
+      const library = await response.json();
+      return library;
+    }
   };
 
   loadInstructions = async () => {
@@ -167,8 +183,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resetCode();
 
     this.setPlaying(false);
-
-    this.player.clearAllSoundEvents();
   };
 
   onBlockSpaceChange = e => {
@@ -179,30 +193,30 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.Events.BLOCK_DRAG) {
-      this.player.stopAndCancelPreviews();
+      this.player.cancelPreviews();
       return;
     }
 
-    // Stop all when_run sounds that are still to play, because if they
-    // are still valid after the when_run code is re-executed, they
-    // will be scheduled again.
-    this.stopAllSoundsStillToPlay();
+    // Prevent a rapid cycle of workspace resizing from occurring when
+    // dragging a block near the bottom of the workspace.
+    if (e.type === Blockly.Events.VIEWPORT_CHANGE) {
+      return;
+    }
 
-    // Also clear all when_run sounds from the events list, because it
-    // will be recreated in its entirely when the when_run code is
-    // re-executed.
-    this.player.clearWhenRunEvents();
+    const codeChanged = this.compileSong();
+    if (codeChanged) {
+      this.executeCompiledSong();
 
-    this.executeSong();
+      this.analyticsReporter.onBlocksUpdated(
+        this.musicBlocklyWorkspace.getAllBlocks()
+      );
 
-    this.analyticsReporter.onBlocksUpdated(
-      this.musicBlocklyWorkspace.getAllBlocks()
-    );
+      // This is a way to tell React to re-render the scene, notably
+      // the timeline.
+      this.setState({updateNumber: this.state.updateNumber + 1});
+    }
 
-    // This is a way to tell React to re-render the scene, notably
-    // the timeline.
-    this.setState({updateNumber: this.state.updateNumber + 1});
-
+    // Save the workspace.
     this.musicBlocklyWorkspace.saveCode();
   };
 
@@ -234,41 +248,42 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
-  executeSong = () => {
-    this.musicBlocklyWorkspace.executeSong({
+  compileSong = () => {
+    return this.musicBlocklyWorkspace.compileSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
+      RandomSkipManager: this.randomSkipManager,
       getTriggerCount: () => this.triggerCount
     });
+  };
+
+  executeCompiledSong = () => {
+    // Clear the events list of when_run sounds, because it will be
+    // populated next.
+    this.player.clearWhenRunEvents();
+
+    this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
   playSong = () => {
     this.player.stopSong();
 
-    // Clear the events list of when_run sounds, because it will be
-    // populated next.
-    this.player.clearWhenRunEvents();
+    this.compileSong();
 
-    this.executeSong();
+    this.executeCompiledSong();
 
     this.player.playSong();
 
-    this.setState({isPlaying: true, currentAudioElapsedTime: 0});
+    this.setState({isPlaying: true, currentPlayheadPosition: 1});
   };
 
   stopSong = () => {
     this.player.stopSong();
 
-    // Clear the events list, and hence the visual timeline, of any
-    // user-triggered sounds.
-    this.player.clearTriggeredEvents();
+    this.executeCompiledSong();
 
-    this.setState({isPlaying: false});
+    this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
-  };
-
-  stopAllSoundsStillToPlay = () => {
-    this.player.stopAllSoundsStillToPlay();
   };
 
   handleKeyUp = event => {
@@ -347,12 +362,13 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
+          instructionsAvailable={!!this.state.instructions}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
         <Timeline
           isPlaying={this.state.isPlaying}
-          currentAudioElapsedTime={this.state.currentAudioElapsedTime}
+          currentPlayheadPosition={this.state.currentPlayheadPosition}
         />
       </div>
     );
@@ -366,52 +382,52 @@ class UnconnectedMusicView extends React.Component {
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
           value={{
-            getSoundEvents: () => this.player.getSoundEvents(),
-            getCurrentMeasure: () => this.player.getCurrentMeasure(),
-            convertMeasureToSeconds: measure =>
-              this.player.convertMeasureToSeconds(measure),
+            getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id)
+            getTypeForId: id => this.player.getTypeForId(id),
+            getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <div id="music-lab-container" className={moduleStyles.container}>
-            {this.state.showInstructions &&
-              instructionsPosition === InstructionsPositions.TOP &&
-              this.renderInstructions(InstructionsPositions.TOP)}
-
-            {this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                true,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-
-            <div className={moduleStyles.middleArea}>
+          <PlayingContext.Provider value={{isPlaying: this.state.isPlaying}}>
+            <div id="music-lab-container" className={moduleStyles.container}>
               {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.LEFT &&
-                this.renderInstructions(InstructionsPositions.LEFT)}
+                instructionsPosition === InstructionsPositions.TOP &&
+                this.renderInstructions(InstructionsPositions.TOP)}
 
-              <div id="blockly-area" className={moduleStyles.blocklyArea}>
-                <div className={moduleStyles.topButtonsContainer}>
-                  <TopButtons
-                    clearCode={this.clearCode}
-                    uploadSound={file => this.soundUploader.uploadSound(file)}
-                  />
+              {this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  true,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
+
+              <div className={moduleStyles.middleArea}>
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.LEFT &&
+                  this.renderInstructions(InstructionsPositions.LEFT)}
+
+                <div id="blockly-area" className={moduleStyles.blocklyArea}>
+                  <div className={moduleStyles.topButtonsContainer}>
+                    <TopButtons
+                      clearCode={this.clearCode}
+                      uploadSound={file => this.soundUploader.uploadSound(file)}
+                    />
+                  </div>
+                  <div id="blockly-div" />
                 </div>
-                <div id="blockly-div" />
+
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.RIGHT &&
+                  this.renderInstructions(InstructionsPositions.RIGHT)}
               </div>
 
-              {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.RIGHT &&
-                this.renderInstructions(InstructionsPositions.RIGHT)}
+              {!this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  false,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
             </div>
-
-            {!this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                false,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-          </div>
+          </PlayingContext.Provider>
         </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );
