@@ -32,7 +32,7 @@ export const setCurrentLocationNextMeasure = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'go to next measure',
     helpUrl: ''
   },

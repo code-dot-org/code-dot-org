@@ -135,7 +135,7 @@ export const playSoundInTrack = {
     previousStatement: null,
     nextStatement: null,
     mutator: PLAY_MULTI_MUTATOR,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -170,7 +170,7 @@ export const restInTrack = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks'
+    style: 'lab_blocks'
   },
   generator: ctx =>
     `MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(

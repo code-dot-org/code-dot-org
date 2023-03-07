@@ -6,7 +6,7 @@ import {fieldSoundsDefinition} from '../fields';
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     message0: 'play %1 at measure %2',
     args0: [
       fieldSoundsDefinition,
