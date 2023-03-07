@@ -71,7 +71,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
         <h5>{i18n.useDropdownMessage()}</h5>
       </div>
       <CurriculumQuickAssignTopRow
-        isPl={false}
+        showPlOfferings={false}
         marketingAudience={marketingAudience}
         updateMarketingAudience={updateMarketingAudience}
       />

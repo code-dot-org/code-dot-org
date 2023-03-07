@@ -13,7 +13,7 @@ export const MARKETING_AUDIENCE = {
 };
 
 export default function CurriculumQuickAssignTopRow({
-  isPl,
+  showPlOfferings,
   marketingAudience,
   updateMarketingAudience
 }) {
@@ -80,7 +80,7 @@ export default function CurriculumQuickAssignTopRow({
             updateMarketingAudience(MARKETING_AUDIENCE.HOC);
           }}
         />
-        {isPl && (
+        {showPlOfferings && (
           <Button
             id={'uitest-pl-button'}
             className={moduleStyles.buttonStyle}
@@ -103,7 +103,7 @@ export default function CurriculumQuickAssignTopRow({
 }
 
 CurriculumQuickAssignTopRow.propTypes = {
-  isPl: PropTypes.bool.isRequired,
+  showPlOfferings: PropTypes.bool.isRequired,
   marketingAudience: PropTypes.string,
   updateMarketingAudience: PropTypes.func.isRequired
 };
