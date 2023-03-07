@@ -1,5 +1,6 @@
 import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 
@@ -42,6 +43,23 @@ export interface Effects {
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
+  skipContext?: SkipContext;
+  effects?: Effects;
+}
+
+interface PatternTickEvent {
+  tick: number;
+  src: string;
+}
+
+interface PatternEventValue {
+  kit: string;
+  events: PatternTickEvent[];
+}
+
+interface PatternEvent extends PlaybackEvent {
+  type: 'pattern';
+  value: PatternEventValue;
   skipContext?: SkipContext;
   effects?: Effects;
 }
@@ -159,6 +177,45 @@ export default class MusicPlayer {
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
+    }
+  }
+
+  playPatternAtMeasureById(
+    value: PatternEventValue,
+    measure: number,
+    insideWhenRun: boolean,
+    trackId?: string,
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
+  ) {
+    if (!this.samplePlayer.initialized()) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (
+      !value ||
+      !measure
+    ) {
+      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
+      return;
+    }
+
+    const patternEvent: PatternEvent = {
+      type: 'pattern',
+      value,
+      triggered: !insideWhenRun,
+      when: measure,
+      trackId,
+      functionContext,
+      skipContext,
+      effects
+    };
+
+    this.playbackEvents.push(patternEvent);
+
+    if (this.samplePlayer.playing()) {
+      this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
     }
   }
 
@@ -419,6 +476,27 @@ export default class MusicPlayer {
           effects: soundEvent.effects
         }
       ];
+    } else if (event.type === 'pattern') {
+      const patternEvent = event as PatternEvent;
+
+      const results = [];
+
+      const kit = patternEvent.value.kit;
+
+      for (let event of patternEvent.value.events) {
+        const resultEvent = {
+          sampleId: `${kit}/${event.src}`,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(
+            patternEvent.when + event.tick / 16
+          ),
+          triggered: patternEvent.triggered,
+          effects: patternEvent.effects
+        };
+
+        results.push(resultEvent);
+      }
+
+      return results;
     }
 
     return [];
