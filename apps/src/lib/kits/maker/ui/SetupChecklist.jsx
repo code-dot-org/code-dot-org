@@ -382,7 +382,8 @@ class SetupChecklist extends Component {
                     <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
                     <p>
                       <span style={styles.highlightedText}>
-                        {applabI18n.makerSetupClickRedetect()}&nbsp;
+                        <strong>{applabI18n.makerSetupClickRedetect()}</strong>
+                        &nbsp;
                       </span>
                       {applabI18n.makerSetupConfirmConnection()}
                     </p>
