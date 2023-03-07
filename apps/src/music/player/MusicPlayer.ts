@@ -52,12 +52,14 @@ interface PatternTickEvent {
   src: string;
 }
 
+interface PatternEventValue {
+  kit: string;
+  events: PatternTickEvent[];
+}
+
 interface PatternEvent extends PlaybackEvent {
   type: 'pattern';
-  value: {
-    kit: string;
-    events: PatternTickEvent[];
-  }
+  value: PatternEventValue;
   skipContext?: SkipContext;
   effects?: Effects;
 }
@@ -179,7 +181,7 @@ export default class MusicPlayer {
   }
 
   playPatternAtMeasureById(
-    value: any,
+    value: PatternEventValue,
     measure: number,
     insideWhenRun: boolean,
     trackId?: string,
