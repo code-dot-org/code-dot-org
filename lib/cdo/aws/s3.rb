@@ -323,7 +323,8 @@ module AWS
           options.merge(
             bucket: @bucket,
             key: key,
-            body: body
+            body: body,
+            content_type: 'text/plain'
           )
         )
         if @make_public
