@@ -231,10 +231,15 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
-    const showingUploadButton =
-      !hideUploadOption &&
-      ((!searching && (!inCategory || isBackgroundsTab)) ||
-        results.length === 0);
+    // We show the draw your own and upload buttons if the user is either:
+    // Not currently searching and not in a category, unless that category is backgrounds
+    // OR they are searching but there were no results
+    const showDrawAndUploadButtons =
+      (!searching && (!inCategory || isBackgroundsTab)) || results.length === 0;
+    // We are showing the upload button if it should be visible per the previous boolean and
+    // hideUploadOption is not set to true.
+    const showingUploadButton = !hideUploadOption && showDrawAndUploadButtons;
+
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -283,8 +288,7 @@ export default class AnimationPickerBody extends React.Component {
                 {msg.animationPicker_noResultsFound()}
               </div>
             )}
-            {((!searching && (!inCategory || isBackgroundsTab)) ||
-              results.length === 0) && (
+            {showDrawAndUploadButtons && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
