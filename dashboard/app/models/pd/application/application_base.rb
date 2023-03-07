@@ -120,7 +120,7 @@ module Pd::Application
     end
 
     def formatted_applicant_email
-      applicant_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
+      applicant_email = user.email.presence || sanitized_form_data_hash[:alternate_email]
       if applicant_email.blank?
         raise "invalid email address for application #{id}"
       end
@@ -227,7 +227,7 @@ module Pd::Application
     end
 
     # Get the answers from form_data with additional text appended
-    # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
+    # @param [Hash] hash - sanitized form data hash (see #sanitized_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
     # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
     # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
@@ -260,7 +260,7 @@ module Pd::Application
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       @full_answers ||= begin
-        sanitize_form_data_hash.tap do |hash|
+        sanitized_form_data_hash.tap do |hash|
           additional_text_fields.each do |field_name, option, additional_text_field_name|
             next unless hash.key? field_name
 
@@ -290,7 +290,7 @@ module Pd::Application
     end
 
     def email
-      user.try(:email) || sanitize_form_data_hash[:alternate_email]
+      user.try(:email) || sanitized_form_data_hash[:alternate_email]
     end
 
     def regional_partner_name
@@ -306,7 +306,7 @@ module Pd::Application
     end
 
     def applicant_name
-      "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+      "#{sanitized_form_data_hash[:first_name]} #{sanitized_form_data_hash[:last_name]}"
     end
 
     def total_score

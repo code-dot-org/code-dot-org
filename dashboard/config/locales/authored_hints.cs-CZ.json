@@ -2336,7 +2336,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Tahle úloha je lepší řešit po částech. Máš čas. Nemusíš to vyřešit na první pokus.",
           "course_starWars_loops8_b": "První část jsou podobné schody jako v předchozím problému. Jak se to řešilo před tím?",
-          "course_starWars_loops8_c": "Podívej se na plánek.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Podívej se na plánek.\n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "Tahle úloha je lepší řešit po částech. Máš čas. Nemusíš to vyřešit na první pokus.",
@@ -3179,7 +3179,7 @@
           "courseE_artist_functions1_b": "Je v pořádku, pokud se čáry překrývají."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "Váš program by měl:\n\n-   použít funkci\n-   posunout se vpřed o 100 + 75 pixelů\n-   použít funkci"
+          "courseD_artist_functions2_a": "Váš program by měl:\n- použít funkci\n- posunout se vpřed o 100 + 75 pixelů\n- použít funkci"
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_a": "Váš program by měl:\n- použít funkci\n- posunout se vpřed o 100 + 75 pixelů\n- použít funkci"
@@ -11208,7 +11208,7 @@
           "courseF_bee_variables_4_2021_1": "Namísto přičtení jedničky k proměnné přičtěte pokaždé dvojku."
         },
         "courseF_events_choice_pufferfish_-2022-2": {
-          "changeProp": "Budete potřebovat také tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "V tomto bloku budete potřebovat také:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">„měřítko“</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">„creature_18_1“</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Budete potřebovat také tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -11217,7 +11217,7 @@
           "behavior_list": "Zkuste používat taková chování jako „pohyb na východ a zacyklení“, „otáčení doprava“, a „potulování se“."
         },
         "courseF_text_choice_multiprompt_-2022-2": {
-          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`při zodpovězení`). Protože výzev je více, použijte výzvu pro _poslední_ výzvu, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`když je zodpovězeno`). Protože výzev je více, použijte štítek *poslední* výzvy, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"

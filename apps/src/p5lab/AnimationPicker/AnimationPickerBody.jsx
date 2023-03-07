@@ -18,6 +18,7 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
+import AnimationUploadButton from './AnimationUploadButton.jsx';
 import experiments from '@cdo/apps/util/experiments';
 
 const MAX_SEARCH_RESULTS = 40;
@@ -38,7 +39,8 @@ export default class AnimationPickerBody extends React.Component {
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
-    pickerType: PropTypes.string.isRequired
+    pickerType: PropTypes.string.isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired
   };
 
   state = {
@@ -219,14 +221,15 @@ export default class AnimationPickerBody extends React.Component {
       is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
-      onAnimationSelectionComplete
+      onAnimationSelectionComplete,
+      shouldRestrictAnimationUpload
     } = this.props;
 
     const searching = searchQuery !== '';
     const inCategory = categoryQuery !== '';
     const isBackgroundsTab =
       this.props.pickerType === 'backgrounds' &&
-      experiments.isEnabled('backgroundsTab');
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD);
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
@@ -288,10 +291,11 @@ export default class AnimationPickerBody extends React.Component {
                   onClick={onDrawYourOwnClick}
                 />
                 {!hideUploadOption && (
-                  <AnimationPickerListItem
-                    label={msg.animationPicker_uploadImage()}
-                    icon="upload"
-                    onClick={onUploadClick}
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldRestrictAnimationUpload={
+                      shouldRestrictAnimationUpload
+                    }
                     isBackgroundsTab={isBackgroundsTab}
                   />
                 )}

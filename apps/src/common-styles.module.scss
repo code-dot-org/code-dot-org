@@ -20,6 +20,12 @@
   &Unfocused {
     background-color: color.$neutral_dark;
     color: color.$neutral_white;
+
+    button {
+      span {
+        color: color.$neutral_dark;
+      }
+    }
   }
 }
 

@@ -1,13 +1,9 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-09-19T21:30:36.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Debug: Pink Tags\r\n\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**What is a bug?**]\r\nBugs are mistakes in code which causes it not to work as planned.\r\n:::\r\n\r\n\r\n::: details [**What is debugging?**]\r\nDebugging is the process of finding and fixing bugs.  Debugging is a problem solving process so use your problem solving steps as you try to debug. \r\n:::\r\n\r\n\r\n::: details [**What are some examples of bugs?**]\r\n\r\nBugs can be anything that causes code not to work as planned.  Some examples are misspelling, putting code in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n\r\n\r\n:::\r\n\r\n::: details [**Why does the code sometimes turn pink?**]\r\n\r\nWeb Lab is programmed to automatically detect some mistakes in HTML. When it notices a mistake, it turns that code pink.  The mistake might be in pink, or it might be somewhere before the pink code.  You'll need to carefully debug to find your mistake.\r\n\r\n:::\r\n\r\n::: details [**Why does HTML seem to work even when it's broken?**]\r\n\r\nHTML is read by your web browser to generate web pages. Since people often make little mistakes when writing their web pages, browsers are programmed to make a best guess of what you intended to do. Sometimes different browsers are even programmed to make different guesses! The only way to ensure your code looks like you intend is make sure you're always using tags correctly.\r\n\r\n:::\r\n</div>\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nThe code should not be pink | There is pink code near line 12 and line 14\r\n \r\n # Do this\r\n * Find and fix the problem that is causing the bug.",
+    "long_instructions": "# Debug: Pink Tags\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nThe code should not be pink | There is pink code near line 12 and line 14\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -19,13 +15,20 @@
     "thumbnail_url": "https://images.code.org/1eeeb9247f0b09d755110b72f853f8ef-image-1561698586467.09.23 PM.png",
     "encrypted_examples": "9ptREN96FQmB3/uy3TzGEVWoN3XVJdLzqr74MIkgski+Pqvw99w6yH63RhYQ\nNC4T5Q3yBbmmVKtBa7QfMfcxMQ==\n",
     "reference_links": [
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
       "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs",
-    "name_suffix": "_2023"
+    "map_reference": "/courses/csd-2022/guides/debugging-html",
+    "name_suffix": "_2023",
+    "validation_enabled": "false"
   },
+  "game_id": 58,
   "published": true,
+  "created_at": "2022-09-19T21:30:36.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T21:30:36.381+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Headings challenge debug 3_2022\\\"\"],\"cloned_from\":\"CSD U2 Headings challenge debug 3_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T21:30:36.381+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Headings challenge debug 3_2022\\\"\"],\"cloned_from\":\"CSD U2 Headings challenge debug 3_2022\"},{\"changed_at\":\"2023-02-17 23:12:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

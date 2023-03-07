@@ -3,5 +3,9 @@
   "display_name": "Star Quilts Module",
   "category": "csc",
   "is_featured": true,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
+  "grade_levels": "3,4,5",
+  "header": "CS Connections"
 }

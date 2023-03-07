@@ -52,6 +52,9 @@
         },
         "csd-2022/variables": {
           "display_name": "ವೇರಿಯಬಲ್‌ಗಳು"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "ವೆಬ್ ಲ್ಯಾಬ್"
         }
       }
     }

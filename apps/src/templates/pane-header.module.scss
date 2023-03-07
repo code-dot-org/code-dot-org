@@ -20,8 +20,26 @@
   border-radius: 4px;
   font-family: "Gotham 5r", sans-serif;
   line-height: 18px;
+  padding: 0;
+  border: 0;
+
   &:hover {
+    box-shadow: none;
     background-color: color.$neutral_dark10;
+  }
+
+  &:disabled {
+    background-color: color.$light_gray;
+    cursor: default;
+    border: 0;
+    &:hover {
+      background-color: color.$light_gray;
+    }
+  }
+
+  span {
+    color: color.$neutral_white;
+    font-size: 13px;
   }
 
   &Rtl {
@@ -34,9 +52,18 @@
     background-color: #606060;
     color: #bfbfbf;
     border: none;
+
+    span {
+      color: #bfbfbf;
+    }
+
     &:hover {
       background-color: #606060;
       color: color.$white;
+
+      span {
+        color: color.$white;
+      }
     }
   }
 
