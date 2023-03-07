@@ -49,7 +49,7 @@ const getCurrentTrackId = ctx => {
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     message0: 'play %1 at measure %2',
     args0: [
       fieldSoundsDefinition,
@@ -107,7 +107,7 @@ export const setCurrentLocationNextMeasure = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'go to next measure',
     helpUrl: ''
   },
@@ -218,7 +218,7 @@ export const playSoundInTrack = {
     previousStatement: null,
     nextStatement: null,
     mutator: PLAY_MULTI_MUTATOR,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -253,7 +253,7 @@ export const restInTrack = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks'
+    style: 'lab_blocks'
   },
   generator: ctx =>
     `MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
@@ -269,7 +269,7 @@ export const valueSample = {
     type: BlockTypes.VALUE_SAMPLE,
     message0: '%1',
     args0: [fieldSoundsDefinition],
-    style: 'music_blocks',
+    style: 'lab_blocks',
     output: SOUND_VALUE_TYPE
   },
   generator: ctx => [
