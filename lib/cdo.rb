@@ -110,6 +110,14 @@ module Cdo
       host
     end
 
+    def dashboard_host
+      site_host('studio.code.org')
+    end
+
+    def pegasus_host
+      site_host('code.org')
+    end
+
     def site_url(domain, path = '', scheme = '')
       path = '/' + path unless path.empty? || path[0] == '/'
       "#{scheme}//#{site_host(domain)}#{path}"
