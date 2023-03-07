@@ -1,9 +1,9 @@
 // IMPORTANT! Whenever updating the styles in this file, be sure to also update
 // the styles in cdoAccessible.js as well. The accessible styles can be generated
-// using accessibleColors.mjs.
+// using accessibleStylesGenerator.mjs.
 // From this directory in your terminal, enter:
 // - yarn add nearest-color
-// - node accessibleColors.mjs
+// - node accessibleStylesGenerator.mjs
 // - yarn remove nearest-color
 // Copy the values output by the script into cdoAccessible and commit both changes together.
 
@@ -65,6 +65,9 @@ const labBlockStyles = {
   }
 };
 
+// The order of the properties in this object is intentional
+// as it gives priority to our most-used block styles when
+// remapping to nearest colors for our accessible themes.
 export default {
   ...commonBlockStyles,
   ...labBlockStyles

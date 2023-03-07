@@ -109,11 +109,6 @@ Object.values(themes).forEach(theme => {
   );
 });
 
-console.log(
-  '\x1b[33m%s\x1b[0m',
-  'Copy the following values into cdoAccessible.js:'
-);
-
 function mapBlockStylesToPalette(blockStyles, theme) {
   const enoughColors =
     Object.keys(accessiblePalettes[theme]).length >=
@@ -145,6 +140,12 @@ function mapBlockStylesToPalette(blockStyles, theme) {
     );
   }
 }
+
+console.log(
+  '\x1b[33m%s\x1b[0m',
+  'Copy the above values into cdoAccessible.js.'
+);
+
 console.log(
   '\x1b[33m%s\x1b[0m',
   'After copying, enter:',

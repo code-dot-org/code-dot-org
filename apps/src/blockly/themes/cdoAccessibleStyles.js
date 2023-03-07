@@ -1,9 +1,9 @@
 // IMPORTANT! Whenever updating ./cdoBlockStyles.mjs, be sure to also update
 // the styles here as well. The accessible styles can be generated using
-// accessibleColors.mjs.
+// accessibleStylesGenerator.mjs.
 // From this directory in your terminal, enter:
 // - yarn add nearest-color
-// - node accessibleColors.mjs
+// - node accessibleStylesGenerator.mjs
 // - yarn remove nearest-color
 
 // Copy the values output by the script below.
