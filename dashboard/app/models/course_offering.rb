@@ -89,9 +89,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_versions_launched?
-    Rails.cache.fetch("#{cache_key}/any_versions_launched", force: !CourseOffering.should_cache?) do
-      course_versions.any?(&:launched?)
-    end
+    course_versions.any?(&:launched?)
   end
 
   def any_versions_in_development?
