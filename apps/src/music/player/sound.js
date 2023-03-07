@@ -13,7 +13,7 @@ var audioSystem = null;
 
 export function InitSound(desiredSounds) {
   // regular web version.
-  baseSoundUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
+  baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   audioSystem = new WebAudio();
 
   LoadSounds(desiredSounds);

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-04 00:44:10 UTC",
+    "serialized_at": "2023-03-07 00:00:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -167,12 +167,29 @@
       }
     },
     {
-      "key": "Sprites",
-      "name": "Sprites",
+      "key": "lesson-18",
+      "name": "Mini-Project - Robot Faces",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
+      "properties": {
+        "overview": "After a quick review of the code they have learned so far, students are introduced to their first creative project of the unit. Using the problem-solving process as a model, students define the robot face that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers. The open-ended nature of this lesson also provides flexibility for the teacher to decide how long students should spend on their work, depending on the scheduling demands of the particular course implementation.\n\n**Question of the Day:** How can we use shapes, variables, and randomness to express our creativity?\n",
+        "preparation": "* Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n* If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "Sprites",
+      "name": "Sprites",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In order to create more interesting and detailed images, students are introduced to the sprite object which allows for one variable name to control both the shape and all its aspects. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.\n\n**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n",
@@ -188,10 +205,10 @@
     {
       "key": "Sprite Properties",
       "name": "Sprite Properties",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In the last lesson, when students were introduced to sprites, they focused mainly on creating a sprite and assigning it an animation. This lesson starts to dig into what makes sprites such a powerful programming construct - that they have properties that can be modified as a program is _running_. This lays the foundation for much of what students will be doing in the rest of the unit in terms of accessing and manipulating sprite properties to create interesting behaviors in their programs. The lesson starts with a review of what a sprite is, then students move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.\n\n**Question of the Day:** How can we use sprite properties to change their appearance on the screen?\n",
@@ -207,10 +224,10 @@
     {
       "key": "Text",
       "name": "Text",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces Game Lab's text commands, giving students more practice using the coordinate plane and parameters. This is the last type of element that students will be placing on the screen - after this, students will focus on how they can control the movement and interactions of these elements. The lesson begins with asking students to caption a cartoon created in Game Lab. They then move on to Code Studio where they practice placing text on the screen and controlling other text properties, such as size. Students who complete the assessment early can go on to learn more challenging blocks related to text properties.  \n\n**Question of the Day:** How can we use text to improve our scenes and animations?\n",
@@ -226,13 +243,13 @@
     {
       "key": "Mini-Project - Captioned Scenes",
       "name": "Mini-Project - Captioned Scenes",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "After a quick review of the code they have learned so far, students are introduced to their first creative project of the unit. Using the problem-solving process as a model, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers. The open-ended nature of this lesson also provides flexibility for the teacher to decide how long students should spend on their work, depending on the scheduling demands of the particular course implementation.\n\n**Question of the Day:** How can we use Game Lab to express our creativity?\n",
+        "overview": "After a quick review of the code they have learned so far, students start working on their next creative project of the unit. Using the problem-solving process as a model again, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers. The open-ended nature of this lesson also provides flexibility for the teacher to decide how long students should spend on their work, depending on the scheduling demands of the particular course implementation.\n\n**Question of the Day:** How can we use Game Lab to express our creativity?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we use Game Lab to express our creativity?\n\nIn this lesson, you will get the opportunity to be creative by using the problem-solving process to design and program a scene of your choice. \n"
       },
@@ -245,10 +262,10 @@
     {
       "key": "The Draw Loop",
       "name": "The Draw Loop",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. Students should leave the lesson understanding that the commands in the draw loop are called after all other code but are then called repeatedly to create animation. Students will have a chance to continue to develop an understanding of this behavior in the next two lessons, but laying a strong conceptual foundation in this lesson will serve them well for the rest of the unit.\n\n**Question of the Day:** How can we animate our images in Game Lab?\n",
@@ -264,10 +281,10 @@
     {
       "key": "Sprite Movement",
       "name": "Sprite Movement",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson builds on the draw loop that students learned previously to create programs with _purposeful_ motion. Students learn how to control sprite movement using a construct called the counter pattern, which incrementally changes a sprite's properties. Students first brainstorm different ways that they could animate sprites by controlling their properties, then explore the counter pattern in Code Studio. After examining working code, students try using the counter pattern to create various types of sprite movements. The skills that students build in this lesson lay the foundation for all of the animations and games that they will make throughout the rest of the unit.\n\n**Question of the Day:** How can we control sprite movement in Game Lab?\n",
@@ -283,10 +300,10 @@
     {
       "key": "Mini-Project - Animation",
       "name": "Mini-Project - Animation",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson is a chance for students to get more creative with what they have learned as students are asked to combine different methods that they have learned to create an animated scene. Students first review the types of movement and animation that they have learned and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab.\n\n**Question of the Day:** How can we combine different programming patterns to make a complete animation?\n",
@@ -302,10 +319,10 @@
     {
       "key": "Conditionals",
       "name": "Conditionals",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces booleans and conditionals, which allow a program to run differently depending on whether a condition is true. Students start by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates Boolean expressions, and how they can be used to structure a program.\n\n**Question of the Day:**  How can programs react to changes as they are running?\n",
@@ -321,10 +338,10 @@
     {
       "key": "Keyboard Input",
       "name": "Keyboard Input",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "One common way conditionals are used is to check for different types of user input, especially key presses. Following the introduction to booleans and _if_ statements in the previous lesson, students are introduced to a new block called [`keyDown()`(#fff176)](/docs/gamelab/keyDown/) which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson, students will have written programs that take keyboard input from the user to control sprites on the screen.\n\n**Question of the Day:** How can our programs react to user input?\n",
@@ -340,10 +357,10 @@
     {
       "key": "Mouse Input",
       "name": "Mouse Input",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students continue to explore ways to use conditional statements to take user input - this time with the mouse. They will also expand their understanding of conditionals to include _else_, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not. This concept is introduced alongside several new mouse input commands, allowing students to gradually build up programs that use input in different ways.\n\n**Question of the Day:** What are more ways that the computer can react to user input?\n",
@@ -359,10 +376,10 @@
     {
       "key": "Project - Interactive Card",
       "name": "Project - Interactive Card",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This end-of-chapter assessment is a good place for students to bring together all the pieces they have learned (drawing, variables, sprites, images, conditionals, user input) in one place. In this project, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.\n\n**Question of the Day:**  What skills and practices are important when creating an interactive program?\n",
@@ -378,10 +395,10 @@
     {
       "key": "Velocity",
       "name": "Velocity",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson launches a major theme of the chapter: that complex behavior can be represented in simpler ways to make it easier to write and reason about code. After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the idea of hiding those patterns in a single [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block.  Students then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at various ways that they are able to code more complex behaviors in their sprites. Over the next several lessons, students will see how this method of managing complexity allows them to produce more interesting sprite behaviors.\n\n**Question of the Day:**  How can programming languages hide complicated patterns so that it is easier to program?\n",
@@ -397,10 +414,10 @@
     {
       "key": "Collision Detection",
       "name": "Collision Detection",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson formally introduces the use of abstractions, simple ways of representing underlying complexity. In the last lesson, students were exposed to the idea of using one block to represent complex code. Working in pairs, students further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. Students then use a single block, the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) block, to represent this complexity and to create different effects when sprites collide. By the end of the lesson, students should understand that by using a single block to represent this complexity, it becomes much easier to write and reason about code and appreciate the value of using abstractions. \n\n**Question of the Day:** How can programming help make complicated problems more simple?\n",
@@ -416,10 +433,10 @@
     {
       "key": "Mini-Project - Side Scroller",
       "name": "Mini-Project - Side Scroller",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson is another chance for students to get more creative with what they have learned. Students use what they have learned about collision detection and setting velocity to create a simple side-scroller game. After looking at a sample side-scroller game, students brainstorm what sort of side-scroller they would like to make, then use a structured process to program the game in Code Studio. This lesson can be shortened or lengthened depending on time constraints. \n\n**Question of the Day:**  How can the new types of sprite movement and collision detection be used to create a game?\n",
@@ -435,10 +452,10 @@
     {
       "key": "Complex Sprite Movement",
       "name": "Complex Sprite Movement",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson does not introduce any new blocks and in fact, only uses patterns students have seen in Chapter 1 and demonstrates how combining these patterns, in particular the abstractions students learned in the previous two lessons, allows them to build new behaviors for their sprites. Specifically, this lesson has students learn how to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern and observe the different types of movement that result, such as simulating gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.\n\n**Question of the Day:** How can previous blocks be combined in new patterns to make interesting movements?\n",
@@ -454,10 +471,10 @@
     {
       "key": "Collisions",
       "name": "Collisions",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)). This is the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.\n\n**Question of the Day:** How can programmers build on abstractions to create further abstractions?\n",
@@ -473,10 +490,10 @@
     {
       "key": "Mini-Project - Flyer Game",
       "name": "Mini-Project - Flyer Game",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson is another chance for students to get more creative with what they have learned. Students use what they have learned about simulating gravity and the different types of collisions to create simple flyer games. After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio.\n\n**Question of the Day:**  How can the new types of collisions and modeling movement be used to create a game?\n",
@@ -492,10 +509,10 @@
     {
       "key": "Functions",
       "name": "Functions",
-      "absolute_position": 24,
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 24,
+      "relative_position": 25,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In previous lessons, students have learned to use a number of abstractions in their programs which have allowed them to build much more complex programs while ignoring the details of how that behavior is created. In this lesson, students learn to build abstractions of their own by creating functions that will serve to organize their code, make it more readable, and remove repeated blocks of code. Students first think about what sorts of new blocks they would like in Game Lab, and what code those blocks would contain inside. Afterward, students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function.\n\n**Question of the Day:** How can programmers use functions to create their own abstractions?\n",
@@ -511,10 +528,10 @@
     {
       "key": "The Game Design Process",
       "name": "The Game Design Process",
-      "absolute_position": 25,
+      "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 25,
+      "relative_position": 26,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to the process they will use to design games for the remainder of the unit which is centered around a project guide that asks students to define their sprites, variables, and functions _before_ they begin programming their game. Students begin by playing a game on Game Lab where the code is hidden, discussing what they think the sprites, variables, and functions would need to be to make the game. For the purposes of heavily scaffolding the software development process, students are then given a completed project guide that provides starter code and shows one way to implement the game. Students are then walked through this implementation process through a series of levels and have an opportunity to make improvements to the game to make it their own in the final level. In the subsequent lessons, students will need to complete a greater portion of the guide independently, and for the final project, they will follow this process largely independently.\n\n**Question of the Day:**  How does having a plan help to make a large project easier?\n",
@@ -530,10 +547,10 @@
     {
       "key": "Using the Game Design Process",
       "name": "Using the Game Design Process",
-      "absolute_position": 26,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 26,
+      "relative_position": 27,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this multi-day lesson, students use the problem-solving process from Unit 1 to create a platform jumper game. This lesson also builds on the use of the Project Guide in the previous lesson by having students complete more of this project guide independently before using it to build a game. Students begin the lesson by looking at an example of a platform jumper, then define what their games will look like. Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game. After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.\n\n**Question of the Day:**  How can the problem-solving process help programmers to manage large projects?\n",
@@ -549,10 +566,10 @@
     {
       "key": "Project - Design a Game",
       "name": "Project - Design a Game",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
         "announcements": [
           {
@@ -579,7 +596,7 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": true,
       "has_lesson_plan": false,
       "relative_position": 1,
@@ -867,6 +884,48 @@
       "seeding_key": {
         "lesson_activity.key": "6197ff7b-e89b-4bff-a52d-dc5901568f52",
         "lesson.key": "Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "e53c0056-9d14-4da3-962d-0609f5a88efe",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e53c0056-9d14-4da3-962d-0609f5a88efe",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "9efe6a1c-eb77-4c90-bad3-da379606c67a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "83413d3a-dccf-41f7-b38d-469207901c5a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "83413d3a-dccf-41f7-b38d-469207901c5a",
+        "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -3124,6 +3183,204 @@
       "seeding_key": {
         "activity_section.key": "ba918b42-40c9-4e13-bccd-924e08e01cde",
         "lesson_activity.key": "6197ff7b-e89b-4bff-a52d-dc5901568f52"
+      }
+    },
+    {
+      "key": "47d27ccf-6d83-46d4-8939-1f7517061c95",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are some ways we can use variables with random numbers to make our programs different each time we run them?\n\n**Share:** Allow students to share what they remember as a group review.\n\n**Discussion Goal:** The goal of this discussion is to review how to use variables with random numbers when drawing shapes. Students may share ways that they have used variables with random numbers in previous lessons as well as new ideas that they haven’t seen yet.\n",
+        "name": "Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "47d27ccf-6d83-46d4-8939-1f7517061c95",
+        "lesson_activity.key": "e53c0056-9d14-4da3-962d-0609f5a88efe"
+      }
+    },
+    {
+      "key": "d1c9ed2c-04bf-454a-9fbc-60403662fdd3",
+      "position": 2,
+      "properties": {
+        "description": "You've learned how to do some really cool things in Game Lab. Today you'll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else's idea, you get to come up with an idea of your own. Your robot face can be as creative as you want since you can add lots of unique and different features from the shape of its head to the number of eyes or mouths or if it has antennas … the sky’s the limit so it's time to get creative!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d1c9ed2c-04bf-454a-9fbc-60403662fdd3",
+        "lesson_activity.key": "e53c0056-9d14-4da3-962d-0609f5a88efe"
+      }
+    },
+    {
+      "key": "465e8b5f-bd51-4885-9b9d-5fe2d49f7d9f",
+      "position": 3,
+      "properties": {
+        "description": "**Question of the Day:** How can we use shapes, variables, and randomness to express our creativity?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check in with how well students understand the course content so far. \n\nYou may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag out to multiple days and for students' work to spiral beyond the scope of this project.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "465e8b5f-bd51-4885-9b9d-5fe2d49f7d9f",
+        "lesson_activity.key": "e53c0056-9d14-4da3-962d-0609f5a88efe"
+      }
+    },
+    {
+      "key": "2224277a-ca84-4713-a137-d0c990fb241a",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Pass out copies of the [r activity_guide_-_robot_face_planning/csd3/2023]. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the robot face they create at the end of this lesson.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2224277a-ca84-4713-a137-d0c990fb241a",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "fc020b54-3fc8-4864-951b-ce668ffa4a77",
+      "position": 2,
+      "properties": {
+        "description": "**Circulate:** As students fill out a description of the robot face they want to create, circulate the room to ask students about their ideas and help guide them to make sure they are thinking of how they could include variables and random features. Remind students about the `shape`, `regularPolygon`, `line`, `arc`, and `point` blocks so that they know they are not limited to just `ellipse` and `rect` blocks.\n",
+        "name": "Step 1: Define - Describe your Image"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc020b54-3fc8-4864-951b-ce668ffa4a77",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "9339beae-6aac-4958-9c4d-e7b577d07aee",
+      "position": 3,
+      "properties": {
+        "description": "As students answer questions about the design of their robot face, continue to ensure that they are thinking about variables and random features. After they have completed their designs, ensure that they can identify which blocks will be needed for the different features on the face.\n",
+        "name": "Step 2: Prepare - Design your Image",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if a student's initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well.\n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9339beae-6aac-4958-9c4d-e7b577d07aee",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "cb131886-b1a9-4b12-b5a1-0409e1697c49",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your programs. One thing that could make this challenging is the *blank screen* effect: unlike previous levels, you won’t have any starter code or direction on what to create. This means you might not be sure what exactly you’re supposed to do, or you might run into bugs you need to fix which can be frustrating. Luckily, we can also use the problem-solving process to help with these types of projects as well!\n",
+        "name": "Step 3: Try - Develop your Image",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb131886-b1a9-4b12-b5a1-0409e1697c49",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "ddd15dbf-db18-4920-80cd-ba04b2dba229",
+      "position": 5,
+      "properties": {
+        "description": "**Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddd15dbf-db18-4920-80cd-ba04b2dba229",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "db7a1c8b-4d78-4cfa-aac9-ab9b2edf862b",
+      "position": 6,
+      "properties": {
+        "description": "If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db7a1c8b-4d78-4cfa-aac9-ab9b2edf862b",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "c0e2c624-f4ec-4fce-9e45-ed73d1070b78",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Not all bullets in the Problem Solving Process will be applicable to every problem a student has. Instead, encourage them to pick one or two from each category to try each time they are stuck\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c0e2c624-f4ec-4fce-9e45-ed73d1070b78",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "1e934931-bc5e-45b6-b064-756f73811322",
+      "position": 8,
+      "properties": {
+        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. They will have a chance to review all of the blocks they have learned before they start on their robot faces, as some may help them create the features of their robot faces and features. They can complete these activities as a review or use them as resources while they work on their projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
+        "progression_name": "Review Shape Blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e934931-bc5e-45b6-b064-756f73811322",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "92f66cc4-5fba-49ae-85be-36973c4e5cbf",
+      "position": 9,
+      "properties": {
+        "progression_name": "Create Your Robot Face",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n* Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n* Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issues before asking for help.\n* If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92f66cc4-5fba-49ae-85be-36973c4e5cbf",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "9ccac27e-7ede-449d-80e8-2e1451d6f8e8",
+      "position": 10,
+      "properties": {
+        "description": "Allow students to walk around the room and see the robot faces that each of their classmates has created. Celebrate all of the different ideas that students were able to implement with the same basic blocks.\n",
+        "name": "Gallery Walk",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to formalize this process by having each student write down one positive quality of each project, or having students \"draw names\" to comment on one particular classmate's work.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of learning goals.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ccac27e-7ede-449d-80e8-2e1451d6f8e8",
+        "lesson_activity.key": "9efe6a1c-eb77-4c90-bad3-da379606c67a"
+      }
+    },
+    {
+      "key": "1fbb6201-1556-4b41-9a14-4ae07fff50fc",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day:** How can we use shapes, variables and randomness to express our creativity?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What was one especially creative way you saw someone else use the blocks today?\n\n**Share:** Have students share what they appreciated about their classmates' projects. You may want to do this \"popcorn\" style, with each student who responds choosing the next person to share.\n\n**Discussion Goal:** This discussion should serve as a celebration of what the students have accomplished. As students share what they have seen, encourage them to learn from each other and ask questions if they are not sure how to do something. Highlight how students were able to do very different things with the same tools.\n",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fbb6201-1556-4b41-9a14-4ae07fff50fc",
+        "lesson_activity.key": "83413d3a-dccf-41f7-b38d-469207901c5a"
       }
     },
     {
@@ -7140,6 +7397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023"
+        ],
         "progression": "Animation and Game Templates"
       },
       "bonus": false,
@@ -8037,6 +8297,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Review Shape Blocks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 L7 review_2023"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "1e934931-bc5e-45b6-b064-756f73811322"
+      },
+      "level_keys": [
+        "CSD U3 L7 review_2023"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Your Robot Face"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 L7 mini project_2023"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "92f66cc4-5fba-49ae-85be-36973c4e5cbf"
+      },
+      "level_keys": [
+        "CSD U3 L7 mini project_2023"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSD U3L7 - Predict_test2023"
         ],
@@ -8057,7 +8361,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8082,7 +8386,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8107,7 +8411,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8132,7 +8436,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8157,7 +8461,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8182,7 +8486,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -8207,7 +8511,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8232,7 +8536,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8257,7 +8561,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8282,7 +8586,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8307,7 +8611,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8332,7 +8636,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8357,7 +8661,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8382,7 +8686,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8407,7 +8711,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8432,7 +8736,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8457,7 +8761,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8482,7 +8786,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8507,7 +8811,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8532,7 +8836,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8557,7 +8861,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8582,7 +8886,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8607,7 +8911,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8632,7 +8936,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8657,7 +8961,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8682,7 +8986,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8707,7 +9011,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8732,7 +9036,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8757,7 +9061,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8782,7 +9086,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8807,7 +9111,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8832,7 +9136,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8857,7 +9161,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8882,7 +9186,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8907,7 +9211,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8932,7 +9236,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8957,7 +9261,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8982,7 +9286,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9007,7 +9311,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9032,7 +9336,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -9057,7 +9361,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9082,7 +9386,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9107,7 +9411,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9132,7 +9436,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9157,7 +9461,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9182,7 +9486,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9207,7 +9511,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9232,7 +9536,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9257,7 +9561,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9282,7 +9586,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9307,7 +9611,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9332,7 +9636,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9357,7 +9661,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9382,7 +9686,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9407,7 +9711,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9432,7 +9736,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9457,7 +9761,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9482,7 +9786,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9507,7 +9811,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9532,7 +9836,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9557,7 +9861,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9582,7 +9886,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9607,7 +9911,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9632,7 +9936,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9657,7 +9961,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9682,7 +9986,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9707,7 +10011,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9732,7 +10036,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9757,7 +10061,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9782,7 +10086,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -9807,7 +10111,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9832,7 +10136,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9857,7 +10161,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9882,7 +10186,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9907,7 +10211,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9932,7 +10236,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9957,7 +10261,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9982,7 +10286,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 117,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10007,7 +10311,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 118,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10032,7 +10336,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 119,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10057,7 +10361,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 120,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10082,7 +10386,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10107,7 +10411,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10132,7 +10436,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10157,7 +10461,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10182,7 +10486,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10207,7 +10511,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -10232,7 +10536,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -10257,7 +10561,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10282,7 +10586,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -10307,7 +10611,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10332,7 +10636,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 131,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10357,7 +10661,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 132,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10382,7 +10686,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 133,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10407,7 +10711,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 134,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10432,7 +10736,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 135,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10457,7 +10761,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 136,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10482,7 +10786,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 137,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10507,7 +10811,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 138,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10532,7 +10836,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10557,7 +10861,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 140,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10582,7 +10886,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 141,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10607,7 +10911,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 142,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10632,7 +10936,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 143,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10657,7 +10961,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 144,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10682,7 +10986,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 145,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10707,7 +11011,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 146,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10732,7 +11036,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10757,7 +11061,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 148,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10782,7 +11086,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 149,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10807,7 +11111,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 150,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10832,7 +11136,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 151,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10857,7 +11161,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 152,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -10882,7 +11186,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 153,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10907,7 +11211,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 154,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10932,7 +11236,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 155,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10957,7 +11261,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 156,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10982,7 +11286,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 157,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11007,7 +11311,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 158,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11032,7 +11336,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 159,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11057,7 +11361,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 160,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11082,7 +11386,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 161,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11107,7 +11411,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 162,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11132,7 +11436,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 163,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11157,7 +11461,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 164,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11182,7 +11486,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 165,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11207,7 +11511,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 166,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11232,7 +11536,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 167,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11257,7 +11561,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 168,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11282,7 +11586,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 169,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11307,7 +11611,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 170,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11332,7 +11636,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 171,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11357,7 +11661,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 172,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11382,7 +11686,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 173,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11407,7 +11711,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 174,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11432,7 +11736,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 175,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11457,7 +11761,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 176,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11482,7 +11786,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 177,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11507,7 +11811,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 178,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -11532,7 +11836,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 179,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11557,7 +11861,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11582,7 +11886,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 181,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11607,7 +11911,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 182,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11632,7 +11936,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 183,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11657,7 +11961,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 184,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11682,7 +11986,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 185,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11707,7 +12011,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 186,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11732,7 +12036,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 187,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11757,7 +12061,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 188,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11782,7 +12086,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 189,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11807,7 +12111,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 190,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -11832,7 +12136,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 191,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -11857,7 +12161,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 192,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11882,7 +12186,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 193,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11907,7 +12211,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 194,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11932,7 +12236,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 195,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11957,7 +12261,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 196,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11982,7 +12286,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 197,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12007,7 +12311,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 198,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12032,7 +12336,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 199,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12057,7 +12361,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 200,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12082,7 +12386,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 201,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12107,7 +12411,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 202,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12132,7 +12436,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 203,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12157,7 +12461,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 204,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12182,7 +12486,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 205,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12207,7 +12511,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 206,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12232,7 +12536,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 207,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12257,7 +12561,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 208,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12282,7 +12586,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 209,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12307,7 +12611,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 210,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12332,7 +12636,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 211,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12357,7 +12661,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 212,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12382,7 +12686,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 213,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12407,7 +12711,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 214,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12432,7 +12736,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 215,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12457,7 +12761,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 216,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12482,7 +12786,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 217,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12507,7 +12811,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 218,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12532,7 +12836,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 219,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12557,7 +12861,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 220,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12582,7 +12886,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 221,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12607,7 +12911,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 222,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12632,7 +12936,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 223,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -13087,6 +13391,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "d22d84cc-f379-48f6-ab9b-1c7d3ef8e704"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 L7 review_2023",
+        "script_level.level_keys": [
+          "CSD U3 L7 review_2023"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "1e934931-bc5e-45b6-b064-756f73811322"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 L7 mini project_2023",
+        "script_level.level_keys": [
+          "CSD U3 L7 mini project_2023"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "92f66cc4-5fba-49ae-85be-36973c4e5cbf"
       }
     },
     {
@@ -15336,6 +15664,18 @@
       }
     },
     {
+      "name": "Activity Guide - Robot Face Planning",
+      "url": "https://docs.google.com/document/d/1xy53Z--2I9X4k75Besh15eGTY3Rpo8Asdba6uctI9nY/edit?usp=sharing",
+      "key": "activity_guide_-_robot_face_planning",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_-_robot_face_planning"
+      }
+    },
+    {
       "name": "Animated Scene",
       "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
       "key": "animated_scene",
@@ -16042,6 +16382,30 @@
       }
     },
     {
+      "name": "Mini-Project - Robot Faces",
+      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/edit?usp=sharing",
+      "key": "mini-project_-_robot_faces",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_robot_faces"
+      }
+    },
+    {
+      "name": "Mini-Project - Robot Faces",
+      "url": "https://docs.google.com/document/d/1jereSAhnM_DHRHJ7xmnhJl1cp9U6QiuNDbHnVaJHJA8/edit?usp=sharing",
+      "key": "mini-project_-_robot_faces_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_robot_faces_1"
+      }
+    },
+    {
       "name": "Mini-Project - Side Scroller",
       "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview",
       "key": "mini-project_-_side_scroller",
@@ -16153,6 +16517,18 @@
       }
     },
     {
+      "name": "Problem Solving with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit?usp=share_link",
+      "key": "problem_solving_with_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_programming"
+      }
+    },
+    {
       "name": "Programming for a Purpose",
       "url": "https://docs.google.com/presentation/d/1lR2Il6bOm-OHQltTtHO5XJ_p0q2J-3dye_RiCZW-sGY/template/preview",
       "key": "programming_for_a_purpose",
@@ -16235,6 +16611,18 @@
       },
       "seeding_key": {
         "resource.key": "random_sprite_flipbook"
+      }
+    },
+    {
+      "name": "Robot Faces",
+      "url": "https://docs.google.com/document/d/1MQBo1-nmTLCjrUihCOBSU9X__V7LgS4H0Clc2obp_Ek/edit?usp=sharing",
+      "key": "robot_faces",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "robot_faces"
       }
     },
     {
@@ -17213,6 +17601,36 @@
         "lesson.key": "Velocity",
         "resource.key": "velocity_2"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "activity_guide_-_robot_face_planning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "mini-project_-_robot_faces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "mini-project_-_robot_faces_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "problem_solving_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "robot_faces"
+      }
     }
   ],
   "scripts_resources": [
@@ -17788,6 +18206,16 @@
       }
     },
     {
+      "key": "03acfea1-e135-4363-970e-ae24d3a8aef0",
+      "properties": {
+        "description": "Use a structured process to plan and develop a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "03acfea1-e135-4363-970e-ae24d3a8aef0"
+      }
+    },
+    {
       "key": "0442e7e5-7306-4c57-8551-0e3008c07965",
       "properties": {
         "description": "Use conditionals to react to keyboard input or changes in variables / properties"
@@ -18175,6 +18603,16 @@
       "seeding_key": {
         "lesson.key": "Sprite Movement",
         "objective.key": "d3475b2f-0839-4265-81b8-0ae6cde4f38b"
+      }
+    },
+    {
+      "key": "e463ba5c-6fb7-46b4-ac0b-b2a608593a77",
+      "properties": {
+        "description": "Apply variables, shapes, and ranomNumber concepts to create a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "e463ba5c-6fb7-46b4-ac0b-b2a608593a77"
       }
     },
     {

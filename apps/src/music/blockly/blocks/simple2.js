@@ -3,12 +3,18 @@ import {
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
+  FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE
 } from '../constants';
-import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
+import {
+  fieldSoundsDefinition,
+  fieldPatternDefinition,
+  fieldRestDurationDefinition
+} from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
+import {DEFAULT_PATTERN_LENGTH} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -155,6 +161,36 @@ export const playSoundAtCurrentLocationSimple2 = {
         MusicPlayer.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
         )
+      );
+    `
+};
+
+export const playPatternAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'play pattern %1',
+    args0: [fieldPatternDefinition],
+
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'music_blocks',
+    tooltip: 'play pattern',
+    helpUrl: ''
+  },
+  generator: block =>
+    `
+      MusicPlayer.playPatternAtMeasureById(
+        ${JSON.stringify(block.getFieldValue(FIELD_PATTERN_NAME))},
+        ProgramSequencer.getCurrentMeasure(),
+        __insideWhenRun,
+        null,
+        __currentFunction,
+        RandomSkipManager.getSkipContext(),
+        __effects
+      );
+      ProgramSequencer.updateMeasureForPlayByLength(
+        ${DEFAULT_PATTERN_LENGTH}
       );
     `
 };
