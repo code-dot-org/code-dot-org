@@ -10,7 +10,7 @@ export const valueSample = {
     type: BlockTypes.VALUE_SAMPLE,
     message0: '%1',
     args0: [fieldSoundsDefinition],
-    style: 'music_blocks',
+    style: 'lab_blocks',
     output: SOUND_VALUE_TYPE
   },
   generator: ctx => [
