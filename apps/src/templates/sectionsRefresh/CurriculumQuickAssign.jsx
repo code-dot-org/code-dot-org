@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import QuickAssignTable from './QuickAssignTable';
+import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const MARKETING_AUDIENCE = {
@@ -51,8 +52,11 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   };
 
   // To distinguish between types of tables: HOC & PL vs Grade Bands
-  const isGradeBand =
-    marketingAudience !== (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL);
+  const isPlOrHoc = () => {
+    return (
+      marketingAudience === (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL)
+    );
+  };
 
   return (
     <div>
@@ -132,8 +136,16 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           </label>
         </div>
       </div>
-      {marketingAudience && isGradeBand && courseOfferings && (
+      {marketingAudience && !isPlOrHoc() && courseOfferings && (
         <QuickAssignTable
+          marketingAudience={marketingAudience}
+          courseOfferings={courseOfferings}
+          updateCourse={course => updateSection('course', course)}
+          sectionCourse={sectionCourse}
+        />
+      )}
+      {marketingAudience && isPlOrHoc() && courseOfferings && (
+        <QuickAssignTableHocPl
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
           updateCourse={course => updateSection('course', course)}
