@@ -3,7 +3,7 @@ import ChangeUserTypeModal from './ChangeUserTypeModal';
 import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
-  handlSubmit: action('handleSubmit callback'),
+  handleSubmit: action('handleSubmit callback'),
   handleCancel: action('handleCancel callback')
 };
 

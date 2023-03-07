@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),
-  handleCancel: action('handlCancel callback')
+  handleCancel: action('handleCancel callback')
 };
 
 export default {
