@@ -96,9 +96,9 @@ const CheckForUnderstanding = ({
         </label>
 
         <div className={styles.studentResponsesColumns}>
-          {data.responses.map((response, index) => (
-            <div key={index} className={styles.studentAnswer}>
-              {response.text}
+          {data.responses.map(response => (
+            <div key={response.user_id} className={styles.studentAnswer}>
+              <p>{response.text}</p>
             </div>
           ))}
         </div>
