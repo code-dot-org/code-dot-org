@@ -63,7 +63,7 @@ export default function QuickAssignTableHocPl({
   If called with 8 headers, the first two tables will be given one additional header.
   */
   const retrieveTableSplit = tableIndex => {
-    var offerings = {};
+    const offerings = {};
     // If the headers don't evenly divide, distribute extras starting at table 0
     var extraHeaderCount = overflowCount > tableIndex ? 1 : 0;
     for (var i = 0; i < minHeadersPerTable + extraHeaderCount; i++) {
