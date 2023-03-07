@@ -8,12 +8,13 @@ import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
 import ProgramSequencer from '../player/ProgramSequencer';
+import RandomSkipManager from '../player/RandomSkipManager';
 import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from '../context';
+import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -54,6 +55,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
+    this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
@@ -241,7 +243,12 @@ class UnconnectedMusicView extends React.Component {
   };
 
   compileSong = () => {
-    return this.musicBlocklyWorkspace.compileSong();
+    return this.musicBlocklyWorkspace.compileSong({
+      MusicPlayer: this.player,
+      ProgramSequencer: this.programSequencer,
+      RandomSkipManager: this.randomSkipManager,
+      getTriggerCount: () => this.triggerCount
+    });
   };
 
   executeCompiledSong = () => {
@@ -249,20 +256,15 @@ class UnconnectedMusicView extends React.Component {
     // populated next.
     this.player.clearWhenRunEvents();
 
-    this.musicBlocklyWorkspace.executeCompiledSong({
-      MusicPlayer: this.player,
-      ProgramSequencer: this.programSequencer,
-      getTriggerCount: () => this.triggerCount
-    });
+    this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
   playSong = () => {
     this.player.stopSong();
 
-    const codeChanged = this.compileSong();
-    if (codeChanged) {
-      this.executeCompiledSong();
-    }
+    this.compileSong();
+
+    this.executeCompiledSong();
 
     this.player.playSong();
 
@@ -271,6 +273,9 @@ class UnconnectedMusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
+
+    this.executeCompiledSong();
+
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
   };
@@ -378,43 +383,45 @@ class UnconnectedMusicView extends React.Component {
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <div id="music-lab-container" className={moduleStyles.container}>
-            {this.state.showInstructions &&
-              instructionsPosition === InstructionsPositions.TOP &&
-              this.renderInstructions(InstructionsPositions.TOP)}
-
-            {this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                true,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-
-            <div className={moduleStyles.middleArea}>
+          <PlayingContext.Provider value={{isPlaying: this.state.isPlaying}}>
+            <div id="music-lab-container" className={moduleStyles.container}>
               {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.LEFT &&
-                this.renderInstructions(InstructionsPositions.LEFT)}
+                instructionsPosition === InstructionsPositions.TOP &&
+                this.renderInstructions(InstructionsPositions.TOP)}
 
-              <div id="blockly-area" className={moduleStyles.blocklyArea}>
-                <div className={moduleStyles.topButtonsContainer}>
-                  <TopButtons
-                    clearCode={this.clearCode}
-                    uploadSound={file => this.soundUploader.uploadSound(file)}
-                  />
+              {this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  true,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
+
+              <div className={moduleStyles.middleArea}>
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.LEFT &&
+                  this.renderInstructions(InstructionsPositions.LEFT)}
+
+                <div id="blockly-area" className={moduleStyles.blocklyArea}>
+                  <div className={moduleStyles.topButtonsContainer}>
+                    <TopButtons
+                      clearCode={this.clearCode}
+                      uploadSound={file => this.soundUploader.uploadSound(file)}
+                    />
+                  </div>
+                  <div id="blockly-div" />
                 </div>
-                <div id="blockly-div" />
+
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.RIGHT &&
+                  this.renderInstructions(InstructionsPositions.RIGHT)}
               </div>
 
-              {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.RIGHT &&
-                this.renderInstructions(InstructionsPositions.RIGHT)}
+              {!this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  false,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
             </div>
-
-            {!this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                false,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-          </div>
+          </PlayingContext.Provider>
         </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );

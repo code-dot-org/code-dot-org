@@ -14,10 +14,11 @@ export default function SingleSectionSetUp({
 
   return (
     <div>
-      <h2>{i18n.classSectionNum({num: sectionNum})}</h2>
+      <h2>{i18n.classSection()}</h2>
       <label>
         {i18n.className()}
         <input
+          required
           type="text"
           className={moduleStyles.classNameTextField}
           value={section.name}
@@ -32,7 +33,6 @@ export default function SingleSectionSetUp({
         values={section.grades || []}
         setValues={g => updateSection('grades', g)}
       />
-      <hr />
     </div>
   );
 }

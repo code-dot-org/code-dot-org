@@ -32,13 +32,6 @@ We're working to give every student the opportunity to learn computer science â€
 <a class="link-button" href="https://donate.code.org/give/172233/#!/donation/checkout">Donate now</a> <a class="link-button" href="https://donate.code.org/campaign/computer-science-education/c142257">Start a fundraiser</a>
 
 
-
-## Have Amazon make a donation for you
-If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
-
-<a class="link-button" href="/donate/amazonsmile">Donate with AmazonSmile</a>
-
-
 ## Donate through DAF Direct
 Donate through your donor advised fund with Fidelity Charitable, Schwab Charitable or BNY Mellon and make your grant recommendation to Code.org through the DAF Direct online form.
 

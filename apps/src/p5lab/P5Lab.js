@@ -288,6 +288,8 @@ export default class P5Lab {
       // If we reset a puzzle, it no longer has any custom uploads.
       // Therefore we can set restricted share mode to false.
       project.sourceHandler.setInRestrictedShareMode(false);
+      // If we reset a puzzle, we should reset the selected poem on that project.
+      project.sourceHandler.setSelectedPoem(null);
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
