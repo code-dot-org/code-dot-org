@@ -4,10 +4,34 @@
   max-width: 970px;
   margin: auto;
 
+  .navLinks {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    a {
+      text-decoration: underline;
+    }
+
+    a.navLinkLeft {
+      float: left;
+    }
+
+    a.navLinkRight {
+      float: right;
+    }
+  }
+
   h1,
   h2 {
     color: $neutral_dark;
-    margin-top: 12px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $neutral_dark20;
+  }
+
+  .markdown h1,
+  .markdown h2 {
+    border-bottom: unset;
   }
 
   p,
@@ -27,47 +51,67 @@
   }
 }
 
-.summaryContainer.left-aligned {
-  margin-left: 0;
-}
-
-.studentAnswerContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-}
-
-.studentAnswer {
-  padding: 8px;
-  margin-bottom: 12px;
-  background-color: $lightest_cyan; // TODO
-  display: block;
-
-  p {
-    margin: 0;
-  }
-}
-
-.navLinks {
-  padding-top: 12px;
-  padding-bottom: 12px;
-
-  a {
-    text-decoration: underline;
+.studentResponses {
+  select {
+    display: block;
   }
 
-  a.navLinkLeft {
+  .studentResponsesColumns {
+    width: 100%;
+    columns: 2 auto;
+    column-gap: 48px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
+
+  .studentAnswer {
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: $lightest_cyan; // TODO
+    display: block;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  /* stylelint-disable selector-pseudo-class-no-unknown */
+  .studentsSubmittedLeft {
     float: left;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    top: -44px; // h2 height+margins
+
+    span {
+      vertical-align: middle;
+    }
+
+    :global(.fa-user) {
+      vertical-align: middle;
+      padding-left: 4px;
+      font-size: 24px;
+      color: $brand_primary_default;
+    }
   }
 
-  a.navLinkRight {
+  .studentsSubmittedRight {
     float: right;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    top: -42px;
+
+    span {
+      vertical-align: middle;
+    }
+
+    :global(.fa-user) {
+      vertical-align: middle;
+      padding-right: 4px;
+      font-size: 24px;
+      color: $brand_primary_default;
+    }
   }
+  /* stylelint-enable selector-pseudo-class-no-unknown */
 }

@@ -36,28 +36,17 @@ const CheckForUnderstanding = ({
   const teacherMarkdown = data.teacher_markdown;
   const height = data.level.height || '80';
 
-  // Split responses into two arrays for displaying in columns.
-  const responseColumns = [
-    data.responses.slice(0, Math.ceil(data.responses.length / 2)),
-    data.responses.slice(data.responses.length / 2 + 1)
-  ];
-
   return (
     <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
       <div className={styles.navLinks}>
-        <a
-          className={styles.navLinkBack}
-          href={currentLevel.url}
-          icon="arrow-left"
-        >
+        <a className={styles.navLinkBack} href={currentLevel.url}>
           &lt; Back to level
         </a>
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
             href={nextLevel.url}
-            icon="arrow-right"
           >
             Next level &gt;
           </a>
@@ -68,7 +57,7 @@ const CheckForUnderstanding = ({
       {data.level.properties.title && <h1>{data.level.properties.title}</h1>}
 
       {/* Question Body */}
-      <SafeMarkdown markdown={questionMarkdown} />
+      <SafeMarkdown className={styles.markdown} markdown={questionMarkdown} />
 
       {/* Question Inputs */}
       {data.level.type === 'FreeResponse' && (
@@ -85,32 +74,31 @@ const CheckForUnderstanding = ({
       )}
 
       {/* Student Responses */}
-      <h2>Student Responses</h2>
+      <div className={styles.studentResponses}>
+        <h2>Student Responses</h2>
 
-      <div id="student-submissions">
-        <p>
-          {data.responses.length}/{students.length} students submitted
-        </p>
-      </div>
-
-      <label>
-        Responses shown for class section:
-        <SectionSelector style={{display: 'block'}} reloadOnChange={true} />
-      </label>
-
-      <div className={styles.studentAnswerContainer}>
-        <div className={styles.column}>
-          {responseColumns[0].map((response, index) => (
-            <div key={`1${index}`} className={styles.studentAnswer}>
-              <p>{response.text}</p>
-            </div>
-          ))}
+        <div
+          className={
+            isRtl ? styles.studentsSubmittedLeft : styles.studentsSubmittedRight
+          }
+        >
+          <p>
+            <i className="fa fa-user" />
+            <span>
+              {data.responses.length}/{students.length} students submitted
+            </span>
+          </p>
         </div>
 
-        <div className={styles.column}>
-          {responseColumns[1].map((response, index) => (
-            <div key={`2${index}`} className={styles.studentAnswer}>
-              <p>{response.text}</p>
+        <label>
+          Responses shown for class section:
+          <SectionSelector reloadOnChange={true} />
+        </label>
+
+        <div className={styles.studentResponsesColumns}>
+          {data.responses.map((response, index) => (
+            <div key={index} className={styles.studentAnswer}>
+              {response.text}
             </div>
           ))}
         </div>
@@ -121,7 +109,10 @@ const CheckForUnderstanding = ({
         <div>
           <h2>For Teachers Only</h2>
 
-          <SafeMarkdown markdown={teacherMarkdown} />
+          <SafeMarkdown
+            className={styles.markdown}
+            markdown={teacherMarkdown}
+          />
         </div>
       )}
     </div>
