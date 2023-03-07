@@ -4,6 +4,5 @@
 :update_sources: true
 :bulk_threshold: 1000
 :verbose: true
-install: --no-ri --no-rdoc
-update: --no-ri --no-rdoc
-gem: --bindir /usr/local/bin
+install: --no-ri --no-rdoc --bindir /usr/local/bin
+update: --no-ri --no-rdoc --bindir /usr/local/bin
