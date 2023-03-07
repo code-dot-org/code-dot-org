@@ -14,7 +14,7 @@ const TimelineSampleEvents = ({
   getEventHeight
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getSoundEvents();
+  const soundEvents = playerUtils.getPlaybackEvents();
 
   const uniqueSoundsRef = useRef(new UniqueSounds());
   // Let's cache the value of getUniqueSounds() so that the various helpers
@@ -40,7 +40,7 @@ const TimelineSampleEvents = ({
       {soundEvents.map((eventData, index) => (
         <TimelineElement
           key={index}
-          soundId={eventData.id}
+          eventData={eventData}
           barWidth={barWidth}
           height={
             getEventHeight(currentUniqueSounds.length) - eventVerticalSpace

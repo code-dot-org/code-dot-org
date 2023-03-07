@@ -69,7 +69,6 @@ function checkImageReachability(imageUrl, callback) {
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
     exportApp: PropTypes.func,
-    icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
     selectedSong: PropTypes.string,
@@ -88,7 +87,8 @@ class ShareAllowedDialog extends React.Component {
     onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
-    userSharingDisabled: PropTypes.bool
+    userSharingDisabled: PropTypes.bool,
+    inRestrictedShareMode: PropTypes.bool
   };
 
   state = {
@@ -182,8 +182,8 @@ class ShareAllowedDialog extends React.Component {
       canPrint,
       canPublish,
       isPublished,
+      inRestrictedShareMode,
       canShareSocial,
-      icon,
       appType,
       selectedSong,
       shareUrl,
@@ -196,13 +196,10 @@ class ShareAllowedDialog extends React.Component {
       channelId
     } = this.props;
 
-    let image;
-    let modalClass = 'modal-content';
-    if (icon) {
-      image = <img className="modal-image" src={icon} />;
-    } else {
-      modalClass += ' no-modal-icon';
-    }
+    // inRestrictedShareMode overrides canPublish and canShareSocial
+    const publishAllowed = canPublish && !inRestrictedShareMode;
+    const socialShareAllowed = canShareSocial && !inRestrictedShareMode;
+    const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
     const artistTwitterHandle = SongTitlesToArtistTwitterHandle[selectedSong];
@@ -280,7 +277,6 @@ class ShareAllowedDialog extends React.Component {
           )}
           {!this.sharingDisabled() && (
             <div>
-              {image}
               <div
                 id="project-share"
                 className={modalClass}
@@ -344,7 +340,7 @@ class ShareAllowedDialog extends React.Component {
                     <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
                     <span>{i18n.sendToPhone()}</span>
                   </a>
-                  {canPublish && !isPublished && (
+                  {publishAllowed && !isPublished && (
                     <button
                       type="button"
                       id="share-dialog-publish-button"
@@ -358,7 +354,7 @@ class ShareAllowedDialog extends React.Component {
                       {i18n.publish()}
                     </button>
                   )}
-                  {canPublish && isPublished && (
+                  {publishAllowed && isPublished && (
                     <PendingButton
                       id="share-dialog-unpublish-button"
                       isPending={isUnpublishPending}
@@ -377,7 +373,7 @@ class ShareAllowedDialog extends React.Component {
                     </a>
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
-                  {canShareSocial && !isUnpublishPending && (
+                  {socialShareAllowed && !isUnpublishPending && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -426,10 +422,17 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-                {canPublish && !isPublished && !hasThumbnail && (
+                {publishAllowed && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
                     <span style={{fontSize: 12}} className="thumbnail-warning">
                       {i18n.thumbnailWarning()}
+                    </span>
+                  </div>
+                )}
+                {inRestrictedShareMode && (
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.restrictedShareInfo()}
                     </span>
                   </div>
                 )}
@@ -564,7 +567,8 @@ export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
     isOpen: state.shareDialog.isOpen,
-    isUnpublishPending: state.shareDialog.isUnpublishPending
+    isUnpublishPending: state.shareDialog.isUnpublishPending,
+    inRestrictedShareMode: state.project.inRestrictedShareMode
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),

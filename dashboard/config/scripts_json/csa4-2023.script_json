@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-22 18:39:47 UTC",
+    "serialized_at": "2023-03-03 18:27:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,7 +55,7 @@
       "position": 3,
       "properties": {
         "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Data for Social Good Project."
+        "description": "This section contains the one-day version of the Abstract Data Art Project."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -1099,6 +1099,10 @@
           {
             "type": "assessmentOpportunity",
             "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of 1D array algorithms.\n\nThe practice levels can be used as a formative assessment to gauge understanding of using API documentation and calling methods from existing classes."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Since these levels are focused on providing students opportunities for creative exploration with The Theater, they do not have validation."
           }
         ]
       },

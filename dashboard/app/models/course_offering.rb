@@ -240,6 +240,10 @@ class CourseOffering < ApplicationRecord
     key == 'csd'
   end
 
+  def hoc?
+    category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
   def grade_levels_list
     return [] if grade_levels.nil?
     grade_levels.strip.split(',')

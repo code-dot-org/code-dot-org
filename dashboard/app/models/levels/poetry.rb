@@ -128,6 +128,15 @@ class Poetry < GamelabJr
     [
       ['', ''],
       ['1990 - My Poem 1', 'pat'],
+      ['2020 - My Poem 2', 'erin'],
+      ['2021 - My Poem 3', 'aryanna'],
+      ['2023 - My Poem 4', 'tj'],
+      ['1905 - The Turn of the Century ', 'erik'],
+      ['1963 - March on Washington', 'aaron'],
+      ['1969 - Inspiring Dreams', 'noemi'],
+      ['1969 - Hope for Peace', 'ken'],
+      ['1980 - Bring Us Together', 'mike'],
+      ['1990 - Mary W. Jackson ', 'jess'],
     ]
   end
 end

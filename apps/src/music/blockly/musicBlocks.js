@@ -15,9 +15,12 @@ import {
   whenRunSimple2,
   triggeredAtSimple2,
   playSoundAtCurrentLocationSimple2,
+  playPatternAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
+  setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  playSoundsRandom,
   repeatSimple2
 } from './blocks/simple2';
 
@@ -32,9 +35,12 @@ const blockList = [
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
+  playPatternAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
+  setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  playSoundsRandom,
   repeatSimple2,
   forLoop,
   newTrackAtStart,
