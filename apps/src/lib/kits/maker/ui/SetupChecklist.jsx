@@ -8,6 +8,7 @@ import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
+import color from '@cdo/apps/util/color';
 import {
   isWindows,
   isChrome,
@@ -79,6 +80,10 @@ class SetupChecklist extends Component {
 
   thumb(selector) {
     this.setState({[selector]: Status.CELEBRATING});
+  }
+
+  question(selector) {
+    this.setState({[selector]: Status.UNKNOWN});
   }
 
   detect() {
@@ -205,11 +210,17 @@ class SetupChecklist extends Component {
 
   updateMBFirmata() {
     this.spin(STATUS_BOARD_UPDATE_FIRMATA);
-    this.spin(STATUS_BOARD_CONNECT);
-    this.setupChecker.updateMBFirmata().then(() => {
-      this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
-      console.log('success!');
-    });
+    this.question(STATUS_BOARD_CONNECT);
+    this.setupChecker
+      .updateMBFirmata()
+      .then(() => {
+        this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
+        console.log('success!');
+      })
+      .catch(err => {
+        console.log(err);
+        this.fail(STATUS_BOARD_UPDATE_FIRMATA);
+      });
   }
 
   componentDidMount() {
@@ -349,6 +360,36 @@ class SetupChecklist extends Component {
             )}
             {this.contactSupport()}
           </ValidationStep>
+          {experiments.isEnabled('microbit') &&
+            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+            this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING && (
+              <ValidationStep
+                stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
+                stepName={'Updating micro:bit software'}
+                hideWaitingSteps={false}
+                alwaysShowChildren={true}
+                updatePercentComplete={this.props.firmataPercentComplete}
+              >
+                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                  Status.ATTEMPTING && (
+                  <div>
+                    <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
+                  </div>
+                )}
+                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                  Status.SUCCEEDED && (
+                  <div>
+                    <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
+                    <p>
+                      <span style={styles.highlightedText}>
+                        {applabI18n.makerSetupClickRedetect()}&nbsp;
+                      </span>
+                      {applabI18n.makerSetupConfirmConnection()}
+                    </p>
+                  </div>
+                )}
+              </ValidationStep>
+            )}
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
@@ -380,31 +421,7 @@ class SetupChecklist extends Component {
                 />
               )}
           </ValidationStep>
-          {experiments.isEnabled('microbit') &&
-            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-            this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING && (
-              <ValidationStep
-                stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
-                stepName={'Updating Firmata'}
-                hideWaitingSteps={false}
-                alwaysShowChildren={true}
-                updatePercentComplete={this.props.firmataPercentComplete}
-              >
-                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
-                  Status.ATTEMPTING && (
-                  <div>
-                    <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
-                  </div>
-                )}
-                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
-                  Status.SUCCEEDED && (
-                  <div>
-                    <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
-                  </div>
-                )}
-              </ValidationStep>
-            )}
-          {this.contactSupport()}
+
           {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
@@ -430,6 +447,9 @@ export default connect(state => ({
 const styles = {
   suggestionHeader: {
     marginTop: 15
+  },
+  highlightedText: {
+    color: color.realgreen
   }
 };
 
