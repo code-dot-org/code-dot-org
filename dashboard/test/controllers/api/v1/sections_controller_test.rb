@@ -1303,7 +1303,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     Unit.stubs(:should_cache?).returns(true)
 
-    assert_cached_queries(73) do
+    assert_cached_queries(0) do
       get :valid_course_offerings
     end
   end

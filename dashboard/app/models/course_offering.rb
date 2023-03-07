@@ -106,9 +106,17 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Unit) && cv.has_editor_experiment?(user)}
   end
 
+  def self.all_course_offerings
+    if should_cache?
+      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+      @@course_offerings
+    else
+      CourseOffering.all.includes(course_versions: :content_root)
+    end
+  end
+
   def self.assignable_course_offerings(user)
-    course_offerings = CourseOffering.all.includes(course_versions: :content_root)
-    course_offerings.select {|co| co.can_be_assigned?(user)}
+    all_course_offerings.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
