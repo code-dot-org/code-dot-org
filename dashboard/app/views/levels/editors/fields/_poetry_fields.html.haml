@@ -20,7 +20,7 @@
     = f.label :default_poem, 'Default Poem'
     = f.select :default_poem, options_for_select(@level.class.poems_for_subtype(@level.standalone_app_name), @level.default_poem)
 
-    = f.label :dropdown_poems, 'Available Poems'
+    = f.label :available_poems, 'Available Poems'
     %p If you would like to customize the available poems in the level, select poems here. Otherwise, all poems will be available.
     %p
       Select
@@ -28,4 +28,4 @@
       \/
       %a.select_none{href: '#'} no
       (shift-click or cmd-click to select multiple).
-    = f.select :dropdown_poems, (@level.class.poems_for_subtype(@level.standalone_app_name)), {}, {multiple: true}
+    = f.select :available_poems, (@level.class.poems_for_subtype(@level.standalone_app_name)), {}, {multiple: true}

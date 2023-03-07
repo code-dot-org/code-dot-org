@@ -15,7 +15,7 @@ export default class Poetry extends SpriteLab {
       getStore().dispatch(setPoem(poem));
     }
 
-    const poemList = getPoemsFromListOrDefault(config.level.dropdownPoems);
+    const poemList = getPoemsFromListOrDefault(config.level.availablePoems);
     getStore().dispatch(setPoemList(poemList));
     return loader;
   }

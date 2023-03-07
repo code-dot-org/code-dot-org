@@ -14,7 +14,7 @@ function initPage() {
       .val()
       .toLowerCase();
     const defaultPoemSelect = $('#level_default_poem');
-    const dropdownPoemsSelect = $('#level_dropdown_poems');
+    const availablePoemsSelect = $('#level_available_poems');
     if (selectionValue === 'poetry') {
       defaultPoem.addClass('collapse');
     } else {
@@ -24,11 +24,11 @@ function initPage() {
         poems = timeCapsulePoems;
       }
       resetPoemList(defaultPoemSelect, poems);
-      resetPoemList(dropdownPoemsSelect, poems);
+      resetPoemList(availablePoemsSelect, poems);
     }
     // always unset selected poem and dropdown poems
     defaultPoemSelect.val([]);
-    dropdownPoemsSelect.val([]);
+    availablePoemsSelect.val([]);
   }
 
   function resetPoemList(selectElement, poems) {

@@ -25,33 +25,37 @@
 #
 
 class Poetry < GamelabJr
-  validate :validate_default_poem_and_dropdown_poems
+  validate :validate_default_poem_and_available_poems
 
   serialized_attrs %w(
     default_poem
     standalone_app_name
-    dropdown_poems
+    available_poems
   )
 
+  # Set the default poem to nil if the subtype does not have poems, or if the default poem is
+  # not in the list of poems for the subtype.
   def sanitize_default_poem
     self.default_poem = nil if !Poetry.subtypes_with_poems.include?(standalone_app_name) ||
       !Poetry.poem_keys_for_subtype(standalone_app_name).include?(default_poem)
   end
 
-  def sanitize_dropdown_poems
-    self.dropdown_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
-    return if !Poetry.subtypes_with_poems.include?(standalone_app_name) || (dropdown_poems && dropdown_poems.empty?)
-    # filter out any invalid poems from dropdown_poems
-    self.dropdown_poems = dropdown_poems & Poetry.poem_keys_for_subtype(standalone_app_name)
+  # Set the available poems to nil if the subtype does not have poems.
+  # Also remove any available poems that are not in the list of poems for the subtype.
+  def sanitize_available_poems
+    self.available_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
+    return if !Poetry.subtypes_with_poems.include?(standalone_app_name) || (available_poems && available_poems.empty?)
+    # filter out any invalid poems from available_poems
+    self.available_poems = available_poems & Poetry.poem_keys_for_subtype(standalone_app_name)
   end
 
-  def validate_default_poem_and_dropdown_poems
+  def validate_default_poem_and_available_poems
     sanitize_default_poem
-    sanitize_dropdown_poems
+    sanitize_available_poems
     # If there is a default poem and dropdown poem(s), check that it the default poem is
     # in the dropdown poem list.
     if default_poem.present? && Poetry.subtypes_with_poems.include?(standalone_app_name) &&
-      dropdown_poems && !dropdown_poems.empty? && !dropdown_poems.include?(default_poem)
+      available_poems && !available_poems.empty? && !available_poems.include?(default_poem)
       errors.add(:default_poem, "selected default poem is not in dropdown poem list")
     end
   end
