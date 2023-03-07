@@ -6,4 +6,3 @@
 :verbose: true
 install: --no-ri --no-rdoc
 update: --no-ri --no-rdoc
-gem: --bindir /usr/local/bin
