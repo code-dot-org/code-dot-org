@@ -39,7 +39,6 @@ class School < ApplicationRecord
 
   has_many :school_stats_by_year
   has_many :school_info
-  has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}

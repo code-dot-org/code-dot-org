@@ -38,44 +38,6 @@ FactoryGirl.define do
       school_year 2017
     end
 
-    trait :with_census_override_no do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'NO'
-      end
-    end
-
-    trait :with_census_override_yes do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'YES'
-      end
-    end
-
-    trait :with_census_override_maybe do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'MAYBE'
-      end
-    end
-    trait :with_census_override_historical_yes do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_YES'
-      end
-    end
-    trait :with_census_override_historical_no do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_NO'
-      end
-    end
-    trait :with_census_override_historical_maybe do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_MAYBE'
-      end
-    end
-    trait :with_census_override_nil do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: nil
-      end
-    end
-
     trait :with_state_not_having_state_data do
       state "QQ"
     end
@@ -343,32 +305,6 @@ FactoryGirl.define do
 
     trait :without_audit_data do
       audit_data nil
-    end
-  end
-
-  factory :census_override, class: 'Census::CensusOverride' do
-    school {build :school}
-    school_year 2017
-    teaches_cs nil
-
-    trait :with_valid_teaches_cs do
-      teaches_cs "N"
-    end
-
-    trait :with_invalid_teaches_cs do
-      teaches_cs "X"
-    end
-
-    trait :with_invalid_school_year do
-      school_year 1900
-    end
-
-    trait :without_school_year do
-      school_year nil
-    end
-
-    trait :without_school do
-      school nil
     end
   end
 end

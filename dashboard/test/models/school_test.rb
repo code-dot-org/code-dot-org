@@ -283,7 +283,6 @@ class SchoolTest < ActiveSupport::TestCase
   def clear_schools_and_dependent_models
     # Clear tables with hard dependencies (ie, MySQL foreign keys)
     # on the schools table.
-    Census::CensusOverride.delete_all
     Census::CensusSummary.delete_all
     SchoolInfo.delete_all
     SchoolStatsByYear.delete_all
