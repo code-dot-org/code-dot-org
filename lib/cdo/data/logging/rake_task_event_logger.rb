@@ -91,6 +91,8 @@ class RakeTaskEventLogger
     begin
       metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{event}"
       metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
+      ChatClient.log "about to log metric", color: 'green'
+      ChatClient.log "metric_name", color: 'green'
       dimensions = {environment: rack_env,
                      commit_hash: RakeUtils.git_revision,
                      task_name: @rake_task.name,
@@ -98,6 +100,8 @@ class RakeTaskEventLogger
                      is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
+      ChatClient.log "metric flushed", color: 'green'
+
       puts "Metric flushed ------------------------------------"
     rescue => e
       Honeybadger.notify(
