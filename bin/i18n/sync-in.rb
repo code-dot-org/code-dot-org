@@ -29,6 +29,7 @@ def sync_in
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   localize_external_sources
+  localize_course_resources
   redact_level_content
   redact_block_content
   redact_docs
@@ -554,6 +555,40 @@ def write_to_yml(type, strings)
     }
     file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
   end
+end
+
+# Merging dashboard/config/courses/*.course with courses.yml
+# These files contain resources used by UnitGroup (used in the landing pages of full courses).
+# https://studio.code.org/courses/csd-2021
+# All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
+# https://studio.code.org/s/csd1-2021
+def localize_course_resources
+  puts "Preparing course resources"
+
+  # Currently, csd is the only fully translatable course that has resources in this directory
+  translatable_courses = %w(csd)
+  resources = {}
+  Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).sort.each do |file|
+    course_json = JSON.parse(File.read(file))
+    course_properties = course_json['properties']
+    next unless translatable_courses.include?(course_properties['family_name'])
+
+    course_resources = course_json['resources']
+    next if course_resources.empty?
+    course_resources.each do |resource|
+      # resoruce.rb uses Services::GloballyUniqueIdentifiers.build_resource_key to create resource keys as follow
+      # resource.key / resource.course_version.course_offering.key / resource.course_version.key
+      # resource_key is used to localize the resources.
+      resource_key = [resource['key'], course_properties['family_name'], course_properties['version_year']].join('/')
+      resources.store(resource_key, {'name' => resource['name'], 'url' => resource['url']})
+    end
+  end
+  courses_source = File.join(I18N_SOURCE_DIR, 'dashboard', 'courses.yml')
+  courses_yaml = YAML.load_file(courses_source)
+  courses_data = courses_yaml['en']['data']
+  # Merging resources if courses already contain resources
+  courses_data['resources'] ? courses_data['resources'].merge!(resources) : courses_data.store('resources', resources)
+  File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
 end
 
 # Pull in various fields for custom blocks from .json files and save them to
