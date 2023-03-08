@@ -97,12 +97,15 @@ class RakeTaskEventLogger
                      commit_hash: RakeUtils.git_revision,
                      task_name: @rake_task.name,
                      depth: @@depth.to_s,
+                     total_dependencies: task_chain.split(',').count,
                      is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
-      Cdo::Metrics.flush!
-      ChatClient.log "metric flushed", color: 'green'
-      ChatClient.log "metric flushed2", color: 'green'
 
+      Cdo::Metrics.flush!
+      ChatClient.log @rake_task.name, color: 'green'
+      ChatClient.log task_chain, color: 'green'
+      ChatClient.log depth, color: 'green'
+      ChatClient.log task_chain.split(',').count, color: 'green'
       puts "Metric flushed ----------------------------------2--"
     rescue => e
       Honeybadger.notify(
