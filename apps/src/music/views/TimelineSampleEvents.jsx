@@ -40,7 +40,7 @@ const TimelineSampleEvents = ({
       {soundEvents.map((eventData, index) => (
         <TimelineElement
           key={index}
-          soundId={eventData.id}
+          eventData={eventData}
           barWidth={barWidth}
           height={
             getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
