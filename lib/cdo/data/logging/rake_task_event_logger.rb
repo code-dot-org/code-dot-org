@@ -101,6 +101,7 @@ class RakeTaskEventLogger
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
       ChatClient.log "metric flushed", color: 'green'
+      ChatClient.log "metric flushed2", color: 'green'
 
       puts "Metric flushed ------------------------------------"
     rescue => e
