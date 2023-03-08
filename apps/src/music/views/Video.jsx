@@ -41,8 +41,8 @@ const Video = ({onClose}) => {
             width="100%"
             height="100%"
             style={{border: 'none'}}
-            src="https://www.youtube.com/embed/qYZF6oIZtfc"
-            title="YouTube video player"
+            src="https://www.youtube-nocookie.com/embed/qYZF6oIZtfc"
+            title=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
