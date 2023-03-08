@@ -75,9 +75,10 @@ CSV.open(csv_file, 'w') do |csv|
     users = User.where("user_type = 'teacher' AND school_info_id = ?", school_info_id)
     next unless users.with_deleted.count > 1
 
-    if options[:deleted_filter].eql?('WITH')
+    case options[:deleted_filter]
+    when 'WITH'
       users = users.with_deleted
-    elsif options[:deleted_filter].eql?('ONLY')
+    when 'ONLY'
       users = users.only_deleted
     end
 

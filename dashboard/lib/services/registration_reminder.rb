@@ -27,7 +27,7 @@ class Services::RegistrationReminder
     # Not enrolled in a workshop since the 'accepted' email was sent
     applications_awaiting_enrollment.
       where("accepted.sent_at <= ?", 1.week.ago).
-      where("registration_reminder.id is null")
+      where(registration_reminder: {id: nil})
   end
 
   # Locate all applications that are eligible to receive their second workshop registration
@@ -68,7 +68,7 @@ class Services::RegistrationReminder
         and pd_enrollments.created_at >= accepted.sent_at
       SQL
       where("pd_applications.created_at >= ?", REMINDER_START_DATE).
-      where('pd_enrollments.id is null').
+      where(pd_enrollments: {id: nil}).
       distinct
   end
 end

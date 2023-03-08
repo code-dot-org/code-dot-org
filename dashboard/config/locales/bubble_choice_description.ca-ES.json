@@ -111,7 +111,12 @@
         "helloworld_food_sizes_soccer-2022": "Aprèn a canviar la mida dels sprites.",
         "helloworld_food_sizes_space-2022": "Aprèn a canviar la mida dels sprites.",
         "helloworld_retro_location": "Fes que l'sprite comenci a fer un comportament nou quan hagi passat una estona.",
-        "helloworld_retro_sizes": "Aprèn a canviar la mida dels sprites."
+        "helloworld_retro_sizes": "Aprèn a canviar la mida dels sprites.",
+        "courseD_artist_nestedLoops92022": "Saps com fer una imatge com aquesta?",
+        "ramp_artist_loops42022": "Per crear aquest patró d'estrella, fes un bucle amb una seqüència.",
+        "ramp_artist_loops4_2021": "Per crear aquest patró d'estrella, fes un bucle amb una seqüència.",
+        "ramp_artist_loops82022": "Busca un patró i fes servir bucles per escurçar el codi.",
+        "ramp_artist_loops8_2021": "Busca un patró i fes servir bucles per escurçar el codi."
       }
     }
   }

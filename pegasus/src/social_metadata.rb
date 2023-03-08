@@ -223,9 +223,10 @@ def get_social_metadata_for_page(request)
   # Additional hoc variants.
   extension = ""
   hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
-  if hoc_launch == "mc"
+  case hoc_launch
+  when "mc"
     extension = "-mc"
-  elsif hoc_launch == "dance"
+  when "dance"
     extension = "-dance"
   end
 
@@ -236,13 +237,14 @@ def get_social_metadata_for_page(request)
 
   output = {}
   social_tag_set.each do |name, value|
-    if name == :image
+    case name
+    when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
       output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
-    elsif name == :video
+    when :video
       output["og:video:url"] = "http://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:secure_url"] = "https://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:type"] = "video/mp4"
@@ -252,13 +254,13 @@ def get_social_metadata_for_page(request)
       output["twitter:player:width"] = value[:width]
       output["twitter:player:height"] = value[:height]
       output["twitter:card"] = "player"
-    elsif name == :title
+    when :title
       output["og:title"] = value
       output["twitter:title"] = value
-    elsif name == :description
+    when :description
       output["og:description"] = value
       output["twitter:description"] = value
-    elsif name == :description_twitter
+    when :description_twitter
       output["twitter:description"] = value
     end
   end

@@ -49,14 +49,14 @@ class AnimationPicker extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
-    is13Plus: PropTypes.bool,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     onClose: PropTypes.func.isRequired,
     onPickNewAnimation: PropTypes.func.isRequired,
@@ -109,7 +109,6 @@ class AnimationPicker extends React.Component {
     return (
       <div>
         <AnimationPickerBody
-          is13Plus={this.props.is13Plus}
           onDrawYourOwnClick={this.props.onPickNewAnimation}
           onPickLibraryAnimation={this.props.onPickLibraryAnimation}
           onUploadClick={this.onUploadClick}
@@ -121,9 +120,12 @@ class AnimationPicker extends React.Component {
           navigable={this.props.navigable}
           defaultQuery={this.props.defaultQuery}
           hideBackgrounds={this.props.hideBackgrounds}
-          canDraw={this.props.canDraw}
+          hideCostumes={this.props.hideCostumes}
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
+          shouldRestrictAnimationUpload={
+            this.props.shouldRestrictAnimationUpload
+          }
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -196,7 +198,6 @@ export default connect(
     visible: state.animationPicker.visible,
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
-    is13Plus: state.pageConstants.is13Plus,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
     selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
   }),

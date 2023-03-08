@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-13 23:49:05 UTC",
+    "serialized_at": "2023-03-04 17:06:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,8 +33,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 10: Algortihms",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.\n\n\n### Major Assessment and Projects\n\nThis unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.\n* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.9 Developing Algorithms\n* 3.11 Binary Search\n* 3.17 Algorithmic Efficiency\n* 3.18 Undecidable Problems\n* 4.3 Parallel and Distributed Computing"
+        "display_name": "Unit 10: Algortihms"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",
@@ -2596,16 +2595,81 @@
       }
     },
     {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/copy",
-      "key": "csp_unit_6_-_algorithms",
+      "name": "CSP Unit 10 - Lesson 1 - Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/copy",
+      "key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 2 - Algorithm Efficiency",
+      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/copy",
+      "key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 3 - Unreasonable Time",
+      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/copy",
+      "key": "csp_unit_10_-_lesson_3_-_unreasonable_time",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 4 - The Limits of Algorithms",
+      "url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/copy",
+      "key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 5 - Distributed Algorithms",
+      "url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/copy",
+      "key": "csp_unit_10_-_lesson_5_-_distributed_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_5_-_distributed_algorithms"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 6 - Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/copy",
+      "key": "csp_unit_10_-_lesson_6_-_assessment_day",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
       }
     },
     {
@@ -2674,25 +2738,25 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_5_-_distributed_algorithms"
       }
     },
     {
@@ -2704,7 +2768,7 @@
     {
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms"
       }
     },
     {
@@ -2716,7 +2780,7 @@
     {
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
       }
     },
     {

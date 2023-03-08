@@ -77,3 +77,5 @@ Nasze Szybkie działania zapewniają szybki i interesujący sposób na powiązan
 {{ clearfix }}
 
 <em>Ukończyłeś ćwiczenie z Powiązań z informatyką i/lub szukasz więcej opcji dla swojej klasy? Podziel <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">się swoją opinią</a> i pomysłami na więcej lekcji tutaj!</em>
+
+{{ visit_partial_event_logger }}
