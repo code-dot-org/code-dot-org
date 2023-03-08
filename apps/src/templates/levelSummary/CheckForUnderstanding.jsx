@@ -39,7 +39,7 @@ const CheckForUnderstanding = ({
   return (
     <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
-      <div className={styles.navLinks}>
+      <p className={styles.navLinks}>
         <a className={styles.navLinkBack} href={currentLevel.url}>
           &lt; Back to level
         </a>
@@ -51,7 +51,7 @@ const CheckForUnderstanding = ({
             Next level &gt;
           </a>
         )}
-      </div>
+      </p>
 
       {/* Question Title */}
       {data.level.properties.title && <h1>{data.level.properties.title}</h1>}
