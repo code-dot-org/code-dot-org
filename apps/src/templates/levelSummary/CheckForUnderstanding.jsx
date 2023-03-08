@@ -7,6 +7,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import styles from './check-for-understanding.module.scss';
 
+const SUMMARY_PARAM = 'view=summary';
+
 const CheckForUnderstanding = ({
   isRtl,
   viewAs,
@@ -23,7 +25,7 @@ const CheckForUnderstanding = ({
   // send them back to the level in Participant mode instead.
   if (viewAs === ViewType.Participant) {
     const paramString = document.location.search
-      .replace('view=summary', '')
+      .replace(SUMMARY_PARAM, '')
       .replace('&&', '&')
       .replace('?&', '?');
     document.location.replace(currentLevel.url + paramString);
@@ -46,7 +48,7 @@ const CheckForUnderstanding = ({
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
-            href={nextLevel.url}
+            href={`${nextLevel.url}${document.location.search}`}
           >
             Next level &gt;
           </a>
