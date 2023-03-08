@@ -15,6 +15,7 @@ const lessons = [
   fakeLesson('Artist', 3),
   fakeLesson('Something', 4)
 ];
+
 const levelsByLesson = [
   [
     {
@@ -49,135 +50,107 @@ const groupedLesson = {
   levelsByLesson
 };
 
-export default storybook => {
-  storybook.storiesOf('Progress/LessonGroup', module).addStoryTable([
-    {
-      name: 'LessonGroup with detail view',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <LessonGroup
-            groupedLesson={groupedLesson}
-            isPlc={false}
-            isSummaryView={false}
-          />
-        </Provider>
-      )
-    },
-
-    {
-      name: 'LessonGroup in instructor summary view with one hidden lesson',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 3)}>
-          <LessonGroup
-            groupedLesson={groupedLesson}
-            isPlc={false}
-            isSummaryView={true}
-          />
-        </Provider>
-      )
-    },
-
-    {
-      name: 'LessonGroup with all lessons hidden instructor summary view',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
-          <LessonGroup
-            groupedLesson={{
-              lessonGroup: {
-                displayName: 'My Group',
-                description: 'Lesson Group Description',
-                bigQuestions: 'Why? Who? Where?'
-              },
-              lessons: [lessons[0]],
-              levelsByLesson: [levelsByLesson[0]]
-            }}
-            isPlc={false}
-            isSummaryView={true}
-          />
-        </Provider>
-      )
-    },
-
-    {
-      name: 'LessonGroup with no lessons instructor summary view',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
-          <LessonGroup
-            groupedLesson={{
-              lessonGroup: {
-                displayName: 'My Group',
-                description: 'Lesson Group Description',
-                bigQuestions: 'Why? Who? Where?'
-              },
-              lessons: [],
-              levelsByLesson: []
-            }}
-            isPlc={false}
-            isSummaryView={true}
-          />
-        </Provider>
-      )
-    },
-
-    {
-      name:
-        'LessonGroup with all lessons hidden participant summary view (empty)',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Participant, 1)}>
-          <LessonGroup
-            groupedLesson={{
-              lessonGroup: {
-                displayName: 'My Group',
-                description: 'Lesson Group Description',
-                bigQuestions: 'Why? Who? Where?'
-              },
-              lessons: [lessons[0]],
-              levelsByLesson: [levelsByLesson[0]]
-            }}
-            isPlc={false}
-            isSummaryView={true}
-          />
-        </Provider>
-      )
-    },
-
-    {
-      name: 'LessonGroup in PLC',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <LessonGroup
-            groupedLesson={groupedLesson}
-            isPlc={true}
-            isSummaryView={false}
-          />
-        </Provider>
-      )
-    },
-
-    {
-      name: 'LessonGroup with description and big questions',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <LessonGroup
-            groupedLesson={{
-              ...groupedLesson,
-              lessonGroup: {
-                displayName: 'My Group',
-                description: 'Lesson Group Description',
-                bigQuestions: 'Why? Who? Where?'
-              }
-            }}
-            isPlc={false}
-            isSummaryView={false}
-          />
-        </Provider>
-      )
-    }
-  ]);
+export default {
+  name: 'LessonGroup',
+  compoent: LessonGroup
 };
+
+export const WithDetailView = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, null)}>
+    <LessonGroup
+      groupedLesson={groupedLesson}
+      isPlc={false}
+      isSummaryView={false}
+    />
+  </Provider>
+);
+export const InstructorSummaryWithOneHiddenLesson = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 3)}>
+    <LessonGroup
+      groupedLesson={groupedLesson}
+      isPlc={false}
+      isSummaryView={true}
+    />
+  </Provider>
+);
+
+export const InstructorSummaryWithAllLessonsHidden = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
+    <LessonGroup
+      groupedLesson={{
+        lessonGroup: {
+          displayName: 'My Group',
+          description: 'Lesson Group Description',
+          bigQuestions: 'Why? Who? Where?'
+        },
+        lessons: [lessons[0]],
+        levelsByLesson: [levelsByLesson[0]]
+      }}
+      isPlc={false}
+      isSummaryView={true}
+    />
+  </Provider>
+);
+
+export const InstructorViewWithNoLessons = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
+    <LessonGroup
+      groupedLesson={{
+        lessonGroup: {
+          displayName: 'My Group',
+          description: 'Lesson Group Description',
+          bigQuestions: 'Why? Who? Where?'
+        },
+        lessons: [],
+        levelsByLesson: []
+      }}
+      isPlc={false}
+      isSummaryView={true}
+    />
+  </Provider>
+);
+
+export const ParticipantViewWithAllLessonsHidden = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Participant, 1)}>
+    <LessonGroup
+      groupedLesson={{
+        lessonGroup: {
+          displayName: 'My Group',
+          description: 'Lesson Group Description',
+          bigQuestions: 'Why? Who? Where?'
+        },
+        lessons: [lessons[0]],
+        levelsByLesson: [levelsByLesson[0]]
+      }}
+      isPlc={false}
+      isSummaryView={true}
+    />
+  </Provider>
+);
+
+export const Plc = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, null)}>
+    <LessonGroup
+      groupedLesson={groupedLesson}
+      isPlc={true}
+      isSummaryView={false}
+    />
+  </Provider>
+);
+
+export const WithDescriptionAndBigQuestions = () => (
+  <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, null)}>
+    <LessonGroup
+      groupedLesson={{
+        ...groupedLesson,
+        lessonGroup: {
+          displayName: 'My Group',
+          description: 'Lesson Group Description',
+          bigQuestions: 'Why? Who? Where?'
+        }
+      }}
+      isPlc={false}
+      isSummaryView={false}
+    />
+  </Provider>
+);

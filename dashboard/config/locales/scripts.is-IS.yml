@@ -3107,6 +3107,21 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Frá lykkjur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3156,7 +3171,7 @@ is:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listar
+              display_name: Gögn
             csp_loops:
               display_name: Lykkjur
             csp_traversals:
@@ -3167,8 +3182,16 @@ is:
               display_name: Könnun eftir námskeið
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Listar
             lessonGroup-2:
               display_name: Könnun eftir námskeið
+            lessonGroup-3:
+              display_name: Lykkjur
+            lessonGroup-4:
+              display_name: Yfirferðir
+            lessonGroup-5:
+              display_name: Verkefni
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -3197,3 +3220,13 @@ is:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+            lessonGroup-4:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök

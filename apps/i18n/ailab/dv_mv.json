@@ -1,11 +1,2 @@
 {
-  "datasets": {
-    "movies": {
-      "fields": {
-        "Star": {
-          "id": "ސްޓަރ - ތަރި"
-        }
-      }
-    }
-  }
 }

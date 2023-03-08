@@ -2649,6 +2649,20 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: '"მიზნისთვის" ციკლები'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: შემთხვევითი
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
         hello-world-soccer-2022:
           title: 'გამარჯობა მსოფლიო: ფეხბურთი'
         csd4-2023:
@@ -2699,15 +2713,19 @@ ka:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: სიები
+              display_name: მონაცემები
             csp_loops:
               display_name: ციკლები
             lessonGroup-5:
               display_name: კურსის შემდგომი გამოკითხვა
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: სიები
             lessonGroup-2:
               display_name: კურსის შემდგომი გამოკითხვა
+            lessonGroup-3:
+              display_name: ციკლები
         csp7-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2730,3 +2748,15 @@ ka:
           lesson_groups:
             lessonGroup-4:
               display_name: 'თავი 2: აპარატული შეყვანა'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია

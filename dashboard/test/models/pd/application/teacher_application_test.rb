@@ -207,7 +207,7 @@ module Pd::Application
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: (
         # Select all but the first. Expect the first selected to be returned below
-        workshops[1..-1].map do |workshop|
+        workshops[1..].map do |workshop|
           "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
         end
         )
@@ -412,7 +412,7 @@ module Pd::Application
 
       # update related field
       Timecop.freeze 1
-      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
+      application.update!(form_data: application.form_data_hash.merge(firstName: 'Garfunkel').to_json)
       assert_status_log(
         [
           {status: 'incomplete', at: 1.second.ago},
@@ -1026,27 +1026,27 @@ module Pd::Application
     private
 
     test 'test allow_sending_principal_email?' do
-      # If we are unreviewed, we cannot send.
-      application = create :pd_teacher_application
-      application.update!(status: 'unreviewed')
-      refute application.allow_sending_principal_email?
-
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       assert application.allow_sending_principal_email?
 
-      # If we are pending, we can send.
+      # If we are unreviewed, we can't send.
+      application = create :pd_teacher_application
+      application.update!(status: 'unreviewed')
+      refute application.allow_sending_principal_email?
+
+      # If we are pending, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'pending')
-      assert application.allow_sending_principal_email?
+      refute application.allow_sending_principal_email?
 
-      # If we are pending_space_availability, we can send.
+      # If we are pending_space_availability, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'pending_space_availability')
-      assert application.allow_sending_principal_email?
+      refute application.allow_sending_principal_email?
 
-      # If we're no longer unreviewed/pending/pending_space_availability, we can't send.
+      # If we're accepted, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'accepted')
       refute application.allow_sending_principal_email?
@@ -1077,23 +1077,23 @@ module Pd::Application
     end
 
     test 'test allow_sending_admin_approval_teacher_reminder_email?' do
-      # If we are unreviewed, we cannot send.
-      application = create :pd_teacher_application
-      application.update!(status: 'unreviewed')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       assert application.allow_sending_admin_approval_teacher_reminder_email?
 
-      # If we are pending, we can send.
+      # If we are unreviewed, we cannot send.
+      application = create :pd_teacher_application
+      application.update!(status: 'unreviewed')
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
+
+      # If we are pending, we cannot send.
       application = create :pd_teacher_application
       application.update!(status: 'pending')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      assert application.allow_sending_admin_approval_teacher_reminder_email?
+      refute application.allow_sending_admin_approval_teacher_reminder_email?
 
       # If we are pending_space_availability, we can't send.
       application = create :pd_teacher_application

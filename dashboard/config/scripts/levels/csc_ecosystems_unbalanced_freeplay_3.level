@@ -11,7 +11,7 @@
       "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
@@ -45,7 +45,7 @@
   "created_at": "2022-11-01T23:06:12.000Z",
   "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:06:12.178+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_unbalanced_freeplay_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_unbalanced_freeplay_2022\"},{\"changed_at\":\"2022-12-01 17:52:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 18:03:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 18:42:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 18:42:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:06:12.178+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_unbalanced_freeplay_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_unbalanced_freeplay_2022\"},{\"changed_at\":\"2022-12-01 17:52:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 18:03:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 18:42:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 18:42:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-11 23:29:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-11 23:34:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-11 23:35:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-12 00:10:35 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-01-12 00:14:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-01-12 00:39:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-01-12 00:41:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-22 18:13:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 18:13:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -258,6 +258,102 @@
             </block>
           </next>
         </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation>
+            <description>Setup the basics for the student for this level.</description>
+          </mutation>
+          <field name="NAME" id="oceanSetup">oceanSetup</field>
+          <statement name="STACK">
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
+              <field name="IMG">"background_underwater_17"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon" deletable="false">
+                  <field name="ANIMATION_NAME">"boat-net"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
+                      <field name="LOCATION">{"x":57,"y":45}</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setProp" deletable="false">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" deletable="false">
+                          <field name="ANIMATION">"boat-net"</field>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" deletable="false" movable="false" editable="false">
+                          <field name="NUM">200</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <field name="ANIMATION_NAME">"underseadeco_25"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
+                              <field name="LOCATION">{"x":110,"y":371}</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_makeNewSpriteAnon">
+                              <field name="ANIMATION_NAME">"underseadeco_24"</field>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
+                                  <field name="LOCATION">{"x":43,"y":358}</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false">
+                                      <field name="ANIMATION">"boat-net"</field>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_behavior_get">
+                                      <mutation/>
+                                      <field name="VAR" id="moving east and looping">moving east and looping</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_makeNumSprites">
+                                      <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
+                                      <value name="NUM">
+                                        <block type="math_number" deletable="false" editable="false" can_disconnect_from_parent="false">
+                                          <field name="NUM">7</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_setProp">
+                                          <field name="PROPERTY">"scale"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"green-sea-plant-2"</field>
+                                            </block>
+                                          </value>
+                                          <value name="VAL">
+                                            <block type="math_number" deletable="false" movable="false" editable="false">
+                                              <field name="NUM">30</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
         <block type="behavior_definition" editable="false" uservisible="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -337,102 +433,6 @@
                           </value>
                         </block>
                       </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
-          <mutation>
-            <description>Setup the basics for the student for this level.</description>
-          </mutation>
-          <field name="NAME" id="oceanSetup">oceanSetup</field>
-          <statement name="STACK">
-            <block type="gamelab_setBackgroundImageAs" deletable="false" movable="false" editable="false">
-              <field name="IMG">"background_underwater_17"</field>
-              <next>
-                <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false" editable="false">
-                  <field name="ANIMATION_NAME">"boat-net"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                      <field name="LOCATION">{"x":57,"y":45}</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_setProp" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                      <field name="PROPERTY">"scale"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                          <field name="ANIMATION">"boat-net"</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number" deletable="false" movable="false" editable="false">
-                          <field name="NUM">200</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false" editable="false">
-                          <field name="ANIMATION_NAME">"underseadeco_25"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                              <field name="LOCATION">{"x":110,"y":371}</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_makeNewSpriteAnon" deletable="false" movable="false" editable="false">
-                              <field name="ANIMATION_NAME">"underseadeco_24"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                                  <field name="LOCATION">{"x":43,"y":358}</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_addBehaviorSimple" deletable="false" movable="false" editable="false">
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false" editable="false">
-                                      <field name="ANIMATION">"boat-net"</field>
-                                    </block>
-                                  </value>
-                                  <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get" deletable="false" movable="false" editable="false">
-                                      <mutation/>
-                                      <field name="VAR" id="moving east and looping">moving east and looping</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_makeNumSprites" deletable="false" movable="false" editable="false">
-                                      <field name="ANIMATION_NAME">"green-sea-plant-2"</field>
-                                      <value name="NUM">
-                                        <block type="math_number" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                                          <field name="NUM">7</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_setProp" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                                          <field name="PROPERTY">"scale"</field>
-                                          <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false" editable="false" can_disconnect_from_parent="false">
-                                              <field name="ANIMATION">"green-sea-plant-2"</field>
-                                            </block>
-                                          </value>
-                                          <value name="VAL">
-                                            <block type="math_number" deletable="false" movable="false" editable="false">
-                                              <field name="NUM">30</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>

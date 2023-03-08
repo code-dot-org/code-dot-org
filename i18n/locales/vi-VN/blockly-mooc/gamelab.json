@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "chiều cao",
   "dropletBlock_setColliderEach_param0": "loại",
   "dropletBlock_setColliderEach_param4": "chiều cao",
-  "errorLoadingAnimation": "Dường như chúng tôi đang gặp sự cố khi tải hoạt ảnh “{animationName}” của bạn. Hãy đảm bảo rằng bạn có kết nối internet tốt và thử tải lại trang. Nếu sự cố này vẫn tiếp diễn, có thể hoạt ảnh này đã bị lỗi. Trong trường hợp này, bạn có thể phải tiếp tục bằng cách xóa hoạt ảnh.",
   "reinfFeedbackMsg": "Bạn đã hoàn thành! Hãy nhấp chuột vào “Continue” (tiếp tục) để chuyển sang cấp độ tiếp theo.",
   "shareGame": "Chia sẻ trò chơi của bạn:"
 }

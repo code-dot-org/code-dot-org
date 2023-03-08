@@ -4,11 +4,7 @@
     "func": "changeColorBy",
     "blockText": "change {COLOR} {METHOD} by {AMOUNT}",
     "returnType": "Colour",
-    "color": [
-      196,
-      1,
-      0.79
-    ],
+    "style": "colour_blocks",
     "args": [
       {
         "name": "COLOR",

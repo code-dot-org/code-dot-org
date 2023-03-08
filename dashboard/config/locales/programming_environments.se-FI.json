@@ -4,17 +4,186 @@
       "programming_environments": {
         "gamelab": {
           "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Čáhppes ja Vilges"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            },
             "sprites": {
-              "name": "Sprite:at"
+              "name": "Sprite:at",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirála"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
               "name": "Joavkkut"
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Násti"
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "applab": {
           "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeakta"
+                    }
+                  }
+                }
+              }
+            },
             "advanced": {
               "name": "Avanserta"
             }

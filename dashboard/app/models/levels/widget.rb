@@ -72,7 +72,7 @@ class Widget < Level
     path = Rails.root.join('app', 'views', 'levels', File.basename(href))
 
     # Ensure we are looking for a 'haml' template, if it isn't already one.
-    if File.extname(path)[1..-1] == "html"
+    if File.extname(path)[1..] == "html"
       path = "#{path}.haml"
     end
 
@@ -82,7 +82,7 @@ class Widget < Level
     # If it exists, then the haml file should be preferred, so return it without
     # the underscore.
     if File.exist?(path)
-      return "levels/" + File.basename(path)[1..-1]
+      return "levels/" + File.basename(path)[1..]
     end
 
     # Otherwise, we assume the widget exists within the public path.
@@ -91,6 +91,6 @@ class Widget < Level
 
   # Determines the type of template being rendered for this widget.
   def template_type
-    File.extname(template)[1..-1].to_sym
+    File.extname(template)[1..].to_sym
   end
 end

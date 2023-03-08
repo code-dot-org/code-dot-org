@@ -114,3 +114,5 @@ Die Stufen 2-4 verwenden ein vortrainiertes Modell, das vom [TensorFlow](https:/
 Auf den Stufen 6-8 wird eine \[„Support-Vector Machine“\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) verwendet. Wir betrachten jede Komponente des Fisches (z. B. Augen, Maul, Körper) und fügen alle Metadaten für die Komponenten (z. B. Anzahl der Zähne, Körperform) zu einem Vektor von Zahlen für jeden Fisch zusammen. Wir verwenden diese Vektoren zum Trainieren des SVM. Auf der Grundlage der Trainingsdaten unterteilt die SVM den „Raum“ aller möglichen Fische in zwei Teile, die den Klassen entsprechen, die wir zu lernen versuchen (wie „blau“ oder „nicht blau“).
 
 [[Zurück zum Anfang]](#top)
+
+{{ visit_partial_event_logger }}

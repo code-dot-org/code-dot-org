@@ -753,31 +753,18 @@ nl:
         werken, en deel je app dan in een paar seconden.
       audience: Leeftijd 13+
       cta: Leer hoe
-    dance:
-      title: Dansfeest
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Dansfeest
-    hello-world:
-      title: Hallo Wereld
-    poem-art:
-      title: Poëzie
-    hoc:
-      title: Klassiek doolhof
-      body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
+    dance:
+      title: Dansfeest
     flappy:
       title: Flappy Code
       body: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy
         Code opdracht!
-    20-hour:
-      title: versnelde cursus
-      body: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en
-        programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor
-        alle leeftijden leuk om te leren.
-      body_short: Leer eenvoudige informatica in een versnelde versie van de cursussen
-        2-4.
-    hoc2014:
-      try_new_tutorial: Probeer onze nieuwe Uur Code in beta
-      try_frozen: Maak kunst met Anna en Elsa van Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galerij
       body: Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers
@@ -787,21 +774,22 @@ nl:
         games kan maken met objecten en personages die met elkaar interageren.
       audience: Leeftijd 13+
       cta: Leer hoe
+    hello-world:
+      title: Hallo Wereld
+    hero:
+      title: Minecraft
+      body: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer
+        om door Minecraft te reizen.
     hoc-encryption:
       title: Eenvoudige versleuteling
       body: Leerlingen willen technieken leren om versleutelde berichten te maken
         en te breken.
-    weblab:
-      title: Web Lab (bèta)
-      body: Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend
-        van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele
-        seconden.
-      audience: Leeftijd 13+
-      cta: Leer hoe
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klassiek doolhof
+      body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
+    hoc2014:
+      try_new_tutorial: Probeer onze nieuwe Uur Code in beta
+      try_frozen: Maak kunst met Anna en Elsa van Frozen
     infinity:
       title: Infinity Play Lab
       body: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren
@@ -813,16 +801,32 @@ nl:
       title: Minecraft
       body: Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft
         omgeving.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer
-        om door Minecraft te reizen.
+    poem-art:
+      title: Poëzie
+    starwars:
+      title: Star Wars
     text-compression:
       title: Tekstcompressie
       body: In deze les zullen leerlingen de Tekstcompressiewidget gebruiken om tekst
         te comprimeren door patronen te vervangen door symbolen.
+    weblab:
+      title: Web Lab (bèta)
+      body: Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend
+        van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele
+        seconden.
+      audience: Leeftijd 13+
+      cta: Leer hoe
+    widgets:
+      title: Widgets
+      body: Studenten kunnen concepten uit onze 'CW Principles cursus' diepgaand verkennen
+        door gebruik te maken van deze digitale hulpmiddelen. Gebruik de widgets op
+        zichzelf, of maak een één-concept-les.
+      audience: Leeftijd 14+
+      cta: Leer hoe
+    unplugged_conditionals:
+      title: Voorwaardelijke instructies
+      body: Leer over algoritmes en conditionele statements in deze "unplugged" activiteit
+        door gebruik te maken van een kaartspel.
     unplugged:
       title: "'Unplugged' lessen"
       audience: Leeftijden 6+
@@ -832,17 +836,13 @@ nl:
         voor een informatica-vak.
       body_short: Als je geen computers hebt, probeer dan deze 'unplugged' lessen
         in je klaslokaal.
-    unplugged_conditionals:
-      title: Voorwaardelijke instructies
-      body: Leer over algoritmes en conditionele statements in deze "unplugged" activiteit
-        door gebruik te maken van een kaartspel.
-    widgets:
-      title: Widgets
-      body: Studenten kunnen concepten uit onze 'CW Principles cursus' diepgaand verkennen
-        door gebruik te maken van deze digitale hulpmiddelen. Gebruik de widgets op
-        zichzelf, of maak een één-concept-les.
-      audience: Leeftijd 14+
-      cta: Leer hoe
+    20-hour:
+      title: versnelde cursus
+      body: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en
+        programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor
+        alle leeftijden leuk om te leren.
+      body_short: Leer eenvoudige informatica in een versnelde versie van de cursussen
+        2-4.
   landing:
     report_bug: Meld Bug
     support: Help

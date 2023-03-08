@@ -5944,6 +5944,30 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Bir Boyutlu (1D) Diziler
+            lesson-3:
+              name: For (İçin) Döngüleri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Alternatif Dersler
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Rastgele
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Alternatif Dersler
         csa6-2023:
           description: "Bu ünite, öğrencilere 'ArrayList' sınıfını kullanarak liste oluşturmayı öğretmek için veri yapılarını genişletmeye devam ediyor. Bu süreçte öğrenciler \"Tamsayı\" ve \"Double\" sınıflarını öğrenirler ve yöntemlerini metin dosyalarından verileri ayrıştırmak ve tamsayı değerlerinin sınırlarını keşfetmek için kullanırlar. Öğrenciler, bir \"ArrayList\"in yapısını ve işlevselliğini öğrenirken, her bir veri yapısının ne zaman kullanılacağını ayırt eder. Öğrenciler, sayısal ve nesne verilerinden oluşan bir \"ArrayList\" içindeki verileri bulmak ve işlemek için standart algoritmaları uygular. Ünite boyunca öğrenciler, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirler. Ayrıca öğrenciler, programları için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerini daha da geliştirirler.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/s/csa6-2022/standards) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [\\*\\*AP Central\\*\\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\nAP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:\n\n-   Kişisel İlerleme Kontrolü 2\n-   Kişisel İlerleme Kontrolü 7\n\n**_Not:_** _Önerilen Kişisel İlerleme Kontrollerindeki Bazı Öğrenme Hedefleri ve Temel Bilgi ifadeleri sonraki ünitelerde ele alınmaktadır._\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [\\*\\*kısa anketi\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) yanıtlayın."
           student_description: Bu ünite, sizi 'ArrayList' sınıfını kullanarak listeler oluşturmaya alıştırmak için veri yapılarını genişletmeye devam ediyor. Bu süreçte, "Tamsayı" ve "Duble" sınıflarını öğrenir ve metin dosyalarından verileri ayrıştırmak için yöntemlerini kullanır ve tamsayı değerlerinin sınırlarını keşfedersiniz. Bir "ArrayList"in yapısı ve işlevselliği hakkında bilgi edinirken, her tür veri yapısının ne zaman kullanılacağını ayırt edersiniz. Sayısal ve nesne verilerinden oluşan bir "ArrayList" içindeki verileri bulmak ve işlemek için standart algoritmalar uygularsınız. Ünite boyunca, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirsiniz. Ayrıca, programlarınız için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerinizi daha da geliştirirsiniz.
@@ -6051,7 +6075,7 @@ tr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listeler
+              display_name: Veri
             csp_loops:
               display_name: Döngüler
             csp_traversals:
@@ -6061,17 +6085,23 @@ tr:
             lessonGroup-5:
               display_name: Kurs-Sonrası Anketi
           description: Bu birim listeleri, döngüleri ve geçişleri tanıtır ve bunların büyük miktarda bilgi depolayan ve işleyen uygulamalar oluşturmak için nasıl kullanılabileceğini araştırır. App Lab'deki veri kitaplığıyla programlamayı öğrenin ve ünite sonunda, seçtiğiniz herhangi bir konuda bir program tasarlayabileceğiniz 5 günlük bir hackathon projesini tamamlayın.
-          student_description: Bu birim listeleri, döngüleri ve geçişleri tanıtır ve bunların büyük miktarda bilgi depolayan ve işleyen uygulamalar oluşturmak için nasıl kullanılabileceğini araştırır. App Lab'deki veri kitaplığıyla programlamayı öğrenin ve ünite sonunda, seçtiğiniz herhangi bir konuda bir program tasarlayabileceğiniz 5 günlük bir hackathon projesini tamamlayın.
+          student_description: Bu ünitede, veri analizinin ham verileri dünya hakkında yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde, seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
           description_short: Büyük miktarda bilgiyi depolamak ve işlemek için listeleri, döngüleri ve geçişleri kullanan uygulamaları nasıl oluşturacağınızı öğrenin.
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Ünite 6: Algoritmalar'
+              display_name: Listeler
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
+            lessonGroup-3:
+              display_name: Döngüler
+            lessonGroup-4:
+              display_name: Gezinmeler
+            lessonGroup-5:
+              display_name: Proje
           description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
-          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
-          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz edin.
+          student_description: Bu birim listeleri, döngüleri ve geçişleri tanıtır ve bunların büyük miktarda bilgi depolayan ve işleyen uygulamalar oluşturmak için nasıl kullanılabileceğini araştırır. App Lab'deki veri kitaplığıyla programlamayı öğrenin ve ünite sonunda, seçtiğiniz herhangi bir konuda bir program tasarlayabileceğiniz 5 günlük bir hackathon projesini tamamlayın.
+          description_short: Büyük miktarda bilgiyi depolamak ve işlemek için listeleri, döngüleri ve geçişleri kullanan uygulamaları nasıl oluşturacağınızı öğrenin.
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -6089,8 +6119,8 @@ tr:
               display_name: Performans Görevi Oluştur
             lessonGroup-3:
               display_name: Kurs-Sonrası Anketi
-          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
-          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
+          description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
+          student_description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
           description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
         csp9-2023:
           lesson_groups:
@@ -6098,18 +6128,18 @@ tr:
               display_name: 'Ünite 9: Veriler'
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
-          description: Bu ünitede, veri analizinin ham verileri dünya hakkında yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde, seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
-          student_description: Bu ünitede, veri analizinin ham verileri dünya hakkında yararlı bilgilere dönüştürmeye nasıl yardımcı olduğunu öğrenin. Veri kümelerinin içindeki kalıpları bulmak için veri görselleştirmeyi nasıl kullanacağınızı öğrenin ve bu veri analizi sürecinin, karar vermeye yardımcı olmak veya dünyamız hakkında daha fazla bilgi edinmek için açık veri veya makine öğrenimi gibi bağlamlarda nasıl kullanıldığını öğrenin. Ünite projesinde, seçtiğiniz bir veri setini analiz edecek ve bulgularınızı sunacaksınız.
-          description_short: Kalıpları ararken ve çevrenizdeki dünya hakkında daha fazla şey öğrenmeye çalışırken çok çeşitli konulardaki veri kümelerini keşfedin ve görselleştirin.
+          description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
+          student_description: Bu ünitede AP Oluşturma Performansı Görevine hazırlanın ve gerçekleştirin. Her ders, görevi anlamanıza ve görevi tamamlamak için bir plan geliştirmenize yardımcı olacak faydalı belgelere ve etkinliklere bağlantılar içerir.
+          description_short: Performans Görevi Oluştur (PT) alıştırması yapın ve tamamlayın.
         csp10-2023:
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
             lessonGroup-2:
               display_name: Kurs-Sonrası Anketi
-          description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
-          student_description: Bu ünitede bilgi işlem yeniliklerinin dünyamızı nasıl yararlı ve zararlı şekillerde etkilediğini öğrenin. Verilerin gizliliğimize ve güvenliğimize nasıl tehdit oluşturabileceğini ve bunları korumak için şifreleme ve diğer tekniklerin nasıl kullanıldığını öğrenin. Ünite boyunca, sizin ve bir ekibin bilgi işlem yenilikleriyle okul yaşamını en iyi şekilde nasıl geliştirebileceğinize dair bir öneride bulunduğunuz bir "geleceğin okulu" konferansına katılın.
-          description_short: Veri, kamu politikası, hukuk, etik ve toplumsal etkinin kesiştiği noktada güncel olayları araştırın ve tartışın.
+          description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
+          student_description: Bu ünite, bilgisayar bilimcilerinin sorunları çözmek için algoritmaları nasıl tasarladıklarına ve farklı algoritmaların hızlarını nasıl analiz ettiklerine dair hızlı bir keşiftir. Çeşitli uygulamalı etkinlikler aracılığıyla algoritmik verimlilik kavramı hakkında bilgi edinin ve bunun modern bilgi işlemde nasıl uygulandığını öğrenin.
+          description_short: Nasıl çalıştıklarını ve neden bazılarının diğerlerinden daha iyi kabul edildiğini anlamak için algoritmalar tasarlayın ve analiz edin.
         csp-post-survey-2023:
           title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
         self-paced-pl-csa1-2023:
@@ -6145,3 +6175,40 @@ tr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bölüm 1: Donanım girdisi'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Girdiler ve çıktılar
+            lessonGroup-4:
+              display_name: 'Bölüm 1: Donanım girdisi'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uygulama Labına Giriş
+            lessonGroup-3:
+              display_name: Girdiler ve çıktılar
+        self-paced-pl-csc-2023:
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika

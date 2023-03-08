@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-15 01:18:08 UTC",
+    "serialized_at": "2023-01-18 16:11:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1248,7 +1248,7 @@
       "key": "a0cde871-7586-487f-88fa-aa05bb2ad006",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Design Thinking: Group Brainstorm"
       },
@@ -1439,7 +1439,7 @@
       "key": "4cc32777-ecea-4650-96ff-3ecb090a50f9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "tips": [
           {
             "type": "teachingTip",
@@ -1514,7 +1514,7 @@
       "key": "ef33d22a-e3f4-4a09-b76b-69cccd95a749",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Guide.",
         "duration": "5",
         "name": "Introduction",
         "tips": [
@@ -1705,7 +1705,7 @@
       "key": "d51eff97-f31f-443c-aee8-f95406e8410e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as syntax, class headers, and the `main` method. Students also identify the features in Java Lab that allow them to write, run, and test their programs. They should realize that the knowledge they gained in this lesson provides them a foundation to build on to develop more complex programs and make predictions about what they might learn next.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as syntax, class headers, and the `main` method. Students also identify the features in Java Lab that allow them to write, run, and test their programs. They should realize that the knowledge they gained in this lesson provides them a foundation to build on to develop more complex programs and make predictions about what they might learn next.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1786,7 +1786,7 @@
       "key": "cce70db2-d684-4811-879b-77f8ba2ed3a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Introduction"
       },
@@ -1986,7 +1986,7 @@
       "key": "7473fbb6-ff78-4757-9943-06736a0b9572",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2068,7 +2068,7 @@
       "key": "a19708bc-39c1-4ba3-8d06-21d509674c5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Instantiation"
       },
@@ -2223,7 +2223,7 @@
       "key": "e30f49c7-bf54-4954-8df2-e7b9fa3cdfff",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2316,7 +2316,7 @@
       "key": "01863dad-c74f-44b3-8b82-e3eedf0ddbf4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2455,7 +2455,7 @@
       "key": "e2546f96-4bcd-4e6a-aed9-5657fe3d9dcc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question by identifying the missing method call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question by identifying the missing method call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Fix the Code",
         "tips": [
           {
@@ -2538,7 +2538,7 @@
       "key": "25cef960-7c1b-4a8f-9a98-55c53c448f24",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2691,7 +2691,7 @@
       "key": "05c5ff90-60d3-431f-a633-45ea6f6c84f8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2784,7 +2784,7 @@
       "key": "9a83e932-6c1d-40c2-928d-4e25e77c3cde",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -2954,7 +2954,7 @@
       "key": "ea0087b0-766e-4f42-bdee-414b5d6c5820",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3053,7 +3053,7 @@
       "key": "61b605a1-ab48-4ab9-ae79-81d847b950de",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Inheritance"
       },
@@ -3220,7 +3220,7 @@
       "key": "c9df4e22-111b-486a-b489-52522f058bf3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some things you want a `PainterPlus` object to do that a `Painter` object can't do?*\n\n**Discussion Goal:** Students share ideas of methods they could add to the `PainterPlus` class, such as a method to turn right, navigate faster, or take all of the paint from a paint bucket.\n\n**Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some things you want a `PainterPlus` object to do that a `Painter` object can't do?*\n\n**Discussion Goal:** Students share ideas of methods they could add to the `PainterPlus` class, such as a method to turn right, navigate faster, or take all of the paint from a paint bucket.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3290,7 +3290,7 @@
       "key": "68f01012-2986-4af3-86ea-bf4b1e5f604c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3513,7 +3513,7 @@
       "key": "9efc3ca1-aad2-49c6-924c-c8091baccbe6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3595,7 +3595,7 @@
       "key": "b59ca707-6c53-4732-8b58-9a1bdec8771f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Style and Documentation"
       },
@@ -3786,7 +3786,7 @@
       "key": "f8f90577-1b83-4961-8bcd-317ac559ee3e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What surprises you about this visual? What do you want to know more about?*\n\n**Discussion Goal:** Students share aspects of the visual that surprise them, such as the amount of time spent on fixing errors. They might ask questions about why so much time is spent on finding and fixing errors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Approximately $85 billion is lost from developer time spent on bad code each year. How can software engineers minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the various tasks they complete as part of their work. Students identify strategies to minimize time spent on bad code, such as using good programming style and planning and reviewing code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What surprises you about this visual? What do you want to know more about?*\n\n**Discussion Goal:** Students share aspects of the visual that surprise them, such as the amount of time spent on fixing errors. They might ask questions about why so much time is spent on finding and fixing errors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Approximately $85 billion is lost from developer time spent on bad code each year. How can software engineers minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the various tasks they complete as part of their work. Students identify strategies to minimize time spent on bad code, such as using good programming style and planning and reviewing code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3868,7 +3868,7 @@
       "key": "9f893097-abc9-436f-a1ec-6defdfd0d785",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -4090,7 +4090,7 @@
       "key": "11d9a149-c2d1-4454-8f33-71a4d7d5d7ae",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4172,7 +4172,7 @@
       "key": "f600fd67-4dca-42ca-9f12-968663bf4262",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -4369,7 +4369,7 @@
       "key": "d96aa514-6b53-4793-946b-7a0b3249b80d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between methods that return a value and `void` methods?*\n* *What parts of this lesson were similar to strategies you have used to solve other problems?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students explain the difference between methods that return a value and `void` methods and make connections to the methods in the `Painter` class. Students suggest examples of strategies they have used to solve other problems, such as going through a solution one step at a time or tracing the values of variables in previous computer science classes or math classes. Students share concepts from the lesson that they are confident about and concepts they might be confused about.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between methods that return a value and `void` methods?*\n* *What parts of this lesson were similar to strategies you have used to solve other problems?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students explain the difference between methods that return a value and `void` methods and make connections to the methods in the `Painter` class. Students suggest examples of strategies they have used to solve other problems, such as going through a solution one step at a time or tracing the values of variables in previous computer science classes or math classes. Students share concepts from the lesson that they are confident about and concepts they might be confused about.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4451,7 +4451,7 @@
       "key": "1d34fdca-1e36-4e8e-948f-3924e179a959",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Decomposition"
       },
@@ -4749,7 +4749,7 @@
       "key": "60d39b77-33c4-4138-92bb-25a2a8908899",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4831,7 +4831,7 @@
       "key": "07b24030-fe47-40c8-9b48-333dba0616c3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -4998,7 +4998,7 @@
       "key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week",
         "tips": [
           {
@@ -9192,7 +9192,7 @@
       }
     },
     {
-      "name": "FRQ Practice",
+      "name": "SpiralPainter FRQ",
       "url": "https://docs.google.com/presentation/d/1vdfMoR8X4eqfVKsWLJ1JIDprNAJmDhdJL9V-NSGQz9s/edit?usp=sharing",
       "key": "frq_practice",
       "properties": {

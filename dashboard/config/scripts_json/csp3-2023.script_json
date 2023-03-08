@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-19 18:16:13 UTC",
+    "serialized_at": "2023-03-04 15:16:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Unit 3: Intro to App Design",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n* **New Topics, Same Classroom Culture:** This unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n* **Empowering \"Creators\":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n### Major Assessment and Projects\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
+        "description": "### Unit Philosophy and Pedagogy\n\n\n\n\n### Major Assessment and Projects\n\n\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit3_2020",
@@ -2482,6 +2482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App_2023"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2504,6 +2507,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App_2023"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2526,6 +2532,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App_2023"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2548,6 +2557,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App_2023"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2570,6 +2582,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App_2023"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2592,6 +2607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate_2023"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2614,6 +2632,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation_2023"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2636,6 +2657,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation_2023"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2658,6 +2682,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App Investigation_2023"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2680,6 +2707,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation_2023"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2702,6 +2732,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2724,6 +2757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode_2023"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2746,6 +2782,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes_2023"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2768,6 +2807,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors_2023"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2790,6 +2832,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images_2023"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2812,6 +2857,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons_2023"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2834,6 +2882,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids_2023"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2856,6 +2907,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Copy an App_2023"
+        ],
         "progression": "Copy an App"
       },
       "bonus": false,
@@ -2878,6 +2932,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L2 CSP CFU ID names_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2900,6 +2957,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard_2023"
+        ],
         "progression": "Sample Prototype"
       },
       "bonus": false,
@@ -2922,6 +2982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Design Screens_2023"
+        ],
         "progression": "Build Your Screens"
       },
       "bonus": false,
@@ -2944,6 +3007,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2966,6 +3032,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 1_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2988,6 +3057,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 2_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3010,6 +3082,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 1_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3032,6 +3107,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven setScreen_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3054,6 +3132,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 2_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3076,6 +3157,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 3_2023"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3098,6 +3182,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3120,6 +3207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 1_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3142,6 +3232,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 2_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3164,6 +3257,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 4_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3186,6 +3282,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 6_2023"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3208,6 +3307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L7 Choice_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3230,6 +3332,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3252,6 +3357,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code_2023"
+        ],
         "progression": "Add Code"
       },
       "bonus": false,
@@ -3274,6 +3382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L9 Add More Code_2023"
+        ],
         "progression": "Add More Code"
       },
       "bonus": false,
@@ -3296,6 +3407,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L10 Submit App_2023"
+        ],
         "progression": "Submit your app"
       },
       "bonus": false,
@@ -3318,6 +3432,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp3_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3340,6 +3457,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment 2022_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3935,6 +4055,42 @@
       }
     },
     {
+      "name": "Debugging",
+      "url": "https://docs.google.com/presentation/d/1lbA2-DeAGIyw6wXoSr5upyvyzgnwnxk5Mr2QT8m5s00/template/preview",
+      "key": "debugging_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_1"
+      }
+    },
+    {
+      "name": "Designing an App - Days 1-2",
+      "url": "https://docs.google.com/presentation/d/1E_AOW9LFj51KIPILNuXB78mGwi8UTZ6c4mzP-RYEVnQ/template/preview",
+      "key": "designing_an_app_-_days_1-2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "designing_an_app_-_days_1-2"
+      }
+    },
+    {
+      "name": "Designing an App - Days 3-5",
+      "url": "https://docs.google.com/presentation/d/1at074YyYXix_cXDm79DThpcdqsZ5F9NgAcMzfdUqUu8/template/preview",
+      "key": "designing_an_app_-_days_3-5",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "designing_an_app_-_days_3-5"
+      }
+    },
+    {
       "name": "How Computers Work - What Makes a Computer, a Computer",
       "url": "https://www.youtube.com/watch?v=mCq8-xTH7jA&feature=youtu.be",
       "key": "how_computers_work_-_what_makes_a_computer_a_computer",
@@ -3961,6 +4117,42 @@
       }
     },
     {
+      "name": "Intro to Programming",
+      "url": "https://docs.google.com/presentation/d/1ho6pc2u4yVg0ggMSx3qGumU0HO9zjWnkuh0x7GzXVTE/template/preview",
+      "key": "intro_to_programming",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_programming"
+      }
+    },
+    {
+      "name": "Introduction to Apps",
+      "url": "https://docs.google.com/presentation/d/1updHVqzKC0pbnVLIR3VOvL72v2sNuYBz_r1muMaa6iI/template/preview",
+      "key": "introduction_to_apps",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_apps"
+      }
+    },
+    {
+      "name": "Introduction to Design Mode",
+      "url": "https://docs.google.com/presentation/d/1C-L-ajuryUMFWYCaNqK9H7XdgxiEMsxagqdMX9HfNcI/template/preview",
+      "key": "introduction_to_design_mode",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_design_mode"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://youtu.be/q7d_JtyCq1A",
       "key": "pair_programming",
@@ -3983,6 +4175,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Need for Programming Languages",
+      "url": "https://docs.google.com/presentation/d/1vKDoFifrWW11cYJPtblcSb4OxFZJLKs9n4wLlWF4p3w/template/preview",
+      "key": "the_need_for_programming_languages",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_need_for_programming_languages"
       }
     },
     {
@@ -4056,13 +4260,13 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging",
-        "resource.key": "debugging"
+        "resource.key": "debugging_1"
       }
     },
     {
@@ -4074,13 +4278,7 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to Programming",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "intro_to_programming"
       }
     },
     {
@@ -4091,8 +4289,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "resource.key": "introduction_to_apps"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "introduction_to_design_mode"
       }
     },
     {
@@ -4104,7 +4308,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Designing an App Part 1",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "designing_an_app_-_days_1-2"
       }
     },
     {
@@ -4128,7 +4332,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Designing an App Part 3",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "designing_an_app_-_days_3-5"
       }
     },
     {
@@ -4188,7 +4392,7 @@
     {
       "seeding_key": {
         "lesson.key": "The Need for Programming Languages",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "the_need_for_programming_languages"
       }
     }
   ],

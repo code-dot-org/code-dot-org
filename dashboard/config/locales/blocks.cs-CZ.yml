@@ -378,7 +378,7 @@ cs:
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
-            '"BEAR"': Medvěd
+            '"BEAR"': medvěd
             '"CAT"': kočka
             '"DOG"': pes
             '"DUCK"': kachna
@@ -407,7 +407,7 @@ cs:
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
-            '"BEAR"': Medvěd
+            '"BEAR"': medvěd
             '"CAT"': kočka
             '"DOG"': pes
             '"DUCK"': kachna
@@ -1320,7 +1320,7 @@ cs:
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": vlnky na
               pláži
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": bublina
-            "'sound://category_animals/bear.mp3'": Medvěd
+            "'sound://category_animals/bear.mp3'": medvěd
             "'sound://category_animals/cat.mp3'": kočka
             "'sound://category_animals/cow.mp3'": kráva
             "'sound://category_animals/pig.mp3'": prase

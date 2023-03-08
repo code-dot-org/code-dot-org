@@ -970,6 +970,42 @@ pl:
         csa-pl-intro-to-strings: Wprowadzenie do łańcuchów w Javie
         csa-pl-compareTo: Metoda compareto ()
         csc-event-short-intro: Krótkie wprowadzenie do zdarzeń.
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Przegląd jednostki Circuit
+          Playground
+        csa-day-in-pm-pl: Co robi kierownik projektu?
+        csa-pl-intro-to-pm: Wprowadzenie do zarządzania projektami
+        PL_CSD_CircuitPlayground_Setup: Konfiguracja Circuit Playground
+        csa_object_oriented_programming: 'CSA: Programowanie obiektowe'
+        csa_creating_objects: 'CSA: Tworzenie obiektów'
+        csa_calling_methods: 'CSA: Wywołanie metod'
+        csa_while_loops: 'CSA: Pętle dopóki'
+        csa_inheritance: 'CSA: Dziedziczenie'
+        csa_writing_a_method: 'CSA: Pisanie metody'
+        csa_software_engineering_code_reviews: 'CSA: Inżynieria oprogramowania - Przegld
+          kodu'
+        csa_conditional_statements: 'CSA: Instrukcje warunkowe'
+        csa_printing_in_java: 'CSA: Drukowanie w Javie'
+        csa_two_way_selection_and_not: 'CSA: Wybór dwukierunkowy i NOT'
+        csa-pl-intro-to-oop: Wprowadzenie do programowania obiektowego
+        csa-pl-welcome-to-Neighborhood: Witamy w The Neighborhood
+        csa-pl-calling-methods: Wywołanie metod w Javie
+        csa-pl-creating-objects: Tworzenie obiektów
+        csa_accessor_methods: 'CSA: Metody accessor'
+        csa_constructors: 'CSA: Konstruktory'
+        csa_creating_a_scanner_object: 'CSA: Tworzenie obiektu skaner'
+        csa_creating_variables: 'CSA: Tworzenie zmiennych'
+        csa_instance_variables_and_attributes: 'CSA: Zmienne instancji i atrybuty'
+        csa_mutator_methods: 'CSA: Metody mutator'
+        csa_overloaded_constructors: 'CSA: Przeciążene konstruktory'
+        csa_the_tostring_method: 'CSA: Metoda toString ()'
+        csa_scanner_class_methods: 'CSA: Metody klasy skaner'
+        csa_for_loops: 'CSD: Pętle ''dla'''
+        csa_enhanced_for_loops: 'CSA: Ulepszone pętle ''dla'''
+        csa_modifying_values_in_a_1d_array: 'CSA: Modyfikowanie wartości w tablicy
+          1D'
+        csa_nested_loops: 'CSA: Zagnieżdżone pętle'
+        csa_one_dimensional_arrays: 'CSA: Tablice jednowymiarowe (1D)'
+        csa_polymorphism: 'CSA: Polimorfizm'
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

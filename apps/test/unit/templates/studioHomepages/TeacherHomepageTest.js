@@ -5,6 +5,8 @@ import {assert} from 'chai';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   announcements: [],
@@ -22,7 +24,8 @@ const DEFAULT_PROPS = {
   teacherId: 1,
   teacherEmail: 'teacher@code.org',
   teacherName: 'Teacher',
-  hasFeedback: false
+  hasFeedback: false,
+  currentUserId: 42
 };
 
 const setUp = (overrideProps = {}) => {
@@ -40,8 +43,14 @@ describe('TeacherHomepage', () => {
   beforeEach(() => {
     server = sinon.fakeServer.create();
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
+    sinon.stub(sessionStorage, 'getItem');
+    sinon.stub(sessionStorage, 'setItem');
   });
-  afterEach(() => server.restore());
+  afterEach(() => {
+    server.restore();
+    sessionStorage.setItem.restore();
+    sessionStorage.getItem.restore();
+  });
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
@@ -56,6 +65,31 @@ describe('TeacherHomepage', () => {
   it('renders 2 ProtectedStatefulDivs', () => {
     const wrapper = setUp();
     assert.lengthOf(wrapper.find('ProtectedStatefulDiv'), 2);
+  });
+
+  it('logs an Amplitude event only on first render', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    sessionStorage.getItem.withArgs('logged_teacher_session').returns(false);
+    setUp();
+
+    expect(sessionStorage.setItem).to.have.been.calledOnce;
+    expect(sessionStorage.setItem).to.have.been.calledWith(
+      'logged_teacher_session',
+      'true'
+    );
+    expect(analyticsSpy).to.have.been.calledOnce;
+    expect(analyticsSpy.firstCall.args).to.deep.eq([
+      'Teacher Login',
+      {'user id': 42}
+    ]);
+
+    // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
+    sessionStorage.getItem.withArgs('logged_teacher_session').returns('true');
+    setUp();
+    expect(sessionStorage.setItem).to.have.been.calledOnce;
+    expect(analyticsSpy).to.have.been.calledOnce;
+
+    analyticsSpy.restore();
   });
 
   it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {

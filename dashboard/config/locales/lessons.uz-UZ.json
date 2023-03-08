@@ -409,7 +409,7 @@
           "student_overview": "Siz Sprite Laboratoriyasi bilan yanada ko'proq ishlashni va ko'plab spritlar bilan loyihalar yaratishni o'rganasiz!"
         },
         "coursef-2022/[New] Counting with Variables": {
-          "name": "O'zgaruvchilar bilan hisoblash",
+          "name": "O'zgaruvchilarni sanash",
           "overview": "Ushbu **malaka oshirish** darsida talabalar hisoblagich kabi vaqt o‘tishi bilan o‘zgarib turadigan qiymatni kuzatish uchun o‘zgaruvchilardan foydalanadilar. Ushbu darsda talabalar oddiy o'yin yaratadigan qisqa **mini-loyiha** ham mavjud.",
           "purpose": "Oldingi darslarda talabalar keyinroq olinishi mumkin bo'lgan ma'lumotlarni saqlash uchun o'zgaruvchilardan foydalanishni o'rganadilar. Ushbu darsda talabalar o'zgaruvchida saqlangan ma'lumotlarni o'zgartirishni o'rganishni boshlaydilar. O'zgaruvchilar qanday ishlashini tushunish, ularga yanada ilg'or loyihalarni yaratishga imkon beradi.",
           "student_overview": "Hisoblagich yaratish yoki o'yinda hisobni kuzatish uchun o'zgaruvchilardan foydalanishni o'rganasiz."
@@ -603,7 +603,8 @@
           "student_overview": "Use events to create a story or make an interactive game."
         },
         "courseb-2022/End of Course Project": {
-          "name": "End of Course Project"
+          "name": "End of Course Project",
+          "purpose": "Ushbu dars talabalarga yangi informatika ko'nikmalaridan ijodiy foydalanish uchun oxirgi imkoniyatni beradi."
         },
         "express-2022/Programming with Angry Birds": {
           "name": "Jahldor qushlar bilan dasturlash",
@@ -754,7 +755,7 @@
           "student_overview": "Ushbu darsda siz Sprite Lab-da o'zgaruvchilar bilan mashq qilasiz."
         },
         "express-2022/[New] Counting with Variables": {
-          "name": "O'zgaruvchilar bilan hisoblash",
+          "name": "O'zgaruvchilarni sanash",
           "overview": "Ushbu **malaka oshirish** darsida talabalar hisoblagich kabi vaqt o‘tishi bilan o‘zgarib turadigan qiymatni kuzatish uchun o‘zgaruvchilardan foydalanadilar. Ushbu darsda talabalar oddiy o'yin yaratadigan qisqa **mini-loyiha** ham mavjud.",
           "preparation": "Darajalar bo'yicha o'ynang va dars rejasini ko'rib chiqing.",
           "purpose": "Oldingi darslarda talabalar keyinroq olinishi mumkin bo'lgan ma'lumotlarni saqlash uchun o'zgaruvchilardan foydalanishni o'rganadilar. Ushbu darsda talabalar o'zgaruvchida saqlangan ma'lumotlarni o'zgartirishni o'rganishni boshlaydilar. O'zgaruvchilar qanday ishlashini tushunish, ularga yanada ilg'or loyihalarni yaratishga imkon beradi.",
@@ -871,6 +872,7 @@
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
           "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyasiga kirganda nima kutishi kerakligi haqida o‘rgatadi. Ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
+          "preparation": "-   Code.org saytida **\\*Qanday sinf bo'limini yaratish mumkin**-ni tomosha qiling - O'qituvchi videosi. Code.org saytida o'zingizning sinf bo'limingizni yarating va har bir talaba o'z paroli ko'rsatilgan kartaga ega ekanligiga ishonch hosil qiling.\n-   Talabalar 2-darsga o'z qurilmalaridan kira olishlariga ishonch hosil qiling. Talabalar juda tez oldinga siljishlariga yo'l qo'ymaslik uchun kelajakdagi darslarni yashirishni xohlaysizmi yoki yo'qligini o'ylab ko'ring.\n-   Maktab IT xodimidan kompyuter ish stoliga sinfingiz bo'limi uchun tezkor havolani qo'shishini so'rang.\n-   Common Sense Education veb-saytini ko'proq onlayn xavfsizlik mazmuni uchun ko'rib chiqing.",
           "purpose": "Ushbu darsning asosiy maqsadi talabalarni kompyuter bilan ishlash tajribasini rivojlantirishdir. Bosish, ushlab turish  kabi eng asosiy kompyuter funktsiyalarini qamrab olgan holda, biz kelajakdagi jumboqlar uchun sinfda yanada tekis o'yin maydonini yaratamiz. Ushbu dars, shuningdek, qurilmangizga qarab, \"sichqoncha\", \"trackpad\" yoki \"sensorli ekran\" kabi asosiy kompyuter apparat terminologiyasini tanishtirish uchun ajoyib imkoniyatni taqdim etadi.",
           "student_overview": "Boshqotirma va jumboqni tugatish uchun harakatlaning"
         },
@@ -935,12 +937,18 @@
           "student_overview": "Move and shout when your teachers presses buttons on a giant remote."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-loyiha: Play Lab bilan harakatda",
           "overview": "Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!",
+          "preparation": "-   Sinfingiz uchun mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib bajarish uchun bir nechta jumboqlarni tanlang.\n-   **\\*CSF darslari bo'yicha tavsiyalarni ko'rib chiqing**.\n-   Har bir o'quvchining aks ettirish jurnali borligiga ishonch hosil qiling.",
           "purpose": "Bugun talabalar Play Labdan foydalanib hodisalar haqidagi tushunchalarini yanada rivojlantiradilar. Ko‘plab komputer daasturlarida hodisalar juda muhim hisoblanishadi. Bu mashg‘ulotda, talabalar hodisalardan biron obrazni ekran bo‘ylab harakatlantirishda, shovqin solishda va foydalanuvchi qanday boshlashiga qarab fonni o‘zgartirishda ishlatishadi.",
           "student_overview": "O'z o'yiningiz yoki hikoyangizni yarating!"
         },
         "coursea-2022/End of Course Project": {
-          "name": "End of Course Project"
+          "name": "End of Course Project",
+          "overview": "Ushbu **loyiha** darsida talabalar ketma-ketlik va tsikllar haqida o‘rganganlarini Rassom bilan qo‘llashadi.",
+          "preparation": "-   O'quvchilarni ilhomlantirish uchun Rassom uchun o'z hikoyangizni oldindan yozing va kodlang!",
+          "purpose": "Ushbu dars talabalarga yangi informatika ko'nikmalaridan ijodiy foydalanish uchun oxirgi imkoniyatni beradi.",
+          "student_overview": "Rassom bilan voqeani aytib bering!"
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
           "student_overview": "Ushbu darsda siz ma'nosizlik haqida va agar Internetda duch kelganda nima qilish kerakligi haqida bilib olasiz."
@@ -4099,7 +4107,8 @@
           "student_overview": "Use events to create a story or make an interactive game."
         },
         "courseb-2021/lesson-1": {
-          "name": "End of Course Project"
+          "name": "End of Course Project",
+          "purpose": "Ushbu dars talabalarga yangi informatika ko'nikmalaridan ijodiy foydalanish uchun oxirgi imkoniyatni beradi."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
           "name": "Mening onlayn atrofimda xavfsizlik",
@@ -4110,6 +4119,7 @@
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
           "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
+          "preparation": "-   Code.org saytida **\\*Qanday sinf bo'limini yaratish mumkin**-ni tomosha qiling - O'qituvchi videosi. Code.org saytida o'zingizning sinf bo'limingizni yarating va har bir talaba o'z paroli ko'rsatilgan kartaga ega ekanligiga ishonch hosil qiling.\n-   Talabalar 2-darsga o'z qurilmalaridan kira olishlariga ishonch hosil qiling. Talabalar juda tez oldinga siljishlariga yo'l qo'ymaslik uchun kelajakdagi darslarni yashirishni xohlaysizmi yoki yo'qligini o'ylab ko'ring.\n-   Maktab IT xodimidan kompyuter ish stoliga sinfingiz bo'limi uchun tezkor havolani qo'shishini so'rang.\n-   Common Sense Education veb-saytini ko'proq onlayn xavfsizlik mazmuni uchun ko'rib chiqing.",
           "purpose": "Bu darsning asl maqsadi talabalarga komputer bilan ishlash tajribasiga erishishiga yordam berish. Bosish, ko‘chirib olish va ko‘chirib qo‘yish kabi eng asosiy funksiyalarini o‘tish orqali, biz sinfda kelajakdagi boshqotirmalar uchun yana ham tengroq shug‘ullanish maydoni yaratayapmiz. Bu dars yana mos komputer labaratoriyasi xatti-harakatlaini tanishtirish uchun ajoyib imkoniyat bilan ta’minlaydi.",
           "student_overview": "Click and drag to finish the puzzles."
         },
@@ -4164,12 +4174,18 @@
           "student_overview": "Move and shout when your teachers presses buttons on a giant remote."
         },
         "coursea-2021/Events in Play Lab": {
+          "name": "Mini-loyiha: Play Lab bilan harakatda",
           "overview": "Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!",
+          "preparation": "-   Sinfingiz uchun mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib bajarish uchun bir nechta jumboqlarni tanlang.\n-   **\\*CSF darslari bo'yicha tavsiyalarni ko'rib chiqing**.\n-   Har bir o'quvchining aks ettirish jurnali borligiga ishonch hosil qiling.",
           "purpose": "Bugun talabalar Play Labdan foydalanib hodisalar haqidagi tushunchalarini yanada rivojlantiradilar. Ko‘plab komputer daasturlarida hodisalar juda muhim hisoblanishadi. Bu mashg‘ulotda, talabalar hodisalardan biron obrazni ekran bo‘ylab harakatlantirishda, shovqin solishda va foydalanuvchi qanday boshlashiga qarab fonni o‘zgartirishda ishlatishadi.",
           "student_overview": "O'z o'yiningiz yoki hikoyangizni yarating!"
         },
         "coursea-2021/lesson-1": {
-          "name": "End of Course Project"
+          "name": "End of Course Project",
+          "overview": "Ushbu **loyiha** darsida talabalar ketma-ketlik va tsikllar haqida o‘rganganlarini Rassom bilan qo‘llashadi.",
+          "preparation": "-   O'quvchilarni ilhomlantirish uchun Rassom uchun o'z hikoyangizni oldindan yozing va kodlang!",
+          "purpose": "Ushbu dars talabalarga yangi informatika ko'nikmalaridan ijodiy foydalanish uchun oxirgi imkoniyatni beradi.",
+          "student_overview": "Rassom bilan voqeani aytib bering!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "student_overview": "Ushbu darsda siz ma'nosizlik haqida va agar Internetda duch kelganda nima qilish kerakligi haqida bilib olasiz."

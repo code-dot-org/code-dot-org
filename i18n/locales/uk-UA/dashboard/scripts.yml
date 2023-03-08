@@ -2890,6 +2890,17 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Цикли For
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         hello-world-space-2022:
           title: 'Привіт Світ: Космос'
         hello-world-soccer-2022:
@@ -2945,7 +2956,7 @@ uk:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Списки
+              display_name: Дані
             csp_loops:
               display_name: Цикли
             csp_traversals:
@@ -2956,8 +2967,16 @@ uk:
               display_name: Опитування після закінчення курсу
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
             lessonGroup-2:
               display_name: Опитування після закінчення курсу
+            lessonGroup-3:
+              display_name: Цикли
+            lessonGroup-4:
+              display_name: Переходи
+            lessonGroup-5:
+              display_name: Проект
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -2981,6 +3000,10 @@ uk:
             lessonGroup-2:
               display_name: Опитування після закінчення курсу
         devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        microbit-2022:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'

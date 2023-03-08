@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-particles",
-    "serialized_at": "2022-11-09 18:37:13 UTC",
+    "serialized_at": "2023-01-03 22:24:17 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1309,6 +1309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_physical change"
+        ],
         "progression": "Physical Changes Information"
       },
       "bonus": false,
@@ -1331,6 +1334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_observe2"
+        ],
         "progression": "Physical Changes Wood Experiment "
       },
       "bonus": false,
@@ -1353,6 +1359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cdc_particles_physical_intro2"
+        ],
         "progression": "Vanishing Act"
       },
       "bonus": false,
@@ -1400,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_setup1"
+        ],
         "progression": "Lab Setup"
       },
       "bonus": false,
@@ -1447,6 +1459,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_experimentEvent"
+        ],
         "progression": "Create Your Experiment"
       },
       "bonus": false,
@@ -1594,6 +1609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_chemical change"
+        ],
         "progression": "Chemical Changes Information"
       },
       "bonus": false,
@@ -1616,6 +1634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_observe2_chem"
+        ],
         "progression": "Chemical Changes Wood Experiment"
       },
       "bonus": false,
@@ -1638,6 +1659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_chemical_intro"
+        ],
         "progression": "Vanishing Act 2"
       },
       "bonus": false,
@@ -1685,6 +1709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_setup1_chem"
+        ],
         "progression": "Lab Setup"
       },
       "bonus": false,
@@ -1707,6 +1734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events_chem"
+        ],
         "progression": "Create Your Experiment"
       },
       "bonus": false,
@@ -1829,6 +1859,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_physical_change_chem"
+        ],
         "progression": "Before & After Chemical Change"
       },
       "bonus": false,

@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Os cursos da Code.org são usadas por dezenas de milhões de alunos e por um milhão de professores em todo o mundo.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## História
 
 Em 2013, a Code.org for lançada pelos dois irmãos Hadi e Ali Partovi, com um [vídeo promocional de ciência computacional](https://www.youtube.com/watch?v=nKIu9yen5nc). Este vídeo tornou-se o #1 no Youtube por um dia, e 15,000 escolas estenderam a mão para nos ajudar. Desde então, expandimos a nossa equipa de voluntários para construir uma organização completa que apoia um movimento mundial. Acreditamos que a qualidade da educação da ciência computacional deveria estar disponível para toas as crianças, não apenas para algumas.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## O Que Fazemos
 

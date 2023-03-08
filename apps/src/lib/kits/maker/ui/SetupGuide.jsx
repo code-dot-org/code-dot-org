@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import experiments from '@cdo/apps/util/experiments';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
+import i18n from '@cdo/locale';
+import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
 
 const style = {
   twoColumns: {
@@ -35,7 +39,8 @@ export default class SetupGuide extends React.Component {
           href: 'https://microbit.org/',
           imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
           description: applabI18n.makerSetupMicrobitDescription(),
-          imgStyle: style.microbitImg
+          imgStyle: style.microbitImg,
+          alt: applabI18n.makerSetupMicrobitImageAltText()
         };
       case 'circuitPlayground':
         return {
@@ -45,15 +50,39 @@ export default class SetupGuide extends React.Component {
             'https://learn.adafruit.com/introducing-circuit-playground/overview',
           imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
-          imgStyle: style.circuitPlaygroundImg
+          imgStyle: style.circuitPlaygroundImg,
+          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
         };
     }
   };
+
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
-    let isMicrobit = experiments.isEnabled('microbit');
+    const isMicrobit = experiments.isEnabled('microbit');
+    const chromeVersion = getChromeVersion();
+
     return (
       <div>
+        {isCodeOrgBrowser() && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationWarningAppTitle()}
+            details={i18n.makerSetupDeprecationWarningAppDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
+          />
+        )}
+        {chromeVersion && chromeVersion <= 90 && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
+            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
+          />
+        )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
         {isMicrobit ? (
           <div style={style.twoColumns}>
@@ -83,7 +112,12 @@ function DescriptionCard(props) {
       <h2>{props.title}</h2>
       <center>
         <a href={props.href}>
-          <img src={props.imgSrc} width={200} style={props.imgStyle} />
+          <img
+            src={props.imgSrc}
+            width={200}
+            style={props.imgStyle}
+            alt={props.alt}
+          />
         </a>
       </center>
       <div className="description-content">
@@ -99,5 +133,6 @@ DescriptionCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
-  divStyle: PropTypes.object
+  divStyle: PropTypes.object,
+  alt: PropTypes.string.isRequired
 };

@@ -4075,6 +4075,26 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: 代替レッスン
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 1次元 (1D) 配列
+            lesson-3:
+              name: ループ用
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: ランダム
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         hello-world-space-2022:
           title: ハローワールド:スペース
         hello-world-soccer-2022:
@@ -4159,7 +4179,7 @@ ja:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: リスト
+              display_name: データ
             csp_loops:
               display_name: くりかえし
             csp_traversals:
@@ -4171,9 +4191,15 @@ ja:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'ユニット6: アルゴリズム'
+              display_name: リスト
             lessonGroup-2:
               display_name: コース終了後アンケート
+            lessonGroup-3:
+              display_name: くりかえし
+            lessonGroup-4:
+              display_name: トラバーサル
+            lessonGroup-5:
+              display_name: プロジェクト
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -4210,3 +4236,15 @@ ja:
           lesson_groups:
             lessonGroup-4:
               display_name: '第 2 章: 物理プロパティの構築'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: アプリラボの紹介
+            lessonGroup-3:
+              display_name: 入力と出力

@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ Wir empfehlen Ihnen, mit der IT-Abteilung Ihrer Schule oder der Stadt zu spreche
 | **Website des Internetsimulators**                                           | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Website von Web Lab**                                                      | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Verwendung der Schaltfläche Teilen von Google Classroom**                  | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                  | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Informationen zu mobilen Geräten und Tablets
 
@@ -100,7 +101,7 @@ Wir betten die Videos mit [YouTube](https://www.youtube.com) in Code.org und uns
 
 Testen Sie die Wiedergabe des Videos unten, bevor Sie die Online-Kurse von Code.org beginnen, um zu sehen, ob alles funktioniert.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Das ist der Player, der währende des gesamten Lehrplans verwendet wird. Er wird versuchen, das Video über YouTube wiederzugeben, und wenn YouTube gesperrt ist, wird das von Code.org gehostete Video mit unserem eigenen Player angezeigt.
 

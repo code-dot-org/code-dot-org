@@ -45,6 +45,10 @@ function member(elt, array) {
   return false;
 }
 
+function checkSpriteExists(id) {
+  return member(id, getSpriteIdsInUse());
+}
+
 /**
 Updates several helper variables that are used in validation code:
 - spriteIds - an array of all the current sprite IDs
@@ -62,7 +66,9 @@ if(World.frameCount == 1) {
   setFailTime(150);
   setDelayTime(90);
   setupPrevious();
+
   // addCriteria functions here
+
 }
 getHelperVars(); //<-----------
 check();
@@ -94,7 +100,9 @@ if(World.frameCount == 1) {
   setFailTime(150);
   setDelayTime(90);
   setupPrevious(); //<-----------
+
   // addCriteria functions here
+
 }
 getHelperVars();
 check();
@@ -131,7 +139,9 @@ if(World.frameCount == 1) {
   setFailTime(150);
   setDelayTime(90);
   setupPrevious();
+
   // addCriteria functions here
+
 }
 getHelperVars();
 check();
@@ -287,12 +297,15 @@ SPRITE VALIDATION
  }, "changeLocation");  // include i18n feedback string
  */
 function checkMovedSpritePin(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteX = getProp(sprite, "x");
-  var spriteY = getProp(sprite, "y");
-  if(spriteX != 200 || spriteY != 200) {
-    return true;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteX = getProp(sprite, "x");
+    var spriteY = getProp(sprite, "y");
+    if(spriteX != 200 || spriteY != 200) {
+      return true;
+ 	}
   }
+  return false;
 }
 
 
@@ -308,13 +321,16 @@ function checkMovedSpritePin(spriteId) {
   }, "useSetpropBlock");
  */
 function checkNotDefaultSize(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteScale = getProp(sprite, "scale");
-  if(spriteScale != 100) {
-    return true;
-  } else {
-  	return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteScale = getProp(sprite, "scale");
+    if(spriteScale != 100) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 //Checks if the sprite has been changed from the default costume
@@ -332,13 +348,16 @@ function checkNotDefaultSize(spriteId) {
  }, "cscLandmarkChangeCostume");  // include i18n feedback string
  */
 function checkNotDefaultCostume(spriteId, defaultCostume) {
-  var sprite = {id: spriteId};
-  var spriteCostume = getProp(sprite, "costume");
-  if(spriteCostume != defaultCostume) {
-    return true;
-  } else {
-    return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteCostume = getProp(sprite, "costume");
+    if(spriteCostume != defaultCostume) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 
@@ -544,13 +563,17 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   addCriteria(function() {
     return spriteIds.length >= 3 && checkThisSpriteTouchedThisFrame(spriteIds[1]) && checkNewBackground();
   }, "cscLandmarkBackgroundStoryteller");
+
   //For third sprite: check that the background changed
   addCriteria(function() {
     return spriteIds.length >= 3 && checkThisSpriteTouchedThisFrame(spriteIds[2]) && checkNewBackground();
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  return getBackground() != validationProps.previous.background;
+  if (getBackground() != '' && getBackground() != null) {
+  	return getBackground() != validationProps.previous.background;
+  }
+  return false;
 }
 
 //Checks if n unique touch events have happened
@@ -658,6 +681,7 @@ function getSpritesThatTouched(){
   setFailTime(150);
   setDelayTime(90);
   setupPrevious();
+
   addCriteria(function() {
     //Check that a sprite started speaking the same frame a prompt was answered
     return checkPromptUpdatedThisFrame() && checkNewSpriteSpeakThisFrame(spriteIds[0]);
@@ -689,6 +713,7 @@ function trackSpriteSpeech(spriteId) {
   setFailTime(150);
   setDelayTime(90);
   setupPrevious();
+
   addCriteria(function() {
     //Check that a sprite started speaking the same frame a prompt was answered
     return checkPromptUpdatedThisFrame() && checkNewSpriteSpeakThisFrame(spriteIds[0]);
@@ -720,6 +745,7 @@ function updatePrevSpriteSpeech(spriteId) {
   setFailTime(150);
   setDelayTime(90);
   setupPrevious();
+
   addCriteria(function() {
     //Check that a sprite started speaking the same frame a prompt was answered
     return checkPromptUpdatedThisFrame() && checkNewSpriteSpeakThisFrame(spriteIds[0]); // <-------------
@@ -738,101 +764,6 @@ function checkNewSpriteSpeakThisFrame(spriteId) {
   }
   return validationProps.spriteSpeeches[spriteId] != validationProps.previous.spriteSpeeches[spriteId];
 }
-
-
-/**
- * Updates current sprite costume for given sprite id. Meant to be called every frame, similar to getHelperVars()
- @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
- @example
-if(World.frameCount == 1) {
-  setFailTime(150);
-  setDelayTime(90);
-  setupPrevious(); 
-
-  addCriteria(function() {
-    //update to the criteria you want
-    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
-  }, "Make sure you change the costume of your sprite!");
-
-}
-getHelperVars();
-trackSpriteCostume(spriteIds[0]); // <-------
-check();
-updatePrevSpriteCostume(spriteIds[0]);
-updatePrevious();
- */
-function trackSpriteCostume(spriteId) {
-  if(!validationProps.spriteCostumes) {
-    validationProps.spriteCostumes = {};
-  }
-  if(!validationProps.previous.spriteCostumes) {
-    validationProps.previous.spriteCostumes = {};
-  }
-  
-  validationProps.spriteCostumes[spriteId] = getProp({id: spriteId}, "costume");
-}
-
-/**
- * Keeps track of previous frame sprite costume. Meant to be called just before the end of the validation loop, similar to updatePrevious();
- @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
- @example
-if(World.frameCount == 1) {
-  setFailTime(150);
-  setDelayTime(90);
-  setupPrevious(); 
-
-  addCriteria(function() {
-    //update to the criteria you want
-    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
-  }, "Make sure you change the costume of your sprite!");
-
-}
-getHelperVars();
-trackSpriteCostume(spriteIds[0]); 
-check();
-updatePrevSpriteCostume(spriteIds[0]); // <-------
-updatePrevious();
- */
-function updatePrevSpriteCostume(spriteId) {
-  if(!validationProps.spriteCostumes) {
-    validationProps.spriteCostumes = {};
-  }
-  if(!validationProps.previous.spriteCostumes) {
-    validationProps.previous.spriteCostumes = {};
-  }
-  
-  validationProps.previous.spriteCostumes[spriteId] = validationProps.spriteCostumes[spriteId];
-}
-
-/**
- * Checks if the sprite's costume changed this frame
- @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
- @example
-if(World.frameCount == 1) {
-  setFailTime(150);
-  setDelayTime(90);
-  setupPrevious(); 
-
-  addCriteria(function() {
-    //update to the criteria you want
-    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]); // <-------
-  }, "Make sure you change the costume of your sprite!");
-
-}
-getHelperVars();
-trackSpriteCostume(spriteIds[0]); 
-check();
-updatePrevSpriteCostume(spriteIds[0]); 
-updatePrevious();
- */
-function checkNewSpriteCostumeThisFrame(spriteId) {
-  if(!validationProps.spriteCostumes) {
-    console.log("Validation error - in order to use checkNewSpriteCostumeThisFrame, you must also call trackSpriteCostume() and updatePrevSpriteCostume(). See documentation for more information.");
-    return false;
-  }
-  return validationProps.spriteCostumes[spriteId] != validationProps.previous.spriteCostumes[spriteId];
-}
-
 
 // NEWSECTION
 // # <a name="promptPrintValidation">Prompt & Print Validation</a>
@@ -859,7 +790,7 @@ function checkAtLeastNPrints(n) {
 }
 
 //Checks that there's at least N prompt in the workspace, as evidenced by a promptVars object with N keys
-//Don't use - use checkAtLeastNPromptsAnswered(n) instead
+//Don't use - use checkAtLeastNPrimptsAnswered(n) instead
 function checkAtLeastNPrompts(n) {
   var promptVars = getPromptVars();
   if (promptVars == {}) {
@@ -989,10 +920,12 @@ VARIABLE & FUNCTION VALIDATION
   setFailTime(250);
   setDelayTime(150);
   setupPrevious();
+
   addCriteria(function() {
     //Check we clicked the sprite and the output variable changed
     return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkStudentVariableChangedThisFrame("output");
   }, "cscFunctionsNoFunctionBlock");
+
 }
 getHelperVars();
 drawHandsOnUnclickedSprites(0);
@@ -1049,10 +982,12 @@ function trackStudentVariable(variableName) {
   setFailTime(250);
   setDelayTime(150);
   setupPrevious();
+
   addCriteria(function() {
     //Check we clicked the sprite and the output variable changed
     return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkStudentVariableChangedThisFrame("output");
   }, "cscFunctionsNoFunctionBlock");
+
 }
 getHelperVars();
 drawHandsOnUnclickedSprites(0);
@@ -1083,10 +1018,12 @@ function updateStudentVariable(variableName) {
   setFailTime(250);
   setDelayTime(150);
   setupPrevious();
+
   addCriteria(function() {
     //Check we clicked the sprite and the output variable changed
     return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkStudentVariableChangedThisFrame("output"); // <--------
   }, "cscFunctionsNoFunctionBlock");
+
 }
 getHelperVars();
 drawHandsOnUnclickedSprites(0);
@@ -1104,15 +1041,8 @@ function checkStudentVariableChangedThisFrame(variableName) {
   return validationProps.variableValues[variableName] != validationProps.previous.variableValues[variableName];
 }
 
-// NEWSECTION
-//# <a name="requestedFunctions">Requested Functions</a>
-
-/***************************************************
-VARIABLE & FUNCTION VALIDATION
-***************************************************/
-
 /**
- * Checks that the last thing printed by the user contains a given string. For example, if this criterion function was passed the string "example", then the criterion function would return true if the user printed "this is an example" or "example" but not "examp" or "1234".
+ * Checks that the last thing printed by the user contains a given string. For example, if this criterion function was passed the string "example", then the criterion function would return true if the user printed "this is an example" or "example" but not "examp".
  * @param {string} string - the string to search for in the last print statement
  * @returns {boolean} true if the statement printed by a print block contains <string>
  * @see [Click here for example](https://levelbuilder-studio.code.org/levels/43122)
@@ -1121,6 +1051,7 @@ VARIABLE & FUNCTION VALIDATION
    return checkLastPrintStatementContains(example);
  }, "genericFailure");
  */
+
 function checkLastPrintStatementContains(string) {
   	if (printLog.length > 0) {
 		return printLog[printLog.length - 1].indexOf(string) !== -1;
@@ -1166,4 +1097,8 @@ function checkInteractiveSpriteMovement() {
         y: currentY,
       };
     }
+}
+
+function checkUsedWhenRun() {
+	console.log(getEventLog());
 }

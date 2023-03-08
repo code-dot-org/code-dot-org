@@ -13,7 +13,7 @@ var audioSystem = null;
 
 export function InitSound(desiredSounds) {
   // regular web version.
-  baseSoundUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
+  baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   audioSystem = new WebAudio();
 
   LoadSounds(desiredSounds);
@@ -55,17 +55,25 @@ export function PlaySound(
   groupTag,
   when = 0,
   onStop = () => {},
-  loop = false
+  loop = false,
+  effects = false
 ) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i] === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      return PlaySoundByIndex(i, groupTag || name, when, loop, onStop);
+      return PlaySoundByIndex(i, groupTag || name, when, loop, effects, onStop);
     }
   }
 }
 
-function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop, onStop) {
+function PlaySoundByIndex(
+  audioBufferIndex,
+  groupTag,
+  when,
+  loop,
+  effects,
+  onStop
+) {
   if (!audioSoundBuffers[audioBufferIndex]) {
     return;
   }
@@ -84,6 +92,7 @@ function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop, onStop) {
     audioIdUpto,
     when,
     loop,
+    effects,
     function(id) {
       // callback received when sound ends
       //console.log("sound ended", id);

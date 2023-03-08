@@ -87,9 +87,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
     outer_level_with_multiple_contained_levels.update(contained_level_names: [contained_level_freeresponse.name, contained_level_freeresponse_2.name])
 
     contained_level_multi = create :level, name: 'contained level multi', type: 'Multi', properties: {
-      'markdown': 'Contained',
-      'questions': [{'text': 'Question text'}],
-      'answers': [
+      markdown: 'Contained',
+      questions: [{text: 'Question text'}],
+      answers: [
         {"text" => "answer 1", "correct" => false},
         {"text" => "answer 2", "correct" => true},
         {"text" => "answer 3", "correct" => true},
@@ -141,9 +141,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
 
   test 'tts works for non-english contained levels' do
     contained_level = create :level, name: 'contained level multi', type: 'Multi', properties: {
-      'markdown': 'Contained',
-      'questions': [{'text': 'Question text'}],
-      'answers': [
+      markdown: 'Contained',
+      questions: [{text: 'Question text'}],
+      answers: [
         {"text" => "answer 1", "correct" => false},
         {"text" => "answer 2", "correct" => true},
         {"text" => "answer 3", "correct" => true},
@@ -158,8 +158,8 @@ class TextToSpeechTest < ActiveSupport::TestCase
       "data" => {
         "dsls" => {
           contained_level.name => {
-            'questions': [{'text': 'texte de la question'}],
-            'answers': [
+            questions: [{text: 'texte de la question'}],
+            answers: [
               {"text" => "réponse un"},
               {"text" => "réponse deux"},
               {"text" => "réponse troi"},

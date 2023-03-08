@@ -39,6 +39,7 @@ fa:
         Custom: هنرمند
         CustomStudio: آزمایشگاه بازی
         Gamelab: کارگاه بازی سازی
+        Spritelab: آزمایشگاه اسپرایت
     trophy:
       name:
         Bronze: برنز
@@ -374,12 +375,20 @@ fa:
         mc_if_statements: ماین کرافت - جملات شرطی
         mc_congrats_share: ماین کرافت - تبریک
         mc_congrats_no_share: ماین کرافت - تبریک
+        CSF_scrat_loops_K1: حلقه‌ها در عصر یخبندان
+        CSF_scrat_loops_CF: حلقه‌ها در عصر یخبندان
         CSF_loops_AB: حلقه‌ها
+        CDEF_Video_SpritesInAction: اسپرایت‌ها در عمل
+        CSF_SpriteLab_SpritesInAction_CDEF: اسپرایت‌ها در عمل
         c_and_c_great_to_create: عالی خواهد بود که بتوانیم چیزی خلق کنیم و جوانمردانه بازی کنیم
         c_and_c_digital_sharing: اشتراک گذاری دیجیتال
         csd_pair_programming: برنامه نویسی دوتایی
         csd_applab_parameters: معادله با پارامترها
+        CSF_Going_Places_Safely: محله برخط من
+        CSF_SpriteLab_Intro_v2: آشنایی با آزمایشگاه اسپرایت
+        CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
         csd_debugging: اشکال‌زدایی
+        csf_my_online_neighborhood_2020: محله برخط من
         csf_private_and_personal_information: اطلاعات خصوصی و شخصی
         playlab_2021: معرفی آزمایشگاه بازی
         playlab_2021_reader: معرفی آزمایشگاه بازی

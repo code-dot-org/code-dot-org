@@ -9,7 +9,7 @@ fr:
         n'est pas disponible pour les jeunes élèves. Demandez à votre professeur d'approuver
         les nouvelles conditions d'utilisation pour vous donner l'accès à ce contenu.
         Votre professeur peut le faire en se connectant sur Code Studio et en cliquant
-        sur le bouton "Voir les conditions mises à jour" en haut de la page d'accueil
+        sur le bouton « Voir les conditions mises à jour » en haut de la page d'accueil
         de Code Studio.
       pair_programmer: Vous êtes en train de programmer avec un élève qui n'a pas
         accès à ce contenu. Pour accéder à ce contenu, arrêtez la programmation en
@@ -80,7 +80,7 @@ fr:
       title: Rejoindre un groupe de classe sur Code.Org
       placeholder: Code de la section (ABCDEF)
       instructions: 'Merci d''entrer votre code à 6 caractères que votre professeur
-        vous a donné (exemple : "ABCDEF") pour rejoindre son groupe de classe.'
+        vous a donné (exemple : « ABCDEF ») pour rejoindre son groupe de classe.'
       instructions_short: Entrez le code à 6 caractères de votre groupe de classe
       submit: Rejoindre
   add_hint_form:
@@ -849,35 +849,18 @@ fr:
         pour la faire fonctionner, puis partagez votre application en quelques secondes.
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
-    dance:
-      title: Soirée Dansante
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Soirée Dansante
-    hello-world:
-      title: Bonjour tout le monde !
-      body: Choisis entre quatre activités amusantes pour programmer des personnages
-        interactifs dans un monde que tu as créé!
-    poem-art:
-      title: Art du poème
-      body: Exprime-toi! Programme un poème animé.
-    hoc:
-      title: Labyrinthe classique
-      body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
+    dance:
+      title: Soirée Dansante
     flappy:
       title: Flappy l'oiseau
       body: Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel
         de Code Flappy !
-    20-hour:
-      title: Cours accéléré
-      body: Ce cours de 20 heures couvre les concepts des fondamentaux de l'informatique
-        et de la programmation des Cours 2 à 4. Le cours est conçu pour être utilisé
-        avec des élèves de 10 à 18 ans. Découvre les Cours 2 à 4 pour une expérience
-        plus complète !
-      body_short: Apprends les fondamentaux de l'informatique avec une version accélérée
-        des cours 2 à 4.
-    hoc2014:
-      try_new_tutorial: Essaie notre nouveau tutoriel Heure de Code en version bêta
-      try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
+    frozen:
+      title: La Reine des neiges
     gallery:
       title: Galerie
       body: Regarde une galerie des applications et des images d'artistes créées par
@@ -889,21 +872,24 @@ fr:
         entre eux.
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
+    hello-world:
+      title: Bonjour tout le monde !
+      body: Choisis entre quatre activités amusantes pour programmer des personnages
+        interactifs dans un monde que tu as créé!
+    hero:
+      title: Minecraft
+      body: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité !
+        Exploration de Minecraft avec le code.
     hoc-encryption:
       title: Cryptage simple
       body: Les élèves apprendront les techniques pour créer et casser des messages
         chiffrés.
-    weblab:
-      title: Le Labo du Web (beta)
-      body: Le Labo Web est un environnement de programmation où tu peux créer des
-        pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage
-        ton site en quelques instants.
-      audience: 'Âge recommandé: 13 ans et plus'
-      cta: Apprendre comment
-    frozen:
-      title: La Reine des neiges
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Labyrinthe classique
+      body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
+    hoc2014:
+      try_new_tutorial: Essaie notre nouveau tutoriel Heure de Code en version bêta
+      try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
     infinity:
       title: Labo Jeux Infinity
       body: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène
@@ -915,33 +901,25 @@ fr:
       title: Minecraft
       body: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons,
         des creepers, des zombies et bien d'autres encore.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité !
-        Exploration de Minecraft avec le code.
+    poem-art:
+      title: Art du poème
+      body: Exprime-toi! Programme un poème animé.
     sports:
       title: Sports
       body: Créer un jeu de basket ou un mélange de différents sports.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Compression de texte
       body: Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte
         pour compresser le texte en remplaçant des modèles par des symboles.
-    unplugged:
-      title: Leçons en mode « déconnecté »
-      audience: À partir de 4 ans
-      body: Nous avons compilé une liste de leçons en mode "déconnecté" que vous pouvez
-        utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique,
-        que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser
-        ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires
-        à l'un de vos cours d'informatique.
-      body_short: Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode "déconnecté"
-        dans votre classe.
-    unplugged_conditionals:
-      title: Formules conditionnelles
-      body: Découvre les algorithmes et les déclarations conditionnelles, dans cette
-        activité "déconnectée", en t’appuyant sur un jeu de cartes.
+    weblab:
+      title: Le Labo du Web (beta)
+      body: Le Labo Web est un environnement de programmation où tu peux créer des
+        pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage
+        ton site en quelques instants.
+      audience: 'Âge recommandé: 13 ans et plus'
+      cta: Apprendre comment
     widgets:
       title: Widgets
       body: Les élèves peuvent découvrir les concepts de notre cours pratique sur
@@ -950,6 +928,28 @@ fr:
         pour votre classe.
       audience: 14 ans et +
       cta: Apprendre comment
+    unplugged_conditionals:
+      title: Instructions conditionnelles
+      body: Découvre les algorithmes et les déclarations conditionnelles, dans cette
+        activité « déconnectée », en t’appuyant sur un jeu de cartes.
+    unplugged:
+      title: Leçons en mode « déconnecté »
+      audience: À partir de 4 ans
+      body: Nous avons compilé une liste de leçons en mode « déconnecté » que vous
+        pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique,
+        que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser
+        ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires
+        à l'un de vos cours d'informatique.
+      body_short: Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode « déconnecté »
+        dans votre classe.
+    20-hour:
+      title: Cours accéléré
+      body: Ce cours de 20 heures couvre les concepts des fondamentaux de l'informatique
+        et de la programmation des Cours 2 à 4. Le cours est conçu pour être utilisé
+        avec des élèves de 10 à 18 ans. Découvre les Cours 2 à 4 pour une expérience
+        plus complète !
+      body_short: Apprends les fondamentaux de l'informatique avec une version accélérée
+        des cours 2 à 4.
   landing:
     prerelease_tutorial: Ce didacticiel est en version **beta**. Il est sujet à révision,
       en fonction des commentaires, et des améliorations sont ensuite apportées.
@@ -1071,16 +1071,17 @@ fr:
     tos: Conditions Générales d'Utilisation
     privacy: Politique de confidentialité
     privacy_notice: Déclaration de confidentialité
-    accept_label: J'accepte les <a href="%{tos_url}" target="_blank"> Conditions d’Utilisation</a>
-      et la<a href="%{privacy_url}" target="_blank"> Politique de Confidentialité</a>
+    accept_label: J'accepte les <a href="%{tos_url} » target="_blank"> Conditions
+      d’Utilisation</a> et la<a href="%{privacy_url} » target="_blank"> Politique
+      de Confidentialité</a>
     accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url})
       et de la[Politique de confidentialité](%{privacy_url})
     accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url})
       et [Privacy Policy](%{privacy_url}).
     accept: Accepter 
     print: Imprimer
-    reminder_desc: Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions
-      d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">Politique
+    reminder_desc: Nous avons mis à jour nos <a href="%{tos_url} » target="_blank">Conditions
+      d’utilisation</a> et notre<a href="%{privacy_url} » target="_blank">Politique
       de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter.
       Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour
       vos élèves avant votre acceptation expresse des conditions mises à jour.
@@ -1498,7 +1499,7 @@ fr:
         connectez avec Google.
       error_invalid_user: Identifiant invalide. Veuillez vous reconnecter.
       error_no_code: Veuillez entrer votre code de connexion.
-      confirm_login: Sélectionnez "Confirmer" pour vous connecter avec votre compte
+      confirm_login: Sélectionnez « Confirmer » pour vous connecter avec votre compte
         Google.
   parent_email_banner:
     text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique

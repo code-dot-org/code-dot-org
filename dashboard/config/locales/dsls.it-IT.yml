@@ -10081,9 +10081,9 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
+        - text: Output
         - text: Archiviazione
-        - {}
+        - text: Elaborazione
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -10092,9 +10092,9 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
+        - text: Output
         - text: Archiviazione
-        - {}
+        - text: Elaborazione
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -10103,9 +10103,9 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
+        - text: Output
         - text: Archiviazione
-        - {}
+        - text: Elaborazione
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -17115,21 +17115,12 @@ it-IT:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
-          feedback: Sbagliato. Prima, Scrat si gira nella direzione sbagliata, poi
-            non si muove abbastanza volte in avanti per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
-            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
             `vai avanti`.
-          correct: true
-          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
-            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non si sposterà dal primo blocco.
-          feedback: Ci sono due errori in questo codice. Prima, Scrat si gira nella
-            direzione sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
-            la ghianda.
+          feedback: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
         questions:
         - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
             c'è un problema?

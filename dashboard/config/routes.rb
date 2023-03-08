@@ -9,7 +9,8 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /.*code.org.*|.*hourofcode.com.*/ do
+  # This matches any host that is not the codeprojects hostname
+  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -37,7 +38,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: "musiclab#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
@@ -105,7 +107,7 @@ Dashboard::Application.routes.draw do
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
     # User-facing section routes
-    resources :sections, only: [:show] do
+    resources :sections, only: [:show, :new] do
       member do
         post 'log_in'
       end
@@ -326,7 +328,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :course_offerings, only: [:edit, :update], param: 'key'
+    resources :course_offerings, only: [:edit, :update], param: 'key' do
+      collection do
+        get 'quick_assign_course_offerings'
+      end
+    end
 
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
@@ -500,6 +506,7 @@ Dashboard::Application.routes.draw do
     get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
+    get '/weblab/network-check', to: 'weblab_host#network_check'
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -562,8 +569,6 @@ Dashboard::Application.routes.draw do
     put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
     get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
     post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
-    get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
-    post '/census/review', to: 'census_reviewers#create'
 
     get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -654,7 +659,6 @@ Dashboard::Application.routes.draw do
         post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
         post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
-        post :workshop_surveys, to: 'workshop_surveys#create'
         post :teachercon_surveys, to: 'teachercon_surveys#create'
         post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
         post :international_opt_ins, to: 'international_opt_ins#create'
@@ -1015,6 +1019,12 @@ Dashboard::Application.routes.draw do
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
+
+    # partial ports of legacy v3 APIs
+    get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
+    delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
+    post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
+    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').

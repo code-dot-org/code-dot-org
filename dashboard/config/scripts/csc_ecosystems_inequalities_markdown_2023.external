@@ -1,0 +1,23 @@
+name 'csc_ecosystems_inequalities_markdown_2023'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Balancing Your Ecosystem
+
+What does it mean for an ecosystem to be healthy? We need the animals and plants to exist in balance with each other. 
+
+##What is a healthy balance?
+
+What is the natural threshold for a healthy ecosystem? 
+How much algae is too much?
+
+
+
+
+<div style="text-align: center;">
+<img src="https://images.code.org/42a2ca1a2c3df14ddbdaa11fb783ecae-image-1660670589537.gif" style="width: 15%; "/>
+</div>
+
+
+MARKDOWN

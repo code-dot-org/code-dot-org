@@ -5194,6 +5194,17 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For sikllari
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         hello-world-space-2022:
           title: 'Salom Dunyo: Kosmik'
         hello-world-soccer-2022:
@@ -5249,8 +5260,6 @@ uz:
               display_name: Loyiha
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Ro‘yxatlar
             csp_loops:
               display_name: Sikllar
             csp_project:
@@ -5260,9 +5269,13 @@ uz:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unit 6: Algoritmlar'
+              display_name: Ro‘yxatlar
             lessonGroup-2:
               display_name: Post-Course Survey
+            lessonGroup-3:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Loyiha
         csp7-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5289,3 +5302,15 @@ uz:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Building Physical Prototypes'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs

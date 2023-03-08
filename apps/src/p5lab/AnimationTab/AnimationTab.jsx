@@ -10,45 +10,77 @@ import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
-import {P5LabType} from '@cdo/apps/p5lab/constants';
 import i18n from '@cdo/locale';
-
+import {P5LabInterfaceMode, P5LabType} from '../constants.js';
+import experiments from '@cdo/apps/util/experiments';
 /**
  * Root of the animation editor interface mode for GameLab
  */
 class AnimationTab extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired,
+    channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
+    // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
     hideUploadOption: PropTypes.bool.isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
+    interfaceMode: PropTypes.oneOf([
+      P5LabInterfaceMode.CODE,
+      P5LabInterfaceMode.ANIMATION,
+      P5LabInterfaceMode.BACKGROUND
+    ]).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-    selectedAnimation: shapes.AnimationKey
+    currentAnimation: shapes.AnimationKey,
+    defaultQuery: PropTypes.object
   };
 
   render() {
+    const {
+      channelId,
+      columnSizes,
+      currentAnimation,
+      defaultQuery,
+      hideAnimationNames,
+      hideBackgrounds,
+      hideUploadOption,
+      interfaceMode,
+      labType,
+      libraryManifest,
+      onColumnWidthsChange,
+      pickerType,
+      shouldRestrictAnimationUpload
+    } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (this.props.selectedAnimation) {
+    if (currentAnimation) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
+    const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
+    const animationsColumnStyle =
+      labType !== P5LabType.GAMELAB &&
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+        ? styles.animationsColumnSpritelab
+        : styles.animationsColumnGamelab;
+
     return (
       <div>
         <ResizablePanes
           style={styles.root}
-          columnSizes={this.props.columnSizes}
-          onChange={this.props.onColumnWidthsChange}
+          columnSizes={columnSizes}
+          onChange={onColumnWidthsChange}
         >
-          <div style={styles.animationsColumn}>
-            <P5LabVisualizationHeader labType={this.props.labType} />
+          <div style={animationsColumnStyle}>
+            <P5LabVisualizationHeader labType={labType} />
             <AnimationList
-              hideBackgrounds={this.props.hideBackgrounds}
-              labType={this.props.labType}
+              hideBackgrounds={hideBackgrounds}
+              hideCostumes={hideCostumes}
+              labType={labType}
             />
           </div>
           <div style={styles.editorColumn}>
@@ -58,16 +90,18 @@ class AnimationTab extends React.Component {
             </div>
           </div>
         </ResizablePanes>
-        {this.props.channelId && (
+        {channelId && (
           <AnimationPicker
-            channelId={this.props.channelId}
-            libraryManifest={this.props.libraryManifest}
-            hideUploadOption={this.props.hideUploadOption}
-            hideAnimationNames={this.props.hideAnimationNames}
-            navigable={true}
-            canDraw={true}
-            hideBackgrounds={this.props.hideBackgrounds}
-            pickerType={this.props.pickerType}
+            channelId={channelId}
+            libraryManifest={libraryManifest}
+            hideUploadOption={hideUploadOption}
+            hideAnimationNames={hideAnimationNames}
+            navigable={!hideCostumes}
+            hideBackgrounds={hideBackgrounds}
+            hideCostumes={hideCostumes}
+            pickerType={pickerType}
+            defaultQuery={defaultQuery}
+            shouldRestrictAnimationUpload={shouldRestrictAnimationUpload}
           />
         )}
       </div>
@@ -83,10 +117,16 @@ const styles = {
     left: 0,
     right: 0
   },
-  animationsColumn: {
+  animationsColumnGamelab: {
     display: 'flex',
     flexDirection: 'column',
     minWidth: 190,
+    maxWidth: 300
+  },
+  animationsColumnSpritelab: {
+    display: 'flex',
+    flexDirection: 'column',
+    minWidth: 240,
     maxWidth: 300
   },
   editorColumn: {
@@ -119,8 +159,8 @@ const styles = {
 };
 export default connect(
   state => ({
-    columnSizes: state.animationTab.columnSizes,
-    selectedAnimation: state.animationTab.selectedAnimation
+    currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
+    columnSizes: state.animationTab.columnSizes
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {

@@ -17,7 +17,7 @@ module Pd::SurveyPipeline
     def self.process_data(context)
       check_required_input_keys REQUIRED_INPUT_KEYS, context
 
-      results = transform_data context.slice(*REQUIRED_INPUT_KEYS)
+      results = transform_data(**context.slice(*REQUIRED_INPUT_KEYS))
 
       OUTPUT_KEYS.each do |key|
         context[key] ||= []

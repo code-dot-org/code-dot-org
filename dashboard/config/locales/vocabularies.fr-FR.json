@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "event/dance-extras/unversioned": {
@@ -14,6 +15,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/minecraft/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/minecraft/unversioned": {
@@ -33,6 +35,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/hero/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/hero/unversioned": {
@@ -68,6 +71,7 @@
           "definition": "Une série d'étapes qui ont été codées dans quelque chose qui peut être exécuté par une machine."
         },
         "code/flappy/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/flappy/unversioned": {
@@ -79,6 +83,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/hourofcode/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/hourofcode/unversioned": {
@@ -90,6 +95,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/frozen/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/frozen/unversioned": {
@@ -101,6 +107,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/iceage/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/iceage/unversioned": {
@@ -124,6 +131,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/gumball/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/gumball/unversioned": {
@@ -135,6 +143,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "event/dance/unversioned": {
@@ -146,6 +155,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/aquatic/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "condition/aquatic/unversioned": {
@@ -153,7 +163,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "debugging/aquatic/unversioned": {
@@ -172,6 +182,7 @@
           "word": "Chiffrement"
         },
         "code/starwars/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/starwars/unversioned": {
@@ -183,6 +194,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/mc/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/mc/unversioned": {
@@ -194,6 +206,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/playlab/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/playlab/unversioned": {
@@ -205,6 +218,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/starwarsblocks/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -242,6 +256,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/infinity/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/infinity/unversioned": {
@@ -253,6 +268,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/basketball/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "debugging/basketball/unversioned": {
@@ -268,6 +284,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "event/dance-extras-2019/unversioned": {
@@ -320,17 +337,18 @@
         },
         "frustrated/coursed/2022": {
           "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+          "definition": "Se sentir énervé ou en colère parce qu'une chose n'est pas comme on veut qu'elle le soit."
         },
         "persistence/coursed/2022": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "event/coursed/2022": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2022": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "repeat/coursed/2022": {
@@ -339,10 +357,10 @@
         },
         "command/coursed/2022": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2022": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2022": {
@@ -355,7 +373,11 @@
         },
         "while_loop/coursed/2022": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/coursed/2022": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "sprite/coursef/2022": {
           "word": "Sprite",
@@ -367,7 +389,7 @@
         },
         "algorithm/coursef/2022": {
           "word": "Algorithme",
-          "definition": "Une série d'étapes à suivre pour terminer une tâche."
+          "definition": "Une série d'étapes à suivre pour accomplir une tâche."
         },
         "behavior/coursef/2022": {
           "word": "comportement"
@@ -382,11 +404,11 @@
         },
         "variable/coursef/2022": {
           "word": "Variable",
-          "definition": "Un espace réservé pour une information qui peut changer."
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
         },
         "prompt/coursef/2022": {
           "word": "Invite",
-          "definition": "Message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
+          "definition": "Un message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
         },
         "input/coursef/2022": {
           "word": "Entrée",
@@ -402,15 +424,15 @@
         },
         "dns/coursef/2022": {
           "word": "DNS",
-          "definition": "abréviation de Domain Name System, ce système traduit les noms de domaine (comme exemple.com) en adresses IP (comme 93.184.216.34)"
+          "definition": "Abréviation de « Domain Name System » (« Système de Domaines de Noms »), ce système traduit les noms de domaines (comme exemple.com) en adresses IP (comme 93.184.216.34)."
         },
         "dsl_cable/coursef/2022": {
           "word": "DSL/Câble",
-          "definition": "Un procédé d'envoi d'informations utilisant les câbles téléphoniques ou de télévision."
+          "definition": "Un mode d'envoi d'informations qui emploie des câbles téléphoniques ou de télévision."
         },
         "fiber_optic_cable/coursef/2022": {
           "word": "Câble à Fibre Optique",
-          "definition": "Une connexion qui utilise la lumière pour transmettre des informations"
+          "definition": "Une connexion qui utilise la lumière pour transmettre les informations."
         },
         "internet/coursef/2022": {
           "word": "Internet",
@@ -418,15 +440,15 @@
         },
         "ip_address/coursef/2022": {
           "word": "Adresse IP",
-          "definition": "Un numéro attribué à tout élément connecté à Internet."
+          "definition": "Un numéro attribué à tout objet connecté à Internet."
         },
         "packets/coursef/2022": {
           "word": "PaqLes uets",
-          "definition": "De petits morceaux d'informations qui ont été soigneusement formés à partir de plus grands blocs d'informations."
+          "definition": "De petits morceaux d'informations qui ont été soigneusement composés à partir de plus grands blocs d'informations."
         },
         "servers/coursef/2022": {
           "word": "Serveurs",
-          "definition": "Ordinateurs qui n'existent que pour fournir des choses aux autres."
+          "definition": "Des ordinateurs qui n'existent que pour fournir des choses aux autres."
         },
         "url/coursef/2022": {
           "word": "URL",
@@ -434,19 +456,19 @@
         },
         "wi_fi/coursef/2022": {
           "word": "Wi-Fi",
-          "definition": "Procédé sans fil d'envoi d'informations à l'aide d'ondes radio."
+          "definition": "Un mode sans fil d'envoi d'informations à l'aide d'ondes radio."
         },
         "define/coursef/2022": {
-          "word": "Définis",
-          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+          "word": "Définir",
+          "definition": "Comprendre les détails des problèmes qu'on essaie de résoudre"
         },
         "prepare/coursef/2022": {
           "word": "Préparer",
-          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité qu'on est sur le point d'entreprendre"
         },
         "reflect/coursef/2022": {
           "word": "Réfléchir",
-          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+          "definition": "Repenser soigneusement à quelque chose avec l'intention d'en améliorer le résultat à l'avenir"
         },
         "try/coursef/2022": {
           "word": "Essayer",
@@ -475,27 +497,28 @@
           "word": "Condition"
         },
         "conditionals/coursee/2022": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2022": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
         },
         "copyright/coursee/2022": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "define/coursee/2022": {
-          "word": "Définis",
-          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+          "word": "Définir",
+          "definition": "Comprendre les détails des problèmes qu'on essaie de résoudre"
         },
         "prepare/coursee/2022": {
           "word": "Préparer",
-          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité qu'on est sur le point d'entreprendre"
         },
         "reflect/coursee/2022": {
           "word": "Réfléchir",
-          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+          "definition": "Repenser soigneusement à quelque chose avec l'intention d'en améliorer le résultat à l'avenir"
         },
         "try/coursee/2022": {
           "word": "Essayer",
@@ -514,12 +537,12 @@
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2022": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/courseb/2022": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/courseb/2022": {
           "word": "Glisser",
@@ -539,7 +562,7 @@
         },
         "persistence/courseb/2022": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/courseb/2022": {
           "word": "Boucle",
@@ -590,7 +613,8 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2022": {
-          "definition": "écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Coder",
+          "definition": "Fait d'écrire du code, c'est-à-dire écrire des instructions pour un ordinateur."
         },
         "loop/express/2022": {
           "word": "Boucle",
@@ -602,58 +626,63 @@
         },
         "command/express/2022": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "condition/express/2022": {
           "word": "Condition",
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2022": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2022": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/express/2022": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2022": {
           "word": "Fonction",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "prompt/express/2022": {
-          "definition": "Message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
+          "word": "invite",
+          "definition": "Un message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
         },
         "variable/express/2022": {
           "word": "Variable",
-          "definition": "Un espace réservé pour une information qui peut changer."
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
         },
         "for_loop/express/2022": {
           "word": "La Boucle « Pour »",
-          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+          "definition": "Des boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
         },
         "define/express/2022": {
-          "word": "Définis",
-          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+          "word": "Définir",
+          "definition": "Comprendre les détails des problèmes qu'on essaie de résoudre"
         },
         "prepare/express/2022": {
           "word": "Préparer",
-          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité qu'on est sur le point d'entreprendre"
         },
         "reflect/express/2022": {
           "word": "Réfléchir",
-          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+          "definition": "Repenser soigneusement à quelque chose avec l'intention d'en améliorer le résultat à l'avenir"
         },
         "try/express/2022": {
           "word": "Essayer",
           "definition": "Tenter de faire quelque chose"
         },
         "click/pre-express/2022": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/pre-express/2022": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/pre-express/2022": {
           "word": "Glisser",
@@ -685,7 +714,7 @@
         },
         "persistence/pre-express/2022": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/pre-express/2022": {
           "word": "Boucle",
@@ -712,12 +741,12 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "click/coursea/2022": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/coursea/2022": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/coursea/2022": {
           "word": "Glisser",
@@ -791,7 +820,7 @@
         },
         "binary/coursec/2022": {
           "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "input/csd/2022": {
           "word": "Entrée"
@@ -813,7 +842,7 @@
         },
         "variable/csd/2022": {
           "word": "Variable",
-          "definition": "Un espace réservé pour une information qui peut changer."
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
         },
         "sprite/csd/2022": {
           "word": "Sprite"
@@ -822,7 +851,7 @@
           "word": "Condition"
         },
         "conditionals/csd/2022": {
-          "word": "Formules conditionnelles"
+          "word": "Instructions conditionnelles"
         },
         "abstraction/csd/2022": {
           "word": "Abstraction"
@@ -843,7 +872,8 @@
           "word": "CSS"
         },
         "copyright/csd/2022": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "relevant/csd/2022": {
           "word": "Pertinent"
@@ -886,7 +916,7 @@
         },
         "algorithm/coursef/2021": {
           "word": "Algorithme",
-          "definition": "Une série d'étapes à suivre pour terminer une tâche."
+          "definition": "Une série d'étapes à suivre pour accomplir une tâche."
         },
         "behavior/coursef/2021": {
           "word": "comportement",
@@ -902,11 +932,11 @@
         },
         "variable/coursef/2021": {
           "word": "Variable",
-          "definition": "Un espace réservé pour une information qui peut changer."
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
         },
         "prompt/coursef/2021": {
           "word": "Invite",
-          "definition": "Message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
+          "definition": "Un message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
         },
         "input/coursef/2021": {
           "word": "Entrée",
@@ -922,7 +952,7 @@
         },
         "for_loop/coursef/2021": {
           "word": "La Boucle « Pour »",
-          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+          "definition": "Des boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
         },
         "models_and_simulations/coursef/2021": {
           "word": "Modèles et simulations",
@@ -934,15 +964,15 @@
         },
         "dns/coursef/2021": {
           "word": "DNS",
-          "definition": "abréviation de Domain Name System, ce système traduit les noms de domaine (comme exemple.com) en adresses IP (comme 93.184.216.34)"
+          "definition": "Abréviation de « Domain Name System » (« Système de Domaines de Noms »), ce système traduit les noms de domaines (comme exemple.com) en adresses IP (comme 93.184.216.34)."
         },
         "dsl_cable/coursef/2021": {
           "word": "DSL/Câble",
-          "definition": "Un procédé d'envoi d'informations utilisant les câbles téléphoniques ou de télévision."
+          "definition": "Un mode d'envoi d'informations qui emploie des câbles téléphoniques ou de télévision."
         },
         "fiber_optic_cable/coursef/2021": {
           "word": "Câble à Fibre Optique",
-          "definition": "Une connexion qui utilise la lumière pour transmettre des informations"
+          "definition": "Une connexion qui utilise la lumière pour transmettre les informations."
         },
         "internet/coursef/2021": {
           "word": "Internet",
@@ -950,15 +980,15 @@
         },
         "ip_address/coursef/2021": {
           "word": "Adresse IP",
-          "definition": "Un numéro attribué à tout élément connecté à Internet."
+          "definition": "Un numéro attribué à tout objet connecté à Internet."
         },
         "packets/coursef/2021": {
           "word": "PaqLes uets",
-          "definition": "De petits morceaux d'informations qui ont été soigneusement formés à partir de plus grands blocs d'informations."
+          "definition": "De petits morceaux d'informations qui ont été soigneusement composés à partir de plus grands blocs d'informations."
         },
         "servers/coursef/2021": {
           "word": "Serveurs",
-          "definition": "Ordinateurs qui n'existent que pour fournir des choses aux autres."
+          "definition": "Des ordinateurs qui n'existent que pour fournir des choses aux autres."
         },
         "url/coursef/2021": {
           "word": "URL",
@@ -966,19 +996,19 @@
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
-          "definition": "Procédé sans fil d'envoi d'informations à l'aide d'ondes radio."
+          "definition": "Un mode sans fil d'envoi d'informations à l'aide d'ondes radio."
         },
         "define/coursef/2021": {
-          "word": "Définis",
-          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+          "word": "Définir",
+          "definition": "Comprendre les détails des problèmes qu'on essaie de résoudre"
         },
         "prepare/coursef/2021": {
           "word": "Préparer",
-          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité qu'on est sur le point d'entreprendre"
         },
         "reflect/coursef/2021": {
           "word": "Réfléchir",
-          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+          "definition": "Repenser soigneusement à quelque chose avec l'intention d'en améliorer le résultat à l'avenir"
         },
         "try/coursef/2021": {
           "word": "Essayer",
@@ -997,12 +1027,12 @@
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2021": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/courseb/2021": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/courseb/2021": {
           "word": "Glisser",
@@ -1022,7 +1052,7 @@
         },
         "persistence/courseb/2021": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/courseb/2021": {
           "word": "Boucle",
@@ -1049,12 +1079,12 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "click/coursea/2021": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/coursea/2021": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/coursea/2021": {
           "word": "Glisser",
@@ -1122,7 +1152,7 @@
         },
         "binary/coursec/2021": {
           "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "algorithm/coursed/2021": {
           "word": "Algorithme",
@@ -1150,17 +1180,18 @@
         },
         "frustrated/coursed/2021": {
           "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
+          "definition": "Se sentir énervé ou en colère parce qu'une chose n'est pas comme on veut qu'elle le soit."
         },
         "persistence/coursed/2021": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "event/coursed/2021": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2021": {
+          "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "repeat/coursed/2021": {
@@ -1169,10 +1200,10 @@
         },
         "command/coursed/2021": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2021": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2021": {
@@ -1185,7 +1216,11 @@
         },
         "while_loop/coursed/2021": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/coursed/2021": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "algorithm/express/2021": {
           "word": "Algorithme",
@@ -1224,7 +1259,8 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2021": {
-          "definition": "écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Coder",
+          "definition": "Fait d'écrire du code, c'est-à-dire écrire des instructions pour un ordinateur."
         },
         "loop/express/2021": {
           "word": "Boucle",
@@ -1236,58 +1272,63 @@
         },
         "command/express/2021": {
           "word": "Commande",
-          "definition": "Une instruction pour l'ordinateur. De nombreuses commandes assemblées composent des algorithmes et des programmes informatiques."
+          "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "condition/express/2021": {
           "word": "Condition",
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2021": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2021": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
+        },
+        "until/express/2021": {
+          "word": "Jusqu'à",
+          "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2021": {
           "word": "Fonction",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "prompt/express/2021": {
-          "definition": "Message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
+          "word": "invite",
+          "definition": "Un message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
         },
         "variable/express/2021": {
           "word": "Variable",
-          "definition": "Un espace réservé pour une information qui peut changer."
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
         },
         "for_loop/express/2021": {
           "word": "La Boucle « Pour »",
-          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+          "definition": "Des boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
         },
         "define/express/2021": {
-          "word": "Définis",
-          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+          "word": "Définir",
+          "definition": "Comprendre les détails des problèmes qu'on essaie de résoudre"
         },
         "prepare/express/2021": {
           "word": "Préparer",
-          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité qu'on est sur le point d'entreprendre"
         },
         "reflect/express/2021": {
           "word": "Réfléchir",
-          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+          "definition": "Repenser soigneusement à quelque chose avec l'intention d'en améliorer le résultat à l'avenir"
         },
         "try/express/2021": {
           "word": "Essayer",
           "definition": "Tenter de faire quelque chose"
         },
         "click/pre-express/2021": {
-          "word": "Cliquez",
+          "word": "Cliquer",
           "definition": "Appuie sur le bouton de la souris"
         },
         "double_click/pre-express/2021": {
-          "word": "Double-Clique sur",
-          "definition": "Appuuie très rapidement sur le bouton de la souris"
+          "word": "Double-Cliquer",
+          "definition": "Appuie très rapidement sur le bouton de la souris"
         },
         "drag/pre-express/2021": {
           "word": "Glisser",
@@ -1319,7 +1360,7 @@
         },
         "persistence/pre-express/2021": {
           "word": "Persévérance",
-          "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
+          "definition": "Essayer encore et encore, même quand une chose est très difficile."
         },
         "loop/pre-express/2021": {
           "word": "Boucle",
@@ -1332,6 +1373,10 @@
         "event/pre-express/2021": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorithme",
+          "definition": "Une liste d'étapes pour terminer une tâche"
         },
         "behavior/coursee/2021": {
           "word": "comportement",
@@ -1346,7 +1391,8 @@
           "definition": "Action qui provoque quelque chose."
         },
         "copyright/coursee/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "loop/coursee/2021": {
           "word": "Boucle",
@@ -1365,24 +1411,24 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/coursee/2021": {
-          "word": "Formules conditionnelles",
+          "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2021": {
           "word": "Boucle Tant Que",
-          "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
+          "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
         },
         "define/coursee/2021": {
-          "word": "Définis",
-          "definition": "Comprendre les détails des problèmes que tu essayes de résoudre"
+          "word": "Définir",
+          "definition": "Comprendre les détails des problèmes qu'on essaie de résoudre"
         },
         "prepare/coursee/2021": {
           "word": "Préparer",
-          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité que tu es sur le point d'entreprendre"
+          "definition": "Rechercher, planifier et acquérir du matériel pour l'activité qu'on est sur le point d'entreprendre"
         },
         "reflect/coursee/2021": {
           "word": "Réfléchir",
-          "definition": "Réfléchir soigneusement à quelque chose avec l'intention d'améliorer le résultat à l'avenir"
+          "definition": "Repenser soigneusement à quelque chose avec l'intention d'en améliorer le résultat à l'avenir"
         },
         "try/coursee/2021": {
           "word": "Essayer",
@@ -1402,7 +1448,7 @@
         },
         "for_loop/csd/2021": {
           "word": "La Boucle « Pour »",
-          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+          "definition": "Des boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
         },
         "debugging/csd/2021": {
           "word": "Le Débogage",
@@ -1414,7 +1460,7 @@
         },
         "variable/csd/2021": {
           "word": "Variable",
-          "definition": "Un espace réservé pour une information qui peut changer."
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
         },
         "sprite/csd/2021": {
           "word": "Sprite"
@@ -1423,7 +1469,7 @@
           "word": "Condition"
         },
         "conditionals/csd/2021": {
-          "word": "Formules conditionnelles"
+          "word": "Instructions conditionnelles"
         },
         "abstraction/csd/2021": {
           "word": "Abstraction"
@@ -1450,7 +1496,8 @@
           "word": "CSS"
         },
         "copyright/csd/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "relevant/csd/2021": {
           "word": "Pertinent"

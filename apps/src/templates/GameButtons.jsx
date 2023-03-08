@@ -67,11 +67,15 @@ ResetButton.displayName = 'ResetButton';
 export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons">
-      <RunButton
-        hidden={props.hideRunButton}
-        runButtonText={props.runButtonText}
-      />
-      <ResetButton hidden={props.hideResetButton} />
+      {!props.noRunResetButton && (
+        <>
+          <RunButton
+            hidden={props.hideRunButton}
+            runButtonText={props.runButtonText}
+          />
+          <ResetButton hidden={props.hideResetButton} />
+        </>
+      )}
       {
         ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
       }
@@ -92,7 +96,8 @@ UnconnectedGameButtons.propTypes = {
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,
   showFinishButton: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  noRunResetButton: PropTypes.bool
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 

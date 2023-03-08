@@ -114,3 +114,5 @@ Níveis 2-4 use um modelo pré-treinado fornecido pelo [TensorFlow](https://www.
 Níveis 6-8 usar um \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Olhamos cada componente do peixe (como olhos, boca, corpo) e montamos todos os metadados para os componentes (como número de dentes, forma corporal) em um vetor de números para cada peixe. Usamos esses vetores para treinar o SVM. Com base nos dados de treinamento, o SVM separa o "espaço" de todos os peixes possíveis em duas partes, que correspondem às classes que estamos tentando aprender (como "azul" ou "não azul").
 
 [[Voltar ao topo]](#top)
+
+{{ visit_partial_event_logger }}

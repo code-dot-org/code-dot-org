@@ -245,6 +245,10 @@ class User < ApplicationRecord
 
   before_destroy :soft_delete_channels
 
+  before_validation on: :create, if: -> {gender.present?} do
+    self.gender = Policies::Gender.normalize gender
+  end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
@@ -1241,7 +1245,7 @@ class User < ApplicationRecord
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
-    next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
+    next_unpassed = script.script_levels[script_level_index..].try(:detect) do |script_level|
       user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -2503,7 +2507,7 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grade).uniq
+    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for

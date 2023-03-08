@@ -1892,6 +1892,10 @@ mr:
           lessons:
             lesson-4:
               name: व्हेरीएबल्स
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: एक-आयामी (1D) अॅरेज
         hello-world-space-2022:
           title: 'हॅलो वर्ल्ड: जागा'
         hello-world-soccer-2022:
@@ -1932,12 +1936,24 @@ mr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: याद्या
+              display_name: डेटा
             csp_loops:
               display_name: लूप्स
             csp_project:
+              display_name: प्रकल्प
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: याद्या
+            lessonGroup-3:
+              display_name: लूप्स
+            lessonGroup-5:
               display_name: प्रकल्प
         csp-playground:
           description_audience: अभ्यासक्रम लेखक
           description_short: अभ्यासक्रमाच्या आवृत्त्यांमधील धडे किंवा स्तरांवरील अपडेट्स
             स्टेज करण्यासाठी
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अॅप लॅबची ओळख

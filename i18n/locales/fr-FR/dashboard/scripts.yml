@@ -106,11 +106,11 @@ fr:
           student_description: Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel de Code Flappy !
           name: flappy
         jigsaw:
-          title: Puzzle
+          title: Casse-tête
           description: Essaie notre tutoriel pour les pièces de casse-tête
           description_short: Essaie notre tutoriel pour les pièces de casse-tête
           student_description: Essaie notre tutoriel pour les pièces de casse-tête
-          name: pièces de Puzzle
+          name: pièces de Casse-tête
         step:
           title: Étape
           description: Tutoriel par étapes
@@ -127,7 +127,7 @@ fr:
           description_short: Relevez le défi !
           student_description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutoriel - Défi d'énigmes sur Code Studio
+          title: Tutoriel - Défi d' casse-têtes sur Code Studio
           description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
           description_short: Relevez le défi !
           student_description: Essayez ces amusantes casse-têtes de codage. Faites de votre mieux !
@@ -1572,7 +1572,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -1622,7 +1622,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -1664,7 +1664,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -1850,7 +1850,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -1988,7 +1988,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -1999,7 +1999,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2012,7 +2012,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2036,7 +2036,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2054,7 +2054,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2065,7 +2065,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2076,7 +2076,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2334,7 +2334,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2347,7 +2347,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
@@ -2378,7 +2378,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_events:
               display_name: Événements
             csf_sprites:
@@ -2397,7 +2397,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_events:
               display_name: Événements
             csf_sprites:
@@ -2425,7 +2425,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2586,7 +2586,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -2649,7 +2649,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -2782,16 +2782,16 @@ fr:
               display_name: Contenu
         virustest:
           title: Simulation d'une épidémie
-          description_short: Utilisez Sprite Lab pour créer une simulation à partir d'une épidémie de virus.
+          description_short: Utilisez le Labo des Sprites pour créer une simulation à partir d'une épidémie de virus.
         outbreak:
           lesson_groups:
             outbreak:
               display_name: Simulation de l'épidémie
           title: Simulateur d'épidémie
-          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
-          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          description_short: 'Utilisez le Labo des Sprites pour programmer la simulation d''une épidémie de virus. '
+          description: 'Utilisez le Labo des Sprites pour programmer la simulation d''une épidémie de virus. '
           name: épidémie
-          student_description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          student_description: 'Utilisez le Labo des Sprites pour programmer la simulation d''une épidémie de virus. '
         2021drafting:
           lesson_groups:
             introduction:
@@ -2810,7 +2810,7 @@ fr:
           description_short: Interne
         csd1-2021:
           title: Résolution de problèmes et informatique (21-'22)
-          description: "Résolution de problèmes et l'informatique est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous allez vous exercer à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment les ordinateurs entrent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes.  L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix. \n\n\\*\\*Conseils pour la mise en œuvre de l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies pour certaines leçons de l'unité 1, selon le contexte de votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) et le [Guide de mise en œuvre](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) pour plus d'informations sur cette unité.\n\nTraduit avec www.DeepL.com/Translator (version gratuite)"
+          description: "Résolution de problèmes et l'informatique est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous allez vous exercer à utiliser un processus de résolution de problèmes pour résoudre une série d' casse-têtes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment les ordinateurs entrent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes.  L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix. \n\n\\*\\*Conseils pour la mise en œuvre de l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies pour certaines leçons de l'unité 1, selon le contexte de votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) et le [Guide de mise en œuvre](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) pour plus d'informations sur cette unité.\n\nTraduit avec www.DeepL.com/Translator (version gratuite)"
           description_short: Apprends comment les humains travaillent avec les ordinateurs pour résoudre des problèmes.
           lesson_groups:
             cspSurvey:
@@ -2932,7 +2932,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2983,6 +2983,7 @@ fr:
               display_name: Enquête
         coursea-2021:
           title: Cours A (2021)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs débutants, dont les élèves de maternelle. Les élèves apprendront à programmer en utilisant des commandes telles que les boucles et les événements. Les leçons qui se trouvent dans ce cours enseigneront également aux élèves à collaborer sérieusement les uns avec les autres, différentes techniques de résolution de problèmes, à persister face aux tâches plus exigeantes, et comment naviguer l''internet en toute sécurité. '
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lesson_groups:
@@ -2999,6 +3000,7 @@ fr:
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         courseb-2021:
           title: Cours B (2021)
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si les notions présentées dans le Cours B suivent de près celles du Cours A, les élèves découvriront néanmoins des activités déconnectées plus complexes et travailleront avec une plus grande variété de casse-têtes. Les élèves apprendront les bases de la programmation, des techniques de collaboration, développeront des compétences d'investigation et leur esprit critique, et apprendront à persévérer face aux difficultés et à naviguer l'internet en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres jeux dans l'environnement Labo Jeux.
           description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
           lesson_groups:
@@ -3050,7 +3052,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -3062,7 +3064,7 @@ fr:
           student_description: Découvre les boucles, les instructions conditionnelles et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
         coursee-2021:
           title: Cours E (2021)
-          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les instructions conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
           description_audience: 'Âge : 8 à 12 ans'
           lesson_groups:
             ramp_up:
@@ -3072,7 +3074,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_nested_loops:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_impacts:
@@ -3081,7 +3083,7 @@ fr:
               display_name: Projet de fin de cours
             lessonGroup-7:
               display_name: L'impact de l'informatique
-          student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les formules conditionnelles et les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
+          student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les instructions conditionnelleset les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
         coursef-2021:
           title: Cours F (2021)
           description: On a créé le Cours F pour des élèves de CM2. Le cours commence en examinant la manière dont les utilisateurs font des choix au sein des applications qu'ils utilisent. Les élèves apprendront ensuite à créer diverses applications avec le Labo des Sprites qui proposent aussi des choix aux utilisateurs. Plus on progresse vers la fin des leçons du cours, plus les élèves découvriront des notions avancées, dont les variables et les boucles « pour ». Les élèves jouiront d'une plus grande autonomie et de plus de choix tout au long de ce cours. À la fin du cours, les élèves auront créé des projets interactifs ou des œuvres d'art à partager avec leurs amis et leur famille.
@@ -3116,13 +3118,13 @@ fr:
           description_audience: 'Âges : de 9 à 18 ans'
           lesson_groups:
             csf_warmup:
-              display_name: Warm-up (Séance d’échauffement)
+              display_name: Séance d’échauffement
             csf_sequencing:
               display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -3191,9 +3193,9 @@ fr:
           lesson_groups:
             contagion:
               display_name: Contagion
-          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
-          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
-          student_description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          description_short: 'Utilisez le Labo des Sprites pour programmer la simulation d''une épidémie de virus. '
+          description: 'Utilisez le Labo des Sprites pour programmer la simulation d''une épidémie de virus. '
+          student_description: 'Utilisez le Labo des Sprites pour programmer la simulation d''une épidémie de virus. '
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -3470,8 +3472,8 @@ fr:
         spritelab-effects-challenge:
           name: spritelab-effets-défi
           title: Défi de l'effet Sprite
-          description_audience: Utilisateurs intermédiaires/avancés de Sprite Lab
-          description_short: Relevez le défi de créer votre propre effet de sprite avec Sprite Lab !
+          description_audience: Utilisateurs intermédiaires/avancés du Labo des Sprites
+          description_short: Relevez le défi de créer votre propre effet de sprite avec le Labo des Sprites !
         csa-u8-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3596,6 +3598,7 @@ fr:
             lessonGroup-5:
               display_name: Projet de fin de cours
           title: Cours A (2022)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs débutants, dont les élèves de maternelle. Les élèves apprendront à programmer en utilisant des commandes telles que les boucles et les événements. Les leçons qui se trouvent dans ce cours enseigneront également aux élèves à collaborer sérieusement les uns avec les autres, différentes techniques de résolution de problèmes, à persister face aux tâches plus exigeantes, et comment naviguer l''internet en toute sécurité. '
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
@@ -3610,7 +3613,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -3644,7 +3647,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3675,6 +3678,7 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Projet de fin de cours
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si les notions présentées dans le Cours B suivent de près celles du Cours A, les élèves découvriront néanmoins des activités déconnectées plus complexes et travailleront avec une plus grande variété de casse-têtes. Les élèves apprendront les bases de la programmation, des techniques de collaboration, développeront des compétences d'investigation et leur esprit critique, et apprendront à persévérer face aux difficultés et à naviguer l'internet en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres jeux dans l'environnement Labo Jeux.
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
           description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
@@ -3740,7 +3744,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             end_of_course_project:
               display_name: Projet de fin de cours
           title: Cours D (2022)
@@ -3759,14 +3763,14 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_nested_loops:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             lessonGroup-7:
               display_name: L'impact de l'informatique
             end_of_course_project:
               display_name: Projet de fin de cours
           title: Cours E (2022)
-          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les formules conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
-          student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les formules conditionnelles et les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les instructions conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          student_description: Mets-toi à coder avec les algorithmes, les événements, les boucles, les instructions conditionnelleset les fonctions ! À la fin de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras partager avec tes amis et ta famille.
           description_audience: 'Âge : 8 à 12 ans'
         coursef-2022:
           lesson_groups:
@@ -3940,7 +3944,7 @@ fr:
             csd1_3:
               display_name: Leçons alternatives
           title: Résolution de problèmes et informatique ('22-'23)
-          description: "Résolution de problèmes et informatique est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous allez appliquer un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment les ordinateurs entrent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes.  L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix. \n\n**Conseils pour la mise en œuvre de Résolution de problèmes et informatique**.\n\n-   Le premier chapitre de cette unité doit être terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies pour certaines leçons de cette unité, en fonction du contexte de votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) et le [Guide de mise en œuvre](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) pour plus d'informations sur cette unité."
+          description: "Résolution de problèmes et informatique est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous allez appliquer un processus de résolution de problèmes pour résoudre une série d' casse-têtes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment les ordinateurs entrent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes.  L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix. \n\n**Conseils pour la mise en œuvre de Résolution de problèmes et informatique**.\n\n-   Le premier chapitre de cette unité doit être terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies pour certaines leçons de cette unité, en fonction du contexte de votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) et le [Guide de mise en œuvre](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) pour plus d'informations sur cette unité."
           description_short: Apprends comment les humains travaillent avec les ordinateurs pour résoudre des problèmes.
         csd2-2022:
           lesson_groups:
@@ -4072,6 +4076,26 @@ fr:
               display_name: Contenu
             lessonGroup-4:
               display_name: Leçons alternatives
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Tableaux unidimensionnels (1D)
+            lesson-3:
+              name: Les Boucles « Pour »
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Random
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
         hello-world-space-2022:
           title: 'Bonjour tout le monde : Espace'
         hello-world-soccer-2022:
@@ -4143,7 +4167,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -4151,7 +4175,7 @@ fr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listes
+              display_name: Données
             csp_loops:
               display_name: Boucles
             csp_traversals:
@@ -4163,9 +4187,15 @@ fr:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unité 6 : Les Algorithmes'
+              display_name: Listes
             lessonGroup-2:
               display_name: Suivi d'après cours
+            lessonGroup-3:
+              display_name: Boucles
+            lessonGroup-4:
+              display_name: Parcours
+            lessonGroup-5:
+              display_name: Projet
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -4202,3 +4232,15 @@ fr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
