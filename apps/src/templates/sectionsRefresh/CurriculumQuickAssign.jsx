@@ -5,6 +5,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import QuickAssignTable from './QuickAssignTable';
 import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -21,7 +22,10 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
 
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
-    fetch('/course_offerings/quick_assign_course_offerings')
+    const participantType = queryParams('participantType');
+    fetch(
+      `/course_offerings/quick_assign_course_offerings?participantType=${participantType}`
+    )
       .then(response => response.json())
       .then(data => setCourseOfferings(data));
   }, []);
