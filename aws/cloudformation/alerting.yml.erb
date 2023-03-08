@@ -123,12 +123,15 @@ Resources:
 
   InfraLowPriorityTopic:
     Type: 'AWS::SNS::Topic'
-    TopicName: Infra-LowPriority
+    Properties:
+      TopicName: Infra-LowPriority
 
   InfraWorkdayUrgentTopic:
     Type: 'AWS::SNS::Topic'
-    TopicName: Infra-WorkdayUrgent
+    Properties:
+      TopicName: Infra-WorkdayUrgent
 
   InfraUrgentTopic:
     Type: 'AWS::SNS::Topic'
-    TopicName: Infra-Urgent
+    Properties:
+      TopicName: Infra-Urgent
