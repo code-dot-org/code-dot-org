@@ -1,5 +1,5 @@
-function goldilocks(condition, group, callback) {
-  var count = countByAnimation(group);
+function goldilocks(condition, costume, callback) {
+  var count = countByAnimation({costume: costume});
   switch(condition) {
     case "too much":
       if(count > 15) {
