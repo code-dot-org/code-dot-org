@@ -82,7 +82,7 @@
                   = t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               - if ask_gender_experiment?(request, session.id.to_s)
-                - gender_input_type = gender_input_type?(request, session.id.to_s)
+                - gender_input_type = gender_input_type?(request, session)
                 - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'section_signup')
                 - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
                   .itemblock

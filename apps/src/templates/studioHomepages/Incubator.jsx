@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import HeaderBanner from '../HeaderBanner';
 import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import color from '@cdo/apps/util/color';
 
 class Incubator extends Component {
   render() {
@@ -48,7 +47,6 @@ class Incubator extends Component {
                 text: 'Try it out!'
               }
             ]}
-            backgroundColor={color.purple}
           />
         </div>
       </div>

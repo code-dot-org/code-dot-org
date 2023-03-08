@@ -20,7 +20,7 @@
     "instructions_important": "false",
     "long_instructions": "##Add a Sprite\r\n- Drag a `make new sprite` block into the workspace and connect it under when run.\r\n",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -37,14 +37,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "standalone_app_name": "spritelab"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-10-20T16:47:02.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-20T16:47:02.614+00:00\",\"changed\":[\"cloned from \\\"csc_fm_background\\\"\"],\"cloned_from\":\"csc_fm_background\"},{\"changed_at\":\"2022-10-20 16:47:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 16:48:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 16:52:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 16:52:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:18:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:19:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:22:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-10 19:07:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-10 19:52:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-30 15:30:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-20T16:47:02.614+00:00\",\"changed\":[\"cloned from \\\"csc_fm_background\\\"\"],\"cloned_from\":\"csc_fm_background\"},{\"changed_at\":\"2022-10-20 16:47:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 16:48:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 16:52:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 16:52:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:18:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:19:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:22:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-10 19:07:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-10 19:52:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-30 15:30:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-06 15:41:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

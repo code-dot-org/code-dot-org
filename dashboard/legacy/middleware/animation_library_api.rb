@@ -167,9 +167,10 @@ class AnimationLibraryApi < Sinatra::Base
   #
   # Retrieve the metadata for the default sprite list from S3
   get %r{/api/v1/animation-library/default-spritelab-metadata/(levelbuilder|production)} do |env|
-    if env == 'production'
+    case env
+    when 'production'
       env_path = ANIMATION_DEFAULT_MANIFEST_JSON
-    elsif env == 'levelbuilder'
+    when 'levelbuilder'
       env_path = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
     else
       bad_request
@@ -194,9 +195,10 @@ class AnimationLibraryApi < Sinatra::Base
     dont_cache
     if request.content_type == 'application/json'
       body = request.body.string
-      if env == 'production'
+      case env
+      when 'production'
         key = ANIMATION_DEFAULT_MANIFEST_JSON
-      elsif env == 'levelbuilder'
+      when 'levelbuilder'
         key = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
       else
         bad_request

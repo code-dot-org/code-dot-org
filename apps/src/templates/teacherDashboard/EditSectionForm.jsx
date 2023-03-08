@@ -29,12 +29,12 @@ import {
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 import GetVerifiedBanner from './GetVerifiedBanner';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
-const CURRICULUM_ASSIGNED = 'Section Curriculum Assigned';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -174,7 +174,7 @@ class EditSectionForm extends Component {
         sectionCurriculumLocalizedName: courseName,
         sectionCurriculum: courseId, //this is course Offering id
         sectionCurriculumVersionYear: versionYear,
-        sectionGrade: section.grade,
+        sectionGrade: section.grades ? section.grades[0] : null,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed
@@ -186,12 +186,17 @@ class EditSectionForm extends Component {
         section.courseOfferingId !== initialCourseOfferingId) ||
         (section.unitId && section.unitId !== initialUnitId))
     ) {
-      analyticsReporter.sendEvent(CURRICULUM_ASSIGNED, {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
         previousUnitId: initialUnitId,
         previousCourseId: initialCourseOfferingId,
+        previousCourseVersionId: initialCourseVersionId,
         previousVersionYear: initialVersionYear,
         newUnitId: section.unitId,
         newCourseId: section.courseOfferingId,
+        newCourseVersionId: section.courseVersionId,
         newVersionYear: versionYear
       });
     }
@@ -267,8 +272,8 @@ class EditSectionForm extends Component {
           />
           {section.participantType === ParticipantAudience.student && (
             <GradeField
-              value={section.grade || ''}
-              onChange={grade => editSectionProperties({grade})}
+              value={section.grades ? section.grades[0] : ''}
+              onChange={grade => editSectionProperties({grades: [grade]})}
               disabled={isSaveInProgress}
             />
           )}

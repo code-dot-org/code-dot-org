@@ -1,0 +1,23 @@
+name 'SP-VPL-21-mod5-PL-lesson2-overview_-22_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# CS Concepts and Skills
+
+##### In the next section of this professional learning module, you will be introduced to lesson levels and have the opportunity to practice using key computer science concepts in CS Connections modules.
+
+## You will:
+
+* ##### Preview CS Connections lesson levels.
+* ##### Code using Sprite Lab.
+* ##### Code using different types of events.
+* ##### Identify skills your students will develop.
+
+### **Suggested time:** 20 minutes
+
+## Let's keep learning! 
+
+
+
+MARKDOWN

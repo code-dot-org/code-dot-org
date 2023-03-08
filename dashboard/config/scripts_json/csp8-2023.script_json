@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-11 20:14:44 UTC",
+    "serialized_at": "2023-03-04 17:04:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,8 +33,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 8: Cybersecurity and Global Impacts",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Learning Through Full-class Simulation:** The simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. \n\n* **Ending the Year as \"Deciders\":** A major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are \"creators\" with technology, but all of them will need to be thoughtful \"deciders\" in a world profoundly shaped by computing. \n\n\n### Major Assessment and Projects\n\nStudents complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they'll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n* IOC-2: The use of computing innovations may involve risks to your personal safety and identity.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 5.1 Beneficial and Harmful Effects\n* 5.6 Safe Computing"
+        "display_name": "Unit 8: Cybersecurity and Global Impacts"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -3763,19 +3762,6 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1Zjg9DIe4_MAau1LNYFpTNMqV0xI2Rp964UktCEV60eg/copy",
-      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Zjg9DIe4_MAau1LNYFpTNMqV0xI2Rp964UktCEV60eg/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
-      }
-    },
-    {
       "name": "CSP Unit 10 Project Overview",
       "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
       "key": "csp_unit_10_project_overview",
@@ -3786,6 +3772,188 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_10_project_overview"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 10 - Protecting Data Part 2",
+      "url": "https://docs.google.com/presentation/d/18OM96OsnZeX115cRQp_SUKBp6RQOOP7UHKi2fEFZW44/copy",
+      "key": "csp_unit_8_-_lesson_10_-_protecting_data_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/18OM96OsnZeX115cRQp_SUKBp6RQOOP7UHKi2fEFZW44/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_10_-_protecting_data_part_2"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 11 - Project: Innovation Simulation Part 5",
+      "url": "https://docs.google.com/presentation/d/1eddAzjMCA_uVc_DlMXPZZkNs-4d4nh-gK4yR41XpTpk/copy",
+      "key": "csp_unit_8_-_lesson_11_-_project_innovation_simulation_part_5",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1eddAzjMCA_uVc_DlMXPZZkNs-4d4nh-gK4yR41XpTpk/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_11_-_project_innovation_simulation_part_5"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 12 - Project: Innovation Simulation Part 6",
+      "url": "https://docs.google.com/presentation/d/1G96Omk0PD28kMmgn6RXR9d0O-iEaojW5HJkEVW4-rcE/copy",
+      "key": "csp_unit_8_-_lesson_12_-_project_innovation_simulation_part_6",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1G96Omk0PD28kMmgn6RXR9d0O-iEaojW5HJkEVW4-rcE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_12_-_project_innovation_simulation_part_6"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 13 - Project: Innovation Simulation Part 7",
+      "url": "https://docs.google.com/presentation/d/1vLwcs9Gl2Rm8DW43EajtUkTFS2I6ddEixORXoF-fl88/copy",
+      "key": "csp_unit_8_-_lesson_13_-_project_innovation_simulation_part_7",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1vLwcs9Gl2Rm8DW43EajtUkTFS2I6ddEixORXoF-fl88/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_13_-_project_innovation_simulation_part_7"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 14 - Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1P1Jw7IJQciYo_o1xoQ6LjjjuLnfr4N_MrSVCqfiA9DE/copy",
+      "key": "csp_unit_8_-_lesson_14_-_assessment_day",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1P1Jw7IJQciYo_o1xoQ6LjjjuLnfr4N_MrSVCqfiA9DE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_14_-_assessment_day"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 1 - Project: Innovation Simulation Part 1",
+      "url": "https://docs.google.com/presentation/d/15ZETgJrwKPzmaycaAButEX3L0JMpN84UuINM0BuIW-0/copy",
+      "key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/15ZETgJrwKPzmaycaAButEX3L0JMpN84UuINM0BuIW-0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 2 - Project: Innovation Simulation Part 2",
+      "url": "https://docs.google.com/presentation/d/1B-lh4rYidcYvKIrEDzO2BokEmQ_FSDZfaHkzrdBA7u4/copy",
+      "key": "csp_unit_8_-_lesson_2_-_project_innovation_simulation_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1B-lh4rYidcYvKIrEDzO2BokEmQ_FSDZfaHkzrdBA7u4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_2_-_project_innovation_simulation_part_2"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 3 - Data Policies and Privacy",
+      "url": "https://docs.google.com/presentation/d/1lruerL3W-UO_Q4dLo2CTFFIHpeIjAbxBloOyjLGFkH8/copy",
+      "key": "csp_unit_8_-_lesson_3_-_data_policies_and_privacy",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lruerL3W-UO_Q4dLo2CTFFIHpeIjAbxBloOyjLGFkH8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_3_-_data_policies_and_privacy"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 4 - The Value of Privacy",
+      "url": "https://docs.google.com/presentation/d/1_d9JATEfx3UEhpKWA10HfIK0HrdBDl62p9-DJ028peQ/copy",
+      "key": "csp_unit_8_-_lesson_4_-_the_value_of_privacy",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1_d9JATEfx3UEhpKWA10HfIK0HrdBDl62p9-DJ028peQ/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_4_-_the_value_of_privacy"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 5 - Project: Innovation Simulation Part 3",
+      "url": "https://docs.google.com/presentation/d/1NQm12j4Bk7XsZczgZbTDuSVM8we-S4vnHYyjZY-UUro/copy",
+      "key": "csp_unit_8_-_lesson_5_-_project_innovation_simulation_part_3",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NQm12j4Bk7XsZczgZbTDuSVM8we-S4vnHYyjZY-UUro/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_5_-_project_innovation_simulation_part_3"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 6 - Security Risks Part 1",
+      "url": "https://docs.google.com/presentation/d/1Q39BgzWsGzb4BeJXb6-L5xEDD6rJG5BqWNpUvw1VpHc/copy",
+      "key": "csp_unit_8_-_lesson_6_-_security_risks_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Q39BgzWsGzb4BeJXb6-L5xEDD6rJG5BqWNpUvw1VpHc/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_6_-_security_risks_part_1"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 7 - Security Risks Part 2",
+      "url": "https://docs.google.com/presentation/d/1SgM-bQorufulv8cXUPa-ZN082RHO0DWlktc2hlK1IwY/copy",
+      "key": "csp_unit_8_-_lesson_7_-_security_risks_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1SgM-bQorufulv8cXUPa-ZN082RHO0DWlktc2hlK1IwY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_7_-_security_risks_part_2"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 8 - Project: Innovation Simulation Part 4",
+      "url": "https://docs.google.com/presentation/d/1bApf23hj78Pg_4dqArZ5vwdNwJT6TRxZjYX6J2mEt0g/copy",
+      "key": "csp_unit_8_-_lesson_8_-_project_innovation_simulation_part_4",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1bApf23hj78Pg_4dqArZ5vwdNwJT6TRxZjYX6J2mEt0g/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_8_-_project_innovation_simulation_part_4"
+      }
+    },
+    {
+      "name": "CSP Unit 8 - Lesson 9 - Protecting Data Part 1",
+      "url": "https://docs.google.com/presentation/d/13UxFNpOXcnrANeMBynFLC2XyAK7fzHN5_Gg8ZKSMddc/copy",
+      "key": "csp_unit_8_-_lesson_9_-_protecting_data_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/13UxFNpOXcnrANeMBynFLC2XyAK7fzHN5_Gg8ZKSMddc/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_lesson_9_-_protecting_data_part_1"
       }
     },
     {
@@ -3880,13 +4048,13 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_14_-_assessment_day"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Data Policies and Privacy",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_3_-_data_policies_and_privacy"
       }
     },
     {
@@ -3928,13 +4096,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 1",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 1",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
       }
     },
     {
@@ -3946,13 +4114,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 2",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 2",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_2_-_project_innovation_simulation_part_2"
       }
     },
     {
@@ -3964,13 +4132,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 3",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 3",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_5_-_project_innovation_simulation_part_3"
       }
     },
     {
@@ -3982,13 +4150,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 4",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 4",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_8_-_project_innovation_simulation_part_4"
       }
     },
     {
@@ -4000,13 +4168,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 5",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 5",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_11_-_project_innovation_simulation_part_5"
       }
     },
     {
@@ -4018,13 +4186,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 6",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 6",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_12_-_project_innovation_simulation_part_6"
       }
     },
     {
@@ -4036,19 +4204,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 7",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_10_project_overview"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 7",
-        "resource.key": "csp_unit_10_project_overview"
+        "resource.key": "csp_unit_8_-_lesson_13_-_project_innovation_simulation_part_7"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Protecting Data Part 1",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_9_-_protecting_data_part_1"
       }
     },
     {
@@ -4066,13 +4234,13 @@
     {
       "seeding_key": {
         "lesson.key": "Protecting Data Part 2",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_10_-_protecting_data_part_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Security Risks Part 1",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_6_-_security_risks_part_1"
       }
     },
     {
@@ -4084,7 +4252,7 @@
     {
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_7_-_security_risks_part_2"
       }
     },
     {
@@ -4114,7 +4282,7 @@
     {
       "seeding_key": {
         "lesson.key": "The Value of Privacy",
-        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+        "resource.key": "csp_unit_8_-_lesson_4_-_the_value_of_privacy"
       }
     },
     {

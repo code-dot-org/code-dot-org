@@ -309,6 +309,10 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
+#codeTextbox.has_banner {
+  top: $workspace-headers-height + 30;
+}
+
 html[dir="rtl"] .editor-column {
   right: 400px;
 }
@@ -388,6 +392,30 @@ html[dir="rtl"] .editor-column {
 
 .droplet-gutter-line.droplet_warning {
   background-position: 2px 2px;
+}
+
+html[dir="rtl"] {
+  // !Important is used to overwrite droplet.min styling for RTL languages support.
+  #codeTextbox {
+    .droplet-wrapper-div {
+      left: 0 !important;
+    }
+
+    .ace_editor {
+      left: 0 !important;
+    }
+
+    .droplet-palette-wrapper {
+      right: 0 !important;
+      left: unset !important;
+      z-index: 1;
+    }
+
+    .droplet-palette-header,
+    .droplet-palette-scroller {
+      border-left: 2px solid #ddd;
+    }
+  }
 }
 
 #visualizationResizeBar {
