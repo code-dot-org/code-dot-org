@@ -5,6 +5,10 @@ file '/etc/gemrc' do
   only_if {File.exist? '/etc/gemrc'}
 end
 
+directory '/usr/etc' do
+  recursive true
+end
+
 cookbook_file '/usr/etc/gemrc' do
   action :create_if_missing
   source 'gemrc'
