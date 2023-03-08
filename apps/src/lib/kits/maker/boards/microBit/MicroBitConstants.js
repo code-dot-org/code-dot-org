@@ -1,3 +1,5 @@
+import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+
 export const SENSOR_CHANNELS = {
   accelX: 8,
   accelY: 9,
@@ -92,3 +94,10 @@ for (let i = 0; i < 5; i++) {
   }
 }
 export const ALL_LEDS = allLeds;
+
+export const MICROBIT_FIRMATA_V1_URL = `${DOWNLOAD_PREFIX}microbit-firmata-v1-ver1.2.hex`;
+export const MICROBIT_FIRMATA_V2_URL = `${DOWNLOAD_PREFIX}microbit-firmata-v1-ver1.2.hex`;
+export const MICROBIT_IDS_V1 = ['9900', '9901'];
+export const MICROBIT_IDS_V2 = ['9903', '9904', '9905', '9906'];
+export const MICROBIT_V1 = 'v1';
+export const MICROBIT_V2 = 'v2';

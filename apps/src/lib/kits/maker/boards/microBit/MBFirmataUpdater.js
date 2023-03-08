@@ -1,4 +1,11 @@
-import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import {
+  MICROBIT_FIRMATA_V1_URL,
+  MICROBIT_FIRMATA_V2_URL,
+  MICROBIT_IDS_V1,
+  MICROBIT_IDS_V2,
+  MICROBIT_V1,
+  MICROBIT_V2
+} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
 import {setMicrobitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microbitRedux';
@@ -14,12 +21,10 @@ export default class MBFirmataUpdater extends EventEmitter {
   detectMicrobitVersion(device) {
     // Detect micro:bit version and select the right Intel Hex for micro:bit V1 or V2
     const microbitId = device.serialNumber.substring(0, 4);
-    let microbitVersion = 'v1';
-    const v1MicrobitIds = ['9900', '9901'];
-    const v2MicrobitIds = ['9903', '9904', '9905', '9906'];
-    if (v2MicrobitIds.includes(microbitId)) {
-      microbitVersion = 'v2';
-    } else if (!v1MicrobitIds.includes(microbitId)) {
+    let microbitVersion = MICROBIT_V1;
+    if (MICROBIT_IDS_V2.includes(microbitId)) {
+      microbitVersion = MICROBIT_V2;
+    } else if (!MICROBIT_IDS_V1.includes(microbitId)) {
       microbitVersion = null;
     }
     return microbitVersion;
@@ -30,11 +35,11 @@ export default class MBFirmataUpdater extends EventEmitter {
       filters: [{vendorId: 0x0d28, productId: 0x0204}]
     });
     const microbitVersion = this.detectMicrobitVersion(device);
-    let firmataUrl = `${DOWNLOAD_PREFIX}microbit-firmata-v1-ver1.2.hex`;
-    if (microbitVersion === 'v2') {
-      firmataUrl = `${DOWNLOAD_PREFIX}microbit-firmata-v2-ver1.2.hex`;
-    } else if (microbitVersion !== 'v1') {
-      throw new Error('microbit version not detected correctly');
+    let firmataUrl = MICROBIT_FIRMATA_V1_URL;
+    if (microbitVersion === MICROBIT_V2) {
+      firmataUrl = MICROBIT_FIRMATA_V2_URL;
+    } else if (microbitVersion !== MICROBIT_V1) {
+      throw new Error('micro:bit version not detected correctly.');
     }
     const result = await fetch(firmataUrl);
 
@@ -57,7 +62,6 @@ export default class MBFirmataUpdater extends EventEmitter {
       // Push binary to board
       await target.connect();
       await target.flash(hexAsBytes);
-      console.log('flash complete - now disconnect');
       await target.disconnect();
     } catch (error) {
       console.log(error);
