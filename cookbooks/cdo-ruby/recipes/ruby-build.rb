@@ -40,6 +40,6 @@ execute 'install ruby-build' do
 end
 
 execute 'install ruby with ruby build' do
-  command "ruby-build #{node['cdo-ruby']['version']}"
+  command "ruby-build #{node['cdo-ruby']['version']} /usr/local"
   not_if "which ruby && ruby --version | grep --quiet '^ruby #{node['cdo-ruby']['version']}'"
 end
