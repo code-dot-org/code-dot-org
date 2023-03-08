@@ -369,6 +369,20 @@ describe('MicroBitBoard', () => {
         expect(ledScreenSpy).to.have.been.calledOnce;
       });
     });
+
+    it('turns off any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'off');
+        sinon.spy(led2, 'off');
+        expect(led1.off).not.to.have.been.called;
+        expect(led2.off).not.to.have.been.called;
+        board.reset();
+        expect(led1.off).to.have.been.calledOnce;
+        expect(led2.off).to.have.been.calledOnce;
+      });
+    });
   });
 
   describe(`destroy()`, () => {

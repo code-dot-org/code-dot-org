@@ -101,6 +101,9 @@ export const PaneButton = Radium(function(props) {
     isMinecraft,
     headerHasFocus,
     isDisabled,
+    ariaLabel,
+    onClick,
+    id,
     style,
     className
   } = props;
@@ -114,7 +117,7 @@ export const PaneButton = Radium(function(props) {
     iconOrLabelHidden && moduleStyles.headerButtonIconOrLabelHidden
   );
 
-  const divClassNames = classNames(
+  const buttonClassNames = classNames(
     moduleStyles.headerButton,
     isRtl !== !!leftJustified && moduleStyles.headerButtonRtl,
     isMinecraft && moduleStyles.headerButtonMinecraft,
@@ -123,6 +126,11 @@ export const PaneButton = Radium(function(props) {
     isDisabled && moduleStyles.headerButtonDisabled,
     className
   );
+
+  // There are specific styles for Minecraft lab (some rules with !important from external package)
+  // so in order not to break Minecraft labs, it's better to leave PaneButton a div
+  const Tag = isMinecraft ? 'div' : 'button';
+  const tagSpecificProps = isMinecraft ? {role: 'button'} : {type: 'button'};
 
   function renderIcon() {
     const {iconClass, icon} = props;
@@ -157,22 +165,23 @@ export const PaneButton = Radium(function(props) {
   }
 
   return (
-    <div
-      className={divClassNames}
-      role="button"
+    <Tag
+      {...tagSpecificProps}
+      className={buttonClassNames}
+      disabled={isDisabled}
       tabIndex="0"
-      id={props.id}
+      id={id}
       style={style}
-      onKeyDown={props.isDisabled ? () => {} : onKeyDownWrapper}
-      onClick={props.isDisabled ? () => {} : props.onClick}
-      aria-label={props.ariaLabel}
+      onKeyDown={onKeyDownWrapper}
+      onClick={onClick}
+      aria-label={ariaLabel}
     >
       <span className={moduleStyles.headerButtonSpan}>
-        {props.hiddenImage}
+        {hiddenImage}
         {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
-    </div>
+    </Tag>
   );
 });
 PaneButton.propTypes = {

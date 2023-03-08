@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `Startup`(#e7e8ea) class represents a startup business that appeared on the TV show *Shark Tank* and has instance variables for the name of the company, a description of the product, and whether or not the company got the deal.\r\n\r\n✅ **TO DO #1:** In `Startup.java`(#e7e8ea),\r\n\r\n1. Declare and initialize a static variables called `numStartups`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. In the `Startup`(#e7e8ea) constructor, increment `numStartups`(#e7e8ea) by `1`(#e7e8ea).\r\n\r\n3. Write a static method called `getNumStartups()`(#e7e8ea) that returns a `String`(#e7e8ea) containing the text `\"There have been {numStartups} startup pitches on Shark Tank!\"`(#e7e8ea), where `numStartups`(#e7e8ea) is the number of `Startup`(#e7e8ea) objects that have been instantiated.\r\n\r\n✅ **TO DO #2:** In `StartupRunner.java`(#e7e8ea), create several `Startup`(#e7e8ea) objects, such as:\r\n\r\n* Company Name: Touch Up Cup, Description: paint storage cup, Got Deal: true\r\n\r\n* Company Name: SparkCharge, Description: portable electric car charger, Got Deal: true\r\n\r\n* Company Name: GarmaGuard, Description: germ killing spray, Got Deal: false\r\n\r\n* Company Name: Rumpl, Description: high performance blanks, Got Deal: false\r\n\r\n✅ **TO DO #3:** In `StartupRunner.java`(#e7e8ea), call the `getNumStartups()`(#e7e8ea) method and print the result.\r\n\r\n💡 **TIP:** Check out the **Help & Tips** tab ⬆️ for help with declaring and initializing a constant and writing a static method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/constants",
+      "/courses/csa-2023/guides/static-methods"
+    ],
+    "display_name": "Startups on Shark Tank",
+    "bubble_choice_description": "Use static variables and methods to keep track of the number of companies that have appeared on the TV show *Shark Tank*.",
+    "thumbnail_url": "https://images.code.org/67f26bdaf9422455d10794f01a572f76-shuttle.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-02-17T18:26:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:26:35.503+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8a_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L8a_2023\"},{\"changed_at\":\"2023-02-17 18:26:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 19:11:37 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

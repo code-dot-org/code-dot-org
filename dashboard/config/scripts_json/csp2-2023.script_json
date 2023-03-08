@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-27 20:26:20 UTC",
+    "serialized_at": "2023-03-04 15:17:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,8 +33,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 2: The Internet",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates how different features or \"layers\" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Lessons will present students with challenges that closely mimic those that the internet's original inventors needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of how the internet works and why it was designed that way. By the end of the unit, students will have \"invented the internet\" themselves! \n\n* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and developing a supportive and inclusive classroom culture. \n\n### Major Assessment and Projects\n\nThe unit project asks students to design a policy position for an imaginary political candidate related to an \"Internet Dilemma.\" Students must analyze news stories about their topic to identify impacted groups, explain those groups' interests, explain technical background about the dilemma, and then recommend a policy solution that the candidate should advocate for. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CSN-1: that computer systems and networks facilitate how data are transferred\n* IOC-1: and that while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 4.1 The Internet\n* 4.2 Fault Tolerance\n* 5.2 Digital Divide"
+        "display_name": "Unit 2: The Internet"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit2_2020",
@@ -3034,6 +3033,18 @@
       }
     },
     {
+      "name": "Building a Network",
+      "url": "https://docs.google.com/presentation/d/1kxB2sHjJvwG0tyYUz2I2-aeL5FUfXFNDsAd--ALT9cY/template/preview",
+      "key": "building_a_network",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "building_a_network"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -3082,6 +3093,18 @@
       }
     },
     {
+      "name": "HTTP and DNS",
+      "url": "https://docs.google.com/presentation/d/1c-xMjaoO_cE4RAk71mDPg9LCyHnvjxo5yZF90-eQYCk/template/preview",
+      "key": "http_and_dns",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "http_and_dns"
+      }
+    },
+    {
       "name": "Internet Dilemmas",
       "url": "https://docs.google.com/document/d/1UZ1FJDBnwLARSmP7hqFKnMLkV8c2lC6C3qO5RPulDao/edit?usp=sharing",
       "key": "internet_dilemmas",
@@ -3092,6 +3115,18 @@
       },
       "seeding_key": {
         "resource.key": "internet_dilemmas"
+      }
+    },
+    {
+      "name": "Internet Dilemmas",
+      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/template/preview",
+      "key": "internet_dilemmas_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "internet_dilemmas_1"
       }
     },
     {
@@ -3117,6 +3152,30 @@
       },
       "seeding_key": {
         "resource.key": "layers_of_the_internet"
+      }
+    },
+    {
+      "name": "Packets",
+      "url": "https://docs.google.com/presentation/d/10bLpLwyNIg4tXMlAS0YhEpUaesAdy2Yqvcg8fo1ZlZQ/template/preview",
+      "key": "packets",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "packets"
+      }
+    },
+    {
+      "name": "Routers and Redundancy",
+      "url": "https://docs.google.com/presentation/d/1Jg8fCWRrk-7XE5ZV0OrOZiWtxu3YzQ_FZGhWW-uqVEM/template/preview",
+      "key": "routers_and_redundancy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "routers_and_redundancy"
       }
     },
     {
@@ -3197,6 +3256,18 @@
       }
     },
     {
+      "name": "The Need for Addressing",
+      "url": "https://docs.google.com/presentation/d/1wjYGFjh5BfWDRmrdPlabPvx9ctfaxjVxWptfa0khpUo/template/preview",
+      "key": "the_need_for_addressing",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_need_for_addressing"
+      }
+    },
+    {
       "name": "U2 High Score Sample Guide & Rubric",
       "url": "https://docs.google.com/document/d/1AuFdmglDQD6-gzzipbP492kkIUejKrwtHpLbvFv8kcA/edit?usp=sharing",
       "key": "u2_high_score_sample_guide_rubric",
@@ -3247,6 +3318,18 @@
       }
     },
     {
+      "name": "Welcome to the Internet",
+      "url": "https://docs.google.com/presentation/d/10FQTUZnQE_H6pfaNhQ2S28hQAkZ8ITqFMJUjESVoZF0/template/preview",
+      "key": "welcome_to_the_internet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_internet"
+      }
+    },
+    {
       "name": "What is the Internet?",
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what_is_the_internet_",
@@ -3270,13 +3353,13 @@
     {
       "seeding_key": {
         "lesson.key": "Building a Network",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "building_a_network"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "http_and_dns"
       }
     },
     {
@@ -3306,7 +3389,7 @@
     {
       "seeding_key": {
         "lesson.key": "Packets",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "packets"
       }
     },
     {
@@ -3324,12 +3407,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Internet Dilemmas Part 1",
-        "resource.key": "csp_unit_2_-_the_internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Internet Dilemmas Part 1",
         "resource.key": "exemplar_internet_dilemmas"
       }
     },
@@ -3337,6 +3414,12 @@
       "seeding_key": {
         "lesson.key": "Project   Internet Dilemmas Part 1",
         "resource.key": "internet_dilemmas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
+        "resource.key": "internet_dilemmas_1"
       }
     },
     {
@@ -3384,7 +3467,7 @@
     {
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "routers_and_redundancy"
       }
     },
     {
@@ -3396,13 +3479,13 @@
     {
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "the_internet_ip_addresses_and_dns"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
-        "resource.key": "the_internet_ip_addresses_and_dns"
+        "resource.key": "the_need_for_addressing"
       }
     },
     {
@@ -3414,7 +3497,7 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "welcome_to_the_internet"
       }
     },
     {

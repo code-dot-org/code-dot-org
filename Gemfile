@@ -271,7 +271,7 @@ gem 'daemons'
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
-gem 'oj'
+gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 

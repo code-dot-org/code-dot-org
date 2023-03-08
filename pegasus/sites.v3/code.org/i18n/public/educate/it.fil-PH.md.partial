@@ -101,7 +101,7 @@ Gumagamit kami ng [YouTube](https://www.youtube.com) upang mag-embed ng mga vide
 
 Bago mo simulan ang mga online na kurso ng Code.org, subukan ang pag-playback ng video sa ibaba upang matiyak na handa ka nang magsimula.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Ito ang player na ginagamit sa buong kurikulum. Susubukan nitong ipakita ang video sa pamamagitan ng YouTube at, kung naka-block ang YouTube, ipakita sa halip ang Code.org na naka-host na video gamit ang "fallback" player namin.
 

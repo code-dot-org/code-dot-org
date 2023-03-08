@@ -306,80 +306,82 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize(include_prev_next=true, for_edit: false, user_id: nil)
-    ids = level_ids
-    active_id = oldest_active_level.id
-    inactive_ids = ids - [active_id]
+    ActiveRecord::Base.connected_to(role: :reading) do
+      ids = level_ids
+      active_id = oldest_active_level.id
+      inactive_ids = ids - [active_id]
 
-    levels.each do |l|
-      ids.concat(l.contained_levels.map(&:id))
-    end
-
-    summary = {
-      ids: ids.map(&:to_s),
-      activeId: active_id.to_s,
-      inactiveIds: inactive_ids.map(&:to_s),
-      position: position,
-      kind: kind,
-      icon: level.icon,
-      is_concept_level: level.concept_level?,
-      title: level_display_text,
-      url: build_script_level_url(self),
-      freePlay: level.try(:free_play) == "true",
-      bonus: bonus,
-      display_as_unplugged: level.display_as_unplugged?
-    }
-
-    if progression
-      summary[:progression] = progression
-      localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
-      summary[:progression_display_name] = localized_progression_name
-    end
-
-    if named_level
-      summary[:name] = level.display_name || level.name
-    end
-
-    if bubble_choice?
-      summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
-    end
-
-    if for_edit
-      summary[:key] = level.key
-      summary[:skin] = level.try(:skin)
-      summary[:videoKey] = level.video_key
-      summary[:concepts] = level.summarize_concepts
-      summary[:conceptDifficulty] = level.summarize_concept_difficulty
-      summary[:assessment] = !!assessment
-      summary[:challenge] = !!challenge
-      summary[:instructor_in_training] = !!instructor_in_training
-    end
-
-    if include_prev_next
-      # Add a previous pointer if it's not the obvious (level-1)
-      if previous_level
-        if previous_level.lesson.absolute_position != lesson.absolute_position
-          summary[:previous] = [previous_level.lesson.absolute_position, previous_level.position]
-        end
-      else
-        # This is the first level in the script
-        summary[:previous] = false
+      levels.each do |l|
+        ids.concat(l.contained_levels.map(&:id))
       end
 
-      # Add a next pointer if it's not the obvious (level+1)
-      if end_of_lesson?
-        if next_level
-          summary[:next] = [next_level.lesson.absolute_position, next_level.position]
+      summary = {
+        ids: ids.map(&:to_s),
+        activeId: active_id.to_s,
+        inactiveIds: inactive_ids.map(&:to_s),
+        position: position,
+        kind: kind,
+        icon: level.icon,
+        is_concept_level: level.concept_level?,
+        title: level_display_text,
+        url: build_script_level_url(self),
+        freePlay: level.try(:free_play) == "true",
+        bonus: bonus,
+        display_as_unplugged: level.display_as_unplugged?
+      }
+
+      if progression
+        summary[:progression] = progression
+        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        summary[:progression_display_name] = localized_progression_name
+      end
+
+      if named_level
+        summary[:name] = level.display_name || level.name
+      end
+
+      if bubble_choice?
+        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
+      end
+
+      if for_edit
+        summary[:key] = level.key
+        summary[:skin] = level.try(:skin)
+        summary[:videoKey] = level.video_key
+        summary[:concepts] = level.summarize_concepts
+        summary[:conceptDifficulty] = level.summarize_concept_difficulty
+        summary[:assessment] = !!assessment
+        summary[:challenge] = !!challenge
+        summary[:instructor_in_training] = !!instructor_in_training
+      end
+
+      if include_prev_next
+        # Add a previous pointer if it's not the obvious (level-1)
+        if previous_level
+          if previous_level.lesson.absolute_position != lesson.absolute_position
+            summary[:previous] = [previous_level.lesson.absolute_position, previous_level.position]
+          end
         else
-          # This is the final level in the script
-          summary[:next] = false
-          if script.wrapup_video
-            summary[:wrapupVideo] = script.wrapup_video.summarize
+          # This is the first level in the script
+          summary[:previous] = false
+        end
+
+        # Add a next pointer if it's not the obvious (level+1)
+        if end_of_lesson?
+          if next_level
+            summary[:next] = [next_level.lesson.absolute_position, next_level.position]
+          else
+            # This is the final level in the script
+            summary[:next] = false
+            if script.wrapup_video
+              summary[:wrapupVideo] = script.wrapup_video.summarize
+            end
           end
         end
       end
-    end
 
-    summary
+      summary
+    end
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
@@ -701,16 +703,17 @@ class ScriptLevel < ApplicationRecord
         # Java Lab levels use levels rather than projects as their example, so the URL is much more clearly
         # defined and is directly set on the level. Because of this, the value of "example" is already in its
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
-        if level.is_a?(Dancelab)
+        case level
+        when Dancelab
           send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Poetry)
+        when Poetry
           send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(GamelabJr)
+        when GamelabJr
           send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Artist)
+        when Artist
           artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Studio) # playlab
+        when Studio # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)

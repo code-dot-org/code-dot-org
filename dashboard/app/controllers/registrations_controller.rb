@@ -102,7 +102,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def create
     gender = params.dig(:user, :gender)
-    gender_input_type = gender_input_type?(request, session.id.to_s)
+    gender_input_type = gender_input_type?(request, session)
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
@@ -123,7 +123,7 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
-      SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'email_signup', current_user.user_type)
+      SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'email_signup', current_user)
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -186,12 +186,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def sign_up_params
     super.tap do |params|
-      if params[:user_type] == "teacher"
+      case params[:user_type]
+      when 'teacher'
         params[:email_preference_opt_in_required] = true
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
-      elsif params[:user_type] == "student"
+      when 'student'
         params[:parent_email_preference_request_ip] = request.ip
         params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
       end

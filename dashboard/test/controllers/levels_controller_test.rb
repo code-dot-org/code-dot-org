@@ -722,8 +722,8 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
 
     assert_equal level_path, assigns(:level).filename
-    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
-    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split.first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split.first
   end
 
   test "should allow rename of new level" do
@@ -769,7 +769,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    create(:level, name: level_name) unless Level.where(name: level_name).exists?
+    create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}

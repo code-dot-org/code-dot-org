@@ -160,6 +160,8 @@ export function handleUploadComplete(result) {
   });
 
   return function(dispatch, getState) {
+    const isBackgroundMode =
+      getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
@@ -171,7 +173,8 @@ export function handleUploadComplete(result) {
           name: uploadFilename,
           sourceUrl: sourceUrl,
           size: result.size,
-          version: result.versionId
+          version: result.versionId,
+          categories: [isBackgroundMode ? 'backgrounds' : '']
         });
 
         if (goal === Goal.NEW_ANIMATION) {
@@ -255,10 +258,14 @@ export function pickNewAnimation() {
     const state = getState();
     const goal = state.animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      if (state.interfaceMode !== P5LabInterfaceMode.ANIMATION) {
+      if (
+        ![P5LabInterfaceMode.ANIMATION, P5LabInterfaceMode.BACKGROUND].includes(
+          state.interfaceMode
+        )
+      ) {
         dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
       }
-      dispatch(addBlankAnimation());
+      dispatch(addBlankAnimation(state.interfaceMode));
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendBlankFrame());
     }
@@ -294,6 +301,7 @@ export function pickLibraryAnimation(animation) {
       }
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
+      dispatch(hide());
     }
   };
 }
