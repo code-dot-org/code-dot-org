@@ -244,6 +244,10 @@ class CourseOffering < ApplicationRecord
     category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
   end
 
+  def get_participant_audience
+    course_versions&.first&.content_root&.participant_audience
+  end
+
   def grade_levels_list
     return [] if grade_levels.nil?
     grade_levels.strip.split(',')
