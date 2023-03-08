@@ -103,7 +103,7 @@ class RakeTaskEventLogger
       ChatClient.log "metric flushed", color: 'green'
       ChatClient.log "metric flushed2", color: 'green'
 
-      puts "Metric flushed ------------------------------------"
+      puts "Metric flushed ----------------------------------2--"
     rescue => e
       Honeybadger.notify(
         e,
