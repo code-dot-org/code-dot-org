@@ -80,6 +80,7 @@ module Cdo
     # @param [Hash, Aws::CloudWatch::Types::MetricDatum] metric
     def self.put_metric(namespace, metric)
       BUFFERS[namespace].buffer(metric)
+      ChatClient.log "added to buffer", color: 'green'
     end
 
     # Asynchronously send a collection of CloudWatch metrics in batches.
