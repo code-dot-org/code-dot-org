@@ -62,7 +62,7 @@ class SetupChecklist extends Component {
   static propTypes = {
     webSerialPort: PropTypes.object,
     stepDelay: PropTypes.number,
-    firmataPercentComplete: PropTypes.string
+    firmataPercentComplete: PropTypes.number
   };
 
   fail(selector) {
@@ -214,7 +214,6 @@ class SetupChecklist extends Component {
       .updateMBFirmata()
       .then(() => {
         this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
-        console.log('success!');
       })
       .catch(err => {
         console.log(err);
@@ -365,7 +364,7 @@ class SetupChecklist extends Component {
             this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
-                stepName={'Updating micro:bit software'}
+                stepName={i18n.validationStepUpdateMicroBitSoftware()}
                 hideWaitingSteps={false}
                 alwaysShowChildren={true}
                 updatePercentComplete={this.props.firmataPercentComplete}
@@ -416,7 +415,7 @@ class SetupChecklist extends Component {
                   color={Button.ButtonColor.orange}
                   size={Button.ButtonSize.medium}
                   style={downloadButtonStyle}
-                  onClick={() => this.updateMBFirmata('versioned')}
+                  onClick={() => this.updateMBFirmata()}
                   title={applabI18n.makerSetupUpdateMBFirmataDescription()}
                 />
               )}

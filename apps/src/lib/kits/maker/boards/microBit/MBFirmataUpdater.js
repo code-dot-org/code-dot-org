@@ -1,4 +1,6 @@
 import {
+  MICROBIT_VENDOR_ID,
+  MICROBIT_PRODUCT_ID,
   MICROBIT_FIRMATA_V1_URL,
   MICROBIT_FIRMATA_V2_URL,
   MICROBIT_IDS_V1,
@@ -21,26 +23,27 @@ export default class MBFirmataUpdater extends EventEmitter {
   detectMicrobitVersion(device) {
     // Detect micro:bit version and select the right Intel Hex for micro:bit V1 or V2
     const microbitId = device.serialNumber.substring(0, 4);
-    let microbitVersion = MICROBIT_V1;
-    if (MICROBIT_IDS_V2.includes(microbitId)) {
+    let microbitVersion = null;
+    if (MICROBIT_IDS_V1.includes(microbitId)) {
+      microbitVersion = MICROBIT_V1;
+    } else if (MICROBIT_IDS_V2.includes(microbitId)) {
       microbitVersion = MICROBIT_V2;
-    } else if (!MICROBIT_IDS_V1.includes(microbitId)) {
-      microbitVersion = null;
     }
     return microbitVersion;
   }
 
   async updateMBFirmataVersioned() {
     const device = await navigator.usb.requestDevice({
-      filters: [{vendorId: 0x0d28, productId: 0x0204}]
+      filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}]
     });
     const microbitVersion = this.detectMicrobitVersion(device);
-    let firmataUrl = MICROBIT_FIRMATA_V1_URL;
-    if (microbitVersion === MICROBIT_V2) {
-      firmataUrl = MICROBIT_FIRMATA_V2_URL;
-    } else if (microbitVersion !== MICROBIT_V1) {
+    if (microbitVersion === null) {
       throw new Error('micro:bit version not detected correctly.');
     }
+    const firmataUrl =
+      microbitVersion === MICROBIT_V1
+        ? MICROBIT_FIRMATA_V1_URL
+        : MICROBIT_FIRMATA_V2_URL;
     const result = await fetch(firmataUrl);
 
     if (!result.ok) {
@@ -53,7 +56,7 @@ export default class MBFirmataUpdater extends EventEmitter {
 
     this.firmataUpdatePercent = 0;
     target.on(DAPLink.EVENT_PROGRESS, progress => {
-      this.getPercentUpdateComplete(progress);
+      this.setPercentUpdateComplete(progress);
     });
 
     // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
@@ -65,21 +68,20 @@ export default class MBFirmataUpdater extends EventEmitter {
       await target.disconnect();
     } catch (error) {
       console.log(error);
+      getStore().dispatch(setMicrobitFirmataUpdatePercent(null));
       return Promise.reject('Failed to flash Firmata.');
     }
   }
 
-  getPercentUpdateComplete = progress => {
-    if (progress) {
+  setPercentUpdateComplete = progress => {
+    if (progress !== null) {
       let percentComplete = Math.ceil(progress * 100);
       // 'progress' is a decimal value between 0.0 and 1.0 indicating the Firmata update percent completion.
       // If the rounded value is different from the value stored in the instance variable
       // 'firmataUpdatePercent', then we update the corresponding state value.
       if (percentComplete !== this.firmataUpdatePercent) {
         this.firmataUpdatePercent = percentComplete;
-        getStore().dispatch(
-          setMicrobitFirmataUpdatePercent(` ${percentComplete.toString()}%`)
-        );
+        getStore().dispatch(setMicrobitFirmataUpdatePercent(percentComplete));
       }
     }
   };

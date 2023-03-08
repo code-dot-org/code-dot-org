@@ -101,3 +101,9 @@ export const MICROBIT_IDS_V1 = ['9900', '9901'];
 export const MICROBIT_IDS_V2 = ['9903', '9904', '9905', '9906'];
 export const MICROBIT_V1 = 'v1';
 export const MICROBIT_V2 = 'v2';
+
+// Any USB device (including a micro:bit) will identify itself on connection to the
+// host computer through three numbers: Vendor ID, Product ID, and serial number.
+// We check if the connected board is a micro:bit with the following constants.
+export const MICROBIT_VENDOR_ID = 0x0d28;
+export const MICROBIT_PRODUCT_ID = 0x0204;

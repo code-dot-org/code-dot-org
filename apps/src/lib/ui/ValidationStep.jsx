@@ -46,7 +46,7 @@ export default class ValidationStep extends Component {
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     alwaysShowChildren: PropTypes.bool,
     hideWaitingSteps: PropTypes.bool,
-    updatePercentComplete: PropTypes.string
+    updatePercentComplete: PropTypes.number
   };
 
   render() {
@@ -74,8 +74,10 @@ export default class ValidationStep extends Component {
         <div style={{...style.header, ...styleFor(stepStatus)}}>
           <div style={style.icon}>{iconFor(stepStatus)}</div>
           <div style={style.headerText}>
-            {stepName}&nbsp;
-            {updatePercentComplete}
+            {stepName}
+            {updatePercentComplete && (
+              <span>&nbsp;{updatePercentComplete}%</span>
+            )}
           </div>
         </div>
         {showChildren && (

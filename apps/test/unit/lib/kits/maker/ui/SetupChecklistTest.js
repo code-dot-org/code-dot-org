@@ -57,7 +57,7 @@ describe('SetupChecklist', () => {
       .callsFake(() => Promise.resolve());
     stubRedux();
     registerReducers({microbit: microbitReducer});
-    getStore().dispatch(setMicrobitFirmataUpdatePercent('0%'));
+    getStore().dispatch(setMicrobitFirmataUpdatePercent(0));
   });
 
   afterEach(() => {
