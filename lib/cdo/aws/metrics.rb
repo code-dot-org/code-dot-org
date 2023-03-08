@@ -81,6 +81,7 @@ module Cdo
     def self.put_metric(namespace, metric)
       BUFFERS[namespace].buffer(metric)
       ChatClient.log "added to buffer", color: 'green'
+      ChatClient.log namespace, color: 'green'
     end
 
     # Asynchronously send a collection of CloudWatch metrics in batches.
