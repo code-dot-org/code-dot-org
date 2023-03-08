@@ -13,7 +13,7 @@ import {
   isWebSerialPort
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
-import {MBFirmataUpdater} from '../boards/microBit/MBFirmataUpdater';
+import MBFirmataUpdater from '../boards/microBit/MBFirmataUpdater';
 
 export default class SetupChecker {
   constructor(webSerialPort) {
@@ -115,7 +115,11 @@ export default class SetupChecker {
   }
 
   async updateMBFirmata() {
-    const mbFirmataUpdater = new MBFirmataUpdater();
-    return mbFirmataUpdater.updateMBFirmataVersioned();
+    try {
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      return mbFirmataUpdater.updateMBFirmataVersioned();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
