@@ -17,12 +17,9 @@ function useWindowSize() {
 }
 
 /**
- * Renders a video player.
+ * Renders a simple modal video player.
  */
 const Video = ({onClose}) => {
-  //const targetWidth = window.innerWidth - 20;
-  //const targetHeight = window.innerHeight - 100;
-
   let [targetWidth, targetHeight] = useWindowSize();
   targetWidth -= 80;
   targetHeight -= 100;
