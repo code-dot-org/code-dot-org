@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-02-02 01:13:39 UTC",
+    "serialized_at": "2023-03-07 22:24:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5299,7 +5299,7 @@
     },
     {
       "name": "ASCII and Binary Representation",
-      "url": "https://docs.google.com/presentation/d/1RkUjU8jpW0RvQnCvfTs3COAE_uNyNvOmEAtUJVeTZQ4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1EouCz7ZnhJQshZjlUwVEZ7kw2w2nh6liwOz1_Rpf0TM/template/preview",
       "key": "ascii_and_binary_representation",
       "properties": {
         "audience": "Teacher",
@@ -5400,11 +5400,10 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1IJX7-vYg58tTUzY3IZdEEZsVM_K0Z97SvwI36AGVMkA/template/preview",
       "key": "automating_data_decisions_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5426,11 +5425,10 @@
     },
     {
       "name": "Combining Representations",
-      "url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1yiUWlgEKk2nWkSnCWEctviqkGrbssoSL1Dk9JzUaYSo/template/preview",
       "key": "combining_representations",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5501,11 +5499,10 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1l8eKXAb5DL_ewyfBso65r2PH2MBARRdDNIE6Af047Yg/template/preview",
       "key": "create_a_representation_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5526,11 +5523,10 @@
     },
     {
       "name": "Data and Machine Learning",
-      "url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/template/preview",
+      "url": "https://docs.google.com/presentation/d/15tupPQcqJqImvYWXjE3iikIufWdBU7da7GjxrxrtYpg/template/preview",
       "key": "data_and_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5602,11 +5598,10 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vxqJy-RsZBygj5m-_ibHGYY2JVTHQZSNFGGfQBP8YEk/template/preview",
       "key": "interpreting_data_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5615,11 +5610,10 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/template/preview",
+      "url": "https://docs.google.com/presentation/d/1K6c-sLOL_SicLTAhLxbdBaDsSFew7uL9am7VKxvYQDQ/template/preview",
       "key": "keeping_data_secret",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5704,11 +5698,10 @@
     },
     {
       "name": "Making Decisions with Data",
-      "url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/template/preview",
+      "url": "https://docs.google.com/presentation/d/19-4q5bIQqXCHDuI6L-AfFeuW7YG7pIwSYT1w8GdSLoQ/template/preview",
       "key": "making_decisions_with_data_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5792,7 +5785,7 @@
     },
     {
       "name": "Patterns and Representation",
-      "url": "https://docs.google.com/presentation/d/1Ama35jAILCQPxztIx1hGd3WqQ3hqww6XF4sqy46P8Ek/template/preview",
+      "url": "https://docs.google.com/presentation/d/1YwgXAloB7J4FoMIqpUNIQH0xD42bw2XYxWbYjgeGaMA/template/preview",
       "key": "patterns_and_representation",
       "properties": {
         "audience": "Teacher",
@@ -5853,11 +5846,10 @@
     },
     {
       "name": "Problem Solving with Big Data",
-      "url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1pOEp_iDVNnscSE3LZvErt5DMmoBGJc2uixcwqApdpyM/template/preview",
       "key": "problem_solving_with_big_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5891,11 +5883,10 @@
     },
     {
       "name": "Problem Solving With Data",
-      "url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/17jDnDpFEzc_VRW2neAQN82GSn6Cs0nEITGil3MfWGVg/template/preview",
       "key": "problem_solving_with_data_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5904,11 +5895,10 @@
     },
     {
       "name": "Project - Make a Recommendation",
-      "url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1LyAoCCXnDblFsBeNIx22lh-XqYYjxNHPFk3IbQXCBBg/template/preview",
       "key": "project_-_make_a_recommendation",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5954,7 +5944,7 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://docs.google.com/presentation/d/1U3NpxfpC3QU7RlLSIu8nZ1Wt97s1Xu2eYs5LDcWPAEY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1N7mpiPKdI3vqkkVUY5tCSzngIucLXlzSYr0oL_ONkDI/template/preview",
       "key": "representation_matters_2",
       "properties": {
         "audience": "Teacher",
@@ -5966,7 +5956,7 @@
     },
     {
       "name": "Representing Images",
-      "url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/template/preview",
+      "url": "https://docs.google.com/presentation/d/13Gq5uHgmLfOkrDTCxR9maA8KyHMFSZMdQlUJ6E4D3s0/template/preview",
       "key": "representing_images",
       "properties": {
         "audience": "Teacher",
@@ -6027,7 +6017,7 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://docs.google.com/presentation/d/1FSXepS9tbm9aukEjRu7xg7BE7QHzohKq_cqNUjQtATE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-qhamxT6pE6QfgSR4tPgqhxgzWroJSdMQltu8VYK1nw/template/preview",
       "key": "representing_numbers_1",
       "properties": {
         "audience": "Teacher",
@@ -6090,11 +6080,10 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1jrQVjVcYrb7GIP9MdFKEz1SXz9KRibALuXTF8udZV_4/template/preview",
       "key": "structuring_data_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
