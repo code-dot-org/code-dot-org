@@ -589,6 +589,20 @@ StudioApp.prototype.init = function(config) {
     this.addChangeHandler(this.editDuringRunAlertHandler.bind(this));
   }
 
+  // If url contains `reset=true`, clear the version history of the puzzle, reload page,
+  // and remove `reset` from the url params
+  const url = new URL(document.URL);
+  const params = new URLSearchParams(url.search);
+  if (params.get('reset')) {
+    params.delete('reset');
+    url.search = params.toString();
+
+    let handler = this.handleClearPuzzle.bind(this, config);
+    handler()
+      .then(project.save(true))
+      .then(window.location.replace(url.toString()));
+  }
+
   this.emit('afterInit');
 };
 
@@ -1198,9 +1212,11 @@ StudioApp.prototype.inject = function(div, options) {
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
 
-  // Allows Google Blockly labs to use the Zelos renderer instead of the default.
+  // Allows Google Blockly labs to use the Zelos or Thrasos renderer instead of the default.
   if (experiments.isEnabled('zelos')) {
     options.renderer = 'cdo_renderer_zelos';
+  } else if (experiments.isEnabled('thrasos')) {
+    options.renderer = 'cdo_renderer_thrasos';
   }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
@@ -1525,15 +1541,21 @@ StudioApp.prototype.resizeVisualization = function(width) {
  */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (
-    this.editCode &&
-    this.editor &&
-    this.editor.session &&
-    this.editor.session.paletteEnabled
-  ) {
-    // If in the droplet editor, set toolboxWidth based on the block palette width:
-    var categories = document.querySelector('.droplet-palette-wrapper');
-    toolboxWidth = categories.getBoundingClientRect().width;
+  if (this.editCode && this.editor && this.editor.session) {
+    const isRtl = getStore().getState().isRtl;
+    const categories = document.querySelector('.droplet-palette-wrapper');
+
+    if (isRtl) {
+      // If Rtl - handle show/hide toolbox functionality
+      categories.style.zIndex = this.editor.session.paletteEnabled
+        ? 'inherit'
+        : '0';
+    }
+
+    if (this.editor.session.paletteEnabled) {
+      // If in the droplet editor, set toolboxWidth based on the block palette width:
+      toolboxWidth = categories.getBoundingClientRect().width;
+    }
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }

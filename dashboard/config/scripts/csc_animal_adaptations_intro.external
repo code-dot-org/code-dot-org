@@ -1,0 +1,22 @@
+name 'csc_animal_adaptations_intro'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Survival Behaviors
+
+Animals have developed **behaviors** and actions to help them survive. Some animals can move very fast, some hibernate during the winter and others try to stay in groups.
+
+In computer science, **behaviors** are pre-defined sets of actions that a sprite can perform over and over. When a sprite begins a behavior you are telling the computer to run that set of actions on the sprite over and over until the behavior stops.
+
+##Example
+Picture/Gif
+
+##Example
+Picture/Gif
+
+##Example
+Picture/Gif
+
+
+MARKDOWN

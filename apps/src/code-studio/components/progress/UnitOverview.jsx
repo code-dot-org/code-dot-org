@@ -59,6 +59,7 @@ class UnitOverview extends React.Component {
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    participantAudience: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -66,7 +67,8 @@ class UnitOverview extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    userType: PropTypes.string
   };
 
   constructor(props) {
@@ -75,9 +77,14 @@ class UnitOverview extends React.Component {
       props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
 
-    analyticsReporter.sendEvent(EVENTS.UNIT_OVERVIEW_PAGE_VISITED_EVENT, {
-      'unit name': props.scriptName
-    });
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName
+        }
+      );
+    }
   }
 
   onCloseRedirectDialog = () => {
@@ -120,7 +127,8 @@ class UnitOverview extends React.Component {
       courseOfferingId,
       courseVersionId,
       isProfessionalLearningCourse,
-      publishedState
+      publishedState,
+      participantAudience
     } = this.props;
 
     const displayRedirectDialog =
@@ -193,6 +201,7 @@ class UnitOverview extends React.Component {
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}
+            participantAudience={participantAudience}
           />
         </div>
         <ProgressTable minimal={false} />

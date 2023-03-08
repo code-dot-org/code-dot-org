@@ -1,0 +1,24 @@
+{
+  "category": "CSC",
+  "config": {
+    "func": "playerBehaviors",
+    "blockText": "{BEHAVIOR}",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "moving NSEW with arrow keys",
+            "new Behavior(moving_with_arrow_keys, [])"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -337,31 +337,6 @@ namespace :seed do
     School.seed_all
   end
 
-  timed_task_with_logging ap_school_codes: :environment do
-    Census::ApSchoolCode.seed
-  end
-
-  timed_task_with_logging ap_cs_offerings: :environment do
-    Census::ApCsOffering.seed
-  end
-
-  timed_task_with_logging ib_school_codes: :environment do
-    Census::IbSchoolCode.seed
-  end
-
-  timed_task_with_logging ib_cs_offerings: :environment do
-    Census::IbCsOffering.seed
-  end
-
-  timed_task_with_logging state_cs_offerings: :environment do
-    Census::StateCsOffering.seed
-  end
-
-  # Seed school course offering data where the courses are taught by outside curriculum providers, such as TEALS.
-  timed_task_with_logging other_curriculum_offerings: :environment do
-    Census::OtherCurriculumOffering.seed
-  end
-
   timed_task_with_logging sample_data: :environment do
     SampleData.seed
   end
@@ -476,7 +451,7 @@ namespace :seed do
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
@@ -487,7 +462,7 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :import_pegasus_data]
+  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :donor_schools, :foorms, :import_pegasus_data]
 
   desc "seed only dashboard data required for tests"
   timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]

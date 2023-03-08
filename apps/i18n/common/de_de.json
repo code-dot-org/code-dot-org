@@ -171,7 +171,7 @@
   "assignHiddenUnitConfirm": "Es sieht so aus, als ob Sie \"{assignmentName}\" aus der Lerngruppe \"{sectionName}\" versteckt haben. Möchten Sie diese Einheit immer noch zuweisen und sichtbar machen?",
   "assigned": "Zugeordnet",
   "assignedTo": "Zugeordnet zu",
-  "assignedToWithColon": "Zu [name] zugeordnet",
+  "assignedToWithColon": "Zugeordnet zu:",
   "assignToSection": "Einer Lerngruppe zuteilen",
   "assignUnit": "Einheit zuordnen",
   "assignedToNewerVersion": "Dein Lehrer hat dich zu einer neueren Version dieses Kurses zugewiesen.",

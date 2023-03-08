@@ -46,7 +46,7 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
   end
 
   def unit
-    sanitize_form_data_hash[:unit]
+    sanitized_form_data_hash[:unit]
   end
 
   def unit_not_started?
@@ -54,7 +54,7 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
   end
 
   def lesson
-    sanitize_form_data_hash[:lesson]
+    sanitized_form_data_hash[:lesson]
   end
 
   def unit_lesson_short_name
@@ -83,7 +83,7 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
   end
 
   def lessons
-    selected_unit = units_and_lessons.find {|u| u.first == sanitize_form_data_hash[:unit]}
+    selected_unit = units_and_lessons.find {|u| u.first == sanitized_form_data_hash[:unit]}
     selected_unit.try(:last)
   end
 

@@ -45,13 +45,20 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
     end
 
+    # If the new grades field exists, it takes precedence.
+    grades = if Section.valid_grades?(params[:grades] || [])
+               params[:grades]
+             elsif Section.valid_grades?([params[:grade].to_s])
+               [params[:grade].to_s]
+             end
+
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         participant_type: params[:participant_type],
-        grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
+        grades: grades,
         script_id: @unit&.id,
         course_id: @course&.id,
         lesson_extras: params['lesson_extras'] || false,
@@ -87,7 +94,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
-    fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
+    fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
+    # If the new grades field exists, it takes precedence.
+    fields[:grades] = params[:grades] if Section.valid_grades?(params[:grades] || [])
     fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
@@ -277,14 +286,15 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      if course_version.content_root_type == 'UnitGroup'
+      case course_version.content_root_type
+      when 'UnitGroup'
         course_id = course_version.content_root_id
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
         @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Unit'
+      when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit

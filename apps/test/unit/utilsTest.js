@@ -7,6 +7,7 @@ const {
   shallowCopy,
   cloneWithoutFunctions,
   stripQuotes,
+  stripEncapsulatingDoubleQuotes,
   wrapNumberValidatorsForLevelBuilder,
   escapeHtml,
   escapeText,
@@ -770,6 +771,34 @@ describe('utils modules', () => {
       expect(id1).to.equal(id2);
       expect(id2).to.not.equal(id3);
       expect(id3).to.equal(id4);
+    });
+  });
+
+  describe('stripEncapsulatingDoubleQuotes', () => {
+    let result;
+
+    it('removes double quotes at the first and last character position', () => {
+      result = stripEncapsulatingDoubleQuotes('"blah"');
+      expect(result).to.equal('blah');
+
+      result = stripEncapsulatingDoubleQuotes('""blah""');
+      expect(result).to.equal('"blah"');
+
+      result = stripEncapsulatingDoubleQuotes('" "');
+      expect(result).to.equal(' ');
+    });
+
+    it('does not modify a string without encapsulating double quotes', () => {
+      result = stripEncapsulatingDoubleQuotes('blah');
+      expect(result).to.equal('blah');
+    });
+
+    it('does not remove a single double quote', () => {
+      result = stripEncapsulatingDoubleQuotes('"blah ');
+      expect(result).to.equal('"blah ');
+
+      result = stripEncapsulatingDoubleQuotes('blah"');
+      expect(result).to.equal('blah"');
     });
   });
 });

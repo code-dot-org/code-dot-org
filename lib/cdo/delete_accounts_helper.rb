@@ -118,9 +118,17 @@ class DeleteAccountsHelper
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
 
-    Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
+
+    # SQL query to anonymize Pd::Teachercon1819Registration because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      sql_query_to_anonymize_field(
+        "pd_teachercon1819_registrations",
+        {'form_data' => '""'},
+        {'user_id' => user_id}
+      )
+    )
 
     # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
@@ -260,11 +268,20 @@ class DeleteAccountsHelper
     @log.puts "Removing CensusSubmission"
     census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
     csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
-    ciis = Census::CensusInaccuracyInvestigation.where(census_submission_id: census_submissions.pluck(:id))
-    deleted_cii_count = ciis.delete_all
+
+    unless census_submissions.empty?
+      census_submission_ids = census_submissions.pluck(:id).join(',')
+      # SQL query to anonymize Census::CensusInaccuracyInvestigation because the model no longer exists
+      deleted_cii_count = ActiveRecord::Base.connection.exec_query(
+        "SELECT id FROM `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`census_submission_id` IN (#{census_submission_ids})"
+      ).length
+      ActiveRecord::Base.connection.exec_query(
+        "DELETE FROM `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`census_submission_id` IN (#{census_submission_ids})"
+      )
+      @log.puts "Removed #{deleted_cii_count} CensusInaccuracyInvestigation" if deleted_cii_count > 0
+    end
     deleted_csfm_count = csfms.delete_all
     deleted_submissions_count = census_submissions.delete_all
-    @log.puts "Removed #{deleted_cii_count} CensusInaccuracyInvestigation" if deleted_cii_count > 0
     @log.puts "Removed #{deleted_csfm_count} CensusSubmissionFormMap" if deleted_csfm_count > 0
     @log.puts "Removed #{deleted_submissions_count} CensusSubmission" if deleted_submissions_count > 0
   end

@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
+import experiments from '@cdo/apps/util/experiments';
 
+/**
+ * A custom field that renders the sample previewing and choosing UI, used in
+ * various "play_sound"-related blocks. The UI is rendered by {@link SoundsPanel}.
+ */
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
     super(options.currentValue);
@@ -40,7 +45,9 @@ class FieldSounds extends GoogleBlockly.Field {
       this.borderRect_.setAttribute('fill', 'transparent');
     }
     if (this.textElement_) {
-      this.textElement_.style.fill = 'white';
+      if (experiments.isEnabled('zelos')) {
+        this.textElement_.style.fill = 'white';
+      }
     }
   }
 
