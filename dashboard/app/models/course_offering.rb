@@ -14,6 +14,10 @@
 #  marketing_initiative :string(255)
 #  grade_levels         :string(255)
 #  header               :string(255)
+#  image                :string(255)
+#  cs_topic             :string(255)
+#  school_subject       :string(255)
+#  device_compatibility :string(255)
 #
 # Indexes
 #
@@ -176,7 +180,11 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative:  marketing_initiative,
       grade_levels: grade_levels,
-      header: header
+      header: header,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility
     }
   end
 
@@ -190,7 +198,11 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
-      header: header
+      header: header,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility
     }
   end
 
