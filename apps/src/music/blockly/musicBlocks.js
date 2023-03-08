@@ -1,14 +1,4 @@
-import {
-  newTrackAtMeasure,
-  newTrackAtStart,
-  newTrackOnTrigger,
-  playSound,
-  playSoundAtCurrentLocation,
-  playSoundInTrack,
-  restInTrack,
-  setCurrentLocationNextMeasure,
-  valueSample
-} from './blocks/samples';
+import {valueSample} from './blocks/samples';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
 import {
@@ -23,6 +13,18 @@ import {
   playSoundsRandom,
   repeatSimple2
 } from './blocks/simple2';
+import {
+  newTrackAtMeasure,
+  newTrackAtStart,
+  newTrackOnTrigger,
+  playSoundInTrack,
+  restInTrack
+} from './blocks/tracks';
+import {
+  playSoundAtCurrentLocation,
+  setCurrentLocationNextMeasure
+} from './blocks/simple';
+import {playSound} from './blocks/advanced';
 
 // All blocks
 const blockList = [

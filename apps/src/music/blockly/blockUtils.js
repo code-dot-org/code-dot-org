@@ -1,3 +1,5 @@
+import {BlockTypes} from './blockTypes';
+
 /**
  * Generate code for the specified block but not following blocks.
  * Adapted from this thread: https://groups.google.com/g/blockly/c/uXewhtr-mvM
@@ -47,3 +49,17 @@ export function getCodeForSingleBlock(block) {
     throw Error('Invalid code generated: ' + code);
   }
 }
+
+// Examine chain of parents to see if one is 'when_run'.
+export const isBlockInsideWhenRun = ctx => {
+  let block = ctx;
+  while ((block = block.getParent())) {
+    if (
+      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+};
