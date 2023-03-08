@@ -71,7 +71,7 @@ module Cdo
         metric_name: metric_name,
         dimensions: dimensions.map {|k, v| {name: k, value: v}},
         value: value,
-        timestamp: Time.now
+        timestamp: Time.nowq
       }.merge(options)
       put_metric(namespace, metric)
     end
