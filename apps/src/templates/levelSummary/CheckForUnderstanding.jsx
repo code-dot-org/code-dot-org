@@ -54,7 +54,9 @@ const CheckForUnderstanding = ({
       </p>
 
       {/* Question Title */}
-      {data.level.properties.title && <h1>{data.level.properties.title}</h1>}
+      {data.level.properties.title && (
+        <h1 className={styles.levelTitle}>{data.level.properties.title}</h1>
+      )}
 
       {/* Question Body */}
       <SafeMarkdown className={styles.markdown} markdown={questionMarkdown} />
