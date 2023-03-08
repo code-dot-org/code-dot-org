@@ -1,0 +1,30 @@
+# Monitoring & Alerting Infrastructure
+
+Resources:
+
+  # ---------------------------------------------
+  # SNS Topics
+  # 
+  # Note: When we specify a TopicName, we can't
+  # perform an update that causes the resource to
+  # be replaced. If you must replace it, specify
+  # a new name or delete the topic first.
+  # 
+  # Unmanaged topics that could be migrated here:
+  #   - CDO-LowPriority
+  #   - CDO-WorkdayUrgent
+  #   - CDO-Urgent
+  #
+  # ---------------------------------------------
+
+  InfraLowPriorityTopic:
+    Type: 'AWS::SNS::Topic'
+    TopicName: Infra-LowPriority
+
+  InfraWorkdayUrgentTopic:
+    Type: 'AWS::SNS::Topic'
+    TopicName: Infra-WorkdayUrgent
+
+  InfraUrgentTopic:
+    Type: 'AWS::SNS::Topic'
+    TopicName: Infra-Urgent
