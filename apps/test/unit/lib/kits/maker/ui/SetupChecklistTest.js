@@ -16,7 +16,7 @@ import {
 } from '@cdo/apps/redux';
 import microbitReducer, {
   setMicrobitFirmataUpdatePercent
-} from '@cdo/apps/code-studio/microbitRedux';
+} from '@cdo/apps/lib/kits/maker/microbitRedux';
 
 describe('SetupChecklist', () => {
   let checker;

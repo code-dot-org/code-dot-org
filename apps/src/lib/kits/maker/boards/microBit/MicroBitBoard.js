@@ -26,13 +26,7 @@ import {
   SERIAL_BAUD,
   isWebSerialPort
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import {
-  MAKER_TOOLKIT,
-  DOWNLOAD_PREFIX
-} from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import {DAPLink, WebUSB} from 'dapjs';
-import {getStore} from '@cdo/apps/redux';
-import {setMicrobitFirmataUpdatePercent} from '@cdo/apps/code-studio/microbitRedux';
+import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -42,10 +36,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
  * @implements MakerBoard
  */
 export default class MicroBitBoard extends EventEmitter {
-  // Static variable used to help with updating the Firmata percent progress.
-  // State value 'microbitFirmataUpdatePercent' is only updated when this static variable changes.
-  static firmataUpdatePercent = 0;
-
   constructor(port) {
     super();
 
@@ -350,74 +340,6 @@ export default class MicroBitBoard extends EventEmitter {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
     });
   }
-
-  static detectMicrobitVersion(device) {
-    // Detect micro:bit version and select the right Intel Hex for micro:bit V1 or V2
-    const microbitId = device.serialNumber.substring(0, 4);
-    let microbitVersion = 'v1';
-    const v1MicrobitIds = ['9900', '9901'];
-    const v2MicrobitIds = ['9903', '9904', '9905', '9906'];
-    if (v2MicrobitIds.includes(microbitId)) {
-      microbitVersion = 'v2';
-    } else if (!v1MicrobitIds.includes(microbitId)) {
-      microbitVersion = null;
-    }
-    return microbitVersion;
-  }
-
-  static async updateMBFirmataVersioned() {
-    const device = await navigator.usb.requestDevice({
-      filters: [{vendorId: 0x0d28, productId: 0x0204}]
-    });
-    const microbitVersion = MicroBitBoard.detectMicrobitVersion(device);
-    let firmataUrl = `${DOWNLOAD_PREFIX}microbit-firmata-v1-ver1.2.hex`;
-    if (microbitVersion === 'v2') {
-      firmataUrl = `${DOWNLOAD_PREFIX}microbit-firmata-v2-ver1.2.hex`;
-    } else if (microbitVersion !== 'v1') {
-      throw new Error('microbit version not detected correctly');
-    }
-    const result = await fetch(firmataUrl);
-
-    if (!result.ok) {
-      throw new Error('Failed to download hex file');
-    }
-    const hexStr = await result.text();
-
-    const transport = new WebUSB(device);
-    const target = new DAPLink(transport);
-
-    MicroBitBoard.firmataUpdatePercent = 0;
-    target.on(DAPLink.EVENT_PROGRESS, progress => {
-      MicroBitBoard.getPercentUpdateComplete(progress);
-    });
-
-    // Intel Hex is currently in ASCII, do a 1-to-1 conversion from chars to bytes
-    let hexAsBytes = new TextEncoder().encode(hexStr);
-    try {
-      // Push binary to board
-      await target.connect();
-      await target.flash(hexAsBytes);
-      console.log('flash complete - now disconnect');
-      await target.disconnect();
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  static getPercentUpdateComplete = progress => {
-    if (progress) {
-      let percentComplete = Math.ceil(progress * 100);
-      // 'progress' is a decimal value between 0.0 and 1.0 indicating the Firmata update percent completion.
-      // If the rounded value is different from the value stored in the static variable
-      // 'firmataUpdatePercent', then we update the corresponding state value.
-      if (percentComplete !== MicroBitBoard.firmataUpdatePercent) {
-        MicroBitBoard.firmataUpdatePercent = percentComplete;
-        getStore().dispatch(
-          setMicrobitFirmataUpdatePercent(` ${percentComplete.toString()}%`)
-        );
-      }
-    }
-  };
 
   resetDynamicComponents() {
     this.dynamicComponents_.forEach(component => {
