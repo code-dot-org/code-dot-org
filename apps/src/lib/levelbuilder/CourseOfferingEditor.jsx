@@ -9,6 +9,7 @@ import {
   CourseOfferingHeaders,
   CourseOfferingCurriculumTypes,
   CourseOfferingMarketingInitiatives,
+  CourseOfferingCsTopics,
   CourseOfferingSchoolSubjects
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
@@ -212,6 +213,28 @@ export default function CourseOfferingEditor(props) {
           {Object.values(CourseOfferingMarketingInitiatives).map(initiative => (
             <option key={initiative} value={initiative}>
               {initiative}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        CS Topic
+        <HelpTip>
+          <p>
+            Select all related CS topics. Shift-click or cmd-click to select
+            multiple.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={courseOffering.cs_topic?.split(',')}
+          style={styles.dropdown}
+          onChange={e => handleMultipleSelected(e, 'cs_topic')}
+        >
+          <option value="">(None)</option>
+          {Object.values(CourseOfferingCsTopics).map(topic => (
+            <option key={topic} value={topic}>
+              {topic}
             </option>
           ))}
         </select>
