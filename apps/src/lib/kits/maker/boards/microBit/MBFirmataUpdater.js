@@ -69,7 +69,7 @@ export default class MBFirmataUpdater extends EventEmitter {
     if (progress) {
       let percentComplete = Math.ceil(progress * 100);
       // 'progress' is a decimal value between 0.0 and 1.0 indicating the Firmata update percent completion.
-      // If the rounded value is different from the value stored in the static variable
+      // If the rounded value is different from the value stored in the instance variable
       // 'firmataUpdatePercent', then we update the corresponding state value.
       if (percentComplete !== this.firmataUpdatePercent) {
         this.firmataUpdatePercent = percentComplete;
