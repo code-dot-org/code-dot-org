@@ -20,6 +20,8 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
 
+  const showPlOfferings = queryParams('participantType') === 'teacher';
+
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
     const participantType = queryParams('participantType');
@@ -72,10 +74,10 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           onChange={toggleDecideLater}
         />
         <h3>{i18n.assignACurriculum()}</h3>
-        <h5>{i18n.useDropdownMessage()}</h5>
+        <h4>{i18n.useDropdownMessage()}</h4>
       </div>
       <CurriculumQuickAssignTopRow
-        showPlOfferings={false}
+        showPlOfferings={showPlOfferings}
         marketingAudience={marketingAudience}
         updateMarketingAudience={updateMarketingAudience}
       />
