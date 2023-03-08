@@ -328,6 +328,45 @@ describe('DetailViewContents', () => {
         'Make not required'
       );
     });
+    it(`Shows button to resend admin email if status is awaiting_admin_approval and it is allowed to be resent`, () => {
+      const detailView = mountDetailView({
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: true,
+          status: 'awaiting_admin_approval'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Resend request'
+      );
+    });
+    it(`Does not show button to resend admin email if status is awaiting_admin_approval but is not allowed to be resent`, () => {
+      const detailView = mountDetailView({
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: false,
+          status: 'awaiting_admin_approval'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
+        'Resend request'
+      );
+    });
+    it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
+      const detailView = mountDetailView({
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: true,
+          status: 'pending'
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
+        'Resend request'
+      );
+    });
   });
 
   describe('Regional Partner View', () => {
