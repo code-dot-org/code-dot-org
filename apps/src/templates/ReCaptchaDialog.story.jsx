@@ -18,8 +18,4 @@ const DEFAULT_PROPS = {
 const Template = args => <ReCaptchaDialog {...DEFAULT_PROPS} {...args} />;
 
 export const DialogOpen = Template.bind({});
-DialogOpen.args = {
-  name: 'Dialog open',
-  description:
-    'Dialog forces user to cancel or complete captcha before submitting'
-};
+DialogOpen.args = {};

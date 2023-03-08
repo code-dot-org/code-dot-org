@@ -73,14 +73,9 @@ const Template = args => <SchoolInfoInputsWrapper {...args} />;
 
 export const SchoolInfoRequired = Template.bind({});
 SchoolInfoRequired.args = {
-  name: 'Inputs for school info (required)',
-  description: `Gets school info data.`,
   showErrors: true,
   showRequiredIndicator: true
 };
 
 export const SchoolInfoNotRequired = Template.bind({});
-SchoolInfoNotRequired.args = {
-  name: 'Inputs for school info (not required)',
-  description: `Gets school info data.`
-};
+SchoolInfoNotRequired.args = {};
