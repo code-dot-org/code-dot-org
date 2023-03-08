@@ -34,6 +34,7 @@ class RakeTaskEventLogger
   end
 
   def exception_task_logging(exception)
+    ChatClient.log exception
     @end_time = Time.new
     duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'exception'.freeze
