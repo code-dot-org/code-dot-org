@@ -135,6 +135,18 @@ export default class AnalyticsReporter {
     track('Button clicked', {buttonName, ...properties}).promise;
   }
 
+  onVideoClosed(id: string, duration: number) {
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
+    this.log(
+      `Video closed. Id: ${id}.  Duration: ${duration}}`
+    );
+    track('Video closed', {id, duration}).promise;
+  }
+
   onInstructionsVisited(page: number) {
     if (!this.sessionInProgress) {
       this.log('No session in progress');
