@@ -79,6 +79,7 @@ module Cdo
     # @param [String] namespace
     # @param [Hash, Aws::CloudWatch::Types::MetricDatum] metric
     def self.put_metric(namespace, metric)
+      ChatClient.log ".", color: 'green'
       BUFFERS[namespace].buffer(metric)
     end
 
