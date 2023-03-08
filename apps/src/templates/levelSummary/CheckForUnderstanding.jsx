@@ -5,9 +5,11 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import i18n from '@cdo/locale';
 import styles from './check-for-understanding.module.scss';
 
 const SUMMARY_PARAM = 'view=summary';
+const FREE_RESPONSE = 'FreeResponse';
 
 const CheckForUnderstanding = ({
   isRtl,
@@ -43,14 +45,14 @@ const CheckForUnderstanding = ({
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
         <a className={styles.navLinkBack} href={currentLevel.url}>
-          &lt; Back to level
+          &lt; {i18n.backToLevel()}
         </a>
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
             href={`${nextLevel.url}${document.location.search}`}
           >
-            Next level &gt;
+            ${i18n.nextLevelLink()} &gt;
           </a>
         )}
       </p>
@@ -64,12 +66,13 @@ const CheckForUnderstanding = ({
       <SafeMarkdown className={styles.markdown} markdown={questionMarkdown} />
 
       {/* Question Inputs */}
-      {data.level.type === 'FreeResponse' && (
+      {data.level.type === FREE_RESPONSE && (
         <textarea
           className={styles.freeResponse}
           id={`level_${data.level.id}`}
+          aria-label={i18n.yourAnswer()}
           placeholder={
-            data.level.properties.placeholder || 'Enter your answer here'
+            data.level.properties.placeholder || i18n.enterYourAnswerHere()
           }
           style={{height: height + 'px'}}
           readOnly={true}
@@ -79,7 +82,7 @@ const CheckForUnderstanding = ({
 
       {/* Student Responses */}
       <div className={styles.studentResponses}>
-        <h2>Student Responses</h2>
+        <h2>{i18n.studentResponses()}</h2>
 
         <div
           className={
@@ -89,13 +92,16 @@ const CheckForUnderstanding = ({
           <p>
             <i className="fa fa-user" />
             <span>
-              {data.responses.length}/{students.length} students submitted
+              {i18n.studentsSubmitted({
+                numSubmissions: data.responses.length,
+                numStudents: students.length
+              })}
             </span>
           </p>
         </div>
 
         <label>
-          Responses shown for class section:
+          {i18n.responsesForClassSection()}
           <SectionSelector reloadOnChange={true} />
         </label>
 
@@ -111,7 +117,7 @@ const CheckForUnderstanding = ({
       {/* Teacher Instructions */}
       {teacherMarkdown && (
         <div>
-          <h2>For Teachers Only</h2>
+          <h2>{i18n.forTeachersOnly()}</h2>
 
           <SafeMarkdown
             className={styles.markdown}
