@@ -219,6 +219,7 @@ class SetupChecklist extends Component {
       .catch(err => {
         console.log(err);
         this.fail(STATUS_BOARD_UPDATE_FIRMATA);
+        this.fail(STATUS_BOARD_CONNECT);
       });
   }
 
@@ -408,7 +409,8 @@ class SetupChecklist extends Component {
             {experiments.isEnabled('microbit') &&
               this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
               this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
-              this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING && (
+              (this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING ||
+                this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.FAILED) && (
                 <Button
                   text={applabI18n.makerSetupUpdateMBFirmata()}
                   color={Button.ButtonColor.orange}
