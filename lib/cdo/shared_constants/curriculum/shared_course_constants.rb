@@ -120,6 +120,16 @@ module Curriculum
       }
     )
 
+    # School subject field values for course offerings
+    COURSE_OFFERING_SCHOOL_SUBJECTS = OpenStruct.new(
+      {
+        math: 'Math',
+        science: 'Science',
+        english_language_arts: 'English Language Arts',
+        history: 'History'
+      }
+    ).freeze
+
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be
     # participants in the course. There this will tell you give the participant_audience of the
