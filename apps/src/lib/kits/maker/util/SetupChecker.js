@@ -120,6 +120,7 @@ export default class SetupChecker {
       return mbFirmataUpdater.updateMBFirmataVersioned();
     } catch (error) {
       console.log(error);
+      return Promise.reject(new Error('Failed to flash Firmata.'));
     }
   }
 }

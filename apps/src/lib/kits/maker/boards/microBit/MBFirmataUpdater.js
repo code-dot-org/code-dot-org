@@ -61,6 +61,7 @@ export default class MBFirmataUpdater extends EventEmitter {
       await target.disconnect();
     } catch (error) {
       console.log(error);
+      return Promise.reject('Failed to flash Firmata.');
     }
   }
 
