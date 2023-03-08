@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-07 00:00:18 UTC",
+    "serialized_at": "2023-03-08 00:08:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8297,6 +8297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 review_2023"
+        ],
         "progression": "Review Shape Blocks"
       },
       "bonus": false,
@@ -8319,6 +8322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 mini project_2023"
+        ],
         "progression": "Create Your Robot Face"
       },
       "bonus": false,
@@ -15801,11 +15807,10 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1r4I_2bAd7GCqWPlIaQ_JaXr1UaIISo5TXCLvsXIiQiY/template/preview",
       "key": "collision_detection_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15840,11 +15845,10 @@
     },
     {
       "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview",
+      "url": "https://docs.google.com/presentation/d/18nEJsDVITNK8jHkhfBSdtvwoHBB12DVnKtjm-MhYoxI/template/preview",
       "key": "collisions",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15853,11 +15857,10 @@
     },
     {
       "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/1r3fGTf_J1buSAn10_qBNJI4h8mHEGWOFatytHyQOVYQ/template/preview",
       "key": "complex_sprite_movement",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15892,11 +15895,10 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Pa444DLx4TBgZ1vaBgJMgHmaLSryolD7phxmdK7YQ2w/template/preview",
       "key": "conditionals",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15917,7 +15919,7 @@
     },
     {
       "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kVwsZPhVrafAXXkK5qhWdfZeYKSEjK-eD6txmmWmPSA/template/preview",
       "key": "drawing_in_game_lab",
       "properties": {
         "audience": "Teacher",
@@ -16092,11 +16094,10 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/template/preview",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16256,11 +16257,10 @@
     },
     {
       "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dxsWmBnyhc0pzGs5KjupRRNaYkXX8Ehdiebja2N0Yss/template/preview",
       "key": "keyboard_input",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16344,11 +16344,10 @@
     },
     {
       "name": "Mini-Project - Animation",
-      "url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1us7auvKet5Mdtd21WNeVH0p7CO8ZOiqHjVK6_SXGn0Y/template/preview",
       "key": "mini-project_-_animation",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16357,11 +16356,10 @@
     },
     {
       "name": "Mini-Project - Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
       "key": "mini-project_-_captioned_scenes",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16370,11 +16368,10 @@
     },
     {
       "name": "Mini-Project - Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qbOF9IpC97i4GDN1c1KieAb6XtVb6Lh7mon9WcdUM9Q/template/preview",
       "key": "mini-project_-_flyer_game",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16383,7 +16380,7 @@
     },
     {
       "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/template/preview",
       "key": "mini-project_-_robot_faces",
       "properties": {
         "audience": "Teacher",
@@ -16407,11 +16404,10 @@
     },
     {
       "name": "Mini-Project - Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-Zd08aeFU9Po2Qa7EHi9pf870CUilb2pdHtR44s_h_U/template/preview",
       "key": "mini-project_-_side_scroller",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16444,11 +16440,10 @@
     },
     {
       "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1V_I3P7hFqxijePGNKF5V0RynQqv1_zYLJaBrQyhwpns/template/preview",
       "key": "mouse_input",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16494,7 +16489,7 @@
     },
     {
       "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kAI6VK8GU8k-ounpUizwzLRdhjMfwF4M0yumF8-O9qc/template/preview",
       "key": "plotting_shapes",
       "properties": {
         "audience": "Teacher",
@@ -16542,11 +16537,10 @@
     },
     {
       "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/template/preview",
+      "url": "https://docs.google.com/presentation/d/14RyASPSwS_vT1jf_OWromepRlsN8LQtQiAnLj2qzXVQ/template/preview",
       "key": "project_-_design_a_game",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16555,11 +16549,10 @@
     },
     {
       "name": "Project - Interactive Card",
-      "url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/template/preview",
+      "url": "https://docs.google.com/presentation/d/1VymZrgMdUtcehg9rA2u-IGevR5rptmlNRkeuHRmwisw/template/preview",
       "key": "project_-_interactive_card",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16591,11 +16584,10 @@
     },
     {
       "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1gYcOnHhQRTTNDFj1s1Anfu5XkrkeCPk_9N7GmLCLzFo/template/preview",
       "key": "random_numbers_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16651,7 +16643,7 @@
     },
     {
       "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1apejlCGeW2ptqIoFWTcy-WqthPGMsItKNbEUOWGosEk/template/preview",
       "key": "shapes_and_parameters_1",
       "properties": {
         "audience": "Teacher",
@@ -16702,11 +16694,10 @@
     },
     {
       "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qcdkzXVAkXUd9c3JIRba4ik35i02bk_-xRMfwrQVz8I/template/preview",
       "key": "sprite_movement_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16727,11 +16718,10 @@
     },
     {
       "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
       "key": "sprite_properties_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16777,11 +16767,10 @@
     },
     {
       "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1XcR7-9AOjlV-ksjFts4MturQ7qISXUFMXWSWwrecjvU/template/preview",
       "key": "sprites_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16790,11 +16779,10 @@
     },
     {
       "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
       "key": "text",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16840,11 +16828,10 @@
     },
     {
       "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WiAmb354NypVe1SsF3AUZ0O2b-aXgvnhRgkETaO3sZQ/template/preview",
       "key": "the_draw_loop_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16853,11 +16840,10 @@
     },
     {
       "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/template/preview",
+      "url": "https://docs.google.com/presentation/d/1R52jE2nA2mmd8dex6wfWKrAU63m64spVHgotpqid86w/template/preview",
       "key": "the_game_design_process",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16879,11 +16865,10 @@
     },
     {
       "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview",
+      "url": "https://docs.google.com/presentation/d/14SNOuHJQ_rkJGymgcAA1DT7Nshhk1wROENBo-W6kY7g/template/preview",
       "key": "using_the_game_design_process",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16904,7 +16889,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/edit",
+      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
       "key": "variables_1",
       "properties": {
         "audience": "Teacher",
@@ -16941,11 +16926,10 @@
     },
     {
       "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/template/preview",
+      "url": "https://docs.google.com/presentation/d/112H3VkJf1Dq8MQNQqDsFg5a6y62_kjSwUhafQD9xxoo/template/preview",
       "key": "velocity_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
