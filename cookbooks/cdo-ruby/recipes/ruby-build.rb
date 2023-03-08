@@ -40,7 +40,6 @@ execute 'install ruby-build' do
 end
 
 execute 'install ruby with ruby build' do
-  # target /usr for consistency; that's where our old apt approach targeted
-  command "ruby-build #{node['cdo-ruby']['version']} /usr"
+  command "ruby-build #{node['cdo-ruby']['version']}"
   not_if "which ruby && ruby --version | grep --quiet '^ruby #{node['cdo-ruby']['version']}'"
 end
