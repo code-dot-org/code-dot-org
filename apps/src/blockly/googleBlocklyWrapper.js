@@ -24,13 +24,21 @@ import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
-import CdoHighContrastTheme from './themes/cdoHighContrast';
+import {
+  CdoHighContrastTheme,
+  MusicLabHighContrastTheme
+} from './themes/cdoHighContrast';
 import {
   CdoProtanopiaTheme,
   CdoDeuteranopiaTheme,
   CdoTritanopiaTheme
 } from './themes/cdoAccessibleThemes';
-import MusicLabTheme from './themes/musicLabDark';
+import {
+  MusicLabProtanopiaTheme,
+  MusicLabDeuteranopiaTheme,
+  MusicLabTritanopiaTheme
+} from './themes/musicLabAccessibleThemes';
+import MusicLabDarkTheme from './themes/musicLabDark';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -302,7 +310,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.PROTANOPIA]: CdoProtanopiaTheme,
     [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
-    [Themes.MUSICLAB_DARK]: MusicLabTheme
+    [Themes.MUSICLAB_DARK]: MusicLabDarkTheme,
+    [Themes.MUSICLAB_HIGH_CONTRAST]: MusicLabHighContrastTheme,
+    [Themes.MUSICLAB_PROTANOPIA]: MusicLabProtanopiaTheme,
+    [Themes.MUSICLAB_DEUTERANOPIA]: MusicLabDeuteranopiaTheme,
+    [Themes.MUSICLAB_TRITANOPIA]: MusicLabTritanopiaTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();

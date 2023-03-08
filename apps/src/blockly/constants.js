@@ -11,11 +11,15 @@ export const MenuOptionStates = {
 export const Themes = {
   MODERN: 'modern',
   DARK: 'dark',
-  MUSICLAB_DARK: 'musiclabdark',
-  HIGH_CONTRAST: 'highContrast',
+  HIGH_CONTRAST: 'highcontrast',
   PROTANOPIA: 'protanopia',
   DEUTERANOPIA: 'deuteranopia',
-  TRITANOPIA: 'tritanopia'
+  TRITANOPIA: 'tritanopia',
+  MUSICLAB_DARK: 'musiclabdark',
+  MUSICLAB_HIGH_CONTRAST: 'musiclabhighcontrast',
+  MUSICLAB_PROTANOPIA: 'musiclabprotanopia',
+  MUSICLAB_DEUTERANOPIA: 'musiclabdeuteranopia',
+  MUSICLAB_TRITANOPIA: 'musiclabtritanopia'
 };
 
 // Used for custom field type ClampedNumber(,)
