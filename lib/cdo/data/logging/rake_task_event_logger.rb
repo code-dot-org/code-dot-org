@@ -92,7 +92,7 @@ class RakeTaskEventLogger
       metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{event}"
       metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
       ChatClient.log "about to log metric", color: 'green'
-      ChatClient.log "metric_name", color: 'green'
+      ChatClient.log metric_name, color: 'green'
       dimensions = {environment: rack_env,
                      commit_hash: RakeUtils.git_revision,
                      task_name: @rake_task.name,
