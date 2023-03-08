@@ -107,7 +107,7 @@ class RakeTaskEventLogger
       ChatClient.log @@depth.to_s, color: 'green'
       ChatClient.log task_chain.split(',').count.to_s, color: 'green'
       ChatClient.log "END rake task information --------\n", color: 'green'
-      puts "Metric flushed ---------------------------e------e-2--"
+      puts "Metric flushed ---------------------------e------e3-2--"
     rescue => e
       Honeybadger.notify(
         e,
