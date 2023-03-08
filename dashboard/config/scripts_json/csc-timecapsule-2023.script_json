@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-03-07 00:33:27 UTC",
+    "serialized_at": "2023-03-07 14:21:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -331,8 +331,8 @@
       "key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Prediction\" slides\n\n**Level 3**: Consider reading the time capsule poem out loud to all students before they begin writing their prediction. ",
-        "progression_name": "Prediction"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Time Capsule\" slide\n\n**Say:** **A time capsule is like a treasure box,** but instead of keeping toys and candy inside, it holds special items that tell the story of what life was like right now. Then, it is put in a safe place, like buried in the ground or in a strong box in a library, for many years.\n\n**When the time is right, someone will open the box** and see all the special things put inside, and they'll know all about what life was like when it was buried.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Digital Time Capsule\" slide\n\n**Say:** **A digital time capsule poem is similar,** but instead of keeping things inside of a box, it holds pictures, videos, and messages that are stored on a computer or on the internet.\n",
+        "progression_name": "Time Capsules"
       },
       "seeding_key": {
         "activity_section.key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
@@ -343,6 +343,8 @@
       "key": "ef6e8766-c654-408f-89c5-bd6d21105185",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 3 - Prediction\" slide\n\n**Level 3**: Consider reading the time capsule poem out loud to all students before they begin writing their prediction. ",
+        "progression_name": "Prediction",
         "tips": [
           {
             "type": "teachingTip",
@@ -899,7 +901,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Time Capsules"
       },
       "bonus": false,
       "seeding_key": {
@@ -918,12 +920,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_timecapsule_predict3_2023"
-        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -934,7 +933,7 @@
         "lesson.key": "Time Capsule Introduction (pilot)",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2023",
-        "activity_section.key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42"
+        "activity_section.key": "ef6e8766-c654-408f-89c5-bd6d21105185"
       },
       "level_keys": [
         "csc_timecapsule_predict3_2023"
@@ -1275,7 +1274,7 @@
         "lesson.key": "Time Capsule Introduction (pilot)",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2023",
-        "activity_section.key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42"
+        "activity_section.key": "ef6e8766-c654-408f-89c5-bd6d21105185"
       }
     },
     {

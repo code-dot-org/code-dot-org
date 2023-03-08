@@ -2,10 +2,10 @@
   "category": "CSC",
   "config": {
     "func": "goldilocks",
-    "blockText": " if {NUM}{SPRITE}{STATEMENT}",
+    "blockText": " if {CONDITION}{SPRITE}\n{STATEMENT}",
     "args": [
       {
-        "name": "NUM",
+        "name": "CONDITION",
         "options": [
           [
             "too much",
@@ -23,7 +23,7 @@
       },
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "customInput": "costumePicker"
       },
       {
         "name": "STATEMENT",
