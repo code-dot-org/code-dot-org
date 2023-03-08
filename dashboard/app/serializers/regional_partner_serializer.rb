@@ -18,6 +18,7 @@
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
 #  properties         :text(65535)
+#  inactive           :boolean
 #
 
 class RegionalPartnerSerializer < ActiveModel::Serializer
