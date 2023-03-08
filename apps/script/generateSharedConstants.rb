@@ -158,7 +158,17 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(PRINCIPAL_APPROVAL_STATE YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(
+        PRINCIPAL_APPROVAL_STATE
+        SEND_ADMIN_APPROVAL_EMAIL_STATUSES
+        YEAR SECTION_HEADERS
+        PAGE_LABELS
+        VALID_SCORES
+        LABEL_OVERRIDES
+        TEXT_FIELDS
+        MULTI_ANSWER_QUESTION_FIELDS
+        SCOREABLE_QUESTIONS
+      ),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),
