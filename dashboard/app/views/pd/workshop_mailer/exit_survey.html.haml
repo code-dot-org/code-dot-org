@@ -63,9 +63,6 @@
     = link_to('teacher forum', 'https://forum.code.org/') + '.'
 
 - unless [Pd::Workshop::SUBJECT_CSF_201, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS].include? @workshop.subject
-  %h3
-    Additional workshop benefits
-
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     %p
       There's a personalized certificate attached to this email acknowledging your successful completion of Code.org's
