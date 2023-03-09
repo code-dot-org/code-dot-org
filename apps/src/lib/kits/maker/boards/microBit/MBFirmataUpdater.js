@@ -30,6 +30,13 @@ export default class MBFirmataUpdater {
     return microBitVersion;
   }
 
+  // Precondition: microBitVersion is assigned either MICROBIT_V1 or MICROBIT_V2
+  getFirmataURLByVersion(microBitVersion) {
+    return microBitVersion === MICROBIT_V1
+      ? MICROBIT_FIRMATA_V1_URL
+      : MICROBIT_FIRMATA_V2_URL;
+  }
+
   async updateMBFirmataVersioned() {
     const device = await navigator.usb.requestDevice({
       filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}]
@@ -38,10 +45,7 @@ export default class MBFirmataUpdater {
     if (microBitVersion === null) {
       throw new Error('micro:bit version not detected correctly.');
     }
-    const firmataUrl =
-      microBitVersion === MICROBIT_V1
-        ? MICROBIT_FIRMATA_V1_URL
-        : MICROBIT_FIRMATA_V2_URL;
+    const firmataUrl = this.getFirmataURLByVersion(microBitVersion);
     const result = await fetch(firmataUrl);
 
     if (!result.ok) {
