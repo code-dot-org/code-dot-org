@@ -20,7 +20,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
 
-  const showPlOfferings = queryParams('participantType') === 'teacher';
+  const showPlOfferings = queryParams('participantType') !== 'student';
 
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
