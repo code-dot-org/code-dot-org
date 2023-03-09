@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
-import {setMicrobitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microbitRedux';
+import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microBitRedux';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 
 export default class MBFirmataUpdater extends EventEmitter {
@@ -20,28 +20,28 @@ export default class MBFirmataUpdater extends EventEmitter {
     this.firmataUpdatePercent = 0;
   }
 
-  detectMicrobitVersion(device) {
-    // Detect micro:bit version and select the right Intel Hex for micro:bit V1 or V2
-    const microbitId = device.serialNumber.substring(0, 4);
-    let microbitVersion = null;
-    if (MICROBIT_IDS_V1.includes(microbitId)) {
-      microbitVersion = MICROBIT_V1;
-    } else if (MICROBIT_IDS_V2.includes(microbitId)) {
-      microbitVersion = MICROBIT_V2;
+  detectMicroBitVersion(device) {
+    // Detect micro:bit version V1 or V2 from the first 4 digits of the micro:bit's serial number
+    const microBitId = device.serialNumber.substring(0, 4);
+    let microBitVersion = null;
+    if (MICROBIT_IDS_V1.includes(microBitId)) {
+      microBitVersion = MICROBIT_V1;
+    } else if (MICROBIT_IDS_V2.includes(microBitId)) {
+      microBitVersion = MICROBIT_V2;
     }
-    return microbitVersion;
+    return microBitVersion;
   }
 
   async updateMBFirmataVersioned() {
     const device = await navigator.usb.requestDevice({
       filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}]
     });
-    const microbitVersion = this.detectMicrobitVersion(device);
-    if (microbitVersion === null) {
+    const microBitVersion = this.detectMicroBitVersion(device);
+    if (microBitVersion === null) {
       throw new Error('micro:bit version not detected correctly.');
     }
     const firmataUrl =
-      microbitVersion === MICROBIT_V1
+      microBitVersion === MICROBIT_V1
         ? MICROBIT_FIRMATA_V1_URL
         : MICROBIT_FIRMATA_V2_URL;
     const result = await fetch(firmataUrl);
@@ -68,7 +68,7 @@ export default class MBFirmataUpdater extends EventEmitter {
       await target.disconnect();
     } catch (error) {
       console.log(error);
-      getStore().dispatch(setMicrobitFirmataUpdatePercent(null));
+      getStore().dispatch(setMicroBitFirmataUpdatePercent(null));
       return Promise.reject('Failed to flash Firmata.');
     }
   }
@@ -81,7 +81,7 @@ export default class MBFirmataUpdater extends EventEmitter {
       // 'firmataUpdatePercent', then we update the corresponding state value.
       if (percentComplete !== this.firmataUpdatePercent) {
         this.firmataUpdatePercent = percentComplete;
-        getStore().dispatch(setMicrobitFirmataUpdatePercent(percentComplete));
+        getStore().dispatch(setMicroBitFirmataUpdatePercent(percentComplete));
       }
     }
   };

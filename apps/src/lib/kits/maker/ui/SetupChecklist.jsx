@@ -21,6 +21,7 @@ import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import Button from '../../../../templates/Button';
+import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -210,8 +211,9 @@ class SetupChecklist extends Component {
   updateMBFirmata() {
     this.spin(STATUS_BOARD_UPDATE_FIRMATA);
     this.question(STATUS_BOARD_CONNECT);
-    this.setupChecker
-      .updateMBFirmata()
+    const mbFirmataUpdater = new MBFirmataUpdater();
+    return mbFirmataUpdater
+      .updateMBFirmataVersioned()
       .then(() => {
         this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
       })
@@ -440,7 +442,7 @@ class SetupChecklist extends Component {
 }
 
 export default connect(state => ({
-  firmataPercentComplete: state.microbit.microbitFirmataUpdatePercent
+  firmataPercentComplete: state.microBit.microBitFirmataUpdatePercent
 }))(SetupChecklist);
 
 const styles = {

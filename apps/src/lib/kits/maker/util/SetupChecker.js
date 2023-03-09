@@ -13,7 +13,6 @@ import {
   isWebSerialPort
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
-import MBFirmataUpdater from '../boards/microBit/MBFirmataUpdater';
 
 export default class SetupChecker {
   constructor(webSerialPort) {
@@ -111,16 +110,6 @@ export default class SetupChecker {
       this.boardController.destroy().then(releaseRefs);
     } else {
       releaseRefs();
-    }
-  }
-
-  async updateMBFirmata() {
-    try {
-      const mbFirmataUpdater = new MBFirmataUpdater();
-      return mbFirmataUpdater.updateMBFirmataVersioned();
-    } catch (error) {
-      console.log(error);
-      return Promise.reject(new Error('Failed to flash Firmata.'));
     }
   }
 }
