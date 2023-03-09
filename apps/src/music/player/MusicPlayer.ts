@@ -1,5 +1,6 @@
 import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 
@@ -27,9 +28,40 @@ interface FunctionContext {
   uniqueInvocationId: number;
 }
 
+interface SkipContext {
+  insideRandom: boolean;
+  skipSound: boolean;
+}
+
+type EffectValue = 'normal' | 'medium' | 'low';
+export interface Effects {
+   volume?: EffectValue;
+   filter?: EffectValue;
+   delay?: EffectValue;
+}
+
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
+  skipContext?: SkipContext;
+  effects?: Effects;
+}
+
+interface PatternTickEvent {
+  tick: number;
+  src: string;
+}
+
+interface PatternEventValue {
+  kit: string;
+  events: PatternTickEvent[];
+}
+
+interface PatternEvent extends PlaybackEvent {
+  type: 'pattern';
+  value: PatternEventValue;
+  skipContext?: SkipContext;
+  effects?: Effects;
 }
 
 interface TrackMetadata {
@@ -103,7 +135,9 @@ export default class MusicPlayer {
     measure: number,
     insideWhenRun: boolean,
     trackId?: string,
-    functionContext?: FunctionContext
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
@@ -134,13 +168,54 @@ export default class MusicPlayer {
       triggered: !insideWhenRun,
       when: measure,
       trackId,
-      functionContext
+      functionContext,
+      skipContext,
+      effects
     };
 
     this.playbackEvents.push(soundEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
+    }
+  }
+
+  playPatternAtMeasureById(
+    value: PatternEventValue,
+    measure: number,
+    insideWhenRun: boolean,
+    trackId?: string,
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
+  ) {
+    if (!this.samplePlayer.initialized()) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (
+      !value ||
+      !measure
+    ) {
+      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
+      return;
+    }
+
+    const patternEvent: PatternEvent = {
+      type: 'pattern',
+      value,
+      triggered: !insideWhenRun,
+      when: measure,
+      trackId,
+      functionContext,
+      skipContext,
+      effects
+    };
+
+    this.playbackEvents.push(patternEvent);
+
+    if (this.samplePlayer.playing()) {
+      this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
     }
   }
 
@@ -388,13 +463,40 @@ export default class MusicPlayer {
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
+
+      if (soundEvent.skipContext?.skipSound) {
+        return [];
+      }
+
       return [
         {
           sampleId: soundEvent.id,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
-          triggered: soundEvent.triggered
+          triggered: soundEvent.triggered,
+          effects: soundEvent.effects
         }
       ];
+    } else if (event.type === 'pattern') {
+      const patternEvent = event as PatternEvent;
+
+      const results = [];
+
+      const kit = patternEvent.value.kit;
+
+      for (let event of patternEvent.value.events) {
+        const resultEvent = {
+          sampleId: `${kit}/${event.src}`,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(
+            patternEvent.when + event.tick / 16
+          ),
+          triggered: patternEvent.triggered,
+          effects: patternEvent.effects
+        };
+
+        results.push(resultEvent);
+      }
+
+      return results;
     }
 
     return [];

@@ -3,8 +3,19 @@ import PropTypes from 'prop-types';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {renderRows} from './QuickAssignTableHelpers';
 
-export default function QuickAssignTable({marketingAudience, courseOfferings}) {
+/*
+Represents the (collection of) tables in Curriculum Quick Assign.
+They display side by side as if they were columns, but leaving them
+as independent tables makes styling them simpler.
+*/
+export default function QuickAssignTable({
+  marketingAudience,
+  courseOfferings,
+  updateCourse,
+  sectionCourse
+}) {
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
   const renderTable = (key, title) => {
@@ -17,9 +28,11 @@ export default function QuickAssignTable({marketingAudience, courseOfferings}) {
             </td>
           </tr>
         </thead>
-        <tbody>
-          {JSON.stringify(
-            Object.values(courseOfferings[marketingAudience][key])
+        <tbody className={moduleStyles.tableBody}>
+          {renderRows(
+            courseOfferings[marketingAudience][key],
+            sectionCourse,
+            updateCourse
           )}
         </tbody>
       </table>
@@ -27,7 +40,7 @@ export default function QuickAssignTable({marketingAudience, courseOfferings}) {
   };
 
   return (
-    <div className={moduleStyles.multiTables}>
+    <div className={moduleStyles.flexDisplay}>
       {!!courseOfferings[marketingAudience][curriculumTypes.course] &&
         renderTable(curriculumTypes.course, i18n.courses())}
       {!!courseOfferings[marketingAudience][curriculumTypes.module] &&
@@ -40,5 +53,7 @@ export default function QuickAssignTable({marketingAudience, courseOfferings}) {
 
 QuickAssignTable.propTypes = {
   courseOfferings: PropTypes.object.isRequired,
-  marketingAudience: PropTypes.string.isRequired
+  marketingAudience: PropTypes.string.isRequired,
+  updateCourse: PropTypes.func.isRequired,
+  sectionCourse: PropTypes.object
 };

@@ -80,8 +80,21 @@ $full-width: 900px;
           border-color: brown;
         }
 
+        &Pink {
+          background-color: pink;
+          border-color: slategray;
+        }
+
         &Playing {
           box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
+        }
+
+        &InsideRandom {
+          border-color: #a1a1a1;
+        }
+
+        &SkipSound {
+          background-color: #808080;
         }
       }
 

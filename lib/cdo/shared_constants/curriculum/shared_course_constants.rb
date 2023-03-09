@@ -105,9 +105,9 @@ module Curriculum
         self_paced: 'Self-Paced',
         teacher_led: 'Teacher-Led',
         collections: 'Collections',
-        virtual_pl: 'Virtual Professional Learning',
-        self_paced_pl: 'Self Paced Professional Learning',
-        other_pl: 'Other Professional Learning'
+        workshops_k5: 'K-5 Workshops',
+        summer_workshops_612: '6-12 Summer Workshops',
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
       }
     ).freeze
 

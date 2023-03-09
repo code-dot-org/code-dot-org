@@ -25,7 +25,7 @@ const EVENTS = {
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
 
   // PD Application flow
-  TEACHER_APP_STARTED_EVENT: '6-12 Teacher Application Started',
+  TEACHER_APP_VISITED_EVENT: '6-12 Teacher Application Visited',
   PAGE_CHANGED_EVENT: 'Page Changed',
   PROGRAM_PICKED_EVENT: 'Professional Learning Program Picked',
   SCHOOL_ID_CHANGED_EVENT: 'School ID Changed',
@@ -38,6 +38,7 @@ const EVENTS = {
 
   // Marketing site pages
   TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
+  ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
 
   // Sections
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',

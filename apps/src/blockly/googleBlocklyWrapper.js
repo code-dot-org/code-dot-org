@@ -25,7 +25,11 @@ import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
-import cdoAccessibleTheme from './themes/cdoAccessible';
+import {
+  CdoProtanopiaTheme,
+  CdoDeuteranopiaTheme,
+  CdoTritanopiaTheme
+} from './themes/cdoAccessibleThemes';
 import MusicLabTheme from './themes/musicLabDark';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -293,9 +297,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
     [Themes.MODERN]: CdoTheme,
-    [Themes.ACCESSIBLE]: cdoAccessibleTheme,
     [Themes.DARK]: CdoDarkTheme,
     [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
+    [Themes.PROTANOPIA]: CdoProtanopiaTheme,
+    [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
+    [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.MUSICLAB_DARK]: MusicLabTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
