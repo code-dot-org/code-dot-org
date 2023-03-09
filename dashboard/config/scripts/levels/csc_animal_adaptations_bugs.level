@@ -85,7 +85,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-03T16:35:41.614+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_butterfly\\\"\"],\"cloned_from\":\"csc_animal_adaptations_butterfly\"},{\"changed_at\":\"2023-03-03 22:59:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:06:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:08:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-03T16:35:41.614+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_butterfly\\\"\"],\"cloned_from\":\"csc_animal_adaptations_butterfly\"},{\"changed_at\":\"2023-03-03 22:59:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:06:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:08:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:47:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:48:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:50:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:52:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1455,16 +1455,16 @@
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
         </block>
-        <block type="gamelab_moveInDirection">
-          <field name="DIRECTION">"North"</field>
+        <block type="gamelab_turn">
+          <field name="DIRECTION">"right"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"penguin_1"</field>
             </block>
           </value>
-          <value name="DISTANCE">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">10</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">45</field>
             </block>
           </value>
         </block>
@@ -1505,6 +1505,17 @@
             </block>
           </value>
         </block>
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <block type="math_number">
+              <field name="NUM">10</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_behavior_get">
+          <mutation/>
+          <field name="VAR" id="jittering">jittering</field>
+        </block>
         <block type="gamelab_setTint">
           <value name="THIS">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1515,6 +1526,7 @@
             <block type="gamelab_randomColor"/>
           </value>
         </block>
+        <block type="gamelab_repeatForever"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
