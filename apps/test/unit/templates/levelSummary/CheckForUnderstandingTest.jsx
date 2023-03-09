@@ -71,12 +71,12 @@ const setUpWrapper = (state = {}, jsData = {}) => {
   return wrapper;
 };
 
-afterEach(() => {
-  document.head.removeChild(document.querySelector('script[data-summary]'));
-  document.body.removeChild(document.querySelector('#attach-to-div'));
-});
-
 describe('CheckForUnderstanding', () => {
+  afterEach(() => {
+    document.head.removeChild(document.querySelector('script[data-summary]'));
+    document.body.removeChild(document.querySelector('#attach-to-div'));
+  });
+
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 
@@ -126,7 +126,6 @@ describe('CheckForUnderstanding', () => {
       {teacher_markdown: 'test teacher markdown'}
     );
 
-    console.log(wrapper.debug());
     expect(wrapper.find('SafeMarkdown').length).to.eq(2);
     expect(
       wrapper
