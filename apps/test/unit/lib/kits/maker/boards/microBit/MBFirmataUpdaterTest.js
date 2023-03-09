@@ -6,26 +6,77 @@ import {
   MICROBIT_FIRMATA_V2_URL
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
+import microBitReducer, {
+  setMicroBitFirmataUpdatePercent
+} from '@cdo/apps/lib/kits/maker/microBitRedux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 
 describe('MBFirmataUpdater', () => {
-  it('detectMicroBitVersion returns correct version', () => {
-    const mbFirmataUpdater = new MBFirmataUpdater();
-    let device = {serialNumber: '99001234'};
-    let version = mbFirmataUpdater.detectMicroBitVersion(device);
-    expect(version).to.equal(MICROBIT_V1);
-    device = {serialNumber: '99039876'};
-    version = mbFirmataUpdater.detectMicroBitVersion(device);
-    expect(version).to.equal(MICROBIT_V2);
-    device = {serialNumber: '88001234'};
-    version = mbFirmataUpdater.detectMicroBitVersion(device);
-    expect(version).to.equal(null);
+  describe('detectMicroBitVersion function', () => {
+    it('returns correct version for micro:bit v1', () => {
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      const device = {serialNumber: '99001234'};
+      const version = mbFirmataUpdater.detectMicroBitVersion(device);
+      expect(version).to.equal(MICROBIT_V1);
+    });
+    it('returns correct version for micro:bit v2', () => {
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      const device = {serialNumber: '99039876'};
+      const version = mbFirmataUpdater.detectMicroBitVersion(device);
+      expect(version).to.equal(MICROBIT_V2);
+    });
+    it('returns null for device that is not micro:bit', () => {
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      const device = {serialNumber: '88001234'};
+      const version = mbFirmataUpdater.detectMicroBitVersion(device);
+      expect(version).to.equal(null);
+    });
   });
+  describe('getFirmataURLByVersion function', () => {
+    it('returns correct URL for micro:bit v1', () => {
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V1);
+      expect(URL).to.equal(MICROBIT_FIRMATA_V1_URL);
+    });
+    it('returns correct URL for micro:bit v2', () => {
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V2);
+      expect(URL).to.equal(MICROBIT_FIRMATA_V2_URL);
+    });
+  });
+  describe('setPercentUpdateComplete function', () => {
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({microBit: microBitReducer});
+    });
 
-  it('getFirmataURLByVersion returns correct URL', () => {
-    const mbFirmataUpdater = new MBFirmataUpdater();
-    let URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V1);
-    expect(URL).to.equal(MICROBIT_FIRMATA_V1_URL);
-    URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V2);
-    expect(URL).to.equal(MICROBIT_FIRMATA_V2_URL);
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('changes state value appropriately when rounded progress value has changed', () => {
+      getStore().dispatch(setMicroBitFirmataUpdatePercent(3));
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      mbFirmataUpdater.firmataUpdatePercent = 3;
+      mbFirmataUpdater.setPercentUpdateComplete(0.034);
+      expect(mbFirmataUpdater.firmataUpdatePercent).to.equal(4);
+      let percent = getStore().getState().microBit.microBitFirmataUpdatePercent;
+      expect(percent).to.equal(4);
+    });
+
+    it('does not change state value when rounded progress value has not changed', () => {
+      getStore().dispatch(setMicroBitFirmataUpdatePercent(4));
+      const mbFirmataUpdater = new MBFirmataUpdater();
+      mbFirmataUpdater.firmataUpdatePercent = 4;
+      mbFirmataUpdater.setPercentUpdateComplete(0.034);
+      expect(mbFirmataUpdater.firmataUpdatePercent).to.equal(4);
+      let percent = getStore().getState().microBit.microBitFirmataUpdatePercent;
+      expect(percent).to.equal(4);
+    });
   });
 });
