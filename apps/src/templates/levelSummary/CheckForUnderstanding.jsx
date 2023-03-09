@@ -16,7 +16,6 @@ const CheckForUnderstanding = ({
   viewAs,
   selectedSection,
   students,
-  sections,
   currentLevelId,
   levels
 }) => {
@@ -133,10 +132,19 @@ CheckForUnderstanding.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
   }),
-  students: PropTypes.arrayOf(PropTypes.object),
-  sections: PropTypes.array, // TODO
+  students: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string
+    })
+  ),
   currentLevelId: PropTypes.string,
-  levels: PropTypes.array // TODO
+  levels: PropTypes.arrayOf(
+    PropTypes.shape({
+      activeId: PropTypes.string.isRequired,
+      position: PropTypes.number.isRequired
+    })
+  )
 };
 
 export default connect(
@@ -154,7 +162,6 @@ export default connect(
       selectedSection:
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
       students: state.teacherSections.selectedStudents,
-      sections: state.teacherSections.sections,
       currentLevelId: state.progress.currentLevelId,
       levels: currentLesson.levels
     };
