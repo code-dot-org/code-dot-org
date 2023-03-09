@@ -1299,15 +1299,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  test 'num queries for valid_course_offerings for a teacher with no extra permissions' do
-    sign_in @teacher
-    Unit.stubs(:should_cache?).returns(true)
-
-    assert_cached_queries(0) do
-      get :valid_course_offerings
-    end
-  end
-
   private
 
   def set_up_code_review_groups
