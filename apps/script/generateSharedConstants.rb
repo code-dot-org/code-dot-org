@@ -111,6 +111,8 @@ def main
       COURSE_OFFERING_MARKETING_INITIATIVES
       COURSE_OFFERING_CS_TOPICS
       COURSE_OFFERING_SCHOOL_SUBJECTS
+      DEVICE_TYPES
+      DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
