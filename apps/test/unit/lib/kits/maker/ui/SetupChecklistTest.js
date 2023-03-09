@@ -14,9 +14,9 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import microbitReducer, {
-  setMicrobitFirmataUpdatePercent
-} from '@cdo/apps/lib/kits/maker/microbitRedux';
+import microBitReducer, {
+  setMicroBitFirmataUpdatePercent
+} from '@cdo/apps/lib/kits/maker/microBitRedux';
 
 describe('SetupChecklist', () => {
   let checker;
@@ -56,8 +56,8 @@ describe('SetupChecklist', () => {
       .stub(SetupChecker.prototype, 'celebrate')
       .callsFake(() => Promise.resolve());
     stubRedux();
-    registerReducers({microbit: microbitReducer});
-    getStore().dispatch(setMicrobitFirmataUpdatePercent(0));
+    registerReducers({microBit: microBitReducer});
+    getStore().dispatch(setMicroBitFirmataUpdatePercent(0));
   });
 
   afterEach(() => {
