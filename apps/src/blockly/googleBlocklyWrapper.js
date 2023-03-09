@@ -270,6 +270,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
+  // cleanUp() doesn't currently account for immovable blocks.
+  blocklyWrapper.blockly_.ContextMenuRegistry.registry.unregister(
+    'cleanWorkspace'
+  );
+  blocklyWrapper.blockly_.ContextMenuRegistry.registry.unregister(
+    'collapseWorkspace'
+  );
+  blocklyWrapper.blockly_.ContextMenuRegistry.registry.unregister(
+    'expandWorkspace'
+  );
+  blocklyWrapper.blockly_.ContextMenuRegistry.registry.unregister(
+    'workspaceDelete'
+  );
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
