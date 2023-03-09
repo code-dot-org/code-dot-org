@@ -107,7 +107,6 @@ class CourseOffering < ApplicationRecord
   def self.all_course_offerings
     if should_cache?
       @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
-      @@course_offerings
     else
       CourseOffering.all.includes(course_versions: :content_root)
     end
