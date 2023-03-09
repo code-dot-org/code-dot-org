@@ -46,7 +46,7 @@ export default class ValidationStep extends Component {
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     alwaysShowChildren: PropTypes.bool,
     hideWaitingSteps: PropTypes.bool,
-    updatePercentComplete: PropTypes.number
+    percentComplete: PropTypes.number
   };
 
   render() {
@@ -56,8 +56,13 @@ export default class ValidationStep extends Component {
       alwaysShowChildren,
       children,
       hideWaitingSteps,
-      updatePercentComplete
+      percentComplete
     } = this.props;
+
+    const displayPercentComplete = () => {
+      return percentComplete > 0 ? ` ${percentComplete}%` : '';
+    };
+
     // By default, we only show the children if the step failed or alerted.
     // If alwaysShowChildren is set, show them regardless
     let showChildren =
@@ -74,10 +79,7 @@ export default class ValidationStep extends Component {
         <div style={{...style.header, ...styleFor(stepStatus)}}>
           <div style={style.icon}>{iconFor(stepStatus)}</div>
           <div style={style.headerText}>
-            {stepName}
-            {updatePercentComplete && (
-              <span>&nbsp;{updatePercentComplete}%</span>
-            )}
+            {`${stepName}${displayPercentComplete()}`}
           </div>
         </div>
         {showChildren && (

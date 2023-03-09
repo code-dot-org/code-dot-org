@@ -52,7 +52,7 @@ const initialState = {
 class SetupChecklist extends Component {
   constructor(props) {
     super(props);
-    const {webSerialPort} = this.props;
+    const {webSerialPort} = props;
     const wrappedSerialPort = webSerialPort
       ? new WebSerialPortWrapper(webSerialPort)
       : null;
@@ -326,6 +326,16 @@ class SetupChecklist extends Component {
       isLinux() &&
       this.state.caughtError?.message?.includes('Permission denied');
 
+    const showUpdateMicroBitButton =
+      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+      this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
+      (this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING ||
+        this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.FAILED);
+
+    const showUpdateMicroBitValidationStep =
+      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+      this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING;
+
     return (
       <div>
         <h2>
@@ -362,14 +372,13 @@ class SetupChecklist extends Component {
             {this.contactSupport()}
           </ValidationStep>
           {experiments.isEnabled('microbit') &&
-            this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-            this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING && (
+            showUpdateMicroBitValidationStep && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
                 stepName={i18n.validationStepUpdateMicroBitSoftware()}
                 hideWaitingSteps={false}
                 alwaysShowChildren={true}
-                updatePercentComplete={this.props.firmataPercentComplete}
+                percentComplete={this.props.firmataPercentComplete}
               >
                 {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
                   Status.ATTEMPTING && (
@@ -407,20 +416,16 @@ class SetupChecklist extends Component {
               </div>
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
-            {experiments.isEnabled('microbit') &&
-              this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
-              this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
-              (this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING ||
-                this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.FAILED) && (
-                <Button
-                  text={applabI18n.makerSetupUpdateMBFirmata()}
-                  color={Button.ButtonColor.orange}
-                  size={Button.ButtonSize.medium}
-                  style={downloadButtonStyle}
-                  onClick={() => this.updateMBFirmata()}
-                  title={applabI18n.makerSetupUpdateMBFirmataDescription()}
-                />
-              )}
+            {experiments.isEnabled('microbit') && showUpdateMicroBitButton && (
+              <Button
+                text={applabI18n.makerSetupUpdateMBFirmata()}
+                color={Button.ButtonColor.orange}
+                size={Button.ButtonSize.medium}
+                style={downloadButtonStyle}
+                onClick={() => this.updateMBFirmata()}
+                title={applabI18n.makerSetupUpdateMBFirmataDescription()}
+              />
+            )}
           </ValidationStep>
 
           {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
