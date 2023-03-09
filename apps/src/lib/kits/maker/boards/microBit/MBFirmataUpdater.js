@@ -11,11 +11,9 @@ import {
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
 import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microBitRedux';
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 
-export default class MBFirmataUpdater extends EventEmitter {
+export default class MBFirmataUpdater {
   constructor() {
-    super();
     // State value 'microbitFirmataUpdatePercent' is only updated when this instance variable changes.
     this.firmataUpdatePercent = 0;
   }
