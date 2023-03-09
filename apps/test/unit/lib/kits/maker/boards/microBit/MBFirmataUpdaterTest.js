@@ -17,23 +17,21 @@ import {
 } from '@cdo/apps/redux';
 
 describe('MBFirmataUpdater', () => {
+  const mbFirmataUpdater = new MBFirmataUpdater();
   describe('detectMicroBitVersion function', () => {
     it('returns correct version for micro:bit v1', () => {
-      const mbFirmataUpdater = new MBFirmataUpdater();
       const device = {serialNumber: '99001234'};
       const version = mbFirmataUpdater.detectMicroBitVersion(device);
       expect(version).to.equal(MICROBIT_V1);
     });
 
     it('returns correct version for micro:bit v2', () => {
-      const mbFirmataUpdater = new MBFirmataUpdater();
       const device = {serialNumber: '99039876'};
       const version = mbFirmataUpdater.detectMicroBitVersion(device);
       expect(version).to.equal(MICROBIT_V2);
     });
 
     it('returns null for device that is not micro:bit', () => {
-      const mbFirmataUpdater = new MBFirmataUpdater();
       const device = {serialNumber: '88001234'};
       const version = mbFirmataUpdater.detectMicroBitVersion(device);
       expect(version).to.equal(null);
@@ -42,13 +40,11 @@ describe('MBFirmataUpdater', () => {
 
   describe('getFirmataURLByVersion function', () => {
     it('returns correct URL for micro:bit v1', () => {
-      const mbFirmataUpdater = new MBFirmataUpdater();
       const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V1);
       expect(URL).to.equal(MICROBIT_FIRMATA_V1_URL);
     });
 
     it('returns correct URL for micro:bit v2', () => {
-      const mbFirmataUpdater = new MBFirmataUpdater();
       const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V2);
       expect(URL).to.equal(MICROBIT_FIRMATA_V2_URL);
     });
@@ -66,7 +62,6 @@ describe('MBFirmataUpdater', () => {
 
     it('changes state value appropriately when rounded progress value has changed', () => {
       getStore().dispatch(setMicroBitFirmataUpdatePercent(3));
-      const mbFirmataUpdater = new MBFirmataUpdater();
       mbFirmataUpdater.firmataUpdatePercent = 3;
       mbFirmataUpdater.setPercentUpdateComplete(0.034);
       expect(mbFirmataUpdater.firmataUpdatePercent).to.equal(4);
@@ -76,7 +71,6 @@ describe('MBFirmataUpdater', () => {
 
     it('does not change state value when rounded progress value has not changed', () => {
       getStore().dispatch(setMicroBitFirmataUpdatePercent(4));
-      const mbFirmataUpdater = new MBFirmataUpdater();
       mbFirmataUpdater.firmataUpdatePercent = 4;
       mbFirmataUpdater.setPercentUpdateComplete(0.034);
       expect(mbFirmataUpdater.firmataUpdatePercent).to.equal(4);
