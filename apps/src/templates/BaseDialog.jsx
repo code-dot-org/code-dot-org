@@ -79,7 +79,6 @@ export default class BaseDialog extends React.Component {
   }
 
   render() {
-    console.log(`uncloseable? ${this.props.uncloseable}`);
     if (!this.props.isOpen && !this.props.hideBackdrop) {
       return <div />;
     }

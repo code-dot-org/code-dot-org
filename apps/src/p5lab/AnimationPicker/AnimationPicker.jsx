@@ -66,7 +66,8 @@ class AnimationPicker extends React.Component {
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    onAnimationSelectionComplete: PropTypes.func.isRequired
+    onAnimationSelectionComplete: PropTypes.func.isRequired,
+    uploadWarningShowing: PropTypes.bool.isRequired
   };
 
   state = {
@@ -106,7 +107,6 @@ class AnimationPicker extends React.Component {
     }
 
     const contextName = this.contextSpecificName();
-    console.log(`upload in progress? ${this.props.uploadInProgress}`);
 
     return (
       <div>
@@ -133,7 +133,9 @@ class AnimationPicker extends React.Component {
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
           isOpen={this.state.exitingDialog}
-          uncloseable={this.props.uploadInProgress}
+          uncloseable={
+            this.props.uploadInProgress || this.props.uploadWarningShowing
+          }
           backdropStyle={{
             top: -15,
             right: -15,
@@ -161,17 +163,17 @@ class AnimationPicker extends React.Component {
   }
 
   render() {
-    console.log(`upload in progress? ${this.props.uploadInProgress}`);
     if (!this.props.visible) {
       return null;
     }
-    console.log('it is visible');
 
     return (
       <BaseDialog
         isOpen
         handleClose={this.onClose}
-        uncloseable={this.props.uploadInProgress}
+        uncloseable={
+          this.props.uploadInProgress || this.props.uploadWarningShowing
+        }
         fullWidth={true}
         style={styles.dialog}
       >
@@ -206,7 +208,8 @@ export default connect(
     uploadError: state.animationPicker.uploadError,
     is13Plus: state.pageConstants.is13Plus,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
+    selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
+    uploadWarningShowing: state.animationPicker.uploadWarningShowing
   }),
   dispatch => ({
     onClose() {

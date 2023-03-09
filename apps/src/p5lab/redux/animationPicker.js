@@ -41,7 +41,8 @@ const initialState = {
   isSpriteLab: false,
   isBackground: false,
   // List of animations selected to be added through multiselect
-  selectedAnimations: {}
+  selectedAnimations: {},
+  uploadWarningShowing: false
 };
 
 export default function reducer(state, action) {
@@ -72,14 +73,16 @@ export default function reducer(state, action) {
     return initialState;
   }
   if (action.type === SHOWING_UPLOAD_WARNING) {
-    return _.assign({}, state, {
-      uploadInProgress: true
-    });
+    return {
+      ...state,
+      uploadWarningShowing: true
+    };
   }
   if (action.type === EXITED_UPLOAD_WARNING) {
-    return _.assign({}, state, {
-      uploadInProgress: false
-    });
+    return {
+      ...state,
+      uploadWarningShowing: false
+    };
   }
   if (action.type === BEGIN_UPLOAD) {
     return _.assign({}, state, {
@@ -159,7 +162,6 @@ export function beginUpload(filename) {
  * @returns  {{type: string}}
  */
 export function showingUploadWarning() {
-  console.log('in showingUploadWarning');
   return {
     type: SHOWING_UPLOAD_WARNING
   };
@@ -171,7 +173,6 @@ export function showingUploadWarning() {
  * @returns  {{type: string}}
  */
 export function exitedUploadWarning() {
-  console.log('in exitedUploadWarning');
   return {
     type: EXITED_UPLOAD_WARNING
   };
