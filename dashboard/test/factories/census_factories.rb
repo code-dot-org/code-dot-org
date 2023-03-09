@@ -32,66 +32,10 @@ FactoryGirl.define do
   end
 
   factory :census_school, parent: :school do
-    state {Census::StateCsOffering::SUPPORTED_STATES.first}
+    state 'AK'
     is_high_school
     transient do
       school_year 2017
-    end
-
-    trait :with_census_override_no do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'NO'
-      end
-    end
-
-    trait :with_census_override_yes do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'YES'
-      end
-    end
-
-    trait :with_census_override_maybe do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'MAYBE'
-      end
-    end
-    trait :with_census_override_historical_yes do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_YES'
-      end
-    end
-    trait :with_census_override_historical_no do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_NO'
-      end
-    end
-    trait :with_census_override_historical_maybe do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_MAYBE'
-      end
-    end
-    trait :with_census_override_nil do
-      after(:create) do |school, evaluator|
-        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: nil
-      end
-    end
-
-    trait :with_ap_cs_offering do
-      after(:create) do |school, evaluator|
-        create :ap_school_code, :with_ap_cs_offering, school: school, school_year: evaluator.school_year
-      end
-    end
-
-    trait :with_ib_cs_offering do
-      after(:create) do |school, evaluator|
-        create :ib_school_code, :with_ib_cs_offering, school: school, school_year: evaluator.school_year
-      end
-    end
-
-    trait :with_state_cs_offering do
-      after(:create) do |school, evaluator|
-        create :state_cs_offering, school: school, school_year: evaluator.school_year
-      end
     end
 
     trait :with_state_not_having_state_data do
@@ -329,142 +273,6 @@ FactoryGirl.define do
     submitter_role "TEACHER"
   end
 
-  factory :ap_school_code, class: 'Census::ApSchoolCode' do
-    sequence(:school_code) {|n| Census::ApSchoolCode.normalize_school_code(n)}
-    school_year 2017
-    school {create :school}
-
-    trait :without_school_code do
-      school_code nil
-    end
-
-    trait :without_school do
-      school nil
-    end
-
-    trait :with_too_long_school_code do
-      school_code "12345678"
-    end
-
-    trait :with_invalid_school_code do
-      school_code "ABCDEF"
-    end
-
-    trait :without_school_year do
-      school_year nil
-    end
-
-    trait :with_invalid_school_year do
-      school_year "FISH"
-    end
-
-    trait :with_ap_cs_offering do
-      ap_cs_offering {build_list(:ap_cs_offering, 1, school_year: school_year)}
-    end
-  end
-
-  factory :ap_cs_offering, class: 'Census::ApCsOffering' do
-    ap_school_code {build :ap_school_code, school_year: school_year}
-    course "CSP"
-    school_year 2017
-
-    trait :without_course do
-      course nil
-    end
-
-    trait :with_invalid_course do
-      course "ABC"
-    end
-
-    trait :without_school_code do
-      ap_school_code nil
-    end
-
-    trait :without_school_year do
-      school_year nil
-    end
-
-    trait :with_invalid_school_year do
-      school_year 1900
-    end
-  end
-
-  factory :state_cs_offering, class: 'Census::StateCsOffering' do
-    school {build :school}
-    course "Some Random CS Course"
-    school_year 2017
-
-    trait :without_course do
-      course nil
-    end
-
-    trait :without_school do
-      school nil
-    end
-
-    trait :without_school_year do
-      school_year nil
-    end
-
-    trait :with_invalid_school_year do
-      school_year 1900
-    end
-  end
-
-  factory :ib_school_code, class: 'Census::IbSchoolCode' do
-    sequence(:school_code) {|n| Census::IbSchoolCode.normalize_school_code(n)}
-    school {create :school}
-
-    trait :without_school_code do
-      school_code nil
-    end
-
-    trait :with_too_long_school_code do
-      school_code "12345678"
-    end
-
-    trait :without_school do
-      school nil
-    end
-
-    trait :with_invalid_school_code do
-      school_code "ABCDEF"
-    end
-
-    trait :with_ib_cs_offering do
-      transient do
-        school_year 2017
-      end
-      ib_cs_offering {build_list(:ib_cs_offering, 1, school_year: school_year)}
-    end
-  end
-
-  factory :ib_cs_offering, class: 'Census::IbCsOffering' do
-    ib_school_code {build :ib_school_code}
-    level "HL"
-    school_year 2017
-
-    trait :without_level do
-      level nil
-    end
-
-    trait :with_invalid_level do
-      level "ABC"
-    end
-
-    trait :without_school_code do
-      ib_school_code nil
-    end
-
-    trait :without_school_year do
-      school_year nil
-    end
-
-    trait :with_invalid_school_year do
-      school_year 1900
-    end
-  end
-
   factory :census_summary, class: 'Census::CensusSummary' do
     school {build :school}
     school_year 2017
@@ -497,32 +305,6 @@ FactoryGirl.define do
 
     trait :without_audit_data do
       audit_data nil
-    end
-  end
-
-  factory :census_override, class: 'Census::CensusOverride' do
-    school {build :school}
-    school_year 2017
-    teaches_cs nil
-
-    trait :with_valid_teaches_cs do
-      teaches_cs "N"
-    end
-
-    trait :with_invalid_teaches_cs do
-      teaches_cs "X"
-    end
-
-    trait :with_invalid_school_year do
-      school_year 1900
-    end
-
-    trait :without_school_year do
-      school_year nil
-    end
-
-    trait :without_school do
-      school nil
     end
   end
 end

@@ -4,6 +4,8 @@ class SectionsController < ApplicationController
 
   def new
     return head :forbidden unless current_user&.admin
+
+    redirect_to '/home' unless params[:loginType] && params[:participantType]
   end
 
   def show
