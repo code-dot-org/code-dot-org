@@ -38,7 +38,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: "musiclab#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
