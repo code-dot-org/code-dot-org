@@ -34,7 +34,6 @@ const CheckForUnderstanding = ({
   }
 
   const data = getScriptData('summary');
-  console.log(data);
 
   const questionMarkdown = data.level.properties.long_instructions;
   const teacherMarkdown = data.teacher_markdown;
@@ -44,9 +43,7 @@ const CheckForUnderstanding = ({
     <div className={styles.summaryContainer}>
       {/* Top Nav Links */}
       <p className={styles.navLinks}>
-        <a className={styles.navLinkBack} href={currentLevel.url}>
-          &lt; {i18n.backToLevel()}
-        </a>
+        <a href={currentLevel.url}>&lt; {i18n.backToLevel()}</a>
         {nextLevel && (
           <a
             className={isRtl ? styles.navLinkLeft : styles.navLinkRight}
@@ -130,7 +127,7 @@ const CheckForUnderstanding = ({
 };
 
 CheckForUnderstanding.propTypes = {
-  isRtl: PropTypes.boolean,
+  isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -139,7 +136,7 @@ CheckForUnderstanding.propTypes = {
   students: PropTypes.arrayOf(PropTypes.object),
   sections: PropTypes.array, // TODO
   currentLevelId: PropTypes.string,
-  levels: PropTypes.object // TODO
+  levels: PropTypes.array // TODO
 };
 
 export default connect(
@@ -150,7 +147,6 @@ export default connect(
     const currentLesson = state.progress.lessons.find(
       l => l.id === state.progress.currentLessonId
     );
-    console.log(state);
 
     return {
       isRtl: state.isRtl,
