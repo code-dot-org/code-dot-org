@@ -20,6 +20,7 @@ export default class MBFirmataUpdater {
 
   detectMicroBitVersion(device) {
     // Detect micro:bit version V1 or V2 from the first 4 digits of the micro:bit's serial number
+    // Documentation at https://support.microbit.org/support/solutions/articles/19000035697-what-are-the-usb-vid-pid-numbers-for-micro-bit
     const microBitId = device.serialNumber.substring(0, 4);
     let microBitVersion = null;
     if (MICROBIT_IDS_V1.includes(microBitId)) {
