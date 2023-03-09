@@ -21,7 +21,9 @@ describe('CourseOfferingEditor', () => {
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
         cs_topic: 'Art and Design',
-        school_subject: 'Science,English Language Arts'
+        school_subject: 'Science,English Language Arts',
+        device_compatibility:
+          "{'Computer':'Incompatible','Chromebook':'Not recommended','Tablet':'Not recommended','Mobile':'Ideal','No Device':'(None)'}"
       }
     };
   });
@@ -57,7 +59,9 @@ describe('CourseOfferingEditor', () => {
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
         cs_topic: 'Art and Design',
-        school_subject: 'Science,English Language Arts'
+        school_subject: 'Science,English Language Arts',
+        device_compatibility:
+          "{'Computer':'Incompatible','Chromebook':'Not recommended','Tablet':'Not recommended','Mobile':'Ideal','No Device':'(None)'}"
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -128,7 +132,9 @@ describe('CourseOfferingEditor', () => {
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
         cs_topic: 'Art and Design',
-        school_subject: 'Science,English Language Arts'
+        school_subject: 'Science,English Language Arts',
+        device_compatibility:
+          "{'Computer':'Incompatible','Chromebook':'Not recommended','Tablet':'Not recommended','Mobile':'Ideal','No Device':'(None)'}"
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
