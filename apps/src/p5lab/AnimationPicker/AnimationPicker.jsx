@@ -133,9 +133,7 @@ class AnimationPicker extends React.Component {
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
           isOpen={this.state.exitingDialog}
-          uncloseable={
-            this.props.uploadInProgress || this.props.uploadWarningShowing
-          }
+          uncloseable={this.props.uploadInProgress}
           backdropStyle={{
             top: -15,
             right: -15,

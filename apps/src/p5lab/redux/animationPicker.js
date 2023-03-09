@@ -158,7 +158,7 @@ export function beginUpload(filename) {
 }
 
 /**
- * We are showing the pre-upload warning. Mark the upload as in progress.
+ * We are showing the pre-upload warning.
  * @returns  {{type: string}}
  */
 export function showingUploadWarning() {
@@ -168,8 +168,7 @@ export function showingUploadWarning() {
 }
 
 /**
- * The user exited the upload warning without approving upload. Don't mark the upload
- * as in-progress anymore.
+ * The user exited the upload warning.
  * @returns  {{type: string}}
  */
 export function exitedUploadWarning() {
