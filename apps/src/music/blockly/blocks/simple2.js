@@ -125,6 +125,7 @@ export const triggeredAtSimple2 = {
         name: '${block.getFieldValue(TRIGGER_FIELD)}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
@@ -142,7 +143,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -174,7 +175,7 @@ export const playPatternAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play pattern',
     helpUrl: ''
   },
@@ -203,7 +204,7 @@ export const playRestAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'rest',
     helpUrl: ''
   },
@@ -238,7 +239,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'set effect',
     helpUrl: ''
   },
@@ -266,7 +267,7 @@ export const playSoundsTogether = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'flow_blocks',
+    style: 'logic_blocks',
     tooltip: 'play sounds together',
     helpUrl: ''
   },
@@ -292,7 +293,7 @@ export const playSoundsSequential = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'flow_blocks',
+    style: 'logic_blocks',
     tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
@@ -318,7 +319,7 @@ export const playSoundsRandom = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'flow_blocks',
+    style: 'logic_blocks',
     tooltip: 'play sound randomly',
     helpUrl: ''
   },

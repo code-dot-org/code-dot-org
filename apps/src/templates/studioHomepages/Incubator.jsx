@@ -35,15 +35,15 @@ class Incubator extends Component {
 
           <TwoColumnActionBlock
             imageUrl={
-              '/shared/images/teacher-announcement/incubator-musiclab.png'
+              '/shared/images/teacher-announcement/incubator-projectbeats.png'
             }
-            subHeading={'Music Lab'}
+            subHeading={'Project Beats'}
             description={
               'Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.'
             }
             buttons={[
               {
-                url: '/musiclab',
+                url: '/projectbeats',
                 text: 'Try it out!'
               }
             ]}

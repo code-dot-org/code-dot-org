@@ -104,6 +104,12 @@ class Button extends React.Component {
 
     let buttonStyle = style;
     let Tag = 'button';
+    /*
+    TODO: Rework __useDeprecatedTag logic once the remaining instances are only
+    links. The tag is safe to remove from current <Button> implementations if
+    the button has an onClick() and no href. Such removal may require style
+    updates for margin and boxShadow to match page styling.
+    */
     if (__useDeprecatedTag) {
       Tag = href ? 'a' : 'div';
     } else {
