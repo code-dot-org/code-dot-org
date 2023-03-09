@@ -1,12 +1,12 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 
@@ -26,7 +26,7 @@ describe('CurriculumQuickAssign', () => {
   });
 
   it('updates caret direction when clicked', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 

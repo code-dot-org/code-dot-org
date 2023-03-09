@@ -38,12 +38,16 @@
   display: flex;
 }
 
-.buttonsInRow .input {
-  margin: 0 5px 0 200px;
+.input .inputBox {
+  float: right;
+  margin-top: 15px;
 }
 
-.buttonsInRow .decideLater {
-  margin-top: 5px;
+.decideLater {
+  float: right;
+  margin: 10px 5px 0 5px;
+  font-weight: 350;
+  font-size: 16px;
 }
 
 .table {
@@ -55,6 +59,7 @@
 .headerRow {
   background-color: $brand_primary_default;
   color: $white;
+  height: 42px;
 }
 
 .headerCell {

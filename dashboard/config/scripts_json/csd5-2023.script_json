@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-02-02 01:13:39 UTC",
+    "serialized_at": "2023-03-08 22:10:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1114,7 +1114,7 @@
       "key": "fbe20b57-7b1a-4d97-8536-ec0d781cfd73",
       "position": 1,
       "properties": {
-        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -4583,7 +4583,7 @@
       "key": "e54fbfc0-7585-4d29-b3b8-cca770d0c711",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "name": "Post-Project Test"
       },
       "seeding_key": {
@@ -5261,6 +5261,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csd5-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd5-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd5-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Amazon and Data",
       "url": "https://youtu.be/S4RL6prqtGQ",
       "key": "amazon_and_data",
@@ -5299,7 +5332,7 @@
     },
     {
       "name": "ASCII and Binary Representation",
-      "url": "https://docs.google.com/presentation/d/1RkUjU8jpW0RvQnCvfTs3COAE_uNyNvOmEAtUJVeTZQ4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1EouCz7ZnhJQshZjlUwVEZ7kw2w2nh6liwOz1_Rpf0TM/template/preview",
       "key": "ascii_and_binary_representation",
       "properties": {
         "audience": "Teacher",
@@ -5400,11 +5433,10 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1IJX7-vYg58tTUzY3IZdEEZsVM_K0Z97SvwI36AGVMkA/template/preview",
       "key": "automating_data_decisions_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5426,11 +5458,10 @@
     },
     {
       "name": "Combining Representations",
-      "url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1yiUWlgEKk2nWkSnCWEctviqkGrbssoSL1Dk9JzUaYSo/template/preview",
       "key": "combining_representations",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5501,11 +5532,10 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1l8eKXAb5DL_ewyfBso65r2PH2MBARRdDNIE6Af047Yg/template/preview",
       "key": "create_a_representation_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5525,12 +5555,51 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "Data and Machine Learning",
-      "url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/template/preview",
+      "url": "https://docs.google.com/presentation/d/15tupPQcqJqImvYWXjE3iikIufWdBU7da7GjxrxrtYpg/template/preview",
       "key": "data_and_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5602,11 +5671,10 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vxqJy-RsZBygj5m-_ibHGYY2JVTHQZSNFGGfQBP8YEk/template/preview",
       "key": "interpreting_data_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5615,11 +5683,10 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/template/preview",
+      "url": "https://docs.google.com/presentation/d/1K6c-sLOL_SicLTAhLxbdBaDsSFew7uL9am7VKxvYQDQ/template/preview",
       "key": "keeping_data_secret",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5704,11 +5771,10 @@
     },
     {
       "name": "Making Decisions with Data",
-      "url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/template/preview",
+      "url": "https://docs.google.com/presentation/d/19-4q5bIQqXCHDuI6L-AfFeuW7YG7pIwSYT1w8GdSLoQ/template/preview",
       "key": "making_decisions_with_data_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5792,7 +5858,7 @@
     },
     {
       "name": "Patterns and Representation",
-      "url": "https://docs.google.com/presentation/d/1Ama35jAILCQPxztIx1hGd3WqQ3hqww6XF4sqy46P8Ek/template/preview",
+      "url": "https://docs.google.com/presentation/d/1YwgXAloB7J4FoMIqpUNIQH0xD42bw2XYxWbYjgeGaMA/template/preview",
       "key": "patterns_and_representation",
       "properties": {
         "audience": "Teacher",
@@ -5853,11 +5919,10 @@
     },
     {
       "name": "Problem Solving with Big Data",
-      "url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1pOEp_iDVNnscSE3LZvErt5DMmoBGJc2uixcwqApdpyM/template/preview",
       "key": "problem_solving_with_big_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5891,11 +5956,10 @@
     },
     {
       "name": "Problem Solving With Data",
-      "url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/17jDnDpFEzc_VRW2neAQN82GSn6Cs0nEITGil3MfWGVg/template/preview",
       "key": "problem_solving_with_data_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5904,11 +5968,10 @@
     },
     {
       "name": "Project - Make a Recommendation",
-      "url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1LyAoCCXnDblFsBeNIx22lh-XqYYjxNHPFk3IbQXCBBg/template/preview",
       "key": "project_-_make_a_recommendation",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5954,7 +6017,7 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://docs.google.com/presentation/d/1U3NpxfpC3QU7RlLSIu8nZ1Wt97s1Xu2eYs5LDcWPAEY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1N7mpiPKdI3vqkkVUY5tCSzngIucLXlzSYr0oL_ONkDI/template/preview",
       "key": "representation_matters_2",
       "properties": {
         "audience": "Teacher",
@@ -5966,7 +6029,7 @@
     },
     {
       "name": "Representing Images",
-      "url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/template/preview",
+      "url": "https://docs.google.com/presentation/d/13Gq5uHgmLfOkrDTCxR9maA8KyHMFSZMdQlUJ6E4D3s0/template/preview",
       "key": "representing_images",
       "properties": {
         "audience": "Teacher",
@@ -6027,7 +6090,7 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://docs.google.com/presentation/d/1FSXepS9tbm9aukEjRu7xg7BE7QHzohKq_cqNUjQtATE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-qhamxT6pE6QfgSR4tPgqhxgzWroJSdMQltu8VYK1nw/template/preview",
       "key": "representing_numbers_1",
       "properties": {
         "audience": "Teacher",
@@ -6090,11 +6153,10 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1jrQVjVcYrb7GIP9MdFKEz1SXz9KRibALuXTF8udZV_4/template/preview",
       "key": "structuring_data_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6112,6 +6174,16 @@
       },
       "seeding_key": {
         "resource.key": "structuring_data_2021"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
       }
     },
     {
@@ -6614,7 +6686,54 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd5-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

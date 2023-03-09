@@ -103,7 +103,6 @@ export default class SelectStartAnimations extends React.Component {
               animation library):
             </h3>
             <AnimationPickerBody
-              is13Plus
               onDrawYourOwnClick={() =>
                 console.log('Not supported at this time')
               }
@@ -124,7 +123,6 @@ export default class SelectStartAnimations extends React.Component {
         <div style={styles.pageBreak}>
           <h3>Library Animations:</h3>
           <AnimationPickerBody
-            is13Plus
             onDrawYourOwnClick={() => console.log('Not supported at this time')}
             onPickLibraryAnimation={this.addAnimationToList}
             onAnimationSelectionComplete={() => {}}

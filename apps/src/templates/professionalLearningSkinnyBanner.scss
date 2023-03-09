@@ -48,10 +48,11 @@ $width-sm: 640px; // Mobile
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0.5em 2em;
+    padding: 0.5em 2em 0.5em 1.25em;
 
     @media screen and (max-width: $width-md) {
       justify-content: right;
+      padding: 0.5em 1.5em;
     }
 
     @media screen and (max-width: $width-sm) {

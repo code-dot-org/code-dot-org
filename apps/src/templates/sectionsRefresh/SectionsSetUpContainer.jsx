@@ -5,6 +5,7 @@ import CurriculumQuickAssign from './CurriculumQuickAssign';
 import SectionSetupAdvancedSettings from './SectionSetupAdvancedSettings';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const FORM_ID = 'sections-set-up-container';
@@ -53,12 +54,12 @@ const saveSection = (e, section) => {
 
   const csrfToken = document.querySelector('meta[name="csrf-token"]')
     .attributes['content'].value;
+  const loginType = queryParams('loginType');
+  const participantType = queryParams('participantType');
 
-  // TODO: remove this once login_type and participant_type are hooked up to
-  // the form.
   const section_data = {
-    login_type: 'word',
-    participant_type: 'student',
+    login_type: loginType,
+    participant_type: participantType,
     ...section
   };
 

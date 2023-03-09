@@ -752,14 +752,14 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently awaiting_admin_approval, pending, or pending_space_availability.
-      return false unless awaiting_admin_approval? || pending? || pending_space_availability?
-
       # Only if the principal approval is required.
       return false if principal_approval_not_required
 
       # Only if we haven't gotten a principal response yet.
       return false if response
+
+      # Only if this teacher application has a status that allows it
+      return false unless SEND_ADMIN_APPROVAL_EMAIL_STATUSES.include?(status)
 
       # Only if it's been more than 5 days since we last created an email for the principal.
       return false if last_principal_approval_email_created_at && last_principal_approval_email_created_at > 5.days.ago
@@ -772,9 +772,8 @@ module Pd::Application
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
-      # Only if this teacher application is currently awaiting_admin_approval or pending.
-      # (Unlike allow_sending_principal_email?, don't allow for pending_space_availability.)
-      return false unless awaiting_admin_approval? || pending?
+      # Only if this teacher application has a status that allows it
+      return false unless SEND_ADMIN_APPROVAL_EMAIL_STATUSES.include?(status)
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?

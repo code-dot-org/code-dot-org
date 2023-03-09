@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+//import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import moduleStyles from './sections-refresh.module.scss';
+//import moduleStyles from './sections-refresh.module.scss';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
-import {
-  assignedUnitTextToSpeechEnabled,
-  assignedUnitLessonExtrasAvailable
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+// import {
+//   assignedUnitTextToSpeechEnabled,
+//   assignedUnitLessonExtrasAvailable
+// } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export default function SectionSetupAdvancedSettings({
   updateSection,
