@@ -57,7 +57,6 @@ class AnimationPicker extends React.Component {
     visible: PropTypes.bool.isRequired,
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
-    is13Plus: PropTypes.bool,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     onClose: PropTypes.func.isRequired,
     onPickNewAnimation: PropTypes.func.isRequired,
@@ -110,7 +109,6 @@ class AnimationPicker extends React.Component {
     return (
       <div>
         <AnimationPickerBody
-          is13Plus={this.props.is13Plus}
           onDrawYourOwnClick={this.props.onPickNewAnimation}
           onPickLibraryAnimation={this.props.onPickLibraryAnimation}
           onUploadClick={this.onUploadClick}
@@ -200,7 +198,6 @@ export default connect(
     visible: state.animationPicker.visible,
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
-    is13Plus: state.pageConstants.is13Plus,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
     selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
   }),
