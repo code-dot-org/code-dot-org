@@ -52,7 +52,7 @@ class Poetry < GamelabJr
   def validate_default_poem_and_available_poems
     sanitize_default_poem
     sanitize_available_poems
-    # If there is a default poem and dropdown poem(s), check that it the default poem is
+    # If there is a default poem and dropdown poem(s), check that the default poem is
     # in the dropdown poem list.
     if default_poem.present? && Poetry.subtypes_with_poems.include?(standalone_app_name) &&
       available_poems && !available_poems.empty? && !available_poems.include?(default_poem)
