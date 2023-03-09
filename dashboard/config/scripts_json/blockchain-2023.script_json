@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-07 03:05:43 UTC",
+    "serialized_at": "2023-03-09 02:45:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,6 +92,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "Students participate in a simulation of a crypto investment firm, similar in style and structure to the [Stock Market Game](https://www.stockmarketgame.org/). Students are in charge of a fictional investment firm where they can invest $1500 in several fictional assets - NFTs, cryptocurrencies, and stablecoins. Students watch a video that gives an overview of these assets and how value is determined on the blockchain, then they must decide which assets to invest in. Once decided, the teacher generates several fake news stories that impact the value of each asset. By the end of the simulation, students can see how their investments increased or decreased based on the news that was generated. Lastly, students reflect on the simulation and consider other reasons to invest in blockchain assets beyond their purely financial value\n\n**Big Question**: What does it mean for a digital asset to have value in a digital marketplace?",
+        "preparation": "- Experiment with the Crypto Market Simulator to understand how it works and how it's used with the Activity Guide\n- Print enough copies of the Blockchain Asset Cards for each group\n- Have calculators available for students to help with calculations\n- (Optional) Print one copy of each Asset Sheet and cut them out\n- (Optional) Print multiple copies of the Buy / Sell sheets for groups to use during the activity",
+        "student_overview": "**Big Question**: What does it mean for a digital asset to have value in a digital marketplace?"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -167,6 +170,48 @@
       "seeding_key": {
         "lesson_activity.key": "d0dfedcd-96ff-499a-b027-ceed71856b2f",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "e250fceb-f88a-49b2-97c3-d4daa63860d8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e250fceb-f88a-49b2-97c3-d4daa63860d8",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "blockchain-2023"
       }
@@ -599,7 +644,7 @@
       "key": "9f5d443f-57ee-4e69-b9cf-a79c6d354e5b",
       "position": 25,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the Blockchain Under the Hood video (~6 minutes). Have students match the vocabulary words from the video on their notetaker as well.\n\n# TO DO - UPDATE WITH YOUTUBE VIDEO!"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the Blockchain Under the Hood video (~6 minutes). Have students match the vocabulary words from the video on their notetaker as well.\n\n# TODO - UPDATE WITH YOUTUBE VIDEO!\n**[Temporary video link for reviewers](https://vimeo.com/800769426/627b7c670d)**"
       },
       "seeding_key": {
         "activity_section.key": "9f5d443f-57ee-4e69-b9cf-a79c6d354e5b",
@@ -840,6 +885,792 @@
         "activity_section.key": "ed763334-833a-4b15-a82c-05b61d736052",
         "lesson_activity.key": "d0dfedcd-96ff-499a-b027-ceed71856b2f"
       }
+    },
+    {
+      "key": "f6f094db-4304-471b-904d-4fa3574bd1cd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are examples of physical things that people buy just to own and collect? For example, some people collect limited edition sneakers."
+      },
+      "seeding_key": {
+        "activity_section.key": "f6f094db-4304-471b-904d-4fa3574bd1cd",
+        "lesson_activity.key": "e250fceb-f88a-49b2-97c3-d4daa63860d8"
+      }
+    },
+    {
+      "key": "0fe713f4-e5fe-4a14-b81e-195033fcb653",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should think of examples where people invest money in a physical object that may not have a ton of utility but is still valuable. Additional examples might include:\n- Collecting limited edition movie posters ([example here](https://mondoshop.com/collections/posters))\n- Collecting limited edition plush animals or toys ([example here](https://parade.com/1172319/stephanieosmanski/most-valuable-beanie-babies/))\n- Collecting memorabilia from concerts or events, especially T-shirts\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fe713f4-e5fe-4a14-b81e-195033fcb653",
+        "lesson_activity.key": "e250fceb-f88a-49b2-97c3-d4daa63860d8"
+      }
+    },
+    {
+      "key": "07a6476a-666c-48d0-b247-dd3bd474fdc6",
+      "position": 3,
+      "properties": {
+        "description": "Focus on examples of items that people might collect without any direct utility, but may have sentimental value. Emphasize if a student bring up examples that include a financial investment component - such as collecting gold, or collecting rare coins, or collecting artwork."
+      },
+      "seeding_key": {
+        "activity_section.key": "07a6476a-666c-48d0-b247-dd3bd474fdc6",
+        "lesson_activity.key": "e250fceb-f88a-49b2-97c3-d4daa63860d8"
+      }
+    },
+    {
+      "key": "f4f20df0-7345-4430-81cd-df783dbb10fe",
+      "position": 4,
+      "properties": {
+        "description": "These are all great examples of when people find value in a physical object beyond just using or consuming it. Sometimes we spend money on items because of sentimental value or personal preference. Sometimes we spend money on items as an investment, to try and make a profit by re-selling the item later. All of the examples we discussed today were physical objects - today, we’re going to look at examples of what this could look like with digital objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f4f20df0-7345-4430-81cd-df783dbb10fe",
+        "lesson_activity.key": "e250fceb-f88a-49b2-97c3-d4daa63860d8"
+      }
+    },
+    {
+      "key": "8d7e6875-e81b-4731-abd9-6961eaf98de5",
+      "position": 5,
+      "properties": {
+        "description": "**Big Question:** What does it mean for something digital to have value in a digital economy?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d7e6875-e81b-4731-abd9-6961eaf98de5",
+        "lesson_activity.key": "e250fceb-f88a-49b2-97c3-d4daa63860d8"
+      }
+    },
+    {
+      "key": "5146e01d-9579-4b9c-9d25-d11953a6dbb4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the\n[r vocabulary_matching_1/blockchain/2023] handout. Students will use this to keep track of vocabulary throughout the lesson.",
+        "duration": "25",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "5146e01d-9579-4b9c-9d25-d11953a6dbb4",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "098281b0-6bb1-438e-b077-5ee372e1090a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show students the Marketplaces & Price video\n\n# TODO: ADD VIDEO HERE!\n**[Temporary video link for reviewers](https://vimeo.com/775334662/b79e2e1c1d)**"
+      },
+      "seeding_key": {
+        "activity_section.key": "098281b0-6bb1-438e-b077-5ee372e1090a",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "7e00413f-1a77-483d-a566-2e85a96c7b90",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with this vocabulary. Allow students to check their answers on their vocabulary notetaker.\n- **Exchange** - a marketplace where anybody can buy or sell something\n- **Asset** - Something you own that is valuable. Often, assets are exchanged or converted into currency."
+      },
+      "seeding_key": {
+        "activity_section.key": "7e00413f-1a77-483d-a566-2e85a96c7b90",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "2ac602ae-f369-447b-aee4-ae15361ad1b4",
+      "position": 4,
+      "properties": {
+        "description": "Today we’re going to simulate a cryptocurrency economy. You will work as group to decide what types of assets you would like to invest in, and we will simulate how different events impact the price of your investments. Today’s activity will involve three types of assets: NFTs, Cryptocurrencies, and Stablecoins",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2ac602ae-f369-447b-aee4-ae15361ad1b4",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "08e49941-6ee2-4ed0-b971-15a071bf7fd5",
+      "position": 5,
+      "properties": {
+        "description": "**Group:** Place students in groups so that there are six groups in class. Assign each group a number."
+      },
+      "seeding_key": {
+        "activity_section.key": "08e49941-6ee2-4ed0-b971-15a071bf7fd5",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023]."
+      },
+      "seeding_key": {
+        "activity_section.key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "b9118b7a-890f-4445-8a57-9e89523b5d96",
+      "position": 7,
+      "properties": {
+        "description": "These cards represent the different assets we can invest in during this activity. There are four NFTs, three cryptocurrencies, and two stablecoins. Read over the cards as a group to learn more about each asset. Then, see if you can identify the qualities of NFTs, Cryptocurrencies, and Stablecoins on your vocabulary sheet.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b9118b7a-890f-4445-8a57-9e89523b5d96",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "caf2755a-1314-49ee-a96c-fae38f87e175",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Give students time to look over each card and read more about the assets. After a while, transition students to completing the bottom section of their vocabulary notetaker to identify qualities of NFTs, Cryptocurrencies, and Stablecoins. It's okay for students to be unsure of some responses - they will have a chance to check their work in the next activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "caf2755a-1314-49ee-a96c-fae38f87e175",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "12a778c5-46e1-4d9c-84b7-a7eeae47bf9f",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the set of slides giving an overview of NFTs, Cryptocurrencies, and Stablecoins. Give students an opportunity to check their work and update their answers based on the slides.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**More Questions than Answers:** This overview of blockchain assets is meant to help students make decisions in the main activity as well as give them tools to understand headlines they may read about cryptocurrencies in the real-world. However, students may have additional questions or still be uncertain about some of these terms. Assure students that they don't need to be experts on these terms at this moment, and encourage them to visit https://code.org/blockchain to view additional resources to help explore in more depth after the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12a778c5-46e1-4d9c-84b7-a7eeae47bf9f",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "48b9f4bf-4558-4863-b383-4517bd48ba83",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of \n[r crypto_market_simulation_overview/blockchain/2023]."
+      },
+      "seeding_key": {
+        "activity_section.key": "48b9f4bf-4558-4863-b383-4517bd48ba83",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "ef0580ce-d957-4eb1-81b5-2c9125b8a1f7",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a class, review the Background section at the top of the handout. Explain that there are multiple stages to this simulation, which is outlined in each row of this handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "ef0580ce-d957-4eb1-81b5-2c9125b8a1f7",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "bdbc3518-8844-4b5b-9822-f70a5faf5e2c",
+      "position": 12,
+      "properties": {
+        "description": "Take a minute to review these assets again, but now from an investor perspective. As a group, try to rank the assets from “riskiest” to “stablest”. Risky investments are ones where you’re just as likely to lose your investment as you are to increase it, and Stable investments are ones that are more likely to keep or increase your investment.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bdbc3518-8844-4b5b-9822-f70a5faf5e2c",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "5b1a9fec-793a-4dc4-9c39-87b23458dbed",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Look through the assets individually first, reading over the different descriptions and information on each card. As a table, put them in order from “most risky” to “most stable”"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b1a9fec-793a-4dc4-9c39-87b23458dbed",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "068ed79f-1e26-44a2-ae4f-cecc677fca90",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are looking through the collection of assets - each one has a unique description that can give insights into what might happen throughout the simulation. Then monitor table conversations to hear which assets students think are risky versus stable."
+      },
+      "seeding_key": {
+        "activity_section.key": "068ed79f-1e26-44a2-ae4f-cecc677fca90",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "d376c0c9-3df1-4bfd-b85d-7d1deeb38e9d",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What was an asset that seemed especially risky? What was an asset that seemed especially stable? Why?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d376c0c9-3df1-4bfd-b85d-7d1deeb38e9d",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "f9c0b187-e74b-4711-92be-f17cf688d01d",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ask each table to share their thoughts on this prompt or just one part of it. There’s no one “right answer” to this question or the ordering that students come up with, but there are definitely some assets that appear more risky or more stable than others:\n- ByteCoin, Connect USD, and Sol may appear the most stable to some groups, although some groups may question the extremely high return rate for Sol\n- ParrotCoin may appear the most risky to some groups\n- The NFTs are harder to predict and students may end up using the descriptions to justify why they think a particular NFT is more or less table, especially if they connect the value to the perks or utility of the stablecoin.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9c0b187-e74b-4711-92be-f17cf688d01d",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "9c225b2e-3723-4584-8b6a-9caad719a0a3",
+      "position": 17,
+      "properties": {
+        "description": "As you noticed, some options appear riskier than others - and sometimes those risks pay off, and sometimes they don’t. You also noticed that some assets have other perks or purposes behind them that aren’t purely motivated by finances, similar to the items we discussed in the warm-up, and it’s okay to purchase assets for these reasons too. Now it’s time to decide as a team how these factors will impact your investment strategy",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c225b2e-3723-4584-8b6a-9caad719a0a3",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "a86d8fe3-b321-467d-9893-66ee2964e6c4",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** As a table, have a discussion about:\n1. How risky do you want your investment strategy to be?\n2. How much of your strategy do you want to based on the purpose and utility of the asset (and not just its value)?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a86d8fe3-b321-467d-9893-66ee2964e6c4",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "26adee2f-8621-448a-8d38-405056a412fd",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students as they discuss their options, paying attention to group dynamics and ensuring all students have a voice in the discussion. Some groups may decide they only care about value and will make investment decisions based on how risky or stable an asset is. Some groups may care more about impact or utility and may decide to invest in an asset because of its status (for example: buying all the crypto gerbils because they want to participate in the game). Be sure to give students a time limit on their discussion so they can continue to the next part of the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "26adee2f-8621-448a-8d38-405056a412fd",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "9052e60c-3c82-4ae1-820c-fac6136a9485",
+      "position": 20,
+      "properties": {
+        "description": "We’re ready to start our simulation! This begins with each group deciding how they want to spend their $1500. We’re going to use a widget to run the simulation as a class, but you’ll be using your own individual handout to keep track of your group’s investments.",
+        "duration": "20",
+        "name": "Starting the Simulation",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9052e60c-3c82-4ae1-820c-fac6136a9485",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "a7dad98d-98b5-47a0-a0fc-503b0c87e312",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Open up the Crypto Market Simulation Widget. You will use this app the run the simulation for the class - it should remain open on a teacher computer and running the entire class period."
+      },
+      "seeding_key": {
+        "activity_section.key": "a7dad98d-98b5-47a0-a0fc-503b0c87e312",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "14dccb06-703b-44a6-8f7d-101ae829595a",
+      "position": 22,
+      "properties": {
+        "progression_name": "[Teacher] Crypto Market Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "14dccb06-703b-44a6-8f7d-101ae829595a",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "02355e7f-a5dc-4c1c-bc70-27ff492ac4e2",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the \n[r value_on_the_blockchain_1/blockchain/2023] activity guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**So Many Resources!** At this point, groups may feel overwhelmed by the amount of paper they have on their desks. From this point forward, the Crypto Market Simulation Activity Guide will be the primary document they will be working with as they follow along in the simulation.\n\n**Calculators Needed**: Groups will be performing accounting tasks (addition and multiplication) to keep track of their investments and calculators will be especially helpful. Encourage students to use an app on their phone, or a personal calculator, or distribute class calculators."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "02355e7f-a5dc-4c1c-bc70-27ff492ac4e2",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "54ab3396-a566-49eb-ab25-ae1481798991",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, decide which assets they would like to purchase. Teams can spend up to $1500. Teams should record their results on their activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "54ab3396-a566-49eb-ab25-ae1481798991",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "367b6175-5af6-4d17-bde6-6e8a9fbf4e05",
+      "position": 25,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/1be6e6d2d5ca65b40473987300c76190-widget1.png) | ![](https://images.code.org/d399cd1458853561627e447c8ba2a533-guide1.png) | **Say:** As a group, decide how you would like to invest your $1500 and record your results on the activity guide.<br /><br />**Widget:** Leave the widget open on the initial screen showing the market values<br /><br />**Activity Guide:** Have students fill in the _Transaction_ and _Fund Value_ columns. You may decide to display an example from the slides showing students what sections they can fill in. |\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "367b6175-5af6-4d17-bde6-6e8a9fbf4e05",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "817ccb1f-dab6-4b7d-9a9a-fad000cc1572",
+      "position": 26,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with groups to ensure they understand some of the rules and outcomes of the assets they are purchasing: \n- Groups will be able to sell their assets in the middle of the simulation and purchase new ones. When this happens, the order of buying is reversed (so the last team to purchase now will be the first team to purchase later on)\n- NFTs and Stablecoins can only be sold in whole values, but cryptocurrencies can be sold in decimal quantities. For example a team can purchase $100 of Bytecoin by purchasing 0.39 Bytecoins\n- When purchasing a Stablecoin, the investment is locked until the end of the simulation in order for the investment to mature. This means teams won’t be able to buy or sell any Stablecoin investments in the middle of the simulation\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "817ccb1f-dab6-4b7d-9a9a-fad000cc1572",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "02269588-2456-4798-afaf-13c1785c8160",
+      "position": 27,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Starting at group 1 and going in order, ask groups to share which assets they are purchasing and in what quantities. "
+      },
+      "seeding_key": {
+        "activity_section.key": "02269588-2456-4798-afaf-13c1785c8160",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "1b812a08-1ec2-4d97-89cc-175021cd2f60",
+      "position": 28,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **(Optional) Distribute:** As groups purchase assets, distribute physical copies of these assets from the [r printable_asset_sheets/blockchain/2023] folder. This folder has several sheets available to print out, creating physical representations of the digital assets in the simulation (for example: 15 Crypto Gerbil NFTs). These physical manipulatives can help groups keep track of their investments during the Buy and Sell stages, and can be a fun addition to the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b812a08-1ec2-4d97-89cc-175021cd2f60",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "c13c2e63-1cb3-44eb-80dd-f9b70c2b2a39",
+      "position": 29,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/17b2f2c15dd7bf6aab0360a47ef3f4d8-widget2a.gif) | (No change to Activity Guide) | **Widget:** Use the simulation widget to keep track of the NFTs remaining in the marketplace. As groups progress, some NFTs may be purchased entirely and go to 0 - when this happens, no other groups can purchase that NFT.<br /><br />**Activity Guide:** Students only need to interact with their Activity Guide if one of their NFTs is no longer available. |",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Handling Limited Resources:** Order matters - if one group buys up all of the NFTs before other groups have a chance, they’ll need to adjust their strategy. This is likely to happen with the High Five NFT, since there is only one copy - once someone buys it, no one else can. This scenario is meant to model scarcity situations in actual markets.\n\n**Handling Time:** To make sure that each group doesn't take too long, limit each group to 60 seconds when it's their turn. If they haven't finished announcing what they want to buy at the end of the minute, then their remaining amount is cash.\n\n**Correcting Mistakes:** Students should only be allowed to buy NFTs during this stage - however, if a mistake happens when using the simulator, you can press the \"Oops - I made a mistake\" button to enable the \"Sell\" buttons. You can use these buttons to fix any misclicks that may misrepresent the simulation."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c13c2e63-1cb3-44eb-80dd-f9b70c2b2a39",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "30a2b9a8-9772-4f0f-9a04-7d6c7d9526d3",
+      "position": 30,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
+        "duration": "5",
+        "name": "Crypto Market Simulation: Fall Quarter"
+      },
+      "seeding_key": {
+        "activity_section.key": "30a2b9a8-9772-4f0f-9a04-7d6c7d9526d3",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "c7ce2fff-cd54-4953-a769-cbd04214a39b",
+      "position": 31,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/7986265a1ff992093068226f0282cd2f-widget3.gif) | ![](https://images.code.org/4f0c0edeaf11f1919008e7d2edad0da6-guide2.png) | **Say:** As a group, decide how you think the news from this quarter will affect each asset. Circle your prediction in the activity guide.<br /><br />**Widget:** Click through each news story until the financial notification appears, but **do not click it yet**. Wait for students to complete their predictions first.<br /><br />**Activity Guide:** Have students fill in the News Cycle Prediction column underneath the Fall header |"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7ce2fff-cd54-4953-a769-cbd04214a39b",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "b09c54f0-7799-4192-b0a8-f6cf63347e32",
+      "position": 32,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+      },
+      "seeding_key": {
+        "activity_section.key": "b09c54f0-7799-4192-b0a8-f6cf63347e32",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "c041a98e-c13a-42dd-bfaa-0c8859029497",
+      "position": 33,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/763701488b06fc11bb627a42c896599b-widget4.gif) | ![](https://images.code.org/380902454b33a65164f7ac9958ab17f5-guide3.png) | **Say:** Let's see how these news stories affected our assets and the market.<br /><br />**Widget:** Click the Financial Notification to reveal changes to the value of each asset. Students can compare their predictions to the result.<br /><br />**Activity Guide:** Have students fill in the New Market Value column underneath the Fall header |\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c041a98e-c13a-42dd-bfaa-0c8859029497",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "548f9148-4d18-4eac-816d-f7f71e0cbbab",
+      "position": 34,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**News Story Fact Check:** All of the blockchain assets and news stories in this lesson are fictionalized, but are based on real events and real assets. To learn more about the news stories in this lesson and their influences, you can read the [r news_articles/blockchain/2023] resource"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "548f9148-4d18-4eac-816d-f7f71e0cbbab",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "bc0d2bd0-7238-4085-acf0-dfb3de754ee7",
+      "position": 35,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
+        "duration": "5",
+        "name": "Crypto Market Simulation: Winter Quarter"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0d2bd0-7238-4085-acf0-dfb3de754ee7",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "b3b96d58-34d4-4c6f-a2e6-8a5259c99806",
+      "position": 36,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/7986265a1ff992093068226f0282cd2f-widget3.gif) | ![](https://images.code.org/dfdca3044b4602b5538068893d738add-guide-winter1.png) | **Say:** As a group, decide how you think the news from this quarter will affect each asset. Circle your prediction in the activity guide.<br /><br />**Widget:** Click through each news story until the financial notification appears, but **do not click it yet**. Wait for students to complete their predictions first.<br /><br />**Activity Guide:** Have students fill in the News Cycle Prediction column underneath the Winter header |"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3b96d58-34d4-4c6f-a2e6-8a5259c99806",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "da8977d4-0699-4304-8b59-a71b8e6ae097",
+      "position": 37,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+      },
+      "seeding_key": {
+        "activity_section.key": "da8977d4-0699-4304-8b59-a71b8e6ae097",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "de6b05ca-9e05-4f71-a604-15ee71061b2d",
+      "position": 38,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/763701488b06fc11bb627a42c896599b-widget4.gif) | ![](https://images.code.org/08a27f15840e6987998311c642c80d52-guide-winter2.png) | **Say:** Let's see how these news stories affected our assets and the market.<br /><br />**Widget:** Click the Financial Notification to reveal changes to the value of each asset. Students can compare their predictions to the result.<br /><br />**Activity Guide:** Have students fill in the New Market Value column underneath the Winter header |\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "de6b05ca-9e05-4f71-a604-15ee71061b2d",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "77d7cfad-7b3f-421b-9bb1-a5d7e95e1b6f",
+      "position": 39,
+      "properties": {
+        "description": "We’ve reached the halfway point of our simulation. Let’s pause and reflect on how things are going.",
+        "duration": "5",
+        "name": "Pause for Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "77d7cfad-7b3f-421b-9bb1-a5d7e95e1b6f",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "17b4ed91-26cf-40bc-9dca-a45b8132d186",
+      "position": 40,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Based on the news from the last two quarters, what decisions are you glad you made at the start of this simulation? Are there any decisions you regret?"
+      },
+      "seeding_key": {
+        "activity_section.key": "17b4ed91-26cf-40bc-9dca-a45b8132d186",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "7efa01d6-c9cc-4caf-b4b3-c95ffe6f1047",
+      "position": 41,
+      "properties": {
+        "description": "Have students record their thoughts on a sheet of paper first before sharing with their group, then invite students to share as a full group.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt helps foreshadow the next step of the simulation, where teams will be able to sell some of their assets and redistribute their investments if they’d like. It’s also an opportunity to decompress and discuss the whims of the market based and how it’s impacting their investments. Even though it’s just a simulation, people with real money are often impacted by similar events on real investments.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reflecting on a Human Level**: Many aspects of this simulation mirror real-world events or real-world habits around investing, including gambling addiction mindsets or scenarios involving scarcity of resources, which can carry emotional weight for students. Be prepared to support students if these feelings surface, and consider having resources available if students need additional support. Acknowledging the real-world impacts of financial decisions is an important outcome of this scenario, and seeing these crypto markets as more than just numbers and finances flowing through computers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7efa01d6-c9cc-4caf-b4b3-c95ffe6f1047",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "0d8e1226-abe9-4491-b36f-c4dce8ead5bf",
+      "position": 42,
+      "properties": {
+        "description": "At this halfway point, you have the option to change your investments if you’d like. You’ll have the chance to sell any of your assets, and purchase new ones. This is completely optional - you don’t have to make any changes if you don’t want to.",
+        "duration": "10",
+        "name": "Crypto Market Simulation: Sell and Buy Assets",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0d8e1226-abe9-4491-b36f-c4dce8ead5bf",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "24f5ec51-1788-4124-9154-988871c49f62",
+      "position": 43,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss which assets they would like to sell (if any). The amount they earn from selling can be used in the next round to purchase new assets. Students should record their decisions on their activity guide, filling in the _Transaction_ and _Money Earned from Selling_ columns. An example of what this could look like on their activity guide is available in the slide deck.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Buy/Sell Slips:** Optionally, you may decide to have students use the provided [r buy_sell_slips/blockchain/2023] for this part of the activity - each group would be provided with several cut-out slips. Students can write their decisions down on the slips and use them as a reference when communicating with the class. This helps students organize their thoughts, and mimics historical depictions of stock exchanges where exchanges happened on slips of paper passed through the market."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "24f5ec51-1788-4124-9154-988871c49f62",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "f5bc16f5-d574-40b7-9c39-52e963980176",
+      "position": 44,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/57b8017979102b5d8b4d55ff5fc92a39-widget-sell.png) | ![](https://images.code.org/e0b270241b561420dcb09162e196c172-guide-sell.png) | **Say:** Let's go around and each group share any NFTs they're selling. Then in the next round, folks can decide to buy any new NFTs that will now be on the market.<br /><br />**Widget:** As students share any NFTs they're selling, update the widget<br /><br />**Activity Guide:** Students should have already filled out the Selling column in their activity guide. They don't need to make any updates while the widget is updating. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5bc16f5-d574-40b7-9c39-52e963980176",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "61d33361-2f73-4cb0-acd1-89216bbe80fb",
+      "position": 45,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students transition to the second page of their activity guide. They will need to copy over the _Cash From Previous Round_ value from the previous page and re-copy the current market values into the _Market Value_ column. An example of what this could look like on their activity guide is available in the slide deck.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss which new assets they want to purchase. They should also keep track of how many they are carrying over from the previous rounds. Students can keep track of this in the _Transaction_ and _Fund Value_ columns. An example of what this could look like on their activity guide is available in the slide deck."
+      },
+      "seeding_key": {
+        "activity_section.key": "61d33361-2f73-4cb0-acd1-89216bbe80fb",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "49400b35-7fbf-4dfd-9647-18a17660490e",
+      "position": 46,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/81191b2e6dedf0d00bdfa194cbc4da58-widget-buy.png) | ![](https://images.code.org/7cb19d1b1e01a4ec283a7df275d8e664-guide-buy.png) | **Say:** In _reverse_ order, each group will share any new purchases they're making.<br /><br />**Widget:** As students share any NFTs they're buying, update the widget<br /><br />**Activity Guide:** Students should have already filled out the Buying column in their activity guide. They don't need to make any updates while the widget is updating unless someone purchases all of a certain NFT before it's their turn. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "49400b35-7fbf-4dfd-9647-18a17660490e",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "29294cae-22fa-4648-9a8a-70a5e10986e0",
+      "position": 47,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
+        "duration": "5",
+        "name": "Crypto Market Simulation: Spring Quarter"
+      },
+      "seeding_key": {
+        "activity_section.key": "29294cae-22fa-4648-9a8a-70a5e10986e0",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "e446c642-ed2c-4311-b43d-c0ebc642a886",
+      "position": 48,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/7986265a1ff992093068226f0282cd2f-widget3.gif) | ![](https://images.code.org/540a89a0656374f3bca4523c2284123a-guide-spring1.png) | **Say:** As a group, decide how you think the news from this quarter will affect each asset. Circle your prediction in the activity guide.<br /><br />**Widget:** Click through each news story until the financial notification appears, but **do not click it yet**. Wait for students to complete their predictions first.<br /><br />**Activity Guide:** Have students fill in the News Cycle Prediction column underneath the Spring header |"
+      },
+      "seeding_key": {
+        "activity_section.key": "e446c642-ed2c-4311-b43d-c0ebc642a886",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "ccda4760-cb0b-4d11-832c-4226d8f87a70",
+      "position": 49,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+      },
+      "seeding_key": {
+        "activity_section.key": "ccda4760-cb0b-4d11-832c-4226d8f87a70",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "0c1cbc46-b83d-41bd-a800-86f160610c9d",
+      "position": 50,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/763701488b06fc11bb627a42c896599b-widget4.gif) | ![](https://images.code.org/48704b19ddfa76de2739bb923b353316-guide-spring2.png) | **Say:** Let's see how these news stories affected our assets and the market.<br /><br />**Widget:** Click the Financial Notification to reveal changes to the value of each asset. Students can compare their predictions to the result.<br /><br />**Activity Guide:** Have students fill in the New Market Value column underneath the Spring header |"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c1cbc46-b83d-41bd-a800-86f160610c9d",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "e96fc1bf-e836-4297-a617-f0aba48a0088",
+      "position": 51,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets."
+      },
+      "seeding_key": {
+        "activity_section.key": "e96fc1bf-e836-4297-a617-f0aba48a0088",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "f16243d4-8086-48b0-88c0-c4484f41b94a",
+      "position": 52,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/7986265a1ff992093068226f0282cd2f-widget3.gif) | ![](https://images.code.org/da14dd2295c0392c4d180d5976625305-guide-summer1.png) | **Say:** As a group, decide how you think the news from this quarter will affect each asset. Circle your prediction in the activity guide.<br /><br />**Widget:** Click through each news story until the financial notification appears, but **do not click it yet**. Wait for students to complete their predictions first.<br /><br />**Activity Guide:** Have students fill in the News Cycle Prediction column underneath the Summer header |"
+      },
+      "seeding_key": {
+        "activity_section.key": "f16243d4-8086-48b0-88c0-c4484f41b94a",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "a6bc5e49-c0a8-4093-8af9-a220559bb4a1",
+      "position": 53,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+      },
+      "seeding_key": {
+        "activity_section.key": "a6bc5e49-c0a8-4093-8af9-a220559bb4a1",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "e0d1b00b-854a-4709-8257-e943ba691bf0",
+      "position": 54,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/763701488b06fc11bb627a42c896599b-widget4.gif) | ![](https://images.code.org/aafbc48789acde980f47d85149c63760-guide-summer2.png) | **Say:** Let's see how these news stories affected our assets and the market.<br /><br />**Widget:** Click the Financial Notification to reveal changes to the value of each asset. Students can compare their predictions to the result.<br /><br />**Activity Guide:** Have students fill in the New Market Value column underneath the Summer header |"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0d1b00b-854a-4709-8257-e943ba691bf0",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "268b7aa3-c2c9-41ea-b846-05dc6ecfd64c",
+      "position": 55,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen on the widget to show a summary screen. Note that the Stablecoins have appreciated in value. Have students complete the _Quantity We Own_ and _Fund Value_ columns of their guide, then add up the elements in the _Fund Value_ column to fill in the _Total Fund Value_ at the bottom of the guide. An example of what this could look like on their activity guide is available in the slide deck.",
+        "duration": "5",
+        "name": "Crypto Market Simulation: Summary"
+      },
+      "seeding_key": {
+        "activity_section.key": "268b7aa3-c2c9-41ea-b846-05dc6ecfd64c",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "ba76ce16-8286-4e99-b29f-ab2e8017f056",
+      "position": 56,
+      "properties": {
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/909067d558c55c3d127df4b32d1965b1-widget-summary.png) | ![](https://images.code.org/b129845bd945e69b24474eae16dcafa4-guide-summary.png) | **Say:** **Say:** Fill in the last two columns of your activity guide, then add up all the items in your last column to get your final fund value.<br /><br />**Widget:** Nothing needs to change on the widget, but make sure students see that their Stablecoins (especially Connect USD) have updated.<br /><br />**Activity Guide:** Have students complete the _Quantity We Own_ and _Fund Value_ columns of their guide, then add up the elements in the _Fund Value_ column to fill in the _Total Fund Value_ at the bottom of the guide. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba76ce16-8286-4e99-b29f-ab2e8017f056",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "9e859998-9ba0-441f-af4d-d8b511174543",
+      "position": 57,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you feel about the changes you made to your investments at the midway point of this activity?"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e859998-9ba0-441f-af4d-d8b511174543",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "87889a40-9fc5-4696-9c03-edfb8b2a0f0a",
+      "position": 58,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is another opportunity to decompress and discuss the whims of the market based and how it’s impacting their investments. Some students may be ready to reflect on the activity as a whole and the impact that the market has on their emotional state, since some funds may have skyrocketed in value and others may be close to bottoming out. This can be a useful thread to return to in the wrap-up of this activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "87889a40-9fc5-4696-9c03-edfb8b2a0f0a",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "dbc69a3c-0b29-4ba1-bc38-2928c4b14256",
+      "position": 59,
+      "properties": {
+        "description": "There are a lot of ups and downs when investing, especially in crypto markets. This activity simulates some of the experiences of folks who’ve invested their money - sometimes their investments go up, and sometimes they go down. Even when researching safe investments, it can be hard to predict what the market will do.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dbc69a3c-0b29-4ba1-bc38-2928c4b14256",
+        "lesson_activity.key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d"
+      }
+    },
+    {
+      "key": "9dd4d11c-1318-4c77-b047-9f3f25706d1b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Some assets in this activity had uses beyond just their financial value, especially some of the NFTs. If you were to own one of these items without caring about its financial value, what type of asset would you want to own? Why?"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dd4d11c-1318-4c77-b047-9f3f25706d1b",
+        "lesson_activity.key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb"
+      }
+    },
+    {
+      "key": "f30659d1-c21e-444d-be9a-b1b83415ad94",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt attempts to expand the reasoning why someone might want to own a digital asset - even though there is a narrative that all digital assets exist to make money, there may be other reasons to own one. This is similar to the warm-up prompt, where there are other reasons to own physical assets beyond being used solely for investment. Students may decide they want to own a piece of digital art just because it’s appealing to them, or own an NFT to be a part of a community or support an artist, or invest in a certain cryptocurrency because of the purpose it serves (such as IntCoin for international currency). "
+      },
+      "seeding_key": {
+        "activity_section.key": "f30659d1-c21e-444d-be9a-b1b83415ad94",
+        "lesson_activity.key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb"
+      }
     }
   ],
   "script_levels": [
@@ -849,6 +1680,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - Verify Signature Scenarios"
+        ],
         "progression": "Widget: Verifying Signatures"
       },
       "bonus": false,
@@ -871,6 +1705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 3"
+        ],
         "progression": "Widget: Blockchain Scenario 1"
       },
       "bonus": false,
@@ -893,6 +1730,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 2"
+        ],
         "progression": "Widget: Blockchain Scenario 2"
       },
       "bonus": false,
@@ -915,6 +1755,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 4"
+        ],
         "progression": "Widget: Blockchain Scenario 3"
       },
       "bonus": false,
@@ -937,6 +1780,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - Bitcoin - Scenario 1"
+        ],
         "progression": "Widget: Blockchain Scenario 4"
       },
       "bonus": false,
@@ -951,6 +1797,28 @@
       },
       "level_keys": [
         "Crypto - Bitcoin - Scenario 1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "[Teacher] Crypto Market Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crypto - Value - Teach Widget"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023",
+        "activity_section.key": "14dccb06-703b-44a6-8f7d-101ae829595a"
+      },
+      "level_keys": [
+        "Crypto - Value - Teach Widget"
       ]
     }
   ],
@@ -1014,9 +1882,33 @@
         "script.name": "blockchain-2023",
         "activity_section.key": "fce39193-57c3-4cb5-9cfc-dc65cc2d0c84"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crypto - Value - Teach Widget",
+        "script_level.level_keys": [
+          "Crypto - Value - Teach Widget"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023",
+        "activity_section.key": "14dccb06-703b-44a6-8f7d-101ae829595a"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[Example] Crypto Market Simulation",
+      "url": "https://docs.google.com/document/d/1Mnyl6Z_k0KJi5yRCmfwNBAro09iPccH8ve3gZTZRpTg/edit",
+      "key": "_example_crypto_market_simulation",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_example_crypto_market_simulation"
+      }
+    },
     {
       "name": "[Key] Blockchain Scenarios",
       "url": "https://docs.google.com/document/d/1CyuoQPSozVpsUi-EbjnKgd-oIJFzzVhvqEqV4j45WdU/edit#",
@@ -1055,6 +1947,18 @@
       }
     },
     {
+      "name": "Blockchain Asset Cards",
+      "url": "https://docs.google.com/presentation/d/1VbEvEElchksdpesH_maL4Rn4hOEmQ2FcOmh_FTtOzNc/edit",
+      "key": "asset_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "asset_cards"
+      }
+    },
+    {
       "name": "Blockchain Scenarios",
       "url": "https://docs.google.com/document/d/1-eaC5C-avcrnc-SWylUFjTgxQxgHzuEsIuirOohCy7c/edit",
       "key": "blockchain_scenarios",
@@ -1065,6 +1969,31 @@
       },
       "seeding_key": {
         "resource.key": "blockchain_scenarios"
+      }
+    },
+    {
+      "name": "Buy & Sell Slips",
+      "url": "https://docs.google.com/document/d/14fUN_27R-KAO-Q9LxQQW3Dl839gzrPmf4LtXrMxU0LI/edit",
+      "key": "buy_sell_slips",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "buy_sell_slips"
+      }
+    },
+    {
+      "name": "Crypto Market Simulation Overview",
+      "url": "https://docs.google.com/document/d/1pLQWAkFlc_H1lFGx_Hzu04LA3RA8uyUVVok28-Ivqi4/edit#",
+      "key": "crypto_market_simulation_overview",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "crypto_market_simulation_overview"
       }
     },
     {
@@ -1080,6 +2009,55 @@
       }
     },
     {
+      "name": "Crypto Market Simulation News Articles",
+      "url": "https://docs.google.com/document/d/1SU5WMXQweMTOqX-l-4r80tJCl7p7_O4u1qVqyoVEL5Y/edit#",
+      "key": "news_articles",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "news_articles"
+      }
+    },
+    {
+      "name": "Printable Asset Sheets",
+      "url": "https://drive.google.com/drive/folders/1SyJowdHNjliuQiI2H6O4OjhLiPZy050h?usp=share_link",
+      "key": "printable_asset_sheets",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "printable_asset_sheets"
+      }
+    },
+    {
+      "name": "Value on the Blockchain",
+      "url": "https://docs.google.com/presentation/d/1aZ--vmCT_6CHtrqSkFvQIw1jTpRQoDLB2MrcH-wozKA/template/preview",
+      "key": "value_on_the_blockchain",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "value_on_the_blockchain"
+      }
+    },
+    {
+      "name": "Crypto Market Simulation",
+      "url": "https://docs.google.com/document/d/1X2GQ0ebtkJhLnTG57QL7Tq9KIDCLKy6T9ZDoRFOUf2A/edit",
+      "key": "value_on_the_blockchain_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "value_on_the_blockchain_1"
+      }
+    },
+    {
       "name": "Vocabulary Matching",
       "url": "https://docs.google.com/document/d/1GzZxP2EXOUiI4T-M9-wtJk0Nyby3_QCId7CVDsjq4bY/edit",
       "key": "vocabulary_matching",
@@ -1090,6 +2068,19 @@
       },
       "seeding_key": {
         "resource.key": "vocabulary_matching"
+      }
+    },
+    {
+      "name": "Vocabulary Matching",
+      "url": "https://docs.google.com/document/d/1DMVgOGWuVbKJpniofn_8Bno5bmscNiiXlBXYeXVdBlI/edit#",
+      "key": "vocabulary_matching_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_matching_1"
       }
     }
   ],
@@ -1129,6 +2120,60 @@
         "lesson.key": "lesson-2",
         "resource.key": "vocabulary_matching"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_example_crypto_market_simulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "asset_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "buy_sell_slips"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "crypto_market_simulation_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "news_articles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "printable_asset_sheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "value_on_the_blockchain"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "value_on_the_blockchain_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "vocabulary_matching_1"
+      }
     }
   ],
   "scripts_resources": [
@@ -1138,6 +2183,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "asset",
+      "word": "Asset",
+      "definition": "Something you own that is valuable. Often, assets are exchanged or converted into currency.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "asset"
+      }
+    },
     {
       "key": "asymmetric_encryption",
       "word": "Asymmetric Encryption",
@@ -1176,6 +2231,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "key": "exchange",
+      "word": "Exchange",
+      "definition": "A marketplace where anybody can buy or sell something",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "exchange"
       }
     },
     {
@@ -1363,12 +2428,34 @@
         "lesson.key": "lesson-2",
         "vocabulary.key": "symmetric_encryption"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "asset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "exchange"
+      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
+    {
+      "key": "34a5389f-3ba2-4456-bf13-1bf84d87f5df",
+      "properties": {
+        "description": "Explain how an NFT, cryptocurrency, and stablecoin can gain or lose value in a digital marketplace"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "34a5389f-3ba2-4456-bf13-1bf84d87f5df"
+      }
+    },
     {
       "key": "90f812fe-aa3c-49e6-a8bb-8090ee40c1fe",
       "properties": {
@@ -1380,6 +2467,16 @@
       }
     },
     {
+      "key": "aef46940-cc35-45d3-ac0c-a0cca4cb5e23",
+      "properties": {
+        "description": "Explain that there are multiple reasons for investing in blockchain assets beyond pure financial gains"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "aef46940-cc35-45d3-ac0c-a0cca4cb5e23"
+      }
+    },
+    {
       "key": "ba1844fd-8866-4115-a085-8bd7acd69a38",
       "properties": {
         "description": "Use public key cryptography to verify transactions on the blockchain"
@@ -1387,6 +2484,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "ba1844fd-8866-4115-a085-8bd7acd69a38"
+      }
+    },
+    {
+      "key": "d03eac90-2755-41b9-9c5c-21003cd8ef39",
+      "properties": {
+        "description": "Provide a rationale for whether or not to invest in blockchain assets"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "d03eac90-2755-41b9-9c5c-21003cd8ef39"
       }
     },
     {
