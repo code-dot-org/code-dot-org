@@ -67,7 +67,7 @@ const styles = {
     width: '32px'
   },
   label: {
-    marginRight: 5,
+    marginLeft: 5,
     padding: 0
   }
 };

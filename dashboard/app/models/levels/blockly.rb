@@ -449,10 +449,10 @@ class Blockly < Level
 
   def localized_start_html(start_html)
     return unless start_html
-    start_html_xml = Nokogiri::XML(start_html, &:noblanks)
+    start_html_doc = Nokogiri::HTML(start_html, &:noblanks)
 
     # match any element that contains text
-    start_html_xml.xpath('//*[text()[normalize-space()]]').each do |element|
+    start_html_doc.xpath('//*[text()[normalize-space()]]').each do |element|
       localized_text = I18n.t(
         element.text,
         scope: [:data, :start_html, name],
@@ -462,7 +462,13 @@ class Blockly < Level
       element.content = localized_text if localized_text
     end
 
-    start_html_xml.serialize(save_with: XML_OPTIONS).strip
+    # returning the children of body removes extra <html><body> tags added by parsing with ::HTML
+    # the save_with option prevents the to_html method from pretty printing and adding newlines
+    # see: https://github.com/premailer/premailer/issues/345
+    start_html_doc.xpath("//body").children.to_html(
+      encoding: 'UTF-8',
+      save_with: Nokogiri::XML::Node::SaveOptions::DEFAULT_HTML ^ Nokogiri::XML::Node::SaveOptions::FORMAT
+    )
   end
 
   def localized_authored_hints

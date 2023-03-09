@@ -9,6 +9,8 @@ const REFRESH_PROJECT_NAME = 'project/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'project/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'project/SET_NAME_FAILURE';
 const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
+const REFRESH_IN_RESTRICTED_SHARE_MODE =
+  'project/REFRESH_IN_RESTRICTED_SHARE_MODE';
 
 export const projectUpdatedStatuses = {
   default: 'default',
@@ -30,7 +32,8 @@ const initialState = {
   projectName: '',
   projectNameFailure: undefined,
   showTryAgainDialog: false,
-  showWorkspaceAlert: {type: '', message: '', displayBottom: undefined}
+  showWorkspaceAlert: {type: '', message: '', displayBottom: undefined},
+  inRestrictedShareMode: false
 };
 
 export default (state = initialState, action) => {
@@ -88,6 +91,12 @@ export default (state = initialState, action) => {
     return {
       ...state,
       projectNameFailure: action.projectNameFailure
+    };
+  }
+  if (action.type === REFRESH_IN_RESTRICTED_SHARE_MODE) {
+    return {
+      ...state,
+      inRestrictedShareMode: dashboard.project.inRestrictedShareMode()
     };
   }
 
@@ -157,3 +166,9 @@ export const setNameFailure = projectNameFailure => ({
 export const unsetNameFailure = () => ({
   type: UNSET_NAME_FAILURE
 });
+
+export function refreshInRestrictedShareMode() {
+  return {
+    type: REFRESH_IN_RESTRICTED_SHARE_MODE
+  };
+}
