@@ -136,14 +136,15 @@ export default class AnalyticsReporter {
   }
 
   onVideoClosed(id: string, duration: number) {
+    const logMessage = `Video closed. Id: ${id}. Duration: ${duration}}`;
+
     if (!this.sessionInProgress) {
-      this.log('No session in progress');
+      this.log(`No session in progress.  (${logMessage}`);
       return;
+    } else {
+      this.log(logMessage);
     }
 
-    this.log(
-      `Video closed. Id: ${id}.  Duration: ${duration}}`
-    );
     track('Video closed', {id, duration}).promise;
   }
 
