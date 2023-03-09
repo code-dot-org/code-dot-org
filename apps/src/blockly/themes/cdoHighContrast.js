@@ -65,7 +65,7 @@ const cdoHighContrastBlockStyles = {
   ...cdoCustomHighContrastStyles
 };
 
-const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   'cdohighcontrast',
   {
     base: HighContrastTheme,
@@ -81,7 +81,6 @@ const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   }
 );
 
-export default CdoHighContrastTheme;
 export const MusicLabHighContrastTheme = GoogleBlockly.Theme.defineTheme(
   'musiclabhighcontrast',
   {
