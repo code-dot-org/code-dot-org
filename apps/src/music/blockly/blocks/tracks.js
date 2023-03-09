@@ -50,9 +50,14 @@ export const newTrackAtStart = {
     extensions: [DEFAULT_TRACK_NAME_EXTENSION]
   },
   generator: ctx => {
-    return `MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
+    return `
+    Sequencer.createTrack("${ctx.id}", "${ctx.getFieldValue(
       TRACK_NAME_FIELD
-    )}", 1, true);\n`;
+    )}", 1, false);\n
+    MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
+      TRACK_NAME_FIELD
+    )}", 1, true);\n
+    `;
   }
 };
 
@@ -79,7 +84,15 @@ export const newTrackAtMeasure = {
     extensions: [DEFAULT_TRACK_NAME_EXTENSION]
   },
   generator: ctx => {
-    return `MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
+    return `
+    Sequencer.createTrack("${ctx.id}", "${ctx.getFieldValue(
+      TRACK_NAME_FIELD
+    )}", ${Blockly.JavaScript.valueToCode(
+      ctx,
+      'measure',
+      Blockly.JavaScript.ORDER_ASSIGNMENT
+    )}, false);\n
+    MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
       TRACK_NAME_FIELD
     )}", ${Blockly.JavaScript.valueToCode(
       ctx,
@@ -112,7 +125,13 @@ export const newTrackOnTrigger = {
     extensions: [DEFAULT_TRACK_NAME_EXTENSION, DYNAMIC_TRIGGER_EXTENSION]
   },
   generator: ctx => {
-    return `MusicPlayer.createTrack("${
+    return `
+    Sequencer.createTrack("${
+      ctx.id
+    }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
+      TRACK_NAME_FIELD
+    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), true);\n
+    MusicPlayer.createTrack("${
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
       TRACK_NAME_FIELD
@@ -156,9 +175,13 @@ export const playSoundInTrack = {
         )}"`
       );
     }
-    return `MusicPlayer.addSoundsToTrack(${getCurrentTrackId(
-      ctx
-    )}, ${allSounds.join(',')});\n`;
+    return `
+    Sequencer.addSoundsToTrack(${getCurrentTrackId(ctx)}, ${allSounds.join(
+      ','
+    )});\n
+    MusicPlayer.addSoundsToTrack(${getCurrentTrackId(ctx)}, ${allSounds.join(
+      ','
+    )});\n`;
   }
 };
 
@@ -173,7 +196,11 @@ export const restInTrack = {
     style: 'lab_blocks'
   },
   generator: ctx =>
-    `MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
+    `
+    Sequencer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
+      FIELD_REST_DURATION_NAME
+    )});\n
+    MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
       FIELD_REST_DURATION_NAME
     )});\n`
 };
