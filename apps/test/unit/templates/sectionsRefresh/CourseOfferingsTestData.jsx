@@ -124,7 +124,7 @@ export const highSchoolCourseOfferings = {
   }
 };
 
-// Keeping 4 categories to be able to test the uneven split of headers
+// Keeping 5 categories to be able to test the uneven split of headers
 export const hocCourseOfferings = {
   hoc: {
     Favorites: [
@@ -274,6 +274,87 @@ export const hocCourseOfferings = {
             name: 'Keep On Dancing (2018)',
             path: '/s/dance-extras',
             type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
+    ]
+  }
+};
+
+export const plCourseOfferings = {
+  pl: {
+    '6–12 Virtual Academic Year Workshops': [
+      {
+        id: 157,
+        key: 'vpl-csd',
+        display_name: 'CS Discoveries Virtual Professional Learning',
+        course_versions: [
+          {
+            id: 1231,
+            key: '2022',
+            version_year: '2022',
+            name: 'CS Discoveries Virtual Professional Learning 2022 - 23',
+            path: '/s/vpl-csd-2022',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      },
+      {
+        id: 158,
+        key: 'vpl-csp',
+        display_name: 'CS Principles Virtual Professional Learning',
+        course_versions: [
+          {
+            id: 1234,
+            key: '2022',
+            version_year: '2022',
+            name: 'CS Principles Virtual Professional Learning 22 - 23',
+            path: '/s/vpl-csp-2022',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      },
+      {
+        id: 457,
+        key: 'vpl-csa',
+        display_name: 'CSA Virtual Professional Learning',
+        course_versions: [
+          {
+            id: 1228,
+            key: '2022',
+            version_year: '2022',
+            name: 'CSA Virtual Professional Learning',
+            path: '/s/vpl-csa-2022',
+            type: 'Unit',
+            is_stable: true,
+            is_recommended: true,
+            locales: ['English']
+          }
+        ]
+      }
+    ],
+    'Self-Paced': [
+      {
+        id: 191,
+        key: 'self-paced-pl-csa',
+        display_name: 'CSA Getting Started Modules',
+        course_versions: [
+          {
+            id: 611,
+            key: '2022',
+            version_year: "'22-'23",
+            name: 'CSA Getting Started Modules',
+            path: '/courses/self-paced-pl-csa-2022',
+            type: 'UnitGroup',
             is_stable: true,
             is_recommended: true,
             locales: ['English']

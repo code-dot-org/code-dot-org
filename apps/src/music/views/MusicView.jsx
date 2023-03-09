@@ -293,10 +293,13 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    if (event.key === 't') {
+    // When assigning new keyboard shortcuts, be aware that the following
+    // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
+    // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
+    if (event.key === 'v') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
-    if (event.key === 'i') {
+    if (event.key === 'b') {
       this.toggleInstructions(true);
     }
     if (event.key === 'n') {
