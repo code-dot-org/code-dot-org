@@ -40,9 +40,9 @@ execute 'install ruby-build' do
 end
 
 execute 'install ruby with ruby build' do
-  # Target /usr/local; it might make sense to install ruby itself to /usr, but
-  # the directory we target here is also the one RubyGems will target for its
-  # own installation and local is more appropriate for that content.
+  # Target /usr/local; it might make sense to install ruby itself to /usr as
+  # our old apt approach did, but the directory we target here is also the one
+  # RubyGems will target, and local is more appropriate for that installation
   command "ruby-build #{node['cdo-ruby']['version']} /usr/local"
   not_if "which ruby && ruby --version | grep --quiet '^ruby #{node['cdo-ruby']['version']}'"
 end
