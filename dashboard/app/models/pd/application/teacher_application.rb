@@ -82,7 +82,7 @@ module Pd::Application
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_save :save_partner, if: -> {form_data_changed? && !deleted?}
+    before_save :save_partner, if: -> {!deleted? && (form_data_changed? || regional_partner_id.nil?)}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed? || form_data_changed?}
 
