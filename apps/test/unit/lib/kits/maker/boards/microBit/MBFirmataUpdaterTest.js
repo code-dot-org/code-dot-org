@@ -24,12 +24,14 @@ describe('MBFirmataUpdater', () => {
       const version = mbFirmataUpdater.detectMicroBitVersion(device);
       expect(version).to.equal(MICROBIT_V1);
     });
+
     it('returns correct version for micro:bit v2', () => {
       const mbFirmataUpdater = new MBFirmataUpdater();
       const device = {serialNumber: '99039876'};
       const version = mbFirmataUpdater.detectMicroBitVersion(device);
       expect(version).to.equal(MICROBIT_V2);
     });
+
     it('returns null for device that is not micro:bit', () => {
       const mbFirmataUpdater = new MBFirmataUpdater();
       const device = {serialNumber: '88001234'};
@@ -37,18 +39,21 @@ describe('MBFirmataUpdater', () => {
       expect(version).to.equal(null);
     });
   });
+
   describe('getFirmataURLByVersion function', () => {
     it('returns correct URL for micro:bit v1', () => {
       const mbFirmataUpdater = new MBFirmataUpdater();
       const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V1);
       expect(URL).to.equal(MICROBIT_FIRMATA_V1_URL);
     });
+
     it('returns correct URL for micro:bit v2', () => {
       const mbFirmataUpdater = new MBFirmataUpdater();
       const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V2);
       expect(URL).to.equal(MICROBIT_FIRMATA_V2_URL);
     });
   });
+
   describe('setPercentUpdateComplete function', () => {
     beforeEach(() => {
       stubRedux();
