@@ -20,6 +20,7 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
+import Video from './Video';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -82,7 +83,8 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: false,
-      instructionsPosIndex
+      instructionsPosIndex,
+      showingVideo: true
     };
   }
 
@@ -327,6 +329,10 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
+  onVideoClosed = () => {
+    this.setState({showingVideo: false});
+  };
+
   renderInstructions(position) {
     return (
       <div
@@ -381,6 +387,9 @@ class UnconnectedMusicView extends React.Component {
     const instructionsPosition =
       instructionPositionOrder[this.state.instructionsPosIndex];
 
+    const showVideo =
+      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
@@ -397,6 +406,10 @@ class UnconnectedMusicView extends React.Component {
               {this.state.showInstructions &&
                 instructionsPosition === InstructionsPositions.TOP &&
                 this.renderInstructions(InstructionsPositions.TOP)}
+
+              {showVideo && (
+                <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+              )}
 
               {this.state.timelineAtTop &&
                 this.renderTimelineArea(
