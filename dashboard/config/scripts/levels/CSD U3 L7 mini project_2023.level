@@ -68,16 +68,16 @@
     "text_mode_at_start": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/courses/csd-2022/guides/random-numbers",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/naming-variables",
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
+    ],
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
     ]
   },
   "game_id": 50,
@@ -86,7 +86,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-06T23:48:14.724+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2023\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2023\"},{\"changed_at\":\"2023-03-06 23:57:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"teacher_markdown\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-06T23:48:14.724+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2023\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2023\"},{\"changed_at\":\"2023-03-06 23:57:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"teacher_markdown\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 00:07:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
