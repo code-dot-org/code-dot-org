@@ -9,7 +9,7 @@ import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
 import ProgramSequencer from '../player/ProgramSequencer';
 import RandomSkipManager from '../player/RandomSkipManager';
-import {Triggers} from '../constants';
+import {BlockMode, Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -20,6 +20,9 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
+import Simple2Sequencer from '../player/sequencers/Simple2Sequencer';
+import TracksSequencer from '../player/sequencers/TracksSequencer';
+import PlaybackUIEventManager from '../PlaybackUIEventManager';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -74,6 +77,13 @@ class UnconnectedMusicView extends React.Component {
         instructionsPosIndex = posIndex;
       }
     }
+
+    const blockMode = getBlockMode();
+    this.sequencer =
+      blockMode === BlockMode.SIMPLE2
+        ? new Simple2Sequencer(this.player)
+        : new TracksSequencer(this.player);
+    this.playbackUIEventManager = new PlaybackUIEventManager();
 
     this.state = {
       instructions: null,
@@ -234,7 +244,14 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
+
+    this.sequencer.reset();
     this.musicBlocklyWorkspace.executeTrigger(id);
+    this.playbackUIEventManager.addNewEvents(
+      this.sequencer.getPlaybackEvents()
+    );
+    this.player.playEvents(this.sequencer.getPlaybackEvents());
+
     this.triggerCount++;
   };
 
@@ -252,6 +269,7 @@ class UnconnectedMusicView extends React.Component {
     return this.musicBlocklyWorkspace.compileSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
+      Sequencer: this.sequencer,
       RandomSkipManager: this.randomSkipManager,
       getTriggerCount: () => this.triggerCount
     });
@@ -260,9 +278,19 @@ class UnconnectedMusicView extends React.Component {
   executeCompiledSong = () => {
     // Clear the events list of when_run sounds, because it will be
     // populated next.
-    this.player.clearWhenRunEvents();
+
+    this.playbackUIEventManager.clearWhenRunEvents();
+    this.sequencer.reset();
 
     this.musicBlocklyWorkspace.executeCompiledSong();
+    this.playbackUIEventManager.addNewEvents(
+      this.sequencer.getPlaybackEvents()
+    );
+
+    if (this.state.isPlaying) {
+      this.player.clearWhenRunEvents();
+      this.player.playEvents(this.sequencer.getPlaybackEvents());
+    }
   };
 
   playSong = () => {
@@ -272,13 +300,15 @@ class UnconnectedMusicView extends React.Component {
 
     this.executeCompiledSong();
 
-    this.player.playSong();
+    // this.player.playSong();
+    this.player.startPlaybackWithEvents(this.sequencer.getPlaybackEvents());
 
     this.setState({isPlaying: true, currentPlayheadPosition: 1});
   };
 
   stopSong = () => {
     this.player.stopSong();
+    this.playbackUIEventManager.clearTriggeredEvents();
 
     this.executeCompiledSong();
 
@@ -385,7 +415,8 @@ class UnconnectedMusicView extends React.Component {
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
           value={{
-            getPlaybackEvents: () => this.player.getPlaybackEvents(),
+            getPlaybackEvents: () =>
+              this.playbackUIEventManager.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
             getTypeForId: id => this.player.getTypeForId(id),

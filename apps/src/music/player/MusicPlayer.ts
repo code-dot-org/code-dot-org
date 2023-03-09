@@ -8,7 +8,7 @@ const soundApi = require('./sound');
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
 
-interface PlaybackEvent {
+export interface PlaybackEvent {
   /** Type of event */
   type: 'sound' | 'pattern';
   /** Measure when this event occurs */
@@ -19,6 +19,8 @@ interface PlaybackEvent {
   trackId?: string;
   /** Function context this event belongs to (only used in Simple2 mode) */
   functionContext?: FunctionContext;
+  skipContext?: SkipContext;
+  effects?: Effects;
 }
 
 interface FunctionContext {
@@ -28,40 +30,36 @@ interface FunctionContext {
   uniqueInvocationId: number;
 }
 
-interface SkipContext {
+export interface SkipContext {
   insideRandom: boolean;
   skipSound: boolean;
 }
 
-type EffectValue = 'normal' | 'medium' | 'low';
+export type EffectValue = 'normal' | 'medium' | 'low';
 export interface Effects {
-   volume?: EffectValue;
-   filter?: EffectValue;
-   delay?: EffectValue;
+  volume?: EffectValue;
+  filter?: EffectValue;
+  delay?: EffectValue;
 }
 
-interface SoundEvent extends PlaybackEvent {
+export interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
-  skipContext?: SkipContext;
-  effects?: Effects;
 }
 
-interface PatternTickEvent {
+export interface PatternTickEvent {
   tick: number;
   src: string;
 }
 
-interface PatternEventValue {
+export interface PatternEventValue {
   kit: string;
   events: PatternTickEvent[];
 }
 
-interface PatternEvent extends PlaybackEvent {
+export interface PatternEvent extends PlaybackEvent {
   type: 'pattern';
   value: PatternEventValue;
-  skipContext?: SkipContext;
-  effects?: Effects;
 }
 
 interface TrackMetadata {
@@ -193,10 +191,7 @@ export default class MusicPlayer {
       console.log('MusicPlayer not initialized');
       return;
     }
-    if (
-      !value ||
-      !measure
-    ) {
+    if (!value || !measure) {
       console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
       return;
     }
@@ -247,6 +242,18 @@ export default class MusicPlayer {
     }
 
     this.samplePlayer.startPlayback(sampleEvents);
+  }
+
+  startPlaybackWithEvents(events: PlaybackEvent[]) {
+    this.samplePlayer.startPlayback(
+      events.map(event => this.convertEventToSamples(event)).flat()
+    );
+  }
+
+  playEvents(events: PlaybackEvent[]) {
+    this.samplePlayer.playSamples(
+      events.map(event => this.convertEventToSamples(event)).flat()
+    );
   }
 
   /**
@@ -461,10 +468,14 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
+    if (event.skipContext && event.skipContext.skipSound) {
+      return [];
+    }
+    
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
 
-      if (soundEvent.skipContext?.skipSound) {
+      if (soundEvent.skipContext && soundEvent.skipContext.skipSound) {
         return [];
       }
 
