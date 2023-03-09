@@ -12,7 +12,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.7.5
+     ruby --version  # --> ruby 2.7.7
      node --version  # --> v14.17.1
      yarn --version  # --> 1.22.5
      ```
