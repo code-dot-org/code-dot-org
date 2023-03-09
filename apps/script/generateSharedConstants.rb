@@ -101,6 +101,7 @@ def main
     generate_multiple_constants(
         %w(
       PUBLISHED_STATE
+      NONE_OPTION
       INSTRUCTION_TYPE
       PARTICIPANT_AUDIENCE
       INSTRUCTOR_AUDIENCE
@@ -111,6 +112,8 @@ def main
       COURSE_OFFERING_MARKETING_INITIATIVES
       COURSE_OFFERING_CS_TOPICS
       COURSE_OFFERING_SCHOOL_SUBJECTS
+      DEVICE_TYPES
+      DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false

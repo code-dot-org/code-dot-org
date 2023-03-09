@@ -13,6 +13,9 @@ module Curriculum
       }
     ).freeze
 
+    # Default "(None)" option for dropdowns in editor
+    NONE_OPTION = '(None)'
+
     # Used to determine style a course is taught in
     INSTRUCTION_TYPE = OpenStruct.new(
       {
@@ -143,6 +146,26 @@ module Curriculum
         science: 'Science',
         english_language_arts: 'English Language Arts',
         history: 'History'
+      }
+    ).freeze
+
+    # Device types for course offerings
+    DEVICE_TYPES = OpenStruct.new(
+      {
+        computer: 'Computer',
+        chromebook: 'Chromebook',
+        tablet: 'Tablet',
+        mobile: 'Mobile',
+        no_device: 'No Device'
+      }
+    ).freeze
+
+    # Device compatibility levels for course offerings
+    DEVICE_COMPATIBILITY_LEVELS = OpenStruct.new(
+      {
+        ideal: 'Ideal',
+        not_recommended: 'Not recommended',
+        incompatible: 'Incompatible'
       }
     ).freeze
 
