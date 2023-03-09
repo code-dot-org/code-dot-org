@@ -49,7 +49,7 @@ export function UnconnectedAnimationUploadButton({
         onClick={
           showRestrictedUploadWarning
             ? project.isPublished()
-              ? () => setIsPublishedWarningModalOpen(true)
+              ? showPublishedWarning
               : showUploadModal
             : onUploadClick
         }
@@ -61,6 +61,16 @@ export function UnconnectedAnimationUploadButton({
   function showUploadModal() {
     setIsUploadModalOpen(true);
     showingUploadWarning();
+  }
+
+  function showPublishedWarning() {
+    setIsPublishedWarningModalOpen(true);
+    showingUploadWarning();
+  }
+
+  function closePublishedWarning() {
+    setIsPublishedWarningModalOpen(false);
+    exitedUploadWarning();
   }
 
   // Warning dialog that says if you upload, you can no longer share and remix,
@@ -120,7 +130,7 @@ export function UnconnectedAnimationUploadButton({
     return (
       <BaseDialog
         isOpen={isPublishedWarningModalOpen}
-        handleClose={() => setIsPublishedWarningModalOpen(false)}
+        handleClose={closePublishedWarning}
       >
         <div>
           <h1 className={styles.modalHeader}>
@@ -132,7 +142,7 @@ export function UnconnectedAnimationUploadButton({
           <button
             className={classNames(styles.modalButton, styles.confirmButton)}
             type="button"
-            onClick={() => setIsPublishedWarningModalOpen(false)}
+            onClick={closePublishedWarning}
           >
             {msg.dialogOK()}
           </button>
