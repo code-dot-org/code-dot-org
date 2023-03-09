@@ -77,10 +77,10 @@ export default function QuickAssignTableHocPl({
   return (
     <div>
       {marketingAudience === MARKETING_AUDIENCE.HOC && (
-        <div>{allTables(i18n.courseOfferingHOC())}</div>
+        <div>{allTables(i18n.teacherCourseHoc())}</div>
       )}
       {marketingAudience === MARKETING_AUDIENCE.PL && (
-        <div>{allTables(i18n.ProfessionalLearning())}</div>
+        <div>{allTables(i18n.professionalLearning())}</div>
       )}
     </div>
   );

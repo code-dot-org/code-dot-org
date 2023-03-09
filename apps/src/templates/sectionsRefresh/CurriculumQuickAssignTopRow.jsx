@@ -68,7 +68,7 @@ export default function CurriculumQuickAssignTopRow({
         <Button
           id={'uitest-hoc-button'}
           className={moduleStyles.buttonStyle}
-          text={i18n.courseOfferingHOC()}
+          text={i18n.teacherCourseHoc()}
           size={Button.ButtonSize.large}
           icon={
             marketingAudience === MARKETING_AUDIENCE.HOC

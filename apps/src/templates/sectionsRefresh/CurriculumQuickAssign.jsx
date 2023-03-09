@@ -56,7 +56,8 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   // To distinguish between types of tables: HOC & PL vs Grade Bands
   const isPlOrHoc = () => {
     return (
-      marketingAudience === (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL)
+      marketingAudience === MARKETING_AUDIENCE.HOC ||
+      marketingAudience === MARKETING_AUDIENCE.PL
     );
   };
 
@@ -74,7 +75,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
           onChange={toggleDecideLater}
         />
         <h3>{i18n.assignACurriculum()}</h3>
-        <h4>{i18n.useDropdownMessage()}</h4>
+        <h5>{i18n.useDropdownMessage()}</h5>
       </div>
       <CurriculumQuickAssignTopRow
         showPlOfferings={showPlOfferings}
