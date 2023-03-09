@@ -283,7 +283,9 @@ CourseOfferingEditor.propTypes = {
     grade_levels: PropTypes.string,
     curriculum_type: PropTypes.string,
     header: PropTypes.string,
-    marketing_initiative: PropTypes.string
+    marketing_initiative: PropTypes.string,
+    cs_topic: PropTypes.string,
+    school_subject: PropTypes.string
   })
 };
 
