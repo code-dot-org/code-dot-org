@@ -84,8 +84,7 @@ class UnconnectedMusicView extends React.Component {
       timelineAtTop: false,
       showInstructions: false,
       instructionsPosIndex,
-      showingVideo: true,
-      sessionStartTime: Date.now()
+      showingVideo: true
     };
   }
 
@@ -329,9 +328,6 @@ class UnconnectedMusicView extends React.Component {
 
   onVideoClosed = () => {
     this.setState({showingVideo: false});
-
-    const videoDuration = (Date.now() - this.state.sessionStartTime) / 1000;
-    this.analyticsReporter.onVideoClosed('initial-modal-0', videoDuration);
   };
 
   renderInstructions(position) {
@@ -406,7 +402,7 @@ class UnconnectedMusicView extends React.Component {
                 this.renderInstructions(InstructionsPositions.TOP)}
 
               {this.state.showingVideo && (
-                <Video onClose={this.onVideoClosed} />
+                <Video id="initial-modal-0" onClose={this.onVideoClosed} />
               )}
 
               {this.state.timelineAtTop &&

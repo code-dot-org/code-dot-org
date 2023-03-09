@@ -1,7 +1,14 @@
 import PropTypes from 'prop-types';
-import React, {useLayoutEffect, useState} from 'react';
+import React, {
+  useRef,
+  useContext,
+  useLayoutEffect,
+  useEffect,
+  useState
+} from 'react';
 import styles from './video.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {AnalyticsContext} from '../context';
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -19,7 +26,14 @@ function useWindowSize() {
 /**
  * Renders a simple modal video player.
  */
-const Video = ({onClose}) => {
+const Video = ({id, onClose}) => {
+  const startTime = useRef(null);
+  const analyticsReporter = useContext(AnalyticsContext);
+
+  useEffect(() => {
+    startTime.current = Date.now();
+  }, []);
+
   let [targetWidth, targetHeight] = useWindowSize();
   targetWidth -= 80;
   targetHeight -= 100;
@@ -32,6 +46,13 @@ const Video = ({onClose}) => {
     width = targetWidth;
     height = (9 / 16) * width;
   }
+
+  const onCloseClicked = () => {
+    onClose();
+
+    const videoDuration = (Date.now() - startTime.current) / 1000;
+    analyticsReporter.onVideoClosed(id, videoDuration);
+  };
 
   return (
     <div id="video-container" className={styles.container}>
@@ -50,7 +71,7 @@ const Video = ({onClose}) => {
         <div className={styles.closeContainer}>
           <FontAwesome
             icon={'times'}
-            onClick={onClose}
+            onClick={onCloseClicked}
             className={styles.closeIcon}
           />
         </div>
@@ -60,6 +81,7 @@ const Video = ({onClose}) => {
 };
 
 Video.propTypes = {
+  id: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired
 };
 
