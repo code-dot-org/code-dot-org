@@ -43,30 +43,42 @@ const INITIAL_STATE = {
   }
 };
 
+const setUpWrapper = (state = {}, jsData = {}) => {
+  const div = document.createElement('div');
+  div.setAttribute('id', 'attach-to-div');
+  const script = document.createElement('script');
+  script.dataset.summary = JSON.stringify({...JS_DATA, ...jsData});
+  document.head.appendChild(script);
+  document.body.appendChild(div);
+
+  const store = createStore(
+    combineReducers({
+      isRtl,
+      viewAs,
+      teacherSections,
+      progress
+    }),
+    {...INITIAL_STATE, ...state}
+  );
+
+  const wrapper = mount(
+    <Provider store={store}>
+      <CheckForUnderstanding />
+    </Provider>,
+    {attachTo: div}
+  );
+
+  return wrapper;
+};
+
+afterEach(() => {
+  document.head.removeChild(document.querySelector('script[data-summary]'));
+  document.body.removeChild(document.querySelector('#attach-to-div'));
+});
+
 describe('CheckForUnderstanding', () => {
   it('renders elements', () => {
-    const div = document.createElement('div');
-    const script = document.createElement('script');
-    script.dataset.summary = JSON.stringify(JS_DATA);
-    document.head.appendChild(script);
-    document.body.appendChild(div);
-
-    const store = createStore(
-      combineReducers({
-        isRtl,
-        viewAs,
-        teacherSections,
-        progress
-      }),
-      INITIAL_STATE
-    );
-
-    const wrapper = mount(
-      <Provider store={store}>
-        <CheckForUnderstanding />
-      </Provider>,
-      {attachTo: div}
-    );
+    const wrapper = setUpWrapper();
 
     // Back link, but no next link.
     expect(wrapper.find(`.${styles.navLinks} a`).length).to.eq(1);
@@ -84,5 +96,43 @@ describe('CheckForUnderstanding', () => {
     // Section selector, with one section.
     expect(wrapper.find('SectionSelector').length).to.eq(1);
     expect(wrapper.find('SectionSelector option').length).to.eq(2);
+  });
+
+  it('applies correct classes when rtl', () => {
+    const wrapper = setUpWrapper({
+      isRtl: true,
+      progress: {
+        currentLessonId: 0,
+        currentLevelId: '0',
+        lessons: [
+          {
+            id: 0,
+            levels: [{activeId: '0', position: 1}, {activeId: '1', position: 2}]
+          }
+        ]
+      }
+    });
+
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(1);
+
+    expect(wrapper.find(`.${styles.navLinkRight}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.navLinkLeft}`).length).to.eq(1);
+  });
+
+  it('renders teacher markdown if defined', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {teacher_markdown: 'test teacher markdown'}
+    );
+
+    console.log(wrapper.debug());
+    expect(wrapper.find('SafeMarkdown').length).to.eq(2);
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(1)
+        .text()
+    ).to.eq('test teacher markdown');
   });
 });
