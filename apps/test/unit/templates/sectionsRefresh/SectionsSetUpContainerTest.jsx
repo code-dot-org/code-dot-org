@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
 
 describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
@@ -79,6 +80,40 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
+
+    sinon.restore();
+  });
+
+  it('passes participantType and loginTyp to ajax request when save is clicked', () => {
+    sinon
+      .stub(document, 'querySelector')
+      .withArgs('#sections-set-up-container')
+      .returns({
+        checkValidity: () => true
+      })
+      .withArgs('meta[name="csrf-token"]')
+      .returns({
+        attributes: {content: {value: null}}
+      });
+    sinon
+      .stub(utils, 'queryParams')
+      .withArgs('loginType')
+      .returns('word')
+      .withArgs('participantType')
+      .returns('student');
+    const fetchSpy = sinon.spy(window, 'fetch');
+
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    wrapper
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(fetchSpy).to.have.been.called.once;
+    const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
+    expect(fetchBody.login_type).to.equal('word');
+    expect(fetchBody.participant_type).to.equal('student');
 
     sinon.restore();
   });

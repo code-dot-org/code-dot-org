@@ -41,6 +41,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2
   },
+  [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2
+  },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
@@ -353,12 +357,8 @@ export function getToolbox() {
         {
           Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
-          ],
-          Effects: [
-            BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2
           ],
           Control: [
             BlockTypes.TRIGGERED_AT_SIMPLE2,
@@ -366,6 +366,11 @@ export function getToolbox() {
             BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
             BlockTypes.PLAY_SOUNDS_RANDOM,
             BlockTypes.REPEAT_SIMPLE2
+          ],
+          Effects: [
+            BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2
           ]
         },
         {includeFunctions: true}

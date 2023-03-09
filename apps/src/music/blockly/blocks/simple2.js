@@ -3,12 +3,18 @@ import {
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
+  FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE
 } from '../constants';
-import {fieldRestDurationDefinition, fieldSoundsDefinition} from '../fields';
+import {
+  fieldSoundsDefinition,
+  fieldPatternDefinition,
+  fieldRestDurationDefinition
+} from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
+import {DEFAULT_PATTERN_LENGTH} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -119,6 +125,7 @@ export const triggeredAtSimple2 = {
         name: '${block.getFieldValue(TRIGGER_FIELD)}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
@@ -136,7 +143,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -159,6 +166,36 @@ export const playSoundAtCurrentLocationSimple2 = {
     `
 };
 
+export const playPatternAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'play pattern %1',
+    args0: [fieldPatternDefinition],
+
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'play pattern',
+    helpUrl: ''
+  },
+  generator: block =>
+    `
+      MusicPlayer.playPatternAtMeasureById(
+        ${JSON.stringify(block.getFieldValue(FIELD_PATTERN_NAME))},
+        ProgramSequencer.getCurrentMeasure(),
+        __insideWhenRun,
+        null,
+        __currentFunction,
+        RandomSkipManager.getSkipContext(),
+        __effects
+      );
+      ProgramSequencer.updateMeasureForPlayByLength(
+        ${DEFAULT_PATTERN_LENGTH}
+      );
+    `
+};
+
 export const playRestAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
@@ -167,7 +204,7 @@ export const playRestAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'rest',
     helpUrl: ''
   },
@@ -202,7 +239,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'lab_blocks',
     tooltip: 'set effect',
     helpUrl: ''
   },
@@ -230,7 +267,7 @@ export const playSoundsTogether = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'flow_blocks',
+    style: 'logic_blocks',
     tooltip: 'play sounds together',
     helpUrl: ''
   },
@@ -256,7 +293,7 @@ export const playSoundsSequential = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'flow_blocks',
+    style: 'logic_blocks',
     tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
@@ -282,7 +319,7 @@ export const playSoundsRandom = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'flow_blocks',
+    style: 'logic_blocks',
     tooltip: 'play sound randomly',
     helpUrl: ''
   },

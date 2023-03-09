@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2023-02-01 23:34:05 UTC",
+    "serialized_at": "2023-03-08 22:11:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1471,7 +1471,7 @@
       "key": "398f58bc-86f7-469e-a3d1-5f60556bd4ac",
       "position": 1,
       "properties": {
-        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -5713,7 +5713,7 @@
       "key": "744c8609-33ca-4ebe-a5c4-1b24c9963c18",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "name": "Post-Project Test"
       },
       "seeding_key": {
@@ -6920,6 +6920,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd4-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd4-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd4-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd4-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "App Design Kickoff",
       "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
       "key": "app_design_kickoff",
@@ -7020,11 +7064,10 @@
     },
     {
       "name": "Bugs and Features",
-      "url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1y6QCAd_xow-sik_VBFXv3iPxe4lut6QPUj_AdUj7YRY/template/preview",
       "key": "bugs_and_features_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7033,11 +7076,10 @@
     },
     {
       "name": "Build a Digital Prototype",
-      "url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1m_wCIIDoIp_ErwXCfiLR7C0gz76UT_SOXpE0zehxDFI/template/preview",
       "key": "build_a_digital_prototype",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7046,11 +7088,10 @@
     },
     {
       "name": "Build a Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/template/preview",
+      "url": "https://docs.google.com/presentation/d/16FI22pYInGobcTyY-d_gT6I1-0yy8csglrXFGuOZnaU/template/preview",
       "key": "build_a_paper_prototype",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7083,6 +7124,46 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "Design Mode",
       "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
       "key": "design_mode",
@@ -7108,11 +7189,10 @@
     },
     {
       "name": "Design Mode in App Lab",
-      "url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1OaU4Usq0hBND-uOEQ94p14bODWZXwEgDxmszDQmQUZw/template/preview",
       "key": "design_mode_in_app_lab",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7121,11 +7201,10 @@
     },
     {
       "name": "Designing Apps for Good",
-      "url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Jgq8VFas_arxyvooUEleRJhVJNeWoOfkIOvEb-zkdDA/template/preview",
       "key": "designing_apps_for_good",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7159,7 +7238,7 @@
     },
     {
       "name": "Designing With Empathy",
-      "url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1J7jcGlNc_NcAZVKRPjYh6HZklX4u8SvUfN446zye8TE/template/preview",
       "key": "designing_with_empathy_2",
       "properties": {
         "audience": "Teacher",
@@ -7184,11 +7263,10 @@
     },
     {
       "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/template/preview",
+      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/template/preview",
       "key": "events_in_app_lab",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7307,11 +7385,10 @@
     },
     {
       "name": "Exploring UI Elements",
-      "url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1K3K8qyAnkNFQCEgvXJ_k8K_YahKclHGDc9FQAEAaung/template/preview",
       "key": "exploring_ui_elements",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7320,11 +7397,10 @@
     },
     {
       "name": "Feedback and Testing",
-      "url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Ei2opMNsuFVaIhGQz1RBtF1BI-uzEWpCxhTqh0TTH7c/template/preview",
       "key": "feedback_and_testing",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7333,11 +7409,10 @@
     },
     {
       "name": "Identifying User Needs",
-      "url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1QCkVC0MWzi0JiuLMmgfddVwhPrSIklpbDF7_18iGsj8/template/preview",
       "key": "identifying_user_needs",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7395,11 +7470,10 @@
     },
     {
       "name": "Linking Prototype Screens",
-      "url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1FEpaeO9Sc0oBboRKbfOO_n8nn8b3PJNALpytfAEVzJI/template/preview",
       "key": "linking_prototype_screens",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7445,11 +7519,10 @@
     },
     {
       "name": "Market Research",
-      "url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1VewZgc4VzXFSQDlc5QUrdV6Xm8hN58gEKH3DWSzoByY/template/preview",
       "key": "market_research_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7669,11 +7742,10 @@
     },
     {
       "name": "Project - App Presentation",
-      "url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/template/preview",
+      "url": "https://docs.google.com/presentation/d/17u_op3RN3iyBebwv2ubMUMx83-MXza-wNzxDlpxnY1Q/template/preview",
       "key": "project_-_app_presentation",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7682,11 +7754,10 @@
     },
     {
       "name": "Project - Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/template/preview",
+      "url": "https://docs.google.com/presentation/d/19DdVVqSlOtAXoh_s92NR9dqqkka6udzl6JF-qyOWhEc/template/preview",
       "key": "project_-_paper_prototype",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7708,11 +7779,10 @@
     },
     {
       "name": "Prototype Testing",
-      "url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1n6k7rNlAurR70Gsko5wAHR5rZiIyyzdLv2jy1sC8ptc/template/preview",
       "key": "prototype_testing",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7831,12 +7901,21 @@
       }
     },
     {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
       "name": "Testing the App",
-      "url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1iPfbJe630o40RCFnGKCSlujZfvozajPc4J3el9MlHgg/template/preview",
       "key": "testing_the_app",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7857,7 +7936,7 @@
     },
     {
       "name": "Understanding Your User",
-      "url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ay4VDFZ1PTA6LBUksPJRz_6aU7cVy5FXHSHuMrmfUl8/template/preview",
       "key": "understanding_your_user",
       "properties": {
         "audience": "Teacher",
@@ -7882,11 +7961,10 @@
     },
     {
       "name": "Updating Your Prototype",
-      "url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1EB3cF4d1MdQ7FkL29IbZOL7VyAiRTADRnGlIFZGWKTA/template/preview",
       "key": "updating_your_prototype_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7895,7 +7973,7 @@
     },
     {
       "name": "User Centered Design - Define and Prepare",
-      "url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/template/preview",
+      "url": "https://docs.google.com/presentation/d/1g2tfwNongYEZQI_0SCMW1fCuzGxtUAxWj6RDNA75PE4/template/preview",
       "key": "user_centered_design_-_define_and_prepare",
       "properties": {
         "audience": "Teacher",
@@ -7907,7 +7985,7 @@
     },
     {
       "name": "User Centered Design - Try and Reflect",
-      "url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WFIH7J7MIVcc7l3uSOMynL1F1TMZTi7wqTvZML8ENxE/template/preview",
       "key": "user_centered_design_-_try_and_reflect",
       "properties": {
         "audience": "Teacher",
@@ -7982,7 +8060,7 @@
     },
     {
       "name": "User Interfaces",
-      "url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lQ8QF0NB5hSNqcSQiEXsX8704TxVM6tk9Goq9ajvMoA/template/preview",
       "key": "user_interfaces",
       "properties": {
         "audience": "Teacher",
@@ -8660,7 +8738,60 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd4-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
