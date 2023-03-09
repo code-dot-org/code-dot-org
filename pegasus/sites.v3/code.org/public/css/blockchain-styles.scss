@@ -1,10 +1,13 @@
 // Custom styles for code.org/blockchain
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'breakpoints';
+@import 'color', 'font', 'breakpoints', 'barlow-semi-condensed-font';
 
 // Hero banner
 .hero-banner-basic {
+  background: url('/images/circuit-bg.png') center center no-repeat;
+  background-size: cover;
+
   .wrapper {
     display: flex;
     justify-content: space-between;
