@@ -1277,6 +1277,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       color: $neutral_dark;
       margin-bottom: 10px;
 
+      &.caption-text {
+        font-family: $gotham-bold;
+      }
+
       a {
         font-family: $gotham-regular;
         font-weight: normal;
