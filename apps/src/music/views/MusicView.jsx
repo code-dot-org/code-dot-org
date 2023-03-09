@@ -384,6 +384,9 @@ class UnconnectedMusicView extends React.Component {
     const instructionsPosition =
       instructionPositionOrder[this.state.instructionsPosIndex];
 
+    const showVideo =
+      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
@@ -401,7 +404,7 @@ class UnconnectedMusicView extends React.Component {
                 instructionsPosition === InstructionsPositions.TOP &&
                 this.renderInstructions(InstructionsPositions.TOP)}
 
-              {this.state.showingVideo && (
+              {showVideo && (
                 <Video id="initial-modal-0" onClose={this.onVideoClosed} />
               )}
 
