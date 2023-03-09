@@ -68,12 +68,8 @@ const Video = ({id, onClose}) => {
             allowFullScreen
           />
         </div>
-        <div className={styles.closeContainer}>
-          <FontAwesome
-            icon={'times'}
-            onClick={onCloseClicked}
-            className={styles.closeIcon}
-          />
+        <div className={styles.closeContainer} onClick={onCloseClicked}>
+          <FontAwesome icon={'times'} className={styles.closeIcon} />
         </div>
       </div>
     </div>
