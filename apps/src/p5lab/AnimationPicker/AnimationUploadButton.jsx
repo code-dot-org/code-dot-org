@@ -58,21 +58,6 @@ export function UnconnectedAnimationUploadButton({
     );
   }
 
-  function showUploadModal() {
-    setIsUploadModalOpen(true);
-    showingUploadWarning();
-  }
-
-  function showPublishedWarning() {
-    setIsPublishedWarningModalOpen(true);
-    showingUploadWarning();
-  }
-
-  function closePublishedWarning() {
-    setIsPublishedWarningModalOpen(false);
-    exitedUploadWarning();
-  }
-
   // Warning dialog that says if you upload, you can no longer share and remix,
   // and you confirm you will not upload PII.
   function renderUploadModal() {
@@ -157,6 +142,22 @@ export function UnconnectedAnimationUploadButton({
     // redux setting, for use in share/remix
     refreshInRestrictedShareMode();
     onUploadClick();
+    exitedUploadWarning();
+  }
+
+  function showUploadModal() {
+    setIsUploadModalOpen(true);
+    showingUploadWarning();
+  }
+
+  function showPublishedWarning() {
+    setIsPublishedWarningModalOpen(true);
+    showingUploadWarning();
+  }
+
+  function closePublishedWarning() {
+    setIsPublishedWarningModalOpen(false);
+    exitedUploadWarning();
   }
 
   function cancelUpload() {
