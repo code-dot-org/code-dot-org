@@ -14,6 +14,7 @@ require 'json'
 require 'parallel'
 require 'tempfile'
 require 'yaml'
+require 'active_support/core_ext/object/blank'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
@@ -343,6 +344,25 @@ def distribute_course_content(locale)
   end
 end
 
+# We provide URLs to the translators for Resources only; because
+# the sync has a side effect of applying Markdown formatting to
+# everything it encounters, we want to make sure to un-Markdownify
+# these URLs
+def postprocess_course_resources(locale, courses_source)
+  courses_yaml = YAML.load_file(courses_source)
+  lang_code = PegasusLanguages.get_code_by_locale(locale)
+  if courses_yaml[lang_code]['data']['resources']
+    courses_resources = courses_yaml[lang_code]['data']['resources']
+    courses_resources.each do |_key, resource|
+      next if resource['url'].blank?
+      resource['url'].strip!
+      resource['url'].delete_prefix!('<')
+      resource['url'].delete_suffix!('>')
+    end
+  end
+  File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
+end
+
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
@@ -362,7 +382,7 @@ def distribute_translations(upload_manifests)
       next unless file_changed?(locale, relative_path)
 
       basename = File.basename(loc_file, ext)
-
+      postprocess_course_resources(locale, loc_file) if File.basename(loc_file) == 'courses.yml'
       # Special case the un-prefixed Yaml file.
       destination = (basename == "base") ?
         "dashboard/config/locales/#{locale}#{ext}" :
