@@ -27,7 +27,8 @@
           "name": "Hello World: Putbol",
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
-          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
+          "student_overview": "Sa aralin na ito, matututunan mo ang mga pangunahing kaalaman sa computer science sa pamamagitan ng pagprograma sa Sprite Lab."
         },
         "hourofcode/Maze": {
           "name": "Maze",
@@ -46,7 +47,8 @@
         "hello-world-emoji-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
-          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
+          "student_overview": "Sa aralin na ito, matututunan mo ang mga pangunahing kaalaman sa computer science sa pamamagitan ng pagprograma sa Sprite Lab."
         },
         "artist/Artist": {
           "name": "Artista"
@@ -62,7 +64,8 @@
         "hello-world-food-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
-          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
+          "student_overview": "Sa aralin na ito, matututunan mo ang mga pangunahing kaalaman sa computer science sa pamamagitan ng pagprograma sa Sprite Lab."
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Paglalakbay sa Aquatic",
@@ -77,12 +80,14 @@
           "name": "Hello World: Puwang",
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
-          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
+          "student_overview": "Sa aralin na ito, matututunan mo ang mga pangunahing kaalaman sa computer science sa pamamagitan ng pagprograma sa Sprite Lab."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
-          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
+          "student_overview": "Sa aralin na ito, matututunan mo ang mga pangunahing kaalaman sa computer science sa pamamagitan ng pagprograma sa Sprite Lab."
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: Paglikha ng Galaksiya Gamit ang Code (Javascript)",
@@ -104,7 +109,8 @@
         "hello-world-retro-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
-          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa.",
+          "student_overview": "Sa aralin na ito, matututunan mo ang mga pangunahing kaalaman sa computer science sa pamamagitan ng pagprograma sa Sprite Lab."
         },
         "starwarsblocks/Hour of Code 2015": {
           "student_overview": "Sa araling ito, nakakakuha ang mga mag-aaral sa lahat ng edad ng panimulang karanasan sa coding at computer science sa isang ligtas at sumusuportang kapaligiran. May dalawang bersyon ang araling ito."
@@ -778,6 +784,9 @@
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Introduksiyon sa AI Lab"
         },
         "csd7-2022/Numerical Data in AI Lab": {
           "name": "Numerical Data sa Ai Lab"
@@ -3409,6 +3418,9 @@
         },
         "coursee-2021/lesson-1": {
           "name": "Pagdidisenyo sa Accessibility"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Introduksiyon sa AI Lab"
         },
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "Numerical Data sa Ai Lab"

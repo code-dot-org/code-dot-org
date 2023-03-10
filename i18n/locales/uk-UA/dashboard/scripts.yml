@@ -2897,6 +2897,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         hello-world-space-2022:
           title: 'Привіт Світ: Космос'
         hello-world-soccer-2022:

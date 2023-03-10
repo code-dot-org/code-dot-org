@@ -752,7 +752,7 @@
         }
       ]
     ],
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the condition for the last `while`(#e7e8ea) loop on **Line 34** to `jesse.hasPaint()`(#e7e8ea) then run the program to observe the results. What happens when you run the program? Why do you think this happened?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the condition for the last <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loop on **Line 34** to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">jesse.hasPaint()</code> then run the program to observe the results. What happens when you run the program? Why do you think this happened?",
     "project_template_level_name": "CSA U1L5-Loops PBT_2023",
     "reference_links": [
       "/courses/csa-2023/guides/while-loops"
@@ -767,6 +767,6 @@
   "created_at": "2022-11-13T16:14:57.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-13T16:14:57.614+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L2_2023\"},{\"changed_at\":\"2022-11-13 16:14:59 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-13 16:41:31 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-22 15:48:07 +0000\",\"changed\":[\"serialized_maze\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-13T16:14:57.614+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L2_2023\"},{\"changed_at\":\"2022-11-13 16:14:59 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-13 16:41:31 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-22 15:48:07 +0000\",\"changed\":[\"serialized_maze\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-08 19:54:34 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

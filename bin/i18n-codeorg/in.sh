@@ -27,6 +27,7 @@ cp_in $orig_dir/restricted.en.yml $loc_dir/restricted.yml
 cp_in $orig_dir/scripts.en.yml $loc_dir/scripts.yml
 cp_in $orig_dir/slides.en.yml $loc_dir/slides.yml
 cp_in $orig_dir/unplugged.en.yml $loc_dir/unplugged.yml
+cp_in $orig_dir/courses.en.yml $loc_dir/courses.yml
 
 ### Apps
 

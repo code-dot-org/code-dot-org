@@ -252,11 +252,17 @@
         "csd5-2022/Keeping Data Secret": {
           "name": "Пазене на Тайни Данни"
         },
+        "csd1-2022/Intro to Problem Solving": {
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
         "csd1-2022/The Problem Solving Process": {
           "name": "Процеса за Решаване на Проблеми"
         },
         "csd1-2022/What is a Computer?": {
           "name": "Какво е Компютър?"
+        },
+        "csd1-2022/Storage": {
+          "name": "Съхранение"
         },
         "csd3-2022/Variables": {
           "name": "Променливи"
@@ -444,6 +450,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Правопис"
         },
+        "csd3-2018/Shapes and Randomization": {
+          "name": "Фигури и Рандомизация"
+        },
         "csd3-2018/Variables": {
           "name": "Променливи"
         },
@@ -579,6 +588,9 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Правопис"
         },
+        "csd3-2019/Shapes and Randomization": {
+          "name": "Фигури и Рандомизация"
+        },
         "csd3-2019/Variables": {
           "name": "Променливи"
         },
@@ -639,11 +651,32 @@
         "coursef-2017/Conditionals in Minecraft": {
           "name": "Условия в Minecraft"
         },
+        "coursea-2017/Debugging: Unspotted Bugs": {
+          "name": "Отстраняване на Грешки: Ненамерени Грешки"
+        },
+        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Постоянство; Стиви и Големия Проект"
+        },
         "coursea-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Реални алгоритми: Засадете семената"
         },
+        "coursea-2017/Programming: Happy Maps": {
+          "name": "Програмиране: Щастливи Карти"
+        },
+        "coursea-2017/Going Places Safely": {
+          "name": "Цифров Гражданин: Безопасно Посещаване на Места"
+        },
+        "coursea-2017/Loops: Happy Loops": {
+          "name": "Цикли: Щастливи Цикли"
+        },
         "coursea-2017/Loops in Artist": {
           "name": "Цикли в Художник"
+        },
+        "pre-express-2017/Debugging: Unspotted Bugs": {
+          "name": "Отстраняване на Грешки: Ненамерени Грешки"
+        },
+        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Постоянство; Стиви и Големия Проект"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Реални алгоритми: Засадете семената"
@@ -672,6 +705,12 @@
         "coursec-2017/Loops in Harvester": {
           "name": "Цикли в Harvester"
         },
+        "courseb-2017/Debugging: Unspotted Bugs": {
+          "name": "Отстраняване на Грешки: Ненамерени Грешки"
+        },
+        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Постоянство; Стиви и Големия Проект"
+        },
         "courseb-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Реални алгоритми: Засадете семената"
         },
@@ -698,6 +737,9 @@
         },
         "express-2017/Conditionals in Minecraft": {
           "name": "Условия в Minecraft"
+        },
+        "csd3-2017/Shapes and Randomization": {
+          "name": "Фигури и Рандомизация"
         },
         "csd3-2017/Variables": {
           "name": "Променливи"
@@ -737,6 +779,9 @@
         },
         "csd1-2017/What is a Computer?": {
           "name": "Какво е Компютър?"
+        },
+        "csd1-2017/Storage": {
+          "name": "Съхранение"
         },
         "csd5-2017/Representing Images": {
           "name": "Представяне на Изображения"
@@ -1307,6 +1352,9 @@
         },
         "csd1-2021/What is a Computer?": {
           "name": "Какво е Компютър?"
+        },
+        "csd1-2021/Storage": {
+          "name": "Съхранение"
         },
         "csd2-2021/Headings": {
           "name": "Заглавия"

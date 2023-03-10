@@ -437,8 +437,22 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal facilitator_to_teacher_course_versions[@unit_facilitator_to_teacher.course_version.id][:units].keys, [@unit_facilitator_to_teacher.id]
   end
 
+  test 'query count for assignable_course_offerings' do
+    Unit.stubs(:should_cache?).returns true
+
+    assert_cached_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@teacher)
+    end
+
+    assert_cached_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@facilitator)
+    end
+
+    Unit.clear_cache
+  end
+
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media'
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: '/images/sample_image_ref', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: 'Computer:Works,Chromebook:Not ideal,Tablet:Does not work,Mobile:Does not work,No Device:Does not work'
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
@@ -461,6 +475,60 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_raises do
       CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
     end
+  end
+
+  test "elementary_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    assert course1.elementary_school_level?
+    assert course2.elementary_school_level?
+    assert course3.elementary_school_level?
+    refute course4.elementary_school_level?
+    refute course5.elementary_school_level?
+    refute course6.elementary_school_level?
+    refute course7.elementary_school_level?
+  end
+
+  test "middle_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    refute course1.middle_school_level?
+    refute course2.middle_school_level?
+    assert course3.middle_school_level?
+    assert course4.middle_school_level?
+    assert course5.middle_school_level?
+    refute course6.middle_school_level?
+    refute course7.middle_school_level?
+  end
+
+  test "high_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    refute course1.high_school_level?
+    refute course2.high_school_level?
+    refute course3.high_school_level?
+    refute course4.high_school_level?
+    assert course5.high_school_level?
+    assert course6.high_school_level?
+    assert course7.high_school_level?
   end
 
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)

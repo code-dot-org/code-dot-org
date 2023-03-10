@@ -1269,7 +1269,7 @@
           "description": "데이터 시각화 도구를 사용하여 모델을 학습시킬 때 포함할 특징을 결정하세요."
         },
         "16648f4d-5313-42ea-9348-5e540f239956": {
-          "description": "앱 랩에서 화면 및 이벤트 추가"
+          "description": "App Lab에서 화면 및 이벤트 추가"
         },
         "417c1279-8200-49cb-9363-699a49b8f881": {
           "description": "머신 러닝을 사용하는 앱 만들기"
@@ -1316,11 +1316,17 @@
         "96b0c2a4-2817-4da1-a183-bb8615f96a07": {
           "description": "AI 윤리 문제를 해결하는 적어도 한 가지 안내 원칙을 만드세요."
         },
+        "24ba55d1-52ed-41bf-9e37-bbffa6693159": {
+          "description": "실제 데이터세트를 사용하여 머신 러닝 모델 만들기"
+        },
         "8b3f7d07-fc2c-4021-b56d-1ce1935a2e98": {
           "description": "머신 러닝을 사용하는 앱 만들기"
         },
         "1ee1ea06-74b1-40e5-97fb-1a5eb4b633bc": {
           "description": "브레인스토밍 전략을 사용하여 문제 관찰을 핵심 문제로 발전시키세요."
+        },
+        "2bc2c165-40b7-494f-849c-fae928a6f49d": {
+          "description": "머신 러닝 앱을 만드는 데 사용할 수 있는 설문조사 질문을 고안합니다"
         },
         "881c3276-338c-4fd2-b700-9a862c27b280": {
           "description": "템플릿을 사용하여 구글 양식 설문조사를 만드세요."
@@ -1329,7 +1335,7 @@
           "description": "Google 시트의 데이터 분석 및 정리"
         },
         "582adec8-f707-46bc-8aed-566ae4105ffd": {
-          "description": "csv 파일을 AI 랩에 업로드"
+          "description": "csv 파일을 AI Lab에 업로드"
         },
         "cd4ba8c5-66c9-494f-8607-7ab981bf3d0e": {
           "description": "구글 시트에서 csv 파일 다운로드"
@@ -2364,7 +2370,7 @@
           "description": "머신 러닝을 사용하는 앱 만들기"
         },
         "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a": {
-          "description": "앱 랩에서 화면 및 이벤트 추가"
+          "description": "App Lab에서 화면 및 이벤트 추가"
         },
         "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64": {
           "description": "모델 카드를 읽고 모델을 평가하는 데 사용"
@@ -2408,11 +2414,17 @@
         "173089ae-6d54-457a-a391-0a8f5510aaca": {
           "description": "AI 윤리 문제를 해결하는 적어도 한 가지 안내 원칙을 만드세요."
         },
+        "516ee8d7-e5f6-41c3-a27e-a6a22c67e3e2": {
+          "description": "실제 데이터세트를 사용하여 머신 러닝 모델 만들기"
+        },
         "eca7e19d-20f2-41f4-a1eb-9d90257b7f24": {
           "description": "머신 러닝을 사용하는 앱 만들기"
         },
         "105797c1-c68c-4ff9-af1f-4381a25459b0": {
           "description": "브레인스토밍 전략을 사용하여 문제 관찰을 핵심 문제로 발전시키세요."
+        },
+        "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd": {
+          "description": "머신 러닝 앱을 만드는 데 사용할 수 있는 설문조사 질문을 고안합니다"
         },
         "7c5f2ec7-d487-49a3-9db3-df016dfac686": {
           "description": "템플릿을 사용하여 구글 양식 설문조사를 만드세요."
@@ -2421,7 +2433,7 @@
           "description": "구글 시트에서 csv 파일 다운로드"
         },
         "1598362d-3c6e-4a16-aa0e-ac3f3046f96e": {
-          "description": "csv 파일을 AI 랩에 업로드"
+          "description": "csv 파일을 AI Lab에 업로드"
         },
         "90487953-eb66-44f3-918e-2395a9fa6379": {
           "description": "Google 시트의 데이터 분석 및 정리"
