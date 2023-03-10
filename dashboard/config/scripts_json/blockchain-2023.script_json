@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-09 02:45:28 UTC",
+    "serialized_at": "2023-03-10 02:57:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -39,12 +39,13 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Blockchain Overview",
+      "name": "Why Blockchain?",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "Students engage in two immersive class-wide simulations representing different types of economic markets. The first simulation focuses on decentralized markets (similar to a bartering system) and the second simulation focuses on centralized markets (similar to regulated banking). Teachers are invited to participate in the simulation in specific ways to highlight key issues with each system, and students reflect on the successes and failures of each system. At the end of the lesson, students watch the Why Blockchain? video which summarizes the different types of economic markets and presents Blockchain technology as a new way to exchange goods and services.\n\n**Big Question:** What are the tradeoffs when exchanging goods and services with other people?"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -110,6 +111,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "Students research applications of blockchain and its impact. They share what they learned and decide which applications of blockchain have the potential for the most benefit and the most harm.\n\n**Big Question:** : What are the societal impacts of blockchain?",
+        "preparation": "- Print copies of the Blockchain Research Reflection handout (one for each group of three or four)\n- Label one side of the classroom \"good\" and one side \"bad\" for the Societal Impacts activity. Make sure there is space to stand between the two sides, as if on a sliding scale.\n",
+        "student_overview": "Research applications of blockchain and its impact,  then share what you learned and decide which applications of blockchain have the potential for the most benefit and the most harm."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -119,6 +123,48 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "e25f88e4-b3d9-4858-84ed-244890d47831",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e25f88e4-b3d9-4858-84ed-244890d47831",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "298644da-a2f6-4f6a-a421-3103fb777ba0",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "298644da-a2f6-4f6a-a421-3103fb777ba0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
     {
       "key": "ea1d0acf-b767-4e54-a1c8-2bbc038253e7",
       "position": 1,
@@ -215,9 +261,503 @@
         "lesson_group.key": "",
         "script.name": "blockchain-2023"
       }
+    },
+    {
+      "key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up (Option 1)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up (Option 2)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "41535ff9-6325-44f6-85c5-14581c388df8",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "410f1f92-724a-4608-84d6-d481af2766d7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Most people purchase things using cash, credit cards, or online apps. Can you think of an example where you were able to buy something with something other than cash, such as with a trade?"
+      },
+      "seeding_key": {
+        "activity_section.key": "410f1f92-724a-4608-84d6-d481af2766d7",
+        "lesson_activity.key": "e25f88e4-b3d9-4858-84ed-244890d47831"
+      }
+    },
+    {
+      "key": "b7fae761-bfdd-44f5-b8d4-653c6ce9f521",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt encourages students to think about situations where people can trade or exchange goods, and start considering other forms of currency used for trading. Students might think of collectibles or video games, where people can trade “cards” with each other. They may also think of bartering with services, such as helping to pick fruit in exchange for some of the fruit that was collected. If this lesson is being taught in conjunction with other Blockchain lessons, you may decide to explicitly mention cryptocurrencies (such as Bitcoin) as an example of something other than cash or credit cards used to make purchases."
+      },
+      "seeding_key": {
+        "activity_section.key": "b7fae761-bfdd-44f5-b8d4-653c6ce9f521",
+        "lesson_activity.key": "e25f88e4-b3d9-4858-84ed-244890d47831"
+      }
+    },
+    {
+      "key": "86712444-6705-4120-8ee5-76c67984011f",
+      "position": 3,
+      "properties": {
+        "description": "There are a lot of ways to exchange goods or services - paying with cash or credit cards is just one possibility. Today, we’re going to investigate different systems that could be used to make trades or exchange goods. Then, we’re going to learn about a brand new system called Blockchain which uses new, innovative technology to exchange goods and services digitally.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86712444-6705-4120-8ee5-76c67984011f",
+        "lesson_activity.key": "e25f88e4-b3d9-4858-84ed-244890d47831"
+      }
+    },
+    {
+      "key": "b31b2f65-560f-4d35-b1f1-a17f926a6eb7",
+      "position": 4,
+      "properties": {
+        "description": "**Big Question:** What are the tradeoffs when exchanging goods and services with other people?"
+      },
+      "seeding_key": {
+        "activity_section.key": "b31b2f65-560f-4d35-b1f1-a17f926a6eb7",
+        "lesson_activity.key": "e25f88e4-b3d9-4858-84ed-244890d47831"
+      }
+    },
+    {
+      "key": "44086ba0-d31c-4e3b-bde6-79d1c6f371e7",
+      "position": 1,
+      "properties": {
+        "description": "Today we’re going to participate in a simulation of some of the original economic marketplaces where people trade directly with each other. If there’s no currency involved and people trade things directly, this is called a bartering system. The class will split into groups of 3 that will participate in the simulation - afterward, we’ll all discuss the benefits and consequences of a system like this.",
+        "duration": "15",
+        "name": "Economic Simulation: Decentralized Market",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Modern Examples:** It may be helpful to share modern examples of decentralized markets, but be sure to pick examples that your students can relate to. Some potential examples include:\n- Farmer’s markets where vendors can barter or trade with each other\n- The popular website Craig’s List, where people can interact directly with each other\nMarkets for collectibles, like trading cards, where people trade directly with each other based on the type of collectible\n- Discord is an app where each person can host their own servers and communicate directly with each other. Even though everyone must use the same tool (Discord) to communicate, the messages themselves are not going through any Discord company servers"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "44086ba0-d31c-4e3b-bde6-79d1c6f371e7",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "ace3e4ab-dfd6-4f7e-aa84-80bc40504604",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Split the class into groups of 3, but so there are no more than 8 groups. If there are more students in the class: some students can be observers or groups of 4 can be created but it will be more difficult for those groups to succeed in the simulation."
+      },
+      "seeding_key": {
+        "activity_section.key": "ace3e4ab-dfd6-4f7e-aa84-80bc40504604",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "7b8a5344-49a4-40ab-877c-180465513d5f",
+      "position": 3,
+      "properties": {
+        "description": "Every group starts with a certain amount of resources, which you will be able to trade with other groups. As I distribute these resources, keep them a secret - for now, only your group knows the resources that have been allocated to your group. I will also be participating in the simulation and you have my own set of resources you can trade with.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8a5344-49a4-40ab-877c-180465513d5f",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "211fd054-e772-49d5-9c9b-9085bbb5bee4",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute the pre-cut [r decentralized_market_resource_cutouts/blockchain/2023] to each group (for example: by having them pre-sorted in envelopes that each group opens). Groups can look at their own resources, but should keep them a secret from other groups for now. "
+      },
+      "seeding_key": {
+        "activity_section.key": "211fd054-e772-49d5-9c9b-9085bbb5bee4",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "bdfec6e3-b1b4-4ef9-aaf6-57ac7376db47",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the next set of slides which explain the rules of the simulation and the rules for trading."
+      },
+      "seeding_key": {
+        "activity_section.key": "bdfec6e3-b1b4-4ef9-aaf6-57ac7376db47",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "88e055fa-5b89-4f81-bf53-0c53f3147842",
+      "position": 6,
+      "properties": {
+        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/9e372eebd8e916e4035c980bbcce90ca-slides1-sm.png) | **Say:** Each group is trying to gather enough resources for each member of the group |\n|![](https://images.code.org/b88a7312dac0a4a53fbd086ff300797b-slides2-sm.png) | **Say:** There are three types of resources: food, clothing, and materials for shelter.  |\n|![](https://images.code.org/a87d9f99e60a6ee9ff9f69b5b123de8a-slides3-sm.png) | **Say:** Having 1 of each type means you’ve completed a set and a person can survive on that resource |\n|![](https://images.code.org/3a499453f85ae97a6fc057532507f83d-slides4-sm.png) | **Say:** Completing all 3 sets means that person will survive in society |\n|![](https://images.code.org/ed11ef1dcce285572fff7ad2b7a223dc-slides5-sm.png) | **Say:** Completing all three sets for each person in your group means the group will survive in society and they’ve won the simulation. |\n|![](https://images.code.org/a99494587bb7fbeaf620d33119241707-slides6-sm.png) | **Say:** Each group starts with their own set of resources. They will need to barter with other groups to collect the resources they’re missing |\n|![](https://images.code.org/9dae5d1e1d3ec9d0a32588479ec4d902-slides7-sm.png) | **Say:** Bartering and discussing should be done publicly and in the open, but no group is required to reveal their actual cards to any other group.  |\n|![](https://images.code.org/0ce940f4a6f871609672bb222d213cf3-slides8-sm.png) | **Say:** When you’re ready to trade, the actual trade happens in secret by folding your cards before you trade them. <br /><br />This means the actual card isn’t revealed until the trade is over and the card is unfolded. |\n|![](https://images.code.org/a2a91fc6deac3cbc7f746628d80f723b-slides9-sm.png) | **Say:** Each person starts with the same amount of cards, but some cards may be “empty resources”. <br /><br />This means it may look like a typical resource, but you don’t know for sure until the card is revealed to you. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "88e055fa-5b89-4f81-bf53-0c53f3147842",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "bff78cdc-e983-4ec5-9b1b-62e5f39b5c44",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **(Optional) Model:** Show a short demonstration for how a trade could work:\n- Ask a group if someone would like to trade for a resource\n- Fold up the card and have the other group fold up their card\n- Trade the cards with each other\n- Unfold and verify that the cards match what each party agreed on"
+      },
+      "seeding_key": {
+        "activity_section.key": "bff78cdc-e983-4ec5-9b1b-62e5f39b5c44",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "19dfa736-045d-4d2d-a36a-d7f0b91715f9",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Trust Matters:** The rules of this game are deliberately designed to allow emphasize the need for trust, and the potential for people to break that trust. Some students may pick up on this in this example - for example you could have traded a blank card or a different resource than the one you said, or the other person could have done the same. If students pick up on this and ask about it, acknowledge that this may be possible and trust is important, but try to keep the discussion short and don’t explain so much that it could impact the simulation. This is a point that will get emphasized and revisited after the simulation is over."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "19dfa736-045d-4d2d-a36a-d7f0b91715f9",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "6c1836ed-27b9-42d8-92a5-404e05fbe86d",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Set a timer for 10 minutes and allow students to barter and trade with each other to try and \"win\" the game."
+      },
+      "seeding_key": {
+        "activity_section.key": "6c1836ed-27b9-42d8-92a5-404e05fbe86d",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "b504e723-b155-4b14-a054-18e702c7edc8",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they begin to barter and trade with each other, and be sure to participate in the activity itself by instigating trades with students.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Managing Emotions:** Some aspects of this simulation are meant to highlight the limitations of a system like this and how it can create inequitable outcomes. Putting students in the position of someone impacted by this system can help build empathy and understanding for how this system can benefit or harm real people, and will be useful during the debrief. If students find themselves significantly impacted or getting upset, reassure them that this will be a great topic to discuss during the debrief and the simulation will be over soon.\n\n**Where are your resources?** It doesn’t matter what resources you have access to when participating in the simulation - it may be best to print an extra stack of each resource to have available to you. Depending on the groups involved in the simulation, it may become apparent that there aren’t enough of a certain resources for everyone to have a chance to survive. If you notice this happening, consider trading that resource with groups to add more into circulation."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b504e723-b155-4b14-a054-18e702c7edc8",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "0f2f39f4-a8bc-487a-aa95-3e7643e7423a",
+      "position": 11,
+      "properties": {
+        "description": "| Student Actions | Teacher Actions |\n|---|---|\n| The instructions are purposefully vague on how to get started, so a variety of interactions may occur as the simulation begins. It can be useful to look out for these potential behaviors:<br /><ul><li>**Cliques:** Students may fall into familiar social relationships to barter and trade, making it so a small pocket of students are able to meet the goals of the activity while others are potentially excluded.</li><li>*Scarcity:,** Some students may “hoard” resources, meaning there may not be enough for others as the activity continues</li><li>**Deceit:** A student may perform a deceptive trade and another student may become upset. If this happens, it’s okay to assure students that this is just a simulation and this is something we’ll address when debriefing, but they should continue for now.</li></ul> | As you participate in the activity, there are several specific actions that you should try and perform, which can then be discussed and debriefed afterwards. If you’re not able to perform these actions, that’s okay - they can also be brought up in the discussion after the simulation.<br /><ul><li>**Wrong Amount:** Agree on a trade with someone but, when making the trade, include a few blank cards mixed in with your resources so that your trading partner receives less than what was agreed upon</li><li>**Wrong Resource:** Agree on a trade with someone but, when making the trade, trade the wrong resource that you all agreed upon.</li><li>**Ghosting:** Agree to trade with someone but, when making the trade, ensure that you are handed the resource cards first. Once you have them in your hand, rescind your deal and walk away from the trade, keeping the other person’s cards.</li><li>**Lose your cards:** Pretend to have misplaced your cards and make a big deal out of not being able to find them, which means you’ve essentially lost all of your resources.</li></ul> |"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f2f39f4-a8bc-487a-aa95-3e7643e7423a",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "9a272a1a-c720-4835-b265-33d3b529e2c6",
+      "position": 12,
+      "properties": {
+        "description": "**Regroup:** After 10 minutes have elapsed, have students regroup and continue through the slides."
+      },
+      "seeding_key": {
+        "activity_section.key": "9a272a1a-c720-4835-b265-33d3b529e2c6",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "d0026892-c3eb-4ee5-9d5e-c33845676db3",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is an example where this system worked as intended and you were able to get the resources you needed? What’s an example where this system wasn’t working effectively or disadvantaged certain groups?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0026892-c3eb-4ee5-9d5e-c33845676db3",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "47fc325e-b8c3-4bc5-bdcd-f2999458b91f",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to pull out any significant exchanges during the simulation, especially ones that you architected using the strategies above. Students may comment that, when someone had a lot of one resource and another group had less, it was easy to trade. However, students should also call out when students were taken advantage of or when not everyone was able to have their needs met. You should also point out any observations you made about student behaviors, such as forming “cliques” or hoarding resources. Students should leave this discussion with examples of potential flaws in this system."
+      },
+      "seeding_key": {
+        "activity_section.key": "47fc325e-b8c3-4bc5-bdcd-f2999458b91f",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "ed49d7e5-1634-4b33-bb6f-3ac4d2d00f35",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How did **trust** play a role in the situations we just talked about? Would you have made different decisions based on whether or not you could trust someone when making a trade?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed49d7e5-1634-4b33-bb6f-3ac4d2d00f35",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "e68a26bb-1f5c-428f-b833-d651f9e7131f",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is meant to focus on “trust” being a central component to both the issues and successes with this system - untrustworthy behavior can lead to some of the issues seen so far, but being able to “trust” another person can lead to successful trades. Help students make these connections on their own, but if the class struggles surfacing this themselves, you can make this explicit in the transition to the next activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "e68a26bb-1f5c-428f-b833-d651f9e7131f",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "86303fc0-57aa-4a9d-94e2-5465ac6529f4",
+      "position": 17,
+      "properties": {
+        "description": "The simulation we just did was an example of a **decentralized market** because there’s no central authority helping to manage or validate trades. As societies evolved and got bigger, these decentralized markets continued to cause issues, especially when trading with someone far away and you don’t know if you can trust them. To help with this, societies created **centralized markets** which use a central, trusted entity to manage transactions. For example: a bank is a central entity that people trust with their money. We’re about to participate in a new simulation, but using a centralized entity instead!",
+        "duration": "15",
+        "name": "Economic Simulation: Centralized Market",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Modern Examples:** It may be helpful to share modern examples of centralized markets, but be sure to pick examples that your students can relate to. Some potential examples include:\n- Banks are centralized sources for wealth and transactions. They help manage transactions between users, and can help mediate in cases of fraud or theft.\n- Ebay is a centralized, trusted source for online auctions between people, verifying trades and holding people accountable. Ebay can be thought of as a counter-example to Craig's List from earlier.\n- App stores on your devices - especially the Apple App Store - vet, verify and regulate all apps on the marketplace so you can’t just install whatever app you want, but you’re ensured that the apps are secure.\n- Many major tech companies provide centralized email services, such as Google or Yahoo or Apple. This is a counter-example to the Discord scenario from earlier - unlike discord, all messages are processed and relayed by a central server owned by one of these companies.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "86303fc0-57aa-4a9d-94e2-5465ac6529f4",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "e66b9225-dca8-42b0-aec7-64f93ac8a7f2",
+      "position": 18,
+      "properties": {
+        "description": "**Group:** Decide on one group to help with the bank transactions. This group will be removed from the game and instead will act as “bank tellers” to process transactions and update the ledger. Let students know you will also be acting as a bank teller who can help complete transactions."
+      },
+      "seeding_key": {
+        "activity_section.key": "e66b9225-dca8-42b0-aec7-64f93ac8a7f2",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "01a0b697-df92-4eb1-b109-b92f59eb0c6d",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** \n- Pass out a pre-cut [r centralized_market_-_individual_group_resources/blockchain/2023] slip to each group so they know how many resources they start with\n- Pass out **one** [r centralized_market_-_bank_ledger/blockchain/2023] handout to the bank group (do not distribute one per student - distribute one for the whole group)\n- Have a stack of \n[r centralized_market_-_bank_trading_note/blockchain/2023] available for groups to use for trades"
+      },
+      "seeding_key": {
+        "activity_section.key": "01a0b697-df92-4eb1-b109-b92f59eb0c6d",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "4727842a-04b5-4665-8589-90e59910f034",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slides with the rules for the simulation and trading."
+      },
+      "seeding_key": {
+        "activity_section.key": "4727842a-04b5-4665-8589-90e59910f034",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "da48c68f-3099-433a-ae4c-f6e1d4317e79",
+      "position": 21,
+      "properties": {
+        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/e58710648dc32f87240130d7aa11f721-slides10-sm.png) | **Say:** Each group starts with a set of resources. Instead of keeping track of these resources yourself, they’re managed by a centralized bank. |\n|![](https://images.code.org/baa232a4ea52d3d643c62402d11468af-slides11-sm.png) | **Say:** In order to complete transactions, you use a bank trading note to indicate what you want to trade |\n|![](https://images.code.org/4ffb822683733c93c1e0325cbac08e9e-slides13-sm.png) | **Say:** When you and another group agree, you take your note to the bank to validate the transaction and update their ledger. |\n|![](https://images.code.org/b8e58e55e59418a02c90ae28ff56b4ca-slides14-sm.png) | **Say:** You still need to complete the same sets of resources to win the game. But instead of collecting cards, you win if the bank ledger shows that your group has enough resources for each person. |\n|![](https://images.code.org/6cd5470e3d0b93b5746ff774f352f043-slides15-sm.png) | **Say:** There’s already one more immediate benefit to these new rules: **no more fake resources** since everything is being kept track of from the bank. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "da48c68f-3099-433a-ae4c-f6e1d4317e79",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "d02937f0-ebc1-42c2-92f7-d8b860bdf076",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Set a timer for 10 minutes and allow students to barter with each other to meet the demands of the game. You should also circulate and participate in the game."
+      },
+      "seeding_key": {
+        "activity_section.key": "d02937f0-ebc1-42c2-92f7-d8b860bdf076",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "7ebfb146-b671-4169-8d56-9a008a59750d",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they begin to trade with each other, and be sure to participate in the activity itself as a bank teller. It may take longer to initiate trades because of the added layer of presenting bank slips to tellers to complete trades."
+      },
+      "seeding_key": {
+        "activity_section.key": "7ebfb146-b671-4169-8d56-9a008a59750d",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "26344de4-583d-4e9d-8d1f-f5d3f025f1ef",
+      "position": 24,
+      "properties": {
+        "description": "| Student Actions | Teacher Actions |\n|---|---|\n| The instructions are purposefully vague on how to get started, so a variety of interactions may occur as the simulation begins. It can be useful to look out for these potential behaviors:<br /><ul><li>**Delays:** Relying on the bank tellers will add time to how long it takes to complete a transaction. This mirrors real-life flaws in centralized systems, where things operate slower than if people dealt directly with each other.</li><li>**Teller Cliques:** Notice if students again fall into “cliques” or serve their friends first as bank tellers. This also mirrors real-life flaws in centralized systems, where access to banking may not be equitably distributed to certain communities.</li><li>**Accounting Errors:** Bank tellers may struggle to keep track of multiple transactions, especially if multiple people from the same group try to initiate transactions. There’s potential for an “overdraft” to happen where the ledger can’t keep up with the trades trying to occur.</li></ul> | As you participate in the activity, there are several specific actions that you should try and perform, which can then be discussed and debriefed afterwards. If you’re not able to perform these actions, that’s okay - they can also be brought up in the discussion after the simulation.<br /><ul><li>**Charging a Fee:** Tell certain groups you won’t process their trades unless they give you something in return. This could be one of their resources, or even something intangible like a high-five or answering a trivia question. This mirrors real-life experiences with banks charging fees.</li><li>**Inaccessible:** Sit somewhere far away from everyone else and declare you will only serve people who sit near this area. This mirrors real-life experiences where banks are not always accessible to certain communities, or certain geographic areas are discriminated against.</li><li>**Embezzlement:** Add a new row to the bottom of the banking ledger and take resources from other people’s accounts and give it to yourself.</li> |"
+      },
+      "seeding_key": {
+        "activity_section.key": "26344de4-583d-4e9d-8d1f-f5d3f025f1ef",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "92ed9103-601f-4b40-ad6c-03fa6a84889f",
+      "position": 25,
+      "properties": {
+        "description": "**Regroup:** After 10 minutes have elapsed, have students regroup and continue into the slides."
+      },
+      "seeding_key": {
+        "activity_section.key": "92ed9103-601f-4b40-ad6c-03fa6a84889f",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "1eeb207b-6ecb-4a1e-8a16-1d8005739da3",
+      "position": 26,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is an example where this system worked as intended and you were able to get the resources you needed? What’s an example where this system wasn’t working effectively or disadvantaged certain groups?"
+      },
+      "seeding_key": {
+        "activity_section.key": "1eeb207b-6ecb-4a1e-8a16-1d8005739da3",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "42a98bb1-d161-46bc-868c-444a36d223f0",
+      "position": 27,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to pull out any significant exchanges during the simulation, especially ones that you architected using the strategies above. Students may comment on how trustworthy the system is, but may not like how long it takes to get anything done. You should also point out any observations you made about student behaviors, such as forming “cliques” or the potential for overdrafting with so many transactions occurring. Students should leave this discussion with examples of potential flaws in this system."
+      },
+      "seeding_key": {
+        "activity_section.key": "42a98bb1-d161-46bc-868c-444a36d223f0",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "3296d595-98d7-41eb-b93e-2493e483b3d5",
+      "position": 28,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How did **individual freedom** play a role in the situations we just talked about? Even though there’s more trust in this system, were there times when you were restricted from making certain choices?"
+      },
+      "seeding_key": {
+        "activity_section.key": "3296d595-98d7-41eb-b93e-2493e483b3d5",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "68d8f3b3-58de-494f-9320-89093a78f5b4",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is meant to focus on “individual freedom” being a central component to this system as a counter-balance to trust. Trades are more likely to be successful because of the central authority managing it, but you may not always be able to trade when you need to or you may be restricted on where you can trade if the bank is located somewhere else."
+      },
+      "seeding_key": {
+        "activity_section.key": "68d8f3b3-58de-494f-9320-89093a78f5b4",
+        "lesson_activity.key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec"
+      }
+    },
+    {
+      "key": "98266378-6449-4ffe-aae3-e99fc9ba4e48",
+      "position": 1,
+      "properties": {
+        "description": "Today's activities introduced two types of economic markets that evolved throughout the history of human beings: **decentralized markets**, where people can trade directly with each other. And **centralized markets**, where people interact with a central entity. As technology also continues to evolve, there are new innovations and new systems that try to solve the problems in these markets. One of those technologies is called the **Blockchain**.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "98266378-6449-4ffe-aae3-e99fc9ba4e48",
+        "lesson_activity.key": "298644da-a2f6-4f6a-a421-3103fb777ba0"
+      }
+    },
+    {
+      "key": "b686dc40-791e-4ae9-b924-0e4aa7b998c2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the Why Blockchain? Video. After the previous activities, students should recognize and be able to relate to many of the themes in the video.\n\n# TODO: ADD VIDEO HERE\n\n[Temporary video here for reviewers](https://vimeo.com/793087073/f9a46e6a94)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b686dc40-791e-4ae9-b924-0e4aa7b998c2",
+        "lesson_activity.key": "298644da-a2f6-4f6a-a421-3103fb777ba0"
+      }
+    },
+    {
+      "key": "d139a89c-f7ab-49e5-b9c0-8d203730ad78",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** \n- What is one issue from today that could be improved by Blockchain?\n- What is a potential new issue that you think could occur because of Blockchain?\n\nHave students think on their answer first and discuss with their groups before sharing as a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "d139a89c-f7ab-49e5-b9c0-8d203730ad78",
+        "lesson_activity.key": "298644da-a2f6-4f6a-a421-3103fb777ba0"
+      }
+    },
+    {
+      "key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Discussion Goal: Answers will vary depending on the experiences students had during the simulation - however, hopefully students see how their experiences are reflected in the lead-up to blockchain technology as presented in the video."
+      },
+      "seeding_key": {
+        "activity_section.key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
+        "lesson_activity.key": "298644da-a2f6-4f6a-a421-3103fb777ba0"
+      }
+    },
     {
       "key": "2169c786-7cc5-43d7-9c4d-94fdf4261449",
       "position": 1,
@@ -1671,6 +2211,366 @@
         "activity_section.key": "f30659d1-c21e-444d-be9a-b1b83415ad94",
         "lesson_activity.key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb"
       }
+    },
+    {
+      "key": "21e7ca9c-280e-4fff-9eca-e3443217d904",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not this lesson is being taught in sequence with the other Blockchain lessons or if this lesson is being taught independently from the other Blockchain lessons.\n\n**Option 1** is for classrooms that are teaching this lesson **as part of the other Blockchain lessons** and assumes students have already seen several applications of Blockchain. This warm-up relies on prior knowledge and experiences from previous lessons to generate a discussion.\n\n**Option 2** is for classrooms that are teaching this lesson **independently from other Blockchain lessons** and assumes students may not have much context behind how Blockchain works. This warm-up emphasizes focuses on the impact of technology in general before pivoting to Blockchain specifically in the lesson. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21e7ca9c-280e-4fff-9eca-e3443217d904",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "a03b7110-e0cc-45ef-ac81-b4975d1362bd",
+      "position": 2,
+      "properties": {
+        "description": "You've learned a lot about blockchain! Let's think about how it can be used in society.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a03b7110-e0cc-45ef-ac81-b4975d1362bd",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "fd71455b-ea7e-437b-9a42-4bf1eafc0516",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are possible applications of blockchain in society?"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd71455b-ea7e-437b-9a42-4bf1eafc0516",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "5b3100cb-da35-459a-85cb-939d12e3ae89",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This can be a quick discussion to activate prior knowledge. Students share applications for blockchain they’ve seen over the course of the lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b3100cb-da35-459a-85cb-939d12e3ae89",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "87627a4d-9add-436f-9a97-6c10f70a39df",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of times when these applications of blockchain has been helpful? Can you think of times when these applications have been harmful, even if unintended?"
+      },
+      "seeding_key": {
+        "activity_section.key": "87627a4d-9add-436f-9a97-6c10f70a39df",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "22f80af6-fd37-4438-a2cb-2858cbb1dc2e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intentionally open-ended to allow students to reflect on what they’ve learned about Blockchain throughout the last few lessons. Students may recall how the cryptographic elements of Blockchain help people exchange goods and services in a trustworthy manner, but they may also recall how financial investments could have a harmful impact due to the volatile nature of blockchain assets. Give students space to explore these labels of “harmful” and “helpful” and try to hear from a wide variety of voices in your classroom. "
+      },
+      "seeding_key": {
+        "activity_section.key": "22f80af6-fd37-4438-a2cb-2858cbb1dc2e",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "044e70de-82d1-4ed4-9089-501538254f94",
+      "position": 7,
+      "properties": {
+        "description": "Any kind of technology can have many impacts, both intended and unintended. Some of these may be beneficial to people and society, and some of them may be harmful. Today we’ll explore some of the impacts Blockchain has already had on the world, then discuss ways it’s been helpful and ways it has been harmful to society.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "044e70de-82d1-4ed4-9089-501538254f94",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "8864b16b-8560-4788-9763-8ef9c9e5717a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Big Question:** What are the societal impacts of blockchain?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8864b16b-8560-4788-9763-8ef9c9e5717a",
+        "lesson_activity.key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30"
+      }
+    },
+    {
+      "key": "8a24fcbb-e3bc-4a94-af2d-f823b0916526",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not this lesson is being taught in sequence with the other Blockchain lessons or if this lesson is being taught independently from the other Blockchain lessons.\n\n**Option 2** is for classrooms that are teaching this lesson **independently from other Blockchain lessons** and assumes students may not have much context behind how Blockchain works. This warm-up emphasizes focuses on the impact of technology in general before pivoting to Blockchain specifically in the lesson. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8a24fcbb-e3bc-4a94-af2d-f823b0916526",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "e3e6a2e8-5bee-42a4-8828-ab6ee599b9b3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of an example of how a new piece of technology has improved your life, or improved the life of someone you know?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3e6a2e8-5bee-42a4-8828-ab6ee599b9b3",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "7ac6b601-c1a4-4f1c-9641-564aa54b521d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This can be a quick discussion to activate prior knowledge about ways technology impacts the world around us. Students may share examples of recent technologies, or technology they only recently got access to (for example: having a newer cell phone with a better camera)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ac6b601-c1a4-4f1c-9641-564aa54b521d",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "6a51ea1f-eb79-423f-ae3c-153afccff429",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of an example where one of these pieces of technology has had an unintended effect that may have been helpful or harmful to a different group of people?\n\nGive students a chance to discuss in small groups before sharing as a class. Their responses may depend on the examples the rest of the class shared."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a51ea1f-eb79-423f-ae3c-153afccff429",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "7c275e5d-a2dc-429d-83fd-628c49f3ea0d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intended to help students consider the impact of technology beyond how we may typically see or use it, and to empathize with people outside their immediate experience. For example, students may talk about how AI-generated artwork has helped them be creative or help create projects for school, but another student may know an artist or designer whose job has been affected by the increased use of AI-generated artwork."
+      },
+      "seeding_key": {
+        "activity_section.key": "7c275e5d-a2dc-429d-83fd-628c49f3ea0d",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "d7f55658-519f-464f-abae-a030e7b025b4",
+      "position": 6,
+      "properties": {
+        "description": "Technology can have many impacts, both intended and unintended. Some of these may be beneficial to people and society, and some of them may be harmful. Today we’re going to talk about a particular type of new technology: Blockchain. We’ll explore some of the impacts Blockchain has already had on the world, then discuss ways it’s been helpful and ways it has been harmful to society.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d7f55658-519f-464f-abae-a030e7b025b4",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "77d8b4a8-c7a7-4a50-844d-daf8aa8f2ced",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Big Question:** What are the societal impacts of blockchain?"
+      },
+      "seeding_key": {
+        "activity_section.key": "77d8b4a8-c7a7-4a50-844d-daf8aa8f2ced",
+        "lesson_activity.key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2"
+      }
+    },
+    {
+      "key": "441b3c74-2786-4115-a058-116e88f2cf69",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the Societal Impacts Blockchain video\n\n# TODO: ADD VIDEO HERE\n\n[Temporary video for reviewers](https://drive.google.com/file/d/1_3l_IMY7x3zDWh8dBPaw15EKW0hFCknA/view)",
+        "duration": " 25",
+        "name": "Research"
+      },
+      "seeding_key": {
+        "activity_section.key": "441b3c74-2786-4115-a058-116e88f2cf69",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "9bb57c79-3978-46a9-a22b-989e8fe2a44a",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of three or four"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bb57c79-3978-46a9-a22b-989e8fe2a44a",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "bddcefc3-30fb-4b00-9436-c21dcf27f266",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally distribute copies of the [r societal_impact_research_areas/blockchain/2023] handout.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bddcefc3-30fb-4b00-9436-c21dcf27f266",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "400d69b7-b1a2-42c6-b845-67b673241c2a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, choose an area of application. Each group is encouraged to pick different topics if possible."
+      },
+      "seeding_key": {
+        "activity_section.key": "400d69b7-b1a2-42c6-b845-67b673241c2a",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "bd4d7034-f3cf-4de7-bd84-310f52f9fb60",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Within that area of application, each person chooses an article or video to review. Students can also use the internet to find new articles or videos to research."
+      },
+      "seeding_key": {
+        "activity_section.key": "bd4d7034-f3cf-4de7-bd84-310f52f9fb60",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "5dd7f9ed-6d33-4894-96e4-766444c12530",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the [r societal_impact_research_reflection/blockchain/2023] handout.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dd7f9ed-6d33-4894-96e4-766444c12530",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "958eb483-7de2-4385-a463-fcb13ece8fe8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Blockchain Research Reflection handout. Each student will research a particular resource and discuss what they find with their group. The handout should be completed as a group, pulling from different research articles and videos that each person investigates. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Skimming and Summarizing:** Encourage students to skim articles for key ideas, take notes, and pose additional questions as they read articles.\n\n**Yes, And:** The research articles provided are jumping-off points to motivate questions and key ideas, but students are encouraged to use search engines to continue searching and researching. Using these articles as a starting point, there will often be new updates and current events relevant to their research that they can discover in their research."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "958eb483-7de2-4385-a463-fcb13ece8fe8",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "6bd8505d-36bf-4384-82b4-b655b29a7108",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor groups as they complete their research, encouraging groups to share what they discover with group members. Make sure groups are filling out the activity guide as they research, incorporating ideas from each group member as they discover different articles and areas of research.\n\nGive students a 2-minute warning before transitioning to the next activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "6bd8505d-36bf-4384-82b4-b655b29a7108",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "77185ce0-d769-40ef-aa0d-74b4d93a6716",
+      "position": 9,
+      "properties": {
+        "description": "As you discovered, there are a variety of applications for blockchain technology that can be both helpful or harmful. Considering all of your research together, we're going to decide if we think blockchain is mostly helpful... or mostly harmful.",
+        "duration": "10",
+        "name": "Societal Impacts",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "77185ce0-d769-40ef-aa0d-74b4d93a6716",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "927edaf8-f19d-4d87-b464-ec3262babc9c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, decide if blockchain is helpful or harmful in their area of research, then move towards that side of the room. Groups can also move to anywhere in between the two sides.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Alternative Ways to Engage:** This activity can also be done without physical movement for different classroom setups. You could ask students to give a thumbs up, side, or down.\n\nYou can also run this activity by drawing a line on a whiteboard with one side labeled “helpful” and the other labeled “harmful”, and students use post-it notes to write down their application and rationale for why it’s helpful or harmful. Then the following discussion turns into a gallery walk where students read each other’s post-its."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "927edaf8-f19d-4d87-b464-ec3262babc9c",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "a71e6dc1-e5ae-4495-8268-64ac7a418937",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What did you learn about your application of blockchain? Why did you choose your application as \"helpful\" or \"harmful\"?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a71e6dc1-e5ae-4495-8268-64ac7a418937",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "c8eec936-e57e-4e06-bf67-c0f8fbd9b1cf",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ask students from different ends of the spectrum to respond to the question, sharing different perspectives. Try to curate a conversation where multiple viewpoints are represented, emphasizing that the technology is neither “inherently helpful” or “inherently harmful” but depends on how it’s used."
+      },
+      "seeding_key": {
+        "activity_section.key": "c8eec936-e57e-4e06-bf67-c0f8fbd9b1cf",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "7b742b66-8106-4b54-9031-0464bc959bc4",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students return to their seats."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b742b66-8106-4b54-9031-0464bc959bc4",
+        "lesson_activity.key": "41535ff9-6325-44f6-85c5-14581c388df8"
+      }
+    },
+    {
+      "key": "fa8c7ac4-d31a-4703-86f8-cb2ec3da94d6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine two of your friends are having an argument - one says “Blockchain is terrible - everything it touches is bad!” but the other says “Blockchain is amazing! It can improve every aspect of society”. If they asked for your opinion, what would you say?"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa8c7ac4-d31a-4703-86f8-cb2ec3da94d6",
+        "lesson_activity.key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c"
+      }
+    },
+    {
+      "key": "d3fc6873-086c-4d10-8fd0-8c8931dbecb9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is purposefully open-ended, but is designed to focus students on the gray area of technology and see the nuance in these types of arguments. Listen for responses that can push back against both points of view in this fictitious argument, or that consider larger issues beyond just blockchain technology."
+      },
+      "seeding_key": {
+        "activity_section.key": "d3fc6873-086c-4d10-8fd0-8c8931dbecb9",
+        "lesson_activity.key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c"
+      }
     }
   ],
   "script_levels": [
@@ -1805,6 +2705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crypto - Value - Teach Widget"
+        ],
         "progression": "[Teacher] Crypto Market Simulation"
       },
       "bonus": false,
@@ -1984,6 +2887,42 @@
       }
     },
     {
+      "name": "Centralized Market - Bank Ledger",
+      "url": "https://docs.google.com/document/d/1XlV0x66DVDnsqwgTlNZBO7yjrmK18Bs95lMIe4YaR00/edit",
+      "key": "centralized_market_-_bank_ledger",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "centralized_market_-_bank_ledger"
+      }
+    },
+    {
+      "name": "Centralized Market - Bank Trading Note [Cutouts]",
+      "url": "https://docs.google.com/document/d/1_hvA53w5bCj1FWSeCHqTTldRygTpF1KT2w1Ebp2cCBY/edit",
+      "key": "centralized_market_-_bank_trading_note",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "centralized_market_-_bank_trading_note"
+      }
+    },
+    {
+      "name": "Centralized Market - Individual Group Resources [Cutouts]",
+      "url": "https://docs.google.com/document/d/1vEQaUKCUEuRMeZpA4myLCIsRmKP0IO33bSgHakW0H-o/edit",
+      "key": "centralized_market_-_individual_group_resources",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "centralized_market_-_individual_group_resources"
+      }
+    },
+    {
       "name": "Crypto Market Simulation Overview",
       "url": "https://docs.google.com/document/d/1pLQWAkFlc_H1lFGx_Hzu04LA3RA8uyUVVok28-Ivqi4/edit#",
       "key": "crypto_market_simulation_overview",
@@ -1994,6 +2933,18 @@
       },
       "seeding_key": {
         "resource.key": "crypto_market_simulation_overview"
+      }
+    },
+    {
+      "name": "Decentralized Market Resources [Cutouts]",
+      "url": "https://docs.google.com/document/d/12MYmrqvjze1-kXOoVbjT16o0xRBVqX8wRppe0O4WvpY/edit",
+      "key": "decentralized_market_resource_cutouts",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "decentralized_market_resource_cutouts"
       }
     },
     {
@@ -2030,6 +2981,44 @@
       },
       "seeding_key": {
         "resource.key": "printable_asset_sheets"
+      }
+    },
+    {
+      "name": "Societal Impact Research Areas",
+      "url": "https://docs.google.com/document/d/1nnrkcQnqrXhTEpnOir8Z3A5qhtn5IvNnZOlPgb-z3e0/edit",
+      "key": "societal_impact_research_areas",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "societal_impact_research_areas"
+      }
+    },
+    {
+      "name": "Societal Impact Research Reflection",
+      "url": "https://docs.google.com/document/d/11V-dgEdLQaB5NhMZOAclSa9QQDZZ_GMi2bj6q9viRmY/edit#",
+      "key": "societal_impact_research_reflection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "societal_impact_research_reflection"
+      }
+    },
+    {
+      "name": "Societal Impacts of Blockchain",
+      "url": "https://docs.google.com/presentation/d/1i4XqShZDtsQ0ee7ppkXS_QaD7ozn_um2PMwcfcWgAaY/template/preview",
+      "key": "societal_impacts_of_blockchain",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "societal_impacts_of_blockchain"
       }
     },
     {
@@ -2082,9 +3071,51 @@
       "seeding_key": {
         "resource.key": "vocabulary_matching_1"
       }
+    },
+    {
+      "name": "Why Blockchain?",
+      "url": "https://docs.google.com/presentation/d/1iD8HdiceTQfEEhOeKYN3f1UK5i95fey3EMN4p2yhJl0/template/preview",
+      "key": "why_blockchain_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "why_blockchain_"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "centralized_market_-_bank_ledger"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "centralized_market_-_bank_trading_note"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "centralized_market_-_individual_group_resources"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "decentralized_market_resource_cutouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "why_blockchain_"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -2173,6 +3204,24 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "vocabulary_matching_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "societal_impact_research_areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "societal_impact_research_reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "societal_impacts_of_blockchain"
       }
     }
   ],
@@ -2447,6 +3496,16 @@
   ],
   "objectives": [
     {
+      "key": "059416f9-fffe-4ee1-a7cb-ff9e435b3d1c",
+      "properties": {
+        "description": "Explain how issues with centralized markets center around individual freedoms"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "059416f9-fffe-4ee1-a7cb-ff9e435b3d1c"
+      }
+    },
+    {
       "key": "34a5389f-3ba2-4456-bf13-1bf84d87f5df",
       "properties": {
         "description": "Explain how an NFT, cryptocurrency, and stablecoin can gain or lose value in a digital marketplace"
@@ -2454,6 +3513,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "34a5389f-3ba2-4456-bf13-1bf84d87f5df"
+      }
+    },
+    {
+      "key": "621b691d-e28c-4932-b1e3-c1c52a8b4a13",
+      "properties": {
+        "description": "Explain how issues with decentralized markets center around trust"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "621b691d-e28c-4932-b1e3-c1c52a8b4a13"
       }
     },
     {
@@ -2477,6 +3546,16 @@
       }
     },
     {
+      "key": "b8a44e5e-9f60-4637-a90c-0d550938d78e",
+      "properties": {
+        "description": "Describe the applications and impacts of the blockchain on society"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "b8a44e5e-9f60-4637-a90c-0d550938d78e"
+      }
+    },
+    {
       "key": "ba1844fd-8866-4115-a085-8bd7acd69a38",
       "properties": {
         "description": "Use public key cryptography to verify transactions on the blockchain"
@@ -2484,6 +3563,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "ba1844fd-8866-4115-a085-8bd7acd69a38"
+      }
+    },
+    {
+      "key": "cd60c1f8-135a-40fc-9a69-c9d14e35befb",
+      "properties": {
+        "description": "Explain how Blockchain tries to address the issues with both centralized and decentralized systems."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "cd60c1f8-135a-40fc-9a69-c9d14e35befb"
       }
     },
     {
