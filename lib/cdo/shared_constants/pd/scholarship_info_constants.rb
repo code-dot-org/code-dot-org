@@ -3,6 +3,7 @@ module Pd
     SCHOLARSHIP_STATUSES = [
       NO = 'no'.freeze,
       YES_CDO = 'yes_code_dot_org'.freeze,
+      YES_CS_LEADERS = 'yes_cs_leaders'.freeze,
       YES_OTHER = 'yes_other'.freeze
     ].freeze
 
@@ -16,6 +17,7 @@ module Pd
     SCHOLARSHIP_DROPDOWN_OPTIONS = [
       {value: NO, label: "No, paid teacher"},
       {value: YES_CDO, label: "Yes, Code.org scholarship"},
+      {value: YES_CS_LEADERS, label: "Yes, CS Leaders Prize"},
       {value: YES_OTHER, label: "Yes, other funding (non code.org)"}
     ].freeze
 

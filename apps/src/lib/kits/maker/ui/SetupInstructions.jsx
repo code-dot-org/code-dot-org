@@ -22,8 +22,7 @@ import {
   WEB_SERIAL_FILTERS
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getStore} from '@cdo/apps/redux';
-
-const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
+import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';

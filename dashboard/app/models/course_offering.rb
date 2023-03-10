@@ -14,6 +14,10 @@
 #  marketing_initiative :string(255)
 #  grade_levels         :string(255)
 #  header               :string(255)
+#  image                :string(255)
+#  cs_topic             :string(255)
+#  school_subject       :string(255)
+#  device_compatibility :string(255)
 #
 # Indexes
 #
@@ -104,8 +108,16 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Unit) && cv.has_editor_experiment?(user)}
   end
 
+  def self.all_course_offerings
+    if should_cache?
+      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+    else
+      CourseOffering.all.includes(course_versions: :content_root)
+    end
+  end
+
   def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
+    all_course_offerings.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
@@ -176,7 +188,11 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative:  marketing_initiative,
       grade_levels: grade_levels,
-      header: header
+      header: header,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility
     }
   end
 
@@ -190,7 +206,11 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
-      header: header
+      header: header,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility
     }
   end
 
@@ -242,6 +262,10 @@ class CourseOffering < ApplicationRecord
 
   def hoc?
     category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
+  def get_participant_audience
+    course_versions&.first&.content_root&.participant_audience
   end
 
   def grade_levels_list
