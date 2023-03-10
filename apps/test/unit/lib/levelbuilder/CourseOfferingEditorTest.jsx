@@ -20,8 +20,8 @@ describe('CourseOfferingEditor', () => {
         curriculum_type: 'Module',
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
-        cs_topic: 'Art and Design',
-        school_subject: 'Science,English Language Arts'
+        cs_topic: 'art_and_design',
+        school_subject: 'science,english_language_arts'
       }
     };
   });
@@ -56,8 +56,8 @@ describe('CourseOfferingEditor', () => {
         curriculum_type: 'Module',
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
-        cs_topic: 'Art and Design',
-        school_subject: 'Science,English Language Arts'
+        cs_topic: 'art_and_design',
+        school_subject: 'science,english_language_arts'
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -127,8 +127,8 @@ describe('CourseOfferingEditor', () => {
         curriculum_type: 'Course',
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
-        cs_topic: 'Art and Design',
-        school_subject: 'Science,English Language Arts'
+        cs_topic: 'art_and_design',
+        school_subject: 'science,english_language_arts'
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
