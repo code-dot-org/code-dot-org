@@ -59,9 +59,23 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
     (_, i) => i + 1
   );
 
+  const loopStart = 4;
+  const loopEnd = 6;
+  const loopLength = loopEnd - loopStart;
+
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
       <div className={moduleStyles.container}>
+        <div className={moduleStyles.fullWidthOverlay}>
+          <div
+            className={moduleStyles.loopLine}
+            style={{
+              width: loopLength * barWidth,
+              left: (loopStart - 1) * barWidth
+            }}
+          />
+        </div>
+
         <div className={moduleStyles.fullWidthOverlay}>
           {arrayOfMeasures.map((measure, index) => {
             return (
@@ -77,7 +91,16 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
                       moduleStyles.barLineCurrent
                   )}
                 />
-                <div className={moduleStyles.barNumber}>{measure}</div>
+                <div
+                  className={classNames(
+                    moduleStyles.barNumber,
+                    measure >= loopStart &&
+                      measure < loopEnd &&
+                      moduleStyles.barNumberLoop
+                  )}
+                >
+                  {measure}
+                </div>
               </div>
             );
           })}
