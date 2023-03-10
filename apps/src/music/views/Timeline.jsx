@@ -17,7 +17,7 @@ const eventVerticalSpace = 2;
 /**
  * Renders the music playback timeline.
  */
-const Timeline = ({isPlaying, currentPlayheadPosition}) => {
+const Timeline = ({isPlaying, isLooping, currentPlayheadPosition}) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
@@ -67,13 +67,15 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
     <div id="timeline" className={moduleStyles.wrapper}>
       <div className={moduleStyles.container}>
         <div className={moduleStyles.fullWidthOverlay}>
-          <div
-            className={moduleStyles.loopLine}
-            style={{
-              width: loopLength * barWidth,
-              left: (loopStart - 1) * barWidth
-            }}
-          />
+          {isLooping && (
+            <div
+              className={moduleStyles.loopLine}
+              style={{
+                width: loopLength * barWidth,
+                left: (loopStart - 1) * barWidth
+              }}
+            />
+          )}
         </div>
 
         <div className={moduleStyles.fullWidthOverlay}>
@@ -94,7 +96,8 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
                 <div
                   className={classNames(
                     moduleStyles.barNumber,
-                    measure >= loopStart &&
+                    isLooping &&
+                      measure >= loopStart &&
                       measure < loopEnd &&
                       moduleStyles.barNumberLoop
                   )}
@@ -133,6 +136,7 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
 
 Timeline.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
+  isLooping: PropTypes.bool.isRequired,
   currentPlayheadPosition: PropTypes.number.isRequired,
   sounds: PropTypes.array
 };

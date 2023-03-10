@@ -123,6 +123,7 @@ const Controls = ({
                   marginRight: 7,
                   padding: 2
                 }}
+                value="4"
               />
               <FontAwesome icon={'arrow-right'} />
               <input
@@ -134,6 +135,7 @@ const Controls = ({
                   marginLeft: 7,
                   padding: 2
                 }}
+                value="6"
               />
             </div>
           )}
