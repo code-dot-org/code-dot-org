@@ -1,21 +1,22 @@
-import {Source} from './types';
+import {Source, SourceUpdateOptions} from './types';
 import {SOURCE_FILE} from './constants';
+const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>
   `/v3/sources/${channelId}/${SOURCE_FILE}`;
 
-// TODO: what should we return if the request fails (404, 422, 500, etc)?
-// maybe Promise<Source | Response>?
-export async function get(channelId: string): Promise<Source> {
-  const response = await fetch(rootUrl(channelId));
-  return response.json();
+export async function get(channelId: string): Promise<Response> {
+  return fetch(rootUrl(channelId));
 }
 
-export async function put(
+// TODO: do we need contentType header?
+export async function update(
   channelId: string,
-  source: Source
+  source: Source,
+  options?: SourceUpdateOptions
 ): Promise<Response> {
-  return fetch(rootUrl(channelId), {
+  const url = rootUrl(channelId) + stringifyQueryParams(options);
+  return fetch(url, {
     method: 'PUT',
     body: JSON.stringify(source)
   });
