@@ -57,6 +57,38 @@ function costumeList() {
 function backgroundList() {
   return animations(true);
 }
+function getAllBehaviors() {
+  const behaviors = [
+    [
+      Blockly.FieldDropdown.NO_OPTIONS_MESSAGE,
+      Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
+    ]
+  ];
+  Blockly.mainBlockSpace.getAllBlocks().forEach(function(block) {
+    if (
+      block.type === 'behavior_definition' &&
+      block.getProcedureInfo()?.name &&
+      block.getProcedureInfo()?.id
+    ) {
+      const newOption = [
+        block.getProcedureInfo().name,
+        Blockly.JavaScript.variableDB_?.getName(
+          block.getProcedureInfo().id,
+          'PROCEDURE'
+        )
+      ];
+      if (
+        behaviors[behaviors.length - 1].includes(
+          Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
+        )
+      ) {
+        behaviors.pop();
+      }
+      behaviors.push(newOption);
+    }
+  });
+  return behaviors.sort();
+}
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -350,6 +382,19 @@ const customInputTypes = {
       return `{name: '${Blockly.JavaScript.translateVarName(
         block.getFieldValue(arg.name)
       )}'}`;
+    }
+  },
+  behaviorPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return `${block.getFieldValue(arg.name)}`;
     }
   },
   limitedColourPicker: {
@@ -654,6 +699,8 @@ export default {
     ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
+          console.log('initialize flyout configure');
+          console.log(Blockly.BlockValueType);
           if (behaviorEditor && !behaviorEditor.isOpen()) {
             flyout.addButtonToFlyout_(
               cursor,
