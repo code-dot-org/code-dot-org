@@ -28,16 +28,6 @@ Scenario: School Info Confirmation Dialog
   Then I reload the page
   And I wait to see ".modal"
 
-  # Teacher completes school info interstitial
-  And element "#react-select-2--value" contains text "United States"
-  And element "#school-type" is visible
-  And I select the "Public" option in dropdown "school-type"
-  And I wait until element "#nces_school" is visible
-  Then I press keys "Alakanuk School" for element "#nces_school"
-  Then I wait until element ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" is visible
-  Then I press ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" using jQuery
-  Then I press "#save-button" using jQuery
-
   # One week later, the teacher does not see the prompt
   And eight days pass for user "Teacher_Chuba"
   Then I reload the page

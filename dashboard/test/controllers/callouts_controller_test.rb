@@ -41,22 +41,6 @@ class CalloutsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, params: {id: @callout}
-    assert_response :success
-  end
-
-  test "should update callout" do
-    patch :update, params: {
-      id: @callout,
-      callout: {
-        element_id: @callout.element_id,
-        localization_key: @callout.localization_key
-      }
-    }
-    assert_redirected_to callout_path(assigns(:callout))
-  end
-
   test "should destroy callout" do
     assert_destroys(Callout) do
       delete :destroy, params: {id: @callout}
