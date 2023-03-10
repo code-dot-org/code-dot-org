@@ -26,6 +26,13 @@ $full-width: 900px;
       left: 0;
     }
 
+    .loopLine {
+      background-color: white;
+      border-radius: 8px;
+      height: 18px;
+      position: absolute;
+    }
+
     .barLineContainer {
       position: absolute;
       top: 0;
@@ -47,6 +54,10 @@ $full-width: 900px;
 
       .barNumber {
         padding-left: 6px;
+
+        &Loop {
+          color: black;
+        }
       }
     }
 

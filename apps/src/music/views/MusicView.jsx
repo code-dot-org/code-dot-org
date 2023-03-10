@@ -85,7 +85,9 @@ class UnconnectedMusicView extends React.Component {
       showInstructions: false,
       instructionsPosIndex,
       showingVideo: true,
-      isLooping: false
+      isLooping: false,
+      loopStart: 0,
+      loopEnd: 0
     };
   }
 
@@ -381,6 +383,8 @@ class UnconnectedMusicView extends React.Component {
           instructionsOnRight={instructionsOnRight}
           isLooping={this.state.isLooping}
           setLooping={this.setLooping}
+          loopStart={this.state.loopStart}
+          loopEnd={this.state.loopEnd}
         />
         <Timeline
           isPlaying={this.state.isPlaying}
