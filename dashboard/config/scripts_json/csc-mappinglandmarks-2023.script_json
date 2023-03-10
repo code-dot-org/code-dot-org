@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-03-07 01:08:38 UTC",
+    "serialized_at": "2023-03-09 16:50:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1231,6 +1231,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1253,6 +1256,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1_2023"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
