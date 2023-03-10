@@ -124,29 +124,25 @@ module Curriculum
     )
 
     # CS topic field values for course offerings
-    COURSE_OFFERING_CS_TOPICS = OpenStruct.new(
-      {
-        art_and_design: 'Art and Design',
-        app_design: 'App Design',
-        artificial_intelligence: 'Artificial Intelligence',
-        cybersecurity: 'Cybersecurity',
-        data: 'Data',
-        games_and_animations: 'Games and Animations',
-        internet: 'Internet',
-        physical_computing: 'Physical Computing',
-        web_design: 'Web Design',
-        programming: 'Programming'
-      }
+    COURSE_OFFERING_CS_TOPICS = %w(
+      art_and_design
+      app_design
+      artificial_intelligence
+      cybersecurity
+      data
+      games_and_animations
+      internet
+      physical_computing
+      web_design
+      programming
     ).freeze
 
     # School subject field values for course offerings
-    COURSE_OFFERING_SCHOOL_SUBJECTS = OpenStruct.new(
-      {
-        math: 'Math',
-        science: 'Science',
-        english_language_arts: 'English Language Arts',
-        history: 'History'
-      }
+    COURSE_OFFERING_SCHOOL_SUBJECTS = %w(
+      math
+      science
+      english_language_arts
+      history
     ).freeze
 
     # Device types for course offerings

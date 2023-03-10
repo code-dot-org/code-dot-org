@@ -17,6 +17,10 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
+import {
+  translatedCourseOfferingCsTopics,
+  translatedCourseOfferingSchoolSubjects
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
@@ -268,7 +272,7 @@ export default function CourseOfferingEditor(props) {
           <option value="">{NoneOption}</option>
           {Object.values(CourseOfferingCsTopics).map(topic => (
             <option key={topic} value={topic}>
-              {topic}
+              {translatedCourseOfferingCsTopics[topic]}
             </option>
           ))}
         </select>
@@ -290,7 +294,7 @@ export default function CourseOfferingEditor(props) {
           <option value="">{NoneOption}</option>
           {Object.values(CourseOfferingSchoolSubjects).map(subject => (
             <option key={subject} value={subject}>
-              {subject}
+              {translatedCourseOfferingSchoolSubjects[subject]}
             </option>
           ))}
         </select>
