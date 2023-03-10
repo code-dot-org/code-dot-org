@@ -568,7 +568,7 @@ def localize_course_resources
   # Currently, csd is the only fully translatable course that has resources in this directory
   translatable_courses = %w(csd)
   resources = {}
-  Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).sort.each do |file|
+  Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).each do |file|
     course_json = JSON.parse(File.read(file))
     course_properties = course_json['properties']
     next unless translatable_courses.include?(course_properties['family_name'])
