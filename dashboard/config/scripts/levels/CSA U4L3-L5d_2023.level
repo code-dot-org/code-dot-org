@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "A content creator wants to know how much a post could potentially spread on a social media app.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Creator.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcReach()</code> method to calculate and return a 1D array containing the number of people a post could potentially reach. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcReach()</code> method should:\r\n\r\n1. Have a parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">startNum</code> for the number of people to start with and a parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numLevels</code> for the number of levels to estimate.\r\n\r\n2. Return a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">int</code> values containing the estimated spread from <code style=\"background-color: #ececec; color: black; font-weight: bold;\">startNum</code> to the value for the last level.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>,\r\n\r\n1. Declare and initialize a 1D array that stores the 1D array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcReach()</code> method.\r\n\r\n2. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResults()</code> method with the 1D array.\r\n\r\n&nbsp;\r\n\r\n::: details [<span style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</span>]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\ncreate int array that is the length of numLevels\r\n\r\nloop from 0 to results.length\r\n  results[index] = Math.pow(startNum, numLevels)\r\n\r\nreturn results\r\n</pre>\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math</code> class in the **Documentation** tab ⬆️ for help using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math.pow()</code> method.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,16 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Viral Marketing",
+    "bubble_choice_description": "A content creator wants to know how much a post could potentially spread on a social media app.",
+    "thumbnail_url": "https://images.code.org/ec3d760998fac03d29ad7c4d338984f6-social-media.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-02-17T18:31:58.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-02-17T18:31:58.602+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L5c_2023\"},{\"changed_at\":\"2023-02-17 18:32:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-17T18:31:58.602+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L5c_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L5c_2023\"},{\"changed_at\":\"2023-02-17 18:32:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 15:35:14 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
