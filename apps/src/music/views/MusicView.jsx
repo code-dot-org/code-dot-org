@@ -84,7 +84,8 @@ class UnconnectedMusicView extends React.Component {
       timelineAtTop: false,
       showInstructions: false,
       instructionsPosIndex,
-      showingVideo: true
+      showingVideo: true,
+      isLooping: false
     };
   }
 
@@ -250,6 +251,10 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
+  setLooping = isLooping => {
+    this.setState({isLooping});
+  };
+
   compileSong = () => {
     return this.musicBlocklyWorkspace.compileSong({
       MusicPlayer: this.player,
@@ -374,6 +379,8 @@ class UnconnectedMusicView extends React.Component {
           instructionsAvailable={!!this.state.instructions}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
+          isLooping={this.state.isLooping}
+          setLooping={this.setLooping}
         />
         <Timeline
           isPlaying={this.state.isPlaying}

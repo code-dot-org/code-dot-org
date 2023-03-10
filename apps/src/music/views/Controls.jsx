@@ -18,7 +18,9 @@ const Controls = ({
   top,
   instructionsAvailable,
   toggleInstructions,
-  instructionsOnRight
+  instructionsOnRight,
+  isLooping,
+  setLooping
 }) => {
   const [isShowingBeatPad, setBeatPadShowing] = useState(false);
   useEffect(() => {
@@ -88,8 +90,54 @@ const Controls = ({
           icon={isPlaying ? 'stop-circle' : 'play-circle'}
           onClick={() => setPlaying(!isPlaying)}
           className={moduleStyles.iconButton}
+          style={{paddingLeft: 140}}
         />
-        <FontAwesome icon={'repeat'} />
+        <div
+          style={{
+            marginLeft: 12,
+            cursor: 'pointer',
+            backgroundColor: isLooping ? 'white' : 'initial',
+            color: isLooping ? '#424242' : 'white',
+            borderRadius: '50%',
+            width: 18,
+            height: 18,
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          onClick={() => setLooping(!isLooping)}
+        >
+          <FontAwesome icon={'repeat'} style={{position: 'absolute'}} />
+        </div>
+        <div style={{width: 140}}>
+          {isLooping && (
+            <div>
+              <input
+                type="number"
+                style={{
+                  width: 45,
+                  borderRadius: 4,
+                  marginBottom: 0,
+                  marginLeft: 7,
+                  marginRight: 7,
+                  padding: 2
+                }}
+              />
+              <FontAwesome icon={'arrow-right'} />
+              <input
+                type="number"
+                style={{
+                  width: 45,
+                  borderRadius: 4,
+                  marginBottom: 0,
+                  marginLeft: 7,
+                  padding: 2
+                }}
+              />
+            </div>
+          )}
+        </div>
       </div>
       {rightIcon}
     </div>
@@ -103,7 +151,9 @@ Controls.propTypes = {
   top: PropTypes.bool.isRequired,
   instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
-  instructionsOnRight: PropTypes.bool.isRequired
+  instructionsOnRight: PropTypes.bool.isRequired,
+  isLooping: PropTypes.bool.isRequired,
+  setLooping: PropTypes.func.isRequired
 };
 
 export default Controls;
