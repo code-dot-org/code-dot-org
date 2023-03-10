@@ -4,7 +4,7 @@
     "name": "behaviorPicker",
     "blockText": "{BEHAVIOR}",
     "returnType": "Behavior",
-    "expression": "new Behavior(VALUE, [])",
+    "expression": "VALUE",
     "color": [
       136,
       ".84",

@@ -72,10 +72,7 @@ function getAllBehaviors() {
     ) {
       const newOption = [
         block.getProcedureInfo().name,
-        Blockly.JavaScript.variableDB_?.getName(
-          block.getProcedureInfo().id,
-          'PROCEDURE'
-        )
+        block.getProcedureInfo().id
       ];
       if (
         behaviors[behaviors.length - 1].includes(
@@ -392,9 +389,47 @@ const customInputTypes = {
           new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
           inputConfig.name
         );
+      let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+      if (
+        window.appOptions && // global appOptions is not available on level edit page
+        appOptions.level.toolbox &&
+        !appOptions.readonlyWorkspace &&
+        !Blockly.hasCategories
+      ) {
+        allowBehaviorEditing = false;
+      }
+      if (allowBehaviorEditing) {
+        const editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+        Blockly.cdoUtils.bindBrowserEvent(
+          editLabel.fieldGroup_,
+          'mousedown',
+          block,
+          this.openEditor
+        );
+        currentInputRow.appendField(editLabel);
+      }
     },
     generateCode(block, arg) {
-      return `${block.getFieldValue(arg.name)}`;
+      const invalidBehavior =
+        block.getFieldValue(arg.name) ===
+        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE;
+      const behaviorId = Blockly.JavaScript.variableDB_?.getName(
+        block.getFieldValue(arg.name),
+        'PROCEDURE'
+      );
+      if (invalidBehavior) {
+        console.warn('No behaviors available');
+        return undefined;
+      } else {
+        return `new Behavior(${behaviorId}, [])`;
+      }
+    },
+    openEditor(e) {
+      e.stopPropagation();
+      Blockly.behaviorEditor.openEditorForFunction(
+        this,
+        this.getFieldValue('BEHAVIOR')
+      );
     }
   },
   limitedColourPicker: {
@@ -699,8 +734,6 @@ export default {
     ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
-          console.log('initialize flyout configure');
-          console.log(Blockly.BlockValueType);
           if (behaviorEditor && !behaviorEditor.isOpen()) {
             flyout.addButtonToFlyout_(
               cursor,
