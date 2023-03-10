@@ -9,7 +9,6 @@ export async function get(channelId: string): Promise<Channel> {
   return response.json();
 }
 
-// TODO: do we need contentType header?
 // TODO: add correct type for queryParams
 export async function create(
   channel: NewChannel,

@@ -9,7 +9,6 @@ export async function get(channelId: string): Promise<Response> {
   return fetch(rootUrl(channelId));
 }
 
-// TODO: do we need contentType header?
 export async function update(
   channelId: string,
   source: Source,
