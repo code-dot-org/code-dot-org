@@ -42,7 +42,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"8d5b0a6c-125a-4099-ae3a-236f621ae2f8\",\"c29ea13d-5223-4ecf-bd40-f6a8d9f0d010\",\"5c63a1ad-7f61-4cde-b7ab-42b45f8b3ad0\",\"0ecae378-2654-4543-946b-ac92159bcfbf\"],\"propsByKey\":{\"0ecae378-2654-4543-946b-ac92159bcfbf\":{\"name\":\"fish_10\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":247},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:44 UTC\",\"pngLastModified\":\"2021-01-19 23:46:45 UTC\",\"version\":\"0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0rhBDi4DUUwKbJatsf.dSkxMiiPwS2HQ/category_animals/fish_10.png\",\"sourceSize\":{\"x\":395,\"y\":247}},\"5c63a1ad-7f61-4cde-b7ab-42b45f8b3ad0\":{\"name\":\"cuteanimals_tuna\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:26 UTC\",\"pngLastModified\":\"2021-09-02 22:04:08 UTC\",\"version\":\"s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6.\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6./category_animals/cuteanimals_tuna.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c29ea13d-5223-4ecf-bd40-f6a8d9f0d010\":{\"name\":\"background_underwater_17\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:15 UTC\",\"pngLastModified\":\"2021-01-19 23:53:16 UTC\",\"version\":\"T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T3iCeWVvk34YAqG8qfnOzbGcWXDnBqlp/category_backgrounds/background_underwater_17.png\",\"sourceSize\":{\"x\":400,\"y\":399}},\"8d5b0a6c-125a-4099-ae3a-236f621ae2f8\":{\"name\":\"shark\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":397,\"y\":185},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:44:57 UTC\",\"pngLastModified\":\"2021-01-19 23:44:57 UTC\",\"version\":\"xCviHEh_mf4AvODEY_xFeI008j9L3HR5\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xCviHEh_mf4AvODEY_xFeI008j9L3HR5/category_animals/shark.png\",\"sourceSize\":{\"x\":397,\"y\":185}}}}\r\n\r\n",
     "hide_custom_blocks": "true",
-    "long_instructions": "**Another way to control sprites is with effects!**\r\n\r\n- Add a `create spiral effect`(#F79EA5) block.\r\n- Test a few effects to find one to represent a **school of fish swimming together**. \r\n- Click `Run`(#FFBD46) to test your code and `Finish`(#FFBD46) when you're done experimenting. \r\n\r\n***\r\n\r\n**Bonus:** Add an `event`(#6AF36C) and a `behavior`(#5ED5DD) to make the shark move with the arrow keys.\r\n",
+    "long_instructions": "**Many animals collect in groups to survive. Code these fish to swim together following the leader.**\r\n\r\n- Add a `new sprite`(#F79EA5) to become the leader of the school of fish. \r\n- Set the new fish's behavior to `swim with arrow keys`(#6AF36C).\r\n- Connect the `sprite begins following fish`(#5ED5DD). \r\n- Click `Run`(#FFBD46) and use the **arrows** to move the leader. \r\n\r\n\r\n**Do all of the other fish follow together?** \r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -61,11 +61,10 @@
     "hide_pause_button": "false",
     "callout_json": "[]",
     "instructions_icon": "bear",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your `when clicked` events should look like this: \\n<xml><block type=\\\"gamelab_spriteClicked\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"cuteanimals_tuna\\\"</field></block></value><next><block type=\\\"math_change\\\"><field name=\\\"VAR\\\">moreFish</field><value name=\\\"DELTA\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">20</field></block></value><next><block type=\\\"gamelab_setProp\\\"><field name=\\\"PROPERTY\\\">\\\"scale\\\"</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"cuteanimals_tuna\\\"</field></block></value><value name=\\\"VAL\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">50</field></block></value><next><block type=\\\"gamelab_makeBurst\\\"><field name=\\\"EFFECT\\\">\\\"spiral\\\"</field><field name=\\\"ANIMATION_NAME\\\">\\\"cuteanimals_tuna\\\"</field><value name=\\\"NUM\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">moreFish</field></block></value><next><block type=\\\"gamelab_spriteSay\\\"><field name=\\\"SPEECH\\\">Whoa! This large school of fish is confusing me!</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"shark\\\"</field></block></value></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/46c218d8f4a74f5c425f7bed3b6be8b2/csc_ecosystems_survival_choice_fishschool.mp3\"}]",
+    "authored_hints": "[]",
     "skip_autosave": true,
     "encrypted_examples": "DPA2aEwVQ4xvFNtvkxFxc58W2x05YRFU+ka+R4b/dnY85NRKuCAFgJITmDMu\nSIn45C4GebAA/NKmlf03rQG/+3tPrZDG/+qkzcIMW3ImiKroU1z9sJprOk0s\ndfbbYvWpAt64ncyq3fe6aYORfV+sBg==\n",
     "display_name": "Fish Schools",
-    "thumbnail_url": "https://images.code.org/8dec5127f87ab35871f1731407e5e7f5-image-1651021333028.01.38 PM.png",
     "standalone_app_name": "spritelab",
     "soft_buttons": [
       "leftButton",
@@ -81,7 +80,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-03T21:44:40.469+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_fishschool_1\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_fishschool_1\"},{\"changed_at\":\"2023-03-03 21:50:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:50:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:51:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:52:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:52:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:53:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:31:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:31:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:32:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:32:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:37:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:41:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-03T21:44:40.469+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_fishschool_1\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_fishschool_1\"},{\"changed_at\":\"2023-03-03 21:50:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:50:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:51:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:52:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:52:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:53:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 21:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:31:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:31:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:32:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:32:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:37:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:41:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 14:12:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-09 14:13:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-09 14:45:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-09 22:02:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:09:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:10:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:11:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:12:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:13:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:57:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:59:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:00:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:01:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -93,32 +92,35 @@
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"background_underwater_17"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNumSprites">
                   <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                      <field name="LOCATION">{"x":64,"y":96}</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">20</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNumSprites">
-                      <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
-                      <value name="NUM">
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_getAllSprites"/>
+                      </value>
+                      <value name="VAL">
                         <block type="math_number">
-                          <field name="NUM">20</field>
+                          <field name="NUM">30</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_setProp">
-                          <field name="PROPERTY">"scale"</field>
+                        <block type="gamelab_addBehaviorSimple">
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"cuteanimals_tuna"</field>
                             </block>
                           </value>
-                          <value name="VAL">
-                            <block type="math_number">
-                              <field name="NUM">30</field>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get">
+                              <mutation/>
+                              <field name="VAR" id="wandering">wandering</field>
                             </block>
                           </value>
                         </block>
@@ -1448,25 +1450,27 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="functional_pass">
-          <mutation name="driving with arrow keys"/>
-        </block>
         <block type="gamelab_setBackgroundImageAs">
           <field name="IMG">"background_underwater_17"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
+          <field name="ANIMATION_NAME">"fish_10"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_startFollowing">
-          <field name="TARGET">"fish_10"</field>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"cuteanimals_tuna"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number">
+              <field name="NUM">30</field>
             </block>
           </value>
         </block>
@@ -1492,7 +1496,15 @@
           <value name="BEHAVIOR">
             <block type="gamelab_behavior_get">
               <mutation/>
-              <field name="VAR" id="driving with arrow keys">driving with arrow keys</field>
+              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_startFollowing">
+          <field name="TARGET">"fish_10"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"cuteanimals_tuna"</field>
             </block>
           </value>
         </block>
