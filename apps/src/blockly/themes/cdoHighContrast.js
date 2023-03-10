@@ -1,5 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import HighContrastTheme from '@blockly/theme-highcontrast';
+import {Themes} from '../constants';
 
 // Intentionally overriden styles from Google Blockly.
 // We do not override list, math, text, or variable blocks.
@@ -60,43 +61,20 @@ const cdoCustomHighContrastStyles = {
   ...spriteLabHighContrastStyles
 };
 
-const cdoHighContrastBlockStyles = {
+export const cdoHighContrastBlockStyles = {
   ...coreBlocklyOverrides,
   ...cdoCustomHighContrastStyles
 };
 
-const CdoHighContrastTheme = GoogleBlockly.Theme.defineTheme(
-  'cdohighcontrast',
-  {
-    base: HighContrastTheme,
-    blockStyles: cdoHighContrastBlockStyles,
-    categoryStyles: {},
-    componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
-    },
-    fontStyle: {
-      family: '"Gotham 4r", sans-serif'
-    },
-    startHats: null
-  }
-);
-
-export default CdoHighContrastTheme;
-export const MusicLabHighContrastTheme = GoogleBlockly.Theme.defineTheme(
-  'musiclabhighcontrast',
-  {
-    base: CdoHighContrastTheme,
-    blockStyles: cdoHighContrastBlockStyles,
-    componentStyles: {
-      toolboxBackgroundColour: '#424242', // gray-800
-      // The flyout background is especially dark so that workspace blocks
-      // underneath the flyout (which is semi-transparent) are obscured enough
-      // to make the blocks in the flyout easy to see.
-      flyoutBackgroundColour: '#121212',
-      workspaceBackgroundColour: '#212121' // gray-900
-    },
-    fontStyle: {
-      family: '"Gotham 4r", sans-serif'
-    }
-  }
-);
+export default GoogleBlockly.Theme.defineTheme(Themes.HIGH_CONTRAST, {
+  base: HighContrastTheme,
+  blockStyles: cdoHighContrastBlockStyles,
+  categoryStyles: {},
+  componentStyles: {
+    toolboxBackgroundColour: '#DDDDDD'
+  },
+  fontStyle: {
+    family: '"Gotham 4r", sans-serif'
+  },
+  startHats: null
+});

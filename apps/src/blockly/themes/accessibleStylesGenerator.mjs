@@ -6,7 +6,7 @@ import nearestColor from 'nearest-color';
 // http://mkweb.bcgsc.ca/colorblind/palettes/24.color.blindness.palette.txt
 // The above list was filtered down to just those that provide adequate contrast with white text.
 
-export const themes = {
+const themes = {
   PROTANOPIA: 'protanopia',
   DEUTERANOPIA: 'deuteranopia',
   TRITANOPIA: 'tritanopia'
