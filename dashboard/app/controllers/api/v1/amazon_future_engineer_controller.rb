@@ -71,8 +71,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     render json: e.to_s, status: :bad_request
   end
 
-  private
-
   REQUIRED_PARAMETERS = %w(
     firstName
     lastName
@@ -96,13 +94,13 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     'consentCSTA'
   ]
 
-  def submit_params
+  private def submit_params
     params.require(:amazon_future_engineer).
            permit(*PERMITTED_PARAMETERS).
            tap {|p| p.require(REQUIRED_PARAMETERS)}
   end
 
-  def to_bool(val)
+  private def to_bool(val)
     ActiveModel::Type::Boolean.new.cast val
   end
 end

@@ -135,13 +135,11 @@ class ActivitiesController < ApplicationController
     log_milestone(@level_source, params)
   end
 
-  private
-
-  def milestone_logger
+  private def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  def track_progress_for_user
+  private def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
 
@@ -215,7 +213,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def track_progress_in_session
+  private def track_progress_in_session
     # track scripts
     if @script_level.try(:script).try(:id)
       test_result = params[:testResult].to_i
@@ -229,7 +227,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def log_milestone(level_source, params)
+  private def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id

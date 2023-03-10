@@ -193,9 +193,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     redirect_to controller: 'pd/session_attendance', action: 'attend'
   end
 
-  private
-
-  def build_enrollment_from_params
+  private def build_enrollment_from_params
     enrollment = get_workshop_user_enrollment
     enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
     enrollment.school_info_attributes = school_info_params
@@ -203,26 +201,26 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     enrollment
   end
 
-  def mark_attended(user_id, session_id)
+  private def mark_attended(user_id, session_id)
     Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)
   end
 
-  def workshop_closed?
+  private def workshop_closed?
     @workshop.state == ::Pd::Workshop::STATE_ENDED
   end
 
-  def workshop_full?
+  private def workshop_full?
     @workshop.enrollments.count >= @workshop.capacity
   end
 
-  def workshop_owned_by?(user)
+  private def workshop_owned_by?(user)
     return false unless user
     @workshop.organizer_or_facilitator? user
   end
 
   # Gets the workshop enrollment associated with the current user id or email if one exists.
   # Otherwise returns a new enrollment for that user.
-  def get_workshop_user_enrollment
+  private def get_workshop_user_enrollment
     @workshop.enrollments.where(
       'user_id = ? OR email = ?', current_user.id, current_user.email
     ).first || Pd::Enrollment.new(
@@ -233,7 +231,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     )
   end
 
-  def enrollment_params
+  private def enrollment_params
     params.require(:pd_enrollment).permit(
       :first_name,
       :last_name,
@@ -243,7 +241,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     )
   end
 
-  def school_info_params
+  private def school_info_params
     params.require(:school_info).permit(
       :country,
       :school_type,

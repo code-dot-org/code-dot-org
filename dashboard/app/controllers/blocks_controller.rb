@@ -43,13 +43,11 @@ class BlocksController < ApplicationController
     redirect_to(blocks_path, notice: "Block Deleted")
   end
 
-  private
-
-  def create_params
+  private def create_params
     update_params
   end
 
-  def update_params
+  private def update_params
     params['block'].permit(:name, :pool, :category, :config, :helper_code)
   end
 end

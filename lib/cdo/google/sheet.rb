@@ -61,13 +61,11 @@ module Google
       end
     end
 
-    private
-
     # Returns a list of email addresses of individuals who have been granted access
     # to the document who are not:
     #   - @code.org accounts
     #   - The configured gsheet writer service account
-    def external_emails_with_access
+    private def external_emails_with_access
       acl = @drive.get_spreadsheet_acl @document_key
       emails = []
       acl.each do |entry|

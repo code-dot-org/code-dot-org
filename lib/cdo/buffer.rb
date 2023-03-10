@@ -87,8 +87,6 @@ module Cdo
       end
     end
 
-    private
-
     # Extend ScheduledTask to support rescheduling after being executed.
     class RescheduledTask < Concurrent::ScheduledTask
       # Reschedule the task using the given delay and the current time.
@@ -117,13 +115,13 @@ module Cdo
     # Track time each object was added to the buffer.
     BufferObject = Struct.new(:object, :added_at)
 
-    def now
+    private def now
       Process.clock_gettime(Process::CLOCK_MONOTONIC)
     end
 
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
-    def schedule_flush(force = false)
+    private def schedule_flush(force = false)
       @buffer.synchronize do
         @task.reschedule {batch_ready(force)} unless @buffer.empty?
       end
@@ -132,7 +130,7 @@ module Cdo
     # Determine when the next batch of existing buffered objects will be ready to be flushed.
     # @param [Boolean] force flush batch even if not full.
     # @return [Float] Seconds until the next batch can be flushed.
-    def batch_ready(force)
+    private def batch_ready(force)
       raise ArgumentError.new('Empty buffer') if @buffer.empty?
 
       # Wait until max_interval has passed since the earliest object to flush a non-full batch.
@@ -151,7 +149,7 @@ module Cdo
     end
 
     # Flush a batch of objects from the buffer.
-    def flush_batch
+    private def flush_batch
       @last_flush = now
       flush(take_batch.map(&:object))
     rescue => e
@@ -159,7 +157,7 @@ module Cdo
     end
 
     # Take a single batch of objects from the buffer.
-    def take_batch
+    private def take_batch
       batch = []
       @buffer.synchronize do
         batch << @buffer.shift until
@@ -170,7 +168,7 @@ module Cdo
       batch
     end
 
-    def reset_if_forked
+    private def reset_if_forked
       @buffer.synchronize do
         if $$ != @ruby_pid
           @buffer.clear
