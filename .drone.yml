@@ -38,7 +38,7 @@ steps:
       filename: unit-tests-cache.tar
 
   - name: unit-tests
-    image: codedotorg/code-dot-org:1.5.4
+    image: codedotorg/code-dot-org:ruby-2.7.7
     pull: always
     volumes:
       - name: rbenv
@@ -135,7 +135,7 @@ steps:
       restore: true
 
   - name: ui-tests
-    image: codedotorg/code-dot-org:1.5.4
+    image: codedotorg/code-dot-org:ruby-2.7.7
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
