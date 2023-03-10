@@ -54,6 +54,14 @@ const optionsList = [
       {value: 'false', description: "Don't show instructions."},
       {value: 'true', description: 'Show instructions.'}
     ]
+  },
+  {
+    name: 'show-video',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't show video."},
+      {value: 'true', description: 'Show video.'}
+    ]
   }
 ];
 
