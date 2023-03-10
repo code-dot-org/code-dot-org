@@ -85,10 +85,9 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
-Before running dashboard tests for the first time, run the below commands to seed the required test data
+Before running dashboard tests for the first time, run the below command to seed the required test data
 
-1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
-2. `RAILS_ENV=test bundle exec rake assets:precompile`
+ `RAILS_ENV=test bundle exec rake assets:precompile`
 
 To run all dashboard tests, which takes about 15 mintues
 
@@ -111,10 +110,12 @@ You can get a local coverage report with
 
 1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
 
-    1. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
+    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
+    
+    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
       `spring stop` 
 
-    2. recreate your local dashboard test db and reseed the data via:
+    3. recreate your local dashboard test db and reseed the data via:
         * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
         * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
 
