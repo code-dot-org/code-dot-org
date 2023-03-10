@@ -272,7 +272,7 @@ export default function CourseOfferingEditor(props) {
           onChange={e => handleMultipleSelected(e, 'cs_topic')}
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(CourseOfferingCsTopics).map(topic => (
+          {CourseOfferingCsTopics.map(topic => (
             <option key={topic} value={topic}>
               {translatedCourseOfferingCsTopics[topic]}
             </option>
@@ -294,7 +294,7 @@ export default function CourseOfferingEditor(props) {
           onChange={e => handleMultipleSelected(e, 'school_subject')}
         >
           <option value="">{translatedNoneOption}</option>
-          {Object.values(CourseOfferingSchoolSubjects).map(subject => (
+          {CourseOfferingSchoolSubjects.map(subject => (
             <option key={subject} value={subject}>
               {translatedCourseOfferingSchoolSubjects[subject]}
             </option>
