@@ -869,6 +869,7 @@ $default-modal-width: 640px;
   }
 
   a:hover:not(.btn) {
+    color: $red;
     background-color: $white;
   }
 

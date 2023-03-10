@@ -46,9 +46,9 @@ export class Heading2 extends Component {
 
 export const h3Style = {
   ...baseHeadingStyle,
-  fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
-  fontSize: '1.75em',
-  lineHeight: '1.2'
+  fontFamily: '"Gotham 5r", sans-serif',
+  fontSize: 16,
+  lineHeight: '24px'
 };
 
 export class Heading3 extends Component {
