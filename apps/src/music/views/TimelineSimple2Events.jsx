@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import {PlayerUtilsContext} from '../context';
 import TimelineElement from './TimelineElement';
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 /**
  * Renders timeline events for the simple2 model.
@@ -13,7 +14,7 @@ const TimelineSimple2Events = ({
   getEventHeight
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getSoundEvents();
+  const soundEvents = playerUtils.getPlaybackEvents();
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -49,7 +50,10 @@ const TimelineSimple2Events = ({
   for (const soundEvent of soundEvents) {
     const soundId = soundEvent.id;
     const functionName = soundEvent.functionContext.name;
-    const length = playerUtils.getLengthForId(soundId);
+    const length =
+      soundEvent.type === 'pattern'
+        ? DEFAULT_PATTERN_LENGTH
+        : playerUtils.getLengthForId(soundId);
     const positionLeft = soundEvent.when;
     const positionRight = positionLeft + length;
     const positionTop = getVerticalOffsetForEventId(
@@ -110,7 +114,7 @@ const TimelineSimple2Events = ({
         {soundEvents.map((eventData, index) => (
           <TimelineElement
             key={index}
-            soundId={eventData.id}
+            eventData={eventData}
             barWidth={barWidth}
             height={
               getEventHeight(currentUniqueSounds.length) -
@@ -125,6 +129,7 @@ const TimelineSimple2Events = ({
             }
             left={barWidth * (eventData.when - 1)}
             when={eventData.when}
+            skipContext={eventData.skipContext}
             currentPlayheadPosition={currentPlayheadPosition}
           />
         ))}

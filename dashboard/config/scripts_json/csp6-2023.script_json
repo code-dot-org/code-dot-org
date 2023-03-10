@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-17 04:53:05 UTC",
+    "serialized_at": "2023-03-07 04:44:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,12 +29,23 @@
   },
   "lesson_groups": [
     {
-      "key": "csp_unit6_2020",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Lists",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the \"Hackathon\" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most \"Create-PT-like\" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.\n\n* **Growing Comfort with EIPM:** By this unit, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.\n\n* **Programming with Real-world Data:** The Data Library is a feature in App Lab designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.\n\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to spend five days as part of a \"Hackathon\" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.2 Data Abstraction\n* 3.4 Strings\n* 3.8 Iteration\n* 3.10 Lists\n* 3.16 Simulations\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.b.i\n* 3.b.ii\n* 3.b.iii\n* 3.b.iv\n* 3.b.v"
+        "display_name": "Pre-Unit Interest Inventory"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "key": "csp_unit6_2020",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Lists"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit6_2020",
@@ -44,7 +55,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Loops"
       },
@@ -56,7 +67,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Traversals"
       },
@@ -68,7 +79,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Project"
       },
@@ -80,7 +91,7 @@
     {
       "key": "lessonGroup-2",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Post-Course Survey"
       },
@@ -92,9 +103,24 @@
   ],
   "lessons": [
     {
+      "key": "Lists, Loops, and Traversals Pre-Survey",
+      "name": "Lists, Loops, and Traversals Pre-Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
       "key": "Lists Explore",
       "name": "Lists Explore",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -115,7 +141,7 @@
     {
       "key": "Lists Investigate",
       "name": "Lists Investigate",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -135,7 +161,7 @@
     {
       "key": "Lists Practice",
       "name": "Lists Practice",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -155,7 +181,7 @@
     {
       "key": "Lists Make",
       "name": "Lists Make",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -175,7 +201,7 @@
     {
       "key": "Loops Explore",
       "name": "Loops Explore",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -196,7 +222,7 @@
     {
       "key": "Loops Investigate",
       "name": "Loops Investigate",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -216,7 +242,7 @@
     {
       "key": "Loops Practice",
       "name": "Loops Practice",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -236,7 +262,7 @@
     {
       "key": "Loops Make",
       "name": "Loops Make",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -256,7 +282,7 @@
     {
       "key": "Traversals Explore",
       "name": "Traversals Explore",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -277,7 +303,7 @@
     {
       "key": "Traversals Investigate",
       "name": "Traversals Investigate",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -297,7 +323,7 @@
     {
       "key": "Traversals Practice",
       "name": "Traversals Practice",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -317,7 +343,7 @@
     {
       "key": "Traversals Make",
       "name": "Traversals Make",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -337,7 +363,7 @@
     {
       "key": "Project   Hackathon Part 1",
       "name": "Project   Hackathon Part 1",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -358,7 +384,7 @@
     {
       "key": "Project   Hackathon Part 2",
       "name": "Project   Hackathon Part 2",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -379,7 +405,7 @@
     {
       "key": "Project   Hackathon Part 3",
       "name": "Project   Hackathon Part 3",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
@@ -400,7 +426,7 @@
     {
       "key": "Project   Hackathon Part 4",
       "name": "Project   Hackathon Part 4",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
@@ -421,7 +447,7 @@
     {
       "key": "Project   Hackathon Part 5",
       "name": "Project   Hackathon Part 5",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
@@ -442,7 +468,7 @@
     {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 18,
@@ -462,7 +488,7 @@
     {
       "key": "CS Principles Post-Course Survey",
       "name": "CS Principles Post-Course Survey",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 19,
@@ -476,6 +502,18 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "aa3022d7-ce74-4e8f-b117-57b7f155dd6c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa3022d7-ce74-4e8f-b117-57b7f155dd6c",
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023"
+      }
+    },
     {
       "key": "e8b8c82a-55cf-48fa-876b-6120dbb12c4f",
       "position": 1,
@@ -1487,6 +1525,16 @@
   ],
   "activity_sections": [
     {
+      "key": "e833377a-e394-4e67-9506-531421b49278",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e833377a-e394-4e67-9506-531421b49278",
+        "lesson_activity.key": "aa3022d7-ce74-4e8f-b117-57b7f155dd6c"
+      }
+    },
+    {
       "key": "f2474e60-f70a-4e05-9fee-fca37293385c",
       "position": 1,
       "properties": {
@@ -1801,7 +1849,7 @@
       "key": "daf25887-3b63-4b25-a294-0c75c6864830",
       "position": 3,
       "properties": {
-        "description": "**Levels 1-2 Setting Up Lists:** These levels involve setting up a list and printing the list to the console\n\n* Level 1: a list of numbers\n* Level 2: a list of strings",
+        "description": "**Levels 1-3 Setting Up Lists:** These levels involve setting up a list and printing the list to the console\n\n* Level 1: a list of numbers\n* Level 2: a list of strings\n* Level 3: a list from a dataset using the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command",
         "progression_name": "Setting up Lists"
       },
       "seeding_key": {
@@ -1813,7 +1861,7 @@
       "key": "ff349dce-c00f-4a50-ab6b-7bfb4fc48a60",
       "position": 4,
       "properties": {
-        "description": "**Levels 3-5 Accessing Elements in a List:** Students practice accessing elements in a list using the index. These levels also practice the random list access and list scrolling pattern students saw in the Investigate lesson.\n\n* Levels 3: Students practice printing specific elements to the console using bracket notation, as in `myList[1]`.\n* Level 4: Students build a \"Magic 8 Ball\" app that uses the Random List access pattern.\n* Level 5: Students build a \"Class Schedule\" app that uses the List Scrolling pattern.",
+        "description": "**Levels 4-6 Accessing Elements in a List:** Students practice accessing elements in a list using the index. These levels also practice the random list access and list scrolling pattern students saw in the Investigate lesson.\n\n* Levels 4: Students practice printing specific elements to the console using bracket notation, as in `myList[1]`.\n* Level 5: Students build a \"Magic 8 Ball\" app that uses the Random List access pattern.\n* Level 6: Students build a \"Class Schedule\" app that uses the List Scrolling pattern.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1841,7 +1889,7 @@
       "key": "72d329f5-3451-420f-b7c5-e7662c67eef9",
       "position": 6,
       "properties": {
-        "description": "\n\n**Levels 6 Strings and Indexes:** Students practice accessing elements in a list\n\n* Levels 6: Students practice printing the length and first characters of strings\n* Level 7: Students debug code that uses `string.substring()` to grab different parts of a date stored as a string.\n"
+        "description": "\n\n**Levels 7-8 Strings and Indexes:** Students practice working with strings\n\n* Level 7: Students practice printing the length and first characters of strings\n* Level 8: Students debug code that uses `string.substring()` to grab different parts of a date stored as a string.\n"
       },
       "seeding_key": {
         "activity_section.key": "72d329f5-3451-420f-b7c5-e7662c67eef9",
@@ -1863,7 +1911,7 @@
       "key": "2b19c952-6ef1-4f1f-9832-978592eeed9b",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 8-10 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
+        "description": "\n**Levels 9-11 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 9: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 10: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 11: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
       },
       "seeding_key": {
         "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b",
@@ -1885,7 +1933,7 @@
       "key": "f4983e81-4c1c-44b4-af53-134475677c21",
       "position": 10,
       "properties": {
-        "description": "**Level 11: Putting It Together** Students complete a choice level practicing with lists\n * Level 11a - Students add code that allows the user to add songs to the Top 10 Songs.\n * Level 11b - Students debug some scrolling issues and add code to update the total number of photos on the app screen.\n * Level 11c - Students write code to add items to a list of encouragement and display a random caption on a photo.",
+        "description": "**Level 112: Putting It Together** Students complete a choice level practicing with lists\n * Level 12a - Students add code that allows the user to add songs to the Top 10 Songs.\n * Level 12b - Students debug some scrolling issues and add code to update the total number of photos on the app screen.\n * Level 12c - Students write code to add items to a list of encouragement and display a random caption on a photo.",
         "progression_name": "Putting It Together",
         "tips": [
           {
@@ -3985,6 +4033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Data Tab Investigate_2023"
+        ],
         "progression": "Data Tab Investigation"
       },
       "bonus": false,
@@ -4104,18 +4155,43 @@
     {
       "chapter": 10,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lists Practice setup with data_2023"
+        ],
+        "progression": "Setting up Lists"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lists Practice setup with data_2023"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2023",
+        "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830"
+      },
+      "level_keys": [
+        "Lists Practice setup with data_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U5 L03 Lists Practice 3.75_2023"
+          "Lists Practice Accessing Elements using Data_2023"
         ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 L03 Lists Practice 3.75_2023"
+          "Lists Practice Accessing Elements using Data_2023"
         ],
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_unit6_2020",
@@ -4123,12 +4199,12 @@
         "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
       },
       "level_keys": [
-        "U5 L03 Lists Practice 3.75_2023"
+        "Lists Practice Accessing Elements using Data_2023"
       ]
     },
     {
-      "chapter": 11,
-      "position": 4,
+      "chapter": 12,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4152,8 +4228,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 5,
+      "chapter": 13,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4177,8 +4253,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 6,
+      "chapter": 14,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4202,8 +4278,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 7,
+      "chapter": 15,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4227,8 +4303,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 8,
+      "chapter": 16,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4252,8 +4328,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 9,
+      "chapter": 17,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4277,8 +4353,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 10,
+      "chapter": 18,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4302,8 +4378,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 11,
+      "chapter": 19,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4327,8 +4403,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 12,
+      "chapter": 20,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4352,8 +4428,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 13,
+      "chapter": 21,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4377,7 +4453,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4402,7 +4478,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4427,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4452,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4477,7 +4553,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4502,7 +4578,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4527,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4552,7 +4628,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4577,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4602,7 +4678,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4627,7 +4703,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4652,7 +4728,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4677,7 +4753,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4702,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4727,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4752,7 +4828,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4777,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -4802,7 +4878,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 11,
       "activity_section_position": 2,
       "assessment": true,
@@ -4827,7 +4903,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4852,7 +4928,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4877,7 +4953,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4902,7 +4978,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4927,7 +5003,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4952,7 +5028,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4977,7 +5053,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5002,7 +5078,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5027,7 +5103,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5052,7 +5128,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5077,7 +5153,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5102,7 +5178,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5127,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5152,7 +5228,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5177,7 +5253,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5202,7 +5278,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5227,7 +5303,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5252,7 +5328,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5277,7 +5353,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5302,7 +5378,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5327,7 +5403,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5352,7 +5428,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5377,7 +5453,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5402,7 +5478,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5427,7 +5503,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5449,6 +5525,27 @@
       },
       "level_keys": [
         "csp-post-survey-2021-markdown-with-link-to-survey_csp6_2023"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 5 Pre-Unit Survey_23"
+        ],
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023",
+        "activity_section.key": "e833377a-e394-4e67-9506-531421b49278"
+      },
+      "level_keys": [
+        "CSP Unit 5 Pre-Unit Survey_23"
       ]
     }
   ],
@@ -5563,9 +5660,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 L03 Lists Practice 3.75_2023",
+        "level.key": "Lists Practice setup with data_2023",
         "script_level.level_keys": [
-          "U5 L03 Lists Practice 3.75_2023"
+          "Lists Practice setup with data_2023"
+        ],
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2023",
+        "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lists Practice Accessing Elements using Data_2023",
+        "script_level.level_keys": [
+          "Lists Practice Accessing Elements using Data_2023"
         ],
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_unit6_2020",
@@ -6207,6 +6316,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp6-2023",
         "activity_section.key": "69fb7633-53ca-43f9-944a-b51055d07e2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 5 Pre-Unit Survey_23",
+        "script_level.level_keys": [
+          "CSP Unit 5 Pre-Unit Survey_23"
+        ],
+        "lesson.key": "Lists, Loops, and Traversals Pre-Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp6-2023",
+        "activity_section.key": "e833377a-e394-4e67-9506-531421b49278"
       }
     }
   ],

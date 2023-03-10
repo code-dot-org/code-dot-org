@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:59:13.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -212,7 +208,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements"
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/problem-solving-process-programming"
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
@@ -221,9 +218,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:59:13.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:13.130+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card User Input_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card User Input_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:13.130+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card User Input_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card User Input_2022\"},{\"changed_at\":\"2023-03-09 17:46:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
