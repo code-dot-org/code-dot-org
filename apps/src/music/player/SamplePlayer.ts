@@ -68,6 +68,7 @@ export default class SamplePlayer {
     //const currentAudioTime = soundApi.GetCurrentAudioTime();
 
     const looping = true;
+    const loopStart = 6;
 
     this.sampleEvents.forEach(sampleEvent => {
       let eventStart;
@@ -76,7 +77,7 @@ export default class SamplePlayer {
       if (looping) {
         const elapsedTime = currentAudioTime - this.startPlayingAudioTime;
         const loopedOffset = elapsedTime % 4;
-        eventStart = sampleEvent.offsetSeconds;
+        eventStart = sampleEvent.offsetSeconds - loopStart;
         currentLoop = Math.floor(elapsedTime / 4);
         normalTime = loopedOffset;
       } else {
