@@ -88,7 +88,7 @@ export default function CourseOfferingEditor(props) {
 
     // Initialize device compatibility values if empty, otherwise update given device compatibility level.
     if (!deviceCompatibilities) {
-      Object.values(DeviceTypes).forEach(currDevice => {
+      DeviceTypes.forEach(currDevice => {
         updatedDeviceCompatibilities[currDevice] =
           currDevice === device ? compatibilityLevel : '';
       });
@@ -302,7 +302,7 @@ export default function CourseOfferingEditor(props) {
         </select>
       </label>
       <h3>Device Compatibility</h3>
-      {Object.values(DeviceTypes).map(device => (
+      {DeviceTypes.map(device => (
         <label key={device}>
           {translatedCourseOfferingDeviceTypes[device]}
           <select
@@ -311,7 +311,7 @@ export default function CourseOfferingEditor(props) {
             onChange={e => updateDeviceCompatibilities(device, e.target.value)}
           >
             <option value="">{translatedNoneOption}</option>
-            {Object.values(DeviceCompatibilityLevels).map(compLevel => (
+            {DeviceCompatibilityLevels.map(compLevel => (
               <option key={compLevel} value={compLevel}>
                 {translatedCourseOfferingDeviceCompatibilityLevels[compLevel]}
               </option>
