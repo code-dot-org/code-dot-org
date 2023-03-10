@@ -165,7 +165,7 @@ class AdvancedShareOptions extends React.Component {
           color={Button.ButtonColor.neutralDark}
           onClick={this.downloadExport}
           style={{
-            marginLeft: 0,
+            margin: 0,
             paddingRight: 11,
             fontSize: 'large',
             height: 40
@@ -190,7 +190,7 @@ class AdvancedShareOptions extends React.Component {
         <Button
           color={Button.ButtonColor.neutralDark}
           onClick={this.props.openLibraryCreationDialog}
-          style={{marginLeft: 0, fontSize: 'large', height: 40}}
+          style={{margin: 0, fontSize: 'large', height: 40}}
           text={i18n.shareLibrary()}
         />
       </div>

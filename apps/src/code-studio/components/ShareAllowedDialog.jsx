@@ -23,7 +23,6 @@ import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LegacyButton from '../../templates/LegacyButton';
 import Button from '../../templates/Button';
 
 function recordShare(type) {
@@ -308,22 +307,25 @@ class ShareAllowedDialog extends React.Component {
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <LegacyButton
+                    <Button
                       type="primary"
+                      color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
+                      icon="clipboard"
                       style={{
                         ...styles.button,
                         ...styles.copyButton,
                         ...(this.state.hasBeenCopied && styles.copyButtonLight)
                       }}
                       onClick={wrapShareClick(this.copy, 'copy')}
+                      text={i18n.copyLinkToProject()}
                       value={shareUrl}
                     >
-                      <FontAwesome icon="clipboard" style={{fontSize: 16}} />
-                      <span style={{padding: '0 10px'}}>
-                        {i18n.copyLinkToProject()}
-                      </span>
-                    </LegacyButton>
+                      {/*<FontAwesome icon="clipboard" style={{fontSize: 16}} />*/}
+                      {/*<span style={{padding: '0 10px'}}>*/}
+                      {/*  {i18n.copyLinkToProject()}*/}
+                      {/*</span>*/}
+                    </Button>
                     <DownloadReplayVideoButton
                       style={{...styles.button, marginBottom: 8}}
                       onError={this.replayVideoNotFound}
@@ -537,7 +539,8 @@ const styles = {
   copyButton: {
     paddingTop: 12.5,
     paddingBottom: 12.5,
-    marginBottom: 5
+    margin: 0,
+    fontSize: 'large'
   },
   copyButtonLight: {
     backgroundColor: color.light_purple
