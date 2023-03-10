@@ -620,6 +620,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_parent_email_banner.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
+    'layouts/_section_creation_celebration_dialog':
+      './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',
     'layouts/_school_info_confirmation_dialog':
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     'layouts/_school_info_interstitial':
