@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-03-08 22:10:43 UTC",
+    "serialized_at": "2023-03-10 02:00:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1114,7 +1114,7 @@
       "key": "fbe20b57-7b1a-4d97-8536-ec0d781cfd73",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -2868,7 +2868,13 @@
       "key": "56dda092-1e94-4b4d-a6d7-3918316d1906",
       "position": 3,
       "properties": {
-        "description": "**The Problem Solving Process:** Remind students of the problem solving process: Define, Prepare, Try, Reflect. We will use this process to solve today's problem.\n\n**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem_solving_with_data_1/csd5/2023], one per student.\n\n\n\n#### Solving a Data Problem"
+        "description": "**The Problem Solving Process:** Introduce students to the Problem Solving Process - a structured process used to break a problem down into manageable steps: \n* **Define:** understand the problem, your constraints, and defining what success looks like\n* **Prepare:** brainstorm/research possible solutions, compare pros and cons, and make a plan\n* **Try:** put your plan into action\n* **Reflect:** reflect on your results compared to the goals set, reflect on what you can learn from this or do better next time, and identify any new problems you have discovered\n\nStudents will use this process to solve today's problem.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Already Familiar with the Problem Solving Process:** If students are already familiar with the Problem Solving Process from previous units, you can choose to simply remind your students of the four steps - *Define, Prepare, Try,* and *Reflect* and let them know they will be using this process to solve problems moving forward. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "56dda092-1e94-4b4d-a6d7-3918316d1906",
@@ -2876,8 +2882,19 @@
       }
     },
     {
-      "key": "a88eed04-e269-4b4b-8efe-5d905abe160c",
+      "key": "5730857e-7a0a-48df-a302-1fe8bb5e5b9e",
       "position": 4,
+      "properties": {
+        "description": "**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem_solving_with_data_1/csd5/2023], one per student.\n\n\n\n#### Solving a Data Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "5730857e-7a0a-48df-a302-1fe8bb5e5b9e",
+        "lesson_activity.key": "f68ed891-b597-46d1-bfa3-338b5b3c0c8e"
+      }
+    },
+    {
+      "key": "a88eed04-e269-4b4b-8efe-5d905abe160c",
+      "position": 5,
       "properties": {
         "description": "**Prompt:** What is the problem you are trying to solve? Ask students to write down the problem in their activity guide, then allow them to discuss with a partner.",
         "name": "Define\r"
@@ -2889,7 +2906,7 @@
     },
     {
       "key": "e226e1af-53fd-4948-a919-0c4b2dc7d107",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Allow students to share out their responses and discuss them as a class.\n\n**Discussion Goal:** Students should understand that it’s not just about having an opinion about what should be built, but using data to help decide what the city needs most.\n\n"
       },
@@ -2900,7 +2917,7 @@
     },
     {
       "key": "d7a546cd-67f7-4929-8435-3fb1ed3ce202",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Prompt**: What data do you need to solve your problem? Write down three types of data that might help you to decide what the city needs the most. In a moment, you'll be sharing these ideas with a group and deciding which ones to investigate.",
         "name": "Prepare\r"
@@ -2912,7 +2929,7 @@
     },
     {
       "key": "afc92e62-6403-4504-9c27-9ca581af81e8",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Circulate**: Give students a few minutes to complete this individually, then ask students to share their ideas with 2-3 other classmates in small groups. Encourage groups to continue adding types of data to their list as they get more ideas from their classmates.",
         "tips": [
@@ -2933,7 +2950,7 @@
     },
     {
       "key": "ab447f35-97c5-4a1a-b461-c38f7729a893",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "I heard some really great ideas - this is a lot of data! We may not be able to find it all, but we’re going to split into groups and look for this data on the internet.",
         "remarks": true
@@ -2945,7 +2962,7 @@
     },
     {
       "key": "f3330b36-4c13-4de3-a330-5c8f3dd8656f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Circulate:**  Support groups as they try to locate the data online and record what they have found on the Activity Guide.\n\n**Share Out:** Bring the class back together to share the data. Record the results of the research somewhere public and in front of the classroom so everyone can see. When this is finished, you should have a class list of facts and information that students can use to help make a decision."
       },
@@ -2956,7 +2973,7 @@
     },
     {
       "key": "0444ed41-564e-42ee-b0ca-b5f024a01747",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "**Discussion:** Allow each group to discuss what they think should be at the location and fill out the chart with their reasons and data.  Make sure students understand that they are allowed to use the data from the **whole class**, and not just that of their particular group. They should use at least two types of data to support their decision.\n\n**Circulate:** Support groups as they decide what should be built at the location.  If groups cannot come to an agreement, assure them that there is no \"right\" answer for this problem, but they should try to figure out what they can support with two types of data.",
         "name": "Try\r"
@@ -2968,7 +2985,7 @@
     },
     {
       "key": "a5f630e2-cf3b-4667-86c1-7b9c0d60fb60",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Share Out:** Have groups share out their decisions, as well as the reasons and data that support them. Assure them that it's fine to have multiple answers, as long as data is being used to support their ideas.\n\n**Discussion Goal:** Students should understand and be comfortable with the fact that the decisions that we make from data involve interpretation and prioritization. They should be able to support their decisions using the data the class found.\n\n",
         "tips": [
@@ -2985,7 +3002,7 @@
     },
     {
       "key": "a15312a4-71ef-4fe1-9a42-2e515c066e32",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "Even people with the same data can sometimes come to different conclusions.  When you make a decision with data, you have to know what the data means and what is important to you.",
         "remarks": true
@@ -2997,7 +3014,7 @@
     },
     {
       "key": "2f925359-1bbf-4aec-8276-f326e80089ac",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "Ask students to fill out the last portion of the worksheet, reminding them that more data might help them make a better decision.",
         "name": "Reflect\r"
