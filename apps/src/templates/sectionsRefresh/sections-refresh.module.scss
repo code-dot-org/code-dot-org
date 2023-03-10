@@ -1,4 +1,5 @@
 @import "color.scss";
+@import "font.scss";
 
 .classNameTextField {
   width: 100%;
@@ -88,4 +89,17 @@
 
 .label {
   margin: 10px 10px 0 5px;
+}
+
+.celebrationDialogBody {
+  padding: 36px;
+  font: $barlowSemiCondensed-medium;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.celebrationDialogBody .celebrationGif {
+  margin: 14px;
 }
