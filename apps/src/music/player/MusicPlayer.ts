@@ -292,7 +292,7 @@ export default class MusicPlayer {
     if (elapsedTime === -1) {
       return 0;
     }
-    return this.convertSecondsToPlayheadPosition(elapsedTime % 4);
+    return 3 + this.convertSecondsToPlayheadPosition(elapsedTime % 4);
   }
 
   // Converts actual seconds used by the audio system into a playhead
