@@ -33,6 +33,9 @@ export default class MBFirmataUpdater {
 
   // Precondition: microBitVersion is assigned either MICROBIT_V1 or MICROBIT_V2
   getFirmataURLByVersion(microBitVersion) {
+    if (microBitVersion !== MICROBIT_V1 && microBitVersion !== MICROBIT_V2) {
+      throw new Error('micro:bit version is invalid.');
+    }
     return microBitVersion === MICROBIT_V1
       ? MICROBIT_FIRMATA_V1_URL
       : MICROBIT_FIRMATA_V2_URL;

@@ -2,7 +2,7 @@ const SET_MICROBIT_FIRMATA_UPDATE_PERCENT =
   'microBit/SET_MICROBIT_FIRMATA_UPDATE_PERCENT';
 
 const initialState = {
-  microBitFirmataUpdatePercent: null
+  microBitFirmataUpdatePercent: 0
 };
 
 export default (state = initialState, action) => {
