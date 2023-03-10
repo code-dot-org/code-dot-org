@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-//import moduleStyles from './sections-refresh.module.scss';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 // import {
 //   assignedUnitTextToSpeechEnabled,
 //   assignedUnitLessonExtrasAvailable
 // } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-export default function SectionSetupAdvancedSettings({
+export default function AdvancedSettingToggles({
   updateSection,
   section,
+
+  // these are currently hard coded into the parent component
+  // In the future we will want to make these dynamic based on the course
   assignedUnitTextToSpeechEnabled,
   assignedUnitLessonExtrasAvailable
 }) {
@@ -42,6 +43,7 @@ export default function SectionSetupAdvancedSettings({
   return (
     <div>
       <ToggleSwitch
+        id={'uitest-pair-toggle'}
         isToggledOn={section.pairingAllowed}
         onToggle={e => {
           handlePairProgrammingToggle(e);
@@ -49,13 +51,14 @@ export default function SectionSetupAdvancedSettings({
         label={i18n.pairProgramming()}
       />
       <ToggleSwitch
+        id={'uitest-lock-toggle'}
         isToggledOn={section.restrictSection}
         onToggle={e => handleLockSectionToggle(e)}
         label={i18n.restrictSectionAccess()}
       />
-
       {assignedUnitTextToSpeechEnabled && (
         <ToggleSwitch
+          id={'uitest-tts-toggle'}
           isToggledOn={section.ttsAutoplayEnabled}
           onToggle={e => handleTtsAutoplayEnabledToggle(e)}
           label={i18n.enableTtsAutoplay()}
@@ -63,6 +66,7 @@ export default function SectionSetupAdvancedSettings({
       )}
       {assignedUnitLessonExtrasAvailable && (
         <ToggleSwitch
+          id={'uitest-lesson-extras-toggle'}
           isToggledOn={section.lessonExtras}
           onToggle={e => handleLessonExtrasToggle(e)}
           label={i18n.enableLessonExtras()}
@@ -72,18 +76,9 @@ export default function SectionSetupAdvancedSettings({
   );
 }
 
-SectionSetupAdvancedSettings.propTypes = {
+AdvancedSettingToggles.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
   assignedUnitLessonExtrasAvailable: PropTypes.bool,
   assignedUnitTextToSpeechEnabled: PropTypes.bool
 };
-
-// let defaultPropsFromState = state => ({
-//   assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),
-//   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state)
-// });
-
-// export const UnconnectedSectionSetupAdvancedSettings = SectionSetupAdvancedSettings;
-
-// export default connect(state => ({}))(SectionSetupAdvancedSettings);

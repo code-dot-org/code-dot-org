@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
 import CurriculumQuickAssign from './CurriculumQuickAssign';
-import SectionSetupAdvancedSettings from './SectionSetupAdvancedSettings';
+import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -112,15 +112,38 @@ export default function SectionsSetUpContainer() {
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />
-      <div onClick={toggleAdvancedSettingsOpen}>
-        <FontAwesome icon={caret} style={caretStyle} />
-        {i18n.advancedSettings()}
-      </div>
+      {/* <Button
+        id={'uitest-advanced-settings'}
+        className={moduleStyles.buttonStyle}
+        text={i18n.advancedSettings()}
+        size={Button.ButtonSize.large}
+        icon={caret}
+        onClick={toggleAdvancedSettingsOpen}
+      /> */}
+      <span>
+        <div>
+          <FontAwesome
+            id={'uitest-advanced-settings'}
+            onClick={toggleAdvancedSettingsOpen}
+            icon={caret}
+            style={caretStyle}
+          />
+          <h3
+            style={style.label}
+            onClick={toggleAdvancedSettingsOpen}
+            htmlFor={'uitest-advanced-settings'}
+          >
+            {i18n.advancedSettings()}
+          </h3>
+        </div>
+      </span>
       <div>
         {advancedSettingsOpen && (
-          <SectionSetupAdvancedSettings
+          <AdvancedSettingToggles
             updateSection={(key, val) => updateSection(0, key, val)}
             section={sections[0]}
+            assignedUnitTextToSpeechEnabled={true}
+            assignedUnitLessonExtrasAvailable={true}
             label={i18n.pairProgramming()}
           />
         )}
@@ -148,5 +171,8 @@ export default function SectionsSetUpContainer() {
 const style = {
   caret: {
     marginRight: 10
+  },
+  label: {
+    display: 'inline-block'
   }
 };
