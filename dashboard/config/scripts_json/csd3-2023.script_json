@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-09 02:13:07 UTC",
+    "serialized_at": "2023-03-10 01:59:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1844,7 +1844,7 @@
       "key": "20c9de82-1ad3-483e-a387-b152ab0b006e",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -5485,7 +5485,7 @@
       "position": 10,
       "properties": {
         "description": "Using the rubric, students should assess their own project before submitting it.\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Reflect\r"
+        "name": "Step 4: Reflect"
       },
       "seeding_key": {
         "activity_section.key": "8b5019b4-f706-4db9-b31a-7a751c510a68",
@@ -6000,13 +6000,8 @@
       "key": "90da1fce-029b-4071-811d-9c582d9ddc14",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the Side Scroller they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r side_scroller_1/csd3/2023]. Student should use this activity guide to plan out and brainstorm how to program the side scroller game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the Side Scroller example game or demo the game for the students.\n",
+        "progression_name": "Side Scroller Example"
       },
       "seeding_key": {
         "activity_section.key": "90da1fce-029b-4071-811d-9c582d9ddc14",
@@ -6017,6 +6012,8 @@
       "key": "47f81bf9-27d2-4354-ad62-9c52c1213106",
       "position": 2,
       "properties": {
+        "description": "**Circulate:** As students fill out a description of the aspects of the side scroller they want to keep the same and what they want to change, circulate the room to ask students about their ideas and help guide them.\n",
+        "name": "Step 1: Define - Plan Your Game",
         "progression_name": "Intro to Side Scrollers"
       },
       "seeding_key": {
@@ -6025,10 +6022,42 @@
       }
     },
     {
-      "key": "81ec9172-9243-4727-8eb1-91c9261cd682",
+      "key": "3efc723c-74bd-4a78-bd9f-9e563f66a40d",
       "position": 3,
       "properties": {
-        "progression_name": "Draw Your Background"
+        "description": "As students fill in the activity guide about the side scroller game, continue to support student ideas and brainstorms as they are asked to consider the different aspects of programming the game:\n\n1) Students are asked to identify parts of programming the game that they are not sure how to do yet. If students identify concepts that have previously been covered, suggest they go back and review. \n\n2) Next, students are given the opportunity to identify new animations for the three sprites in the game.  \n\n3) The first layer of the game is a background. The activity guide provides a space for students to lay out their background and an area for students to take notes and write pseudocode.\n\n4) Next, students think through how each sprite is programmed to move and interact with the other sprites and given  an opportunity to decide if they want to change anything.",
+        "name": "Step 2: Prepare - Design Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "3efc723c-74bd-4a78-bd9f-9e563f66a40d",
+        "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
+      }
+    },
+    {
+      "key": "00c3056c-cbaf-4e38-af9b-0ad0838d472a",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your game. Don't forget about using the problem solving process to help with the *blank screen* effect. If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.\n",
+        "name": "Step 3: Try - Program Your Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "00c3056c-cbaf-4e38-af9b-0ad0838d472a",
+        "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
+      }
+    },
+    {
+      "key": "81ec9172-9243-4727-8eb1-91c9261cd682",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "progression_name": "Draw Your Background",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, player controls, etc). Encourage students to follow the instructions in each level, focusing on one task at a time."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "81ec9172-9243-4727-8eb1-91c9261cd682",
@@ -6037,9 +6066,16 @@
     },
     {
       "key": "cab43fe2-4162-4c38-ae96-c14d216eb2ac",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "progression_name": "Create Your Sprites"
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "progression_name": "Create Your Sprites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cab43fe2-4162-4c38-ae96-c14d216eb2ac",
@@ -6048,7 +6084,7 @@
     },
     {
       "key": "2c12b812-2b92-40f3-b116-f08602dd7f5c",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Player Controls"
       },
@@ -6059,7 +6095,7 @@
     },
     {
       "key": "29654361-4d3a-49e0-95fd-a05491589d75",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Looping"
       },
@@ -6070,7 +6106,7 @@
     },
     {
       "key": "c42f0c29-5a4d-4797-87a6-ad9a0b2ed694",
-      "position": 7,
+      "position": 9,
       "properties": {
         "progression_name": "Sprite Interactions"
       },
@@ -6081,7 +6117,7 @@
     },
     {
       "key": "c37ae870-958d-48ab-a7c8-b019936613ad",
-      "position": 8,
+      "position": 10,
       "properties": {
         "progression_name": "Scoring & Scoreboard"
       },
@@ -6092,7 +6128,7 @@
     },
     {
       "key": "2f4d7386-2ead-4655-8393-ec856d6ba1ff",
-      "position": 9,
+      "position": 11,
       "properties": {
         "progression_name": "Review Your Game",
         "tips": [
@@ -6104,6 +6140,18 @@
       },
       "seeding_key": {
         "activity_section.key": "2f4d7386-2ead-4655-8393-ec856d6ba1ff",
+        "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
+      }
+    },
+    {
+      "key": "bf604258-d20a-49e3-806d-a5e46829dddb",
+      "position": 12,
+      "properties": {
+        "description": "Direct students to complete the last step of their activity guide to reflect on how they did programming this game.",
+        "name": "Step 4: Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf604258-d20a-49e3-806d-a5e46829dddb",
         "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
       }
     },
@@ -6544,13 +6592,8 @@
       "key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students can use this sheet to plan out the Flyer Game they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r flyer_game_1/csd3/2023]. Student should use this activity guide to plan out and brainstorm how to program the flyer game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the flyer game example game or demo the game for the students.\n\n",
+        "progression_name": "Flyer Game Example"
       },
       "seeding_key": {
         "activity_section.key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296",
@@ -6561,6 +6604,8 @@
       "key": "9c27acba-ecaa-4c7b-93a5-810026e5864c",
       "position": 2,
       "properties": {
+        "description": "**Circulate:** As students fill out a description of the aspects of the flyer game they want to keep the same and what they want to change, circulate the room to ask students about their ideas and help guide them.\n",
+        "name": "Step 1: Define - Plan the Game",
         "progression_name": "Intro to Flyer Game"
       },
       "seeding_key": {
@@ -6569,10 +6614,42 @@
       }
     },
     {
-      "key": "c81e2265-ff17-420a-9def-e2c71a004da1",
+      "key": "553b5584-c1aa-4e85-93f0-4d2631111697",
       "position": 3,
       "properties": {
-        "progression_name": "Make Your Sprites"
+        "description": "As students fill in the activity guide about the flyer game, continue to support student ideas and brainstorms as they are asked to consider the different aspects of programming the game:\n\n1) Students are asked to identify parts of programming the game that they are not sure how to do yet. If students identify concepts that have previously been covered, suggest they go back and review. \n\n2) Next, students are given the opportunity to identify new animations for the three sprites in the game.  \n\n3) The first layer of the game is a background. The activity guide provides a space for students to lay out their background and an area for students to take notes and write pseudocode.\n\n4) Next, students think through how each sprite is programmed to move and interact with the other sprites and given  an opportunity to decide if they want to change anything.",
+        "name": "Step 2: Prepare - Design Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "553b5584-c1aa-4e85-93f0-4d2631111697",
+        "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
+      }
+    },
+    {
+      "key": "be8cc86e-bfba-48c2-8c09-bfdb56572c58",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your game. Don't forget about using the problem solving process to help with the *blank screen* effect. If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.\n",
+        "name": "Step 3: Try - Program Your Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "be8cc86e-bfba-48c2-8c09-bfdb56572c58",
+        "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
+      }
+    },
+    {
+      "key": "c81e2265-ff17-420a-9def-e2c71a004da1",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "progression_name": "Make Your Sprites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, player controls, etc). Encourage students to follow the instructions in each level, focusing on one task at a time."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c81e2265-ff17-420a-9def-e2c71a004da1",
@@ -6581,9 +6658,16 @@
     },
     {
       "key": "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "progression_name": "Player Controls"
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "progression_name": "Player Controls",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7",
@@ -6592,7 +6676,7 @@
     },
     {
       "key": "9f59f303-4fc6-4e21-a68f-7bb84427a90e",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Sprite Movement"
       },
@@ -6603,7 +6687,7 @@
     },
     {
       "key": "f7e3dfc2-b577-4557-9826-de3f8d1d6dce",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Sprite Interactions"
       },
@@ -6614,7 +6698,7 @@
     },
     {
       "key": "8132afd2-391e-4945-804c-75dc8a2a62d0",
-      "position": 7,
+      "position": 9,
       "properties": {
         "progression_name": "Review Your Game",
         "tips": [
@@ -6626,6 +6710,18 @@
       },
       "seeding_key": {
         "activity_section.key": "8132afd2-391e-4945-804c-75dc8a2a62d0",
+        "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
+      }
+    },
+    {
+      "key": "2fed67b8-42b8-4645-8a8d-c1d5d3e23754",
+      "position": 10,
+      "properties": {
+        "description": "Direct students to complete the last step of their activity guide to reflect on how they did programming this game.",
+        "name": "Step 4: Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fed67b8-42b8-4645-8a8d-c1d5d3e23754",
         "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
       }
     },
@@ -7345,7 +7441,7 @@
       "key": "1fa27a0a-2750-4089-91df-bda854753642",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
         "name": "Review Project Guide\r"
       },
       "seeding_key": {
@@ -7358,7 +7454,7 @@
       "position": 3,
       "properties": {
         "description": "**Circulate:** Students should spend the first 15-20 minutes playing the sample games, reviewing past work, and discussing as a group the type of game they'd like to build. If they want they can sketch ideas on scratch paper or in their journals.",
-        "name": "Define - Scope Game\r",
+        "name": "Step 1: Define - Scope Game",
         "progression_name": "Sample Games",
         "tips": [
           {
@@ -7377,7 +7473,7 @@
       "position": 4,
       "properties": {
         "description": "**Circulate:** Once students have discussed their ideas for the project, they should complete the project guide. While this should be a fairly familiar process, encourage students to make each component as clear and detailed as they can. Planning ahead can help them identify issues in their plan before they'll need to make more significant changes to their code.",
-        "name": "Prepare - Complete Project Guide\r",
+        "name": "Step 2: Prepare - Complete Project Guide",
         "tips": [
           {
             "type": "teachingTip",
@@ -7394,8 +7490,8 @@
       "key": "a55e3691-9685-4192-89b5-0ee62a4c1c15",
       "position": 5,
       "properties": {
-        "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
-        "name": "Try - Write Code\r",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to Code Studio to start programming. The levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.\n",
+        "name": "Step 3: Try - Write Code",
         "tips": [
           {
             "type": "teachingTip",
@@ -7412,6 +7508,7 @@
       "key": "41bb4f61-1aae-4f97-9f4a-bd8bc162da2a",
       "position": 6,
       "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
         "progression_name": "Project - Background and Variables",
         "tips": [
           {
@@ -7441,7 +7538,7 @@
       "position": 8,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the peer review guide.  \r\n\r\nStudents should spend 15 minutes reviewing the other group's game and filling out the peer review guide.",
-        "name": "Reflect - Peer Review\r"
+        "name": "Step 4: Reflect - Peer Review"
       },
       "seeding_key": {
         "activity_section.key": "d0c51657-4106-4acd-b56d-06f92f430b13",
@@ -7463,7 +7560,7 @@
       "key": "beb11136-6ed3-4efd-a31f-ffb212bc8f33",
       "position": 10,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.\n\nDirect students to complete the last step of their activity guide to reflect on how they did programming this game.",
         "name": "Iterate - Update Code\r",
         "tips": [
           {
@@ -9097,6 +9194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Scene Example_2023"
+        ],
         "progression": "Captioned Scene Example"
       },
       "bonus": false,
@@ -10369,6 +10469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2023"
+        ],
         "progression": "Interactive Card Examples"
       },
       "bonus": false,
@@ -10991,10 +11094,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD games side scroller demo_2023"
-        ],
-        "progression": "Intro to Side Scrollers"
+        "progression": "Side Scroller Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -11004,7 +11104,7 @@
         "lesson.key": "Mini-Project - Side Scroller",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "47f81bf9-27d2-4354-ad62-9c52c1213106"
+        "activity_section.key": "90da1fce-029b-4071-811d-9c582d9ddc14"
       },
       "level_keys": [
         "CSD games side scroller demo_2023"
@@ -11566,10 +11666,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD games flyer demo_2023"
-        ],
-        "progression": "Intro to Flyer Game"
+        "progression": "Flyer Game Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -11579,7 +11676,7 @@
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "9c27acba-ecaa-4c7b-93a5-810026e5864c"
+        "activity_section.key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296"
       },
       "level_keys": [
         "CSD games flyer demo_2023"
@@ -14764,7 +14861,7 @@
         "lesson.key": "Mini-Project - Side Scroller",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "47f81bf9-27d2-4354-ad62-9c52c1213106"
+        "activity_section.key": "90da1fce-029b-4071-811d-9c582d9ddc14"
       }
     },
     {
@@ -15040,7 +15137,7 @@
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "9c27acba-ecaa-4c7b-93a5-810026e5864c"
+        "activity_section.key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296"
       }
     },
     {
@@ -15859,7 +15956,7 @@
     },
     {
       "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
+      "url": "https://docs.google.com/document/d/1fHRgDgi5mCgPFitc3nM4StqO1ciaGjmQCLREmTnveFg/view",
       "key": "animated_scene",
       "properties": {
         "audience": "Student",
@@ -15872,7 +15969,7 @@
     },
     {
       "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
+      "url": "https://docs.google.com/document/d/1a2qv6xH8ewMu9SrKaFt3hbPM6JGSJ0kqjyc-UzQ_3xE/view",
       "key": "animated_scene_1",
       "properties": {
         "audience": "Student",
@@ -15885,7 +15982,7 @@
     },
     {
       "name": "Animated Scene Planning",
-      "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1YrtHnzB6kLGtFt05gQEHjfbX5aWWYlv3YRdTsR5VR3M/view",
       "key": "animated_scene_planning",
       "properties": {
         "audience": "Verified Teacher",
@@ -15908,7 +16005,7 @@
       }
     },
     {
-      "name": "App Design for Users",
+      "name": "Animation and Game Design for Users",
       "url": "https://docs.google.com/document/d/1T1rHB9UzmWg26DW1QLzJWGE6_ONfBCIi5F6pdX4rGmU/edit?usp=sharing",
       "key": "app_design_for_users",
       "properties": {
@@ -15946,7 +16043,7 @@
     },
     {
       "name": "Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
+      "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
       "key": "captioned_scenes",
       "properties": {
         "audience": "Student",
@@ -15959,7 +16056,7 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
+      "url": "https://docs.google.com/document/d/1pSfutXv_HqPGrU-dWIDbwFgo0RiG0_8x58c3c5heGfY/view",
       "key": "collision_detection",
       "properties": {
         "audience": "Verified Teacher",
@@ -15995,7 +16092,7 @@
     },
     {
       "name": "Collision Detection (Version A)",
-      "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
+      "url": "https://docs.google.com/document/d/1YThab-y4Vg-ltanqwNykC4nOaT0gKdKFHtS1INoHWHM/view",
       "key": "collision_detection_version_a_",
       "properties": {
         "audience": "Student",
@@ -16008,7 +16105,7 @@
     },
     {
       "name": "Collision Detection (Version B)",
-      "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
+      "url": "https://docs.google.com/document/d/1U3t6FGGvvqAVdz-rudQIJsDW4ubfEaSelaVqENp_kVw/view",
       "key": "collision_detection_version_b_",
       "properties": {
         "audience": "Student",
@@ -16143,7 +16240,7 @@
     },
     {
       "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit",
+      "url": "https://docs.google.com/document/d/1ScMzt0GzhV_f-hMtrWCRCI0pha4mtmlGrrtrp76KIqg/view",
       "key": "defender_game",
       "properties": {
         "audience": "Student",
@@ -16193,7 +16290,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
+      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/view",
       "key": "drawing_shapes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16242,6 +16339,18 @@
       }
     },
     {
+      "name": "Exemplar - Animation and Game Design Activity Guide",
+      "url": "https://docs.google.com/document/d/1MgNcavou62Y4BykohkGT_MR8Rj1nKIeInEUVU2qaxq0/edit?usp=sharing",
+      "key": "exemplar_-_animation_and_game_design_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
+      }
+    },
+    {
       "name": "Extra Code in Challenge Levels",
       "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
       "key": "extra_code_in_challenge_levels",
@@ -16267,7 +16376,7 @@
     },
     {
       "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
+      "url": "https://docs.google.com/document/d/1dTUv-Qj1Kg_9oEYfAR70iL2ud6y8XFectzYKCi4MLyE/view",
       "key": "flyer_game",
       "properties": {
         "audience": "Student",
@@ -16280,7 +16389,7 @@
     },
     {
       "name": "Flyer Game - Project Guide",
-      "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14by40I7v6BwWh7venZO83xk1qgeHE4hmNjdfQo1BsbQ/view",
       "key": "flyer_game_-_project_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -16292,12 +16401,12 @@
     },
     {
       "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
+      "url": "https://docs.google.com/document/d/1_n916C-OpKAquctNSkD5SdsWqC1RI9WQQzQ0EcZV_48/view",
       "key": "flyer_game_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "flyer_game_1"
@@ -16378,8 +16487,8 @@
       }
     },
     {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
+      "name": "Exemplar - Interactive Card",
+      "url": "https://docs.google.com/document/d/1Z13UA6i0PTT83UVdtEjSsZqxyGinVYoz3SFIUAnkwVY/view",
       "key": "interactive_card",
       "properties": {
         "audience": "Verified Teacher",
@@ -16391,7 +16500,7 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
+      "url": "https://docs.google.com/document/d/1HwcWQLHiuPEOlPaM6axOFGgu7peYsrCZnT7Juea-rfA/view",
       "key": "interactive_card_-_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
@@ -16403,37 +16512,38 @@
     },
     {
       "name": "Interactive Card - Student Checklist",
-      "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view",
+      "url": "https://docs.google.com/document/d/1N1iuDi-25VhSto-9zk9_0dc8H4t1nsS22u91I7Uucfw/view",
       "key": "interactive_card_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "interactive_card_-_student_checklist"
       }
     },
     {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+      "name": "Interactive Card - Activity Guide",
+      "url": "https://docs.google.com/document/d/1iJjh3OSHyZdk1TCBaq5JtfP3v9fXxbp9utiJzIU5bdQ/view",
       "key": "interactive_card_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "interactive_card_1"
       }
     },
     {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
+      "name": "Interactive Card - Peer Review",
+      "url": "https://docs.google.com/document/d/1e9HdHppRFxkszxCF2m9YWr-jt1EK8DupSrsP6q2_060/view",
       "key": "interactive_card_2",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Peer Review"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "interactive_card_2"
@@ -16505,7 +16615,7 @@
     },
     {
       "name": "Make Your Own Game ",
-      "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1m0szgz6YtE4RucBUFWpocRxu3r0hKpn3JDgPoK7nwOQ/view",
       "key": "make_your_own_game",
       "properties": {
         "audience": "Verified Teacher",
@@ -16517,7 +16627,7 @@
     },
     {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
+      "url": "https://docs.google.com/document/d/1VHUhfblKwRZieZXM8YYHr3mkilbjEQhcQmcmwNaUUHc/view",
       "key": "make_your_own_game_-_sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
@@ -16529,11 +16639,12 @@
     },
     {
       "name": "Make Your Own Game - Student Checklist",
-      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
+      "url": "https://docs.google.com/document/d/1YDsOmgD3NvRjIQwGpZsH_17TIXpQaVUhtjFpyh4-qGw/view",
       "key": "make_your_own_game_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game_-_student_checklist"
@@ -16541,25 +16652,25 @@
     },
     {
       "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14oPvmdvm_BfOn5KBSov6jyhoEMRHygdNNIXl-fe4g-Q/view",
       "key": "make_your_own_game_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game_1"
       }
     },
     {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
+      "name": "Make Your Own Game - Peer Review",
+      "url": "https://docs.google.com/document/d/1VOlmo7osjS7We0ebREm3M54Gwr4o13p7irHfIASDvFE/view",
       "key": "make_your_own_game_2",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Peer Review"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game_2"
@@ -16567,7 +16678,7 @@
     },
     {
       "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
+      "url": "https://docs.google.com/document/d/1BHsR1x8scsPsfaQoNEIgkz1rSLwG2hnKkjmVrPX55lw/view",
       "key": "make_your_own_game_3",
       "properties": {
         "audience": "Student",
@@ -16652,7 +16763,7 @@
     },
     {
       "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zxFNweZNdkXc1YsVROgDQ2fmrxbbgCgZQtMPS-POmg4/view",
       "key": "mini-project_guide_-_side_scroller",
       "properties": {
         "audience": "Verified Teacher",
@@ -16664,7 +16775,7 @@
     },
     {
       "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
+      "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view",
       "key": "mini_project_-_captioned_scenes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16700,7 +16811,7 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
+      "url": "https://docs.google.com/document/d/1F9RH16-Yph9gapZyBKbnnh-LEJUwN20Ipa5D4rIMz1g/view",
       "key": "planning_your_platform_game",
       "properties": {
         "audience": "Verified Teacher",
@@ -16712,7 +16823,7 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
+      "url": "https://docs.google.com/document/d/1FqTjwpAuFrVidZ_j6aGw895FivFCRO2CZSvhHqWuEik/view",
       "key": "planning_your_platform_game_1",
       "properties": {
         "audience": "Student",
@@ -16797,7 +16908,7 @@
     },
     {
       "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit",
+      "url": "https://docs.google.com/drawings/d/1N1m8la6XsQrn1X2Yq97gRfg4HRh1glk-gTHBK0fUDZA/view",
       "key": "random_dot_flipbook",
       "properties": {
         "audience": "Teacher"
@@ -16832,7 +16943,7 @@
     },
     {
       "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit",
+      "url": "https://docs.google.com/drawings/d/1VEgpZKDn4kvZvRSafrDSqB3so1HzKeeA8WAWLQZsoL0/view",
       "key": "random_sprite_flipbook",
       "properties": {
         "audience": "Teacher"
@@ -16891,7 +17002,7 @@
     },
     {
       "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
+      "url": "https://docs.google.com/document/d/1iSosF7vOAc5_iqr9cBYfgDjbiVERhkbKNMa1RJK_mv8/view",
       "key": "side_scroller",
       "properties": {
         "audience": "Student",
@@ -16904,12 +17015,12 @@
     },
     {
       "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+      "url": "https://docs.google.com/document/d/1WW92Ti8Xg1Evn8rQtRZq8Xltf5NP8cP_ZVrWHuiQPFk/view",
       "key": "side_scroller_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "side_scroller_1"
@@ -16978,7 +17089,7 @@
     },
     {
       "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
+      "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view",
       "key": "sprite_scene_planning",
       "properties": {
         "audience": "Student",
@@ -17195,7 +17306,7 @@
       }
     },
     {
-      "name": "App Design Template ",
+      "name": "Animation and Game Design Template ",
       "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
       "key": "web_design_template",
       "properties": {
@@ -17420,6 +17531,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project - Flyer Game",
+        "resource.key": "problem_solving_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
         "resource.key": "mini-project_-_side_scroller"
       }
@@ -17428,6 +17545,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
         "resource.key": "mini-project_guide_-_side_scroller"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "resource.key": "problem_solving_with_programming"
       }
     },
     {
@@ -17511,6 +17634,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
+        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
         "resource.key": "problem_solving_and_design"
       }
     },
@@ -17578,6 +17707,12 @@
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "resource.key": "make_your_own_game_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "problem_solving_with_programming"
       }
     },
     {
