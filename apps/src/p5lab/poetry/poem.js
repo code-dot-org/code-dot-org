@@ -27,6 +27,20 @@ export function getPoems() {
   }
 }
 
+export function getPoemsFromListOrDefault(poemList) {
+  const fullPoemList = getPoems();
+  if (!poemList || poemList.length === 0) {
+    return fullPoemList;
+  }
+  const result = {};
+  poemList.forEach(poem => {
+    if (fullPoemList[poem]) {
+      result[poem] = fullPoemList[poem];
+    }
+  });
+  return result;
+}
+
 // Don't alphabetize time capsule poems, they should remain in their
 // original order.
 export function shouldAlphabetizePoems() {
