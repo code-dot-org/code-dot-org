@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
-import {hocCourseOfferings} from './CourseOfferingsTestData';
+import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
 import i18n from '@cdo/locale';
 
 describe('QuickAssignTable', () => {
@@ -50,6 +50,45 @@ describe('QuickAssignTable', () => {
         .find('table')
         .at(1)
         .contains('Sports')
+    ).to.be.true;
+  });
+
+  it('renders Professional Learning as the first and only table/column header', () => {
+    const wrapper = shallow(
+      <QuickAssignTableHocPl
+        marketingAudience={MARKETING_AUDIENCE.PL}
+        courseOfferings={plCourseOfferings}
+        updateCourse={() => {}}
+        sectionCourse={{}}
+      />
+    );
+    expect(wrapper.find('table').length).to.equal(3);
+    expect(wrapper.contains(i18n.professionalLearning())).to.be.true;
+  });
+
+  it('renders one header in each of the first two columns', () => {
+    const wrapper = shallow(
+      <QuickAssignTableHocPl
+        marketingAudience={MARKETING_AUDIENCE.PL}
+        courseOfferings={plCourseOfferings}
+        updateCourse={() => {}}
+        sectionCourse={{}}
+      />
+    );
+    expect(wrapper.find('table').length).to.equal(3);
+    // First header displays in table 0
+    expect(
+      wrapper
+        .find('table')
+        .at(0)
+        .contains('6–12 Virtual Academic Year Workshops')
+    ).to.be.true;
+    // Second header displays in table 1
+    expect(
+      wrapper
+        .find('table')
+        .at(1)
+        .contains('Self-Paced')
     ).to.be.true;
   });
 });
