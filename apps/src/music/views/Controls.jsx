@@ -89,6 +89,7 @@ const Controls = ({
           onClick={() => setPlaying(!isPlaying)}
           className={moduleStyles.iconButton}
         />
+        <FontAwesome icon={'repeat'} />
       </div>
       {rightIcon}
     </div>

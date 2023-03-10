@@ -9,6 +9,7 @@ export interface SampleEvent {
   sampleId: string;
   triggered: boolean;
   effects?: Effects;
+  played: number | boolean;
 }
 
 interface PlayingSample {
@@ -29,12 +30,14 @@ export default class SamplePlayer {
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private isInitialized: boolean;
+  private sampleEvents: SampleEvent[];
 
   constructor() {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.isInitialized = false;
+    this.sampleEvents = [];
   }
 
   initialize(library: MusicLibrary) {
@@ -50,6 +53,75 @@ export default class SamplePlayer {
     soundApi.InitSound(soundList);
 
     this.isInitialized = true;
+
+    setInterval(() => this.updateTick(soundApi.GetCurrentAudioTime()), 1 / 10);
+  }
+
+  updateTick(currentAudioTime: number) {
+    if (!this.isPlaying) {
+      return;
+    }
+
+    // Look at our current list of sample events, and if they're in teh current time window,
+    // then let's tee them up to play.
+
+    //const currentAudioTime = soundApi.GetCurrentAudioTime();
+
+    const looping = true;
+
+    this.sampleEvents.forEach(sampleEvent => {
+      let eventStart;
+      let currentLoop = 0;
+      let normalTime = 0;
+      if (looping) {
+        const elapsedTime = currentAudioTime - this.startPlayingAudioTime;
+        const loopedOffset = elapsedTime % 4;
+        eventStart = sampleEvent.offsetSeconds;
+        currentLoop = Math.floor(elapsedTime / 4);
+        normalTime = loopedOffset;
+      } else {
+        eventStart = this.startPlayingAudioTime + sampleEvent.offsetSeconds;
+        normalTime = currentAudioTime;
+      }
+      console.log(sampleEvent, eventStart, currentAudioTime);
+      if (
+        (eventStart >= normalTime &&
+          eventStart < normalTime + 1 / 10 &&
+          sampleEvent.played !== currentLoop) ||
+        (eventStart + 4 >= normalTime &&
+          eventStart + 4 < normalTime + 1 / 10 &&
+          sampleEvent.played !== currentLoop + 1) //&&
+        //!sampleEvent.played
+        //sampleEvent.played !== currentLoop
+      ) {
+        console.log(' sound');
+
+        // if we are peeking around the loop, then we are looking into the next loop.
+        if (
+          eventStart + 4 >= normalTime &&
+          eventStart + 4 < normalTime + 1 / 10
+        ) {
+          currentLoop++;
+        }
+
+        const uniqueId = soundApi.PlaySound(
+          GROUP_PREFIX + '/' + sampleEvent.sampleId,
+          MAIN_AUDIO_GROUP,
+          this.startPlayingAudioTime + currentLoop * 4 + eventStart,
+          null,
+          false,
+          sampleEvent.effects
+        );
+
+        this.playingSamples.push({
+          eventStart,
+          uniqueId,
+          triggered: sampleEvent.triggered
+        });
+
+        sampleEvent.played = currentLoop;
+      }
+    });
   }
 
   initialized(): boolean {
@@ -67,7 +139,12 @@ export default class SamplePlayer {
     this.startPlayingAudioTime = soundApi.GetCurrentAudioTime();
     this.isPlaying = true;
 
+    this.sampleEvents = [];
+
     this.playSamples(sampleEventList);
+
+    // let's force a tick right away.
+    this.updateTick(this.startPlayingAudioTime);
   }
 
   previewSample(sampleId: string, onStop: () => any) {
@@ -104,6 +181,11 @@ export default class SamplePlayer {
       return;
     }
 
+    this.sampleEvents.push(...sampleEvents);
+
+    // let's just add these samples into the list of what we'll play.
+
+    /*
     for (const sampleEvent of sampleEvents) {
       const currentAudioTime = soundApi.GetCurrentAudioTime();
       const eventStart = this.startPlayingAudioTime + sampleEvent.offsetSeconds;
@@ -135,6 +217,7 @@ export default class SamplePlayer {
         });
       }
     }
+    */
   }
 
   stopPlayback() {
