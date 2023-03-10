@@ -388,6 +388,7 @@ class UnconnectedMusicView extends React.Component {
         />
         <Timeline
           isPlaying={this.state.isPlaying}
+          isLooping={this.state.isLooping}
           currentPlayheadPosition={this.state.currentPlayheadPosition}
         />
       </div>
