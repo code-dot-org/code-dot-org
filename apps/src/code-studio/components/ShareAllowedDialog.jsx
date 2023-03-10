@@ -23,6 +23,8 @@ import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import LegacyButton from '../../templates/LegacyButton';
+import Button from '../../templates/Button';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -282,7 +284,7 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">{i18n.shareTitle()}</p>
+                <h5 className="dialog-title">{i18n.shareTitle()}</h5>
                 {isAbusive && (
                   <AbuseError
                     i18n={{
@@ -306,8 +308,8 @@ class ShareAllowedDialog extends React.Component {
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <button
-                      type="button"
+                    <LegacyButton
+                      type="primary"
                       id="sharing-dialog-copy-button"
                       style={{
                         ...styles.button,
@@ -318,31 +320,50 @@ class ShareAllowedDialog extends React.Component {
                       value={shareUrl}
                     >
                       <FontAwesome icon="clipboard" style={{fontSize: 16}} />
-                      <span style={{paddingLeft: 10}}>
+                      <span style={{padding: '0 10px'}}>
                         {i18n.copyLinkToProject()}
                       </span>
-                    </button>
+                    </LegacyButton>
                     <DownloadReplayVideoButton
                       style={{...styles.button, marginBottom: 8}}
                       onError={this.replayVideoNotFound}
                     />
                   </div>
                 </div>
-                <div className="social-buttons">
-                  <a
+                <div className="social-buttons" style={{marginTop: 12}}>
+                  <Button
+                    color={Button.ButtonColor.neutralDark}
                     id="sharing-phone"
                     href=""
                     onClick={wrapShareClick(
                       this.showSendToPhone,
                       'send-to-phone'
                     )}
+                    style={{
+                      margin: 0,
+                      marginRight: 12,
+                      fontSize: 'large',
+                      padding: '0 16px',
+                      paddingRight: 6,
+                      height: 45
+                    }}
                   >
                     <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span>{i18n.sendToPhone()}</span>
-                  </a>
+                    <span
+                      style={{
+                        padding: 0,
+                        paddingLeft: 10,
+                        verticalAlign: 'text-top'
+                      }}
+                    >
+                      {i18n.sendToPhone()}
+                    </span>
+                  </Button>
+
                   {publishAllowed && !isPublished && (
-                    <button
+                    <Button
                       type="button"
+                      color={Button.ButtonColor.neutralDark}
                       id="share-dialog-publish-button"
                       style={
                         hasThumbnail ? styles.button : styles.buttonDisabled
@@ -351,8 +372,8 @@ class ShareAllowedDialog extends React.Component {
                       disabled={!hasThumbnail}
                       className="no-mc"
                     >
-                      {i18n.publish()}
-                    </button>
+                      <span>{i18n.publish()}</span>
+                    </Button>
                   )}
                   {publishAllowed && isPublished && (
                     <PendingButton
@@ -424,7 +445,13 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 {publishAllowed && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                    <span
+                      style={{
+                        fontSize: 12,
+                        fontFamily: "'Gotham 7r', sans-serif"
+                      }}
+                      className="thumbnail-warning"
+                    >
                       {i18n.thumbnailWarning()}
                     </span>
                   </div>
@@ -487,32 +514,23 @@ const styles = {
     fontWeight: 'bold'
   },
   button: {
-    backgroundColor: color.purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
+    height: 45,
     paddingTop: 12.5,
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
+    margin: 0,
     marginRight: 8,
     verticalAlign: 'top'
   },
   buttonDisabled: {
-    backgroundColor: color.gray,
-    borderWidth: 0,
-    color: color.white,
+    height: 45,
     fontSize: 'larger',
     paddingTop: 12.5,
     paddingBottom: 12.5,
     paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
+    paddingRight: 5,
+    margin: 0,
     marginRight: 8,
     verticalAlign: 'top'
   },
@@ -526,7 +544,7 @@ const styles = {
   },
   thumbnail: {
     float: 'left',
-    marginRight: 10,
+    marginRight: 12,
     width: 125,
     height: 125,
     overflow: 'hidden',
