@@ -320,12 +320,7 @@ class ShareAllowedDialog extends React.Component {
                       onClick={wrapShareClick(this.copy, 'copy')}
                       text={i18n.copyLinkToProject()}
                       value={shareUrl}
-                    >
-                      {/*<FontAwesome icon="clipboard" style={{fontSize: 16}} />*/}
-                      {/*<span style={{padding: '0 10px'}}>*/}
-                      {/*  {i18n.copyLinkToProject()}*/}
-                      {/*</span>*/}
-                    </Button>
+                    />
                     <DownloadReplayVideoButton
                       style={{...styles.button, marginBottom: 8}}
                       onError={this.replayVideoNotFound}
