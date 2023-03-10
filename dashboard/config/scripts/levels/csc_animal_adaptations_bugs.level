@@ -20,7 +20,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -45,7 +45,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"7b7f8a23-8c63-49da-b9dc-bb6deb0d47df\",\"da500a7e-b919-4044-8475-6aa9414eef10\",\"b91143e3-f3a7-49bb-98e6-9f39c4d8f2a6\",\"b46c31a5-5547-47c0-91b1-17bcf89bd491\",\"eaa89ec0-9413-44e1-b4b9-4509f1981546\"],\"propsByKey\":{\"eaa89ec0-9413-44e1-b4b9-4509f1981546\":{\"name\":\"forest\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-04-12T13:44:16.000Z\",\"pngLastModified\":\"2022-04-11T21:01:53.000Z\",\"version\":\"Y7raWTqnv9VZrTGiQBsu8ukz_ofafQTH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Y7raWTqnv9VZrTGiQBsu8ukz_ofafQTH/forest.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b46c31a5-5547-47c0-91b1-17bcf89bd491\":{\"name\":\"peacock\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":399,\"y\":289},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:45:13 UTC\",\"pngLastModified\":\"2021-01-19 23:45:13 UTC\",\"version\":\"IhKQIrd59RVzivA606R7uHXju3qJvNks\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/IhKQIrd59RVzivA606R7uHXju3qJvNks/category_animals/peacock.png\",\"sourceSize\":{\"x\":399,\"y\":289}},\"b91143e3-f3a7-49bb-98e6-9f39c4d8f2a6\":{\"name\":\"parrot_1\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":399,\"y\":227},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:45:32 UTC\",\"pngLastModified\":\"2021-01-19 23:45:33 UTC\",\"version\":\"jw90K7zEdAwMhDvj8Bd0wlMLi7UOKpHm\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/jw90K7zEdAwMhDvj8Bd0wlMLi7UOKpHm/category_animals/parrot_1.png\",\"sourceSize\":{\"x\":399,\"y\":227}},\"da500a7e-b919-4044-8475-6aa9414eef10\":{\"name\":\"ostrich\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":297,\"y\":397},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:45:26 UTC\",\"pngLastModified\":\"2021-01-19 23:45:27 UTC\",\"version\":\"w7lj2iHq7._EZTAnt3k.0EIeAd6td.R9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/w7lj2iHq7._EZTAnt3k.0EIeAd6td.R9/category_animals/ostrich.png\",\"sourceSize\":{\"x\":297,\"y\":397}},\"7b7f8a23-8c63-49da-b9dc-bb6deb0d47df\":{\"name\":\"penguin_1\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":244,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:45:14 UTC\",\"pngLastModified\":\"2021-01-19 23:45:15 UTC\",\"version\":\"G1UMWRuHw9rl0MFe6v1ITJcuSTdo0AGC\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/G1UMWRuHw9rl0MFe6v1ITJcuSTdo0AGC/category_animals/penguin_1.png\",\"sourceSize\":{\"x\":244,\"y\":400}}}}\r\n\r\n",
     "hide_custom_blocks": "true",
-    "long_instructions": "**Dancing is a behavior many animals do to attract a mate.**\r\n- First, choose your `background`(#B3B2FB) environment and `sprite`(#F79EA5) animal.\r\n\r\n**Then create a dance:**\r\n- Change the sprite's appearance with a `block` `block` or `block`\r\n- Change the sprite's appearance again. \r\n- Add a third change to finish the dance.\r\n\r\n",
+    "long_instructions": "**Dancing is a behavior many animals do to attract a mate.**\r\n- First, choose your `background`(#B3B2FB) environment and `sprite`(#F79EA5) animal.\r\n- Make New Behavior (UPDATE BASED ON NEW BLOCKS)\r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -85,7 +85,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-03T16:35:41.614+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_butterfly\\\"\"],\"cloned_from\":\"csc_animal_adaptations_butterfly\"},{\"changed_at\":\"2023-03-03 22:59:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:06:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:08:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:47:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:48:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:50:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:52:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-03T16:35:41.614+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_butterfly\\\"\"],\"cloned_from\":\"csc_animal_adaptations_butterfly\"},{\"changed_at\":\"2023-03-03 22:59:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:06:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 23:08:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:47:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:48:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:50:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:52:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:31:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:02:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:05:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"disable_param_editing\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1455,78 +1455,10 @@
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
         </block>
-        <block type="gamelab_turn">
-          <field name="DIRECTION">"right"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"penguin_1"</field>
-            </block>
-          </value>
-          <value name="N">
-            <block type="math_number">
-              <field name="NUM">45</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_removeBehaviorSimple">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"penguin_1"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
-              <mutation/>
-              <field name="VAR" id="fluttering">fluttering</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_moveBackward">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"penguin_1"</field>
-            </block>
-          </value>
-          <value name="DISTANCE">
-            <block type="gamelab_int10">
-              <field name="VALUE">1</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_moveForward">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"penguin_1"</field>
-            </block>
-          </value>
-          <value name="DISTANCE">
-            <block type="gamelab_int10">
-              <field name="VALUE">1</field>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext">
-          <value name="TIMES">
-            <block type="math_number">
-              <field name="NUM">10</field>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_behavior_get">
           <mutation/>
           <field name="VAR" id="jittering">jittering</field>
         </block>
-        <block type="gamelab_setTint">
-          <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"penguin_1"</field>
-            </block>
-          </value>
-          <value name="COLOR">
-            <block type="gamelab_randomColor"/>
-          </value>
-        </block>
-        <block type="gamelab_repeatForever"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
