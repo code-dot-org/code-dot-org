@@ -9,17 +9,16 @@ export const MenuOptionStates = {
 };
 
 export const Themes = {
-  MODERN: 'modern',
-  DARK: 'dark',
-  HIGH_CONTRAST: 'highcontrast',
-  PROTANOPIA: 'protanopia',
-  DEUTERANOPIA: 'deuteranopia',
-  TRITANOPIA: 'tritanopia',
-  MUSICLAB_DARK: 'musiclabdark',
-  MUSICLAB_HIGH_CONTRAST: 'musiclabhighcontrast',
-  MUSICLAB_PROTANOPIA: 'musiclabprotanopia',
-  MUSICLAB_DEUTERANOPIA: 'musiclabdeuteranopia',
-  MUSICLAB_TRITANOPIA: 'musiclabtritanopia'
+  MODERN: 'cdomodern',
+  DARK: 'cdomoderndark',
+  HIGH_CONTRAST: 'cdohighcontrast',
+  HIGH_CONTRAST_DARK: 'cdohighcontrastdark',
+  PROTANOPIA: 'cdoprotanopia',
+  PROTANOPIA_DARK: 'cdoprotanopiadark',
+  DEUTERANOPIA: 'cdodeuteranopia',
+  DEUTERANOPIA_DARK: 'cdodeuteranopiadark',
+  TRITANOPIA: 'cdotritanopia',
+  TRITANOPIA_DARK: 'cdotritanopiadark'
 };
 
 // Used for custom field type ClampedNumber(,)
