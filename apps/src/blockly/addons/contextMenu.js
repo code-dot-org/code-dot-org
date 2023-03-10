@@ -219,6 +219,7 @@ function registerThemes(themes) {
 }
 
 const registerAllContextMenuItems = function() {
+  unregisterDefaultOptions();
   registerDeletable();
   registerMovable();
   registerEditable();
@@ -257,6 +258,17 @@ function isCurrentTheme(theme, workspace) {
 
 function isMusicLabTheme(workspace) {
   return workspace.getTheme().name === Themes.MUSICLAB_DARK;
+}
+
+function unregisterDefaultOptions() {
+  // Remove some default context menu options, if they are present.
+  try {
+    // cleanUp() doesn't currently account for immovable blocks.
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('collapseWorkspace');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('expandWorkspace');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('workspaceDelete');
+  } catch (error) {}
 }
 
 exports.registerAllContextMenuItems = registerAllContextMenuItems;
