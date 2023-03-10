@@ -292,7 +292,7 @@ export default class MusicPlayer {
     if (elapsedTime === -1) {
       return 0;
     }
-    return this.convertSecondsToPlayheadPosition(elapsedTime);
+    return this.convertSecondsToPlayheadPosition(elapsedTime % 4);
   }
 
   // Converts actual seconds used by the audio system into a playhead
@@ -473,7 +473,8 @@ export default class MusicPlayer {
           sampleId: soundEvent.id,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
           triggered: soundEvent.triggered,
-          effects: soundEvent.effects
+          effects: soundEvent.effects,
+          played: false
         }
       ];
     } else if (event.type === 'pattern') {
@@ -490,7 +491,8 @@ export default class MusicPlayer {
             patternEvent.when + (event.tick-1) / 16
           ),
           triggered: patternEvent.triggered,
-          effects: patternEvent.effects
+          effects: patternEvent.effects,
+          played: false
         };
 
         results.push(resultEvent);
