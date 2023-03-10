@@ -15,11 +15,9 @@ class LoginTypeCard extends Component {
     hover: false
   };
 
-  // Toggle hover is not working properly when component is rendered with mouse already 'over' the component.
-  // In order for hover to work properly - set on/off hover implicitly.
-  onHover = () => this.setState({hover: true});
-
-  offHover = () => this.setState({hover: false});
+  toggleHover = () => {
+    this.setState({hover: !this.state.hover});
+  };
 
   render() {
     const {title, subtitle, description, onClick} = this.props;
@@ -31,19 +29,22 @@ class LoginTypeCard extends Component {
       description: descriptionStyle
     } = styles;
     if (this.state.hover) {
-      cardStyle = {...cardStyle, background: color.neutral_light};
+      cardStyle = {...cardStyle, borderColor: color.dark_charcoal};
+      titleStyle = {...titleStyle, color: color.dark_charcoal};
+      subtitleStyle = {...subtitleStyle, color: color.dark_charcoal};
+      descriptionStyle = {...descriptionStyle, color: color.dark_charcoal};
     }
 
     return (
       <div
         style={cardStyle}
         onClick={onClick}
-        onMouseEnter={this.onHover}
-        onMouseLeave={this.offHover}
+        onMouseEnter={this.toggleHover}
+        onMouseLeave={this.toggleHover}
         className={this.props.className}
       >
         <div>
-          <h4 style={titleStyle}>{title}</h4>
+          <div style={titleStyle}>{title}</div>
           {subtitle && <div style={subtitleStyle}>{subtitle}</div>}
           <div style={descriptionStyle}>{description}</div>
         </div>
@@ -55,45 +56,48 @@ class LoginTypeCard extends Component {
 const styles = {
   card: {
     overflow: 'hidden',
-    display: 'inline-block',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     boxSizing: 'border-box',
     // Set width to form a three-column layout on 970px teacher dashboard.
     width: 312,
+    // Uniform height, even in different rows
+    flex: '0 0 auto',
     minHeight: 150,
-    padding: 8,
-    margin: '8px 0',
+    padding: 16,
+    marginBottom: 5,
+    marginLeft: 5,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.neutral_dark20,
-    borderRadius: 1,
-    background: color.neutral_white,
-    cursor: 'pointer'
+    borderColor: color.border_gray,
+    borderRadius: 5,
+    background: color.white
   },
   title: {
-    paddingBottom: 4,
-    marginTop: 8,
-    marginBottom: 0,
-    fontSize: '1.5em',
-    lineHeight: '18px',
-    fontFamily: '"Barlow Semi Condensed Medium", sans-serif',
-    zIndex: 2,
-    color: color.neutral_dark
-  },
-  subtitle: {
-    paddingBottom: 0,
-    fontSize: 12,
+    paddingBottom: 6,
+    fontSize: 24,
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
     zIndex: 2,
-    color: color.neutral_dark
+    color: color.charcoal
   },
-  description: {
-    paddingTop: 12,
-    fontSize: 12,
+  subtitle: {
+    paddingBottom: 12,
+    fontSize: 14,
     lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.neutral_dark
+    color: color.charcoal
+  },
+  description: {
+    paddingTop: 10,
+    paddingBottom: 5,
+    fontSize: 13,
+    lineHeight: '18px',
+    fontFamily: '"Gotham 4r", sans-serif',
+    zIndex: 2,
+    color: color.charcoal
   }
 };
 export default LoginTypeCard;
