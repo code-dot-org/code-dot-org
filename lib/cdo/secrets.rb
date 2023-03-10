@@ -27,7 +27,7 @@ module Cdo
     end
 
     # @return [Concurrent::Promises::Future<Aws::SecretsManager::Client>] Secrets Manager Client
-    def client
+    def client_promise
       @client_promise ||= Concurrent::Promises.future_on(@pool) do
         @client || Aws::SecretsManager::Client.new
       end
@@ -51,7 +51,7 @@ module Cdo
     # @return [Concurrent::Promises::Future<Hash>] All keys and their resolved values
     def get_multi(*keys)
       return Concurrent::Promises.fulfilled_future({}, @pool) if keys.empty?
-      client.then do
+      client_promise.then do
         promises = keys.map {|key| get(key).then {|value| [key, value]}}
         Concurrent::Promises.zip_futures_on(@pool, *promises).
           then {|*values| values.to_h}
@@ -63,7 +63,7 @@ module Cdo
     def get(key)
       key = key.to_s
       @values[key] ||= begin
-        client.then do |client|
+        client_promise.then do |client|
           parse_json(get_secret_value(client, key))
         rescue => e
           e.message << " Key: #{key}"
@@ -115,7 +115,7 @@ module Cdo
     # @param value [String, Object]
     def put(key, value)
       value = value.to_json unless value.is_a?(String)
-      c = client.value!
+      c = client_promise.value!
       c.create_secret(
         name: key,
         secret_string: value
