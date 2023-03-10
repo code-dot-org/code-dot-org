@@ -182,9 +182,7 @@ class ReportAbuseController < ApplicationController
     abuse_score
   end
 
-  private
-
-  def get_bucket_impl(endpoint)
+  private def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
       AnimationBucket
@@ -201,13 +199,13 @@ class ReportAbuseController < ApplicationController
     end
   end
 
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
+  private def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
     return true if current_user&.project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
-  def require_captcha?
+  private def require_captcha?
     return false if current_user&.admin? || current_user&.project_validator?
     true
   end

@@ -340,13 +340,11 @@ class Unit < ApplicationRecord
       end
     end
 
-    private
-
-    def visible_units
+    private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
 
-    def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
+    private def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
       record = {
         study: 'scripts_en_yml',
         event: log_event_type,

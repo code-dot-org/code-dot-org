@@ -53,6 +53,9 @@ Layout/SpaceInsideBlockBraces:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
 Style/EmptyElse:
   EnforcedStyle: empty
 

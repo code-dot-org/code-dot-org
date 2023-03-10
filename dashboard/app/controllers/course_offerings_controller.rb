@@ -32,9 +32,7 @@ class CourseOfferingsController < ApplicationController
     render :ok, json: offerings.to_json
   end
 
-  private
-
-  def course_offering_params
+  private def course_offering_params
     params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative).to_h
   end
 end

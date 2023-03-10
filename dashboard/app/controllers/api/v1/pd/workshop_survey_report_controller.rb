@@ -102,20 +102,18 @@ module Api::V1::Pd
       notify_error e
     end
 
-    private
-
-    def create_csf_survey_report
+    private def create_csf_survey_report
       render json: report_single_workshop(@workshop, current_user)
     end
 
-    def create_generic_survey_report
+    private def create_generic_survey_report
       this_ws_report = report_single_workshop(@workshop, current_user)
       rollup_report = report_rollups(@workshop, current_user)
 
       render json: this_ws_report.merge(rollup_report)
     end
 
-    def notify_error(exception, error_status_code = :bad_request)
+    private def notify_error(exception, error_status_code = :bad_request)
       Honeybadger.notify(
         exception,
         context: {
@@ -138,7 +136,7 @@ module Api::V1::Pd
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.
-    def facilitator_name_filter
+    private def facilitator_name_filter
       return nil if current_user.workshop_admin? || current_user.workshop_organizer? || current_user.program_manager?
       return current_user.name if current_user.facilitator?
 

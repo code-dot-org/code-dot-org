@@ -127,13 +127,11 @@ module Cdo
       )
     end
 
-    private
-
     # Call GetSecretValue for the provided key.
     # @param client[Aws::SecretsManager::Client]
     # @param key[String]
     # @return [String]
-    def get_secret_value(client, key)
+    private def get_secret_value(client, key)
       logger&.info("GetSecretValue: #{key}")
       client.get_secret_value(
         secret_id: key,
@@ -155,7 +153,7 @@ module Cdo
     #
     # @param value[String]
     # @return [Array, ActiveSupport::OrderedOptions, String]
-    def parse_json(value)
+    private def parse_json(value)
       parsed = JSON.parse(value)
       return parsed if parsed.is_a?(Array)
       return ActiveSupport::OrderedOptions[parsed.symbolize_keys] if parsed.is_a?(Hash)

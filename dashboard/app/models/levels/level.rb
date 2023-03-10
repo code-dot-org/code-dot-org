@@ -798,12 +798,10 @@ class Level < ApplicationRecord
     }
   end
 
-  private
-
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.
-  def base_name
+  private def base_name
     base_name = name
     if name_suffix
       strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
@@ -815,7 +813,7 @@ class Level < ApplicationRecord
 
   # repeatedly strip any version year suffix of the form _NNNN or -NNNN ()e.g. _2017 or -2017)
   # from the input string.
-  def strip_version_year_suffixes(str)
+  private def strip_version_year_suffixes(str)
     year_suffix_regex = /^(.*)[_-][0-9]{4}$/
     loop do
       matchdata = str.match(year_suffix_regex)
@@ -825,7 +823,7 @@ class Level < ApplicationRecord
     str
   end
 
-  def write_to_file?
+  private def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end
