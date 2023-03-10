@@ -6,6 +6,7 @@ import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
+import Button from '../../templates/Button';
 
 const style = {
   nav: {
@@ -19,13 +20,14 @@ const style = {
     },
     li: {
       display: 'inline-block',
-      color: color.light_gray,
+      color: color.neutral_dark90,
+      fontFamily: "'Gotham 5r', sans-serif",
       fontSize: 'larger',
       fontWeight: 'bold',
       marginRight: 10,
       cursor: 'pointer'
     },
-    selectedLi: {color: color.purple}
+    selectedLi: {color: color.brand_secondary_default}
   },
   ol: {
     marginLeft: 15
@@ -33,7 +35,8 @@ const style = {
   p: {
     fontSize: 'inherit',
     lineHeight: 'inherit',
-    color: 'inherit'
+    color: color.neutral_dark,
+    fontFamily: "'Gotham 5r', sans-serif"
   },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
@@ -42,7 +45,8 @@ const style = {
     marginTop: 20
   },
   expand: {
-    color: color.purple,
+    color: color.brand_secondary_default,
+    fontFamily: "'Gotham 5r', sans-serif",
     cursor: 'pointer',
     fontWeight: 'bold'
   },
@@ -130,6 +134,7 @@ class AdvancedShareOptions extends React.Component {
         <label style={{display: 'flex'}}>
           <input
             type="checkbox"
+            style={{accentColor: color.brand_primary_default}}
             checked={this.state.embedWithoutCode}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
@@ -156,14 +161,19 @@ class AdvancedShareOptions extends React.Component {
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
         </p>
-        <button
-          type="button"
+        <Button
+          color={Button.ButtonColor.neutralDark}
           onClick={this.downloadExport}
-          style={{marginLeft: 0}}
+          style={{
+            marginLeft: 0,
+            paddingRight: 11,
+            fontSize: 'large',
+            height: 40
+          }}
         >
           {spinner}
           Export
-        </button>
+        </Button>
         {alert}
       </div>
     );
@@ -177,13 +187,12 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
-        <button
-          type="button"
+        <Button
+          color={Button.ButtonColor.neutralDark}
           onClick={this.props.openLibraryCreationDialog}
-          style={{marginLeft: 0}}
-        >
-          {i18n.shareLibrary()}
-        </button>
+          style={{marginLeft: 0, fontSize: 'large', height: 40}}
+          text={i18n.shareLibrary()}
+        />
       </div>
     );
   };
