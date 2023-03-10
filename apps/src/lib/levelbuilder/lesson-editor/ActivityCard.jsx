@@ -244,7 +244,5 @@ export default connect(
     moveActivity,
     removeActivity,
     updateActivityField
-  },
-  null,
-  {forwardRef: true}
+  }
 )(ActivityCard);
