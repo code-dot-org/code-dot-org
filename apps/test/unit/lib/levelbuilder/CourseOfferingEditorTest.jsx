@@ -8,6 +8,14 @@ import * as utils from '@cdo/apps/utils';
 describe('CourseOfferingEditor', () => {
   let defaultProps;
 
+  const deviceCompatibilities = {
+    computer: 'incompatible',
+    chromebook: 'not_recommended',
+    tablet: 'not_recommended',
+    mobile: 'ideal',
+    no_device: ''
+  };
+
   beforeEach(() => {
     defaultProps = {
       initialCourseOffering: {
@@ -22,8 +30,7 @@ describe('CourseOfferingEditor', () => {
         marketing_initiative: 'HOC',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
-        device_compatibility:
-          "{'Computer':'Incompatible','Chromebook':'Not recommended','Tablet':'Not recommended','Mobile':'Ideal','No Device':'(None)'}"
+        device_compatibility: JSON.stringify(deviceCompatibilities)
       }
     };
   });
@@ -60,8 +67,7 @@ describe('CourseOfferingEditor', () => {
         marketing_initiative: 'HOC',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
-        device_compatibility:
-          "{'Computer':'Incompatible','Chromebook':'Not recommended','Tablet':'Not recommended','Mobile':'Ideal','No Device':'(None)'}"
+        device_compatibility: JSON.stringify(deviceCompatibilities)
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -133,8 +139,7 @@ describe('CourseOfferingEditor', () => {
         marketing_initiative: 'HOC',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
-        device_compatibility:
-          "{'Computer':'Incompatible','Chromebook':'Not recommended','Tablet':'Not recommended','Mobile':'Ideal','No Device':'(None)'}"
+        device_compatibility: JSON.stringify(deviceCompatibilities)
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
