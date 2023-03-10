@@ -101,7 +101,6 @@ def main
     generate_multiple_constants(
         %w(
       PUBLISHED_STATE
-      NONE_OPTION
       INSTRUCTION_TYPE
       PARTICIPANT_AUDIENCE
       INSTRUCTOR_AUDIENCE

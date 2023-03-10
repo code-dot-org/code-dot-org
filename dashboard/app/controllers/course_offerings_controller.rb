@@ -35,6 +35,6 @@ class CourseOfferingsController < ApplicationController
   private
 
   def course_offering_params
-    params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative, :cs_topic, :school_subject).to_h
+    params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative, :cs_topic, :school_subject, :device_compatibility).to_h
   end
 end

@@ -5,7 +5,6 @@ import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {
-  NoneOption,
   CourseOfferingCategories,
   CourseOfferingHeaders,
   CourseOfferingCurriculumTypes,
@@ -18,8 +17,11 @@ import {
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 import {
+  translatedNoneOption,
   translatedCourseOfferingCsTopics,
-  translatedCourseOfferingSchoolSubjects
+  translatedCourseOfferingSchoolSubjects,
+  translatedCourseOfferingDeviceTypes,
+  translatedCourseOfferingDeviceCompatibilityLevels
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 const useCourseOffering = initialCourseOffering => {
@@ -107,7 +109,7 @@ export default function CourseOfferingEditor(props) {
     let deviceCompatibilities = courseOffering.device_compatibility;
     return deviceCompatibilities
       ? JSON.parse(deviceCompatibilities)[device]
-      : NoneOption;
+      : translatedNoneOption;
   };
 
   return (
@@ -188,7 +190,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => handleMultipleSelected(e, 'grade_levels')}
         >
-          <option value="">{NoneOption}</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(StudentGradeLevels).map(level => (
             <option key={level} value={level}>
               {level}
@@ -212,7 +214,7 @@ export default function CourseOfferingEditor(props) {
             updateCourseOffering('curriculum_type', e.target.value)
           }
         >
-          <option value="">{NoneOption}</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingCurriculumTypes).map(type => (
             <option key={type} value={type}>
               {type}
@@ -230,7 +232,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => updateCourseOffering('header', e.target.value)}
         >
-          <option value="">{NoneOption}</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingHeaders).map(header => (
             <option key={header} value={header}>
               {header}
@@ -247,7 +249,7 @@ export default function CourseOfferingEditor(props) {
             updateCourseOffering('marketing_initiative', e.target.value)
           }
         >
-          <option value="">{NoneOption}</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingMarketingInitiatives).map(initiative => (
             <option key={initiative} value={initiative}>
               {initiative}
@@ -269,7 +271,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => handleMultipleSelected(e, 'cs_topic')}
         >
-          <option value="">{NoneOption}</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingCsTopics).map(topic => (
             <option key={topic} value={topic}>
               {translatedCourseOfferingCsTopics[topic]}
@@ -291,7 +293,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => handleMultipleSelected(e, 'school_subject')}
         >
-          <option value="">{NoneOption}</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingSchoolSubjects).map(subject => (
             <option key={subject} value={subject}>
               {translatedCourseOfferingSchoolSubjects[subject]}
@@ -302,16 +304,16 @@ export default function CourseOfferingEditor(props) {
       <h3>Device Compatibility</h3>
       {Object.values(DeviceTypes).map(device => (
         <label key={device}>
-          {device}
+          {translatedCourseOfferingDeviceTypes[device]}
           <select
             value={getDeviceCompatibility(device)}
             style={styles.dropdown}
             onChange={e => updateDeviceCompatibilities(device, e.target.value)}
           >
-            <option value="">{NoneOption}</option>
+            <option value="">{translatedNoneOption}</option>
             {Object.values(DeviceCompatibilityLevels).map(compLevel => (
               <option key={compLevel} value={compLevel}>
-                {compLevel}
+                {translatedCourseOfferingDeviceCompatibilityLevels[compLevel]}
               </option>
             ))}
           </select>
