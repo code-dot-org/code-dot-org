@@ -1,11 +1,3 @@
-// ConditionChecker
-//
-// ProgressManager:
-// init
-// checkProgress
-// onProgressChange
-//
-
 class ConditionChecker {
   constructor() {
     this.clear();
@@ -17,20 +9,6 @@ class ConditionChecker {
 
   addCurrentCondition(id, value) {
     this.currentConditions[id] = value;
-  }
-
-  checkValidation(requirements) {
-    // Go through each requirement, and return the first to fail.
-    for (const requirement of requirements) {
-      if (
-        this.checkConditions(this.currentConditions, requirement.conditions)
-      ) {
-        return requirement;
-      }
-    }
-
-    // Or return false if we didn't find something.
-    return false;
   }
 
   checkRequirementConditions(requirementConditions) {
@@ -96,7 +74,7 @@ export default class ProgressManager {
         );
       }
 
-      // next, let's check against each progress for the current step.
+      // next, let's check against each validation for the current step.
       const currentValidations = progression.panels[progressStep].validations;
 
       if (!currentValidations) {
@@ -111,8 +89,6 @@ export default class ProgressManager {
             validation.conditions
           );
           if (met) {
-            console.log('met conditions', validation);
-
             onChange({
               progressPassing: validation.next,
               progressMessage: validation.message
@@ -121,7 +97,6 @@ export default class ProgressManager {
           }
         } else {
           // we've fallen through to a fallback without conditions.
-          console.log('message', validation);
           onChange({progressMessage: validation.message});
         }
       }
