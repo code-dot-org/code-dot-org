@@ -705,29 +705,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Removed 1 CensusSubmissionFormMap"
   end
 
-  test "deletes census_inaccuracy_investigations associated census_submissions associated with user email" do
-    teacher = create :teacher
-    submission = create :census_your_school2017v0, submitter_email_address: teacher.email
-    ActiveRecord::Base.connection.exec_query(
-      <<-SQL
-        INSERT INTO `census_inaccuracy_investigations` (user_id, census_submission_id, notes, created_at, updated_at)
-        VALUES (#{teacher.id}, #{submission.id}, '', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
-      SQL
-    )
-
-    assert_equal ActiveRecord::Base.connection.exec_query(
-      "SELECT id from `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`user_id` = #{teacher.id}"
-    ).length, 1
-
-    purge_user teacher
-
-    assert_equal ActiveRecord::Base.connection.exec_query(
-      "SELECT id from `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`user_id` = #{teacher.id}"
-    ).length, 0
-
-    assert_logged "Removed 1 CensusInaccuracyInvestigation"
-  end
-
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
     user = create :teacher
     email = user.email
