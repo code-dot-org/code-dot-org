@@ -111,30 +111,40 @@ class UnconnectedMusicView extends React.Component {
 
     document.body.addEventListener('keyup', this.handleKeyUp);
 
-    this.loadLibrary().then(library => {
+    const promises = [];
+    promises.push(this.loadLibrary());
+    if (AppConfig.getValue('load-progression') === 'true') {
+      promises.push(this.loadProgression());
+    }
+
+    Promise.all(promises).then(values => {
+      // Process progression first, if there is one, since
+      // it might affect the toolbox.
+      if (AppConfig.getValue('load-progression') === 'true') {
+        const progression = values[1];
+        this.setState({
+          progression: progression,
+          showInstructions: !!progression
+        });
+      }
+
+      // Process library, which includes setting up the toolbox.
+      const library = values[0];
+
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
-        this.player
+        this.player,
+        this.state.progression
+          ? this.getToolboxForProgress(this.state.progressStep)
+          : null
       );
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
 
       Globals.setLibrary(library);
       Globals.setPlayer(this.player);
-
-      this.setToolboxForProgress(this.state.progressStep);
     });
-
-    // Only attempt to load progression if configured to.
-    if (AppConfig.getValue('load-progression') === 'true') {
-      this.loadProgression().then(progression => {
-        this.setState({
-          progression: progression,
-          showInstructions: !!progression
-        });
-      });
-    }
   }
 
   componentDidUpdate(prevProps) {
@@ -186,10 +196,14 @@ class UnconnectedMusicView extends React.Component {
     this.setToolboxForProgress(nextProgressStep);
   };
 
+  getToolboxForProgress = step => {
+    return this.state.progression.panels[step].toolbox;
+  };
+
   setToolboxForProgress = step => {
     if (this.state.progression) {
-      const toolbox = this.state.progression.panels[step].toolbox;
-      this.musicBlocklyWorkspace.updateToolbox(toolbox);
+      const allowedToolbox = this.getToolboxForProgress(step);
+      this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };
 
