@@ -240,8 +240,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   setToolboxForProgress = step => {
-    const toolbox = this.state.progression.panels[step].toolbox;
-    this.musicBlocklyWorkspace.updateToolbox(toolbox);
+    if (this.state.progression) {
+      const toolbox = this.state.progression.panels[step].toolbox;
+      this.musicBlocklyWorkspace.updateToolbox(toolbox);
+    }
   };
 
   loadLibrary = async () => {
