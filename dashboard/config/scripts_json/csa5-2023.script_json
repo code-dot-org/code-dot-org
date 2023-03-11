@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-07 12:46:00 UTC",
+    "serialized_at": "2023-03-03 18:28:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,19 +26,239 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Personal Narrative Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Two-Dimensional (2D) Arrays",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "2D Array Elements",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Row-Major Traversal",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Column-Major Traversal",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Enhanced For Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Images in The Theater",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "2D Array Algorithms",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Modifying Images",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Impacts of Programs",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Personal Narrative Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "GrayscaleImage FRQ",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Unit 5 Assessment",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Personal Narrative Project [1-Day Version]",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023"
+      }
+    }
   ],
   "lesson_activities": [
 

@@ -14,7 +14,8 @@
       "/courses/csd-2022/guides/lists",
       "/courses/csd-2022/guides/headings-and-paragraphs",
       "/courses/csd-2022/guides/html-tags",
-      "/courses/csd-2022/guides/debugging-html"
+      "/courses/csd-2022/guides/debugging-html",
+      "/courses/csd-2022/guides/problem-solving-process-programming"
     ],
     "map_reference": "/courses/csd-2022/guides/style-sheets",
     "submittable": "false",
@@ -31,6 +32,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:22:22.246+00:00\",\"changed\":[\"cloned from \\\"CSD web CSS project CSS_2022\\\"\"],\"cloned_from\":\"CSD web CSS project CSS_2022\"},{\"changed_at\":\"2023-02-18 00:18:01 +0000\",\"changed\":[\"long_instructions\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:22:22.246+00:00\",\"changed\":[\"cloned from \\\"CSD web CSS project CSS_2022\\\"\"],\"cloned_from\":\"CSD web CSS project CSS_2022\"},{\"changed_at\":\"2023-02-18 00:18:01 +0000\",\"changed\":[\"long_instructions\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-03 19:11:22 +0000\",\"changed\":[\"reference_links\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab>

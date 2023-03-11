@@ -9,12 +9,14 @@
       "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
+      "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2023"
+      "version_year": "2023",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-02-03 17:51:23 UTC",
+    "serialized_at": "2023-03-10 02:02:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -29,7 +31,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Chapter 1"
+        "display_name": "Chapter 1: Inputs and Outputs"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -41,7 +43,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Chapter 2"
+        "display_name": "Chapter 2: Building Physical Prototypes"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -1283,7 +1285,7 @@
       "key": "9369687d-6d3d-4278-99bb-88bb1e71c5d9",
       "position": 1,
       "properties": {
-        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -1561,7 +1563,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1579,7 +1581,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1625,7 +1627,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1642,7 +1644,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)."
           },
           {
             "type": "assessmentOpportunity",
@@ -1663,7 +1665,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1726,7 +1728,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1905,7 +1907,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2035,7 +2037,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2385,7 +2387,7 @@
       "key": "007124e0-3e18-4b21-83cd-bef3df8eb12a",
       "position": 6,
       "properties": {
-        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
+        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
       },
       "seeding_key": {
         "activity_section.key": "007124e0-3e18-4b21-83cd-bef3df8eb12a",
@@ -2487,7 +2489,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2651,7 +2653,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2852,7 +2854,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3139,7 +3141,7 @@
       "key": "20958b11-7d1d-4485-bff7-d1908563abdc",
       "position": 4,
       "properties": {
-        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
       },
       "seeding_key": {
         "activity_section.key": "20958b11-7d1d-4485-bff7-d1908563abdc",
@@ -3332,7 +3334,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3501,7 +3503,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3626,7 +3628,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3807,7 +3809,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4074,7 +4076,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           },
           {
             "type": "assessmentOpportunity",
@@ -4175,7 +4177,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4325,7 +4327,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4496,7 +4498,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           }
         ]
       },
@@ -4592,7 +4594,7 @@
       "key": "d73ffca3-e9f1-41bd-95ff-ef687a2d168d",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "name": "Post-Project Test"
       },
       "seeding_key": {
@@ -9832,6 +9834,50 @@
       }
     },
     {
+      "name": "All Code",
+      "url": "/s/csd6-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd6-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd6-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd6-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Analog Sensors",
       "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
       "key": "analog_sensors",
@@ -10027,6 +10073,76 @@
       },
       "seeding_key": {
         "resource.key": "computing_innovations_research_areas"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
       }
     },
     {
@@ -10676,6 +10792,16 @@
       }
     },
     {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
       "name": "The Accelerometer",
       "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
       "key": "the_accelerometer",
@@ -11261,7 +11387,78 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd6-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

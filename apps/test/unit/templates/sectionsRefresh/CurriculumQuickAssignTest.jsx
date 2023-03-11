@@ -1,18 +1,19 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 
     expect(wrapper.find('h3').length).to.equal(1);
     expect(wrapper.find('h5').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(4);
+    // We haven't specified participantType = student, so all 5 buttons appear
+    expect(wrapper.find('Button').length).to.equal(5);
     expect(
       wrapper
         .find('Button')
@@ -26,7 +27,7 @@ describe('CurriculumQuickAssign', () => {
   });
 
   it('updates caret direction when clicked', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 

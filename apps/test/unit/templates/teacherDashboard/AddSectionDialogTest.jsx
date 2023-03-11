@@ -4,6 +4,8 @@ import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import _ from 'lodash';
+import * as utils from '@cdo/apps/utils';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('AddSectionDialog', () => {
   let defaultProps,
@@ -98,5 +100,76 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
     expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
+  });
+
+  describe('with sectionSetupRefresh experiment', () => {
+    let navigateToHrefSpy;
+
+    beforeEach(() => {
+      navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
+      sinon
+        .stub(experiments, 'isEnabled')
+        .withArgs('sectionSetupRefresh')
+        .returns(true);
+    });
+
+    afterEach(() => {
+      experiments.isEnabled.restore();
+      navigateToHrefSpy.restore();
+    });
+
+    it('redirects to new section setup when selecting non-student participant type', () => {
+      const newSection = _.cloneDeep(defaultProps.section);
+      const wrapper = shallow(
+        <AddSectionDialog
+          {...defaultProps}
+          section={newSection}
+          availableParticipantTypes={['student', 'teacher', 'facilitator']}
+        />
+      );
+
+      wrapper.find('ParticipantTypePicker').invoke('setParticipantType')(
+        'teacher'
+      );
+      expect(navigateToHrefSpy).to.be.called.once;
+      expect(navigateToHrefSpy.getCall(0).args[0]).to.equal(
+        '/sections/new?participantType=teacher&loginType=email'
+      );
+    });
+
+    it('redirects to new section setup when selecting non-oauth login type', () => {
+      const sectionWithParticipantType = _.cloneDeep(defaultProps.section);
+      sectionWithParticipantType.participantType = 'student';
+      const wrapper = shallow(
+        <AddSectionDialog
+          {...defaultProps}
+          section={sectionWithParticipantType}
+          availableParticipantTypes={['student', 'teacher', 'facilitator']}
+        />
+      );
+
+      wrapper.find('Connect(LoginTypePicker)').invoke('setLoginType')('word');
+      expect(navigateToHrefSpy).to.be.called.once;
+      expect(navigateToHrefSpy.getCall(0).args[0]).to.equal(
+        '/sections/new?participantType=student&loginType=word'
+      );
+    });
+
+    it('does not redirect to new section setup when selection oauth login type', () => {
+      const sectionWithParticipantType = _.cloneDeep(defaultProps.section);
+      sectionWithParticipantType.participantType = 'student';
+      const wrapper = shallow(
+        <AddSectionDialog
+          {...defaultProps}
+          section={sectionWithParticipantType}
+          availableParticipantTypes={['student', 'teacher', 'facilitator']}
+        />
+      );
+
+      wrapper.find('Connect(LoginTypePicker)').invoke('setLoginType')(
+        'google_classroom'
+      );
+      expect(navigateToHrefSpy).to.have.not.been.called;
+    });
   });
 });
