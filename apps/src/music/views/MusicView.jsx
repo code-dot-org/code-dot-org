@@ -20,7 +20,7 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
-import Validation from '../validation';
+import ProgressManager from '../ProgressManager';
 import Video from './Video';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -61,7 +61,8 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
-    this.validation = new Validation();
+    this.progressManager = new ProgressManager();
+
     // Increments every time a trigger is pressed;
     // used to differentiate tracks created on the same trigger
     this.triggerCount = 0;
@@ -79,7 +80,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      progression: null,
       isPlaying: false,
       currentPlayheadPosition: 0,
       updateNumber: 0,
@@ -87,9 +87,10 @@ class UnconnectedMusicView extends React.Component {
       showInstructions: false,
       instructionsPosIndex,
       showingVideo: true,
-      progressionStep: 0,
-      levelPassing: false,
-      progressMessage: null
+      progression: null,
+      progressMessage: null,
+      progressStep: 0,
+      progressPassing: false
     };
   }
 
@@ -122,7 +123,7 @@ class UnconnectedMusicView extends React.Component {
       Globals.setLibrary(library);
       Globals.setPlayer(this.player);
 
-      this.setToolboxForProgress(0);
+      this.setToolboxForProgress(this.state.progressStep);
     });
 
     // Only attempt to load progression if configured to.
@@ -159,84 +160,30 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (this.state.progression) {
-      this.checkValidation();
-    }
-  };
-
-  checkValidation = () => {
-    if (this.state.isPlaying) {
-      if (this.player.getPlaybackEvents().length > 0) {
-        this.validation.addCurrentCondition('played_one_sound', true);
-      }
-
-      // get number of sounds currently playing simultaneously?
-      let currentNumberSounds = 0;
-
-      this.player.getPlaybackEvents().forEach(eventData => {
-        const length = this.player.getLengthForId(eventData.id);
-        if (
-          eventData.when <= this.state.currentPlayheadPosition &&
-          eventData.when + length > this.state.currentPlayheadPosition
-        ) {
-          currentNumberSounds++;
+      this.progressManager.checkProgress({
+        progression: this.state.progression,
+        progressStep: this.state.progressStep,
+        isPlaying: this.state.isPlaying,
+        currentPlayheadPosition: this.state.currentPlayheadPosition,
+        player: this.player,
+        onChange: newState => {
+          this.setState(newState);
         }
       });
-
-      if (currentNumberSounds === 3) {
-        this.validation.addCurrentCondition(
-          'played_three_sounds_together',
-          true
-        );
-      }
-      if (currentNumberSounds === 2) {
-        this.validation.addCurrentCondition('played_two_sounds_together', true);
-      }
-
-      // next, let's check against each progress for the current step.
-      const currentValidations = this.state.progression.panels[
-        this.state.progressionStep
-      ].validations;
-
-      if (!currentValidations) {
-        // maybe it's a final level with no validations.
-        return;
-      }
-
-      // go through each validation until one fails.
-      for (const validation of currentValidations) {
-        if (validation.conditions) {
-          const met = this.validation.checkRequirementConditions(
-            validation.conditions
-          );
-          if (met) {
-            console.log('met conditios', validation);
-
-            this.setState({
-              levelPassing: validation.next,
-              progressMessage: validation.message
-            });
-            return;
-          }
-        } else {
-          // we've fallen through to a fallback without conditions.
-          console.log('message', validation);
-          this.setState({progressMessage: validation.message});
-        }
-      }
     }
   };
 
   onNextPanel = () => {
-    const nextProgressionStep = this.state.progressionStep + 1;
+    const nextProgressStep = this.state.progressStep + 1;
     this.setState({
-      progressionStep: nextProgressionStep,
-      levelPassing: false,
+      progressStep: nextProgressStep,
+      progressPassing: false,
       progressMessage: null
     });
-    this.validation.clear();
+    this.progressManager.clear();
     this.stopSong();
     this.clearCode();
-    this.setToolboxForProgress(nextProgressionStep);
+    this.setToolboxForProgress(nextProgressStep);
   };
 
   setToolboxForProgress = step => {
@@ -447,9 +394,9 @@ class UnconnectedMusicView extends React.Component {
       >
         <Instructions
           progression={this.state.progression}
-          currentPanel={this.state.progressionStep}
+          currentPanel={this.state.progressStep}
           lastMessage={this.state.progressMessage}
-          onNextPanel={this.state.levelPassing ? this.onNextPanel : null}
+          onNextPanel={this.state.progressPassing ? this.onNextPanel : null}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
