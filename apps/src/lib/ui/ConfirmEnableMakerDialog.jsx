@@ -38,23 +38,13 @@ export class ConfirmEnableMakerDialog extends Component {
     handleCancel: PropTypes.func.isRequired
   };
 
-  state = {
-    microBitExperimentEnabled: false
-  };
-
   render() {
     return (
       <Dialog
         isOpen={this.props.isOpen}
-        confirmText={this.state.microBitExperimentEnabled ? null : msg.enable()}
-        onConfirm={
-          this.state.microBitExperimentEnabled
-            ? null
-            : () => this.props.handleConfirm('circuitPlayground')
-        }
-        onCancel={
-          this.state.microBitExperimentEnabled ? null : this.props.handleCancel
-        }
+        confirmText={null}
+        onConfirm={null}
+        onCancel={null}
         handleClose={this.props.handleCancel}
       >
         <Title>{msg.enableMakerDialogTitle()}</Title>
@@ -65,33 +55,24 @@ export class ConfirmEnableMakerDialog extends Component {
               {msg.enableMakerDialogSetupPageLinkText()}
             </a>
           </div>
-          {this.state.microBitExperimentEnabled ? (
-            <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
-          ) : (
-            <div style={style.warning}>
-              {msg.enableMakerDialogWarningOnlyCP()}
-            </div>
-          )}
-          {this.state.microBitExperimentEnabled && (
-            <Footer key="footer">
-              <div style={style.footerButtons}>
-                <Cancel onClick={this.props.handleCancel} />
-                <div>
-                  <Confirm onClick={() => this.props.handleConfirm('microbit')}>
-                    {msg.useMicroBit()}
-                  </Confirm>
-                  <Confirm
-                    onClick={() =>
-                      this.props.handleConfirm('circuitPlayground')
-                    }
-                    style={style.buttonGroupSpacing}
-                  >
-                    {msg.useCircuitPlayground()}
-                  </Confirm>
-                </div>
+          <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
+
+          <Footer key="footer">
+            <div style={style.footerButtons}>
+              <Cancel onClick={this.props.handleCancel} />
+              <div>
+                <Confirm onClick={() => this.props.handleConfirm('microbit')}>
+                  {msg.useMicroBit()}
+                </Confirm>
+                <Confirm
+                  onClick={() => this.props.handleConfirm('circuitPlayground')}
+                  style={style.buttonGroupSpacing}
+                >
+                  {msg.useCircuitPlayground()}
+                </Confirm>
               </div>
-            </Footer>
-          )}
+            </div>
+          </Footer>
         </Body>
       </Dialog>
     );
