@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-03-01T23:03:29.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -47,9 +43,9 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\"orderedKeys\":[\"26011c62-5b03-40bf-ab79-45f29d704e3c\",\"19c05b84-24a8-47d0-b42a-476bf58d51f4\",\"e64dea53-4162-4952-8da6-ce4cc8feaffa\"],\"propsByKey\":{\"e64dea53-4162-4952-8da6-ce4cc8feaffa\":{\"name\":\"whale-1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":189},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:06:40.000Z\",\"pngLastModified\":\"2022-04-11T21:06:40.000Z\",\"version\":\"zCc7IogcbHrLkIfF5CaSY.h8DKLxZnBW\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/zCc7IogcbHrLkIfF5CaSY.h8DKLxZnBW/whale-1.png\",\"sourceSize\":{\"x\":400,\"y\":189}},\"19c05b84-24a8-47d0-b42a-476bf58d51f4\":{\"name\":\"whale-4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":183},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:07:06.000Z\",\"pngLastModified\":\"2022-04-11T21:51:52.000Z\",\"version\":\"wr20GPxFd_WZI5F.9pBP2vHXHUpUrhak\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/wr20GPxFd_WZI5F.9pBP2vHXHUpUrhak/whale-4.png\",\"sourceSize\":{\"x\":400,\"y\":183}},\"26011c62-5b03-40bf-ab79-45f29d704e3c\":{\"name\":\"world-map\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-04-12T13:44:17.000Z\",\"pngLastModified\":\"2022-04-11T21:04:30.000Z\",\"version\":\"j9QOdpWu.JzqROzGFFPd5pXDSbNOdgaG\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/j9QOdpWu.JzqROzGFFPd5pXDSbNOdgaG/world-map.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
+    "start_animations": "{\"orderedKeys\":[\"db89aa25-b796-4cd0-ac99-bcf269fbae50\",\"0a67bbe6-58a0-41f8-a684-a7a008194387\",\"104f41e8-169e-417d-8f85-df8b2556f937\"],\"propsByKey\":{\"104f41e8-169e-417d-8f85-df8b2556f937\":{\"name\":\"cheetah\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":311},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:48:24 UTC\",\"pngLastModified\":\"2021-01-19 23:48:24 UTC\",\"version\":\"8VJOgeffI_i3QFGlVm5NhdLzjem1PIa2\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8VJOgeffI_i3QFGlVm5NhdLzjem1PIa2/category_animals/cheetah.png\",\"sourceSize\":{\"x\":396,\"y\":311}},\"0a67bbe6-58a0-41f8-a684-a7a008194387\":{\"name\":\"background_landscape_07\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:17 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"zUULcHm5t_jSrB.48UGxZW3Lb.CGqvLl\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zUULcHm5t_jSrB.48UGxZW3Lb.CGqvLl/category_backgrounds/background_landscape_07.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"db89aa25-b796-4cd0-ac99-bcf269fbae50\":{\"name\":\"tortoise\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":397,\"y\":260},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:44:27 UTC\",\"pngLastModified\":\"2021-01-19 23:44:28 UTC\",\"version\":\"Tyll0nLtpl99UiNQb4M3Zdf1TxK3uQI8\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Tyll0nLtpl99UiNQb4M3Zdf1TxK3uQI8/category_animals/tortoise.png\",\"sourceSize\":{\"x\":397,\"y\":260}}}}\r\n\r\n",
     "hide_custom_blocks": "true",
-    "long_instructions": "##Whale Migration\r\n\r\n- Make the whale move 10 pixels north when the up key is pressed\r\n\r\n",
+    "long_instructions": "\r\n\r\n\r\n\r\n**Animals have developed different speeds to survive their environment and challenges. \r\n<br> Turtles move slow  to conserve energy and cheetahs move fast to catch prey!** \r\n\r\n- Add `set turtle speed to slow`(#5ED5DD) to your code.\r\n- Add `set cheetah speed to fast`(#5ED5DD) to your code.\r\n\r\n- Press `Run`(#FFBD46) to see the animal survival behaviors in action!\r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -83,9 +79,15 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-03-01T23:03:29.000Z",
+  "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-01T23:03:29.848+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_migration\\\"\"],\"cloned_from\":\"csc_animal_adaptations_migration\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-01T23:03:29.848+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_migration\\\"\"],\"cloned_from\":\"csc_animal_adaptations_migration\"},{\"changed_at\":\"2023-03-03 17:30:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:11:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:13:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:13:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:15:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:17:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:20:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:23:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 20:24:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:14:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:16:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:17:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 01:18:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:54:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:55:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:55:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -93,15 +95,53 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"world-map"</field>
+              <field name="IMG">"background_landscape_07"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"whale-4"</field>
+                  <field name="ANIMATION_NAME">"tortoise"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                      <field name="LOCATION">{"x":112,"y":209}</field>
+                      <field name="LOCATION">{"x":129,"y":363}</field>
                     </block>
                   </value>
+                  <next>
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"tortoise"</field>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <field name="NUM">60</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <field name="ANIMATION_NAME">"cheetah"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                              <field name="LOCATION">{"x":32,"y":342}</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_getAllSprites"/>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation/>
+                                  <field name="VAR" id="patrolling">patrolling</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -1426,30 +1466,32 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"world-map"</field>
+          <field name="IMG">"background_landscape_07"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"whale-4"</field>
+          <field name="ANIMATION_NAME">"tortoise"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_keyPressed">
-          <field name="CONDITION">"when"</field>
-          <field name="KEY">"up"</field>
-        </block>
-        <block type="gamelab_moveInDirection">
-          <field name="DIRECTION">"North"</field>
+        <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"whale-4"</field>
+            <block type="gamelab_getAllSprites"/>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get">
+              <mutation/>
+              <field name="VAR" id="patrolling">patrolling</field>
             </block>
           </value>
-          <value name="DISTANCE">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">10</field>
+        </block>
+        <block type="gamelab_setSpeed_dropdown">
+          <field name="SIZE">3</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"tortoise"</field>
             </block>
           </value>
         </block>

@@ -21,6 +21,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import Validation from '../validation';
+import Video from './Video';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -85,6 +86,7 @@ class UnconnectedMusicView extends React.Component {
       timelineAtTop: false,
       showInstructions: false,
       instructionsPosIndex,
+      showingVideo: true,
       progressionStep: 0,
       levelPassing: false,
       progressMessage: null
@@ -243,13 +245,19 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadLibrary = async () => {
-    const libraryParameter = AppConfig.getValue('library');
-    const libraryFilename = libraryParameter
-      ? `music-library-${libraryParameter}.json`
-      : 'music-library.json';
-    const response = await fetch(baseUrl + libraryFilename);
-    const library = await response.json();
-    return library;
+    if (AppConfig.getValue('local-library') === 'true') {
+      const localLibraryFilename = 'music-library';
+      const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
+      return localLibrary;
+    } else {
+      const libraryParameter = AppConfig.getValue('library');
+      const libraryFilename = libraryParameter
+        ? `music-library-${libraryParameter}.json`
+        : 'music-library.json';
+      const response = await fetch(baseUrl + libraryFilename);
+      const library = await response.json();
+      return library;
+    }
   };
 
   loadProgression = async () => {
@@ -383,10 +391,13 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    if (event.key === 't') {
+    // When assigning new keyboard shortcuts, be aware that the following
+    // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
+    // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
+    if (event.key === 'v') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
-    if (event.key === 'i') {
+    if (event.key === 'b') {
       this.toggleInstructions(true);
     }
     if (event.key === 'n') {
@@ -412,6 +423,10 @@ class UnconnectedMusicView extends React.Component {
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
+  };
+
+  onVideoClosed = () => {
+    this.setState({showingVideo: false});
   };
 
   renderInstructions(position) {
@@ -471,6 +486,9 @@ class UnconnectedMusicView extends React.Component {
     const instructionsPosition =
       instructionPositionOrder[this.state.instructionsPosIndex];
 
+    const showVideo =
+      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
@@ -487,6 +505,10 @@ class UnconnectedMusicView extends React.Component {
               {this.state.showInstructions &&
                 instructionsPosition === InstructionsPositions.TOP &&
                 this.renderInstructions(InstructionsPositions.TOP)}
+
+              {showVideo && (
+                <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+              )}
 
               {this.state.timelineAtTop &&
                 this.renderTimelineArea(

@@ -80,7 +80,7 @@ const TimelineTrackEvents = ({
                     (eventData, index) => (
                       <TimelineElement
                         key={index}
-                        soundId={eventData.id}
+                        eventData={eventData}
                         barWidth={barWidth}
                         height={singleElementHeight}
                         top={index * singleElementHeight}

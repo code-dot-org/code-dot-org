@@ -8,6 +8,7 @@ export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 
 export const TRACK_NAME_FIELD = 'track_name';
 export const FIELD_SOUNDS_NAME = 'sound';
+export const FIELD_PATTERN_NAME = 'pattern';
 export const EXTRA_SOUND_INPUT_PREFIX = 'extra_sound_input_';
 export const EXTRA_SAMPLE_FIELD_PREFIX = 'extra_sample';
 export const TRIGGER_FIELD = 'trigger';
@@ -20,6 +21,8 @@ export const FIELD_EFFECTS_VALUE = 'effects_value';
 
 export const FIELD_SOUNDS_TYPE = 'field_sounds';
 export const SOUND_VALUE_TYPE = 'sound_value_type';
+export const FIELD_PATTERN_TYPE = 'field_pattern';
+export const PATTERN_VALUE_TYPE = 'pattern_value_type';
 
 // SVG
 

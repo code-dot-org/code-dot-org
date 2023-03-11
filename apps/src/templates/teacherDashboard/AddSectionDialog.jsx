@@ -17,6 +17,23 @@ import {
 } from './teacherSectionsRedux';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {navigateToHref} from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
+
+// Checks if experiment is enabled and navigates to the new section setup page
+// if both params are non-null.
+const redirectToNewSectionPage = (participantType, loginType) => {
+  if (
+    experiments.isEnabled('sectionSetupRefresh') &&
+    !!participantType &&
+    !!loginType
+  ) {
+    navigateToHref(
+      `/sections/new?participantType=${participantType}&loginType=${loginType}`
+    );
+  }
+};
 
 /**
  * UI for a teacher to add a new class section.  For editing a section see
@@ -47,6 +64,27 @@ const AddSectionDialog = ({
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();
 
+  const onParticipantTypeSelection = participantType => {
+    if (participantType !== 'student') {
+      redirectToNewSectionPage(participantType, SectionLoginType.email);
+    }
+    setParticipantType(participantType);
+  };
+
+  const onLoginTypeSelection = loginType => {
+    // Oauth section types should use the roster dialog, not the section setup page
+    if (
+      [
+        SectionLoginType.picture,
+        SectionLoginType.word,
+        SectionLoginType.email
+      ].includes(loginType)
+    ) {
+      redirectToNewSectionPage(participantType, loginType);
+    }
+    setLoginType(loginType);
+  };
+
   const getDialogContent = () => {
     if (!asyncLoadComplete) {
       return <Spinner size="large" style={{padding: 50}} />;
@@ -59,7 +97,7 @@ const AddSectionDialog = ({
       return (
         <ParticipantTypePicker
           title={title}
-          setParticipantType={setParticipantType}
+          setParticipantType={onParticipantTypeSelection}
           handleCancel={handleCancel}
           availableParticipantTypes={availableParticipantTypes}
         />
@@ -71,7 +109,7 @@ const AddSectionDialog = ({
           title={title}
           handleImportOpen={beginImportRosterFlow}
           setRosterProvider={setRosterProvider}
-          setLoginType={setLoginType}
+          setLoginType={onLoginTypeSelection}
           handleCancel={handleCancel}
         />
       );
@@ -79,17 +117,25 @@ const AddSectionDialog = ({
     return <EditSectionForm title={title} isNewSection={true} />;
   };
 
-  return (
-    <BaseDialog
-      useUpdatedStyles
-      fixedWidth={1010}
-      isOpen={isOpen}
-      overflow="hidden"
-      uncloseable
-    >
-      <PadAndCenter>{getDialogContent()}</PadAndCenter>
-    </BaseDialog>
-  );
+  if (
+    participantType &&
+    loginType &&
+    experiments.isEnabled('sectionSetupRefresh')
+  ) {
+    return null;
+  } else {
+    return (
+      <BaseDialog
+        useUpdatedStyles
+        fixedWidth={1010}
+        isOpen={isOpen}
+        overflow="hidden"
+        uncloseable
+      >
+        <PadAndCenter>{getDialogContent()}</PadAndCenter>
+      </BaseDialog>
+    );
+  }
 };
 
 AddSectionDialog.propTypes = {
