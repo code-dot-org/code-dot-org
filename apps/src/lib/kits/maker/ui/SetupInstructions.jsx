@@ -178,7 +178,7 @@ class Downloads extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{marginTop: 50}}>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
           <button type="button" value={WINDOWS}>
             <FontAwesome icon="windows" /> {i18n.windows()}

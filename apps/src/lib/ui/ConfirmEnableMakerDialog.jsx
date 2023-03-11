@@ -10,7 +10,6 @@ import Dialog, {
   Confirm,
   Cancel
 } from '../../templates/Dialog';
-import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   description: {
@@ -42,12 +41,6 @@ export class ConfirmEnableMakerDialog extends Component {
   state = {
     microBitExperimentEnabled: false
   };
-
-  componentDidMount() {
-    this.setState({
-      microBitExperimentEnabled: experiments.isEnabled('microbit')
-    });
-  }
 
   render() {
     return (

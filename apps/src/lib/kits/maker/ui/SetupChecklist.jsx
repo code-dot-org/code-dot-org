@@ -16,7 +16,6 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import experiments from '@cdo/apps/util/experiments';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
@@ -119,9 +118,6 @@ class SetupChecklist extends Component {
       // What type of board is this?
       .then(() => {
         this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
-        if (experiments.isEnabled('microbit')) {
-          console.log('Board detected: ' + this.setupChecker.detectBoardType());
-        }
         Promise.resolve();
       })
 
@@ -301,18 +297,11 @@ class SetupChecklist extends Component {
       });
     } else {
       // Board Type is Other/Unknown
-      if (experiments.isEnabled('microbit')) {
-        firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
-          firmataURLExpress: EXPRESS_FIRMATA_URL,
-          firmataURLClassic: CLASSIC_FIRMATA_URL,
-          firmataURLMB: MICROBIT_FIRMATA_URL
-        });
-      } else {
-        firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
-          firmataURLExpress: EXPRESS_FIRMATA_URL,
-          firmataURLClassic: CLASSIC_FIRMATA_URL
-        });
-      }
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
+        firmataURLExpress: EXPRESS_FIRMATA_URL,
+        firmataURLClassic: CLASSIC_FIRMATA_URL,
+        firmataURLMB: MICROBIT_FIRMATA_URL
+      });
     }
     return (
       <div style={styles.suggestionHeader}>
@@ -371,34 +360,32 @@ class SetupChecklist extends Component {
             )}
             {this.contactSupport()}
           </ValidationStep>
-          {experiments.isEnabled('microbit') &&
-            showUpdateMicroBitValidationStep && (
-              <ValidationStep
-                stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
-                stepName={i18n.validationStepUpdateMicroBitSoftware()}
-                hideWaitingSteps={false}
-                alwaysShowChildren={true}
-                percentComplete={this.props.firmataPercentComplete}
-              >
-                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
-                  Status.ATTEMPTING && (
-                  <div>
-                    <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
-                  </div>
-                )}
-                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
-                  Status.SUCCEEDED && (
-                  <div>
-                    <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
-                    <p>
-                      <strong>{applabI18n.makerSetupClickRedetect()}</strong>
-                      &nbsp;
-                      {applabI18n.makerSetupConfirmConnection()}
-                    </p>
-                  </div>
-                )}
-              </ValidationStep>
-            )}
+          {showUpdateMicroBitValidationStep && (
+            <ValidationStep
+              stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
+              stepName={i18n.validationStepUpdateMicroBitSoftware()}
+              hideWaitingSteps={false}
+              alwaysShowChildren={true}
+              percentComplete={this.props.firmataPercentComplete}
+            >
+              {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                Status.ATTEMPTING && (
+                <div>
+                  <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
+                </div>
+              )}
+              {this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.SUCCEEDED && (
+                <div>
+                  <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
+                  <p>
+                    <strong>{applabI18n.makerSetupClickRedetect()}</strong>
+                    &nbsp;
+                    {applabI18n.makerSetupConfirmConnection()}
+                  </p>
+                </div>
+              )}
+            </ValidationStep>
+          )}
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
@@ -416,7 +403,7 @@ class SetupChecklist extends Component {
               </div>
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
-            {experiments.isEnabled('microbit') && showUpdateMicroBitButton && (
+            {showUpdateMicroBitButton && (
               <Button
                 text={applabI18n.makerSetupUpdateMBFirmata()}
                 color={Button.ButtonColor.orange}

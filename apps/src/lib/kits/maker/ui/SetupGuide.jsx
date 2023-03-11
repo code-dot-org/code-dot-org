@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import experiments from '@cdo/apps/util/experiments';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
@@ -64,7 +63,6 @@ export default class SetupGuide extends React.Component {
 
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
-    const isMicrobit = experiments.isEnabled('microbit');
     const chromeVersion = getChromeVersion();
 
     return (
@@ -90,28 +88,23 @@ export default class SetupGuide extends React.Component {
           />
         )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        {isMicrobit ? (
-          <div>
-            <div style={style.oneColumn}>
-              <DescriptionCard {...this.setupGuideContent('general')} />
-            </div>
-            <div style={style.twoColumns}>
-              <DescriptionCard
-                {...this.setupGuideContent('circuitPlayground')}
-                divStyle={style.descriptionFlexCard}
-              />
-              <DescriptionCard
-                {...this.setupGuideContent('microbit')}
-                divStyle={style.descriptionFlexCard}
-              />
-            </div>
-          </div>
-        ) : (
-          <div>
+
+        <div>
+          <div style={style.oneColumn}>
             <DescriptionCard {...this.setupGuideContent('general')} />
-            <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
           </div>
-        )}
+          <div style={style.twoColumns}>
+            <DescriptionCard
+              {...this.setupGuideContent('circuitPlayground')}
+              divStyle={style.descriptionFlexCard}
+            />
+            <DescriptionCard
+              {...this.setupGuideContent('microbit')}
+              divStyle={style.descriptionFlexCard}
+            />
+          </div>
+        </div>
+
         <div id="setup-status-mount">
           <SetupInstructions />
         </div>
