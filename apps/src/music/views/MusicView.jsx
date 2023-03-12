@@ -284,7 +284,6 @@ class UnconnectedMusicView extends React.Component {
     if (play) {
       this.playSong();
       this.analyticsReporter.onButtonClicked('play');
-      this.setState({progressSatisfied: false});
     } else {
       this.stopSong();
     }
