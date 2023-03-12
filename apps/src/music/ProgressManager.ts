@@ -49,7 +49,7 @@ class ConditionChecker {
 }
 
 // Manages progress.  The caller can reuglarly check to see how the user
-// is doing against a step's validation specified in a progression, and might
+// is doing against a step's validations specified in a progression, and might
 // receive feedback to give to the user, or the go-ahead to move to the next
 // step.
 export default class ProgressManager {
@@ -60,7 +60,7 @@ export default class ProgressManager {
   }
 
   // Called regularly to see how the user is doing against a progression's
-  // validation.  Calls back onChange with new information.  Accumulates
+  // validations.  Calls back onChange with new information.  Accumulates
   // satisfied conditions which can be reset with a call to clear() when moving
   // to a new step.
   checkProgress = (options:{[key: string]: any}) => {
@@ -115,7 +115,7 @@ export default class ProgressManager {
         return;
       }
 
-      // go through each validation until one fails.
+      // Go through each validation until one fails.
       for (const validation of currentValidations) {
         if (validation.conditions) {
           const met = this.conditionChecker.checkRequirementConditions(
@@ -129,14 +129,14 @@ export default class ProgressManager {
             return;
           }
         } else {
-          // we've fallen through to a fallback without conditions.
+          // we've fallen through to a validation without conditions.
           onChange({progressMessage: validation.message});
         }
       }
     }
   };
 
-  // Clears out the accumulated satisfied conditions, usually called when
+  // Clears out the accumulated satisfied conditions; usually called when
   // moving to a new step.
   clear = () => {
     this.conditionChecker.clear();
