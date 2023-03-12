@@ -90,7 +90,7 @@ class UnconnectedMusicView extends React.Component {
       progression: null,
       progressMessage: null,
       progressStep: 0,
-      progressPassing: false
+      progressSatisfied: false
     };
   }
 
@@ -187,7 +187,7 @@ class UnconnectedMusicView extends React.Component {
     const nextProgressStep = this.state.progressStep + 1;
     this.setState({
       progressStep: nextProgressStep,
-      progressPassing: false,
+      progressSatisfied: false,
       progressMessage: null
     });
     this.progressManager.clear();
@@ -284,7 +284,7 @@ class UnconnectedMusicView extends React.Component {
     if (play) {
       this.playSong();
       this.analyticsReporter.onButtonClicked('play');
-      this.setState({levelPassing: false});
+      this.setState({progressSatisfied: false});
     } else {
       this.stopSong();
     }
@@ -410,7 +410,7 @@ class UnconnectedMusicView extends React.Component {
           progression={this.state.progression}
           currentPanel={this.state.progressStep}
           lastMessage={this.state.progressMessage}
-          onNextPanel={this.state.progressPassing ? this.onNextPanel : null}
+          onNextPanel={this.state.progressSatisfied ? this.onNextPanel : null}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
