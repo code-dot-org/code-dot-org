@@ -23,7 +23,7 @@
       },
       "validations": [
         {
-          "conditions": ["played_three_sounds_together"],
+          "conditions": ["played_three_sounds_together", "used_together_block"],
           "message": "Nice work.",
           "next": "true"
         },
