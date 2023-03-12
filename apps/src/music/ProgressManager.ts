@@ -12,8 +12,10 @@ const KnownConditions = {
 // A small helper class that accumulates satisfied conditions, and then evaluates
 // whether a set of conditions have all been satisfied.
 class ConditionChecker {
+  private currentSatisfiedConditions: { [key: string]: boolean };
+
   constructor() {
-    this.clear();
+    this.currentSatisfiedConditions = {};
   }
 
   // Reset the accumulated conditions.
@@ -22,13 +24,13 @@ class ConditionChecker {
   }
 
   // Accumulate a satisfied condition.
-  addSatisfiedCondition(id, value) {
+  addSatisfiedCondition(id:string, value:boolean) {
     this.currentSatisfiedConditions[id] = value;
   }
 
   // Check whether the current set of satisfied conditions satisfy the given
   // required conditions.
-  checkRequirementConditions(requiredConditions) {
+  checkRequirementConditions(requiredConditions:[string]) {
     for (const requiredCondition of requiredConditions) {
       // If we don't yet support a condition, don't check against it for now.
       if (!Object.values(KnownConditions).includes(requiredCondition)) {
@@ -51,6 +53,8 @@ class ConditionChecker {
 // receive feedback to give to the user, or the go-ahead to move to the next
 // step.
 export default class ProgressManager {
+  private conditionChecker: ConditionChecker;
+
   constructor() {
     this.conditionChecker = new ConditionChecker();
   }
@@ -59,7 +63,7 @@ export default class ProgressManager {
   // validation.  Calls back onChange with new information.  Accumulates
   // satisfied conditions which can be reset with a call to clear() when moving
   // to a new step.
-  checkProgress = options => {
+  checkProgress = (options:{[key: string]: any}) => {
     const {
       progression,
       progressStep,
@@ -80,7 +84,7 @@ export default class ProgressManager {
       // Get number of sounds currently playing simultaneously.
       let currentNumberSounds = 0;
 
-      player.getPlaybackEvents().forEach(eventData => {
+      player.getPlaybackEvents().forEach((eventData: { id: string; when: number; }) => {
         const length = player.getLengthForId(eventData.id);
         if (
           eventData.when <= currentPlayheadPosition &&
