@@ -21,7 +21,7 @@ const PatternPanel = ({library, initValue, onChange}) => {
 
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
-  const currentValue = {...initValue};
+  const currentValue = JSON.parse(JSON.stringify(initValue));
 
   const group = library.groups[0];
   const currentFolder = findFolder(currentValue.kit);
