@@ -64,7 +64,7 @@ function getAllBehaviors() {
       Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
     ]
   ];
-  Blockly.mainBlockSpace.getAllBlocks().forEach(function(block) {
+  Blockly.mainBlockSpace?.getAllBlocks().forEach(function(block) {
     if (
       block.type === 'behavior_definition' &&
       block.getProcedureInfo()?.name &&
