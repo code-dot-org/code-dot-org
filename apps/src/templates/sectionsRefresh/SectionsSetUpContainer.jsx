@@ -113,7 +113,7 @@ export default function SectionsSetUpContainer() {
         sectionCourse={sections[0].course}
       />
       <span>
-        <div>
+        <div style={style.div}>
           <FontAwesome
             id={'uitest-advanced-settings'}
             onClick={toggleAdvancedSettingsOpen}
@@ -166,5 +166,9 @@ const style = {
   },
   label: {
     display: 'inline-block'
+  },
+  div: {
+    cursor: 'pointer',
+    flexGrow: 1
   }
 };
