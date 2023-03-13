@@ -50,7 +50,8 @@
     "block_pool": "gamelab",
     "name_suffix": "_1",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "mini_rubric": "false",
     "include_shared_functions": "true",
@@ -79,7 +80,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-03T22:03:08.590+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptaions_fishschool\\\"\"],\"cloned_from\":\"csc_animal_adaptaions_fishschool\"},{\"changed_at\":\"2023-03-03 22:13:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:13:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:15:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:16:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:18:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:19:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:29:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:40:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:41:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:44:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:49:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:50:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:51:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:51:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:52:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:34:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-03T22:03:08.590+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptaions_fishschool\\\"\"],\"cloned_from\":\"csc_animal_adaptaions_fishschool\"},{\"changed_at\":\"2023-03-03 22:13:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:13:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:15:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:16:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:18:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:19:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-03 22:29:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:40:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:41:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:44:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:49:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:50:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:51:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:51:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 22:52:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 23:34:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-10 17:36:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 17:39:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 17:41:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 17:44:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 17:44:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 17:45:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-10 17:45:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -95,50 +96,29 @@
                   <field name="ANIMATION_NAME">"ladybug2"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                      <field name="LOCATION">{"x":100,"y":100}</field>
+                      <field name="LOCATION">{"x":66,"y":323}</field>
                     </block>
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"grasshopper"</field>
+                      <field name="ANIMATION_NAME">"beetle"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                          <field name="LOCATION">{"x":300,"y":100}</field>
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":280,"y":322}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"beetle2"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                              <field name="LOCATION">{"x":100,"y":300}</field>
+                        <block type="gamelab_addBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                              <field name="ANIMATION">"ladybug2"</field>
                             </block>
                           </value>
-                          <next>
-                            <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"beetle"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                                  <field name="LOCATION">{"x":299,"y":303}</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_addBehaviorSimple">
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"ladybug2"</field>
-                                    </block>
-                                  </value>
-                                  <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
-                                      <mutation/>
-                                      <field name="VAR" id="spinning right">spinning right</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
+                          <value name="BEHAVIOR">
+                            <block type="adaptations_adaptationBehaviors">
+                              <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
                             </block>
-                          </next>
+                          </value>
                         </block>
                       </next>
                     </block>
@@ -2784,7 +2764,7 @@
           <field name="IMG">"forest"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"grasshopper"</field>
+          <field name="ANIMATION_NAME">"ladybug2"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -2793,14 +2773,13 @@
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grasshopper"</field>
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"ladybug2"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
-              <mutation/>
-              <field name="VAR" id="spinning right">spinning right</field>
+            <block type="adaptations_adaptationBehaviors">
+              <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
             </block>
           </value>
         </block>
@@ -2808,42 +2787,21 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grasshopper"</field>
+              <field name="ANIMATION">"ladybug2"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_removeBehaviorSimple">
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grasshopper"</field>
+              <field name="ANIMATION">"ladybug2"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
-              <mutation/>
-              <field name="VAR" id="spinning right">spinning right</field>
+            <block type="adaptations_adaptationBehaviors">
+              <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <field name="VAR" id="swimming left and right">swimming left and right</field>
-        </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <field name="VAR" id="patrolling">patrolling</field>
-        </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <field name="VAR" id="wobbling">wobbling</field>
-        </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <field name="VAR" id="wandering">wandering</field>
-        </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <field name="VAR" id="fluttering">fluttering</field>
         </block>
       </xml>
     </toolbox_blocks>
