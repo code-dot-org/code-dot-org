@@ -32,7 +32,6 @@ const MINIMUM_PROPS = {
 const getStudentRows = wrapper => wrapper.find(StudentRow);
 
 describe('LessonLockDialog with stubbed section selector', () => {
-  // Stub out <SectionSelector> so we can test without Redux.
   let store;
   beforeEach(() => {
     stubRedux();
