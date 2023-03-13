@@ -38,7 +38,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: "musiclab#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
@@ -206,7 +207,6 @@ Dashboard::Application.routes.draw do
       passwords: 'passwords'
     }
     get 'discourse/sso' => 'discourse_sso#sso'
-    post '/auth/lti', to: 'lti_provider#sso'
 
     root to: "home#index"
     get '/home_insert', to: 'home#home_insert'

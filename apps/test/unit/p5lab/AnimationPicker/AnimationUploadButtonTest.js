@@ -16,6 +16,8 @@ describe('AnimationUploadButton', function() {
         isBackgroundsTab={false}
         refreshInRestrictedShareMode={emptyFunction}
         inRestrictedShareMode={false}
+        showingUploadWarning={emptyFunction}
+        exitedUploadWarning={emptyFunction}
       />
     );
     const uploadButton = body.find(AnimationPickerListItem).at(0);
@@ -32,6 +34,8 @@ describe('AnimationUploadButton', function() {
         isBackgroundsTab={false}
         refreshInRestrictedShareMode={emptyFunction}
         inRestrictedShareMode={true}
+        showingUploadWarning={emptyFunction}
+        exitedUploadWarning={emptyFunction}
       />
     );
     const uploadButton = body.find(AnimationPickerListItem).at(0);
@@ -48,6 +52,8 @@ describe('AnimationUploadButton', function() {
         isBackgroundsTab={false}
         refreshInRestrictedShareMode={emptyFunction}
         inRestrictedShareMode={false}
+        showingUploadWarning={emptyFunction}
+        exitedUploadWarning={emptyFunction}
       />
     );
     const uploadButton = body.find(AnimationPickerListItem).at(0);
@@ -64,6 +70,8 @@ describe('AnimationUploadButton', function() {
         isBackgroundsTab={false}
         refreshInRestrictedShareMode={emptyFunction}
         inRestrictedShareMode={false}
+        showingUploadWarning={emptyFunction}
+        exitedUploadWarning={emptyFunction}
       />
     );
     const uploadButton = body.find(AnimationPickerListItem).at(0);

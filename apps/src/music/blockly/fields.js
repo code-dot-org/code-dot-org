@@ -1,21 +1,30 @@
 // Common field definitions used across multiple music blocks
 
-import {DEFAULT_SOUND} from '../constants';
+import {DEFAULT_SOUND, DEFAULT_PATTERN} from '../constants';
 import Globals from '../globals';
 import {
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,
-  FIELD_SOUNDS_TYPE
+  FIELD_SOUNDS_TYPE,
+  FIELD_PATTERN_NAME,
+  FIELD_PATTERN_TYPE
 } from './constants';
 
 export const fieldSoundsDefinition = {
   type: FIELD_SOUNDS_TYPE,
   name: FIELD_SOUNDS_NAME,
-  getLibrary: () => Globals.getLibrary(),
+  getLibrary: Globals.getLibrary,
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
   currentValue: DEFAULT_SOUND
+};
+
+export const fieldPatternDefinition = {
+  type: FIELD_PATTERN_TYPE,
+  name: FIELD_PATTERN_NAME,
+  getLibrary: Globals.getLibrary,
+  currentValue: DEFAULT_PATTERN
 };
 
 export const fieldRestDurationDefinition = {
