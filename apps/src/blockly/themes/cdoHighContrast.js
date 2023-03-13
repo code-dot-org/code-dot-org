@@ -1,5 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import HighContrastTheme from '@blockly/theme-highcontrast';
+import {Themes} from '../constants';
 
 // Intentionally overriden styles from Google Blockly.
 // We do not override list, math, text, or variable blocks.
@@ -60,12 +61,12 @@ const cdoCustomHighContrastStyles = {
   ...spriteLabHighContrastStyles
 };
 
-const cdoHighContrastBlockStyles = {
+export const cdoHighContrastBlockStyles = {
   ...coreBlocklyOverrides,
   ...cdoCustomHighContrastStyles
 };
 
-export default GoogleBlockly.Theme.defineTheme('cdohighcontrast', {
+export default GoogleBlockly.Theme.defineTheme(Themes.HIGH_CONTRAST, {
   base: HighContrastTheme,
   blockStyles: cdoHighContrastBlockStyles,
   categoryStyles: {},
