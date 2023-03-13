@@ -16,8 +16,4 @@ max_age: 60
 ---
 
 - course = File.basename(request.path_info)
-
-- if ScriptConstants.has_congrats_page?(course)
-  = view :csf_congrats, course: course
-- else
-  - redirect "/congrats"
+- redirect CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(course)}", CDO.default_scheme)

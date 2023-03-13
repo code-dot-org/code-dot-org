@@ -178,13 +178,6 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.false;
     expect(component.state().error).to.be.false;
   });
-
-  it('can toggle hover state', function() {
-    const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
-    // Just checking that this doesn't cause error for now
-    component.instance().toggleHover();
-    component.instance().toggleHover();
-  });
 });
 
 // Could extend this to have real EventTarget behavior,

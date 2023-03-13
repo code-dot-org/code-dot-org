@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=9",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More",
+          "key": "c0b6268f-dbb5-4f81-b459-02e1f35b0761"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +25,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:34:58 UTC",
+    "serialized_at": "2022-10-25 20:46:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -63,18 +76,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "announcements": [
-          {
-            "notice": "Lesson Updated March 4",
-            "details": "Due to a change in Google's privacy policies, the Google Trends tool is no longer accessible to most students. We've updated this lesson to remove the use of the Google Trends tool. If you'd like to reference the old version of this lesson with Google Trends included, please click the \"Learn More\" button.",
-            "link": "https://curriculum.code.org/csp-20/unit9/1/",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.",
-        "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo",
+        "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1Ycz0b-nlvTSMQPq4dV5MHffdJpZYw-2sPsLAVue4raE/edit?usp=sharing)",
         "purpose": "The two main purposes of this lesson are:\n\n1. Getting acquainted with talking and writing about data. In particular we want to:\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\n2. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \n",
         "student_overview": "In this lesson, you will explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, you will learn about the concept of metadata and look for the metadata of datasets on App Lab."
       },
@@ -94,7 +98,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned.",
-        "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson",
+        "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types, a bar chart, and a histogram. Students will build skills in using this tool and reading data that they will continue to develop throughout the unit.\r\n\r\nIn the Wrap Up of this lesson students are introduced to the Data Analysis Process, a set of steps that can be used to use data to answer questions. Students will continue to refer to this process throughout the remainder of the unit.",
         "student_overview": "Create a bar chart and a histogram in App Lab's Data Visualizer."
       },
@@ -114,7 +118,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, student explore the challenges of working with a messy dataset. First students learn how to identify issues using the Data Visualizer, and then manually clean the data. Following this, students learn about the filtering tools in the Data Visualizer, and use a guided activity to answer data questions that require filtering a dataset. ",
-        "preparation": "* Preview the filter tool in the Data Visualizer\r\n* Prepare for the demo in the Activity",
+        "preparation": "* Preview the filter tool in the Data Visualizer\n* Prepare for the demo in the Activity\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The goal of this lesson is to introduce two crucial concepts when working with data: cleaning and filtering. The datasets in App Lab are generally clean, so a \"messy\" dataset is imported to a level for students to explore. After discovering why datsets need to be cleaned, students manually clean the dataset. \r\n\r\nWhen working with a dataset to answer a question, the user may want to focus on a subset of the data. In this lesson, students are introduced to the filtering tools in the Data Visualizer so they can accurately filter for the information they are looking for. ",
         "student_overview": "Clean data and use the filtering tools in the Data Visualizer to be able to analyze data."
       },
@@ -134,7 +138,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts, a cross tab, and a scatterplot. Students will practice reading each type of chart before learning to make them in the Data Visualizer. Students will track their work using a provided activity guide. The lesson concludes with a review of key takeaways.",
-        "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer",
+        "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces students to two new ways of make visualizations in the Data Visualizer. The crosstab and scatter chart are new in that they allow students to see patterns across multiple variables, noticing how one might seem to change (or correlate) with another. This is good preparation for their unit project in which they'll need to make and interpret a data visualization of their own.",
         "student_overview": "Create and analyze crosstab and scatter charts in App Lab's Data Visualizer."
       },
@@ -154,7 +158,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.",
-        "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\r\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.",
+        "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson zooms back out from the data analysis process to the ways that is applied in a wide variety of contexts. Students learn how big data, open data, and crowdsourcing apply this process in interesting ways that cleverly modify this process. For a summary of key points of this lesson review the key takeaways in the slides. In short however:\r\n\r\n* Big data: \"Collect huge amounts of data so we can learn even more from it\"\r\n* Open data: \"sharing data with others so they can can analyze it\"\r\n* Crowdsourcing: \"collecting data from others so you can analyze it\"\r\n\r\nThis lesson further builds towards the following lesson on machine learning which explores a different application of the data analysis process.",
         "student_overview": "Learn how big data, open data, and crowdsourcing apply the data analysis process in real world context to solve problems that matter.",
         "unplugged": true
@@ -175,7 +179,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. ",
+        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This tutorial is designed to quickly introduce students to machine learning, a type of artificial intelligence. Students will explore how training data is used to enable a machine learning model to classify new data. ",
         "student_overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
       },
@@ -194,7 +198,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
-        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
+        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
       "seeding_key": {
@@ -214,7 +218,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
-        "preparation": "* Preview the Project Guide",
+        "preparation": "* Preview the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit.",
         "student_overview": "You will create an effective visualization that you will use to tell a data story."
       },
@@ -235,7 +239,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
-        "preparation": "* Review the rubric in the Project Guide",
+        "preparation": "* Review the rubric in the Project Guide\n* Review the example projects linked under the \"Resources\" section of this lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-tell-a-data-story-unit-9-lessons-8-9/36490) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit. ",
         "student_overview": "Finish the task you started in the previous lesson by using the Data Analysis Process to tell a data story with the visualization you created."
       },
@@ -1592,7 +1596,13 @@
       "properties": {
         "description": "Have students fill in page 2 of their activity guides practicing making scatter charts.\n\n**Discuss:** *Have students share our their responses and talk through their conclusions*.",
         "name": "Making Scatter Charts",
-        "progression_name": "Crosstab and Scatter Charts"
+        "progression_name": "Crosstab and Scatter Charts",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The dataset titled \"Favorite Classes\" that students use to complete this activity guide is a fabricated dataset for the purposes of this lesson. The rest of the datasets are ones that can be found in the permanent library of datasets available in any AppLab project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1bd8046f-a264-44be-85d1-1a392c018028",
@@ -3464,7 +3474,7 @@
     },
     {
       "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1UkJX1PrpTjqWdiySNp1k3z2qIIws5jdEokwKp2r2bIU/view",
+      "url": "https://docs.google.com/presentation/d/1UkJX1PrpTjqWdiySNp1k3z2qIIws5jdEokwKp2r2bIU/copy",
       "key": "csp_unit_9_-_data",
       "properties": {
         "audience": "Teacher",
@@ -3490,7 +3500,7 @@
     },
     {
       "name": "Data Visualizer in App Lab - Part 2",
-      "url": "https://youtu.be/OjUEFHo3Yw0",
+      "url": "https://youtu.be/4vaWVvrnsFk",
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",
@@ -3841,6 +3851,30 @@
       "seeding_key": {
         "lesson.key": "Project   Tell a Data Story Part 2",
         "resource.key": "csp_unit_9_-_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "resource.key": "u9_sample_project_4"
       }
     }
   ],

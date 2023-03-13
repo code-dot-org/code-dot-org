@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:22.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -71,14 +67,14 @@
     "parent_level_id": 20697,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/sprite-interactions"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -90,7 +86,7 @@
     "long_instructions": "# Make it Fit!\r\n<img src=\"https://images.code.org/3cc33de83a1dee34a3ce07f4d6c24c45-image-1566239215417.25.23 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nThe food is way too big to fit on the plate.  Use your knowledge of sprite properties to make it fit.\r\n\r\n# Do this\r\n\r\n* Run the program to see how big the food is.\r\n* Use sprite properties to scale all of the food sprites down so they fit on the plate.\r\n\r\n",
     "encrypted_examples": "PSzjbf1WS7EMRMADdfknIEk36xdHEcmwampUF5jL4QNENjMyaFepI/p2hKGb\n5Bfwx3PIpjGIlPNJV6LcaoFy6Q==\n",
     "libraries_enabled": "false",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "rubric_key_concept": "Use dot notation to update a sprite's properties.",
     "rubric_performance_level_1": "The arrangement of sprites is identical to the example provided in the instructions.",
     "rubric_performance_level_2": "The sprites have been resized to fit inside the circle. There may be some slight differences between the student's work and the provided example.",
@@ -98,6 +94,10 @@
     "rubric_performance_level_4": "The code is either the same or has been changed in ways unrelated the assignment.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:22.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:22.910+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties assessment_2021\\\"\"],\"cloned_from\":\"CSD Games properties assessment_2021\"}]"

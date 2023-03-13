@@ -20,10 +20,10 @@
 class Follower < ApplicationRecord
   acts_as_paranoid
 
-  belongs_to :section
+  belongs_to :section, optional: true
   has_one :user, through: :section
-  belongs_to :student_user, foreign_key: "student_user_id", class_name: 'User'
-  has_one :code_review_group_member, dependent: :delete
+  belongs_to :student_user, class_name: 'User', optional: true
+  has_one :code_review_group_member, dependent: :destroy
   has_one :code_review_group, through: :code_review_group_member
 
   accepts_nested_attributes_for :student_user

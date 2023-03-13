@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-04-22 19:05:50 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-01-30 18:10:02 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -195,7 +196,7 @@
       "properties": {
         "assessment_opportunities": "1) **Use AI Lab to select features to train a model**\n\n\tEach level requires a minimum accuracy score to continue. Checking that students fully complete each level is enough to verify that they have met this objective.\n\n2) **Use data visualization tools to decide which features to include when training a model**\n\n\tCheck the free responses in the activity guide to assess this objective.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.\n\n**Question of the Day:** How can we use machine learning to make recommendations?",
+        "overview": "In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.\n\n**Question of the Day:** How can you use AI Lab to create an accurate machine learning model?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student\n",
         "student_overview": "Learn how to use AI Lab to train machine learning models, such as how to recognize shapes or how to make food recommendations for a restaurant."
       },
@@ -365,7 +366,7 @@
     },
     {
       "key": "Mini-Project: Make a Machine Learning App",
-      "name": "Mini-Project: Make a Machine Learning App",
+      "name": "Project: Make a Machine Learning App",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -475,7 +476,7 @@
     },
     {
       "key": "Design an AI App",
-      "name": "Design an AI App",
+      "name": "Project - Design an AI App",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -498,7 +499,7 @@
       "key": "3ecb4357-7d80-478c-b775-35bf6a2595e7",
       "position": 1,
       "properties": {
-        "name": "Before the Unit"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "3ecb4357-7d80-478c-b775-35bf6a2595e7",
@@ -1448,7 +1449,8 @@
       "key": "e4aed3e6-69c9-4f26-8e28-469ac2da0ee5",
       "position": 1,
       "properties": {
-        "description": "This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries or the App Lab Hour of Code tutorial. Students will use App Lab for the first time in Lesson 7. \n\nIf you have students who have not worked in App Lab and Design Mode before, you may consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read our recommendations for how to do this."
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "name": "Preparing for the Unit"
       },
       "seeding_key": {
         "activity_section.key": "e4aed3e6-69c9-4f26-8e28-469ac2da0ee5",
@@ -1926,10 +1928,27 @@
       }
     },
     {
-      "key": "20015ce4-15d6-4172-96cb-f792879b4a7a",
+      "key": "9bba3c38-7247-43e6-883a-49a62429ad6c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of [r types_of_machine_learning/aiml/2022] to each student. Students will use this activity guide while working through levels in Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of [r types_of_machine_learning/aiml/2022] to each student. Students will use this activity guide while working through levels in Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9bba3c38-7247-43e6-883a-49a62429ad6c",
+        "lesson_activity.key": "741a767a-7024-4d16-890e-bfc7ab4c2a66"
+      }
+    },
+    {
+      "key": "20015ce4-15d6-4172-96cb-f792879b4a7a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.\n"
       },
       "seeding_key": {
         "activity_section.key": "20015ce4-15d6-4172-96cb-f792879b4a7a",
@@ -1938,7 +1957,7 @@
     },
     {
       "key": "b5f38001-f091-450c-b444-143ff011d0ef",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Looking for Patterns",
         "tips": [
@@ -1955,7 +1974,7 @@
     },
     {
       "key": "2cfa0d86-a0ae-4cd2-b8b9-9404a06a1c07",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What groupings did you create? Is there a pattern?_"
       },
@@ -1966,7 +1985,7 @@
     },
     {
       "key": "4240c8c1-c8e1-4a8a-8147-6f505fed7f26",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": " **Discussion Goal:** Have several students share or call on a few that you noticed while circulating around the classroom. Students may find that they unintentionally grouped cards together by color (red, green, blue) or by shade (light vs dark) or other factors. It’s okay for students to have many different answers to this, and it’s also okay for students to not have any noticeable patterns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary:**\n\n- **Unsupervised Learning:** Finding patterns in data that doesn't have any labels\n- **Features:** The inputs that a model uses to make decisions"
       },
@@ -1977,7 +1996,7 @@
     },
     {
       "key": "0df40e2f-4a07-4391-8e45-08a68c29e8d0",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "This is really fascinating! Just by grouping similar numbers together, we were able to find patterns and create different color groupings. This is an example of **Unsupervised Learning**, where we were able to learn something using just the data itself. The only thing we paid attention to were the numbers on the cards, called the **features**. This is similar to how online recommendations work - computers try to find patterns in the items we buy so they can suggest new items for us.",
         "remarks": true
@@ -1989,7 +2008,7 @@
     },
     {
       "key": "6aee7fd7-6886-46d7-8d25-ae233a984bfb",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm-up are similar to unsupervised learning?_\n\nHave students reflect on the examples shared during the warm-up, trying to identify which ones are are likely to be unsupervised learning. Try to identify situations where students were noticing patterns without clear directions, such as the unspoken rules of their home or community. They will likely think of situations from when they were much younger, especially when they thought they learned something from observation, but it didn't actually end up being true."
       },
@@ -2000,7 +2019,7 @@
     },
     {
       "key": "d85e99aa-7914-4020-885b-0b5862f8a1a7",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "Unsupervised Learning is one way that computers can learn something new. But this isn't like what we did yesterday - yesterday we helped the computer learn something new by providing examples. This is like when you get older and a coach or mentor can help teach you something new. In the next level, we're going to try and learn something new with somebody's help.",
         "duration": "10",
@@ -2014,7 +2033,7 @@
     },
     {
       "key": "a233de5b-6b89-496c-8f82-21be87c84c98",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where they will play a game called the Green Glass Door. The goal is to notice patterns in different types of words to try and get words accepted through the door."
       },
@@ -2025,7 +2044,7 @@
     },
     {
       "key": "d28ca076-ac78-41fe-af3a-bb71f17ea9c3",
-      "position": 14,
+      "position": 15,
       "properties": {
         "progression_name": "Green Glass Door"
       },
@@ -2036,7 +2055,7 @@
     },
     {
       "key": "df9e6799-ecd8-44e3-9750-c4ac954cb930",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "**Circulate:** Check in with students as they complete this activity. This activity can frustrate students, especially if they’re not sure what to be looking for. Encourage students to click the “See all results” button to see which words have been accepted and which words have been rejected. Help them notice what all the accepted words have in common, and what makes them different from the rejected works. If students figure out the secret early, encourage them to keep it a secret until the class discussion.\n\nRemind students to complete the activity guide as they work through this level.",
         "tips": [
@@ -2053,7 +2072,7 @@
     },
     {
       "key": "693f57a8-7637-4112-9e8a-66c453b474d4",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What’s the secret - which words are accepted or rejected? How did you figure it out?_"
       },
@@ -2064,7 +2083,7 @@
     },
     {
       "key": "2c19de23-efbd-494e-8138-a2701753ffd5",
-      "position": 17,
+      "position": 18,
       "properties": {
         "description": " **Discussion Goal:** This should be an exciting moment, as students finally share the secret to how the game works. Ask a few students to share how they figured out the secret. Focus on responses that highlight how they looked for similarities within each group (like noticing the double letters) and differences between groups. Highlight how the wizard was helpful in noticing the pattern - without their examples, it would have been a lot more difficult to determine the pattern.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** These words are spread across two slides. Use the visualizations to help explain each concept as students record the vocabulary in their notes.\n\n- **Supervised Learning** - When a human trains a model to learn with examples.\n- **Label** - the output you are trying to decide or predict with a model\n- **Training** - giving examples to a model so it can learn"
       },
@@ -2075,7 +2094,7 @@
     },
     {
       "key": "c5fc9329-79b9-45be-b687-672d65b70ec0",
-      "position": 18,
+      "position": 19,
       "properties": {
         "description": "This activity is an example of **Supervised Learning**, where we learn something new by looking at examples. The wizard was helping to **train** us by providing **labels** for each of the words - either accept or reject. After looking at enough examples, we can start to figure out the pattern ourselves. This is similar to the activity we did yesterday, or when you’re asked to identify street lights or stop signs from an image - we’re helping to train a driverless car by providing more data.",
         "remarks": true
@@ -2087,7 +2106,7 @@
     },
     {
       "key": "32b6e8e9-2cd3-47fd-8437-9c961cb705f2",
-      "position": 19,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm up are supervised learning?_"
       },
@@ -2098,7 +2117,7 @@
     },
     {
       "key": "99f098ab-3d15-468f-95b2-1b28bb4cc20d",
-      "position": 20,
+      "position": 21,
       "properties": {
         "description": " **Discussion Goal:** Have students reflect on the examples shared during the warm-up, trying to identify which ones are supervised learning. Help students understand that the key distinction is that learning happens by examples from someone who is helping or coaching during the learning.\n"
       },
@@ -2109,7 +2128,7 @@
     },
     {
       "key": "b926c9f6-da2d-4f45-8b59-c088e104654f",
-      "position": 21,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the second page of the activity guide, students are given several scenarios to identify as supervised or unsupervised learning. Have students read through the scenarios and complete the task individually, then have students pair-up to compare answers and talk through their reasoning.\n\n**Circulate:** Monitor students as they complete this activity, checking that they can reason through the differences between supervised and unsupervised learning. An answer key is provided to help check student responses.",
         "duration": "15",
@@ -2128,7 +2147,7 @@
     },
     {
       "key": "42237efc-7399-43c4-8c6a-c83e3250ad7c",
-      "position": 22,
+      "position": 23,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cycle through the next several slides and invite students to share their responses. This is an opportunity to have a discussion about each scenario and hear why students think certain scenarios are similar to supervised or unsupervised learning.\n\n**Discussion Goal:** These discussion are less about being absolutely right or wrong, and more about the reasoning being used to compare why certain situations are supervised or unsupervised. Encourage students to discuss with each other, especially if they disagree about a certain scenario. Students may be unsure about some scenarios, which is a good opportunity to clarify the differences between supervised and unsupervised learning as a full class."
       },
@@ -2139,7 +2158,7 @@
     },
     {
       "key": "ed937322-4fe0-48a9-aba9-43f3e1bd97bf",
-      "position": 23,
+      "position": 24,
       "properties": {
         "description": "Today we've seen two examples of machine learning, and how they can be similar to some of our own learning experiences as humans. Tomorrow, we'll have a chance to research examples of machine learning and see how this type of learning can be used to solve problems in the world.",
         "remarks": true
@@ -3608,7 +3627,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _This class considered asking about gender on the survey to help recommend a book, but decided against it._\n\n_Do you think there is any harm in including a question about gender in the survey? Why or why not?_\n\n**Discussion Goal:** This is an opportunity to explore how demographic features, like gender or race or age, should or shouldn't be used in machine learning models. Some students may think it's harmless to include gender in the survey, since it may have a strong relation to certain types of books. Other students may bring up how about gender can lead to stereotypes, or how there may not be enough data to be gender inclusive in the survey especially for non-binary students.\n\nGuide students to consider whether or not it feels like the best type of question to ask considering that the class is trying to predict a book recommendation. Have the class consider whether gender feels like a necessary question, or if other questions will also lead to accurate recommendations. In this way, asking about gender is similar to the previous two questions about which sandwich you like or the type of day you're having: the other questions are probably better predictors of what type of book you may read.",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "contentCorner",
             "markdown": "**Additional Resources:** Even though including gender on a survey may feel innocent to some students, studies have shown that gender bias can creep into recommendation and selection processes in unintended and unexpected ways. For example, a machine learning algorithm designed to screen job candidates in the tech industry was discovered to be [biased against against women](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G) and perpetuating stereotypes in the tech industry. Importantly, this phenomenon can exist even without AI and Machine Learning, such as a study showing how [gender bias was impacting selection for symphonic orchestras](https://www.princeton.edu/news/2000/11/28/blind-orchestra-auditions-better-women-study-finds).\n\nIf students are interested in this topic, consider having them explore the **[Survival of the Best Fit](https://www.survivalofthebestfit.com/)** game which simulates a similar phenomenon. "
           }
         ]
@@ -3629,7 +3648,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**This Can Be Overwhelming:** When models are imported into App Lab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n"
+            "markdown": "**This Can Be Overwhelming:** When models are imported into App Lab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n\n**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           }
         ]
       },
@@ -3664,7 +3683,13 @@
       "key": "2952c662-eab5-4ecb-bb55-e3f5d28c0fde",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Programming Levels:** These levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete these levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2952c662-eab5-4ecb-bb55-e3f5d28c0fde",
@@ -3675,7 +3700,13 @@
       "key": "205f52e5-d938-473c-9b23-16a1592d58bb",
       "position": 11,
       "properties": {
-        "progression_name": "Customize Your App"
+        "progression_name": "Customize Your App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "205f52e5-d938-473c-9b23-16a1592d58bb",
@@ -3725,7 +3756,7 @@
         "name": "Journal",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "assessmentOpportunity",
             "markdown": "**Formative Assessment:** There are a lot of places in this lesson where students may get lost or confused and not feel comfortable speaking up, especially if other students in the class have prior App Lab experience. Use this prompt as a way to determine if you need to check in with students at a later lesson, or revisit a concept from today. This is especially true if students have varied levels of experience with App Lab before this unit.\r\n"
           }
         ]
@@ -4137,7 +4168,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"block boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
+            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"black boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
           }
         ]
       },
@@ -4544,7 +4575,13 @@
       "key": "3ef553de-3847-4259-8e65-c9ea329095e3",
       "position": 15,
       "properties": {
-        "progression_name": "Adding New Screens"
+        "progression_name": "Adding New Screens",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3ef553de-3847-4259-8e65-c9ea329095e3",
@@ -4560,7 +4597,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging?** Several of these practice levels feature the term debugging, which is first introduced in CS Discoveries Unit 2. If you and your students are unfamiliar with this term, consider reviewing the [CSD Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview). You can also consider showing your students this [How to Debug video](https://www.youtube.com/watch?v=auv10y-dN4s)\n\n**Student Choice and Practice Levels:** Having students choose their own practice levels are one way to differentiate instruction with your students. To learn more about how these levels support differentiation, as well as other strategies, you can review the [CSD Guide to Differentiation](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)"
+            "markdown": "**Student Choice and Practice Levels:** Having students choose their own practice levels are one way to differentiate instruction with your students. To learn more about how these levels support differentiation, as well as other strategies, you can review the [CSD Guide to Differentiation](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)"
           }
         ]
       },
@@ -4577,7 +4614,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-)"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5667,10 +5704,23 @@
       "key": "996ab1d2-b6b8-4b6d-bdb5-2e5bb881edc4",
       "position": 1,
       "properties": {
-        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed."
+        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed.",
+        "name": "Ethics in AI"
       },
       "seeding_key": {
         "activity_section.key": "996ab1d2-b6b8-4b6d-bdb5-2e5bb881edc4",
+        "lesson_activity.key": "a9f71b73-8e75-470a-96ce-9d326191bb32"
+      }
+    },
+    {
+      "key": "1a8b1bdd-9860-4451-9133-cce485aee39d",
+      "position": 2,
+      "properties": {
+        "description": "This lesson provides an opportunity for students to be critical of existing AI programs, developing a Code of Ethics as a potential solution to existing issues in the industry. This critical lens can be extended to additional learning objectives and activities as outlined in the [Artificial Intelligence](https://criticallyconsciouscomputing.org/ai) chapter of the [Critically Conscious Computing: Methods for Secondary Education](https://criticallyconsciouscomputing.org/) online textbook from Dr. Amy Ko.\n\nThis chapter provides an overview of additional concepts related to AI and Machine Learning, and ends with a \"unit sketch\" which outlines additional lessons and activities that could be introduces in a unit on AI and Machine Learning from a critical lens. These activities could be appropriate if you would like to continue exploring artificial intelligence from a critical lens with your students.",
+        "name": "Critically Conscious AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a8b1bdd-9860-4451-9133-cce485aee39d",
         "lesson_activity.key": "a9f71b73-8e75-470a-96ce-9d326191bb32"
       }
     },
@@ -5855,7 +5905,7 @@
       "key": "c128123f-5d0b-491e-9c5d-d1bee6aa36ed",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "c128123f-5d0b-491e-9c5d-d1bee6aa36ed",
@@ -7335,7 +7385,13 @@
       "position": 4,
       "properties": {
         "description": "**Distribute:** Give students copies of the [r design_an_ai_app_-_project_guide/aiml/2022].\n\n**Overview:** Read through the Overview of the project with students and answer any questions.\n",
-        "name": "Activity"
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3aec0a33-a281-443b-8abd-d27a255f502d",
@@ -7351,7 +7407,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Issues vs Problems:** Encourage students to think broadly and consider issues they would like to address, since these are more likely to have solutions that can use data and machine learning. If students focus too narrowly on specific problems, they may have chosen something where machine learning may not be an appropriate solution. If you notice a student has a too narrow issue, encourage them to use the 5 Why's strategy to investigate the core issue and broaden their options."
+            "markdown": "**Issues vs Problems:** Encourage students to think broadly and consider issues they would like to address, since these are more likely to have solutions that can use data and machine learning. If students focus too narrowly on specific problems, they may have chosen something where machine learning may not be an appropriate solution. If you notice a student has a too narrow issue, encourage them to use the 5 Why's strategy to investigate the core issue and broaden their options.\n\n**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show an example app [like the ones available here](https://studio.code.org/s/self-paced-pl-csd5-2021/lessons/5/levels/4) to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
           }
         ]
       },
@@ -10607,7 +10663,6 @@
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10875,7 +10930,6 @@
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10948,7 +11002,6 @@
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11160,7 +11213,6 @@
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11178,6 +11230,19 @@
       },
       "seeding_key": {
         "resource.key": "patterns_in_data_1"
+      }
+    },
+    {
+      "name": "Printable Model Cards",
+      "url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/view",
+      "key": "printable_model_cards",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/export?format=pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "printable_model_cards"
       }
     },
     {
@@ -11281,7 +11346,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"
@@ -11346,7 +11411,6 @@
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11728,6 +11792,12 @@
       "seeding_key": {
         "lesson.key": "Model Cards in App Lab",
         "resource.key": "model_cards_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "resource.key": "printable_model_cards"
       }
     },
     {

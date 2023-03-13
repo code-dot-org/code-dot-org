@@ -23,9 +23,9 @@ class Video < ApplicationRecord
   scope :english_locale, -> {where(locale: 'en-US')}
   # This SQL string is not at risk for injection vulnerabilites because it's
   # just a hardcoded string, so it's safe to wrap in Arel.sql
-  scope :current_locale, -> {where(locale: I18n.locale.to_s).or(Video.english_locale).unscope(:order).order(Arel.sql("(case when locale = 'en-US' then 0 else 1 end) desc"))}
+  scope :current_locale, -> {where(locale: I18n.locale.to_s).or(Video.default_scoped.english_locale).unscope(:order).order(Arel.sql("(case when locale = 'en-US' then 0 else 1 end) desc"))}
 
-  validates_uniqueness_of :key, scope: [:locale]
+  validates_uniqueness_of :key, scope: [:locale], case_sensitive: true
   validates :key, format: {with: /\A[a-zA-Z0-9\-_]+\z/}
   validates_presence_of :download
 
@@ -97,7 +97,7 @@ class Video < ApplicationRecord
 
     path = dashboard_dir('public', 'c', 'video_thumbnails', "#{key}.jpg")
     url = "http://img.youtube.com/vi/#{youtube_code}/mqdefault.jpg"
-    IO.copy_stream(open(url), path)
+    IO.copy_stream(URI.parse(url).open, path)
   end
 
   def youtube_url(args={})
@@ -121,14 +121,6 @@ class Video < ApplicationRecord
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
-  def embed_url
-    Video.embed_url youtube_code
-  end
-
-  def self.embed_url(id)
-    CDO.studio_url "videos/embed/#{id}"
-  end
-
   def self.download_url(key)
     "#{CDO.videos_url}/youtube/#{key}.mp4"
   end
@@ -150,15 +142,17 @@ class Video < ApplicationRecord
   end
 
   def summarize(autoplay = true)
-    # Note: similar video info is also set in javascript at levels/_blockly.html.haml
-    {
-      src: youtube_url(autoplay: autoplay ? 1 : 0),
-      key: key,
-      name: localized_name,
-      download: download,
-      thumbnail: thumbnail_path,
-      enable_fallback: true,
-      autoplay: autoplay,
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      # Note: similar video info is also set in javascript at levels/_blockly.html.haml
+      {
+        src: youtube_url(autoplay: autoplay ? 1 : 0),
+        key: key,
+        name: localized_name,
+        download: download,
+        thumbnail: thumbnail_path,
+        enable_fallback: true,
+        autoplay: autoplay,
+      }
+    end
   end
 end

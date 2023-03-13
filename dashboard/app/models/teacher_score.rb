@@ -59,7 +59,7 @@ class TeacherScore < ApplicationRecord
   def self.get_level_scores_for_script_for_section(script_id, section_id, page)
     level_scores_by_student_by_lesson_by_script = {}
     # Teacher scores are currently only relevant for unplugged lessons
-    lessons = Script.find(script_id).lessons.select(&:unplugged)
+    lessons = Unit.find(script_id).lessons.select(&:unplugged)
     student_ids = Section.find(section_id).students.page(page).per(50).pluck(:id)
     lesson_student_level_scores = {}
     lessons.each do |lesson|
@@ -86,7 +86,7 @@ class TeacherScore < ApplicationRecord
       student_user_levels = user_levels.select {|u_l| u_l.user_id == student_id}
       student_level_score = {}
       student_user_levels.each do |u_l|
-        teacher_score = teacher_scores.select {|t_s| t_s.user_level_id == u_l.id}.sort_by(&:created_at).last&.score
+        teacher_score = teacher_scores.select {|t_s| t_s.user_level_id == u_l.id}.max_by(&:created_at)&.score
         if teacher_score
           student_level_score[u_l.level_id] = teacher_score
         end

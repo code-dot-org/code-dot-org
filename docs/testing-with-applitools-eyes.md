@@ -4,7 +4,7 @@ Applitools Eyes is a service that lets us upload and compare screenshots of our 
 
 ## Getting an account
 
-Code.org employees as of this writing should receive login details for a shared account. If not, contact Anthony about getting an account.
+Consult the [Getting Started as a Developer at Code.org](https://docs.google.com/document/d/158MiIxJ_1JokzUkw43Wf2bFONPycYoCeXtKEU-ww0Xw/edit) document for details on how to gain access to Sauce Labs.
 
 ## Add your feature to the eyes file
 
@@ -41,7 +41,7 @@ You can find that key by [logging in](https://eyes.applitools.com/app/sessions/)
 
 ### Try it targeting Sauce Labs
 
-1. `bundle exec ./runner.rb --eyes -c Chrome33Win7,iPhone`
+See the [UI Testing Instructions](../dashboard/test/ui/README.md) for details about running tests in Sauce Labs.
 
 ## Watch for run on CircleCI and test server deploy
 

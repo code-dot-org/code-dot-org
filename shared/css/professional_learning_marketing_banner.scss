@@ -65,11 +65,11 @@ $dark_blue_background_colour: #0d4172;
     @media screen and (min-width: 1440px) {
 
       .text-wrapper {
-        
+
         .header {
           font-size: 26px;
         }
-    
+
         .text {
           font-size: 17px;
         }
@@ -99,12 +99,13 @@ $dark_blue_background_colour: #0d4172;
 
     .text-wrapper {
       width: 50%;
-      left: 30px;
+      left: 20px;
 
       .header {
         color: black;
         position: relative;
         font-size: 18px;
+        margin-bottom: 8px;
       }
 
       .text {
@@ -112,6 +113,7 @@ $dark_blue_background_colour: #0d4172;
         position: relative;
         font-size: 14px;
         width: calc(100% - 150px);
+        line-height: 1.3;
       }
     }
 
@@ -138,7 +140,7 @@ $dark_blue_background_colour: #0d4172;
         padding-bottom: 5px;
         font-size: 2.5vw;
       }
-      
+
       .text {
         color: black;
         font-size: 2vw;
@@ -167,7 +169,7 @@ $dark_blue_background_colour: #0d4172;
 
     .text-wrapper {
       right: 12px;
-      width: 50%;
+      width: 52%;
       float: right;
 
       .header {
@@ -230,9 +232,7 @@ $dark_blue_background_colour: #0d4172;
 
       .text {
         text-align: center;
-        margin-left: 5px;
-        margin-right: 5px;
-        font-size: 13px;
+        line-height: 1.3;
       }
 
       button {

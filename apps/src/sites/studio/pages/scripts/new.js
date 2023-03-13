@@ -8,6 +8,7 @@ $(document).ready(() => {
     <NewUnitForm
       families={getScriptData('families')}
       versionYearOptions={getScriptData('versionYearOptions')}
+      familiesCourseTypes={getScriptData('familiesCourseTypes')}
     />,
     document.getElementById('form')
   );

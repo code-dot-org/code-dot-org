@@ -30,6 +30,7 @@ bg-BG:
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете
     се към # други.'
   petition_join_others: 'Присъединете се към # другите'
+  petition_join_others_num: Присъединете се към %{num} други
   name: Име
   email: Имейл
   zipcode: Пощенски код или държава
@@ -226,7 +227,13 @@ bg-BG:
   if_you_enjoyed: Ако Ви е харесало наученото, споделете с приятелите си, за да пробват
     и те! Ние искаме целият свят да научи.
   personalize_certificate: Персонализирайте вашия сертификат
+  print_batch_certificates: Изпринтирай група сертификати
   print_certificates: Печат на сертификати
+  certificate_sponsor_message: "%{sponsor_name} направи щедрият подарък да спонсорира
+    твоето обучение."
+  print_one_here_certificates: Изпринтирай един тук.
+  enter_certificate_names: Въведете до 30 имена, **по едно на ред**. Страница за принтиране
+    с персонализирани %{script_name} сертификати ще бъде генерирана.
   share_achievement: Споделете вашето постижение
   beyond_hour_message: Продължете с нашия<a href='http://studio.code.org'> 20-часов
     курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите след
@@ -314,10 +321,18 @@ bg-BG:
     Алзейт, 5-ти клас'
   stats_michael: Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани
     за нещо в обучението им. -Франк Мартинес, учител
+  stats_nina_markdown: '"Всеки ден отчитам същите резултати— 100 % ангажираност."
+    - Нина Никълс Пири, Учител'
+  stats_student_markdown: '"Знеах, че това е шанс **веднъж в живота**." - Мариана
+    Алзате, 5то класничка'
+  stats_michael_markdown: '"Аз **никога** не съм виждал ученици по-развълнувани за
+    учене." - Франк Мартинез, Учител'
   studiobar_title: Разгледайте <a href='http://studio.code.org'> Студиото за програмиране</a>
   studiobar_title_nolink: Разгледайте Студиото за кодиране
   studiobar_elementary_title: Начални курсове
   studiobar_elementary_body: Нашите три нови курса за K &#8209; 5
+  studiobar_dance_title: Танцово Парти
+  studiobar_dance_body: Създай и сподели своето Танц Парти
   studiobar_hoc_title: Часът на кодирането
   studiobar_hoc_body: Научете се дапрограмирате с Angry Birds
   studiobar_flappy_title: Flappy код
@@ -331,6 +346,7 @@ bg-BG:
     си дарил
   studiobar_shop_title: Магазин
   studiobar_shop_body: Разбий стереотипите. Носи логото ни с гордост.
+  homepage_stats_students: от ученици в САЩ имат акоунти на Code.org
   homepage_stats_female: на нашите ученици са от женски пол
   homepage_stats_teachers: учителите използват Code.org
   homepage_stats_hourofcodde: в света ученици са опитвали Часа на кода
@@ -444,8 +460,9 @@ bg-BG:
   homepage_slot_text_link_donate: Направете дарение
   homepage_slot_text_link_shop: Тениски, шапки & повече
   homepage_slot_text_link_administrators: Въведете CS във вашето училище
-  homepage_header_donors: Code.org благодари на своите привърженици
-  homepage_donors_seall: Вижте всички
+  homepage_gallery_header: Над %{project_count} милиона Code.org проекти създадени
+  homepage_header_donors: Code.org благодари
+  homepage_donors_seall: Вижте още поддръжници
   homepage_donors_donate: Дарения
   homepage_below_hero_announcement_text: Ние се грижим за вашата поверителност и направихме
     някои актуализации за поверителността, влезнаха в сила от 25 май.
@@ -522,6 +539,7 @@ bg-BG:
   minecraft_adventurer: Minecraft авантюрист
   minecraft_tutorials: Minecraft Hour of Code уроци
   minecraft_specs: Много езици | Съвременни браузъри и таблети | Клас 2 +
+  minecraft_start_tutorial: Започни урока
   minecraft_agent_description: Minecraft се завръща за часът на кода с чисто нова
     дейност! Пътешествай през Minecraft с код.
   minecraft_agent_button: Старт
@@ -551,6 +569,11 @@ bg-BG:
     target='_blank'>уебинари</a>. Вие ще научите най-добрите практики, ще имате достъп
     до готови материали и ще получите презентация на новото пътешествие на героя урок
     от екипа на Minecraft.
+  minecraft_continue_learning: 'Компютърни Науки за Всички: Извън Hour of Code в Microsoft
+    Store'
+  minecraft_future: Помагане на младежта да станат готови за бъдещето
+  minecraft_og_designer: Minecraft се завръща с нова дейност в Hour of Code. Програмирахте
+    животни и други същества от Minecraft в твоята версия на Minecraft.
   minecraft_og_agent: Minecraft се завръща за часът на кода, и ти си героят там! Пиши
     код за пътуване през Minecraft средата.
   sports_page_title: Спортен Hour of Code
@@ -563,21 +586,27 @@ bg-BG:
   sports_select_theme: Изберете вашата обучителна тема
   sports_basketball_title: Направете баскетболна игра
   sports_all_sports_title: Програмирай свой собствен спорт
+  sports_featured_athletes: Виж избраните атлети
+  sports_athletes_title: Избрани атлети
   watch_inspirational_videos: Преди да започнете, гледайте едно от тези вдъхновяващи
     видеа
+  video_title_cs_is_everything: Компютърните Науки Променят Всичко
   video_title_inspire_girl: Вдъхновете момиче
   video_title_cs_intro: Въведение в компютърните науки
   video_title_schools_dont_teach: Това, което повечето училища не преподават
   video_title_obama: Президентът Обама за компютърните науки
   video_title_hoc_is_here: Hour of Code е тук - всеки може да се научи
   video_title_anybody_can_learn: Всеки може да се научи
+  video_title_steph_curry: Час на Кода със Стеф Къри
   video_title_draymond_green: Hour of Code с Draymond Green
   video_title_russell_okung: Hour of Code с Russell Okung
   video_title_real_madrid: Russell Okung с Real Madrid
   video_title_marco_belinelli: Hour of Code с Marco Belinelli
   video_title_chris_bosh: Крис Бош за компютърните науки
+  video_title_my_name_is_aracely: Моето Име е Аракели
   video_1min: 1 мин.
   video_2min: 2 мин.
+  video_3min: 3 мин
   video_5min: 5 мин.
   speak_another_language: Говорите друг език?
   help_translate: Помогнете ни с превода.
@@ -684,6 +713,7 @@ bg-BG:
   volunteer_engineer_submission_distance_16: 10 мили
   volunteer_engineer_submission_distance_24: 15 мили
   volunteer_engineer_submission_distance_32: 20 мили
+  volunteer_engineer_submission_distance_80: 50 мили
   volunteer_engineer_submission_num_volunteers_5: 5 доброволци
   volunteer_engineer_submission_num_volunteers_10: 10 доброволци
   volunteer_engineer_submission_num_volunteers_25: 25 доброволци
@@ -933,8 +963,14 @@ bg-BG:
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
   dashboard_course4: 'Курс 4: '
+  dashboard_coursea: 'Курс A: '
+  dashboard_coursec: 'Курс C: '
+  dashboard_coursed: 'Курс D: '
+  dashboard_coursee: 'Курс E:  '
+  dashboard_coursef: 'Курс F:  '
   dashboard_unplugged: Ако не разполагате с компютри, <a href='%{unplugged_url}'>
     Опитайте тези уроци без компютър</a> в класната стая.
+  dashboard_tools: 'Инструменти: '
   dashboard_curriculum: Учебна програма
   dashboard_curriculum_overview: K-5 преглед на програмата
   dashboard_overview: Общ преглед
@@ -1122,6 +1158,48 @@ bg-BG:
   course2_name: Курс 2
   course3_name: Курс 3
   course4_name: Курс 4
+  coursea-draft_name: Курс A
+  coursea_name: Курс A
+  courseb-draft_name: Курс B
+  courseb_name: Курс B
+  coursec-draft_name: Курс C
+  coursec_name: Курс C
+  coursed-draft_name: Курс D
+  coursed_name: Курс D
+  coursee-draft_name: Курс E
+  coursee_name: Курс E
+  coursef-draft_name: Курс F
+  coursef_name: Курс F
+  coursea-2017_name: Курс A (2017)
+  courseb-2017_name: Курс B (2017)
+  coursec-2017_name: Курс C (2017)
+  coursed-2017_name: Курс D (2017)
+  coursee-2017_name: Курс E (2017)
+  coursef-2017_name: Курс F (2017)
+  coursea-2018_name: Курс A (2018)
+  courseb-2018_name: Курс B (2018)
+  coursec-2018_name: Курс C (2018)
+  coursed-2018_name: Курс D (2018)
+  coursee-2018_name: Курс E (2018)
+  coursef-2018_name: Курс F (2018)
+  coursea-2019_name: Курс A (2019)
+  courseb-2019_name: Курс B (2019)
+  coursec-2019_name: Курс C (2019)
+  coursed-2019_name: Курс D (2019)
+  coursee-2019_name: Курс E (2019)
+  coursef-2019_name: Курс F (2019)
+  coursea-2020_name: Курс A (2020)
+  courseb-2020_name: Курс B (2020)
+  coursec-2020_name: Курс C (2020)
+  coursed-2020_name: Курс D (2020)
+  coursee-2020_name: Курс E (2020)
+  coursef-2020_name: Курс F (2020)
+  coursea-2021_name: Курс А (2021)
+  courseb-2021_name: Курс B (2021)
+  coursec-2021_name: Курс C (2021)
+  coursef-2021_name: Курс F (2021)
+  csd2_name: 'Урок 2: Уеб Разработка'
+  csd3_name: 'Урок 3: Анимация и Игри'
   accelerated_name: Ускорен курс
   20-hour_name: Ускорен курс
   algebra_name: CS в алгебрата
@@ -1231,6 +1309,12 @@ bg-BG:
   coursed-2021_gradelevel: Клас 8 +
   coursee-2021_gradelevel: Възраст 8-12
   coursef-2021_gradelevel: Възраст 9-13
+  coursea-2022_gradelevel: Възраст 4-7
+  courseb-2022_gradelevel: Възраст 5-8
+  coursec-2022_gradelevel: Възраст 6-10
+  coursed-2022_gradelevel: Клас 8 +
+  coursee-2022_gradelevel: Възраст 8-12
+  coursef-2022_gradelevel: Възраст 9-13
   accelerated_gradelevel: Възраст 10 + (след курс 3)
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
@@ -1908,8 +1992,13 @@ bg-BG:
   header_report_bug: Съобщи за бъгове
   header_legal_privacy: Защита на личните данни
   header_legal_tos: Термини
+  header_tutorials: Уроци
+  header_screen_reader_hamburger: Меню
+  header_screen_reader_help: Помощно Меню
+  header_documentation: Документация
   user_header_label: Здравейте %{username}
   user_header_team: Екип
+  user_header_my_projects: Моите проекти
   user_header_settings: Моят акаунт
   user_header_logout: Изход
   user_header_signin: Вход
@@ -1918,21 +2007,35 @@ bg-BG:
   user_header_artist: 'Художник '
   user_header_gamelab: Играта лаборатория
   user_header_playlab: Театрална лаборатория
+  user_header_dance: Танцово Парти
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_project_gallery: Покажи Галерия с проекти
   user_header_view_my_projects: Покажи моите проекти
   view_all_sections: Покажи всички раздели
+  signing_in: Влизане
+  sign_in_instruct_website: Отидете на %{code_org_url}.
+  sign_in_instruct_code: 'Въведете кода за секцията им: %{section_code}.'
+  sign_in_instruct_secret: Изберете тяхната тайна %{secret}.
+  sign_in_instruct_button: Натиснете бутона "Вход".
   hero_name: 'Minecraft: Пътуването на героя'
   applab_tile_start_tutorial: Старт
   aquatic_name: 'Minecraft: Подводното пътешествие'
+  account_sign_up_email_opt_in: Можем ли да ви изпращаме обновления на нашите курсове,
+    локални  възможности или други новини свързани с компютърните науки? (горе-долу
+    веднъж на месец)
+  account_sign_up_child_accept_terms: Потвърждавам, че имам разрешение от родител
+    или настойник да използвам услугите на Code.org.
+  hoc_overview_dance_title: Танцово Парти
   hoc_overview_start_tutorial: Старт
   hoc_overview_more_resources: За повече ресурси за взаимодействие с вашата отдалечена
     класна стая, вижте нашето ръководство за хостване на [виртуален Hour of Code](https://hourofcode.com/us/how-to/virtual).
     За ученици с ограничена или никаква техника или свързаност, споделете този пакет
     от [достъпни Hour of Code дейности](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc2018_creativity: креативност
   hoc2018_creativity_create: Създай
   hoc2018_creativity_hoc_coming: Hour of Code идва…
+  hoc2018_creativity_what_will_you_create: Какво ще създадеш?
   hoc2018_mc_page_title: Minecraft Hour of Code уроци
   hoc2018_mc_details: Много езици | Съвременни браузъри и таблети | Клас 2 +
   hoc2018_mc_aquatic_title: 'Minecraft: Подводното пътешествие'
@@ -1962,15 +2065,20 @@ bg-BG:
     видеа</a> с участието на специалисти от областта на технологиите
   hoc2018_mc_video_1min: 1 мин.
   hoc2018_mc_video_2min: 2 мин.
+  hoc2018_mc_video_3min: 3 мин
   hoc2018_mc_video_5min: 5 мин.
+  hoc2018_mc_video_title_steph_curry: Час на Кода със Стеф Къри
   hoc2018_mc_video_title_sports: Опитай. Всеки може да се научи.
+  hoc2018_mc_video_title_cs_is_everything: Компютърните Науки Променят Всичко
   hoc2018_mc_video_title_inspire_girl: Вдъхновете момиче
   hoc2018_mc_video_title_cs_intro: Въведение в компютърните науки
   hoc2018_mc_video_title_schools_dont_teach: Това, което повечето училища не преподават
   hoc2018_mc_video_title_obama: Президентът Обама за компютърните науки
   hoc2018_mc_video_title_hoc_is_here: Hour of Code е тук - всеки може да се научи
   hoc2018_mc_video_title_anybody_can_learn: Всеки може да се научи
+  hoc2018_mc_video_title_my_name_is_aracely: Моето Име е Аракели
   hoc2018_mc_homepage_hoc_coming: Hour of Code идва...
+  hoc2018_mc_homepage_what_create: Какво ще създадеш?
   hoc2018_mc_homepage_give_flight: Дай полет на въображението и раждането на иновациите.
     Започни с един час на код и своя собствена марка на творчеството, каквото и да
     е.
@@ -1983,22 +2091,64 @@ bg-BG:
   hoc2018_mc_minecraft_education: Minecraft образование
   hoc2018_mc_continue_learning: Продължете да учите с Minecraft.
   hoc2018_mc_go_to_mc_education: Отидете на Minecraft Education
+  hoc2018_dance_party_main_heading: Танцово Парти
+  hoc2018_dance_party_landing_title: Танц
+  hoc2018_dance_party_subheading: Помогнете в предова на Dance Party
+  hoc2018_dance_create_your_own_dance_title: Създай Своето Собствено Dance Party
+  hoc2018_dance_party_box_title: Танцово Парти
   hoc2018_dance_party_box_description: Продължи да задълбаваш в програмирането с Dance
     Party уроците.
+  hoc2018_dance_party_specs: Език | Формат 1 | Възраст 6-106
   hoc2018_dance_party_button: Старт
+  hoc2018_dance_keep_on_dancing_box_title: Продължавай Да Танцуваш
+  hoc2018_dance_keep_on_dancing_specs: Език | Формат | Възраст 13+
   hoc2018_dance_teacher_resources_tile1_button: План на урок
   hoc2018_dance_teacher_resources_tile2_button: Ънплъгд дейност
+  hoc2018_dance_videos_section_heading: Вдъхнови се
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: В партньорство с
   hoc2018_dance_amazon_about_future_engineer_button: Научете повече
   hoc2018_dance_amazon_scholarship_programs_button: Регистрирай се сега
+  hoc2018_dance_video1: Танцово Парти - Въведение
+  hoc2018_dance_video2: Танцово Парти - Събития
+  hoc2018_dance_video3: Танцово Парти - Характеристики
+  hoc2018_dance_video4: Танцово Парти - Позрадвления
   page_not_found_title: Страницата не е намерена
+  page_not_found_header: '404: Страницата Не е Намерена'
+  page_not_found_description: Страницата, която търсите, не съществува на този адрес.
+    Проверете уеб адреса и изпратете отново. Или се върнете на началната ни страница.
+  page_not_found_button: Началната страница
+  hoc2018_mc_with_microsoft: В партньорство с
+  page_not_available_button: Началната страница
+  hoc2020_mc_available_code_org: Досстъпно на Code.org
+  hoc2020_mc_mee_title: Minecraft Историята на Две Села
+  hoc2021_mc_mee_villages_title: Историята на Две Села
   footer_powered_by_aws: Създадено с Amazon Web Services
   codebytes_skinny_banner_english_only: Само на английски
   footer_privacy_policy: Защита на личните данни
   footer_about: Относно
   footer_partners: Партньори
+  footer_blog: Блог
   footer_donate: Дарения
+  footer_store: Магазин
   footer_support: Помощ
   footer_terms: Условия
   ai_for_oceans_lesson_plan: план на урок
+  ai_in_partnership_with: В партньорство с
   ai_activity: Упражнение
   ai_description: Описание
+  ai_quick_draw: Бързо, Нарисувай!
+  ai_quick_draw_description: Може ли невронна мрежа да се научи да разпознава драскулки?
+  ai_audience: Публика
+  outbreak_tile_title: Епидемия
+  outbreak_tile_subtitle: Вирус е заразил Града на Чудовищата! Кодирайте симулатор
+    на епидемията и направете прогнози какво ще се случи със съседите на Града на
+    Чудовищата.
+  outbreak_tile_alt: Симулация, как вирусът се разпространява, чрез група лилави чудовища.
+  footer_cookie_notice: Известие за Бисквитки
+  top_hoc_tutorial_applab_alt_text: Кафява ръка с показалец, докосващ таблет със сензорен
+    екран, излъчващ звезди и лъчи светлина на син фон
+  hoc2022_banner_title: Изследвай, Играй, Създавай!
+  hoc2022_cta_primary: Виж какво е ново
+  hoc2022_landing_page_play_title: Играй
+  hoc2022_landing_page_create_title: Създай
+  microsoft_logo_alt: Лого на Microsoft

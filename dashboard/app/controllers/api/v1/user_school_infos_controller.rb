@@ -12,13 +12,13 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   # PATCH /api/v1/users_school_infos
   def update
     unless school_info_params[:school_id].present? || school_info_params[:country].present?
-      render json: {error: "school id or country is not present"}, status: 422
+      render json: {error: "school id or country is not present"}, status: :unprocessable_entity
       return
     end
 
-    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
+    school_info_params.delete(:full_address) if school_info_params[:full_address].blank?
 
-    if school_info_params[:country]&.downcase&.eql? 'united states'
+    if school_info_params[:country]&.downcase.eql? 'united states'
       school_info_params[:country] = 'US'
     end
 
@@ -38,7 +38,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
           first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
         end
       unless current_user.update(school_info: submitted_school_info)
-        render json: current_user.errors, status: 422
+        render json: current_user.errors, status: :unprocessable_entity
         return
       end
       current_user.user_school_infos.where(school_info: submitted_school_info).

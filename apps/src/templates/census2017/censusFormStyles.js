@@ -13,7 +13,7 @@ export const styles = {
   },
   question: {
     fontSize: 16,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     paddingTop: 10,
     paddingBottom: 5
@@ -39,15 +39,6 @@ export const styles = {
     color: color.charcoal,
     marginRight: 20,
     marginLeft: 20
-  },
-  existingInaccuracy: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    marginRight: 20,
-    marginLeft: 20
-  },
-  existingInaccuracyTooltip: {
-    width: 270
   },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -99,20 +90,20 @@ export const styles = {
   input: {
     height: 40,
     width: 250,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     padding: 5
   },
   inputInline: {
     height: 25,
     width: 390,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     padding: 5,
     maxWidth: '80%'
   },
   textArea: {
     height: 100,
     width: '100%',
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     padding: 5
   },
   firstQuestion: {
@@ -130,7 +121,7 @@ export const styles = {
   },
   errors: {
     fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.red,
     paddingTop: 5,
     paddingBottom: 5

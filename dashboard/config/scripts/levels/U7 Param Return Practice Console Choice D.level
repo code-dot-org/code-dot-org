@@ -80,7 +80,7 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "encrypted_examples": "SZo0uaUsgB7DW3bFYi0rqyTac4Q1RzvrHVMeQRaRPwPDprGXsPQ/rB5ZUJxD\nkvtjYdSoQONu5IQTzoJ3+5PcDw==\n",
+    "encrypted_examples": "UgGifzPi5HUFnHfDxJU/2mLFwLDtiNZI2tzXP52ptc0Bp0rRwv34QMx/KIOF\nK6RmaIgXjWTIKxVDu2RSK924uw==\n",
     "name_suffix": "2022",
     "ai_enabled": "false",
     "display_name": "Sleep In",
@@ -94,7 +94,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-11T21:13:52.317+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Part 52022\\\"\"],\"cloned_from\":\"U7 Param Return Practice Part 52022\"},{\"changed_at\":\"2022-04-11 21:32:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"data_library_tables\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-11 21:34:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-11T21:13:52.317+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Part 52022\\\"\"],\"cloned_from\":\"U7 Param Return Practice Part 52022\"},{\"changed_at\":\"2022-04-11 21:32:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"data_library_tables\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-11 21:34:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-07-07 21:22:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -4,14 +4,6 @@
 = link_to level_completions_path do
   Level Completion
 %br
-= link_to pd_progress_path(:script_id => 33) do
-  PD Progress
-%br
-
-%h3 Hour of Code
-= link_to hoc_students_served_path do
-  Students Served
-
 %h3 Search
 = link_to find_students_path do
   For Users
@@ -28,6 +20,9 @@
 = link_to "See all Regional Partners", regional_partners_path
 %br
 = link_to "Create a new Regional Partner", new_regional_partner_path
+
+%h3 Facilitators
+= link_to "Facilitator Course Permissions", pd_facilitator_courses_path
 
 %h3 Pilot Experiments
 = link_to 'Manage Pilots', pilots_path

@@ -22,9 +22,9 @@
 #
 
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
-  belongs_to :user
-  belongs_to :circuit_playground_discount_code
-  belongs_to :school
+  belongs_to :user, optional: true
+  belongs_to :circuit_playground_discount_code, optional: true
+  belongs_to :school, optional: true
 
   enum unit_6_intention: {
     no: 1,

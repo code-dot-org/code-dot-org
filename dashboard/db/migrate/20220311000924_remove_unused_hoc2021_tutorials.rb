@@ -13,7 +13,7 @@ class RemoveUnusedHoc2021Tutorials < ActiveRecord::Migration[5.2]
       spelling-bee
     )
     script_names.each do |name|
-      script = Script.find_by_name(name)
+      script = Unit.find_by_name(name)
       next unless script
       script.destroy!
     end

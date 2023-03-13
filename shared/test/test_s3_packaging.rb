@@ -14,10 +14,10 @@ class S3PackagingTest < Minitest::Test
     target_location = Dir.mktmpdir
     Dir.chdir(source_location) do
       FileUtils.mkdir('src')
-      File.open('src/one.js', 'w') {|file| file.write("file one")}
-      File.open('src/two.js', 'w') {|file| file.write("file two")}
+      File.write('src/one.js', "file one")
+      File.write('src/two.js', "file two")
       FileUtils.mkdir('build')
-      File.open('build/output.js', 'w') {|file| file.write("output")}
+      File.write('build/output.js', "output")
     end
     packager = RakeUtils.stub(:git_folder_hash, commit_hash) do
       S3Packaging.new('test-package', source_location, target_location).tap do |s3|
@@ -51,7 +51,7 @@ class S3PackagingTest < Minitest::Test
     # starts out as nil, since we don't have a commit_hash file
     assert @packager.send(:target_commit_hash, @target_location).nil?
 
-    IO.write(@target_location + '/commit_hash', 'manual-hash')
+    File.write(@target_location + '/commit_hash', 'manual-hash')
     assert_equal @packager.send(:target_commit_hash, @target_location), 'manual-hash'
     FileUtils.rm(@target_location + '/commit_hash')
   end
@@ -68,7 +68,7 @@ class S3PackagingTest < Minitest::Test
     # package contains a commit_hash
     commit_hash_file = @target_location + '/commit_hash'
     assert File.exist?(commit_hash_file)
-    assert_equal ORIGINAL_HASH, IO.read(commit_hash_file)
+    assert_equal ORIGINAL_HASH, File.read(commit_hash_file)
 
     assert File.exist?(@target_location + '/output.js')
   end

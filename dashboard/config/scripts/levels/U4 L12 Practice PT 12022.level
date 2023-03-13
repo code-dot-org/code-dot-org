@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:05:07.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -20,7 +16,7 @@
     "embed": "true",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "var myName;\nvar dollars = 15;\nvar restaurantType = \"Chinese\";\nvar response = \"\";\n\nonEvent(\"downDollars\",\"click\",function(){\n  if(dollars > 0){\n    dollars = dollars - 5;\n  }\n  updateDollars();\n  updateScreen();\n});\n\nonEvent(\"upDollars\",\"click\",function(){\n  if(dollars <= 50){\n    dollars = dollars + 5;\n  }\n  updateDollars();\n  updateScreen();\n});\n\nonEvent(\"restaurantTypeSelector\", \"change\", function( ) {\n  restaurantType  = getText(\"restaurantTypeSelector\");\n  updateScreen();\n});\n\nfunction updateDollars(){\n  setText(\"dollarsTracker\",\"$\"+dollars);\n}\n\n// Purpose: Sets the output displayed on the screen based on a decision\n// Functionality: the user's name is collected and stored in a variable. \n//    the response variable is updated with the name and additional text.\n//    the final part added to the response variable is updated based on a conditional statement\n//    which checks the type of restaurant selected and the amount of dollars.\n//    Finally the information stored in the response variable is displayed as output on the screen. \nfunction updateScreen(){\n  myName = getText(\"nameInput\");\n  \n  // Add name to response\n  response = \"Hello, \" + myName +\"!\";\n  \n  // Add restaurant information\n  response = response + \" It sounds like you want to eat at a \" + restaurantType + \" restaurant and spend \" + dollars + \" dollars per person.\";\n  response = response + \" I recommend \";\n  // Add recommendation\n  if(restaurantType == \"Chinese\" && dollars > 20){\n    response = response + \"Din Tai Fung\";\n  } else if (restaurantType == \"Chinese\" && dollars <= 20) {\n    response = response + \"Genghis Khan\";\n  } else if (restaurantType == \"Italian\" && dollars > 30){\n    response = response + \"Casina Spinasse\";\n  } else if (restaurantType == \"Italian\" && dollars <= 30) {\n    response = response + \"Bizzaro's\";\n  } else if (restaurantType == \"Breakfast\" && dollars < 20){\n    response = response + \"Glo's Diner\";\n  } else {\n    response = response + \"Portage Bay\";\n  }\n  setText(\"RestaurantText\",response);\n  playSound(\"sound://category_app/app_button_3.mp3\");\n}\n",
+    "start_blocks": "var myName;\r\nvar dollars = 15;\r\nvar restaurantType = \"Chinese\";\r\nvar response = \"\";\r\n\r\nonEvent(\"downDollars\",\"click\",function(){\r\n  if(dollars > 0){\r\n    dollars = dollars - 5;\r\n  }\r\n  updateDollars();\r\n  updateScreen();\r\n});\r\n\r\nonEvent(\"upDollars\",\"click\",function(){\r\n  if(dollars <= 50){\r\n    dollars = dollars + 5;\r\n  }\r\n  updateDollars();\r\n  updateScreen();\r\n});\r\n\r\nonEvent(\"restaurantTypeSelector\", \"change\", function( ) {\r\n  restaurantType  = getText(\"restaurantTypeSelector\");\r\n  updateScreen();\r\n});\r\n\r\nfunction updateDollars(){\r\n  setText(\"dollarsTracker\",\"$\"+dollars);\r\n}\r\n\r\n// Purpose: Sets the output displayed on the screen based on a decision\r\n// Functionality: the user's name is collected and stored in a variable. \r\n//    the response variable is updated with the name and additional text.\r\n//    the final part added to the response variable is updated based on a conditional statement\r\n//    which checks the type of restaurant selected and the amount of dollars.\r\n//    Finally the information stored in the response variable is displayed as output on the screen. \r\nfunction updateScreen(){\r\n  myName = getText(\"nameInput\");\r\n  \r\n  // Add name to response\r\n  response = \"Hello, \" + myName +\"!\";\r\n  \r\n  // Add restaurant information\r\n  response = response + \" It sounds like you want to eat at a \" + restaurantType + \" restaurant and spend \" + dollars + \" dollars per person.\";\r\n  response = response + \" I recommend \";\r\n  // Add recommendation\r\n  if(restaurantType == \"Chinese\" && dollars > 20){\r\n    response = response + \"Din Tai Fung\";\r\n  } else if (restaurantType == \"Chinese\" && dollars <= 20) {\r\n    response = response + \"Chengdu Memory\";\r\n  } else if (restaurantType == \"Italian\" && dollars > 30){\r\n    response = response + \"Casina Spinasse\";\r\n  } else if (restaurantType == \"Italian\" && dollars <= 30) {\r\n    response = response + \"Bizzaro's\";\r\n  } else if (restaurantType == \"Breakfast\" && dollars < 20){\r\n    response = response + \"Glo's Diner\";\r\n  } else {\r\n    response = response + \"Portage Bay\";\r\n  }\r\n  setText(\"RestaurantText\",response);\r\n  playSound(\"sound://category_app/app_button_3.mp3\");\r\n}\r\n",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "true",
     "droplet_tooltips_disabled": "false",
@@ -38,7 +34,6 @@
     "expand_debugger": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 17751,
     "palette_category_at_start": "math",
     "mini_rubric": "false",
@@ -47,11 +42,21 @@
     "encrypted": "false",
     "widget_mode": "false",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "libraries_enabled": "false",
+    "validation_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:05:07.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:05:07.955+00:00\",\"changed\":[\"cloned from \\\"U4 L12 Practice PT 1_2021\\\"\"],\"cloned_from\":\"U4 L12 Practice PT 1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:05:07.955+00:00\",\"changed\":[\"cloned from \\\"U4 L12 Practice PT 1_2021\\\"\"],\"cloned_from\":\"U4 L12 Practice PT 1_2021\"},{\"changed_at\":\"2022-11-18 17:25:16 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

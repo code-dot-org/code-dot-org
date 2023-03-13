@@ -66,7 +66,7 @@ module Poste
       unless messages.where(name: name).first
         id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger.info "Registered new message template '#{name}' as #{id}" if logger
+        logger&.info "Registered new message template '#{name}' as #{id}"
       end
 
       return path
@@ -112,8 +112,8 @@ module Poste
   class Template
     def initialize(path)
       @path = path
-      @template_type = File.extname(path)[1..-1]
-      @header, @html, @text = parse_template(IO.read(path))
+      @template_type = File.extname(path)[1..]
+      @header, @html, @text = parse_template(File.read(path))
     end
 
     def render(params={})
@@ -182,7 +182,7 @@ module Poste
       @@renderer ||= begin
         require 'cdo/markdown/handler'
         Cdo::Markdown::Handler.register
-        ActionView::Base.new
+        ActionView::Base.with_empty_template_cache.empty
       end
     end
   end
@@ -196,7 +196,7 @@ class Deliverer
   end
 
   def reset_connection
-    @smtp.finish if @smtp
+    @smtp&.finish
     @smtp = smtp_connect unless rack_env?(:development)
   end
 
@@ -234,7 +234,7 @@ class Deliverer
     to_address = parse_address(header['to'], recipient.merge({temporary_email: delivery[:contact_email]}))
     message.puts 'To: ' + format_address(to_address)
 
-    from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
+    from_address = parse_address(header['from'], {email: 'support@code.org', name: 'Code.org'})
     message.puts 'From: ' + format_address(from_address)
 
     # List of the email part of all destination addresses, including To, Cc, and Bcc
@@ -320,7 +320,7 @@ class Deliverer
     name = address[:name].to_s.strip
     return email if name.empty?
 
-    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if name =~ /[;,\"\'\(\)]/
+    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if /[;,\"\'\(\)]/.match?(name)
     "#{name} <#{email}>".strip
   end
 
@@ -482,7 +482,7 @@ module Poste2
         # Prevent saving certificates - they are unecessarily filling storage.
         next if name.include?('certificate')
         filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
-        File.open(filename, 'w+b') {|f| f.write content}
+        File.binwrite(filename, content)
         saved[name] = filename
       end
     end
@@ -560,7 +560,7 @@ module Poste2
       end
 
       content_type = body_part.content_type
-      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
+      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type.include?('charset=UTF-8')
       body = body_part.body.to_s
 
       sender_email = mail.from.first

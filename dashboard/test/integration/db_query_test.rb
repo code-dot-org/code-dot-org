@@ -10,7 +10,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Script.get_from_cache('allthethings')
+    script = Unit.get_from_cache('allthethings')
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(15) do
+    assert_cached_queries(9) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -34,7 +34,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Script.hoc_2014_unit
+    script = Unit.hoc_2014_unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
@@ -53,7 +53,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     assert_cached_queries(4) do
       get user_app_options_path,
-        headers: {'HTTP_USER_AGENT': 'test'}
+        headers: {HTTP_USER_AGENT: 'test'}
       assert_response :success
     end
   end
@@ -65,7 +65,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    assert_cached_queries(8) do
+    assert_cached_queries(7) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id
@@ -81,7 +81,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
-    assert_cached_queries(8) do
+    assert_cached_queries(7) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id
@@ -98,7 +98,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(script)
 
@@ -122,7 +122,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    assert_cached_queries(3) do
+    assert_cached_queries(2) do
       get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
       assert_response :success
     end
@@ -136,7 +136,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(unit)
 
@@ -165,7 +165,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    assert_cached_queries(3) do
+    assert_cached_queries(2) do
       get "/levels/#{level.id}/get_rubric"
       assert_response :success
     end

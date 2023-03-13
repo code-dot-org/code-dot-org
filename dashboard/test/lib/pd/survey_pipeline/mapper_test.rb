@@ -1,6 +1,6 @@
 require 'test_helper'
-require 'pd/survey_pipeline/mapper.rb'
-require 'pd/survey_pipeline/reducer.rb'
+require 'pd/survey_pipeline/generic_mapper'
+require 'pd/survey_pipeline/reducer'
 
 module Pd::SurveyPipeline
   class GenericMapperTest < ActiveSupport::TestCase
@@ -26,7 +26,7 @@ module Pd::SurveyPipeline
     test 'map and reduce basic data' do
       group_config = [:a, :b]
       always_true = lambda {|_| true}
-      map_config = [{condition: always_true, field: :c, reducers: [Pd::SurveyPipeline::AvgReducer]}]
+      map_config = [{condition: always_true, field: :c, reducers: [Pd::SurveyPipeline::Reducer::Average]}]
 
       # Average value of field :c in @data, grouped by field :a and :b
       expected_avg = 0.5
@@ -56,13 +56,13 @@ module Pd::SurveyPipeline
     test 'group data using one key' do
       summary = group_and_summarize([:a])
       assert_equal 2, summary.size
-      assert summary.all? {|v| v == @data.size / 2}
+      assert summary.all?(@data.size / 2)
     end
 
     test 'group data using all keys' do
       summary = group_and_summarize([:a, :b, :c])
       assert_equal @data.size, summary.size
-      assert summary.all? {|v| v == 1}
+      assert summary.all?(1)
     end
 
     test 'map groups to matched reducers' do
@@ -72,16 +72,16 @@ module Pd::SurveyPipeline
 
       # Mapping routes
       map_config = [
-        {condition: is_odd_record, field: :val, reducers: [AvgReducer]},
-        {condition: is_even_record, field: :val, reducers: [NoOpReducer]}
+        {condition: is_odd_record, field: :val, reducers: [Reducer::Average]},
+        {condition: is_even_record, field: :val, reducers: [Reducer::NoOp]}
       ]
 
       # Expectations
       expected_values_to_avg = @groups[{odd: true}].pluck(:val)
       expected_values_to_passthrough = @groups[{odd: false}].pluck(:val)
 
-      AvgReducer.expects(:reduce).with(expected_values_to_avg)
-      NoOpReducer.expects(:reduce).with(expected_values_to_passthrough)
+      Reducer::Average.expects(:reduce).with(expected_values_to_avg)
+      Reducer::NoOp.expects(:reduce).with(expected_values_to_passthrough)
 
       # Action
       GenericMapper.new(group_config: [], map_config: map_config).map_to_reducers @groups
@@ -89,18 +89,18 @@ module Pd::SurveyPipeline
 
     test 'map all groups to match-all reducer' do
       always_true = lambda {|_| true}
-      map_config = [{condition: always_true, field: :val, reducers: [NoOpReducer]}]
+      map_config = [{condition: always_true, field: :val, reducers: [Reducer::NoOp]}]
 
-      NoOpReducer.expects(:reduce).times(@groups.count)
+      Reducer::NoOp.expects(:reduce).times(@groups.count)
 
       GenericMapper.new(group_config: [], map_config: map_config).map_to_reducers @groups
     end
 
     test 'map no group to unmatched reducer' do
       always_false = lambda {|_| false}
-      map_config = [{condition: always_false, field: :val, reducers: [NoOpReducer]}]
+      map_config = [{condition: always_false, field: :val, reducers: [Reducer::NoOp]}]
 
-      NoOpReducer.expects(:reduce).never
+      Reducer::NoOp.expects(:reduce).never
 
       GenericMapper.new(group_config: [], map_config: map_config).map_to_reducers @groups
     end

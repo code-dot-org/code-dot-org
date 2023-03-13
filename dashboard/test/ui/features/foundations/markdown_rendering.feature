@@ -4,9 +4,9 @@ Feature: Markdown rendering across the website
     Given I am on "http://studio.code.org/s/allthethings/lessons/21/levels/1?noautoplay=true"
     And I rotate to landscape
     And I wait to see "#extra-details-tag"
-    Then element "#extra-details-tag" is hidden
+    Then element "#cool-list" is not open
     And I press "summary-tag"
-    Then element "#extra-details-tag" is visible
+    Then element "#cool-list" is open
 
   @eyes
   Scenario: Viewing a level with blockly embedded in instructions

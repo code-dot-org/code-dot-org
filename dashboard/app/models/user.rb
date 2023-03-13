@@ -71,7 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
-require 'cdo/user_helpers'
+require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
@@ -121,6 +121,25 @@ class User < ApplicationRecord
     share_teacher_email_regional_partner_opt_in
   )
 
+  attr_accessor(
+    :login,
+    :email_preference_opt_in_required,
+    :email_preference_opt_in,
+    :email_preference_request_ip,
+    :email_preference_source,
+    :email_preference_form_kind,
+    :parent_email_update_only,
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    :parent_email_preference_request_ip,
+    :parent_email_preference_source,
+    :share_teacher_email_reg_partner_opt_in_radio_choice,
+    :data_transfer_agreement_required,
+    :raw_token,
+    :child_users
+  )
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
@@ -149,7 +168,7 @@ class User < ApplicationRecord
   ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
-  belongs_to :studio_person
+  belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 
   # courses a facilitator is able to teach
@@ -166,7 +185,7 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -195,7 +214,7 @@ class User < ApplicationRecord
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
-  belongs_to :school_info
+  belongs_to :school_info, optional: true
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
@@ -226,11 +245,15 @@ class User < ApplicationRecord
 
   before_destroy :soft_delete_channels
 
+  before_validation on: :create, if: -> {gender.present?} do
+    self.gender = Policies::Gender.normalize gender
+  end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
         email: email,
-        opt_in: email_preference_opt_in.downcase == "yes",
+        opt_in: email_preference_opt_in.casecmp?("yes"),
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
@@ -243,7 +266,7 @@ class User < ApplicationRecord
     if student? && parent_email.present?
       EmailPreference.upsert!(
         email: parent_email,
-        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
         ip_address: parent_email_preference_request_ip,
         source: parent_email_preference_source,
         form_kind: nil
@@ -254,7 +277,7 @@ class User < ApplicationRecord
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
     user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
     end
@@ -316,7 +339,7 @@ class User < ApplicationRecord
     end
   end
 
-  belongs_to :invited_by, polymorphic: true
+  belongs_to :invited_by, polymorphic: true, optional: true
 
   validate :admins_must_be_teachers_without_followeds
 
@@ -397,24 +420,6 @@ class User < ApplicationRecord
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
 
-  attr_accessor :login
-  attr_accessor :email_preference_opt_in_required
-  attr_accessor :email_preference_opt_in
-  attr_accessor :email_preference_request_ip
-  attr_accessor :email_preference_source
-  attr_accessor :email_preference_form_kind
-
-  attr_accessor :parent_email_update_only
-  attr_accessor :parent_email_preference_opt_in_required
-  attr_accessor :parent_email_preference_opt_in
-  attr_accessor :parent_email_preference_email
-  attr_accessor :parent_email_preference_request_ip
-  attr_accessor :parent_email_preference_source
-
-  attr_accessor :share_teacher_email_reg_partner_opt_in_radio_choice
-
-  attr_accessor :data_transfer_agreement_required
-
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
@@ -430,7 +435,7 @@ class User < ApplicationRecord
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :user
 
-  belongs_to :secret_picture
+  belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
@@ -491,6 +496,10 @@ class User < ApplicationRecord
     self.parent_email = parent_email_preference_email
   end
 
+  def memoized_teachers
+    @memoized_teachers ||= teachers.to_a
+  end
+
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
   validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
@@ -523,7 +532,7 @@ class User < ApplicationRecord
   end
 
   def normalize_email
-    return unless email.present?
+    return if email.blank?
     self.email = email.strip.downcase
   end
 
@@ -532,7 +541,7 @@ class User < ApplicationRecord
   end
 
   def hash_email
-    return unless email.present?
+    return if email.blank?
     self.hashed_email = User.hash_email(email)
   end
 
@@ -571,7 +580,7 @@ class User < ApplicationRecord
       self.email = ''
       self.full_address = nil
       self.school_info = nil
-      studio_person.destroy! if studio_person
+      studio_person&.destroy!
       self.studio_person_id = nil
     end
 
@@ -697,7 +706,7 @@ class User < ApplicationRecord
 
   def email_and_hashed_email_must_be_unique
     # skip the db lookup if we are already invalid
-    return unless errors.blank?
+    return if errors.present?
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
@@ -847,7 +856,7 @@ class User < ApplicationRecord
     return false unless teacher? && purged_at.nil?
 
     # new teacher accounts should always require an email
-    return true unless created_at.present?
+    return true if created_at.blank?
 
     # existing accounts created after the email requirement must have an email.
     # FND-1130: The created_at exception will no longer be required
@@ -880,13 +889,13 @@ class User < ApplicationRecord
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
-      update_attributes(params, *options)
+      update(params, *options)
     else
       super
     end
   end
 
-  def update_email_for(provider: nil, uid: nil, email:)
+  def update_email_for(email:, provider: nil, uid: nil)
     if migrated?
       # Provider and uid are required to update email on AuthenticationOption for migrated user.
       return unless provider.present? && uid.present?
@@ -983,7 +992,7 @@ class User < ApplicationRecord
 
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
-    return false unless email.present?
+    return false if email.blank?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1124,7 +1133,7 @@ class User < ApplicationRecord
   # Retrieve all user levels for the designated set of users in the given
   # script, with a single query.
   # @param [Enumerable<User>] users
-  # @param [Script] script
+  # @param [Unit] script
   # @return [Hash] UserLevels by user id by level id
   # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
   # {
@@ -1236,7 +1245,7 @@ class User < ApplicationRecord
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
-    next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
+    next_unpassed = script.script_levels[script_level_index..].try(:detect) do |script_level|
       user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -1287,10 +1296,15 @@ class User < ApplicationRecord
       first
   end
 
+  #sections owned by the user AND not deleted
+  def owned_section_ids
+    sections.select(:id).all
+  end
+
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
-    return false if try(:teacher?)
+    return false if script_level.script.can_be_instructor?(self)
 
     sections = sections_as_student
     return false if sections.empty?
@@ -1314,38 +1328,40 @@ class User < ApplicationRecord
     end
   end
 
-  # Is the given script hidden for this user (based on the sections that they are in)
-  def script_hidden?(script)
-    return false if try(:teacher?)
+  # Is the given unit hidden for this user (based on the sections that they are in)
+  def unit_hidden?(unit)
+    return false if unit.can_be_instructor?(self)
 
     return false if sections_as_student.empty?
 
-    # Can't hide a script that isn't part of a course
-    unit_group = script.try(:unit_group)
+    # Can't hide a unit that isn't part of a course
+    unit_group = unit.try(:unit_group)
     return false unless unit_group
 
-    get_student_hidden_ids(unit_group.id, false).include?(script.id)
+    get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   lesson ids for that section.
   #   For students this will just be a list of lesson ids that are hidden for them.
-  def get_hidden_lesson_ids(script_name)
-    script = Script.get_from_cache(script_name)
-    return [] if script.nil?
+  def get_hidden_lesson_ids(unit_name)
+    unit = Unit.get_from_cache(unit_name)
+    return [] if unit.nil?
 
-    teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
+    unit.can_be_instructor?(self) ? get_instructor_hidden_ids(true) : get_participant_hidden_ids(unit.id, true)
   end
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   script ids for that section.
-  #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(unit_group = nil)
+  #   unit ids for that section.
+  #   For students this will just be a list of unit ids that are hidden for them.
+  def get_hidden_unit_ids(unit_group = nil)
     return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
+    # If there isn't a unit_group then we are on the homepage and looking for all the hidden units for an instructor
+    return get_instructor_hidden_ids(false) if unit_group.nil?
+    unit_group.can_be_instructor?(self) ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1426,9 +1442,13 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def mute_music?
+    !!mute_music
+  end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -1495,7 +1515,6 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  attr_accessor :raw_token
   def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -1509,7 +1528,6 @@ class User < ApplicationRecord
     return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
 
-  attr_accessor :child_users
   def send_reset_password_for_users(email, users)
     if users.empty?
       not_found_user = User.new(email: email)
@@ -1619,7 +1637,7 @@ class User < ApplicationRecord
   # @return [Array] of Scripts
   def visible_assigned_scripts
     user_scripts.where("assigned_at").
-      map {|user_script| Script.where(id: user_script.script.id).select(&:launched?)}.
+      map {|user_script| Unit.where(id: user_script.script.id).select(&:launched?)}.
       flatten
   end
 
@@ -1715,7 +1733,7 @@ class User < ApplicationRecord
         nil
       else
         script_id = user_script[:script_id]
-        script = Script.get_from_cache(script_id)
+        script = Unit.get_from_cache(script_id)
         {
           name: script[:name],
           title: data_t_suffix('script.name', script[:name], 'title'),
@@ -1755,7 +1773,7 @@ class User < ApplicationRecord
         nil
       else
         script_id = user_script[:script_id]
-        script = Script.get_from_cache(script_id)
+        script = Unit.get_from_cache(script_id)
         {
           name: script[:name],
           title: data_t_suffix('script.name', script[:name], 'title'),
@@ -1793,12 +1811,12 @@ class User < ApplicationRecord
   end
 
   def visible_scripts
-    scripts.map(&:cached).select {|s| [SharedCourseConstants::PUBLISHED_STATE.stable, SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
   # is a part of. Includes default scripts for any assigned courses as well.
-  # @return [Array<Script>]
+  # @return [Array<Unit>]
   def section_scripts
     all_scripts = []
     all_sections.each do |section|
@@ -1855,7 +1873,7 @@ class User < ApplicationRecord
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = Script.cache_find_level(level_id).level_concept_difficulty
+    level_concept_difficulty = Unit.cache_find_level(level_id).level_concept_difficulty
     return unless level_concept_difficulty
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -1896,8 +1914,8 @@ class User < ApplicationRecord
         new_level_completed = true
       end
 
-      script = Script.get_from_cache(script_id)
-      script_valid = script.csf? && script.name != Script::COURSE1_NAME
+      script = Unit.get_from_cache(script_id)
+      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result >= ActivityConstants::BEST_PASS_RESULT &&
         script_valid &&
@@ -1916,7 +1934,7 @@ class User < ApplicationRecord
       # We only lock levels of type LevelGroup
       # When the student submits an assessment, lock the level so they no
       # longer have access for the remainder of the autolock period
-      is_level_group = user_level.level.type === 'LevelGroup'
+      is_level_group = user_level.level.type == 'LevelGroup'
       if submitted && is_level_group
         user_level.locked = true
       end
@@ -1965,7 +1983,7 @@ class User < ApplicationRecord
   # This method is called when a section the user belongs to is assigned to
   # a script. We find or create a new UserScript entry, and set assigned_at
   # if not already set.
-  # @param script [Script] The script to assign.
+  # @param script [Unit] The script to assign.
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
@@ -2003,7 +2021,6 @@ class User < ApplicationRecord
       user_type: user_type,
       gender: gender,
       birthday: birthday,
-      total_lines: total_lines,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
       secret_picture_path: secret_picture&.path,
@@ -2101,6 +2118,14 @@ class User < ApplicationRecord
     sections_as_student.empty?
   end
 
+  def shared_sections_with(other_user)
+    sections_as_student & other_user.sections_as_student
+  end
+
+  def in_code_review_group_with?(other_user)
+    (code_review_groups & other_user.code_review_groups).any?
+  end
+
   # Users who might otherwise have orphaned accounts should have the option
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
@@ -2150,12 +2175,12 @@ class User < ApplicationRecord
       sections.find {|section| section.script_id == script.id}
   end
 
-  def lesson_extras_enabled?(script)
-    return false unless script.lesson_extras_available?
-    return true if teacher?
+  def lesson_extras_enabled?(unit)
+    return false unless unit.lesson_extras_available?
+    return true if unit.can_be_instructor?(self)
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.lesson_extras
+      section.script_id == unit.id && section.lesson_extras
     end
   end
 
@@ -2279,7 +2304,7 @@ class User < ApplicationRecord
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
     script = begin
-      Script.get_from_cache(script_name)
+      Unit.get_from_cache(script_name)
     rescue ActiveRecord::RecordNotFound
       nil
     end
@@ -2301,7 +2326,7 @@ class User < ApplicationRecord
     hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
 
     unless (channel_level_ids & hoc_level_ids).empty?
-      User.track_script_progress(id, Script.get_from_cache(script_name).id)
+      User.track_script_progress(id, Unit.get_from_cache(script_name).id)
 
       # Create user_level entries for the levels associated with channels. In the
       # case of template backed levels, a channel for the template level will result
@@ -2449,7 +2474,7 @@ class User < ApplicationRecord
   end
 
   # The data returned by this method is set to cookies for the marketing team to
-  # use in Optimizely for segmenting teacher user experience.
+  # use in Google Optimize for segmenting teacher user experience.
   def marketing_segment_data
     return unless teacher?
 
@@ -2482,7 +2507,7 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grade).uniq
+    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
@@ -2503,33 +2528,33 @@ class User < ApplicationRecord
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
-  def hidden_script_ids(sections)
+  def hidden_unit_ids(sections)
     return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_lessons is true, id is expected to be a script id and
+  # on the input. If hidden_lessons is true, id is expected to be a unit id and
   # we look for lessons that are hidden. If hidden_lessons is false, id is expected
-  # to be a course_id, and we look for hidden scripts.
+  # to be a course_id, and we look for hidden units.
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden scripts.
+  #   if we're looking for hidden units.
   # @return {Hash<string,number[]>
-  def get_teacher_hidden_ids(hidden_lessons)
+  def get_instructor_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden lessons/scripts in that section
+    # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which lessons/scripts should be hidden
+  # and determine which lessons/units should be hidden
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden scripts.
-  # @return {number[]} Set of lesson/script ids that should be hidden
-  def get_student_hidden_ids(assign_id, hidden_lessons)
+  #   if we're looking for hidden units.
+  # @return {number[]} Set of lesson/unit ids that should be hidden
+  def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
@@ -2539,14 +2564,14 @@ class User < ApplicationRecord
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a lesson/script
+      # if we have no sections matching this assignment, we consider a lesson/unit
       # hidden if any of our sections hides it
-      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_unit_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a lesson/script
+      # if we do have sections matching this assignment, we consider a lesson/unit
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_unit_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

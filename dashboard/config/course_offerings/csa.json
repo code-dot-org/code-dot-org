@@ -3,5 +3,13 @@
   "display_name": "Computer Science A",
   "category": "full_course",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": null,
+  "grade_levels": "9,10,11,12",
+  "header": "Year Long",
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null
 }

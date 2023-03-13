@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTeacherDashboard as TeacherDashboard} from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const DEFAULT_PROPS = {
@@ -38,45 +38,43 @@ describe('TeacherDashboard', () => {
 
   it('defaults to progress tab if no tab provided in route', () => {
     const location = {pathname: '/'};
-    const wrapper = shallow(
-      <TeacherDashboard {...DEFAULT_PROPS} location={location} />
-    );
-    expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+    shallow(<TeacherDashboard {...DEFAULT_PROPS} location={location} />);
+    expect(location.pathname).to.equal('/progress');
   });
 
   it('defaults to progress tab if incorrect tab provided in route', () => {
     const location = {pathname: '/some_fake_path'};
-    const wrapper = shallow(
-      <TeacherDashboard {...DEFAULT_PROPS} location={location} />
-    );
-    expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+    shallow(<TeacherDashboard {...DEFAULT_PROPS} location={location} />);
+    expect(location.pathname).to.equal('/progress');
   });
 
   it('defaults to manage students tab if no tab provided in route and section has 0 students', () => {
     const location = {pathname: '/'};
-    const wrapper = shallow(
+    shallow(
       <TeacherDashboard
         {...DEFAULT_PROPS}
         location={location}
         studentCount={0}
       />
     );
-    expect(wrapper.instance().props.location.pathname).to.equal(
-      '/manage_students'
-    );
+    expect(location.pathname).to.equal('/manage_students');
   });
 
   it('defaults to manage students tab if incorrect tab provided in route and section has 0 students', () => {
     const location = {pathname: '/some_fake_path'};
-    const wrapper = shallow(
+    shallow(
       <TeacherDashboard
         {...DEFAULT_PROPS}
         location={location}
         studentCount={0}
       />
     );
-    expect(wrapper.instance().props.location.pathname).to.equal(
-      '/manage_students'
-    );
+    expect(location.pathname).to.equal('/manage_students');
+  });
+
+  it('does not override given path if there are students and path is legitimate', () => {
+    const location = {pathname: '/assessments'};
+    shallow(<TeacherDashboard {...DEFAULT_PROPS} location={location} />);
+    expect(location.pathname).to.equal('/assessments');
   });
 });

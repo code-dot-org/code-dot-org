@@ -11,7 +11,6 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
  */
 function MiniView(props) {
   const {
-    linesOfCodeText,
     isSummaryView,
     hasGroups,
     scriptName,
@@ -46,7 +45,6 @@ function MiniView(props) {
       {!minimal && (
         <MiniViewTopRow
           scriptName={scriptName}
-          linesOfCodeText={linesOfCodeText}
           selectedSectionId={selectedSectionId}
         />
       )}
@@ -56,7 +54,6 @@ function MiniView(props) {
 }
 
 MiniView.propTypes = {
-  linesOfCodeText: PropTypes.string,
   minimal: PropTypes.bool,
 
   // redux backed

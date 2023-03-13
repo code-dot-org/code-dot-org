@@ -12,14 +12,15 @@ dashboard/brakeman_security_report.htm
 .dropbox
 .tmputils
 .rakeTasks
+.tscache/
 .idea/
+.irb_history
 jsconfig.json
 /bin/i18n/*_credentials.yml
 /bin/i18n/crowdin/*files_to_sync_out.json
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
-.ruby-version
 /apps/.babel-cache
 /apps/build
 /apps/build-times.log
@@ -64,6 +65,7 @@ npm-debug.log
 /log
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
+/pegasus/sites.v3/*/public/css/generated
 /rebuild
 /rebuild-apps
 /rebuild-shared
@@ -72,3 +74,5 @@ npm-debug.log
 /i18n/locales/*/codeorg-markdown/
 /i18n/locales/*/curriculum_content/
 /i18n/locales/*/piskel/
+/i18n/locales/*/standards/
+/i18n/locales/*/docs/

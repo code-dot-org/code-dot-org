@@ -7,7 +7,8 @@ import ChangeEmailForm from '@cdo/apps/lib/ui/accounts/ChangeEmailForm';
 describe('ChangeEmailForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
   const PASSWORD_SELECTOR = 'input[type="password"]';
-  const OPT_IN_SELECTOR = 'select';
+  const OPT_IN_SELECTOR = 'input[type="radio"][value="yes"]';
+  const OPT_OUT_SELECTOR = 'input[type="radio"][value="no"]';
 
   const DEFAULT_PROPS = {
     values: {},
@@ -24,6 +25,7 @@ describe('ChangeEmailForm', () => {
         <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
       expect(wrapper.find(OPT_IN_SELECTOR)).to.exist;
+      expect(wrapper.find(OPT_OUT_SELECTOR)).to.exist;
     });
 
     it('is not rendered for students', () => {
@@ -31,6 +33,7 @@ describe('ChangeEmailForm', () => {
         <ChangeEmailForm {...DEFAULT_PROPS} userType="student" />
       );
       expect(wrapper.find(OPT_IN_SELECTOR)).not.to.exist;
+      expect(wrapper.find(OPT_OUT_SELECTOR)).not.to.exist;
     });
   });
 
@@ -139,9 +142,7 @@ describe('ChangeEmailForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedOptIn = 'no';
-      wrapper
-        .find(OPT_IN_SELECTOR)
-        .simulate('change', {target: {value: changedOptIn}});
+      wrapper.find(OPT_OUT_SELECTOR).simulate('click');
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
@@ -230,11 +231,12 @@ describe('ChangeEmailForm', () => {
     it('the opt-in field is disabled', () => {
       wrapper.setProps({userType: 'teacher'});
       expect(wrapper.find(OPT_IN_SELECTOR)).to.have.attr('disabled');
+      expect(wrapper.find(OPT_OUT_SELECTOR)).to.have.attr('disabled');
     });
   });
 
   describe('focusOnAnError()', () => {
-    let wrapper, emailSpy, passwordSpy, optInSpy;
+    let wrapper, emailSpy, passwordSpy;
 
     beforeEach(() => {
       wrapper = mount(
@@ -245,16 +247,11 @@ describe('ChangeEmailForm', () => {
         wrapper.find(PASSWORD_SELECTOR).getDOMNode(),
         'focus'
       );
-      optInSpy = sinon.stub(
-        wrapper.find(OPT_IN_SELECTOR).getDOMNode(),
-        'focus'
-      );
     });
 
     afterEach(() => {
       emailSpy.restore();
       passwordSpy.restore();
-      optInSpy.restore();
     });
 
     it('does nothing if there are no validation errors', () => {
@@ -265,7 +262,6 @@ describe('ChangeEmailForm', () => {
       wrapper.instance().focusOnAnError();
       expect(emailSpy).not.to.have.been.called;
       expect(passwordSpy).not.to.have.been.called;
-      expect(optInSpy).not.to.have.been.called;
     });
 
     it('focuses on the email field if there is an email validation error', () => {
@@ -278,7 +274,6 @@ describe('ChangeEmailForm', () => {
       wrapper.instance().focusOnAnError();
       expect(emailSpy).to.have.been.calledOnce;
       expect(passwordSpy).not.to.have.been.called;
-      expect(optInSpy).not.to.have.been.called;
     });
 
     it('focuses on the password field if there is a password validation error', () => {
@@ -291,7 +286,6 @@ describe('ChangeEmailForm', () => {
       wrapper.instance().focusOnAnError();
       expect(emailSpy).not.to.have.been.called;
       expect(passwordSpy).to.have.been.calledOnce;
-      expect(optInSpy).not.to.have.been.called;
     });
 
     it('focuses on the email field if there are both email and password validation errors', () => {
@@ -305,7 +299,6 @@ describe('ChangeEmailForm', () => {
       wrapper.instance().focusOnAnError();
       expect(emailSpy).to.have.been.calledOnce;
       expect(passwordSpy).not.to.have.been.called;
-      expect(optInSpy).not.to.have.been.called;
     });
   });
 });

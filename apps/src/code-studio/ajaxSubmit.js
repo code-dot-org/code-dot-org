@@ -3,6 +3,7 @@ import $ from 'jquery';
 module.exports = function ajaxSubmit(form_selector) {
   $(document).ready(function() {
     $(form_selector).on('ajax:beforeSend', function(e, xhr) {
+      $('.publishLevelErrorMessage').hide();
       $('.validation-error')
         .empty()
         .hide();
@@ -24,6 +25,7 @@ module.exports = function ajaxSubmit(form_selector) {
       } catch (err) {
         errors = {message: 'Error (' + error + '): ' + xhr.responseText};
       }
+      $('.publishLevelErrorMessage').show();
       $('.validation-error')
         .show()
         .html("<p>Couldn't create level:</p>")

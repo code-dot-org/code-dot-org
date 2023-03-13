@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class JavabuilderSessionsControllerTest < ActionController::TestCase
-  CSA_PILOT = "csa-pilot"
-  CSA_PILOT_FACILITATORS = "csa-pilot-facilitators"
-  CSD_PILOT = "csd-piloters"
-
   setup do
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
@@ -13,7 +9,8 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     JavalabFilesHelper.stubs(:get_project_files).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_validation).returns({})
-    JavalabFilesHelper.stubs(:upload_project_files).returns(true)
+    put_response = Net::HTTPResponse.new(nil, '200', nil)
+    JavalabFilesHelper.stubs(:upload_project_files).returns(put_response)
   end
 
   test_user_gets_response_for :get_access_token,
@@ -23,25 +20,44 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
+  test_user_gets_response_for :get_access_token,
+    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    user: :authorized_teacher,
+    response: :success
 
-  test_user_gets_response_for :get_access_token_with_override_sources,
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
     user: :student,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_sources,
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
     user: :teacher,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_sources,
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
     params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
+  test_user_gets_response_for :access_token_with_override_sources,
+    method: :post,
+    params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
+    user: :authorized_teacher,
+    response: :success
 
-  test_user_gets_response_for :get_access_token_with_override_validation,
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
     user: :student,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_validation,
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
     user: :teacher,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_override_validation,
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
+    user: :authorized_teacher,
+    response: :forbidden
+  test_user_gets_response_for :access_token_with_override_validation,
+    method: :post,
     params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
@@ -67,7 +83,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     get :get_access_token, params: {
       channelId: @fake_channel_id,
       executionType: 'RUN',
-      options: {'useNeighborhood': true},
+      options: {useNeighborhood: true},
       miniAppType: 'console'
     }
 
@@ -79,39 +95,38 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_equal "{\"useNeighborhood\":\"true\"}", decoded_token[0]['options']
   end
 
-  test 'csa pilot participant can get access token' do
-    user = create :user
-    create(:single_user_experiment, min_user_id: user.id, name: CSA_PILOT)
-    sign_in(user)
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
-    assert_response :success
-  end
-
-  test 'student of csa pilot participant can get access token' do
-    teacher = create(:teacher)
-    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT)
+  test 'student of authorized teacher without csa section cannot get access token' do
+    teacher = create(:authorized_teacher)
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
-    assert_response :success
-    section.destroy
+    assert_response :forbidden
   end
 
-  test 'student of csa pilot facilitators participant can get access token' do
-    teacher = create(:teacher)
-    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT_FACILITATORS)
+  test 'student not in the authorized teachers csa section cannot get access token' do
+    csa_script = create(:csa_script)
+    teacher = create(:authorized_teacher)
     section = create(:section, user: teacher, login_type: 'word')
+    create(:section, user: teacher, login_type: 'word', script: csa_script)
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    assert_response :forbidden
+  end
+
+  test 'student of authorized teacher in csa section can get access token' do
+    teacher = create(:authorized_teacher)
+    csa_script = create(:csa_script)
+    section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
-    section.destroy
   end
 
-  test 'student of section with non-csa-pilot teacher cannot get access token' do
+  test 'student of non-authorized teacher cannot get access token' do
     teacher = create(:teacher)
-    create(:single_user_experiment, min_user_id: teacher.id, name: CSD_PILOT)
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
@@ -130,14 +145,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'param for override sources is required when using override sources route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
+    post :access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for override validation is required when using override validation route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
+    post :access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
@@ -156,25 +171,26 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'returns error if upload fails' do
-    JavalabFilesHelper.stubs(:upload_project_files).returns(false)
+    JavalabFilesHelper.stubs(:upload_project_files).returns(nil)
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
   end
 
-  test 'student of csa-pilot and verified teacher has correct verified_teachers parameter' do
-    teacher = create(:teacher)
-    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT_FACILITATORS)
-    section_1 = create(:section, user: teacher, login_type: 'word')
-    verified_teacher = create(:teacher)
-    verified_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    section_2 = create(:section, user: verified_teacher, login_type: 'word')
-    student_1 = create(:follower, section: section_1).student_user
-    create(:follower, section: section_2, student_user: student_1)
+  test 'student of verified teacher has correct verified_teachers parameter' do
+    csa_script = create(:csa_script)
+    verified_teacher_1 = create(:authorized_teacher)
+    csa_section = create(:section, user: verified_teacher_1, login_type: 'word', script: csa_script)
+    verified_teacher_2 = create(:authorized_teacher)
+    section_1 = create(:section, user: verified_teacher_2, login_type: 'word')
+    student_1 = create(:follower, section: csa_section).student_user
+    create(:follower, section: section_1, student_user: student_1)
+    # have verified teacher 2 also teach a csa section which student 1 is not assigned to.
+    create(:section, user: verified_teacher_2, login_type: 'word', script: csa_script)
     regular_teacher = create(:teacher)
-    section_3 = create(:section, user: regular_teacher, login_type: 'word')
-    create(:follower, section: section_3, student_user: student_1)
+    section_2 = create(:section, user: regular_teacher, login_type: 'word')
+    create(:follower, section: section_2, student_user: student_1)
 
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
@@ -186,13 +202,11 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
     teachers_string = decoded_token[0]['verified_teachers']
     teachers = teachers_string.split(',')
-    assert_equal 2, teachers.length
-    assert teachers.include?((teacher.id).to_s)
-    assert teachers.include?((verified_teacher.id).to_s)
+    assert_equal 1, teachers.length
+    assert teachers.include?((verified_teacher_1.id).to_s)
+    # verified teacher 2 is not teaching the student csa
+    refute teachers.include?((verified_teacher_2.id).to_s)
     refute teachers.include?((regular_teacher.id).to_s)
-
-    section_1.destroy
-    section_2.destroy
   end
 
   test 'levelbuilder has correct verified_teachers parameter' do

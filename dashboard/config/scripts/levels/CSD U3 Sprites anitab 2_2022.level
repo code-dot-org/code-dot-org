@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:16.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -68,14 +64,14 @@
     "parent_level_id": 18487,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/csd-1718/sprites/index.html",
-      "/docs/csd-1718/drawing_shapes_map/index.html",
-      "/docs/csd-1718/shape_size_map/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html",
-      "/docs/csd-1718/variables_intro_csd/index.html",
-      "/docs/csd-1718/naming_variables/index.html"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/csd-1718/animation_tab/index.html",
+    "map_reference": "/courses/csd-2022/guides/animation-tab",
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -88,6 +84,10 @@
     "bubble_choice_description": "Upload an image from another website to complete a kite scene.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:16.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:16.609+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites anitab 2_2021\\\"\"],\"cloned_from\":\"CSD U3 Sprites anitab 2_2021\"}]"

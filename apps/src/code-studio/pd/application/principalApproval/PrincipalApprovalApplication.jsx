@@ -2,12 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../../form_components_func/FormController';
 import PrincipalApprovalComponent from './PrincipalApprovalComponent';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PrincipalApprovalApplication = props => {
   const getInitialData = () => ({
     firstName: props.teacherApplication.principal_first_name,
     lastName: props.teacherApplication.principal_last_name,
     title: props.teacherApplication.principal_title,
+    role: props.teacherApplication.principal_role,
     email: props.teacherApplication.principal_email,
     course: props.teacherApplication.course,
     school: props.teacherApplication.school_id,
@@ -43,6 +46,11 @@ const PrincipalApprovalApplication = props => {
   };
 
   const onSuccessfulSubmit = () => {
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
+    analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+      'application id': props.teacherApplication.id,
+      'application status': 'unreviewed'
+    });
     window.location.reload(true);
   };
 
@@ -64,12 +72,14 @@ PrincipalApprovalApplication.propTypes = {
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   teacherApplication: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     course: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     application_guid: PropTypes.string.isRequired,
     principal_first_name: PropTypes.string.isRequired,
     principal_last_name: PropTypes.string.isRequired,
     principal_title: PropTypes.string,
+    principal_role: PropTypes.string,
     principal_email: PropTypes.string.isRequired,
     school_id: PropTypes.string,
     school_zip_code: PropTypes.string

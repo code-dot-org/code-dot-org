@@ -1,9 +1,5 @@
 <StandaloneVideo>
   <config><![CDATA[{
-  "game_id": 54,
-  "created_at": "2022-03-30T23:33:06.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "video_key": "csd_teamwork_and_disagreement",
@@ -15,6 +11,10 @@
     "teacher_markdown": "**Discussion Goals**\r\n\r\nStudents should understand that disagreement is a normal part of teamwork and have strategies for constructively dealing with disagreement in their teams.\r\n\r\nTips in the video are:\r\n\r\n1. Appreciate that your team has lots of ideas, even if you don't agree with all of them.\r\n2. Be curious about the other ideas, and try to understand what is good about them.\r\n3. Compromise with your teammates, taking goo parts of lots of ideas and putting them together.",
     "name_suffix": "_2022"
   },
+  "level_num": "custom",
+  "game_id": 54,
+  "created_at": "2022-03-30T23:33:06.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:06.892+00:00\",\"changed\":[\"cloned from \\\"csd web disagreement video_2021\\\"\"],\"cloned_from\":\"csd web disagreement video_2021\"}]"

@@ -14,7 +14,11 @@ export default (project, tosText) => {
     React.createElement(AbuseExclamation, {
       i18n: {
         tos: tosText,
-        contact_us: msg.contactUs({url: 'http://code.org/contact'}),
+        contact_us: msg.contactUs({
+          url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+            `Abuse error for project at url: ${project.getShareUrl()}`
+          )}`
+        }),
         edit_project: msg.editProject(),
         go_to_code_studio: msg.goToCodeStudio()
       },

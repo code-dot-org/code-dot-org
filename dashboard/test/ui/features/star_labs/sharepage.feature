@@ -33,8 +33,8 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   When I simulate a mousedown on the svg
   Then ensure Flappy gameState is ACTIVE
 
-  Then block "14" is child of block "13"
-  And block "15" is child of block "14"
+  Then block "flapHeight" is child of block "whenClick"
+  And block "playSound" is child of block "flapHeight"
 
 @as_student
 Scenario: Share and save an artist level to the project gallery

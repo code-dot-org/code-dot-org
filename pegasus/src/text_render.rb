@@ -15,7 +15,7 @@ module TextRender
     end
 
     def avatar_image(name)
-      basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
+      basename = name.downcase.gsub(/\W/, '_').squeeze('_')
 
       search_bases = []
       search_bases << sites_dir(@locals[:request].site, 'images', 'avatars', basename) if @locals.key?(:request)
@@ -51,7 +51,7 @@ module TextRender
   end
 
   def self.f(engine, path, locals={})
-    r(engine, IO.read(path), locals)
+    r(engine, File.read(path), locals)
   end
 
   #
@@ -129,7 +129,7 @@ module TextRender
           value = $1
           if value[0] == '#'
             attribute = 'id'
-            value = value[1..-1]
+            value = value[1..]
           else
             attribute = 'class'
           end
@@ -208,7 +208,7 @@ module TextRender
     end
 
     def result(binding=nil)
-      YAML.load(@template.result(binding))
+      YAML.safe_load(@template.result(binding))
     end
   end
 

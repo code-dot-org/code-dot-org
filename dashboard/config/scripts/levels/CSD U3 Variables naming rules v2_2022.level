@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:01.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -17,7 +13,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Change the value of petalSize multiple times. How does it change your drawing?",
-    "start_blocks": "var size of circle = 150;\r\nvar 1dimension = 100;\r\nvar yLocation = 200;\r\n\r\nfill(\"OrangeRed\");\r\nellipse(1dimension, YLocation, size of circle, size of circle);",
+    "start_blocks": "var size of circle = 150;\r\nvar xLocation = 200;\r\nvar 2dimension = 100;\r\n\r\nfill(\"OrangeRed\");\r\nellipse(xlocation, 2dimension, size of circle, size of circle);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -46,7 +42,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "qVXkIojXW6gEv+Xt804Z+hSjBSbHs0z6nVhrey3l+RpY3AVosTfgplMFla+M\nnntO1DqFBc81gqELITUdor9rsg==\n",
+    "encrypted_examples": "b4ZuvdZqB//rBb/XVsXEQ7DoUxyD9pqf1JVs/L9r3MegrZun5hnmOxsOIgkB\nX5DtDYnccnVcCqpL6cvG+ylApQ==\n",
     "show_debug_watch": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -57,11 +53,11 @@
     "parent_level_id": 20666,
     "teacher_markdown": "If students use variable names that start with numbers, include spaces, or break other rules, the code may be forced into text mode the next time that they go to that level or refresh the page.  To get back into block mode, students will first need to fix the problem with the variable names.  Use the red error squares to see where the bugs most likely are, and once they are gone, click the \"block mode\" button at the top right of the workspace.",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/javascript/naming-variables/",
+    "map_reference": "/courses/csd-2022/guides/naming-variables",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "name_suffix": "_2022",
@@ -70,9 +66,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-03-30T23:39:01.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:01.922+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables naming rules v2_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables naming rules v2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:01.922+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables naming rules v2_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables naming rules v2_2021\"},{\"changed_at\":\"2022-09-28 22:13:05 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 22:13:34 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-28 17:05:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-28 17:08:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

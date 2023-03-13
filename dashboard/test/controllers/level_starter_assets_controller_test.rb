@@ -103,6 +103,15 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'inline', response.headers['Content-Disposition']
   end
 
+  test 'file: returns 404 if level has no starter assets' do
+    LevelStarterAssetsController.any_instance.expects(:get_object).never
+    level = create(:applab, starter_assets: nil)
+
+    get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
+
+    assert_response :not_found
+  end
+
   test 'upload: forbidden for non-levelbuilders' do
     sign_in create(:student)
     post :upload, params: {level_name: create(:applab).name, files: []}

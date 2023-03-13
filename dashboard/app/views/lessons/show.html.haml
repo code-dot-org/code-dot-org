@@ -16,6 +16,8 @@
     %ul
       - if Rails.application.config.levelbuilder_mode
         %li= link_to "Edit", @lesson.get_uncached_edit_path
+        %li
+          #copy-lesson-button
       - else
         %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", script_lesson_path(@lesson.script, @lesson)).to_s
 

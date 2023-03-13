@@ -5210,13 +5210,15 @@
         "isVisible": true
       }
     },
-    "long_instructions": "**Teacher Feedback:** Some of the girls at our school ride horses, but interestingly, this student does not."
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-11-01T18:24:01.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-11-01T18:24:01.412+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 10\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 10\"},{\"changed_at\":\"2021-11-01 18:24:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-01 18:25:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-11-01T18:24:01.412+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 10\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 10\"},{\"changed_at\":\"2021-11-01 18:24:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-01 18:25:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2022-08-03 15:59:49 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

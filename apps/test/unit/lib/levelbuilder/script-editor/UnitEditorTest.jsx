@@ -2,7 +2,6 @@ import React from 'react';
 import {mount} from 'enzyme';
 import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import {assert, expect} from '../../../../util/reconfiguredChai';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import reducers, {
@@ -63,7 +62,6 @@ describe('UnitEditor', () => {
       initialAnnouncements: [],
       curriculumUmbrella: 'CSF',
       i18nData: {
-        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:
@@ -73,11 +71,9 @@ describe('UnitEditor', () => {
       locales: [],
       name: 'test-unit',
       unitFamilies: [],
-      teacherResources: [],
       versionYearOptions: [],
       initialFamilyName: '',
       initialVersionYear: '',
-      initialTeacherResources: [],
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
@@ -88,7 +84,8 @@ describe('UnitEditor', () => {
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
       scriptPath: '/s/test-unit',
-      initialProfessionalLearningCourse: ''
+      initialProfessionalLearningCourse: '',
+      isCSDCourseOffering: false
     };
   });
 
@@ -165,8 +162,8 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1
       });
 
-      expect(wrapper.find('input').length).to.equal(25);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
@@ -208,68 +205,11 @@ describe('UnitEditor', () => {
     });
 
     describe('Teacher Resources', () => {
-      it('adds empty resources if passed none', () => {
-        const wrapper = createWrapper({});
-        assert.deepEqual(wrapper.find('UnitEditor').state('teacherResources'), [
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''}
-        ]);
-      });
-
-      it('adds empty resources if passed fewer than max', () => {
-        const wrapper = createWrapper({
-          initialTeacherResources: [
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]
-        });
-
-        assert.deepEqual(wrapper.find('UnitEditor').state('teacherResources'), [
-          {type: ResourceType.curriculum, link: '/foo'},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''},
-          {type: '', link: ''}
-        ]);
-      });
-
       it('uses new resource editor for migrated units', () => {
         const wrapper = createWrapper({
           isMigrated: true
         });
-        expect(
-          wrapper
-            .find('ResourcesEditor')
-            .first()
-            .props().useMigratedResources
-        ).to.be.true;
-      });
-
-      it('uses old resource editor for migrated units when legacy teacher resources are present', () => {
-        const wrapper = createWrapper({
-          isMigrated: true,
-          initialTeacherResources: [
-            {type: ResourceType.curriculum, link: '/foo'}
-          ]
-        });
-        expect(
-          wrapper
-            .find('ResourcesEditor')
-            .first()
-            .props().useMigratedResources
-        ).to.be.false;
+        expect(wrapper.find('ResourcesEditor').first()).to.exist;
       });
     });
 
@@ -619,7 +559,7 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         publishedState: 'beta',
-        professionalLearningCourse: 'new-pl-course'
+        deeperLearningCourse: 'new-pl-course'
       });
 
       let returnData = {scriptPath: '/s/test-unit'};

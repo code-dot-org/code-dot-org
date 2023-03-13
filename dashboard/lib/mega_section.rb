@@ -65,7 +65,7 @@ class MegaSection
       user.sections.each do |section|
         # Hard-delete all students in each section.
         section.students.each do |student_user|
-          raise "Not a sample student - #{student_user.name}" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
+          raise "Not a sample student - #{student_user.name}" unless SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
           environment_check!
           UserGeo.where(user_id: student_user.id).destroy_all
           student_user.really_destroy!
@@ -99,8 +99,8 @@ class MegaSection
   #  :script_name_2 - name of additional script to generate progress for
   #  :num_students - number of students to generate for section
   def self.create_section(options)
-    script_1 = Script.get_from_cache(options[:script_name_1])
-    script_2 = Script.get_from_cache(options[:script_name_2])
+    script_1 = Unit.get_from_cache(options[:script_name_1])
+    script_2 = Unit.get_from_cache(options[:script_name_2])
     script_levels_1 = script_1.script_levels.includes(:levels)
     script_levels_2 = script_2.script_levels.includes(:levels)
 

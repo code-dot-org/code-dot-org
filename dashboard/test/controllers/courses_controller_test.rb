@@ -7,36 +7,36 @@ class CoursesControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
+    @in_development_unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     @pilot_facilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
-    @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @pilot_pl_section = create :section, user: @pilot_facilitator, unit_group: @pilot_pl_unit_group
     @pilot_participant = create :teacher
     create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
 
-    @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @migrated_pl_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @pl_unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @migrated_pl_unit = create :script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @pl_unit_group_migrated = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1
     @migrated_pl_unit.reload
 
-    @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @unmigrated_unit = create :script, is_migrated: false, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @unit_group_unmigrated = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_unit, position: 1
   end
 
   setup do
     sign_in @teacher
 
-    @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @migrated_unit = create :script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @unit_group_migrated = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
 
     # stub writes so that we dont actually make updates to filesystem
@@ -45,11 +45,11 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CoursesQueryCountTests < ActionController::TestCase
     setup do
-      Script.stubs(:should_cache?).returns true
-      Script.clear_cache
+      Unit.stubs(:should_cache?).returns true
+      Unit.clear_cache
       UnitGroup.clear_cache
 
-      @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+      @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     end
 
     test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
@@ -60,29 +60,29 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
-    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
   end
 
   class CachedQueryCounts < ActionController::TestCase
     setup do
-      Script.stubs(:should_cache?).returns true
-      Script.clear_cache
+      Unit.stubs(:should_cache?).returns true
+      Unit.clear_cache
       UnitGroup.clear_cache
 
       offering = create :course_offering, key: 'csx'
 
-      @unit_group = create :unit_group, name: 'csx-3001', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3001'
+      @unit_group = create :unit_group, name: 'csx-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3001'
       create :course_version, course_offering: offering, content_root: @unit_group, key: '3001'
-      unit1 = create :unit, name: 'csx1-3001', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit1 = create :unit, name: 'csx1-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: @unit_group, script: unit1, position: 1
-      unit2 = create :unit, name: 'csx2-3001', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit2 = create :unit, name: 'csx2-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: @unit_group, script: unit2, position: 2
 
-      older_unit_group = create :unit_group, name: 'csx-3000', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3000'
+      older_unit_group = create :unit_group, name: 'csx-3000', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3000'
       create :course_version, course_offering: offering, content_root: older_unit_group, key: '3000'
-      unit1 = create :unit, name: 'csx1-3000', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit1 = create :unit, name: 'csx1-3000', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: older_unit_group, script: unit1, position: 1
-      unit2 = create :unit, name: 'csx2-3000', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit2 = create :unit, name: 'csx2-3000', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: older_unit_group, script: unit2, position: 2
     end
 
@@ -94,14 +94,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(5) do
+      assert_cached_queries(6) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(8) do
+      assert_cached_queries(9) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
@@ -120,22 +120,22 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family" do
     offering = create :course_offering, key: 'csp'
-    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
-    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
-    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     offering = create :course_offering, key: 'csd'
-    ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
-    ug2019 = create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    ug2019 = create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
-    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
@@ -144,7 +144,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "get_unit_group for family name with no stable versions does not redirect" do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     offering = create :course_offering, key: 'csd'
-    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {course_name: 'csd'}
@@ -155,11 +155,11 @@ class CoursesControllerTest < ActionController::TestCase
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
 
     offering = create :course_offering, key: 'csp'
-    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
-    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
-    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
 
     get :standards, params: {course_name: 'csp'}
@@ -169,10 +169,10 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect from new unstable version to assigned version" do
     student = create :student
-    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :follower, section: create(:section, unit_group: csp2017), student_user: student
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     sign_in student
     get :show, params: {course_name: 'csp-2019'}
@@ -182,10 +182,10 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect participant from new unstable version to assigned version" do
     teacher = create :teacher
-    plcsp2017 = create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    plcsp2017 = create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :follower, section: create(:section, unit_group: plcsp2017), student_user: teacher
-    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    create :unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     sign_in teacher
     get :show, params: {course_name: 'pl-csp-2019'}
@@ -195,9 +195,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family for logged out user" do
     sign_out @teacher
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     get :show, params: {course_name: 'csp-2017'}
 
@@ -206,8 +206,8 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect to latest stable version if no_redirect query param provided" do
     sign_out @teacher
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017', no_redirect: "true"}
     assert_response :ok
@@ -216,9 +216,9 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family for student" do
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
@@ -229,9 +229,9 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family for participant" do
-    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    create :unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     sign_in create(:teacher)
     get :show, params: {course_name: 'pl-csp-2017'}
@@ -242,8 +242,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect student to latest stable version in course family if they have progress" do
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     UnitGroup.any_instance.stubs(:has_progress?).returns(true)
     sign_in create(:student)
@@ -253,8 +253,8 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect participant to latest stable version in course family if they have progress" do
-    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     UnitGroup.any_instance.stubs(:has_progress?).returns(true)
     sign_in create(:teacher)
@@ -265,9 +265,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect student to latest stable version in course family if they are assigned" do
     student = create :student
-    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :follower, section: create(:section, unit_group: csp2017), student_user: student
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     sign_in student
     get :show, params: {course_name: 'csp-2017'}
@@ -277,9 +277,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect participant to latest stable version in course family if they are assigned" do
     teacher = create :teacher
-    plcsp2017 = create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    plcsp2017 = create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :follower, section: create(:section, unit_group: plcsp2017), student_user: teacher
-    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     sign_in teacher
     get :show, params: {course_name: 'pl-csp-2017'}
@@ -291,8 +291,8 @@ class CoursesControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in teacher
 
-    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017'}
 
@@ -303,8 +303,8 @@ class CoursesControllerTest < ActionController::TestCase
     facilitator = create :facilitator
     sign_in facilitator
 
-    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
 
     get :show, params: {course_name: 'pl-csp-2017'}
 
@@ -312,7 +312,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: shows course when family name matches course name" do
-    course = create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    course = create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(course)
 
     get :show, params: {course_name: 'new-course'}
@@ -454,6 +454,28 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-1991/edit'
   end
 
+  test "create: defaults to teacher led, teacher to student course if nothing provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
+    ug = UnitGroup.find_by_name!('csp-1991')
+    assert_equal ug.instruction_type, 'teacher_led'
+    assert_equal ug.instructor_audience, 'teacher'
+    assert_equal ug.participant_audience, 'student'
+  end
+
+  test "create: sets course type if info is provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self_paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
+    ug = UnitGroup.find_by_name!('pl-csp-1991')
+    assert_equal ug.instruction_type, 'self_paced'
+    assert_equal ug.instructor_audience, 'universal_instructor'
+    assert_equal ug.participant_audience, 'teacher'
+  end
+
   test "create: writes course json file" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -541,7 +563,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 'unit2', alternate_unit_group_unit.default_script.name
     assert_equal 'my_experiment', alternate_unit_group_unit.experiment_name
 
-    default_unit = Script.find_by(name: 'unit2')
+    default_unit = Unit.find_by(name: 'unit2')
     expected_position = unit_group.default_unit_group_units.find_by(script: default_unit).position
     assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate unit must have the same position as the default unit it replaces'
@@ -568,19 +590,19 @@ class CoursesControllerTest < ActionController::TestCase
     refute unit_group.has_verified_resources
     refute unit_group.launched?
     refute unit_group.stable?
-    assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    assert_equal unit_group.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-    assert_equal unit_group.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    assert_equal unit_group.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    assert_equal unit_group.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    assert_equal unit_group.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     post :update, params: {
       course_name: unit_group.name,
       version_year: '2019',
       family_name: 'csb',
       has_verified_resources: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.stable,
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced,
-      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,
-      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable,
+      instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced,
+      instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,
+      participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     }
     unit_group.reload
 
@@ -589,21 +611,25 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.has_verified_resources
     assert unit_group.launched?
     assert unit_group.stable?
-    assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
-    assert_equal unit_group.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
-    assert_equal unit_group.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    assert_equal unit_group.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    assert_equal unit_group.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
+    assert_equal unit_group.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
   end
 
   test "update: persists teacher resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
-    unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
+
+    File.stubs(:write).with do |filename, data|
+      filename.to_s.end_with?("#{unit_group.name}.course") && data.include?(resource1.name) && data.include?(resource2.name)
+    end.once
 
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
     unit_group.reload
@@ -613,10 +639,10 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists student resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
-    unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
@@ -631,7 +657,7 @@ class CoursesControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group
     unit_group.update!(name: 'csp-2017')
-    script = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    script = create :script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
 
     assert_nil unit_group.course_version
@@ -643,9 +669,10 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: cannot change course version for unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     unit_group = create :unit_group
     unit_group.update!(name: 'csp-2017')
-    script = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    script = create :script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
 
     assert_nil unit_group.course_version
@@ -706,6 +733,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: does not work for plc_course" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :plc_course, name: 'plc-course'
 
     assert_raises ActiveRecord::ReadOnlyRecord do
@@ -716,6 +744,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: renders edit page for regular courses" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     create :unit_group, name: 'csp'
 
     get :edit, params: {course_name: 'csp'}
@@ -726,6 +755,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated
@@ -745,6 +775,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     sign_in(@levelbuilder)
 
     course_version = create :course_version, content_root: @unit_group_migrated

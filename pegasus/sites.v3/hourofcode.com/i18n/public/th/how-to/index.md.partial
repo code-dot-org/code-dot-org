@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### เข้าร่วมการเคลื่อนไหวและแนะนำนักเรียนให้รู้จักวิทยาการคอมพิวเตอร์โดยปฏิบัติตามขั้นตอนเหล่านี้
 
-แนวคิดเชิงคำนวณจะช่วยเสริมทักษะด้านการแก้ไขปัญหา ตรรกะและความคิดสร้างสรรค์ และเทคโนโลยีกำลังจะเข้ามาเปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ ไม่เพียงแต่เรียนรู้วิธีใช้แต่นักเรียนยุคปัจจุบันจึงควรเรียนรู้วิธีการสร้างเทคโนโลยีไปด้วย ด้วยการเริ่มต้นอย่างรวดเร็วนี้นั้นจะเป็นรากฐานแห่งความสำเร็จด้านอาชีพของพวกเขาในศตวรรษที่ 21
+ไม่เพียงแต่เรียนรู้วิธีใช้แต่นักเรียนยุคปัจจุบันจึงควรเรียนรู้วิธีการสร้างเทคโนโลยีไปด้วย
 
-การทดลองใช้ Hour of Code นั้นเป็นไปอย่างง่ายดายและสนุกสนานเพื่อนำพานักเรียนให้ไปรู้จักกับวิทยาการคอมพิวเตอร์ ซึ่งอาจจะเป็นครั้งแรกและสามารถดำเนินการได้เป็นอย่างดีทั้งในชั้นเรียนและนอกชั้นเรียน Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+ลองกิจกรรม Hour of Code ได้ง่ายๆ และสนุก เพื่อที่จะแนะนำนักเรียนให้รู้จักกับวิทยาการคอมพิวเตอร์ ซึ่งอาจจะเป็นครั้งแรกสำหรับพวกเขา! ค้นหากิจกรรมที่เหมาะกับสภาพแวดล้อมของคุณ ไม่ว่าจะในชั้นเรียนหรือหลังเลิกเรียน แบบตัวต่อตัวหรือแบบเสมือนจริง ดู [ คู่มือการมีส่วนร่วมของเรา หากคุณยังคงมีคำถาม]({{ localized_files/participation_guide }})หลังจากที่ได้ตรวจสอบขั้นตอนด้านล่างนี้:
 
 - [ดูวิดีโอการใช้งาน Hour of Code](#how-to-video)
 - [ดูกิจกรรมและวิธีการใช้งาน](#explore-activities)
@@ -23,13 +23,11 @@ nav: how_to_nav
 - [ฉลองความสำเร็จของนักเรียน](#celebrate)
 - [แหล่ง Hour of Code อื่นๆสำหรับนักการศึกษา](#other-resources)
 
-### นอกจากนี้ Hour of Code ยังสามารถใช้ทำงานจากระยะไกลได้อีกด้วย! ดูข้อมูลเพิ่มเติม [เพื่อเริ่มใช้งาน Hour of Code แบบเสมือนจริงในอีเวนต์](https://hourofcode.com/us/how-to/virtual)
-
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -41,7 +39,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+ผู้คนทั่วโลกเข้าร่วมในการเฉลิมฉลอง Hour of Code ในช่วงสัปดาห์การศึกษา CS (5-11 ธันวาคม) เมื่อมีการเผยแพร่บทช่วยสอนและกิจกรรมล่าสุด But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -76,11 +74,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+เมื่อคุณ [ ลงทะเบียนกิจกรรม Hour of Code](/#join) คุณจะได้รับการสื่อสารที่เป็นประโยชน์ทางอีเมลพร้อมข่าวสารและเคล็ดลับสำหรับการจัดงาน Hour of Code ที่ประสบความสำเร็จ It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. หรือพิมพ์โปสเตอร์สร้างแรงบันดาลใจในห้องเรียนของคุณ! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -115,7 +113,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ให้นักเรียนไปสู่กิจกรรม
 
-- แปะลิงค์วิธีการใช้งานไว้บนกระดานและดูลิงค์ที่อยู่ในรายการ [ข้อมูลเกี่ยวกับการสาธิตที่คุณเลือก]({{ urls/learn }}) ใต้จำนวนของผู้เข้าร่วม
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 เมื่อนักเรียนของคุณพบปัญหา มันโอเคที่จะตอบว่า:
 
@@ -142,7 +140,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [สั่งซื้อเสื้อยืดสั่งทำ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)สำหรับโรงเรียนของคุณ
 - แชร์รูปถ่ายและวิดีโอของกิจกรรม Hour of Code ของคุณลงในโซเชียลมีเดีย ใช้ #HourOfCode และ @codeorg เพื่อที่เราจะสามารถเห็นความสำเร็จของคุณด้วยเช่นกัน!
 
 * * *
@@ -156,6 +153,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### จะทำอะไรต่อหลังจาก Hour of Code?
 
-วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบใน Hour of Code! หลักสูตรของเรานั้นอยู่บนเว็บไซต์ที่ใช้งานได้ฟรีตลอดเวลา [ดูวิธี](/beyond) การนำ CS มาสู่โรงเรียนและนักเรียน
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

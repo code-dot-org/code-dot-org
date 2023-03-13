@@ -4,17 +4,6 @@ require 'test_helper'
 # dashboard/test/models/ subdirectory. Move this there, making the requisite test framework
 # changes.
 class UserHelpersTest < ActiveSupport::TestCase
-  test 'UserHelpers.sponsor_message' do
-    teacher = create :teacher
-
-    assert_equal "Someone made the generous gift to sponsor your classroom's learning. Pay it forward, <a href=\"https://code.org/donate\">donate $25 to Code.org</a> to pay for another classroom's education.",
-      UserHelpers.sponsor_message(teacher)
-
-    student = create :student
-    assert_equal "Someone made the generous gift to sponsor your learning. A generous <a href=\"https://code.org/donate\">gift of $1 to Code.org</a> will help another student learn.",
-      UserHelpers.sponsor_message(student)
-  end
-
   def create_user_with_username(username)
     user = create(:user)
     user.update_attribute(:username, username)
@@ -80,7 +69,7 @@ class UserHelpersTest < ActiveSupport::TestCase
   test 'generate_username for long names' do
     assert_equal 'there',
       UserHelpers.generate_username(
-        User, 'There is a really long name' + ' blah' * 10
+        User, 'There is a really long name' + (' blah' * 10)
       )
   end
 

@@ -19,13 +19,12 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 <!---- Can use http://markdowntable.com/ for reformatting help --->
 
-|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
-|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
-| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |   
-|                      |                    |                         |                    |                    |                    |
-| circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
-| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
-| test build             |                           |                                   |                    |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|                        | ruby lint                 | scss lint                         | haml lint          | stylelint                | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
+|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
+| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `apps/**/*.scss` / changed `*.js`                 |
+| circle CI (via github) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
+| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                          |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
+| test build             |                           |                                   |                    |                          |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Running tests
 
@@ -86,15 +85,13 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
-`cd dashboard && RAILS_ENV=test bundle exec rails test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
+Before running dashboard tests for the first time, run the below command to seed the required test data
 
-If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+ `RAILS_ENV=test bundle exec rake assets:precompile`
 
-1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
+To run all dashboard tests, which takes about 15 mintues
 
-2. recreate your local dashboard test db and reseed the data via:
-    * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-    * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+`cd dashboard && RAILS_ENV=test bundle exec rails test` 
 
 If you just want to run a single file of tests, from the dashboard directory you can run
 `bundle exec spring testunit ./path/to/your/test.rb` 
@@ -109,7 +106,20 @@ The test name is `test_` concatenated with the name of the test listed in the te
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
 
-If you get an error about missing db fields, try migrating your test database:
+#### Common issues and potential fixes
+
+1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+
+    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
+    
+    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
+      `spring stop` 
+
+    3. recreate your local dashboard test db and reseed the data via:
+        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
+        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+
+2. If you get an error about missing db fields, try migrating your test database:
 `RAILS_ENV=test rake db:migrate`
 
 ### UI Tests and Eyes Tests

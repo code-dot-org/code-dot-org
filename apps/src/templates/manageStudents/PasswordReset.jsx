@@ -6,12 +6,16 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+// This min length is configured in user.rb with validates_length_of :password
+const MIN_PASSWORD_LENGTH = 6;
+
 class PasswordReset extends Component {
   static propTypes = {
     initialIsResetting: PropTypes.bool,
     sectionId: PropTypes.number,
     studentId: PropTypes.number,
-    resetDisabled: PropTypes.bool
+    resetDisabled: PropTypes.bool,
+    setPasswordLengthFailure: PropTypes.func
   };
 
   state = {
@@ -30,47 +34,72 @@ class PasswordReset extends Component {
       isResetting: false,
       input: ''
     });
+    this.hidePasswordLengthFailure();
+  };
+
+  hidePasswordLengthFailure = () => {
+    this.props.setPasswordLengthFailure(false);
   };
 
   save = () => {
     const {sectionId, studentId} = this.props;
+
+    if (this.state.input.length < MIN_PASSWORD_LENGTH) {
+      this.props.setPasswordLengthFailure(true);
+      return;
+    }
+
     const dataToUpdate = {
       student: {
         password: this.state.input
       }
     };
 
-    $.ajax({
-      url: `/dashboardapi/sections/${sectionId}/students/${studentId}`,
+    fetch(`/dashboardapi/sections/${sectionId}/students/${studentId}`, {
       method: 'PATCH',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToUpdate)
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+      },
+      body: JSON.stringify(dataToUpdate),
+      credentials: 'same-origin'
     })
-      .done(data => {
-        this.setState({
-          isResetting: false,
-          input: ''
-        });
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students',
-            event: 'reset-secret',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              studentId: studentId,
-              loginType: 'email'
-            })
-          },
-          {includeUserId: true}
-        );
+      .then(res => {
+        if (res.ok) {
+          this.setState({
+            isResetting: false,
+            input: ''
+          });
+          this.recordResetSecret();
+          this.hidePasswordLengthFailure();
+        } else {
+          const err = new Error('HTTP status code: ' + res.status);
+          err.response = res;
+          err.status = res.status;
+          throw err;
+        }
       })
-      .fail((jqXhr, status) => {
+      .catch(() => {
         // We may want to handle this more cleanly in the future, but for now this
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
-        console.error(status);
       });
+  };
+
+  recordResetSecret = () => {
+    const {sectionId, studentId} = this.props;
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'reset-secret',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: studentId,
+          loginType: 'email'
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   updateInput = event => {
@@ -88,7 +117,6 @@ class PasswordReset extends Component {
         {!this.state.isResetting && (
           <span data-for={tooltipId} data-tip>
             <Button
-              __useDeprecatedTag
               onClick={this.reset}
               color={Button.ButtonColor.white}
               text={i18n.resetPassword()}
@@ -110,14 +138,12 @@ class PasswordReset extends Component {
               onChange={this.updateInput}
             />
             <Button
-              __useDeprecatedTag
               onClick={this.save}
               color={Button.ButtonColor.blue}
               text={i18n.save()}
               style={styles.button}
             />
             <Button
-              __useDeprecatedTag
               onClick={this.cancel}
               color={Button.ButtonColor.white}
               text={i18n.cancel()}

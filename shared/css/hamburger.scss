@@ -1,4 +1,4 @@
-@import 'color';
+@import 'color.scss';
 @import 'font';
 
 
@@ -170,7 +170,7 @@
         html[dir=rtl], .rtl & {
           float: left;
         }
-        
+
       }
       .arrow-up {
         font-size: 30px;

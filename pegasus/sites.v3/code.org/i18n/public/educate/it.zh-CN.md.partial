@@ -1,0 +1,126 @@
+---
+title: IT要求
+nav: educate_nav
+theme: responsive
+---
+
+# Code.org教程的技术要求
+
+## 硬件
+
+- 我们建议学校的网络连接至少15兆比特/秒。
+- 我们支持的最小屏幕尺寸是1024 x 728 px。
+- 你需要带鼠标（或触摸板）和键盘的台式电脑或笔记本电脑，用于我们的初中和高中级别课程：计算机科学探索、计算机科学原理和应用实验室导论。 大多数平板电脑和移动设备不支持这些课程。 请参阅下面的“移动设备和平板电脑支持详情”，了解特定设备例外情况。
+- 除各种现代平板电脑和笔记本电脑或台式电脑外，诸如K-5课程（计算机科学基础）和编程一小时活动等所有其他内容在iPad和Chromebook上兼容。
+- 寻找移动设备支持详情？ 阅读以下内容。
+
+## 支持的最低浏览器和平台
+
+<table>
+ <tr>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          浏览器
+        </th>
+        <tr>
+          <td>Chrome 96.x</td>
+        </tr>
+        <tr>
+          <td>Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Edge 94.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 91.x</td>
+        </tr>
+      </table>
+  </td>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          平台
+        </th>
+        <tr>
+          <td>macOS 10.13</td>
+        </tr>
+        <tr>
+          <td>iOS 11.x</td>
+        </tr>
+        <tr>
+          <td>Windows 7</td>
+        </tr>
+        <tr>
+          <td>Android 6</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+  </td>
+ </tr>
+</table>
+
+## 要解除屏蔽的网站
+
+为了获得所有Code.org内容的最佳体验，我们建议咨询学校或学区的IT部门，以确保以下网站允许访问，没有被屏蔽。
+
+| 优先级                         | 地址                                                                                                         |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **必需**                      | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **可选**                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **使用YouTube托管视频（增强隐私模式）**   | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **使用Code.org托管视频**          | `https://videos.code.org`                                                                                  |
+| **使用互联网模拟器**                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **使用网络实验室**                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **使用谷歌课堂共享按钮**              | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+
+## 移动设备/平板电脑支持详情
+
+所有计算机科学探索、计算机科学原理和应用实验室导论课程都不兼容平板电脑或移动设备，需要全键盘和鼠标（或触摸板，如MacBook上的）。 大多数平板电脑不支持，但有以下例外：
+
+- 带外接键盘的微软Surface Pro
+- 带外接键盘和外接鼠标或触摸板且运行iPadOS 13.4及以上版本的iPad
+
+除各种现代平板电脑和笔记本电脑或台式电脑外，诸如K-5课程（计算机科学基础）和编程一小时活动等所有其他内容在iPad和Chromebook上兼容。
+
+### 手机
+
+我们的编程一小时活动和计算机科学基础课程可以在手机上完成。 虽然这些活动可以使用，但它们并没有针对手机体验进行优化，并且存在一些已知的局限性（例如触摸目标可能很小，附件元素可能显示在屏幕外，文本可能难以使用屏幕键盘输入）。 计算机科学探索、计算机科学原理和应用实验室导论课程不能在手机上使用。
+
+## 视频
+
+我们使用[YouTube](https://www.youtube.com)来将视频嵌入Code.org和我们的[在线学习平台](https://studio.code.org)。 对于YouTube被屏蔽的学校，我们尝试显示Code.org托管视频播放器。
+
+### 你能播放这个视频吗？
+
+在你开始Code.org的在线课程之前，请测试以下视频的播放，以确保你准备就绪。
+
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+这是贯穿整个课程的播放器。 它将尝试通过YouTube显示视频，如果YouTube被屏蔽，将使用我们的“后备”播放器显示Code.org托管视频。
+
+### 视频无法播放？
+
+如果视频无法播放，你可以给我们发送电子邮件：support@code.org。
+
+然而，你仍然可以在没有视频的情况下使用我们的教程。
+
+1. 我们已经使所有的视频[可以一起下载](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)。 如果你的学校带宽较低，我们建议你下载视频并在共享屏幕上给学生展示。
+2. 在我们的教程中，我们为每个视频添加了一个绿色下载链接图标<img src="/images/green-download.png" width=25 height=25 />，让学生可以下载单个教程视频。
+3. 如果所有方法都失败，则“显示备注”标签上提供了视频的等效演示图板。
+
+  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
+
+## 谷歌应用程序/G-Suite用户的特殊设置
+
+如果你是G-suite管理员，记得检查你对YouTube的限制设置。 如果你已指定“严格限制YouTube访问”设置，或如果你看到“此视频已被限制”的消息，你可以将我们的频道添加到已批准频道列表。 请参阅来自谷歌的[这个指南](https://support.google.com/a/answer/6245597)，了解如何将我们的频道添加到已批准列表。 你也可以参阅[这个指南](https://support.google.com/a/answer/6212415?hl=en)以进一步了解不同的设置以及哪种设置最适合你的课堂。
+
+## 仍然存在困难？
+
+我们将为你提供帮助，只需给我们发送电子邮件：support@code.org！

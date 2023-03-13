@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:41:34.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -74,10 +70,10 @@
     "parent_level_id": 23078,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/game-lab/sprites/velocity/"
+      "/courses/csd-2022/guides/collision-detection",
+      "/courses/csd-2022/guides/velocity"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-interactions/",
+    "map_reference": "/courses/csd-2022/guides/sprite-interactions",
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Model complex movement on a coordinate plane.",
@@ -88,6 +84,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:41:34.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:34.088+00:00\",\"changed\":[\"cloned from \\\"CSD games collisions assessment_2021\\\"\"],\"cloned_from\":\"CSD games collisions assessment_2021\"}]"

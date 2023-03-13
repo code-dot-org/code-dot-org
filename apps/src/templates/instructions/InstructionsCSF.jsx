@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import ThreeColumns from './ThreeColumns';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
@@ -72,7 +71,8 @@ class InstructionsCSF extends React.Component {
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
+    setInstructionsRef: PropTypes.func
   };
 
   static defaultProps = {
@@ -91,8 +91,8 @@ class InstructionsCSF extends React.Component {
       displayScrollButtons: true
     };
 
-    this.debouncedCalculateRenderedHeight = debounce(
-      this.calculateRenderedHeight,
+    this.debouncedAdjustRenderedHeight = debounce(
+      this.adjustRenderedHeight,
       300
     );
   }
@@ -107,6 +107,16 @@ class InstructionsCSF extends React.Component {
     }
   }
 
+  adjustRenderedHeight(props = this.props) {
+    const minHeight = this.getMinHeight(props.collapsed);
+    const maxHeight = this.getMaxHeight();
+    const newHeight = Math.max(Math.min(props.height, maxHeight), minHeight);
+
+    if (newHeight !== props.height) {
+      this.props.setInstructionsRenderedHeight(newHeight);
+    }
+  }
+
   /**
    * When collapsed, height can change when we get additional feedback
    * or the hint prompt. In that case, we want to always resize.
@@ -115,16 +125,7 @@ class InstructionsCSF extends React.Component {
    * again, we want to increase height.
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
-    const minHeight = this.getMinHeight(nextProps.collapsed);
-    const newHeight = Math.min(nextProps.maxHeight, minHeight);
-
-    const shouldUpdateHeight = nextProps.collapsed
-      ? newHeight !== this.props.height
-      : nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
-
-    if (shouldUpdateHeight) {
-      this.props.setInstructionsRenderedHeight(newHeight);
-    }
+    this.debouncedAdjustRenderedHeight(nextProps);
   }
 
   UNSAFE_componentWillUpdate(nextProps) {
@@ -141,7 +142,7 @@ class InstructionsCSF extends React.Component {
 
   componentDidUpdate() {
     this.setCanScrollInstructions();
-    this.debouncedCalculateRenderedHeight();
+    this.debouncedAdjustRenderedHeight();
     this.props.adjustMaxNeededHeight();
   }
 
@@ -155,21 +156,6 @@ class InstructionsCSF extends React.Component {
       this.setState({
         displayScrollButtons: canScroll
       });
-    }
-  }
-
-  calculateRenderedHeight() {
-    const minHeight = this.getMinHeight();
-    const maxHeight = this.getMaxHeight();
-    const heightOutOfBounds =
-      this.props.height < minHeight || this.props.height > maxHeight;
-
-    if (heightOutOfBounds) {
-      const newHeight = Math.max(
-        Math.min(this.props.height, maxHeight),
-        minHeight
-      );
-      this.props.setInstructionsRenderedHeight(newHeight);
     }
   }
 
@@ -293,18 +279,31 @@ class InstructionsCSF extends React.Component {
     return this.instructions ? getOuterHeight(this.instructions, true) : 0;
   }
 
+  setInstructionsRef(instructions) {
+    this.instructions = instructions?.getWrappedInstance().instructions;
+
+    // TopInstructions, our parent, needs a ref to the body of the instructions
+    // to determine its height.
+    if (this.props.setInstructionsRef) {
+      this.props.setInstructionsRef(instructions);
+    }
+  }
+
   render() {
-    const mainStyle = [
-      styles.main,
-      {
-        height: this.props.height
+    const mainStyle = {
+      ...styles.main,
+      ...{
+        height: this.props.height - HEADER_HEIGHT
       },
-      this.props.noVisualization && styles.noViz,
-      this.props.overlayVisible && styles.withOverlay
-    ];
+      ...(this.props.noVisualization && styles.noViz),
+      ...(this.props.overlayVisible && styles.withOverlay)
+    };
 
     const threeColumnsStyles = {
-      container: [styles.body, this.props.isMinecraft && craftStyles.body],
+      container: {
+        ...styles.body,
+        ...(this.props.isMinecraft && craftStyles.body)
+      },
       left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
     };
 
@@ -327,10 +326,7 @@ class InstructionsCSF extends React.Component {
             setColHeight={this.setLeftColHeight}
           />
           <InstructionsCsfMiddleCol
-            ref={instructions =>
-              (this.instructions =
-                instructions && instructions.getWrappedInstance().instructions)
-            }
+            ref={instructions => this.setInstructionsRef(instructions)}
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
             adjustMaxNeededHeight={this.props.adjustMaxNeededHeight}
@@ -376,13 +372,13 @@ const styles = {
   },
   leftCol: {
     position: 'absolute',
-    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
+    bottom: RESIZER_HEIGHT,
     left: 0,
     marginLeft: 0
   },
   leftColRtl: {
     position: 'absolute',
-    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
+    bottom: RESIZER_HEIGHT,
     right: 0,
     marginRight: 0
   }
@@ -419,4 +415,4 @@ export default connect(
   },
   null,
   {withRef: true}
-)(Radium(InstructionsCSF));
+)(InstructionsCSF);

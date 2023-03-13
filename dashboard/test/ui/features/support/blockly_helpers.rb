@@ -44,7 +44,7 @@ module BlocklyHelpers
   # Get the block ID for a given alias
   # Callers expect the returned block ID value to be a string
   def get_block_id(alias_or_id)
-    if @block_aliases && @block_aliases.key?(alias_or_id)
+    if @block_aliases&.key?(alias_or_id)
       return @block_aliases[alias_or_id]
     end
     alias_or_id
@@ -75,15 +75,15 @@ module BlocklyHelpers
   def modal_dialog_visible
     @browser.execute_script("return $('#modalContainer').is(':visible');")
   end
+end
 
-  def google_blockly?
-    @browser.execute_script("return Blockly.version === 'Google'")
-  end
+def google_blockly?
+  @browser.execute_script("return Blockly.version === 'Google'")
+end
 
-  # Google Blockly encodes the id in the DOM element as the "data-id", CDO Blockly calls it the "block-id"
-  def get_id_selector
-    google_blockly? ? 'data-id' : 'block-id'
-  end
+# Google Blockly encodes the id in the DOM element as the "data-id", CDO Blockly calls it the "block-id"
+def get_id_selector
+  google_blockly? ? 'data-id' : 'block-id'
 end
 
 World(BlocklyHelpers)

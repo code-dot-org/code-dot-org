@@ -19,12 +19,12 @@
 class UnitGroupUnit < ApplicationRecord
   self.table_name = 'course_scripts'
 
-  belongs_to :unit_group, foreign_key: 'course_id'
-  belongs_to :script
+  belongs_to :unit_group, foreign_key: 'course_id', optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
 
   # The script will replace the default_script when the user has
   # the experiment_name enabled.
-  belongs_to :default_script, class_name: 'Script'
+  belongs_to :default_script, class_name: 'Unit', optional: true
 
   def self.experiments
     Rails.cache.fetch("course_script_experiments") do

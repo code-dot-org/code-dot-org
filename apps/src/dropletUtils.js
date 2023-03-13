@@ -987,7 +987,8 @@ export function generateDropletModeOptions(config) {
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
     lockFunctionDropIntoKnownParams: config.lockFunctionDropIntoKnownParams,
-    paramButtonsForUnknownFunctions: true
+    paramButtonsForUnknownFunctions: true,
+    createSocketForKnownBlock: true
   };
 }
 
@@ -1146,7 +1147,9 @@ export function setParamAtIndex(index, value, block) {
 
 /**
  * Take a string like "'param1', 'param2'" and an index and return
- * the param at the given index without extra quotes, commas or spaces.
+ * the param at the given index without extra quotes, commas or spaces
+ * Note: The sanitization here is too aggressive for some parameters and
+ * is the cause of at least one bug: https://codedotorg.atlassian.net/browse/SL-580
  */
 function formatParamString(index, params) {
   // Use encodeURIComponent to encode everything except commas outside

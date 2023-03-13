@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:46:08.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "embed": "false",
@@ -51,16 +47,20 @@
     "parent_level_id": 20262,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/responding-to-user-input/",
-      "/docs/concepts/app-lab/design-mode/importing-screens/",
-      "/docs/concepts/app-lab/multi-screen-apps/",
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/responding-to-user-input",
+      "/courses/csd-2022/guides/importing-screens",
+      "/courses/csd-2022/guides/multi-screen-apps",
+      "/courses/csd-2022/guides/design-mode",
+      "/courses/csd-2022/guides/design-mode-elements"
     ],
     "mini_rubric": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:46:08.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:46:08.034+00:00\",\"changed\":[\"cloned from \\\"CSDU4 Project Bug Feature_2021\\\"\"],\"cloned_from\":\"CSDU4 Project Bug Feature_2021\"}]"

@@ -10,10 +10,10 @@
 .col-50
   .tutorial-tile
     %a{href: CDO.studio_url("/s/applab-intro/reset")}
-      %img.tutorial-tile-img{src: CDO.code_org_url(image_url)}
+      %img.tutorial-tile-img{src: CDO.code_org_url(image_url), alt: I18n.t(:top_hoc_tutorial_applab_alt_text)}
     .tutorial-info
       %span
-        %h3.tutorial-info-h= I18n.t(:applab_tile_title)
+        %h2.tutorial-info-h= I18n.t(:applab_tile_title)
         .smalltext= I18n.t(:applab_tile_subtitle)
       %span
         %a{href: CDO.studio_url("/s/applab-intro/reset")}

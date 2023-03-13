@@ -28,7 +28,7 @@
 class Pd::FacilitatorTeacherconAttendance < ApplicationRecord
   DATE_FORMAT = "%B %e".freeze
 
-  belongs_to :user
+  belongs_to :user, optional: true
 
   def attendance_dates(teachercon)
     dates = {}

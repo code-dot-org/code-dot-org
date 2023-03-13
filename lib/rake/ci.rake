@@ -2,15 +2,18 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/aws/cloudfront'
 require 'tempfile'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :ci do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
-  task :chef_update do
-    # Replace root certificates in the installation of OpenSSL embedded in Chef client with a newer list from our repository
-    # that we periodically obtain and commit to our repository from https://curl.se/docs/caextract.html
+  timed_task_with_logging :chef_update do
+    # Ensure Chef Client is using an up to date TLS/SSL root certificate store from a trusted source (Mozilla via curl.se)
     Dir.chdir(cookbooks_dir) do
-      RakeUtils.sudo 'cp cacert.pem /opt/chef/embedded/ssl/certs/cacert.pem'
+      ROOT_CERTIFICATE_URL = "https://raw.githubusercontent.com/code-dot-org/code-dot-org/#{GitUtils.current_branch}/cookbooks/cacert.pem"
+      RakeUtils.sudo "curl -o /opt/chef/embedded/ssl/certs/cacert.pem #{ROOT_CERTIFICATE_URL}"
     end
     if CDO.chef_local_mode
       # Update local cookbooks from repository in local mode.
@@ -45,7 +48,7 @@ namespace :ci do
 
   # Perform a normal local build by calling the top-level Rakefile.
   # Additionally run the lint task if specified for the environment.
-  task build: [:chef_update] do
+  timed_task_with_logging build: [:chef_update] do
     Dir.chdir(deploy_dir) do
       ChatClient.wrap('rake lint') {Rake::Task['lint'].invoke} if CDO.lint
       ChatClient.wrap('rake build') {Rake::Task['build'].invoke}
@@ -54,7 +57,7 @@ namespace :ci do
 
   multitask deploy_multi: [:deploy_console, :deploy_stack]
 
-  task :deploy_stack do
+  timed_task_with_logging :deploy_stack do
     ChatClient.wrap('CloudFormation stack update') do
       RakeUtils.system_stream_output 'QUIET=1 bundle exec rake stack:start' do |io|
         io.each do |line|
@@ -66,14 +69,14 @@ namespace :ci do
     end
   end
 
-  task :deploy_console do
+  timed_task_with_logging :deploy_console do
     if rack_env?(:production) && (console = CDO.app_servers['console'])
       upgrade_frontend 'console', console
     end
   end
 
   desc 'Publish a new tag and release to GitHub'
-  task :publish_github_release do
+  timed_task_with_logging :publish_github_release do
     RakeUtils.system "bin/create-release --force"
     ChatClient.log '<a href="https://github.com/code-dot-org/code-dot-org/releases/latest">New release created</a>'
   rescue RuntimeError => e
@@ -81,10 +84,10 @@ namespace :ci do
     ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
   end
 
-  desc 'flush CDN and frontend caches'
-  task :flush_cache do
+  desc 'flush Content Distribution Network (CDN) caches'
+  timed_task_with_logging :flush_cloudfront_cache do
     ChatClient.wrap('Flush cache') do
-      RakeUtils.system "bin/flush_cache"
+      AWS::CloudFront.invalidate_caches
     end
   end
 
@@ -92,18 +95,18 @@ namespace :ci do
   all_tasks << 'firebase:ci'
   all_tasks << :build
   all_tasks << :deploy_multi
-  all_tasks << :flush_cache
+  all_tasks << :flush_cloudfront_cache
   all_tasks << :publish_github_release if rack_env?(:production)
-  task all: all_tasks
+  timed_task_with_logging all: all_tasks
 
-  task test: [
+  timed_task_with_logging test: [
     :all,
     'test:ci'
   ]
 end
 
 desc 'Update the server as part of continuous integration.'
-task :ci do
+timed_task_with_logging :ci do
   # In the test environment, we want to build everything with tests. In most
   # other environments, we want to do a full build including server
   # redeployment, but in some environments (like the i18n server) we just want

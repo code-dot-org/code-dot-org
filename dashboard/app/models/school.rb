@@ -35,16 +35,11 @@ class School < ApplicationRecord
 
   self.primary_key = 'id'
 
-  belongs_to :school_district
+  belongs_to :school_district, optional: true
 
   has_many :school_stats_by_year
   has_many :school_info
-  has_many :state_cs_offering, class_name: 'Census::StateCsOffering', foreign_key: :state_school_id, primary_key: :state_school_id
-  has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
-
-  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
-  has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
 
@@ -70,7 +65,7 @@ class School < ApplicationRecord
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
+    (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
   end
 
   # Determines if school meets Amazon Fugure Engineer criteria.
@@ -101,11 +96,11 @@ class School < ApplicationRecord
 
   # School statuses representing currently open schools in 2018-2019 import.
   # Non-open statuses are 'Closed', 'Future', 'Inactive'
-  OPEN_SCHOOL_STATUSES = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
+  OPEN_SCHOOL_STATUSES_2018_2019 = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
 
-  # School statuses representing currently open schools in 2019-2020 import.
+  # School statuses representing currently open schools in 2019-2020 and 2020-2021 import.
   # Non-open statuses are '2-Closed', '7-Future', '6-Inactive'
-  OPEN_SCHOOL_STATUSES_2019_2020 = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
+  OPEN_SCHOOL_STATUSES = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
 
   # School categories need to be mapped to existing values for 2019-2020 import.
   SCHOOL_CATEGORY_MAP = {
@@ -139,7 +134,7 @@ class School < ApplicationRecord
   # @returns [String, nil] the sanitized version of the string, with equal signs and double
   #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
   def self.sanitize_string_for_db(unsanitized)
-    unsanitized = NIL_CHARS.include?(unsanitized) ? nil : unsanitized
+    unsanitized = nil if NIL_CHARS.include?(unsanitized)
     unsanitized&.tr('="', '')
   end
 
@@ -161,10 +156,10 @@ class School < ApplicationRecord
 
   def self.seed_from_s3
     # NCES school data has been built up in the DB over time by pulling in different
-    # data files. This seeding recreates the order in which they we incorporated.
+    # data files. This seeding recreates the order in which they were incorporated.
     # NOTE: we are intentionally not populating the state_school_id based on the
     # 2014-2015 preliminary or 2013-2014 public/charter data sets. Those files
-    # containt duplicate entries where some schools appear to be listed more than
+    # contain duplicate entries where some schools appear to be listed more than
     # once but with different NCES ids. Since state_school_id needs to be unique
     # the seeding would fail if we tried to set the state ids from those files.
     # The 2014-2015 public/charter data does not have this issue so we do load the
@@ -340,7 +335,7 @@ class School < ApplicationRecord
             # New addition for this iteration -- a "school category",
             # which is Regular, Special Education, Alternative, or Career and Technical
             school_category:              row['SCH_TYPE_TEXT'],
-            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['UPDATED_STATUS_TEXT']) ? '2018-2019' : nil
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES_2018_2019.include?(row['UPDATED_STATUS_TEXT']) ? '2018-2019' : nil
           }
         end
       end
@@ -378,21 +373,68 @@ class School < ApplicationRecord
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
             state_school_id:              row['State School ID [Public School] 2019-20'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2019-20']].presence,
-            last_known_school_year_open:  OPEN_SCHOOL_STATUSES_2019_2020.include?(row['Updated Status [Public School] 2019-20']) ? '2019-2020' : nil
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2019-20']) ? '2019-2020' : nil
+          }
+        end
+      end
+
+      # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
+      CDO.log.info "Seeding 2020-2021 public school data."
+      AWS::S3.seed_from_file('cdo-nces', "2020-2021/ccd/schools_public.csv") do |filename|
+        merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          {
+            id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+            name:                         row['School Name'].upcase,
+            address_line1:                row['Location Address 1 [Public School] 2020-21'].to_s.upcase.truncate(50).presence,
+            address_line2:                row['Location Address 2 [Public School] 2020-21'].to_s.upcase.truncate(30).presence,
+            address_line3:                row['Location Address 3 [Public School] 2020-21'].to_s.upcase.presence,
+            city:                         row['Location City [Public School] 2020-21'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [Public School] 2020-21'].to_s.strip.upcase.presence,
+            zip:                          row['Location ZIP [Public School] 2020-21'],
+            latitude:                     row['Latitude [Public School] 2020-21'].to_f,
+            longitude:                    row['Longitude [Public School] 2020-21'].to_f,
+            school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2020-21'].to_s] || 'public',
+            school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
+            state_school_id:              row['State School ID [Public School] 2020-21'],
+            school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2020-21']].presence,
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2020-21']) ? '2020-2021' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2019-2020 private school data."
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
+          {
+            id:                           row['School ID - NCES Assigned [Private School] Latest available year'],
+            name:                         row['Private School Name'].upcase,
+            address_line1:                row['Physical Address [Private School] 2019-20'].to_s.upcase.truncate(50).presence,
+            address_line2:                nil,
+            address_line3:                nil,
+            city:                         row['City [Private School] 2019-20'].to_s.upcase.presence,
+            state:                        row['State Abbr [Private School] Latest available year'].to_s.strip.upcase.presence,
+            zip:                          row['ZIP [Private School] 2019-20'],
+            latitude:                     nil,
+            longitude:                    nil,
+            school_type:                  'private',
+            school_district_id:           nil,
+            state_school_id:              nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2019-2020 private school geographic data."
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
+          {
+            id:                 row['PPIN'],
+            latitude:           row['LAT'].to_f,
+            longitude:          row['LON'].to_f
           }
         end
       end
     end
-  end
-
-  def load_state_cs_offerings(offerings_to_load, is_dry_run)
-    offerings_to_load.each do |offering|
-      new_offering = offering.slice(:course, :school_year)
-      new_offering[:state_school_id] = state_school_id
-      Census::StateCsOffering.create!(new_offering) unless is_dry_run
-    end
-
-    return state_cs_offering.reload
   end
 
   # format a list of schools to a string
@@ -416,12 +458,10 @@ class School < ApplicationRecord
     updated_schools_attribute_frequency = {}
     unchanged_schools = 0
     duplicate_schools = []
-    state_cs_offerings_deleted_count = 0
-    state_cs_offerings_reloaded_count = 0
     lines_processed = 0
 
     ActiveRecord::Base.transaction do
-      schools = CSV.read(filename, options).each do |row|
+      schools = CSV.read(filename, **options).each do |row|
         break if limit && lines_processed > limit
         lines_processed += 1
         csv_entry = block_given? ? yield(row) : row.to_hash.symbolize_keys
@@ -439,13 +479,6 @@ class School < ApplicationRecord
             duplicate_schools << csv_entry
           end
         elsif !db_entry.nil? && update_existing
-          old_state_school_id = db_entry.state_school_id.clone
-
-          # skip DB query if state school ID not in provided set of data
-          has_state_cs_offerings = csv_entry.key?(:state_school_id) ?
-            db_entry.state_cs_offering.any? :
-            false
-
           db_entry.assign_attributes(csv_entry)
 
           if db_entry.changed?
@@ -462,30 +495,11 @@ class School < ApplicationRecord
                 updated_schools_attribute_frequency[attribute] = 1
             end
 
-            # We need to delete and reload state_cs_offerings
-            # if we're going to update the state_school_id for a given school.
-            deleted_state_cs_offerings = []
-            if has_state_cs_offerings && db_entry.changed.include?('state_school_id')
-              deleted_state_cs_offerings = Census::StateCsOffering.where(state_school_id: old_state_school_id).destroy_all unless is_dry_run
-              state_cs_offerings_deleted_count += deleted_state_cs_offerings.count
-            end
-
             begin
               db_entry.update!(csv_entry)
             rescue ActiveRecord::RecordNotUnique
               CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
               duplicate_schools << csv_entry
-            end
-
-            if deleted_state_cs_offerings.any?
-              reloaded_state_cs_offerings = db_entry.load_state_cs_offerings(deleted_state_cs_offerings, is_dry_run)
-              state_cs_offerings_reloaded_count += reloaded_state_cs_offerings.count
-
-              # Check and see if old and new are the same
-              reconstituted = reloaded_state_cs_offerings.pluck(:course, :school_year)
-              original = deleted_state_cs_offerings.pluck(:course, :school_year)
-              failure = ((reconstituted - original) + (original - reconstituted)).any?
-              raise "Mismatch between state CS offerings deleted and recreated for NCES ID #{db_entry.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
             end
           else
             unchanged_schools += 1
@@ -503,7 +517,6 @@ class School < ApplicationRecord
         "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
         "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (apart from specified ignored attributes).\n"\
         "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
-        "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
       if updated_schools_attribute_frequency.any?
         summary_message <<
@@ -524,7 +537,7 @@ class School < ApplicationRecord
         if duplicate_schools.any?
           summary_message <<
             "Duplicate schools#{future_tense_dry_run} skipped:\n"\
-            "#{pretty_print_schools_list(duplicate_schools)}"
+            "#{pretty_print_school_list(duplicate_schools)}"
         end
       end
 

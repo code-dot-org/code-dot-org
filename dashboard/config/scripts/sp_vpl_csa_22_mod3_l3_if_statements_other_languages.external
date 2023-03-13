@@ -17,5 +17,7 @@ When checking for comparison between two integer values, we use the **comparison
 
 Finally, with the comparison operator, `age == 16` and `16 == age` will evaluate to the same boolean value. The order does not matter. 
 
-Let’s practice!
+---
+
+**Up next:** We will do more practice with variables, boolean statements, and conditionals!
 MARKDOWN

@@ -6,7 +6,7 @@ Background:
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape
   And I wait for the page to fully load
-  And I drag block "1" to block "3"
-  And I drag block "1" to block "4"
+  And I drag block "moveLeft" to block "whenLeft"
+  And I drag block "moveRight" to block "moveLeft"
   And I wait for 1 seconds
-  Then block "5" is child of block "4"
+  Then block "moveRight" is child of block "moveLeft"

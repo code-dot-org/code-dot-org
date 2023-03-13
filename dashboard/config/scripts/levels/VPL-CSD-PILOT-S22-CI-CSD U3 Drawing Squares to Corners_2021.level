@@ -56,7 +56,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20642,
     "name_suffix": "_2021",
-    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/drawing-shapes",
     "video_key": "csd_gamelab_draw_1",
     "show_type_hints": "false",
     "encrypted": "false",
@@ -65,11 +65,11 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-24T14:27:54.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-24T14:27:54.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-24T14:27:54.711+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Drawing Squares to Corners_2021\\\"\"],\"cloned_from\":\"CSD U3 Drawing Squares to Corners_2021\"},{\"changed_at\":\"2022-03-24 15:47:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-24 15:49:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-24 15:49:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

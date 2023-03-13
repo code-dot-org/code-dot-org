@@ -3,7 +3,6 @@ import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
 import DeleteAnimationDialog from './DeleteAnimationDialog';
@@ -72,7 +71,7 @@ class ListItemButtons extends React.Component {
               <i
                 key="trash"
                 className="fa fa-trash-o"
-                style={[styles.icon, styles.trash]}
+                style={{...styles.icon, ...styles.trash}}
                 onClick={this.openDeleteDialog}
               />
             </OverlayTrigger>
@@ -132,4 +131,4 @@ const styles = {
   }
 };
 
-export default Radium(ListItemButtons);
+export default ListItemButtons;

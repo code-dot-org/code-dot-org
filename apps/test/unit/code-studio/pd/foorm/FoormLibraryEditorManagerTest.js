@@ -1,30 +1,17 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {assert} from 'chai';
 
-import {
-  stubRedux,
-  restoreRedux,
-  getStore,
-  registerReducers
-} from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
-import FoormLibraryEditorManager, {
-  UnconnectedFoormLibraryEditorManager
-} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
-import foorm from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
+import FoormEntityLoadButtons from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
+import {UnconnectedFoormLibraryEditorManager as FoormLibraryEditorManager} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import sinon from 'sinon';
-import {Button, DropdownButton} from 'react-bootstrap';
 
 global.$ = require('jquery');
 
 describe('FoormLibraryEditorManager', () => {
-  let defaultProps, store, server, wrapper;
+  let defaultProps, server, wrapper;
   beforeEach(() => {
-    stubRedux();
-    registerReducers({foorm});
-
     // Default fake server is set up to respond to selection of a library
     // and return a single library question.
     server = sinon.fakeServer.create();
@@ -34,23 +21,27 @@ describe('FoormLibraryEditorManager', () => {
       JSON.stringify([{id: 2, name: 'a_library_question_name', type: 'radio'}])
     ]);
 
-    store = getStore();
-
     defaultProps = {
       populateCodeMirror: () => {},
       resetCodeMirror: () => {},
-      categories: ['surveys/pd']
+      categories: ['surveys/pd'],
+      questions: {},
+      fetchableLibraries: [],
+      fetchableLibraryQuestionsForCurrentLibrary: [],
+      setFetchableLibraryQuestions: () => {},
+      setLastSaved: () => {},
+      setSaveError: () => {},
+      setLibraryQuestionData: () => {},
+      setHasJSONError: () => {},
+      setHasLintError: () => {},
+      setLastSavedQuestions: () => {},
+      setLibraryData: () => {}
     };
 
-    wrapper = mount(
-      <Provider store={store}>
-        <FoormLibraryEditorManager {...defaultProps} />
-      </Provider>
-    );
+    wrapper = shallow(<FoormLibraryEditorManager {...defaultProps} />);
   });
 
   afterEach(() => {
-    restoreRedux();
     server.restore();
   });
 
@@ -69,37 +60,41 @@ describe('FoormLibraryEditorManager', () => {
   it('keeps library question choice disabled and editor hidden on load', () => {
     assert(
       wrapper
-        .find(DropdownButton)
+        .find(FoormEntityLoadButtons)
         .at(1)
-        .prop('disabled')
+        .prop('isDisabled')
     );
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
   });
 
   it('enables library question choice and keeps editor hidden on library load', () => {
-    // Tricky to click item within menu -- executing click handler directly.
-    const unconnectedManager = wrapper
-      .find(UnconnectedFoormLibraryEditorManager)
-      .instance();
-
-    unconnectedManager.loadLibraryQuestionChoices(sampleExistingLibraryData);
+    wrapper
+      .find(FoormEntityLoadButtons)
+      .at(0)
+      .prop('onSelect')(sampleExistingLibraryData);
 
     assert(
       wrapper
-        .find(DropdownButton)
+        .find(FoormEntityLoadButtons)
         .at(1)
-        .prop('disabled')
+        .prop('isDisabled')
     );
 
     server.respond();
-    wrapper.update();
+    // calls setFetchableLibraryQuestions which results in
+    wrapper.setProps({
+      libraryId: sampleExistingLibraryData.id,
+      fetchableLibraryQuestionsForCurrentLibrary: [
+        sampleExistingLibraryQuestionData
+      ]
+    });
 
     assert.isFalse(
       wrapper
-        .find(DropdownButton)
+        .find(FoormEntityLoadButtons)
         .at(1)
-        .prop('disabled')
+        .prop('isDisabled')
     );
   });
 
@@ -112,57 +107,22 @@ describe('FoormLibraryEditorManager', () => {
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
 
-    // Tricky to click item within menu -- executing click handler directly.
-    const unconnectedManager = wrapper
-      .find(UnconnectedFoormLibraryEditorManager)
-      .instance();
-
-    unconnectedManager.loadLibraryQuestionChoices(sampleExistingLibraryData);
-
-    server.respond();
-    wrapper.update();
-
-    assert.equal(wrapper.find(FoormEntityEditor).length, 0);
-
-    unconnectedManager.loadLibraryQuestionData(
-      sampleExistingLibraryQuestionData
-    );
-
-    server.respond();
-    wrapper.update();
-
-    assert.equal(wrapper.find(FoormEntityEditor).length, 1);
-  });
-
-  it('shows blank editor on new library click', () => {
-    assert.equal(wrapper.find(FoormEntityEditor).length, 0);
-
-    // The second button is "New Library"
     wrapper
-      .find(Button)
+      .find(FoormEntityLoadButtons)
+      .at(0)
+      .prop('onSelect')(sampleExistingLibraryData);
+
+    server.respond();
+    wrapper.update();
+
+    assert.equal(wrapper.find(FoormEntityEditor).length, 0);
+
+    wrapper
+      .find(FoormEntityLoadButtons)
       .at(1)
-      .simulate('click');
-    wrapper.update();
+      .prop('onSelect')(sampleExistingLibraryQuestionData);
 
-    assert.equal(wrapper.find(FoormEntityEditor).length, 1);
-  });
-
-  it('shows blank editor on new library question click', () => {
-    // Need to select a library first before "New Library Question" button is enabled.
-    // Tricky to click item within menu -- executing click handler directly.
-    const unconnectedManager = wrapper
-      .find(UnconnectedFoormLibraryEditorManager)
-      .instance();
-
-    unconnectedManager.loadLibraryQuestionChoices(sampleExistingLibraryData);
-
-    assert.equal(wrapper.find(FoormEntityEditor).length, 0);
-
-    // The fourth button is "New Library Question"
-    wrapper
-      .find(Button)
-      .at(3)
-      .simulate('click');
+    server.respond();
     wrapper.update();
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 1);

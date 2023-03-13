@@ -7,9 +7,6 @@ const ADD_RESOURCE = 'resourcesEditor/ADD_RESOURCE';
 const EDIT_RESOURCE = 'resourcesEditor/EDIT_RESOURCE';
 const REMOVE_RESOURCE = 'resourcesEditor/REMOVE_RESOURCE';
 
-// Contains operations that can be done for migrated resources,
-// i.e. ones backed by the Resource model on Rails
-
 export const initResources = (resourceContext, resources) => ({
   type: INIT,
   resourceContext,

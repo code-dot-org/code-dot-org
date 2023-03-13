@@ -21,7 +21,7 @@ social:
 # Poznaj sztuczną inteligencję (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">Nowy Moduł AI i uczenia maszynowego</h2><p>Nasz nowy moduł nauczania koncentruje się na etyce AI, analizuje kwestie stronniczości oraz bada i wyjaśnia podstawowe pojęcia poprzez działania online i bez dostępu do sieci oraz dyskusje w całej grupie.</p><a  href="#about-aimodule"><button>Ucz się więcej</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Poznaj moduł</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">Nowy Moduł AI i uczenia maszynowego</h2><p>Nasz nowy moduł nauczania koncentruje się na etyce AI, analizuje kwestie stronniczości oraz bada i wyjaśnia podstawowe pojęcia poprzez działania online i bez dostępu do sieci oraz dyskusje w całej grupie.</p><a  href="#about-aimodule"><button>Ucz się więcej</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Poznaj moduł</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ Dołącz do nas, aby odkrywać sztuczną inteligencję w nowej serii filmów, tr
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## Nowy Moduł AI i uczenia maszynowego
 <div>
-<div class="col-50">
-<p>Moduł AI i uczenia maszynowego to w przybliżeniu pięciotygodniowy moduł nauczania, który może być <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samodzielnym modułem</a> lub opcjonalnie <a href="https://studio.code.org/s/csd7-2021">jednostką w Odkryciach informatyki</a>. Koncentruje się na etyce AI, analizuje kwestie stronniczości oraz bada i wyjaśnia podstawowe pojęcia</p><p>Ponieważ uczenie maszynowe zależy od dużych zestawów danych, nowa jednostka zawiera zestawy danych z życia wzięte dotyczące opieki zdrowotnej, demografii i nie tylko, aby zaangażować uczniów podczas badania pytań typu „Na czym polega problem, w którym może pomóc uczenie maszynowe?” „Jak AI może pomóc społeczeństwu?” „Kto korzysta z AI?” „Kto jest krzywdzony?” "Kto jest zamieszany?" "Kto traci?"  </p>
-<p>Kwestie etyczne będą na czele tych dyskusji, z częstymi kwestiami i lekcjami na temat wpływu tych technologii. Pomoże to uczniom rozwinąć całościowe, przemyślane zrozumienie tych technologii, jednocześnie poznając techniczne podstawy ich działania.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Poznaj moduł</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>Moduł AI i uczenia maszynowego to w przybliżeniu pięciotygodniowy moduł nauczania, który może być <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samodzielnym modułem</a> lub opcjonalnie <a href="https://studio.code.org/s/csd7-2021">jednostką w Odkryciach informatyki</a>. Koncentruje się na etyce AI, analizuje kwestie stronniczości oraz bada i wyjaśnia podstawowe pojęcia</p><p>Ponieważ uczenie maszynowe zależy od dużych zestawów danych, nowa jednostka zawiera zestawy danych z życia wzięte dotyczące opieki zdrowotnej, demografii i nie tylko, aby zaangażować uczniów podczas badania pytań typu „Na czym polega problem, w którym może pomóc uczenie maszynowe?” „Jak AI może pomóc społeczeństwu?” „Kto korzysta z AI?” „Kto jest krzywdzony?” "Kto jest zamieszany?" "Kto traci?"  </p>
+    <p>Kwestie etyczne będą na czele tych dyskusji, z częstymi kwestiami i lekcjami na temat wpływu tych technologii. Pomoże to uczniom rozwinąć całościowe, przemyślane zrozumienie tych technologii, jednocześnie poznając techniczne podstawy ich działania.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Poznaj moduł</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## Jak działa AI
 
 Ta seria krótkich filmów, przedstawiona przez CEO firmy Microsoft, Satyę Nadellę, wprowadzi Cię w sposób działania sztucznej inteligencji i dlaczego ma to znaczenie. Dowiedz się o sieciach neuronowych lub o tym, jak AI się uczy, i zagłęb się w takie kwestie, jak błąd algorytmiczny i etyka podejmowania decyzji w AI.
@@ -115,3 +114,5 @@ Poziomy 2-4 używają wstępnie wytrenowanego modelu dostarczonego przez projekt
 Poziomy 6-8 używają \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Patrzymy na każdy składnik ryby (taki jak oczy, usta, ciało) i łączymy wszystkie metadane dla składników (takich, jak liczba zębów, kształt ciała) w wektor liczb dla każdej ryby. Używamy tych wektorów do trenowania SVM. Na podstawie danych treningowych, SVM rozdziela „przestrzeń” wszystkich możliwych ryb na dwie części, które odpowiadają klasom, których próbujemy się nauczyć (np. „niebieski” lub „nie niebieski”).
 
 [Powrót na górę](#top)
+
+{{ visit_partial_event_logger }}

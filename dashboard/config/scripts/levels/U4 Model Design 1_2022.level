@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:45:44.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -55,7 +51,7 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "teacher_markdown": "Students will be using App Lab to create a simple prototype for their app.  Students who want to go further in making their apps functional can learn more about App Lab, watch demo videos, and work through tutorials at [https://code.org/educate/applab](https://code.org/educate/applab).",
-    "map_reference": "/docs/concepts/app-lab/design-mode/",
+    "map_reference": "/courses/csd-2022/guides/design-mode",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_applab_designmode",
@@ -64,6 +60,10 @@
     },
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:45:44.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:45:44.255+00:00\",\"changed\":[\"cloned from \\\"U4 Model Design 1_2021\\\"\"],\"cloned_from\":\"U4 Model Design 1_2021\"}]"

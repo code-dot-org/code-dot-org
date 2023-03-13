@@ -72,7 +72,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
           __useDeprecatedTag
           text={i18n.coursesCardAction()}
           href={'/courses'}
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
         />
       )}
     </div>
@@ -108,10 +108,16 @@ export const studentsFormatter = function(studentCount, {rowData}) {
         __useDeprecatedTag
         text={i18n.addStudents()}
         href={manageStudentsUrl}
-        color={Button.ButtonColor.gray}
+        color={Button.ButtonColor.neutralDark}
       />
     ) : (
-      <a style={tableLayoutStyles.link} href={manageStudentsUrl}>
+      <a
+        style={tableLayoutStyles.link}
+        href={manageStudentsUrl}
+        aria-label={i18n.manageStudentsAriaLabel({
+          numStudents: studentCount
+        })}
+      >
         {rowData.studentCount}
       </a>
     );
@@ -161,19 +167,25 @@ class OwnedSectionsTable extends Component {
     if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function(obj) {
-        return mult * StudentGradeLevels.concat(null).indexOf(obj.grade);
+        return (
+          mult *
+          StudentGradeLevels.concat(null).indexOf(
+            obj.grades ? obj.grades[0] : null
+          )
+        );
       });
     } else {
       return orderBy(data, activeColumn, directionArray);
     }
   };
 
-  gradeFormatter = (grade, {rowData}) => {
+  gradeFormatter = (grades, {rowData}) => {
+    const formattedGrades = rowData.grades ? rowData.grades.join(', ') : null;
     return (
       <div>
         {this.props.isPlSections
           ? participantNames[rowData.participantType]
-          : rowData.grade}
+          : formattedGrades}
       </div>
     );
   };
@@ -237,7 +249,7 @@ class OwnedSectionsTable extends Component {
         }
       },
       {
-        property: this.props.isPlSections ? 'participantType' : 'grade',
+        property: this.props.isPlSections ? 'participantType' : 'grades',
         header: {
           label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
           props: {

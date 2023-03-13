@@ -20,4 +20,6 @@ Dashboard::Application.initialize!
 # It also will ignore tables starting with an underscore, which are temporarily created
 # when we use the gh-ost online migration tool to migrate large tables
 # without significant downtime.
-ActiveRecord::SchemaDumper.ignore_tables = ['overflow_activities', /^_/]
+# Google_sheets_ tables are created from pegasus and since they have dynamic column definition
+# from a CSV file, they are excluded from active record
+ActiveRecord::SchemaDumper.ignore_tables = ['overflow_activities', /^_/, /^google_sheets_.*/]

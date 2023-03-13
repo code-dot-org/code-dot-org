@@ -19,7 +19,7 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
       ? `summary-progress-row-${lessonNumber}`
       : `progress-lesson-${lessonNumber}`;
 
-    document.getElementById(completedLessonElementId).scrollIntoView();
+    document.getElementById(completedLessonElementId)?.scrollIntoView();
   };
 
   return (

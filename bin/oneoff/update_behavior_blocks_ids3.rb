@@ -14,24 +14,24 @@
 
 require_relative '../../dashboard/config/environment'
 
-BEHAVIORAL_DEFINITION_NAMES = %w(
-  driving\ with\ arrow\ keys
-  growing
-  jittering
-  moving\ east
-  moving\ north
-  moving\ south
-  moving\ west
-  moving\ with\ arrow\ keys
-  patrolling
-  shrinking
-  spinning\ left
-  spinning\ right
-  swimming\ left\ and\ right
-  wandering
-  chasing
-  acting\ goofy
-).freeze
+BEHAVIORAL_DEFINITION_NAMES = [
+  'driving with arrow keys',
+  'growing',
+  'jittering',
+  'moving east',
+  'moving north',
+  'moving south',
+  'moving west',
+  'moving with arrow keys',
+  'patrolling',
+  'shrinking',
+  'spinning left',
+  'spinning right',
+  'swimming left and right',
+  'wandering',
+  'chasing',
+  'acting goofy'
+].freeze
 
 SCRIPT_NAMES = %w(
   coursee-2022
@@ -39,7 +39,7 @@ SCRIPT_NAMES = %w(
   express-2022
 ).freeze
 
-$level_names_to_be_updated = Script.where(name: SCRIPT_NAMES).map(&:levels).flatten.map(&:name).to_set
+$level_names_to_be_updated = Unit.where(name: SCRIPT_NAMES).map(&:levels).flatten.map(&:name).to_set
 
 def level_to_be_updated?(level_name)
   $level_names_to_be_updated.include? level_name

@@ -453,6 +453,7 @@ pl-PL:
   homepage_banner_40k_teachers_link: Dowiedz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
+  homepage_slot_text_blurb_hoc_2022: Badaj, baw się i twórz!
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
   homepage_slot_text_link_about_hoc: O Godzinie Kodowania
   homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
@@ -478,16 +479,23 @@ pl-PL:
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
   homepage_slot_text_link_shop: Koszulki, czapki i inne
+  homepage_slot_text_link_thebadguys: Koduj ze złymi facetami
   homepage_slot_text_link_administrators: Wprowadź informatykę do swojej szkoły
-  homepage_gallery_header: Utworzono ponad %{project_count} mln projektów w Code.org
+  homepage_gallery_header: W code.org utworzono ponad %{project_count} mln projektów
   homepage_header_donors: Code.org dziękuje za wsparcie
-  homepage_donors_seall: Zobacz wszystkich
+  homepage_donors_seall: 'Zobacz więcej wspierających '
   homepage_donors_donate: Podaruj
   homepage_below_hero_announcement_text: Dbamy o Twoją prywatność i dokonujemy kilku
     aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja.
   homepage_below_hero_announcement_link_text: Dowiedz się więcej
   homepage_higher_power_body: Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu
     na żywo.
+  homepage_thebadguys_body: Zakoduj przygodę z panią Tarantulą, panem Wolf i resztą
+    bohaterów filmu **The Bad Guys**!
+  homepage_csa_subhead: Nowe podejście do
+  homepage_csa_title: AP® Computer Science A
+  homepage_csa_body: Zapewnij uczniom kreatywne projekty związane ze światem rzeczywistym
+    w naszym programie nauczania opartym na równości.
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -668,6 +676,8 @@ pl-PL:
   video_title_marco_belinelli: Godzina Kodowania z Marco Belinellim
   video_title_chris_bosh: Chris Bosh o informatyce
   video_title_my_name_is_aracely: Nazywam się Aracely
+  video_title_change_face_of_cs: Zmień oblicze informatyki
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 min
   video_2min: 2 min
   video_3min: 3 min
@@ -804,6 +814,7 @@ pl-PL:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 ochotników
   volunteer_engineer_submission_num_volunteers_10: 10 ochotników
   volunteer_engineer_submission_num_volunteers_25: 25 ochotników
@@ -1321,6 +1332,9 @@ pl-PL:
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
   coursed-2021_name: Kurs D (2021)
+  coursed-2022_name: Kurs D (2021)
+  coursee-2022_name: Kurs E (2022)
+  coursef-2022_name: Kurs F (2022)
   express-2018_name: Szybki Kurs (2018)
   pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
   express-2019_name: Kurs ekspresowy (2019)
@@ -1328,6 +1342,7 @@ pl-PL:
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
+  pre-express-2022_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2022)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: Przyspieszony kurs
@@ -1342,6 +1357,8 @@ pl-PL:
   iceage_name: Epoka lodowcowa
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bloki)
+  hoc-impact-study_name: Klasyczny labirynt z ankietą
+  flappy-impact-study_name: Kod Flappiego z ankietą
   hoc-encryption_name: Proste szyfrowanie
   text-compression_name: Kompresja tekstu
   applab_name: App Lab
@@ -1443,6 +1460,12 @@ pl-PL:
   coursed-2021_gradelevel: Klasa 8+
   coursee-2021_gradelevel: W wieku 8-12
   coursef-2021_gradelevel: W wieku 9-13
+  coursea-2022_gradelevel: W wieku 4-7
+  courseb-2022_gradelevel: W wieku 5-8
+  coursec-2022_gradelevel: W wieku 6-10
+  coursed-2022_gradelevel: Klasa 8+
+  coursee-2022_gradelevel: W wieku 8-12
+  coursef-2022_gradelevel: W wieku 9-13
   accelerated_gradelevel: W wieku 10-18
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
@@ -1643,8 +1666,8 @@ pl-PL:
   courseb-2020_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
     w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
     udostępnić.
-  coursec-2020_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
-    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+  coursec-2020_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i
+    zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
     rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
     utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2020_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
@@ -1655,7 +1678,7 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
-    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
     znajomym i rodzinie.
@@ -1665,8 +1688,8 @@ pl-PL:
   courseb-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
     w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
     udostępnić.
-  coursec-2021_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
-    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+  coursec-2021_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i
+    zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
     rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
     utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
   coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
@@ -1677,7 +1700,29 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
-    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
+    tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
+    znajomym i rodzinie.
+  coursea-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
+    w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+    udostępnić.
+  courseb-2022_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
+    w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+    udostępnić.
+  coursec-2022_shortdescription_congrats: Twórz programy z sekwencjami, pętlami i
+    zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+    rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
+    utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursed-2022_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
+    zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą
+    się o obywatelstwie cyfrowym.
+  coursee-2022_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów,
+    pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W
+    drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
+    udostępnić znajomym i rodzinie.
+  coursef-2022_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
+    zdarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
     znajomym i rodzinie.
@@ -2223,6 +2268,7 @@ pl-PL:
   header_educate_beyond: Poza Code.org
   header_educate_inspire: Inspiruj ucznia
   header_educate_community: Społeczność online
+  header_educate_requirements: Wymagania Techniczne
   header_educate_tools: Narzędzia i filmy
   header_about_us: O nas
   header_about_leadership: Przywództwo
@@ -2345,6 +2391,13 @@ pl-PL:
   hoc_overview_dance_2019_subtitle: 'Koduj Potańcówkę, aby podzielić się ze znajomymi.
     Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj i 34 innych!'
+  hoc_overview_dance_2022_subtitle: Koduj imprezę taneczną, aby podzielić się nią
+    ze znajomymi. Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+    muzyka z filmu Disneya „Encanto,” i więcej!
+  hoc_overview_hello_world_2022_subtitle: Wybierz jeden z czterech zabawnych motywów,
+    aby zakodować interaktywne postacie w tworzonym przez siebie świecie.
+  hoc_overview_hello_world_2022_alt_text: Animowane astronauta i postacie zwierząt
+    unoszące się wokół ilustracji ziemi
   hoc_overview_title: Aktywności Godziny Kodowania z Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com"> Godzina Kodowania (Hour
     of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów
@@ -2422,10 +2475,18 @@ pl-PL:
     udział w otwartych warsztatach poświęconych Godzinie Kodowania. Dla uczestników
     na dowolnym poziomie umiejętności, w wieku sześciu i więcej lat.
   hoc2018_mc_educators_box3_button: Znajdź warsztaty
+  hoc2022_mc_educators_box3_desc_markdown: 'Skorzystaj z tego na żądanie [darmowy
+    kurs](%{free_course_link}) lub zarejestruj całą klasę, aby wziąć udział w warsztatach
+    Hour of Code na żywo z gościnnym nauczycielem. Oferowane wielokrotnie podczas
+    CSEW, Dec 6 - 11. '
+  hoc2022_mc_educators_box3_button: Zarejestruj się teraz
   hoc2018_mc_educators_box4_title: Skorzystaj z większej ilości zasobów informatycznych
   hoc2018_mc_educators_box4_desc: Powoduj zmiany w swojej społeczności dzięki umiejętnościom
     cyfrowym i zasobom informatycznym firmy Microsoft.
   hoc2018_mc_educators_box4_button: Wykorzystuj zasoby
+  hoc2022_mc_educators_box4_desc: Inspiruj pasję STEM u uczniów K-12 dzięki 200hr
+    programowi informatyki, od bloku do pytona, wspieranym przez rozwój zawodowy.
+  hoc2022_mc_educators_box4_button: Kontynuuj naukę
   hoc2018_mc_watch_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów
   hoc2018_mc_videos_more: Więcej <a href='%{inspiring_videos_playlist}'> inspirujących
     filmów</a> pokazujących role modeli i gwiazd
@@ -2595,6 +2656,13 @@ pl-PL:
   hoc2021_mc_mee_ai_title: AI Na dobre
   hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami
     i naucz się kodować w grze Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Posiadłość Minecraft Escape
+  hoc2022_mc_mee_description: 'Ucieknij z tajemniczej rezydencji o świcie i zarobić
+    milion szmaragdów! Nowy samouczek Minecraft Hour of Code jest już dostępny w Minecraft:
+    Education Edition dla systemów Windows, Mac, Chromebook, Ipad i Mobile. Zacznij
+    korzystać z bezpłatnych zasobów dla nauczycieli, szkolenia, i filmy. '
+  hoc2022_mc_mee_timecraft_description: 'Cofnij się w czasie, aby uratować przyszłość
+    w tej bezpłatnej lekcji kodowania w grze Minecraft: Education Edition.'
   footer_powered_by_aws: 'Amazon Web Services i logo “Powered by AWS” są znakami towarowymi
     Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych
     krajach.
@@ -2683,6 +2751,11 @@ pl-PL:
   ai_ecs: 'ECS: Sztuczna inteligencja (AI)'
   ai_ecs_description: Nowa alternatywna jednostka programowa dla programu nauczania
     Odkrywanie Informatyki (ECS).
+  ai_aiedu_intro: 'AiEdu: Wprowadzenie do sztucznej inteligencji'
+  ai_aiedu_intro_description: Wprowadzenie do sztucznej inteligencji jest bezpłatne,
+    innowacyjny, kulturowo odpowiedni program nauczania, w którym uczniowie rozwijają
+    konceptualną wiedzę na temat tego, czym jest sztuczna inteligencja i jak jest
+    używana w prawdziwym świecie.
   ai_elements: Elementy sztucznej inteligencji (AI)
   ai_elements_description: Seria bezpłatnych kursów online utworzonych przez Reaktor
     i Uniwersytet Helsiński.
@@ -2696,3 +2769,33 @@ pl-PL:
   outbreak_tile_alt: Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych
     potworów.
   footer_cookie_notice: Informacja o plikach cookie
+  top_hoc_tutorial_applab_alt_text: Brązowa dłoń z palcem wskazującym dotykająca tabletu
+    z ekranem dotykowym emitującego gwiazdy i promienie światła na niebieskim tle
+  minecraft_tile_alt: Dwie postacie Minecrafta, Steve i Alex na tle przedstawiającym
+    wodną scenę Minecrafta z koralami, delfinami i wodorostami
+  hoc2022_banner_title: Odkrywaj, graj, twórz!
+  hoc2022_banner_description: Eksploruj wszechświat, strzel gola, wykonaj ruch — jest
+    tak wiele sposobów wykorzystania informatyki!
+  hoc2022_cta_primary: Zobacz, co nowego
+  hoc2022_cta_secondary: Wypróbuj więcej zajęć
+  hoc2022_landing_page_explore_title: Odkrywaj
+  hoc2022_landing_page_explore_description: Otwórz drzwi do nowych światów dzięki
+    informatyce!
+  hoc2022_landing_page_play_title: Graj
+  hoc2022_landing_page_play_description: Weź udział i wygraj!
+  hoc2022_landing_page_create_title: Utwórz
+  hoc2022_landing_page_create_description: Stwórz coś dziwnego i wspaniałego!
+  hoc2022_landing_page_banner_alt_left: Obcy tańczący obok Saturna w kosmosie
+  hoc2022_landing_page_banner_alt_right: Robot dryblujący piłką w przestrzeni przed
+    startującą rakietą
+  try_it_yourself: Wypróbuj to sam!
+  try_an_activity: Wypróbuj zajęcia
+  see_more_activities: Zobacz więcej aktywności
+  hoc2022_nasa_webb_alt_text: Ilustracja teleskopu NASA James Webb
+  hoc2022_nasa_banner_heading: Dołącz do NASA, aby wziąć udział w specjalnej sesji
+    Godziny Kodowania o informatyce w kosmosie!
+  hoc2022_nasa_banner_description: Premiera 10 rano ET, 5 grudnia na kanale YouTube
+    NASA STEM.
+  hoc2022_nasa_banner_heading_posthoc: Sprawdź specjalny diał Godziny Kodowania NASA
+    o informatyce w kosmosie!
+  microsoft_logo_alt: Logo Microsoft

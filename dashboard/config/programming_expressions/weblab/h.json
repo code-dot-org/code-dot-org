@@ -26,6 +26,6 @@
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_hn.asp",
   "short_description": "Heading\nThis tag is used to create different sized section titles throughout a web page. The &lt;h1&gt; through &lt;h6&gt; tags are used to create headings on a page, where &lt;h1&gt; is the largest and &lt;h6&gt; is the smallest.",
-  "syntax": "```\n<h1></h1>\n<h2></h2>\n<h3></h3>\n<h4></h4>\n<h5></h5>\n<h6></h6>",
+  "syntax": "<h1></h1>",
   "tips": "* There are different sized headings which are marked by the number in the heading tag. They go from `<h1>` to `<h6>`.\r\n* The `<h1>` tag is the largest font size.\r\n* The `<h6>` tag is the smallest font size.\r\n"
 }

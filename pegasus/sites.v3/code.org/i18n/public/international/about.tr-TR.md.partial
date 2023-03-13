@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org kursları, tüm dünyada on milyonlarca öğrenci ve bir milyon öğretmen tarafından kullanılmaktadır.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Tarihçe
 
 2013 yılında Code.org, ikiz kardeşler Hadi ve Ali Partovi tarafından [ bilgisayar bilimini tanıtan bir videoyla ](https://www.youtube.com/watch?v=nKIu9yen5nc) başlatıldı. Bu video, bir günde YouTube'da #1 numara oldu ve 15.000 okul yardım için bize ulaştı. O zamandan beri, dünya çapında bir hareketi destekleyen tam bir organizasyon oluşturmak için bünyesi içinde gönüllülerden oluşan kadrosundan genişledik. Kaliteli bir bilgisayar bilimi eğitiminin sadece şanslı birkaç çocuğa değil, her çocuğa sunulması gerektiğine inanıyoruz.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Neler Yapıyoruz
 
@@ -43,7 +43,7 @@ Web sitemizin trafiğinin %40'ından fazlası Amerika Birleşik Devletleri dış
 
 ## Ücretsiz müfredat ve açık kaynak teknolojisi bizim sözümüzdür
 
-Oluşturduğumuz tüm müfredat kaynakları ve dersler sonsuza kadar ücretsiz olarak kullanılabilecek ve bir [ Genel Oluşturucu ](http://creativecommons.org/licenses/by-nc-sa/4.0/) yetkisi altında açık bir şekilde yetkilendirilecektir, böylelikle başkalarının ticari olmayan amaçlarla çeşitli eğitim kaynakları yapmasına izin verir. Materyallerimizi ticari amaçlar doğrultusunda yetkilendirmek ile ilgileniyorsanız, [ bize ulaşın ](/contact). Kurslarımız dünya çapında veya farklı dilleri konuşan kişiler tarafından çevrilmektedir. Teknolojimiz, bir [açık kaynak projesi](https://github.com/code-dot-org/code-dot-org) olarak geliştirilmektedir.
+Oluşturduğumuz tüm müfredat kaynakları ve dersler sonsuza kadar ücretsiz olarak kullanılabilecek ve bir [ Genel Oluşturucu ](http://creativecommons.org/licenses/by-nc-sa/4.0/) yetkisi altında açık bir şekilde yetkilendirilecektir, böylelikle başkalarının ticari olmayan amaçlarla çeşitli eğitim kaynakları yapmasına izin verir. Materyallerimizi ticari amaçlar doğrultusunda yetkilendirmek ile ilgileniyorsanız, [ bize ulaşın ](/contact). Kurslarımız dünya çapında kullanılmak için farklı dilleri konuşan kişiler tarafından çevrilmektedir. Teknolojimiz, bir [açık kaynak projesi](https://github.com/code-dot-org/code-dot-org) olarak geliştirilmektedir.
 
 <img alt="Bir dizüstü bilgisayarı olan öğrenciler" src="/images/international/group_computer.jpg" width="100%" />
 

@@ -144,12 +144,22 @@ module Cdo
       raise
     end
 
-    # If +value+ is JSON, parse and wrap in ActiveSupport::OrderedOptions so
+    # If +value+ is JSON, parse it.
+    #
+    # If +value+ is a JSON array, return it.
+    #
+    # If +value+ is a JSON object, wrap in ActiveSupport::OrderedOptions so
     # property-method lookup chains are possible (e.g., secrets.secret.key).
+    #
+    # Otherwise, cast the value to a string.
+    #
     # @param value[String]
-    # @return [ActiveSupport::OrderedOptions, String]
+    # @return [Array, ActiveSupport::OrderedOptions, String]
     def parse_json(value)
-      ActiveSupport::OrderedOptions[JSON.parse(value).symbolize_keys]
+      parsed = JSON.parse(value)
+      return parsed if parsed.is_a?(Array)
+      return ActiveSupport::OrderedOptions[parsed.symbolize_keys] if parsed.is_a?(Hash)
+      return parsed.to_s
     rescue JSON::ParserError, TypeError
       value
     end

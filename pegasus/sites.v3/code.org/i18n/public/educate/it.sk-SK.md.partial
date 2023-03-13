@@ -1,0 +1,126 @@
+---
+title: IT požiadavky
+nav: educate_nav
+theme: responsive
+---
+
+# Technické požiadavky na tutoriály z Code.org
+
+## Hardvér
+
+- Pre vašu školu odporúčame internetové pripojenie s minimálnou rýchlosťou 15 MBit/s.
+- Najmenšia podporovaná veľkosť obrazovky je 1024 x 728 px.
+- Na naše kurzy pre základné a stredné školy – CS Discoveries (Informatické objavy), CS Principles (Princípy informatiky) a Intro to App Lab (Úvod do laboratória aplikácií), budete potrebovať stolný počítač či laptop s myšou (alebo touchpadom) a klávesnicu. Tieto kurzy zvyčajne nie sú podporované na tabletoch a mobilných zariadeniach. Výnimky týkajúce sa konkrétnych zariadení nájdete v časti „Podrobnosti o podpore mobilných zariadení a tabletov“ nižšie.
+- Všetok ďalší obsah, napríklad kurzy pre deti od 5 rokov (Základy informatiky) a aktivity v rámci Hodiny kódu je kompatibilný so všetkými modernými tabletmi, laptopmi a stolovými počítačmi, ale aj s iPadmi a Chromebookmi.
+- Chcete vedieť viac o podpore mobilných zariadení? Čítajte ďalej.
+
+## Minimálne podporované prehliadače a platformy
+
+<table>
+ <tr>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Prehliadač
+        </th>
+        <tr>
+          <td>Chrome 96.x</td>
+        </tr>
+        <tr>
+          <td>Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Edge 94.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 91.x</td>
+        </tr>
+      </table>
+  </td>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma
+        </th>
+        <tr>
+          <td>macOS 10.13</td>
+        </tr>
+        <tr>
+          <td>iOS 11.x</td>
+        </tr>
+        <tr>
+          <td>Windows 7</td>
+        </tr>
+        <tr>
+          <td>Android 6</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+  </td>
+ </tr>
+</table>
+
+## Stránky na odblokovanie
+
+Pre ten najlepší zážitok zo stránky Code.org odporúčame konzultovať sprístupnenie a odblokovanie nasledovných stránok s IT oddelením vašej školy alebo okresu.
+
+| Prioritné                                                        | URL                                                                                                        |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Potrebné**                                                     | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Voliteľné**                                                    | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Pre používanie videí na YouTube (režim rozšíreného súkromia)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Pre používanie videí na stránke Code.org**                     | `https://videos.code.org`                                                                                  |
+| **Pre používanie simulátora internetu**                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Pre používanie Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Pre používanie tlačidla na zdieľanie Google Classroom**        | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                      | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+
+## Podrobnosti o podpore mobilných zariadení a tabletov
+
+Žiadny z kurzov CS Discoveries (Informatické objavy), CS Principles (Principles informatiky) a Intro to App Lab (Úvod do laboratória aplikácií) nie je kompatibilný s tabletmi ani mobilnými zariadeniami – vyžaduje sa plnohodnotná klávesnica a myš (alebo touchpad na MacBook-u). Väčšina tabletov nie je podporovaná, až na nasledovné výnimky:
+
+- Microsoft Surface Pro s externou klávesnicou
+- iPad so systémom iPadOS 13.4 alebo novším a s externou klávesnicou, externou myšou alebo touchpadom.
+
+Všetok ďalší obsah, napríklad kurzy pre deti od 5 rokov (Základy informatiky) a aktivity v rámci Hodiny kódu je kompatibilný so všetkými modernými tabletmi, laptopmi a stolovými počítačmi, ale aj s iPadmi a Chromebookmi.
+
+### Mobilné telefóny
+
+Aktivity v rámci Hodiny kódu a Základy informatiky môžu byť absolvované na mobilných telefónoch. Hoci sú tieto aktivity použiteľné, nie sú optimalizované pre mobilný telefón a obsahujú niekoľko obmedzení (napr. tlačidlá na stránke môžu byť malé, prvky príslušenstva sa môžu zobrazovať mimo obrazovky a text sa môže ťažko zadávať pomocou klávesnice na obrazovke). Kurzy CS Discoveries (Informatické objavy), CS Principles (Princípy informatiky) a Intro to App Lab (Úvod do laboratória aplikácií) nie je možné otvoriť na mobilných zariadeniach.
+
+## Videá
+
+Na vkladanie videí do Code.org a do [vzdelávacej platformy online](https://studio.code.org) využívame službu [YouTube](https://www.youtube.com). V prípade škôl, ktoré majú zablokovaný YouTube, sa pokúšame zobraziť videá na prehrávači z Code.org.
+
+### Dá sa vám prehrať toto video?
+
+Pred začatím kurzov na stránke Code.org, si skúste prehrať video zobrazené nižšie a uistite sa, že všetko prebieha v poriadku.
+
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+Tento prehrávač sa používa v celom učebnom pláne. Pokúsi sa vám zobraziť video prostredníctvom služby YouTube a v prípade, že je táto služba zablokovaná, zobrazí video zo „záložného“ prehrávača od Code.org.
+
+### Video sa vám neprehráva?
+
+Ak video nejde spustiť, kontaktujte nás prostredníctvom e-mailovej adresy na support@code.org.
+
+Aktivity je však možné využiť aj bez videí.
+
+1. Všetky naše videá sme sprístupnili na stiahnutie [tu](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Ak vaša škola nemá dostatočnú šírku vlnového pásma, odporúčame vám videá stiahnuť a študentom/žiakom premietať na jednej veľkej obrazovke.
+2. Do našich aktivít sme pridali zelenú ikonu s odkazom na stiahnutie <img src="/images/green-download.png" width=25 height=25 /> každého videa. Tak je študentom umožnené stiahnuť si každú jednu z aktivít.
+3. Ak predošlé návrhy zlyhajú, k dispozícii je karta „Zobraziť poznámky“, ktorá poskytuje ekvivalent storyboardu videí.
+
+  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
+
+## Špeciálne nastavenia pre používateľov Google Apps/G-Suite
+
+Ak ste správcom služby G-suite, skontrolujte nastavenia obmedzení pre službu YouTube. Ak ste zvolili nastavenie „Prísne obmedzený prístup na YouTube“ alebo ak sa zobrazujú správy s textom „toto video bolo obmedzené“, pridajte náš kanál do zoznamu schválených kanálov. Pozrite si [tento návod](https://support.google.com/a/answer/6245597) od spoločnosti Google a zistíte, ako môžete pridať náš kanál do zoznamu schválených kanálov. Môžete si tiež pozrieť [tento návod](https://support.google.com/a/answer/6212415?hl=en) a zistiť viac o rôznych nastaveniach a o tom, ktoré je pre vás a vašu triedu to najlepšie.
+
+## Stále máte problémy?
+
+Pomôžeme vám – kontaktujte nás prostredníctvom e-mailu na support@code.org

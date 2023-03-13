@@ -162,7 +162,7 @@ class Blockly < Level
   end
 
   def self.count_xml_blocks(xml_string)
-    unless xml_string.blank?
+    if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
       # The structure of the XML will be
       # <document>
@@ -187,14 +187,15 @@ class Blockly < Level
     default_category = category_node = Nokogiri::XML("<category name='Default'>").child
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
-      if block.attr('type') == 'category'
+      case block.attr('type')
+      when 'category'
         category_name = block.xpath(tag).text
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
         xml.child << category_node
         block.remove
-      elsif block.attr('type') == 'custom_category'
+      when 'custom_category'
         custom_type = block.xpath(tag).text
         category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
@@ -286,7 +287,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Script.should_cache?) do
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
 
       # For historical reasons, `localized_instructions` and
@@ -300,6 +301,7 @@ class Blockly < Level
 
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
+        set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
@@ -319,6 +321,8 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_loop_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_remaining_variable_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -383,7 +387,7 @@ class Blockly < Level
 
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['step'] = [1, 2].include?(step_mode_value)
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
@@ -441,6 +445,30 @@ class Blockly < Level
   def localized_long_instructions
     localized_long_instructions = get_localized_property("long_instructions")
     localized_blockly_in_text(localized_long_instructions)
+  end
+
+  def localized_start_html(start_html)
+    return unless start_html
+    start_html_doc = Nokogiri::HTML(start_html, &:noblanks)
+
+    # match any element that contains text
+    start_html_doc.xpath('//*[text()[normalize-space()]]').each do |element|
+      localized_text = I18n.t(
+        element.text,
+        scope: [:data, :start_html, name],
+        default: nil,
+        smart: true
+      )
+      element.content = localized_text if localized_text
+    end
+
+    # returning the children of body removes extra <html><body> tags added by parsing with ::HTML
+    # the save_with option prevents the to_html method from pretty printing and adding newlines
+    # see: https://github.com/premailer/premailer/issues/345
+    start_html_doc.xpath("//body").children.to_html(
+      encoding: 'UTF-8',
+      save_with: Nokogiri::XML::Node::SaveOptions::DEFAULT_HTML ^ Nokogiri::XML::Node::SaveOptions::FORMAT
+    )
   end
 
   def localized_authored_hints
@@ -685,6 +713,63 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
+  # Localizing variable names in "controls_for" block types
+  def localized_loop_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+    block_xml.xpath("//block[@type=\"controls_for\"]").each do |controls_for_block|
+      controls_for_name = controls_for_block.at_xpath("./#{tag}[@name=\"VAR\"]")
+      next unless controls_for_name
+      localized_name = I18n.t(
+        controls_for_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      controls_for_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing variable names in all remaining block types.
+  # @param blocks [String] an XML doc to be localized.
+  # @return [String] the given XML doc localized.
+  def localized_remaining_variable_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+
+    # The block types that are otherwise unaccounted for.
+    block_types = %w[
+      studio_ask
+      math_change
+      gamelab_textVariableJoin
+    ]
+
+    # Localize each 'catch-all' block type.
+    block_types.each do |block_type|
+      block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+        # Find all <title/field name="VAR" /> blocks and maybe update their
+        # content if there exists a localization key for them.
+        block.xpath("./#{tag}[@name=\"VAR\"]").each do |var|
+          localized_name = I18n.t(
+            var.content,
+            scope: [:data, :variable_names],
+            default: nil,
+            smart: true
+          )
+          var.content = localized_name if localized_name
+        end
+      end
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
   # Localizes all supported types of the given placeholder text blockly
   # blocks in the given XML document string.
   # @param blocks [String] an XML doc to be localized.
@@ -787,7 +872,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Unit.should_cache?) do
       SharedBlocklyFunction.where(level_type: shared_function_type).map(&:to_xml_fragment)
     end.join
   end
@@ -801,9 +886,16 @@ class Blockly < Level
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
 
-      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name|
-        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
-        name.content = localized_name if localized_name
+      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
+        localized_name = I18n.t(name_element.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name_element.content = localized_name if localized_name
+
+        mutation.xpath('.//description').each do |description|
+          # Using name_element['id'] so we still access the correct translation key even if the
+          # content has been translated in a previous step
+          localized_description = I18n.t(name_element['id'], scope: [:data, :behavior_descriptions, name], default: nil, smart: true)
+          description.content = localized_description if localized_description
+        end
       end
     end
 
@@ -863,7 +955,7 @@ class Blockly < Level
   end
 
   def update_goal_override
-    if goal_override&.is_a?(String)
+    if goal_override.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
   end

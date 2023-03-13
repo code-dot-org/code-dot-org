@@ -13,13 +13,6 @@ get '/:short_code' do |short_code|
   launch_tutorial(tutorial)
 end
 
-get '/v2/hoc/tutorial-metrics.json' do
-  only_for 'code.org'
-  forbidden! unless dashboard_user_helper && dashboard_user_helper.admin?
-  content_type :json
-  JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
-end
-
 # Link from Hour of Code 2014 employee engagement pages
 get '/api/hour/begin_company/:company' do |company|
   redirect "/learn?company=#{company}"
@@ -53,84 +46,6 @@ get '/api/hour/begin_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
   launch_tutorial_pixel(tutorial)
-end
-
-get '/api/hour/certificate/:filename' do |filename|
-  only_for ['code.org', 'csedweek.org', partner_sites].flatten
-
-  extname = File.extname(filename)
-  pass unless settings.image_extnames.include?(extname)
-
-  basename = File.basename(filename, extname)
-  session, width = basename.split('-')
-  pass unless row = DB[:hoc_activity].where(session: session).first
-
-  width = width.to_i
-  width = 0 unless width > 0 && width < 1754
-
-  begin
-    image = CertificateImage.create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
-    image.resize_to_fit!(width) unless width == 0
-    image.format = extname[1..-1]
-
-    dont_cache
-    content_type image.format.to_sym
-    image.to_blob
-  ensure
-    image && image.destroy!
-  end
-end
-
-get '/v2/hoc/certificate/:filename' do |filename|
-  only_for ['code.org']
-  extname = File.extname(filename)
-  encoded = File.basename(filename, extname)
-  begin
-    data = JSON.parse(Base64.urlsafe_decode64(encoded))
-  rescue ArgumentError, OpenSSL::Cipher::CipherError, JSON::ParserError
-    bad_request
-  end
-
-  extnames = ['.jpg', '.jpeg', '.png']
-  pass unless extnames.include?(extname)
-
-  format = extname[1..-1]
-  begin
-    image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
-    image.format = format
-
-    content_type format.to_sym
-    expires 0, :private, :must_revalidate
-    image.to_blob
-  ensure
-    image && image.destroy!
-  end
-end
-
-get '/api/hour/certificate64/:course/:filename' do |course, filename|
-  only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  extname = File.extname(filename)
-  encoded = File.basename(filename, extname)
-  begin
-    label = Base64.urlsafe_decode64(encoded)
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
-    bad_request
-  end
-
-  extnames = ['.jpg', '.jpeg', '.png']
-  pass unless extnames.include?(extname)
-
-  format = extname[1..-1]
-  begin
-    image = CertificateImage.create_course_certificate_image(label, course)
-    image.format = format
-
-    content_type format.to_sym
-    expires 0, :private, :must_revalidate
-    image.to_blob
-  ensure
-    image && image.destroy!
-  end
 end
 
 get '/api/hour/finish' do

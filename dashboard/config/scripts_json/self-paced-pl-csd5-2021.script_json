@@ -10,7 +10,8 @@
           "details": "If you are not already a verified teacher, click here to complete the form to become a verified teacher.",
           "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "dcc64b4b-0e4d-487f-b688-399046143625"
         }
       ],
       "has_verified_resources": true,
@@ -22,7 +23,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csd5",
-    "serialized_at": "2022-03-31 15:10:07 UTC",
+    "serialized_at": "2022-09-28 14:31:48 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -232,7 +233,7 @@
       "key": "b07a5f71-0de1-4d81-bf1d-70280229de24",
       "position": 1,
       "properties": {
-        "progression_name": "Overivew"
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "b07a5f71-0de1-4d81-bf1d-70280229de24",
@@ -574,7 +575,7 @@
         "level_keys": [
           "SP-VPL-21-mod5-PL-lesson2-overview"
         ],
-        "progression": "Overivew"
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {

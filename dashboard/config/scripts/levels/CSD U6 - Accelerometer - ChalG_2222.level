@@ -32,11 +32,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -81,7 +81,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Accessibility App\r\n\r\nCreate an app prototype that could be used to increase accessibility and access to technology for people with disabilities. For example, a non-verbal user could use the accelerometer and LEDs or buzzer to communicate. Or the circuit playground could buzz anytime the mouse moves over certain UI elements to let a person with a visual impairment know they can interact with that part of the app. For more ideas around accessibility and computing, you can visit the [Access CSforAll website](https://www.washington.edu/accesscomputing/accesscsforall/videos) for more ideas.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
@@ -92,10 +92,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/analog-sensors/",
-      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
-      "/docs/concepts/maker-toolkit/board-events/",
-      "/docs/concepts/maker-toolkit/data-and-change-events/"
+      "/courses/csd-2022/guides/analog-sensors",
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/data-and-change-events"
     ],
     "display_name": "Accessibility App",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
@@ -111,7 +111,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-21T22:15:46.859+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalD_2222\"},{\"changed_at\":\"2022-04-21 22:24:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-21T22:15:46.859+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalD_2222\"},{\"changed_at\":\"2022-04-21 22:24:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-16 17:57:47 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

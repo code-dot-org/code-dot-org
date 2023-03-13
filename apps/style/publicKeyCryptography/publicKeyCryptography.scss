@@ -18,7 +18,8 @@ $line-height: 30px;
     height: $line-height - 2px;
     line-height: $line-height - 2px;
 
-    .Select-placeholder, .Select-value {
+    .Select-placeholder,
+    .Select-value {
       line-height: $line-height - 2px;
     }
 
@@ -26,10 +27,9 @@ $line-height: 30px;
       height: $line-height - 2px;
       line-height: $line-height - 2px;
 
-      &> input {
+      & > input {
         padding: 2px 0 8px 0;
       }
     }
-
   }
 }

@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=1",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More",
+          "key": "49b4c824-bd90-438c-9244-9c2a8fc6edb2"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:21:14 UTC",
+    "serialized_at": "2022-12-06 15:27:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,7 +92,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Welcome to Computer Science Principles! The first lesson is about getting students excited about the course and connecting their own personal interests to computer science.  Students are asked to share something they know a lot about and teach it to a small group.  Groups make a “rapid” prototype of an innovative idea and share it.  Students watch a brief video about computing innovations.  The lesson ends with students logging into the Code.org CSP course web site, and answering a brief prompt about what “computer science” means to them.",
-        "preparation": "- Procure poster paper for sharing innovations\r\n- Queue up CS is Changing Everything video\r\n- Setup section in Code Studio for this course\r\n- Have student sign-up link ready to share",
+        "preparation": "- Procure poster paper for sharing innovations\n- Queue up CS is Changing Everything video\n- Setup section in Code Studio for this course\n- Have student sign-up link ready to share\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This activity plants the initial seed for students to think about the ways in which they might be able to solve some problems relevant to their lives with technological innovations. ",
         "student_overview": "Welcome to Computer Science Principles! Groups make a “rapid” prototype of an innovative idea and share it. Students watch a brief video about computing innovations.",
         "unplugged": true
@@ -101,7 +113,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using everyday materials, students create devices for sending information to a partner. Each group then uses its device to send an answer to a question. Following this, students modify their devices to answer more complex answers, responding with one of four possible messages, then one of eight possible messages, then one of sixteen possible messages.",
-        "preparation": "- Reusable and consumable supplies for the classroom, such as markers, small flashlights, noisemakers, bells, whistles, cups and string, straws, slinkies, blocks, or colored paper.",
+        "preparation": "- Reusable and consumable supplies for the classroom, such as markers, small flashlights, noisemakers, bells, whistles, cups and string, straws, slinkies, blocks, or colored paper.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces the concept of sending bits of information from one place to another. While building and modifying their information sending devices students should eventually recognize that it's easier to invent a system of communication that used a combination of patterns with a simple device, rather than making a new, or increasingly complex device for each new problem. This lays the foundation for understanding how complex information is represented in computers using a combination of bits. ",
         "student_overview": "Design a device for sending information across the room using common household supplies.",
         "unplugged": true
@@ -122,7 +134,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates.",
-        "preparation": "* Have scissors ready for groups to create [r ab-cutouts/csp/2021] or have these pre-cut and prepared before class\r\n",
+        "preparation": "* Have scissors ready for groups to create [r shape_cutouts/csp/2022] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "Eventually, students will need to understand the binary number system which uses 1's and 0's rather than circles and squares. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced. In wrestling with the challenge of describing the rules of ordering patterns of circles and squares clearly, students will be primed to see how the binary number system solves many of these problems. Students may discover a system that is equivalent to the binary number system, which is a feat worth celebrating, but it is not expected that every student uncovers the rules for binary in this lesson.",
         "student_overview": "Develop a system for creating and ordering patterns of shapes.",
         "unplugged": true
@@ -143,7 +155,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\n* Printed copies of [r flippy_do/csp/2022]\t\n* [KEY U1L4 Flippy Do Pt 1](https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
@@ -164,7 +176,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
-        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.",
+        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers.\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1gCIVlV9pXKbqQsUWvZNv-Yojl_SVK5JXjpZdbtf8Gxw/edit?usp=sharing)",
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "unplugged": true
@@ -185,7 +197,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students create a system for representing text using only numbers while communicating with each other. They are only allowed to send numbers back-and-forth, so they must create a system to translate between number and character. At the end of the main activity they briefly review the ASCII system for representing text. The wrap up discussion emphasizes how all of the concepts thus far have ‘built’ on each other and introduces the concept of abstraction to describe this progression.",
-        "preparation": "\r\n* Decide how you will distribute challenge phrases to students\r\n* Access to journals, paper, or other places that students can write down systems for the main activity.\r\n* Optionally print copies of ASCII Reference Sheet or prepare to project it",
+        "preparation": "\n* Decide how you will distribute challenge phrases to students\n* Access to journals, paper, or other places that students can write down systems for the main activity.\n* Optionally print copies of ASCII Reference Sheet or prepare to project it\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "After this lesson students will understand the ways the most common types of information, text and numbers, are stored using binary. More importantly they should understand the challenges or principles that led to the creation of these systems and that these systems are somewhat arbitrarily created to solve a shared problem. They work not because there was \"one right answer\" but because many people agreed to use them. The wrap up discussion begins to explore the concept of abstraction. This is a challenging concept to understand and one that students will return to many times throughout the course. In this context, we emphasize how common it is to send text messages to each other yet these messages rely on many smaller layers (like binary numbers and electrical signals) to truly function correctly.",
         "student_overview": "Develop a system for representing text using bits based on what you already know about representing numbers.",
         "unplugged": true
@@ -206,7 +218,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2021/stage/7/puzzle/1)",
+        "preparation": "\n* Practice using the pixelation widget\n* Copies of [r u1l7_black_and_white_images/csp/2022] for each pair of students\n* [KEY U1L7 Black and White Images](https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
         "student_overview": "Learn how computers represent black and white images using bits."
       },
@@ -226,7 +238,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
-        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information/csp/2021]\t\r\n",
+        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information/csp/2022]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
         "student_overview": "Learn how computers represent color images using bits."
       },
@@ -246,7 +258,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others.",
-        "preparation": "\r\n* Familiarize yourself with the Text Compression Widget\r\n* Open Unit 1 Slideshow to current lesson\r\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up",
+        "preparation": "\n* Familiarize yourself with the Text Compression Widget\n* Open Unit 1 Slideshow to current lesson\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "As students have been creating images over the last few lessons, the number of bits it takes to represent that information has grown and grown. In this lesson, students are introduced to the concept of compression as a way to address the growing file sizes of all of our information. This lesson is anchored by the Text Compression widget, which is a very hands-on & active widget for students to experiment with. Most of the lesson should be spent in the widget, having students experiment with different strategies for compression and creating a memorable experience to help anchor the concept of compression. Students also watch a video that introduces **lossless** and **lossy compression** - today’s lesson is an example of **lossless compression**, while tomorrow’s lesson is dedicated to **lossy compression**. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
         "student_overview": "Learn how computers can decrease the number of bits used to represent a piece of information."
       },
@@ -266,7 +278,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
-        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information/csp/2021] ready for the discussion towards the end of the lesson\r\n",
+        "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_-_digital_information/csp/2022] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost."
       },
@@ -286,7 +298,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article.",
-        "preparation": "\r\n* Print out [r fortnite-article/csp/2021] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.",
+        "preparation": "\n* Print out [r article_-_fortnite_stealing_dance_moves/csp/2022] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students have been examining how digital information is created and stored, but they have not closely examined the question of who owns their digital data and what rules govern how that information can be shared. This lesson introduces the concept of copyright by presenting students with an article that challenges their current understanding of digital ownership and makes them wrestle with some of the complexities of owning and sharing digital information. It’s important for students to talk through their ideas and hear the perspectives of their peers as they try to unpack how copyright law can impact society. Ultimately, students begin to form their own opinions about copyright focusing on how these policies impact the world around us and observing who benefits and who is harmed in particular copyright situations.\r\n\r\nThis lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence. Students may need support with these processes during this lesson so they are able to complete the following lesson independently. It is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \r\n",
         "student_overview": "Learn about how people can own digital information and the ways they can share access to their creative digital works.",
         "unplugged": true
@@ -308,7 +320,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students begin tackling the question of whether digitizing information has made the world a better or worse place. To begin the lesson, students place stickies on a spectrum of \"worse\" to \"better\" to state their opinion prior to doing the activity. Students then choose an article they are interested in reading using a process the class completed collectively in the previous lesson. Students will discuss their preliminary reading and opinions after today's lesson and will have a chance to start making an artifact to present their findings.",
-        "preparation": "* Print copies of articles for students",
+        "preparation": "* Print copies of articles for students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-digital-information-dilemmas-unit-1-lessons-12-13/36469) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "At this point in the unit students understand a great deal about how information is digitized and they are ready to start considering the impacts of digitization on society at large.\r\n\r\nThis lesson is very similar to the project that students will complete at the end of Unit 2 in which students evaluate the benefits and harms of connecting humanity through vast networks.",
         "student_overview": "Read about a current event or societal challenge created by the digitization of information.",
         "unplugged": true
@@ -330,7 +342,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students finish designing an artifact that represents their analysis of an article on the impacts of digitizing information. Students will complete the final two quadrants of their poster in which they identify the benefits and harms highlighted in the article and then make an overall claim about whether the world has been made better or worse through the digitization of information. At the conclusion of the class students update the position of their stickies on the \"better\" to \"worse\" spectrum they designed yesterday and then discuss whether and why they changed their opinion.",
-        "preparation": "* Make sure students have access to the posters they began designing in the previous lesson",
+        "preparation": "* Make sure students have access to the posters they began designing in the previous lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-digital-information-dilemmas-unit-1-lessons-12-13/36469) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is a continuation of the major unit project. Students continue to consider broad societal questions about the impacts of computing and the ways it is changing their world.",
         "student_overview": "Share the results of your reading and discuss with classmates the overall impacts of the digitization of information.",
         "unplugged": true
@@ -1163,7 +1175,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how_to_videos_1/csp/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how_to_videos/csp/2022] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
           }
         ]
       },
@@ -2018,7 +2030,7 @@
       "key": "8dadd407-4848-4ddc-9877-b0f44833eee7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and playwith the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
         "progression_name": "Widget: Binary Odometer"
       },
       "seeding_key": {
@@ -5669,11 +5681,10 @@
     },
     {
       "name": "Article - Fortnite Stealing Dance Moves",
-      "url": "https://drive.google.com/file/d/1zs-d_4L53qgPCtdg1e9Gw00QMx8NQpt0/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1RshIPOF9Sm9AYPLehNouZus4rkRDWX-7/view?usp=sharing",
       "key": "article_-_fortnite_stealing_dance_moves",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "article_-_fortnite_stealing_dance_moves"
@@ -5693,11 +5704,10 @@
     },
     {
       "name": "Athletes Don't Own Their Tattoos",
-      "url": "https://www.todayonline.com/world/athletes-dont-own-their-tattoos-thats-problem-video-game-developers",
+      "url": "https://www.nytimes.com/2018/12/27/style/tattoos-video-games.html?smid=url-share",
       "key": "athletes_don_t_own_their_tattoos",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "athletes_don_t_own_their_tattoos"
@@ -5731,7 +5741,7 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://youtu.be/QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything",
       "properties": {
         "audience": "Student",
@@ -5802,7 +5812,7 @@
     },
     {
       "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/view",
+      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/copy",
       "key": "csp_unit_1_-_digital_information",
       "properties": {
         "audience": "Teacher",
@@ -5911,7 +5921,7 @@
     },
     {
       "name": "Personal Innovations",
-      "url": "https://docs.google.com/document/d/14UBbBCYtaWskax2UOcE-vMdSBUelte9qdKRhgQ6SeJU/",
+      "url": "https://docs.google.com/document/d/1rUAaOVwSMBDYLoXKGhL5lxZix-Hgw51mzDvcgiF8RuE/view",
       "key": "personal_innovations",
       "properties": {
         "audience": "Student",
@@ -5924,7 +5934,7 @@
     },
     {
       "name": "Personal Innovations",
-      "url": "https://docs.google.com/document/d/1_ULIYnSwsMxOEZr0SHP_ueopo4qlIHFCyrfFcMhuDgE/",
+      "url": "https://docs.google.com/document/d/1v3BHA47QuQu9USBcrQvALigzlNNtQzaojlDQuZ57LZA/view",
       "key": "personal_innovations_1",
       "properties": {
         "audience": "Student",

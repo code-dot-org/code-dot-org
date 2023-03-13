@@ -68,10 +68,10 @@ end
 
 def sign_up(name)
   wait_proc = proc do
-    opacity = @browser.execute_script <<JS
-field = document.querySelector('#email-block > .error_in_field');
-return field ? parseInt(window.getComputedStyle(field).opacity) : 0;
-JS
+    opacity = @browser.execute_script <<~JS
+      field = document.querySelector('#email-block > .error_in_field');
+      return field ? parseInt(window.getComputedStyle(field).opacity) : 0;
+    JS
     expect(opacity).to eq(0)
   end
   page_load(wait_proc: wait_proc) do

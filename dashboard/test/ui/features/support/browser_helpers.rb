@@ -1,3 +1,5 @@
+require 'redcarpet'
+
 module BrowserHelpers
   def element_has_text(selector, expected_text)
     expected_text.gsub!('\"', '"')
@@ -18,6 +20,33 @@ module BrowserHelpers
     # Get localized text from server
     response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
     text.should eq response
+  end
+
+  # This function checks that the text within the given selector matches the
+  # text produced by rendering the markdown given by the localization string.
+  #
+  # This is used to test that localized markdown is being rendered in any given
+  # container element.
+  def element_has_i18n_markdown(selector, language, loc_key)
+    loc_key.gsub!('\"', '"')
+
+    # Grab html of the markdown container from the browser.
+    html = @browser.execute_script("return $(\"#{selector}\").html();")
+
+    # Get localized markdown from server.
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
+
+    # Render the markdown and remove whitespace.
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(filter_html: true))
+    expected_html = renderer.render(response)
+
+    # Compare just the text, assuming the structure is correct as we only care
+    # that the localized strings are being used. We remove whitespace to avoid
+    # any minor issues when the Markdown produces multiple newlines.
+    text = Nokogiri::HTML(html).text.gsub(/\s/, "")
+    expected_text = Nokogiri::HTML(expected_html).text.gsub(/\s/, "")
+
+    text.should eq expected_text
   end
 
   def element_text(selector)
@@ -58,7 +87,7 @@ module BrowserHelpers
   def element_has_css_multiple_properties(selector, properties, expected_value)
     expected = false
     properties.each do |property|
-      expected ||= (element_css_value(selector, property) === (expected_value))
+      expected ||= (element_css_value(selector, property) == (expected_value))
     end
     expected
   end

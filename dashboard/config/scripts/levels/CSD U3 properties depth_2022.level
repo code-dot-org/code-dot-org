@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:23.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -84,7 +80,7 @@
     "long_instructions": "# Height and Width\r\n\r\nYou learned about the scale property, which grows or shrinks a sprite while keeping their height to width ratio the same. But it is possible to only change the height or width of a sprite with other properties!\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the height and width properties and think about when you would want to use these properties versus using the scale property. \r\n\r\n",
     "parent_level_id": 19235,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -97,18 +93,22 @@
     "encrypted_examples": "VEwU/cGOv4ZIRa3cIYLkbPlA1kAEc6x3kU/TFMduSI9a8Vfxb4Sn++EgpkRl\nLnVAeyaOywqv6dOqxuYMM84ofg==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/sprite-interactions"
     ],
     "bubble_choice_description": "Stretch your sprite horizontally or vertically.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:23.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:23.599+00:00\",\"changed\":[\"cloned from \\\"CSD U3 properties depth_2021\\\"\"],\"cloned_from\":\"CSD U3 properties depth_2021\"}]"

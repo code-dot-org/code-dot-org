@@ -1,8 +1,10 @@
-@import 'color';
+@import "color.scss";
 
 .progress-bubble {
   &.enabled {
-    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+    transition:
+      background-color 0.2s ease-out,
+      border-color 0.2s ease-out,
       color 0.2s ease-out;
     &:hover {
       text-decoration: none;
@@ -15,6 +17,9 @@
 
 a.progress-bubble-link {
   display: inline-block;
+  // Use important to overwrite default projects link underline.
+  text-decoration: none !important;
+
   &:hover {
     text-decoration: none;
   }
@@ -24,7 +29,7 @@ table.progress-legend {
   margin-top: 60px;
   margin-bottom: 20px;
   &:nth-of-type(2) {
-    margin-top: 0px;
+    margin-top: 0;
   }
   &:only-of-type {
     width: 100%;
@@ -67,7 +72,7 @@ table.progress-legend {
     justify-content: center;
   }
   .level-details {
-    padding: 10px 0px;
+    padding: 10px 0;
     white-space: nowrap;
     div:nth-of-type(2) {
       padding-top: 16px;

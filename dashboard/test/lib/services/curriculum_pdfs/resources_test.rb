@@ -25,12 +25,13 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
 
     # mock some file operations for the 'download PDF from url' case
     IO.stubs(:copy_stream)
-    URI.stubs(:open).returns(StringIO.new)
+    URI.stubs(:parse)
   end
 
   test 'script resources PDF includes resources from all lessons' do
     script = create(:script, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
+    FileUtils.stubs(:cp)
 
     Dir.mktmpdir('script resources pdf test') do |tmpdir|
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.empty?}
@@ -63,6 +64,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     lesson.resources << verified_teacher_resource
     lesson_group.lessons << lesson
     script.reload
+    FileUtils.stubs(:cp)
 
     Dir.mktmpdir('script resources pdf test') do |tmpdir|
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.empty?}
@@ -95,7 +97,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   test 'resources that are externally-hosted PDFs can be downloaded' do
     resource = create(:resource, url: "https://example.com/test.pdf", include_in_pdf: true)
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
-      URI.expects(:open).with("https://example.com/test.pdf")
+      URI.expects(:parse).with("https://example.com/test.pdf")
       assert Services::CurriculumPdfs.fetch_resource_pdf(resource, tmpdir)
     end
   end

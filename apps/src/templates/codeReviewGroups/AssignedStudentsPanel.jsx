@@ -28,7 +28,7 @@ export default function AssignedStudentsPanel({
           onClick={onCreateGroupClick}
           icon={<FontAwesome icon="plus" className="fa" />}
           text={i18n.createGroup()}
-          style={styles.button}
+          inlineStyle={styles.button}
           isHorizontal
         />
       </div>

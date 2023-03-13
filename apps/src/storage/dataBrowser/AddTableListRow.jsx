@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import msg from '@cdo/locale';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 
 const INITIAL_STATE = {
   newTableName: ''
@@ -36,25 +36,27 @@ class AddTableListRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
-        <td style={dataStyles.cell}>
+      <tr className={dataStyles.row}>
+        <td className={dataStyles.cell}>
           <input
-            className="uitest-add-table-input"
-            style={dataStyles.input}
+            className={classNames('uitest-add-table-input', dataStyles.input)}
             placeholder={msg.dataTableNamePlaceholder()}
             value={this.state.newTableName}
             onChange={this.handleInputChange}
             onKeyUp={this.handleKeyUp}
           />
         </td>
-        <td style={dataStyles.cell}>
+        <td className={dataStyles.cell}>
           <button
-            className="uitest-add-table-btn"
+            className={classNames(
+              'uitest-add-table-btn',
+              dataStyles.button,
+              dataStyles.buttonBlue
+            )}
             type="button"
-            style={dataStyles.blueButton}
             onClick={this.handleAdd}
           >
-            Add
+            {msg.add()}
           </button>
         </td>
       </tr>
@@ -62,4 +64,4 @@ class AddTableListRow extends React.Component {
   }
 }
 
-export default Radium(AddTableListRow);
+export default AddTableListRow;

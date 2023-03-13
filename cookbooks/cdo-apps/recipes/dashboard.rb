@@ -1,2 +1,2 @@
-::Chef::Recipe.send(:include, CdoApps)
+::Chef::Recipe.include CdoApps
 setup_app 'dashboard'

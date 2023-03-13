@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=2",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "96261a6a-6742-48e0-ab85-c8fcc3b83a95"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +23,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 15:40:55 UTC",
+    "serialized_at": "2022-12-08 17:27:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +85,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I store values so I can reuse them?**\n\nStudents expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students explore how variables are declared, initialized, and used as they write and modify code segments and identify the current value stored in a variable.",
-        "preparation": "* Print copies of the Unit 2 Guide (one for each student)",
+        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-1-variables/36397/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I store values so I can reuse them?**\n\nYou learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You explore how variables are declared, initialized, and used as you write and modify code segments and identify the current value stored in a variable."
       },
       "seeding_key": {
@@ -106,6 +103,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I use variables to perform calculations?**\n\nStudents discover how arithmetic and compound assignment operators function in Java with different data types. Students practice evaluating expressions and explore scenarios that result in errors or unexpected results.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-2-operators-and-expressions/36396/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use variables to perform calculations?**\n\nYou learned about primitive and reference variables and how to store values and pointers to objects in these variables. In this lesson, you discover how arithmetic and compound assignment operators function in Java when used with different data types. You practice evaluating expressions and explore scenarios that result in errors or unexpected results."
       },
       "seeding_key": {
@@ -123,7 +121,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, students created subclasses of the `Painter` class and objects of different types. Students revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. Students define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access.",
-        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)\n* (Optional) Cut out the manipulatives on pages 2-5 on the Classes and Objects Manipulatives\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
+        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)\n* (Optional) Cut out the manipulatives on pages 2-5 on the Classes and Objects Manipulatives\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, you created subclasses of the `Painter` class and objects of different types. You revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. You define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access."
       },
       "seeding_key": {
@@ -141,7 +139,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I create objects with specific values?**\n\nStudents revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, students differentiate between actual and formal parameters and explore how constructor calls function in programs.",
-        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
+        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create objects with specific values?**\n\nIn the previous unit, you wrote constructors in your `Painter` subclasses that instantiated an object using the `Painter` class constructor. In this lesson, you revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, you learn the difference between actual and formal parameters and explore how constructor calls function in programs."
       },
       "seeding_key": {
@@ -159,6 +157,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class. Additionally, they discover the `NullPointerException`, its cause, and strategies for debugging this error.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-5-user-input/36393/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn to obtain user input using the `Scanner` class. You also discover the `NullPointerException`, its cause, and strategies for debugging this error."
       },
       "seeding_key": {
@@ -176,7 +175,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I create hierarchies of classes to simplify program code?**\n\nStudents learned about inheritance in the previous unit to create subclasses of the `Painter` class. In this lesson, students revisit inheritance to learn about using the DRY principle to refactor redundant code. Students also learn about the `Object` class and deepen their understanding of inheritance.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-6-class-hierarchies/36392/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create hierarchies of classes to simplify program code?**\n\nYou learned about inheritance in the previous unit to create subclasses of the `Painter` class. In this lesson, you revisit inheritance to learn about using the DRY principle to refactor redundant code. You also learn about the `Object` class and deepen your understanding of inheritance."
       },
       "seeding_key": {
@@ -194,7 +193,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students review the components of a method signature and how methods return values. Students practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.",
-        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
+        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-7-accessor-methods/36391/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have learned that `private` instance variables cannot be directly accessed from outside the class. In this lesson, you discover the need for accessor methods to obtain the values stored in the instance variables of a class. You review the components of a method signature and how methods return values. You practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions."
       },
       "seeding_key": {
@@ -212,6 +211,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I change the values of an object's instance variables after the object has been created?**\n\nStudents discover the need for mutator methods to change the values stored in the instance variables of a class. Students also revisit the `void` keyword and recall edge cases. Students practice writing and calling mutator methods for their classes.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-8-mutator-methods/36390/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I change the values of an object's instance variables after the object has been created?**\n\nYour programs currently cannot directly change the values stored in the instance variables of a class. In this lesson, you discover the need for mutator methods to change these values. You also revisit the `void` keyword and recall edge cases. You practice writing and calling mutator methods for your classes."
       },
       "seeding_key": {
@@ -229,7 +229,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to obtain information about an object using its accessor methods. In this lesson, students discover the need for an easier way to get the state of an object. Students revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. Students also learn to format output using escape sequences and concatenating instance variables and `String`s.",
-        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up",
+        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-9-printing-objects/36389/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to obtain information about an object using its accessor methods. In this lesson, you discover the need for an easier way to get the state of an object. You revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. You also learn to format output using escape sequences and concatenating instance variables and `String`s."
       },
       "seeding_key": {
@@ -247,7 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How does the scope of a variable impact its accessibility and use?**\n\nStudents explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.",
-        "preparation": "* Print copies of the Unit 2 Study Guide (one for each student)",
+        "preparation": "* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-10-scope-and-this/36388/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the scope of a variable impact its accessibility and use?**\n\nYou learned about local variables that are used by a constructor or a method. In this lesson, you explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. You learn to use the `this` keyword to refer to the current object in constructors and methods."
       },
       "seeding_key": {
@@ -265,7 +265,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Print copies of the Store Management Project Planning Guide (one for each student)",
+        "preparation": "* Print copies of the Store Management Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
       },
       "seeding_key": {
@@ -283,7 +283,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents designed classes to represent objects in a business of their choice to create a store management program. Students decide how users interact with their program and use the Scanner class to receive user input. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now designed classes to represent objects in a business of your choice to create a store management program. In this lesson, you decide how users interact with your program and use the Scanner class to receive user input. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -302,7 +302,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -320,7 +320,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)",
+        "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-frq-practice/36386/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -339,7 +339,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-assessment/36385/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 2 Assessment."
       },
       "seeding_key": {
@@ -1096,10 +1096,33 @@
       }
     },
     {
-      "key": "b940a466-2ede-478d-b12b-c439ff186fa8",
+      "key": "15d30ea9-fba5-4ee5-a826-949f29185b7a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *variable*."
+      },
+      "seeding_key": {
+        "activity_section.key": "15d30ea9-fba5-4ee5-a826-949f29185b7a",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "67320b8a-bf2a-4059-b1d1-cb622db68f27",
+      "position": 4,
+      "properties": {
+        "description": "Each variable in a program has associated memory that is used to hold its value.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "67320b8a-bf2a-4059-b1d1-cb622db68f27",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "b940a466-2ede-478d-b12b-c439ff186fa8",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Creating Variables"
       },
       "seeding_key": {
@@ -1109,9 +1132,9 @@
     },
     {
       "key": "0586ef33-7bbe-4e6f-bd3b-5042f2e80f9f",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different types of values and how a `String` can be created. Students may wonder about the differences between each type and why a `String` can be created in different ways.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate stack memory and heap memory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *data type*, *primitive type*, and *reference type*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different types of values and how a `String` can be created. Students may wonder about the differences between each type and why a `String` can be created in different ways."
       },
       "seeding_key": {
         "activity_section.key": "0586ef33-7bbe-4e6f-bd3b-5042f2e80f9f",
@@ -1119,10 +1142,50 @@
       }
     },
     {
-      "key": "eba9e668-35de-4bab-aa53-7d3f0b0ce51f",
-      "position": 5,
+      "key": "adb339cd-68e6-4d5e-afd4-db07513b2289",
+      "position": 7,
       "properties": {
-        "description": "Primitive variables are stored in stack memory. On the other hand, objects are stored in heap memory. We use reference variables to access an object from heap memory. Reference variables contain a pointer to where the object is located in memory.",
+        "description": "A `String` is a special data type that we often use in our programs. When we create a `String`, we are actually creating an object that is an instance of the `String` class which represents a collection of characters. This means that we can also create a `String` object using the `new` keyword.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "adb339cd-68e6-4d5e-afd4-db07513b2289",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "f2daf38b-7886-4501-914a-df539bd02ea4",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `String` class and the `java.lang` package.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The `java.lang` package is not accessible in Java Lab for security reasons. Students will receive an error if they attempt to explicitly import the `java.lang` package. Java Lab uses a version of the `java.lang` package with the classes students will need for the course that all programs implicitly import."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2daf38b-7886-4501-914a-df539bd02ea4",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "1e32702f-2d95-4f35-845e-d5012fe95af1",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate stack memory and heap memory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *data type*, *primitive type*, and *reference type*."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e32702f-2d95-4f35-845e-d5012fe95af1",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "eba9e668-35de-4bab-aa53-7d3f0b0ce51f",
+      "position": 10,
+      "properties": {
+        "description": "Primitive variables are stored in stack memory. The memory associated with a variable of a primitive type holds an actual primitive value. On the other hand, objects are stored in heap memory. We use reference variables to access an object from heap memory. Reference variables contain a pointer to where the object is located in memory.",
         "remarks": true
       },
       "seeding_key": {
@@ -1132,7 +1195,7 @@
     },
     {
       "key": "030b1b51-7b8d-417a-a7be-b25f66036498",
-      "position": 6,
+      "position": 11,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "duration": "10",
@@ -1146,7 +1209,7 @@
     },
     {
       "key": "a8f5cfe2-070d-4ceb-b585-72177757ed4d",
-      "position": 7,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the code segment and define *assignment*, *declaration*, *initialization*, and *literal*."
       },
@@ -1157,7 +1220,7 @@
     },
     {
       "key": "a4661d22-2732-45a3-9d16-370f4c819a42",
-      "position": 8,
+      "position": 13,
       "properties": {
         "description": "Let's practice creating and using variables in Java. You can print the values stored in a variable to check its value.",
         "duration": "10",
@@ -1171,7 +1234,7 @@
     },
     {
       "key": "236a10a7-d2ef-42b0-b2e0-4890833e6713",
-      "position": 9,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Variables*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate printing the value stored in a variable to the console.",
         "tips": [
@@ -1188,7 +1251,7 @@
     },
     {
       "key": "06becc23-9624-40ea-9387-e5656607c7e3",
-      "position": 10,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete a Check for Understanding on Level 3, then continue to Level 4 to create and print `int`, `double`, and `String` variables. Students change and print the values stored in these variables on Level 5.",
         "progression_name": "Creating and Printing Variables"
@@ -1652,10 +1715,21 @@
       }
     },
     {
-      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "key": "731da697-8bc7-4ac0-97a3-ead1316b39cc",
       "position": 13,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice."
+      },
+      "seeding_key": {
+        "activity_section.key": "731da697-8bc7-4ac0-97a3-ead1316b39cc",
+        "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
+      }
+    },
+    {
+      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "position": 14,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to create objects from their classes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1799,7 +1873,7 @@
       "key": "f3e35839-453f-4935-b605-db036c310dd6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `Painter` starts at a specific location facing a different direction. Students may wonder how to implement this in their `PainterPlus` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `Painter` starts at a specific location facing a different direction. Students may wonder how to implement this in their `PainterPlus` class."
       },
       "seeding_key": {
         "activity_section.key": "f3e35839-453f-4935-b605-db036c310dd6",
@@ -1807,12 +1881,82 @@
       }
     },
     {
-      "key": "957fce81-1a11-431e-9dd1-a2dac2ba72d9",
+      "key": "e2c37533-524e-45a2-af55-b6a2803f6452",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Project Mercury Pastries Food Truck problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. On Level 2, students complete a choice level to use the parameterized constructor for the `Painter` class. Students continue to Level 3 to write and use a no-argument constructor in the `Dessert` class. On Level 4, students write and use a parameterized constructor in the `Dessert` class.",
+        "description": "Subclasses do not inherit the constructors from a superclass. To use this constructor in the `Painter` class, we will need to implement it in our `PainterPlus` class. Let's start by identifying the components of this type of constructor.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c37533-524e-45a2-af55-b6a2803f6452",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b4b65e3-63b4-4987-ab7b-41b14417c803",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "295651c7-7b87-450e-8553-428258f2efe7",
+      "position": 8,
+      "properties": {
+        "description": "Constructors are used to set the initial state of an object, which should include starting values for all instance variables. These values set the state of an object, which is represented by the object's instance variables and their values at a given time. The constructor parameters are local variables to the constructor and provide data to initialize instance variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "295651c7-7b87-450e-8553-428258f2efe7",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "48e67885-f7fc-43ad-b029-adf04ca257c0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using `super()` in a parameterized constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "48e67885-f7fc-43ad-b029-adf04ca257c0",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+      "position": 10,
+      "properties": {
+        "description": "The `PainterPlus` class inherits the instance variables defined in the `Painter` class. The actual parameters that are passed in the call to the superclass constructor provide values that the constructor can use to initialize the object's instance variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "814c99d2-1402-48bc-8ba1-1501a4fd59ae",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "93f43edb-5f75-43ae-860d-68512a815df7",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Project Mercury Pastries Food Truck is starting its business in The Neighborhood, and the owner needs our help! They need to track the desserts they sell and manage their customers and orders. Throughout the upcoming lessons, we will use our software engineering skills to help solve the problems they encounter as they get their business started in The Neighborhood.",
         "duration": "10",
         "name": "Writing and Using Constructors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "93f43edb-5f75-43ae-860d-68512a815df7",
+        "lesson_activity.key": "146acf35-ae24-4de0-be0b-210c82702c37"
+      }
+    },
+    {
+      "key": "957fce81-1a11-431e-9dd1-a2dac2ba72d9",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. On Level 2, students complete a choice level to use the parameterized constructor for the `Painter` class. Students continue to Level 3 to write and use a no-argument constructor in the `Dessert` class. On Level 4, students write and use a parameterized constructor in the `Dessert` class.",
         "progression_name": "Writing and Using Constructors",
         "tips": [
           {
@@ -1828,7 +1972,7 @@
     },
     {
       "key": "91729f1e-501d-43a8-a62b-e4b5a81cd8ad",
-      "position": 7,
+      "position": 13,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack.",
         "remarks": true
@@ -1840,7 +1984,7 @@
     },
     {
       "key": "f0f2b1d5-86d6-4055-9e6b-f165e195c4c4",
-      "position": 8,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `Dessert` class to the Backpack."
       },
@@ -2025,7 +2169,7 @@
       "key": "f8797801-0679-495d-824d-3b47d4abf696",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define `null` and `NullPointerException`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods."
       },
       "seeding_key": {
         "activity_section.key": "f8797801-0679-495d-824d-3b47d4abf696",
@@ -2033,8 +2177,31 @@
       }
     },
     {
-      "key": "d8f2d2bb-33e8-4aa5-8b9f-272ccde70828",
+      "key": "3eb6470f-4054-49fc-b744-55f5492dd743",
       "position": 8,
+      "properties": {
+        "description": "We previously learned that reference variables point to the location of an object in memory while `int`, `double`, and `boolean` variables hold a primitive value. When we have a primitive variable that does not yet have a specific value, we might initialize it to zero or `false`. Sometimes we might have a reference variable that does not yet point to a specific object. In these cases, we could initialize a reference variable to `null`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3eb6470f-4054-49fc-b744-55f5492dd743",
+        "lesson_activity.key": "73e5db0d-c2c9-42ef-87e2-f60e11d00c6b"
+      }
+    },
+    {
+      "key": "e293e1f3-832f-4976-8d73-54df30ffb1a0",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define `null` and `NullPointerException`."
+      },
+      "seeding_key": {
+        "activity_section.key": "e293e1f3-832f-4976-8d73-54df30ffb1a0",
+        "lesson_activity.key": "73e5db0d-c2c9-42ef-87e2-f60e11d00c6b"
+      }
+    },
+    {
+      "key": "d8f2d2bb-33e8-4aa5-8b9f-272ccde70828",
+      "position": 10,
       "properties": {
         "description": "The methods we saw in the video earlier are not the only methods available in the `Scanner` class. We can refer to the documentation for the `Scanner` class to see what methods it has and how to use them.",
         "duration": "15",
@@ -2048,7 +2215,7 @@
     },
     {
       "key": "55930d62-5967-421a-a7be-1def044d7878",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to access documentation in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students debug a program on Level 2 with a `NullPointer` exception, then continue to Level 3 to complete a choice level to create and use a `Scanner` object to obtain user input.",
         "progression_name": "Getting User Input"
@@ -2237,7 +2404,7 @@
       "key": "96dbc988-7a58-47ee-9e83-02d670ec7d2b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Object` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that a superclass reference can be used as a formal parameter in a method to accept superclass and subclass types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Object` class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2402,7 +2569,7 @@
       "key": "4f3d0d90-f95b-4936-94cb-2709b2d46b7a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2416,8 +2583,31 @@
       }
     },
     {
-      "key": "6d38994f-eaec-455b-9f3b-b64490520660",
+      "key": "a1b9268c-01e6-4f92-8025-baeeb9178949",
       "position": 3,
+      "properties": {
+        "description": "An accessor method is a non-void method. Non-void methods return a value that is the same type as the return type in the method signature. We can store the return value in a variable or use it as part of an expression.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a1b9268c-01e6-4f92-8025-baeeb9178949",
+        "lesson_activity.key": "c60c7f6f-3cde-414d-94f8-a355c2744ad8"
+      }
+    },
+    {
+      "key": "8a5b916e-7e8b-4d51-b0b1-233eee45eb92",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called."
+      },
+      "seeding_key": {
+        "activity_section.key": "8a5b916e-7e8b-4d51-b0b1-233eee45eb92",
+        "lesson_activity.key": "c60c7f6f-3cde-414d-94f8-a355c2744ad8"
+      }
+    },
+    {
+      "key": "6d38994f-eaec-455b-9f3b-b64490520660",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 5. Students complete a Check for Understanding on Level 1 then continue to Level 2 to write accessor methods in the `Dessert` class. On Level 3, students use the `Dessert` class accessor methods. Students then write accessor methods for the `Dessert` subclasses on Level 4 and use them on Level 5.",
         "duration": "15",
@@ -2437,7 +2627,7 @@
     },
     {
       "key": "da296ed9-242d-4892-8adb-94fc4e4ce6e4",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` classes to the Backpack.",
         "remarks": true
@@ -2449,7 +2639,7 @@
     },
     {
       "key": "6725266f-3de1-4746-b987-a5a41dbd45d8",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` classes to the Backpack."
       },
@@ -2572,7 +2762,7 @@
       "key": "cf3c945d-4e85-40ee-8286-36e9d4f4651f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling a mutator method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is different about the way mutator methods work in comparison to accessor methods?*\n* *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n* *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students identify similarities between mutator methods and accessor methods, such as both working with the instance variables of a class. Students also identify differences, such as mutator methods taking a parameter to set a new value to the instance variable and does not return a value while accessor methods do not have a parameter and return the current value stored in the instance variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the methods change the values stored in the instance variables. Students may wonder how these methods are able to change the values since instance variables are `private`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Mutator Methods*."
       },
       "seeding_key": {
         "activity_section.key": "cf3c945d-4e85-40ee-8286-36e9d4f4651f",
@@ -2580,8 +2770,54 @@
       }
     },
     {
-      "key": "9fc7d87c-b01c-49ab-9d48-6ae78dc92d42",
+      "key": "71057f53-22d1-4b80-9158-85451199b9e3",
       "position": 4,
+      "properties": {
+        "description": "Mutator methods are `void` methods, which means they do not return a value and therefore cannot be called as part of an expression. As `void` methods, they can perform an action, like changing the state of an object.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71057f53-22d1-4b80-9158-85451199b9e3",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "1e6a16ff-5898-47eb-babc-5aa9fee77664",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling a mutator method."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e6a16ff-5898-47eb-babc-5aa9fee77664",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "985a7316-7840-4b0b-a011-0f3066160e3c",
+      "position": 6,
+      "properties": {
+        "description": "When designing a class, programmers make decisions about what data to make accessible and modifiable from an external class. Data can be either accessible or modifiable, or it can be both or neither.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "985a7316-7840-4b0b-a011-0f3066160e3c",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "8c92c964-78c0-4499-82e1-616baac9903c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What is different about the way mutator methods work in comparison to accessor methods?*\n* *Should all instance variables have mutator methods? When would we not want an instance variable to be modified?*\n* *Are there values that should be considered invalid for certain instance variables?*\n\n**Discussion Goal:** Students identify similarities between mutator methods and accessor methods, such as both working with the instance variables of a class. Students also identify differences, such as mutator methods taking a parameter to set a new value to the instance variable and does not return a value while accessor methods do not have a parameter and return the current value stored in the instance variable."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c92c964-78c0-4499-82e1-616baac9903c",
+        "lesson_activity.key": "6c14c398-e123-4712-a62e-b86c4dfd3230"
+      }
+    },
+    {
+      "key": "9fc7d87c-b01c-49ab-9d48-6ae78dc92d42",
+      "position": 8,
       "properties": {
         "description": "We can use an `if` statement to check for invalid values. For example, we may want to make sure that a user doesn't enter a negative value for a price or a quantity.",
         "duration": "10",
@@ -2595,7 +2831,7 @@
     },
     {
       "key": "de8d5b6a-c1f4-468a-ac3f-1ac1947d353c",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Exploring Edge Cases"
@@ -2607,7 +2843,7 @@
     },
     {
       "key": "012193e0-5d8f-4c57-a827-4b6f79f93160",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce relational operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *Boolean expression*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *sentinel value*."
       },
@@ -2618,7 +2854,7 @@
     },
     {
       "key": "7e42ea53-331e-4aa7-b678-a0419adc78de",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 through 5. Students write mutator methods in the `Dessert` class on Level 3, then continue to Level 4 to use the `Dessert` class mutator methods. On Level 5, students complete a choice level to use the `Scanner` class and a sentinel value to repeatedly take input from a user.",
         "duration": "10",
@@ -2638,7 +2874,7 @@
     },
     {
       "key": "62437ccc-513a-4c38-9d91-632fa819d55e",
-      "position": 8,
+      "position": 12,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` class to the Backpack.",
         "remarks": true
@@ -2650,7 +2886,7 @@
     },
     {
       "key": "e1c2224f-04fd-4a0b-a611-2038c988497c",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` class to the Backpack."
       },
@@ -2793,10 +3029,33 @@
       }
     },
     {
-      "key": "6066c686-1809-4ff9-bc1f-65ea7816009c",
+      "key": "1c12a557-b1d2-4e08-af7a-b159840d9454",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the output of this program?*\n* *What do you wonder about the output of this program?*\n\n**Discussion Goal:** Students notice that printing an object displays random letters and numbers to the console instead of the values stored in its instance variables. Students may wonder what the letters and numbers mean and why the values are not printed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain why printing an object that doesn't have a `toString()` method in its class does not print the values stored in its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce its `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *If we could write our own version of the `toString()` method in our `Dessert` class, what information would we want it to include?*\n\n**Discussion Goal:** Students suggest including the instance variables in the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and demonstrate overriding the `toString()` method and printing an object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is this information useful? Why or why not?*\n\n**Discussion Goal:** Students note that the output contains the information about the object, but it is not in a user-friendly format.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the output of this program?*\n* *What do you wonder about the output of this program?*\n\n**Discussion Goal:** Students notice that printing an object displays random letters and numbers to the console instead of the values stored in its instance variables. Students may wonder what the letters and numbers mean and why the values are not printed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain why printing an object that doesn't have a `toString()` method in its class does not print the values stored in its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce its `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *If we could write our own version of the `toString()` method in our `Dessert` class, what information would we want it to include?*\n\n**Discussion Goal:** Students suggest including the instance variables in the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and demonstrate overriding the `toString()` method and printing an object."
+      },
+      "seeding_key": {
+        "activity_section.key": "1c12a557-b1d2-4e08-af7a-b159840d9454",
+        "lesson_activity.key": "d6038b4d-6e90-43d1-89cc-09e5f80fd805"
+      }
+    },
+    {
+      "key": "c0e44a03-b8d1-4dc5-800f-2287a4854e78",
+      "position": 4,
+      "properties": {
+        "description": "Notice that this code segment did not explicitly call the object's `toString()` method. The object's `toString()` method is automatically called when we pass an object reference to a print statement or when we concatenate an object reference with a `String`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0e44a03-b8d1-4dc5-800f-2287a4854e78",
+        "lesson_activity.key": "d6038b4d-6e90-43d1-89cc-09e5f80fd805"
+      }
+    },
+    {
+      "key": "6066c686-1809-4ff9-bc1f-65ea7816009c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is this information useful? Why or why not?*\n\n**Discussion Goal:** Students note that the output contains the information about the object, but it is not in a user-friendly format.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2811,7 +3070,7 @@
     },
     {
       "key": "41b31194-9c81-4212-97ca-23634fa14156",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `super` keyword can be used to call the superclass method.\n\n**<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This:** Introduce escape sequences, and have students determine the output for each example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a quotation mark ( `\\\"` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a new line ( `\\n` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a backslash ( `\\\\` )"
       },
@@ -2822,9 +3081,9 @@
     },
     {
       "key": "32451ca6-ff18-4f98-bee9-612b77cd421f",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `super` keyword to call superclass methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students write a `toString()` method in the `Dessert` class then continue to Level 3 to refactor the code. On Level 4, students write `toString()` methods in the `Dessert` subclasses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students write a `toString()` method in the `Dessert` class then continue to Level 3 to refactor the code. On Level 4, students write `toString()` methods in the `Dessert` subclasses.",
         "duration": "15",
         "name": "Overriding Object Class Methods",
         "progression_name": "Overriding Object Class Methods",
@@ -2842,7 +3101,7 @@
     },
     {
       "key": "134d3afa-413a-4724-83da-e6273a075288",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "This is a good time to commit our code and save our new version of our `Dessert` classes to the Backpack.",
         "remarks": true
@@ -2854,7 +3113,7 @@
     },
     {
       "key": "0d1e185c-0545-4439-996b-158234d639c5",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the new version of the `Dessert` classes to the Backpack."
       },
@@ -2976,7 +3235,7 @@
       "key": "58596fe4-eef2-4ad5-ae0b-0eedee304a9e",
       "position": 3,
       "properties": {
-        "description": "Sometimes we need to make it clear which variable or object we are referring to in our programs. Java has a special keyword that helps us refer to the current object when referring to a specific variable or object.",
+        "description": "We can give a local variable the same name as an instance variable. If we were to do this, the variable name will refer to the local variable instead of the instance variable. We need to make it clear which variable or object we are referring to in our programs. Java has a special keyword that helps us refer to the current object when referring to a specific variable or object.",
         "remarks": true
       },
       "seeding_key": {
@@ -5903,6 +6162,18 @@
       }
     },
     {
+      "name": "Accessor Methods",
+      "url": "https://youtu.be/F5plZ3f5B3c",
+      "key": "accessor_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "accessor_methods"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa2-2022/resources",
       "key": "all_resources_4",
@@ -5941,6 +6212,7 @@
       "key": "burger_class_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5953,6 +6225,7 @@
       "key": "burger_class_frq_graphic_organizer",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5965,6 +6238,7 @@
       "key": "burger_class_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5989,10 +6263,47 @@
       "key": "classes_and_objects_manipulatives",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "classes_and_objects_manipulatives"
+      }
+    },
+    {
+      "name": "Constructors",
+      "url": "https://youtu.be/1vXP8R2i-wg",
+      "key": "constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "name": "Creating a Scanner Object",
+      "url": "https://youtu.be/43PYFmSyupI",
+      "key": "creating_a_scanner_object",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "name": "Creating Variables",
+      "url": "https://youtu.be/VHwlxlqrquM",
+      "key": "creating_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_variables"
       }
     },
     {
@@ -6001,6 +6312,7 @@
       "key": "cs_bingo_cards_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6020,15 +6332,76 @@
       }
     },
     {
+      "name": "CSA Manipulatives Demo",
+      "url": "https://youtu.be/4QbHVC9HkkY",
+      "key": "csa_manipulatives_demo",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "csa_manipulatives_demo"
+      }
+    },
+    {
       "name": "Diagramming Scope",
       "url": "https://docs.google.com/document/d/1INolQrMjM7CUxH70jCOiZjg-LDlOZGwQARFtICWumqY/edit?usp=sharing",
       "key": "diagramming_scope",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "name": "Instance Variables and Attributes",
+      "url": "https://youtu.be/49XzLCs8wgU",
+      "key": "instance_variables_and_attributes",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "name": "Mutator Methods",
+      "url": "https://youtu.be/unh7__NcIS8",
+      "key": "mutator_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "mutator_methods"
+      }
+    },
+    {
+      "name": "Overloaded Constructors",
+      "url": "https://youtu.be/rYTRK8R9ZM8",
+      "key": "overloaded_constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "name": "Scanner Class Methods",
+      "url": "https://youtu.be/v1xPNK2hzzg",
+      "key": "scanner_class_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "scanner_class_methods"
       }
     },
     {
@@ -6037,10 +6410,23 @@
       "key": "store_management_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "store_management_project_planning_guide"
+      }
+    },
+    {
+      "name": "The toString() Method",
+      "url": "https://youtu.be/WF7prjPzl98",
+      "key": "the_tostring_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_tostring_method"
       }
     },
     {
@@ -6049,6 +6435,7 @@
       "key": "u2l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6061,6 +6448,7 @@
       "key": "u2l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6073,6 +6461,7 @@
       "key": "u2l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6085,10 +6474,23 @@
       "key": "u2l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L3 Manipulatives Demo",
+      "url": "https://youtu.be/gC2yirf2H8I",
+      "key": "u2l3_manipulatives_demo",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_manipulatives_demo"
       }
     },
     {
@@ -6097,6 +6499,7 @@
       "key": "u2l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6109,6 +6512,7 @@
       "key": "u2l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6121,6 +6525,7 @@
       "key": "u2l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6133,6 +6538,7 @@
       "key": "u2l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6145,6 +6551,7 @@
       "key": "u2l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6157,6 +6564,7 @@
       "key": "u2l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6169,10 +6577,23 @@
       "key": "unit_2_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1FRfTlmlx2FKOm8VzLu5_-NvuHwsnIYDiGm_dCwlXUFA/edit?usp=sharing",
+      "key": "unit_2_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guide_exemplar_"
       }
     },
     {
@@ -6252,6 +6673,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "scanner_class_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "u2l5_extra_practice"
       }
     },
@@ -6288,6 +6721,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "accessor_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "u2l7_extra_practice"
       }
     },
@@ -6301,6 +6740,12 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "mutator_methods"
       }
     },
     {
@@ -6331,6 +6776,12 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_definitions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "the_tostring_method"
       }
     },
     {
@@ -6456,6 +6907,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "creating_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "u2l1_extra_practice"
       }
     },
@@ -6504,7 +6961,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "csa_manipulatives_demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u2l3_manipulatives_demo"
       }
     },
     {
@@ -6517,6 +6992,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "overloaded_constructors"
       }
     },
     {
@@ -6554,6 +7041,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_2_guide",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_guide_exemplar_",
         "script.name": "csa2-2022"
       }
     },
@@ -7645,6 +8138,13 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.8"
       }
     },
@@ -7863,6 +8363,13 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.3"
       }
     },
     {
@@ -8129,6 +8636,13 @@
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.C.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
       }
     },
     {

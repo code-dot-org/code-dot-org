@@ -1,6 +1,5 @@
 require 'i18n'
 require 'active_support/core_ext/numeric/bytes'
-require 'cdo/key_value'
 require 'cdo/honeybadger'
 require 'cdo/i18n_string_url_tracker'
 
@@ -26,7 +25,7 @@ module Cdo
         # which periods in a key name can be mistakenly interpreted as separators
         if options.key?(:scope) && !options.key?(:separator)
           combined_key = [key] + options.fetch(:scope, [])
-          options[:separator] = get_valid_separator(combined_key.join(""))
+          options[:separator] = get_valid_separator(combined_key.join)
         end
 
         options
@@ -34,7 +33,7 @@ module Cdo
 
       # Potential characters to use as a separator. This list can be safely
       # expanded if the current set proves insufficient
-      SEPARATORS = ".|,-_ /".split('')
+      SEPARATORS = ".|,-_ /".chars
 
       # Return a character than can be used as a separator without separating the
       # given string. If the given string contains all the attempted separator
@@ -50,7 +49,7 @@ module Cdo
       # Used for to make sure that dynamically-provided values can safely be used
       # as the I18n key.
       def self.get_valid_separator(string)
-        characters = string.split('').to_set
+        characters = string.chars.to_set
         SEPARATORS.find do |separator|
           !characters.include? separator
         end
@@ -65,7 +64,8 @@ module Cdo
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         translation = super(locale, key, options.except(:markdown))
         markdown = options.fetch(:markdown, false)
-        if markdown == true
+        case markdown
+        when true
           # The safe_links_only just makes sure that the URL is a "safe" web
           # one which starts with: "#", "/", "http://", "https://", "ftp://",
           # "mailto:" However, it isn't good enough because it ignores URLS
@@ -79,7 +79,7 @@ module Cdo
           # redacting all URLs in strings given to outside translators.
           @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe.new(safe_links_only: false))
           @renderer.render(translation)
-        elsif markdown == :inline
+        when :inline
           @inline_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
           @inline_renderer.render(translation)
         else
@@ -170,40 +170,7 @@ module Cdo
       include SafeInterpolation
       include I18nStringUrlTrackerPlugin
     end
-
-    # I18n backend instance used by the web application.
-    class KeyValueCacheBackend < ::I18n::Backend::KeyValue
-      include ::I18n::Backend::CacheFile
-      include SmartTranslate
-      include I18nStringUrlTrackerPlugin
-
-      CACHE_DIR = pegasus_dir('cache', 'i18n/cache')
-
-      def initialize
-        store = KeyValue.new(CACHE_DIR)
-        super(store, false)
-        self.path_roots = [Gem.dir, deploy_dir]
-      end
-
-      def load_translations(*filenames)
-        @loading = true
-        super
-        store.flush
-        @loading = false
-      end
-
-      alias init_translations load_translations
-      alias reload! load_translations
-
-      def store_translations(*args)
-        super.tap {store.flush unless @loading}
-      end
-    end
   end
 end
 
-# Use custom i18n backend by enabling `CDO.i18n_key_value`.
-# Default false during testing and controlled roll-out.
-CDO_I18N_BACKEND = CDO.with_default(false).i18n_key_value ?
-  Cdo::I18n::KeyValueCacheBackend.new :
-  Cdo::I18n::SimpleBackend.new
+CDO_I18N_BACKEND = Cdo::I18n::SimpleBackend.new

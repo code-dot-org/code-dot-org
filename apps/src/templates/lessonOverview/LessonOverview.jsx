@@ -25,6 +25,10 @@ import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import FontAwesome from '../FontAwesome';
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -38,6 +42,19 @@ class LessonOverview extends Component {
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired
   };
+
+  constructor(props) {
+    super(props);
+
+    analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
+      lessonId: props.lesson.id,
+      lessonName: props.lesson.displayName,
+      lessonLink: document.location.pathname,
+      referrer: document.referrer,
+      unitName: props.lesson.unit.displayName,
+      unitLink: props.lesson.unit.link
+    });
+  }
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
     // Prevent navigation to url until callback
@@ -119,7 +136,14 @@ class LessonOverview extends Component {
                 <div style={{marginRight: 5}}>
                   <DropdownButton
                     color={Button.ButtonColor.gray}
-                    text={i18n.printingOptions()}
+                    customText={
+                      <div>
+                        <FontAwesome icon="print" style={styles.icon} />
+                        <span style={styles.customText}>
+                          {i18n.printingOptions()}
+                        </span>
+                      </div>
+                    }
                   >
                     {pdfDropdownOptions.map(option => (
                       <a
@@ -162,7 +186,6 @@ class LessonOverview extends Component {
           })}
         </h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
-
         <div style={styles.frontPage}>
           <div style={styles.left}>
             {lesson.overview && (
@@ -306,11 +329,11 @@ class LessonOverview extends Component {
             )}
           </div>
         </div>
-
         <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
           <Activity activity={activity} key={activity.key} />
         ))}
+        <CopyrightInfo />
       </div>
     );
   }
@@ -321,6 +344,17 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     marginTop: 40
+  },
+  customText: {
+    margin: '0px 2px'
+  },
+  icon: {
+    margin: '0px 2px',
+    fontSize: 16,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 1
   },
   left: {
     width: '60%',

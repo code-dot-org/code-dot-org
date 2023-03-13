@@ -160,7 +160,6 @@ FactoryGirl.define do
       on_map false         # Never on the map
       funded               # More than half are funded
       num_facilitators 2   # Most have 2 facilitators
-      suppress_email true  # As of 2020-2021 school year, all AYW should suppress reminder emails.
 
       # Some specific academic year workshops are usually two days instead of one.
       # Add a trait making it easy to specify that we're testing a two-day workshop.
@@ -211,6 +210,22 @@ FactoryGirl.define do
         subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
       end
       factory(:csd_academic_year_workshop) {csd}
+
+      # CSA Academic Year Workshops
+      trait :csa do
+        course Pd::Workshop::COURSE_CSA
+        location_name 'Greendale Community College'
+
+        # Possible subjects:
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_1
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_2
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_3
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_4
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_1_2 (2-day)
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_3_4 (2-day)
+        subject Pd::Workshop::SUBJECT_CSA_WORKSHOP_1
+      end
+      factory(:csa_academic_year_workshop) {csa}
     end
 
     # 5-day local summer workshops
@@ -289,7 +304,6 @@ FactoryGirl.define do
       num_sessions 1       # Most have 1 session
       num_facilitators 1   # Want to work with facilitators
       each_session_hours 2 # Not sure on session length
-      suppress_email true  # Should suppress reminder emails.
     end
 
     factory :counselor_workshop do

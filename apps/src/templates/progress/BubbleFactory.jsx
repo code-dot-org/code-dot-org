@@ -86,9 +86,15 @@ DiamondContainer.propTypes = {
   children: PropTypes.node
 };
 
-export function BubbleLink({url, onClick, children}) {
+export function BubbleLink({url, onClick, children, a11y_description}) {
   return (
-    <a href={url} onClick={onClick} className="progress-bubble-link">
+    <a
+      href={url}
+      onClick={onClick}
+      className="progress-bubble-link"
+      title={a11y_description}
+      aria-label={a11y_description}
+    >
       {children}
     </a>
   );
@@ -96,7 +102,8 @@ export function BubbleLink({url, onClick, children}) {
 BubbleLink.propTypes = {
   url: PropTypes.string,
   onClick: PropTypes.func,
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  a11y_description: PropTypes.string
 };
 
 function getTooltipTextForLevel(level) {

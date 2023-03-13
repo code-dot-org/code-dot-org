@@ -25,7 +25,7 @@ CS Fundamentals for Elementary Schools
 <div class="col-50" style="padding-right: 20px; float: left; margin-top: 10px">
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
-<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{PegasusCdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
 <%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 
 <a href="https://code.org/professional-development-workshops"><button>Learn about professional learning!</button></a>
@@ -113,7 +113,7 @@ Selecting the right course
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 <br>
 <br>
-The progression of <a href="https://code.org/educate/curriculum/csf">Courses A-F</a> build upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. Explore the lesson plans and download <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview">the curriculum guide for Courses A-F here</a>. All courses make suitable entry points for students. Later courses feature “ramp up” lessons which are intended to introduce or review important concepts from previous courses at an accelerated pace.
+The progression of <a href="https://code.org/educate/curriculum/csf">Courses A-F</a> build upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. Explore the lesson plans and download <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">the curriculum guide for Courses A-F here</a>. All courses make suitable entry points for students. Later courses feature “ramp up” lessons which are intended to introduce or review important concepts from previous courses at an accelerated pace.
 <br/>
 <br/>
 
@@ -232,4 +232,4 @@ Thanks to a global community of volunteer translators, Courses A-F and the Expre
 [View course catalog] (https://studio.code.org/courses)
 <br/>
 
-
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSF_CURRICULUM_PAGE_VISITED_EVENT %>

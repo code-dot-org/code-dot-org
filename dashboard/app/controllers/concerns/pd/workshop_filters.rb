@@ -22,7 +22,7 @@ module Pd::WorkshopFilters
   def load_filtered_ended_workshops
     # Default to the last week, by schedule
     end_date = params[:end] || Date.today
-    start_date = params[:start] || end_date - 1.week
+    start_date = params[:start] || (end_date - 1.week)
     query_by = params[:query_by] || QUERY_BY_SCHEDULE
     course = params[:course]
 
@@ -126,26 +126,26 @@ module Pd::WorkshopFilters
         raise ArgumentError, "Unable to parse order_by param: #{order_by}" unless parsed
         field, direction = parsed[1..2]
         case field
-          when 'location_name'
-            workshops = workshops.order("location_name #{direction}".strip)
-          when 'on_map'
-            workshops = workshops.order("on_map #{direction}".strip)
-          when 'funded'
-            workshops = workshops.order("funded #{direction}".strip)
-          when 'course'
-            workshops = workshops.order("course #{direction}".strip)
-          when 'subject'
-            workshops = workshops.order("subject #{direction}".strip)
-          when 'virtual'
-            workshops = workshops.order("virtual #{direction}".strip)
-          when 'date'
-            workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
-          when 'enrollments'
-            workshops = workshops.order_by_enrollment_count(desc: direction == 'desc')
-          when 'state'
-            workshops = workshops.order_by_state(desc: direction == 'desc')
-          else
-            raise ArgumentError, "Invalid order_by field: #{field}"
+        when 'location_name'
+          workshops = workshops.order("location_name #{direction}".strip)
+        when 'on_map'
+          workshops = workshops.order("on_map #{direction}".strip)
+        when 'funded'
+          workshops = workshops.order("funded #{direction}".strip)
+        when 'course'
+          workshops = workshops.order("course #{direction}".strip)
+        when 'subject'
+          workshops = workshops.order("subject #{direction}".strip)
+        when 'virtual'
+          workshops = workshops.order("virtual #{direction}".strip)
+        when 'date'
+          workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
+        when 'enrollments'
+          workshops = workshops.order_by_enrollment_count(desc: direction == 'desc')
+        when 'state'
+          workshops = workshops.order_by_state(desc: direction == 'desc')
+        else
+          raise ArgumentError, "Invalid order_by field: #{field}"
         end
       end
     end

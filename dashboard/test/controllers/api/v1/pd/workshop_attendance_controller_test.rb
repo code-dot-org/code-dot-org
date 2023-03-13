@@ -244,7 +244,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
       assert_response :success
     end
 
-    refute Pd::Attendance.where(session: @session, teacher: teacher).exists?
+    refute Pd::Attendance.exists?(session: @session, teacher: teacher)
   end
 
   test 'create delete and create restores the original record' do
@@ -302,7 +302,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
       assert_response :success
     end
 
-    refute Pd::Attendance.where(session: @session, enrollment: enrollment).exists?
+    refute Pd::Attendance.exists?(session: @session, enrollment: enrollment)
   end
 
   private

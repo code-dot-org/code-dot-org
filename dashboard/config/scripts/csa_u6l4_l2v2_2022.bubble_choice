@@ -1,6 +1,6 @@
 name 'CSA U6L4-L2v2_2022'
 display_name 'The String length() Method'
-description 'level description here'
+description 'Traverse an `ArrayList` of `String`s and use the `length()` method to implement standard algorithms.'
 
 sublevels
 level 'CSA U6L4-L2a_2022'

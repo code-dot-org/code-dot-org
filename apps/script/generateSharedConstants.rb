@@ -89,6 +89,7 @@ def main
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
     ABUSE_CONSTANTS
     ERROR_SEVERITY_LEVELS
+    RESTRICTED_PUBLISH_PROJECT_TYPES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
@@ -105,9 +106,12 @@ def main
       INSTRUCTOR_AUDIENCE
       CURRICULUM_UMBRELLA
       COURSE_OFFERING_CATEGORIES
+      COURSE_OFFERING_CURRICULUM_TYPES
+      COURSE_OFFERING_HEADERS
+      COURSE_OFFERING_MARKETING_INITIATIVES
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
-      source_module: SharedCourseConstants, transform_keys: false
+      source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),
     "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
   )
@@ -122,6 +126,9 @@ def main
         SUBJECT_NAMES
         SUBJECTS
         VIRTUAL_ONLY_SUBJECTS
+        HIDE_FEE_INFORMATION_SUBJECTS
+        HIDE_ON_WORKSHOP_MAP_SUBJECTS
+        HIDE_FUNDED_SUBJECTS
         MUST_SUPPRESS_EMAIL_SUBJECTS
         ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
@@ -129,6 +136,7 @@ def main
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
         ACTIVE_COURSE_WORKSHOPS
+        ACTIVE_COURSES_WITH_SURVEYS
         WORKSHOP_TYPES
         NOT_FUNDED_SUBJECTS
       ),
@@ -149,16 +157,17 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS),
-      source_module: Pd::Facilitator1920ApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(
+        PRINCIPAL_APPROVAL_STATE
+        SEND_ADMIN_APPROVAL_EMAIL_STATUSES
+        YEAR SECTION_HEADERS
+        PAGE_LABELS
+        VALID_SCORES
+        LABEL_OVERRIDES
+        TEXT_FIELDS
+        MULTI_ANSWER_QUESTION_FIELDS
+        SCOREABLE_QUESTIONS
+      ),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),
@@ -172,15 +181,6 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
-      source_module: Pd::Teachercon1819RegistrationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
   )
 
   generate_shared_js_file(

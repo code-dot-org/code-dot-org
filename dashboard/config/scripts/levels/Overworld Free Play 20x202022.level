@@ -13,7 +13,7 @@
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "true",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -98,7 +98,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:43.906+00:00\",\"changed\":[\"cloned from \\\"Overworld Free Play 20x20_2021\\\"\"],\"cloned_from\":\"Overworld Free Play 20x20_2021\"},{\"changed_at\":\"2022-03-07 17:15:29 +0000\",\"changed\":[\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:43.906+00:00\",\"changed\":[\"cloned from \\\"Overworld Free Play 20x20_2021\\\"\"],\"cloned_from\":\"Overworld Free Play 20x20_2021\"},{\"changed_at\":\"2022-03-07 17:15:29 +0000\",\"changed\":[\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:20:29 +0000\",\"changed\":[\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,

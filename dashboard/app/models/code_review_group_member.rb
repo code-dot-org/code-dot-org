@@ -18,10 +18,10 @@
 class CodeReviewGroupMember < ApplicationRecord
   self.primary_key = :follower_id
 
-  belongs_to :follower, required: true
-  belongs_to :code_review_group, required: true
+  belongs_to :follower
+  belongs_to :code_review_group
 
   def name
-    return follower.student_user.name
+    follower&.student_user&.name || ''
   end
 end

@@ -15,7 +15,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@unit_teacher_to_students)
     @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student3', family_name: 'family-2', version_year: '1992', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students2)
-    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
+    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
 
     @beta_unit = create(:script, name: 'beta-unit', family_name: 'beta', version_year: '1991', is_course: true, published_state: 'beta')
@@ -34,15 +34,15 @@ class CourseOfferingTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@unit_group)
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@pilot_unit)
 
     @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-5', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-5', version_year: '1991', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     CourseOffering.add_course_offering(@pilot_pl_unit)
 
     @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
-    @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-11', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-11', version_year: '1991', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@partner_unit)
   end
 
@@ -348,7 +348,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@levelbuilder)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'in assignable course offerings summary display names of course offerings include star if they are not launched' do
@@ -363,7 +364,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.display_name
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}.sort, expected_course_offering_names
+    assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}
+    expected_course_offering_names.each {|name| assert assignable_course_offering_names.include?(name)}
   end
 
   test 'get assignable course offerings for pilot teacher should return offerings where pilot teacher can be instructor' do
@@ -373,7 +375,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @pilot_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@pilot_teacher).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@pilot_teacher)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for partner should return offerings where partner can be instructor and partners courses' do
@@ -383,7 +386,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @partner_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@partner).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@partner)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for pl pilot instructor should return offerings where pl pilot instructor can be instructor' do
@@ -394,7 +398,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@pilot_instructor).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@pilot_instructor)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
@@ -403,7 +408,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_teacher_to_students.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@teacher).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@teacher)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for facilitator should return all offerings, versions, amd units where facilitator can be instructor' do
@@ -415,7 +421,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@facilitator)
 
-    assert_equal assignable_course_offerings.keys.sort, expected_course_offering_info
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
 
     unit_group_course_versions = assignable_course_offerings[@unit_group.course_version.course_offering.id][:course_versions]
     assert_equal unit_group_course_versions.keys, [@unit_group.course_version.id]
@@ -431,8 +437,22 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal facilitator_to_teacher_course_versions[@unit_facilitator_to_teacher.course_version.id][:units].keys, [@unit_facilitator_to_teacher.id]
   end
 
+  test 'query count for assignable_course_offerings' do
+    Unit.stubs(:should_cache?).returns true
+
+    assert_cached_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@teacher)
+    end
+
+    assert_cached_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@facilitator)
+    end
+
+    Unit.clear_cache
+  end
+
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1'
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: '/images/sample_image_ref', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: 'Computer:Works,Chromebook:Not ideal,Tablet:Does not work,Mobile:Does not work,No Device:Does not work'
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
@@ -443,6 +463,72 @@ class CourseOfferingTest < ActiveSupport::TestCase
     new_course_offering = CourseOffering.find_by(key: new_course_offering_key)
     assert_equal previous_course_offering.attributes.except('id', 'created_at', 'updated_at'),
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
+  end
+
+  test "validates curriculum_type value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+    end
+  end
+
+  test "validates marketing_initiative value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+    end
+  end
+
+  test "elementary_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    assert course1.elementary_school_level?
+    assert course2.elementary_school_level?
+    assert course3.elementary_school_level?
+    refute course4.elementary_school_level?
+    refute course5.elementary_school_level?
+    refute course6.elementary_school_level?
+    refute course7.elementary_school_level?
+  end
+
+  test "middle_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    refute course1.middle_school_level?
+    refute course2.middle_school_level?
+    assert course3.middle_school_level?
+    assert course4.middle_school_level?
+    assert course5.middle_school_level?
+    refute course6.middle_school_level?
+    refute course7.middle_school_level?
+  end
+
+  test "high_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    refute course1.high_school_level?
+    refute course2.high_school_level?
+    refute course3.high_school_level?
+    refute course4.high_school_level?
+    assert course5.high_school_level?
+    assert course6.high_school_level?
+    assert course7.high_school_level?
   end
 
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)

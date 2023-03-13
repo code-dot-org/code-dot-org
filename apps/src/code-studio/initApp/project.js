@@ -1,13 +1,11 @@
 /* global appOptions */
 import $ from 'jquery';
-import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 import NameFailureError from '../NameFailureError';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
@@ -31,6 +29,12 @@ var channels = require('./clientApi').create('/v3/channels');
 var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
+import {getStore} from '../../redux';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+  refreshInRestrictedShareMode
+} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -100,6 +104,8 @@ let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
+let fetchChannelResponseCode = null;
+let fetchSourceResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -110,7 +116,8 @@ var currentSources = {
   makerAPIsEnabled: null,
   animations: null,
   selectedSong: null,
-  selectedPoem: null
+  selectedPoem: null,
+  inRestrictedShareMode: false
 };
 
 /**
@@ -133,10 +140,10 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
-    libraries: data.libraries
+    libraries: data.libraries,
+    inRestrictedShareMode: data.inRestrictedShareMode
   };
 }
 
@@ -275,7 +282,7 @@ var projects = (module.exports = {
       const port = 'localhost' === environmentKey ? `:${location.port}` : '';
       return `${
         location.protocol
-      }//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+      }//${subdomain}codeprojects.org${port}/projects/weblab/${this.getCurrentId()}`;
     } else {
       return location.origin + this.getPathName();
     }
@@ -324,19 +331,6 @@ var projects = (module.exports = {
    */
   getMakerAPIs() {
     return currentSources.makerAPIsEnabled;
-  },
-
-  /**
-   * Calculates a md5 hash for everything within sources except the
-   * generatedProperties.
-   * @return {string} md5 hash string.
-   */
-  md5CurrentSources() {
-    const {
-      generatedProperties, // eslint-disable-line no-unused-vars
-      ...sourcesWithoutProperties
-    } = currentSources;
-    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -501,6 +495,14 @@ var projects = (module.exports = {
     return hasEditPermissions && isEditOrViewPage;
   },
 
+  channelNotFound() {
+    return fetchChannelResponseCode >= 400 && fetchChannelResponseCode < 500;
+  },
+
+  sourceNotFound() {
+    return fetchSourceResponseCode >= 400 && fetchSourceResponseCode < 500;
+  },
+
   __TestInterface: {
     // Used by UI tests
     getCurrent() {
@@ -558,9 +560,7 @@ var projects = (module.exports = {
 
   showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
-      header.showProjectHeader({
-        showExport: this.shouldShowExport()
-      });
+      header.showProjectHeader();
     }
   },
 
@@ -582,23 +582,10 @@ var projects = (module.exports = {
     );
   },
 
-  // Currently, only applab when the experiment is enabled. Hide if
-  // hideShareAndRemix is set on the level.
-  shouldShowExport() {
-    const {level = {}, app} = appOptions;
-    const {hideShareAndRemix} = level;
-    return (
-      !hideShareAndRemix &&
-      (app === 'applab' || app === 'gamelab') &&
-      experiments.isEnabled('exportExpo')
-    );
-  },
-
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix(),
-        showExport: this.shouldShowExport()
+        showShareAndRemix: !this.shouldHideShareAndRemix()
       });
     }
   },
@@ -679,8 +666,6 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
-   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
-   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -719,10 +704,13 @@ var projects = (module.exports = {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
-      if (currentSources.generatedProperties) {
-        sourceHandler.setInitialGeneratedProperties(
-          currentSources.generatedProperties
+      if (currentSources.inRestrictedShareMode !== undefined) {
+        sourceHandler.setInRestrictedShareMode(
+          currentSources.inRestrictedShareMode
         );
+        // ensure restrictdShareMode is set correctly in redux
+        // so we hide publish and remix correctly.
+        getStore().dispatch(refreshInRestrictedShareMode());
       }
 
       if (isEditing) {
@@ -872,7 +860,6 @@ var projects = (module.exports = {
       case 'flappy':
       case 'weblab':
       case 'gamelab':
-      case 'spritelab':
       case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
@@ -922,6 +909,8 @@ var projects = (module.exports = {
         return 'bounce';
       case 'poetry':
         return appOptions.level.standaloneAppName;
+      case 'spritelab':
+        return appOptions.level.standaloneAppName || appOptions.app;
       default:
         return null;
     }
@@ -978,7 +967,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1052,14 +1041,18 @@ var projects = (module.exports = {
      */
     const completeAsyncSave = () =>
       new Promise((resolve, reject) =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.saveSourceAndHtml_(
-            sourceAndHtml,
-            (err, result) => (err ? reject(err) : resolve()),
-            forceNewVersion,
-            preparingRemix
-          )
-        )
+        this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+          try {
+            this.saveSourceAndHtml_(
+              sourceAndHtml,
+              (err, result) => (err ? reject(err) : resolve()),
+              forceNewVersion,
+              preparingRemix
+            );
+          } catch (err) {
+            reject(err);
+          }
+        })
       );
 
     if (preparingRemix) {
@@ -1164,6 +1157,15 @@ var projects = (module.exports = {
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
+              if (err.message.includes('httpStatusCode: 422')) {
+                getStore().dispatch(
+                  displayWorkspaceAlert(
+                    workspaceAlertTypes.error,
+                    msg.invalidCharactersErrorMessage(),
+                    /* bottom */ true
+                  )
+                );
+              }
             }
             return;
           } else if (saveSourcesErrorCount > 0) {
@@ -1212,6 +1214,15 @@ var projects = (module.exports = {
   saveSelectedPoem(poem) {
     this.sourceHandler.setSelectedPoem(poem);
     return this.save();
+  },
+
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    this.sourceHandler.setInRestrictedShareMode(inRestrictedShareMode);
+    return this.save();
+  },
+
+  inRestrictedShareMode() {
+    return this.sourceHandler.inRestrictedShareMode();
   },
 
   /**
@@ -1289,8 +1300,8 @@ var projects = (module.exports = {
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
-          const generatedProperties = this.sourceHandler.getGeneratedProperties();
           const libraries = this.sourceHandler.getLibrariesList();
+          const inRestrictedShareMode = this.sourceHandler.inRestrictedShareMode();
           callback({
             source,
             html,
@@ -1298,8 +1309,8 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            generatedProperties,
-            libraries
+            libraries,
+            inRestrictedShareMode
           });
         })
         .catch(error => callback({error}))
@@ -1308,10 +1319,6 @@ var projects = (module.exports = {
 
   getSelectedSong() {
     return currentSources.selectedSong;
-  },
-
-  getGeneratedProperties() {
-    return currentSources.generatedProperties;
   },
 
   /**
@@ -1687,21 +1694,12 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
-          if (err.message.includes('error: Not Found')) {
-            // Project not found. Redirect to the most recent project of this
-            // type, or a new project of this type if none exists.
-            const newPath = utils
-              .currentLocation()
-              .pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1)
-              .join('/');
-            utils.navigateToHref(newPath);
-          }
-          // Reject even after navigation, to allow unit tests which stub
-          // navigateToHref to confirm that navigation has happened.
           return Promise.reject(err);
         })
         .then(this.fetchSource.bind(this))
+        .catch(err => {
+          return Promise.reject(err);
+        })
         .then(() => {
           if (current.isOwner && pathInfo.action === 'view') {
             isEditing = true;
@@ -1722,7 +1720,13 @@ var projects = (module.exports = {
   loadProjectBackedLevel_: function() {
     isEditing = true;
     return this.fetchChannel(appOptions.channel)
+      .catch(err => {
+        return Promise.reject(err);
+      })
       .then(this.fetchSource.bind(this))
+      .catch(err => {
+        return Promise.reject(err);
+      })
       .then(() => {
         projects.showHeaderForProjectBacked();
         return fetchAbuseScoreAndPrivacyViolations(this);
@@ -1820,9 +1824,10 @@ var projects = (module.exports = {
    */
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
-      channels.fetch(channelId, (err, data) =>
-        err ? reject(err) : resolve(data)
-      );
+      channels.fetch(channelId, (err, data, jqXhr, response) => {
+        fetchChannelResponseCode = response?.status;
+        err ? reject(err) : resolve(data);
+      });
     }).catch(err => {
       this.logError_(
         'load-channel-error',
@@ -1859,9 +1864,10 @@ var projects = (module.exports = {
         url += '?version=' + version;
       }
       return new Promise((resolve, reject) => {
-        sourcesApi.fetch(url, (err, data, jqXHR) =>
-          err ? reject(err) : resolve({data, jqXHR})
-        );
+        sourcesApi.fetch(url, (err, data, jqXHR, response) => {
+          fetchSourceResponseCode = response?.status;
+          err ? reject(err) : resolve({data, jqXHR});
+        });
       })
         .catch(err => {
           this.logError_(
@@ -2004,7 +2010,7 @@ function setMakerAPIsStatusFromQueryParams() {
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = CP_API;
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
 

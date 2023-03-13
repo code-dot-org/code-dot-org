@@ -22,7 +22,6 @@ class Pd::PaymentTerm < ApplicationRecord
 
   belongs_to :regional_partner
 
-  validates_presence_of :regional_partner
   validates_presence_of :start_date
   validate :sufficient_contract_terms
 

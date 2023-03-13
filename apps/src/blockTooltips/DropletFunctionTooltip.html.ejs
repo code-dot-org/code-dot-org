@@ -1,3 +1,4 @@
+<% var i18n = require('@cdo/locale'); %>
 <% function getPrefixedName () {
   return locals.tipPrefix ? locals.tipPrefix + locals.functionName : locals.functionName;
 } %>
@@ -25,11 +26,11 @@
 <% var linkText = "" %>
 <% if (locals.showCodeLink) { %>
   <div class="tooltip-code-link">
-    <a href="#">Show code</a>
+    <a href="#"><%= i18n.showGeneratedCode() %></a>
   </div>
 <% } %>
 <% if (locals.showExamplesLink) { %>
   <div class="tooltip-example-link">
-    <a href="#">See examples</a>
+    <a href="#"><%= i18n.examples() %></a>
   </div>
 <% } %>

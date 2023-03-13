@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:21.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -71,14 +67,14 @@
     "parent_level_id": 20695,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/sprite-interactions"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -91,9 +87,13 @@
     "long_instructions": "# New Properties\r\n\r\nSprites have lots of properties.  Check out the two new blocks in this activity and try them out for yourself.  Notice that different sprites can use the same animation, and still look different because of properties.\r\n\r\n# Do this\r\n\r\n* Run the program to see how the `rotation` and `scale` blocks make the first two notes look different.\r\n* Use the `rotation` and `scale` blocks on the last two notes to make them look different, too.",
     "encrypted_examples": "9mw1uOwn6CoQ6omMD7FAMVEacLcuseLWu3IU3D/XGE2vHUOlpbQGz8F32pcN\nNJa2Gcvpqv3jYvf+WXGPqmjtCw==\n",
     "libraries_enabled": "false",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:21.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:21.892+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties new_2021\\\"\"],\"cloned_from\":\"CSD Games properties new_2021\"}]"

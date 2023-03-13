@@ -6,6 +6,7 @@ import {getDatasetInfo} from './dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DataTable from './DataTable';
 import msg from '@cdo/locale';
+import TableDescription from './TableDescription';
 
 class PreviewModal extends React.Component {
   static propTypes = {
@@ -23,22 +24,19 @@ class PreviewModal extends React.Component {
   }
 
   render() {
-    if (!this.props.isPreviewOpen) {
+    const {isPreviewOpen, tableName, libraryManifest, onClose} = this.props;
+
+    if (!isPreviewOpen) {
       return null;
     }
-    const datasetInfo = getDatasetInfo(
-      this.props.tableName,
-      this.props.libraryManifest.tables
-    );
+    const datasetInfo = getDatasetInfo(tableName, libraryManifest.tables);
     return (
-      <BaseDialog isOpen handleClose={this.props.onClose} fullWidth fullHeight>
-        <h1>{this.props.tableName}</h1>
-        <p>
-          {datasetInfo.description}{' '}
-          {datasetInfo.docUrl && (
-            <a href={datasetInfo.docUrl}>{msg.moreInfo()}</a>
-          )}
-        </p>
+      <BaseDialog isOpen handleClose={onClose} fullWidth fullHeight>
+        <h1>{tableName}</h1>
+        <TableDescription
+          tableName={tableName}
+          libraryTables={libraryManifest.tables}
+        />
         <div style={{overflow: 'scroll', maxHeight: '70%'}}>
           <DataTable readOnly rowsPerPage={100} />
         </div>

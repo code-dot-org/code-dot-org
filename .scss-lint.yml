@@ -1,3 +1,7 @@
+# This is an SCSS linter for the backend, using scss-lint
+# which is no longer supported: https://github.com/sds/scss-lint#notice-consider-other-tools-before-adopting-scss-lint
+# On the frontend, we are using stylelint-scss, whose
+# config can be found in apps/stylelint.config.js
 scss_files: 'dashboard/app/**/*.scss'
 
 linters:

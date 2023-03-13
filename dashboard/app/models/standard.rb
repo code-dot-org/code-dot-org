@@ -16,8 +16,8 @@
 #
 
 class Standard < ApplicationRecord
-  belongs_to :framework
-  belongs_to :category, class_name: 'StandardCategory'
+  belongs_to :framework, optional: true
+  belongs_to :category, class_name: 'StandardCategory', optional: true
   has_one :parent_category, through: :category
 
   # ensures associated lessons_standards are deleted when a standard is deleted

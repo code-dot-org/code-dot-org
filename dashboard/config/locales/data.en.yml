@@ -689,6 +689,81 @@ en:
         csd_u6_call_define_functions: 'CSD: Calling and Defining Functions'
         csp_applab_parameters: Functions with Parameters
         starquilts_intro_artist: Intro to Star Quilts
+        CSA-PL-intro-to-arrays: One-Dimensional (1D) Arrays
+        CSA-PL-1d-arrays-new-values: Entering values in 1D arrays
+        CSA-PL-conditionals: Conditional Statements in Java
+        CSA-PL-two-way-selection: Two-way selection
+        CSA-PL-Printing-in-Java: Printing in Java
+        CSA-PL-multi-selection-statements: Multi-selection Statements
+        PL_CSP_TeacherTips_Advice: 'Teacher Tips: Advice to New CS Teachers'
+        PL_CSP_TeacherTips_IntroToCSP: 'Teacher Tips: Intro to CS Principles'
+        PL_CSP_TeacherTips_Debugging: 'Teacher Tips: Help with Debugging'
+        PL_CSP_TeacherTips_LeadLearner: 'Teacher Tips: How to be a Lead Learner'
+        PL_CSP_TeacherTips_APExam: 'Teacher Tips: Preparing for the AP Exam'
+        PL_CSP_TeacherTips_EIPM: 'Teacher Tips: The EIPM Process'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground Overview
+        CSA-PL-debugging-22: Debugging in Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplar
+        CS_Changing_Everything: Computer Science is Changing Everything
+        csa-alias-video: Equals and Aliases
+        csa-equals-video: The equals() method
+        csa-user-stories: User Stories in Software Engineering
+        csa-pl-vpl-m1-unit-3: Software Engineering in Unit 3
+        csa-pl-intro-to-equality: Introduction to Equality
+        csa-pl-intro-to-equals-method: Introduction to the .equals() method
+        csa-pl-equals-book: Writing the equals() method for the Book class
+        csa-multi-select-pl: Multi-selection Statements in Java
+        csc_timecapsule_intro: Time Capsule Introduction
+        PL_Equity_in_CS_Education: Equity in CS Education
+        csc_fm_pilot: Function Machines (Pilot)
+        csc_fm_pilot_v2: 'Function Machines Intro '
+        csc-sprite-lab-pixel-editor: Draw Your Own Sprite
+        csa-pl-intro-to-strings: Introduction to Strings in Java
+        csa-pl-compareTo: The compareTo() method
+        csc-event-short-intro: Events Short Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Playground Unit Overview
+        csa-day-in-pm-pl: What does a project manager do?
+        csa-pl-intro-to-pm: Introduction to Project Managment
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground Setup
+        csa_object_oriented_programming: 'CSA: Object-Oriented Programming'
+        csa_creating_objects: 'CSA: Creating Objects'
+        csa_calling_methods: 'CSA: Calling Methods'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Inheritance'
+        csa_writing_a_method: 'CSA: Writing a Method'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Code Reviews'
+        csa_conditional_statements: 'CSA: Conditional Statements'
+        csa_printing_in_java: 'CSA: Printing in Java'
+        csa_two_way_selection_and_not: 'CSA: Two-Way Selection and NOT'
+        csa-pl-intro-to-oop: Introduction to Object-Oriented Programming
+        csa-pl-welcome-to-Neighborhood: Welcome to The Neighborhood
+        csa-pl-calling-methods: Calling Methods in Java
+        csa-pl-creating-objects: Creating Objects
+        csa_accessor_methods: 'CSA: Accessor Methods'
+        csa_constructors: 'CSA: Constructors'
+        csa_creating_a_scanner_object: 'CSA: Creating a Scanner Object'
+        csa_creating_variables: 'CSA: Creating Variables'
+        csa_instance_variables_and_attributes: 'CSA: Instance Variables and Attributes'
+        csa_mutator_methods: 'CSA: Mutator Methods'
+        csa_overloaded_constructors: 'CSA: Overloaded Constructors'
+        csa_the_tostring_method: 'CSA: The toString() Method'
+        csa_scanner_class_methods: 'CSA: Scanner Class Methods'
+        csa_for_loops: 'CSA: For Loops'
+        csa_enhanced_for_loops: 'CSA: Enhanced For Loops'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modifying Values in a 1D Array'
+        csa_nested_loops: 'CSA: Nested Loops'
+        csa_one_dimensional_arrays: 'CSA: One-Dimensional (1D) Arrays'
+        csa_polymorphism: 'CSA: Polymorphism'
+        csa_casting: 'CSA: Casting'
+        csa_equals_and_aliases: 'CSA: Equals and Aliases'
+        csa_multi-selection_statements: 'CSA: Multi-Selection Statements'
+        csa_random_numbers: 'CSA: Random Numbers'
+        csa_static_methods: 'CSA: Static Methods'
+        csa_static_variables: 'CSA: Static Variables'
+        csa_the_equals_method: 'CSA: The equals() Method'
+        csa_welcome_to_the_theater: 'CSA: Welcome to The Theater'
+        enter_your_own_poem: Enter Your Own Poem
+        csa-example-solution-1: 'Live Coding an Example Solution '
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

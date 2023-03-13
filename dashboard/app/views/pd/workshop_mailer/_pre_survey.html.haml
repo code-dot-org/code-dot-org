@@ -1,5 +1,5 @@
 %p
-  - survey_type = @workshop.summer? ? 'pre-course' : 'pre-workshop'
+  - survey_type = (@workshop.summer? || @workshop.ayw?) ? 'pre-course' : 'pre-workshop'
   - if @is_first_pre_survey_email
     Please take a moment to complete the
     = survey_type

@@ -37,7 +37,7 @@ module ShareFiltering
 
   def self.should_filter_program(program)
     Gatekeeper.allows('webpurify', default: true) &&
-      program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
+      program =~ /#{PLAYLAB_APP_INDICATOR}/o &&
           program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
   end
 

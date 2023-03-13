@@ -358,22 +358,6 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
 
             <CollapsibleEditorSection
-              title="Assessment Opportunities"
-              collapsed={true}
-              fullWidth={true}
-            >
-              <TextareaWithMarkdownPreview
-                markdown={assessmentOpportunities}
-                label={'Assessment Opportunities'}
-                inputRows={5}
-                handleMarkdownChange={e =>
-                  this.setState({assessmentOpportunities: e.target.value})
-                }
-                features={{imageUpload: true, resourceLink: true}}
-              />
-            </CollapsibleEditorSection>
-
-            <CollapsibleEditorSection
               title="Resources"
               collapsed={true}
               fullWidth={true}
@@ -429,6 +413,23 @@ class LessonEditor extends Component {
                 updateObjectives={this.handleUpdateObjectives}
               />
             </CollapsibleEditorSection>
+
+            <CollapsibleEditorSection
+              title="Assessment Opportunities"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={assessmentOpportunities}
+                label={'Assessment Opportunities'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({assessmentOpportunities: e.target.value})
+                }
+                features={{imageUpload: true, resourceLink: true}}
+              />
+            </CollapsibleEditorSection>
+
             <CollapsibleEditorSection
               title="Standards"
               collapsed={true}

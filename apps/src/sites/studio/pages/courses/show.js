@@ -17,7 +17,11 @@ import {
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {registerReducers} from '@cdo/apps/redux';
-import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import {
+  setUserSignedIn,
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
   setVerifiedResources
@@ -31,15 +35,9 @@ function showCourseOverview() {
   const script = document.querySelector('script[data-courses-show]');
   const scriptData = JSON.parse(script.dataset.coursesShow);
   const courseSummary = scriptData.course_summary;
-  const isTeacher = scriptData.is_teacher;
+  const isInstructor = scriptData.is_instructor;
   const userId = scriptData.user_id;
 
-  const teacherResources = (courseSummary.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
@@ -50,8 +48,9 @@ function showCourseOverview() {
 
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
-  if (isTeacher) {
+  if (isInstructor) {
     store.dispatch(setViewType(ViewType.Instructor));
+    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
     if (scriptData.is_verified_instructor) {
@@ -74,15 +73,7 @@ function showCourseOverview() {
   if (announcements) {
     registerReducers({announcements: announcementReducer});
     announcements.forEach(announcement =>
-      store.dispatch(
-        addAnnouncement(
-          announcement.notice,
-          announcement.details,
-          announcement.link,
-          announcement.type,
-          announcement.visibility
-        )
-      )
+      store.dispatch(addAnnouncement(announcement))
     );
   }
 
@@ -99,8 +90,7 @@ function showCourseOverview() {
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
         sectionsInfo={scriptData.sections}
-        teacherResources={teacherResources}
-        migratedTeacherResources={courseSummary.migrated_teacher_resources}
+        teacherResources={courseSummary.teacher_resources}
         studentResources={courseSummary.student_resources}
         scripts={courseSummary.scripts}
         versions={versions}
@@ -112,9 +102,8 @@ function showCourseOverview() {
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
         userId={userId}
-        useMigratedResources={
-          courseSummary.is_migrated && !teacherResources.length
-        }
+        userType={scriptData.user_type}
+        participantAudience={courseSummary.participant_audience}
       />
     </Provider>,
     document.getElementById('course_overview')

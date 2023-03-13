@@ -19,14 +19,12 @@
 #
 
 # A named group of learning modules within a PLC course.
-# Corresponds to a Script in our regular curriculum hierarchy.
+# Corresponds to a Unit in our regular curriculum hierarchy.
 class Plc::CourseUnit < ApplicationRecord
-  belongs_to :script
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :plc_course, class_name: '::Plc::Course'
   has_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_course_unit_id', dependent: :destroy
   has_many :plc_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_course_unit_id', dependent: :destroy
-
-  validates :plc_course, presence: true
 
   # TODO: Migrate unit_name to name for consistency - @mehal
   def name

@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-04-07T19:51:42.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -23,7 +19,7 @@
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -73,9 +69,13 @@
     "encrypted_examples": "M5Rg5u56j58+HJ3Y65YeHJx4moU8IklXEbYmwJFUuVbkjy6mNL28hkbeZgPk\ngamYMoE/BqopmL1aFpX+pcsk3g==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-04-07T19:51:42.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T19:51:42.933+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_freeplay_retro_2022_pilot\\\"\"],\"cloned_from\":\"courseF_groups_freeplay_retro_2022_pilot\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-07T19:51:42.933+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_freeplay_retro_2022_pilot\\\"\"],\"cloned_from\":\"courseF_groups_freeplay_retro_2022_pilot\"},{\"changed_at\":\"2023-01-17 18:24:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-01-17 18:27:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -90,7 +90,7 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <field name="IMG">"hw_plate_background_1"</field>
+            <field name="IMG">"hw_retro_background_1"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
@@ -175,7 +175,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"face_pizza_1"</field>
+            <field name="ANIMATION_NAME">"retrocreature_18"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -183,7 +183,7 @@
             </value>
           </block>
           <block type="gamelab_makeNumSprites">
-            <field name="ANIMATION_NAME">"face_pizza_1"</field>
+            <field name="ANIMATION_NAME">"retrocreature_18"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">3</field>
@@ -192,7 +192,7 @@
           </block>
           <block type="gamelab_makeBurst">
             <field name="EFFECT">"pop"</field>
-            <field name="ANIMATION_NAME">"face_pizza_1"</field>
+            <field name="ANIMATION_NAME">"retrocreature_18"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">10</field>
@@ -200,7 +200,7 @@
             </value>
           </block>
           <block type="gamelab_allSpritesWithAnimation">
-            <field name="ANIMATION">"face_pizza_1"</field>
+            <field name="ANIMATION">"retrocreature_18"</field>
           </block>
           <block type="gamelab_getAllSprites"/>
           <block type="gamelab_destroy"/>
@@ -249,7 +249,7 @@
           </block>
           <block type="gamelab_removeTint"/>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"face_pizza_1"</field>
+            <field name="ANIMATION">"retrocreature_18"</field>
           </block>
           <block type="gamelab_jumpTo">
             <value name="LOCATION">
@@ -260,7 +260,7 @@
             <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -273,7 +273,7 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
             <value name="N">
@@ -286,14 +286,14 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -305,7 +305,7 @@
           <block type="gamelab_moveToward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -330,7 +330,7 @@
           </block>
           <block type="gamelab_randomLocation"/>
         </category>
-        <category name="Behaviors">
+        <category name="Behaviors" custom="Behavior">
           <block type="gamelab_addBehaviorSimple"/>
           <block type="gamelab_removeBehaviorSimple"/>
           <block type="gamelab_removeAllBehaviors"/>
@@ -361,7 +361,7 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
           </block>
@@ -369,12 +369,12 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"face_pizza_1"</field>
+                <field name="ANIMATION">"retrocreature_18"</field>
               </block>
             </value>
           </block>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DummyForm < ActiveRecord::Base
+class DummyForm < ApplicationRecord
   include Pd::Form
 end
 
@@ -54,20 +54,20 @@ class DummyFormWithDynamicOptions < DummyForm
 
   # Valid options depend on which option_set is selected, determined at runtime
   def dynamic_options
-    case sanitize_form_data_hash[:option_set]
-      when '1'
-        {
-          option: %w(One Two)
-        }
-      when '2'
-        {
-          option: %w(Three Four)
-        }
-      else
-        {
-          # always fail in this case
-          option: nil
-        }
+    case sanitized_form_data_hash[:option_set]
+    when '1'
+      {
+        option: %w(One Two)
+      }
+    when '2'
+      {
+        option: %w(Three Four)
+      }
+    else
+      {
+        # always fail in this case
+        option: nil
+      }
     end
   end
 end
@@ -210,7 +210,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     assert_nil form.instance_variable_get(:@form_data_hash)
   end
 
-  test 'memoized sanitize_form_data_hash' do
+  test 'memoized sanitized_form_data_hash' do
     form = DummyForm.new(
       form_data_hash: {
         firstField: 'value1',
@@ -224,14 +224,14 @@ class Pd::FormTest < ActiveSupport::TestCase
     }
 
     assert_nil form.instance_variable_get(:@sanitized_form_data_hash)
-    assert_equal sanitized_form_data_hash, form.sanitize_form_data_hash
+    assert_equal sanitized_form_data_hash, form.sanitized_form_data_hash
     assert_equal sanitized_form_data_hash, form.instance_variable_get(:@sanitized_form_data_hash)
 
     form.form_data = nil
     assert_nil form.instance_variable_get(:@sanitized_form_data_hash)
   end
 
-  test 'memoized sanitize_and_trim_form_data_hash' do
+  test 'memoized sanitized_and_trimmed_form_data_hash' do
     form = DummyForm.new(
       form_data_hash: {
         firstField: 'value1',
@@ -244,7 +244,7 @@ class Pd::FormTest < ActiveSupport::TestCase
     }
 
     assert_nil form.instance_variable_get(:@sanitized_and_trimmed_form_data_hash)
-    assert_equal sanitized_and_trimmed_form_data_hash, form.sanitize_and_trim_form_data_hash
+    assert_equal sanitized_and_trimmed_form_data_hash, form.sanitized_and_trimmed_form_data_hash
     assert_equal sanitized_and_trimmed_form_data_hash, form.instance_variable_get(:@sanitized_and_trimmed_form_data_hash)
 
     form.form_data = nil

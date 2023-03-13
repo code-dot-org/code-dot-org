@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2022-03-09T19:21:00.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "artist",
     "short_instructions": "This time, complete the puzzle with the fewest number of blocks possible.",
@@ -29,7 +25,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "long_instructions": "**Try this student lesson level from Course E - Lesson 9, Level 4:  Fancy Shapes using Nested Loops.**\r\nThis time, complete the puzzle with the fewest number of blocks possible.\r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.\r\nSee how much easier this is with **nested loops**?",
+    "long_instructions": "**Try this student lesson level from Course E - Lesson 7, Level 4:  Fancy Shapes using Nested Loops.**\r\nThis time, complete the puzzle with the fewest number of blocks possible.\r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.\r\nSee how much easier this is with **nested loops**?",
     "examples_required": "false",
     "never_autoplay_video": "true",
     "discard_background": "false",
@@ -46,11 +42,18 @@
     "encrypted": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2022-03-09T19:21:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-09T19:21:00.880+00:00\",\"changed\":[\"cloned from \\\"OPD-K5 NestedLoopsE-2021\\\"\"],\"cloned_from\":\"OPD-K5 NestedLoopsE-2021\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-09T19:21:00.880+00:00\",\"changed\":[\"cloned from \\\"OPD-K5 NestedLoopsE-2021\\\"\"],\"cloned_from\":\"OPD-K5 NestedLoopsE-2021\"},{\"changed_at\":\"2022-05-31 19:40:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -32,8 +32,6 @@ class Pd::WorkshopSurvey < ApplicationRecord
 
   belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
 
-  validates_presence_of :pd_enrollment
-
   def self.required_fields
     [
       :will_teach,
@@ -127,7 +125,7 @@ class Pd::WorkshopSurvey < ApplicationRecord
   def validate_required_fields
     return if owner_deleted?
 
-    hash = sanitize_form_data_hash
+    hash = sanitized_form_data_hash
 
     # validate conditional required fields
     if hash.try(:[], :will_teach) == NO

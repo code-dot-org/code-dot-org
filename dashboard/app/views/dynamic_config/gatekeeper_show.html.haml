@@ -67,7 +67,7 @@
       - @gk_hsh.to_a.sort.each do |feature, clauses|
         -unless clauses.empty?
           %li
-            %a{:href => "?feature=#{URI.encode(feature)}", :class => ("selected" if feature == @feature)}= feature
+            %a{:href => "?feature=#{URI.encode_www_form_component(feature)}", :class => ("selected" if feature == @feature)}= feature
 
 
 - if @feature_details

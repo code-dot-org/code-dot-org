@@ -7,7 +7,7 @@ class Homepage
   @@json_path = pegasus_dir 'sites.v3/code.org/homepage.json'
 
   # gets special announcement data for a page, or nil if not found
-  def self.get_announcement_for_page(page)
+  def self.get_announcement_for_page(page, request)
     load_announcements
     return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
@@ -25,8 +25,14 @@ class Homepage
       # If the banner has a required DCDO flag, then it must be set.
       next if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
 
+      # If the banner has an array of required hoc_mode DCDO values, then one of them must be the current hoc_mode.
+      next if banner["hoc_modes"] && !banner["hoc_modes"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
+
+      # If the banner has an array of languages, then the current language must be one of them.
+      next if banner["languages"] && !banner["languages"].include?(request.language)
+
       # We have a banner.  Add the ID to the hash that we return.
-      return banner.merge({"id": banner_id_for_page})
+      return banner.merge({id: banner_id_for_page})
     end
 
     # If we made it to here, none of the potential banners was available.
@@ -44,7 +50,7 @@ class Homepage
     end
     begin
       @@announcements_data = JSON.parse(
-        IO.read(@@json_path),
+        File.read(@@json_path),
         symbolize_names: true,
         object_class: HashWithIndifferentAccess
       )
@@ -60,7 +66,7 @@ class Homepage
   def self.validate_announcements_data(announcements_data)
     return false unless announcements_data && announcements_data[:pages] &&
       announcements_data[:banners] &&
-      announcements_data[:banners].respond_to?("each_value")
+      announcements_data[:banners].respond_to?(:each_value)
 
     announcements_data[:banners].each_value do |banner|
       return false unless validate_banner(banner)
@@ -176,8 +182,8 @@ class Homepage
     ]
   end
 
-  def self.get_action_buttons_css_class
-    custom_banner = get_announcement_for_page("homepage")
+  def self.get_action_buttons_css_class(request)
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner && custom_banner["class"]
       custom_banner["class"]
     else
@@ -185,8 +191,8 @@ class Homepage
     end
   end
 
-  def self.get_num_columns
-    custom_banner = get_announcement_for_page("homepage")
+  def self.get_num_columns(request)
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
       return 3
     end
@@ -194,8 +200,8 @@ class Homepage
     1
   end
 
-  def self.get_outer_column_images
-    custom_banner = get_announcement_for_page("homepage")
+  def self.get_outer_column_images(request)
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
       return {left_image: custom_banner["leftImage"], right_image: custom_banner["rightImage"]}
     end
@@ -221,7 +227,7 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    custom_banner = get_announcement_for_page("homepage")
+    custom_banner = get_announcement_for_page("homepage", request)
 
     if custom_banner
       custom_banner["actions"].map do |action|
@@ -304,25 +310,25 @@ class Homepage
         {
           id: "at-home-en",
           type: "block",
-          title: "homepage_slot_text_title_at_home",
-          text: "homepage_slot_text_blurb_at_home",
+          title: "homepage_slot_text_title_hoc",
+          text: "homepage_slot_text_blurb_hoc_2022",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/athome",
+          url: "https://hourofcode.com/us",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
               {
-                text: "homepage_slot_text_link_do_hoc",
+                text: "homepage_slot_text_link_hoc",
                 url: "/hourofcode/overview"
               },
               {
-                text: "homepage_slot_text_link_express_course",
-                url: "/educate/curriculum/express-course"
+                text: "homepage_slot_text_link_about_hoc",
+                url: "https://hourofcode.com/"
               },
               {
-                text: "homepage_slot_text_link_code_break",
-                url: "/break"
+                text: "homepage_slot_text_link_host",
+                url: "https://hourofcode.com/us/#join"
               }
             ]
         },
@@ -466,7 +472,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    custom_banner = get_announcement_for_page("homepage")
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner
       "custom"
     else
@@ -481,10 +487,10 @@ class Homepage
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    custom_banner = get_announcement_for_page("homepage")
+    custom_banner = get_announcement_for_page("homepage", request)
     if custom_banner
       heroes_arranged =
-        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
+        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"], image_mobile: custom_banner["mobileImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else
@@ -548,15 +554,15 @@ class Homepage
   end
 
   def self.get_dance_stars
-    stars = [
-      "Katy Perry", "Lil Nas X (ft. Billy Ray Cyrus)", "Jonas Brothers", "Panic! At The Disco",
-      "Shawn Mendes", "Nicki Minaj", "KIDZ BOP", "Pedro Capó", "Francesco Gabbani", "Sia",
-      "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
-      "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
+    [
+      "Beyoncé", "Harry Styles", "Lizzo", "Post Malone", "Disney\'s \"Encanto\"", "Nicky Youre",
+      "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
+      "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
+      "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
+      "Carly Rae Jepsen", "Coldplay", "Ed Sheeran", "Imagine Dragons",
       "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
-    DCDO.get("hoc2019_dance_stars", stars)
   end
 end

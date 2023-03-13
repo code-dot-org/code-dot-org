@@ -8,6 +8,9 @@ export default function NewUnitForm(props) {
   const [isCourse, setIsCourse] = useState('');
   const [familyName, setFamilyName] = useState('');
   const [versionYear, setVersionYear] = useState('');
+  const [instructorAudience, setInstructorAudience] = useState('');
+  const [participantAudience, setParticipantAudience] = useState('');
+  const [instructionType, setInstructionType] = useState('');
 
   const getScriptName = () => {
     const name =
@@ -15,6 +18,26 @@ export default function NewUnitForm(props) {
         ? familyName + '-' + versionYear
         : familyName;
     return name;
+  };
+
+  const setFamilyAndCourseType = familyName => {
+    if (familyName === '') {
+      setParticipantAudience('');
+      setInstructorAudience('');
+      setInstructionType('');
+    } else {
+      setParticipantAudience(
+        props.familiesCourseTypes[familyName].participant_audience
+      );
+      setInstructorAudience(
+        props.familiesCourseTypes[familyName].instructor_audience
+      );
+      setInstructionType(
+        props.familiesCourseTypes[familyName].instruction_type
+      );
+    }
+
+    setFamilyName(familyName);
   };
 
   return (
@@ -52,12 +75,17 @@ export default function NewUnitForm(props) {
             families={props.families}
             versionYearOptions={props.versionYearOptions}
             familyName={familyName}
+            setFamilyAndCourseType={setFamilyAndCourseType}
             setFamilyName={setFamilyName}
             versionYear={versionYear}
             setVersionYear={setVersionYear}
+            instructionType={instructionType}
+            instructorAudience={instructorAudience}
+            participantAudience={participantAudience}
           />
           {familyName !== '' && versionYear !== '' && (
             <div>
+              <h2>Unit Slug</h2>
               <label>
                 The Unit Slug for this course will be:
                 <HelpTip>
@@ -83,6 +111,27 @@ export default function NewUnitForm(props) {
               </label>
               <input name="family_name" value={familyName} type="hidden" />
               <input name="version_year" value={versionYear} type="hidden" />
+              {instructionType !== '' && (
+                <input
+                  name="instruction_type"
+                  value={instructionType}
+                  type="hidden"
+                />
+              )}
+              {instructorAudience !== '' && (
+                <input
+                  name="instructor_audience"
+                  value={instructorAudience}
+                  type="hidden"
+                />
+              )}
+              {participantAudience !== '' && (
+                <input
+                  name="participant_audience"
+                  value={participantAudience}
+                  type="hidden"
+                />
+              )}
               <input
                 name="is_course"
                 value={isCourse === 'true'}
@@ -116,7 +165,8 @@ export default function NewUnitForm(props) {
 
 NewUnitForm.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
-  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  familiesCourseTypes: PropTypes.object.isRequired
 };
 
 const styles = {

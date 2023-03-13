@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "9b45f4aa-6b0a-44d7-9813-8e724baca343",
+          "notice": "Extension Lessons with the micro:bit",
+          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
+          "link": "https://code.org/maker/csf-microbit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn more"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -15,12 +27,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-04-21 16:37:27 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-01-12 01:55:54 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -186,8 +199,8 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. ",
-        "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.\n",
-        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. With this skill, students could then create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects.\n",
+        "preparation": "- Play through the puzzles to find any potential problem areas for your class.\n- [Optional] Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.\n",
+        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. Students will learn how to make sprites say things, which is a skill they will use in the following About Me lesson.\n",
         "student_overview": "In this lesson, you will learn to create and animate sprites and make them interactive using events."
       },
       "seeding_key": {
@@ -346,7 +359,7 @@
       "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
+        "overview": "In this **skill-building/context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "student_overview": "Here you will learn about conditionals in the world of _Minecraft_."
@@ -715,6 +728,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2ae44a38-4141-461c-a9d1-291a952c3bec",
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "key": "5b8fa378-7c92-4dfd-aa8b-170836cd31b6",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b8fa378-7c92-4dfd-aa8b-170836cd31b6",
         "lesson.key": "Hello World: Food",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2022"
@@ -1475,6 +1501,19 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursee-2022"
       }
+    },
+    {
+      "key": "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af",
+      "position": 6,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursee-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1945,6 +1984,17 @@
       "seeding_key": {
         "activity_section.key": "ebbcd2fa-1991-41d3-a054-232b53cf8f17",
         "lesson_activity.key": "2ae44a38-4141-461c-a9d1-291a952c3bec"
+      }
+    },
+    {
+      "key": "6fd1ff5b-fb1a-4780-ac80-cb2780555f36",
+      "position": 1,
+      "properties": {
+        "description": "With skills learned in this Hello World lesson, students are able to  create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects."
+      },
+      "seeding_key": {
+        "activity_section.key": "6fd1ff5b-fb1a-4780-ac80-cb2780555f36",
+        "lesson_activity.key": "5b8fa378-7c92-4dfd-aa8b-170836cd31b6"
       }
     },
     {
@@ -3663,6 +3713,18 @@
       "seeding_key": {
         "activity_section.key": "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9",
         "lesson_activity.key": "f4c94b25-e0f0-4caa-bebd-1557f771a849"
+      }
+    },
+    {
+      "key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
+      "position": 1,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
+        "name": "Extension Lessons with the micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "be35b565-6d45-46fa-ae1a-c5d1aeb2f901",
+        "lesson_activity.key": "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af"
       }
     }
   ],
@@ -8979,6 +9041,18 @@
       }
     },
     {
+      "name": "Extension Lessons with the micro:bit",
+      "url": "https://code.org/maker/csf-microbit",
+      "key": "extension_lessons_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit"
+      }
+    },
+    {
       "name": "Functions Unplugged: Songwriting",
       "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
       "key": "functions_unplugged_songwriting",
@@ -9541,6 +9615,12 @@
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "coursee-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit",
         "script.name": "coursee-2022"
       }
     },

@@ -15,13 +15,14 @@ module Api::V1::Pd::Application
       }
     end
 
-    PRINCIPAL_APPROVAL_EMAILS = [
-      :principal_approval_completed,
-      :principal_approval_completed_partner
+    ADMIN_APPROVAL_EMAILS = [
+      :admin_approval_completed,
+      :admin_approval_completed_partner,
+      :admin_approval_completed_teacher_receipt
     ]
 
     setup do
-      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+      ADMIN_APPROVAL_EMAILS.each do |email_type|
         Pd::Application::TeacherApplicationMailer.stubs(email_type).returns(
           mock {|mail| mail.stubs(:deliver_now)}
         )
@@ -48,13 +49,12 @@ module Api::V1::Pd::Application
       expected_principal_fields = {
         principal_approval: 'Yes',
         principal_schedule_confirmed: "Yes, I plan to include this course in the #{@teacher_application.year} master schedule",
-        principal_diversity_recruitment: 'Yes',
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
         principal_pay_fee: 'Yes, my school would be able to pay the full program fee.'
       }
-      actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
+      actual_principal_fields = @teacher_application.sanitized_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
@@ -65,8 +65,7 @@ module Api::V1::Pd::Application
         application_guid: teacher_application.application_guid,
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
           {
-            replace_course: 'Yes',
-            replace_which_course_csp: ['CodeHS', 'CS Fundamentals']
+            replace_course: 'Yes'
           }.stringify_keys
         )
       }
@@ -77,8 +76,8 @@ module Api::V1::Pd::Application
       end
 
       assert_equal(
-        'Yes: CodeHS, CS Fundamentals',
-        teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
+        'Yes',
+        teacher_application.reload.sanitized_form_data_hash[:principal_wont_replace_existing_course]
       )
     end
 
@@ -92,8 +91,6 @@ module Api::V1::Pd::Application
           do_you_approve_other: "this is the other for do you approve",
           committed_to_master_schedule: "Other:",
           committed_to_master_schedule_other: "this is the other for master schedule",
-          committed_to_diversity: "Other (Please Explain):",
-          committed_to_diversity_other: "this is the other for diversity",
           replace_course: "I don't know (Please Explain):",
           replace_course_other: "this is the other for replace course"
         )
@@ -107,18 +104,17 @@ module Api::V1::Pd::Application
       expected_principal_fields = {
         principal_approval: "Other: this is the other for do you approve",
         principal_schedule_confirmed: "Other: this is the other for master schedule",
-        principal_diversity_recruitment: "Other (Please Explain): this is the other for diversity",
         principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
-      actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
-        expected_principal_fields.keys.include? k
+      actual_principal_fields = teacher_application.reload.sanitized_form_data_hash.select do |k, _|
+        expected_principal_fields.key?(k)
       end
 
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
     test 'Sends principal approval received emails on successful create' do
-      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+      ADMIN_APPROVAL_EMAILS.each do |email_type|
         TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
       end
 
@@ -127,7 +123,7 @@ module Api::V1::Pd::Application
     end
 
     test 'Does not send emails on unsuccessful create' do
-      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+      ADMIN_APPROVAL_EMAILS.each do |email_type|
         Pd::Application::TeacherApplicationMailer.expects(email_type).never
       end
 

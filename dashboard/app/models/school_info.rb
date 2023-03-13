@@ -43,8 +43,8 @@ class SchoolInfo < ApplicationRecord
     VALIDATION_COMPLETE = 'complete'.freeze
   ].freeze
 
-  belongs_to :school_district
-  belongs_to :school
+  belongs_to :school_district, optional: true
+  belongs_to :school, optional: true
 
   has_and_belongs_to_many :census_submissions, class_name: 'Census::CensusSubmission'
 
@@ -263,16 +263,17 @@ class SchoolInfo < ApplicationRecord
   # needs to be, but correlates to the list of valid configurations given
   # in https://github.com/code-dot-org/code-dot-org/pull/8624.
   def validate_school_district_without_country
-    return if school_type == SCHOOL_TYPE_CHARTER && !zip.blank?
-    return if school_type == SCHOOL_TYPE_PRIVATE && !zip.blank?
-    if school_type == SCHOOL_TYPE_PUBLIC
+    return if school_type == SCHOOL_TYPE_CHARTER && zip.present?
+    return if school_type == SCHOOL_TYPE_PRIVATE && zip.present?
+    case school_type
+    when SCHOOL_TYPE_PUBLIC
       return if state == SCHOOL_STATE_OTHER
-      return if !state.blank? && !school_district_id.blank?
-      return if !state.blank? && school_district_id.blank? && !school_district_other.blank?
-    elsif school_type == SCHOOL_TYPE_OTHER
+      return if state.present? && school_district_id.present?
+      return if state.present? && school_district_id.blank? && school_district_other.present?
+    when SCHOOL_TYPE_OTHER
       return if state == SCHOOL_STATE_OTHER
-      return if !state.blank? && !school_district_id.blank?
-      return if !state.blank? && school_district_id.blank? && !school_district_other.blank?
+      return if state.present? && school_district_id.present?
+      return if state.present? && school_district_id.blank? && school_district_other.present?
     end
 
     errors.add(:school_district, "is required")
@@ -320,6 +321,6 @@ class SchoolInfo < ApplicationRecord
     ].include?(school_type)
 
     # Given we got past above cases, school name is sufficient
-    !school_name.blank?
+    school_name.present?
   end
 end

@@ -61,7 +61,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'index gets all regional partners for workshop admin' do
     regional_partner = create :regional_partner, name: 'New regional partner'
-    sign_in (create :workshop_admin)
+    sign_in(create(:workshop_admin))
 
     get :index
     response = JSON.parse(@response.body)
@@ -82,40 +82,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
-      application.lock!
 
       sign_in @workshop_organizer
       get :capacity, params: {role: 'csp_teachers'}
       assert_response :success
 
       assert_equal(50, JSON.parse(@response.body)['capacity'])
-    end
-  end
-
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'capacity as a workshop organizer returns nil regional partner cohort capacity for facilitator applications' do
-    time = Date.new(2017, 3, 15)
-
-    Timecop.freeze(time) do
-      application = create(
-        :pd_facilitator1819_application,
-        course: 'csp',
-        regional_partner: @regional_partner,
-        user: @serializing_teacher
-      )
-
-      application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
-      application.save!
-      application.lock!
-
-      sign_in @workshop_organizer
-      get :capacity, params: {role: 'csp_facilitators'}
-      assert_response :success
-
-      assert_nil JSON.parse(@response.body)['capacity']
     end
   end
 
@@ -131,39 +105,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
-      application.lock!
 
       sign_in @program_manager
       get :capacity, params: {role: 'csp_teachers'}
       assert_response :success
 
       assert_equal(50, JSON.parse(@response.body)['capacity'])
-    end
-  end
-
-  test 'capacity returns nil regional partner cohort capacity for facilitator applications' do
-    time = Date.new(2017, 3, 15)
-
-    Timecop.freeze(time) do
-      application = create(
-        :pd_facilitator1819_application,
-        course: 'csp',
-        regional_partner: @regional_partner,
-        user: @serializing_teacher
-      )
-
-      application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
-      application.save!
-      application.lock!
-
-      sign_in @program_manager
-      get :capacity, params: {role: 'csp_facilitators'}
-      assert_response :success
-
-      assert_nil JSON.parse(@response.body)['capacity']
     end
   end
 
@@ -179,9 +128,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
-      application.lock!
 
       sign_in @workshop_admin
       get :capacity, params: {role: 'csp_teachers', regional_partner_value: 'all'}
@@ -203,9 +151,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
-      application.lock!
 
       sign_in @workshop_admin
       get :capacity, params: {role: 'csp_teachers', regional_partner_value: 'none'}
@@ -227,9 +174,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
-      application.lock!
 
       sign_in @workshop_admin
       get :capacity, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
@@ -326,12 +272,6 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     Api::V1::Pd::ApplicationsController::ROLES.each_with_index do |role, index|
       course, subject =
         case role
-        when :csf_facilitators
-          [COURSE_CSF, SUBJECT_CSF_FIT]
-        when :csd_facilitators
-          [COURSE_CSD, SUBJECT_CSD_FIT]
-        when :csp_facilitators
-          [COURSE_CSP, SUBJECT_CSP_FIT]
         when :csd_teachers
           [COURSE_CSD, SUBJECT_CSD_SUMMER_WORKSHOP]
         when :csp_teachers

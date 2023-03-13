@@ -33,15 +33,12 @@
 
 require 'dynamic_config/gatekeeper'
 
-MAX_INT_VALUE = 2**31 - 1
+MAX_INT_VALUE = (2**31) - 1
 
 class AuthoredHintViewRequest < ApplicationRecord
-  belongs_to :user
-  belongs_to :script
+  belongs_to :user, optional: true
+  belongs_to :script, class_name: 'Unit'
   belongs_to :level
-
-  validates :script, presence: true
-  validates :level, presence: true
 
   # manually validate all integer values; otherwise extra-large values
   # will throw errors rather than simply invalidating.

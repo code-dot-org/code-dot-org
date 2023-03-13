@@ -3,6 +3,16 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {windowOpen} from '@cdo/apps/utils';
+import DropdownButton from '../DropdownButton';
+import Button from '../Button';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {
+  isGDocsUrl,
+  gDocsPdfUrl,
+  gDocsMsOfficeUrl,
+  gDocsCopyUrl
+} from './googleDocsUtils';
 
 export default class ResourceList extends Component {
   static propTypes = {
@@ -25,6 +35,9 @@ export default class ResourceList extends Component {
 
   downloadResource = (e, resource) => {
     e.preventDefault();
+
+    this.sendLinkVisitedEvent(resource, 'download');
+
     firehoseClient.putRecord(
       {
         study:
@@ -53,6 +66,9 @@ export default class ResourceList extends Component {
 
   openResource = (e, resource) => {
     e.preventDefault();
+
+    this.sendLinkVisitedEvent(resource, 'open');
+
     firehoseClient.putRecord(
       {
         study:
@@ -75,6 +91,19 @@ export default class ResourceList extends Component {
     );
   };
 
+  sendLinkVisitedEvent = (resource, visitType) => {
+    analyticsReporter.sendEvent(EVENTS.LESSON_RESOURCE_LINK_VISITED_EVENT, {
+      resourceId: resource.id,
+      resourceName: resource.name,
+      resourceAudience: resource.audience,
+      resourceType: resource.type,
+      resourceUrl: resource.url,
+      resourceDownloadUrl: resource.download_url,
+      visitType: visitType,
+      path: document.location.pathname
+    });
+  };
+
   createResourceListItem = resource => (
     <li key={resource.key}>
       <a
@@ -85,7 +114,7 @@ export default class ResourceList extends Component {
       >
         {resource.name}
       </a>
-      {resource.type && ` -  ${resource.type}`}
+      {resource.type && ` -  ${resource.type} `}
       {resource.download_url && (
         <span>
           {' ('}
@@ -96,6 +125,41 @@ export default class ResourceList extends Component {
             href={resource.download_url}
           >{`${i18n.download()}`}</a>
           {')'}
+        </span>
+      )}
+      {isGDocsUrl(resource.url) && (
+        <span>
+          {' '}
+          <DropdownButton
+            text={i18n.makeACopy()}
+            color={Button.ButtonColor.gray}
+            size={Button.ButtonSize.small}
+          >
+            <a
+              href={gDocsPdfUrl(resource.url)}
+              onClick={e => {
+                this.sendLinkVisitedEvent(resource, `copyPdf`);
+              }}
+            >
+              PDF
+            </a>
+            <a
+              href={gDocsMsOfficeUrl(resource.url)}
+              onClick={e => {
+                this.sendLinkVisitedEvent(resource, `copyMsOffice`);
+              }}
+            >
+              Microsoft Office
+            </a>
+            <a
+              href={gDocsCopyUrl(resource.url)}
+              onClick={e => {
+                this.sendLinkVisitedEvent(resource, `copyGDocs`);
+              }}
+            >
+              Google Docs
+            </a>
+          </DropdownButton>
         </span>
       )}
     </li>

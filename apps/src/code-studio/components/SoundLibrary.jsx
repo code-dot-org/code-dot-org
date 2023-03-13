@@ -39,6 +39,8 @@ const SOUND_CATEGORIES = {
   puzzle: 'Puzzle',
   retro: 'Retro',
   slide: 'Slide',
+  space: 'Space',
+  sports: 'Sports',
   swing: 'Swing',
   swish: 'Swish',
   tap: 'Tap',

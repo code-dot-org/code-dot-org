@@ -55,7 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import cookies from 'js-cookie';
+import {muteCookieWithLevel} from '../util/muteCookieHelpers';
 import {
   showArrowButtons,
   dismissSwipeOverlay
@@ -63,8 +63,6 @@ import {
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
-
-const muteMusic = 'mute_music';
 
 var Direction = constants.Direction;
 var CardinalDirections = constants.CardinalDirections;
@@ -2205,8 +2203,16 @@ Studio.init = function(config) {
     skin.assetUrl,
     levelTracks,
     undefined,
-    config.level.muteMusic || cookies.get(muteMusic) === 'true'
+    muteCookieWithLevel(config.level)
   );
+
+  config.muteBackgroundMusic = function() {
+    Studio.musicController.setMuteMusic(true);
+  };
+
+  config.unmuteBackgroundMusic = function() {
+    Studio.musicController.setMuteMusic(false);
+  };
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -2251,6 +2257,8 @@ Studio.init = function(config) {
     );
     showInstructions();
   };
+
+  config.level.levelTracks = levelTracks;
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -2994,6 +3002,17 @@ Studio.runButtonClick = function() {
   Studio.execute();
   Studio.gameState = Studio.GameStates.ACTIVE;
 
+  // We want to save progress any time a student clicks the Run button on a
+  // Free Play level, because they don't have a "success" state like other
+  // level types that would handle this. Since the Run button is already
+  // overloaded in "edit_blocks" mode (when a content editor is making
+  // changes to the level) to act as a "save" button, we don't want to call
+  // this if we're in "edit_blocks" mode.
+  if (!level.edit_blocks && level.freePlay) {
+    // Save progress. Don't display feedback.
+    Studio.sendPuzzleReport(Studio.onReportCompleteNoFeedback);
+  }
+
   if (
     level.freePlay &&
     !level.isProjectLevel &&
@@ -3089,6 +3108,17 @@ Studio.onReportComplete = function(response) {
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
   Studio.displayFeedback();
+};
+
+/**
+ * Function to be called when the service report call is complete
+ * if you don't want to show the feedback dialog.
+ * @param {MilestoneResponse} response - JSON response (if available)
+ */
+Studio.onReportCompleteNoFeedback = function(response) {
+  Studio.response = response;
+  Studio.waitingForReport = false;
+  studioApp().onReportComplete(response);
 };
 
 var registerEventHandler = function(handlers, name, func) {
@@ -3720,7 +3750,7 @@ Studio.resumeExecution = function() {
 Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
-Studio.onPuzzleComplete = function() {
+Studio.sendPuzzleReport = function(onComplete = Studio.onReportComplete) {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
   } else if (
@@ -3729,10 +3759,6 @@ Studio.onPuzzleComplete = function() {
   ) {
     Studio.result = ResultType.SUCCESS;
   }
-
-  // Stop everything on screen
-  Studio.clearEventHandlersKillTickLoop();
-  Studio.movementAudioOff();
 
   if (skin.gridAlignedMovement && Studio.JSInterpreter) {
     // If we've been selecting code as we run, we need to call selectCurrentCode()
@@ -3794,7 +3820,7 @@ Studio.onPuzzleComplete = function() {
       testResult: Studio.testResults,
       program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
-      onComplete: Studio.onReportComplete
+      onComplete: onComplete
     });
   };
 
@@ -3814,6 +3840,14 @@ Studio.onPuzzleComplete = function() {
       }
     });
   }
+};
+
+Studio.onPuzzleComplete = function() {
+  // Stop everything on screen
+  Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
+
+  Studio.sendPuzzleReport();
 };
 
 /* Return the frame count for items or projectiles
@@ -5173,7 +5207,7 @@ Studio.vanishActor = function(opts) {
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError('Incorrect parameter: ' + spriteIndex);
+    return;
   }
   var sprite = Studio.sprite[spriteIndex];
   var spriteShowing = sprite.visible || sprite.isFading();
@@ -5645,9 +5679,12 @@ Studio.setSprite = function(opts) {
 
   var spriteIndex = opts.spriteIndex;
   if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
-    throw new RangeError('Incorrect parameter: ' + spriteIndex);
+    return;
   }
   var sprite = Studio.sprite[spriteIndex];
+  if (!sprite) {
+    return;
+  }
 
   sprite.visible = spriteValue !== 'hidden' && !opts.forceHidden;
 

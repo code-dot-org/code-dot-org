@@ -10,7 +10,8 @@
           "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
           "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "0c7dd1fc-a79d-48c4-b0aa-9abadda3ddfe"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit8/{LESSON}",
@@ -24,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 21:16:40 UTC",
+    "serialized_at": "2022-09-28 14:31:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -1,11 +1,12 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import {castValue} from './dataUtils';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 import _ from 'lodash';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -59,16 +60,16 @@ class AddTableRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row} id="addDataTableRow">
+      <tr className={dataStyles.row} id="addDataTableRow">
         {this.props.columnNames.map(columnName => (
-          <td key={columnName} style={dataStyles.cell}>
+          <td key={columnName} className={dataStyles.cell}>
             {columnName === 'id' ? (
               <span style={{color: 'darkgray'}}>#</span>
             ) : (
               <input
-                style={dataStyles.input}
+                className={dataStyles.input}
                 value={this.state.newInput[columnName] || ''}
-                placeholder="enter text"
+                placeholder={msg.enterText()}
                 onChange={event => this.handleChange(columnName, event)}
                 onKeyUp={this.handleKeyUp}
               />
@@ -76,15 +77,15 @@ class AddTableRow extends React.Component {
           </td>
         ))}
 
-        <td style={dataStyles.cell} />
+        <td className={dataStyles.cell} />
 
-        <td style={dataStyles.addButtonCell}>
+        <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
-            pendingText="Adding..."
-            style={dataStyles.blueButton}
-            text="Add Row"
+            pendingText={msg.addingToTable()}
+            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
+            text={msg.addRowToTable()}
           />
         </td>
       </tr>
@@ -92,4 +93,4 @@ class AddTableRow extends React.Component {
   }
 }
 
-export default Radium(AddTableRow);
+export default AddTableRow;

@@ -3,13 +3,8 @@ describe command('aws --version') do
   its(:stderr) {should match('aws-cli/1.15.81')}
 end
 
-describe command('pip show awscli-cwlogs') do
-  its(:exit_status) {should eq 0}
-  its(:stdout) {should match('Version: 1.4.5')}
-end
-
-describe command("echo 'hello' | aws logs push --log-group-name test --log-stream-name test --dry-run") do
-  its(:exit_status) {should eq 0}
-  its(:stdout) {should eq("hello\n")}
-  its(:stderr) {should match('cwlogs.push.publisher')}
+describe file('/root/.aws/config') do
+  its('content') {should match "region = us-east-1"}
+  its('content') {should match "metadata_service_num_attempts = 3"}
+  its('content') {should match "metadata_service_timeout = 5"}
 end

@@ -4,16 +4,6 @@ import xml from './xml';
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 
-// Used for custom field type ClampedNumber(,)
-// Captures two optional arguments from the type string
-// Allows:
-//   ClampedNumber(x,y)
-//   ClampedNumber( x , y )
-//   ClampedNumber(,y)
-//   ClampedNumber(x,)
-//   ClampedNumber(,)
-const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
-
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
@@ -356,7 +346,7 @@ exports.mathBlockXml = function(type, inputs, titles) {
 };
 
 /**
- * Generate xml for a functional defintion
+ * Generate xml for a functional definition
  * @param {string} name The name of the function
  * @param {string} outputType Function's output type
  * @param {Object<string, string>[]} argList Name and type for each arg
@@ -774,11 +764,8 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
-      const field = new BlocklyField(
-        '',
-        getFieldInputChangeHandler(blockly, inputConfig.type)
-      );
+      const {type} = inputConfig;
+      const field = Blockly.cdoUtils.getField(type);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -793,26 +780,6 @@ const STANDARD_INPUT_TYPES = {
     }
   }
 };
-
-/**
- * Given a type string for a field input, returns an appropriate change handler function
- * for that type, which customizes the input field and provides validation on blur.
- * @param {Blockly} blockly
- * @param {string} type
- * @returns {?function}
- */
-function getFieldInputChangeHandler(blockly, type) {
-  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
-  if (clampedNumberMatch) {
-    const min = parseFloat(clampedNumberMatch[1]);
-    const max = parseFloat(clampedNumberMatch[2]);
-    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
-  } else if ('Number' === type) {
-    return blockly.FieldTextInput.numberValidator;
-  } else {
-    return undefined;
-  }
-}
 
 const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
   const inputRows = [];
@@ -948,6 +915,7 @@ exports.createJsWrapperBlockCreator = function(
   return (
     {
       color,
+      style,
       func,
       expression,
       orderPrecedence,
@@ -1050,10 +1018,17 @@ exports.createJsWrapperBlockCreator = function(
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function() {
-        if (color) {
+        // Styles should be used over hard-coded colors in Google Blockly blocks
+        if (style && this.setStyle) {
+          this.setStyle(style);
+        } else if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          if (this.setStyle) {
+            this.setStyle('default');
+          } else {
+            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          }
         }
 
         if (returnType) {
@@ -1092,36 +1067,41 @@ exports.createJsWrapperBlockCreator = function(
           // Block.isMiniFlyoutOpen is used in the blockly repo to track whether or not the horizontal flyout is open.
           this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
-          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
-            if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
-              return;
-            }
+          Blockly.cdoUtils.bindBrowserEvent(
+            toggle.fieldGroup_,
+            'mousedown',
+            this,
+            () => {
+              if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
+                return;
+              }
 
-            if (this.isMiniFlyoutOpen) {
-              toggle.setValue('+');
-            } else {
-              toggle.setValue('-');
-            }
-            this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
-            this.render();
-            // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
-            // This has to happen after render() because some browsers don't render properly if the elements are not
-            // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
-            // the thumbnail image overlaps the label in Firefox, Edge, and IE.
-            if (this.isMiniFlyoutOpen) {
-              let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
-              let rootInputBlocks = this.getConnections_(true /* all */)
-                .filter(function(connection) {
-                  return connection.type === Blockly.INPUT_VALUE;
-                })
-                .map(function(connection) {
-                  return connection.targetBlock();
+              if (this.isMiniFlyoutOpen) {
+                toggle.setValue('+');
+              } else {
+                toggle.setValue('-');
+              }
+              this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
+              this.render();
+              // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
+              // This has to happen after render() because some browsers don't render properly if the elements are not
+              // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
+              // the thumbnail image overlaps the label in Firefox, Edge, and IE.
+              if (this.isMiniFlyoutOpen) {
+                let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
+                let rootInputBlocks = this.getConnections_(true /* all */)
+                  .filter(function(connection) {
+                    return connection.type === Blockly.INPUT_VALUE;
+                  })
+                  .map(function(connection) {
+                    return connection.targetBlock();
+                  });
+                miniToolboxBlocks.forEach(function(block, index) {
+                  block.shadowBlockValue_(rootInputBlocks[index]);
                 });
-              miniToolboxBlocks.forEach(function(block, index) {
-                block.shadowBlockValue_(rootInputBlocks[index]);
-              });
+              }
             }
-          });
+          );
 
           this.appendDummyInput()
             .appendField(toggle, 'toggle')
@@ -1130,45 +1110,48 @@ exports.createJsWrapperBlockCreator = function(
           this.initMiniFlyout(miniToolboxXml);
         }
 
-        // Set block to shadow for preview field if needed
-        switch (this.type) {
-          case 'gamelab_clickedSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_spriteClicked' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_newSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_whenSpriteCreated' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_subjectSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_checkTouching' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_objectSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_checkTouching' &&
-                root.getConnections_()[2] &&
-                root.getConnections_()[2].targetBlock()
-            );
-            break;
-          default:
-            // Not a pointer block, so no block to shadow
-            break;
+        // These blocks should not be loaded into a Google Blockly level.
+        // In the event that they are, skip this so the page doesn't crash.
+        if (this.setBlockToShadow) {
+          // Set block to shadow for preview field if needed
+          switch (this.type) {
+            case 'gamelab_clickedSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_spriteClicked' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_newSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_whenSpriteCreated' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_subjectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_objectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[2] &&
+                  root.getConnections_()[2].targetBlock()
+              );
+              break;
+            default:
+              // Not a pointer block, so no block to shadow
+              break;
+          }
         }
-
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
       }

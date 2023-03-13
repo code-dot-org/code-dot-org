@@ -32,7 +32,7 @@ class ProgrammingMethodsController < ApplicationController
     )
     transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
     transformed_params[:parameters] = transformed_params[:parameters].to_json if transformed_params[:parameters]
-    transformed_params[:overload_of] = nil if transformed_params[:overload_of]&.empty?
+    transformed_params[:overload_of] = nil if transformed_params[:overload_of] && transformed_params[:overload_of].empty?
     transformed_params
   end
 end

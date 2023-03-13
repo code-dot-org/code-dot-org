@@ -1,5 +1,4 @@
-/* global dashboard */
-import React, {useState, useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -11,30 +10,38 @@ import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
-const blankCertificates = {
-  hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
-  oceans: require('@cdo/static/oceans_hoc_certificate.png'),
-  mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-  minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
-  hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
-  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
-  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
-  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png'),
-  mee_timecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_timecraft.png')
-};
+/**
+ * Without this, we get an error on the server "invalid byte sequence in UTF-8".
+ *
+ * Workaround via
+ * https://github.com/exupero/saveSvgAsPng/commit/fd9453f576d202dd36e08105cd18d5aed9174d22
+ *
+ * @param {string} data
+ * @returns {string}
+ */
+function reEncodeNonLatin1(data) {
+  var encodedData = encodeURIComponent(data);
+  encodedData = encodedData.replace(/%([0-9A-F]{2})/g, function(match, p1) {
+    return String.fromCharCode('0x' + p1);
+  });
+  return decodeURIComponent(encodedData);
+}
 
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
   const [studentName, setStudentName] = useState();
   const nameInputRef = useRef(null);
 
-  const isMinecraft = () =>
-    /mc|minecraft|hero|aquatic|mee|mee_empathy|mee_timecraft/.test(
-      props.tutorial
-    );
-  const isAIOceans = () => /oceans/.test(props.tutorial);
-
   const personalizeCertificate = session => {
+    if (isHocTutorial && session) {
+      personalizeHocCertificate(session);
+    } else {
+      setStudentName(nameInputRef.current.value);
+      setPersonalized(true);
+    }
+  };
+
+  const personalizeHocCertificate = session => {
     $.ajax({
       url: '/v2/certificate',
       type: 'post',
@@ -58,47 +65,20 @@ function Certificate(props) {
       course: props.tutorial,
       donor
     };
-    return btoa(JSON.stringify(data));
+    return btoa(reEncodeNonLatin1(JSON.stringify(data)));
   };
 
-  const getCertificateImagePath = certificate => {
-    if (!props.showStudioCertificate) {
-      return `${
-        dashboard.CODE_ORG_URL
-      }/api/hour/certificate/${certificate}.jpg`;
-    }
-
+  const getCertificateImagePath = () => {
     const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
   };
 
-  const getPrintPath = certificate => {
-    if (!props.showStudioCertificate) {
-      let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-      if (isMinecraft() && !personalized) {
-        // Correct the minecraft print url for non-personalized certificates.
-        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
-          props.tutorial
-        }`;
-      }
-      if (isAIOceans() && !personalized) {
-        // Correct the minecraft print url for non-personalized certificates.
-        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
-          props.tutorial
-        }`;
-      }
-      return print;
-    }
-
+  const getPrintPath = () => {
     const encoded = getEncodedParams();
     return `/print_certificates/${encoded}`;
   };
 
-  const getCertificateSharePath = certificate => {
-    if (!props.showStudioCertificate) {
-      return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
-    }
-
+  const getCertificateSharePath = () => {
     const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
   };
@@ -109,15 +89,16 @@ function Certificate(props) {
     certificateId,
     randomDonorTwitter,
     under13,
-    children
+    children,
+    initialCertificateImageUrl,
+    isHocTutorial
   } = props;
 
-  const certificate = certificateId || 'blank';
-  const personalizedCertificate = getCertificateImagePath(certificate);
-  const blankCertificate =
-    blankCertificates[tutorial] || blankCertificates.hourOfCode;
-  const imgSrc = personalized ? personalizedCertificate : blankCertificate;
-  const certificateShareLink = getCertificateSharePath(certificate);
+  const personalizedCertificate = getCertificateImagePath();
+  const imgSrc = personalized
+    ? personalizedCertificate
+    : initialCertificateImageUrl;
+  const certificateShareLink = getCertificateSharePath();
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -136,7 +117,7 @@ function Certificate(props) {
       : i18n.justDidHourOfCode()
   });
 
-  const print = getPrintPath(certificate);
+  const print = getPrintPath();
 
   return (
     <div style={styles.container}>
@@ -167,7 +148,7 @@ function Certificate(props) {
             <button
               type="button"
               style={styles.submit}
-              onClick={personalizeCertificate.bind(this, certificate)}
+              onClick={personalizeCertificate.bind(this, certificateId)}
             >
               {i18n.submit()}
             </button>
@@ -200,7 +181,8 @@ Certificate.propTypes = {
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
-  showStudioCertificate: PropTypes.bool
+  initialCertificateImageUrl: PropTypes.string.isRequired,
+  isHocTutorial: PropTypes.bool
 };
 
 const styles = {

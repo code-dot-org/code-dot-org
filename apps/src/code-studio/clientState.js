@@ -20,13 +20,6 @@ clientState.queryParams = require('./utils').queryParams;
 clientState.EXPIRY_DAYS = 365;
 
 /**
- * Maximum number of lines of code that can be stored in the cookie
- * @type {number}
- * @private
- */
-var MAX_LINES_TO_SAVE = 1000;
-
-/**
  * Values larger than this result are server-dependent and shouldn't be cached
  * in client storage.
  */
@@ -97,18 +90,6 @@ clientState.writeSourceForLevel = function(
 };
 
 /**
- * Tracks the lines of code written after the user clicks run if their
- * solution is successful.
- * @param {boolean} result - Whether the user's solution is successful
- * @param {number} lines - Number of lines of code user wrote in this solution
- */
-clientState.trackLines = function(result, lines) {
-  if (result && isFinite(lines)) {
-    addLines(lines);
-  }
-};
-
-/**
  * Merges the given testResult for the given level into the progress
  * data stored in session storage.
  * @param {string} scriptName
@@ -157,28 +138,6 @@ function levelProgressByScript() {
     // Recover from malformed data.
     return {};
   }
-}
-
-/**
- * Returns the number of lines completed from the cookie.
- * @returns {number}
- */
-clientState.lines = function() {
-  var linesStr = sessionStorage.getItem('lines');
-  return isFinite(linesStr) ? Number(linesStr) : 0;
-};
-
-/**
- * Adds the given number of completed lines.
- * @param {number} addedLines
- */
-function addLines(addedLines) {
-  var newLines = Math.min(
-    clientState.lines() + Math.max(addedLines, 0),
-    MAX_LINES_TO_SAVE
-  );
-
-  trySetSessionStorage('lines', String(newLines));
 }
 
 /**

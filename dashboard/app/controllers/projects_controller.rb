@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -10,6 +10,9 @@ class ProjectsController < ApplicationController
   include LevelsHelper
 
   TEMPLATES = %w(projects).freeze
+
+  # Number of projects in millions, rounded down. tracked and updated by marketing
+  PROJECT_COUNT_MILLIONS = 210
 
   # @type [Hash[Hash]] A map from project type to a hash with the following options
   # representing properties of this project type:
@@ -152,6 +155,15 @@ class ProjectsController < ApplicationController
     },
     thebadguys: {
       name: 'New The Bad Guys Project'
+    },
+    story: {
+      name: 'New Story Project'
+    },
+    science: {
+      name: 'New Science Project'
+    },
+    time_capsule: {
+      name: 'New Time Capsule Project'
     }
   }.with_indifferent_access.freeze
 
@@ -168,6 +180,7 @@ class ProjectsController < ApplicationController
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
     @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
+    @project_count_millions = PROJECT_COUNT_MILLIONS
   end
 
   def project_and_featured_project_fields
@@ -226,7 +239,7 @@ class ProjectsController < ApplicationController
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
-    if current_user && current_user.project_validator?
+    if current_user&.project_validator?
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
@@ -265,6 +278,10 @@ class ProjectsController < ApplicationController
       channel_id: channel,
       enableMaker: params['enableMaker'] ? true : nil
     )
+  end
+
+  def weblab_footer
+    render partial: 'projects/weblab_footer'
   end
 
   private def initial_data
@@ -320,12 +337,13 @@ class ProjectsController < ApplicationController
       no_footer: sharing || iframe_embed_app_and_code,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing || iframe_embed_app_and_code,
-      small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
+      small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
       app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      disallowed_html_tags: disallowed_html_tags
+      disallowed_html_tags: disallowed_html_tags,
+      blocklyVersion: params[:blocklyVersion]
     )
 
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
@@ -377,6 +395,8 @@ class ProjectsController < ApplicationController
       return head :bad_request
     end
     project_type = params[:key]
+    return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
+
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
@@ -405,7 +425,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_starter_assets?(project_type)
-    %w(javalab).include? project_type
+    %w(javalab applab).include? project_type
   end
 
   def export_create_channel
@@ -473,7 +493,7 @@ class ProjectsController < ApplicationController
   end
 
   def get_from_cache(key)
-    if Script.should_cache?
+    if Unit.should_cache?
       @@project_level_cache[key] ||= Level.find_by_key(key)
     else
       Level.find_by_key(key)

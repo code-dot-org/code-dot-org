@@ -2,7 +2,7 @@ name 'CSD U6 test events multi_2022'
 question 'What does a programmer need to know when creating an event listener?  
 &nbsp;&nbsp;&nbsp;I. The event that will trigger the change  
 &nbsp;&nbsp;&nbsp;II. When in the program the event will be triggered  
-&nbsp;&nbsp;&nbsp;II. What the program should do when the event is triggered'
+&nbsp;&nbsp;&nbsp;III. What the program should do when the event is triggered'
 wrong 'I only'
 wrong 'II only'
 wrong 'I and II'

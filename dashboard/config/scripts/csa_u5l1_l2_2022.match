@@ -10,7 +10,7 @@ question 'row'
 answer 'a horizontal (left to right) series of data in a two-dimensional (2D) array'
 
 question 'inner array'
-answer 'Answer'
+answer 'an array that is nested inside another array'
 
 question 'outer array'
 answer 'the outermost array of a two-dimensional array'

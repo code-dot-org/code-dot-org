@@ -6,7 +6,7 @@ Scenario: Connect two blocks from toolbox
   And I wait for the page to fully load
   And I dismiss the login reminder
   And I wait to see ".blocklySvg"
-  And I drag block "1" to block "3"
-  And I drag block "1" to block "4"
+  And I drag block "flap" to block "whenClick"
+  And I drag block "playSound" to block "flap"
   And I wait for 1 seconds
-  Then block "6" is child of block "4"
+  Then block "playSound" is child of block "flap"

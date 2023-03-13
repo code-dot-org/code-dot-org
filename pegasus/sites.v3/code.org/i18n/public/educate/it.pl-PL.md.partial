@@ -1,0 +1,126 @@
+---
+title: Wymagania IT
+nav: educate_nav
+theme: responsive
+---
+
+# Wymagania techniczne dla samouczków Code.org
+
+## Sprzęt
+
+- Zalecamy w Twojej szkole połączenie z Internetem o szybkości co najmniej 15 Mb/s.
+- Najmniejszy rozmiar ekranu jaki obsługujemy to 1024 x 728 px.
+- Będziesz potrzebować komputera stacjonarnego lub laptopa z myszą (lub touchpadem) i klawiaturą do naszych kursów na poziomie liceum: Odkrycia Informatyki (CS Discoveries), Zasady Informatyki (CS Principles) oraz Wprowadzenie do App Lab (Intro to App Lab). Większość tabletów i urządzeń mobilnych nie jest obsługiwana podczas tych kursów. Zobacz „Szczegóły obsługi telefonów komórkowych i tabletów” poniżej, aby zapoznać się z wyjątkami dla poszczególnych urządzeń.
+- Wszystkie inne treści, takie jak kursy K-5 (podstawy informatyki) i zajęcia w ramach Godziny kodowania, są zgodne na iPadach i Chromebookach, a także na wszystkich innych nowoczesnych tabletach i laptopach lub komputerach stacjonarnych.
+- Szukasz szczegółów pomocy technicznej dla urządzeń mobilnych? Czytaj poniżej.
+
+## Minimalnie obsługiwane przeglądarki i platformy
+
+<table>
+ <tr>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Przeglądarka
+        </th>
+        <tr>
+          <td>Chrome 96.x</td>
+        </tr>
+        <tr>
+          <td>Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Mobilne Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Edge 94.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 91.x</td>
+        </tr>
+      </table>
+  </td>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma
+        </th>
+        <tr>
+          <td>macOS 10.13</td>
+        </tr>
+        <tr>
+          <td>iOS 11.x</td>
+        </tr>
+        <tr>
+          <td>Windows 7</td>
+        </tr>
+        <tr>
+          <td>Android 6</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+  </td>
+ </tr>
+</table>
+
+## Witryny do odblokowania
+
+Aby uzyskać jak najlepsze doświadczenia z całą zawartością Code.org, zalecamy skonsultowanie się z działem IT szkoły lub okręgu, aby upewnić się, że następujące witryny są dozwolone i nie są blokowane.
+
+| Priorytet                                                                                    | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Wymagane**                                                                                 | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Opcjonalnie**                                                                              | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Korzystanie z filmów wideo hostowanych w serwisie YouTube (rozszerzony tryb prywatności)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Aby korzystać z filmów hostowanych na Code.org**                                           | `https://videos.code.org`                                                                                  |
+| **Aby korzystać z internetowego symulatora**                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Aby korzystać z Web Lab**                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Aby korzystać z Google Classroom Share Button**                                            | `https://apis.google.com`                                                                                  |
+| **Aby używać zestawów danych App Lab**                                                       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+
+## Szczegóły wsparcia telefonów komórkowych i tabletów
+
+Wszystkie kursy Odkrycia Informatyki (CS Discoveries), Zasady Informatyki (CS Principles) i WRowadzenie do App Lab (Intro to App Lab) nie są kompatybilne z tabletami lub urządzeniami mobilnymi — wymagana jest pełna klawiatura i mysz (lub touchpad, jak w MacBookach). Większość tabletów nie jest obsługiwana, z następującymi wyjątkami:
+
+- Microsoft Surface Pro z zewnętrzną klawiaturą
+- iPad z systemem iPadOS 13.4 lub nowszym z zewnętrzną klawiaturą i zewnętrzną myszą lub touchpadem
+
+Wszystkie inne treści, takie jak kursy K-5 (podstawy informatyki) i zajęcia w ramach Godziny kodowania, są zgodne na iPadach i Chromebookach, a także na wszystkich innych nowoczesnych tabletach i laptopach lub komputerach stacjonarnych.
+
+### Telefony komórkowe
+
+Nasze zajęcia w ramach Godziny Kodowania i kursy Podstaw Informatyki można ukończyć na telefonach komórkowych. Chociaż te czynności są użyteczne, nie są zoptymalizowane pod kątem korzystania z telefonu komórkowego i mają pewne znane ograniczenia (np. cele dotykowe mogą być małe, elementy akcesoriów mogą być wyświetlane poza ekranem, a wprowadzanie tekstu za pomocą klawiatury ekranowej może być trudne). Kursów Odkrycia Informatyki, Zasady Informatyki i Intro to App Lab nie można używać na telefonach komórkowych.
+
+## Filmy
+
+Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.org i naszej [platformie edukacyjnej online](https://studio.code.org). W przypadku szkół z zablokowanym YouTube próbujemy zamiast tego wyświetlić odtwarzacz wideo hostowany na Code.org.
+
+### Czy możesz odtworzyć ten film?
+
+Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
+
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+Jest to odtwarzacz używany w całym programie nauczania. Spróbuje wyświetlić wideo przez YouTube, a jeśli YouTube jest zablokowany, pokaże wideo hostowane na Code.org, korzystając z naszego odtwarzacza „zastępczego”.
+
+### Film się nie odtwarza?
+
+Jeśli wideo nie działa, możesz wysłać do nas e-mail na adres support@code.org.
+
+Jednak nadal możesz korzystać z naszych samouczków bez wideo.
+
+1. Zrobiliśmy wszystkie nasze filmy [dostępne do pobrania razem](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jeśli Twoja szkoła ma niską przepustowość, zalecamy pobieranie filmów i pokazywanie ich uczniom na wspólnym ekranie.
+2. Zintegrowane z naszymi samouczkami, dodaliśmy zieloną ikonę łącza pobierania <img src="/images/green-download.png" width=25 height=25 /> dla każdego filmu, umożliwiając uczniom indywidualne pobieranie filmów instruktażowych.
+3. Jeśli nic się nie powiedzie, dostępna jest karta „Pokaż notatki”, na której są odpowiedniki filmów.
+
+  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
+
+## Specjalne ustawienia dla użytkowników Google Apps/G-Suite
+
+Jeśli jesteś administratorem G-suite, sprawdź, jakie są Twoje ustawienia ograniczeń dla YouTube. Jeśli określiłeś ustawienie „Ścisły ograniczony dostęp do YouTube” lub jeśli widzisz komunikat „ten film wideo został ograniczony”, możesz dodać nasz kanał do zatwierdzonej listy kanałów. Zapoznaj się z [tym przewodnikiem](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do zatwierdzonej listy. Możesz też zapoznać się z [tym przewodnikiem](https://support.google.com/a/answer/6212415?hl=pl), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
+
+## Czy nadal masz problemy?
+
+Pomożemy Ci — po prostu napisz do nas na adres support@code.org!

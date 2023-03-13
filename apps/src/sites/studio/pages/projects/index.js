@@ -49,7 +49,7 @@ $(document).ready(() => {
         <div className={'main container'}>
           <ProjectsGallery
             limitedGallery={projectsData.limitedGallery}
-            canShare={projectsData.canShare}
+            canShare={!!projectsData.canShare}
           />
         </div>
       </div>

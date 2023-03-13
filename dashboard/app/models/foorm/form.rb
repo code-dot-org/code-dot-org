@@ -66,7 +66,7 @@ class Foorm::Form < ApplicationRecord
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    errors_arr.each {|error| errors[:questions] << error}
+    errors_arr.each {|error| errors.add(:questions, error)}
   end
 
   def validate_published
@@ -74,7 +74,7 @@ class Foorm::Form < ApplicationRecord
 
     unless parsed_questions['published'].nil?
       if published != parsed_questions['published']
-        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+        errors.add(:questions, 'Mismatch between published state in questions and published state in model')
       end
     end
   end
@@ -260,39 +260,37 @@ class Foorm::Form < ApplicationRecord
       if has_facilitator_questions
         associated_facilitator_submissions = submission.associated_facilitator_submissions
 
-        if associated_facilitator_submissions
-          associated_facilitator_submissions.each_with_index do |facilitator_response, index|
-            next if facilitator_response.nil?
-            facilitator_number = index + 1
+        associated_facilitator_submissions&.each_with_index do |facilitator_response, index|
+          next if facilitator_response.nil?
+          facilitator_number = index + 1
 
-            # Add facilitator number identifier to facilitator-specific questions
-            facilitator_headers_with_facilitator_number = readable_questions_with_facilitator_number(
-              calculated_readable_questions,
-              facilitator_number
-            )
+          # Add facilitator number identifier to facilitator-specific questions
+          facilitator_headers_with_facilitator_number = readable_questions_with_facilitator_number(
+            calculated_readable_questions,
+            facilitator_number
+          )
 
-            # Add same facilitator number identifier to facilitator-specific questions,
-            # such that they map to the appropriate headers.
-            facilitator_response_with_facilitator_number = facilitator_response.
-              formatted_answers_with_facilitator_number(facilitator_number)
+          # Add same facilitator number identifier to facilitator-specific questions,
+          # such that they map to the appropriate headers.
+          facilitator_response_with_facilitator_number = facilitator_response.
+            formatted_answers_with_facilitator_number(facilitator_number)
 
-            # Add facilitator-specific response to answers,
-            # and prep a new set of headers to add to cover facilitator-specific questions.
-            # Don't add to headers array yet, as we want important information
-            # in the response but not in the form itself (eg, facilitator ID)
-            # to come before answers to facilitator-specific questions.
-            facilitator_headers = facilitator_headers_with_facilitator_number
-            answers.merge! facilitator_response_with_facilitator_number
+          # Add facilitator-specific response to answers,
+          # and prep a new set of headers to add to cover facilitator-specific questions.
+          # Don't add to headers array yet, as we want important information
+          # in the response but not in the form itself (eg, facilitator ID)
+          # to come before answers to facilitator-specific questions.
+          facilitator_headers = facilitator_headers_with_facilitator_number
+          answers.merge! facilitator_response_with_facilitator_number
 
-            # Add any facilitator-specific questions as headers
-            # that are in the submission but not already in the list of headers.
-            potential_new_headers = Hash[
-              facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
-            ]
-            facilitator_headers = potential_new_headers.merge facilitator_headers
+          # Add any facilitator-specific questions as headers
+          # that are in the submission but not already in the list of headers.
+          potential_new_headers = Hash[
+            facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
+          ]
+          facilitator_headers = potential_new_headers.merge facilitator_headers
 
-            headers.merge! facilitator_headers
-          end
+          headers.merge! facilitator_headers
         end
       end
 

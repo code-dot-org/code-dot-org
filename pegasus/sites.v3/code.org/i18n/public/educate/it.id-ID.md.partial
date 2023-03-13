@@ -1,0 +1,126 @@
+---
+title: Persyaratan IT
+nav: educate_nav
+theme: responsive
+---
+
+# Persyaratan Teknis untuk Tutorial Code.org
+
+## Perangkat Keras
+
+- Kami menyarankan koneksi Internet paling tidak 15MBit/dtk dtk untuk sekolah Anda.
+- Ukuran layar terkecil yang kami dukung adalah 1024 x 728 px.
+- Anda akan memerlukan komputer desktop atau laptop dengan mouse (atau touchpad) dan keyboard untuk kursus tingkat SMP dan SMA: CS Discoveries, CS Principles, dan Intro to App Lab. Sebagian besar tablet dan perangkat seluler tidak didukung untuk kursus-kursus ini. Lihat "Detail Dukungaun untuk Ponsel dan Tablet" berikut untuk mendapatkan pengecualian khusus.
+- Semua konten lain, seperti kursus K-5 (Dasar-dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel pada iPad dan Chromebook seperti halnya pada semua tablet modern lain dan laptop atau komputer desktop.
+- Mencari detail dukungan untuk perangkat seluler? Baca di bawah.
+
+## Browser dan Platform Minimum yang Didukung
+
+<table>
+ <tr>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser
+        </th>
+        <tr>
+          <td>Chrome 96.x</td>
+        </tr>
+        <tr>
+          <td>Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Edge 94.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 91.x</td>
+        </tr>
+      </table>
+  </td>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform
+        </th>
+        <tr>
+          <td>macOS 10.13</td>
+        </tr>
+        <tr>
+          <td>iOS 11.x</td>
+        </tr>
+        <tr>
+          <td>Windows 7</td>
+        </tr>
+        <tr>
+          <td>Android 6</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+  </td>
+ </tr>
+</table>
+
+## Situs yang Tidak Boleh Diblokir
+
+Untuk mendapatkan pengalaman terbaik dengan semua konten Code.org, kami sarankan untuk berkonsultasi dengan bagian IT sekolah atau distrik Anda untuk memastikan situs berikut boleh diakses dan tidak diblokir.
+
+| Prioritas                                                                               | URL                                                                                                        |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Diperlukan**                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Opsional**                                                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Untuk menggunakan video yang dihosting di YouTube (Mode Privasi yang Disempurnakan)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Untuk menggunakan video yang di-hosting oleh Code.org**                               | `https://videos.code.org`                                                                                  |
+| **Untuk menggunakan Internet Simulator**                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Untuk menggunakan Web Lab**                                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Untuk menggunakan Tombol Berbagi Google Classroom**                                   | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                             | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+
+## Detail Dukungan untuk Ponsel dan Tablet
+
+Semua kursus CS Discoveries, CS Principles, dan Intro to App Lab tidak kompatibel dengan tablet atau perangkat seluler. Anda wajib menggunakan keyboard dan mouse (atau touchpad, seperti pada MacBook). Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
+
+- Microsoft Surface Pro dengan keyboard eksternal
+- iPad yang menggunakan iPadOS 13.4 atau di atasnya dengan keyboard eksternal dan mouse atau touchpad eksternal
+
+Semua konten lain, seperti kursus K-5 (Dasar-dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel pada iPad dan Chromebook seperti halnya pada semua tablet modern lain dan laptop atau komputer desktop.
+
+### Ponsel
+
+Kegiatan Hour of Code dan kursus CS Fundamentals kami dapat dilakukan pada ponsel. Meskipun kegiatan ini dapat dilakukan, namun tidak dioptimalkan untuk ponsel dan memiliki sejumlah keterbatasan (misalnya target sentuh mungkin kecil, elemen aksesori mungkin ditampilkan di luar layar, dan teks mungkin sulit diketik dengan menggunakan keyboard ponsel). Kursus CS Discoveries, CS Principles, dan Intro to App Lab tidak dapat dilakukan pada ponsel.
+
+## Video
+
+Kami menggunakan [YouTube](https://www.youtube.com) untuk menyematkan video ke Code.org dan [platform pembelajaran online](https://studio.code.org) kami. Untuk sekolah di mana YouTube diblokir, kami mencoba menampilkan pemutar video yang dihosting di Code.org.
+
+### Apakah Anda dapat memutar video ini?
+
+Sebelum memulai kursus online Code.org, cobalah memutar video berikut untuk memastikan bahwa Anda sudah siap melakukannya.
+
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+Inilah pemutar video yang digunakan dalam kurikulum. Pemutar ini akan mencoba menampilkan video melalui YouTube dan, jika YouTube diblokir, akan menampilkan video yang dihosting oleh Code.org dengan menggunakan pemutar "fallback" kami.
+
+### Video tidak dapat diputar?
+
+Jika videonya tidak terputar, silakan kirim email kepada kami di support@code.org.
+
+Meski demikian, Anda tetap dapat menggunakan tutorial kami tanpa video.
+
+1. Kami telah menyediakan semua video kami [untuk diunduh](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jika sekolah Anda memiliki bandwidth yang rendah, kami sarankan untuk mengunduh videonya dan memperlihatkannya kepada siswa di layar bersama (shared screen).
+2. Di dalam tutorialnya, kami juga telah menambahkan ikon tautan unduhan berwarna hijau <img src="/images/green-download.png" width=25 height=25 /> untuk tiap video, sehingga siswa dapat mengunduh video tutorial.
+3. Jika tidak bisa, ada tab "Tampilkan Catatan" yang menyediakan storyboard yang serupa dengan video.
+
+  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
+
+## Pengaturan khusus untuk pengguna Google AppsG-Suite
+
+Jika Anda adalah administrator G-suite, pastikan untuk memeriksa pengaturan pembatasan Anda untuk YouTube. Jika Anda telah menetapkan pengaturan "Akses YouTube Terbatas Ketat" atau jika Anda melihat pesan 'video ini telah dibatasi', Anda dapat menambahkan saluran kami ke daftar saluran yang disetujui. Lihat [panduan ini](https://support.google.com/a/answer/6245597) dari Google untuk mempelajari cara menambahkan saluran kami ke daftar yang disetujui. Anda juga dapat melihat [panduan ini](https://support.google.com/a/answer/6212415?hl=en) untuk mempelajari berbagai pengaturan dan apa yang terbaik bagi kelas Anda.
+
+## Masih ada masalah?
+
+Kami akan membantu Anda - cukup kirim email kepada kami di support@code.org!

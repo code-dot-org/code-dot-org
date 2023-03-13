@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Dialog from '../../templates/Dialog';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
+import msg from '@cdo/locale';
 
 class ConfirmDeleteButton extends React.Component {
   static propTypes = {
@@ -28,11 +29,11 @@ class ConfirmDeleteButton extends React.Component {
 
   render() {
     let {confirmText, ...otherProps} = this.props;
-    confirmText = confirmText || 'Delete';
+    confirmText = confirmText || msg.delete();
     return (
-      <div style={[{display: 'inline-block'}, this.props.containerStyle]}>
+      <div style={{...{display: 'inline-block'}, ...this.props.containerStyle}}>
         <Dialog
-          cancelText="Cancel"
+          cancelText={msg.cancel()}
           confirmText={confirmText}
           confirmType="danger"
           isOpen={!!this.state && this.state.open}
@@ -45,7 +46,7 @@ class ConfirmDeleteButton extends React.Component {
           type="button"
           id={this.props.buttonId}
           onClick={() => this.setState({open: true})}
-          style={dataStyles.redButton}
+          className={classNames(dataStyles.button, dataStyles.buttonRed)}
         >
           {this.props.buttonText}
         </button>
@@ -54,4 +55,4 @@ class ConfirmDeleteButton extends React.Component {
   }
 }
 
-export default Radium(ConfirmDeleteButton);
+export default ConfirmDeleteButton;

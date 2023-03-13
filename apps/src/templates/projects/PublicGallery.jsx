@@ -4,6 +4,7 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import ProjectCardGrid from './ProjectCardGrid';
+import Button from '../Button';
 
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -66,14 +67,13 @@ class PublicGallery extends Component {
           limitedGallery={limitedGallery}
           includeDanceParty={includeDanceParty}
         />
-        <div style={styles.clear} />
-        <div style={styles.linkBox}>
-          <a
+        <div style={styles.bottomButton}>
+          <Button
+            __useDeprecatedTag
             href="https://support.code.org/hc/en-us/articles/360001143952"
-            style={styles.link}
-          >
-            <h3>{i18n.reportAbuse()}</h3>
-          </a>
+            color={Button.ButtonColor.neutralDark}
+            text={i18n.reportAbuse()}
+          />
         </div>
       </div>
     );
@@ -81,16 +81,10 @@ class PublicGallery extends Component {
 }
 
 const styles = {
-  clear: {
-    clear: 'both'
-  },
-  linkBox: {
-    textAlign: 'center',
-    width: '100%',
-    marginTop: 10
-  },
-  link: {
-    display: 'inline-block'
+  bottomButton: {
+    marginTop: '38px',
+    marginBottom: '15px',
+    textAlign: 'center'
   }
 };
 export default connect(state => ({

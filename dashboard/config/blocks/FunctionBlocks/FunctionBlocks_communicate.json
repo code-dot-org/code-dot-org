@@ -1,0 +1,23 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "communicate",
+    "blockText": "Communicate {VAR1} with {SPRITE1COSTUME}",
+    "eventBlock": false,
+    "inline": false,
+    "args": [
+      {
+        "name": "VAR1"
+      },
+      {
+        "name": "SPRITE1COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "color": [
+      72,
+      1,
+      0.79
+    ]
+  }
+}

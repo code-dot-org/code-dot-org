@@ -37,23 +37,17 @@ Fotky zo svojho podujatia zdieľajte na Facebooku a Twitteri pomocou hashtagov *
 
 * * *
 
-## Usporiadate Hodinu kódu počas Rodinnej noci kódu, na ktorú pozvete aj rodičov
+## Example plan for a school assembly or event
 
-Skúste zorganizovať večerné podujatie pre žiakov prvého stupňa základnej školy. Pozvite naň aj rodičov, aby spolu s deťmi absolvovali hodinu informatiky. Je to skvelý spôsob, ako zapojiť väčšie množstvo ľudí a motivovať rodičov, aby podporovali výučbu informatiky na vašej škole. Naši partneri z Rodinnej noci kódu (Family Code Night) vytvorili kompletný balíček na organizáciu takéhoto podujatia. Nájdete v ňom kontrolný zoznam k plánovaniu, scenár podujatia pre prezentujúceho, e-mailové pozvánky, plagáty, prezentácie a ďalšie pomôcky, ktoré vám pomôžu zorganizovať vlastné podujatie. [Kliknite sem a stiahnite si balíček na zorganizovanie Rodinnej noci kódu](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Vzorový plán celoškolského zhromaždenia alebo podujatia
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Podujatie:** Celoškolský Týždeň informatiky – úvodné stretnutie
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Dátum:** {{ campaign_date/start_short }} (začiatok Týždňa informatiky)
-
-**Čas:** Počas školského vyučovania. Ideálne v rámci predpoludnia. Trvanie približne 1 hodinu.
-
-**Miesto:** Priestor s veľkou kapacitou (napríklad aula, telocvičňa, jedáleň)
-
-## Priebeh podujatia
+## Run of Show
 
 | Čas           | Program                                                                                                                                         |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |

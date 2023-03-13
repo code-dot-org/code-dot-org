@@ -1,11 +1,18 @@
 -#
+  This is the old banner we should show GDPR countries in order to inform them
+  about our privacy policy. This file should be removed once we finish the
+  'onetrust_cookie_scripts' experiment.
+
+-# Don't show this banner if we are showing the new OneTrust GDPR cookie banner.
+- return if experiment_value('onetrust_cookie_scripts')
+-#
   Only show cookie banner when in a GDPR country, or when we are in the test
   environment and the show_cookie_banner_on_test URL parameter is specified,
   presumably by a UI test.
 
-- if request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)
+- if request.gdpr? || ((rack_env == :test || rack_env == :development) && request.params['show_cookie_banner_on_test'].present?)
   %link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
-  %script{src: webpack_asset_path("js/cookieBanner.js")}
+  %script{src: webpack_asset_path("js/cookieBanner.js"), "data-ot-ignore" => true}
 
   -# dashboard is passed as a parameter when the dashboard is rendering this banner.
   - dashboard ||= false

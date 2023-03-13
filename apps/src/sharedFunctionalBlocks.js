@@ -492,7 +492,7 @@ function installCondForType(blockly, generator, type) {
       Blockly.cdoUtils.setHSV(this, ...Blockly.FunctionalTypeColors[type]);
 
       var plusField = new Blockly.FieldIcon('+');
-      Blockly.bindEvent_(
+      Blockly.cdoUtils.bindBrowserEvent(
         plusField.getRootElement(),
         'mousedown',
         this,
@@ -549,7 +549,7 @@ function installCondForType(blockly, generator, type) {
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
-        Blockly.bindEvent_(
+        Blockly.cdoUtils.bindBrowserEvent(
           minusField.getRootElement(),
           'mousedown',
           this,

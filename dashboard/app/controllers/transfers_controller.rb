@@ -18,7 +18,7 @@ class TransfersController < ApplicationController
     end
 
     student_ids = params[:student_ids].try(:map, &:to_i)
-    if student_ids.nil? || student_ids.empty?
+    if student_ids.blank?
       render json: {
         error: I18n.t('move_students.student_ids_not_entered')
       }, status: :bad_request
@@ -34,14 +34,14 @@ class TransfersController < ApplicationController
     end
     # Verify the destination section is not managed by a third-party login
     new_section = Section.find_by_code(new_section_code)
-    if new_section && new_section.externally_rostered?
+    if new_section&.externally_rostered?
       render json: {
         error: I18n.t('move_students.third_party_login')
       }, status: :bad_request
       return
     end
     # Verify the destination section and destination teacher exist (are not soft-deleted).
-    unless new_section && new_section.user
+    unless new_section&.user
       render json: {
         error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
       }, status: :not_found
@@ -149,7 +149,7 @@ class TransfersController < ApplicationController
     students.each do |student|
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
-        follower_same_user_teacher.update_attributes!(section_id: new_section.id)
+        follower_same_user_teacher.update!(section_id: new_section.id)
       else
         unless student.followeds.exists?(section_id: new_section.id)
           student.followeds.create!(user: new_section.user, section: new_section)

@@ -21,7 +21,7 @@ social:
 # آرٹیفیشل انٹیلیجنس (AI) کے بارے میں جانیں
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">نئی AI اور مشین لرننگ ماڈیول</h2><p>ہمارا نیا نصابی ماڈیول AI اخلاقیات پر توجہ مرکوز کرتا ہے، تعصب/جانبداری کے مسائل کا جائزہ لیتا ہے، اور متعدد آن لائن اور ان پلگڈ سرگرمیوں اور مکمل گروپ مباحثوں کے ذریعے بنیادی تصورات کی کھوج لگاتا اور وضاحت کرتا ہے۔.</p><a href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>ماڈیول دریافت کریں</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">نئی AI اور مشین لرننگ ماڈیول</h2><p>ہمارا نیا نصابی ماڈیول AI اخلاقیات پر توجہ مرکوز کرتا ہے، تعصب/جانبداری کے مسائل کا جائزہ لیتا ہے، اور متعدد آن لائن اور ان پلگڈ سرگرمیوں اور مکمل گروپ مباحثوں کے ذریعے بنیادی تصورات کی کھوج لگاتا اور وضاحت کرتا ہے۔.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI لیب"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ AI اور مشین لرننگ، ہمارے رہنے اور کام کرنے کے 
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## نئی AI اور مشین لرننگ ماڈیول
 <div>
-<div class="col-50">
-<p>AI اور مشین لرننگ ماڈیول تقریباً پانچ ہفتوں کا نصابی ماڈیول ہے جسے <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >الگ آزادانہ ماڈیول</a > کے طور پر یا اختیاری <a href="https://studio.code.org/s/csd7-2021">CS دریافتوں میں یونٹ</a> کے طور پر پڑھایا جا سکتا ہے۔. یہ AI اخلاقیات پر توجہ مرکوز کرتا ہے، جانبداری کے مسائل کا جائزہ لیتا ہے، اور بنیادی تصورات کو دریافت کرتا اور وضاحت کرتا ہے۔</p><p>چونکہ مشین لرننگ ڈیٹا کے بڑے مجموعوں پر انحصار کرتی ہے، اس لیے نئے یونٹ میں نگہداشت صحت، ڈیموگرافکس اور مزید پر حقیقی زندگی کے ڈیٹا کے مجموعے شامل ہیں تاکہ طلباء کو ایسے سوالات کی کھوج کے دوران مشغول کیا جا سکے جیسے، "مشین لرننگ کیا مسئلہ حل کرنے میں مدد کر سکتی ہے؟" "AI معاشرے کی کیسے مدد کر سکتی ہے؟" "AI سے کون فائدہ اٹھا رہا ہے؟" "کسے نقصان پہنچ رہا ہے؟" "کون غائب ہے؟""کون شامل ہے؟" "کون غائب ہے؟"  </p>
-<p>ان مباحثوں میں اخلاقی تفکرات سب سے آگے ہوں گے، جو کہ کثرت سے بات چیت کے نکات اور ان ٹیکنالوجیز کے اثرات کے بارے میں اسباق کے ساتھ ہوں گے۔. اس سے طلباء کو ان ٹیکنالوجیز کے بارے میں ایک جامع، صاحب فکر سمجھ بوجھ فروغ دینے میں مدد ملے گی جبکہ وہ تکنیکی بنیادوں کو سیکھیں گے کہ ٹیکنالوجیز کیسے کام کرتی ہیں۔.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. یہ AI اخلاقیات پر توجہ مرکوز کرتا ہے، جانبداری کے مسائل کا جائزہ لیتا ہے، اور بنیادی تصورات کو دریافت کرتا اور وضاحت کرتا ہے۔</p><p>چونکہ مشین لرننگ ڈیٹا کے بڑے مجموعوں پر انحصار کرتی ہے، اس لیے نئے یونٹ میں نگہداشت صحت، ڈیموگرافکس اور مزید پر حقیقی زندگی کے ڈیٹا کے مجموعے شامل ہیں تاکہ طلباء کو ایسے سوالات کی کھوج کے دوران مشغول کیا جا سکے جیسے، "مشین لرننگ کیا مسئلہ حل کرنے میں مدد کر سکتی ہے؟" "AI معاشرے کی کیسے مدد کر سکتی ہے؟" "AI سے کون فائدہ اٹھا رہا ہے؟" "کسے نقصان پہنچ رہا ہے؟" "کون غائب ہے؟""کون شامل ہے؟" "کون غائب ہے؟"  </p>
+    <p>ان مباحثوں میں اخلاقی تفکرات سب سے آگے ہوں گے، جو کہ کثرت سے بات چیت کے نکات اور ان ٹیکنالوجیز کے اثرات کے بارے میں اسباق کے ساتھ ہوں گے۔. اس سے طلباء کو ان ٹیکنالوجیز کے بارے میں ایک جامع، صاحب فکر سمجھ بوجھ فروغ دینے میں مدد ملے گی جبکہ وہ تکنیکی بنیادوں کو سیکھیں گے کہ ٹیکنالوجیز کیسے کام کرتی ہیں۔.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## AI کیسے کام کرتی ہے
 
 مائیکروسافٹ کے سی ای او ستیا ندیلا کے تعارف کے ساتھ، مختصر ویڈیوز کا یہ سلسلہ آپ کو متعارف کرائے گا کہ آرٹیفیشل انٹیلیجنس کیسے کام کرتی ہے اور یہ کیونکر اہمیت کی حامل ہے۔. نیورل نیٹ ورکس کے بارے میں جانیں، یا کہ AI کس طرح سیکھتی ہے، اور الگورتھمک جانبداری اور AI فیصلہ سازی کی اخلاقیات جیسے مسائل سے متعلق گہری کھوج کریں۔.
@@ -115,3 +114,5 @@ AI اور مشین لرننگ، ہمارے رہنے اور کام کرنے کے 
 لیول 6-8 \[سپورٹ-ویکٹر مشین\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) استعمال کرتے ہیں۔. ہم مچھلی کے ہر جزو (جیسے آنکھیں، منہ، جسم) کی طرف دیکھتے ہیں اور اجزاء (جیسے دانتوں کی تعداد، جسم کی جسامت) کے لیے تمام میٹا ڈیٹا کو ہر مچھلی کے لیے نمبروں کے ایک ویکٹر میں یکجا کرتے ہیں۔. ہم ان ویکٹرز کو SVM کو تربیت دینے کے لیے استعمال کرتے ہیں۔. تربیتی ڈیٹا کی بنیاد پر، SVM تمام ممکنہ مچھلیوں کی "جگہ" کو دو حصوں میں الگ کر دیتا ہے، جن کا تعلق ان درجوں سے ہے جنہیں ہم سیکھنے کی کوشش کر رہے ہیں (جیسے "نیلا" یا "نیلا نہیں")۔.
 
 [[واپس اوپر جائیں]](#top)
+
+{{ visit_partial_event_logger }}

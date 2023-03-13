@@ -1,7 +1,7 @@
 require_relative './test_helper'
 require_relative '../router'
-require 'helpers/auth_helpers'
 require 'cdo/rack/request'
+require 'shared_resources'
 require 'parallel'
 require 'open3'
 require 'digest'
@@ -30,16 +30,15 @@ class PegasusTest < Minitest::Test
   STATUS_EXCEPTIONS = {
     302 => %w[
       code.org/amazon-future-engineer
+      code.org/congrats
       code.org/educate
+      code.org/educate/weblab-test
       code.org/review-hociyskvuwa
       code.org/teach
       code.org/student
     ],
     301 => %w[
       csedweek.org/resource_kit
-    ],
-    401 => %w[
-      code.org/create-company-profile
     ]
   }
 
@@ -76,7 +75,7 @@ class PegasusTest < Minitest::Test
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
-      page[:uri].end_with?('/splat') ||
+      page[:uri].end_with?('/splat', '/splat.fetch') ||
       # Private routes not yet handled.
       page[:uri].start_with?('/private')
     end
@@ -142,7 +141,7 @@ class PegasusTest < Minitest::Test
 
     routes_file = cache_dir('pegasus_routes.yml.gz')
     if File.exist?(routes_file)
-      old_routes = YAML.load(Zlib::GzipReader.new(File.open(routes_file)).read)
+      old_routes = YAML.safe_load(Zlib::GzipReader.new(File.open(routes_file)).read)
       diffs = (pages.to_a - old_routes.to_a).to_h.keys - CONTENT_CHANGE_EXCEPTIONS
       if diffs.any?
         diff_outputs = diffs.map do |diff|
@@ -198,7 +197,7 @@ class PegasusTest < Minitest::Test
     # 1 if warnings are present
     # 2 if errors are present
     if status == 2
-      result.lines.select {|line| line =~ /Error:/}
+      result.lines.grep(/Error:/)
     end
   end
 end

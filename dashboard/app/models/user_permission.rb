@@ -16,7 +16,7 @@
 require 'cdo/chat_client'
 
 class UserPermission < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   VALID_PERMISSIONS = [
     # Grants access to managing workshops and workshop attendance.
@@ -42,8 +42,6 @@ class UserPermission < ApplicationRecord
     # Granted to regional partner program managers.
     # Initially has the same abilities as workshop organizer.
     PROGRAM_MANAGER = 'program_manager'.freeze,
-    # Grants access to review reported inaccuracies in census data
-    CENSUS_REVIEWER = 'census_reviewer'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
   ].freeze
@@ -59,6 +57,11 @@ class UserPermission < ApplicationRecord
 
   after_save :log_permission_save
   before_destroy :log_permission_delete
+  after_create :send_verified_teacher_email, if: proc {permission == AUTHORIZED_TEACHER}
+
+  def send_verified_teacher_email
+    TeacherMailer.verified_teacher_email(user).deliver_now if user&.email.present?
+  end
 
   def log_permission_save
     return if saved_changes.empty?

@@ -9,7 +9,7 @@
 # override.
 
 require_relative '../../dashboard/config/environment'
-require_relative '../../lib/analyze_hoc_activity_helper'
+require_relative '../../pegasus/helpers/analyze_hoc_activity_helper'
 require 'json'
 
 def print_usage_and_exit(code: 0)

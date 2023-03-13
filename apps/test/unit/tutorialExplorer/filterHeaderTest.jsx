@@ -3,7 +3,6 @@ import {mount} from 'enzyme';
 import {StickyContainer} from 'react-sticky';
 import {expect} from '../../util/deprecatedChai';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
-import BackButton from '@cdo/apps/tutorialExplorer/backButton';
 import i18n from '@cdo/tutorialExplorer/locale';
 import {allowConsoleWarnings} from '../../util/testUtils';
 
@@ -12,7 +11,6 @@ const FAKE_ON_ORG_NAME = () => {};
 const FAKE_SHOW_MODAL_FILTERS = () => {};
 const FAKE_HIDE_MODAL_FILTERS = () => {};
 const DEFAULT_PROPS = {
-  backButton: false,
   filteredTutorialsCount: 5,
   mobileLayout: false,
   showingModalFilters: false,
@@ -63,15 +61,6 @@ describe('FilterHeader', () => {
         {i18n.filterHeaderHideFilters()}
       </button>
     );
-  });
-
-  it('adds a back button if requested', () => {
-    const wrapper = mount(
-      <StickyContainer>
-        <FilterHeader {...DEFAULT_PROPS} backButton={true} />
-      </StickyContainer>
-    );
-    expect(wrapper).to.containMatchingElement(<BackButton />);
   });
 
   it('pluralizes result summary correctly', () => {

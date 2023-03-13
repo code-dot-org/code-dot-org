@@ -10,7 +10,18 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "1aca9aa7-be38-47cb-b58d-9d0df5c15f3b"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey",
+          "key": "89b889db-2e3a-4afa-8df5-b424eb0d62d1"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -22,11 +33,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 02:14:41 UTC",
+    "serialized_at": "2023-02-14 22:30:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -186,7 +198,7 @@
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
+        "overview": "In this mini-project, students will use the Circuit Playground to collect data, then use App Lab to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps where a person collects data on a device \"in the field\", then returns to a central location to view and analyze the data (such as cataloguing endangered species in the wild). Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected"
       },
@@ -419,6 +431,17 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
@@ -928,6 +951,7 @@
       "key": "ab66741e-528f-4d29-81df-1b6a3f5ba1fa",
       "position": 5,
       "properties": {
+        "duration": 45,
         "name": "Day 5"
       },
       "seeding_key": {
@@ -1190,19 +1214,6 @@
       }
     },
     {
-      "key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b",
-        "lesson.key": "Physical Outputs and LEDs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "642bece0-6dc3-45e9-918e-4d01f8034a1c",
       "position": 1,
       "properties": {
@@ -1287,8 +1298,21 @@
       }
     },
     {
-      "key": "0e3432dd-ba1d-4c56-a446-81c419bd6db9",
+      "key": "d383eef2-e74d-4993-b0f3-cbd6fc216128",
       "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d383eef2-e74d-4993-b0f3-cbd6fc216128",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "key": "0e3432dd-ba1d-4c56-a446-81c419bd6db9",
+      "position": 5,
       "properties": {
         "name": "Extensions"
       },
@@ -1330,7 +1354,7 @@
       "key": "c34e82c1-7915-4903-8b84-5bb8e0a93f89",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Order Materials:** This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). The module is designed to take 2 hours to complete. No previous experience with coding or physical computing is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -1378,7 +1402,7 @@
       "key": "debe9954-34ec-44d2-96c4-69f46dc1bca8",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.\n\n**Question of the Day:** What is a computing innovation?",
         "name": "Get Inspired\r"
       },
       "seeding_key": {
@@ -1453,7 +1477,7 @@
       "key": "f12fbcf7-5d63-4105-a269-f198663ecdfa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [Circuits and Logic Video](https://www.youtube.com/watch?v=DTwtegUN3Gc&feature=youtu.be) in the slides. This video foreshadows what students will experience in the unit, using a circuit board to create devices to solve problems. The final moment of the video - \"What would you like to do with all these circuits?\" - can be used as a segue to the wrap-up journal prompt.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [Circuits and Logic Video](https://www.youtube.com/watch?v=3wy9EXKhbtU) in the slides. This video foreshadows what students will experience in the unit, using a circuit board to create devices to solve problems. The final moment of the video - \"What would you like to do with all these circuits?\" - can be used as a segue to the wrap-up journal prompt.",
         "name": "Journaling\r",
         "tips": [
           {
@@ -1581,7 +1605,13 @@
       "key": "29b1832f-4872-46da-a270-a41592f155ae",
       "position": 3,
       "properties": {
-        "progression_name": "Setup"
+        "progression_name": "Setup",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "29b1832f-4872-46da-a270-a41592f155ae",
@@ -1647,7 +1677,13 @@
       "key": "010e456f-614d-48fe-a5bc-05ba548140ba",
       "position": 7,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "010e456f-614d-48fe-a5bc-05ba548140ba",
@@ -2107,7 +2143,13 @@
       "key": "a0f4ad44-579c-4404-8ba2-bcb19e459e0c",
       "position": 4,
       "properties": {
-        "progression_name": "Video - Variables"
+        "progression_name": "Video - Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Options for Watching Videos:** Videos can be a good opportunity to re-group the class and ensure everyone gets the same information before proceeding in the lesson. Videos are included in the teacher slide deck to be watched as a class, but are also included as individual levels if students need to watch individually at a later date. We recommend watching videos as a class when possible and allowing the students to discuss and synthesize the topics with partners or as a full class.\n\n**Reviewing the Video:** After watching the video, consider printing or displaying the corresponding Lesson Resource included as a PDF in the student resources of the lesson plan. This can be a helpful visual cue for students as they continue working through levels that require them to apply what they learned from the video, or can be used in a class discussion to summarize and clarify the content of the video. You can also remind students that these resources are available in the Help and Tips tab on individual levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a0f4ad44-579c-4404-8ba2-bcb19e459e0c",
@@ -2129,7 +2171,13 @@
       "key": "64e9d8c1-f351-4dec-b424-f4c03bd5324a",
       "position": 6,
       "properties": {
-        "progression_name": "Video - The Counter Pattern"
+        "progression_name": "Video - The Counter Pattern",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reviewing the Video:** After watching the video, consider printing or displaying the corresponding Lesson Resource included as a PDF in the student resources of the lesson plan. This can be a helpful visual cue for students as they continue working through levels that require them to apply what they learned from the video, or can be used in a class discussion to summarize and clarify the content of the video. You can also remind students that these resources are available in the Help and Tips tab on individual levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "64e9d8c1-f351-4dec-b424-f4c03bd5324a",
@@ -2151,7 +2199,13 @@
       "key": "314cd764-1846-45e2-951b-1fc00d8b5aed",
       "position": 8,
       "properties": {
-        "progression_name": "Video - If Statements"
+        "progression_name": "Video - If Statements",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reviewing the Video:** After watching the video, consider printing or displaying the corresponding Lesson Resource included as a PDF in the student resources of the lesson plan. This can be a helpful visual cue for students as they continue working through levels that require them to apply what they learned from the video, or can be used in a class discussion to summarize and clarify the content of the video. You can also remind students that these resources are available in the Help and Tips tab on individual levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "314cd764-1846-45e2-951b-1fc00d8b5aed",
@@ -3368,7 +3422,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, we have a sense of sight, what happens when we show or hide things from the circuit playground? We have a sense of hearing, what happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
+            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
           }
         ]
       },
@@ -3724,7 +3778,13 @@
       "key": "11718267-5da6-4e25-9cf3-0782a3820c8d",
       "position": 6,
       "properties": {
-        "progression_name": "Video - Introduction to Arrays"
+        "progression_name": "Video - Introduction to Arrays",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reviewing the Video:** After watching the video, consider printing or displaying the corresponding Lesson Resource included as a PDF in the student resources of the lesson plan. This can be a helpful visual cue for students as they continue working through levels that require them to apply what they learned from the video, or can be used in a class discussion to summarize and clarify the content of the video. You can also remind students that these resources are available in the Help and Tips tab on individual levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "11718267-5da6-4e25-9cf3-0782a3820c8d",
@@ -3870,7 +3930,13 @@
       "key": "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9",
       "position": 3,
       "properties": {
-        "progression_name": "Video - Functions"
+        "progression_name": "Video - Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reviewing the Video:** After watching the video, consider printing or displaying the corresponding Lesson Resource included as a PDF in the student resources of the lesson plan. This can be a helpful visual cue for students as they continue working through levels that require them to apply what they learned from the video, or can be used in a class discussion to summarize and clarify the content of the video. You can also remind students that these resources are available in the Help and Tips tab on individual levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9",
@@ -3909,7 +3975,13 @@
       "key": "69fa3327-7be1-4285-859c-d2f87a36b550",
       "position": 6,
       "properties": {
-        "progression_name": "Video - Parameters"
+        "progression_name": "Video - Parameters",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reviewing the Video:** After watching the video, consider printing or displaying the corresponding Lesson Resource included as a PDF in the student resources of the lesson plan. This can be a helpful visual cue for students as they continue working through levels that require them to apply what they learned from the video, or can be used in a class discussion to summarize and clarify the content of the video. You can also remind students that these resources are available in the Help and Tips tab on individual levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "69fa3327-7be1-4285-859c-d2f87a36b550",
@@ -4027,7 +4099,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Example App:** You may decide to show students the exemplar apps and their videos examples of what students can create in this project. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
+            "markdown": "**Example App:** You may decide to show students the exemplar apps and their videos examples of what students can create in this project. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\nThere are also several videos student projects available for verified teachers - [r student_example_projects/csd/2022]. These videos were created during the pilot of this course by a participating teacher with her students, and are used with their permission.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
           }
         ]
       },
@@ -4312,17 +4384,6 @@
       }
     },
     {
-      "key": "b3a69fce-9cb6-4117-9f01-7e7b4b0c82f1",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "b3a69fce-9cb6-4117-9f01-7e7b4b0c82f1",
-        "lesson_activity.key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b"
-      }
-    },
-    {
       "key": "a98ae999-f790-4536-b636-063170f6b369",
       "position": 1,
       "properties": {
@@ -4559,7 +4620,7 @@
       "key": "2c89f55b-648b-4564-9df9-24f3eb75a6c8",
       "position": 7,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side where they decide how to respond to the feedback they were given. They should then use that feedback to improve their game.",
+        "description": "**Circulate:** Students should complete the peer review guide's back side where they decide how to respond to the feedback they were given. They should then use that feedback to improve their innovation.",
         "name": "Iterate - Revise Prototypes\r"
       },
       "seeding_key": {
@@ -4589,12 +4650,48 @@
       "key": "266e20ca-98da-4140-80a3-b88831c809bc",
       "position": 2,
       "properties": {
-        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete an end of unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "266e20ca-98da-4140-80a3-b88831c809bc",
         "lesson_activity.key": "ef0f2f8a-5694-4406-9357-17f0d20037e3"
+      }
+    },
+    {
+      "key": "b48419ef-e168-48e0-9f73-5f0a9f7cbba4",
+      "position": 3,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b48419ef-e168-48e0-9f73-5f0a9f7cbba4",
+        "lesson_activity.key": "ef0f2f8a-5694-4406-9357-17f0d20037e3"
+      }
+    },
+    {
+      "key": "9d25bedc-e25e-4765-933d-124a5f27be74",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d25bedc-e25e-4765-933d-124a5f27be74",
+        "lesson_activity.key": "d383eef2-e74d-4993-b0f3-cbd6fc216128"
+      }
+    },
+    {
+      "key": "a8d4bd5e-402c-4246-a5fb-ffb3bc312ff3",
+      "position": 2,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End-Of-Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8d4bd5e-402c-4246-a5fb-ffb3bc312ff3",
+        "lesson_activity.key": "d383eef2-e74d-4993-b0f3-cbd6fc216128"
       }
     },
     {
@@ -10149,6 +10246,18 @@
       }
     },
     {
+      "name": "Arrays",
+      "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
+      "key": "arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "arrays"
+      }
+    },
+    {
       "name": "Board Events",
       "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
       "key": "board_events",
@@ -10166,7 +10275,6 @@
       "key": "board_events_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1mECbLnlrQ5NyijMctYkOW5yHTM7-iGnGZJv2SBdHcN4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10232,6 +10340,18 @@
       },
       "seeding_key": {
         "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "name": "Circuits and Logic",
+      "url": "https://www.youtube.com/watch?v=3wy9EXKhbtU",
+      "key": "circuits_and_logic",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_logic"
       }
     },
     {
@@ -10359,6 +10479,17 @@
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
       }
     },
     {
@@ -10529,6 +10660,18 @@
       }
     },
     {
+      "name": "Functions",
+      "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
+      "key": "functions_5",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "functions_5"
+      }
+    },
+    {
       "name": "Functions with Parameters",
       "url": "https://youtu.be/5UMKeMPCa7E",
       "key": "functions_with_parameters",
@@ -10583,7 +10726,6 @@
       "key": "innovations_in_computing",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10592,7 +10734,7 @@
     },
     {
       "name": "Input / Output Devices",
-      "url": "https://youtu.be/N-zykCnEmck",
+      "url": "https://www.youtube.com/watch?v=sLIJNEIE0Rs",
       "key": "input_output_devices",
       "properties": {
         "audience": "Student",
@@ -10651,6 +10793,18 @@
       },
       "seeding_key": {
         "resource.key": "mini-project_on-the-go_app"
+      }
+    },
+    {
+      "name": "Modifying Arrays",
+      "url": "https://drive.google.com/file/d/1OkCLdXlEIVm62RoucKyw8JhOpWtQENgH/view?usp=sharing",
+      "key": "modifying_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "modifying_arrays"
       }
     },
     {
@@ -10946,6 +11100,30 @@
       }
     },
     {
+      "name": "Student Checklist - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/edit#",
+      "key": "student_checklist_-_human_device_interaction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "student_checklist_-_human_device_interaction"
+      }
+    },
+    {
+      "name": "Student Example Projects",
+      "url": "https://drive.google.com/drive/folders/19XYyV6BN1ZP8X2jPdk3_e38bZTtiLChY?usp=sharing",
+      "key": "student_example_projects",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "student_example_projects"
+      }
+    },
+    {
       "name": "Student Rubric - Interactive Art",
       "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
       "key": "student_rubric_-_interactive_art",
@@ -10988,7 +11166,6 @@
       "key": "the_circuit_playground",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TMmT760SXp6675QNVWISCfiyLC9eyAe4Qw14ww23DKE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10997,7 +11174,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/2Bn0ipWnWcA",
+      "url": "https://youtu.be/sLIJNEIE0Rs",
       "key": "the_counter_pattern_1",
       "properties": {
         "audience": "Student",
@@ -11037,7 +11214,6 @@
       "key": "updating_screen_elements",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Q1TDByGJq8wIrILuE0E0nWExpE4GAjYdALiA974moAQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11074,7 +11250,6 @@
       "key": "variables_and_if_statements",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ZbvwtMitIOktO6DyXWBnzwPzmdX2j0uuiwXs7KogmF4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11182,6 +11357,12 @@
     {
       "seeding_key": {
         "lesson.key": "Functions",
+        "resource.key": "functions_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
         "resource.key": "functions_with_parameters"
       }
     },
@@ -11195,6 +11376,12 @@
       "seeding_key": {
         "lesson.key": "Getting Screen Inputs",
         "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "circuits_and_logic"
       }
     },
     {
@@ -11230,6 +11417,12 @@
     {
       "seeding_key": {
         "lesson.key": "Making Music",
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
         "resource.key": "introduction_to_arrays"
       }
     },
@@ -11237,6 +11430,12 @@
       "seeding_key": {
         "lesson.key": "Making Music",
         "resource.key": "making_music"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "modifying_arrays"
       }
     },
     {
@@ -11279,6 +11478,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",
         "resource.key": "project_guide_-_interactive_art"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "resource.key": "student_example_projects"
       }
     },
     {
@@ -11439,6 +11644,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "resource.key": "student_checklist_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "resource.key": "circuit_playground"
       }
@@ -11579,6 +11790,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_programming_levels_guide",
         "script.name": "csd6-2022"
       }
@@ -11711,13 +11928,6 @@
         "lesson.key": "Board Events",
         "programming_environment.name": "applab",
         "programming_expression.key": "toggleSwitch"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "toggleSwitch.isOpen"
       }
     },
     {
@@ -12084,6 +12294,16 @@
       }
     },
     {
+      "key": "26ad9b1f-943e-4dea-bc32-f5cbbcbb52c6",
+      "properties": {
+        "description": "Create a project that seamlessly integrates the circuit playground with physical materials"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "objective.key": "26ad9b1f-943e-4dea-bc32-f5cbbcbb52c6"
+      }
+    },
+    {
       "key": "2ec25831-a76d-4ea0-903c-3083f9308f66",
       "properties": {
         "description": "Connect and troubleshoot external devices"
@@ -12124,6 +12344,16 @@
       }
     },
     {
+      "key": "49e90a99-f9de-46ef-99a7-2eaf55f2d453",
+      "properties": {
+        "description": "Create a project that incorporates outputs from the app screen"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "objective.key": "49e90a99-f9de-46ef-99a7-2eaf55f2d453"
+      }
+    },
+    {
       "key": "4bb96cf0-81a4-4e02-a2cd-0bc3580dd98c",
       "properties": {
         "description": "Use variables to store information when creating apps"
@@ -12144,6 +12374,16 @@
       }
     },
     {
+      "key": "56bd593f-cd49-4672-8df1-be90f5f1588b",
+      "properties": {
+        "description": "Create a project that uses a variety of inputs and outputs from the circuit playground and app screen"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "objective.key": "56bd593f-cd49-4672-8df1-be90f5f1588b"
+      }
+    },
+    {
       "key": "59aee898-09e3-47ae-a2bc-30e5ab7a0e4d",
       "properties": {
         "description": "Use user input to update elements on the screen using code"
@@ -12154,6 +12394,16 @@
       }
     },
     {
+      "key": "64bb39dd-fe82-4f01-ba0e-12e572301189",
+      "properties": {
+        "description": "Create a project that incorporates variables and if-statements"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "objective.key": "64bb39dd-fe82-4f01-ba0e-12e572301189"
+      }
+    },
+    {
       "key": "663803b7-72f9-4533-a0ed-9d096ae3d17b",
       "properties": {
         "description": "Use functions to organize repeated blocks of code"
@@ -12161,6 +12411,16 @@
       "seeding_key": {
         "lesson.key": "Functions",
         "objective.key": "663803b7-72f9-4533-a0ed-9d096ae3d17b"
+      }
+    },
+    {
+      "key": "67f2dba7-e2dd-4941-970d-c8abeea0105e",
+      "properties": {
+        "description": "Create a project that combines output from the circuit playground with physical materials"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "objective.key": "67f2dba7-e2dd-4941-970d-c8abeea0105e"
       }
     },
     {
@@ -12324,6 +12584,16 @@
       }
     },
     {
+      "key": "cf2e7187-6bfd-4eda-9f6b-fafcb5d86ffa",
+      "properties": {
+        "description": "Create a project that incorporates physical materials into its design"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "objective.key": "cf2e7187-6bfd-4eda-9f6b-fafcb5d86ffa"
+      }
+    },
+    {
       "key": "d6a096c7-7f32-4787-b0dd-8dd3ce85ab65",
       "properties": {
         "description": "Use variables and if-statements for complex user interaction"
@@ -12331,6 +12601,16 @@
       "seeding_key": {
         "lesson.key": "Combining Inputs and Outputs",
         "objective.key": "d6a096c7-7f32-4787-b0dd-8dd3ce85ab65"
+      }
+    },
+    {
+      "key": "da9fca62-351d-4ba4-bf3e-a65bb33aeda6",
+      "properties": {
+        "description": "Create a project that incorporates inputs from the circuit playground"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "objective.key": "da9fca62-351d-4ba4-bf3e-a65bb33aeda6"
       }
     },
     {
@@ -12375,6 +12655,55 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
@@ -12517,9 +12846,219 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Combining Inputs and Outputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Combining Inputs and Outputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Combining Inputs and Outputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Combining Inputs and Outputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Combining Inputs and Outputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Screen Inputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Screen Inputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Screen Inputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Interactive Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
       }
     },
     {
@@ -12692,6 +13231,62 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Human Device Interaction",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
@@ -12723,6 +13318,41 @@
         "lesson.key": "Updating Screen Elements",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and If Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and If Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and If Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and If Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and If Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
       }
     }
   ],

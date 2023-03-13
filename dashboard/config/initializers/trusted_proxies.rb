@@ -1,6 +1,6 @@
 # Trust Cloudfront proxies so we get real remote IPs
 
-trusted_proxies = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
+trusted_proxies = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
   IPAddr.new(proxy)
 end
 

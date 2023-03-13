@@ -39,7 +39,7 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Fiesta de baile</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programa una Fiesta de baile para compartir con amigos y familiares. ¡Con Katy Perry, Shawn Mendes, Panic! ¡At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj y 34 más!</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programa una Fiesta de baile para compartir con amigos y familiares. Con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de “Encanto” de Disney, ¡y más!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Prueba la actividad</button></a>
     </span>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Laboratorio de aplicaciones</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Laboratorio de juegos</strong></h3></a>
     <p style="color:#ffffff">El Laboratorio de juegos es un entorno de programación en donde puedes hacer animaciones simples y juegos con objetos y personajes que interactúan entre ellos.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Crear un juego</button></a>

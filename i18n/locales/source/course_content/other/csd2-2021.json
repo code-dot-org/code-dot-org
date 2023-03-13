@@ -30,7 +30,14 @@
   },
   "https://studio.code.org/s/csd2-2021/lessons/2/levels/6": {
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I make multiple paragraphs?**]\n\nHere's an example of several paragraph tags in a row. This code would be placed inside of the body of your web page.\n\n    <p>This is a paragraph. It has two sentences.</p>\n    <p>This is another paragraph.</p>\n\n:::\n\n</div>\n\n# Use Paragraph Tags\n\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\n\n# Do This\n\n-   Place the text you just wrote inside at least two separate paragraphs by surrounding it with `<p>` and `</p>` tags\n-   Compare the results with a neighbor. What has changed about the way your text is displayed?",
-    "teacher_markdown": "## Using the Tool\n\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated.  This makes the level particularly useful as assessment.  Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab.  Later, any teacher feedback will appear in the same area."
+    "teacher_markdown": "## Using the Tool\n\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated.  This makes the level particularly useful as assessment.  Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab.  Later, any teacher feedback will appear in the same area.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images; understand the need for precision when using computer languages and use appropriate syntax.\r\n",
+      "rubric_performance_level_1": "All texts is contained within paragraph tags.  There are at least two paragraphs created through the proper use of paragraph tags.",
+      "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags.",
+      "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
+      "rubric_performance_level_4": "There are no paragraph tags in the text."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/2/levels/7": {
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening( `<p>` ) and closing( `</p>` ) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n::: details [**Why does HTML seem to work even when it's broken?**]\nHTML is read by your web browser to generate web pages. Since people often make little mistakes when writing their web pages, browsers are programmed to make a best guess of what you intended to do. Sometimes different browsers are even programmed to make different guesses! The only way to ensure your code looks like you intend is make sure you're always using tags correctly.\n\n:::\n\n::: details [**Why does the code sometimes turn pink?**]\n\nWeb Lab is programmed to automatically detect some mistakes in HTML.  When it notices a mistake, it turns that code pink.  The mistake might be in pink, or it might be somewhere before the pink code.  You'll need to carefully debug to find your mistake.\n\n:::\n\n</div>\n\n# Debug: Fix the Broken Tags\n\nThis simple web page has some issues which are preventing the content from being displayed correctly. Identify and fix the issues. This practice is also called \"debugging\" your code.\n\n# Do This\n\n-   Fix the broken code so that the web page displays correctly\n-   Compare the problems you fixed with a neighbor",
@@ -118,7 +125,14 @@
   },
   "https://studio.code.org/s/csd2-2021/lessons/3/levels/8": {
     "display_name": "Headings and Paragraphs",
-    "long_instructions": "# Headings and Paragraphs\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. All of your text in your web page should be contained in an HTML element (headings or paragraphs). Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I create multiple paragraphs?**]\n\nParagraphs are marked by opening (`<p>`) and closing (`</p>`) tags as well. To create more than one paragraph you will want multiple sets of opening and closing `<p>` tags. For example\n\n        <p>\n            This is a paragraph.\n        </p>\n        <p>\n            This is another paragraph.\n        </p>\n\n:::\n\n::: details [**What are headings?**]\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so it's easier for a user to read.\n:::\n\n::: details [**How do I make different sized headings?**]\nHeadings come in 6 different sizes. So far you have primarily used the biggest one `<h1>`. The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is `<h6>`. You can also try the `<h2>`, `<h3>`, `<h4>`, and `<h5>` tags which get smaller as the number gets larger.\n:::\n\n::: details [**What is HTML?**]\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \n:::\n\n::: details [**What is an HTML element?**]\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n:::\n\n::: details [**What is an HTML tag?**]\n\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\n\n:::\n\n</div>\n\nThe author of this page added in a lot of content, but did not think about structure.  All of the text is mashed together.\n\nDo This:\n\n-   Look through the content with your partner and decide what you think the best structure should be.\n-   Use your heading and paragraph tags to code the structure into the page."
+    "long_instructions": "# Headings and Paragraphs\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. All of your text in your web page should be contained in an HTML element (headings or paragraphs). Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I create multiple paragraphs?**]\n\nParagraphs are marked by opening (`<p>`) and closing (`</p>`) tags as well. To create more than one paragraph you will want multiple sets of opening and closing `<p>` tags. For example\n\n        <p>\n            This is a paragraph.\n        </p>\n        <p>\n            This is another paragraph.\n        </p>\n\n:::\n\n::: details [**What are headings?**]\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so it's easier for a user to read.\n:::\n\n::: details [**How do I make different sized headings?**]\nHeadings come in 6 different sizes. So far you have primarily used the biggest one `<h1>`. The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is `<h6>`. You can also try the `<h2>`, `<h3>`, `<h4>`, and `<h5>` tags which get smaller as the number gets larger.\n:::\n\n::: details [**What is HTML?**]\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \n:::\n\n::: details [**What is an HTML element?**]\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n:::\n\n::: details [**What is an HTML tag?**]\n\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\n\n:::\n\n</div>\n\nThe author of this page added in a lot of content, but did not think about structure.  All of the text is mashed together.\n\nDo This:\n\n-   Look through the content with your partner and decide what you think the best structure should be.\n-   Use your heading and paragraph tags to code the structure into the page.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
+      "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags and multiple sized headings in a logically consistent way.",
+      "rubric_performance_level_2": "All content is contained in tags, uses paragraph and heading tags in a reasonable way.",
+      "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
+      "rubric_performance_level_4": "Little or no content is contained in tags."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/3/levels/9": {
     "dsls": {
@@ -239,7 +253,14 @@
     "long_instructions": "<div class=\"no-pullthrough\" \n style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What colors can I use in CSS?**]\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\" target=\"_new\">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\" target=\"_new\">W3Schools - CSS Legal Color Values</a>\n:::\n\n::: details [**How does the code work?**]\n\nHere is the code that is making the `h1` heading red:\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n\n::: details [**What is CSS?**]\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n    }\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n:::\n\n</div>\n\n# CSS and Text Color\n\nThis HTML file uses a style sheet (\"style.css\") to give the page a particular style.  The style sheet contains information about what each of the HTML elements should look like.\n\n# Do this\n\n-   Find the code in the style sheet (click on \"style.css\" in the files list) that is making the h1 heading red.\n-   Change the code for the color of the h1 heading from `red` to a different color."
   },
   "https://studio.code.org/s/csd2-2021/lessons/6/levels/5": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What colors can I use in CSS?**]\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n:::\n::: details [**How does the code work?**]\n\nHere is the code that is making the `h1` header red:\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n::: details [**How do I make a new rule-set?**]\n\nTo make a new rule set, you'll need a selector and a list of rules.  The selector is the name of the tag you want the rules to be applied to.  The rules are a list of property and value pairs.  You'll also need to pay careful attention to the punctuation in the rule set.  Look at the code below for an example of how the code should look.  You'll need to change the specifics for your page.\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n    }\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n\n:::\n\n</div>\n\n# Making a new CSS rule-set\n\nThe block of code that gives rules for a particular tag is called a _rule-set_.  You can make a new rule set by copying the pattern you see in the rule-set for the `h1` tag.\n\n# Do this\n\n-   Find the CSS rule-set in the style sheet that determines the styles for the `h1` tag.\n-   Using the same pattern, write a new CSS rule-set that will determine the style for the `h3` tag.\n-   Add code to set a different color for the `h3` tags."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What colors can I use in CSS?**]\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n:::\n::: details [**How does the code work?**]\n\nHere is the code that is making the `h1` header red:\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n::: details [**How do I make a new rule-set?**]\n\nTo make a new rule set, you'll need a selector and a list of rules.  The selector is the name of the tag you want the rules to be applied to.  The rules are a list of property and value pairs.  You'll also need to pay careful attention to the punctuation in the rule set.  Look at the code below for an example of how the code should look.  You'll need to change the specifics for your page.\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n    }\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n\n:::\n\n</div>\n\n# Making a new CSS rule-set\n\nThe block of code that gives rules for a particular tag is called a _rule-set_.  You can make a new rule set by copying the pattern you see in the rule-set for the `h1` tag.\n\n# Do this\n\n-   Find the CSS rule-set in the style sheet that determines the styles for the `h1` tag.\n-   Using the same pattern, write a new CSS rule-set that will determine the style for the `h3` tag.\n-   Add code to set a different color for the `h3` tags.",
+    "mini_rubric": {
+      "rubric_key_concept": "Apply formatting in a web page using CSS",
+      "rubric_performance_level_1": "The `h3` headings are a new color (not black).  There is no extra code in the stylesheet, and there are no syntax errors in the code.",
+      "rubric_performance_level_2": "The `h3` headings are a new color (not black).",
+      "rubric_performance_level_3": "The `h3` headings have a special rule-set in the stylesheet, and the color property is used, but there are enough errors that the text does not change color.",
+      "rubric_performance_level_4": "There is no special rule-set for `h3` headings or the color property is not used in the rule-set."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/6/levels/6": {
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**How does the code work?**]\n\nHere is the code that is controlling the paragraph text size:\n\n    p {\n      font-size: 14px;\n    }\n\n-   `p` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces. The `p` stands for paragraph.\n-   `font-size: 14px;` is the rule that makes the text inside the `p` tags a particular size.\n    -   `font-size` is the _property_.  It explains what the rule is about, in this case the text size.\n    -   `14px` is the _value_.  It explains how the rule should be applied, in this case making the text 14 pixels big.\n\n:::\n::: details [**What does `px` mean / What is a pixel?**]\n\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n\n:::\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n    }\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n\n:::\n\n</div>\n\n# Changing text size\n\nYou can control other things besides colors by using other properties.\n\n# Do This\n\n-   Find the CSS rule-set in the style sheet that determines the style for the paragraph tag.\n-   Change the text size of the paragraphs and the headings."
@@ -298,7 +319,14 @@
   "https://studio.code.org/s/csd2-2021/lessons/6/levels/10": {
     "display_name": "Add a style sheet",
     "bubble_choice_description": "Add a style sheet and rule-sets to this article.",
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n:::\n\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n:::\n\n::: details [**How do I create a new style sheet?**]\nTo create a new style sheet, click on the \"Add CSS\" button above the code area.\n:::\n\n::: details [**What should I name my style sheet?**]\nYou can name your style sheet anything, but it's better to choose a relevant name, such as \"style.css\" or \"aboutmestyles.css\" so that it's clear what the file is.  Your file should always end in the \".css\" extension.\n:::\n\n::: details [**How do I rename a file?**]\nTo rename a file, you can right click (or control click) on the file name and choose the \"Rename\" option.  This will allow you to type in a new file name.  Clicking on a file name after it is already highlighted will also allow you to rename the file.\n:::\n\n::: details [**How do I add a style sheet to a web page?**]\n\nTo add a style sheet to a web page, open up the code for the web page.  Inside the head tag, add the following code `<link rel=\"stylesheet\" href=\"style.css\">`.  Then change \"style.css\" to the name of your style sheet.\n\n:::\n\n</div>\n\n# Style this page!\n\nHere is an opportunity to be creative and have some fun with styles.\n\n# Do this\n\n-   Link the stylesheet to the web page.\n-   Make the paragraph text a different size.\n-   Make the paragraph text a different color."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n:::\n\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n:::\n\n::: details [**How do I create a new style sheet?**]\nTo create a new style sheet, click on the \"Add CSS\" button above the code area.\n:::\n\n::: details [**What should I name my style sheet?**]\nYou can name your style sheet anything, but it's better to choose a relevant name, such as \"style.css\" or \"aboutmestyles.css\" so that it's clear what the file is.  Your file should always end in the \".css\" extension.\n:::\n\n::: details [**How do I rename a file?**]\nTo rename a file, you can right click (or control click) on the file name and choose the \"Rename\" option.  This will allow you to type in a new file name.  Clicking on a file name after it is already highlighted will also allow you to rename the file.\n:::\n\n::: details [**How do I add a style sheet to a web page?**]\n\nTo add a style sheet to a web page, open up the code for the web page.  Inside the head tag, add the following code `<link rel=\"stylesheet\" href=\"style.css\">`.  Then change \"style.css\" to the name of your style sheet.\n\n:::\n\n</div>\n\n# Style this page!\n\nHere is an opportunity to be creative and have some fun with styles.\n\n# Do this\n\n-   Link the stylesheet to the web page.\n-   Make the paragraph text a different size.\n-   Make the paragraph text a different color.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create a stylesheet and link to the sheet in the HTML. The stylesheet includes a rule that changes the paragraph element of a webpage.",
+      "rubric_performance_level_1": "The paragraphs are a new color and size, and there are no errors or inconsistencies in the HTML or CSS code.",
+      "rubric_performance_level_2": "The paragraphs are a new color or size.",
+      "rubric_performance_level_3": "The paragraphs have a special rule-set in the stylesheet, and the color or size property is used, but there are enough errors that the text does not change color or size.  There is HTML code that attempts to link the stylesheet to the web page.",
+      "rubric_performance_level_4": "There is no special rule-set for paragraphs or the color or size properties are not used in the rule-set.  There is no code to link the stylesheet to the web page."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/6/levels/11": {
     "dsls": {
@@ -381,7 +409,17 @@
       "CSD U2 RGB intro_2021": {
         "display_name": "Introduction to RGB",
         "bubble_choice_description": "Learn about RGB and how it can be used to make custom colors.",
-        "long_instructions": "# RGB Colors\r\n\r\nAll colors, whether they have names or not, can be described by the level of red, green, and blue light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You can use the widget on your left to try out different RGB values and see what colors they make.\r\n\r\n* Use the sliders to adjust the levels of red, green, and blue light.\r\n* For each of the colors below, match it to its RGB value.\r\n\r\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r\n\r\nB) red: 255, green: 239, blue: 213 - rgb(255,239,213)\r\n\r\nC) red: 250, green: 128, blue: 114 - rgb(250,128,114)\r\n\r\nD) red: 70, green: 130, blue: 180 - rgb(70, 130, 180)\r\n\r\nE) red: 107, green: 142, blue: 35 - rgb(107,142,35)\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n\r\n::: details [**Why do red and green make yellow?**]\r\n\r\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\r\n\r\n:::\r\n\r\n::: details [**How many colors can I make with RGB color mixing?**]\r\n\r\nYou can make over sixteen million different colors with RGB color mixing.\r\n\r\n:::\r\n</div>\r\n"
+        "long_instructions": "# RGB Colors\r\n\r\nAll colors, whether they have names or not, can be described by the level of red, green, and blue light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You can use the widget on your left to try out different RGB values and see what colors they make.\r\n\r\n* Use the sliders to adjust the levels of red, green, and blue light.\r\n* For each of the colors below, match it to its RGB value.\r\n\r\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r\n\r\nB) red: 255, green: 239, blue: 213 - rgb(255,239,213)\r\n\r\nC) red: 250, green: 128, blue: 114 - rgb(250,128,114)\r\n\r\nD) red: 70, green: 130, blue: 180 - rgb(70, 130, 180)\r\n\r\nE) red: 107, green: 142, blue: 35 - rgb(107,142,35)\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n\r\n::: details [**Why do red and green make yellow?**]\r\n\r\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\r\n\r\n:::\r\n\r\n::: details [**How many colors can I make with RGB color mixing?**]\r\n\r\nYou can make over sixteen million different colors with RGB color mixing.\r\n\r\n:::\r\n</div>\r\n",
+        "start_html": {
+          "red: 128": "red: 128",
+          "green: 128": "green: 128",
+          "blue: 128": "blue: 128",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        }
       },
       "CSD U2 rgb practice shades_2021": {
         "display_name": "Using RGB Colors",
@@ -497,7 +535,14 @@
     }
   },
   "https://studio.code.org/s/csd2-2021/lessons/9/levels/7": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How do I add images?**]\n\nThe `<img>` tag allows you to show images on your web page. \n\nExample:\n\n    <img src=\"dog.png\" alt=\"dog jumping\">\n\nIn order to tell the browser which file to use, extra information, called an **attribute**, is added to the <img> tag inside the brackets. The attribute `src` stands for **s**ou**rc**e and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png. \n\nIn addition to have the src attribute, image elements also have the `alt` attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight. \n\nAn `<img>` tag is an example of a  **self-closing tag** because it starts and closes in one tag.\n:::\n\n::: details [**Why does an image tag not have a closing tag?**]\nAn image tag doesn't need a closing tag because there is no text content which must be wrapped in tags. The content that shows on the screen is specified through the tags attributes.\n:::\n\n::: details [**What is an attribute?**]\n\nAttributes are extra information included in a tag.  Attributes have names and values. The name tells what type of information is being provided and then the value gives the specific information for that tag. \n\nFor example <img> tags have two attributes, src and alt. src specifies the name of the image file and alt tells the browser in readable text what the image is.\n\n:::\n\n</div>\n\n# All about you!\n\nYou can use images to make a web page more personal.\n\n# Do This\n\n-   Add an image to the page.\n-   Make sure to follow the rules about copyright, naming, and using good coding styles."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How do I add images?**]\n\nThe `<img>` tag allows you to show images on your web page. \n\nExample:\n\n    <img src=\"dog.png\" alt=\"dog jumping\">\n\nIn order to tell the browser which file to use, extra information, called an **attribute**, is added to the <img> tag inside the brackets. The attribute `src` stands for **s**ou**rc**e and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png. \n\nIn addition to have the src attribute, image elements also have the `alt` attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight. \n\nAn `<img>` tag is an example of a  **self-closing tag** because it starts and closes in one tag.\n:::\n\n::: details [**Why does an image tag not have a closing tag?**]\nAn image tag doesn't need a closing tag because there is no text content which must be wrapped in tags. The content that shows on the screen is specified through the tags attributes.\n:::\n\n::: details [**What is an attribute?**]\n\nAttributes are extra information included in a tag.  Attributes have names and values. The name tells what type of information is being provided and then the value gives the specific information for that tag. \n\nFor example <img> tags have two attributes, src and alt. src specifies the name of the image file and alt tells the browser in readable text what the image is.\n\n:::\n\n</div>\n\n# All about you!\n\nYou can use images to make a web page more personal.\n\n# Do This\n\n-   Add an image to the page.\n-   Make sure to follow the rules about copyright, naming, and using good coding styles.",
+    "mini_rubric": {
+      "rubric_key_concept": "Structure content on a web page using HTML (Add an image to a web page).  Accurately attribute others when using their work.",
+      "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.  There is accurate attribution and the image is named appropriately.",
+      "rubric_performance_level_2": "The image displays properly and is being used according to its copyright license description.",
+      "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.  The image may not be available for legal use on the web page.",
+      "rubric_performance_level_4": "The `img` tag is not used or is not a source address given for the image."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/9/levels/8": {
     "dsls": {
@@ -586,7 +631,14 @@
     }
   },
   "https://studio.code.org/s/csd2-2021/lessons/11/levels/8": {
-    "long_instructions": "# Try it out!\n\nNow that you've seen some different ways to style, it's time to try it out yourself.  Here's a web page you've seen before, but it needs some style!\n\n# Do This\n\n-   Give the webpage a background color.\n-   Make all the images go to the right of the page.\n-   Make all of the text a different color.\n-   Add any other styles you want."
+    "long_instructions": "# Try it out!\n\nNow that you've seen some different ways to style, it's time to try it out yourself.  Here's a web page you've seen before, but it needs some style!\n\n# Do This\n\n-   Give the webpage a background color.\n-   Make all the images go to the right of the page.\n-   Make all of the text a different color.\n-   Add any other styles you want.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
+      "rubric_performance_level_1": "The background, images, and text have all been styled as described in the instructions.  There are no syntax errors or extra code (that does not function) in the stylesheet.",
+      "rubric_performance_level_2": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
+      "rubric_performance_level_3": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
+      "rubric_performance_level_4": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/11/levels/9": {
     "dsls": {
@@ -656,6 +708,208 @@
   "https://studio.code.org/s/csd2-2021/lessons/13/levels/8": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019_pilot_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd2-2021/lessons/14/levels/1": {
@@ -701,7 +955,14 @@
     }
   },
   "https://studio.code.org/s/csd2-2021/lessons/17/levels/5": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nFor the code to work, you need a class, a rule-set, and elements added to the class.\n\nThe img-top class is created in the style sheet, and it includes three class rules in its rule-set.\n\n    .top-img {\n      height: 50px;\n      border-radius: 5px;\n      margin: 10px;\n    }\n\nCode in the HTML file adds elements to the classes using attributes inside the tags.  For example, the code to add an image to the `img-top` class is `<img class=\"top-img\" src=\"angelfalls.jpeg\" alt=\"Parakupá Vená / Angel Falls\">`.  This pattern can be used in most tags.\n:::\n\n::: details [**What rules can be added to a class rule-set?**]\n\nA class rule-set can have the same rules as any other type of selector.  If a rule does not apply to the content of the class (for example, using `font-size` on an element with no text), then the computer will ignore that rule, but still use the rules that work.\n:::\n\n::: details [**Why does the selector have a period in front of it?**]\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\n:::\n\n::: details [**Why would a web developer use classes?**]\n\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\n\n:::\n\n</div>\n\n# Haikus!\n\nThis page has several different haikus.\n\n# Do This\n\n-   Choose one haiku and give it a special look by creating a class for its paragraph and heading tags.  Use at least three CSS properties.\n\n<details><summary>What does the <strong>&lt;br&gt;</strong> tag do?</summary>\n\nThe \\<br> tag is used here to start a new line inside the same paragraph. In the code below, each poem is still treated like one big paragraph. However, the \\<br> tag puts each line of the haiku is on its own line. <em>You do not need to add any CSS or classes to the \\<br> tags.</em>\n\n</details>"
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nFor the code to work, you need a class, a rule-set, and elements added to the class.\n\nThe img-top class is created in the style sheet, and it includes three class rules in its rule-set.\n\n    .top-img {\n      height: 50px;\n      border-radius: 5px;\n      margin: 10px;\n    }\n\nCode in the HTML file adds elements to the classes using attributes inside the tags.  For example, the code to add an image to the `img-top` class is `<img class=\"top-img\" src=\"angelfalls.jpeg\" alt=\"Parakupá Vená / Angel Falls\">`.  This pattern can be used in most tags.\n:::\n\n::: details [**What rules can be added to a class rule-set?**]\n\nA class rule-set can have the same rules as any other type of selector.  If a rule does not apply to the content of the class (for example, using `font-size` on an element with no text), then the computer will ignore that rule, but still use the rules that work.\n:::\n\n::: details [**Why does the selector have a period in front of it?**]\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\n:::\n\n::: details [**Why would a web developer use classes?**]\n\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\n\n:::\n\n</div>\n\n# Haikus!\n\nThis page has several different haikus.\n\n# Do This\n\n-   Choose one haiku and give it a special look by creating a class for its paragraph and heading tags.  Use at least three CSS properties.\n\n<details><summary>What does the <strong>&lt;br&gt;</strong> tag do?</summary>\n\nThe \\<br> tag is used here to start a new line inside the same paragraph. In the code below, each poem is still treated like one big paragraph. However, the \\<br> tag puts each line of the haiku is on its own line. <em>You do not need to add any CSS or classes to the \\<br> tags.</em>\n\n</details>",
+    "mini_rubric": {
+      "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
+      "rubric_performance_level_1": "The class and rule-set are created correctly, all elements of the of the chosen haiku are included, and there are at least three rules in the rule-set.",
+      "rubric_performance_level_2": "A class and rule-set are created and most elements in the chosen haiku section of the website is affected by this class, but there may be a few minor errors for some parts of text, or there may be fewer than three rules in the rule-set.",
+      "rubric_performance_level_3": "And class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+      "rubric_performance_level_4": "No class or rule sets are created, or no website elements are put in the class."
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/17/levels/6": {
     "dsls": {
@@ -740,7 +1001,14 @@
     "long_instructions": "# Navigation Bar\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What are hyperlinks?**]\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n::: details [**How do I add a hyperlink?**]\n\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br /><br />\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n</div>\n\nMost web sites use navigation bars to help you find your way around a site.  They should be the same on every page.\n\n# Do This\n\n-   Look over the navigation bar on \"index.html\".\n-   Add the same navigation bar to the other three pages."
   },
   "https://studio.code.org/s/csd2-2021/lessons/19/levels/6": {
-    "long_instructions": "# Adding New Pages\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What are hyperlinks?**]\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n::: details [**How do I add a hyperlink?**]\n\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br /><br />\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n</div>\n\nTo make your multi-page website, you'll need to add multiple pages to your project. To practice, let's split the content on this sample page into two pages and link them together.\n\n# Do This\n\n-   Add a new HTML file by clicking  [][0].  The new file will appear in the files list on the left side of the workspace.\n-   Rename the file, either by right clicking it and choosing \"Rename\", or by clicking on it when it's already highlighted.  **Make sure the name is unique, descriptive and ends in \".html\"**.\n-   Use HTML to fill out your new page. (You can use content from the main page.)\n-   Link to your new page from \"index.html\"\n-   Link back to the index from your new page."
+    "long_instructions": "# Adding New Pages\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What are hyperlinks?**]\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n::: details [**How do I add a hyperlink?**]\n\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br /><br />\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n</div>\n\nTo make your multi-page website, you'll need to add multiple pages to your project. To practice, let's split the content on this sample page into two pages and link them together.\n\n# Do This\n\n-   Add a new HTML file by clicking  [][0].  The new file will appear in the files list on the left side of the workspace.\n-   Rename the file, either by right clicking it and choosing \"Rename\", or by clicking on it when it's already highlighted.  **Make sure the name is unique, descriptive and ends in \".html\"**.\n-   Use HTML to fill out your new page. (You can use content from the main page.)\n-   Link to your new page from \"index.html\"\n-   Link back to the index from your new page.",
+    "mini_rubric": {
+      "rubric_key_concept": "Creating a digital artifact, linking within a multi-page site\r\n",
+      "rubric_performance_level_1": "A new page has been created and given a unique and descriptive name ending in “.html”. There is a link from the index.html page to the new page and from the new page back to index.html",
+      "rubric_performance_level_2": "There is at least one one working link from one HTML page to another\r\n",
+      "rubric_performance_level_3": "There is an `<a>` tag, but syntax errors or problems with the page name may prevent it from working\r\n",
+      "rubric_performance_level_4": "No new page was created and there are no links\r\n"
+    }
   },
   "https://studio.code.org/s/csd2-2021/lessons/19/levels/7": {
     "dsls": {
@@ -785,11 +1053,444 @@
   "https://studio.code.org/s/csd2-2021/lessons/21/levels/2": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019_pilot_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U2Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U2Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U2Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U2Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U2Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd2-2021/lockable/1/levels/1": {
     "dsls": {
       "title": "Web Development Post-Project Test"
+    },
+    "sublevels": {
+      "CSD U2 Test HTML Usage_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Making the text a different color.",
+              "correct": false
+            },
+            {
+              "text": "Separating out headings from paragraphs",
+              "correct": true
+            },
+            {
+              "text": "Putting borders on an image",
+              "correct": false
+            },
+            {
+              "text": "Adding information about the copyright",
+              "correct": false
+            },
+            {
+              "text": "Organizing text into a list",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO)"
+            }
+          ],
+          "title": "Question 1"
+        }
+      },
+      "CSD U2 Test ContentStructureStyle_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "It will be confusing and less organized for people to read and write code that mixes everything up together.",
+              "correct": false
+            },
+            {
+              "text": "Structure is more important than style or content and needs its own language",
+              "correct": false
+            },
+            {
+              "text": "Communicating about structure and style are different problems, and it is helpful to use two languages specific to those problems",
+              "correct": false
+            },
+            {
+              "text": "A and C",
+              "correct": true
+            },
+            {
+              "text": "All of the above",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A programmer has an idea to use just one language for the content, structure, and style of web pages. What might be a problem with this idea?"
+            }
+          ],
+          "title": "Question 2"
+        }
+      },
+      "CSD U2 Test Classes_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "They want to make their h3 tags bigger than their h1 tags.",
+              "correct": false
+            },
+            {
+              "text": "They want headings to be one color, but paragraphs to be a different color.",
+              "correct": false
+            },
+            {
+              "text": "They want some images to float left, and other images to float right.",
+              "correct": true
+            },
+            {
+              "text": "They want all the pages on their site to have the same style.",
+              "correct": false
+            },
+            {
+              "text": "They want make a special color using RGB codes.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A group of artists is making a website. When should they use classes?"
+            }
+          ],
+          "title": "Question 3"
+        }
+      },
+      "CSD U2 Test Debug_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "1 only",
+              "correct": true
+            },
+            {
+              "text": "3 only",
+              "correct": false
+            },
+            {
+              "text": "1 and 2 only",
+              "correct": false
+            },
+            {
+              "text": "1 and 3 only",
+              "correct": false
+            },
+            {
+              "text": "1, 2, and 3",
+              "correct": false
+            }
+          ],
+          "markdown": "A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem?\n\n1. The student forgot to link the stylesheet to the index.html page.\n1. The student did not upload the images used in the index.html page.\n1. The student accidentally misspelled “green” in the stylesheet.\n",
+          "title": "Question 4"
+        }
+      },
+      "CSD U2 Test code stylesheet_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "1 and 3",
+              "correct": false
+            },
+            {
+              "text": "2 and 4",
+              "correct": false
+            },
+            {
+              "text": "2 and 3",
+              "correct": true
+            },
+            {
+              "text": "3 and 4",
+              "correct": false
+            },
+            {
+              "text": "1, 2, 3, and 4",
+              "correct": false
+            }
+          ],
+          "markdown": "Questions 5 and 6 deal with the following web page:\n\n![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)\n\n![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)\n\n<div>\nWhat code in the stylesheet could have made the text green?<br><br>\n1. <pre style=\"display:inline-block;width:100px\">.p {\n  color:green;\n}</pre>\n2. <pre style=\"display:inline-block;width:100px\">p {\n  color:green;\n}</pre>\n3. <pre style=\"display:inline-block;width:100px\">.special {\n  color:green;\n}</pre>\n4. <pre style=\"display:inline-block;width:100px\">special {\n  color:green;\n}\n</pre>\n</div>\n",
+          "title": "Question 5"
+        }
+      },
+      "CSD U2 Test code styles_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Use &lt;h6&gt; instead of &lt;h3&gt;",
+              "correct": false
+            },
+            {
+              "text": "Use &lt;h1&gt; instead of &lt;h3&gt;",
+              "correct": true
+            },
+            {
+              "text": "Put the “My Page” text inside the <head> tags.",
+              "correct": false
+            },
+            {
+              "text": "Use CSS to set the font-size property of the h3 tag",
+              "correct": true
+            },
+            {
+              "text": "Put the code `style=“larger”` inside the h3 tag.",
+              "correct": false
+            }
+          ],
+          "markdown": "Questions 5 and 6 deal with the following web page:\n\n![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)\n\n![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)\n",
+          "questions": [
+            {
+              "text": "The web developer wants to make the “My Page” text larger.  Which TWO of the following would work? (Choose TWO)"
+            }
+          ],
+          "title": "Question 6"
+        }
+      },
+      "CSD U2 Test Copyright_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "If an image is already on one web page, it's okay to use it on any web page.",
+              "correct": false
+            },
+            {
+              "text": "If you make a lot of changes to an image, you do not need the permission of the original creator to post it on your site.",
+              "correct": false
+            },
+            {
+              "text": "Image creators can decide both who can use their images and how the images can be used.",
+              "correct": true
+            },
+            {
+              "text": "If there is no copyright information for an image, anyone is free to use it on their own sites.",
+              "correct": false
+            },
+            {
+              "text": "You must always contact the creator for permission to use an image on your site.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following is true about copyright?"
+            }
+          ],
+          "title": "Question 7"
+        }
+      },
+      "CSD U2 Test Bug FR_2021": {
+        "display_name": "Question 8",
+        "long_instructions": "Think about one difficult bug that you needed to fix in your program.  What was your process for finding and fixing the bug?"
+      },
+      "CSD U2 Test Copyright FR_2021": {
+        "display_name": "Question 9",
+        "long_instructions": "Choose one piece of copyrighted material you used in your website.  Why do you think the creator chose the license they used?"
+      },
+      "CSD U2 Test DigCit FR_2021": {
+        "display_name": "Question 10",
+        "long_instructions": "Choose one piece of information your class can know, but you don’t want to share on your website.  Why is it okay for your classmates and teacher to know it, but not to post it publicly?"
+      }
     }
   },
   "https://studio.code.org/s/csd2-2021/lessons/22/levels/1": {

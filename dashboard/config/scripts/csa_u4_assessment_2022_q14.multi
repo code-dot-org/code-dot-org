@@ -1,11 +1,15 @@
 name 'CSA U4 Assessment 2022 q14'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong 'The resulting truth value is always `true`.'
+wrong 'The resulting truth value is always `false`.'
+wrong 'The resulting truth value is `true` only when `a` is `true`.'
+wrong 'The resulting truth value is `true` only when `!b` is `true`.'
+right 'None of the above describe the resulting truth values of this expression.'
 
 markdown <<MARKDOWN
-question
+Which of the following best describes the `boolean` expression shown below?
+
+```
+a || !(b || c)
+```
 MARKDOWN

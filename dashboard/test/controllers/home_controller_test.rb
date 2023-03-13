@@ -4,11 +4,6 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  setup do
-    # stub properties so we don't try to hit pegasus db
-    Properties.stubs(:get).returns nil
-  end
-
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create :teacher
     sign_in teacher
@@ -314,39 +309,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#age-modal', false
   end
 
-  test 'anonymous does not get thank donors dialog' do
-    assert_nil current_user
-
-    get :home
-
-    assert_select '#thank-donors-modal', false
-  end
-
-  test 'student on first login gets thank donors dialog' do
-    # Devise does not run callbacks (eg, increment sign in count)
-    # when using sign_in according to this 2014 discussion:
-    # https://github.com/heartcombo/devise/issues/2905
-    student = create(:user, sign_in_count: 1)
-
-    sign_in student
-    get :home
-
-    assert_select '#thank-donors-modal', true
-  end
-
-  test 'teacher on first login gets thank donors dialog' do
-    teacher = create(
-      :teacher,
-      :with_terms_of_service,
-      sign_in_count: 1
-    )
-
-    sign_in teacher
-    get :home
-
-    assert_select '#thank-donors-modal', true
-  end
-
   test "teacher visiting homepage gets expected cookies set" do
     teacher = create :teacher
     sign_in teacher
@@ -356,30 +318,6 @@ class HomeControllerTest < ActionController::TestCase
     assert cookie_header.include?("teacher_account_age_in_years")
     assert cookie_header.include?("teacher_within_us")
     assert cookie_header.include?("teacher_has_attended_pd")
-  end
-
-  test 'student on second login does not get thank donors dialog' do
-    # Devise does not run callbacks (eg, increment sign in count)
-    # when using sign_in.
-    student = create(:user, sign_in_count: 2)
-
-    sign_in student
-    get :home
-
-    assert_select '#thank-donors-modal', false
-  end
-
-  test 'teacher on second login does not get thank donors dialog' do
-    teacher = create(
-      :teacher,
-      :with_terms_of_service,
-      sign_in_count: 2
-    )
-
-    sign_in teacher
-    get :home
-
-    assert_select '#thank-donors-modal', false
   end
 
   # This exception is actually annoying to handle because it never gets to
@@ -406,16 +344,7 @@ class HomeControllerTest < ActionController::TestCase
 
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'program managers see dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service)
+    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
     query_count = 17
     assert_queries query_count do
       get :home
@@ -423,18 +352,17 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
-  test 'workshop admins see dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 15
+  test 'program managers see dashboard links' do
+    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
+    query_count = 18
     assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
-  test 'facilitators see dashboard links' do
-    facilitator = create(:facilitator, :with_terms_of_service)
-    sign_in facilitator
+  test 'workshop admins see dashboard links' do
+    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
     query_count = 16
     assert_queries query_count do
       get :home
@@ -442,9 +370,19 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
+  test 'facilitators see dashboard links' do
+    facilitator = create(:facilitator, :with_terms_of_service, :not_first_sign_in)
+    sign_in facilitator
+    query_count = 17
+    assert_queries query_count do
+      get :home
+    end
+    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
+  end
+
   test 'teachers cannot see dashboard links' do
-    sign_in create(:terms_of_service_teacher)
-    query_count = 14
+    sign_in create(:terms_of_service_teacher, :not_first_sign_in)
+    query_count = 15
     assert_queries query_count do
       get :home
     end
@@ -452,8 +390,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'workshop admins see application dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 15
+    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
+    query_count = 16
     assert_queries query_count do
       get :home
     end
@@ -463,8 +401,8 @@ class HomeControllerTest < ActionController::TestCase
 
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
-    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    query_count = 17
+    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service, :not_first_sign_in)
+    query_count = 18
     assert_queries query_count do
       get :home
     end
@@ -473,8 +411,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'program managers see application dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 17
+    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
+    query_count = 18
     assert_queries query_count do
       get :home
     end
@@ -484,8 +422,8 @@ class HomeControllerTest < ActionController::TestCase
 
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 16
+    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
+    query_count = 17
     assert_queries query_count do
       get :home
     end

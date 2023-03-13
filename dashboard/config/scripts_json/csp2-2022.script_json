@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=2",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More",
+          "key": "bd40e697-e830-4d7d-848b-27c7c2584e0d"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:21:38 UTC",
+    "serialized_at": "2023-01-27 20:25:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,7 +65,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "After a short transition from representing information in Unit 1 to communicating information in Unit 2, students take time to think about their knowledge of the Internet and how it works. Following this, students are introduced to a new widget: The Internet Simulator which they will use throughout this unit to explore the inner workings of the Internet. ",
-        "preparation": "* Test out the Internet Simulator. If you open up the level on two different tabs, you can use it by yourself. \r\n* Prepare for the Teacher Demo.",
+        "preparation": "* Test out the Internet Simulator. If you open up the level on two different tabs, you can use it by yourself. \n* Prepare for the Teacher Demo.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson helps transition between representing digital information in Unit 1 to communicating digital information in Unit 2. The stage is set to understand the different layers of the Internet through the sticky notes activity where students record what they know and don't know about how the Internet works. Following this, students are exposed to the Internet Simulator, which will be revisited throughout the unit. Students should leave this lesson primed to know more about the Internet. ",
         "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks."
       },
@@ -73,7 +85,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
-        "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \r\n* Decide how you would like students to physically form their networks - standing, in seats, etc.",
+        "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \n* Decide how you would like students to physically form their networks - standing, in seats, etc.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The physical activity in this lesson helps provide a memorable experience and personal anchor for the rest of the unit - we can refer to the networks created in this activity to help motivate concepts in later lessons. In the final challenge for this lesson, it is important to let students wrestle with how to best balance the 3 network guidelines and refine their reasoning & explanation for decisions they made when creating their network. This is important in setting up later lessons in this unit - in this lesson, the guidelines are based on the physical impacts of creating a network but towards the end of the unit students will examine the societal and economical impacts for creating computer networks and will again think critically about how to balance several factors from a societal and economic lens.",
         "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
         "unplugged": true
@@ -94,7 +106,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
-        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet/csp/2021]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) ",
+        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp_unit_2_-_the_internet/csp/2022]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
         "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible."
       },
@@ -114,7 +126,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
-        "preparation": "* Read through [r teacher-guide-router/csp/2021] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
+        "preparation": "* Read through [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/csp/2022] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "After yesterday’s lesson that motivated the need for some kind of addressing system, today’s lesson has students use IP Addresses to send messages to specific people. Today’s focus is on how routers help manage the paths that different messages take. The router logs are an important tool for students to discover the extra work that routers are doing to send messages - they can see that messages are passed between routers and that messages take different paths along the way, all from analyzing the data in the router logs. Importantly, students should make a connection between these observations about multiple pathways and the concept of **fault-tolerance** - because there are multiple pathways, the internet can continue to function even when there may be an issue that the routers need to address.",
         "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network."
       },
@@ -134,7 +146,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn that large messages sent over the Internet are actually divided into individual packets and explore the challenges this creates. First students explore a version of the Internet Simulator that breaks messages into packets to get a sense for how it works. Students then use an activity guide that walks them through the challenges that dropped or out-of-order packets create. They then design their own protocol that addresses these challenges. At the end of the lesson students watch a video and learn and the User Datagram Protocol (UDP) and The Transmission Control Protocol (TCP), two different protocols for sending messages broken into packets.",
-        "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\r\n* Preview [r the-internet-packets-routing-and-reliability-1/csp/2021].\t\r\n* The previous lesson's [r teacher-guide-router/csp/2021] contains helpful tips on setting up routers and managing student conversations.",
+        "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\n* Preview [r the_internet_packets_routing_and_reliability/csp/2022].\t\n* The previous lesson's [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/csp/2022] contains helpful tips on setting up routers and managing student conversations.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Information on the Internet is not sent all at once, but is instead broken into smaller chunks of data called packets. Each packet is sent through the Internet individually and may actually take different paths or arrive at different times than others. Once they arrive the receiver will use the packets to recreate the original file.\n\nTwo protocols used to send data as packets are UDP and TCP. The User Datagram Protocol (UDP) simply sends all the packets. If some arrive out of order or are entirely missing there's no system to fix the errors. The Transmission Control Protocol (TCP) numbers packets before sending them so that the receiver can correctly reorder the packets and request missing packets be resent. \n\nOnly one of these two protocols will be used, depending on the situation. TCP takes longer than UDP because of the error-checking done to guarantee every packet was received. TCP is used to send information like emails, images, websites, and more where saving fractions of a second is less important than accuracy. In instances like live-streaming television or online gaming where speed is most important, UDP will be used since it is faster and there's less benefit to correcting errors.\n\nThis lesson gives students a hands-on experience with the ideas behind both protocols and helps them understand the implications of splitting large files into packets when sending them online.\n\nNote: UDP is not covered in the video at the end of the lesson.\n",
         "student_overview": "Learn how information travelling over the Internet is divided into many packets that travel separately through the network as well as the protocols that allow this process to work even when some packets are lost or delayed."
       },
@@ -154,7 +166,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students conclude their study of the layers of the Internet by learning about two top-level protocols, HTTP and DNS. The lesson begins with a review of the layers students have already learned, namely the physical Internet, IP, and TCP / UDP. The lesson then dives into the core of the unit which is \"What happens when I type an address into my browser?\" Students will complete two brief activities, one unplugged, and one plugged, that explore how the DNS works. Students then watch videos explaining how both DNS and HTTP work, taking notes in a provided activity guide. The lesson concludes with a review of how the different layers of the Internet work.\r\n",
-        "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\r\n* Preview [r the-internet-ip-addresses-and-dns-video/csp/2021].  Specifically the portion starting after 4:09 on DNS. \r\n* Preview [r the-internet-http-and-html-1/csp/2021]",
+        "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\n* Preview [r the_internet_ip_addresses_and_dns_1/csp/2022].  Specifically the portion starting after 4:09 on DNS. \n* Preview [r the_internet_http_and_html/csp/2022]\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is designed to wrap up the series on how the Internet works and highlight the main design philosophies of openness, reliability, and scalability.  However, actions taken by governments and organizations challenge some of these design philosophies and may hinder the ability of the World Wide Web to be truly worldwide.  Students will begin thinking about some of the dilemmas caused by these conflicts, which they will explore further after this lesson.",
         "student_overview": "Learn how websites are shared on the Internet and then examine whether everyone actually has equal access to information on the World Wide Web."
       },
@@ -175,7 +187,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students begin working on a two-day project exploring a dilemma at the intersection of the Internet and society. ",
-        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \r\n* Preview the articles in order to answer student questions. \r\n* [KEY - Internet Dilemmas](https://studio.code.org/s/csp2-2020/stage/7/puzzle/1)",
+        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \n* Preview the articles in order to answer student questions. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-internet-dilemmas-unit-2-lessons-7-8/36471) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
         "student_overview": "Begin forming your own answer to the question \"Has the Internet made the world better or worse\" by considering your own experiences and then reading articles about the impact of the Internet on the world."
       },
@@ -196,6 +208,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students finish working on a two-day project exploring a dilemma at the intersection of the Internet and society.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-internet-dilemmas-unit-2-lessons-7-8/36471) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. These project lessons address the \"so what\" question - why is it important to learn about how the Internet works?",
         "student_overview": "Share your conclusions on the question \"Has the Internet made the world better or worse\" by discussing the articles you read as well as your own experience."
       },
@@ -913,7 +926,7 @@
       "key": "ddcdfaf0-5778-4b85-908c-584fc8c8fa9e",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
         "remarks": true
       },
       "seeding_key": {
@@ -1274,7 +1287,7 @@
       "key": "329dd0ac-cc60-457b-9774-5f3772bda2ca",
       "position": 1,
       "properties": {
-        "description": "Today we saw a lot of really important principles that are important on the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
+        "description": "Today we saw a lot of really important principles that apply to the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
         "remarks": true
       },
       "seeding_key": {
@@ -1297,7 +1310,7 @@
       "key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communiate over networks.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
@@ -1319,7 +1332,7 @@
       "key": "5febd336-2c53-4e20-b1e5-5a47b2657543",
       "position": 5,
       "properties": {
-        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols on the Internet.",
+        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols the Internet runs on.",
         "remarks": true
       },
       "seeding_key": {
@@ -1380,7 +1393,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Before starting this lesson, it is helpful to test the widget that students will be using and to have some additional routers setup ahead of time. These steps are in a separate document: [r teacher-guide-router/csp/2021]\n\n\n"
+            "markdown": "Before starting this lesson, it is helpful to test the widget that students will be using and to have some additional routers setup ahead of time. These steps are in a separate document: [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/csp/2022]\n\n\n"
           }
         ]
       },
@@ -1553,7 +1566,7 @@
       "key": "8a5f99f4-c3b0-41f5-ad95-0dc9a6607930",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message long a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message along a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n"
       },
       "seeding_key": {
         "activity_section.key": "8a5f99f4-c3b0-41f5-ad95-0dc9a6607930",
@@ -3056,7 +3069,7 @@
     },
     {
       "name": "CSP Unit 2 - The Internet",
-      "url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/view",
+      "url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/copy",
       "key": "csp_unit_2_-_the_internet",
       "properties": {
         "audience": "Teacher",

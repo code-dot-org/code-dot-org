@@ -1,15 +1,21 @@
-@import "color";
+@use "sass:math";
+@import "color.scss";
 @import "font";
 @import "curriculum/markdown";
 @import "responsive-visualization";
 @import "style-constants";
+@import "aniGif";
+@import "RotateContainer";
+@import "HideToolbarHelper";
+@import "blockly";
 
-$common_root: '/blockly/media/common_images/';
+$common-root: "/blockly/media/common_images/";
 
 @mixin fill-container {
   height: 100%;
   width: auto;
 }
+
 @mixin font {
   font-family: $gotham-regular, sans-serif;
   font-weight: normal;
@@ -45,10 +51,9 @@ $common_root: '/blockly/media/common_images/';
   animation-iteration-count: 3;
 }
 
-
 body {
   @include font;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   font-weight: normal;
   margin-top: 0;
 }
@@ -87,20 +92,20 @@ em strong {
   clear: both;
 }
 
-html[dir='rtl'] #visualizationColumn {
-  right: 0px;
+html[dir="rtl"] #visualizationColumn {
+  right: 0;
 }
 
 #visualizationColumn {
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   overflow: visible;
 }
 
 #visualizationColumn.pin_bottom {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 
   #belowVisualization {
     position: absolute;
@@ -229,14 +234,14 @@ div.droplet-palette-group-header-selected.orange {
 }
 
 button.arrow {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
+  border: 1px solid #ffa000;
+  background-color: #ffa000;
   color: #fff;
-  margin: 5px 0px;
+  margin: 5px 0;
   margin-inline-end: 9px;
   display: none;
 }
-button.arrow>img {
+button.arrow > img {
   opacity: 1;
   vertical-align: text-bottom;
 }
@@ -244,8 +249,8 @@ button.arrow:focus {
   outline-style: none;
 }
 button.arrow:disabled {
-  border: 1px solid #C7C7C7;
-  background-color: #C7C7C7;
+  border: 1px solid #c7c7c7;
+  background-color: #c7c7c7;
 }
 
 #soft-buttons {
@@ -259,9 +264,10 @@ button.arrow:disabled {
       margin-inline-end: 4px;
     }
   }
-  :last-child{
-    margin-inline-end: 0px;
+  :last-child {
+    margin-inline-end: 0;
   }
+
   @supports not (gap: 0 9px) {
     padding-inline-end: 9px;
   }
@@ -289,12 +295,12 @@ button.arrow:disabled {
  * such as dialogs. */
 #codeTextbox {
   position: absolute;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   top: $workspace-headers-height;
-  bottom: 0px;
+  bottom: 0;
   font-size: 14px;
-  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  min-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
   direction: ltr;
   z-index: 1;
 }
@@ -303,12 +309,16 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] .editor-column {
-   right: 400px;
+#codeTextbox.has_banner {
+  top: $workspace-headers-height + 30;
+}
+
+html[dir="rtl"] .editor-column {
+  right: 400px;
 }
 
 .editor-column {
-  left: 400px
+  left: 400px;
 }
 
 #codeWorkspace.pin_bottom {
@@ -318,19 +328,21 @@ html[dir='rtl'] .editor-column {
 
 // #codeWorkspace.readonly is used when we are displaying a workspace but it
 // is not editable (like someone else project), or when app is running
-#codeWorkspace.readonly, #codeWorkspace.dimmed, .libraryCodeViewerContainer {
+#codeWorkspace.readonly,
+#codeWorkspace.dimmed,
+.libraryCodeViewerContainer {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
   .ace_scroller, { // droplet code view
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(0 0 0 / 0.1);
   }
   // Note: We do something similar in our DesignModeBox React component's
   // transparency layer. These two should be kept in sync as much as possible
 }
 
 .ace-chrome .ace_marker-layer .ace_error {
-  background: rgb(232, 47, 25);
+  background: rgb(232 47 25);
 }
 
 .ace_marker-layer .ace_error {
@@ -340,12 +352,13 @@ html[dir='rtl'] .editor-column {
 
 // By defining the rule for pause icons first, the warning and error icons will take priority over showing the pause
 // icon.
-.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
-  background-image: url('#{$common_root}gutterPause.png');
+.ace_gutter-cell.ace_breakpoint,
+.droplet-gutter-line.droplet_breakpoint {
+  background-image: url("#{$common-root}gutterPause.png");
   background-size: 16px 16px;
   background-repeat: no-repeat;
   border-radius: 15px 0 0 15px;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgb(0 0 255 / 0.5);
   color: white;
 }
 
@@ -353,28 +366,56 @@ html[dir='rtl'] .editor-column {
   background-position: 4px 4px;
 }
 
-.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
-  background-image: url('#{$common_root}gutterError.png');
+.ace_gutter-cell.ace_error,
+.droplet-gutter-line.droplet_error {
+  background-image: url("#{$common-root}gutterError.png");
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
 
-.droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
+.droplet-gutter-line.droplet_error,
+.droplet-gutter-line.droplet_warning {
   background-position: 2px center;
 }
 
-.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
-  background-image: url('#{$common_root}gutterWarn.png');
+.ace_gutter-cell.ace_warning,
+.droplet-gutter-line.droplet_warning {
+  background-image: url("#{$common-root}gutterWarn.png");
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
 
-.ace_gutter-cell.ace_error, .ace_gutter-cell.ace_warning {
+.ace_gutter-cell.ace_error,
+.ace_gutter-cell.ace_warning {
   background-position: 2px 0;
 }
 
 .droplet-gutter-line.droplet_warning {
   background-position: 2px 2px;
+}
+
+html[dir="rtl"] {
+  // !Important is used to overwrite droplet.min styling for RTL languages support.
+  #codeTextbox {
+    .droplet-wrapper-div {
+      left: 0 !important;
+    }
+
+    .ace_editor {
+      left: 0 !important;
+    }
+
+    .droplet-palette-wrapper {
+      right: 0 !important;
+      left: unset !important;
+      z-index: 1;
+    }
+
+    .droplet-palette-header,
+    .droplet-palette-scroller {
+      border-left: 2px solid #ddd;
+    }
+  }
 }
 
 #visualizationResizeBar {
@@ -390,7 +431,7 @@ html[dir='rtl'] .editor-column {
   line-height: 400px;
 }
 
-html[dir='rtl'] div#visualizationResizeBar {
+html[dir="rtl"] div#visualizationResizeBar {
   right: 400px;
 }
 
@@ -410,7 +451,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   stroke-width: 1;
   cursor: default;
 
-  html[dir='RTL'] & {
+  html[dir="RTL"] & {
     text-anchor: start;
   }
 }
@@ -458,7 +499,7 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 @mixin studio-dpad-container-width($width) {
-  $scale: $width / 400px;
+  $scale: math.div($width, 400px);
   #studio-dpad-container.responsive > * {
     -webkit-transform: scale($scale);
     -ms-transform: scale($scale);
@@ -474,28 +515,28 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px),
-       screen and (min-height: 801px) and (max-height: 900px) {
+  screen and (min-height: 801px) and (max-height: 900px) {
   @include visualization-width(350px);
   @include studio-dpad-container-width(350px);
   @include karel-counter(20px, 1.2px);
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px),
-       screen and (min-height: 701px) and (max-height: 800px) {
+  screen and (min-height: 701px) and (max-height: 800px) {
   @include visualization-width(300px);
   @include studio-dpad-container-width(300px);
   @include karel-counter(24px, 1.4px);
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px),
-       screen and (min-height: 601px) and (max-height: 700px) {
+  screen and (min-height: 601px) and (max-height: 700px) {
   @include visualization-width(250px);
   @include studio-dpad-container-width(250px);
   @include karel-counter(28px, 1.6px);
 }
 
 @media screen and (max-width: 1000px),
-       screen and (max-height: 600px) {
+  screen and (max-height: 600px) {
   @include visualization-width(200px);
   @include studio-dpad-container-width(200px);
   @include karel-counter(32px, 2px);
@@ -514,7 +555,8 @@ html[dir='rtl'] div#visualizationResizeBar {
 }
 
 /* Buttons */
-button, label.img-upload {
+button,
+label.img-upload {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
@@ -529,8 +571,9 @@ button.launch {
   color: $white;
   font-size: large;
   min-width: 96px;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
 }
@@ -540,7 +583,7 @@ button.launch[disabled] {
 html[dir="RTL"] button.launch {
   text-align: right;
 }
-button.launch>img {
+button.launch > img {
   opacity: 1;
   vertical-align: text-bottom;
 }
@@ -551,15 +594,17 @@ button.blocklyLaunch {
   }
   border: 1px solid $orange;
   background-color: $orange;
+
   @media screen and (min-width: 1051px) {
     min-width: 111px;
   }
   padding: 7px 10px 7px 6px;
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
   img {
     float: left;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 6px;
   }
   div {
@@ -567,14 +612,15 @@ button.blocklyLaunch {
     margin-top: 3px;
     margin-right: 4px;
     float: right;
-    padding: 0px;
+    padding: 0;
     margin-left: 6px;
+
     @media screen and (min-width: 1051px) {
       min-width: 45px;
     }
   }
   html[dir="RTL"] & {
-    margin-right: 0px;
+    margin-right: 0;
   }
   &#resetButton {
     border: 1px solid $cyan;
@@ -592,20 +638,19 @@ button.blocklyLaunch {
       margin-top: -2px;
     }
   }
-
 }
 
 button.share {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
+  border: 1px solid #ffa000;
+  background-color: #ffa000;
   color: $white;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 button.share:focus {
   outline-style: none;
 }
-button:hover>img {
+button:hover > img {
   opacity: 1;
 }
 button:active {
@@ -614,15 +659,17 @@ button:active {
 button:hover {
   box-shadow: 2px 2px 5px $shadow;
 }
-button.disabled, button[disabled=disabled], button:disabled {
-  border: 1px solid #C7C7C7;
-  background-color: #C7C7C7;
+button.disabled,
+button[disabled="disabled"],
+button:disabled {
+  border: 1px solid #c7c7c7;
+  background-color: #c7c7c7;
   box-shadow: none;
   &:hover {
     box-shadow: none;
   }
 }
-button.disabled:hover>img {
+button.disabled:hover > img {
   opacity: 0.6;
 }
 button.disabled {
@@ -639,6 +686,7 @@ input[type="radio"] {
   margin-left: 40px;
   margin-right: 10px;
 }
+
 @media screen and (max-width: 1050px) {
   #stepButton {
     min-width: 0;
@@ -647,7 +695,7 @@ input[type="radio"] {
 
 #learn {
   h1 {
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0 0 0;
   }
   img {
     margin-bottom: 5px;
@@ -658,11 +706,11 @@ input[type="radio"] {
 }
 
 #make-your-own-button {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0 5px 0;
 }
 
 #open-workspace {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0 5px 0;
 }
 
 #gameButtons {
@@ -680,13 +728,13 @@ input[type="radio"] {
   gap: 0 9px;
 }
 
-#gameButtons:after{
-  content: '';
+#gameButtons:after {
+  content: "";
   display: inline-block;
   width: 100%;
   height: 0;
-  font-size:0;
-  line-height:0;
+  font-size: 0;
+  line-height: 0;
 }
 
 #slider-cell {
@@ -757,9 +805,9 @@ input[type="radio"] {
 }
 .feedback {
   font-size: 30px;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0 20px 0;
   line-height: 28px;
-  color: #7E5BA0;
+  color: #7e5ba0;
   font-family: $gotham-extra-bold;
   font-weight: normal;
 }
@@ -773,12 +821,11 @@ input[type="radio"] {
 }
 
 #puzzleRatingButtons {
-
-  $red: #FF3014;
+  $red: #ff3014;
   $dark-red: $dark_red;
   $dark-blue: $dark_blue;
-  $gray: #333333;
-  $dark-gray: #4D4D4D;
+  $gray: #333;
+  $dark-gray: #4d4d4d;
   $light-gray: $light_gray;
 
   hr {
@@ -791,7 +838,7 @@ input[type="radio"] {
     color: $light-gray;
     margin-right: 10px;
 
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
       float: right;
       margin-right: 0;
       margin-left: 10px;
@@ -832,7 +879,6 @@ input[type="radio"] {
       }
     }
   }
-
 }
 
 /* Instructions. Not netsim-bubbles are styled in JSX */
@@ -871,7 +917,7 @@ input[type="radio"] {
 }
 
 html[dir="RTL"] .prompt-icon-cell {
-  padding-right: 0px;
+  padding-right: 0;
   padding-left: 10px;
   &.authored_hints {
     #lightbulb {
@@ -908,7 +954,9 @@ html[dir="RTL"] .prompt-icon-cell {
 
 .authored-hints {
 
-  h1, p, pre {
+  h1,
+  p,
+  pre {
     color: $charcoal;
     font-size: 18px;
     line-height: 20px;
@@ -936,8 +984,6 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-@import "aniGif";
-
 .workspace-header {
   text-align: center;
   white-space: nowrap;
@@ -954,6 +1000,7 @@ html[dir="RTL"] .prompt-icon-cell {
   .fa {
     font-size: 18px;
   }
+
   /* We don't want some of these styles to affect modal content. */
   .ml-modal {
     span {
@@ -963,10 +1010,15 @@ html[dir="RTL"] .prompt-icon-cell {
       font-size: 12px;
     }
   }
+
+  &.is-running {
+    background-color: $lighter-purple;
+    color: $dark-charcoal;
+  }
 }
 
 $workspace-header-button-height: 24px;
-$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) / 2;
+$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
 .workspace-header-button {
   cursor: pointer;
   float: right;
@@ -999,7 +1051,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 #design-headers {
   height: $workspace-headers-height;
-  background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1007,16 +1058,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   user-select: none;
 }
 
-
-.readonly {
-  #headers,
-  #design-headers {
-    background-color: $charcoal;
-  }
-}
-
-#headers, .purple-header {
-  #show-toolbox-icon, #hide-toolbox-icon {
+#headers,
+.purple-header {
+  #show-toolbox-icon,
+  #hide-toolbox-icon {
     position: absolute;
     top: 0;
     left: 8px;
@@ -1042,7 +1087,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    #show-toolbox-click-target:hover  .fa {
+    #show-toolbox-click-target:hover .fa {
       color: $white;
     }
 
@@ -1050,7 +1095,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       margin: auto auto auto 18px;
     }
   }
-  #blockCounter, #blockUsed {
+  #blockCounter,
+  #blockUsed {
     display: inline-block;
   }
 
@@ -1067,12 +1113,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#headers[dir=rtl] {
+#headers[dir="rtl"] {
   div {
     margin-right: 0;
   }
 
-  #show-toolbox-icon, #hide-toolbox-icon {
+  #show-toolbox-icon,
+  #hide-toolbox-icon {
     left: auto;
     right: 8px;
   }
@@ -1108,6 +1155,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       padding-left: 8px;
     }
   }
+  .show-toolbox-label {
+    margin-right: 20px;
+  }
 }
 
 #showVersionsModal {
@@ -1123,12 +1173,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr.highlight{
+  tr.highlight {
     background-color: $lightest_purple;
   }
 
   .template-level-warning {
-    font-family: 'Gotham 7r', sans-serif;
+    font-family: "Gotham 7r", sans-serif;
     color: $red;
     line-height: normal;
     margin-top: 10px;
@@ -1136,20 +1186,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-.blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
-    .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
+.blocklyText,
+.blocklyMenuText,
+.blocklyTreeLabel,
+.blocklyHtmlInput,
+.blocklyIconMark,
+.blocklyTooltipText,
+.goog-menuitem-content {
   @include font;
 }
 
 .blocklyRectangularDropdownMenu {
-  .goog-menuitem-highlight, .goog-menuitem-hover {
-    background-color: rgba(255, 255, 255, 0.35);
+  .goog-menuitem-highlight,
+  .goog-menuitem-hover {
+    background-color: rgb(255 255 255 / 0.35);
   }
-  &:not(.blocklyGridDropdownMenu) {
-    border-color: rgb(84, 84, 84) !important;
-  }
+  border-color: rgb(84 84 84) !important;
   &.blocklyGridDropdownMenu {
-    background-color: white !important;
+    background-color: white;
     padding-top: 5px !important;
 
     .goog-menuitem {
@@ -1158,8 +1212,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       margin-top: 4px;
     }
 
-    .goog-menuitem-highlight, .goog-menuitem-hover {
-      margin: -4px -4px 0 0 !important
+    .goog-menuitem-highlight,
+    .goog-menuitem-hover {
+      margin: -4px -4px 0 0 !important;
     }
   }
 }
@@ -1174,7 +1229,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     .generated-code-container {
       margin: 25px 10px 25px -80px;
 
-      html[dir=rtl] & {
+      html[dir="rtl"] & {
         margin: 25px -80px 25px 10px;
       }
     }
@@ -1183,7 +1238,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   &.no-modal-icon {
     .show-code {
       .generated-code-container {
-        margin-left: 0px;
+        margin-left: 0;
       }
     }
   }
@@ -1192,7 +1247,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
       text-align: right;
     }
 
@@ -1239,7 +1294,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   float: right;
 }
 
-.arrow-head, .arrow-text {
+.arrow-head,
+.arrow-text {
   float: left;
   line-height: normal;
   margin-bottom: 25px;
@@ -1263,7 +1319,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin-right: -10px;
   border-radius: 8px 0 0 8px;
   padding: 10px 0 10px 14px;
-  background-color: #ffbb00;
+  background-color: #fb0;
 }
 
 .arrow-text {
@@ -1277,16 +1333,17 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   background-color: $green;
   border: 1px solid $green;
   color: white;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
   text-align: center;
 }
 
-#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
+#continue-button:not(.arrow-container),
+#confirm-button:not(.arrow-container) {
   background-color: $orange;
   border: 1px solid $orange;
   color: white;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 10px;
   text-align: center;
 }
@@ -1327,7 +1384,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     border: $lighter_gray;
     border-style: solid;
 
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
       float: right;
     }
   }
@@ -1340,12 +1397,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       &.no-image {
         margin-left: 0;
 
-        html[dir=rtl] & {
+        html[dir="rtl"] & {
           margin-right: 0;
         }
       }
 
-      html[dir=rtl] & {
+      html[dir="rtl"] & {
         margin-right: $image_width + 15px;
         margin-left: 25px;
       }
@@ -1367,7 +1424,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       color: white;
     }
 
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row-reverse;
@@ -1384,7 +1441,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin: 2px 0;
 
     .disabled,
-    &[disabled=disabled],
+    &[disabled="disabled"],
     &:disabled {
       border: 1px solid $purple;
       background-color: $lighter_gray;
@@ -1406,15 +1463,15 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #send-to-phone-right {
     float: left;
     width: 35%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   #send-to-phone-qr-code {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   button.saved-to-gallery {
-    font-family: "Gotham 4i";
+    font-family: "Gotham 4i", sans-serif;
   }
 
   #sharing-input-container {
@@ -1456,7 +1513,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
   div#phone-charges {
     font-size: 10px;
-    margin-top: 0px;
+    margin-top: 0;
     color: $red;
   }
 }
@@ -1468,11 +1525,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $y-offset: $y * 26px;
   width: 26px;
   height: 26px;
-  background: url("#{$common_root}shared-sprites-26x26.png") $x-offset $y-offset;
+  background: url("#{$common-root}shared-sprites-26x26.png") $x-offset $y-offset;
 }
 
 .run26 {
-   @include icon26(0, 0);
+  @include icon26(0, 0);
 }
 
 .reset26 {
@@ -1492,7 +1549,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   font-size: 14px;
 }
 
-// body.readonly is used in cases where we are just displaying uneditable blocks (like feedback dialogs) with no workspace
+// body.readonly is used in cases where we are just displaying
+// uneditable blocks (like feedback dialogs) with no workspace
 
 body.readonly {
   margin: 0;
@@ -1513,7 +1571,7 @@ body.readonly #codeWorkspace {
   border: none;
 }
 
-body.readonly #codeWorkspace>svg {
+body.readonly #codeWorkspace > svg {
   background-color: transparent;
   border: none;
 }
@@ -1523,18 +1581,16 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 // Droplet block tooltips configuration
-$parameterColor: $light_yellow;
-$linkColor: $white;
-$tooltipBackground: $cyan;
+$parameter-color: $light_yellow;
+$link-color: $white;
+$tooltip-background: $cyan;
 $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-
 $tooltip-font: $gotham-regular;
 $function-name-font: $code-font;
 $examples-link-font: $gotham-extra-bold;
-
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
@@ -1576,7 +1632,7 @@ $see-examples-thick-underline-color: $yellow;
 .droplet-block-tooltipster {
   border-radius: $tooltip-border-radius;
   border: none;
-  background: $tooltipBackground;
+  background: $tooltip-background;
   color: $text-color;
   -webkit-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
   -moz-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
@@ -1654,7 +1710,8 @@ div.WireframeButtons_active {
   display: inline-block;
 }
 
-a.WireframeButtons_active, div.WireframeButtons_active {
+a.WireframeButtons_active,
+div.WireframeButtons_active {
   background-color: $lightest-purple;
   border-radius: 5px;
   color: $dark-charcoal;
@@ -1665,7 +1722,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 }
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+  background: url("#{$common-root}phone_wireframe.png") center center no-repeat;
   background-size: 432px 757px;
 }
 
@@ -1693,11 +1750,12 @@ a.WireframeButtons_active, div.WireframeButtons_active {
     position: fixed;
   }
 
-  #belowVisualization, .hide-source #belowVisualization {
+  #belowVisualization,
+  .hide-source #belowVisualization {
     display: none;
   }
 
-  #visualizationColumn{
+  #visualizationColumn {
     margin: 0 auto;
     #phoneFrameScreen {
       overflow: hidden;
@@ -1735,9 +1793,9 @@ a.WireframeButtons_active, div.WireframeButtons_active {
       display: none; /* don't show Finish button in share view */
     }
     #soft-buttons button {
-        margin: 5px 1px;
-      }
+      margin: 5px 1px;
     }
+  }
 
   .small-footer-base {
     left: 0;
@@ -1745,7 +1803,8 @@ a.WireframeButtons_active, div.WireframeButtons_active {
     width: auto !important;
   }
 
-  #more-menu, #copyright-flyout {
+  #more-menu,
+  #copyright-flyout {
     border-top: solid thin #202b34;
     left: 0;
     right: 0;
@@ -1771,7 +1830,3 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   width: 800px;
   margin-left: -400px;
 }
-
-@import "RotateContainer";
-@import "HideToolbarHelper";
-@import "blockly";

@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 
 const TeacherFeedbackTab = ({
   teacherViewingStudentWork,
-  displayReviewTab,
   visible,
   rubric,
   latestFeedback,
@@ -19,10 +18,6 @@ const TeacherFeedbackTab = ({
   teacher,
   innerRef
 }) => {
-  // If the teacher is viewing student work and there is no review tab (CSA peer review)
-  // then the teacher is able to leave feedback for the student (editable feedback)
-  const renderEditableFeedback = teacherViewingStudentWork && !displayReviewTab;
-
   // If the teacher isn't viewing student work then display feedback tab content
   // if there is a rubric or feedback has been given to the user
   const renderReadonlyFeedback =
@@ -30,7 +25,7 @@ const TeacherFeedbackTab = ({
 
   return (
     <div>
-      {renderEditableFeedback && (
+      {teacherViewingStudentWork && (
         <EditableTeacherFeedback
           visible={visible}
           rubric={rubric}
@@ -56,7 +51,6 @@ const TeacherFeedbackTab = ({
 
 TeacherFeedbackTab.propTypes = {
   teacherViewingStudentWork: PropTypes.bool.isRequired,
-  displayReviewTab: PropTypes.bool,
   visible: PropTypes.bool.isRequired,
   rubric: rubricShape,
   serverScriptId: PropTypes.number,

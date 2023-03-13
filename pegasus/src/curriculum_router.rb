@@ -61,7 +61,7 @@ class HttpDocument
 
   def self.from_file(path, headers={}, status=200)
     content_type = content_type_from_path(path)
-    new(IO.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
+    new(File.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
 
   def charset?(charset)
@@ -238,7 +238,7 @@ module Pegasus
     end
 
     after do
-      response.headers.keys.each {|i| response.headers.delete(i) if i =~ /^X-Pegasus-/;}
+      response.headers.keys.each {|i| response.headers.delete(i) if /^X-Pegasus-/.match?(i);}
 
       status = response.status.to_s.to_i
       message = "#{status} returned for #{request.site}#{request.path_info}"

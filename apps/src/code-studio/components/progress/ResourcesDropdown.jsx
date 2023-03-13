@@ -4,17 +4,11 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  stringForType,
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class ResourcesDropdown extends React.Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape),
-    migratedResources: PropTypes.arrayOf(migratedResourceShape),
-    useMigratedResources: PropTypes.bool.isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
 
     //For firehose
@@ -43,12 +37,8 @@ export default class ResourcesDropdown extends React.Component {
     const study = !!this.props.studentFacing
       ? 'student-resources'
       : 'teacher-resources';
-    const resourceKey = this.props.useMigratedResources
-      ? resource.key
-      : resource.type;
-    const resourceUrl = this.props.useMigratedResources
-      ? resource.url
-      : resource.link;
+    const resourceKey = resource.key;
+    const resourceUrl = resource.url;
     const callback = () => {
       window.open(resourceUrl, 'noopener', 'noreferrer');
     };
@@ -91,27 +81,17 @@ export default class ResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {resources, migratedResources, useMigratedResources} = this.props;
+    const {resources} = this.props;
 
-    const dropdownResources = useMigratedResources
-      ? migratedResources.map(resource => (
-          <a
-            key={resource.key}
-            href={resource.url}
-            onClick={e => this.handleItemClick(e, resource)}
-          >
-            {resource.name}
-          </a>
-        ))
-      : resources.map((resource, index) => (
-          <a
-            key={index}
-            href={resource.link}
-            onClick={e => this.handleItemClick(e, resource)}
-          >
-            {stringForType[resource.type]}
-          </a>
-        ));
+    const dropdownResources = resources.map(resource => (
+      <a
+        key={resource.key}
+        href={resource.url}
+        onClick={e => this.handleItemClick(e, resource)}
+      >
+        {resource.name}
+      </a>
+    ));
     return (
       <div style={styles.dropdown}>
         <DropdownButton

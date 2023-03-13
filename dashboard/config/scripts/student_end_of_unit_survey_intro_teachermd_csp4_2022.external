@@ -8,7 +8,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a **5-question** teacher survey
 
-## [Click Here for Teacher Survey]()
-
-(Note: The survey link does not currently work - it will become available at the start of the school year)
+## [Click Here for Teacher Survey](https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=4)
 MARKDOWN

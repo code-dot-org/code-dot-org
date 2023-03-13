@@ -1,12 +1,10 @@
 import React from 'react';
 import {
-  getDefaultList,
-  updateDefaultList,
-  regenerateDefaultJSON
+  getDefaultListMetadata,
+  regenerateDefaultSpriteMetadata
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import AddDefaultSprite from '@cdo/apps/code-studio/assets/AddDefaultSprite';
 import Button from '@cdo/apps/templates/Button';
 
 export default class DefaultSpritesEditor extends React.Component {
@@ -19,9 +17,9 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   componentDidMount() {
-    getDefaultList()
+    getDefaultListMetadata('levelbuilder')
       .then(spriteDefault => {
-        let orderedList = Array.from(spriteDefault['default_sprites']);
+        let orderedList = Object.values(spriteDefault.propsByKey);
         this.setState({defaultList: orderedList, isLoading: false});
       })
       .catch(err => {
@@ -44,17 +42,6 @@ export default class DefaultSpritesEditor extends React.Component {
         // Item is to be deleted
         updatedList.splice(index, 1);
       }
-    }
-    this.setState({defaultList: updatedList});
-    this.incrementPendingChanges();
-  };
-
-  addSpriteToDefaults = (addToBeginning, spriteName, spriteCategory) => {
-    let updatedList = [...this.state.defaultList];
-    if (addToBeginning) {
-      updatedList.unshift({name: spriteName, key: spriteCategory});
-    } else {
-      updatedList.push({name: spriteName, key: spriteCategory});
     }
     this.setState({defaultList: updatedList});
     this.incrementPendingChanges();
@@ -95,10 +82,7 @@ export default class DefaultSpritesEditor extends React.Component {
 
   updateDefaultSprites = () => {
     this.setState({isUpdating: true});
-    let jsonList = {};
-    jsonList['default_sprites'] = this.state.defaultList;
-    updateDefaultList(jsonList)
-      .then(() => regenerateDefaultJSON(jsonList))
+    regenerateDefaultSpriteMetadata(this.state.defaultList)
       .then(() => {
         this.setState({
           pendingChangesCount: 0,
@@ -117,7 +101,6 @@ export default class DefaultSpritesEditor extends React.Component {
       return (
         <DefaultSpriteRow
           name={spriteObject.name}
-          keyValue={spriteObject.key}
           onDelete={this.deleteSpriteFromDefaults}
           onMove={this.reorderSpriteByOne}
           key={spriteObject.name}
@@ -136,7 +119,7 @@ export default class DefaultSpritesEditor extends React.Component {
           <Button
             onClick={this.updateDefaultSprites}
             color={Button.ButtonColor.blue}
-            text="Update Default Sprites List"
+            text="Update Default List"
           />
           <p>Pending Changes: {this.state.pendingChangesCount}</p>
           {isUpdating && <Spinner />}
@@ -151,19 +134,26 @@ export default class DefaultSpritesEditor extends React.Component {
 
     return (
       <div>
-        <a href="/sprites">Back to Sprite Management</a>
-        <h1>Edit Default Sprites</h1>
-        <h2>
-          Remove or add sprites from the default dropdown list in Sprite Lab.
-        </h2>
+        <a href="/sprites">Back to Asset Management</a>
+        <h1>Edit Default Sprite Costumes and Backgrounds</h1>
         <p>
-          Sprites are shown in the format: "name: category/path". The order of
-          this list is the order that the sprites appear in the dropdown.
-          Changes aren't saved until the "Update Default Sprites List" button is
+          These animations are preloaded in any new project or any level with
+          the option set to "Use default sprites as starting animation JSON"
+        </p>
+        <h2>Add or remove default sprite costumes and backgrounds.</h2>
+        <p>
+          The order of this list is the order that the costumes and backgrounds
+          appear in a new project.{' '}
+          <i>
+            Note: In Sprite Lab, Sprite costumes and backgrounds are always
+            listed separately.
+          </i>
+        </p>
+        <p>
+          Changes aren't saved until the "Update Default List" button is
           clicked.
         </p>
         {this.renderUploadButton()}
-        <AddDefaultSprite onAdd={this.addSpriteToDefaults} />
         {isLoading && <Spinner />}
         {this.renderDefaultSprites()}
         {this.renderUploadButton()}

@@ -14,14 +14,14 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
   setup do
     # Expect any scripts/courses to be assignable unless specified by test
     UnitGroup.stubs(:course_assignable?).returns(true)
-    Script.stubs(:course_assignable?).returns(true)
+    Unit.stubs(:course_assignable?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
@@ -30,6 +30,8 @@ class SectionsControllerTest < ActionController::TestCase
     create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "do not show login screen for invalid section code" do
@@ -191,5 +193,27 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to section_path(id: @picture_section.code)
+  end
+
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: nil, response: :forbidden
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :student, response: :forbidden
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
+
+  test "new redirects to home if loginType and participantType are not present" do
+    user = create :admin
+    sign_in user
+
+    get :new
+    assert_redirected_to '/home'
+
+    get :new, params: {participantType: 'student'}
+    assert_redirected_to '/home'
+
+    get :new, params: {loginType: 'word'}
+    assert_redirected_to '/home'
+
+    get :new, params: {loginType: 'word', participantType: 'student'}
+    assert_response :success
   end
 end

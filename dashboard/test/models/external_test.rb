@@ -2,11 +2,11 @@ require 'test_helper'
 
 class ExternalTest < ActiveSupport::TestCase
   setup do
-    dsl_text = <<DSL
-name 'user_id_replace'
-title 'title for user_id_replace'
-markdown 'this is the markdown for <user_id/>'
-DSL
+    dsl_text = <<~DSL
+      name 'user_id_replace'
+      title 'title for user_id_replace'
+      markdown 'this is the markdown for <user_id/>'
+    DSL
     @level = External.create_from_level_builder({}, {name: 'my_user_id_replace', dsl_text: dsl_text})
   end
 

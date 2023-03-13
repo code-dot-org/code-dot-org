@@ -242,11 +242,11 @@ def parse_options
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
+      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
     elsif rack_env?(:test)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
+      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -285,7 +285,9 @@ end
 # @return [String] a public hyperlink to the uploaded log, or empty string.
 def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
+  # Assume all log files are Cucumber reports in html format.
+  # TODO: Set content type dynamically based on filename extension.
+  log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => msg
   ChatClient.log "Uploading log to S3 failed: #{msg}"
@@ -304,9 +306,9 @@ def open_log_files
 end
 
 def close_log_files
-  $success_log.close if $success_log
-  $error_log.close if $error_log
-  $errorbrowsers_log.close if $errorbrowsers_log
+  $success_log&.close
+  $error_log&.close
+  $errorbrowsers_log&.close
 end
 
 def log_success(msg)
@@ -440,8 +442,9 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
-  File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(
+  File.write(
+    status_page_filename,
+    haml_engine.render(
       Object.new,
       {
         api_origin: CDO.studio_url('', scheme_for_environment),
@@ -454,7 +457,7 @@ def generate_status_page(suite_start_time)
         browser_features: browser_features
       }
     )
-  end
+  )
   ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
@@ -559,7 +562,7 @@ def output_synopsis(output_text, log_prefix)
 
   failing_scenarios = lines.rindex("Failing Scenarios:\n")
   if failing_scenarios
-    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
+    return lines[failing_scenarios..].map {|line| "#{log_prefix}#{line}"}.join
   else
     return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
   end
@@ -576,7 +579,7 @@ def how_many_reruns?(test_run_string)
     if !flakiness
       $lock.synchronize {puts "No flakiness data for #{test_run_string}".green}
       return 1
-    elsif flakiness == 0.0
+    elsif flakiness.abs < Float::EPSILON
       $lock.synchronize {puts "#{test_run_string} is not flaky".green}
       return 1
     else
@@ -728,10 +731,6 @@ def run_feature(browser, feature, options)
   run_environment['SKIP_I18N_INIT'] = 'true'
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
 
-  # Force Applitools eyes to use a consistent host OS identifier for now
-  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
-
   max_reruns = how_many_reruns?(test_run_string)
 
   html_log = html_output_filename(test_run_string, options)
@@ -806,7 +805,7 @@ def run_feature(browser, feature, options)
   unless parsed_output.nil?
     scenario_count = parsed_output[:scenarios].to_i
     scenario_info = parsed_output[:info]
-    scenario_info = ", #{scenario_info}" unless scenario_info.blank?
+    scenario_info = ", #{scenario_info}" if scenario_info.present?
   end
 
   rerun_info = " with #{reruns} reruns" if reruns > 0
@@ -840,10 +839,10 @@ def run_feature(browser, feature, options)
 
   if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
-    skip_warning += <<EOS
-Check the excluded @tags in the cucumber command line above and in the #{feature} file:
-  - Do the feature or scenario tags exclude #{browser_name}?
-EOS
+    skip_warning += <<~EOS
+      Check the excluded @tags in the cucumber command line above and in the #{feature} file:
+        - Do the feature or scenario tags exclude #{browser_name}?
+    EOS
     unless eyes?
       skip_warning += "  - Are you trying to run --eyes tests?\n"
     end

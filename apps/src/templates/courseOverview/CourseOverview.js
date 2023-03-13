@@ -5,8 +5,7 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from './resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
@@ -26,12 +25,14 @@ import {
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SafeMarkdown from '../SafeMarkdown';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class CourseOverview extends Component {
   static propTypes = {
@@ -50,8 +51,7 @@ class CourseOverview extends Component {
       })
     ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
@@ -62,11 +62,12 @@ class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
+    userType: PropTypes.string,
+    participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired,
-    useMigratedResources: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -74,6 +75,15 @@ class CourseOverview extends Component {
     const showRedirectDialog =
       props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit group name': props.name
+        }
+      );
+    }
   }
 
   onChangeVersion = versionId => {
@@ -125,7 +135,6 @@ class CourseOverview extends Component {
       sectionsInfo,
       sectionsForDropdown,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       viewAs,
       scripts,
@@ -138,7 +147,7 @@ class CourseOverview extends Component {
       showAssignButton,
       userId,
       isSignedIn,
-      useMigratedResources
+      participantAudience
     } = this.props;
 
     const showNotification =
@@ -157,7 +166,7 @@ class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
-        {userId && <StudentFeedbackNotification studentId={userId} />}
+        {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
@@ -215,13 +224,12 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             id={id}
-            title={title}
+            courseName={title}
             teacherResources={teacherResources}
-            migratedTeacherResources={migratedTeacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
-            useMigratedResources={useMigratedResources}
             isInstructor={viewAs === ViewType.Instructor}
+            participantAudience={participantAudience}
           />
         </div>
         {scripts.map((script, index) => (

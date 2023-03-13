@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 
-require_relative '../../lib/country_codes.rb'
+require_relative '../../lib/country_codes'
 
 class CountryCodesTest < Minitest::Test
   def test_country_name_from_code_valid_codes

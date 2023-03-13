@@ -1,12 +1,21 @@
 name 'CSA U6L7-L2v2_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`-1`'
+wrong '`0`'
+wrong '`7`'
+right '`8`'
+wrong '`IndexOutOfBoundsException`'
 
 markdown <<MARKDOWN
-question
+Consider the code segment below.
+
+```
+String month = "January";
+String year = "2035";
+String date = month + " " + year;
+System.out.println(date.indexOf("2"));
+```
+
+What is printed as a result executing the code?
 MARKDOWN

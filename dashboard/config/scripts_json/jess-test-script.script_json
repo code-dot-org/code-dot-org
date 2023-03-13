@@ -8,29 +8,11 @@
       "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"
-        ],
-        [
-          "professionalLearning",
-          "https://studio.code.org/my-professional-learning"
-        ]
-      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "jess-test-script-1",
-    "serialized_at": "2022-04-08 15:41:01 UTC",
+    "serialized_at": "2022-05-10 22:11:35 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -172,6 +154,57 @@
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       }
+    },
+    {
+      "key": "[TEMPLATE] Introduction to",
+      "name": "[TEMPLATE] Introduction to...",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to code.org's ___________ unit.\n* Get a preview of the first week of the ________ unit content.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's ___________ unit.\n* Get a preview of the first week of the ________ unit content.\n\n**Suggested time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "key": "[TEMPLATE] Content lessons",
+      "name": "[TEMPLATE] Content lessons",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**You will:**\n\n* Insert lesson objectives.\n\n**Suggested time:** ____ minutes",
+        "student_overview": "**You will:**\n\n* Insert lesson objectives.\n\n**Suggested time:** ____ minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "[TEMPLATE] Content lessons",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "key": "[TEMPLATE] Unit Wrap Up",
+      "name": "[TEMPLATE] Unit Wrap Up",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "[TEMPLATE] Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
     }
   ],
   "lesson_activities": [
@@ -275,6 +308,42 @@
       "seeding_key": {
         "lesson_activity.key": "75c7d7a7-6d30-43d5-9761-c0a6535a4cc6",
         "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "key": "090804ad-74d2-4c31-9b0d-c0b57ac193a9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "090804ad-74d2-4c31-9b0d-c0b57ac193a9",
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "key": "aa32b4c7-a76f-4463-a5f1-1e559674c4f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa32b4c7-a76f-4463-a5f1-1e559674c4f5",
+        "lesson.key": "[TEMPLATE] Content lessons",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "key": "f7181bbd-52d2-46e9-9fb4-655d69e25677",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7181bbd-52d2-46e9-9fb4-655d69e25677",
+        "lesson.key": "[TEMPLATE] Unit Wrap Up",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       }
@@ -782,6 +851,94 @@
       "seeding_key": {
         "activity_section.key": "fcc6e3cb-6aec-412b-ae04-d382e2496956",
         "lesson_activity.key": "75c7d7a7-6d30-43d5-9761-c0a6535a4cc6"
+      }
+    },
+    {
+      "key": "8a03023b-e548-47ca-8cbf-88efa42e4157",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157",
+        "lesson_activity.key": "090804ad-74d2-4c31-9b0d-c0b57ac193a9"
+      }
+    },
+    {
+      "key": "3b2f5028-fa26-4119-87a1-b2ccc4abd742",
+      "position": 2,
+      "properties": {
+        "progression_name": "Learning tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b2f5028-fa26-4119-87a1-b2ccc4abd742",
+        "lesson_activity.key": "090804ad-74d2-4c31-9b0d-c0b57ac193a9"
+      }
+    },
+    {
+      "key": "564f0ea1-afd7-4975-88c5-c1a3df964b50",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore the first week of curriculum "
+      },
+      "seeding_key": {
+        "activity_section.key": "564f0ea1-afd7-4975-88c5-c1a3df964b50",
+        "lesson_activity.key": "090804ad-74d2-4c31-9b0d-c0b57ac193a9"
+      }
+    },
+    {
+      "key": "5e2e00a5-cfdb-4ce1-9cef-96942353fc5b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e2e00a5-cfdb-4ce1-9cef-96942353fc5b",
+        "lesson_activity.key": "aa32b4c7-a76f-4463-a5f1-1e559674c4f5"
+      }
+    },
+    {
+      "key": "f5e9a3ab-105f-4e32-accb-22a8c5101a99",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Overview - nonprogramming lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5e9a3ab-105f-4e32-accb-22a8c5101a99",
+        "lesson_activity.key": "aa32b4c7-a76f-4463-a5f1-1e559674c4f5"
+      }
+    },
+    {
+      "key": "05e87048-a365-4e6b-9024-e083aa0b294a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "05e87048-a365-4e6b-9024-e083aa0b294a",
+        "lesson_activity.key": "f7181bbd-52d2-46e9-9fb4-655d69e25677"
+      }
+    },
+    {
+      "key": "dd24fcf4-71ca-42df-8d32-6eda68691b90",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd24fcf4-71ca-42df-8d32-6eda68691b90",
+        "lesson_activity.key": "f7181bbd-52d2-46e9-9fb4-655d69e25677"
+      }
+    },
+    {
+      "key": "9ff69873-a64e-4934-993f-d939553d29d9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Make a plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ff69873-a64e-4934-993f-d939553d29d9",
+        "lesson_activity.key": "f7181bbd-52d2-46e9-9fb4-655d69e25677"
       }
     }
   ],
@@ -3860,6 +4017,226 @@
       "level_keys": [
         "VPL - CSD - Module 8 Wrap Up"
       ]
+    },
+    {
+      "chapter": 124,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-sample"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-sample"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "3b2f5028-fa26-4119-87a1-b2ccc4abd742"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_tools-sample"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the first week of curriculum "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "564f0ea1-afd7-4975-88c5-c1a3df964b50"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-sample"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Explore the first week of curriculum "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "564f0ea1-afd7-4975-88c5-c1a3df964b50"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-lesson-overview"
+        ],
+        "lesson.key": "[TEMPLATE] Content lessons",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "5e2e00a5-cfdb-4ce1-9cef-96942353fc5b"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-sample-lesson-overview"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Overview - nonprogramming lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-OfflineLessonOverview-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Content lessons",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "f5e9a3ab-105f-4e32-accb-22a8c5101a99"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-OfflineLessonOverview-sample"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample"
+        ],
+        "lesson.key": "[TEMPLATE] Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "05e87048-a365-4e6b-9024-e083aa0b294a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "dd24fcf4-71ca-42df-8d32-6eda68691b90"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5337,6 +5714,126 @@
         "lesson_group.key": "",
         "script.name": "jess-test-script",
         "activity_section.key": "fcc6e3cb-6aec-412b-ae04-d382e2496956"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "8a03023b-e548-47ca-8cbf-88efa42e4157"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_tools-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "3b2f5028-fa26-4119-87a1-b2ccc4abd742"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "564f0ea1-afd7-4975-88c5-c1a3df964b50"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Introduction to",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "564f0ea1-afd7-4975-88c5-c1a3df964b50"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-sample-lesson-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-lesson-overview"
+        ],
+        "lesson.key": "[TEMPLATE] Content lessons",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "5e2e00a5-cfdb-4ce1-9cef-96942353fc5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-OfflineLessonOverview-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-OfflineLessonOverview-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Content lessons",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "f5e9a3ab-105f-4e32-accb-22a8c5101a99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample"
+        ],
+        "lesson.key": "[TEMPLATE] Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "05e87048-a365-4e6b-9024-e083aa0b294a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample"
+        ],
+        "lesson.key": "[TEMPLATE] Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script",
+        "activity_section.key": "dd24fcf4-71ca-42df-8d32-6eda68691b90"
       }
     }
   ],

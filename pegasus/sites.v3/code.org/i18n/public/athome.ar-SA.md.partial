@@ -1,5 +1,5 @@
 ---
-title: Computer Science at Home
+title: علوم الكمبيوتر في البيت
 video_player: true
 theme: responsive
 ---
@@ -7,15 +7,16 @@ theme: responsive
 <link href="/css/tools.css" rel="stylesheet" />
 
 <a id="top"></a>
-<h1>Computer Science at Home</h1>
+<h1>علوم الكمبيوتر في البيت
+</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="أم تساعد ابنتها في استخدام الكمبيوتر المحمول">
+  <img src="؟" style="width:100%" alt="أم تساعد ابنتها في استخدام الكمبيوتر المحمول">
 </div>
 
-<p>سواء كنت والدًا/ وصيًّا أو دارسًا يتعلم بشكل مستقل، فإن الخيارات أدناه هي طرق سهلة التجربة وحاثَّة على المشاركة لتبدأ عملية استكشافك لعلوم الكمبيوتر.</p>
+<p>سواء كنت والدًا/ وصيًّا أو طالباً يتعلم بشكل مستقل، فإن الخيارات أدناه هي طرق سهلة التجربة وحاثَّة على المشاركة لتبدأ عملية استكشافك لعلوم الكمبيوتر.</p>
 <ul>
-    <li><a class="linktag" id="hoc-nav" href="#hoc">جرِّب Hour of Code</a></li>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">جرب ساعة من البرمجة!</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">شاهد مقاطع فيديو قصيرة عن أسس علوم الكمبيوتر</a></li>
     <li><a class="linktag" id="self-paced-nav" href="#express">تلقَّ دورة تدريبية تمهيدية ذاتية</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">قم بإنشاء لعبة أو تطبيق</a></li>
@@ -26,8 +27,8 @@ theme: responsive
 <br>
 
 <a id="hoc"></a>
-<h2>جرِّب Hour of Code مع هذه الدورة التعليمية التمهيدية الممتعة</h2>
-<p>جرِّب <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">دورة تعليمية لمدة ساعة</a> التي تميز ألعابًا وأفلامًا شهيرة مثل Minecraft وFrozen وStar Wars. تتم هيكلة العديد من الدورات التعليمية مثل الألعاب وتُصمم لتعليم مفاهيم علوم الكمبيوتر الأساسية بطرق تفاعلية ممتعة.</p>
+<h2>جرِّب ساعة من البرمجة مع هذه الدورة التعليمية التمهيدية الممتعة</h2>
+<p>جرِّب <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">دورة تعليمية لمدة ساعة</a> التي تميز ألعابًا وأفلامًا شهيرة مثل Minecraft وFrozen وStar Wars. تتم بناء العديد من الدورات التعليمية مثل الألعاب وتُصمم لتعليم مفاهيم علوم الكمبيوتر الأساسية بطرق تفاعلية ممتعة.</p>
 
 <br>
 
@@ -38,7 +39,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> شفِّر الحفل الراقص لمشاركته مع الأصدقاء والعائلة. تمييز صدمة كاتي بيري وشون مينديز! في الديسكو، Lil Nas X وإخوة Jonas وNicki Minaj و34 آخرين!</div>        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>حفلة الرقص</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> برمج الحفل الراقص لمشاركته مع الأصدقاء والعائلة. يضم بيونسي وهاري ستايلز وليزو وليل ناس إكس وسيلينا غوميز وموسيقى من فيلم ديزني «إنكانتو» والمزيد!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>جرب النشاط</button></a>
     </span>
   </div>
 </div>
@@ -47,11 +49,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
-        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft Aquatic">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ماينكرافت المائية Minecraft Aquatic">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> لعبة Minecraft عادت لـHour of Code بنشاط جديد كليًّا! رحلة داخل Minecraft بشفرة.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ساعة البرمجة - ماينكرافت</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> لعبة Minecraft عادت لـHour of Code بنشاط جديد كليًّا! رحلة داخل Minecraft بالكود.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>جرب النشاط</button></a>
     </span>
   </div>
 </div>
@@ -60,11 +62,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="الذكاء الاصطناعي لـOceans">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="الذكاء الاصطناعي في المحيطات">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> ساعد الذكاء الاصطناعي في تنظيف المحيطات من خلال تدريبه على كشف القمامة! تعلم عن انحيازات وبيانات التدريب وكيف يمكن للذكاء الاصطناعي معالجة المشكلات العالمية. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>الذكاء الاصطناعي في المحيطات</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> ساعد الذكاء الاصطناعي في تنظيف المحيطات من خلال تدريبه على كشف القمامة! تعلم عن انحيازات وبيانات التدريب وكيف يمكن للذكاء الاصطناعي معالجة المشكلات العالمية. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">خطة الدرس</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>جرب النشاط</button></a>
     </span>
   </div>
 </div>
@@ -89,7 +91,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">مع مقدمة من بيل جيتس، تشرح مقاطع الفيديو القصيرة الستة ما يجعل الكمبيوتر كمبيوتر وكيف يعمل.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>شاهد سلسلة مقاطع الفيديو</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>كيف تعمل أجهزة الكمبيوتر</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">مع مقدمة من بيل جيتس، تشرح مقاطع الفيديو القصيرة الستة ما يجعل الكمبيوتر كمبيوتر وكيف يعمل.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>شاهد سلسلة مقاطع الفيديو</button></a>
     </span>
   </div>
 </div>
@@ -102,7 +104,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">في هذه السلسلة من مقاطع الفيديو الثمانية القصيرة، ستتعلم كيف تم اختراع الإنترنت وما هو الـHTML وكيف تعمل محركات بحث مثل جوجل.</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>شاهد سلسلة مقاطع الفيديو</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>كيف يعمل الانترنت</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">في هذه السلسلة من مقاطع الفيديو الثمانية القصيرة، ستتعلم كيف تم اختراع الإنترنت وما هو الـHTML وكيف تعمل محركات بحث مثل جوجل.</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>شاهد سلسلة مقاطع الفيديو</button></a>
     </span>
   </div>
 </div>
@@ -111,11 +113,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro-2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" "How AI Works with Satya Nadella">
+        <img class="tutorial-tile-img" src="؟" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" "How AI Works with Satya Nadella">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> تعلم طريقة عمل الذكاء الاصطناعي وأهميته من خلال هذه السلسلة من مقاطع الفيديو القصيرة. عرض ساتيا ناديلا، المدير التنفيذي لميكروسوفت، وطاقم متنوع من الخبراء.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>كيف يعمل الذكاء الاصطناعي</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> تعلم طريقة عمل الذكاء الاصطناعي وأهميته من خلال هذه السلسلة من مقاطع الفيديو القصيرة. عرض ساتيا ناديلا، المدير التنفيذي لميكروسوفت، وطاقم متنوع من الخبراء.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>شاهد سلسلة الفيديو</button></a>
     </span>
   </div>
 </div>
@@ -123,7 +125,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>إظهار المزيد من مقاطع الفيديو بما في ذلك المقاطع التحفيزية القصيرة التي تعرض مشاهر مثل ستيف كوري وشاكيرا، <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>إظهار المزيد من مقاطع الفيديو بما في ذلك المقاطع التحفيزية القصيرة التي تعرض المشاهير مثل ستيف كوري وشاكيرا، <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">هنا</a>.</p>
 <br>
 <p><a href="#top">[العودة لأعلى]</a></p>
 
@@ -134,19 +136,19 @@ theme: responsive
 <a id="express"></a>
 <h2>تعلم الأسس من خلال دوراتنا التدريبية الذاتية</h2>
 <h3>دورات تدريبية تمهيدية ذاتية</h3>
-<p>خيار عظيم للدراسين للبدء بنفسهم. ستتعلم أسس علوم الكمبيوتر من خلال كتل السحب والإسقاط. قم بإنشاء رسوماتك وألعابك الخاصة. ملحوظة: الدورات التدريبية الأساسية متوفرة حاليًا باللغة الإنجليية والهندية والإيطالية والإسبانية. للغات الأخرى، نوصي بـ20 ساعة<a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. لترى ما هو متوفر بلغتك، زر <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">course catalog</a>.</p>
+<p>خيار عظيم للطلاب للبدء بنفسهم. ستتعلم أسس علوم الكمبيوتر من خلال قطع السحب والإسقاط البرمجية. قم بإنشاء رسوماتك وألعابك الخاصة. ملحوظة: الدورات التدريبية الأساسية متوفرة حاليًا باللغة الإنجليية والهندية والإيطالية والإسبانية. للغات الأخرى، نوصي بـ٢٠ ساعة<a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank"> الكورسات المسرعة </a>. لترى ما هو متوفر بلغتك، زر <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">كتالوغ الكورس</a>.</p>
 
 <br>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="دورة تدريبية أساسية"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Express Course</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="دورة تدريبية أساسية"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">الكورس السريع</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="دورة تدريبية أساسية لمستوى ما قبل القارئ"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="دورة تدريبية أساسية لمستوى ما قبل القارئ"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">الكورس السريع لمرحلة ما قبل القراءة</a>
 
 </div>
 <div style="clear: both"></div>
@@ -163,7 +165,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>مقدمة لمعمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">رسومات البرنامج المتحركة، الفن التفاعلي، والألعاب في معمل الألعاب. ابدأ بأشكال بسيطة وطورها لرسومات متحركة وألعاب قائمة على الرموز وأكثر دقة.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>مقدمة لمعمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">رسومات البرنامج المتحركة، الفن التفاعلي، والألعاب في معمل الألعاب. ابدأ بأشكال بسيطة وطورها لرسومات متحركة وألعاب قائمة على الرموز وأكثر دقة.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>جرب هذه الوحدة</button></a>
     </span>
   </div>
 </div>
@@ -172,11 +174,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="البرمجة التخيُّليَّة في معمل التطبيقات">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="برمجة السلحفاة في معمل التطبيقات">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">استخدم أوامر جافاسكريبت بسيطة لرسم أشكال وصور باستخدام "turtle" الافتراضية. صمم وبرمج مشهدك الرقمي الخاص بك!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>برمجة السلحفاة في معمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">استخدم أوامر جافاسكريبت بسيطة لرسم أشكال وصور باستخدام "السلحفاة" الافتراضية. صمم وبرمج مشهدك الرقمي الخاص بك!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
     </span>
   </div>
 </div>
@@ -189,7 +191,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> تعلم تصميم التطبيقات التي تستجيب للنقرات وضغطات الأزرار. Create a series of simple applications (apps) that live on the web!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>برمجة الأحداث في معمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> تعلم تصميم التطبيقات التي تستجيب للنقرات وضغطات الأزرار. صمم سلسلة من التطبيقات التي تعمل على متصفح الانترنت!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>جرب الوحدة</button></a>
     </span>
   </div>
 </div>
@@ -204,23 +206,23 @@ theme: responsive
 <hr />
 
 <a id="labs"></a>
-<h2>انشِئ شيئًأ!</h2>
-<p>نِل الإلهام أولًا! انظر <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — العب بعض الألعاب أو جرب بعض التطبيقات التي أنشأها الدارسون. يمكنك "إعادة دمج" المشروع لتجعله على ذوقك أو بناء شيء جديد في معمل التطبيقات والألعاب والشبكة.</p>
+<h2>ابتكر شيئًا</h2>
+<p>اشعر بالإلهام أولًا! انظر الى <a href="https://studio.code.org/projects" target="_blank">معرض المشروع</a> — العب بعض الألعاب أو جرب بعض التطبيقات التي أنشأها الطلاب. يمكنك "إعادة دمج" المشروع لتجعله على ذوقك أو بناء شيء جديد في معمل التطبيقات و معمل الألعاب و معمل الشبكة.</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
-    <p style="color:#ffffff">معمل التطبيقات هو بيئة برمجة يمكنك فيها إنشاء تطبيقات بسيطة. صمم تطبيقًا أو كودًا باستخدام الكتل أو الجافاسكريبت ليعمل ثم اطلق تطبيقك في ثواني.</p>
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ابنِ تطبيقًا</button></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>معمل التطبيقات</strong></h3></a>
+    <p style="color:#ffffff">معمل التطبيقات هو بيئة برمجة يمكنك فيها إنشاء تطبيقات بسيطة. صمم تطبيقًا أو كودًا باستخدام القطع البرمجية أو الجافاسكريبت ليعمل ثم انشر وشارك تطبيقك في ثواني.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">أنشئ تطبيقًا</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>معمل الألعاب</strong></h3></a>
     <p style="color:#ffffff">معمل الألعاب هو بيئة برمجة يمكنك فيها عمل رسومات متحركة بسيطة وألعاب بأشياء وشخصيات تتفاعل مع بعضها الآخر.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">قم بإنشاء لعبة</button></a>
@@ -230,10 +232,10 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>معمل شبكة الانترنت</strong></h3></a>
     <p style="color:#ffffff">معمل الشبكة هو بيئة برمجة يمكنك فيها إنشاء صفحات بسيطة على شبكة الإنترنت باستخدام HTML وCSS. صمم صفحاتك على الشبكة وأطلق موقعك في ثواني.</p>
     <br>
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">قم بإنشاء صفحة شبكة</button></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">قم بإنشاء صفحة ويب</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -243,40 +245,40 @@ theme: responsive
 <p><a href="#top">[العودة لأعلى]</a></p>
 
 <a id="unplugged"></a>
-<h2>الأنشطة "غير الموصولة": علوم الكمبيوتر بدون كمبيوتر</h2>
+<h2>الأنشطة "غير البرمجية": علوم الكمبيوتر بدون كمبيوتر</h2>
 
 <div class="col-25" style="padding-bottom:15px; text-align:center">
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
-    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="أنشطة غير موصولة لـHour of Code">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="أنشطة غير برمجية لـHour of Code">
   </a>
-  <p><i>انقر على الصورة لعرضها كـPDF</i></p>
+  <p><i>انقر الصورة لعرضها كـPDF</i></p>
 </div>
 <div class="col-75" style="padding-left:15px">
-  <p>لا توجد شاشة، لا توجد مشكلة! جمعنا "آخذ عينات" لنشاطات علوم الكمبيوتر الممتعة السريعة الذي يمكنك أن تقوم بها بدون جهاز. استمتع بحفل راقص للأسرة أثناء تعلُّمك للأحداث أو "برمجوا" بعضكم الآخر لرسم الصور!</p>
+  <p>لا توجد شاشة، لا توجد مشكلة! لقد جمعنا "عينات" لنشاطات علوم الكمبيوتر الممتعة السريعة التي يمكنك أن تقوم بها بدون جهاز كمبيوتر. استمتع بحفل راقص للأسرة أثناء تعلُّمك للأحداث أو "برمجوا" بعضكم الآخر لرسم الصور!</p>
   <br>
-  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>استعرض الأنشطة غير الموصولة</button></a>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>استعرض الأنشطة غير البرمجية</button></a>
 </div>
 
 <div style="clear: both; margin-bottom: 10px"></div>
 
-<p>أو استعرض هذه الخيارات غير الموصولة من منظمات أخرى:</p>
+<p>أو استعرض هذه الخيارات غير البرمجية من منظمات أخرى:</p>
 <ul>
-  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - أكثر طريقة غريبة الأطوار في العالم للتعلم عن الحواسيب الآلية والتكنولوجيا والبرمجة. تتضمن أنشطة متعلقة بمجموعة من مواضيع علوم الحاسوب، مثل القدرة على تحليل المشكلة، وتمييز الأنماط، والتفكير الخوارزمي، وتصحيح المشكلات والعمل معًا. (for ages 4-10)</li>
-  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - مجموعة من مواد التدريس المجانية التي تعلم علوم الكمبيوتر من خلال ألعاب وأحاجي ممتعة تستخدم البطاقات والخيط وأقلام التلوين والكثير من الركض. (للأعمار من 5 إلى 14)</li>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - أكثر طريقة غريبة الأطوار في العالم للتعلم عن الحواسيب الآلية والتكنولوجيا والبرمجة. تتضمن أنشطة متعلقة بمجموعة من مواضيع علوم الحاسوب، مثل القدرة على تحليل المشكلة، وتمييز الأنماط، والتفكير الخوارزمي، وتصحيح المشكلات والعمل معًا. (للأعمار ٤-١٠)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">علوم الكمبيوتر غير البرمجية</a> - مجموعة من مواد التدريس المجانية التي تعلم علوم الكمبيوتر من خلال ألعاب وأحاجي ممتعة تستخدم البطاقات والخيط وأقلام التلوين والكثير من الركض. (للأعمار من ٥ إلى ١٤)</li>
 </ul>
 
 <h2>ليس لديك كمبيوتر في المنزل؟ جرِّب علوم الكمبيوتر على هاتفك مع هذه التطبيقات من شركائنا</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A لعبة تكويد ممتعة ع الموبايل تأخذ المتعلمين في مغامرة مثيرة أثناء تعليمهم أسس التكويد مثل الخوارزميات والتعرف على الأنماط والمتسلسلات والحلقات والشرطيات. <i>(لكل الأعمار)</i>
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>صندوق الجزيرة Box Island</strong></h3></a>A لعبة برمجة ممتعة للموبايل تأخذ المتعلمين في مغامرة مثيرة أثناء تعليمهم أسس البرمجة مثل الخوارزميات والتعرف على الأنماط والمتسلسلات والحلقات والشرطيات. <i>(لكل الأعمار)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>منصة تعليم التكويد الحائزة على جائزة للأطفال ما بين عمر 5 إلى 9. حِل الأحاجي وانشئ ألعابًا من خلال Foos أثناء تعلم التكويد. <strong>ملحوظة: تقدم codeSpark عرض تجربة مجانية لمدة 3 أشهر. إيميل الوالدين وبيانات بطاقة الائتمان مطلوبة عند التسجيل.</strong> <i>(for pre-readers through Grade 5)</i>
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>منصة تعليم التكويد الحائزة على جائزة للأطفال ما بين عمر 5 إلى 9. حِل الأحاجي وانشئ ألعابًا مع Foos أثناء تعلم البرمجة. <strong>ملحوظة: تقدم codeSpark عرض تجربة مجانية لمدة ٣ أشهر. إيميل الوالدين وبيانات بطاقة الائتمان مطلوبة عند التسجيل.</strong> <i>(for pre-readers through Grade 5)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>تعلم التكويد بالمتعة من خلال دروس سريعة على هاتفك المحمول تعلمك كيف تكتب جافاسكريبت. كود ببرنامج جوجل. <i>(للمدارس المتوسطة وما أعلى)</i>
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>تعلم البرمجة بالمتعة من خلال دروس سريعة على هاتفك المحمول تعلمك كيف تكتب جافاسكريبت. كود ببرنامج جوجل. <i>(للمدارس المتوسطة وما أعلى)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -302,11 +304,12 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
+        <img class="tutorial-tile-img" src="شاهد الحلقات" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>        <div class="smalltext" style="color: dimgray; "> h اجعل تعلم علوم الكمبيوتر ممتعًا من خلال Code Break! يمكنك إنشاء تشفير مع Ashton Kutcher، وتعلم المتغيرات مع Yara Shahidi واستكشاف كيف يعمل الإنترنت مع مخترع فعلي للإنترنت، Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Get connected</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>        <div      class="smalltext" style="color: dimgray; ">  
+   اجعل تعلم علوم الكمبيوتر ممتعًا من خلال Code Break! يمكنك إنشاء شيفرة مع Ashton Kutcher، وتعلم المتغيرات مع Yara Shahidi واستكشاف كيف يعمل الإنترنت مع مخترع فعلي للإنترنت، Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>تواصل معنا</button></a>
     </span>
   </div>
 </div>

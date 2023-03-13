@@ -213,17 +213,14 @@
     "parent_level_id": 27327,
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-01T21:04:38.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-01T21:04:38.000Z",
   "user_id": 832,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T21:04:38.706+00:00\",\"changed\":[\"cloned from \\\"csd-explore ui-2\\\"\"],\"cloned_from\":\"csd-explore ui-2\"},{\"changed_at\":\"2022-04-01 21:12:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

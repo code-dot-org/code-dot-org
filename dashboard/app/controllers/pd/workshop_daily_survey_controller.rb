@@ -89,7 +89,7 @@ module Pd
       agenda = params[:agenda] || nil
 
       # remove / from agenda url so module/1 => module1
-      agenda.tr!("/", "") if agenda
+      agenda&.tr!("/", "")
 
       survey_name = survey_names[workshop.subject]
       render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day, workshop_agenda: agenda)
@@ -315,6 +315,7 @@ module Pd
 
       return {
         Pd::WorkshopSurveyFoormConstants::FACILITATORS => facilitator_data,
+        workshop_id: workshop.id,
         workshop_course: workshop.course,
         workshop_subject: workshop.subject,
         regional_partner_name: regional_partner_name,

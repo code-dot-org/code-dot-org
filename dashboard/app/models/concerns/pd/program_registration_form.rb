@@ -127,7 +127,6 @@ module Pd::ProgramRegistrationForm
 
   included do
     belongs_to :user
-    validates_presence_of :user
     validates_inclusion_of :teachercon, in: 1..3
   end
 

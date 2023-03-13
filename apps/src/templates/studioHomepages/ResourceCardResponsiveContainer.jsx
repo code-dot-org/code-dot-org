@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 
 class ResourceCardResponsiveContainer extends Component {
   static propTypes = {
@@ -17,10 +16,10 @@ class ResourceCardResponsiveContainer extends Component {
         {this.props.children.map((child, childIndex) => (
           <div
             key={childIndex}
-            style={[
-              styles.cardContainer,
-              childIndex % colCount === 0 ? styles.startRow : styles.inRow
-            ]}
+            style={{
+              ...styles.cardContainer,
+              ...(childIndex % colCount === 0 ? styles.startRow : styles.inRow)
+            }}
           >
             {child}
           </div>
@@ -54,4 +53,4 @@ const styles = {
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize
-}))(Radium(ResourceCardResponsiveContainer));
+}))(ResourceCardResponsiveContainer);

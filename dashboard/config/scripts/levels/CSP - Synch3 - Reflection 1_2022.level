@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-04-26T18:56:13.000Z",
-  "level_num": "custom",
-  "user_id": 884,
   "properties": {
     "encrypted": "false",
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
@@ -19,6 +15,10 @@
     "parent_level_id": 24303,
     "name_suffix": "_2022"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-04-26T18:56:13.000Z",
+  "user_id": 884,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:56:13.082+00:00\",\"changed\":[\"cloned from \\\"CSP - Synch3 - Reflection 1\\\"\"],\"cloned_from\":\"CSP - Synch3 - Reflection 1\"}]",

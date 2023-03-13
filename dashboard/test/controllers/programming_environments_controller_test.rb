@@ -9,6 +9,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     File.stubs(:write)
     @levelbuilder = create :levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Unit.stubs(:should_cache?).returns false
   end
 
   test 'data is passed down to edit page' do
@@ -41,10 +42,8 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal 1, JSON.parse(nav_data).length
   end
 
-  test 'data is passed down to docs show page if using studio code docs' do
+  test 'redirects to docs show page url if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).at_least_once
-    DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
 
     programming_environment = create :programming_environment, name: 'weblab'
     category = create :programming_environment_category, programming_environment: programming_environment
@@ -52,37 +51,11 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
 
     get :docs_show, params: {programming_environment_name: programming_environment.name}
-    assert_response :ok
-
-    show_data = css_select('script[data-programmingenvironment]').first.attribute('data-programmingenvironment').to_s
-    assert_equal programming_environment.summarize_for_show.to_json, show_data
-
-    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
-    assert_equal 1, JSON.parse(nav_data).length
-  end
-
-  test 'page is proxied to docs show page if not using studio code docs' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).with('use-studio-code-docs', false).returns(false).at_least_once
-
-    programming_environment = create :programming_environment, name: 'weblab'
-    category = create :programming_environment_category, programming_environment: programming_environment
-    create :programming_environment_category, programming_environment: programming_environment
-    create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
-
-    stub_request(:get, "https://curriculum.code.org/docs/#{programming_environment.name}/").
-        to_return(body: 'curriculum.code.org/docs content', headers: {})
-
-    request.host = "studio.code.org"
-    get :docs_show, params: {programming_environment_name: programming_environment.name}
-    assert_response :ok
-    assert_equal @response.body, 'curriculum.code.org/docs content'
+    assert_response :redirect
   end
 
   test 'page is not proxied to docs index if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).at_least_once
-    DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
 
     create :programming_environment
     stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
@@ -91,21 +64,6 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     get :docs_index
     assert_response :ok
     assert_not_requested stubbed_request
-  end
-
-  test 'page is proxied to docs index page if not using studio code docs' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).with('use-studio-code-docs', false).returns(false).at_least_once
-    create :programming_environment
-
-    stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
-        to_return(body: 'curriculum.code.org/docs content', headers: {})
-
-    request.host = "studio.code.org"
-    get :docs_index
-    assert_response :ok
-    assert_equal @response.body, 'curriculum.code.org/docs content'
-    assert_requested stubbed_request
   end
 
   test 'returns not_found if editing a non-existant programming environment' do
@@ -176,6 +134,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'can create a new programming environment' do
+    @request.host = CDO.dashboard_hostname
     sign_in @levelbuilder
 
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "new-ide.json"}.once

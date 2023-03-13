@@ -740,6 +740,12 @@ lv-LV:
   coursed-2021_gradelevel: Vecums 7-11
   coursee-2021_gradelevel: Vecumā no 8-12
   coursef-2021_gradelevel: Vecumā 9-13
+  coursea-2022_gradelevel: Vecums no 4-7
+  courseb-2022_gradelevel: Vecumā no 5-8
+  coursec-2022_gradelevel: Vecumā no 6-10
+  coursed-2022_gradelevel: Vecums 7-11
+  coursee-2022_gradelevel: Vecumā no 8-12
+  coursef-2022_gradelevel: Vecumā 9-13
   accelerated_gradelevel: Vecumā no 10 gadiem (pēc 3. kursa)
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
@@ -1302,3 +1308,4 @@ lv-LV:
   footer_terms: Nosacījumi
   ai_activity: Aktivitāte
   ai_description: Apraksts
+  hoc2022_landing_page_create_title: Izveidot

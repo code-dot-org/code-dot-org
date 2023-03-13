@@ -11,26 +11,32 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 1. `cd` to the directory of this README.
 2. if this is your first time running tests via chromedriver, run `bundle install` and then `rbenv rehash`
 3. `./runner.rb -l`
-  - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
-  - By default, the tests run in "headless" mode, meaning with no visible chrome window.
-  - **If you need to see what's happening,** add the `--headed` flag. A chrome window will pop up in the background in which you can watch the tests happen
+
+- `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
+- By default, the tests run in "headless" mode, meaning with no visible chrome window.
+- **If you need to see what's happening,** add the `--headed` flag. A chrome window will pop up in the background in which you can watch the tests happen
 
 4. In a separate window, run `tail -f *.log` from the `log` subdirectory to watch the results of your tests
-  - `-f` streams the log in your shell, so it will be updated as new lines are written
+
+- `-f` streams the log in your shell, so it will be updated as new lines are written
 
 5. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
-### With remote browsers: Saucelabs
+If you get the error `session not created: Chrome version must be between 71 and 75`, you may need a newer version of `chromedriver`. Download a version of chromedriver that matches your current version of Chrome [here]([url](https://chromedriver.chromium.org/downloads)), unzip it, and reference the file path of your new version of chromedriver [here](https://github.com/code-dot-org/code-dot-org/blob/d7b3ba84adf30ef2844c538e7206ca4bd3565ea9/dashboard/test/ui/utils/selenium_browser.rb#L9) as follows:
 
-Running tests remotely on [Saucelabs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
+`Selenium::WebDriver::Chrome.driver_path = [path to your chromedriver]`
+
+### With remote browsers: Sauce Labs
+
+Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
 
 We currently have 120 available browsers, and the automated ui tests attempt to run 110.
 
 #### Credentials
 
-Saucelabs requires credentials to be set in locals.yml first.
+Sauce Labs requires credentials to be set in locals.yml first.
 
 ```
 # code-dot-org/locals.yml
@@ -41,29 +47,30 @@ saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 
 You can find the values for these settings in your saucelabs account settings (`https://app.saucelabs.com/users/:username`) The key you need, `saucelabs_authkey`, will be under the "Access Key" header.
 
-#### Saucelabs tunnel
+#### Sauce Labs tunnel
 
-If you want to run tests on saucelabs against localhost you need to set up your tunnel:
+If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
 
-1. Login to Saucelabs and download the [tunnel](https://app.saucelabs.com/tunnels)
-   - Notes: If you work on a linux EC2 instance, download the linux version (will end in .tar.gz)
-     - You will then need to secure copy this file into your dev environment with something like:
-     - `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
-     - From the destination folder, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`
-2. Start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`
-   - Notes: The link above has an example command line with your credentials that you can copy.
-     - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in step 1.
-     - The unique tunnel identifier `-i <tunnel-id>` included in that command can usually be safely ignored (see the note below); if you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
-     - If you are running on an EC2 instance, the -i tunnel identifier referred to above is required to launch the tunnel.
-3. In a separate terminal window, `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
+1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
+   - If you work on a Linux EC2 instance:
+     - Download the Linux version (will end in .tar.gz)
+     - Secure copy this file into your dev environment with something like `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
+   - From the destination folder, unzip the file (or for EC2 instances, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`)
+2. `cd` into the unzipped folder and start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. You can find your username and key on the page linked in step 1. Note: the command listed there does not match the above.
+   - The `bin/sc` path only works once you've navigated into the unzipped file (on a mac, the full path might look something like `sc-4.8.2-osx/bin/sc`).
+   - The configuration of the `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)) depends on your environment:
+     - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
+     - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
+3. (Re)start your dashboard-server `./bin/dashboard-server`.
+4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
-You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.com/beta/dashboard/tests)
+You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
 ## Options
 
 Here are some example command line options. Run `./runner.rb --help` for a full list.
 
-Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
+Run all UI tests on all browsers against your local host (by default, tests point to test.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
 `./runner.rb -d localhost-studio.code.org:3000`
 Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
@@ -100,6 +107,7 @@ Run **eyes tests** on one feature in one saucelabs browser against your local ma
 
 - If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
+- If you're missing data locally, try running `bundle exec rake seed:ui_test` from the dashboard directory
 
 ## See Also
 

@@ -1,7 +1,7 @@
 /** @file Maker Board setup checker */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
@@ -17,14 +17,18 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
-import {BOARD_TYPE} from '../util/boardUtils';
+import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import Button from '../../../../templates/Button';
+import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
+const STATUS_BOARD_UPDATE_FIRMATA = 'statusBoardUpdateFirmata';
 
 const MICROBIT_FIRMATA_URL =
   'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
@@ -41,15 +45,25 @@ const initialState = {
   [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
-  [STATUS_BOARD_COMPONENTS]: Status.WAITING
+  [STATUS_BOARD_COMPONENTS]: Status.WAITING,
+  [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING
 };
 
-export default class SetupChecklist extends Component {
+class SetupChecklist extends Component {
+  constructor(props) {
+    super(props);
+    const {webSerialPort} = props;
+    const wrappedSerialPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
+    this.setupChecker = new SetupChecker(wrappedSerialPort);
+  }
   state = {...initialState};
 
   static propTypes = {
-    setupChecker: PropTypes.instanceOf(SetupChecker).isRequired,
-    stepDelay: PropTypes.number
+    webSerialPort: PropTypes.object,
+    stepDelay: PropTypes.number,
+    firmataPercentComplete: PropTypes.number
   };
 
   fail(selector) {
@@ -68,8 +82,11 @@ export default class SetupChecklist extends Component {
     this.setState({[selector]: Status.CELEBRATING});
   }
 
+  question(selector) {
+    this.setState({[selector]: Status.UNKNOWN});
+  }
+
   detect() {
-    const {setupChecker} = this.props;
     this.setState({...initialState, isDetecting: true});
 
     Promise.resolve()
@@ -77,31 +94,33 @@ export default class SetupChecklist extends Component {
       // Are we using a compatible browser?
       .then(() =>
         this.detectStep(STATUS_SUPPORTED_BROWSER, () =>
-          setupChecker.detectSupportedBrowser()
+          this.setupChecker.detectSupportedBrowser()
         )
       )
 
       // Is Chrome App Installed?
       .then(
         () =>
+          // Only necessary for ChromeOS when not using webserial
           (isChromeOS() || isChrome()) &&
+          !shouldUseWebSerial() &&
           this.detectStep(STATUS_APP_INSTALLED, () =>
-            setupChecker.detectChromeAppInstalled()
+            this.setupChecker.detectChromeAppInstalled()
           )
       )
 
       // Is board plugged in?
       .then(() =>
         this.detectStep(STATUS_BOARD_PLUG, () =>
-          setupChecker.detectBoardPluggedIn()
+          this.setupChecker.detectBoardPluggedIn()
         )
       )
 
       // What type of board is this?
       .then(() => {
-        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
         if (experiments.isEnabled('microbit')) {
-          console.log('Board detected: ' + setupChecker.detectBoardType());
+          console.log('Board detected: ' + this.setupChecker.detectBoardType());
         }
         Promise.resolve();
       })
@@ -109,7 +128,7 @@ export default class SetupChecklist extends Component {
       // Can we talk to the firmware?
       .then(() =>
         this.detectStep(STATUS_BOARD_CONNECT, () =>
-          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
+          this.setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
         )
       )
 
@@ -117,7 +136,7 @@ export default class SetupChecklist extends Component {
       .then(() => {
         if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
           return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-            setupChecker.detectComponentsInitialize()
+            this.setupChecker.detectComponentsInitialize()
           );
         }
         return Promise.resolve();
@@ -131,7 +150,8 @@ export default class SetupChecklist extends Component {
             : STATUS_BOARD_COMPONENTS
         )
       )
-      .then(() => setupChecker.celebrate())
+      .then(() => this.setupChecker.celebrate())
+      .then(() => delayPromise(3000)) // allow 3 seconds for 'celebrate' on Micro:Bit before disconnecting
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
@@ -148,7 +168,7 @@ export default class SetupChecklist extends Component {
 
       // Finally...
       .then(() => {
-        setupChecker.teardown();
+        this.setupChecker.teardown();
         this.setState({isDetecting: false});
       });
   }
@@ -161,7 +181,7 @@ export default class SetupChecklist extends Component {
    */
   detectStep(stepKey, stepWork) {
     this.spin(stepKey);
-    return promiseWaitFor(this.props.stepDelay || 200)
+    return delayPromise(this.props.stepDelay || 200)
       .then(stepWork)
       .then(() => this.succeed(stepKey))
       .catch(error => {
@@ -171,7 +191,7 @@ export default class SetupChecklist extends Component {
   }
 
   /**
-   * Helper to be used on second/subsequent attempts at detecing board usability.
+   * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
     if (
@@ -188,6 +208,22 @@ export default class SetupChecklist extends Component {
     }
   }
 
+  updateMBFirmata() {
+    this.spin(STATUS_BOARD_UPDATE_FIRMATA);
+    this.question(STATUS_BOARD_CONNECT);
+    const mbFirmataUpdater = new MBFirmataUpdater();
+    return mbFirmataUpdater
+      .updateMBFirmataVersioned()
+      .then(() => {
+        this.succeed(STATUS_BOARD_UPDATE_FIRMATA);
+      })
+      .catch(err => {
+        console.log(err);
+        this.fail(STATUS_BOARD_UPDATE_FIRMATA);
+        this.fail(STATUS_BOARD_CONNECT);
+      });
+  }
+
   componentDidMount() {
     this.detect();
   }
@@ -202,27 +238,36 @@ export default class SetupChecklist extends Component {
         />
       );
     } else if (isChromeOS() || isChrome()) {
-      // Chromebooks - Chrome App
-      return (
-        <ValidationStep
-          stepName={
-            applabI18n.makerSetupAppInstalled() +
-            (isChromeOS() ? '' : applabI18n.legacy())
-          }
-          stepStatus={this.state[STATUS_APP_INSTALLED]}
-        >
-          <SafeMarkdown
-            markdown={applabI18n.makerSetupInstallSerialConnector({
-              webstoreURL: CHROME_APP_WEBSTORE_URL
-            })}
+      if (shouldUseWebSerial()) {
+        return (
+          <ValidationStep
+            stepName={applabI18n.makerSetupBrowserSupported()}
+            stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
           />
-          <br />
-          {applabI18n.makerSetupRedetect()}
-          <br />
-          {applabI18n.makerSetupAcceptPrompt()}
-          {this.contactSupport()}
-        </ValidationStep>
-      );
+        );
+      } else {
+        // Chromebooks - Chrome App
+        return (
+          <ValidationStep
+            stepName={
+              applabI18n.makerSetupAppInstalled() +
+              (isChromeOS() ? '' : applabI18n.legacy())
+            }
+            stepStatus={this.state[STATUS_APP_INSTALLED]}
+          >
+            <SafeMarkdown
+              markdown={applabI18n.makerSetupInstallSerialConnector({
+                webstoreURL: CHROME_APP_WEBSTORE_URL
+              })}
+            />
+            <br />
+            {applabI18n.makerSetupRedetect()}
+            <br />
+            {applabI18n.makerSetupAcceptPrompt()}
+            {this.contactSupport()}
+          </ValidationStep>
+        );
+      }
     } else {
       // Unsupported Browser
       return (
@@ -281,6 +326,16 @@ export default class SetupChecklist extends Component {
       isLinux() &&
       this.state.caughtError?.message?.includes('Permission denied');
 
+    const showUpdateMicroBitButton =
+      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+      this.state[STATUS_BOARD_CONNECT] === Status.FAILED &&
+      (this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.WAITING ||
+        this.state[STATUS_BOARD_UPDATE_FIRMATA] === Status.FAILED);
+
+    const showUpdateMicroBitValidationStep =
+      this.state.boardTypeDetected === BOARD_TYPE.MICROBIT &&
+      this.state[STATUS_BOARD_UPDATE_FIRMATA] !== Status.WAITING;
+
     return (
       <div>
         <h2>
@@ -316,6 +371,34 @@ export default class SetupChecklist extends Component {
             )}
             {this.contactSupport()}
           </ValidationStep>
+          {experiments.isEnabled('microbit') &&
+            showUpdateMicroBitValidationStep && (
+              <ValidationStep
+                stepStatus={this.state[STATUS_BOARD_UPDATE_FIRMATA]}
+                stepName={i18n.validationStepUpdateMicroBitSoftware()}
+                hideWaitingSteps={false}
+                alwaysShowChildren={true}
+                percentComplete={this.props.firmataPercentComplete}
+              >
+                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                  Status.ATTEMPTING && (
+                  <div>
+                    <p>{applabI18n.makerSetupMicrobitFirmataTransferring()}</p>
+                  </div>
+                )}
+                {this.state[STATUS_BOARD_UPDATE_FIRMATA] ===
+                  Status.SUCCEEDED && (
+                  <div>
+                    <p>{applabI18n.makerSetupMicrobitFirmataUpdateSuccess()}</p>
+                    <p>
+                      <strong>{applabI18n.makerSetupClickRedetect()}</strong>
+                      &nbsp;
+                      {applabI18n.makerSetupConfirmConnection()}
+                    </p>
+                  </div>
+                )}
+              </ValidationStep>
+            )}
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
@@ -333,8 +416,18 @@ export default class SetupChecklist extends Component {
               </div>
             )}
             {!linuxPermissionError && this.installFirmwareSketch()}
-            {this.contactSupport()}
+            {experiments.isEnabled('microbit') && showUpdateMicroBitButton && (
+              <Button
+                text={applabI18n.makerSetupUpdateMBFirmata()}
+                color={Button.ButtonColor.orange}
+                size={Button.ButtonSize.medium}
+                style={downloadButtonStyle}
+                onClick={() => this.updateMBFirmata()}
+                title={applabI18n.makerSetupUpdateMBFirmataDescription()}
+              />
+            )}
           </ValidationStep>
+
           {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
@@ -348,24 +441,21 @@ export default class SetupChecklist extends Component {
             </ValidationStep>
           )}
         </div>
-        <div>
-          <h2>{i18n.support()}</h2>
-          <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-          {this.contactSupport()}
-        </div>
       </div>
     );
   }
 }
 
-function promiseWaitFor(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
-}
+export default connect(state => ({
+  firmataPercentComplete: state.microBit.microBitFirmataUpdatePercent
+}))(SetupChecklist);
 
 const styles = {
   suggestionHeader: {
     marginTop: 15
   }
+};
+
+const downloadButtonStyle = {
+  textAlign: 'center'
 };
