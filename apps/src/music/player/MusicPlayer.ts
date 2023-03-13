@@ -8,7 +8,7 @@ const soundApi = require('./sound');
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
 
-interface PlaybackEvent {
+export interface PlaybackEvent {
   /** Type of event */
   type: 'sound' | 'pattern';
   /** Measure when this event occurs */
@@ -40,7 +40,7 @@ export interface Effects {
    delay?: EffectValue;
 }
 
-interface SoundEvent extends PlaybackEvent {
+export interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
   skipContext?: SkipContext;
@@ -57,7 +57,7 @@ interface PatternEventValue {
   events: PatternTickEvent[];
 }
 
-interface PatternEvent extends PlaybackEvent {
+export interface PatternEvent extends PlaybackEvent {
   type: 'pattern';
   value: PatternEventValue;
   skipContext?: SkipContext;
