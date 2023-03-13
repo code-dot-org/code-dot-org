@@ -114,3 +114,5 @@ Seviye 2-4, [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github
 Seviye 6-8, bir \[Destek-Vektör Makinesi\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) kullanır. Balığın her bir bileşenine (gözler, ağız, vücut gibi) bakarız ve bileşenlerin (diş sayısı, vücut şekli gibi) tüm meta verilerini her balık için bir sayı vektörü halinde birleştiririz. Bu vektörleri SVM'yi eğitmek için kullanırız. Eğitim verilerine dayanarak, SVM, tüm olası balıkların "boşluğunu", öğrenmeye çalıştığımız sınıflara ("mavi" veya "mavi değil" gibi) karşılık gelen iki bölüme ayırır.
 
 [[Başa dön]](#top)
+
+{{ visit_partial_event_logger }}

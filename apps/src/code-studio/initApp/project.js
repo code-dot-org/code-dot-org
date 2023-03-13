@@ -30,7 +30,11 @@ var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
-import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+  refreshInRestrictedShareMode
+} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -112,7 +116,8 @@ var currentSources = {
   makerAPIsEnabled: null,
   animations: null,
   selectedSong: null,
-  selectedPoem: null
+  selectedPoem: null,
+  inRestrictedShareMode: false
 };
 
 /**
@@ -137,7 +142,8 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
-    libraries: data.libraries
+    libraries: data.libraries,
+    inRestrictedShareMode: data.inRestrictedShareMode
   };
 }
 
@@ -698,6 +704,15 @@ var projects = (module.exports = {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
+      if (currentSources.inRestrictedShareMode !== undefined) {
+        sourceHandler.setInRestrictedShareMode(
+          currentSources.inRestrictedShareMode
+        );
+        // ensure restrictdShareMode is set correctly in redux
+        // so we hide publish and remix correctly.
+        getStore().dispatch(refreshInRestrictedShareMode());
+      }
+
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
@@ -845,7 +860,6 @@ var projects = (module.exports = {
       case 'flappy':
       case 'weblab':
       case 'gamelab':
-      case 'spritelab':
       case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
@@ -895,6 +909,8 @@ var projects = (module.exports = {
         return 'bounce';
       case 'poetry':
         return appOptions.level.standaloneAppName;
+      case 'spritelab':
+        return appOptions.level.standaloneAppName || appOptions.app;
       default:
         return null;
     }
@@ -951,7 +967,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1200,6 +1216,15 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    this.sourceHandler.setInRestrictedShareMode(inRestrictedShareMode);
+    return this.save();
+  },
+
+  inRestrictedShareMode() {
+    return this.sourceHandler.inRestrictedShareMode();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1276,6 +1301,7 @@ var projects = (module.exports = {
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
           const libraries = this.sourceHandler.getLibrariesList();
+          const inRestrictedShareMode = this.sourceHandler.inRestrictedShareMode();
           callback({
             source,
             html,
@@ -1283,7 +1309,8 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            libraries
+            libraries,
+            inRestrictedShareMode
           });
         })
         .catch(error => callback({error}))

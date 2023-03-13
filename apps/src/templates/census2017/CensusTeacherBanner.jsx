@@ -303,15 +303,14 @@ export default class CensusTeacherBanner extends Component {
             __useDeprecatedTag
             onClick={this.props.onDismiss}
             style={styles.button}
-            color="gray"
-            size="large"
+            color={Button.ButtonColor.neutralDark}
             text="No thanks"
           />
           <Button
             __useDeprecatedTag
             onClick={this.props.onSubmit}
             style={styles.button}
-            size="large"
+            color={Button.ButtonColor.brandSecondaryDefault}
             text="Add my school to the map!"
           />
         </div>
@@ -545,7 +544,8 @@ const styles = {
   },
   shareButton: {
     color: color.white,
-    backgroundColor: '#7E5CA2',
+    backgroundColor: color.brand_primary_default,
+    boxShadow: 'none',
     minWidth: 40
   },
   title: {

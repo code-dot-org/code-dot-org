@@ -71,7 +71,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:10.391+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Write Reset_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Write Reset_2022\"},{\"changed_at\":\"2023-01-20 22:49:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:10.391+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Write Reset_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Write Reset_2022\"},{\"changed_at\":\"2023-01-20 22:49:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:21:59 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

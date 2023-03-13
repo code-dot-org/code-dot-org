@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لی�
 
 اس سے پہلے کہ آپ Code.org کے آن لائن کورسز شروع کریں، نیچے دی گئی ویڈیو کے لیے پلے بیک کی جانچ کریں تاکہ یہ یقینی بنایا جا سکے کہ آپ شروع کرنے کے لیے تیار ہیں.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 پورے نصاب میں یہی پلیئر استعمال ہوتا ہے. یہ YouTube کے ذریعے ویڈیو دکھانے کی کوشش کرے گا اور، اگر یوٹیوب بلاک ہے، تو آپ اس کے بجائے ہمارے "بیک اپ" پلیئر کا استعمال کرتے ہوئے Code.org کے فراہم کردہ ویڈیو دکھا سکتے ہیں.
 

@@ -26,7 +26,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       zip: afe_params['zip'],
       marketing_kit: afe_params['inspirationKit'],
       csta_plus: afe_params['csta'],
-      aws_educate: afe_params['awsEducate'],
       amazon_terms: afe_params['consentAFE'],
       new_code_account: current_user.created_at > 5.minutes.ago
     )
@@ -81,7 +80,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     schoolId
     inspirationKit
     csta
-    awsEducate
     consentAFE
   )
 

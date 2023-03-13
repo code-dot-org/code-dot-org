@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ Utilizamos o [YouTube](https://www.youtube.com) para hospedar os vídeos do Code
 
 Antes de começar os cursos on-line do Code.org, teste a reprodução do vídeo abaixo para se certificar de que você está em condições de iniciar o curso.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Este é o player utilizado em todo o currículo. Ele vai tentar exibir o vídeo no YouTube e, se o YouTube estiver bloqueado, no player de vídeo hospedado no Code.org, utilizando nosso player de "contingência".
 

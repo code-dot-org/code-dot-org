@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ Chúng tôi sử dụng [YouTube](https://www.youtube.com) để nhúng video v�
 
 Trước khi bắt đầu các khóa học trực tuyến của Code.org, hãy thử phát video bên dưới để đảm bảo rằng video hoạt động tốt.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Đây là trình phát được sử dụng trong suốt chương trình học. Trình phát này sẽ cố gắng hiển thị video qua YouTube và nếu YouTube bị chặn thì sẽ hiển thị video lưu trên Code.org bằng trình phát “dự phòng” của chúng tôi.
 

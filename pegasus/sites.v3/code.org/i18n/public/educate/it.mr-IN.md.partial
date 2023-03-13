@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ Code.org आणि आमच्या [ ऑनलाइन लर्निंग
 
 तुम्ही Code.org चे ऑनलाइन कोर्स सुरू करण्यापूर्वी, तुम्ही जाण्यासाठी योग्य आहात याची खात्री करण्यासाठी खालील व्हिडिओसाठी प्लेबॅकची चाचणी घ्या.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 संपूर्ण अभ्यासक्रमात वापरण्यात येणारा हा खेळाडू आहे. ते YouTube द्वारे व्हिडिओ दर्शविण्याचा प्रयत्न करेल आणि, YouTube ब्लॉक असल्यास, त्याऐवजी आमच्या "फॉलबॅक" प्लेयरचा वापर करून Code.org होस्ट केलेला व्हिडिओ दर्शवेल.
 

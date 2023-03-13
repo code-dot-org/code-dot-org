@@ -15,6 +15,7 @@ var ALLOWED_KEYS = new Set([
   'codeOwnersName',
   'hasDataMode',
   'hasDesignMode',
+  'inStartBlocksMode',
   'isChallengeLevel',
   'isEmbedView',
   'isResponsive',
@@ -82,7 +83,8 @@ var ALLOWED_KEYS = new Set([
   'validationEnabled',
   'aiEnabled',
   'aiModelId',
-  'aiModelName'
+  'aiModelName',
+  'isCurriculumLevel'
 ]);
 
 const initialState = {

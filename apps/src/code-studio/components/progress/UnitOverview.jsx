@@ -23,6 +23,8 @@ import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -57,6 +59,7 @@ class UnitOverview extends React.Component {
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    participantAudience: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -64,7 +67,8 @@ class UnitOverview extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    userType: PropTypes.string
   };
 
   constructor(props) {
@@ -72,6 +76,15 @@ class UnitOverview extends React.Component {
     const showRedirectDialog =
       props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName
+        }
+      );
+    }
   }
 
   onCloseRedirectDialog = () => {
@@ -114,7 +127,8 @@ class UnitOverview extends React.Component {
       courseOfferingId,
       courseVersionId,
       isProfessionalLearningCourse,
-      publishedState
+      publishedState,
+      participantAudience
     } = this.props;
 
     const displayRedirectDialog =
@@ -187,6 +201,7 @@ class UnitOverview extends React.Component {
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}
+            participantAudience={participantAudience}
           />
         </div>
         <ProgressTable minimal={false} />

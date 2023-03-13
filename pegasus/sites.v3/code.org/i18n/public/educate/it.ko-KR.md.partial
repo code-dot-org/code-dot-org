@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동은 모든 기
 
 Code.org의 온라인 과정을 시작하기 전, 아래 동영상의 재생 여부를 테스트하여 그대로 진행해도 되는지 확인합니다.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 이것은 커리큘럼 전체에서 사용하는 플레이어입니다. 이 플레이어는 유튜브를 통해 동영상을 보여주려고 하며, 유튜브가 차단된 경우, 그에 "대비한" 플레이어를 사용하여 Code.org 동영상을 보여줍니다.
 
