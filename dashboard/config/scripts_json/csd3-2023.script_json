@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-10 01:59:45 UTC",
+    "serialized_at": "2023-03-10 16:54:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2475,7 +2475,13 @@
       "key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
       "position": 3,
       "properties": {
-        "progression_name": "Predict - Introduction to Game Lab"
+        "progression_name": "Predict - Introduction to Game Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
@@ -2486,13 +2492,7 @@
       "key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
-          }
-        ]
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding."
       },
       "seeding_key": {
         "activity_section.key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
@@ -2503,7 +2503,13 @@
       "key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
       "position": 5,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n"
+        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
@@ -2518,7 +2524,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2546,7 +2552,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           }
         ]
       },
@@ -2873,13 +2879,7 @@
       "key": "6f4336c3-44b3-4569-a53d-676b9a4d2247",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document."
-          }
-        ]
+        "description": "**Discussion Goal:** Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6f4336c3-44b3-4569-a53d-676b9a4d2247",
@@ -11094,6 +11094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games side scroller demo_2023"
+        ],
         "progression": "Side Scroller Example"
       },
       "bonus": false,
@@ -11666,6 +11669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games flyer demo_2023"
+        ],
         "progression": "Flyer Game Example"
       },
       "bonus": false,
