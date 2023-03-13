@@ -1,4 +1,4 @@
-import { Effects } from './interfaces/Effects';
+import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
 // Using require() to import JS in TS files
