@@ -109,9 +109,9 @@ module Crowdin
       File.open(dest, "w:#{response.body.encoding}") do |destfile|
         destfile.write(response.body)
       end
-    rescue Net::ReadTimeout, Net::OpenTimeout, AWSError => e
+    rescue Net::ReadTimeout, Net::OpenTimeout, AWSError => exception
       # Only attempting retries on request errors. Surfacing errors during write.
-      warn "download_file(#{dest})#{response.present? ? " error code: #{response.code}" : ''} error: #{e}"
+      warn "download_file(#{dest})#{response.present? ? " error code: #{response.code}" : ''} error: #{exception}"
       raise if attempts <= 1
       download_file(download_url, dest, attempts: attempts - 1)
     end

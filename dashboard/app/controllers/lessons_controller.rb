@@ -140,8 +140,8 @@ class LessonsController < ApplicationController
     end
 
     render json: @lesson.summarize_for_lesson_edit
-  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def clone
@@ -154,8 +154,8 @@ class LessonsController < ApplicationController
       copied_lesson = @lesson.copy_to_unit(destination_script, new_level_suffix)
       render(status: :ok, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
     end
-  rescue => e
-    render(json: {error: e.message}.to_json, status: :not_acceptable)
+  rescue => exception
+    render(json: {error: exception.message}.to_json, status: :not_acceptable)
   end
 
   # Return true if request is one that can be publicly cached.

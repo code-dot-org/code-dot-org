@@ -462,7 +462,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_refresh_token: auth_hash.credentials&.refresh_token
         )
       end
-    rescue => e
+    rescue => exception
       error_class = lookup_user.migrated? ?
         'Failed to create AuthenticationOption during silent takeover' :
         'Failed to update User during silent takeover'
@@ -470,7 +470,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # This can happen if the account being taken over is already invalid
       Honeybadger.notify(
         error_class: error_class,
-        error_message: e.message,
+        error_message: exception.message,
         context: {
           user_id: lookup_user.id,
           tags: 'accounts'
