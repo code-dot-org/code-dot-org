@@ -318,13 +318,13 @@ module AWS
       def upload_log(name, body, options={})
         key = "#{@prefix}/#{name}"
 
+        options[:content_type] ||= 'text/plain'
         options[:acl] = 'public-read' if @make_public
         result = AWS::S3.create_client.put_object(
           options.merge(
             bucket: @bucket,
             key: key,
-            body: body,
-            content_type: 'text/plain'
+            body: body
           )
         )
         if @make_public
