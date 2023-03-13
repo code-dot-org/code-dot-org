@@ -153,9 +153,26 @@ export default class ProgressManager {
     }
   };
 
+  // Go to the next step.  Calls back onChange with new information.
+  nextStep = (progressStep: number, onChange: Function) => {
+    const nextProgressStep = progressStep + 1;
+    onChange({
+      progressStep: nextProgressStep,
+      progressSatisfied: false,
+      progressMessage: null
+    });
+
+    this.clear();
+  };
+
+  // Return the toolbox information for the given step in the given progression.
+  getToolboxForProgress = (progression: {[key: string]: any}, step: number) => {
+    return progression.panels[step].toolbox;
+  };
+
   // Clears out the accumulated satisfied conditions; usually called when
   // moving to a new step.
-  clear = () => {
+  private clear = () => {
     this.conditionChecker.clear();
   };
 }

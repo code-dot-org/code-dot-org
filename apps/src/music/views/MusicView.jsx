@@ -184,20 +184,21 @@ class UnconnectedMusicView extends React.Component {
   };
 
   onNextPanel = () => {
-    const nextProgressStep = this.state.progressStep + 1;
-    this.setState({
-      progressStep: nextProgressStep,
-      progressSatisfied: false,
-      progressMessage: null
+    let nextProgressStep;
+    this.progressManager.nextStep(this.state.progressStep, newState => {
+      this.setState(newState);
+      nextProgressStep = newState.progressStep;
     });
-    this.progressManager.clear();
     this.stopSong();
     this.clearCode();
     this.setToolboxForProgress(nextProgressStep);
   };
 
   getToolboxForProgress = step => {
-    return this.state.progression.panels[step].toolbox;
+    return this.progressManager.getToolboxForProgress(
+      this.state.progression,
+      step
+    );
   };
 
   setToolboxForProgress = step => {
