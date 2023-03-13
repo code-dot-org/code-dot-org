@@ -52,8 +52,7 @@ theme: responsive_full_width
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/C3C_JfG8cNg", allowFullScreen: "true", frameborder: "0"}
 
-%div.divider.no-margin-bottom
-  %hr
+= view :section_divider_line
 
 - if request.language == "en"
   %section
@@ -98,8 +97,7 @@ theme: responsive_full_width
           %p{style: "height: 105px"} Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video.
           %a{href: CDO.studio_url("/s/blockchain-2023/lessons/6"), class: "link-button"} See lesson details
 
-  %div.divider.no-margin-bottom
-    %hr
+  = view :section_divider_line
 
 %section
   .wrapper

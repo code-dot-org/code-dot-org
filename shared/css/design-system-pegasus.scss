@@ -73,7 +73,7 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 // a section that starts with an h2
 div.divider {
   max-width: 960px;
-  margin: 1em auto;
+  margin: 1em auto 0;
 
   @media screen and (max-width: $width-md) {
     padding: 0 2em;
