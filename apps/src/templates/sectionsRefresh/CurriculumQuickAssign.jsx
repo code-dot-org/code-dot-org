@@ -20,6 +20,8 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
 
+  const showPlOfferings = queryParams('participantType') !== 'student';
+
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
     const participantType = queryParams('participantType');
@@ -54,7 +56,8 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   // To distinguish between types of tables: HOC & PL vs Grade Bands
   const isPlOrHoc = () => {
     return (
-      marketingAudience === (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL)
+      marketingAudience === MARKETING_AUDIENCE.HOC ||
+      marketingAudience === MARKETING_AUDIENCE.PL
     );
   };
 
@@ -75,7 +78,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
         <h5>{i18n.useDropdownMessage()}</h5>
       </div>
       <CurriculumQuickAssignTopRow
-        showPlOfferings={false}
+        showPlOfferings={showPlOfferings}
         marketingAudience={marketingAudience}
         updateMarketingAudience={updateMarketingAudience}
       />
