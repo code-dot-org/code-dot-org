@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-03-10 02:02:53 UTC",
+    "serialized_at": "2023-03-11 17:28:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -27,9 +27,22 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Introduction to App Lab",
+        "description": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included below. If your students are already familiar with App Lab, you may decide to skip this lesson. [Click here to learn more about skipping this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Creating Apps for Devices."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 1: Inputs and Outputs"
       },
@@ -41,7 +54,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Chapter 2: Building Physical Prototypes"
       },
@@ -53,12 +66,31 @@
   ],
   "lessons": [
     {
-      "key": "Innovations in Computing",
-      "name": "Innovations in Computing",
+      "key": "Intro to App Lab",
+      "name": "Intro to App Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included in this lesson. If your students are already familiar with App Lab, you may decide to skip this lesson, which requires hiding it from students in the unit overview page. [Click here to learn more about hiding this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Physical Computing\n\nThis tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. ",
+        "preparation": "- Review and complete the online tutorial yourself\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n",
+        "student_overview": "Learn about App Lab, which lets you create apps with code! You'll learn to create and control buttons, text, images, sounds, and screens. At the end of the lesson, you will be able to extend a project you started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. "
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "key": "Innovations in Computing",
+      "name": "Innovations in Computing",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
@@ -74,10 +106,10 @@
     {
       "key": "The Circuit Playground",
       "name": "The Circuit Playground",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.\n\n**Question of the Day:** What outputs can I control on the circuit playground?",
@@ -93,10 +125,10 @@
     {
       "key": "Updating Screen Elements",
       "name": "Updating Screen Elements",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
@@ -112,10 +144,10 @@
     {
       "key": "Board Events",
       "name": "Board Events",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
@@ -131,10 +163,10 @@
     {
       "key": "Variables and If Statements",
       "name": "Variables and If Statements",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "overview": "In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.\n\n**Question of the Day:** How can I create more complex programs that keep track of information and make decisions?",
         "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -149,10 +181,10 @@
     {
       "key": "Mini-Project: Field Collector App",
       "name": "Mini-Project: Field Collector App",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "In this mini-project, students will use the Circuit Playground to collect data, then use App Lab to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps where a person collects data on a device \"in the field\", then returns to a central location to view and analyze the data (such as cataloguing endangered species in the wild). Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -167,10 +199,10 @@
     {
       "key": "Color LEDs",
       "name": "Color LEDs",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.\n\n**Question of the Day:** How can you use the colored LEDs in an app?",
@@ -186,10 +218,10 @@
     {
       "key": "Getting Screen Inputs",
       "name": "Getting Screen Inputs",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.\n\n**Question of the Day:** How can we use the app screen for user input?",
@@ -205,10 +237,10 @@
     {
       "key": "Combining Inputs and Outputs",
       "name": "Combining Inputs and Outputs",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?",
         "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -223,10 +255,10 @@
     {
       "key": "Project: Human Device Interaction",
       "name": "Project: Human Device Interaction",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
@@ -240,10 +272,10 @@
     {
       "key": "Board Sensors",
       "name": "Board Sensors",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.\n\n**Question of the Day:** How can I use sensors to detect changes in the environment?",
@@ -259,10 +291,10 @@
     {
       "key": "Accelerometer",
       "name": "Accelerometer",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.\n\n**Question of the Day:** How can I use the accelerometer to create apps?",
@@ -278,10 +310,10 @@
     {
       "key": "Making Music",
       "name": "Making Music",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.\n\n**Question of the Day:** How can I use the buzzer to play musical notes or songs?",
@@ -297,10 +329,10 @@
     {
       "key": "Functions",
       "name": "Functions",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.\n\n**Question of the Day:** How can I use functions to organize and simplify my code?",
@@ -316,10 +348,10 @@
     {
       "key": "Mini-Project: Interactive Art",
       "name": "Mini-Project: Interactive Art",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-interactive-art-physical-computing-lesson-15/36217) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -334,10 +366,10 @@
     {
       "key": "Physical Outputs and LEDs",
       "name": "Physical Outputs and LEDs",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external LEDs to create physical prototypes?",
@@ -353,10 +385,10 @@
     {
       "key": "Physical Inputs and Buttons",
       "name": "Physical Inputs and Buttons",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external buttons to create physical prototypes?",
@@ -372,10 +404,10 @@
     {
       "key": "Project - Prototype an Innovation",
       "name": "Project - Prototype an Innovation",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "announcements": [
           {
@@ -403,7 +435,7 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": true,
       "has_lesson_plan": false,
       "relative_position": 1,
@@ -417,6 +449,48 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "08c764ae-1332-4b93-9c45-be8fb60dfb97",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08c764ae-1332-4b93-9c45-be8fb60dfb97",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023"
+      }
+    },
+    {
+      "key": "b065d591-042d-472e-b931-89e21e61d8ab",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b065d591-042d-472e-b931-89e21e61d8ab",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023"
+      }
+    },
     {
       "key": "c7b18cda-f965-4e08-ae2d-0e94afb2762c",
       "position": 1,
@@ -1282,6 +1356,126 @@
   ],
   "activity_sections": [
     {
+      "key": "23181101-1fe5-4f36-8450-c4338f5139f6",
+      "position": 1,
+      "properties": {
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them quickly make apps they can instantly send to themselves or friends to use. ",
+        "name": "Introduction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Hour of Code:** This lesson is mostly identical to the [App Lab Hour of Code activity](https://studio.code.org/s/applab-intro/reset), and many of the tips below reference the hour of code. It can be fun to lean-into the \"Hour of Code\" especially if it's your students first introduction to programming. You may decide to review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n\n**Slides and Videos:** This lesson is designed to be mostly self-paced and completed within Code Studio, so there isn't a Slide Deck for this lesson and the videos are included within the levels that students go through. In future lessons, we provide slide decks with the videos embedded to be watched as a class rather than interrupting a student experience."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "23181101-1fe5-4f36-8450-c4338f5139f6",
+        "lesson_activity.key": "08c764ae-1332-4b93-9c45-be8fb60dfb97"
+      }
+    },
+    {
+      "key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44",
+      "position": 2,
+      "properties": {
+        "description": "**Video:** The first level of this activity is a video that should both motivate students to complete the activity and explain how it will work. Consider watching it as a class and quickly debriefing afterwards to answer questions.",
+        "progression_name": "App Lab Intro - Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44",
+        "lesson_activity.key": "08c764ae-1332-4b93-9c45-be8fb60dfb97"
+      }
+    },
+    {
+      "key": "a72a93bc-43a2-4d0c-ab23-5ffca9acb111",
+      "position": 1,
+      "properties": {
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. Encourage students to use the target images and directions provided in every level to know if they are on the right track. If students want to move on past a particularly tricky level they can simply click \"Finish\" and continue on.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help.\n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\n* **Stuck? Click here:** Each level includes a GIF showing exactly how to complete the level. If students want help they can and should use these GIFs. If they only want to use them as a hint, just have them close the GIF once they've seen the first part.\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. Except for the \"Design Mode\" sequence, all levels are independent of one another, though they do rely to some degree on previously introduced concepts.",
+        "name": "Intro to App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "a72a93bc-43a2-4d0c-ab23-5ffca9acb111",
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b"
+      }
+    },
+    {
+      "key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e",
+      "position": 2,
+      "properties": {
+        "description": "####Setting Properties - Levels 2-4\n\n\nThese levels are all about learning to use the `setProperty()` block. The dropdowns in this block make it easy to know exactly what it is capable of changing. That said, there's a couple tips that can help\n\n* **When to use Double Quotes:** The `setProperty()` block automatically changes the final dropdown when you select what properties you want to change, including whether they use double quotes. When in doubt, students should first change the first two dropdowns, then use the last one as a model for what values work there. The most common error is failing to use double quotes around a color name.\n* **Hover to Read IDs:** By hovering over an element in your app you can read its ID. This will help students when they're trying to change multiple elements on their screen.",
+        "progression_name": "Setting Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e",
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b"
+      }
+    },
+    {
+      "key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71",
+      "position": 3,
+      "properties": {
+        "description": "####Make It Interactive - Levels 5-7\n\nThis sequence introduces the `onEvent()` block. Here's some helpful tips if students are getting stuck.\n\n* **onEvents Don't Go Inside One Another:** Students just starting out may try to put one block inside of the others. This is never the intended behavior for this tutorial. Even though this is mentioned in the videos, a quick reminder might help get kids unstuck.\n* **Check Your IDs:** You need to change the `\"id\"` property in `onEvent()` so that it detects events with the correct element.\n* **You Can Use Multiple Blocks in an `onEvent()`:** If you want multiple things to happen when you click the same button, just add more blocks to the same `onEvent()`. You should never have a program that has two `onEvent()` blocks for the combination of element (e.g. \"button1\") and event type (e.g. \"click\").",
+        "progression_name": "Make it Interactive",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Finding Images:** Students do not need to search for images or sounds online in order to complete this lesson, but they may wish to. You'll likely want to prepare in advance to advise responsible and appropriate searching for images.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71",
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b"
+      }
+    },
+    {
+      "key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8",
+      "position": 4,
+      "properties": {
+        "description": "This section has a single level that has students add an animal to a soundboard. This level is a little more involved that the previous ones, so expect that students may need to either rewatch the video beforehand or read instructions carefully to complete all the steps.\n####Images and Sounds - Levels 8-9 \n* **Images Use `setProprety()`:** To add an image to a screen element students can use the `\"image\"` property. There is no new block.\n* **Link to Images:** Students can copy the URL of images they find directly into the `setProperty()` block in order to add them to their apps. There's no need to download them to their computers and upload them to App Lab if they don't wish to.",
+        "progression_name": "Images and Sounds"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8",
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b"
+      }
+    },
+    {
+      "key": "2f438309-45dd-440d-907a-8393497b83aa",
+      "position": 5,
+      "properties": {
+        "description": "\n####Design Mode - Levels 10-13\n\nIn the last sequence students are working on the same project for three bubbles in a row. They are now learning to add screen elements themselves which means that the total number of things they can do in App Lab has grown a lot. Assume that some students will spend some time exploring at this point as they try out all the new tools.\n\n* **Using Good IDs:** An important part of programming in App Lab is giving your elements good IDs. Up to this section students have had their IDs created for them, so they haven't had a chance to practice this skill. This is a useful reminder for the teacher to reinforce during this section.",
+        "progression_name": "Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa",
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b"
+      }
+    },
+    {
+      "key": "a29270bc-c5ea-420c-8929-e73665aa90b4",
+      "position": 6,
+      "properties": {
+        "description": "####Share Your App - Levels 14-15\n\n\nThis section is very open-ended. The tutorial itself is designed to give students ample time to keep working on this project, either making Choose Your Own Adventure, or one of their own creation.\n\n* **Try the Samples:** Students are provided 3 sample apps that should help them brainstorm their own ideas.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Compared to other activities in this lesson, this section asks students to be much more creative. Ask students to think \"what will your story be about?\" or do a quick group brainstorm so that classmates can hear ideas from one another.",
+        "progression_name": "Share Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4",
+        "lesson_activity.key": "0b5e7b0f-3cef-4f0e-8311-baca7ab1564b"
+      }
+    },
+    {
+      "key": "a2b8bb38-856f-4c3b-9ead-793831eca394",
+      "position": 1,
+      "properties": {
+        "description": "**code.org/applab:** At the end of the lesson encourage students to head to the App Lab home page where they can get ideas for more ways to keep their adventure with App Lab going.\n\n**Exit Ticket:** Distribute the Exit Tickets to collect feedback on how the day felt for students.\n\n**(Optional) Certificates:** You may decide to print certificates to celebrate students who completed the entire tutorial - printable certificates can be found here: http://code.org/certificates",
+        "name": "Celebrate and Keep Going!\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2b8bb38-856f-4c3b-9ead-793831eca394",
+        "lesson_activity.key": "b065d591-042d-472e-b931-89e21e61d8ab"
+      }
+    },
+    {
       "key": "9369687d-6d3d-4278-99bb-88bb1e71c5d9",
       "position": 1,
       "properties": {
@@ -1563,7 +1757,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -8135,6 +8329,336 @@
       "level_keys": [
         "CSD Physical Computing Post-Project Test_2023"
       ]
+    },
+    {
+      "chapter": 140,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "App Lab Intro - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Getting Started_csd62023"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Screen Color_csd62023"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Text 2_csd62023"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Full Text_csd62023"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Make It Interactive_csd62023"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent intro_csd62023"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent twoButtons_csd62023"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Images and Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Images and Sounds_csd62023"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Images and Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - playSound_csd62023"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Design Mode_csd62023"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Share Your App_csd62023"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -9804,6 +10328,186 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2023",
         "activity_section.key": "e91ea881-fb68-4ed1-be6a-ab3eaa3ae674"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Getting Started_csd62023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Screen Color_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Text 2_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Full Text_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Make It Interactive_csd62023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent intro_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent twoButtons_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Images and Sounds_csd62023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - playSound_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Design Mode_csd62023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddButton_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddScreen_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatSetScreen_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Share Your App_csd62023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatPersonalize_csd62023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
       }
     }
   ],
@@ -12253,6 +12957,16 @@
       }
     },
     {
+      "key": "e0a4a654-3b6e-44bd-b70e-7dde2d56632e",
+      "properties": {
+        "description": "Build and share their own apps in App Lab using features like buttons, text, images, sound, and screens."
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "objective.key": "e0a4a654-3b6e-44bd-b70e-7dde2d56632e"
+      }
+    },
+    {
       "key": "e92ad771-0c35-4225-ba43-457217ed6b7c",
       "properties": {
         "description": "Turn on and off an LED with code"
@@ -12599,6 +13313,13 @@
         "lesson.key": "Innovations in Computing",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
       }
     },
     {
