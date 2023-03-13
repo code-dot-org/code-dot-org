@@ -85,8 +85,8 @@ class ProgrammingExpressionsController < ApplicationController
       programming_expression.save! if programming_expression.changed?
       programming_expression.write_serialization
       render json: programming_expression.summarize_for_edit.to_json
-    rescue ActiveRecord::RecordInvalid => e
-      render(status: :not_acceptable, plain: e.message)
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception.message)
     end
   end
 
@@ -125,8 +125,8 @@ class ProgrammingExpressionsController < ApplicationController
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: :ok, json: {editUrl: edit_programming_expression_path(new_exp)})
-    rescue => e
-      render(json: {error: e.message}.to_json, status: :not_acceptable)
+    rescue => exception
+      render(json: {error: exception.message}.to_json, status: :not_acceptable)
     end
   end
 

@@ -103,8 +103,8 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => e
-    warn e.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -157,10 +157,10 @@ class ManifestBuilder
         objects['json'].get(response_target: json_destination)
         verbose "Writing #{mp3_destination}"
         objects['mp3'].get(response_target: mp3_destination)
-      rescue Aws::Errors::ServiceError => e
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json and #{name}.mp3 from S3:
-          #{e}
+          #{exception}
           The sound has been skipped.
         WARN
       end
@@ -178,8 +178,8 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => e
-    warn e.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -294,16 +294,16 @@ class ManifestBuilder
         end
         metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}
         metadata['categories'] = categories
-      rescue Aws::Errors::ServiceError => e
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json from S3:
-          #{e}
+          #{exception}
           The sound has been skipped.
         WARN
-      rescue JSON::JSONError => e
+      rescue JSON::JSONError => exception
         next <<~WARN
           There was an error parsing #{name}.json:
-          #{e}
+          #{exception}
           The sound has been skipped.
         WARN
       end
