@@ -29,3 +29,13 @@ public void test(int x) {
 
 Which of the following test values would test each possible output for the method?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+To test each possible output, we would want to use values that would cause each branch to execute.
+
+To test the `if` branch, we would want a value that would cause `x % 3 == 0` to evaluate to `true`. We could use the value `3` for `x` to achieve this.
+
+To test the `else if` branch, we would want a value that would cause `x % 3 == 0` to evaluate to `false` and `x < 10` to evaluate to `true`. We could use the value `1` for `x` to achieve this.
+
+To test the `else` branch, we would want a value that would cause `x % 3 == 0` to evaluate to `false` and `x < 10` to evaluate to `false`. We could use the value `11` for `x` to achieve this.
+MARKDOWN

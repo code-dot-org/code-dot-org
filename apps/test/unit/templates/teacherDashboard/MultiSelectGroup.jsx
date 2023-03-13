@@ -9,9 +9,7 @@ import {multiSelectOptionShape} from '@cdo/apps/templates/teacherDashboard/shape
 // It needs to be its own component so that it adheres to React hooks
 // linting (i.e., this can't be a template or the exported story itself).
 const BasicExampleComponent = props => {
-  const [values, setValues] = useState(
-    Object.fromEntries(props.options.map(o => [o.value, false]))
-  );
+  const [values, setValues] = useState([]);
 
   return <MultiSelectGroup values={values} setValues={setValues} {...props} />;
 };

@@ -487,10 +487,9 @@ describe('CircuitPlaygroundBoard', () => {
         expect(led1.stop).not.to.have.been.called;
         expect(led2.stop).not.to.have.been.called;
 
-        return board.destroy().then(() => {
-          expect(led1.stop).to.have.been.calledOnce;
-          expect(led2.stop).to.have.been.calledOnce;
-        });
+        board.reset();
+        expect(led1.stop).to.have.been.calledOnce;
+        expect(led2.stop).to.have.been.calledOnce;
       });
     });
   });

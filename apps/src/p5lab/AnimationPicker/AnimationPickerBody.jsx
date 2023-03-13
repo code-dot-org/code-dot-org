@@ -18,13 +18,13 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
+import AnimationUploadButton from './AnimationUploadButton.jsx';
 import experiments from '@cdo/apps/util/experiments';
 
 const MAX_SEARCH_RESULTS = 40;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
-    is13Plus: PropTypes.bool,
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
@@ -38,7 +38,8 @@ export default class AnimationPickerBody extends React.Component {
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
-    pickerType: PropTypes.string.isRequired
+    pickerType: PropTypes.string.isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired
   };
 
   state = {
@@ -216,10 +217,10 @@ export default class AnimationPickerBody extends React.Component {
     const {searchQuery, categoryQuery, results} = this.state;
     const {
       hideUploadOption,
-      is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
-      onAnimationSelectionComplete
+      onAnimationSelectionComplete,
+      shouldRestrictAnimationUpload
     } = this.props;
 
     const searching = searchQuery !== '';
@@ -230,6 +231,15 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
+    // We show the draw your own and upload buttons if the user is either:
+    // Not currently searching and not in a category, unless that category is backgrounds
+    // OR they are searching but there were no results
+    const showDrawAndUploadButtons =
+      (!searching && (!inCategory || isBackgroundsTab)) || results.length === 0;
+    // We are showing the upload button if it should be visible per the previous boolean and
+    // hideUploadOption is not set to true.
+    const showingUploadButton = !hideUploadOption && showDrawAndUploadButtons;
+
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -242,7 +252,7 @@ export default class AnimationPickerBody extends React.Component {
         <h1 style={dialogStyles.title}>
           {msg.animationPicker_title({assetType})}
         </h1>
-        {!is13Plus && !hideUploadOption && (
+        {showingUploadButton && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
@@ -278,8 +288,7 @@ export default class AnimationPickerBody extends React.Component {
                 {msg.animationPicker_noResultsFound()}
               </div>
             )}
-            {((!searching && (!inCategory || isBackgroundsTab)) ||
-              results.length === 0) && (
+            {showDrawAndUploadButtons && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
@@ -288,10 +297,11 @@ export default class AnimationPickerBody extends React.Component {
                   onClick={onDrawYourOwnClick}
                 />
                 {!hideUploadOption && (
-                  <AnimationPickerListItem
-                    label={msg.animationPicker_uploadImage()}
-                    icon="upload"
-                    onClick={onUploadClick}
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldRestrictAnimationUpload={
+                      shouldRestrictAnimationUpload
+                    }
                     isBackgroundsTab={isBackgroundsTab}
                   />
                 )}

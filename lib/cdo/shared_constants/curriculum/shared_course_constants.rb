@@ -77,21 +77,14 @@ module Curriculum
       other
     ).freeze
 
-    # The grade bands used to represent course offering audience
-    COURSE_OFFERING_GRADE_BANDS = OpenStruct.new(
-      {
-        elementary: 'Elementary',
-        middle: 'Middle',
-        high: 'High'
-      }
-    ).freeze
-
     # The curriculum types used in curriculum quick assign
     COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
       {
         module: 'Module',
         course: 'Course',
-        standalone_unit: 'Standalone Unit'
+        standalone_unit: 'Standalone Unit',
+        hoc: 'Hour of Code',
+        pl: 'Professional Learning'
       }
     ).freeze
 
@@ -112,9 +105,9 @@ module Curriculum
         self_paced: 'Self-Paced',
         teacher_led: 'Teacher-Led',
         collections: 'Collections',
-        virtual_pl: 'Virtual Professional Learning',
-        self_paced_pl: 'Self Paced Professional Learning',
-        other_pl: 'Other Professional Learning'
+        workshops_k5: 'K-5 Workshops',
+        summer_workshops_612: '6-12 Summer Workshops',
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
       }
     ).freeze
 

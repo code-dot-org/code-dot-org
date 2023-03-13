@@ -285,7 +285,9 @@ end
 # @return [String] a public hyperlink to the uploaded log, or empty string.
 def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
+  # Assume all log files are Cucumber reports in html format.
+  # TODO: Set content type dynamically based on filename extension.
+  log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => exception
   ChatClient.log "Uploading log to S3 failed: #{exception}"
