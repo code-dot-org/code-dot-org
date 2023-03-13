@@ -17,25 +17,21 @@ export default function AdvancedSettingToggles({
   assignedUnitLessonExtrasAvailable
 }) {
   const handlePairProgrammingToggle = e => {
-    e.preventDefault;
     const updatedValue = !section.pairingAllowed;
     updateSection('pairingAllowed', updatedValue);
   };
 
   const handleLockSectionToggle = e => {
-    e.preventDefault;
     const updatedValue = !section.restrictSection;
     updateSection('restrictSection', updatedValue);
   };
 
   const handleLessonExtrasToggle = e => {
-    e.preventDefault;
     const updatedValue = !section.lessonExtras;
     updateSection('lessonExtras', updatedValue);
   };
 
   const handleTtsAutoplayEnabledToggle = e => {
-    e.preventDefault;
     const updatedValue = !section.ttsAutoplayEnabled;
     updateSection('ttsAutoplayEnabled', updatedValue);
   };
