@@ -1,0 +1,6 @@
+name 'csc_animal_adaptations_predict_batQ'
+question 'Make a prediction. Which way will the bat move to catch the spider?'
+wrong 'Left then down', feedback: 'Incorrect.'
+right 'Diagonally', feedback: 'Correct!'
+wrong 'Zig zag', feedback: 'Incorrect. '
+wrong 'Down, then left', feedback: 'Incorrect'
