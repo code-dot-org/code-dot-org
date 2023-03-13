@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-02 00:24:03 UTC",
+    "serialized_at": "2023-03-10 22:26:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -374,6 +374,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-debug-instantiate-2023"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -396,28 +399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lesson 1 summary"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csa-prework-m4-summary-L1-2023"
+        "level_keys": [
+          "csa-prework-m4-matching-code-2023"
         ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa4-2023",
-        "activity_section.key": "b3cb1711-83d7-44ab-8d72-f18616df0acf"
-      },
-      "level_keys": [
-        "csa-prework-m4-summary-L1-2023"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
         "progression": "Lesson 1 summary"
       },
       "bonus": false,
@@ -432,6 +416,31 @@
       },
       "level_keys": [
         "csa-prework-m4-matching-code-2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-prework-m4-summary-L1-2023"
+        ],
+        "progression": "Lesson 1 summary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-prework-m4-summary-L1-2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "b3cb1711-83d7-44ab-8d72-f18616df0acf"
+      },
+      "level_keys": [
+        "csa-prework-m4-summary-L1-2023"
       ]
     },
     {
@@ -490,6 +499,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-useDocs-JL-2023"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -562,6 +574,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-prework-m4-use-isOnPaint-JL-2023"
+        ],
         "progression": "Using methods that return information"
       },
       "bonus": false,
@@ -589,6 +604,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "csa-prework-example-solution-video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "d9010375-437f-411f-8b4b-3be7f8c31f21"
+      },
+      "level_keys": [
+        "csa-prework-example-solution-video"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-prework-m4-painter-choices-2023"
+        ],
+        "progression": "Using methods that return information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "csa-prework-m4-painter-choices-2023"
         ],
         "lesson.key": "lesson-2",
@@ -601,11 +641,14 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 8,
+      "chapter": 20,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-23-mod4-full-module-summary-text"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -734,9 +777,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csa-prework-m4-summary-L1-2023",
+        "level.key": "csa-prework-m4-matching-code-2023",
         "script_level.level_keys": [
-          "csa-prework-m4-summary-L1-2023"
+          "csa-prework-m4-matching-code-2023"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -746,9 +789,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csa-prework-m4-matching-code-2023",
+        "level.key": "csa-prework-m4-summary-L1-2023",
         "script_level.level_keys": [
-          "csa-prework-m4-matching-code-2023"
+          "csa-prework-m4-summary-L1-2023"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -821,6 +864,18 @@
         "level.key": "csa-prework-m4-use-isOnPaint-JL-2023",
         "script_level.level_keys": [
           "csa-prework-m4-use-isOnPaint-JL-2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa4-2023",
+        "activity_section.key": "d9010375-437f-411f-8b4b-3be7f8c31f21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-prework-example-solution-video",
+        "script_level.level_keys": [
+          "csa-prework-example-solution-video"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
