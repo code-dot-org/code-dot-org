@@ -336,14 +336,7 @@ class ShareAllowedDialog extends React.Component {
                       this.showSendToPhone,
                       'send-to-phone'
                     )}
-                    style={{
-                      margin: 0,
-                      marginRight: 12,
-                      fontSize: 'large',
-                      padding: '0 16px',
-                      paddingRight: 6,
-                      height: 45
-                    }}
+                    style={styles.sendToPhoneButton}
                   >
                     <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
                     <span
@@ -443,10 +436,7 @@ class ShareAllowedDialog extends React.Component {
                 {publishAllowed && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
                     <span
-                      style={{
-                        fontSize: 12,
-                        fontFamily: "'Gotham 7r', sans-serif"
-                      }}
+                      style={styles.thumbnailWarning}
                       className="thumbnail-warning"
                     >
                       {i18n.thumbnailWarning()}
@@ -455,14 +445,20 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 {inRestrictedShareMode && (
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                    <span
+                      style={styles.thumbnailWarning}
+                      className="thumbnail-warning"
+                    >
                       {i18n.restrictedShareInfo()}
                     </span>
                   </div>
                 )}
                 {this.state.replayVideoUnavailable && (
                   <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                    <span
+                      style={styles.thumbnailWarning}
+                      className="thumbnail-warning"
+                    >
                       {i18n.downloadReplayVideoButtonError()}
                     </span>
                   </div>
@@ -561,9 +557,21 @@ const styles = {
     msTransform: 'translate(-50%,-50%)',
     WebkitTransform: 'translate(-50%,-50%)'
   },
+  thumbnailWarning: {
+    fontSize: 12,
+    fontFamily: "'Gotham 7r', sans-serif"
+  },
   sendToPhoneContainer: {
     width: '100%',
     marginTop: 15
+  },
+  sendToPhoneButton: {
+    margin: 0,
+    marginRight: 12,
+    fontSize: 'large',
+    padding: '0 16px',
+    paddingRight: 6,
+    height: 45
   },
   sendToPhoneLeft: {
     float: 'left',
