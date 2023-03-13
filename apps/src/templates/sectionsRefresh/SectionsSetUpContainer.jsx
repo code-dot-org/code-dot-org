@@ -82,7 +82,7 @@ const saveSection = (e, section) => {
     });
 };
 
-// add prop to indicate where this is coming from
+// TO DO: Add a prop to indicate if this is a new section or an existing section
 export default function SectionsSetUpContainer() {
   const [sections, updateSection] = useSections();
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
@@ -112,14 +112,6 @@ export default function SectionsSetUpContainer() {
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
       />
-      {/* <Button
-        id={'uitest-advanced-settings'}
-        className={moduleStyles.buttonStyle}
-        text={i18n.advancedSettings()}
-        size={Button.ButtonSize.large}
-        icon={caret}
-        onClick={toggleAdvancedSettingsOpen}
-      /> */}
       <span>
         <div>
           <FontAwesome

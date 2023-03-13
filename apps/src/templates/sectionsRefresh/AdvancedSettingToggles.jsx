@@ -2,17 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
-// import {
-//   assignedUnitTextToSpeechEnabled,
-//   assignedUnitLessonExtrasAvailable
-// } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export default function AdvancedSettingToggles({
   updateSection,
   section,
 
   // these are currently hard coded into the parent component
-  // In the future we will want to make these dynamic based on the course
+  // TO DO: In the future we will want to make these dynamic based on the course
   assignedUnitTextToSpeechEnabled,
   assignedUnitLessonExtrasAvailable
 }) {
