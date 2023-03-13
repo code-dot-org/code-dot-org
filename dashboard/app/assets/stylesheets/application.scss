@@ -232,7 +232,7 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1100px) {
     .create_menu {
       display: none !important;
     }
@@ -410,6 +410,11 @@ img.video_thumbnail {
 
 #header-banner-overflow {
   margin: 16px;
+
+  .bannerContentButton {
+    // !important is used here to overwrite inline styles of button.
+    border-color: $neutral_dark !important;
+  }
 }
 
 #header-banner, #header-banner-overflow {
@@ -979,6 +984,7 @@ $default-modal-width: 640px;
 
 .video-modal {
   z-index: 10000;
+  overflow: visible;
 
   .ui-tabs {
     height: 100%;
@@ -2232,10 +2238,17 @@ a.download-video {
     background-color: $neutral_white;
     border: 2px solid $neutral_dark;
     border-radius: 4px;
+    line-height: 18px;
 
     &:hover {
       background-color: $neutral_dark10;
       box-shadow: none;
+    }
+
+    img {
+      opacity: unset;
+      float: left;
+      margin-left: 24px;
     }
 
     &:focus {

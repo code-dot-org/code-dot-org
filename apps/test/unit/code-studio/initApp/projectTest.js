@@ -1246,6 +1246,8 @@ function createStubSourceHandler() {
     getSelectedPoem: sinon.stub(),
     prepareForRemix: sinon.stub().resolves(),
     setInitialLibrariesList: sinon.stub(),
-    getLibrariesList: sinon.stub()
+    getLibrariesList: sinon.stub(),
+    setInRestrictedShareMode: sinon.stub(),
+    inRestrictedShareMode: sinon.stub()
   };
 }

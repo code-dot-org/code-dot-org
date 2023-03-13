@@ -61,10 +61,21 @@
         }
       }
     },
+    "auto_mpg": {
+      "fields": {
+        "mpg": {
+          "id": "mpg",
+          "description": "Millas por galón."
+        }
+      }
+    },
     "bike_sharing": {
       "fields": {
         "index": {
           "id": "Índice"
+        },
+        "Year": {
+          "id": "Año"
         }
       }
     },
@@ -161,6 +172,17 @@
     },
     "billionaires": {
       "fields": {
+        "Rank": {
+          "id": "Posición",
+          "description": "Su rango de riqueza para el año de este récord."
+        },
+        "Year": {
+          "id": "Año"
+        },
+        "Company Founding Year": {
+          "id": "Año de fundación de la empresa",
+          "description": "El año en que se fundó su empresa."
+        },
         "Age": {
           "id": "Edad"
         },
@@ -228,6 +250,9 @@
         },
         "Star": {
           "id": "Estrella"
+        },
+        "Year": {
+          "id": "Año"
         }
       }
     },
@@ -235,6 +260,9 @@
       "fields": {
         "Artist": {
           "id": "Artista"
+        },
+        "Year": {
+          "id": "Año"
         }
       }
     },
@@ -363,6 +391,13 @@
       "fields": {
         "banana": {
           "id": "plátano"
+        }
+      }
+    },
+    "global_happiness_raw": {
+      "fields": {
+        "Year": {
+          "id": "Año"
         }
       }
     },

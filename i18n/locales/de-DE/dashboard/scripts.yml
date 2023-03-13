@@ -4229,7 +4229,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
-        csa4-2023: {}
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa5-2023: {}
         csa6-2023: {}
         csa7-2023: {}
@@ -4397,3 +4402,24 @@ de:
         vpl-csd5-ayw-pilot-2022: {}
         vpl-csd6-ayw-pilot-2022: {}
         self-paced-pl-csa4-2023: {}
+        katies-playground: {}
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csc-timecapsule-2023: {}
+        vpl-csd7-ayw-pilot-2022: {}
+        vpl-csd8-ayw-pilot-2022: {}
+        csc-mappinglandmarks-2023: {}
+        blockchain-2023: {}
+        self-paced-pl-csc-2023: {}
+        csc-ecosystems-2023: {}
+        csc-adaptations-2023: {}

@@ -1422,6 +1422,44 @@
         },
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Használd ezt a ciklust, hogy összegyűjtsd az összes nektárt (vagy mézet) egy virágból (vagy méhsejtből)."
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "Milyen kódot kell beírnod ebbe a függvénybe?",
+          "courseF_bee_functions_challenge1_2": "Az \"nektár vagy méz ellenőrzése” függvényt felhasználhatod, ha átszerkeszted kicsit, hogy képes legyen több mézet is készíteni."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Ez a blokk lehetővé teszi, hogy a szereplőket áthelyezd a játéktér különböző részeire."
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "Milyen kódot kell beírnod ebbe a függvénybe?",
+          "courseF_bee_functions_challenge1_2": "Az \"nektár vagy méz ellenőrzése” függvényt felhasználhatod, ha átszerkeszted kicsit, hogy képes legyen több mézet is készíteni."
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "Kattints a \"szerkesztés” gombra a függvény frissítéséhez, hogy a magasság paramétert használja."
         }
       }
     }

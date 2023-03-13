@@ -4700,6 +4700,8 @@ pl:
           lessons:
             lesson-7:
               name: Wprowadzenie do Duszków
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -4959,6 +4961,8 @@ pl:
               name: 'Moduł 8 po pracy: Przygotowanie studentów do egzaminu AP'
             lesson-8:
               name: 'Moduł 8 po pracy: Przygotowanie studentów do egzaminu AP'
+            lesson-9:
+              name: Moduł X
           name: csa-draft-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
@@ -5124,10 +5128,30 @@ pl:
           title: Struktura klas i Projekt
         csa3-2023:
           lessons:
+            lesson-2:
+              name: Modyfikowanie elementów
             lesson-3:
               name: Pętle dla (for)
+            lesson-4:
+              name: Warunki wstępne i warunki końcowe
+            lesson-5:
+              name: Ulepszone dla pętli
+            lesson-6:
+              name: Zmienne statyczne i stałe
+            lesson-7:
+              name: Polimorfizm
+            lesson-8:
+              name: Algorytmy macierzowe
+            lesson-9:
+              name: Znajdowanie duplikatów
+            lesson-10:
+              name: Dane dla projektu dobra społecznego
             lesson-11:
               name: Praktyka FRQ
+            lesson-12:
+              name: Jednostka 3 Sprawdzian
+            lesson-13:
+              name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5138,6 +5162,40 @@ pl:
           name: csa3-2023
           title: Tablice i Algorytmy
         csa4-2023:
+          lessons:
+            lesson-2:
+              name: Projekt abstrakcyjnych danych sztuki
+            lesson-3:
+              name: BingoCaller FRQ
+            lesson-4:
+              name: Jednostka 4 Sprawdzian
+            lesson-1:
+              name: Projekt abstrakcyjnych danych sztuki [wersja 1-dniowa]
+            lesson-5:
+              name: Teatr
+            lesson-6:
+              name: Statyczne zmienne i metody
+            lesson-7:
+              name: Klasa matematyki
+            lesson-8:
+              name: Odcinanie i zaokrąglanie
+            lesson-10:
+              name: Aliasy obiektów i równość
+            lesson-11:
+              name: Zagnieżdżone instrukcje 'jeżeli'
+            lesson-12:
+              name: Operatory logiczne
+            lesson-13:
+              name: Prawa De Morgana
+            lesson-14:
+              name: Instrukcje wielokrotnego wyboru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa4-2023
           title: Warunki i Logika
         csa5-2023:
@@ -5317,6 +5375,8 @@ pl:
               name: Lekcja cząstek 4
             lesson-6:
               name: Testowanie Katie
+            lesson-7:
+              name: Funkcje labiryntu
           name: csd-playground
           title: Plac Zabaw CSP
         self-paced-pl-physical-computing1:
@@ -5350,15 +5410,18 @@ pl:
               display_name: Ankieta
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
           title: Internet ('21-'22)
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -5369,6 +5432,7 @@ pl:
               display_name: Funkcje
             csp_project:
               display_name: Projekt
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -5408,6 +5472,7 @@ pl:
               display_name: Biblioteki
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5435,6 +5500,7 @@ pl:
           student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
         self-paced-pl-csa3-2023:
           title: 'Moduł 3: Wsparcie przy programowaniu tekstowym'
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -5520,3 +5586,83 @@ pl:
               name: Badanie asynchronicznego programu nauczania
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia Informatyki wirtualny moduł 6
+        self-paced-pl-csa4-2023:
+          lessons:
+            lesson-1:
+              name: Tworzenie i stosowanie obiektów
+            lesson-2:
+              name: Odkrywanie klasy Painter
+          name: self-paced-pl-csd4-2023
+        katies-playground:
+          lessons:
+            lesson-1:
+              name: Pomysły FM
+          name: katies-playground
+          title: Miejsce Katie do robienia rzeczy
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: mikrobit-2022
+          title: Tworzenie aplikacji z urządzeniami (Micro:bit)
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: Wyświetlacz LED
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: mikrobit-temp
+          title: 'Micro: Bit Temp'
+        csc-timecapsule-2023:
+          name: csc-timecapsule-2023
+          title: Kapsuła czasu (2023)
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Planowanie na przyszły rok
+            lesson-4:
+              name: Bez konferencji
+            lesson-6:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd7-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 7
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Zobowiązanie się do sprawiedliwych praktyk dydaktycznych
+            lesson-4:
+              name: Łączenie się ze społecznością w przyszłości
+            lesson-6:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd8-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 8
+        csc-mappinglandmarks-2023:
+          name: csc-mappinglandmarks-2023
+          title: Mapowanie punktów orientacyjnych (2023)
+        blockchain-2023:
+          lessons:
+            lesson-1:
+              name: Przegląd Blockchain
+            lesson-2:
+              name: Zastosowane Blockchain i Bitcoin
+            lesson-3:
+              name: Poza walutami
+            lesson-4:
+              name: Wartość w Blockchain
+            lesson-5:
+              name: Wpływ społeczny
+          name: blockchain-2023
+          title: Blockchain
+          description: To jest jednostka na Blockchain!
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do uczenia Jednostki 1
+          title: Przygotowanie do uczenia Jednostki 1

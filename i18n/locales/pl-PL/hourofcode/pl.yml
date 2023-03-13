@@ -7792,8 +7792,7 @@ pl:
   tutorial_irobotphone_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_codeguppydraw_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: Wszystkie współczesne przeglądarki, tablet
-    z systemem Android, iPad
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip i  Circuit
@@ -10771,8 +10770,7 @@ pl:
   tutorial_microsoftforest_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Wszystkie współczesne przeglądarki
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_codeartportrait_string_platforms: Wszystkie współczesne przeglądarki, tablet
@@ -11790,8 +11788,7 @@ pl:
   tutorial_nasaorbit_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_nasapackage_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_nasalunar_string_platforms: Wszystkie współczesne przeglądarki, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: Wszystkie współczesne przeglądarki

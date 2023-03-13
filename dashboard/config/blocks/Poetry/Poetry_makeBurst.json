@@ -4,11 +4,7 @@
     "func": "makeBurst",
     "inline": true,
     "blockText": "create {EFFECT} effect with {NUM} {ANIMATION_NAME} sprites",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "args": [
       {
         "name": "NUM",

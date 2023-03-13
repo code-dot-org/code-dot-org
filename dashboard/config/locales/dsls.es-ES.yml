@@ -15403,9 +15403,9 @@ es-ES:
         description: Prueba estos nuevos bloques y desafíos con la entrada del ratón.
         display_name: Desafíos del Ratón
       CSD web mouse practice choice_2022:
-        description: Practica la entrada de teclado y el uso del bloque if/else con
-          estas actividades.
         display_name: Entrada de Ratón y Práctica de If/else
+        description: Practica la introducción de datos con el teclado y el uso de
+          sentencias condicionales con estas actividades.
       CSD web movement challenge choice_2022:
         description: Añade más a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
@@ -25926,8 +25926,7 @@ es-ES:
           Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
       CSD U3 - Interactive Card - ExampleChoice_2022:
         description: En los próximos niveles, completarás tu propia tarjeta interactiva.
-          Aquí tienes algunos ejemplos para darte algunas ideas. No olvides mirar
-          el código para ver cómo funcionan.
+          Aquí tienes algunos ejemplos para darte algunas ideas.
         display_name: Tu Tarjeta Interactiva
       Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
         teacher_markdown: |

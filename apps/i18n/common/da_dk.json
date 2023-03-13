@@ -688,6 +688,7 @@
   "projectTypeMinecraft": "Minecraft",
   "projectTypeMinecraftDesigner": "Minecraft Designer",
   "projectTypePlaylab": "Play Lab",
+  "projectTypeScience": "Videnskab",
   "projectTypeStarwars": "Star Wars",
   "projectTypeStarwarsBlocks": "Star Wars (Blocks)",
   "projectTypeSpriteLab": "SpriteLab",

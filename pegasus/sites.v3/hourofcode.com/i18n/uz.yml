@@ -101,7 +101,7 @@ uz:
     Code.org-ning birinchi zavqidan bahramand bo''ling sun''iy intellekt haqida ko''proq
     ma''lumot berish uchun yangi sayohatga qadam qo''ying. AI uchun "Okeanlar" faoliyatidan
     foydalanganda siz mashinada o''rganishning haqiqiy modellarini o''rgatasiz. [Qo''shimcha
-    ma''lumot] (# parda ortida). '
+    ma''lumot](#behind-the-scenes). '
   oceans_landing_teacher_resources: O'qituvchilar uchun resurslar
   oceans_landing_teacher_resources_desc: Axloqiy masalalarni o'rganayotganda, sun'iy
     intellektni, mashinada o'rganishni, o'qitish ma'lumotlarini va xolislikni o'rgatishda
@@ -553,8 +553,8 @@ uz:
     href='%{howto_guide_url}'> Qanday qo‘llanma </a> ni o‘qing. "
   signup_registration_not_required_markdown: Ishtirok etish uchun ro‘yxatdan o‘tishingiz
     shart emas! "Kodeks soati" tadbirlari yil davomida ishlaydi. [Harakatni sinab
-    ko‘ring] (% {hoc_activities_url}) yoki o‘zingizning sinfingiz uchun tadbir rejalashtirish
-    uchun [Qanday qo‘llanma] ni (% {howto_guide_url}) o‘qing. "
+    ko‘ring](%{hoc_activities_url}) yoki o‘zingizning sinfingiz uchun tadbir rejalashtirish
+    uchun [Qanday qo‘llanma](%{howto_guide_url})  ni o‘qing. "
   signup_registration_closed: Va har yili dekabr oyida sizning sinfingiz butun dunyo
     bo‘ylab millionlab talabalar bilan birgalikda "Informatika bo‘yicha ta'lim haftaligi"
     ni "Kod soati" bilan nishonlashi mumkin. Har yili o‘tkaziladigan bayram uchun
@@ -666,7 +666,7 @@ uz:
   map_warning: Tadbirlarning to‘liq ro‘yxatini <a href='%{events_url}'> tadbirlar
     sahifasida ko‘rish mumkin. </a> "
   map_warning_markdown: Tadbirlarning to‘liq ro‘yxatini [tadbirlar sahifasida ko‘rish
-    mumkin.](%{Events_url}) "
+    mumkin.](%{events_url}) "
   meta_tag_og_title: 'Dasturlash soati: Harakatga qo''shiling'
   meta_tag_og_description: Dasturlash soati - bu 180 dan ortiq mamlakatlarda va 45
     dan ortiq tillarda o‘n millionlab har xil yoshdagi talabalarni qamrab oluvchi
@@ -871,7 +871,7 @@ uz:
   hoc_faq_map_a_markdown: Tadbiringizni "Kodlar soati" xaritasida ko‘rmaganingizdan
     juda afsusdamiz. Ro‘yxatdan o‘tgan o‘n minglab tashkilotchilar tufayli xarita
     ma'lumotlarni birlashtiradi va bir nechta voqealar uchun bitta nuqtani ko‘rsatadi.
-    Agar siz xarita ostidagi [voqealar sahifasi] (% {events_url}) havolasini bosgan
+    Agar siz xarita ostidagi [voqealar sahifasi](%{events_url}) havolasini bosgan
     bo‘lsangiz, siz barcha tadbirlar ro‘yxatiga davlat bo‘yicha yo‘naltirilasiz va
     u erda o‘z voqeangizni topishingiz mumkin. Bundan tashqari, minglab odamlarning
     "Kodlar soati" ga yozilishini hisobga olsak, xaritani va voqealar ro‘yxatini yangilash
@@ -1126,7 +1126,7 @@ uz:
   learn_banner_beyond: O'rganishni davom ettirmoqchimisiz? <a id='learn_banner_beyond'>
     Bir soatdan keyinga </a>
   learn_banner_beyond_markdown: O‘qishni davom ettirmoqchimisiz? [Bir soatdan oshib
-    keting] (% {url}) "
+    keting](%{url}) "
   learn_banner_teachers: 'O‘qituvchilar: <a id=''teacher_banner_host''> Dasturlash
     soatini o‘tkazing </a> yoki <a id=''teacher_banner_howto''> Qo‘llanma bilan tanishib
     chiqing </a>'
@@ -7972,8 +7972,7 @@ uz:
   tutorial_irobotphone_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_codeguppydraw_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: Barcha zamonaviy brauzerlar, Android planshetlari,
-    iPad
+  tutorial_meeempathy_string_platforms: iPad, kompyuterlar (Windows PC, Mac)
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip va Circuit
@@ -11014,8 +11013,7 @@ uz:
   tutorial_microsoftforest_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Barcha zamonaviy brauzerlar
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: iPad, kompyuterlar (Windows PC, Mac)
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Barcha zamonaviy brauzerlar, Screen reader
   tutorial_codeartportrait_string_platforms: Barcha zamonaviy brauzerlar, Android
@@ -11981,8 +11979,7 @@ uz:
   tutorial_nasaorbit_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_nasapackage_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_nasalunar_string_platforms: Barcha zamonaviy brauzerlar, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: iPad, kompyuterlar (Windows PC, Mac)
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: Barcha zamonaviy brauzerlar

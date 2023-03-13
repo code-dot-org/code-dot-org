@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ theme: responsive
 
 在你開始Code.org的線上課程之前，請測試以下視訊的播放，以確保你準備就緒。
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 這是貫穿整個課程的播放機。 它將嘗試通過YouTube顯示視訊，如果YouTube被阻止，將使用我們的“後備”播放機顯示Code.org託管視訊。
 

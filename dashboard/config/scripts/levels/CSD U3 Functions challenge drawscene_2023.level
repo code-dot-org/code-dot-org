@@ -50,7 +50,9 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "setAnimation": null,
-      "rgb": null
+      "rgb": null,
+      "comment": null,
+      "comment_GameLab": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -93,11 +95,11 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
+    "validation_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "validation_enabled": "false"
+    ]
   },
   "game_id": 50,
   "published": true,
@@ -105,7 +107,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:11.571+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions challenge drawscene_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions challenge drawscene_2022\"},{\"changed_at\":\"2023-01-20 22:53:35 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:11.571+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions challenge drawscene_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions challenge drawscene_2022\"},{\"changed_at\":\"2023-01-20 22:53:35 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:23:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

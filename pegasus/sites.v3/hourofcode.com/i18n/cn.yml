@@ -5299,7 +5299,7 @@ cn:
   tutorial_irobotphone_string_platforms: 所有高版本浏览器
   tutorial_codeguppydraw_string_platforms: 所有高版本浏览器
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
+  tutorial_meeempathy_string_platforms: Windows、iPad、MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -8166,8 +8166,7 @@ cn:
   tutorial_microsoftforest_string_platforms: 所有高版本浏览器
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: 所有高版本浏览器
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows、iPad、MacOS
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: 所有高版本浏览器
   tutorial_codeartportrait_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
@@ -9111,8 +9110,7 @@ cn:
   tutorial_nasaorbit_string_platforms: 所有高版本浏览器
   tutorial_nasapackage_string_platforms: 所有高版本浏览器
   tutorial_nasalunar_string_platforms: 所有较新的浏览器，iPad，iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows、iPad、MacOS
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: 所有高版本浏览器

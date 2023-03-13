@@ -8269,9 +8269,15 @@ es:
             acciones mediante eventos. Los eventos se utilizan mucho en programación
             y deberían ser fáciles de reconocer después de esta lección.
         csc-things:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Papel de borrador
           name: csc-cosas
           title: CSC Descarga Mental
           description: 'Se trata de un trabajo en proceso :) '
+          lessons:
+            lesson-2:
+              name: cubierta del libro
         poetry-hoc2:
           name: poesía-hoc2
           title: Poesía HoC v2
@@ -8573,7 +8579,7 @@ es:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Exprés (2021)
+          title: Curso Exprés (2022)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -9511,6 +9517,10 @@ es:
           lessons:
             lesson-7:
               name: Introducción a los Sprites
+            lesson-8:
+              name: Informática Física PSP
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           name: csc-piloto-2022-ecosistemas
         csc-pilot-2022-timecapsule:
@@ -10032,6 +10042,12 @@ es:
             lesson-2:
               name: 'Trabajo posterior al Módulo 2: Entendiendo el contenido de la
                 Unidad 4'
+            lesson-4:
+              name: 'Módulo 4 post-trabajo: Arrays 2D en la Unidad 5 y FRQs'
+            lesson-5:
+              name: 'Módulo 5 post-trabajo: Proyecto de la Unidad 5'
+            lesson-6:
+              name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -10078,6 +10094,22 @@ es:
             lesson-2:
               name: 'Trabajo posterior del Módulo 3: El Teatro y los conjuntos de
                 datos de la Unidad 4'
+            lesson-3:
+              name: 'Módulo 4 post-trabajo: FRQs y Unidad 5'
+            lesson-4:
+              name: 'Módulo 5 post-trabajo: Proyecto de la Unidad 5'
+            lesson-5:
+              name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
+            lesson-6:
+              name: 'Módulo 7 post-trabajo: Proyecto de la Unidad 7'
+            lesson-7:
+              name: 'Módulo 8 post-trabajo: Preparando a los alumnos para el examen
+                AP'
+            lesson-8:
+              name: 'Módulo 8 post-trabajo: Preparando a los alumnos para el examen
+                AP'
+            lesson-9:
+              name: Módulo X
           name: csa-borrador-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
@@ -10290,12 +10322,48 @@ es:
             estrategias para las preguntas de opción múltiple y de respuesta libre.
         csa1-2023:
           lessons:
+            lesson-1:
+              name: Bienvenido a CSA
+            lesson-3:
+              name: Proyecto Arte en el Asfalto [Versión de 1 día]
             lesson-2:
               name: Laboratorio Java
+            lesson-4:
+              name: El Barrio
+            lesson-5:
+              name: Navegando y Pintando
             lesson-6:
               name: Bucles
+            lesson-7:
+              name: Herencia
             lesson-8:
               name: Métodos de escritura
+            lesson-9:
+              name: Estilo de Programación y Comentarios
+            lesson-10:
+              name: Sentencias de Selección
+            lesson-11:
+              name: Estrategias de Depuración
+            lesson-12:
+              name: Descomposición y Diseño
+            lesson-13:
+              name: Declaraciones de Selección Bidireccional
+            lesson-14:
+              name: Instanciación de Objetos
+            lesson-15:
+              name: Métodos con Parámetros
+            lesson-16:
+              name: Código Fuente Abierto
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 1
+            lesson-18:
+              name: Proyecto Arte en el Asfalto - Día 2
+            lesson-19:
+              name: Proyecto Arte en el Asfalto - Día 3
+            lesson-20:
+              name: Práctica FRQ
+            lesson-21:
+              name: Evaluación de la Unidad 1
           lesson_groups:
             lessonGroup-2:
               display_name: Encuesta
@@ -10314,6 +10382,8 @@ es:
               name: Variables
             lesson-9:
               name: Imprimiendo objetos
+            lesson-11:
+              name: Práctica FRQ
             lesson-12:
               name: Evaluación de la unidad 2
           lesson_groups:
@@ -10330,6 +10400,8 @@ es:
               name: Arrays Unidimensionales (1D)
             lesson-3:
               name: Bucles Para
+            lesson-11:
+              name: Práctica FRQ
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -10339,6 +10411,16 @@ es:
               display_name: Lecciones alternativas
           title: Arrays y Algoritmos
         csa4-2023:
+          lessons:
+            lesson-9:
+              name: Aleatorio
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Condiciones y Lógica
         csa5-2023:
           title: Arrays Bidimensionales
@@ -10956,3 +11038,73 @@ es:
               display_name: 'Parte 1: Sesión Sincrónica'
             lessonGroup-3:
               display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Contenido del Taller
+            lesson-1:
+              name: Apertura del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-2:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para Enseñar la Unidad 1
+          title: Preparación para Enseñar la Unidad 1
+          description: "Este módulo está diseñado para ayudarte a preparar la enseñanza
+            de unidades específicas dentro del curso Descubrimientos de la Informática.
+            \ Empieza seleccionando la unidad que planeas enseñar primero. Puedes
+            volver a esta sección de la formación a lo largo del curso escolar mientras
+            te preparas para enseñar nuevas unidades del curso. No es necesario completar
+            este contenido en orden. Para obtener orientación sobre la mejor manera
+            de implementar Descubrimientos de la Informática con los estudiantes,
+            consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para
+            cada unidad en Descubrimientos de la Informática, tendrás la oportunidad
+            de:**\n\n-   Prepararte para enseñar la primera semana del contenido de
+            la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-
+            \  Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar
+            los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+          student_description: "Este módulo está diseñado para ayudarte a preparar
+            la enseñanza de unidades específicas dentro del curso Descubrimientos
+            de la Informática.  Empieza seleccionando la unidad que planeas enseñar
+            primero. Puedes volver a esta sección de la formación a lo largo del curso
+            escolar mientras te preparas para enseñar nuevas unidades del curso. No
+            es necesario completar este contenido en orden. Para obtener orientación
+            sobre la mejor manera de implementar Descubrimientos de la Informática
+            con los estudiantes, consulta la [Guía de Implementación de Descubrimientos
+            de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la
+            Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar
+            la primera semana del contenido de la unidad \n-   Practicar los conceptos
+            clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo
+            de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo
+            sugerido:** 2 horas"

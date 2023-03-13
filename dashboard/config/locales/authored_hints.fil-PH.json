@@ -3318,6 +3318,12 @@
         },
         "courseC_artist_loops7a2022": {
           "courseC_artist_loops7a_a": "Ang bilog ay may 360 na digri. Multiplikahin ang digri ng iyong pag-ikot sa bilang ng iyong pag-ulit. Ito ba ay katumbas ng 360?\nSuriin ang mga iminungkahing pag-ikot upang makita na ito ay gumagana!\n\nIto ang mga halimbawa upang ikaw ay makapagsimula:\n\n-   Subukan ang 60 digri na pag-ikot nang 6 beses.\n-   Subukan ang 45 digri na pag-ikot nang 8 beses paikot.\n-   Subukan ang 30 digri na pag-ikot nang 12 beses paikot."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Upang makapagsalita ang sprite, ikonekta ang mga block ng code tulad nito:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Upang makapagsalita ang sprite, ikonekta ang mga block ng code tulad nito:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

@@ -381,7 +381,7 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where('ideal_level_source_id is null').
+    where(ideal_level_source_id: nil).
     to_a.reject {|level| level.try(:free_play)}
   end
 

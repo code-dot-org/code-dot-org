@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>全世界数千万学生和100万教师在使用 Code.org 的课程。</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## 历史
 
 2013 年，双胞胎兄弟 哈迪·帕托维 和 阿里·帕托维 推出了[宣传计算机科学的视频](https://www.youtube.com/watch?v=nKIu9yen5nc)，这标志着 Code.org 的成立。 这段视频在 YouTube 上保持了观看量第一一整天, 并且 1.5 万所学校向我们寻求帮助。 此后，我们从一个自食其力的志愿者队伍扩大到支持一个全球运动的完整组织。 我们认为，每个孩子都应该接受高质量的计算机科学教育，而不仅仅是少数幸运的孩子。
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## 我们做什么
 

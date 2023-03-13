@@ -113,7 +113,7 @@
         },
         "2-3 Artist Functions 10": {
           "big gear": {
-            "name": "menj és gyűjts nektárt"
+            "name": "nagy fogaskerék"
           },
           "small gear": {
             "name": "kis fogaskerék"
@@ -230,17 +230,17 @@
             "name": "rajzolj kört"
           },
           "draw goal": {
-            "name": "rajzold meg a célt"
+            "name": "rajzolj kaput"
           }
         },
         "4-5 Bee Conditionals 7": {
           "check purple flower": {
-            "name": "ellenőrizd lila virágot"
+            "name": "ellenőrizd a lila virágot"
           }
         },
         "4-5 Bee Conditionals 8": {
           "check flower make honey": {
-            "name": "nézd meg a virágot készíts mézet"
+            "name": "virágvizsgálat és mézkészítés"
           }
         },
         "4-5 Bee Conditionals Assessment 1": {
@@ -402,7 +402,7 @@
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "Course 4 Artist Functions challenge": {
@@ -410,7 +410,7 @@
             "name": "rajzolj egy sor négyzetet"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "Course 4 Bee Params 1": {
@@ -458,23 +458,27 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "Ugorj"
+            "name": "Ugorj",
+            "description": "A fő szereplő 100 képpontot ugrik felfelé."
           }
         },
         "Course 4 Play Lab Params 10": {
           "level_up": {
-            "name": "szintlépés"
+            "name": "level_up",
+            "description": "Növelje a szintet 1-gyel, állítsa vissza a pontokat 0-ra, növelje az ellenfél sebességét, és válasszon véletlenszerű hátteret."
           },
           "score_points": {
-            "name": "szerzett_pontok",
+            "name": "score_points",
             "parameters": {
               "points": "pontok"
-            }
+            },
+            "description": "Hozzáadja a kapott pontot a player_score változóhoz."
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "Ugorj"
+            "name": "Ugorj",
+            "description": "A fő szereplő `height` képpontnyit ugrik felfelé."
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -483,12 +487,14 @@
             "parameters": {
               "height": "magasság",
               "actor": "szereplő"
-            }
+            },
+            "description": "A megadott szereplő a megadott magasságra ugrik. "
           }
         },
         "Course 4 Play Lab Params 4": {
           "patrol": {
-            "name": "járőr"
+            "name": "járőr",
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -499,7 +505,8 @@
             "name": "járőr",
             "parameters": {
               "actor": "szereplő"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé"
           }
         },
         "Course 4 Play Lab Params 6": {
@@ -507,7 +514,8 @@
             "name": "járőr",
             "parameters": {
               "actor": "szereplő"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -516,7 +524,8 @@
             "parameters": {
               "actor": "szereplő",
               "speed": "sebesség"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -525,15 +534,17 @@
             "parameters": {
               "actor": "szereplő",
               "speed": "sebesség"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
-            "name": "szerzett_pontok",
+            "name": "score_points",
             "parameters": {
               "points": "pontok"
-            }
+            },
+            "description": "Hozzáadja a kapott pontot a player_score változóhoz."
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -554,7 +565,7 @@
             "name": "rajzolj egy sor hatszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "Course 4 SCF 1a": {
@@ -567,7 +578,7 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw octagons": {
             "name": "rajzolj nyolcszögeket"
@@ -578,7 +589,7 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -602,13 +613,15 @@
         },
         "FoodFight": {
           "level_up": {
-            "name": "szintlépés"
+            "name": "level_up",
+            "description": "Növelje a szintet 1-gyel, állítsa vissza a pontokat 0-ra, növelje az ellenfél sebességét, és válasszon véletlenszerű hátteret."
           },
           "score_points": {
-            "name": "szerzett_pontok",
+            "name": "score_points",
             "parameters": {
               "points": "pontok"
-            }
+            },
+            "description": "Hozzáadja a kapott pontot a player_score változóhoz."
           }
         },
         "Function intro Ryan": {
@@ -832,7 +845,7 @@
             "name": "rajzolj egy sor négyzetet"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -840,7 +853,7 @@
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -848,7 +861,7 @@
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -865,7 +878,7 @@
             "name": "rajzolj négyzetet 40"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1107,7 +1120,8 @@
             "parameters": {
               "actor": "szereplő",
               "speed": "sebesség"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "New Artist Project": {
@@ -1245,7 +1259,7 @@
             "name": "csinálj valamit"
           },
           "get 3 nectar or honey": {
-            "name": "gyűjts 3 nektárt és mézet"
+            "name": "szerezz 3 nektárt vagy mézet"
           }
         },
         "course3_bee_functions_challenge2": {
@@ -1253,12 +1267,12 @@
             "name": "csinálj valamit"
           },
           "move and collect": {
-            "name": "lépj és gyűjts"
+            "name": "menj és gyűjts"
           }
         },
         "course3_bee_functions_challenge3": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           },
           "row of nectar": {
             "name": "nektársor"
@@ -1269,7 +1283,7 @@
         },
         "course3_bee_functions_challenge4": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           },
           "row of nectar": {
             "name": "nektársor"
@@ -1338,7 +1352,7 @@
             "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -2657,7 +2671,7 @@
             "name": "csinálj valamit"
           },
           "get 3 nectar or honey": {
-            "name": "gyűjts 3 nektárt és mézet"
+            "name": "szerezz 3 nektárt vagy mézet"
           }
         },
         "courseE_bee_functions_challenge2": {
@@ -2665,7 +2679,7 @@
             "name": "csinálj valamit"
           },
           "move and collect": {
-            "name": "lépj és gyűjts"
+            "name": "menj és gyűjts"
           }
         },
         "courseE_farmer_concept1": {
@@ -3172,7 +3186,7 @@
             "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -3180,7 +3194,7 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -3197,7 +3211,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_for_challenge1": {
@@ -3232,7 +3246,7 @@
         },
         "courseF_bee_functions3a": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions4": {
@@ -3240,7 +3254,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions5a": {
@@ -3248,7 +3262,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions6": {
@@ -3282,7 +3296,7 @@
             "name": "nektárokSora"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions_challenge2": {
@@ -3293,7 +3307,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_fwp2": {

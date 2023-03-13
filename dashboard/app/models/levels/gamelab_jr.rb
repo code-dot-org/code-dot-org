@@ -35,10 +35,19 @@ class GamelabJr < Gamelab
     hide_pause_button
     blockly_variables
     instructions_icon
+    standalone_app_name
   )
 
   def shared_blocks
     Block.for(*block_pools.presence || type)
+  end
+
+  def self.standalone_app_names
+    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science']]
+  end
+
+  def standalone_app_name_or_default
+    return standalone_app_name || 'spritelab'
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -62,7 +71,8 @@ class GamelabJr < Gamelab
           all_animations_single_frame: true,
           use_modal_function_editor: true,
           mini_toolbox: false,
-          hide_pause_button: false
+          hide_pause_button: false,
+          standalone_app_name: 'spritelab'
         }
       )
     )

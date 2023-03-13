@@ -7,6 +7,8 @@ import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SUBMISSION_STATUSES = {
   UNSUBMITTED: 'unsubmitted',
@@ -122,19 +124,12 @@ export default class WorkshopEnrollment extends React.Component {
     );
   }
 
-  renderUnknownError() {
-    return (
-      <div>
-        <p>
-          Sorry, an error occurred and we were unable to enroll you in this
-          workshop. Please contact{' '}
-          <a href="mailto:support@code.org">support@code.org</a>.
-        </p>
-      </div>
-    );
-  }
-
   renderSuccess() {
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': this.props.workshop.regional_partner?.name,
+      'workshop course': this.props.workshop.course,
+      'workshop subject': this.props.workshop.subject
+    });
     return (
       <div>
         <h1>Thank you for registering</h1>
@@ -172,7 +167,19 @@ export default class WorkshopEnrollment extends React.Component {
 
   render() {
     switch (this.state.workshopEnrollmentStatus) {
-      case SUBMISSION_STATUSES.UNSUBMITTED:
+      case SUBMISSION_STATUSES.DUPLICATE:
+        return this.renderDuplicate();
+      case SUBMISSION_STATUSES.OWN:
+        return this.renderOwn();
+      case SUBMISSION_STATUSES.CLOSED:
+        return this.renderClosed();
+      case SUBMISSION_STATUSES.FULL:
+        return this.renderFull();
+      case SUBMISSION_STATUSES.NOT_FOUND:
+        return this.renderNotFound();
+      case SUBMISSION_STATUSES.SUCCESS:
+        return this.renderSuccess();
+      default:
         return (
           <div>
             <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
@@ -219,20 +226,6 @@ export default class WorkshopEnrollment extends React.Component {
             </div>
           </div>
         );
-      case SUBMISSION_STATUSES.DUPLICATE:
-        return this.renderDuplicate();
-      case SUBMISSION_STATUSES.OWN:
-        return this.renderOwn();
-      case SUBMISSION_STATUSES.CLOSED:
-        return this.renderClosed();
-      case SUBMISSION_STATUSES.FULL:
-        return this.renderFull();
-      case SUBMISSION_STATUSES.NOT_FOUND:
-        return this.renderNotFound();
-      case SUBMISSION_STATUSES.SUCCESS:
-        return this.renderSuccess();
-      default:
-        return this.renderUnknownError();
     }
   }
 }

@@ -18,6 +18,8 @@ import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLesson
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '../../../templates/FontAwesome';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -45,6 +47,8 @@ class UnitOverviewTopRow extends React.Component {
     courseVersionId: PropTypes.number,
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    courseLink: PropTypes.string,
+    participantAudience: PropTypes.string,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -59,6 +63,14 @@ class UnitOverviewTopRow extends React.Component {
     unitAllowsHiddenLessons: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired
+  };
+
+  logTryNowButtonClick = unitProgress => {
+    if (unitProgress === NOT_STARTED) {
+      analyticsReporter.sendEvent(EVENTS.TRY_NOW_BUTTON_CLICK_EVENT, {
+        'unit name': this.props.unitTitle
+      });
+    }
   };
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
@@ -128,7 +140,8 @@ class UnitOverviewTopRow extends React.Component {
       courseOfferingId,
       courseVersionId,
       isProfessionalLearningCourse,
-      publishedState
+      publishedState,
+      participantAudience
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -169,6 +182,7 @@ class UnitOverviewTopRow extends React.Component {
                 text={NEXT_BUTTON_TEXT[unitProgress]}
                 size={Button.ButtonSize.large}
                 style={{marginRight: 10}}
+                onClick={() => this.logTryNowButtonClick(unitProgress)}
               />
             )}
 
@@ -247,7 +261,9 @@ class UnitOverviewTopRow extends React.Component {
               courseVersionId={courseVersionId}
               scriptId={scriptId}
               forceReload={true}
-              buttonLocationAnalytics={'unit-overview-top'}
+              isOnCoursePage={false}
+              isStandAloneUnit={this.props.courseLink === null}
+              participantAudience={participantAudience}
             />
             {unitAllowsHiddenLessons && (
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />

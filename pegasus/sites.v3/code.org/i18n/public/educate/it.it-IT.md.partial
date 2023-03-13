@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ Utilizziamo [YouTube](https://www.youtube.com) per incorporare video su Code.org
 
 Prima d'iniziare i corsi online di Code.org, esegui il test di riproduzione per i video sottostanti, per assicurarti di essere pronto.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Questo è il lettore utilizzato in tutto il curriculum. Proverà a mostrare il video tramite YouTube e, se questo sito è bloccato, mostrerà il video Code.org utilizzando invece il nostro lettore "di riserva".
 

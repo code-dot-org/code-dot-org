@@ -7286,7 +7286,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -7297,7 +7297,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -7308,7 +7308,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - correct: true
@@ -7319,7 +7319,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -7388,32 +7388,44 @@ ko-KR:
         - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+          correct: true
+        - text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
       aiml-intro-pulse-survey-q1_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+          correct: true
+        - text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
       aiml-intro-pulse-survey-q2_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: AI와 머신 러닝에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모 AI 활동(예: 아워오브코드)을 해본 적이 있지만, 긴 수업은 이번이 처음입니다.'
+          correct: true
+        - text: 이미 AI 및 머신 러닝에 대한 수업을 들었거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 AI 및 머신 러닝과 관련하여 어떤 경험을 했나요?
       aiml-intro-pulse-survey-q2_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: AI와 머신 러닝에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모 AI 활동(예: 아워오브코드)을 해본 적이 있지만, 긴 수업은 이번이 처음입니다.'
+          correct: true
+        - text: 이미 AI 및 머신 러닝에 대한 수업을 들었거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 AI 및 머신 러닝과 관련하여 어떤 경험을 했나요?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -7424,7 +7436,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -7435,7 +7447,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -7446,7 +7458,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - correct: true
@@ -7457,7 +7469,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -12396,6 +12408,10 @@ ko-KR:
         - {}
       ml-club app-choice parent_2022:
         display_name: 앱 사용자 지정
+        teacher_markdown: |
+          **학생 지원: ** 다음의 레벨은 학생들이 이전 레슨에서 완료한 유사한 사용자 지정 레벨과 유사합니다. 학생들이 힘들어 하면 다음의 이전 강의를 참고해 보라고 하세요.
+          - 각 특징 별 복수의 화면 추가: [레슨 13 - 앱 커스터마이징] (../.. /13/levels/2)
+          - 결과 예측에 관한 복수의 화면 추가: [레슨 10 - 앱 랩에서 모델 카드] (../.. /10/levels/5)
       ml-intro app lab-book recommender 5_2022:
         display_name: 앱 사용자 지정
       naturally-better-at-cs:
@@ -13631,3 +13647,8 @@ ko-KR:
           feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
         questions:
         - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
+      Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
+        teacher_markdown: |
+          **교사 단원말 설문조사: ** 학생들이 설문조사를 완료하는 동안 간단한 교사 설문조사를 작성해 주시면 감사하겠습니다.
+
+          ## [교사 설문조사를 보려면 여기를 클릭하십시오] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)

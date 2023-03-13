@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ K začlenění videí do Code.org a do naší [online výukové platformy](http
 
 Než zahájíte online kurzy na Code.org, vyzkoušejte si přehrávání níže uvedeného videa, abyste se ujistili, zda máte připraveno vše potřebné.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Toto je přehrávač používaný v těchto výukových materiálech. Pokusí se zobrazit video přes YouTube, a jestliže bude YouTube zablokováno, zobrazí namísto něho video umístěné na serveru Code.org pomocí našeho „náhradního“ prohlížeče.
 

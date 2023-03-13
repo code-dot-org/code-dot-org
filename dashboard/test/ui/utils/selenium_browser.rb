@@ -5,11 +5,12 @@ module SeleniumBrowser
   def self.local(headless=true, browser=:chrome)
     browser = browser.to_sym
     options = {}
-    if browser == :chrome
+    case browser
+    when :chrome
       options[:options] = Selenium::WebDriver::Chrome::Options.new
       options[:options].add_argument('headless') if headless
       options[:options].add_argument('window-size=1280,1024')
-    elsif browser == :firefox
+    when :firefox
       options[:options] = Selenium::WebDriver::Firefox::Options.new
       options[:options].headless! if headless
       options[:options].add_argument('window-size=1280,1024')

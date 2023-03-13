@@ -23,6 +23,12 @@ export class MicrobitStubBoard {
     this.myPort = true;
   }
 
+  /**
+   * @param {number} pin
+   * @param {number} modeConstant
+   */
+  pinMode(pin, modeConstant) {}
+
   setPinMode(pinNum, mode) {}
 
   digitalWrite(pinNum, value) {}
@@ -74,6 +80,10 @@ export class MicrobitStubBoard {
   stopStreamingAnalogChannel(channel) {}
 
   setDigitalOutput(pin, value) {}
+
+  getBoardClientWithoutPort() {
+    return {};
+  }
 
   disconnect() {}
 

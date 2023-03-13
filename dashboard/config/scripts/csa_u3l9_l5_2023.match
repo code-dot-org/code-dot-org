@@ -3,14 +3,14 @@ title 'Check for Understanding'
 description 'Match each term to its correct definition.'
 height '100'
 
-question 'Question'
-answer 'Answer'
+question 'polymorphism'
+answer 'where the same object or method has more than one form'
 
-question 'Question'
-answer 'Answer'
+question 'postcondition'
+answer 'a condition that must always be true just after the execution of a code segment'
 
-question 'Question'
-answer 'Answer'
+question 'precondition'
+answer 'a condition that must always be true just before the execution of a code segment'
 
-question 'Question'
-answer 'Answer'
+question 'loop control variable'
+answer 'a variable that is changed by a constant value and determines the end of a loop'

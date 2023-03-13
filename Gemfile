@@ -15,7 +15,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '6.0.6'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -155,8 +155,6 @@ gem 'cancancan', '~> 3.1.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/instructure/ims-lti/pull/90
-gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
 gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
 gem 'omniauth-facebook', '~> 4.0.0'
@@ -271,7 +269,7 @@ gem 'daemons'
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
-gem 'oj'
+gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 
@@ -338,9 +336,6 @@ gem 'scenic'
 gem 'scenic-mysql_adapter'
 
 gem 'colorize'
-
-gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
-gem 'hammerspace'
 
 gem 'require_all', require: false
 

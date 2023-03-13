@@ -5,6 +5,8 @@ bg:
       Actions: Действия
       Advanced: Разширено
       Behaviors: Поведения
+      'Behaviors ': 'Поведения '
+      Boolean: Булеви
       Brushes: Четки
       Category: Категория
       Color: Цвят
@@ -13,6 +15,7 @@ bg:
       Conditionals: Условия
       Dancers: Танцьори
       Default: По подразбиране
+      Effects: Ефекти
       Events: Събития
       Functions: Функции
       'Functions ': 'Функции '
@@ -26,9 +29,13 @@ bg:
       Logic: Логика
       Loops: Повторения
       Math: Математика
+      Number: Число
       Numbers: Числа
+      Picker: Избор
+      Prebuilt: Предварително създадени
       Properties: Свойства
       Sprites: Спрайт
+      String: Низ
       Text: Текст
       Variables: Променливи
       'Variables ': 'Променливи '

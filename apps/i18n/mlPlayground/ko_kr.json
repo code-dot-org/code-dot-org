@@ -6,12 +6,18 @@
   "saveProgress": "저장",
   "correctAnswer": "정답",
   "incorrectAnswer": "틀림",
+  "potentialMisusesLabel": "제한 및 경고",
+  "modelCardLimitations": "제한 및 경고",
+  "modelCardLabel": "라벨",
   "modelCardPossibleValuesMinimum": "최소",
   "modelCardPossibleValuesMaximum": "최대",
+  "modelCardFeatures": "특징",
   "columnInspectorDescription": "설명",
   "columnDetailsMinimumValue": "최소",
   "columnDetailsMaximumValue": "최대",
   "dataCardLastUpdated": "최종 수정일",
+  "trainModelHeading": "교육",
+  "resultsTableFeatureHeader": "특징",
   "predictButton": "예측",
   "datasets": {
     "medical_priority": {
@@ -19,7 +25,8 @@
         "age": {
           "id": "나이"
         }
-      }
+      },
+      "name": "의료 우선순위"
     },
     "shoe_survey_toy": {
       "fields": {

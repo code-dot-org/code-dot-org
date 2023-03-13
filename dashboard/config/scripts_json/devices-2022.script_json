@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2023-01-13 19:50:12 UTC",
+    "serialized_at": "2023-02-28 23:03:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1551,7 +1551,7 @@
       "key": "1569750d-8f61-439c-b312-690b49608d34",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). The module is designed to take 2 hours to complete. No previous experience with coding or physical computing is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -3046,13 +3046,7 @@
       "position": 5,
       "properties": {
         "name": "Code Studio",
-        "progression_name": "Field Collector App",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Viewing Exemplars:** The last level in this sequence includes 3 exemplar projects in the \"For Teachers Only\" section of the level. Because these project use the Circuit Playground, they need to be run in the Maker App on Windows and Mac computers. If you'd like to see these examples working with a circuit playground, we recommend visiting these levels and clicking the links within the Maker App rather than viewing them from the lesson plan."
-          }
-        ]
+        "progression_name": "Field Collector App"
       },
       "seeding_key": {
         "activity_section.key": "1405b5a9-c4d7-4ff3-8b74-37313bc28402",

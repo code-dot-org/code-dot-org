@@ -7147,7 +7147,7 @@
         },
         "562abbaf-9fb5-42a3-8451-6dd77ea03954": {
           "name": "Analýza aplikácie (Výber oblečenia)",
-          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania. Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
         },
         "f4a0fbbd-2d29-4de8-b325-f08c12c9abcf": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
@@ -7998,7 +7998,7 @@
         },
         "75801e87-9bc4-4934-ad31-2eae1c5452db": {
           "name": "Denník",
-          "description": "**Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
+          "description": "**Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
         },
         "1abfbbcd-8efd-43b2-9138-3825b3d1bad5": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa podelili o svoje nápady.",
@@ -8008,7 +8008,7 @@
         },
         "0203d927-d4fc-4ad3-bb45-86960035eae3": {
           "name": "Vstup-výstup-ukladanie-spracovanie",
-          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíte vstup, výstup, ukladanie a spracovanie v Game Labe?"
+          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíš vstup, výstup, ukladanie a spracovanie v Game Labe?"
         },
         "de1129c2-dd57-441d-8703-cfad937ab506": {
           "description": "\\*\\* Diskutujte:\\*\\* Umožnite žiakom, aby sa podelili o svoje odpovede.",
@@ -8020,7 +8020,7 @@
           "description": "Dnes sa zameriame na ukladanie. Pozrieme sa na premenné, ktoré sú pre počítače veľmi bežným spôsobom ukladania informácií v programe."
         },
         "649425e6-b789-4125-aed7-3f20cfdf8ce3": {
-          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?**"
+          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?**"
         },
         "e7468f3b-3e70-492a-9749-a45d6df1c3f7": {
           "name": "Programovanie s premennými",
@@ -8062,7 +8062,7 @@
         },
         "a941f6f3-3bda-4a2b-abcd-6f302ebaa80a": {
           "name": "Reflexia",
-          "description": "\\*\\*Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?"
+          "description": "\\*\\*Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?"
         },
         "e651c11f-635c-442f-a480-19faf1ce4c52": {
           "description": "**Spýtajte sa:** Položte žiakom nasledujúce otázky:",
@@ -12242,7 +12242,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Čo nové ste sa dnes dozvedeli o strojovom učení? Akú novú otázku máte o strojovom učení?_\n\nPožiadajte žiakov, aby si vybrali jednu z nich a podelili sa s vami o ňu pri odchode z triedy alebo aby svoje odpovede napísali na lístok, ktorý môžete vystaviť v triede. Ak je to možné, sledujte tieto body počas celého tematického celku a vráťte sa k nim na ďalších hodinách, keď sa nimi budete zaoberať."
         },
         "7077c8e1-5038-47f2-b105-0382592d319d": {
-          "name": "Zapíšte si do zápisníka",
+          "name": "Zapíšte si do denníka",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Premýšľajte o zručnosti, ktorú bežne používate, napríklad rozprávanie, zaväzovanie topánok, varenie alebo hranie hier. Ako ste sa túto zručnosť naučili?_\n\nDajte žiakom minútu alebo dve na napísanie odpovedí a potom požiadajte dobrovoľníkov, aby sa o svoje nápady podelili s triedou. Kým budú žiaci hovoriť, zapisujte na tabuľu témy, ktoré sa objavia."
         },
         "9c2d4592-3cae-43c0-aa8a-55be8e4ac0f6": {
@@ -13452,7 +13452,7 @@
           "progression_name": "Reflexia"
         },
         "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2": {
-          "description": "Táto lekcia je prvou zo série piatich lekcií, ktoré žiakom pomôžu pripraviť sa na dokončenie záverečného projektu v rámci tohto tematického celku. Úlohy, ktoré žiaci riešia tento týždeň, sú totožné s úlohami, ktoré budú riešiť v rámci projektu. Preto môže byť užitočné prečítať si sprievodcu záverečným projektom, aby ste videli, ako jednotlivé lekcie súvisia so záverečným projektom – [kliknutím sem získate prístup k plánu lekcií pre záverečný projekt](../21).\n\nŽiaci budú v priebehu tohto týždňa vytvárať aj vlastné prieskumy pomocou Formulárov Google. To si vyžaduje, aby žiaci mali účet Google. Ak vaši žiaci nemajú účet Google, zvážte, či jeho vytvorenie nezaradíte do dnešnej alebo zajtrajšej vyučovacej hodiny."
+          "description": "Táto lekcia je prvou zo série piatich lekcií, ktoré žiakom pomôžu pripraviť sa na dokončenie záverečného projektu v rámci tohto tematického celku. Úlohy, ktoré žiaci riešia tento týždeň, sú totožné s úlohami, ktoré budú riešiť v rámci projektu. Preto môže byť užitočné prečítať si sprievodcu záverečným projektom, aby ste videli, ako jednotlivé lekcie súvisia so záverečným projektom – [kliknutím sem získate prístup k plánu lekcií pre záverečný projekt](./21).\n\nŽiaci budú v priebehu tohto týždňa vytvárať aj vlastné prieskumy pomocou Formulárov Google. To si vyžaduje, aby žiaci mali účet Google. Ak vaši žiaci nemajú účet Google, zvážte, či jeho vytvorenie nezaradíte do dnešnej alebo zajtrajšej vyučovacej hodiny."
         },
         "097848dd-29f1-4682-a7a3-ba8b76d537ec": {
           "name": "Denník",
@@ -23108,7 +23108,7 @@
           "description": "Našli ste preklep? Boli niektoré pokyny nejasné? Máte návrh, ako zlepšiť chod tejto lekcie? **Radi si ich vypočujeme!** Použite odkazy nižšie a poskytnite nám spätnú väzbu k tejto lekcii.\n\n-   [\\*\\*Nahlásiť preklep / chybu / nejasné pokyny\\*\\*](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%201%20studio.code.org/s/aiml-2021/lessons/1)\n-   [\\*\\*Všeobecná spätná väzba k lekcii\\*\\*](https://docs.google.com/forms/d/e/1FAIpQLSfb7oK-vvnMV2nRlN7h_xp8-P-KGuBxb8iOhmqDrUwZkNBdWg/viewform?usp=sf_link)"
         },
         "2ec7a348-a9d4-4ce7-942e-98fc411303bd": {
-          "name": "Zapíšte si do zápisníka",
+          "name": "Zapíšte si do denníka",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Premýšľajte o zručnosti, ktorú bežne používate, napríklad rozprávanie, zaväzovanie topánok, varenie alebo hranie hier. Ako ste sa túto zručnosť naučili?_\n\nDajte žiakom minútu alebo dve na napísanie odpovedí a potom požiadajte dobrovoľníkov, aby sa o svoje nápady podelili s triedou. Kým budú žiaci hovoriť, zapisujte na tabuľu témy, ktoré sa objavia."
         },
         "f895faf7-ea01-42c7-a485-35e30336038d": {
@@ -26759,7 +26759,7 @@
         },
         "0e7890f7-6b15-4d74-9d06-39410d94914b": {
           "name": "Denník",
-          "description": "**Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
+          "description": "**Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
         },
         "5485407f-b2b9-433e-86a4-6da5afa523f5": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa podelili o svoje nápady.",
@@ -26772,7 +26772,7 @@
         },
         "27e5fe37-7e3b-413e-bb0b-cb4b922db45c": {
           "name": "Vstup-výstup-ukladanie-spracovanie",
-          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíte vstup, výstup, ukladanie a spracovanie v Game Labe?"
+          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíš vstup, výstup, ukladanie a spracovanie v Game Labe?"
         },
         "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
           "description": "\\*\\* Diskutujte:\\*\\* Umožnite žiakom, aby sa podelili o svoje odpovede.",
@@ -26784,7 +26784,7 @@
           "description": "Dnes sa zameriame na ukladanie. Pozrieme sa na premenné, ktoré sú pre počítače veľmi bežným spôsobom ukladania informácií v programe."
         },
         "6bec70d1-36d5-4956-8a4b-64c8af7fd911": {
-          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?**"
+          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?**"
         },
         "bf59eb2b-defb-469f-b80f-f6583ba14219": {
           "name": "Programovanie s premennými",
@@ -26820,7 +26820,7 @@
         },
         "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
           "name": "Reflexia",
-          "description": "\\*\\*Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?"
+          "description": "\\*\\*Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?"
         },
         "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
           "description": "**Spýtajte sa:** Položte žiakom nasledujúce otázky:",
@@ -28709,7 +28709,7 @@
         },
         "49fca890-c067-42b3-9982-6a30352b21d3": {
           "name": "Analýza aplikácie (Výber oblečenia)",
-          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania. Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
         },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",

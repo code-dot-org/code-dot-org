@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -101,7 +101,7 @@ Hour of CodeとCS Fundamentalsは携帯電話でも受講可能です。 これ�
 
 Code.orgのオンラインコースの開始前に、以下のビデオを再生して、準備が整っていることをご確認ください。
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 これはカリキュラム全体で使われるプレーヤーです。 YouTubeでビデオを表示しようとしたときにYouTubeがブロックされている場合は、代わりに「代替の」プレーヤーを使ってCode.orgで掲載されているビデオを表示します。
 

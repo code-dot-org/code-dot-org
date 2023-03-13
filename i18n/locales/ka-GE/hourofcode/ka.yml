@@ -7503,8 +7503,8 @@ ka:
   tutorial_irobotphone_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codeguppydraw_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
-    iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -9574,7 +9574,8 @@ ka:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_rpisensehat_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: უსადენო
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
@@ -10415,8 +10416,8 @@ ka:
   tutorial_microsoftforest_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_codeartportrait_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
@@ -11382,8 +11383,8 @@ ka:
   tutorial_nasaorbit_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_nasapackage_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_nasalunar_string_platforms: ყველა თანამედროვე ბრაუზერი, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: ყველა თანამედროვე ბრაუზერი
