@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-03-09 17:19:06 UTC",
+    "serialized_at": "2023-03-10 16:25:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -53,7 +53,7 @@
     },
     {
       "key": "Writing My Time Capsule Poem",
-      "name": "Writing My Time Capsule Poem",
+      "name": "Writing My Poem",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -644,30 +644,6 @@
       }
     },
     {
-      "key": "e9e07397-8c58-4a56-8dee-ee04714d2897",
-      "position": 9,
-      "properties": {
-        "description": "See below:",
-        "name": "[TESTING]"
-      },
-      "seeding_key": {
-        "activity_section.key": "e9e07397-8c58-4a56-8dee-ee04714d2897",
-        "lesson_activity.key": "e9cbffab-836c-44c6-91e3-fe51eb49cd13"
-      }
-    },
-    {
-      "key": "3a29a4ec-d4a0-46fa-9008-9fe45dab6dc3",
-      "position": 10,
-      "properties": {
-        "description": "This lesson is designed for students to write a time capsule from their own point of view, and can easily be adapted for students to write from another’s perspective. You may choose to have students write a time capsule from the point of view of a local or national historical figure, another student their own age living in a different region, or a character from a book. We encourage you to choose the option that aligns best with your content area standards.",
-        "name": "[Optional] Extension Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "3a29a4ec-d4a0-46fa-9008-9fe45dab6dc3",
-        "lesson_activity.key": "e9cbffab-836c-44c6-91e3-fe51eb49cd13"
-      }
-    },
-    {
       "key": "2522adc1-9ff5-4d94-a789-85795f238c16",
       "position": 1,
       "properties": {
@@ -1135,6 +1111,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1157,6 +1136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1_2023"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -1179,6 +1161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1201,6 +1186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1223,6 +1211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2_2023"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -1245,6 +1236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1267,6 +1261,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1289,6 +1286,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1311,6 +1311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1333,6 +1336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_markdown_lesson_2_poetry"
+        ],
         "progression": "Unplugged Activity"
       },
       "bonus": false,
@@ -1355,6 +1361,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_pause_2023"
+        ],
         "progression": "Pause"
       },
       "bonus": false,
@@ -1377,6 +1386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_addline_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1399,6 +1411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_poetry_l3_finish up_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1421,6 +1436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_share_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1443,6 +1461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_modeling_exemple_2023"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -1656,39 +1677,16 @@
       }
     },
     {
-      "name": "Coding with Poetry Lesson 1",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
+      "name": "Coding with Poetry",
+      "url": "https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview",
       "key": "coding_with_poetry_lesson_1",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "coding_with_poetry_lesson_1"
-      }
-    },
-    {
-      "name": "Coding with Poetry Lesson 2",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_2"
-      }
-    },
-    {
-      "name": "Coding with Poetry Lesson 7",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_7",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_7"
       }
     },
     {
@@ -1765,19 +1763,6 @@
       }
     },
     {
-      "name": "Time Capsule",
-      "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
-      "key": "time_capsule",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/export/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "time_capsule"
-      }
-    },
-    {
       "name": "Time Capsule Rubric",
       "url": "https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview",
       "key": "time_capsule_rubric",
@@ -1790,27 +1775,15 @@
       }
     },
     {
-      "name": "Write Your Own Time Capsule Poem - Question Grab Bag",
-      "url": "https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview",
-      "key": "write_your_own_time_capsule_poem_-_question_grab_bag",
+      "name": "Write Your Own Poem",
+      "url": "https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview",
+      "key": "write_your_own_poem",
       "properties": {
         "audience": "Student",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "write_your_own_time_capsule_poem_-_question_grab_bag"
-      }
-    },
-    {
-      "name": "Write Your Own Time Capsule Poem - Sentence Stems",
-      "url": "https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview",
-      "key": "write_your_own_time_capsule_poem_-_sentence_stems",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "write_your_own_time_capsule_poem_-_sentence_stems"
+        "resource.key": "write_your_own_poem"
       }
     }
   ],
@@ -1818,7 +1791,7 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Own Poem",
-        "resource.key": "coding_with_poetry_lesson_2"
+        "resource.key": "coding_with_poetry_lesson_1"
       }
     },
     {
@@ -1860,7 +1833,7 @@
     {
       "seeding_key": {
         "lesson.key": "Poetry Circle",
-        "resource.key": "coding_with_poetry_lesson_7"
+        "resource.key": "coding_with_poetry_lesson_1"
       }
     },
     {
@@ -1872,13 +1845,13 @@
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "resource.key": "helpful_hints"
+        "resource.key": "coding_with_poetry_lesson_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "resource.key": "time_capsule"
+        "resource.key": "helpful_hints"
       }
     },
     {
@@ -1890,13 +1863,7 @@
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "resource.key": "write_your_own_time_capsule_poem_-_question_grab_bag"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing My Time Capsule Poem",
-        "resource.key": "write_your_own_time_capsule_poem_-_sentence_stems"
+        "resource.key": "write_your_own_poem"
       }
     }
   ],
