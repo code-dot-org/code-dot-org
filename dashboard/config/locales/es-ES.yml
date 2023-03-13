@@ -5,23 +5,23 @@ es:
       not_saved: 'Corrige los siguientes errores:'
       too_young: Este contenido tiene restricciones de edad y no está disponible para
         los alumnos más jóvenes.
-      teacher_must_accept_terms: Este contenido tiene restricciones de edad establecidas
-        y no está disponible para estudiantes jóvenes. Pídele a tu docente que acepte
-        los Términos de Servicio actualizados para darte acceso a este contenido.
-        Para hacerlo, puede iniciar sesión en Code Studio y hacer clic en el botón
-        "Revisar términos actualizados" cerca de la parte superior de la página de
-        inicio de Code Studio.
-      pair_programmer: En este momento, estás programando de a pares con un estudiante
-        que no tiene acceso a este contenido. Para acceder a este contenido, detén
-        la programación en pareja e inténtalo nuevamente.
+      teacher_must_accept_terms: Este contenido tiene restricciones de edad y no está
+        disponible para los alumnos más jóvenes. Pide a tu profesor que acepte las
+        Condiciones del servicio actualizadas para poder acceder a este contenido.
+        Para ello, inicia sesión en Code Studio y pulsa el botón "Revisar las condiciones
+        actualizadas" situado en la parte superior de la página de inicio de Code
+        Studio.
+      pair_programmer: En este momento estás programando por parejas con un alumno
+        que no tiene acceso a este contenido. Para acceder a este contenido, deja
+        de programar por parejas e inténtalo de nuevo.
   activerecord:
     errors:
       models:
         user:
           attributes:
             reset_password_token:
-              invalid: no es válido. Ten en cuenta que cada enlace sólo se puede utilizar
-                una vez para restablecer la contraseña y sólo funcionará el enlace
+              invalid: no es válido. Ten en cuenta que cada enlace sólo puede utilizarse
+                una vez para restablecer tu contraseña, y sólo funcionará el enlace
                 enviado más recientemente.
       messages:
         blank: es requerido
@@ -329,6 +329,7 @@ es:
   teacher_mailer:
     new_teacher_subject: "¡Bienvenido a Code.org!"
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
+    verified_teacher_subject: Verificación de Profesores de Code.org - Satisfactorio
   section:
     your_section:
       one: 'Tu sección:'
@@ -449,6 +450,7 @@ es:
       help_us: Ayudenos
       teach: Enseñar
       about: Acerca de
+      incubator: Incubadora
       legal: Privacidad y Legalidad
       legal_privacy: Política de Privacidad
       legal_cookie_notice: Aviso de Cookies
@@ -760,6 +762,7 @@ es:
     store: Tienda
     cookie_notice: Aviso de Cookies
     view_code: Ver Código
+    locale_select: Seleccionar idioma
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos vídeos y sugerencias
@@ -793,6 +796,11 @@ es:
       weblab_unsupported_locale_storage: Puedes experimentar problemas con el Laboratorio
         web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto
         en modo normal. Disculpa las molestias.
+  deprecation:
+    algebra_lab: 'El plan de estudios y los contenidos de Informática en Álgebra están
+      quedando obsoletos.  En los próximos meses, este laboratorio dejará de estar
+      disponible.  En su lugar, consulta [Bootstrap: Algebra](%{bootstrap_algebra_url}).
+      [Más información](%{cs_algebra_url}).'
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intenta volver a cargar la página
   next_stage: "¡Acabado! Sigue a la siguiente etapa"
@@ -837,8 +845,18 @@ es:
         funcione, y luego comparte tu aplicación en cuestión de segundos.
       audience: Desde 13 años
       cta: Aprende cómo
+      image_alt: Un conejito morado con una mochila propulsada por cohetes.
+    applab-intro:
+      image_alt: Una mano golpea el centro de la pantalla de un smartphone. De la
+        pantalla salen luces y destellos.
     aquatic:
       title: Minecraft
+      image_alt: Steve y Alex de Minecraft te están mirando.
+    artist:
+      image_alt: La caricatura de una persona sosteniendo un enorme lápiz y dibujando
+        un triángulo.
+    conditionals:
+      image_alt: Dos manos barajando un mazo de cartas.
     dance-2019:
       title: Fiesta de Baile
     dance:

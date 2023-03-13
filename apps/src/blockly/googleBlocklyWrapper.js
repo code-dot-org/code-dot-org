@@ -25,7 +25,17 @@ import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
 import CdoHighContrastTheme from './themes/cdoHighContrast';
-import MusicLabTheme from './themes/musicLabDark';
+import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
+import {
+  CdoProtanopiaTheme,
+  CdoDeuteranopiaTheme,
+  CdoTritanopiaTheme
+} from './themes/cdoAccessibleThemes';
+import {
+  CdoProtanopiaDarkTheme,
+  CdoDeuteranopiaDarkTheme,
+  CdoTritanopiaDarkTheme
+} from './themes/cdoAccessibleDarkThemes';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -294,7 +304,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.MODERN]: CdoTheme,
     [Themes.DARK]: CdoDarkTheme,
     [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
-    [Themes.MUSICLAB_DARK]: MusicLabTheme
+    [Themes.HIGH_CONTRAST_DARK]: CdoHighContrastDarkTheme,
+    [Themes.PROTANOPIA]: CdoProtanopiaTheme,
+    [Themes.PROTANOPIA_DARK]: CdoProtanopiaDarkTheme,
+    [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
+    [Themes.DEUTERANOPIA_DARK]: CdoDeuteranopiaDarkTheme,
+    [Themes.TRITANOPIA]: CdoTritanopiaTheme,
+    [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
@@ -558,7 +574,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     };
     // Users can change their active theme using the context menu. Use this setting, if present.
     // Music Lab doesn't look good without its custom theme, so we prevent others from being used.
-    if (localStorage.blocklyTheme && options.theme.name !== 'musiclabdark') {
+    if (localStorage.blocklyTheme) {
       options.theme = this.themes[localStorage.blocklyTheme] || options.theme;
     }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout

@@ -62,18 +62,6 @@ class SchoolTest < ActiveSupport::TestCase
     end
   end
 
-  test 'reload_state_cs_offerings' do
-    school = create :school
-    state_cs_offering = create :state_cs_offering
-    state_cs_offering_collection = Census::StateCsOffering.where(state_school_id: state_cs_offering.state_school_id)
-
-    assert school.state_cs_offering.empty?
-    reloaded_state_cs_offerings = school.load_state_cs_offerings(state_cs_offering_collection, false)
-
-    assert_equal state_cs_offering_collection.pluck(:course, :school_year),
-      reloaded_state_cs_offerings.pluck(:course, :school_year)
-  end
-
   test 'null state_school_id is valid' do
     school = build :school, :without_state_school_id
     assert school.valid?, school.errors.full_messages
@@ -295,12 +283,7 @@ class SchoolTest < ActiveSupport::TestCase
   def clear_schools_and_dependent_models
     # Clear tables with hard dependencies (ie, MySQL foreign keys)
     # on the schools table.
-    Census::ApSchoolCode.delete_all
-    Census::IbSchoolCode.delete_all
-    Census::CensusOverride.delete_all
     Census::CensusSummary.delete_all
-    Census::OtherCurriculumOffering.delete_all
-    Census::StateCsOffering.delete_all
     SchoolInfo.delete_all
     SchoolStatsByYear.delete_all
     CircuitPlaygroundDiscountApplication.delete_all

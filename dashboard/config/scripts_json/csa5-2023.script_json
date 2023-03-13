@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-07 12:46:00 UTC",
+    "serialized_at": "2023-03-10 20:26:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,25 +26,1194 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Personal Narrative Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Two-Dimensional (2D) Arrays",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "2D Array Elements",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Row-Major Traversal",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Column-Major Traversal",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Enhanced For Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Images in The Theater",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "2D Array Algorithms",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Modifying Images",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Impacts of Programs",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Personal Narrative Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "GrayscaleImage FRQ",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-frq-practice/36347/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Unit 5 Assessment",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Personal Narrative Project [1-Day Version]",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c38795b1-a79a-47c4-bf34-e5297a774a98",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c38795b1-a79a-47c4-bf34-e5297a774a98",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "309ea15e-2296-449a-8226-dc3c677188f2",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "bf1641ad-014d-4f95-a0a6-5e8a361b55a7",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf1641ad-014d-4f95-a0a6-5e8a361b55a7",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "194c09fe-fca8-4685-92ef-049516894a44",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "5666db3c-ef23-416a-a500-1530ecb006df",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5666db3c-ef23-416a-a500-1530ecb006df",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "66286627-a9af-443e-a823-f5b49ce3ab1e",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66286627-a9af-443e-a823-f5b49ce3ab1e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "12f2ef75-e3ed-4f2b-9c25-8c8c260dc0a5",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12f2ef75-e3ed-4f2b-9c25-8c8c260dc0a5",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "9828ce90-6363-4b8a-a44f-26b8a31c3684",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9828ce90-6363-4b8a-a44f-26b8a31c3684",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "4eb19ac6-5622-47b0-bfa8-0dac5d2e0241",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing and uploading images and creating a new image filter or image manipulation algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Abstract Data Art Project 1-Day Lesson Plan**](https://studio.code.org/s/csa5-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "4eb19ac6-5622-47b0-bfa8-0dac5d2e0241",
+        "lesson_activity.key": "c38795b1-a79a-47c4-bf34-e5297a774a98"
+      }
+    },
+    {
+      "key": "f7812dc5-7926-4d3f-bc97-cb2cfb1d47b9",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of image filters, collages, and animations throughout the unit. People often use images and image filters are often used in collages and animations to portray a story about personal experiences or interests.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f7812dc5-7926-4d3f-bc97-cb2cfb1d47b9",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "a02110ca-6bf9-4bc6-92b2-5b92b24e634c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals."
+      },
+      "seeding_key": {
+        "activity_section.key": "a02110ca-6bf9-4bc6-92b2-5b92b24e634c",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "ea04217d-a93f-4d5f-8e71-54835ac1cca4",
+      "position": 3,
+      "properties": {
+        "description": "Over the next few days, you will be developing a program that creates a new image filter and puts the images you chose together in a collage or animation.",
+        "duration": "15",
+        "name": "Brainstorming and Planning",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ea04217d-a93f-4d5f-8e71-54835ac1cca4",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "9328e00f-bdf4-4b8e-9c7d-32f4aadc1c3a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9328e00f-bdf4-4b8e-9c7d-32f4aadc1c3a",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "e110b94b-da95-4344-baa6-b25f34250e5a",
+      "position": 5,
+      "properties": {
+        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 3 steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "e110b94b-da95-4344-baa6-b25f34250e5a",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "ab6e181a-f980-4249-bafe-008e1bed7b23",
+      "position": 6,
+      "properties": {
+        "description": "Before you begin writing your program, you first need to decide what personal experiences or interests you want to portray and how you will visualize these in a collage or animation. You will need to plan how you will organize your program and images, and identify the algorithms you need to develop to create your new image filter.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab6e181a-f980-4249-bafe-008e1bed7b23",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "fa143eb5-06bd-4d2a-bd99-ac7671c29c29",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa143eb5-06bd-4d2a-bd99-ac7671c29c29",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "fea2ec89-5d9f-4de2-9769-c82126182c57",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
+        "duration": "15",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "fea2ec89-5d9f-4de2-9769-c82126182c57",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "b1a1a909-81f4-4d4d-9f7f-ca31139c50df",
+      "position": 9,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b1a1a909-81f4-4d4d-9f7f-ca31139c50df",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "a57da274-efc0-4963-aa94-edba1b285086",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a57da274-efc0-4963-aa94-edba1b285086",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "046263e2-a43c-4590-9b87-f840d59d3e44",
+      "position": 11,
+      "properties": {
+        "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "046263e2-a43c-4590-9b87-f840d59d3e44",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "521f679a-7f46-4434-b834-f671023601ea",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the Day 1 Reflection as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "521f679a-7f46-4434-b834-f671023601ea",
+        "lesson_activity.key": "309ea15e-2296-449a-8226-dc3c677188f2"
+      }
+    },
+    {
+      "key": "3f2f7ab4-8f99-4a4a-8833-11b8ce889f52",
+      "position": 1,
+      "properties": {
+        "description": "Like in the examples we have seen in this unit, you are using computer science to convey information about data visually. You are also using your software engineering characteristics to create your programs.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3f2f7ab4-8f99-4a4a-8833-11b8ce889f52",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "a09936c6-409c-4640-affe-c06bebd5e763",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Personal Narrative Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a09936c6-409c-4640-affe-c06bebd5e763",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "76af91c2-2fbc-48f4-93a8-66023b0e0caf",
+      "position": 3,
+      "properties": {
+        "description": "Continue to work on your Personal Narrative Project. Be sure to refer to the project requirements and rubric to make sure you include the necessary components.",
+        "duration": "10",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "76af91c2-2fbc-48f4-93a8-66023b0e0caf",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "f4e10af5-a0ec-4ec5-9bc8-2cf2229a2a99",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "f4e10af5-a0ec-4ec5-9bc8-2cf2229a2a99",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "15cd3efb-095f-458c-b3e9-7ca12b01fa48",
+      "position": 5,
+      "properties": {
+        "description": "This is a good time to commit our code and save our superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "duration": "10",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "15cd3efb-095f-458c-b3e9-7ca12b01fa48",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "62121c17-bc83-413b-a592-785e2db93bd8",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "62121c17-bc83-413b-a592-785e2db93bd8",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "5a285fad-9f24-4d22-b157-1aea1f991339",
+      "position": 7,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5a285fad-9f24-4d22-b157-1aea1f991339",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "79f8ab9d-541a-4107-a3b8-3ae1159391b9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Personal Narrative Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "79f8ab9d-541a-4107-a3b8-3ae1159391b9",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "fbff7682-1079-43bd-82f2-016b8cddd9ca",
+      "position": 9,
+      "properties": {
+        "description": "You have a lot of feedback from the code review to help improve your program! Let's review our tasks and priorities and plan updates based on the feedback we received and what we have left to complete.",
+        "duration": "10",
+        "name": "Revisions, Updates, and Reviews",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbff7682-1079-43bd-82f2-016b8cddd9ca",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "d9a83b2d-a0c5-49f4-ad23-54e7bb3ac4aa",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Personal Narrative Project Planning Guide based on the feedback they received from the code review.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish their prioritized list early, encourage them to start working on their #1 priority."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d9a83b2d-a0c5-49f4-ad23-54e7bb3ac4aa",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "200480b5-06cd-4005-97c2-2728c595337b",
+      "position": 11,
+      "properties": {
+        "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "200480b5-06cd-4005-97c2-2728c595337b",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "d74e66f1-b505-43bd-b387-e14d26d8059a",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the Day 2 Reflection as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d74e66f1-b505-43bd-b387-e14d26d8059a",
+        "lesson_activity.key": "cd8de0f8-1257-4cbe-9ab5-0fd675e8b111"
+      }
+    },
+    {
+      "key": "f19370a8-29e8-486e-8fb9-82379b0d04a5",
+      "position": 1,
+      "properties": {
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f19370a8-29e8-486e-8fb9-82379b0d04a5",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "f21b9061-0e0d-4467-9d83-817b668a5efe",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+      },
+      "seeding_key": {
+        "activity_section.key": "f21b9061-0e0d-4467-9d83-817b668a5efe",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "ea8fef9a-a013-4596-8db3-16c95966ddb7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
+        "duration": "15",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea8fef9a-a013-4596-8db3-16c95966ddb7",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "0e24895e-723c-492a-96b3-9e4f4b5133c9",
+      "position": 4,
+      "properties": {
+        "description": "You will finish developing your Personal Narrative Project. Be sure to consider the feedback you received from your code review and rubric self-assessment as you finalize your program.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0e24895e-723c-492a-96b3-9e4f4b5133c9",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "35304f1a-e956-4909-98e3-12f6f8d3189b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Personal Narrative Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "35304f1a-e956-4909-98e3-12f6f8d3189b",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "6af7277e-c1fc-48fa-abff-47cf41e8b5f9",
+      "position": 6,
+      "properties": {
+        "description": "Use the feedback you received from your code review and self-assessment to finalize your Personal Narrative Project.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6af7277e-c1fc-48fa-abff-47cf41e8b5f9",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "33e57120-7a32-4002-9c1c-9470fdf686cf",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Personal Narrative Project. Have students submit their projects at the end of the allotted time."
+      },
+      "seeding_key": {
+        "activity_section.key": "33e57120-7a32-4002-9c1c-9470fdf686cf",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "16581ea2-bd52-46f5-9067-5509b4659e3d",
+      "position": 8,
+      "properties": {
+        "description": "Congratulations! You have completed your data for social good project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "duration": "15",
+        "name": "Peer Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "16581ea2-bd52-46f5-9067-5509b4659e3d",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "7366acbc-e012-4dbd-af87-7ebdc25e790c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "7366acbc-e012-4dbd-af87-7ebdc25e790c",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "7b9df8c3-0618-4812-9bbd-9641e729ce25",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7b9df8c3-0618-4812-9bbd-9641e729ce25",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "d1e528dc-679d-49f1-9760-aeb44c665e70",
+      "position": 11,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1e528dc-679d-49f1-9760-aeb44c665e70",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "de013f28-8334-4ed9-a486-282155950990",
+      "position": 12,
+      "properties": {
+        "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "de013f28-8334-4ed9-a486-282155950990",
+        "lesson_activity.key": "00c2c8ad-deeb-42f5-b7a0-0f0d0aec1166"
+      }
+    },
+    {
+      "key": "42eb142b-5e5f-449e-b2fc-567c7d341fc0",
+      "position": 1,
+      "properties": {
+        "description": "Today, you will complete your first FRQ independently.\n\nStandardized assessments, like the AP exam you will be taking, can be very stressful. Breathing exercises before and even during an exam are an effective way to help us relax and set aside any distractions or negativity to focus on doing our best work. Everyone is different, though, so some exercises are more effective than others for each person. Let's choose a technique to try!",
+        "name": "Breathing Exercise",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "42eb142b-5e5f-449e-b2fc-567c7d341fc0",
+        "lesson_activity.key": "bf1641ad-014d-4f95-a0a6-5e8a361b55a7"
+      }
+    },
+    {
+      "key": "11065aa8-423a-4229-bd70-74e1c9ec7f3d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+      },
+      "seeding_key": {
+        "activity_section.key": "11065aa8-423a-4229-bd70-74e1c9ec7f3d",
+        "lesson_activity.key": "bf1641ad-014d-4f95-a0a6-5e8a361b55a7"
+      }
+    },
+    {
+      "key": "81b5dacb-17d1-4810-a3fe-52896aadfcfb",
+      "position": 3,
+      "properties": {
+        "description": "Now that we're ready for this FRQ, let's review the strategies we have practiced for approaching these questions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "81b5dacb-17d1-4810-a3fe-52896aadfcfb",
+        "lesson_activity.key": "bf1641ad-014d-4f95-a0a6-5e8a361b55a7"
+      }
+    },
+    {
+      "key": "205bc24b-4bb4-4c0d-bec5-a84b99d2c9b0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
+      },
+      "seeding_key": {
+        "activity_section.key": "205bc24b-4bb4-4c0d-bec5-a84b99d2c9b0",
+        "lesson_activity.key": "bf1641ad-014d-4f95-a0a6-5e8a361b55a7"
+      }
+    },
+    {
+      "key": "7679b1cb-15b9-4cd4-b888-548d9e790a31",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the GrayscaleImage FRQ handout and Java Quick Reference.",
+        "duration": "25",
+        "name": "Writing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is the first time students have used the Java Quick Reference. While students may or may not need it for this FRQ, students should practice using it to become more familiar with this resource before the exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7679b1cb-15b9-4cd4-b888-548d9e790a31",
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44"
+      }
+    },
+    {
+      "key": "082364ee-48b0-4d43-93a5-6336e8fe76fc",
+      "position": 2,
+      "properties": {
+        "description": "When you take the AP CSA Exam, you will receive a copy of the Java Quick Reference, which lists methods from the Java library that the exam may include. There are likely things on this reference that are unfamiliar to you at the moment, and you may or may not need to reference it as you work on this FRQ. It is helpful to be familiar with this resource for the exam.\n\nYou now have 25 minutes to develop your response to the Free Response Question. Remember to use the strategies we have practiced!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "082364ee-48b0-4d43-93a5-6336e8fe76fc",
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44"
+      }
+    },
+    {
+      "key": "e65e360c-fc9f-4568-9b03-7577a427512d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Since this is the first independent Free Response Question, students may need guidance in managing their time. Periodically remind students how much time remains and what part they should work on. Students should spend about 12-13 minutes on each part. For each part, students should spend 2-3 minutes annotating, 5 minutes writing pseudocode, and 5 minutes writing their solution in Java."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e65e360c-fc9f-4568-9b03-7577a427512d",
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44"
+      }
+    },
+    {
+      "key": "42e1a3b9-9818-49cb-bc5e-0f3240efcd94",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the GrayscaleImage FRQ Scoring Guidelines.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the GrayscaleImage FRQ Scoring Guidelines.",
+        "duration": "10",
+        "name": "Scoring and Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "42e1a3b9-9818-49cb-bc5e-0f3240efcd94",
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44"
+      }
+    },
+    {
+      "key": "20fe6b1f-d7f0-4ae6-86eb-a43c7664008a",
+      "position": 5,
+      "properties": {
+        "description": "Congratulations on completing another FRQ! As with any problems we solve in Java, there are multiple approaches to solving an FRQ. Let's look at one solution to today's FRQ.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "20fe6b1f-d7f0-4ae6-86eb-a43c7664008a",
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44"
+      }
+    },
+    {
+      "key": "fa838400-394b-4237-aa30-3bccc3ecc248",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* Implementation for `countBlackPixels()` method (Part (a))\n* Implementation for `lightenImage()` method (Part (b))"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa838400-394b-4237-aa30-3bccc3ecc248",
+        "lesson_activity.key": "194c09fe-fca8-4685-92ef-049516894a44"
+      }
+    },
+    {
+      "key": "a00d8ccd-e71c-4d8e-a2c8-1a08d1939431",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "name": "Give One, Get One"
+      },
+      "seeding_key": {
+        "activity_section.key": "a00d8ccd-e71c-4d8e-a2c8-1a08d1939431",
+        "lesson_activity.key": "5666db3c-ef23-416a-a500-1530ecb006df"
+      }
+    },
+    {
+      "key": "6499abec-4900-4e4b-841f-2dec79b6896b",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "6499abec-4900-4e4b-841f-2dec79b6896b",
+        "lesson_activity.key": "5666db3c-ef23-416a-a500-1530ecb006df"
+      }
+    },
+    {
+      "key": "9aec2e81-73bf-4698-b6c9-c557bceb16ad",
+      "position": 3,
+      "properties": {
+        "description": "**GrayscaleImage FRQ:** The GrayscaleImage FRQ handout can be used as an optional formative assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9aec2e81-73bf-4698-b6c9-c557bceb16ad",
+        "lesson_activity.key": "5666db3c-ef23-416a-a500-1530ecb006df"
+      }
+    },
+    {
+      "key": "a7fb7960-8762-4988-ad4b-4db772cf49c7",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of image filters, collages, and animations throughout the unit. People often use images and image filters are often used in collages and animations to portray a story about personal experiences or interests.",
+        "name": "Personal Narratives",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a7fb7960-8762-4988-ad4b-4db772cf49c7",
+        "lesson_activity.key": "66286627-a9af-443e-a823-f5b49ce3ab1e"
+      }
+    },
+    {
+      "key": "288c8a1f-9e16-47d1-9fe1-74925044dcaf",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "288c8a1f-9e16-47d1-9fe1-74925044dcaf",
+        "lesson_activity.key": "66286627-a9af-443e-a823-f5b49ce3ab1e"
+      }
+    },
+    {
+      "key": "bd2e5198-c897-42e9-bcfa-67e7b8a97ee4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd2e5198-c897-42e9-bcfa-67e7b8a97ee4",
+        "lesson_activity.key": "12f2ef75-e3ed-4f2b-9c25-8c8c260dc0a5"
+      }
+    },
+    {
+      "key": "749a02be-2608-4aa5-b4db-957f3acc283b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
+        "duration": "20",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b",
+        "lesson_activity.key": "12f2ef75-e3ed-4f2b-9c25-8c8c260dc0a5"
+      }
+    },
+    {
+      "key": "6e586de6-db19-4781-947f-bfd54d3e607f",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6e586de6-db19-4781-947f-bfd54d3e607f",
+        "lesson_activity.key": "12f2ef75-e3ed-4f2b-9c25-8c8c260dc0a5"
+      }
+    },
+    {
+      "key": "302a7dab-83bb-443a-a9d1-ef2e34ef219b",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "302a7dab-83bb-443a-a9d1-ef2e34ef219b",
+        "lesson_activity.key": "12f2ef75-e3ed-4f2b-9c25-8c8c260dc0a5"
+      }
+    },
+    {
+      "key": "818700e0-0369-470f-803c-4c7c706cb46c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "818700e0-0369-470f-803c-4c7c706cb46c",
+        "lesson_activity.key": "9828ce90-6363-4b8a-a44f-26b8a31c3684"
+      }
+    },
+    {
+      "key": "aef51c1e-5d31-4fcd-8226-7df692e6c9f2",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "aef51c1e-5d31-4fcd-8226-7df692e6c9f2",
+        "lesson_activity.key": "9828ce90-6363-4b8a-a44f-26b8a31c3684"
+      }
+    },
+    {
+      "key": "5c57d00a-3bbb-436c-b494-32159715362f",
+      "position": 3,
+      "properties": {
+        "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c57d00a-3bbb-436c-b494-32159715362f",
+        "lesson_activity.key": "9828ce90-6363-4b8a-a44f-26b8a31c3684"
+      }
+    }
   ],
   "script_levels": [
 
@@ -74,7 +1243,86 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "07f0276f-2436-4ee6-a7c8-c50037165f8a",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "07f0276f-2436-4ee6-a7c8-c50037165f8a"
+      }
+    },
+    {
+      "key": "0bf4f07f-2c96-4725-9bed-83eda0e2ad1e",
+      "properties": {
+        "description": "Declare and initialize two-dimensional (2D) arrays to store primitive values or object references"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "0bf4f07f-2c96-4725-9bed-83eda0e2ad1e"
+      }
+    },
+    {
+      "key": "3767bdf1-35b6-4a5e-bbec-4e1b810e9349",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "3767bdf1-35b6-4a5e-bbec-4e1b810e9349"
+      }
+    },
+    {
+      "key": "39db8126-3482-4b35-986b-03f6b52fba7c",
+      "properties": {
+        "description": "Develop algorithms to find and manipulative values stored in a two-dimensional (2D) array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "39db8126-3482-4b35-986b-03f6b52fba7c"
+      }
+    },
+    {
+      "key": "85de2c97-fe67-4d64-a616-232157adab89",
+      "properties": {
+        "description": "Declare and initialize two-dimensional (2D) arrays to store primitive values or object references"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "85de2c97-fe67-4d64-a616-232157adab89"
+      }
+    },
+    {
+      "key": "8a429977-74ac-46e6-b2af-8221d00d16dd",
+      "properties": {
+        "description": "Plan an algorithm using pseudocode"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "8a429977-74ac-46e6-b2af-8221d00d16dd"
+      }
+    },
+    {
+      "key": "93a33deb-f730-4f21-abce-8c5a214b2a04",
+      "properties": {
+        "description": "Develop algorithms to find and manipulative values stored in a two-dimensional (2D) array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "93a33deb-f730-4f21-abce-8c5a214b2a04"
+      }
+    },
+    {
+      "key": "9eb0bbd2-388a-4c6b-9e2c-4ea335691ead",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "9eb0bbd2-388a-4c6b-9e2c-4ea335691ead"
+      }
+    }
   ],
   "lessons_standards": [
 

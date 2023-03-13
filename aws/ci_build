@@ -54,7 +54,8 @@ def upload_log_and_get_link(key, body, metadata)
         body,
         {metadata: metadata}
       )
-  " <a href='#{log_url}'>☁ Log on S3</a>"
+  permalink = AWS::S3.get_console_link_from_presigned(log_url)
+  " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
 rescue Exception => exception
   ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''

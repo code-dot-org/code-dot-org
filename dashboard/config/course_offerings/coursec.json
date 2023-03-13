@@ -7,5 +7,9 @@
   "curriculum_type": "Course",
   "marketing_initiative": "CSF",
   "grade_levels": "2,3",
-  "header": "CS Fundamentals"
+  "header": "CS Fundamentals",
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null
 }

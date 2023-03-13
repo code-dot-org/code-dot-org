@@ -1201,11 +1201,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   .goog-menuitem-hover {
     background-color: rgb(255 255 255 / 0.35);
   }
-  &:not(.blocklyGridDropdownMenu) {
-    border-color: rgb(84 84 84) !important;
-  }
+  border-color: rgb(84 84 84) !important;
   &.blocklyGridDropdownMenu {
-    background-color: white !important;
+    background-color: white;
     padding-top: 5px !important;
 
     .goog-menuitem {
