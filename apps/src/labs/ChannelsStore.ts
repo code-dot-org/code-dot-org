@@ -9,7 +9,9 @@ export interface ChannelsStore {
   save: (channel: Channel) => Promise<Response>;
 }
 
-// TODO: comment about this being a mock/empty class implementation
+// Note: This is a stubbed implementation of ChannelsStore because
+// we currently don't have or need the concept of a channel for
+// projects stored locally.
 export class LocalChannelsStore implements ChannelsStore {
   load(key: string) {
     return Promise.resolve(null);
@@ -32,8 +34,7 @@ export class S3ChannelsStore implements ChannelsStore {
   }
 
   create(channel: NewChannel = this.newChannel) {
-    // TODO: implement queryParams
-    return channelsApi.create(channel, '');
+    return channelsApi.create(channel);
   }
 
   save(channel: Channel) {

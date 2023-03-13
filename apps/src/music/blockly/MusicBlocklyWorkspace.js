@@ -19,6 +19,7 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
+import Registry from '@cdo/apps/labs/Registry';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -91,6 +92,7 @@ export default class MusicBlocklyWorkspace {
     this.resizeBlockly();
 
     // Set initial blocks.
+    // TODO: await this?
     this.loadCode();
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
@@ -288,12 +290,19 @@ export default class MusicBlocklyWorkspace {
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.
+    if (window.channelId) {
+      return window.channelId;
+    }
 
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  loadCode() {
-    const existingCode = localStorage.getItem(this.getLocalStorageKeyName());
+  async loadCode() {
+    const {
+      source: existingCode
+    } = await Registry.getInstance().sourcesStore.load(
+      this.getLocalStorageKeyName()
+    );
     if (existingCode) {
       const exitingCodeJson = JSON.parse(existingCode);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
@@ -305,7 +314,9 @@ export default class MusicBlocklyWorkspace {
   saveCode() {
     const code = Blockly.serialization.workspaces.save(this.workspace);
     const codeJson = JSON.stringify(code);
-    localStorage.setItem(this.getLocalStorageKeyName(), codeJson);
+    Registry.getInstance().sourcesStore.save(this.getLocalStorageKeyName(), {
+      source: codeJson
+    });
   }
 
   resetCode() {

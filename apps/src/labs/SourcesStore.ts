@@ -50,11 +50,14 @@ export class S3SourcesStore implements SourcesStore {
 
     if (response.ok) {
       this.lastSaveTime = Date.now();
+      const {timestamp, versionId} = await response.json();
+      this.firstSaveTime = this.firstSaveTime || timestamp;
+      this.currentVersionId = versionId;
+    } else {
+      // TODO: Log errors. Old implementation uses firehose
+      // (logError_ in project.js); do we still want to use that?
+      // See project.js lines 1120-1165
     }
-
-    const {timestamp, versionId} = await response.json();
-    this.firstSaveTime = this.firstSaveTime || timestamp;
-    this.currentVersionId = versionId;
 
     return response;
   }

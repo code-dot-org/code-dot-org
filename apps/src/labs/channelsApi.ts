@@ -9,12 +9,8 @@ export async function get(channelId: string): Promise<Channel> {
   return response.json();
 }
 
-// TODO: add correct type for queryParams
-export async function create(
-  channel: NewChannel,
-  queryParams: string
-): Promise<Response> {
-  return fetch(`${rootUrl}?${queryParams}`, {
+export async function create(channel: NewChannel): Promise<Response> {
+  return fetch(rootUrl, {
     method: 'POST',
     body: JSON.stringify(channel)
   });
