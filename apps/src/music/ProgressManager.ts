@@ -1,3 +1,5 @@
+import MusicPlayer, {PlaybackEvent, SoundEvent} from './player/MusicPlayer';
+
 // The two classes in this file handle student progress through steps.
 
 // A list of conditions that we check for.  If not listed here, it might
@@ -12,7 +14,7 @@ const KnownConditions = {
 // A small helper class that accumulates satisfied conditions, and then evaluates
 // whether a set of conditions have all been satisfied.
 class ConditionChecker {
-  private currentSatisfiedConditions: { [key: string]: boolean };
+  private currentSatisfiedConditions: {[key: string]: boolean};
 
   constructor() {
     this.currentSatisfiedConditions = {};
@@ -24,13 +26,13 @@ class ConditionChecker {
   }
 
   // Accumulate a satisfied condition.
-  addSatisfiedCondition(id:string, value:boolean) {
+  addSatisfiedCondition(id: string, value: boolean) {
     this.currentSatisfiedConditions[id] = value;
   }
 
   // Check whether the current set of satisfied conditions satisfy the given
   // required conditions.
-  checkRequirementConditions(requiredConditions:[string]) {
+  checkRequirementConditions(requiredConditions: [string]) {
     for (const requiredCondition of requiredConditions) {
       // If we don't yet support a condition, don't check against it for now.
       if (!Object.values(KnownConditions).includes(requiredCondition)) {
@@ -48,6 +50,15 @@ class ConditionChecker {
   }
 }
 
+interface CheckProgressOptions {
+  progression: {[key: string]: any};
+  progressStep: number;
+  isPlaying: boolean;
+  currentPlayheadPosition: number;
+  player: MusicPlayer;
+  onChange: Function;
+}
+
 // Manages progress.  The caller can reuglarly check to see how the user
 // is doing against a step's validations specified in a progression, and might
 // receive feedback to give to the user, or the go-ahead to move to the next
@@ -63,7 +74,7 @@ export default class ProgressManager {
   // validations.  Calls back onChange with new information.  Accumulates
   // satisfied conditions which can be reset with a call to clear() when moving
   // to a new step.
-  checkProgress = (options:{[key: string]: any}) => {
+  checkProgress = (options: CheckProgressOptions) => {
     const {
       progression,
       progressStep,
@@ -84,8 +95,14 @@ export default class ProgressManager {
       // Get number of sounds currently playing simultaneously.
       let currentNumberSounds = 0;
 
-      player.getPlaybackEvents().forEach((eventData: { id: string; when: number; }) => {
-        const length = player.getLengthForId(eventData.id);
+      player.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
+        let length = 0;
+        if (eventData.type === 'sound') {
+          length = player.getLengthForId((eventData as SoundEvent).id) || 0;
+        } else {
+          // It's a pattern.
+          length = 1;
+        }
         if (
           eventData.when <= currentPlayheadPosition &&
           eventData.when + length > currentPlayheadPosition
