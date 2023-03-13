@@ -20,6 +20,7 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
+import Video from './Video';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -82,7 +83,8 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: false,
-      instructionsPosIndex
+      instructionsPosIndex,
+      showingVideo: true
     };
   }
 
@@ -293,10 +295,13 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    if (event.key === 't') {
+    // When assigning new keyboard shortcuts, be aware that the following
+    // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
+    // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
+    if (event.key === 'v') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
-    if (event.key === 'i') {
+    if (event.key === 'b') {
       this.toggleInstructions(true);
     }
     if (event.key === 'n') {
@@ -322,6 +327,10 @@ class UnconnectedMusicView extends React.Component {
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
+  };
+
+  onVideoClosed = () => {
+    this.setState({showingVideo: false});
   };
 
   renderInstructions(position) {
@@ -378,6 +387,9 @@ class UnconnectedMusicView extends React.Component {
     const instructionsPosition =
       instructionPositionOrder[this.state.instructionsPosIndex];
 
+    const showVideo =
+      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
@@ -394,6 +406,10 @@ class UnconnectedMusicView extends React.Component {
               {this.state.showInstructions &&
                 instructionsPosition === InstructionsPositions.TOP &&
                 this.renderInstructions(InstructionsPositions.TOP)}
+
+              {showVideo && (
+                <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+              )}
 
               {this.state.timelineAtTop &&
                 this.renderTimelineArea(

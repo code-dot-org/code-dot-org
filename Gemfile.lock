@@ -68,14 +68,6 @@ GIT
     gctools (0.2.4)
 
 GIT
-  remote: https://github.com/wjordan/gnista.git
-  revision: 573e51812da662a48d272d79e855737eee31bd7d
-  ref: embed
-  submodules: true
-  specs:
-    gnista (1.0.1)
-
-GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -95,15 +87,6 @@ GIT
     image_optim_pack (0.5.0)
       fspath (>= 2.1, < 4)
       image_optim (~> 0.19)
-
-GIT
-  remote: https://github.com/wjordan/ims-lti.git
-  revision: 39203db48428ab943547363b13da56b02a19d905
-  ref: oauth_051
-  specs:
-    ims-lti (1.1.12)
-      builder
-      oauth (>= 0.4.5, < 0.6)
 
 GIT
   remote: https://github.com/wjordan/lograge.git
@@ -500,8 +483,6 @@ GEM
       rainbow
       rubocop (>= 0.50.0)
       sysexits (~> 1.1)
-    hammerspace (0.1.7)
-      gnista (~> 1.0.1)
     hashdiff (1.0.1)
     hashery (2.1.2)
     hashie (3.6.0)
@@ -604,7 +585,6 @@ GEM
     nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    oauth (0.5.1)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
@@ -991,7 +971,6 @@ DEPENDENCIES
   gctools!
   gemoji
   geocoder
-  gnista!
   google-apis-analytics_v3
   google-apis-classroom_v1
   google-apis-core
@@ -1000,7 +979,6 @@ DEPENDENCIES
   haml (~> 5.2.0)
   haml-rails
   haml_lint
-  hammerspace
   highline (~> 1.6.21)
   honeybadger (>= 4.5.6)
   httparty
@@ -1008,7 +986,6 @@ DEPENDENCIES
   image_optim_pack (~> 0.5.0)!
   image_optim_rails (~> 0.4.0)
   image_size
-  ims-lti!
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
   jumphash
