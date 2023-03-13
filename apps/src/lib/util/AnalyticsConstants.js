@@ -12,7 +12,8 @@ const EVENTS = {
   TEACHER_LOGIN_EVENT: 'Teacher Login',
 
   // Course/Unit info
-  COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
+    'Course Overview Page Visited By Teacher',
   UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Unit Overview Page Visited By Teacher',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',

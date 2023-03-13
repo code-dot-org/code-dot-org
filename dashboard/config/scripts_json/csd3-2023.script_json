@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-07 00:00:18 UTC",
+    "serialized_at": "2023-03-10 01:59:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -61,7 +61,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "To kick off a unit devoted to problem-solving and developing animations and games, students begin by investigating the design of different animations and games. Students look at a variety of apps and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an app design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.\n\n**Question of the Day:** How can we design animations and games based on the needs of a user?\n\n",
+        "overview": "To kick off a unit devoted to problem-solving and developing animations and games, students begin by investigating the design of different animations and games. Students look at a variety of animations and games and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an animation or game design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.\n\n**Question of the Day:** How can we design animations and games based on the needs of a user?\n\n",
         "preparation": "* Review the research resources linked in Code Studio\n* Print a copy of the activity guide for each group of three students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How is computer science used in entertainment?\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
       },
@@ -1368,7 +1368,7 @@
       "key": "b06ff56b-d12a-4744-b56e-4e045f3e5a50",
       "position": 2,
       "properties": {
-        "duration": 215,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1844,7 +1844,7 @@
       "key": "20c9de82-1ad3-483e-a387-b152ab0b006e",
       "position": 1,
       "properties": {
-        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -2451,7 +2451,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the [CSD Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit)\n\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the [CSD Curriculum Guide](https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view)\n\n"
           }
         ]
       },
@@ -2546,7 +2546,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2563,7 +2563,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2580,7 +2580,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)."
           },
           {
             "type": "assessmentOpportunity",
@@ -2601,7 +2601,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2688,7 +2688,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2797,7 +2797,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the [What Do Computer Do?](https://www.youtube.com/watch?v=92TaQRBwPSs) video which highlights these four functions."
+            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the [What Do Computers Do?](https://www.youtube.com/watch?v=92TaQRBwPSs) video which highlights these four functions."
           }
         ]
       },
@@ -2849,7 +2849,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3060,7 +3060,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3340,7 +3340,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n* Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n* Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issues before asking for help.\n* If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/\n"
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n* Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n* Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issues before asking for help.\n* If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/\n"
           }
         ]
       },
@@ -3438,7 +3438,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3676,7 +3676,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3812,7 +3812,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3932,7 +3932,7 @@
       "key": "15c3f29a-35d7-4736-895b-ff4f44074b73",
       "position": 3,
       "properties": {
-        "description": "You've already learned how to do some really great things in Game Lab. Today you'll have a chance to put them all together to make an interesting scene to share with the world. That means instead of trying to recreate someone else's idea, you're going to get to come up with an idea of your own, so it's time to get creative!",
+        "description": "You've learned how to do some really great things since our last mini-project in Game Lab. Today you'll have a chance to put them all together to make an interesting scene to share with the world. That means instead of trying to recreate someone else's idea, you're going to get to come up with an idea of your own, so it's time to get creative!",
         "remarks": true
       },
       "seeding_key": {
@@ -3961,7 +3961,8 @@
       "key": "5b65c9a6-26fd-43fb-a193-130f47faa6d3",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the scene they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the activity guide. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the captioned scene they create at the end of this lesson.\n\n**Optional Transition** You can choose to either send students to Code Studio to see an example of a captioned scene in level 1 or display the example in the slides.",
+        "progression_name": "Captioned Scene Example",
         "tips": [
           {
             "type": "teachingTip",
@@ -3975,9 +3976,93 @@
       }
     },
     {
-      "key": "df6bc462-7d49-49b2-a0fb-8f0f56c69c69",
+      "key": "3eef2299-d6d1-42e6-b21d-30dc030c6a46",
       "position": 2,
       "properties": {
+        "description": "**Circulate:** As students fill out a description of the captioned scene they want to create, circulate the room to ask students about their ideas and help guide them to make sure they are thinking of how they are going to use sprites and text to meet the project requirements.\n",
+        "name": "Step 1: Define - Describe Your Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "3eef2299-d6d1-42e6-b21d-30dc030c6a46",
+        "lesson_activity.key": "58daa33a-4317-4b8a-a8c3-9b68d101b58a"
+      }
+    },
+    {
+      "key": "9905f777-4587-4aba-b905-43bf06786bc0",
+      "position": 3,
+      "properties": {
+        "description": "As students answer questions about the design of their captioned scene, continue to ensure that they are thinking about implementing sprites and text. After they have completed their designs, ensure that they can identify which blocks will be needed for the different features of their scene.\n",
+        "name": "Step 2: Prepare - Design Your Image",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if a student's initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well.\n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9905f777-4587-4aba-b905-43bf06786bc0",
+        "lesson_activity.key": "58daa33a-4317-4b8a-a8c3-9b68d101b58a"
+      }
+    },
+    {
+      "key": "a2b32d26-8058-4bf9-bf5e-00cf0b56bfd6",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your programs. One thing that could make this challenging is the *blank screen* effect: unlike previous levels, you won’t have any starter code or direction on what to create. This means you might not be sure what exactly you’re supposed to do, or you might run into bugs you need to fix which can be frustrating. Luckily, we can also use the problem-solving process to help with these types of projects as well!\n",
+        "name": "Step 3: Try - Develop Your Scene",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a2b32d26-8058-4bf9-bf5e-00cf0b56bfd6",
+        "lesson_activity.key": "58daa33a-4317-4b8a-a8c3-9b68d101b58a"
+      }
+    },
+    {
+      "key": "f56ea3ca-1a96-4ed9-892f-b4a8ede419cb",
+      "position": 5,
+      "properties": {
+        "description": "**Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f56ea3ca-1a96-4ed9-892f-b4a8ede419cb",
+        "lesson_activity.key": "58daa33a-4317-4b8a-a8c3-9b68d101b58a"
+      }
+    },
+    {
+      "key": "372bdc57-3cfc-4e72-b3d0-a0be5565524c",
+      "position": 6,
+      "properties": {
+        "description": "If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "372bdc57-3cfc-4e72-b3d0-a0be5565524c",
+        "lesson_activity.key": "58daa33a-4317-4b8a-a8c3-9b68d101b58a"
+      }
+    },
+    {
+      "key": "cdcb79f2-7ba2-4f5f-9977-358fb177d4a5",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Not all bullets in the Problem Solving Process will be applicable to every problem a student has. Instead, encourage them to pick one or two from each category to try each time they are stuck\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cdcb79f2-7ba2-4f5f-9977-358fb177d4a5",
+        "lesson_activity.key": "58daa33a-4317-4b8a-a8c3-9b68d101b58a"
+      }
+    },
+    {
+      "key": "df6bc462-7d49-49b2-a0fb-8f0f56c69c69",
+      "position": 8,
+      "properties": {
+        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
         "progression_name": "Sprite Scenes"
       },
       "seeding_key": {
@@ -3987,13 +4072,13 @@
     },
     {
       "key": "4d0925fc-7ba5-4641-9379-87c8f18cb254",
-      "position": 3,
+      "position": 9,
       "properties": {
         "progression_name": "Create a Background",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**Scaffolded Project:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, text, etc). Encourage students to follow the instructions in each level, focusing on one task at a time.  "
           }
         ]
       },
@@ -4004,9 +4089,15 @@
     },
     {
       "key": "ddae81ff-4e39-4051-bbaa-388b45171400",
-      "position": 4,
+      "position": 10,
       "properties": {
-        "progression_name": "Add Sprites"
+        "progression_name": "Add Sprites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ddae81ff-4e39-4051-bbaa-388b45171400",
@@ -4015,7 +4106,7 @@
     },
     {
       "key": "18e00ca9-a736-49d8-b83d-969a9d6d59ff",
-      "position": 5,
+      "position": 11,
       "properties": {
         "progression_name": "Add Text"
       },
@@ -4026,7 +4117,7 @@
     },
     {
       "key": "81cf6d6b-6cba-44a4-a426-badda315b89d",
-      "position": 6,
+      "position": 12,
       "properties": {
         "progression_name": "Review Your Scene"
       },
@@ -4037,7 +4128,7 @@
     },
     {
       "key": "579f7363-c17e-4501-8177-f3c62df87e67",
-      "position": 7,
+      "position": 13,
       "properties": {
         "description": "Allow students to walk around the room and see the pictures that each of their classmates has coded.  Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "Gallery Walk\r",
@@ -4167,7 +4258,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4330,7 +4421,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4491,7 +4582,7 @@
       "key": "dd8a51ba-e183-4b42-a3ce-b89ce885fb5a",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the animation they create at the end of this lesson, but the planning can also be completed on scratch paper.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r animated_scene_1/csd3/2023]. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the animated scene they create at the end of this lesson.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4508,7 +4599,7 @@
       "key": "2858c3f2-a4f7-429b-829d-0fee29b43329",
       "position": 2,
       "properties": {
-        "description": "**Transition** Send students to Code Studio.",
+        "description": "**Optional Transition** You can choose to either send students to Code Studio to see an example of an animated scene in level 1 or you can show the example in the slides.",
         "progression_name": "Example Animated Scene"
       },
       "seeding_key": {
@@ -4517,10 +4608,23 @@
       }
     },
     {
-      "key": "98112b16-adcb-48db-8aea-b650606ed7c6",
+      "key": "8af34b98-3edd-491d-a75f-8bfbae34204f",
       "position": 3,
       "properties": {
-        "progression_name": "Plan Your Scene",
+        "description": "**Circulate:** As students fill out a description of the animated scene they want to create, circulate the room to ask students about their ideas and help guide them to make sure they are thinking of how they could incorporate movement in a scene with the draw loop.\n",
+        "name": "Step 1: Define - Describe Your Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "8af34b98-3edd-491d-a75f-8bfbae34204f",
+        "lesson_activity.key": "a6bbb1dc-c6bd-4d6a-a6f2-29a0d8779b47"
+      }
+    },
+    {
+      "key": "f2966304-a582-4fc1-81b9-1f171c3f87ee",
+      "position": 4,
+      "properties": {
+        "description": "As students answer questions about the design of their scenes, continue to ensure that they are thinking about movement and using the draw loop. After they have completed their designs, ensure that they can identify which sprites will be needed and what sprite properties they need to animate for desired movement in their scene.\n",
+        "name": "Step 2: Prepare - Design Your Scene",
         "tips": [
           {
             "type": "teachingTip",
@@ -4529,15 +4633,64 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "f2966304-a582-4fc1-81b9-1f171c3f87ee",
+        "lesson_activity.key": "a6bbb1dc-c6bd-4d6a-a6f2-29a0d8779b47"
+      }
+    },
+    {
+      "key": "98112b16-adcb-48db-8aea-b650606ed7c6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have them take this resource out if they still have it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n\n\n",
+        "name": "Step 3: Try - Develop Your Scene",
+        "progression_name": "Plan Your Scene"
+      },
+      "seeding_key": {
         "activity_section.key": "98112b16-adcb-48db-8aea-b650606ed7c6",
         "lesson_activity.key": "a6bbb1dc-c6bd-4d6a-a6f2-29a0d8779b47"
       }
     },
     {
-      "key": "acea648c-4d2c-4b65-9d06-812308ecad74",
-      "position": 4,
+      "key": "9f9080bc-7006-4d46-861c-92e082701e7b",
+      "position": 6,
       "properties": {
-        "progression_name": "Draw a Background"
+        "description": "Many of you are ready to start creating your programs. Don't forget about using the problem solving process to help with the *blank screen* effect. If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9f9080bc-7006-4d46-861c-92e082701e7b",
+        "lesson_activity.key": "a6bbb1dc-c6bd-4d6a-a6f2-29a0d8779b47"
+      }
+    },
+    {
+      "key": "b28fae22-403d-4a11-a924-cc1261b4d2ee",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Not all bullets in the Problem Solving Process will be applicable to every problem a student has. Instead, encourage them to pick one or two from each category to try each time they are stuck\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b28fae22-403d-4a11-a924-cc1261b4d2ee",
+        "lesson_activity.key": "a6bbb1dc-c6bd-4d6a-a6f2-29a0d8779b47"
+      }
+    },
+    {
+      "key": "acea648c-4d2c-4b65-9d06-812308ecad74",
+      "position": 8,
+      "properties": {
+        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
+        "progression_name": "Draw a Background",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, text, etc). Encourage students to follow the instructions in each level, focusing on one task at a time.  "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "acea648c-4d2c-4b65-9d06-812308ecad74",
@@ -4546,13 +4699,13 @@
     },
     {
       "key": "8f67d3bb-a00a-4378-99ae-83077d3ed3ad",
-      "position": 5,
+      "position": 9,
       "properties": {
         "progression_name": "Add Sprites",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           }
         ]
       },
@@ -4563,7 +4716,7 @@
     },
     {
       "key": "f83ffcee-0b2b-4bf7-b68d-fc00600f1e11",
-      "position": 6,
+      "position": 10,
       "properties": {
         "progression_name": "Add Text"
       },
@@ -4574,7 +4727,7 @@
     },
     {
       "key": "be676d46-8a2a-41ba-873b-860534463ee9",
-      "position": 7,
+      "position": 11,
       "properties": {
         "progression_name": "Add Movement"
       },
@@ -4585,7 +4738,7 @@
     },
     {
       "key": "ba152368-fe2b-49c9-9075-e94ae4b97ad8",
-      "position": 8,
+      "position": 12,
       "properties": {
         "progression_name": "Review Your Animated Scene"
       },
@@ -4596,7 +4749,7 @@
     },
     {
       "key": "feb6082c-662f-40ee-9fef-b203da98f901",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "Allow students to walk around the room and see the pictures that each of their classmates has coded.  Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "Gallery Walk\r",
@@ -4722,7 +4875,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4893,7 +5046,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -5030,7 +5183,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -5204,7 +5357,7 @@
       "key": "a7382d57-4a04-4bea-86eb-89e8a1312f1f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric and student checklist.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.",
+        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric and student checklist.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r interactive_card_1/csd3/2023]. Student should use this activity guide to plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the [r interactive_card_-_student_checklist/csd3/2023] to each student. Students can use this to self-assess and reflect as they develop their project.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -5221,8 +5374,8 @@
       "key": "860341d7-5830-4186-a27a-acfe0807cb21",
       "position": 3,
       "properties": {
-        "description": "**Distribute:** Hand out the project guide to students. Students will use this to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the Student Checklist to each student. Students can use this to self-assess and reflect as they develop their project.\n\n#### Steps\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
-        "name": "Unplugged: Interactive Card Planning\r"
+        "description": "**Circulate:** As students fill out a description of the interactive card they want to create, circulate the room to ask students about their ideas and help guide them to make sure they are thinking of how they could include all concepts they've learned about so far.\n\n\n\n",
+        "name": "Step 1: Define - Plan Your Card"
       },
       "seeding_key": {
         "activity_section.key": "860341d7-5830-4186-a27a-acfe0807cb21",
@@ -5230,11 +5383,31 @@
       }
     },
     {
-      "key": "bdfe235e-ceaf-4741-9e7b-e6f57c4f5382",
+      "key": "5faa298a-e312-4a56-a942-a7eb8a626687",
       "position": 4,
       "properties": {
-        "description": "**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
-        "name": "Implementing Interactive Card (Level 2 - 7)"
+        "description": "As students fill in the activity guide about the design of their card, continue to support student ideas and brainstorms as they are asked to consider the different aspects of their card:\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.\n\n**Optional:** Students can visit Code Studio - Level 2 for more interactive card ideas if needed.",
+        "name": "Step 2: Prepare - Design Your Card",
+        "progression_name": "Interactive Card Examples",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd3/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5faa298a-e312-4a56-a942-a7eb8a626687",
+        "lesson_activity.key": "b06ff56b-d12a-4744-b56e-4e045f3e5a50"
+      }
+    },
+    {
+      "key": "bdfe235e-ceaf-4741-9e7b-e6f57c4f5382",
+      "position": 5,
+      "properties": {
+        "description": "Many of you are ready to start creating your programs. Don't forget about using the problem solving process to help with the *blank screen* effect. If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.\n\n",
+        "name": "Step 3: Try - Develop Your Card",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "bdfe235e-ceaf-4741-9e7b-e6f57c4f5382",
@@ -5243,13 +5416,14 @@
     },
     {
       "key": "cfe7d63e-fa10-41cc-baaa-b540e001c2cb",
-      "position": 5,
+      "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
         "progression_name": "Make an Interactive Card",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd3/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, text, etc). Encourage students to follow the instructions in each level, focusing on one task at a time."
           }
         ]
       },
@@ -5260,13 +5434,14 @@
     },
     {
       "key": "178315a2-ed7f-41bf-a55d-88724e865ce5",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n\n\n",
         "progression_name": "Project Work",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           }
         ]
       },
@@ -5277,9 +5452,9 @@
     },
     {
       "key": "326592f7-390a-4c2f-8fce-6a9d4c4fe27e",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the peer review guide.\r\n\r\nStudents should spend 15 minutes reviewing the other student's card and filling out the peer review guide.",
+        "description": "**Distribute:** Give each student a copy of the peer review guide.\n\nStudents should spend 15 minutes reviewing the other student's card and filling out the peer review guide.\n",
         "name": "Peer Review\r"
       },
       "seeding_key": {
@@ -5289,7 +5464,7 @@
     },
     {
       "key": "ad65cd05-d6a1-498f-a09e-8c668d0a01a6",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their cards.\n\nStudents should use the rubric and student checklist to self-assess and make sure their project matches with the rubric.",
         "name": "Iterate - Update Code\r",
@@ -5307,10 +5482,10 @@
     },
     {
       "key": "8b5019b4-f706-4db9-b31a-7a751c510a68",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "Using the rubric, students should assess their own project before submitting it.\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Reflect\r"
+        "name": "Step 4: Reflect"
       },
       "seeding_key": {
         "activity_section.key": "8b5019b4-f706-4db9-b31a-7a751c510a68",
@@ -5319,7 +5494,7 @@
     },
     {
       "key": "7c0523e9-60fb-46ca-822b-639b7f0a1feb",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Reflection",
         "tips": [
@@ -5448,7 +5623,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           },
           {
             "type": "teachingTip",
@@ -5825,13 +6000,8 @@
       "key": "90da1fce-029b-4071-811d-9c582d9ddc14",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the Side Scroller they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r side_scroller_1/csd3/2023]. Student should use this activity guide to plan out and brainstorm how to program the side scroller game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the Side Scroller example game or demo the game for the students.\n",
+        "progression_name": "Side Scroller Example"
       },
       "seeding_key": {
         "activity_section.key": "90da1fce-029b-4071-811d-9c582d9ddc14",
@@ -5842,6 +6012,8 @@
       "key": "47f81bf9-27d2-4354-ad62-9c52c1213106",
       "position": 2,
       "properties": {
+        "description": "**Circulate:** As students fill out a description of the aspects of the side scroller they want to keep the same and what they want to change, circulate the room to ask students about their ideas and help guide them.\n",
+        "name": "Step 1: Define - Plan Your Game",
         "progression_name": "Intro to Side Scrollers"
       },
       "seeding_key": {
@@ -5850,10 +6022,42 @@
       }
     },
     {
-      "key": "81ec9172-9243-4727-8eb1-91c9261cd682",
+      "key": "3efc723c-74bd-4a78-bd9f-9e563f66a40d",
       "position": 3,
       "properties": {
-        "progression_name": "Draw Your Background"
+        "description": "As students fill in the activity guide about the side scroller game, continue to support student ideas and brainstorms as they are asked to consider the different aspects of programming the game:\n\n1) Students are asked to identify parts of programming the game that they are not sure how to do yet. If students identify concepts that have previously been covered, suggest they go back and review. \n\n2) Next, students are given the opportunity to identify new animations for the three sprites in the game.  \n\n3) The first layer of the game is a background. The activity guide provides a space for students to lay out their background and an area for students to take notes and write pseudocode.\n\n4) Next, students think through how each sprite is programmed to move and interact with the other sprites and given  an opportunity to decide if they want to change anything.",
+        "name": "Step 2: Prepare - Design Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "3efc723c-74bd-4a78-bd9f-9e563f66a40d",
+        "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
+      }
+    },
+    {
+      "key": "00c3056c-cbaf-4e38-af9b-0ad0838d472a",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your game. Don't forget about using the problem solving process to help with the *blank screen* effect. If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.\n",
+        "name": "Step 3: Try - Program Your Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "00c3056c-cbaf-4e38-af9b-0ad0838d472a",
+        "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
+      }
+    },
+    {
+      "key": "81ec9172-9243-4727-8eb1-91c9261cd682",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "progression_name": "Draw Your Background",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, player controls, etc). Encourage students to follow the instructions in each level, focusing on one task at a time."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "81ec9172-9243-4727-8eb1-91c9261cd682",
@@ -5862,9 +6066,16 @@
     },
     {
       "key": "cab43fe2-4162-4c38-ae96-c14d216eb2ac",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "progression_name": "Create Your Sprites"
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "progression_name": "Create Your Sprites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cab43fe2-4162-4c38-ae96-c14d216eb2ac",
@@ -5873,7 +6084,7 @@
     },
     {
       "key": "2c12b812-2b92-40f3-b116-f08602dd7f5c",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Player Controls"
       },
@@ -5884,7 +6095,7 @@
     },
     {
       "key": "29654361-4d3a-49e0-95fd-a05491589d75",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Looping"
       },
@@ -5895,7 +6106,7 @@
     },
     {
       "key": "c42f0c29-5a4d-4797-87a6-ad9a0b2ed694",
-      "position": 7,
+      "position": 9,
       "properties": {
         "progression_name": "Sprite Interactions"
       },
@@ -5906,7 +6117,7 @@
     },
     {
       "key": "c37ae870-958d-48ab-a7c8-b019936613ad",
-      "position": 8,
+      "position": 10,
       "properties": {
         "progression_name": "Scoring & Scoreboard"
       },
@@ -5917,7 +6128,7 @@
     },
     {
       "key": "2f4d7386-2ead-4655-8393-ec856d6ba1ff",
-      "position": 9,
+      "position": 11,
       "properties": {
         "progression_name": "Review Your Game",
         "tips": [
@@ -5929,6 +6140,18 @@
       },
       "seeding_key": {
         "activity_section.key": "2f4d7386-2ead-4655-8393-ec856d6ba1ff",
+        "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
+      }
+    },
+    {
+      "key": "bf604258-d20a-49e3-806d-a5e46829dddb",
+      "position": 12,
+      "properties": {
+        "description": "Direct students to complete the last step of their activity guide to reflect on how they did programming this game.",
+        "name": "Step 4: Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf604258-d20a-49e3-806d-a5e46829dddb",
         "lesson_activity.key": "3fb46922-b103-439e-9edd-d20c17860eeb"
       }
     },
@@ -6007,7 +6230,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -6369,13 +6592,8 @@
       "key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students can use this sheet to plan out the Flyer Game they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r flyer_game_1/csd3/2023]. Student should use this activity guide to plan out and brainstorm how to program the flyer game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the flyer game example game or demo the game for the students.\n\n",
+        "progression_name": "Flyer Game Example"
       },
       "seeding_key": {
         "activity_section.key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296",
@@ -6386,6 +6604,8 @@
       "key": "9c27acba-ecaa-4c7b-93a5-810026e5864c",
       "position": 2,
       "properties": {
+        "description": "**Circulate:** As students fill out a description of the aspects of the flyer game they want to keep the same and what they want to change, circulate the room to ask students about their ideas and help guide them.\n",
+        "name": "Step 1: Define - Plan the Game",
         "progression_name": "Intro to Flyer Game"
       },
       "seeding_key": {
@@ -6394,10 +6614,42 @@
       }
     },
     {
-      "key": "c81e2265-ff17-420a-9def-e2c71a004da1",
+      "key": "553b5584-c1aa-4e85-93f0-4d2631111697",
       "position": 3,
       "properties": {
-        "progression_name": "Make Your Sprites"
+        "description": "As students fill in the activity guide about the flyer game, continue to support student ideas and brainstorms as they are asked to consider the different aspects of programming the game:\n\n1) Students are asked to identify parts of programming the game that they are not sure how to do yet. If students identify concepts that have previously been covered, suggest they go back and review. \n\n2) Next, students are given the opportunity to identify new animations for the three sprites in the game.  \n\n3) The first layer of the game is a background. The activity guide provides a space for students to lay out their background and an area for students to take notes and write pseudocode.\n\n4) Next, students think through how each sprite is programmed to move and interact with the other sprites and given  an opportunity to decide if they want to change anything.",
+        "name": "Step 2: Prepare - Design Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "553b5584-c1aa-4e85-93f0-4d2631111697",
+        "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
+      }
+    },
+    {
+      "key": "be8cc86e-bfba-48c2-8c09-bfdb56572c58",
+      "position": 4,
+      "properties": {
+        "description": "Many of you are ready to start creating your game. Don't forget about using the problem solving process to help with the *blank screen* effect. If you feel stuck or you’re not sure what to do next, remember you can always follow the steps of the problem-solving process to **define** your next step, **prepare** for what you want to code, **try** it out, then **reflect** on whether or not it solved your problem.\n",
+        "name": "Step 3: Try - Program Your Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "be8cc86e-bfba-48c2-8c09-bfdb56572c58",
+        "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
+      }
+    },
+    {
+      "key": "c81e2265-ff17-420a-9def-e2c71a004da1",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "progression_name": "Make Your Sprites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, player controls, etc). Encourage students to follow the instructions in each level, focusing on one task at a time."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c81e2265-ff17-420a-9def-e2c71a004da1",
@@ -6406,9 +6658,16 @@
     },
     {
       "key": "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "progression_name": "Player Controls"
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
+        "progression_name": "Player Controls",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7",
@@ -6417,7 +6676,7 @@
     },
     {
       "key": "9f59f303-4fc6-4e21-a68f-7bb84427a90e",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Sprite Movement"
       },
@@ -6428,7 +6687,7 @@
     },
     {
       "key": "f7e3dfc2-b577-4557-9826-de3f8d1d6dce",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Sprite Interactions"
       },
@@ -6439,7 +6698,7 @@
     },
     {
       "key": "8132afd2-391e-4945-804c-75dc8a2a62d0",
-      "position": 7,
+      "position": 9,
       "properties": {
         "progression_name": "Review Your Game",
         "tips": [
@@ -6451,6 +6710,18 @@
       },
       "seeding_key": {
         "activity_section.key": "8132afd2-391e-4945-804c-75dc8a2a62d0",
+        "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
+      }
+    },
+    {
+      "key": "2fed67b8-42b8-4645-8a8d-c1d5d3e23754",
+      "position": 10,
+      "properties": {
+        "description": "Direct students to complete the last step of their activity guide to reflect on how they did programming this game.",
+        "name": "Step 4: Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fed67b8-42b8-4645-8a8d-c1d5d3e23754",
         "lesson_activity.key": "45046187-f62d-4582-9b55-3107653f3b56"
       }
     },
@@ -7170,7 +7441,7 @@
       "key": "1fa27a0a-2750-4089-91df-bda854753642",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
         "name": "Review Project Guide\r"
       },
       "seeding_key": {
@@ -7183,7 +7454,7 @@
       "position": 3,
       "properties": {
         "description": "**Circulate:** Students should spend the first 15-20 minutes playing the sample games, reviewing past work, and discussing as a group the type of game they'd like to build. If they want they can sketch ideas on scratch paper or in their journals.",
-        "name": "Define - Scope Game\r",
+        "name": "Step 1: Define - Scope Game",
         "progression_name": "Sample Games",
         "tips": [
           {
@@ -7202,7 +7473,7 @@
       "position": 4,
       "properties": {
         "description": "**Circulate:** Once students have discussed their ideas for the project, they should complete the project guide. While this should be a fairly familiar process, encourage students to make each component as clear and detailed as they can. Planning ahead can help them identify issues in their plan before they'll need to make more significant changes to their code.",
-        "name": "Prepare - Complete Project Guide\r",
+        "name": "Step 2: Prepare - Complete Project Guide",
         "tips": [
           {
             "type": "teachingTip",
@@ -7219,8 +7490,8 @@
       "key": "a55e3691-9685-4192-89b5-0ee62a4c1c15",
       "position": 5,
       "properties": {
-        "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
-        "name": "Try - Write Code\r",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to Code Studio to start programming. The levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.\n",
+        "name": "Step 3: Try - Write Code",
         "tips": [
           {
             "type": "teachingTip",
@@ -7237,11 +7508,12 @@
       "key": "41bb4f61-1aae-4f97-9f4a-bd8bc162da2a",
       "position": 6,
       "properties": {
+        "description": "**Circulate:** Encourage students to use the steps in the Problem-Solving Process for Programming when they get stuck or are unsure of what to do next.\n",
         "progression_name": "Project - Background and Variables",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
           }
         ]
       },
@@ -7266,7 +7538,7 @@
       "position": 8,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the peer review guide.  \r\n\r\nStudents should spend 15 minutes reviewing the other group's game and filling out the peer review guide.",
-        "name": "Reflect - Peer Review\r"
+        "name": "Step 4: Reflect - Peer Review"
       },
       "seeding_key": {
         "activity_section.key": "d0c51657-4106-4acd-b56d-06f92f430b13",
@@ -7288,7 +7560,7 @@
       "key": "beb11136-6ed3-4efd-a31f-ffb212bc8f33",
       "position": 10,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.\n\nDirect students to complete the last step of their activity guide to reflect on how they did programming this game.",
         "name": "Iterate - Update Code\r",
         "tips": [
           {
@@ -7359,7 +7631,7 @@
       "key": "d0e4ab72-97ea-42f5-a35a-821e53038da5",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "name": "Post-Project Test"
       },
       "seeding_key": {
@@ -8297,6 +8569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 review_2023"
+        ],
         "progression": "Review Shape Blocks"
       },
       "bonus": false,
@@ -8319,6 +8594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 mini project_2023"
+        ],
         "progression": "Create Your Robot Face"
       },
       "bonus": false,
@@ -8919,7 +9197,7 @@
         "level_keys": [
           "CSD U3 Scene Example_2023"
         ],
-        "progression": "Sprite Scenes"
+        "progression": "Captioned Scene Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -8929,7 +9207,7 @@
         "lesson.key": "Mini-Project - Captioned Scenes",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "df6bc462-7d49-49b2-a0fb-8f0f56c69c69"
+        "activity_section.key": "5b65c9a6-26fd-43fb-a193-130f47faa6d3"
       },
       "level_keys": [
         "CSD U3 Scene Example_2023"
@@ -9467,31 +9745,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD web project animated plan_2023"
-        ],
-        "progression": "Plan Your Scene"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD web project animated plan_2023"
-        ],
-        "lesson.key": "Mini-Project - Animation",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "98112b16-adcb-48db-8aea-b650606ed7c6"
-      },
-      "level_keys": [
-        "CSD web project animated plan_2023"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSD web project animated background_2023"
         ],
         "progression": "Draw a Background"
@@ -9511,8 +9764,8 @@
       ]
     },
     {
-      "chapter": 86,
-      "position": 4,
+      "chapter": 85,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9536,8 +9789,8 @@
       ]
     },
     {
-      "chapter": 87,
-      "position": 5,
+      "chapter": 86,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9561,8 +9814,8 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 6,
+      "chapter": 87,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9586,8 +9839,8 @@
       ]
     },
     {
-      "chapter": 89,
-      "position": 7,
+      "chapter": 88,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9611,7 +9864,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9636,7 +9889,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9661,7 +9914,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9686,7 +9939,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9711,7 +9964,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9736,7 +9989,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9761,7 +10014,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9786,7 +10039,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9811,7 +10064,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9836,7 +10089,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9861,7 +10114,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9886,7 +10139,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9911,7 +10164,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9936,7 +10189,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9961,7 +10214,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9986,7 +10239,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10011,7 +10264,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10036,7 +10289,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10061,7 +10314,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10086,7 +10339,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10111,7 +10364,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10136,7 +10389,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10161,7 +10414,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10186,7 +10439,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10211,7 +10464,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10219,7 +10472,7 @@
         "level_keys": [
           "CSD U3 - Interactive Card - ExampleChoice_2023"
         ],
-        "progression": "Make an Interactive Card"
+        "progression": "Interactive Card Examples"
       },
       "bonus": false,
       "seeding_key": {
@@ -10229,14 +10482,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "cfe7d63e-fa10-41cc-baaa-b540e001c2cb"
+        "activity_section.key": "5faa298a-e312-4a56-a942-a7eb8a626687"
       },
       "level_keys": [
         "CSD U3 - Interactive Card - ExampleChoice_2023"
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10261,7 +10514,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10286,7 +10539,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10311,7 +10564,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10336,7 +10589,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10361,7 +10614,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10386,7 +10639,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10411,7 +10664,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10436,7 +10689,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 122,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10461,7 +10714,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10486,7 +10739,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10511,7 +10764,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -10536,7 +10789,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -10561,7 +10814,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10586,7 +10839,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -10611,7 +10864,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10636,7 +10889,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10661,7 +10914,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10686,7 +10939,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10711,7 +10964,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10736,7 +10989,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10761,7 +11014,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10786,7 +11039,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10811,7 +11064,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 137,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10836,15 +11089,12 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD games side scroller demo_2023"
-        ],
-        "progression": "Intro to Side Scrollers"
+        "progression": "Side Scroller Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -10854,14 +11104,14 @@
         "lesson.key": "Mini-Project - Side Scroller",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "47f81bf9-27d2-4354-ad62-9c52c1213106"
+        "activity_section.key": "90da1fce-029b-4071-811d-9c582d9ddc14"
       },
       "level_keys": [
         "CSD games side scroller demo_2023"
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10886,7 +11136,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10911,7 +11161,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10936,7 +11186,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10961,7 +11211,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10986,7 +11236,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 144,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11011,7 +11261,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 145,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11036,7 +11286,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 146,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11061,7 +11311,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 147,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11086,7 +11336,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 148,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11111,7 +11361,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 149,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11136,7 +11386,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 150,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11161,7 +11411,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 151,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -11186,7 +11436,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 152,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11211,7 +11461,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 153,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11236,7 +11486,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 154,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11261,7 +11511,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 155,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11286,7 +11536,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 156,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11311,7 +11561,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 157,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11336,7 +11586,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 158,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11361,7 +11611,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 159,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11386,7 +11636,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 160,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11411,15 +11661,12 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 161,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD games flyer demo_2023"
-        ],
-        "progression": "Intro to Flyer Game"
+        "progression": "Flyer Game Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -11429,14 +11676,14 @@
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "9c27acba-ecaa-4c7b-93a5-810026e5864c"
+        "activity_section.key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296"
       },
       "level_keys": [
         "CSD games flyer demo_2023"
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 162,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11461,7 +11708,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 163,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11486,7 +11733,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 164,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11511,7 +11758,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 165,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11536,7 +11783,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 166,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11561,7 +11808,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 167,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11586,7 +11833,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 168,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11611,7 +11858,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 169,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11636,7 +11883,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 170,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11661,7 +11908,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 171,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11686,7 +11933,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 172,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11711,7 +11958,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 173,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11736,7 +11983,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 174,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11761,7 +12008,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 175,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11786,7 +12033,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 176,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11811,7 +12058,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 177,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -11836,7 +12083,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 178,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11861,7 +12108,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 179,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11886,7 +12133,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 180,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11911,7 +12158,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 181,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11936,7 +12183,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 182,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11961,7 +12208,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 183,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11986,7 +12233,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 184,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12011,7 +12258,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 185,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12036,7 +12283,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 186,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -12061,7 +12308,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 187,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -12086,7 +12333,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 188,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -12111,7 +12358,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 189,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -12136,7 +12383,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 190,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -12161,7 +12408,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 191,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12186,7 +12433,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 192,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12211,7 +12458,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 193,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12236,7 +12483,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 194,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12261,7 +12508,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 195,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12286,7 +12533,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 196,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12311,7 +12558,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 197,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12336,7 +12583,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 198,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12361,7 +12608,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 199,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12386,7 +12633,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 200,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12411,7 +12658,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 201,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12436,7 +12683,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 202,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12461,7 +12708,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 203,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12486,7 +12733,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 204,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12511,7 +12758,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 205,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12536,7 +12783,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 206,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12561,7 +12808,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 207,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12586,7 +12833,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 208,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12611,7 +12858,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 209,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12636,7 +12883,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 210,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12661,7 +12908,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 211,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12686,7 +12933,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 212,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12711,7 +12958,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 213,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12736,7 +12983,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 214,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12761,7 +13008,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 215,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12786,7 +13033,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 216,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12811,7 +13058,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 217,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12836,7 +13083,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 218,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12861,7 +13108,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 219,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12886,7 +13133,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 220,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12911,7 +13158,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 221,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12936,7 +13183,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 222,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -13702,7 +13949,7 @@
         "lesson.key": "Mini-Project - Captioned Scenes",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "df6bc462-7d49-49b2-a0fb-8f0f56c69c69"
+        "activity_section.key": "5b65c9a6-26fd-43fb-a193-130f47faa6d3"
       }
     },
     {
@@ -13955,18 +14202,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "2858c3f2-a4f7-429b-829d-0fee29b43329"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD web project animated plan_2023",
-        "script_level.level_keys": [
-          "CSD web project animated plan_2023"
-        ],
-        "lesson.key": "Mini-Project - Animation",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "98112b16-adcb-48db-8aea-b650606ed7c6"
       }
     },
     {
@@ -14326,7 +14561,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "cfe7d63e-fa10-41cc-baaa-b540e001c2cb"
+        "activity_section.key": "5faa298a-e312-4a56-a942-a7eb8a626687"
       }
     },
     {
@@ -14626,7 +14861,7 @@
         "lesson.key": "Mini-Project - Side Scroller",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "47f81bf9-27d2-4354-ad62-9c52c1213106"
+        "activity_section.key": "90da1fce-029b-4071-811d-9c582d9ddc14"
       }
     },
     {
@@ -14902,7 +15137,7 @@
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "9c27acba-ecaa-4c7b-93a5-810026e5864c"
+        "activity_section.key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296"
       }
     },
     {
@@ -15676,8 +15911,52 @@
       }
     },
     {
+      "name": "All Code",
+      "url": "/s/csd3-2023/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd3-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd3-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd3-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
+      "url": "https://docs.google.com/document/d/1fHRgDgi5mCgPFitc3nM4StqO1ciaGjmQCLREmTnveFg/view",
       "key": "animated_scene",
       "properties": {
         "audience": "Student",
@@ -15690,7 +15969,7 @@
     },
     {
       "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
+      "url": "https://docs.google.com/document/d/1a2qv6xH8ewMu9SrKaFt3hbPM6JGSJ0kqjyc-UzQ_3xE/view",
       "key": "animated_scene_1",
       "properties": {
         "audience": "Student",
@@ -15703,7 +15982,7 @@
     },
     {
       "name": "Animated Scene Planning",
-      "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1YrtHnzB6kLGtFt05gQEHjfbX5aWWYlv3YRdTsR5VR3M/view",
       "key": "animated_scene_planning",
       "properties": {
         "audience": "Verified Teacher",
@@ -15726,7 +16005,7 @@
       }
     },
     {
-      "name": "App Design for Users",
+      "name": "Animation and Game Design for Users",
       "url": "https://docs.google.com/document/d/1T1rHB9UzmWg26DW1QLzJWGE6_ONfBCIi5F6pdX4rGmU/edit?usp=sharing",
       "key": "app_design_for_users",
       "properties": {
@@ -15764,7 +16043,7 @@
     },
     {
       "name": "Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
+      "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
       "key": "captioned_scenes",
       "properties": {
         "audience": "Student",
@@ -15777,7 +16056,7 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
+      "url": "https://docs.google.com/document/d/1pSfutXv_HqPGrU-dWIDbwFgo0RiG0_8x58c3c5heGfY/view",
       "key": "collision_detection",
       "properties": {
         "audience": "Verified Teacher",
@@ -15801,11 +16080,10 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1r4I_2bAd7GCqWPlIaQ_JaXr1UaIISo5TXCLvsXIiQiY/template/preview",
       "key": "collision_detection_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15814,7 +16092,7 @@
     },
     {
       "name": "Collision Detection (Version A)",
-      "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
+      "url": "https://docs.google.com/document/d/1YThab-y4Vg-ltanqwNykC4nOaT0gKdKFHtS1INoHWHM/view",
       "key": "collision_detection_version_a_",
       "properties": {
         "audience": "Student",
@@ -15827,7 +16105,7 @@
     },
     {
       "name": "Collision Detection (Version B)",
-      "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
+      "url": "https://docs.google.com/document/d/1U3t6FGGvvqAVdz-rudQIJsDW4ubfEaSelaVqENp_kVw/view",
       "key": "collision_detection_version_b_",
       "properties": {
         "audience": "Student",
@@ -15840,11 +16118,10 @@
     },
     {
       "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview",
+      "url": "https://docs.google.com/presentation/d/18nEJsDVITNK8jHkhfBSdtvwoHBB12DVnKtjm-MhYoxI/template/preview",
       "key": "collisions",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15853,11 +16130,10 @@
     },
     {
       "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/1r3fGTf_J1buSAn10_qBNJI4h8mHEGWOFatytHyQOVYQ/template/preview",
       "key": "complex_sprite_movement",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15892,11 +16168,10 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Pa444DLx4TBgZ1vaBgJMgHmaLSryolD7phxmdK7YQ2w/template/preview",
       "key": "conditionals",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -15904,8 +16179,68 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
+      }
+    },
+    {
       "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit",
+      "url": "https://docs.google.com/document/d/1ScMzt0GzhV_f-hMtrWCRCI0pha4mtmlGrrtrp76KIqg/view",
       "key": "defender_game",
       "properties": {
         "audience": "Student",
@@ -15917,7 +16252,7 @@
     },
     {
       "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kVwsZPhVrafAXXkK5qhWdfZeYKSEjK-eD6txmmWmPSA/template/preview",
       "key": "drawing_in_game_lab",
       "properties": {
         "audience": "Teacher",
@@ -15955,7 +16290,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
+      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/view",
       "key": "drawing_shapes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16004,6 +16339,18 @@
       }
     },
     {
+      "name": "Exemplar - Animation and Game Design Activity Guide",
+      "url": "https://docs.google.com/document/d/1MgNcavou62Y4BykohkGT_MR8Rj1nKIeInEUVU2qaxq0/edit?usp=sharing",
+      "key": "exemplar_-_animation_and_game_design_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
+      }
+    },
+    {
       "name": "Extra Code in Challenge Levels",
       "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
       "key": "extra_code_in_challenge_levels",
@@ -16029,7 +16376,7 @@
     },
     {
       "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
+      "url": "https://docs.google.com/document/d/1dTUv-Qj1Kg_9oEYfAR70iL2ud6y8XFectzYKCi4MLyE/view",
       "key": "flyer_game",
       "properties": {
         "audience": "Student",
@@ -16042,7 +16389,7 @@
     },
     {
       "name": "Flyer Game - Project Guide",
-      "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14by40I7v6BwWh7venZO83xk1qgeHE4hmNjdfQo1BsbQ/view",
       "key": "flyer_game_-_project_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -16054,12 +16401,12 @@
     },
     {
       "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
+      "url": "https://docs.google.com/document/d/1_n916C-OpKAquctNSkD5SdsWqC1RI9WQQzQ0EcZV_48/view",
       "key": "flyer_game_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "flyer_game_1"
@@ -16092,11 +16439,10 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/template/preview",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16141,8 +16487,8 @@
       }
     },
     {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
+      "name": "Exemplar - Interactive Card",
+      "url": "https://docs.google.com/document/d/1Z13UA6i0PTT83UVdtEjSsZqxyGinVYoz3SFIUAnkwVY/view",
       "key": "interactive_card",
       "properties": {
         "audience": "Verified Teacher",
@@ -16154,7 +16500,7 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
+      "url": "https://docs.google.com/document/d/1HwcWQLHiuPEOlPaM6axOFGgu7peYsrCZnT7Juea-rfA/view",
       "key": "interactive_card_-_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
@@ -16166,37 +16512,38 @@
     },
     {
       "name": "Interactive Card - Student Checklist",
-      "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view",
+      "url": "https://docs.google.com/document/d/1N1iuDi-25VhSto-9zk9_0dc8H4t1nsS22u91I7Uucfw/view",
       "key": "interactive_card_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "interactive_card_-_student_checklist"
       }
     },
     {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+      "name": "Interactive Card - Activity Guide",
+      "url": "https://docs.google.com/document/d/1iJjh3OSHyZdk1TCBaq5JtfP3v9fXxbp9utiJzIU5bdQ/view",
       "key": "interactive_card_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "interactive_card_1"
       }
     },
     {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
+      "name": "Interactive Card - Peer Review",
+      "url": "https://docs.google.com/document/d/1e9HdHppRFxkszxCF2m9YWr-jt1EK8DupSrsP6q2_060/view",
       "key": "interactive_card_2",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Peer Review"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "interactive_card_2"
@@ -16256,11 +16603,10 @@
     },
     {
       "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dxsWmBnyhc0pzGs5KjupRRNaYkXX8Ehdiebja2N0Yss/template/preview",
       "key": "keyboard_input",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16269,7 +16615,7 @@
     },
     {
       "name": "Make Your Own Game ",
-      "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1m0szgz6YtE4RucBUFWpocRxu3r0hKpn3JDgPoK7nwOQ/view",
       "key": "make_your_own_game",
       "properties": {
         "audience": "Verified Teacher",
@@ -16281,7 +16627,7 @@
     },
     {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
+      "url": "https://docs.google.com/document/d/1VHUhfblKwRZieZXM8YYHr3mkilbjEQhcQmcmwNaUUHc/view",
       "key": "make_your_own_game_-_sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
@@ -16293,11 +16639,12 @@
     },
     {
       "name": "Make Your Own Game - Student Checklist",
-      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
+      "url": "https://docs.google.com/document/d/1YDsOmgD3NvRjIQwGpZsH_17TIXpQaVUhtjFpyh4-qGw/view",
       "key": "make_your_own_game_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game_-_student_checklist"
@@ -16305,25 +16652,25 @@
     },
     {
       "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14oPvmdvm_BfOn5KBSov6jyhoEMRHygdNNIXl-fe4g-Q/view",
       "key": "make_your_own_game_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game_1"
       }
     },
     {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
+      "name": "Make Your Own Game - Peer Review",
+      "url": "https://docs.google.com/document/d/1VOlmo7osjS7We0ebREm3M54Gwr4o13p7irHfIASDvFE/view",
       "key": "make_your_own_game_2",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Peer Review"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game_2"
@@ -16331,7 +16678,7 @@
     },
     {
       "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
+      "url": "https://docs.google.com/document/d/1BHsR1x8scsPsfaQoNEIgkz1rSLwG2hnKkjmVrPX55lw/view",
       "key": "make_your_own_game_3",
       "properties": {
         "audience": "Student",
@@ -16344,11 +16691,10 @@
     },
     {
       "name": "Mini-Project - Animation",
-      "url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1us7auvKet5Mdtd21WNeVH0p7CO8ZOiqHjVK6_SXGn0Y/template/preview",
       "key": "mini-project_-_animation",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16357,11 +16703,10 @@
     },
     {
       "name": "Mini-Project - Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
       "key": "mini-project_-_captioned_scenes",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16370,11 +16715,10 @@
     },
     {
       "name": "Mini-Project - Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qbOF9IpC97i4GDN1c1KieAb6XtVb6Lh7mon9WcdUM9Q/template/preview",
       "key": "mini-project_-_flyer_game",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16383,7 +16727,7 @@
     },
     {
       "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/template/preview",
       "key": "mini-project_-_robot_faces",
       "properties": {
         "audience": "Teacher",
@@ -16407,11 +16751,10 @@
     },
     {
       "name": "Mini-Project - Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-Zd08aeFU9Po2Qa7EHi9pf870CUilb2pdHtR44s_h_U/template/preview",
       "key": "mini-project_-_side_scroller",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16420,7 +16763,7 @@
     },
     {
       "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zxFNweZNdkXc1YsVROgDQ2fmrxbbgCgZQtMPS-POmg4/view",
       "key": "mini-project_guide_-_side_scroller",
       "properties": {
         "audience": "Verified Teacher",
@@ -16432,7 +16775,7 @@
     },
     {
       "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
+      "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view",
       "key": "mini_project_-_captioned_scenes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16444,11 +16787,10 @@
     },
     {
       "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1V_I3P7hFqxijePGNKF5V0RynQqv1_zYLJaBrQyhwpns/template/preview",
       "key": "mouse_input",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16469,7 +16811,7 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
+      "url": "https://docs.google.com/document/d/1F9RH16-Yph9gapZyBKbnnh-LEJUwN20Ipa5D4rIMz1g/view",
       "key": "planning_your_platform_game",
       "properties": {
         "audience": "Verified Teacher",
@@ -16481,7 +16823,7 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
+      "url": "https://docs.google.com/document/d/1FqTjwpAuFrVidZ_j6aGw895FivFCRO2CZSvhHqWuEik/view",
       "key": "planning_your_platform_game_1",
       "properties": {
         "audience": "Student",
@@ -16494,7 +16836,7 @@
     },
     {
       "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kAI6VK8GU8k-ounpUizwzLRdhjMfwF4M0yumF8-O9qc/template/preview",
       "key": "plotting_shapes",
       "properties": {
         "audience": "Teacher",
@@ -16542,11 +16884,10 @@
     },
     {
       "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/template/preview",
+      "url": "https://docs.google.com/presentation/d/14RyASPSwS_vT1jf_OWromepRlsN8LQtQiAnLj2qzXVQ/template/preview",
       "key": "project_-_design_a_game",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16555,11 +16896,10 @@
     },
     {
       "name": "Project - Interactive Card",
-      "url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/template/preview",
+      "url": "https://docs.google.com/presentation/d/1VymZrgMdUtcehg9rA2u-IGevR5rptmlNRkeuHRmwisw/template/preview",
       "key": "project_-_interactive_card",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16568,7 +16908,7 @@
     },
     {
       "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit",
+      "url": "https://docs.google.com/drawings/d/1N1m8la6XsQrn1X2Yq97gRfg4HRh1glk-gTHBK0fUDZA/view",
       "key": "random_dot_flipbook",
       "properties": {
         "audience": "Teacher"
@@ -16591,11 +16931,10 @@
     },
     {
       "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1gYcOnHhQRTTNDFj1s1Anfu5XkrkeCPk_9N7GmLCLzFo/template/preview",
       "key": "random_numbers_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16604,7 +16943,7 @@
     },
     {
       "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit",
+      "url": "https://docs.google.com/drawings/d/1VEgpZKDn4kvZvRSafrDSqB3so1HzKeeA8WAWLQZsoL0/view",
       "key": "random_sprite_flipbook",
       "properties": {
         "audience": "Teacher"
@@ -16651,7 +16990,7 @@
     },
     {
       "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1apejlCGeW2ptqIoFWTcy-WqthPGMsItKNbEUOWGosEk/template/preview",
       "key": "shapes_and_parameters_1",
       "properties": {
         "audience": "Teacher",
@@ -16663,7 +17002,7 @@
     },
     {
       "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
+      "url": "https://docs.google.com/document/d/1iSosF7vOAc5_iqr9cBYfgDjbiVERhkbKNMa1RJK_mv8/view",
       "key": "side_scroller",
       "properties": {
         "audience": "Student",
@@ -16676,12 +17015,12 @@
     },
     {
       "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+      "url": "https://docs.google.com/document/d/1WW92Ti8Xg1Evn8rQtRZq8Xltf5NP8cP_ZVrWHuiQPFk/view",
       "key": "side_scroller_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "side_scroller_1"
@@ -16702,11 +17041,10 @@
     },
     {
       "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qcdkzXVAkXUd9c3JIRba4ik35i02bk_-xRMfwrQVz8I/template/preview",
       "key": "sprite_movement_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16727,11 +17065,10 @@
     },
     {
       "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
       "key": "sprite_properties_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16752,7 +17089,7 @@
     },
     {
       "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
+      "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view",
       "key": "sprite_scene_planning",
       "properties": {
         "audience": "Student",
@@ -16777,11 +17114,10 @@
     },
     {
       "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1XcR7-9AOjlV-ksjFts4MturQ7qISXUFMXWSWwrecjvU/template/preview",
       "key": "sprites_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16789,12 +17125,21 @@
       }
     },
     {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
       "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
       "key": "text",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16840,11 +17185,10 @@
     },
     {
       "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WiAmb354NypVe1SsF3AUZ0O2b-aXgvnhRgkETaO3sZQ/template/preview",
       "key": "the_draw_loop_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16853,11 +17197,10 @@
     },
     {
       "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/template/preview",
+      "url": "https://docs.google.com/presentation/d/1R52jE2nA2mmd8dex6wfWKrAU63m64spVHgotpqid86w/template/preview",
       "key": "the_game_design_process",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16879,11 +17222,10 @@
     },
     {
       "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview",
+      "url": "https://docs.google.com/presentation/d/14SNOuHJQ_rkJGymgcAA1DT7Nshhk1wROENBo-W6kY7g/template/preview",
       "key": "using_the_game_design_process",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16904,7 +17246,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/edit",
+      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
       "key": "variables_1",
       "properties": {
         "audience": "Teacher",
@@ -16941,11 +17283,10 @@
     },
     {
       "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/template/preview",
+      "url": "https://docs.google.com/presentation/d/112H3VkJf1Dq8MQNQqDsFg5a6y62_kjSwUhafQD9xxoo/template/preview",
       "key": "velocity_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16965,7 +17306,7 @@
       }
     },
     {
-      "name": "App Design Template ",
+      "name": "Animation and Game Design Template ",
       "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
       "key": "web_design_template",
       "properties": {
@@ -17130,6 +17471,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project - Animation",
+        "resource.key": "problem_solving_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
         "resource.key": "captioned_scenes"
       }
@@ -17144,6 +17491,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
         "resource.key": "mini_project_-_captioned_scenes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "resource.key": "problem_solving_with_programming"
       }
     },
     {
@@ -17178,6 +17531,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project - Flyer Game",
+        "resource.key": "problem_solving_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
         "resource.key": "mini-project_-_side_scroller"
       }
@@ -17186,6 +17545,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
         "resource.key": "mini-project_guide_-_side_scroller"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "resource.key": "problem_solving_with_programming"
       }
     },
     {
@@ -17269,6 +17634,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
+        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
         "resource.key": "problem_solving_and_design"
       }
     },
@@ -17341,6 +17712,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
+        "resource.key": "problem_solving_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
         "resource.key": "project_-_design_a_game"
       }
     },
@@ -17390,6 +17767,12 @@
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "resource.key": "interactive_card_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "problem_solving_with_programming"
       }
     },
     {
@@ -17634,7 +18017,72 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd3-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -18416,6 +18864,16 @@
       }
     },
     {
+      "key": "7ba909c9-e151-47a1-8bd1-a1909752c930",
+      "properties": {
+        "description": "Identify features of an animation or game design that match the needs of users"
+      },
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "objective.key": "7ba909c9-e151-47a1-8bd1-a1909752c930"
+      }
+    },
+    {
       "key": "7c53c79e-cb27-4dc0-919a-04120f15ddf7",
       "properties": {
         "description": "Apply an iterator pattern to variables or properties in a loop"
@@ -18568,7 +19026,7 @@
     {
       "key": "bfe358fc-38a1-4001-b4d1-5c61972d301b",
       "properties": {
-        "description": "Identify how computer science is used in a field of entertainment"
+        "description": "Create a prototype of an animation or game design to meet the needs of a user "
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",

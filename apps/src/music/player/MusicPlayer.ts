@@ -487,7 +487,7 @@ export default class MusicPlayer {
         const resultEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
-            patternEvent.when + event.tick / 16
+            patternEvent.when + (event.tick-1) / 16
           ),
           triggered: patternEvent.triggered,
           effects: patternEvent.effects
