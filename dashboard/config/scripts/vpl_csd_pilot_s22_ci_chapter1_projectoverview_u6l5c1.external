@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Chapter 1 project: Make a Game
+# Chapter 1 project: Human Device Interaction
 
 ## Project overview
 
@@ -11,15 +11,13 @@ markdown <<MARKDOWN
 
 ## Sample student projects
 
-### Only thing left to do is add sample projects and delete these instructions
-
 ##### Click the images below to view the sample projects in a new tab.
 
-<div style="float: left; text-align:center;"><strong>Recycling Club</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" width="250px"; alt="Image of recycling club web page"></a></div>
+<div style="float: left; text-align:center;"><strong>Light and Music</strong><br /><a href="https://docs.google.com/document/d/1JGY-WC_C0yFcu0kn_vvc_0GyPCsTTXXpj0sqDPmtYlM/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/c01403951c4bc4a22cab163fe1e84ee7-image-1654791164987.12.01 AM.png" width="250px"; alt="Image of light and music project"></a></div>
 
-<div style="float: left; text-align:center;"><strong>Musical Instruments</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" width="250px" alt="Immage of musical insrumentss web page"></a></div>
+<div style="float: left; text-align:center;"><strong>Magic Unicorn</strong><br /><a href="https://docs.google.com/document/d/13HfVzjOrDS95zGngC_qPmT1f5JgCyCCt_WwmJcUhU0Q/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/edf522d98ab48d04c2261d67ea7c2451-image-1654791278295.14.13 AM.png" width="250px" alt="Image of magic unicorn project"></a></div>
 
-<div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" width="250px" alt="Image of trip web page"></a></div>
+<div style="float: left; text-align:center;"><strong>Red Light Green Light</strong><br /><a href="https://docs.google.com/document/d/1bZaa_cBl2O0U0h_3AxbsTD83HZ7swlwZKAo7bWDG4AU/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/3afb822c1e86af5591a0b8364491e152-image-1654791399261.16.25 AM.png" width="250px" alt="Image of red light green light project"></a></div>
 
 
 <div style="clear:both"/>
@@ -29,10 +27,9 @@ markdown <<MARKDOWN
 ##### If you are short on time, this project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
 
 ## Project resources
-* ##### <a href="https://studio.code.org/s/csd6-2021/lessons/9" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* ##### <a href="https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
-* ##### <a href="https://docs.google.com/document/d/1Stnv4TxXnSI8JZWcd5lEXeihz7ok4OxhERcOllVHMy0/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
-* ##### <a href="https://docs.google.com/document/d/1FcvT4qD9obqusSkeC0OHYGjKVg5lQ26qgpV62aUB528/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
-
+* ##### <a href="https://studio.code.org/s/csd6-2022/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 MARKDOWN

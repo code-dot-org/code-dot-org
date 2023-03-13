@@ -105,7 +105,7 @@ module RakeUtils
   def self.system_stream_output(*args, &block)
     command = command_(*args)
     CDO.log.info command
-    if block_given?
+    if block
       IO.popen(command, &block)
     else
       Kernel.system(command)
@@ -127,9 +127,11 @@ module RakeUtils
   # Changes the Bundler environment to the specified directory for the specified block.
   # Runs bundle_install ensuring dependencies are up to date.
   def self.with_bundle_dir(dir)
-    # Using `with_clean_env` is necessary when shelling out to a different bundle.
-    # Ref: http://bundler.io/man/bundle-exec.1.html#Shelling-out
-    Bundler.with_clean_env do
+    # Using `with_clean_env` is recommended when shelling out to a different bundle (ref:
+    # http://bundler.io/man/bundle-exec.1.html#Shelling-out), but `with_clean_env` is
+    # deprecated in favor of `with_unbundled_env` (ref:
+    # https://bundler.io/v2.1/whats_new.html#helper-deprecations) so use that instead.
+    Bundler.with_unbundled_env do
       ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
         bundle_install
@@ -151,10 +153,15 @@ module RakeUtils
 
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
+    run_bundle_command('config set --local without', *without)
+    run_bundle_command('install --quiet --jobs', nproc, *args)
+  end
+
+  def self.run_bundle_command(*args)
     if CDO.bundler_use_sudo
-      sudo 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      sudo('bundle', *args)
     else
-      system 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      system('bundle', *args)
     end
   end
 
@@ -298,12 +305,12 @@ module RakeUtils
   def self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params={})
     raise 'Need to specify bucket' unless params[:bucket]
 
-    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), open(local_file), acl: 'public-read')
+    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), File.open(local_file), acl: 'public-read')
     new_fetchable_url = AWS::S3.public_url(params[:bucket], s3_filename)
 
     destination_local_pathname = Pathname(destination_local_path)
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
-    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url)}
+    File.write(destination_local_pathname, new_fetchable_url)
     new_fetchable_url
   end
 

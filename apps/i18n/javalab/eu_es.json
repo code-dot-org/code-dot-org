@@ -1,6 +1,8 @@
 {
   "cancel": "Ezeztatu",
+  "create": "Sortu",
   "delete": "Ezabatu",
   "rename": "Aldatu izena",
-  "saving": "Gordetzen..."
+  "saving": "Gordetzen...",
+  "submit": "Bidali"
 }

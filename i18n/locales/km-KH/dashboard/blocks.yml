@@ -2,6 +2,22 @@
 km:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': មធ្យម
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': មធ្យម
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -237,6 +253,11 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': 'y'
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
       gamelab_atTime:
         options:
           UNIT:
@@ -253,7 +274,7 @@ km:
           CONDITION:
             '"when"': នៅ​ពេល
             '"while"': នៅ​ពេល
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': វិ​នាទី
@@ -264,6 +285,10 @@ km:
             '"x"': គូល​x
             '"y"': គូល​y
             '"speed"': ល្បឿន
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': ផ្សេងៗ
       gamelab_getTime:
         options:
           UNIT:
@@ -302,6 +327,12 @@ km:
             '90': ចុះ
             '180': ឆ្វេង
             '270': ឡើង
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': មធ្យម
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -638,3 +669,8 @@ km:
         text: រំកិល​ទៅមុខ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង

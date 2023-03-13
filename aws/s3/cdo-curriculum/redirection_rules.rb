@@ -14,6 +14,15 @@ BUCKET_NAME = "cdo-curriculum"
 routing_rules = [
   {
     condition: {
+      key_prefix_equals: "index.html"
+    },
+    redirect: {
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "courses/"
+    }
+  },
+  {
+    condition: {
       key_prefix_equals: "csp/"
     },
     redirect: {

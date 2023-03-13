@@ -31,7 +31,7 @@ class DynamicConfigController < ApplicationController
 
     params.require(:feature)
     feature = params[:feature]
-    where = JSON.load(params[:where]) || {}
+    where = JSON.parse(params[:where]) || {}
     log_msg = "<b>Gatekeeper - #{feature}</b> #{current_user.name} deleted rule where #{where}"
     ChatClient.log log_msg
     Gatekeeper.delete(feature, where: where)

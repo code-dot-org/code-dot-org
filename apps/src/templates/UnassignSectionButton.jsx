@@ -59,6 +59,10 @@ function UnassignSectionButton({
 
   const closeUnassignDialog = () => {
     setShowUnassignDialog(false);
+  };
+
+  const cancelUnassign = () => {
+    closeUnassignDialog();
     firehoseSendRecord(FIREHOSE_CANCEL_EVENT);
   };
 
@@ -94,7 +98,7 @@ function UnassignSectionButton({
       className={'uitest-unassign-button'}
     >
       <Button
-        __useDeprecatedTag
+        style={styles.boxShadow}
         color={Button.ButtonColor.green}
         text={text}
         icon={icon}
@@ -106,6 +110,7 @@ function UnassignSectionButton({
         courseName={courseName}
         sectionName={sectionName}
         onClose={closeUnassignDialog}
+        cancelUnassign={cancelUnassign}
         unassignSection={confirmUnassign}
       />
     </div>
@@ -134,6 +139,9 @@ const styles = {
     marginRight: 10,
     display: 'flex',
     alignItems: 'center'
+  },
+  boxShadow: {
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)'
   }
 };
 

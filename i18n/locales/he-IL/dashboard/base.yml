@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 he:
   errors:
     messages:
@@ -365,7 +371,6 @@ he:
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'
-      lines: 'סה כ שורות קוד: %{lines}'
       close: 'קרוב'
       mastery: 'עקרונות'
       puzzle_map: 'שלבים'
@@ -477,6 +482,7 @@ he:
     choose_next_course: "נסה קורס מסטודיו קוד ע\"י בחירת אחד מטה"
     print_certificate: "הדפס תעודה"
   certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות ללמידה שלך."
+  certificate_hour_of_code: "שעת הקוד"
   move_students:
     new_section_dne: "מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר קוד קבוצה אחרת."
     section_code_cant_be_current_section: "הקבוצה הנוכחית אינה יכולה להיות זהה כמו הקבוצה החדשה."
@@ -577,23 +583,17 @@ he:
       body_short: "עצב אפליקציה, תכנת אותה בעזרת בלוקים או JavaScript כדי לתת בה חיים ובסוף שתף אותה עם חבריך."
       audience: 'גילאי 13+'
       cta: 'למד כיצד'
-    dance:
-      title: 'מסיבת ריקודים'
+    aquatic:
+      title: "מיינקראפט"
     dance-2019:
       title: 'מסיבת ריקודים'
-    hoc:
-      title: 'מבוך קלאסי'
-      body: 'נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.'
+    dance:
+      title: 'מסיבת ריקודים'
     flappy:
       title: 'קוד מעופף'
       body: 'רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות שלנו!'
-    20-hour:
-      title: 'קורס מואץ'
-      body: 'קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.'
-      body_short: 'למד את הבסיס למדעי המחשב עם גרסה מואצת של קורסים 2-4.'
-    hoc2014:
-      try_new_tutorial: 'נסה את גרסת הביתא של ההדרכות החדשות של שעת קוד'
-      try_frozen: 'צייר עם אנה ואלזה מלשבור את הקרח'
+    frozen:
+      title: "לשבור את הקרח"
     gallery:
       title: "גלריה"
       body: "הצג גלריה של אפליקציות ותמונות אמן שנוצרו על-ידי המשתמשים שלנו"
@@ -602,17 +602,18 @@ he:
       body: "מעבדת המשחקים זו סביבת תכנות שבה תוכל לייצר אנימציות פשוטות עם אובייקטים ודמויות אשר מתקשרות אחת עם השנייה."
       audience: "גילאי 13+"
       cta: "למד כיצד"
+    hello-world:
+      body: 'בחרו מבין ארבעה נושאים כיפיים כדי לקודד דמויות אינטראקטיביות בעולם שאתם יוצרים.'
+    hero:
+      title: "מיינקראפט"
     hoc-encryption:
       body: "התלמידים ילמדו טכניקות ליצירה ופיצוח הודעות מוצפנות."
-    weblab:
-      title: "מעבדת האתרים (בטא)"
-      body: "מעבדת האתרים זו סביבת תכנות שבה תוכל לייצר אתרים פשוטים בעזרת HTML ו-CSS. תכנן את האתר שלך ושתף אותו בתוך שניות."
-      audience: "גילאי 13+"
-      cta: "למד כיצד"
-    frozen:
-      title: "לשבור את הקרח"
-    starwars:
-      title: "מלחמת הכוכבים"
+    hoc:
+      title: 'מבוך קלאסי'
+      body: 'נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.'
+    hoc2014:
+      try_new_tutorial: 'נסה את גרסת הביתא של ההדרכות החדשות של שעת קוד'
+      try_frozen: 'צייר עם אנה ואלזה מלשבור את הקרח'
     infinity:
       title: "אינסוף מעבדת הצעצועים"
       body: "בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך \"דיסני אינסוף\"."
@@ -622,25 +623,34 @@ he:
     minecraft2016:
       title: "מיינקראפט"
       body: "תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך."
-    aquatic:
-      title: "מיינקראפט"
-    hero:
-      title: "מיינקראפט"
+    poem-art:
+      title: 'אומנות השירה'
+    starwars:
+      title: "מלחמת הכוכבים"
     text-compression:
       body: "בשיעור זה, התלמידים ישתמשו בווידג'ט של דחיסת טקסט כדי לכווץ אותו על-ידי החלפת תבניות עם סמלים."
-    unplugged:
-      title: "שיעורים מנותקים"
-      audience: "גילאי 4+"
-      body: "הרכבנו עבורך מספר שיעורים ללא מחשב לשימוש בכיתתך. כעת תוכל ללמד את יסודות מדעי המחשב, גם אם אין ברשותך מחשבים בכיתה! נסה להשתמש בשיעורים אלו כקורס בפני עצמו או כקורס משלים לשיעורים במדעי המחשב."
-      body_short: "אם אין ברשותך מחשבים, נסה להשתמש בשיעורים המנותקים האלו בכיתתך."
-    unplugged_conditionals:
-      title: "תנאים"
-      body: "למד על אלגוריתמים והתניות בפעילות הזו ללא מחשב בעזרת סט קלפים."
+    weblab:
+      title: "מעבדת האתרים (בטא)"
+      body: "מעבדת האתרים זו סביבת תכנות שבה תוכל לייצר אתרים פשוטים בעזרת HTML ו-CSS. תכנן את האתר שלך ושתף אותו בתוך שניות."
+      audience: "גילאי 13+"
+      cta: "למד כיצד"
     widgets:
       title: "ווידג'טים"
       body: "תלמידים יכולים להרחיב אופקים מקורסי העקרונות במדעי המחשב שלנו ולהתנסות בעזרת הכלים הדיגיטליים שלנו. השתמש בווידג'טים לבדם או צור שיעור מבוסס עיקרון יחיד לכיתתך."
       audience: "גילאי 14+"
       cta: "למד כיצד"
+    unplugged_conditionals:
+      title: "תנאים"
+      body: "למד על אלגוריתמים והתניות בפעילות הזו ללא מחשב בעזרת סט קלפים."
+    unplugged:
+      title: "שיעורים מנותקים"
+      audience: "גילאי 4+"
+      body: "הרכבנו עבורך מספר שיעורים ללא מחשב לשימוש בכיתתך. כעת תוכל ללמד את יסודות מדעי המחשב, גם אם אין ברשותך מחשבים בכיתה! נסה להשתמש בשיעורים אלו כקורס בפני עצמו או כקורס משלים לשיעורים במדעי המחשב."
+      body_short: "אם אין ברשותך מחשבים, נסה להשתמש בשיעורים המנותקים האלו בכיתתך."
+    20-hour:
+      title: 'קורס מואץ'
+      body: 'קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.'
+      body_short: 'למד את הבסיס למדעי המחשב עם גרסה מואצת של קורסים 2-4.'
   landing:
     report_bug: "דווח על באג"
     support: "עזרה"
@@ -935,10 +945,10 @@ he:
         other: "אחר:"
       resources:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       robotics:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       email_opt_in:
         opt_in_yes: 'כן'
         opt_in_no: 'לא'
@@ -948,3 +958,12 @@ he:
   copy: 'העתק'
   confirm: 'אשר'
   teacher_feedback: "משוב מורה"
+  lesson_lock:
+    error:
+      no_updates: "אין עדכונים לבצע"
+      missing_params: "יש להכניס משתמש, רמה וזיהוי יחידות"
+      cannot_view_locked_answers: "לא ניתן לצפות בתשובות כאשר נעול"
+      forbidden: "המשתמש אינו יכול לעדכן מצב נעילה של התלמיד"
+  reset_predict_progress_button: "מחק תשובה"
+  pixelation:
+    binary: "בינארי"

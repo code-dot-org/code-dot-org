@@ -38,6 +38,8 @@
   "drawATriangle": "disegna un triangolo",
   "drawUpperWave": "disegna un'onda in alto",
   "drawLowerWave": "disegna un'onda in basso",
+  "drawShape": "disegna forma",
+  "drawShapeWithSideLength": "disegna forma con lunghezza del lato",
   "drawSticker": "disegna un adesivo",
   "drawStickerWithSize": "disegna adesivo con dimensioni",
   "forward": "avanti",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Rende l'artista visibile o invisibile.",
   "widthTooltip": "Cambia la larghezza del pennello.",
   "withSize": "con dimensioni",
+  "withSideLength": "con lunghezza del lato",
   "wrongColour": "Il tuo disegno usa un colore sbagliato. Per questo esercizio, deve essere %1."
 }

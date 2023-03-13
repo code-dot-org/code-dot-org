@@ -1,4 +1,12 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_Game.width_description": "绘图画布的宽度。",
+  "dropletBlock_Game.height_description": "绘图画布的高度。",
+  "dropletBlock_createSprite_param2": "宽度",
+  "dropletBlock_createSprite_param3": "高度",
+  "dropletBlock_setCollider_param0": "类型",
+  "dropletBlock_setCollider_param4": "高度",
+  "dropletBlock_setColliderEach_param0": "类型",
+  "dropletBlock_setColliderEach_param4": "高度",
+  "reinfFeedbackMsg": "你已经完成！请点击“继续”进入下一关",
+  "shareGame": "分享你的游戏："
 }

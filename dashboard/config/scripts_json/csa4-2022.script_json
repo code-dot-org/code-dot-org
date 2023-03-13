@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "defdc3f1-b1e5-46a0-a380-277cfa7f5d83"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,11 +23,12 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 15:39:52 UTC",
+    "serialized_at": "2023-02-22 18:13:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,7 +85,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**What can I make with The Theater?**\n\nStudents are introduced to The Theater and explore its components and functionality. Students review the documentation for The Theater and an existing program to learn about its classes and methods, then practice using them to play sounds, create drawings, and show images.",
-        "preparation": "* Print copies of the Unit 4 Guide (one for each student)\n* Print copies of the Investigating The Theater handout (one for each pair of students)",
+        "preparation": "* Print copies of the Unit 4 Guide (one for each student)\n* Print copies of the Investigating The Theater handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-1-the-theater/36371/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I make with The Theater?**\n\nYou have used The Neighborhood to navigate and paint using a `Painter` object. In this lesson, you explore The Theater and its components and functionality. You review the documentation for The Theater and an existing program to learn about its classes and methods, then practice using some of the methods in The Theater to play sounds, create drawings, and show images."
       },
       "seeding_key": {
@@ -106,7 +103,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I check if two objects are equal?**\n\nStudents discover the difference between comparing primitive values and object references. Students learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. Students then revisit the `Object` class and override the `equals()` method to determine whether two objects of the class are equivalent.",
-        "preparation": "* Gather sticky notes or scrap piece of papers (one for each student)",
+        "preparation": "* Gather sticky notes or scrap piece of papers (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-2-object-aliases-and-equality/36370/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if two objects are equal?**\n\nYou have compared primitive values using relational operators. In this lesson, you discover the difference between comparing primitive values and object references. You learn that two object references are considered aliases when they reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. You then revisit the `Object` class and override the `equals()` method to determine whether two objects of the class are equivalent."
       },
       "seeding_key": {
@@ -124,6 +121,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. Students use nested `if` statements to write an algorithm to compare pairs of values in a 1D array.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-3-nested-if-statements/36369/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. You use nested `if` statements to write an algorithm to compare pairs of values in a 1D array."
       },
       "seeding_key": {
@@ -141,7 +139,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents revisit logical operators to explore the use of the `&&` (and) and `||` (or) operators. Students use truth tables to evaluate Boolean expressions and learn about short-circuited evaluation.",
-        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Gather sticky notes or scrap pieces of paper (one for each student)",
+        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Gather sticky notes or scrap pieces of paper (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-4-logical-operators/36368/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have used the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators. You learn to use truth tables to evaluate Boolean expressions and the functionality of short-circuited evaluation."
       },
       "seeding_key": {
@@ -159,7 +157,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**What are De Morgan's Laws?**\n\nStudents learn about De Morgan's Laws and how they are applied to Boolean expressions. Students explore how equivalent Boolean expressions evaluate to the same value in all cases. Students then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws.",
-        "preparation": "* Print copies of the De Morgan's Laws handout (one for each student)",
+        "preparation": "* Print copies of the De Morgan's Laws handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-5-de-morgans-laws/36367/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are De Morgan's Laws?**\n\nYou have learned to use logical operators to create compound Boolean expressions. In this lesson, you learn about De Morgan's Laws and how they are applied to Boolean expressions. You explore how equivalent Boolean expressions evaluate to the same value in all cases. You then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws."
       },
       "seeding_key": {
@@ -177,7 +175,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**Why would I use a static method?**\n\nStudents have written methods that require an object to be created before the method can be called. In this lesson, students revisit the `static` keyword and learn to write and call static methods. Students explore their functionality and identify scenarios for their use. Students then practice writing and calling static methods to solve problems.",
-        "preparation": "* Print copies of the Dataset Summaries handout (one for each student)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Dataset Summaries handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-6-static-methods/36366/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use a static method?**\n\nYou have written methods that require an object to be created before the method can be called. In this lesson, you revisit the `static` keyword and learn to write and call static methods. You explore their functionality and identify scenarios for their use. You then practice writing and calling static methods to solve problems."
       },
       "seeding_key": {
@@ -194,8 +192,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**What can I do with the Math class?**\n\nStudents explore the `Math` class to learn about its structure and available methods. As students review the documentation for the `Math` class, they revisit the `final` keyword and learn how it can be used to prevent. Students practice using methods in the `Math` class to solve problems.",
-        "preparation": "* Print copies of The Math Class handout (one for each student)",
+        "overview": "**What can I do with the Math class?**\n\nStudents explore the `Math` class to learn about its structure and available methods. As students review the documentation for the `Math` class, they revisit the `final` keyword and learn how it can be used to prevent inheritance. Students practice using methods in the `Math` class to solve problems.",
+        "preparation": "* Print copies of The Math Class handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-7-the-math-class/36365/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I do with the Math class?**\n\nIn this lesson, you explore the `Math` class to learn about its structure and available methods. As you review the documentation for the `Math` class, you revisit the `final` keyword and learn how it can be used to prevent inheritance. You practice using methods in the `Math` class to solve problems."
       },
       "seeding_key": {
@@ -213,7 +211,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
-        "preparation": "* Print copies of the Investigating Casting handout (one for each pair of students)",
+        "preparation": "* Print copies of the Investigating Casting handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-8-casting-and-rounding/36364/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nSometimes we need to temporarily convert a value to a different type or round a value to the nearest integer. In this lesson, you learn about the functionality of casting operators. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. You also use casting operators to round a `double` value to the nearest integer."
       },
       "seeding_key": {
@@ -231,7 +229,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I generate and use random numbers?**\n\nStudents revisit the `Math` class and learn to use the `Math.random()` method to generate random numbers. Students explore how to manipulate the values returned from `Math.random()` to produce a random `int` or `double` in a specific range. Students then practice generating and using random numbers.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-9-random/36363/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I generate and use random numbers?**\n\nYou revisit the `Math` class and learn to use the `Math.random()` method to generate random numbers. You explore how to manipulate the values returned from `Math.random()` to produce a random `int` or `double` in a specific range. You then practice generating and using random numbers."
       },
       "seeding_key": {
@@ -249,7 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I specify different outcomes for different conditions?**\n\nStudents expand their knowledge of selection statements to evaluate and implement multi-selection statements. Students explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students use multi-selection statements to implement algorithms to solve problems.",
-        "preparation": "* Print copies of the Finding Patterns handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 4 Study Guide (one for each student)",
+        "preparation": "* Print copies of the Finding Patterns handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 4 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-lesson-10-multi-selection-statements/36362/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nYou expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You use multi-selection statements to implement algorithms to solve problems."
       },
       "seeding_key": {
@@ -266,9 +264,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)",
-        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
+        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or that is meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-abstract-data-art-project/36361/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -285,7 +283,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents planned their visuals and algorithms to convey a story about their chosen dataset. Students continue to develop their projects to implement algorithms to analyze the data and portray the findings and results visually. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-abstract-data-art-project/36361/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now planned your visuals and algorithms to convey a story about your chosen dataset. You continue developing your project to implement algorithms to analyze the data and visually portray your findings and results. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -304,7 +302,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-abstract-data-art-project/36361/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -322,7 +320,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays and conditionals to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the BingoCaller FRQ handout (one for each student)\n* Print copies of the BingoCaller FRQ Scoring Guidelines (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)",
+        "preparation": "* Print copies of the BingoCaller FRQ handout (one for each student)\n* Print copies of the BingoCaller FRQ Scoring Guidelines (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-frq-practice/36360/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 1D arrays and conditionals to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -341,7 +339,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-assessment/36359/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 4 Assessment."
       },
       "seeding_key": {
@@ -352,7 +350,7 @@
     },
     {
       "key": "Console",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -367,7 +365,7 @@
     },
     {
       "key": "The Neighborhood",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -382,7 +380,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "The Theater",
+      "name": "Sandbox: The Theater",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
@@ -556,7 +554,7 @@
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6f73ae3d-c63a-42a6-b584-86824bb799c3",
@@ -2313,7 +2311,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare? *"
+            "markdown": "Students may struggle to identify why the `Math` class is `final` and has only static methods. A few guiding questions might include:\n* *What might happen if we could change different mathematical formulas or calculations depending on the input?*\n* *If we were to create `Math` objects, what would you want to change about them? In other words, what instance variables would you declare?*"
           }
         ]
       },
@@ -2509,7 +2507,7 @@
       "key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Casting*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
       },
       "seeding_key": {
         "activity_section.key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
@@ -3050,7 +3048,13 @@
       "key": "11a2c844-9c0f-40fa-a71f-ba45515cbbd4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each project level on Lessons 11, 12, and 13 has a different exemplar to provide multiple examples and ideas for the Abstract Data Art Project. You can choose to show one or more of these exemplars to students to provide inspiration and guidance."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "11a2c844-9c0f-40fa-a71f-ba45515cbbd4",
@@ -5980,10 +5984,23 @@
       "key": "abstract_data_art_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "abstract_data_art_project_planning_guide"
+      }
+    },
+    {
+      "name": "Aliasing",
+      "url": "https://youtu.be/9GLT7oQnW4I",
+      "key": "aliasing",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "aliasing"
       }
     },
     {
@@ -6025,6 +6042,7 @@
       "key": "bingocaller_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6037,10 +6055,23 @@
       "key": "bingocaller_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "bingocaller_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Casting",
+      "url": "https://youtu.be/Xy1lVNguW3s",
+      "key": "casting",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "casting"
       }
     },
     {
@@ -6049,6 +6080,7 @@
       "key": "cs_bingo_cards_3",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6073,6 +6105,7 @@
       "key": "dataset_summaries",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6085,6 +6118,7 @@
       "key": "de_morgan_s_laws",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6097,6 +6131,7 @@
       "key": "finding_patterns",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6109,6 +6144,7 @@
       "key": "investigating_casting",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6121,10 +6157,72 @@
       "key": "investigating_the_theater",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "investigating_the_theater"
+      }
+    },
+    {
+      "name": "Multi-Selection Statements",
+      "url": "https://youtu.be/sGYm7fojjXA",
+      "key": "multi-selection_statements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "multi-selection_statements"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://youtu.be/sbH9lixzL34",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Static Methods",
+      "url": "https://youtu.be/k3QLkzascYI",
+      "key": "static_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_methods"
+      }
+    },
+    {
+      "name": "Station Print-outs",
+      "url": "https://docs.google.com/document/d/1Q7z2dGMiSeSD3coG21qyFqIRXsGsCLRO3DK67-yP88U/edit",
+      "key": "station_print-outs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
+      "name": "The equals() Method",
+      "url": "https://youtu.be/F1WhwH4abX4",
+      "key": "the_equals_method",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_equals_method"
       }
     },
     {
@@ -6133,6 +6231,7 @@
       "key": "the_math_class",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6145,6 +6244,7 @@
       "key": "truth_tables",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6157,6 +6257,7 @@
       "key": "u4l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6169,6 +6270,7 @@
       "key": "u4l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6181,6 +6283,7 @@
       "key": "u4l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6193,6 +6296,7 @@
       "key": "u4l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6205,6 +6309,7 @@
       "key": "u4l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6217,6 +6322,7 @@
       "key": "u4l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6229,6 +6335,7 @@
       "key": "u4l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6241,6 +6348,7 @@
       "key": "u4l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6253,6 +6361,7 @@
       "key": "u4l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6265,6 +6374,7 @@
       "key": "u4l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6277,10 +6387,23 @@
       "key": "unit_4_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "name": "Unit 4 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1cOUPPIicbhfv6BBl17cfND_WiCWXcZlUxbzzCvcAFHA/edit?usp=sharing",
+      "key": "unit_4_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_guide_exemplar_"
       }
     },
     {
@@ -6313,6 +6436,7 @@
       "key": "unit_4_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6329,6 +6453,18 @@
       },
       "seeding_key": {
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Welcome to The Theater",
+      "url": "https://youtu.be/Qa5NtHzPmos",
+      "key": "welcome_to_the_theater",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_theater"
       }
     }
   ],
@@ -6372,6 +6508,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "casting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "investigating_casting"
       }
     },
@@ -6391,6 +6533,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "_key_u4l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "random_numbers"
       }
     },
     {
@@ -6421,6 +6569,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "finding_patterns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "multi-selection_statements"
       }
     },
     {
@@ -6521,8 +6675,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "welcome_to_the_theater"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u4l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "aliasing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "the_equals_method"
       }
     },
     {
@@ -6618,6 +6790,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u4l5_extra_practice"
       }
     },
@@ -6643,6 +6821,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "dataset_summaries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "static_methods"
       }
     },
     {
@@ -6710,6 +6894,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_4_guide",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_guide_exemplar_",
         "script.name": "csa4-2022"
       }
     },
@@ -7329,6 +7519,13 @@
         "lesson.key": "lesson-4",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.H.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.E.3"
       }
     },
     {

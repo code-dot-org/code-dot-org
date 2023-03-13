@@ -2,6 +2,9 @@
   "fil-PH": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
         "poem_art_celebration/poem-art/2021": {
           "type": "Video"
         },
@@ -16,11 +19,20 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Video"
         },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Video"
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
         },
         "ai-ml/oceans/unversioned": {
           "type": "Video"
@@ -30,6 +42,1056 @@
         },
         "ai-training/oceans/unversioned": {
           "type": "Video"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Graph Paper Programming",
+          "type": "Pagtatasa"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Pair programming"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relay Programming"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card",
+          "type": "Pagtatasa"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursef/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Ipinapakilala ang Sprite Lab",
+          "type": "Video"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet",
+          "type": "Pagtatasa"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "The Internet"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Rubric"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Pagtatasa"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Rubric"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Iusog mo, Iusog mo"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Pair programming"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie at ang Big Project"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Hindi Namalayang mga Bugs",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Pagiging Loopy"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Pagiging Loopy"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Pagiging Loopy",
+          "type": "Pagtatasa"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Pagiging Loopy"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "The Big Event",
+          "type": "Pagtatasa"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "pair_programming/express/2022": {
+          "name": "Pair programming",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Sprites sa aksyon"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Mga variable"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Rubric"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Pair programming"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Pair programming"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Happy Maps"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "The Big Event",
+          "type": "Pagtatasa"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursec/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Pair programming",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "The Big Event",
+          "type": "Pagtatasa"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binary na mga Pulseras",
+          "type": "Pagtatasa"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binary na mga Pulseras"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "representation_matters/csd/2022": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representation_matters_1/csd/2022": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representation_matters_2/csd/2022": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representing_information/csd/2022": {
+          "name": "Pagrepresenta ng Impormasyon"
+        },
+        "patterns_and_representation/csd/2022": {
+          "name": "Mga Pattern at Representasyon"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII at Binary na Representasyon"
+        },
+        "representing_images/csd/2022": {
+          "name": "Pagkakatawan sa mga Larawan"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Pagrepresenta ng mga Numero"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Pagrepresenta ng mga Numero"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Pagsasama-sama ng mga Representasyon"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Pagiging Sekreto ng mga Datos"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "Pagmumuni-muni"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubric"
+        },
+        "structuring_data/csd/2022": {
+          "name": "Pagsasaayos ng mga Datos"
+        },
+        "structuring_data_1/csd/2022": {
+          "name": "Pagsasaayos ng mga Datos"
+        },
+        "interpreting_data/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting_data_1/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting_data_2/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting_data_3/csd/2022": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Paggawa ng mga Desisyon na may mga Datos"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Paggawa ng mga Desisyon na may mga Datos"
+        },
+        "automating_data_decisions/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating_data_decisions_1/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating_data_decisions_2/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating_data_decisions_3/csd/2022": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Mga Datos sa Tunay na Mundo"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Mga Datos sa Tunay na Mundo"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "Paglutas ng Problema kasama ang Malalaking mga Datos"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "Video: Epekto sa Lipunan",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Machine Learning",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "name": "Video: Data ng Pagsasanay at Pagkiling",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Panimula sa Paglutas ng Problema"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Pagtuklas sa Paglutas ng Problema"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Ano ang isang Kompyuter?"
+        },
+        "input_and_output/csd/2022": {
+          "name": "Input at Output"
+        },
+        "input_and_output_1/csd/2022": {
+          "name": "Input at Output"
+        },
+        "input_and_output_2/csd/2022": {
+          "name": "Input at Output"
+        },
+        "what_do_computers_do/csd/2022": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2022": {
+          "name": "Mga App at Paglutas ng Problema"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Mga App at Paglutas ng Problema",
+          "type": "Pagsusuri ng Peer"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Mga App at Paglutas ng Problema",
+          "type": "Rubric"
+        },
+        "project_-_propose_an_app/csd/2022": {
+          "name": "Proyekto - Pagmungkahi ng App"
+        },
+        "programming_for_entertainment/csd/2022": {
+          "name": "Pag-program para sa Libangan"
+        },
+        "plotting_shapes/csd/2022": {
+          "name": "Pag-plot ng mga Hugis"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "Pagguhit sa Game Lab"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
+        },
+        "variables/csd/2022": {
+          "name": "Mga variable"
+        },
+        "variables_3/csd/2022": {
+          "name": "Mga variable"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
+        },
+        "sprites/csd/2022": {
+          "name": "Mga Sprites"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Ang Animation na Tab",
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Mga Sprites"
+        },
+        "text/csd/2022": {
+          "name": "Text"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubric"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "Ang Draw na Loop"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "Ang Draw na Loop"
+        },
+        "sprite_movement/csd/2022": {
+          "name": "Galaw ng mga Sprite",
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Galaw ng mga Sprite"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubric"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Mga Expression Ng Boolean",
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Mga Kondisyong ng Pahayag",
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Mga conditional"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Keyboard na Input"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Kung / Iba Pa Pahayag",
+          "type": "Video"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_-_interactive_card/csd/2022": {
+          "name": "Proyekto - Inter-aktib na Baraha"
+        },
+        "velocity/csd/2022": {
+          "name": "Belosidad",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Belosidad"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Belosidad"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "side_scroller/csd/2022": {
+          "name": "Scroller sa Gilid",
+          "type": "Rubric"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "Scroller sa Gilid",
+          "type": "Gabay sa Proyekto"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Bilis at ang Counter Pattern"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "Kumplikadong Sprite na Kilusan"
+        },
+        "collisions/csd/2022": {
+          "name": "Mga Banggaan"
+        },
+        "flyer_game/csd/2022": {
+          "name": "Flyer Game",
+          "type": "Rubric"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "Flyer Game",
+          "type": "Gabay sa Proyekto"
+        },
+        "functions/csd/2022": {
+          "name": "Mga function",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Mga function"
+        },
+        "functions_4/csd/2022": {
+          "name": "Mga function"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "Ang Proseso ng Pagdisenyo ng Laro"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "Gamitin ang Proseso ng Pagdisenyo ng Laro"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": "Proyekto - Pagdisenyo ng Laro"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "Panimula sa HTML"
+        },
+        "video_debugging/csd/2022": {
+          "name": "Video: Pag-dedebug",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "Video: Pair Programming",
+          "type": "Video"
+        },
+        "headings/csd/2022": {
+          "name": "Mga Heading"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubric"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "lists/csd/2022": {
+          "name": "Mga listahan"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "Digital na Bakas"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Social Sleuth"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Social Sleuth"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "name": "Intro sa CSS - Yugto 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "name": "Intro sa CSS - Yugto 2",
+          "type": "Video"
+        },
+        "styling_text_with_css/csd/2022": {
+          "name": "Pag-style ng Teksto gamit ang CSS"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubric"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "your_personal_style_2/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2022": {
+          "name": "Intelektwal na Pag-aari"
+        },
+        "images_in_html/csd/2022": {
+          "name": "Mga Larawan sa HTML"
+        },
+        "styling_elements_with_css/csd/2022": {
+          "name": "Pag-istilo sa mga Elemento gamit ang CSS"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "Pag-publish ng Website Mo",
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "Video: Pamamahala ng Di-pagkakasundo",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2022": {
+          "name": "Video: Teamwork",
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "Video: Paano Gumagana ang Paghahanap",
+          "type": "Video"
+        },
+        "classes/csd/2022": {
+          "name": "Mga Klase"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubric"
+        },
+        "linking_pages/csd/2022": {
+          "name": "Pag-uugnay ng Mga Pahina"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Gabay sa Proyekto"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "understanding_your_user/csd/2022": {
+          "name": "Pag-uunawa sa Iyong Gumagamit"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "user_interfaces/csd/2022": {
+          "name": "Mga interface ng Gumagamit"
+        },
+        "feedback_and_testing/csd/2022": {
+          "name": "Feedback at Pagsubok"
+        },
+        "identifying_user_needs/csd/2022": {
+          "name": "Pagtukoy sa mga Pangangailangan ng Gumagamit"
+        },
+        "paper_prototypes/csd/2022": {
+          "name": "Papel na mga Prototype",
+          "type": "Rubric"
+        },
+        "project_-_paper_prototype/csd/2022": {
+          "name": "Proyekto - Papel na Prototype"
+        },
+        "designing_apps_for_good/csd/2022": {
+          "name": "Pagdidisenyo ng mga App para sa Ikabubuti"
+        },
+        "market_research/csd/2022": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "market_research_1/csd/2022": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "market_research_2/csd/2022": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "design_mode/csd/2022": {
+          "name": "Mode ng Pag-disenyo"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "prototype_testing/csd/2022": {
+          "name": "Prototype na Pagsusuri"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "testing_the_app/csd/2022": {
+          "name": "Pag-test ng App"
+        },
+        "app_presentation/csd/2022": {
+          "name": "Pagpresenta ng App",
+          "type": "Rubric"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "Pagpresenta ng App"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "Proyekto - Pagpapakita ng App"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Binabago ng agham ng Computer ang lahat",
+          "type": "Video"
+        },
+        "computing_innovations_1/csd/2022": {
+          "name": "Pag-compute na mga Pagbabago"
+        },
+        "innovations_in_computing/csd/2022": {
+          "name": "Mga Pagbabago sa Pag-Compute"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "the_circuit_playground/csd/2022": {
+          "name": "Ang Circuit na Playground"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "Pagdidisenyo ng mga Screen gamit ang Code"
+        },
+        "board_events/csd/2022": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "physical_input/csd/2022": {
+          "name": "Pisikal na Input"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Mga variable"
+        },
+        "variables_2/csd/2022": {
+          "name": "Mga variable",
+          "type": "Video"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubric"
+        },
+        "color_leds/csd/2022": {
+          "name": "Mga LED na may kulay"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubric"
+        },
+        "accelerometer/csd/2022": {
+          "name": "Accelerometer"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "Mga Event sa Accelerometer"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Introduksyon sa mga Array",
+          "type": "Video"
+        },
+        "making_music/csd/2022": {
+          "name": "Paglikha ng Musika"
+        },
+        "playing_notes/csd/2022": {
+          "name": "Mga Tala ng Laro"
+        },
+        "arrays/csd/2022": {
+          "name": "Mga Array"
+        },
+        "functions_2/csd/2022": {
+          "name": "Mga function"
+        },
+        "functions_3/csd/2022": {
+          "name": "Mga function",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Mga function na meron mga parameter",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Mga function"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Proyekto: Mag-Prototype ng isang Pagbabago"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubric"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "Nakikita ang AI",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Introduksiyon sa AI Lab"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introduksiyon sa AI Lab",
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Pagsasanay at pagsubok sa Ai Lab",
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "name": "Mga model card sa Ai Lab",
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Numerical Data sa Ai Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Numerical Data sa Ai Lab"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Numerical Data sa Ai Lab",
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubric"
+        },
+        "survey_planning/csd/2022": {
+          "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubric"
         },
         "lesson_plans/courseb/2018": {
           "name": "Mga Banghay-Aralin"
@@ -454,29 +1516,51 @@
         "vocabulary_3/csd/2017": {
           "name": "Bukabularyo"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
         "exploring_apps/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
         },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "type": "Video"
-        },
         "exploring_apps_1/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Ipinapakilala ang Sprite Lab"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Ipinapakilala ang Sprite Lab",
+          "type": "Video"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Sprites sa aksyon"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "Video"
         },
         "pause_and_think_online/coursef/2021": {
           "type": "Video"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Saya sa For Loop"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Saya sa For Loop"
@@ -485,40 +1569,49 @@
           "name": "Saya sa For Loop",
           "type": "Pagtatasa"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Video"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Saya sa For Loop"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "The Internet"
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
           "type": "Pagtatasa"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+        "unplugged-video-internet/coursef/2021": {
+          "name": "The Internet"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "type": "Rubric"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/coursef/2021": {
+        "implementation_guide/courseb/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/courseb/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursef/2021": {
+        "virtual_lesson_modifications/courseb/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Galawin ito, Galawin ito"
@@ -545,7 +1638,7 @@
           "name": "Hindi Namalayang mga Bugs",
           "type": "Video"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Pagiging Loopy"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -555,43 +1648,43 @@
           "name": "Pagiging Loopy",
           "type": "Pagtatasa"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Pagiging Loopy"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "The Big Event",
-          "type": "Video"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "The Big Event"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "The Big Event"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "The Big Event",
+          "type": "Video"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/courseb/2021": {
+        "curriculum_guide_1/coursea/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/courseb/2021": {
+        "implementation_guide/coursea/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/courseb/2021": {
+        "virtual_lesson_modifications/coursea/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Video"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Pair programming"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -609,36 +1702,30 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "The Big Event"
         },
-        "implementation_guide/coursea/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursea/2021": {
+        "curriculum_guide_1/coursec/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/coursea/2021": {
+        "implementation_guide/coursec/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursea/2021": {
+        "virtual_lesson_modifications/coursec/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Ang Robot Kong Mga Kaibigan"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Ang Robot Kong Mga Kaibigan"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -647,27 +1734,30 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Pair programming",
           "type": "Video"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "The Big Event"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Video"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Binary na mga Pulseras"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binary na mga Pulseras"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -677,89 +1767,17 @@
           "name": "Binary na mga Pulseras",
           "type": "Pagtatasa"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Binary na mga Pulseras"
         },
-        "implementation_guide/coursec/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "Gabay sa Kurikulum"
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "Pagtitipon ng Guro"
-        },
-        "virtual_lesson_modifications/coursec/2021": {
-          "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "activity-answer-graph-paper/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Graph Paper Programming",
-          "type": "Pagtatasa"
-        },
-        "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "pair-programming-vid/coursed/2021": {
-          "name": "Pair programming"
-        },
-        "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Relay Programming"
-        },
-        "relay-assessment/coursed/2021": {
-          "name": "Relay Programming"
-        },
-        "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Relay Programming"
-        },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Relay Programming"
-        },
-        "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Relay Programming"
-        },
-        "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Relay Programming"
-        },
-        "pause_and_think_online/coursed/2021": {
-          "type": "Video"
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "type": "Video"
-        },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Mga Conditional gamit ang mga Card"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Mga Conditional gamit ang mga Card"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Mga Conditional gamit ang mga Card",
-          "type": "Pagtatasa"
-        },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Mga Conditional gamit ang mga Card"
-        },
-        "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Mga Conditional gamit ang mga Card"
-        },
-        "implementation_guide/coursed/2021": {
-          "name": "Gabay sa Pagpapatupad"
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binary na mga Pulseras"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Gabay sa Pagpapatupad"
         },
         "teacher_forum_1/coursed/2021": {
           "name": "Pagtitipon ng Guro"
@@ -767,6 +1785,77 @@
         "virtual_lesson_modifications/coursed/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Graph Paper Programming",
+          "type": "Pagtatasa"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Pair programming"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Relay Programming"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "type": "Video"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card",
+          "type": "Pagtatasa"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Pagtitipon ng Guro"
         },
         "pair_programming/express/2021": {
           "name": "Pair programming",
@@ -778,8 +1867,20 @@
         "turns_angles/express/2021": {
           "type": "Video"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Sprites sa aksyon"
+        },
         "pause_and_think_online/express/2021": {
           "type": "Video"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify Playlist (lahat ng edad)"
         },
         "pair_programming_video/express/2021": {
           "type": "Video"
@@ -787,17 +1888,20 @@
         "variables_video/express/2021": {
           "name": "Mga variable"
         },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "rubric-csf-final-projects/express/2021": {
           "type": "Rubric"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "Pagtitipon ng Guro"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Pair programming"
         },
         "20_20_20_rule/pre-express/2021": {
           "type": "Video"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Pair programming"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Video"
@@ -805,8 +1909,24 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Video"
@@ -817,47 +1937,51 @@
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Pagtatasa"
         },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Pagdidisenyo sa Accessibility"
+        },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Rubric"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Gabay sa Kurikulum"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Pagtitipon ng Guro"
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Video"
         },
         "seeing_ai/csd/2021": {
+          "name": "Nakikita ang AI",
           "type": "Video"
         },
         "finding_patterns_in_data/csd/2021": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Introduksiyon sa AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introduksiyon sa AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Pagsasanay at pagsubok sa Ai Lab",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Mga model card sa Ai Lab",
           "type": "Video"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Numerical Data sa Ai Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Numerical Data sa Ai Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Numerical Data sa Ai Lab",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
@@ -877,6 +2001,9 @@
         },
         "design_an_ai_app_1/csd/2021": {
           "type": "Rubric"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Pagtitipon ng Guro"
         },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
@@ -913,8 +2040,15 @@
         "app-presentation-exemplar/csd/2021": {
           "name": "Pagpresenta ng App"
         },
-        "teacher_forum/csd/2021": {
-          "name": "Pagtitipon ng Guro"
+        "computing-innovations/csd/2021": {
+          "name": "Pag-compute na mga Pagbabago"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Binabago ng agham ng Computer ang lahat",
+          "type": "Video"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "Pagdidisenyo ng mga Screen gamit ang Code"
@@ -932,6 +2066,9 @@
         "analog-digital-video/csd/2021": {
           "type": "Video"
         },
+        "emoji-race-guide/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "functions_2/csd/2021": {
           "name": "Mga function"
         },
@@ -945,6 +2082,9 @@
         "arrays/csd/2021": {
           "name": "Mga Array"
         },
+        "playing_notes/csd/2021": {
+          "name": "Mga Tala ng Laro"
+        },
         "loops_in_app_lab/csd/2021": {
           "name": "For Loops",
           "type": "Video"
@@ -952,12 +2092,27 @@
         "for_loops/csd/2021": {
           "name": "For Loops"
         },
+        "accelerometer_events/csd/2021": {
+          "name": "Mga Event sa Accelerometer"
+        },
         "circuits-logic-video/csd/2021": {
           "name": "Paano Gumagana ang Kompyuter: Circuits & Logic",
           "type": "Video"
         },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Rubric"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Ang Representasyon ay Mahalaga"
         },
         "representing-information-1/csd/2021": {
           "name": "Pagrepresenta ng Impormasyon"
@@ -967,9 +2122,6 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Pagrepresenta ng mga Numero"
-        },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "Pagiging Sekreto ng mga Datos"
         },
         "create_a_representation/csd/2021": {
           "type": "Rubric"
@@ -1014,6 +2166,7 @@
           "name": "Mga Datos sa Tunay na Mundo"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Video: Epekto sa Lipunan",
           "type": "Video"
         },
         "video_machine_learning/csd/2021": {
@@ -1021,10 +2174,20 @@
           "type": "Video"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "Video: Data ng Pagsasanay at Pagkiling",
           "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Pagsusuri ng Peer"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Rubric"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Pagtitipon ng Guro"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
@@ -1068,13 +2231,22 @@
           "type": "Rubric"
         },
         "boolean_expressions/csd/2021": {
+          "name": "Mga Expression Ng Boolean",
           "type": "Video"
         },
         "conditional_statements/csd/2021": {
+          "name": "Mga Kondisyong ng Pahayag",
           "type": "Video"
         },
         "if_else_statements/csd/2021": {
+          "name": "Kung / Iba Pa Pahayag",
           "type": "Video"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Pagsusuri ng Peer"
         },
         "interactive_card/csd/2021": {
           "type": "Rubric"
@@ -1093,10 +2265,23 @@
           "name": "Pagtukoy sa mga Banggaan"
         },
         "side-scroller-1/csd/2021": {
+          "name": "Scroller sa Gilid",
           "type": "Rubric"
         },
+        "side-scroller/csd/2021": {
+          "name": "Scroller sa Gilid",
+          "type": "Gabay sa Proyekto"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Bilis at ang Counter Pattern"
+        },
         "flyer-game-1/csd/2021": {
+          "name": "Flyer Game",
           "type": "Rubric"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flyer Game",
+          "type": "Gabay sa Proyekto"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Mga function",
@@ -1105,11 +2290,20 @@
         "functions_1/csd/2021": {
           "name": "Mga function"
         },
+        "make-your-own-game/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
         "make_your_own_game/csd/2021": {
           "type": "Rubric"
         },
-        "teacher_forum_1/csd/2021": {
-          "name": "Pagtitipon ng Guro"
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Ano ang isang Kompyuter?"
@@ -1130,7 +2324,8 @@
           "name": "Mga App at Paglutas ng Problema"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Mga App at Paglutas ng Problema"
+          "name": "Mga App at Paglutas ng Problema",
+          "type": "Pagsusuri ng Peer"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Mga App at Paglutas ng Problema",
@@ -1143,19 +2338,33 @@
           "type": "Video"
         },
         "video_pair_programming/csd/2021": {
+          "name": "Video: Pair Programming",
           "type": "Video"
         },
         "video_debugging/csd/2021": {
+          "name": "Video: Pag-dedebug",
           "type": "Video"
         },
         "html-web-page-1/csd/2021": {
           "type": "Rubric"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "html-page/csd/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "lists/csd/2021": {
           "name": "Mga listahan"
         },
         "digital-footprint/csd/2021": {
           "name": "Digital na Bakas"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Social Sleuth"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Social Sleuth"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Intro sa CSS - Yugto 1",
@@ -1168,25 +2377,44 @@
         "your-personal-style-1-2-3/csd/2021": {
           "type": "Rubric"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "creative-commons-video/csd/2021": {
           "type": "Video"
         },
         "images_in_html/csd/2021": {
           "name": "Mga Larawan sa HTML"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
         "personal-web-page/csd/2021": {
           "type": "Rubric"
         },
         "publishing_your_website/csd/2021": {
+          "name": "Pag-publish ng Website Mo",
           "type": "Video"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Video: Pamamahala ng Di-pagkakasundo",
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Teamwork",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Paano Gumagana ang Paghahanap",
           "type": "Video"
         },
         "classes/csd/2021": {
@@ -1194,6 +2422,15 @@
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Rubric"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Gabay sa Proyekto"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Pagsusuri ng Peer"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Gabay sa Proyekto"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Mga Banghay-Aralin"

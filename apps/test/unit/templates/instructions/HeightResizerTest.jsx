@@ -24,7 +24,7 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
-    expect(resizeItemTopCallback).not.to.have.been.called;
+    expect(resizeItemTopCallback).to.have.been.calledOnce;
     expect(onResizeCallback).not.to.have.been.called;
     expect(mouseDownEvent.stopPropagation).to.have.been.called;
     expect(mouseDownEvent.preventDefault).to.have.been.called;
@@ -36,8 +36,8 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledOnce;
-    expect(onResizeCallback).to.have.been.calledOnce.and.calledWith(25);
+    expect(resizeItemTopCallback).to.have.been.calledTwice;
+    expect(onResizeCallback).to.have.been.calledOnce.and.calledWith(10);
     expect(mouseMoveEvent.stopPropagation).to.have.been.called;
     expect(mouseMoveEvent.preventDefault).to.have.been.called;
 
@@ -49,7 +49,7 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseUp(mouseUpEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledOnce;
+    expect(resizeItemTopCallback).to.have.been.calledTwice;
     expect(onResizeCallback).to.have.been.calledOnce;
     expect(mouseUpEvent.stopPropagation).to.have.been.called;
     expect(mouseUpEvent.preventDefault).to.have.been.called;

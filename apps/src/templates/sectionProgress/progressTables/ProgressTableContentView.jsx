@@ -12,7 +12,8 @@ import {
   lessonIsAllAssessment,
   lessonHasLevels
 } from '@cdo/apps/templates/progress/progressHelpers';
-import progressTableStyles from './progressTableStyles.scss';
+import styleConstants from './progress-table-constants.module.scss';
+import './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 
 // Extra header column to account for scrollbar in progress tables
@@ -119,7 +120,7 @@ export default class ProgressTableContentView extends React.Component {
     if (columnWidths) {
       width = columnWidths[index];
     } else if (!lessonHasLevels(scriptData.lessons[index])) {
-      width = parseInt(progressTableStyles.MIN_COLUMN_WIDTH);
+      width = parseInt(styleConstants.MIN_COLUMN_WIDTH);
     }
     return width ? {style: {minWidth: width, maxWidth: width}} : {};
   }
@@ -184,7 +185,7 @@ export default class ProgressTableContentView extends React.Component {
           style={{
             overflowX: 'scroll',
             overflowY: 'auto',
-            maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
+            maxHeight: parseInt(styleConstants.MAX_BODY_HEIGHT)
           }}
           ref={r => {
             this.body = r && r.getRef();

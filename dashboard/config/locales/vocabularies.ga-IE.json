@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Dífhabhtú"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Dífhabhtú"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Coinníollacha"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Dífhabhtú"
         },
         "loops/aquatic/unversioned": {
           "word": "Lúba"
@@ -59,6 +59,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Dífhabhtú"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Cód"
         },
@@ -74,8 +82,154 @@
         "machine_learning/oceans/unversioned": {
           "word": "Meaisínfhoghlaim"
         },
+        "debugging/coursed/2022": {
+          "word": "Dífhabhtú"
+        },
+        "programming/coursed/2022": {
+          "word": "Códáil"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Coinníollacha"
+        },
+        "behavior/coursef/2022": {
+          "word": "Iompar"
+        },
+        "variable/coursef/2022": {
+          "word": "Athróg"
+        },
+        "input/coursef/2022": {
+          "word": "Ionchur"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "internet/coursef/2022": {
+          "word": "An tIdirlíon"
+        },
+        "define/coursef/2022": {
+          "word": "Sainmhínigh"
+        },
+        "behavior/coursee/2022": {
+          "word": "Iompar"
+        },
+        "function/coursee/2022": {
+          "word": "Feidhm"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Coinníollacha"
+        },
+        "copyright/coursee/2022": {
+          "word": "Cóipcheart"
+        },
+        "define/coursee/2022": {
+          "word": "Sainmhínigh"
+        },
+        "debugging/courseb/2022": {
+          "word": "Dífhabhtú"
+        },
+        "drop/courseb/2022": {
+          "word": "Titim"
+        },
+        "programming/courseb/2022": {
+          "word": "Códáil"
+        },
+        "debugging/express/2022": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/express/2022": {
+          "word": "Seicheamhú"
+        },
+        "programming/express/2022": {
+          "word": "Códáil"
+        },
+        "behavior/express/2022": {
+          "word": "Iompar"
+        },
+        "conditionals/express/2022": {
+          "word": "Coinníollacha"
+        },
+        "function/express/2022": {
+          "word": "Feidhm"
+        },
+        "variable/express/2022": {
+          "word": "Athróg"
+        },
+        "define/express/2022": {
+          "word": "Sainmhínigh"
+        },
+        "drop/pre-express/2022": {
+          "word": "Titim"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Dífhabhtú"
+        },
+        "programming/pre-express/2022": {
+          "word": "Códáil"
+        },
+        "debugging/coursea/2022": {
+          "word": "Dífhabhtú"
+        },
+        "drop/coursea/2022": {
+          "word": "Titim"
+        },
+        "programming/coursea/2022": {
+          "word": "Códáil"
+        },
+        "debugging/coursec/2022": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/coursec/2022": {
+          "word": "Seicheamhú"
+        },
+        "programming/coursec/2022": {
+          "word": "Códáil"
+        },
+        "binary/coursec/2022": {
+          "word": "Dénártha"
+        },
+        "input/csd/2022": {
+          "word": "Ionchur"
+        },
+        "debugging/csd/2022": {
+          "word": "Dífhabhtú"
+        },
+        "variable/csd/2022": {
+          "word": "Athróg"
+        },
+        "conditionals/csd/2022": {
+          "word": "Coinníollacha"
+        },
+        "abstraction/csd/2022": {
+          "word": "Teibíocht"
+        },
+        "function/csd/2022": {
+          "word": "Feidhm"
+        },
+        "copyright/csd/2022": {
+          "word": "Cóipcheart"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Meaisínfhoghlaim"
+        },
         "code/poem-art/unversioned": {
-          "word": "Cód"
+          "word": "Cód",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Iompar"

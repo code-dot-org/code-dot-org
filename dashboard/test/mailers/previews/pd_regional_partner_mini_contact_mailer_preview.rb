@@ -1,5 +1,5 @@
-# This can be viewed on non-production environments at /rails/mailers/pd/regional_partner_mini_contact_mailer
-class Pd::RegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
+# This can be viewed on non-production environments at /rails/mailers/pd_regional_partner_mini_contact_mailer
+class PdRegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
   def contact_receipt_with_partner
@@ -28,6 +28,6 @@ class Pd::RegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
 
   def build_form_data(contact_factory, **factory_options)
     contact = build contact_factory, factory_options
-    contact.sanitize_and_trim_form_data_hash
+    contact.sanitized_and_trimmed_form_data_hash
   end
 end

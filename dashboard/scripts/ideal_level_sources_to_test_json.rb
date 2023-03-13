@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative('../config/environment')
-require 'cdo/properties'
 require 'json'
 
 LEVEL_TYPES_WITH_ILS = %w(Craft Studio Karel Eval Maze Calc Blockly StudioEC Artist).freeze
@@ -13,8 +12,8 @@ LEVEL_TYPES_WITH_ILS = %w(Craft Studio Karel Eval Maze Calc Blockly StudioEC Art
 
 def main
   levels_to_test = Level.
-      where('type in (?)', LEVEL_TYPES_WITH_ILS).
-      where('ideal_level_source_id is not null').
+      where(type: LEVEL_TYPES_WITH_ILS).
+      where.not(ideal_level_source_id: nil).
       all.reject {|level| level.try(:free_play) || !level.is_a?(Blockly) || !level.custom?}
 
   level_hashes = levels_to_test.map do |level|
@@ -30,9 +29,10 @@ def main
       }]
     }
 
-    if level.type == "Artist"
+    case level.type
+    when "Artist"
       level_hash[:app] = "turtle"
-    elsif level.type == "Karel"
+    when "Karel"
       level_hash[:app] = "maze"
       level_hash[:skinId] = level_hash[:levelDefinition]['skin']
     else

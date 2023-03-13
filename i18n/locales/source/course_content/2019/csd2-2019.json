@@ -45,7 +45,14 @@
     "long_instructions": "# Add Text to the Body\n\nWhen you start any Web Lab project, it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects, you'll need to do it between the `<body>` and `</body>` tags because it should be part of the body of your webpage.\n\n# Do This\n\n-   Write three separate sentences about any topic you like inside of the body tags of your web page.\n-   Hit \"Refresh and Save\" if you don't see the changes in the preview area.\n-   Compare your work with a neighbor. Make sure you're placing code in the same place."
   },
   "https://studio.code.org/s/csd2-2019/lessons/3/levels/8": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I make multiple paragraphs?**]\n\nHere's an example of several paragraph tags in a row. This code would be placed inside of the body of your web page.\n\n    <p>This is a paragraph. It has two sentences.</p>\n    <p>This is another paragraph.</p>\n\n:::\n\n</div>\n\n# Use Paragraph Tags\n\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\n\n# Do This\n\n-   Place the text you just wrote inside at least two separate paragraphs by surrounding it with `<p>` and `</p>` tags\n-   Compare the results with a neighbor. What has changed about the way your text is displayed?"
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I make multiple paragraphs?**]\n\nHere's an example of several paragraph tags in a row. This code would be placed inside of the body of your web page.\n\n    <p>This is a paragraph. It has two sentences.</p>\n    <p>This is another paragraph.</p>\n\n:::\n\n</div>\n\n# Use Paragraph Tags\n\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\n\n# Do This\n\n-   Place the text you just wrote inside at least two separate paragraphs by surrounding it with `<p>` and `</p>` tags\n-   Compare the results with a neighbor. What has changed about the way your text is displayed?",
+    "mini_rubric": {
+      "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images; understand the need for precision when using computer languages and use appropriate syntax.\r\n",
+      "rubric_performance_level_1": "All texts is contained within paragraph tags.  There are at least two paragraphs created through the proper use of paragraph tags.",
+      "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags.",
+      "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
+      "rubric_performance_level_4": "There are no paragraph tags in the text."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/3/levels/9": {
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening( `<p>` ) and closing( `</p>` ) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**Why does HTML seem to work even when it's broken?**]\n\nHTML is read by your web browser to generate web pages. Since people often make little mistakes when writing their web pages, browsers are programmed to make a best guess of what you intended to do. Sometimes different browsers are even programmed to make different guesses! The only way to ensure your code looks like you intend is make sure you're always using tags correctly.\n\n:::\n\n::: details [**Why does the code sometimes turn pink?**]\n\nWeb Lab is programmed to automatically detect some mistakes in HTML.  When it notices a mistake, it turns that code pink.  The mistake might be in pink, or it might be somewhere before the pink code.  You'll need to carefully debug to find your mistake.\n\n:::\n\n</div>\n\n# Debug: Fix the Broken Tags\n\nThis simple web page has some issues which are preventing the content from being displayed correctly. Identify and fix the issues. This practice is also called \"debugging\" your code.\n\n# Do This\n\n-   Fix the broken code so that the web page displays correctly\n-   Compare the problems you fixed with a neighbor"
@@ -94,7 +101,14 @@
   },
   "https://studio.code.org/s/csd2-2019/lessons/4/levels/6": {
     "display_name": "Headings and Paragraphs",
-    "long_instructions": "# Headings and Paragraphs\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. All of your text in your web page should be contained in an HTML element (headings or paragraphs). Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I create multiple paragraphs?**]\n\nParagraphs are marked by opening (`<p>`) and closing (`</p>`) tags as well. To create more than one paragraph you will want multiple sets of opening and closing `<p>` tags. For example\n\n        <p>\n            This is a paragraph.\n        </p>\n        <p>\n            This is another paragraph.\n        </p>\n\n:::\n\n::: details [**What are headings?**]\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so it's easier for a user to read.\n:::\n\n::: details [**How do I make different sized headings?**]\nHeadings come in 6 different sizes. So far you have primarily used the biggest one \\<h1>. The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is \\<h6>. You can also try the \\<h2>, \\<h3>, \\<h4>, and \\<h5> tags which get smaller as the number gets larger.\n:::\n\n::: details [**What is HTML?**]\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \n:::\n\n::: details [**What is an HTML element?**]\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n:::\n\n::: details [**What is an HTML tag?**]\n\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\n\n:::\n\n</div>\n\nThe author of this page added in a lot of content, but did not think about structure.  All of the text is mashed together.\n\nDo This:\n\n-   Look through the content with your partner and decide what you think the best structure should be.\n-   Use your heading and paragraph tags to code the structure into the page."
+    "long_instructions": "# Headings and Paragraphs\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What is a paragraph element?**]\n\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. All of your text in your web page should be contained in an HTML element (headings or paragraphs). Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\n\n:::\n\n::: details [**How do I create multiple paragraphs?**]\n\nParagraphs are marked by opening (`<p>`) and closing (`</p>`) tags as well. To create more than one paragraph you will want multiple sets of opening and closing `<p>` tags. For example\n\n        <p>\n            This is a paragraph.\n        </p>\n        <p>\n            This is another paragraph.\n        </p>\n\n:::\n\n::: details [**What are headings?**]\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so it's easier for a user to read.\n:::\n\n::: details [**How do I make different sized headings?**]\nHeadings come in 6 different sizes. So far you have primarily used the biggest one \\<h1>. The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is \\<h6>. You can also try the \\<h2>, \\<h3>, \\<h4>, and \\<h5> tags which get smaller as the number gets larger.\n:::\n\n::: details [**What is HTML?**]\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \n:::\n\n::: details [**What is an HTML element?**]\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n:::\n\n::: details [**What is an HTML tag?**]\n\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\n\n:::\n\n</div>\n\nThe author of this page added in a lot of content, but did not think about structure.  All of the text is mashed together.\n\nDo This:\n\n-   Look through the content with your partner and decide what you think the best structure should be.\n-   Use your heading and paragraph tags to code the structure into the page.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
+      "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags and multiple sized headings in a logically consistent way.",
+      "rubric_performance_level_2": "All content is contained in tags, uses paragraph and heading tags in a reasonable way.",
+      "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
+      "rubric_performance_level_4": "Little or no content is contained in tags."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/4/levels/7": {
     "display_name": "Headings in HTML",
@@ -180,7 +194,14 @@
     }
   },
   "https://studio.code.org/s/csd2-2019/lessons/6/levels/6": {
-    "long_instructions": "# Combining Lists\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**What are the two types of lists?**]\n There are two types of lists in HTML, ordered and unordered lists.\n:::\n\n::: details [**What is an unordered list?**]\n\nAn unordered list is just a set of bulleted items.\n\nAn unordered list element has the tag `<ul>` . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the unordered list (`<ul>`).\n\n:::\n\n::: details [**How do I make an unordered list?**]\n\nMaking an unordered list has two steps: making the list and adding the list items.  To make the unordered list, write the unordered list tags `<ul></ul>`.  Next, add your list items **inside** the unordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\n\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ul>` tag.\n\n:::\n\n::: details [**What is an ordered list?**]\n\nAn ordered list is a set of bulleted items which are numbered.\n\nAn ordered list element has the tag `<ol>`. This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`;. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the ordered list (`<ol>`).\n:::\n\n::: details [**How do I make an ordered list?**]\n\nMaking an ordered list has two steps: making the list and adding the list items.  To make the ordered list, write the ordered list tags `<ol></ol>`.  Next, add your list items **inside** the ordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\n<br /><br />\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ol>` tag.\n:::\n\n::: details [**Show me working code.**]\n\n<table border=\"1\">\n<tr>\n<td>Example</td>\n<td>Result</td>\n</tr>\n<tr>\n<td>\n\n    <ul>\n     \t<li>Red </li>\n        <li>Green </li>\n        <li>Blue</li>\n    </ul> \n\n</td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n<table border=\"1\">\n<tr>\n<td>Example</td>\n<td>Result</td>\n</tr>\n<tr>\n<td>\n\n    <ol>\n     \t<li>Step 1</li>\n        <li>Step 2</li>\n        <li>Step 3</li> \n    </ol> \n\n</td>\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n:::\n\n</div>\n\nThis page should include both an unordered list and an ordered list.\n\n# Do This\n\n-   Use the list tags to structure this content into two lists that look like the ones below.\n\n_Hint: There will be NO NUMBERS in your code._ \n\n[][0]"
+    "long_instructions": "# Combining Lists\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**What are the two types of lists?**]\n There are two types of lists in HTML, ordered and unordered lists.\n:::\n\n::: details [**What is an unordered list?**]\n\nAn unordered list is just a set of bulleted items.\n\nAn unordered list element has the tag `<ul>` . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the unordered list (`<ul>`).\n\n:::\n\n::: details [**How do I make an unordered list?**]\n\nMaking an unordered list has two steps: making the list and adding the list items.  To make the unordered list, write the unordered list tags `<ul></ul>`.  Next, add your list items **inside** the unordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\n\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ul>` tag.\n\n:::\n\n::: details [**What is an ordered list?**]\n\nAn ordered list is a set of bulleted items which are numbered.\n\nAn ordered list element has the tag `<ol>`. This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`;. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the ordered list (`<ol>`).\n:::\n\n::: details [**How do I make an ordered list?**]\n\nMaking an ordered list has two steps: making the list and adding the list items.  To make the ordered list, write the ordered list tags `<ol></ol>`.  Next, add your list items **inside** the ordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\n<br /><br />\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ol>` tag.\n:::\n\n::: details [**Show me working code.**]\n\n<table border=\"1\">\n<tr>\n<td>Example</td>\n<td>Result</td>\n</tr>\n<tr>\n<td>\n\n    <ul>\n     \t<li>Red </li>\n        <li>Green </li>\n        <li>Blue</li>\n    </ul> \n\n</td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n<table border=\"1\">\n<tr>\n<td>Example</td>\n<td>Result</td>\n</tr>\n<tr>\n<td>\n\n    <ol>\n     \t<li>Step 1</li>\n        <li>Step 2</li>\n        <li>Step 3</li> \n    </ol> \n\n</td>\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n:::\n\n</div>\n\nThis page should include both an unordered list and an ordered list.\n\n# Do This\n\n-   Use the list tags to structure this content into two lists that look like the ones below.\n\n_Hint: There will be NO NUMBERS in your code._ \n\n[][0]",
+    "mini_rubric": {
+      "rubric_key_concept": "Structure content on a web page using HTML. (Use the `<ol>`, `<ul>`, and `<li>` tags to create ordered and unordered lists in an HTML page.)",
+      "rubric_performance_level_1": "All list contents are contained in the appropriate tags so that the lists are displayed as in the example image.  '<li>' tags are all nested within '<ul>' or '<ol>' tags, and no numbers are used in the code to simulate the behavior of an ordered list.",
+      "rubric_performance_level_2": "`<ul>`, `<ol>`, and `<li>` tags are all used such that some items appear in an unordered list and some items appear in an ordered list.",
+      "rubric_performance_level_3": "At least two `<li>` tags are nested inside a `<ul>`or `<ol>` tag such that the content appears in a list.",
+      "rubric_performance_level_4": "List tags are not used, or are misused such that no content appears in a list."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/6/levels/7": {
     "display_name": "Lists in HTML",
@@ -249,7 +270,14 @@
     }
   },
   "https://studio.code.org/s/csd2-2019/lessons/7/levels/5": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How do I add images?**]\n\nThe `<img>` tag allows you to show images on your web page.\n\nExample:\n\n    <img src=\"dog.png\" alt=\"dog jumping\">\n\nIn order to tell the browser which file to use, extra information, called an **attribute**, is added to the <img> tag inside the brackets. The attribute `src` stands for **s**ou**rc**e and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png. <br><br>\n\nIn addition to have the src attribute, image elements also have the `alt` attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight. <br><br>\n\nAn `<img>` tag is an example of a  **self-closing tag** because it starts and closes in one tag.\n:::\n\n::: details [**Why does an image tag not have a closing tag?**]\nAn image tag doesn't need a closing tag because there is no text content which must be wrapped in tags. The content that shows on the screen is specified through the tags attributes.\n:::\n\n::: details [**What is an attribute?**]\n\nAttributes are extra information included in a tag.  Attributes have names and values. The name tells what type of information is being provided and then the value gives the specific information for that tag. \n\nFor example `<img>` tags have two attributes, src and alt. src specifies the name of the image file and alt tells the browser in readable text what the image is.\n\n:::\n\n</div>\n\n# Uploading Images\n\nYou can upload images that you've found elsewhere using the **Add Image** button. Go find an image of a different type of pet that you like and download it to your computer (using right-click \"Save As\").\n\nOnce you have your images, click [][0] and upload the image from your computer into your project, where you can then use it in your page.\n\n# Do This\n\n-   Upload at least one image into this web page\n-   Use the `<img>` tag to display the image(s) in your website.\n-   Make sure to add an `alt` attribute."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How do I add images?**]\n\nThe `<img>` tag allows you to show images on your web page.\n\nExample:\n\n    <img src=\"dog.png\" alt=\"dog jumping\">\n\nIn order to tell the browser which file to use, extra information, called an **attribute**, is added to the <img> tag inside the brackets. The attribute `src` stands for **s**ou**rc**e and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png. <br><br>\n\nIn addition to have the src attribute, image elements also have the `alt` attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight. <br><br>\n\nAn `<img>` tag is an example of a  **self-closing tag** because it starts and closes in one tag.\n:::\n\n::: details [**Why does an image tag not have a closing tag?**]\nAn image tag doesn't need a closing tag because there is no text content which must be wrapped in tags. The content that shows on the screen is specified through the tags attributes.\n:::\n\n::: details [**What is an attribute?**]\n\nAttributes are extra information included in a tag.  Attributes have names and values. The name tells what type of information is being provided and then the value gives the specific information for that tag. \n\nFor example `<img>` tags have two attributes, src and alt. src specifies the name of the image file and alt tells the browser in readable text what the image is.\n\n:::\n\n</div>\n\n# Uploading Images\n\nYou can upload images that you've found elsewhere using the **Add Image** button. Go find an image of a different type of pet that you like and download it to your computer (using right-click \"Save As\").\n\nOnce you have your images, click [][0] and upload the image from your computer into your project, where you can then use it in your page.\n\n# Do This\n\n-   Upload at least one image into this web page\n-   Use the `<img>` tag to display the image(s) in your website.\n-   Make sure to add an `alt` attribute.",
+    "mini_rubric": {
+      "rubric_key_concept": "Structure content on a web page using HTML. (Add an image to a web page.)",
+      "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.",
+      "rubric_performance_level_2": "The image displays properly.",
+      "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.",
+      "rubric_performance_level_4": "The `img` tag is not used or is not a source address given for the image."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/7/levels/6": {
     "display_name": "Images in HTML"
@@ -298,7 +326,7 @@
     "long_instructions": "# Making a Multi-page Site\n\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What are hyperlinks?**]\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n::: details [**How do I add a hyperlink?**]\n\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\n\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n</div>\n\nA web site should include more than one web page, and they should connect to each other.   Here's an example of a project with multiple pages that are connected by hyperlinks (the blue underlined words that take you to another page when you click on them).\n\n# Do This\n\n-   Use the inspector tool to see the code that creates the hyperlinks on the top of index.html.\n-   Discuss with your partner how you think that code works.\n-   Click on recipe.html in the files list on the left hand side.  Add a hyperlink to the top of this page that will take you back to index.html."
   },
   "https://studio.code.org/s/csd2-2019/lessons/9/levels/3": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What are hyperlinks?**]\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page.\n<br/><br/>\nFor example to link to the unique houses page you would add the following code inside your `<body>` element.\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n::: details [**How do I add a hyperlink?**]\n\nYou can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page.\n<br/><br/>\nFor example to link to the unique houses page you would add the following code inside your `<body>` element.\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n</div>\n\n# Create a Navigation Bar\n\nHere's your project from before.  You'll be linking the two pages by creating a **navigation bar** at the top of the page.  Websites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\" target=\"_new\">this page</a>\n\n# Do This\n\n-   In your home page (index.html), add two hyperlinks at the top of the page, one to your lists page, and one to the home page.\n    -   _Even though it might seem strange to link a page to itself, it's less confusing if the navigation bar is exactly the same on every page._\n-   Copy the code for the navigation bar, then add it to the top of your lists page.\n-   Test your links in the preview area by clicking on them."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What are hyperlinks?**]\n\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page.\n<br/><br/>\nFor example to link to the unique houses page you would add the following code inside your `<body>` element.\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n::: details [**How do I add a hyperlink?**]\n\nYou can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page.\n<br/><br/>\nFor example to link to the unique houses page you would add the following code inside your `<body>` element.\n\n    <a href=\"houses.html\"> Unique Houses </a>\n\n:::\n\n</div>\n\n# Create a Navigation Bar\n\nHere's your project from before.  You'll be linking the two pages by creating a **navigation bar** at the top of the page.  Websites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/view\" target=\"_new\">this page</a>\n\n# Do This\n\n-   In your home page (index.html), add two hyperlinks at the top of the page, one to your lists page, and one to the home page.\n    -   _Even though it might seem strange to link a page to itself, it's less confusing if the navigation bar is exactly the same on every page._\n-   Copy the code for the navigation bar, then add it to the top of your lists page.\n-   Test your links in the preview area by clicking on them."
   },
   "https://studio.code.org/s/csd2-2019/lessons/9/levels/4": {
     "display_name": "Hyperlinks"
@@ -336,6 +364,208 @@
   "https://studio.code.org/s/csd2-2019/lessons/9/levels/13": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U2Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U2Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U2Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U2Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U2Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd2-2019/lessons/10/levels/1": {
@@ -355,7 +585,14 @@
     "long_instructions": "<div class=\"no-pullthrough\" \n style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What colors can I use in CSS?**]\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at [W3Schools - HTML Color Names][0].  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at [W3Schools - CSS Legal Color Values][1]\n:::\n\n::: details [**How does the code work?**]\nHere is the code that is making the `h1` heading red:\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n\n::: details [**What is CSS?**]\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n    }\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n:::\n\n</div>\n\n# CSS and Text Color\n\nThis HTML file uses a style sheet (\"style.css\") to give the page a particular style.  The style sheet contains information about what each of the HTML elements should look like.\n\n-   Find the code in the style sheet (click on \"style.css\" in the files list) that is making the h1 heading red.\n-   Change the code for the color of the h1 heading from `red` to a different color."
   },
   "https://studio.code.org/s/csd2-2019/lessons/10/levels/5": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What colors can I use in CSS?**]\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n:::\n\n::: details [**How does the code work?**]\n\nHere is the code that is making the `h1` header red:\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n\n::: details [**How do I make a new rule-set?**]\n\nTo make a new rule set, you'll need a selector and a list of rules.  The selector is the name of the tag you want the rules to be applied to.  The rules are a list of property and value pairs.  You'll also need to pay careful attention to the punctuation in the rule set.  Look at the code below for an example of how the code should look.  You'll need to change the specifics for your page.\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n\n:::\n\n</div>\n\n# Making a new CSS rule-set\n\nThe block of code that gives rules for a particular tag is called a _rule-set_.  You can make a new rule set by copying the pattern you see in the rule-set for the `h1` tag.\n\n-   Find the CSS rule-set in the style sheet that determines the styles for the `h1` tag.\n-   Using the same pattern, write a new CSS rule-set that will determine the style for the `h3` tag.\n-   Add code to set a different color for the `h3` tags."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n\n::: details [**What colors can I use in CSS?**]\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n:::\n\n::: details [**How does the code work?**]\n\nHere is the code that is making the `h1` header red:\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n\n::: details [**How do I make a new rule-set?**]\n\nTo make a new rule set, you'll need a selector and a list of rules.  The selector is the name of the tag you want the rules to be applied to.  The rules are a list of property and value pairs.  You'll also need to pay careful attention to the punctuation in the rule set.  Look at the code below for an example of how the code should look.  You'll need to change the specifics for your page.\n\n    h1 {\n      color: red;\n    }\n\n-   `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\n-   `color: red;` is the rule that makes the text inside the `h1` tags red.\n    -   `color` is the _property_.  It explains what the rule is about, in this case the text color.\n    -   `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\n\n:::\n\n::: details [**Why do I need all the punctuation?**]\n\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\n\n:::\n\n::: details [**What is a style sheet?**]\n\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\n\n:::\n\n::: details [**What is CSS?**]\n\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\n\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\n\n    h2 {\n       color: blue;\n       font-family: cursive;\n\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\n\n:::\n\n</div>\n\n# Making a new CSS rule-set\n\nThe block of code that gives rules for a particular tag is called a _rule-set_.  You can make a new rule set by copying the pattern you see in the rule-set for the `h1` tag.\n\n-   Find the CSS rule-set in the style sheet that determines the styles for the `h1` tag.\n-   Using the same pattern, write a new CSS rule-set that will determine the style for the `h3` tag.\n-   Add code to set a different color for the `h3` tags.",
+    "mini_rubric": {
+      "rubric_key_concept": "Apply formatting in a web page using CSS",
+      "rubric_performance_level_1": "The `h3` headings are a new color (not black).  There is no extra code in the stylesheet, and there are no syntax errors in the code.",
+      "rubric_performance_level_2": "The `h3` headings are a new color (not black).",
+      "rubric_performance_level_3": "The `h3` headings have a special rule-set in the stylesheet, and the color property is used, but there are enough errors that the text does not change color.",
+      "rubric_performance_level_4": "There is no special rule-set for `h3` headings or the color property is not used in the rule-set."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/10/levels/6": {
     "display_name": "CSS and Style Sheets",
@@ -420,7 +657,14 @@
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nHere is the code that is putting extra space around the images:\n\n    img {\n    \tmargin: 10px;\n    }\n\n-   `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n\n-   `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n    :::\n\n::: details [**What does the `margin` property do?**]\n\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\" target=\"_new\">W3Schools - CSS margin Property</a>\n:::\n\n::: details [**What does `px` mean / What is a pixel?**]\n\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n\n:::\n\n</div>\n\n# Margin\n\nMargins specify how much space should be around an element.\n\n-   Find the `margin` property in the `img` rule-set.\n-   Change the margin to be larger, and discuss the effect with a partner.\n-   Choose another element type and give it a margin, too."
   },
   "https://studio.code.org/s/csd2-2019/lessons/11/levels/11": {
-    "long_instructions": "# Try it out!\n\nNow that you've seen some different ways to style, it's time to try it out yourself.  Here's a web page you've seen before, but it needs some style!\n\n# Do This\n\n-   Give the webpage a background color.\n-   Put more space around the images.\n-   Make all of the text a different color.\n-   Add any other styles you want."
+    "long_instructions": "# Try it out!\n\nNow that you've seen some different ways to style, it's time to try it out yourself.  Here's a web page you've seen before, but it needs some style!\n\n# Do This\n\n-   Give the webpage a background color.\n-   Put more space around the images.\n-   Make all of the text a different color.\n-   Add any other styles you want.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
+      "rubric_performance_level_1": "The background, images, and text have all been styled as described in the instructions.  There are no syntax errors or extra code (that does not function) in the stylesheet.",
+      "rubric_performance_level_2": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
+      "rubric_performance_level_3": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
+      "rubric_performance_level_4": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/11/levels/12": {
     "display_name": "Layout Properties"
@@ -438,18 +682,46 @@
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/2": {
     "display_name": "RGB Widget",
-    "long_instructions": "# RGB Colors\n\nAll colors, whether they have names or not, can be described by the level of red, green, and blue light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You can use the widget on your left to try out different RGB values and see what colors they make.\n\n-   **Click \"Run\" to start the widget on the left,** and use the sliders to adjust the levels of red, green, and blue light.\n-   For each of the colors below, match it to its RGB value.\n\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\n\nB) red: 255, green: 239, blue: 213 - rgb(255,239,213)\n\nC) red: 250, green: 128, blue: 114 - rgb(250,128,114)\n\nD) red: 70, green: 130, blue: 180 - rgb(70, 130, 180)\n\nE) red: 107, green: 142, blue: 35 - rgb(107,142,35)\n\n<div style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Why do red and green make yellow?</strong>\n</summary>\n\n<p>\n\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\n\n</p> </details>\n<details>\n<summary>\n<strong>How many colors can I make with RGB color mixing?</strong>\n</summary>\n\n<p>\nYou can make over sixteen million different colors with RGB color mixing.\n</p>\n\n</details>\n</div>"
+    "long_instructions": "# RGB Colors\n\nAll colors, whether they have names or not, can be described by the level of red, green, and blue light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You can use the widget on your left to try out different RGB values and see what colors they make.\n\n-   **Click \"Run\" to start the widget on the left,** and use the sliders to adjust the levels of red, green, and blue light.\n-   For each of the colors below, match it to its RGB value.\n\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\n\nB) red: 255, green: 239, blue: 213 - rgb(255,239,213)\n\nC) red: 250, green: 128, blue: 114 - rgb(250,128,114)\n\nD) red: 70, green: 130, blue: 180 - rgb(70, 130, 180)\n\nE) red: 107, green: 142, blue: 35 - rgb(107,142,35)\n\n<div style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Why do red and green make yellow?</strong>\n</summary>\n\n<p>\n\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\n\n</p> </details>\n<details>\n<summary>\n<strong>How many colors can I make with RGB color mixing?</strong>\n</summary>\n\n<p>\nYou can make over sixteen million different colors with RGB color mixing.\n</p>\n\n</details>\n</div>",
+    "start_html": {
+      "red: 128": "red: 128",
+      "blue: 128": "blue: 128",
+      "1": "1",
+      "green: 128": "green: 128",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "Click the Run button to start this app": "Click the Run button to start this app"
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/3": {
     "long_instructions": "# Winter Color\n\nIn the next few levels, you'll be finding seasonal colors for a website.  Here, you'll need to find the RGB values for a wintery blue color.\n\n-   Click \"Run\" to start the widget.\n-   Adjust the levels until you match the wintery blue color at the bottom of the widget.\n-   Write the RGB values on your activity guide.  You will need them in the next activity.\n\n<div style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>How do I make a color lighter?</strong>\n</summary>\n\nTo make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.\n\n</details>\n<details>\n<summary>\n<strong>Why do red and green make yellow?</strong>\n</summary>\n\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\n\n</details>\n<details>\n<summary>\n<strong>How many colors can I make with RGB color mixing?</strong>\n</summary>\n\nYou can make make over sixteen million different colors with RGB color mixing.\n\n</details>\n</div>",
-    "teacher_markdown": "[][0]\n\nColor solution for Winter Blue: (red, green, blue) = (195, 230, 255)\n\n[/][0]"
+    "teacher_markdown": "[][0]\n\nColor solution for Winter Blue: (red, green, blue) = (195, 230, 255)\n\n[/][0]",
+    "start_html": {
+      "red: 255": "red: 255",
+      "blue: 255": "blue: 255",
+      "Winter Blue": "Winter Blue",
+      "green: 255": "green: 255"
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/4": {
     "long_instructions": "# Summer Color\n\nFind the RGB values for a summery yellow color.\n\n-   Click \"Run\" to start the widget.\n-   Adjust the levels until you match the summery yellow at the bottom of the widget.\n-   Write the RGB values on your activity guide.  You will need them in the next activity.\n\n<div style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Why do red and green make yellow?</strong>\n</summary>\n\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\n\n</details>\n<details>\n<summary>\n<strong>How many colors can I make with RGB color mixing?</strong>\n</summary>\n\nYou can make make over sixteen million different colors with RGB color mixing.\n\n</details>\n</div>",
-    "teacher_markdown": "[][0]\n\nColor solution for Summer Yellow: (red, green, blue) = (255, 230, 100)\n\n[/][0]"
+    "teacher_markdown": "[][0]\n\nColor solution for Summer Yellow: (red, green, blue) = (255, 230, 100)\n\n[/][0]",
+    "start_html": {
+      "red: 255": "red: 255",
+      "blue: 255": "blue: 255",
+      "Summer Yellow": "Summer Yellow",
+      "green: 255": "green: 255"
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/5": {
-    "long_instructions": "# Spring and Autumn Colors\n\nChoose RGB values for spring and autumn colors.\n\n-   Click \"Run\" to start the widget.\n-   Adjust the levels until you find a spring color you like, then write down the values on your activity guide.\n-   Do the same for an autumn color.   You will need the RGB values for the next activity.\n\n<div style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Where can I see the whole range of color types?</strong>\n</summary>\n\nYou can find many options for colors at <a href=\"http://www.w3schools.com/colors/colors_picker.asp\" target=\"_new\">W3Schools - HTML Color Picker</a>\n\n</details>\n<details>\n<summary>\n<strong>Why do red and green make yellow?</strong>\n</summary>\n\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\n\n</details>\n<details>\n<summary>\n<strong>How many colors can I make with RGB color mixing?</strong>\n</summary>\n\nYou can make make over sixteen million different colors with RGB color mixing.\n\n</details>\n</div>"
+    "long_instructions": "# Spring and Autumn Colors\n\nChoose RGB values for spring and autumn colors.\n\n-   Click \"Run\" to start the widget.\n-   Adjust the levels until you find a spring color you like, then write down the values on your activity guide.\n-   Do the same for an autumn color.   You will need the RGB values for the next activity.\n\n<div style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Where can I see the whole range of color types?</strong>\n</summary>\n\nYou can find many options for colors at <a href=\"http://www.w3schools.com/colors/colors_picker.asp\" target=\"_new\">W3Schools - HTML Color Picker</a>\n\n</details>\n<details>\n<summary>\n<strong>Why do red and green make yellow?</strong>\n</summary>\n\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\n\n</details>\n<details>\n<summary>\n<strong>How many colors can I make with RGB color mixing?</strong>\n</summary>\n\nYou can make make over sixteen million different colors with RGB color mixing.\n\n</details>\n</div>",
+    "start_html": {
+      "red: 255": "red: 255",
+      "blue: 255": "blue: 255",
+      "green: 255": "green: 255"
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/6": {
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nFor the code to work, you need to both create a winter class and add elements to the class.\n\nThe class is created in the style sheet, with the following code.\n\n    .winter {\n      color: rgb(195,230,255);\n    }\n\nThis code creates a class called `winter` and makes everything in the class our winter blue, which has the RGB values of (195,230,255).\n\nThe code that adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter` inside the opening tag adds everything inside the tag to the class.\n:::\n\n::: details [**Why does the selector have a period in front of it?**]\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\n:::\n\n::: details [**Why would a web developer use classes?**]\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\n:::\n\n::: details [**I got different RGB values, but mine are right, too.**]\n\nBecause RGB creates millions of different colors, some are so similar that people have a hard time telling them apart.  That means that there are multiple RGB values that are close enough to work for our winter color.\n\n:::\n\n</div>\n\n# Classes\n\nIn this page, the web developer has used classes to give some of the words our winter color.\n\n-   Look at the HTML code for the winter words.  Why is \"snowy\" the only winter word without the winter color?\n-   Add code to the HTML that will give \"snowy\" the same winter blue as the other words.\n-   Look inside the style sheet to find the rule that makes all the words in the winter class blue, and check whether your RGB numbers are close to the ones in the style sheet.  \n-   Discuss with your partner how the code works."
@@ -464,7 +736,14 @@
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nFor the code to work, you need to both create a spring class and add elements to the class.\n\nThe spring class is already created in the style sheet, but it doesn't have any rules.\n\n    .spring {\n      color: rgb(195,230,255);\n    }\n\nLook at the rules in the `winter` class for clues to how to make rules for the summer class.\n\nYou will also need to add some elements to the spring class inside your HTML file.\n\nThe code in the HTML file that adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  Use this pattern to add elements to the spring class, too.\n:::\n\n::: details [**What rules can be added to a class rule-set?**]\n\nA class rule-set can have the same rules as any other type of selector.  If a rule does not apply to the content of the class (for example, using `font-size` on an element with no text), then the computer will ignore that rule, but still use the rules that work.\n:::\n\n::: details [**Why does the selector have a period in front of it?**]\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\n:::\n\n::: details [**Why would a web developer use classes?**]\n\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\n\n:::\n\n</div>\n\n# Spring Class\n\nNow that your winter class is ready, you can start on the other seasons.\n\n-   Find the empty CSS rule-set in the style sheet that gives the spring words their style.\n-   Add two rules, one to give the text your spring color for earlier in the lesson, and another to give the text a different font, font size, or decoration.\n-   Add the spring class to the spring elements in the HTML page."
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/10": {
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nFor the code for the winter class to work, it needs to both create a winter class and add elements to the class.\n\nThe class is created in the style sheet, with the following code.\n\n    .winter {\n      color: rgb(195,230,255);\n    }\n\nThis code creates a class called `winter` and makes everything in the class our winter blue, which has the RGB values of (195,230,255).\n\nThe code that adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter` inside the opening tag adds everything inside the tag to the class.\n:::\n\n::: details [**How do I create a new rule-set?**]\n\nYou can create a new rule-set by following the pattern that the `winter` and `spring` classes used in the style sheet.\n\n    .winter {\n      color: rgb(195,230,255);\n    }\n\nThe selector name and the color values will be different, but the following pattern is always the same.\n\n    .classname {\n      property1: value1;\n      property2: value2;\n    }\n\n:::\n\n::: details [**Why does the selector have a period in front of it?**]\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\n:::\n\n::: details [**Why would a web developer use classes?**]\n\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\n\n:::\n\n</div>\n\n# Summer and Autumn Classes\n\n-   Inside the style sheet, create a new rule-set for a \"summer\" class.\n-   Add a rule to set the text in the summer class to your summer RGB color.\n-   Add the summer class to the summer elements in the HTML page.\n-   Do the same for the autumn class."
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\n::: details [**How does the code work?**]\nFor the code for the winter class to work, it needs to both create a winter class and add elements to the class.\n\nThe class is created in the style sheet, with the following code.\n\n    .winter {\n      color: rgb(195,230,255);\n    }\n\nThis code creates a class called `winter` and makes everything in the class our winter blue, which has the RGB values of (195,230,255).\n\nThe code that adds a `h5` element to the winter class is `<h5 class=\"winter\">`.  The `class=winter` inside the opening tag adds everything inside the tag to the class.\n:::\n\n::: details [**How do I create a new rule-set?**]\n\nYou can create a new rule-set by following the pattern that the `winter` and `spring` classes used in the style sheet.\n\n    .winter {\n      color: rgb(195,230,255);\n    }\n\nThe selector name and the color values will be different, but the following pattern is always the same.\n\n    .classname {\n      property1: value1;\n      property2: value2;\n    }\n\n:::\n\n::: details [**Why does the selector have a period in front of it?**]\nIn CSS, a period in front of a selector means that the selector is the name of a class.  If there is no period, it means that the selector is the name of an HTML tag.\n:::\n\n::: details [**Why would a web developer use classes?**]\n\nA web developer uses classes when some elements should be styled differently than others, even if they are the same tag.  Classes can also be used to give elements that have different tags the same style.\n\n:::\n\n</div>\n\n# Summer and Autumn Classes\n\n-   Inside the style sheet, create a new rule-set for a \"summer\" class.\n-   Add a rule to set the text in the summer class to your summer RGB color.\n-   Add the summer class to the summer elements in the HTML page.\n-   Do the same for the autumn class.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
+      "rubric_performance_level_1": "The summer class and rule-set are created correctly and all text in the summer section of the website is the chosen color, as indicated by the RGB code.",
+      "rubric_performance_level_2": "The summer class and rule-set are created and most text in the summer section of the website is affected by this class, but there may be a few minor errors for some parts of text.",
+      "rubric_performance_level_3": "The summer class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+      "rubric_performance_level_4": "The summer class or rule set are not created, or no website elements are put in the class."
+    }
   },
   "https://studio.code.org/s/csd2-2019/lessons/13/levels/11": {
     "long_instructions": "# Free Play Styling\n\nYour turn to decide what you want to style! Play with the classes styling and RGB colors to improve your personal website.\n\n-   Make sure you have completed the checklist below.\n-   Take a screenshot of your home page and save it somewhere on your computer so you can find it later.\n\n## Checklist\n\n-   Somewhere on your site, give text a particular color using RGB values.\n-   On your lists page, give all the list items the same background color.\n-   Use classes to style at least two other elements of your personal website"
@@ -480,11 +759,444 @@
   "https://studio.code.org/s/csd2-2019/lessons/14/levels/3": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U2Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U2Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U2Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U2Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U2Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd2-2019/lockable/1/levels/1": {
     "dsls": {
       "title": "Web Development Post-Project Test"
+    },
+    "sublevels": {
+      "CSD U2 Test HTML Usage": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Making the text a different color.",
+              "correct": false
+            },
+            {
+              "text": "Separating out headings from paragraphs",
+              "correct": true
+            },
+            {
+              "text": "Putting borders on an image",
+              "correct": false
+            },
+            {
+              "text": "Adding information about the copyright",
+              "correct": false
+            },
+            {
+              "text": "Organizing text into a list",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO)"
+            }
+          ],
+          "title": "Question 1"
+        }
+      },
+      "CSD U2 Test ContentStructureStyle": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "It will be confusing and less organized for people to read and write code that mixes everything up together.",
+              "correct": false
+            },
+            {
+              "text": "Structure is more important than style or content and needs its own language",
+              "correct": false
+            },
+            {
+              "text": "Communicating about structure and style are different problems, and it is helpful to use two languages specific to those problems",
+              "correct": false
+            },
+            {
+              "text": "A and C",
+              "correct": true
+            },
+            {
+              "text": "All of the above",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A programmer has an idea to use just one language for the content, structure, and style of web pages. What might be a problem with this idea?"
+            }
+          ],
+          "title": "Question 2"
+        }
+      },
+      "CSD U2 Test Classes": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "They want to make their h3 tags bigger than their h1 tags.",
+              "correct": false
+            },
+            {
+              "text": "They want headings to be one color, but paragraphs to be a different color.",
+              "correct": false
+            },
+            {
+              "text": "They want some images to float left, and other images to float right.",
+              "correct": true
+            },
+            {
+              "text": "They want all the pages on their site to have the same style.",
+              "correct": false
+            },
+            {
+              "text": "They want make a special color using RGB codes.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A group of artists is making a website. When should they use classes?"
+            }
+          ],
+          "title": "Question 3"
+        }
+      },
+      "CSD U2 Test Debug": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "1 only",
+              "correct": true
+            },
+            {
+              "text": "3 only",
+              "correct": false
+            },
+            {
+              "text": "1 and 2 only",
+              "correct": false
+            },
+            {
+              "text": "1 and 3 only",
+              "correct": false
+            },
+            {
+              "text": "1, 2, and 3",
+              "correct": false
+            }
+          ],
+          "markdown": "A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? \n\n1. The student forgot to link the stylesheet to the index.html page.\n1. The student did not upload the images used in the index.html page.\n1. The student accidentally misspelled “green” in the stylesheet.\n",
+          "title": "Question 4"
+        }
+      },
+      "CSD U2 Test code stylesheet": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "1 and 3",
+              "correct": false
+            },
+            {
+              "text": "2 and 4",
+              "correct": false
+            },
+            {
+              "text": "2 and 3",
+              "correct": true
+            },
+            {
+              "text": "3 and 4",
+              "correct": false
+            },
+            {
+              "text": "1, 2, 3, and 4",
+              "correct": false
+            }
+          ],
+          "markdown": "Questions 5 and 6 deal with the following web page:\n\n![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)\n\n![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)\n\nWhat code in the stylesheet could have made the text green?<br><br>\n<div>\n1. <pre style=\"display:inline-block;width:100px\">.p {\n  color:green;\n}</pre>\n2. <pre style=\"display:inline-block;width:100px\">p {\n  color:green;\n}</pre>\n3. <pre style=\"display:inline-block;width:100px\">.special {\n  color:green;\n}</pre>\n4. <pre style=\"display:inline-block;width:100px\">special {\n  color:green;\n}\n</pre>\n</div>\n\n",
+          "title": "Question 5"
+        }
+      },
+      "CSD U2 Test code styles": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Use &lt;h6&gt; instead of &lt;h3&gt;",
+              "correct": false
+            },
+            {
+              "text": "Use &lt;h1&gt; instead of &lt;h3&gt;",
+              "correct": true
+            },
+            {
+              "text": "Put the “My Page” text inside the <head> tags.",
+              "correct": false
+            },
+            {
+              "text": "Use CSS to set the font-size property of the h3 tag",
+              "correct": true
+            },
+            {
+              "text": "Put the code `style=“larger”` inside the h3 tag.",
+              "correct": false
+            }
+          ],
+          "markdown": "Questions 5 and 6 deal with the following web page:\n\n![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)\n\n![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)\n",
+          "questions": [
+            {
+              "text": "The web developer wants to make the “My Page” text larger.  Which TWO of the following would work? (Choose TWO)"
+            }
+          ],
+          "title": "Question 6"
+        }
+      },
+      "CSD U2 Test Copyright": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "If an image is already on one web page, it's okay to use it on any web page.",
+              "correct": false
+            },
+            {
+              "text": "If you make a lot of changes to an image, you do not need the permission of the original creator to post it on your site.",
+              "correct": false
+            },
+            {
+              "text": "Image creators can decide both who can use their images and how the images can be used.",
+              "correct": true
+            },
+            {
+              "text": "If there is no copyright information for an image, anyone is free to use it on their own sites.",
+              "correct": false
+            },
+            {
+              "text": "You must always contact the creator for permission to use an image on your site.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following is true about copyright?"
+            }
+          ],
+          "title": "Question 7"
+        }
+      },
+      "CSD U2 Test Bug FR": {
+        "display_name": "Question 8",
+        "long_instructions": "Think about one difficult bug that you needed to fix in your program.  What was your process for finding and fixing the bug?"
+      },
+      "CSD U2 Test Copyright FR": {
+        "display_name": "Question 9",
+        "long_instructions": "Choose one piece of copyrighted material you used in your website.  Why do you think the creator chose the license they used?"
+      },
+      "CSD U2 Test DigCit FR": {
+        "display_name": "Question 10",
+        "long_instructions": "Choose one piece of information your class can know, but you don’t want to share on your website.  Why is it okay for your classmates and teacher to know it, but not to post it publicly?"
+      }
     }
   },
   "https://studio.code.org/s/csd2-2019/lockable/2/levels/1": {
@@ -495,6 +1207,1376 @@
   "https://studio.code.org/s/csd2-2019/lockable/2/levels/2": {
     "dsls": {
       "title": "CS Discoveries End of Semester Student Survey"
+    },
+    "sublevels": {
+      "csp-post-survey-2017 preamble 1_2019": {
+        "dsls": {
+          "markdown": "### **This survey is anonymous** \n\n*Code.org takes your privacy very seriously.* Your responses here will be kept **anonymous**. No one, not even your teacher, can link your responses back to you as an individual.\n\nWe do this because we want you to **be as open and honest as possible**. We care about your experience in the course, and we make improvements based on what you say.\n\n* The survey should take **10 minutes or less** to complete.\n\n***\n\n## School in general\n\n#### *First, we want to ask you about your thoughts and feelings about school, in general.*\n",
+          "teacher_markdown": "## How to see your students' responses to this survey\n\n* You will be able to see the anonymized results of the survey for your students once at least 5 of them have completed it.\n\n* To view the results of this survey please follow the intstructions in the associated lesson plan. \n\n\n"
+        }
+      },
+      "csp-pre-survey-2017-q3_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think my schoolwork is interesting."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q4_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important for me to be good at my schoolwork."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q9_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself at school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 2 cs in general_2019": {
+        "dsls": {
+          "markdown": "### Part 2: Computer Science in general\n\n#### *Next, we'd like to ask for your thoughts and feelings about Computer Science, generally.*\n\n***\n"
+        }
+      },
+      "csp-pre-survey-2017-q10_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q11_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think computer science is interesting. "
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q16_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important to me to be good at computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q12_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science. "
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q13_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am better at computer science than other kids at my school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q17_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "People like me do computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q18_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I could become a computer scientist one day."
+            }
+          ]
+        }
+      },
+      "naturally-better-at-cs": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I believe some people are just naturally better at learning and doing computer science than others."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q33_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Every person has the same ability to learn computer science, no matter what their gender, skin color, or background."
+            }
+          ]
+        }
+      },
+      "same-ability": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Each person has the same ability to learn and do computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 3 this class_2019": {
+        "dsls": {
+          "markdown": "### Part 3: You and computer science\n\n#### *Next we ask for your thoughts about this computer science class and your future.* \n\n***\n"
+        }
+      },
+      "i-like-cs-class": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "comfortable-in-cs-class": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q22_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Sometimes I feel unsure whether I belong in this class."
+            }
+          ]
+        }
+      },
+      "be-myself-in-cs": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself in this computer science class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-worry-seem-less-capable": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I sometimes worry that I am seen by others as less capable in computer science."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-reasons-not-take-csd": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Wanted to, just couldn't due to scheduling conflicts or other constraints (few elective slots, class full, etc.)",
+              "correct": true
+            },
+            {
+              "text": "Thought it would be too hard or they'd get a bad grade",
+              "correct": true
+            },
+            {
+              "text": "Thought it would be boring, wouldn't learn anything useful",
+              "correct": true
+            },
+            {
+              "text": "Had a bad experience in another computer science class",
+              "correct": true
+            },
+            {
+              "text": "Worried they would feel like an outsider, few friends in the class",
+              "correct": true
+            },
+            {
+              "text": "No parent or relative encouraged them",
+              "correct": true
+            },
+            {
+              "text": "No one at the school (teacher, counselor, coach, etc.) encouraged them",
+              "correct": true
+            },
+            {
+              "text": "Someone actively encouraged them NOT to take the class",
+              "correct": true
+            },
+            {
+              "text": "Other reasons not listed here.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Think of a friend of yours at school who didn't take this class, but you think might have enjoyed it. What do you think are the strongest reasons why they didn't take this class? (choose up to two)."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-2017-implementation-teacher_2019": {
+        "dsls": {
+          "markdown": "## Your Classroom Experience\n\n***\n\n<h3>Take a moment to think back over the experiences you had in this class. <br/><em>Thinking back over your time in this class, how often did your <strong>teacher</strong> do the following?</em></h3>\n"
+        }
+      },
+      "csd-post-survey-q26_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school)."
+            }
+          ]
+        }
+      },
+      "interest-connected-to-life": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life)."
+            }
+          ]
+        }
+      },
+      "asked-to-problem-solve": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to problem solve when something didn't work the way I wanted it to work."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q29_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to explain the logic and reasoning supporting my solutions to problems."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q30_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Worked collaboratively with other students in a small group."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q31_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Shared responsibility for activity and project work with group members."
+            }
+          ]
+        }
+      },
+      "made-choices-about-assignments": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Made my own choices about assignments in computer science class."
+            }
+          ]
+        }
+      },
+      "curriculum-how-did-you-like-lessons": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Not at all",
+              "correct": true
+            },
+            {
+              "text": "A little bit",
+              "correct": true
+            },
+            {
+              "text": "Somewhat",
+              "correct": true
+            },
+            {
+              "text": "A lot",
+              "correct": true
+            },
+            {
+              "text": "I loved everything!",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How did you like the lessons and topics covered in this course?"
+            }
+          ]
+        }
+      },
+      "curriculum-how-challenging": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "way too easy.",
+              "correct": true
+            },
+            {
+              "text": "a little too easy.",
+              "correct": true
+            },
+            {
+              "text": "just about right.",
+              "correct": true
+            },
+            {
+              "text": "a little too difficult.",
+              "correct": true
+            },
+            {
+              "text": "way too difficult.",
+              "correct": true
+            }
+          ],
+          "markdown": "<!--\nright 'nothing'  \nright 'too little'\nright 'about the right amount'\nright 'too much'\nright 'way too much'-->\n\n",
+          "questions": [
+            {
+              "text": "How challenging were the lessons and topics in this course for you? I think this course was..."
+            }
+          ]
+        }
+      },
+      "post-assessment survey q31-a-2017b": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I would recommend this computer science class to another student."
+            }
+          ]
+        }
+      },
+      "how-often-pair-programming-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to write code with another student (Pair Programming)"
+            }
+          ]
+        }
+      },
+      "how-often-peer-feedback-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked my peers to give me feedback on my work."
+            }
+          ]
+        }
+      },
+      "how-often-share-ideas-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to share my ideas with classmates in small-group or large-group discussion."
+            }
+          ]
+        }
+      },
+      "how-often-failure-prob-solve-prcess-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Reminded me that failure is natural and expected part of a problem solving process."
+            }
+          ]
+        }
+      },
+      "how-often-journal-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Gave me the opportunity to write my thoughts down in a journal, or on paper."
+            }
+          ]
+        }
+      },
+      "how-often-tried-new-unsure-how-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tried new things in class even when I was not sure how to do them."
+            }
+          ]
+        }
+      },
+      "how-often-tried-knowing-would-fail-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tried something I thought I might fail."
+            }
+          ]
+        }
+      },
+      "how-often-consider-alternative-approaches-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Stopped to consider alternative approaches to what I was working on."
+            }
+          ]
+        }
+      },
+      "how-often-explain-why-disagree-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Explain why I agreed or disagreed with the work of other students."
+            }
+          ]
+        }
+      }
     }
   }
 }

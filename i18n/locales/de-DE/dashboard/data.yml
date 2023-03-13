@@ -547,8 +547,11 @@ de:
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
         codebreak_e10: 'Folge 10.0: Künstliche Intelligenz mit Kat Graham und Kate Park'
+        csf21pilot_events: 'Video: Grafikobjekte in Aktion'
+        csf21pilot_prompts: 'Grafikobjekte-Labor: Text und Aufforderungen'
         outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
         csd_ml_import_model: Importieren eines KI-Modells
+        csf_lots_of_sprites: 'Video: Jede Menge Grafikobjekte'
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
         PL_CSD_TeacherTips_Advise: Tipps für Lehrer – Ratschläge für neue Lehrer
@@ -573,6 +576,29 @@ de:
         poetry_module_multichoiceprompts: Multiple-Choice-Aufgaben - Programmieren mit Poesie
         poetry_module_conditionals: Bedingungen - Programmieren mit Poesie
         poemart_intro: Einführung in die Gedichtkunst
+        CSA-PL-debugging-temp: Einführung in die Fehlerbehebung in Java – Temp
+        csd_u6_circuit_playground: Physische Datenverarbeitung
+        csd_u6_input_output: Input und Output
+        CSA-PL-for-loops: For-Schleifen in Java
+        CSA-PL-variables: Erstellen von Variablen in Java
+        PL_CS_Journeys_Overview: Informatik-Erlebnis
+        CSA-PL-intro-to-java-lab: Java Lab Grundlagen
+        CSA-PL-first-program: Programmieren in Java
+        CSD_u6_variables_part1: 'CSD: Variablen'
+        csd_u6_if_statements: 'CSD: If-Anweisungen'
+        csc-poem-art-intro: Einführungsvideo
+        csc-poem-art-outro: Schlussvideo
+        csd_u6_call_define_functions: 'CSD: Aufrufen und Definieren von Funktionen'
+        csp_applab_parameters: Funktionen mit Parametern
+        starquilts_intro_artist: Einführung in Star Quilts
+        CSA-PL-intro-to-arrays: Eindimensionale (1D) Arrays
+        CSA-PL-1d-arrays-new-values: Eingeben von Werten in 1D-Arrays
+        CSA-PL-conditionals: Bedingte Anweisungen in Java
+        CSA-PL-two-way-selection: Zweifach-Auswahl
+        CSA-PL-Printing-in-Java: Drucken in Java
+        CSA-PL-multi-selection-statements: Mehrfachauswahl-Anweisungen
+        CS_Changing_Everything: Informatik verändert alles
+        csc-sprite-lab-pixel-editor: Zeichne dein eigenes Grafikobjekt
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

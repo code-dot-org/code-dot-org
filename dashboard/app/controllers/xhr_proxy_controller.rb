@@ -35,6 +35,7 @@ class XhrProxyController < ApplicationController
     api.duckduckgo.com
     api.energidataservice.dk
     api.exchangeratesapi.io
+    api.fda.gov
     api.football-data.org
     api.foursquare.com
     api.github.com
@@ -45,6 +46,7 @@ class XhrProxyController < ApplicationController
     api.nookipedia.com
     api.opencagedata.com
     api.open-notify.org
+    api.open-meteo.com
     api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
@@ -61,8 +63,11 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.weather.gov
+    api.weatherapi.com
+    api.wolframalpha.com
     api.zippopotam.us
     bible-api.com
+    bnefoodtrucks.com.au
     ch.tetr.io
     code.org
     covidtracking.com
@@ -77,6 +82,7 @@ class XhrProxyController < ApplicationController
     deckofcardsapi.com
     distanza.org
     dweet.io
+    githubusercontent.com
     googleapis.com
     grobchess.com
     hubblesite.org
@@ -87,6 +93,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    native-land.ca
     newsapi.org
     noaa.gov
     numbersapi.com

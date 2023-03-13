@@ -2,8 +2,26 @@
 he:
   data:
     blocks:
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}תגידו{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': זמן בינוני
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': זמן בינוני
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} מחליפים כל {N} תיבות \nבין {MOVE1} ל{MOVE2}"
         options:
@@ -218,20 +236,12 @@ he:
             MOVES.ThisOrThat: כך וכך
             MOVES.Thriller: זומבי
             MOVES.Rest: כלום
-      Dancelab_everyMeasuresRange:
-        text: 'חזור כל {N} תיבות אחרי {START} '
       Dancelab_everySeconds:
         text: 'כל {N} {UNIT} '
         options:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
-      Dancelab_everySecondsRange:
-        text: 'כל {N} {UNIT} מ-{START} ועד {STOP} '
-        options:
-          UNIT:
-            measures: תיבות
-            seconds: שניות
       Dancelab_everyVerseChorus:
         text: 'כל {UNIT} '
         options:
@@ -331,7 +341,7 @@ he:
             "{x: 300, y: 300}": למטה מימין
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": באקראי
       Dancelab_layoutSprites:
-        text: סדר {GROUP} כ {FORMAT}
+        text: סדר {GROUP} ב {FORMAT}
         options:
           GROUP:
             sprites: כולם
@@ -362,6 +372,7 @@ he:
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
             '"spiral"': ספירלה
+            '"infinity"': קו אינסופי
             '"random"': אקראי
       Dancelab_makeAnonymousDanceSprite:
         text: צור {COSTUME} חדש {LOCATION}
@@ -492,6 +503,7 @@ he:
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
             '"spiral"': ספירלה
+            '"infinity"': קו אינסופי
             '"random"': באקראי
       Dancelab_mixColors:
         text: ערבב {COLOR1} עם {COLOR2}
@@ -980,6 +992,39 @@ he:
         text: הגדרה
       Dancelab_whenSetup2:
         text: הגדרה
+      DansBlocks_getMicroscope:
+        text: למיקרוסקופ יש {INPUT1}
+        options:
+          INPUT1:
+            '1': מיץ לימון
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: בצע אפקט {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts"': לבבות
+            '"emojis"': אמוג'י שמחים
+            '"rain"': גשום
+            '"starburst"': כוכבים
+            '"glass"': זכוכית מתנפצת
+            '"twinkling"': הבהוב
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': מיץ לימון
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: תקשרו {VAR1} עם{SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: צרו{NUM}חדשים{ANIMATION_NAME} שדונים{BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: תייצגו {NUM} חדשים{ANIMATION_NAME}שדונים [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}תגידו{TEXT1}"
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       gamelab_addTarget:
@@ -1043,7 +1088,7 @@ he:
         text: ניתנת לגרירה
       gamelab_edgesDisplace:
         text: המסגרת חוסמת את {SPRITE} מלזוז
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'כל {N} {UNIT} '
         options:
           UNIT:
@@ -1088,7 +1133,7 @@ he:
             '9': '9'
             '10': '10'
       gamelab_isKeyPressed:
-        text: לחוץ
+        text: "{KEY} לחוץ"
         options:
           KEY:
             '"up"': למעלה
@@ -1166,6 +1211,13 @@ he:
             '"z"': z
       gamelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       gamelab_locationMouse:
         text: מיקום עכבר
       gamelab_locationOf:
@@ -1180,8 +1232,6 @@ he:
             '"pop"': קפיצה
             '"rain"': גשום
             '"spiral"': ספירלה
-      gamelab_makeNewScaledSprite:
-        text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNumSprites:
@@ -1193,6 +1243,12 @@ he:
             '90': למטה
             '180': שמאלה
             '270': למעלה
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': זמן בינוני
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} פונה ל{DIRECTION}"
         options:
@@ -1207,6 +1263,12 @@ he:
         text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה
       gamelab_moveInDirection:
         text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה  {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
       gamelab_newSpritePointer:
@@ -1231,14 +1293,53 @@ he:
             "'sound://category_animals/cat.mp3'": חתול
             "'sound://category_animals/cow.mp3'": פרה
             "'sound://category_animals/sheep.mp3'": כבשה
+            "'sound://category_animals/goat.mp3'": עז
             "'sound://category_animals/chicken.mp3'": תרנגולת
+            "'sound://category_animals/rooster.mp3'": תרנגול
+            "'sound://category_animals/elephant.mp3'": פיל
             "'sound://category_animals/dolphin.mp3'": דולפין
+            "'sound://category_animals/chick.mp3'": אפרוח
             "'sound://category_animals/dog.mp3'": כלב
             "'sound://category_collect/trill_stings.mp3'": סלסול
             "'sound://category_instrumental/harpe_pluck_1.mp3'": נבל
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": נקישה
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": דיגיטלי
-            "'sound://category_digital/jump_7.mp3'": קפוץ
+            "'sound://category_transition/trippy_robotic_transition.mp3'": מעבר רובוטים
+            "'sound://category_transition/star_dust_particle_10.mp3'": אבק כוכבים
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": חללית
+              חייזרים
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": קסם
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": בחירה
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": בס מוזר
+            "'sound://category_digital/jump_7.mp3'": קפיצה
+      gamelab_playSoundOptionsSoccer:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": צופר אוויר
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": תשואות
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": שירה
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": עידוד
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": בעיטה
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": שתי משרוקיות
+            "'sound://category_sports/One_Whistle_SFX.mp3'": משרוקית
+      gamelab_playSoundOptionsSpace:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": חור שחור
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": קבוצה צפופה של כוכבים
+            "'sound://category_space/Carina_SFX.mp3'": קארינה
+            "'sound://category_space/Cassiopeia_SFX.mp3'": קסיופאה
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ערפילית הסרטן
+            "'sound://category_space/Galactic_center_SFX.mp3'": המרכז הגלקטי
+            "'sound://category_space/Launch_SFX.mp3'": שיגור
+            "'sound://category_space/Lift_Off.mp3'": המראה
+            "'sound://category_space/Pillars_SFX.mp3'": עמודים
+            "'sound://category_space/Southern_ring_SFX.mp3'": הטבעת הדרומית
+            "'sound://category_space/Supernova_SFX.mp3'": סופרנובה
+            "'sound://category_space/Tycho_SFX.mp3'": טיכו
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": גלקסיית המערבולת
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1247,6 +1348,12 @@ he:
             draggable(): ניתנת לגרירה
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       gamelab_printText:
         text: הדפס {TEXT}
       gamelab_randColor:
@@ -1268,7 +1375,7 @@ he:
       gamelab_setBackground:
         text: קבע צבע רקע {COLOR}
       gamelab_setBackgroundImage:
-        text: הגדר רקע {IMG}
+        text: קבע רקע {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': מערה
@@ -1278,13 +1385,14 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': מדבר
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': גלקסיה
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': כוכבים
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
       gamelab_setBackgroundImageAs:
-        text: הגדר רקע {IMG}
+        text: קבע רקע {IMG}
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1339,11 +1447,15 @@ he:
       gamelab_showTitleScreen:
         text: הצג כותרת מסך {BREAK} כותרת {TITLE} טקסט {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} נלחץ"
+        text: כאשר לוחצים על {CONDITION} {SPRITE}
         options:
           CONDITION:
             '"when"': כאשר
             '"while"': כל עוד
+      gamelab_spriteSay:
+        text: "{SPRITE} אמור {SPEECH}"
+      gamelab_spriteThink:
+        text: "{SPRITE} חשוב {SPEECH}"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1399,7 +1511,9 @@ he:
       gamelab_whileUpArrow:
         text: בעוד חץ למעלה לחוץ
       gamelab_withPercentChance:
-        text: אם {NUM} אחוז סיכוי
+        text: |-
+          אם {NUM} אחוז סיכוי
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |2-
            {NUM} סיכוי
@@ -1619,6 +1733,7 @@ he:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1702,6 +1817,38 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: למיקרוסקופ יש {INPUT1}
+        options:
+          INPUT1:
+            '1': מיץ לימון
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': מיץ לימון
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): מוצק
+            new Behavior(liquid, []): נוזל
+            new Behavior(wandering, []): גז
+      ParticlesBlocks_statesOfMatter2:
+        text: קבעו {COSTUME}להתאים{BEHAVIOR} להתנהגות
+        options:
+          BEHAVIOR:
+            '"solid"': חלקיק מוצק
+            '"liquid"': חלקיק נוזלי
+            '"gas"': חלקיק גז
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': חלקיק מוצק
+            '"liquid"': חלקיק נוזלי
+            '"gas"': חלקיק גז
       Poetry_addFrame:
         text: קבע מסגרת {BRUSH}
         options:
@@ -1783,6 +1930,23 @@ he:
             '"sound://category_achievements/peaceful_win_1.mp3"': ניצחון
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': סחרור
             '"sound://category_achievements/peaceful_win_6.mp3"': פעמוני רוח
+      Poetry_playSoundOptionsSpace:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": חור שחור
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": קבוצה צפופה של כוכבים
+            "'sound://category_space/Carina_SFX.mp3'": קארינה
+            "'sound://category_space/Cassiopeia_SFX.mp3'": קסיופאה
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ערפילית הסרטן
+            "'sound://category_space/Galactic_center_SFX.mp3'": המרכז הגלקטי
+            "'sound://category_space/Launch_SFX.mp3'": שיגור
+            "'sound://category_space/Lift_Off.mp3'": המראה
+            "'sound://category_space/Pillars_SFX.mp3'": עמודים
+            "'sound://category_space/Southern_ring_SFX.mp3'": הטבעת הדרומית
+            "'sound://category_space/Supernova_SFX.mp3'": סופרנובה
+            "'sound://category_space/Tycho_SFX.mp3'": טיכו
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": גלקסיית המערבולת
       Poetry_setBackground:
         text: קבע צבע רקע {COLOR}
       Poetry_setBackgroundEffect:
@@ -1886,6 +2050,11 @@ he:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:
@@ -1940,6 +2109,8 @@ he:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} אמור {SPEECH}"
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
@@ -2081,5 +2252,19 @@ he:
           DIR:
             right: ימינה
             left: שמאלה
+      storylab_setForegroundEffect2:
+        text: בצע אפקט {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts"': לבבות
+            '"rain"': גשום
+            '"starburst"': כוכבים
+            '"twinkling"': הבהוב
+      storylab_setHeading:
+        text: קבעו כותרת {HEADING}
+      storylab_setSubheading:
+        text: קבעו תת-כותרת {SUBHEADING}
       validation_validatedBackground:
-        text: הגדר רקע {IMG}
+        text: קבע רקע {IMG}

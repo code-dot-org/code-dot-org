@@ -1,11 +1,14 @@
 - level ||= @level
 
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/_curriculum_reference.js')}
+  %script{src: webpack_asset_path('js/levels/_curriculum_reference.js'), data: {referenceGuide: level.reference_guide&.summarize_for_show.to_json}}
 
 .curriculum-reference
   %div{style: "overflow: hidden"}
-    #iframe-loading.loading
-    %iframe{id: 'curriculum-reference', width: '100%', frameborder: 0, src: level.href, onload: 'window.curriculumReference.onload()', style: "display: none;" }
+    - if level.reference_guide_level?
+      #reference-guide
+    - else
+      #iframe-loading.loading
+      %iframe{id: 'curriculum-reference', width: '100%', frameborder: 0, src: level.href, onload: 'window.curriculumReference.onload()', style: "display: none;" }
     %a.btn.btn-large.btn-primary.next-lesson.submitButton.pull-right= t('continue')
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}

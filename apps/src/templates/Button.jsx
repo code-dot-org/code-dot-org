@@ -6,12 +6,18 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
+import moduleStyles from './button.module.scss';
+
+// Note: Keep these constants in sync with button.module.scss.
+const Phase1ButtonColor = {
+  brandSecondaryDefault: 'brandSecondaryDefault',
+  neutralDark: 'neutralDark'
+};
 
 const ButtonColor = {
+  ...Phase1ButtonColor,
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
@@ -25,22 +31,25 @@ const ButtonColor = {
 const ButtonSize = {
   default: 'default',
   large: 'large',
-  narrow: 'narrow'
+  narrow: 'narrow',
+  small: 'small'
 };
 
 const ButtonHeight = {
   default: 34,
   large: 40,
-  narrow: 40
+  narrow: 40,
+  small: 20
 };
 
 class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
-    color: PropTypes.oneOf(Object.keys(ButtonColor)),
+    color: PropTypes.oneOf(Object.values(ButtonColor)),
     styleAsText: PropTypes.bool,
     icon: PropTypes.string,
     iconClassName: PropTypes.string,
@@ -93,9 +102,19 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
+    let buttonStyle = style;
     let Tag = 'button';
+    /*
+    TODO: Rework __useDeprecatedTag logic once the remaining instances are only
+    links. The tag is safe to remove from current <Button> implementations if
+    the button has an onClick() and no href. Such removal may require style
+    updates for margin and boxShadow to match page styling.
+    */
     if (__useDeprecatedTag) {
       Tag = href ? 'a' : 'div';
+    } else {
+      // boxShadow should default to none, unless otherwise overridden
+      buttonStyle = {boxShadow: 'none', ...style};
     }
 
     if (download && Tag !== 'a') {
@@ -106,9 +125,12 @@ class Button extends React.Component {
       );
     }
 
-    const sizeStyle = __useDeprecatedTag
-      ? styles.sizes[size]
-      : {...styles.sizes[size], ...styles.updated};
+    const sizeClassNames = __useDeprecatedTag
+      ? [
+          moduleStyles[size],
+          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
+        ]
+      : [moduleStyles[size], moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.
@@ -117,19 +139,27 @@ class Button extends React.Component {
     // potential exploits. Therefore, we do so here.
     const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 
-    let tagStyle, className;
+    let className;
     if (styleAsText) {
-      tagStyle = [styles.main, styles.textButton, style];
-      className = classNames(this.props.className, 'button-active-no-border');
+      className = classNames(
+        this.props.className,
+        moduleStyles.main,
+        moduleStyles.textButton,
+        'button-active-no-border'
+      );
     } else {
-      tagStyle = [styles.main, styles.colors[color], sizeStyle, style];
-      className = this.props.className;
+      className = classNames(
+        this.props.className,
+        moduleStyles.main,
+        moduleStyles[color],
+        sizeClassNames
+      );
     }
 
     return (
       <Tag
         className={className}
-        style={tagStyle}
+        style={{...buttonStyle}}
         href={disabled ? '#' : href}
         target={target}
         rel={rel}
@@ -144,212 +174,26 @@ class Button extends React.Component {
           {icon && (
             <FontAwesome
               icon={icon}
-              className={iconClassName}
-              style={{...styles.icon, ...iconStyle}}
+              className={classNames(iconClassName, moduleStyles.icon)}
+              style={{...iconStyle}}
             />
           )}
+          {this.props.children && this.props.children}
           {isPending && pendingText && (
             <span>
               {pendingText}&nbsp;
               <FontAwesome icon="spinner" className="fa-spin" />
             </span>
           )}
-          <span style={styles.textSpan}>{!isPending && text}</span>
+          <span className={moduleStyles.textSpan}>{!isPending && text}</span>
         </div>
       </Tag>
     );
   }
 }
 
-const styles = {
-  main: {
-    display: 'inline-block',
-    fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    borderBottomLeftRadius: 3,
-    borderBottomRightRadius: 3,
-    borderTopLeftRadius: 3,
-    borderTopRightRadius: 3,
-    textDecoration: 'none',
-    ':hover': {
-      backgroundColor: color.white,
-      cursor: 'pointer'
-    },
-    boxSizing: 'border-box',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
-  },
-  updated: {lineHeight: '12px'},
-  icon: {
-    marginRight: 2.5,
-    marginLeft: 2.5
-  },
-  textSpan: {
-    marginRight: 2.5,
-    marginLeft: 2.5
-  },
-  colors: {
-    [ButtonColor.orange]: {
-      color: 'white',
-      backgroundColor: color.orange,
-      fontWeight: 'bold',
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.63)',
-      ':hover': {
-        color: color.orange,
-        borderColor: color.orange
-      },
-      ':disabled': {
-        // This color is in Mike's styleguide, but we don't use it anywhere else,
-        // and it might be changed by Mark soon - so just hard-coding the string.
-        backgroundColor: '#FFD27F',
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-    [ButtonColor.gray]: {
-      color: color.charcoal,
-      backgroundColor: color.lightest_gray,
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.73)',
-      ':disabled': {
-        backgroundColor: color.lighter_gray,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-    [ButtonColor.blue]: {
-      color: color.white,
-      backgroundColor: color.cyan,
-      fontWeight: 'bold',
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
-      ':hover': {
-        boxShadow: 'none',
-        color: color.cyan,
-        borderColor: color.cyan,
-        backgroundColor: color.lightest_cyan
-      },
-      ':disabled': {
-        color: color.lighter_cyan,
-        backgroundColor: color.lightest_cyan,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-    [ButtonColor.teal]: {
-      color: color.white,
-      backgroundColor: color.teal,
-      fontWeight: 'bold',
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
-      ':hover': {
-        boxShadow: 'none',
-        color: color.teal,
-        borderColor: color.teal,
-        backgroundColor: color.lightest_teal
-      },
-      ':disabled': {
-        color: color.lighter_cyan,
-        backgroundColor: color.lightest_cyan,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-
-    [ButtonColor.white]: {
-      color: color.charcoal,
-      backgroundColor: color.white,
-      boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.06)',
-      ':hover': {
-        boxShadow: 'none',
-        backgroundColor: color.lightest_gray
-      },
-      ':disabled': {
-        backgroundColor: color.lightest_gray,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-    [ButtonColor.red]: {
-      color: color.white,
-      backgroundColor: color.red,
-      fontWeight: 'bold',
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
-      ':hover': {
-        boxShadow: 'none',
-        color: color.red,
-        borderColor: color.red
-      },
-      ':disabled': {
-        backgroundColor: color.lightest_red,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-    [ButtonColor.purple]: {
-      color: color.white,
-      backgroundColor: color.purple,
-      fontWeight: 'bold',
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
-      ':hover': {
-        boxShadow: 'none',
-        color: color.purple,
-        borderColor: color.purple,
-        backgroundColor: color.lightest_purple
-      },
-      ':disabled': {
-        color: color.lighter_purple,
-        backgroundColor: color.lightest_purple,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    },
-    [ButtonColor.green]: {
-      color: color.white,
-      backgroundColor: color.level_perfect,
-      fontWeight: 'bold',
-      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
-      ':hover': {
-        boxShadow: 'none',
-        color: color.charcoal,
-        borderColor: color.lightest_gray,
-        backgroundColor: color.lightest_gray
-      },
-      ':disabled': {
-        backgroundColor: color.lightest_gray,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
-      }
-    }
-  },
-  sizes: {
-    [ButtonSize.default]: {
-      height: ButtonHeight.default,
-      paddingLeft: 24,
-      paddingRight: 24,
-      lineHeight: '34px'
-    },
-    [ButtonSize.large]: {
-      height: ButtonHeight.large,
-      paddingLeft: 30,
-      paddingRight: 30,
-      lineHeight: '40px'
-    },
-    [ButtonSize.narrow]: {
-      height: ButtonHeight.narrow,
-      paddingLeft: 10,
-      paddingRight: 10,
-      lineHeight: '40px'
-    }
-  },
-  textButton: {
-    color: color.teal,
-    borderWidth: 0,
-    backgroundColor: 'unset',
-    fontFamily: '"Gotham 5r", sans-serif',
-    boxShadow: 'none',
-    padding: 0,
-    margin: 0,
-    ':hover': {
-      backgroundColor: 'unset'
-    }
-  }
-};
-
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
 Button.ButtonHeight = ButtonHeight;
 
-export default Radium(Button);
+export default Button;

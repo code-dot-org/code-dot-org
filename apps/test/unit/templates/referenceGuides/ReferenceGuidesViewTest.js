@@ -39,8 +39,8 @@ describe('ReferenceGuideView', () => {
         baseUrl={'fgsfds'}
       />
     );
-    expect(wrapper.findOne('EnhancedSafeMarkdown').props.markdown).to.equal(
-      referenceGuide.content
+    expect(wrapper.findOne('ReferenceGuide').props.referenceGuide).to.equal(
+      referenceGuide
     );
   });
 

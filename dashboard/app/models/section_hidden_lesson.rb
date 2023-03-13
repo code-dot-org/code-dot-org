@@ -13,8 +13,8 @@
 #
 
 class SectionHiddenLesson < ApplicationRecord
-  belongs_to :section
-  belongs_to :lesson, foreign_key: 'stage_id'
+  belongs_to :section, optional: true
+  belongs_to :lesson, foreign_key: 'stage_id', optional: true
 
   self.table_name = 'section_hidden_stages'
 end

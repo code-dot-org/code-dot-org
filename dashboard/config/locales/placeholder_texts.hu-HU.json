@@ -95,7 +95,12 @@
         },
         "course4_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet",
+          "40f4f24106dde9234f43bf30465647e0": "Kopp kopp.",
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+          "8292c7cbebf598e875ccd0c008958922": " ki?",
+          "3986de660e6560710c546cb2f22c12f3": "Ki van ott?",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabájt!"
         },
         "courseC19_playLab_EOC1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
@@ -199,7 +204,12 @@
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet",
+          "40f4f24106dde9234f43bf30465647e0": "Kopp kopp.",
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+          "8292c7cbebf598e875ccd0c008958922": " ki?",
+          "3986de660e6560710c546cb2f22c12f3": "Ki van ott?",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabájt!"
         },
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
@@ -277,6 +287,66 @@
         },
         "Course 4 Playlab For Loops 6b": {
           "710ba29e2eed73bc74a520631d0ab520": "Játék Vége"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Kattintással adj maszkot a sprite-okra.",
+          "968c8b54671ab303d48320f86937c40b": "Maszkok segítségével a vírusok terjedése lelassul."
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Kattintással adj maszkot a sprite-okra.",
+          "968c8b54671ab303d48320f86937c40b": "Maszkok segítségével a vírusok terjedése lelassul."
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseF_apps_aquarium2022": {
+          "83e4a96aed96436c621b9809e258b309": "hal",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "teremtmény",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "egyéb"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "83e4a96aed96436c621b9809e258b309": "hal",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "teremtmény",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "egyéb"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Helló, világ!"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Szint: ",
+          "013405bba4219ed238e87658786699b6": " Pontszám: "
         }
       }
     }

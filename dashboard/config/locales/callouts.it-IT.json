@@ -963,11 +963,11 @@
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
-          "stone_block_2": "I blocchi grici non si possono gettare."
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
         },
         "courseD_maze_ramp3_2020": {
           "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
-          "stone_block_2": "I blocchi grici non si possono gettare."
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Questo numero indica la massima quantità di blocchi di questo tipo che puoi usare."
@@ -1279,7 +1279,7 @@
           "snowflake_dropdown": "Usa questo elenco a discesa per creare fiocchi di neve di varie forme!"
         },
         "frozen line": {
-          "run": "Clicca su \"Esegui\" per provare il tuo programma",
+          "run": "Clicca su \"Esegui\" per provare il tuo programma!",
           "move_elsa_forward": "Per far muovere Elsa in avanti prendi il blocco \"vai avanti\" ed attaccalo sotto il blocco \"quando si clicca su 'Esegui' \""
         },
         "frozen perpendicular": {
@@ -1362,13 +1362,13 @@
           "sticker2": "Aggiungilo nel mezzo del tuo programma."
         },
         "courseC_maze_debugging9_2019": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_debugging9_2020": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_debugging9_copy_2020": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_programming5": {
           "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
@@ -1440,10 +1440,10 @@
           "courseF_artist_variables6a_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
         },
         "express_maze_debugging9_2019": {
-          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "express_maze_debugging9_2020": {
-          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "outbreak2": {
           "minitoolbox": "Clicca qui per espandere il blocco.",
@@ -1595,7 +1595,7 @@
           "courseC_maze_debugging5_1": "Questi blocchi grigi sono bloccati e non possono essere cancellati!"
         },
         "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Dopo aver attaccato tutti i blocchi tra loro, premi \"Esegui\" per far partire il programma."
@@ -1653,7 +1653,7 @@
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
-          "stone_block_2": "I blocchi grici non si possono gettare."
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
         },
         "courseD_maze_ramp5_2021": {
           "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
@@ -1712,7 +1712,7 @@
           "grade2_CaringForNewPet_0_1": "Dopo aver collegato insieme tutti i blocchi, premi \"Esegui\" per far partire il tuo programma."
         },
         "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "Nuovo blocco!"
@@ -1790,25 +1790,25 @@
         },
         "courseF_apps_aquarium": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_apps_card": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
         },
         "courseF_apps_chatbot": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_apps_collector": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_apps_madlib": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
         },
         "courseF_apps_pet": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
-          "run_button": "Clicca prima sul pulsante della corsa"
+          "run_button": "Premi prima il pulsante Esegui!"
         },
         "courseF_editable_card": {
           "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
@@ -1823,10 +1823,10 @@
           "sprites_category2": "Cerca un nuovo blocco qui."
         },
         "courseC_artist_prog2_2021": {
-          "slider": "Qui puoi rallentare il tuo programma."
+          "slider": "Qui puoi rallentare l'esecuzione del tuo programma."
         },
         "courseF_events_conflict": {
-          "stops_block": "Nuovi blocchi qui!"
+          "stops_block": "Qui ci sono nuovi blocchi!"
         },
         "courseF_events_key": {
           "whenKey": "Usa il nuovo blocco di eventi trovato qui."
@@ -1851,7 +1851,7 @@
         },
         "courseF_text_choice_title": {
           "title_block": "Cerca due nuovi blocchi qui!",
-          "text_answer_finish": "La schermata del titolo compare per 3 secondi? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_answer_finish": "La schermata del titolo compare per 3 secondi? Se sì, clicca 'Fine'. Altrimenti, clicca 'Ricomincia', modifica il tuo codice, e clicca di nuovo 'Esegui'."
         },
         "courseF_text_concat": {
           "join_blocks": "Cerca nuovi blocchi qui!"
@@ -1860,20 +1860,20 @@
           "events_category": "Clicca qui per aprire la categoria Eventi."
         },
         "courseF_text_print": {
-          "print_block": "Il blocco stampa lo trovi qui!",
-          "text_print_finish": "IL tuo messaggio è apparso in alto? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "print_block": "Il blocco \"scrivi\" lo trovi qui!",
+          "text_print_finish": "Il tuo messaggio è stato visualizzato in alto? Se sì, clicca `Fine`. Altrimenti, clicca `Reset`, modifica il tuo codice, e clicca di nuovo su `Esegui`."
         },
         "courseF_text_prompts": {
-          "prompt_block": "Il blocco comando lo trovi qui!"
+          "prompt_block": "Il blocco per le richieste all'utente lo trovi qui!"
         },
         "Virtual Pet 2_2021": {
-          "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
+          "vp_costumes": "Clicca qui per aggiungere nuovi costumi al tuo progetto!"
         },
         "Virtual Pet 6_2021": {
-          "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
+          "vp_costumes": "Clicca qui per aggiungere nuovi costumi al tuo progetto!"
         },
         "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Prova ad attraversare il tuo codice un blocco per volta."
+          "stepButton": "Prova a scorrere il tuo codice un blocco per volta."
         },
         "courseF_events_choice_penguin": {
           "whenToWhile": "Prova a cambiare dal blocco \"quando\" al blocco \"mentre\"."
@@ -1882,10 +1882,10 @@
           "variablesPredict": "Osserva attentamente il codice sotto questo punto."
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "Il colore dello sfondo è cambiato quando hai risposto alla domanda? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_color_finish": "Il colore dello sfondo è cambiato quando hai risposto alla domanda? Se sì, clicca `Termina`. Sennò, clicca `Ricomincia`, modifica il tuo programma, e clicca di nuovo `Esegui`."
         },
         "courseF_text_choice_conversation": {
-          "text_generic_finish": "Hai terminato? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+          "text_generic_finish": "Hai finito? Se sì, clicca 'Termina'. Altrimenti, clicca 'Ricomincia', modifica il tuo codice, e clicca di nuovo 'Esegui'."
         },
         "courseF_variables_predict": {
           "variablesPredict": "Osserva attentamente il codice sotto questo punto."
@@ -1900,10 +1900,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_animals_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_animals_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_animals_location": {
           "pin": "fissa"
@@ -1925,10 +1925,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_emoji_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_emoji_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_emoji_location": {
           "pin": "fissa"
@@ -1950,10 +1950,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_food_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_food_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_food_location": {
           "pin": "fissa"
@@ -1975,10 +1975,10 @@
           "hw_Run": "Clicca qui per eseguire il codice."
         },
         "helloworld_retro_events": {
-          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
         },
         "helloworld_retro_freeplay": {
-          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
         },
         "helloworld_retro_location": {
           "pin": "fissa"
@@ -2078,6 +2078,574 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Inserire qui il numero"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto.",
+          "make_sprite": "Usa questi blocchi per creare un personaggio!"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Clicca qui per mostrare la griglia."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Inserire qui il numero"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Inserire qui il numero"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Qui scegli il tipo di ballerino."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Aggiungi questo blocco al tuo programma.",
+          "arrow_buttons": "Premi i pulsanti freccia per controllare il tuo ballerino."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Aggiungi questo blocco al tuo programma!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Aggiungi un nuovo evento al tuo programma."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Nuovo blocco!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Nuovo blocco!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Nuovo blocco!",
+          "new_block_4": "Nuovo blocco!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Clicca qui per espandere il blocco.",
+          "pointerlocation": "Trascina qui un blocco soggetto."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
+        },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "Usa questo blocco per lasciare a te e al tuo insegnante note su come funziona il tuo codice."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Questa piccola istruzione dice al computer di eseguire la GRANDE porzione di codice con lo stesso nome nell'area di lavoro."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Questo è un ciclo di \"ripetizione\"!  Prendilo dall'area di lavoro e aggiungi al suo interno il codice che vuoi eseguire diverse volte."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "L'Agente può muoversi sull'acqua, il giocatore no!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Non puoi buttare via questi blocchi, ma puoi modificarli!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "L'Agente può muoversi sulla lava, mentre Steve e Alex non possono!  "
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Qui ci sono dei blocchi per farti iniziare"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Questo codice inizia la costruzione della tua casa. Riesci a finirla tu?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Clicca su \"Esegui\" per provare il tuo programma",
+          "craft_drag_block_callout": "Prendi il blocco \"vai avanti\" ed attaccalo sotto gli altri blocchi nell'area di lavoro."
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Ripeti le azioni inserendo qui i relativi blocchi"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Questo codice controlla se c'è lava, sai aggiungere un comando per andare avanti?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Estrai il ferro!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "Clicca qui per aggiungere nuovi costumi al tuo progetto!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Clicca qui per aggiungere nuovi costumi al tuo progetto!"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio."
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Questo numero significa che solo uno di questo tipo di blocchi può essere usato nella risposta finale."
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Sapevi che puoi anche disegnare andando all'indietro?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio."
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Clicca sulla lampadina quando hai bisogno di un suggerimento!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Questa è una nota"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Clicca qui per cambiare la direzione dell'evento freccia."
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "Questo ti permette di scegliere un suono \"casuale\", quindi non saprai quale suono verrà riprodotto ogni volta!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Dopo aver attaccato tutti i blocchi tra loro, premi \"Esegui\" per far partire il programma."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio."
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "C'è solo uno di questi blocchi nella cassetta degli attrezzi. Come lo userai?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione."
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Clicca sulla lampadina quando hai bisogno di un suggerimento!"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "Usa la freccia verde per cambiare la direzione."
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "Fai arrivare il personaggio 1 fino a questa bandierina per passare all'esercizio successivo."
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "Usa questo blocco per indicare cosa fare quando il pinguino e il dinosauro si toccano!"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco."
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "Questo blocco è molto importante per questo progetto. Assicurati di usarlo!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "Aggiungilo nel mezzo del tuo programma."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Qui puoi rallentare l'esecuzione del tuo programma."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione."
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "Se necessario, puoi prendere altri blocchi dalla cassetta degli attrezzi!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Il numero quattro sulla zucca indica che ci sono quattro zucche disponibili da raccogliere."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Questi blocchi grigi sono bloccati e non possono essere cancellati!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Dopo aver attaccato tutti i blocchi tra loro, premi \"Esegui\" per far partire il programma."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
+          "courseC_maze_programming3_3": "Questi blocchi sono pietrificati e non possono essere gettati via."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Questo numero indica la massima quantità di blocchi di questo tipo che puoi usare."
+        },
+        "courseC_maze_programming52022": {
+          "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "Questa è la tua prima sfida! Questi esercizi sono appositamente pensati per essere difficili e potrebbero richiederti diversi tentativi.",
+          "courseC_maze_programming7_2": "Non puoi buttare via i blocchi grigi: sono pietrificati!"
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "In questo esercizio, puoi usare solo uno di questi blocchi."
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "Non devi impostare i singoli colori per svolgere correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto a caso` ti permette di ottenere facilmente tanti colori diversi!"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Ricorda di controllare OGNI nuvola per vedere se ha un FIORE. Invece non devi proprio cercare favi."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "Usa questo ciclo per raccogliere tutto il nettare da un fiore o fare tutto il miele in un favo."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Prova a scorrere il tuo codice un blocco per volta."
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "Devi usare il blocco `mentre c'è strada in avanti` per risolvere questo esercizio."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Questo numero indica la massima quantità di blocchi di questo tipo che puoi usare."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Dopo aver attaccato tutti i blocchi tra loro, premi \"Esegui\" per far partire il programma."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
+          "stone_block_2": "I blocchi grigi non si possono buttare via."
+        },
+        "courseD_maze_ramp52022": {
+          "": "Non ci sono vincoli, di questi blocchi ne puoi usare quanti vuoi!"
+        },
+        "courseE_aboutme_22022": {
+          "": "Clicca qui per aggiungere costumi al tuo progetto."
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "Quando verrà eseguito questo blocco verde, sarà eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista dopo aver disegnato il primo quadrato?"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "I blocchi per creare le funzioni sono stati spostati in questa categoria della cassetta degli attrezzi."
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "Prosegui questo programma aggiungendo altri blocchi qui sotto.",
+          "courseE_artist_functions_challenge1_callout2": "Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "Prosegui questo programma aggiungendo altri blocchi qui sotto.",
+          "courseE_artist_functions_challenge2_callout2": "Se non ti piace questo progetto, cambialo con qualunque cosa vuoi!"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Qui la cassetta degli attrezzi è organizzata in modo leggermente diverso. Clicca sulle varie categorie per vedere che blocchi contengono."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "Qui non conosciamo il numero di ortaggi da raccogliere, cambia ad ogni esecuzione del programma."
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "Qui non conosciamo il numero di ortaggi da raccogliere, cambia ad ogni esecuzione del programma."
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "Qui non conosciamo il numero di ortaggi da raccogliere, cambia ad ogni esecuzione del programma."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Premi prima il pulsante Esegui!",
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_artist_for12022": {
+          "courseF_artist_for1_1": "La cassetta degli attrezzi è organizzata in categorie, in modo da lasciare più spazio per il codice.  I cicli li trovi qui."
+        },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "I cicli li trovi qui dentro!"
+        },
+        "courseF_bee_for92022": {
+          "courseF_bee_for9_1": "I blocchi matematici li trovi qui dentro."
+        },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "Puoi trovare qui le tue variabili!"
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Prova a cambiare dal blocco \"quando\" al blocco \"mentre\"."
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Qui ci sono nuovi blocchi!"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Usa il nuovo blocco di eventi trovato qui."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Questo blocco è posizionato nell'ordine sbagliato."
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "Clicca qui per vedere come funziona questo comportamento."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Clicca qui per aprire la categoria Eventi."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Osserva attentamente il codice sotto questo punto."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Clicca qui per aprire la categoria Comportamenti."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Clicca qui per aprire la categoria Personaggi."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Clicca qui per aprire la categoria Posizioni."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Cerca un nuovo blocco qui."
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Cerca un nuovo blocco qui!"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "Il colore dello sfondo è cambiato quando hai risposto alla domanda? Se sì, clicca `Termina`. Sennò, clicca `Ricomincia`, modifica il tuo programma, e clicca di nuovo `Esegui`."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Hai finito? Se sì, clicca 'Termina'. Altrimenti, clicca 'Ricomincia', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "Cerca due nuovi blocchi qui!",
+          "text_answer_finish": "La schermata del titolo compare per 3 secondi? Se sì, clicca 'Fine'. Altrimenti, clicca 'Ricomincia', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Cerca nuovi blocchi qui!"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Clicca qui per aprire la categoria Eventi."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Il blocco \"scrivi\" lo trovi qui!",
+          "text_print_finish": "Il tuo messaggio è stato visualizzato in alto? Se sì, clicca `Fine`. Altrimenti, clicca `Reset`, modifica il tuo codice, e clicca di nuovo su `Esegui`."
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Il blocco per le richieste all'utente lo trovi qui!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Osserva attentamente il codice sotto questo punto."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Osserva attentamente il codice sotto questo punto."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Dopo aver collegato insieme tutti i blocchi, premi \"Esegui\" per far partire il tuo programma."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dalla cassetta degli attrezzi fino alla tua area di lavoro."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Usa questo blocco per impostare un nuovo sfondo."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Usa questo blocco per impostare un nuovo sfondo."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Usa questo blocco con uno dei comportamenti sottostanti."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Usa questo blocco con uno dei comportamenti sottostanti."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Clicca qui per eseguire il codice."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Aggiungi questo blocco evento alla tua area di lavoro."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Clicca qui per aggiungere costumi al tuo progetto."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "fissa"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "fissa"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "fissa"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "fissa"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nuovo blocco!",
+          "hello_world_new_block": "Nuovo blocco!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nuovo blocco!",
+          "hello_world_new_block": "Nuovo blocco!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Per prima cosa clicca qui!"
         }
       }
     }

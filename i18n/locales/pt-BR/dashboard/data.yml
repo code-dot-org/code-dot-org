@@ -581,6 +581,13 @@ pt:
         poetry_module_multichoiceprompts: Prompts de Múltipla Escolha - Codificação com Poesia
         poetry_module_conditionals: Condicionais - Codificação com Poesia
         poemart_intro: Introdução à Arte em Poemas 
+        CSA-PL-debugging-temp: Introdução à depuração em laboratório Java – modelo
+        csd_u6_circuit_playground: Computação Física
+        csd_u6_input_output: Entrada e saída
+        PL_CS_Journeys_Overview: Jornada de CC
+        csp_applab_parameters: Funções com Parâmetros
+        CSA-PL-intro-to-arrays: Matrizes unidimensionais (1D)
+        CS_Changing_Everything: Ciência da Computação está Mudando Tudo
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

@@ -19,19 +19,29 @@ const requiredFormatter = required => {
   }
 };
 
-const descriptionFormatter = description => {
-  if (description) {
-    return (
-      <div style={{padding: 10}}>
-        <EnhancedSafeMarkdown markdown={description} />
-      </div>
-    );
-  } else {
-    return null;
-  }
-};
+export default function ParametersTable({
+  parameters,
+  programmingEnvironmentLanguage,
+  isSmallWindow
+}) {
+  const descriptionFormatter = description => {
+    if (description) {
+      const padding = isSmallWindow ? '0px 0px 0px 5px' : 10;
+      return (
+        <div style={{padding: padding}}>
+          <EnhancedSafeMarkdown markdown={description} />
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
 
-export default function ParametersTable({parameters}) {
+  const hideRequiredColumn = programmingEnvironmentLanguage === 'java';
+  let cellStyle = tableLayoutStyles.cell;
+  if (isSmallWindow) {
+    cellStyle = {...cellStyle, ...styles.smallCell};
+  }
   const columns = [
     {
       property: 'name',
@@ -46,7 +56,7 @@ export default function ParametersTable({parameters}) {
         }
       },
       cell: {
-        props: {style: tableLayoutStyles.cell}
+        props: {style: cellStyle}
       }
     },
     {
@@ -62,7 +72,7 @@ export default function ParametersTable({parameters}) {
         }
       },
       cell: {
-        props: {style: tableLayoutStyles.cell}
+        props: {style: cellStyle}
       }
     },
     {
@@ -73,13 +83,19 @@ export default function ParametersTable({parameters}) {
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '15%'
+            width: '15%',
+            ...(hideRequiredColumn && {display: 'none'})
           }
         }
       },
       cell: {
         formatters: [requiredFormatter],
-        props: {style: tableLayoutStyles.cell}
+        props: {
+          style: {
+            ...cellStyle,
+            ...(hideRequiredColumn && {display: 'none'})
+          }
+        }
       }
     },
     {
@@ -96,7 +112,7 @@ export default function ParametersTable({parameters}) {
       },
       cell: {
         formatters: [descriptionFormatter],
-        props: {style: tableLayoutStyles.cell}
+        props: {style: cellStyle}
       }
     }
   ];
@@ -114,7 +130,9 @@ export default function ParametersTable({parameters}) {
 }
 
 ParametersTable.propTypes = {
-  parameters: PropTypes.arrayOf(PropTypes.object)
+  parameters: PropTypes.arrayOf(PropTypes.object),
+  programmingEnvironmentLanguage: PropTypes.string,
+  isSmallWindow: PropTypes.bool
 };
 
 const styles = {
@@ -127,5 +145,9 @@ const styles = {
   },
   table: {
     width: '100%'
+  },
+  smallCell: {
+    padding: 5,
+    fontSize: 13
   }
 };

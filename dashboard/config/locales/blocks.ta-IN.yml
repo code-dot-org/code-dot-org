@@ -2,8 +2,28 @@
 ta:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} விருப்பங்களுடன் {VAR} மாறிக்கான பயனர் {QUESTION} ஐத் தூண்டவும்"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} சொல் {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': மிகச்சிறியது
+            '0.75': சிறிய
+            '1.00': ஊடகம்
+            '2.00': பெரிய
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': மிகச்சிறியது
+            '0.75': சிறிய
+            '1.00': ஊடகம்
+            '2.00': பெரிய
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -213,12 +233,6 @@ ta:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
-      Dancelab_everySecondsRange:
-        text: 'ஒவ்வொரு {N} {UNIT} {START} தொடங்கி {STOP} வரை '
-        options:
-          UNIT:
-            measures: அளவீடுகள்
-            seconds: விநாடிகள்
       Dancelab_everyVerseChorus:
         text: 'ஒவ்வொரு {UNIT} '
         options:
@@ -929,6 +943,38 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      DansBlocks_getMicroscope:
+        text: நுண்ணோக்கி {INPUT1}உள்ளது
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: விளைவு {EFFECT}செய்ய
+        options:
+          EFFECT:
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts"': இதயங்கள்
+            '"emojis"': மகிழ்ச்சியான எமோஜிகள்
+            '"rain"': மழை
+            '"glass"': நொறுங்கும் கண்ணாடி
+            '"twinkling"': மின்னும்
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{SPRITE1COSTUME} உடன் {VAR1} தொடர்பு கொள்ளவும்"
+      FunctionBlocks_makeManipulative2:
+        text: செய்ய {NUM} புதிய {ANIMATION_NAME} உருவங்களுக்கு  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: பிரதிநிதித்துவம் {NUM} புதிய {ANIMATION_NAME} உருவங்களுக்கு [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} சொல் {TEXT1}"
       gamelab_addBehaviorSimple:
         text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       gamelab_addTarget:
@@ -974,6 +1020,15 @@ ta:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): வலதுபுறம் சுழல்கிறது
+            new Behavior(spinning_left, []): இடதுபுறமாக சுழல்கிறது
+            new Behavior(fluttering, []): படபடக்கும்
+            new Behavior(jittering, []): நடுக்கம்
+            new Behavior(wobbling, []): தள்ளாட்டம்
+            new Behavior(wandering, []): அலைந்து திரிதல்
+            new Behavior(patrolling, []): ரோந்து
+            new Behavior(moving_west_and_looping, []): மேற்கு நோக்கி நகர்ந்து வளையும்
+            new Behavior(moving_east_and_looping, []): கிழக்கு நோக்கி நகர்ந்து வளையும்
             new Behavior(moving_north_and_looping, []): வடக்கே நகர்ந்து வளையும்
             new Behavior(moving_south_and_looping, []): தெற்கே நகர்ந்து வளையும்
       gamelab_comment:
@@ -996,7 +1051,7 @@ ta:
         text: கோடு வரைக {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: விளிம்புகள் தொகுதி {SPRITE} நகரும் இருந்து
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
         options:
           UNIT:
@@ -1155,8 +1210,6 @@ ta:
             '"pop"': பாப்
             '"rain"': மழை
             '"spiral"': சுருள்
-      gamelab_makeNewScaledSprite:
-        text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       gamelab_makeNumSprites:
@@ -1169,6 +1222,13 @@ ta:
             '90': கீழே
             '180': இடது
             '270': மேலே
+      gamelab_makeSpritesWithSize:
+        text: செய்ய{NUM}புதிய{SIZE}{COSTUME}உருவங்கள்
+        options:
+          SIZE:
+            '30': சிறிய
+            '50': ஊடகம்
+            '100': பெரிய
       gamelab_mirrorSprite:
         text: "{SPRITE} முகம் {DIRECTION}"
         options:
@@ -1242,12 +1302,39 @@ ta:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான
               பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
+      gamelab_playSoundOptionsSoccer:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": காற்று ஒலிப்பான்
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": கைத்தட்டல்
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": கோஷமிடுங்கள்
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ஆரவாரம்
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": உதை
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": இரண்டு விசில்
+            "'sound://category_sports/One_Whistle_SFX.mp3'": விசில்
+      gamelab_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": கருந்துளை
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": புல்லட் கிளஸ்ட்டர்
+            "'sound://category_space/Carina_SFX.mp3'": கரினா
+            "'sound://category_space/Cassiopeia_SFX.mp3'": காசியோபியா
+            "'sound://category_space/Crab_nebula_SFX.mp3'": கிராப் நெபுலா
+            "'sound://category_space/Launch_SFX.mp3'": ஏவுதல்
+            "'sound://category_space/Lift_Off.mp3'": தூக்கி எறியுங்கள்
+            "'sound://category_space/Pillars_SFX.mp3'": தூண்கள்
+            "'sound://category_space/Southern_ring_SFX.mp3'": தெற்கு வளையம்
+            "'sound://category_space/Supernova_SFX.mp3'": சூப்பர்நோவா
+            "'sound://category_space/Tycho_SFX.mp3'": டைக்கோ
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): அம்பு விசைகளுடன் நகரும்
+            new Behavior(driving_with_arrow_keys, []): அம்புக்குறி விசைகளை ஓட்டுதல்
             draggable(): இழுக்கப்படக்கூடியது
       gamelab_pointInDirection:
         text: புள்ளி {SPRITE} {DIRECTION}
@@ -1401,6 +1488,41 @@ ta:
         text: "{SPRITE} சொல் {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}சொல்லுங்கள்{TEXT1}{NUM}வினாடிகள்"
+      gamelab_spriteThink:
+        text: "{SPRITE}நினைக்கிறார்கள்{SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}நினைக்கிறார்கள்{TEXT1}க்கான{NUM}வினாடிகள்"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ம்ம்ம்...
+            '"Time to make friends with the sheep."': ஆடுகளுடன் நட்பு கொள்ளும் நேரம்.
+            '"She''ll never recognize me now."': அவள் இப்போது என்னை அடையாளம் காண மாட்டாள்.
+            '"This costume keeps me warm."': இந்த உடை என்னை சூடாக வைத்திருக்கிறது.
+            '"I am actually a wolf."': நான் உண்மையில் ஒரு ஓநாய்.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ம்ம்ம்...
+            '"I''m feeling sleepy."': எனக்கு தூக்கம் வருகிறது.
+            '"No one could ever beat me."': யாராலும் என்னை வெல்ல முடியவில்லை.
+            '"I''ve done this race before."': நான் இதற்கு முன்பு இந்த பந்தயத்தில்
+              பங்கேற்றுள்ளேன்.
+            '"My feet are bigger than Turtle''s feet."': என் பாதங்கள் ஆமையின் பாதங்களை
+              விட பெரியவை.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': ம்ம்ம்...
+            '"I''m so hungry."': எனக்கு பசிக்கிறது.
+            '"I''m a visitor in this town."': நான் இந்த ஊருக்கு வந்தவன்.
+            '"If we share, we''ll all have something to eat. "': நாம் பகிர்ந்து கொண்டால்,
+              நாம் அனைவரும் சாப்பிட ஏதாவது கிடைக்கும்.
+            '"I''ll trick everyone into giving me their food."': எல்லோரையும் ஏமாற்றி
+              எனக்கு உணவு தருவேன்.
       gamelab_startAvoiding:
         text: "{SPRITE}தவிர்க்க தொடங்குகிறது{TARGET}"
       gamelab_startFollowing:
@@ -1796,6 +1918,38 @@ ta:
         text: அசுரர்களை தோராயமாக அமைக்கவும்
       Outbreak_stopMoving:
         text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
+      ParticlesBlocks_getMicroscope:
+        text: நுண்ணோக்கி {INPUT1}உள்ளது
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): திடமான
+            new Behavior(liquid, []): திரவம்
+            new Behavior(wandering, []): கேஸ்
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} முதல் {BEHAVIOR} நடத்தையை அமைக்கவும்"
+        options:
+          BEHAVIOR:
+            '"solid"': திடமான துகள்
+            '"liquid"': திரவ துகள்
+            '"gas"': வாயு துகள்
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': திடமான துகள்
+            '"liquid"': திரவ துகள்
+            '"gas"': வாயு துகள்
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1868,6 +2022,21 @@ ta:
             '"sound://category_achievements/peaceful_win_1.mp3"': வெல்லுங்கள்
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': சுழல்
             '"sound://category_achievements/peaceful_win_6.mp3"': காற்றின் மணியோசைகள்
+      Poetry_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": கருந்துளை
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": புல்லட் கிளஸ்ட்டர்
+            "'sound://category_space/Carina_SFX.mp3'": கரினா
+            "'sound://category_space/Cassiopeia_SFX.mp3'": காசியோபியா
+            "'sound://category_space/Crab_nebula_SFX.mp3'": கிராப் நெபுலா
+            "'sound://category_space/Launch_SFX.mp3'": ஏவுதல்
+            "'sound://category_space/Lift_Off.mp3'": தூக்கி எறியுங்கள்
+            "'sound://category_space/Pillars_SFX.mp3'": தூண்கள்
+            "'sound://category_space/Southern_ring_SFX.mp3'": தெற்கு வளையம்
+            "'sound://category_space/Supernova_SFX.mp3'": சூப்பர்நோவா
+            "'sound://category_space/Tycho_SFX.mp3'": டைக்கோ
       Poetry_setAuthor:
         text: தொகுப்பு ஆசிரியர் {AUTHOR}
       Poetry_setBackground:
@@ -1952,12 +2121,28 @@ ta:
         text: 'ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} தொடங்குகிறது '
         options:
           BEHAVIOR:
+            '"fluttering"': படபடக்கும்
+            '"growing"': வளர்கிறது
+            '"jittering"': நடுக்கம்
+            '"shrinking"': சுருங்குகிறது
+            '"spinning_left"': இடதுபுறமாக சுழல்கிறது
+            '"spinning_right"': வலதுபுறம் சுழல்கிறது
             '"swimming_left_and_right"': நீச்சல்
+            '"wandering"': அலைந்து திரிதல்
+            '"wobbling"': தள்ளாட்டம்
       Poetry_stopBehavior:
         text: ஸ்பிரைட் {ANIMATION_NAME} {BEHAVIOR} நிறுத்துகிறது
         options:
           BEHAVIOR:
+            '"fluttering"': படபடக்கும்
+            '"growing"': வளர்கிறது
+            '"jittering"': நடுக்கம்
+            '"shrinking"': சுருங்குகிறது
+            '"spinning_left"': இடதுபுறமாக சுழல்கிறது
+            '"spinning_right"': வலதுபுறம் சுழல்கிறது
             '"swimming_left_and_right"': நீச்சல்
+            '"wandering"': அலைந்து திரிதல்
+            '"wobbling"': தள்ளாட்டம்
             '"all"': "--எல்லா நடத்தைகளும்-- "
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}\n "
@@ -1980,6 +2165,11 @@ ta:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} பதிலளித்த போது "
       RyanLab_moveForward:
@@ -2089,5 +2279,18 @@ ta:
           DIR:
             right: சரி ↻
             left: இடது  ↺
+      storylab_setForegroundEffect2:
+        text: விளைவு {EFFECT}செய்ய
+        options:
+          EFFECT:
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts"': இதயங்கள்
+            '"rain"': மழை
+            '"twinkling"': மின்னும்
+      storylab_setHeading:
+        text: தலைப்பு அமைக்கவும் {HEADING}
+      storylab_setSubheading:
+        text: துணைத்தலைப்பு அமைக்கவும் {SUBHEADING}
       validation_validatedBackground:
         text: பின்னணி அமைக்க {IMG}

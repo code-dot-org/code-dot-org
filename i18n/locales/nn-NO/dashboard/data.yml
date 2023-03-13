@@ -478,6 +478,8 @@ nn:
         csf_private_and_personal_information: Privat og personleg informasjon
         playlab_2021: Introduksjon til Spelelaboratoriet
         playlab_2021_reader: Introduksjon til Spelelaboratoriet
+        csp_applab_parameters: Funksjonar med parameter
+        CS_Changing_Everything: Informatikk Endrer Alt
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

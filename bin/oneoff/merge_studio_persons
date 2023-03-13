@@ -30,7 +30,7 @@ data.each do |email, alternate_email|
   user = User.find_by_email_or_hashed_email(alternate_email)
   if user
     studio_person = user.studio_person if user
-    studio_person.add_email(email) if studio_person
+    studio_person&.add_email(email)
     next
   end
 

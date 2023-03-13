@@ -1,34 +1,102 @@
 {
   "pages": {
-    "homepage": ["thebadguys"]
+    "homepage": [
+      "hoc2022-soon-hoc",
+      "hoc2022-actual-hoc",
+      "pl-launch-superhero"
+    ]
   },
 
   "banners": {
-    "thebadguys": {
-      "dcdo": "thebadguys-promotion",
-      "class": "vertical-stack",
-      "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
-      "leftImage": "/images/marketing/homepage-thebadguys-left.png",
-      "rightImage": "/images/marketing/homepage-thebadguys-right.png",
+    "hoc2022-soon-hoc": {
+      "hoc_modes": ["soon-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
+      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-02.png",
+      "leftImage": "/images/hoc2022-codeorg-hero-banner-02-left.svg",
+      "rightImage": "/images/hoc2022-codeorg-hero-banner-02-right.svg",
       "actions": [
         {
-          "type": "image",
-          "url": "/images/marketing/homepage-thebadguys-logo.png"
+          "type": "text",
+          "text": "homepage_hero_hoc_is_coming"
         },
         {
-          "type": "video_thumbnail",
-          "image_url": "/images/marketing/homepage-thebadguys-video-thumbnail.png",
-          "text": "homepage_action_text_codevideo",
-          "youtube_id": "6gauCnbXxnQ"
+          "type": "heading",
+          "text": "hoc2022_banner_title"
         },
+        {
+          "type": "heading-two",
+          "text": "hoc2022_banner_description"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/hourofcode2022"
+        },
+        {
+          "type": "cta_button_hollow_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "/hourofcode/overview"
+        }
+      ]
+    },
+    "hoc2022-actual-hoc": {
+      "hoc_modes": ["actual-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
+      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-02.png",
+      "leftImage": "/images/hoc2022-codeorg-hero-banner-02-left.svg",
+      "rightImage": "/images/hoc2022-codeorg-hero-banner-02-right.svg",
+      "actions": [
         {
           "type": "text",
-          "text": "homepage_thebadguys_body"
+          "text": "homepage_hero_hoc_is_here"
         },
         {
-          "type": "cta_button_solid_black",
-          "text": "homepage_action_text_try_it",
-          "url": "/thebadguys"
+          "type": "heading",
+          "text": "hoc2022_banner_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "hoc2022_banner_description"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/hourofcode2022"
+        },
+        {
+          "type": "cta_button_hollow_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "/hourofcode/overview"
+        }
+      ]
+    },
+    "pl-launch-superhero": {
+      "dcdo": "pl-launch-hero-banner",
+      "class": "pl-banner-superhero homepage",
+      "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
+      "actions": [
+        {
+          "type": "heading",
+          "text": "pl_superhero_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "pl_superhero_desc"
+        },
+        {
+          "type": "image",
+          "url": "/images/pl-superhero-girl.png"
+        },
+        {
+          "type": "image-tablet",
+          "url": "/images/pl-superhero-girl-tablet.png"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "front_join_us_learn_more",
+          "url": "/educate/professional-learning/middle-high"
         }
       ]
     }

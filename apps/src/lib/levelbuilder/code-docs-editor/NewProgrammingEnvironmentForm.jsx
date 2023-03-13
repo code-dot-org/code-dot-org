@@ -7,10 +7,6 @@ export default function NewProgrammingEnvironmentForm() {
     <form action="/programming_environments" method="post">
       <RailsAuthenticityToken />
       <h1>New Programming Environment</h1>
-      <h2>
-        This feature is in development. Please continue to use curriculum
-        builder to create code documentation.
-      </h2>
       <label>
         Programming Environment Slug
         <input name="name" style={styles.inputStyle} required />

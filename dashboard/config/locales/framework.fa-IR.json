@@ -1,0 +1,32 @@
+{
+  "fa-IR": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": ""
+        },
+        "csta": {
+          "name": ""
+        },
+        "ccmath": {
+          "name": ""
+        },
+        "csta2011": {
+          "name": ""
+        },
+        "iste": {
+          "name": ""
+        },
+        "csp2021": {
+          "name": ""
+        },
+        "ngss": {
+          "name": ""
+        },
+        "ai4k12-2021": {
+          "name": ""
+        }
+      }
+    }
+  }
+}

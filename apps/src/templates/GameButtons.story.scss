@@ -6,6 +6,6 @@
 
 .GameButtonsStory {
   &.loadCraftStyleSheet {
-    @import "../../style/craft/style";
+    @import "../../style/craft/style"; /* stylelint-disable-line no-invalid-position-at-import-rule */
   }
 }

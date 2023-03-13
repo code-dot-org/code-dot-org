@@ -3,10 +3,41 @@
   "name": "turnRight",
   "category": "Turtle",
   "category_key": "turtle",
-  "content": "[name]\n\n## turnRight(*angle*)\n\n[/name]\n\n\n[category]\n\nCategory: Turtle\n\n[/category]\n\n[description]\n\n[short_description]\n\nRotates the turtle right by the specified angle. The turtle’s position remains the same.\n\n[/short_description]\n\nturnRight() is one of the ways to change the turtle's orientation. When used with moveForward(), you can move, and draw with, the turtle anywhere on the screen.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n\n```\n// Rotate the turtle right 90 degrees (the default angle) from the current direction.\nturnRight();\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Step** Draw a step with a right turn and a left turn. \n\n```\n// Draw a step with a right turn and a left turn.\nmoveForward();\nturnRight();\nmoveForward();\nturnLeft();\n```\n\n[/example]\n____________________________________________________\n\n[example]\n\n**Example: Letter W** Draw the letter W with right turns only. \n\n```\n// Draw the letter W with right turns only.\nturnRight(150);\nmoveForward();\nturnRight(-120);\nmoveForward();\nturnRight(120);\nmoveForward();\nturnRight(-120);\nmoveForward();\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Star** Draw a 25 pointed star by first calculating the exterior angle turn necessary. \n\n<table>\n<tr>\n<td style=\"border-style:none; width:90%; padding:0px\">\n<pre>\n// Draw a 25 pointed star by first calculating the exterior angle turn necessary. \nvar points = 25;\nvar exteriorAngle = 180.0 - (180.0 / points);\nfor (var i = 0; i &lt; points; i++) {\n  moveForward(200);\n  turnRight(exteriorAngle);\n}\n</pre>\n</td>\n<td style=\"border-style:none; width:10%; padding:0px\">\n<img src='https://images.code.org/3fae81b2ff35c4dcfe7c784b186b39c9-image-1445619726798.gif'>\n</td>\n</tr>\n</table>\n\n[/example]\n\n____________________________________________________\n\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| angle | number | No | The angle to rotate right (90 degrees is default).  |\n\n[/parameters]\n\n[returns]\n\n### Returns\nNo return value. Rotates turtle only.\n\n[/returns]\n\n[tips]\n\n### Tips\n- You can specify a negative angle to turn right, which makes the turtle turn left instead.\n- There are three ways to rotate the turtle in place\n\t- turnRight(*angle*) - Rotates the turtle right **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.\n\t- turnLeft(*angle*) - Rotates the turtle left **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.\n\t- turnTo(*angle*) - Rotates the turtle **to** a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.\n\n[/tips]\n\n",
+  "content": "turnRight() is one of the ways to change the turtle's orientation. When used with moveForward(), you can move, and draw with, the turtle anywhere on the screen.",
+  "examples": [
+    {
+      "name": "Example: Turn Right",
+      "code": "```\n// Rotate the turtle right 90 degrees (the default angle) from the current direction.\nturnRight();\n```"
+    },
+    {
+      "name": "Example: Step",
+      "description": "Draw a step with a right turn and a left turn.",
+      "code": "```\n// Draw a step with a right turn and a left turn.\nmoveForward();\nturnRight();\nmoveForward();\nturnLeft();\n```"
+    },
+    {
+      "name": "Example: Letter W",
+      "description": "Draw the letter W with right turns only. ",
+      "code": "```\n// Draw the letter W with right turns only.\nturnRight(150);\nmoveForward();\nturnRight(-120);\nmoveForward();\nturnRight(120);\nmoveForward();\nturnRight(-120);\nmoveForward();\n```"
+    },
+    {
+      "name": "Example: Star",
+      "description": "Draw a 25 pointed star by first calculating the exterior angle turn necessary. ",
+      "code": "```// Draw a 25 pointed star by first calculating the exterior angle turn necessary. \nvar points = 25;\nvar exteriorAngle = 180.0 - (180.0 / points);\nfor (var i = 0; i &lt; points; i++) {\n  moveForward(200);\n  turnRight(exteriorAngle);\n}\n```",
+      "image": "https://images.code.org/3fae81b2ff35c4dcfe7c784b186b39c9-image-1445619726798.gif"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "angle",
+      "type": "number",
+      "description": "The angle to rotate right (90 degrees is default)."
+    }
+  ],
   "parameters": [
     "angle"
   ],
-  "short_description": "\nturnRight(angle)\nCategory: Turtle",
-  "syntax": "turnRight(angle);"
+  "return_value": "No return value. Rotates turtle only.",
+  "short_description": "Rotates the turtle right by the specified angle. The turtle’s position remains the same.",
+  "syntax": "turnRight(angle);",
+  "tips": "- You can specify a negative angle to turn right, which makes the turtle turn left instead.\n- There are three ways to rotate the turtle in place\n  - turnRight(*angle*) - Rotates the turtle right **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.\n  - turnLeft(*angle*) - Rotates the turtle left **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.\n  - turnTo(*angle*) - Rotates the turtle **to** a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same."
 }

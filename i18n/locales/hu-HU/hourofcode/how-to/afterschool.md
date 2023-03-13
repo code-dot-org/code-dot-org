@@ -6,17 +6,17 @@ title: Hour of Code How-to Guide for After-school
 
 # Így tarts meg egy Kódolás Órája eseményt egy iskola utáni foglalkozáson
 
-### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján.
+### Csatlakozz a mozgalomhoz ,és tarts egy bevezető számítástechnikai órát egy csoport diáknak a következő lépések szerint.
 
-A számítástechnikai gondolkodás segít fejleszteni a problémamegoldó képességeket, a logikát és a kreativitást. És mint jól tudjuk, a technológia átformál minden iparágat a világon. A mai diákoknak meg kell tanulniuk, hogyan kell technológiát létrehozni, nem csak használni azt. Ha korán elkezdessz ismerkedni vele, megalapozhatod a sikered a 21. században.
+A számítástechnikai gondolkodás fejleszti a problémamegoldó képességeket, a logikus gondolkodást és a kreativitást. A technológia átalakít minden iparágat a világon. A diákoknak ma nem csak a technológia használatát kell megtanulniuk, hanem azt is, hogy hogyan kell a technológiát létrehozni. Aki korán megismerkedik a számítástechnikával, az a szamai sikerét alapozza meg a 21. században.
 
 Kipróbálni a Kódolás Óráját egyszerű és szórakoztató módja annak, hogy elsőkézből megismertesse gyermekét az informatikával. Ha további segítséget szeretnél, kereshetsz egy [helyi önkéntest]({{ urls/volunteer_local }}), aki segít a Kódolás Óráját szervezni az osztályodban.
 
-### A Kódolás Órája távolról is üzemeltethető! A kezdéshez tekintsd meg [ tippjeinket a virtuális óra megrendezéséhez](https://hourofcode.com/us/how-to/virtual).
+### Egy Kódolás óráját távolról is meg lehet tartani! Kezdésként tekintsd meg a [ tippjeinket, hogyan lehet egy Kódolás óráját megtartani](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Válassz egy gyakorlatot
 
@@ -81,7 +81,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 - Nézd meg a [legjobb gyakorlatokat](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) a legutóbbi "Hour of Code" rendezvényt szervező szervezetektől.
 - Nézd meg az [oktatóknak szóló webináriumunk](https://youtu.be/EJeMeSW2-Mw) felvételét.
 - Látogass el az ["Hour of Code" fórumra](http://forum.code.org/c/plc/hour-of-code) tanácsokért, továbbá itt más szervezetektől támogatást is kérhetsz.
-- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét.
+- Olvasd át a [Kódolás órájával kapcsolatos GYIK-et](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Mi jön a "Hour of Code" esemény után?
 

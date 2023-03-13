@@ -1172,6 +1172,296 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Wijzig het nummer hier"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Klik hier om het raster te tonen."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Hier is de code"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Voeg dit blok toe aan je programma!"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Voeg dit blok toe aan je programma.",
+          "arrow_buttons": "Druk op de pijltjestoetsen om je danser te besturen."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Voeg dit blok toe aan je programma!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Voeg een nieuw evenement toe aan je programma."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Nieuw blok!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Nieuw blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Nieuw blok!",
+          "new_block_4": "Nieuw blok!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Klik hier om het blok uit te breiden.",
+          "pointerlocation": "Sleep hier een subjectblok naartoe."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Met deze kleine instructie weet de computer dat het GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte en voeg code to die je steeds weer wilt uitvoeren."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "De agent kan over water zweven, maar de speler niet!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Je kunt deze blokken niet weggooien, maar je kunt ze wel bewerken!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "De agent kan over lava zweven, maar de speler niet!  "
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "We hebben hier al wat blokken geplaatst om je op weg te helpen"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Met dit programma begin je je huis te bouwen. Kun jij het afmaken?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Klik op \"Run\" om je programma te proberen"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Herhaal acties door blokken hier in te plaatsen"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Deze code kijkt of er lava is, kun jij een opdracht toevoegen om vooruit te bewegen?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Delf dit ijzer!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Dit is een toelichting"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Klik hier om de richting van de gebeurtenis pijl te veranderen."
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseE_aboutme_22022": {
+          "": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "De blokken waarmee je functies maakt en waarmee je ze aanroept, staan in het vervolg onder dit label."
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
+          "courseE_artist_functions_challenge1_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
+          "courseE_artist_functions_challenge2_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nieuw blok!"
         }
       }
     }

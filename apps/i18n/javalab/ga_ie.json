@@ -1,7 +1,9 @@
 {
   "cancel": "Cealaigh",
+  "create": "Cruthaigh",
   "delete": "Scrios",
   "import": "Iompórtáil",
   "rename": "Athainmnigh",
-  "saving": "Á Shábháil..."
+  "saving": "Á Shábháil...",
+  "submit": "Seol"
 }

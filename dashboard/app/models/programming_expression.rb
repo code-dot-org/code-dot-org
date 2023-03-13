@@ -19,13 +19,15 @@
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
 #  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
+require 'honeybadger/ruby'
+
 class ProgrammingExpression < ApplicationRecord
   include CurriculumHelper
   include SerializedProperties
   include Rails.application.routes.url_helpers
 
-  belongs_to :programming_environment
-  belongs_to :programming_environment_category
+  belongs_to :programming_environment, optional: true
+  belongs_to :programming_environment_category, optional: true
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
   has_many :lessons_programming_expressions
 
@@ -76,7 +78,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']}.join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end
@@ -143,16 +145,16 @@ class ProgrammingExpression < ApplicationRecord
     record.id
   end
 
-  def documentation_path
+  def cb_documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
 
   def studio_documentation_path
-    if DCDO.get('use-studio-code-docs', false)
-      documentation_path
-    else
-      programming_environment_programming_expression_path(programming_environment.name, key)
-    end
+    programming_environment_programming_expression_path(programming_environment.name, key)
+  end
+
+  def documentation_path
+    studio_documentation_path
   end
 
   def summarize_for_lesson_edit
@@ -197,17 +199,24 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       name: name,
       blockName: block_name,
-      category: programming_environment_category&.name,
+      category: get_localized_property(
+        :name,
+        [:data,
+         :programming_environments,
+         programming_environment&.name,
+         :categories,
+         programming_environment_category&.key],
+        programming_environment_category&.name
+      ),
       color: get_color,
       externalDocumentation: external_documentation,
-      content: content,
-      syntax: syntax,
-      returnValue: return_value,
-      tips: tips,
-      parameters: palette_params,
-      examples: examples,
-      programmingEnvironmentName: programming_environment.name,
-      video: Video.current_locale.find_by_key(video_key)&.summarize(false),
+      content: get_localized_property(:content, expression_scope, content),
+      syntax: get_localized_property(:syntax, expression_scope, syntax),
+      returnValue: get_localized_property(:return_value, expression_scope, return_value),
+      tips: get_localized_property(:tips,  expression_scope, tips),
+      parameters: get_localized_params,
+      examples: get_localized_examples,
+      video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }
   end
@@ -244,6 +253,82 @@ class ProgrammingExpression < ApplicationRecord
       categoryName: programming_environment_category&.name,
       editPath: edit_programming_expression_path(self)
     }
+  end
+
+  def expression_scope
+    [:data,
+     :programming_environments,
+     programming_environment&.name,
+     :categories,
+     programming_environment_category&.key,
+     :expressions,
+     key]
+  end
+
+  def get_localized_examples
+    localized_examples = examples.deep_dup
+    i18n_examples = I18n.t(
+      :examples,
+      scope: expression_scope,
+      default: examples,
+      smart: true
+    )
+    if i18n_examples != localized_examples
+      localized_examples&.each do |example|
+        if example['name'].nil?
+          report_error_get_localized_examples_no_name(example)
+          next
+        end
+        example_key = example['name'].to_sym
+        unless i18n_examples[example_key].nil?
+          example['name'] = i18n_examples[example_key][:name] unless i18n_examples[example_key][:name].nil?
+          # code sections are not translated until expression names are marked "do not translate" in crowdin.
+          # example['code'] = i18n_examples[example_key][:code] unless i18n_examples[example_key][:code].nil?
+          example['description'] = i18n_examples[example_key][:description] unless i18n_examples[example_key][:description].nil?
+        end
+      end
+    end
+    localized_examples
+  end
+
+  def report_error_get_localized_examples_no_name(example)
+    Honeybadger.notify(
+      "example needs a unique 'name', otherwise a translation cannot be shown",
+      context: {
+        example: example
+      }
+    )
+  end
+
+  def get_localized_params
+    localized_params = palette_params.deep_dup
+    i18n_params = I18n.t(
+      :palette_params,
+      scope: expression_scope,
+      default: palette_params,
+      smart: true
+    )
+    if i18n_params != localized_params
+      localized_params&.each do |param|
+        param_key = param['name'].to_sym
+        unless i18n_params[param_key].nil?
+          # parameter names are not translated since they are part of the code
+          # param['name'] = i18n_params[param_key][:name] unless i18n_params[param_key][:name].nil?
+          param['type'] = i18n_params[param_key][:type] unless i18n_params[param_key][:type].nil?
+          param['description'] = i18n_params[param_key][:description] unless i18n_params[param_key][:description].nil?
+        end
+      end
+    end
+    localized_params
+  end
+
+  def get_localized_property(property_name,  scope, default_value)
+    I18n.t(
+      property_name,
+      scope: scope,
+      default: default_value,
+      smart: true
+    )
   end
 
   def get_blocks
@@ -314,5 +399,12 @@ class ProgrammingExpression < ApplicationRecord
     new_exp.write_serialization
 
     new_exp
+  end
+
+  def self.get_from_cache(programming_environment_name, key)
+    Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Unit.should_cache?) do
+      env = ProgrammingEnvironment.find_by_name(programming_environment_name)
+      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
+    end
   end
 end

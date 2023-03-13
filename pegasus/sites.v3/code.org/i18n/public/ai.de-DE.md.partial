@@ -21,7 +21,7 @@ social:
 # Lernen zum Thema Künstliche Intelligenz (KI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NEU Modul zu den Themen KI und Maschinelles Lernen</h2><p>Unser neues Lehrplanmodul konzentriert sich auf KI-Ethik, untersucht Fragen der Voreingenommenheit und erforscht und erklärt grundlegende Konzepte durch eine Reihe von Aktivitäten, die mit und ohne Computer durchgeführt werden, sowie Diskussionen in der Gruppe.</p><a href="#about-aimodule"><button>Mehr erfahren</button></a> <a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Erkunden Sie das Modul</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">NEU Modul zu den Themen KI und Maschinelles Lernen</h2><p>Unser neues Lehrplanmodul konzentriert sich auf KI-Ethik, untersucht Fragen der Voreingenommenheit und erforscht und erklärt grundlegende Konzepte durch eine Reihe von Aktivitäten, die mit und ohne Computer durchgeführt werden, sowie Diskussionen in der Gruppe.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="KI-Labor"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ Erforschen Sie in einer neuen Videoserie die KI mit uns, trainieren Sie KI für 
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## NEU Modul zu den Themen KI und Maschinelles Lernen
 <div>
-<div class="col-50">
-<p>Das Modul KI und Maschinelles Lernen ist ein etwa fünfwöchiges Lehrplanmodul, das als <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >Einzelmodul</a> oder als optionale <a href="https://studio.code.org/s/csd7-2021">Einheit in CS Discoveries - Entdecken mit Informatik</a> unterrichtet werden kann. Er konzentriert sich auf die Ethik der KI, untersucht Fragen der Voreingenommenheit und erforscht und erklärt grundlegende Konzepte</p><p>Da maschinelles Lernen auf großen Datensätzen basiert, enthält die neue Einheit reale Datensätze zum Gesundheitswesen, zur Demografie und mehr, um die Schüler zu motivieren, während sie Fragen wie „Was ist ein Problem, das man mit maschinellem Lernen lösen kann?“ untersuchen „Wie kann KI der Gesellschaft helfen?“ „Wer profitiert von der KI?“ „Wer wird von der KI geschädigt?“ „Wer ist daran beteiligt?“ „Wer ist nicht dabei?“  </p>
-<p>Bei diesen Diskussionen werden ethische Erwägungen im Vordergrund stehen, und es werden häufig die Auswirkungen dieser Technologien angesprochen. Dies wird den SchülerInnen helfen, ein ganzheitliches, durchdachtes Verständnis für diese Technologien zu entwickeln, während sie gleichzeitig die technischen Grundlagen ihrer Funktionsweise kennenlernen.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. Er konzentriert sich auf die Ethik der KI, untersucht Fragen der Voreingenommenheit und erforscht und erklärt grundlegende Konzepte</p><p>Da maschinelles Lernen auf großen Datensätzen basiert, enthält die neue Einheit reale Datensätze zum Gesundheitswesen, zur Demografie und mehr, um die Schüler zu motivieren, während sie Fragen wie „Was ist ein Problem, das man mit maschinellem Lernen lösen kann?“ untersuchen „Wie kann KI der Gesellschaft helfen?“ „Wer profitiert von der KI?“ „Wer wird von der KI geschädigt?“ „Wer ist daran beteiligt?“ „Wer ist nicht dabei?“  </p>
+    <p>Bei diesen Diskussionen werden ethische Erwägungen im Vordergrund stehen, und es werden häufig die Auswirkungen dieser Technologien angesprochen. Dies wird den SchülerInnen helfen, ein ganzheitliches, durchdachtes Verständnis für diese Technologien zu entwickeln, während sie gleichzeitig die technischen Grundlagen ihrer Funktionsweise kennenlernen.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## Wie die KI funktioniert
 
 Im Rahmen einer Einführung von Microsoft-CEO Satya Nadella erfahren Sie in dieser Reihe von kurzen Videos, wie künstliche Intelligenz funktioniert und warum sie wichtig ist. Erfahren Sie mehr über neuronale Netze oder darüber, wie KI lernt, und beschäftigen Sie sich mit Themen wie algorithmischer Voreingenommenheit und der Ethik von Ki-basierten Entscheidungen.
@@ -115,3 +114,5 @@ Die Stufen 2-4 verwenden ein vortrainiertes Modell, das vom [TensorFlow](https:/
 Auf den Stufen 6-8 wird eine \[„Support-Vector Machine“\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) verwendet. Wir betrachten jede Komponente des Fisches (z. B. Augen, Maul, Körper) und fügen alle Metadaten für die Komponenten (z. B. Anzahl der Zähne, Körperform) zu einem Vektor von Zahlen für jeden Fisch zusammen. Wir verwenden diese Vektoren zum Trainieren des SVM. Auf der Grundlage der Trainingsdaten unterteilt die SVM den „Raum“ aller möglichen Fische in zwei Teile, die den Klassen entsprechen, die wir zu lernen versuchen (wie „blau“ oder „nicht blau“).
 
 [[Zurück zum Anfang]](#top)
+
+{{ visit_partial_event_logger }}

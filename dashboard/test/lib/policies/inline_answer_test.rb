@@ -10,19 +10,19 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
 
-    unit_group = create(:unit_group, name: 'teacher-instructed-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
+    unit_group = create(:unit_group, name: 'teacher-instructed-course', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
     @unit_in_course = create(:script, name: 'unit-in-course')
     create(:unit_group_unit, script: @unit_in_course, unit_group: unit_group, position: 1)
     @unit_in_course.reload
     @script_level_teacher_instructed_in_course = create(:script_level, script: @unit_in_course)
 
-    @teacher_instructed_unit = create(:script, name: 'teacher-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
+    @teacher_instructed_unit = create(:script, name: 'teacher-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
     @script_level_teacher_instructed = create(:script_level, script: @teacher_instructed_unit)
-    @facilitator_instructed_unit = create(:script, name: 'facilitator-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+    @facilitator_instructed_unit = create(:script, name: 'facilitator-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
     @script_level_facilitator_instructed = create(:script_level, script: @facilitator_instructed_unit)
-    @plc_reviewer_instructed_unit = create(:script, name: 'plc-reviewer-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
+    @plc_reviewer_instructed_unit = create(:script, name: 'plc-reviewer-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
     @script_level_plc_reviewer_instructed = create(:script_level, script: @plc_reviewer_instructed_unit)
-    @universal_instructor_instructed_unit = create(:script, name: 'universal-instructor-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor)
+    @universal_instructor_instructed_unit = create(:script, name: 'universal-instructor-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor)
     @script_level_universal_instructor_instructed = create(:script_level, script: @universal_instructor_instructed_unit)
 
     @plc_models_script = create(:script, name: 'old-style-pl-course', professional_learning_course: true)
@@ -53,7 +53,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_script_level? returns true for if teacher in a K5 course' do
-    Script.any_instance.stubs(:k5_course?).returns(true)
+    Unit.any_instance.stubs(:k5_course?).returns(true)
     assert Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_teacher_instructed)
   end
 
@@ -118,7 +118,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_unit? returns true for if teacher in a K5 course' do
-    Script.any_instance.stubs(:k5_course?).returns(true)
+    Unit.any_instance.stubs(:k5_course?).returns(true)
     assert Policies::InlineAnswer.visible_for_unit?(@teacher, @teacher_instructed_unit)
   end
 

@@ -5,11 +5,7 @@
     "docFunc": "gamelab_makeNewSpriteAnon",
     "inline": false,
     "blockText": "make new {ANIMATION_NAME} sprite at {LOCATION}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "args": [
       {
         "name": "ANIMATION_NAME",

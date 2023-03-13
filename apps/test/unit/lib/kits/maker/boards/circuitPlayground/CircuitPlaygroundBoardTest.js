@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
@@ -12,10 +11,15 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
+import {
+  stubComponentInitialization,
+  restoreComponentInitialization
+} from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -312,13 +316,6 @@ describe('CircuitPlaygroundBoard', () => {
         return playground;
       });
 
-    // Our sensors and thermometer block initialization until they receive data
-    // over the wire.  That's not great for unit tests, so here we stub waiting
-    // for data to resolve immediately.
-    sinon.stub(EventEmitter.prototype, 'once');
-    EventEmitter.prototype.once.withArgs('data').callsArg(1);
-    EventEmitter.prototype.once.callThrough();
-
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
@@ -329,7 +326,6 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
-    EventEmitter.prototype.once.restore();
     ChromeSerialPort.stub.reset();
     circuitPlaygroundBoardTeardown();
   });
@@ -434,6 +430,32 @@ describe('CircuitPlaygroundBoard', () => {
     });
   });
 
+  describe(`connectToFirmware() with WebSerial`, () => {
+    let wrappedPort;
+    beforeEach(() => {
+      wrappedPort = new WebSerialPortWrapper();
+      sinon
+        .stub(wrappedPort, 'openCPPort')
+        .returns(new Promise(resolve => resolve(wrappedPort)));
+      board = new CircuitPlaygroundBoard(wrappedPort);
+      board.port_.vendorId = '0x239A';
+    });
+
+    it('does not set the boardType for classic boards', () => {
+      board.port_.productId = '0x8011';
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
+      });
+    });
+
+    it('sets the boardType for express boards', () => {
+      board.port_.productId = '0x8018';
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
+      });
+    });
+  });
+
   describe(`initializeComponents()`, () => {
     it('throws if called before connecting to firmware', () => {
       expect(() => board.initializeComponents()).to.throw(
@@ -449,6 +471,26 @@ describe('CircuitPlaygroundBoard', () => {
         .then(() => {
           expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         });
+    });
+  });
+
+  describe(`reset()`, () => {
+    it('stops any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'stop');
+        sinon.spy(led2, 'stop');
+
+        // reset() will call resetDynamicComponents() which, for each LED, will call off()
+        // which internally calls stop().
+        expect(led1.stop).not.to.have.been.called;
+        expect(led2.stop).not.to.have.been.called;
+
+        board.reset();
+        expect(led1.stop).to.have.been.calledOnce;
+        expect(led2.stop).to.have.been.calledOnce;
+      });
     });
   });
 
@@ -523,6 +565,13 @@ describe('CircuitPlaygroundBoard', () => {
       const realSetTimeout = window.setTimeout;
       yieldToPromiseChain = cb => realSetTimeout(cb, 0);
 
+      // When the board connects, the playground components will be initialized.
+      // Our sensors and thermometer block initialization until they receive data
+      // over the wire.  That's not great for unit tests, so here we stub waiting
+      // for data to resolve immediately.
+      stubComponentInitialization(five.Sensor);
+      stubComponentInitialization(five.Thermometer);
+
       // Now use fake timers so we can test exactly when the different commands
       // are sent to the board
       clock = sinon.useFakeTimers();
@@ -530,6 +579,8 @@ describe('CircuitPlaygroundBoard', () => {
 
     afterEach(() => {
       clock.restore();
+      restoreComponentInitialization(five.Sensor);
+      restoreComponentInitialization(five.Thermometer);
     });
 
     it('plays a song and animates lights', done => {

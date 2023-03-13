@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 se:
   errors:
     messages:
@@ -350,7 +356,6 @@ se:
     popup:
       progress_for_user: "%{name} ovdáneapmi"
       progress: 'Du ovdáneapmi'
-      lines: 'Oktiibuot linjját kodas: %{lines}'
       close: 'GIDDE'
       mastery: 'Konseaptat'
       puzzle_map: 'Dásit'
@@ -562,19 +567,13 @@ se:
       body_short: "Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit."
       audience: 'Agit 13+'
       cta: 'Oahpa movt'
-    hoc:
-      title: 'Klassikalaš Labirynta'
-      body: 'Geahččal vuođđoDihtorDiehtaga. Millijovnnat leat juo geahččalan.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Flappy Koda'
       body: 'Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min Flappy Koda neavvaga!'
-    20-hour:
-      title: 'Akselerejuvvon Kursa'
-      body: 'Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!'
-      body_short: 'Oahpa vuođđodihtordiehtaga akselerejuvvon veršuvnnain kurssain 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Geahččal min ođđa KodenDiimmu neavvaga beta hámis'
-      try_frozen: 'Dáiddár Annain ja Elsain, Jikŋon filmmas'
+    frozen:
+      title: "Jikŋon"
     gallery:
       title: "Galleriija"
       body: "Geahča app:a ja dáiddárgovvagalleriijas maid min geavaheaddjit leat ráhkadan"
@@ -582,17 +581,16 @@ se:
       body: "Speallan Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis animašuvnnaid ja spealuid main leat objeavttat ja speallanfigurat mat doibmet nubbi nuppiin."
       audience: "Agit 13+"
       cta: "Oahpa movt"
+    hero:
+      title: "Minecraft"
     hoc-encryption:
       body: "Oahppit ohppet teknihkaid ráhkadit ja čoavdit krypterejuvvon dieđuid."
-    weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis  neahttasiidduid geavahemiin HTML ja CSS. Ráhkat iežat neahttasiiddu ja juoge dan jođánit."
-      audience: "Agit 13+"
-      cta: "Oahpa movt"
-    frozen:
-      title: "Jikŋon"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Klassikalaš Labirynta'
+      body: 'Geahččal vuođđoDihtorDiehtaga. Millijovnnat leat juo geahččalan.'
+    hoc2014:
+      try_new_tutorial: 'Geahččal min ođđa KodenDiimmu neavvaga beta hámis'
+      try_frozen: 'Dáiddár Annain ja Elsain, Jikŋon filmmas'
     infinity:
       title: "Infinitiija Speallan-lab"
       body: "Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde."
@@ -602,27 +600,34 @@ se:
     minecraft2016:
       title: "Minecraft"
       body: "Programmere elliid dahje eará Minecraft heakkalaččaid du iežat Minecraft-veršuvnnas."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
     sports:
       body: "Ráhkat Gorespábba-spealu dahje seagut falástallansurggiid."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "TeakstaKomprimeren"
       body: "Dán lekšuvnnas oahppit geavahit Teakstakomprimeren Modula komprimeret teavstta molsumiin minstariid ja symbolaid."
-    unplugged:
-      title: "Neahtahaga lekšuvnnat"
-      audience: "Agit 4+"
-      body: "Mii leat čohkken listtu mas leat ovttastahtton lekšuvnnat maid sáhtát atnit klássalanjas. Dál sáhtát oahppat vuođđoDihtorDiehtaga, leaš dál dihtorat klássalanjas vai eai! Geahččal geavahit dáid lekšuvnnaid friddja kursan dahje dievasmahtton lekšuvdnan juohke DihtorDiehtaga kursii."
-      body_short: "Jus dus eai leat dihtorat, geahččal dáid neahtahaga lekšuvnnaid du klássalanjas."
-    unplugged_conditionals:
-      body: "Oahpa algoritmmaid dahje  evttolaš dadjamiid dán “neahtahaga” doaimmas go geavahat speallankoarttaid."
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis  neahttasiidduid geavahemiin HTML ja CSS. Ráhkat iežat neahttasiiddu ja juoge dan jođánit."
+      audience: "Agit 13+"
+      cta: "Oahpa movt"
     widgets:
       title: "Modulat"
       body: "Oahppit sáhttet suokkardallat konseaptaid dihtodiehtaga prinsihppakurssas, ja geavahit dáid digitála reaidduid. Geavat modulaid ieš, dahje ráhkat okta-konsepta lekšuvnna du klássii."
       audience: "Agit 14+"
       cta: "Oahpa movt"
+    unplugged_conditionals:
+      body: "Oahpa algoritmmaid dahje  evttolaš dadjamiid dán “neahtahaga” doaimmas go geavahat speallankoarttaid."
+    unplugged:
+      title: "Neahtahaga lekšuvnnat"
+      audience: "Agit 4+"
+      body: "Mii leat čohkken listtu mas leat ovttastahtton lekšuvnnat maid sáhtát atnit klássalanjas. Dál sáhtát oahppat vuođđoDihtorDiehtaga, leaš dál dihtorat klássalanjas vai eai! Geahččal geavahit dáid lekšuvnnaid friddja kursan dahje dievasmahtton lekšuvdnan juohke DihtorDiehtaga kursii."
+      body_short: "Jus dus eai leat dihtorat, geahččal dáid neahtahaga lekšuvnnaid du klássalanjas."
+    20-hour:
+      title: 'Akselerejuvvon Kursa'
+      body: 'Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!'
+      body_short: 'Oahpa vuođđodihtordiehtaga akselerejuvvon veršuvnnain kurssain 2-4.'
   landing:
     prerelease_tutorial: "Dát neava lea ** beta **. Dán geahččaladdame ja dát rievdaduvvo go oažžut vástádusaid."
     report_bug: "Dieđit Vigi"
@@ -703,14 +708,6 @@ se:
     reminder_desc: 'Mii leat ođastan min <a href="%{tos_url}" target="_blank">Geavahaneavttuid</a> ja <a href="%{privacy_url}" target="_blank">Persovdnasuodjaleami</a>. Loga dáid dárkilit ovdalgo dohkkehat daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript eai soaitte leat olatmuttos ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon eavttuid. '
     reminder_desc_markdown: Mii leat ođastan min [Geavahaneavttuid](%{tos_url}) ja Persovdnasuodjaleami](%{privacy_url}). Loga dáid dárkilit ovdalgo dohkkehat daid. Fuomáš ahte oahpahusreaiddut nugo JavaScript eai soaitte leat olatmuttos ohppiide ovdal go don eksplisihtta dohkkehat ođastuvvon eavttuid.
     review_terms: "Loga ođastuvvon eavttuid"
-  donor_interstitial:
-    title: "Du nuvttá CS kurssaid lea dahkan vejolažžan..."
-    subtitle: "Mii háliidit giitit daid árvvas skeŋkejeddjiid geaid doarjagat leat dahkan Code.org lihkostuvvama vejolažžan. Mii leat geatnegahtton doalahit Code.org nuvttá skuvllaide ja ohppiide, globálalaččat, giitu joatkás árvvasvuhtii min [skeŋkejeaddjit](%{donors_url})!"
-    local_supporters: "Báikkálaš Doarjjaolbmot"
-    global_supporters: "Globála Doarjjaolbmot"
-    support_codeorg_1: "Juohke ruhta mii skeŋkejuvvo Code.org:i addá vejolašvuođaid eanet ohppiide."
-    support_codeorg_2: "[Skeŋke dál](%{donate_url}) doarjun dihte Code.org."
-    get_started: "Boađe johtui Code.org:s"
   school_info_interstitial:
     title: "Mii hálidit buktit DihtorDiehtaga juohke oahppái  - veahket min oaidnit min ovdáneami!"
     message: "Čális iežat skuvlla birra dieđuid vuolábeallái."
@@ -922,6 +919,7 @@ se:
         music: 'Musihkka'
         art: 'Dáidda'
         other: "Eará:"
+        na: 'Ii leat guoskevaš'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -929,7 +927,8 @@ se:
         khan: 'Khan Academy'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Eará:"
+        other: "Eará"
+        na: 'Ii leat guoskevaš'
       robotics:
         grok: 'Grok Learning'
         lego: 'LEGO Education'
@@ -938,7 +937,8 @@ se:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Eará:"
+        other: "Eará"
+        na: 'Ii leat guoskevaš'
       workshop_course:
         csf_af: 'CS Vuođut (Kurssat A-F)'
         csf_express: 'CS Vuođut (Pre-Ekspreassa or Ekspreassa)'

@@ -1,5 +1,23 @@
 kn:
   data:
     shared_functions:
+      driving with arrow keys: ಬಾಣದ ಕೀಲಿಗಳೊಂದಿಗೆ ಚಾಲನೆ
+      fluttering: ಬೀಸುತ್ತಿದೆ
+      growing: ಬೆಳೆಯುತ್ತಿದೆ
+      jittering: ನಡುಗುತ್ತಿದೆ
+      moving east: ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ
+      moving east and looping: ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ
+      moving north: ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ
       moving north and looping: ಉತ್ತರಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ
+      moving south: ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ
       moving south and looping: ದಕ್ಷಿಣಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ ಮತ್ತು ಲೂಪ್ ಆಗುತ್ತಿದೆ
+      moving west: ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ
+      moving west and looping: ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು
+      moving with arrow keys: ಬಾಣದ ಕೀಲಿಗಳೊಂದಿಗೆ ಚಲಿಸುತ್ತದೆ
+      patrolling: ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ
+      shrinking: ಕುಗ್ಗುತ್ತಿರುವ
+      spinning left: ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+      spinning right: ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+      swimming left and right: ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು
+      wandering: ಅಲೆದಾಡುವುದು
+      wobbling: ಒದ್ದಾಡುವುದು

@@ -1,18 +1,20 @@
 .row{style: "margin: 0;"}
-  = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, show_teacher_guide: true }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, show_teacher_guide: true }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::SPORTS_NAME }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::POEM_ART }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::STARWARS_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::FROZEN_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::SPORTS_NAME }
 
 .row{style: "margin: 0;"}
-  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, show_teacher_guide: true }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, show_teacher_guide: true }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, show_teacher_guide: true }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::FLAPPY_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::HOC_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::INFINITY_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::PLAYLAB_NAME, show_teacher_guide: true }
 
 .row{style: "margin: 0;"}
-  = render partial: 'shared/course_tall_block', locals: { id: Script::TEXT_COMPRESSION_NAME, show_teacher_guide: true }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_ENCRYPTION_NAME, show_teacher_guide: true }
+
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::ARTIST_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::TEXT_COMPRESSION_NAME, show_teacher_guide: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Unit::HOC_ENCRYPTION_NAME, show_teacher_guide: true }
   = render partial: 'shared/course_tall_block', locals: { id: 'conditionals', show_teacher_guide: true }
 
 %br/

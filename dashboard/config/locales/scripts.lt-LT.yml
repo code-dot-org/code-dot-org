@@ -2,10 +2,6 @@
 lt:
   data:
     script:
-      category:
-        hoc_category_name: "„Programavimo valanda“"
-        math_category_name: Matematika
-        other_category_name: Kita
       name:
         course1:
           title: Kursas 1
@@ -15,43 +11,6 @@ lt:
             galės pasidalinti su kitais.
           description_short: Pradėti 1-ą kursą, skirtą pradedantiems skaityti.
           description_audience: Amžius 4-6 metai
-          lessons:
-            'Artist: Loops':
-              name: 'Menininkas: kartojimas'
-            'Artist: Sequence':
-              name: 'Menininkas: seka'
-            'Artist: Shapes':
-              name: 'Menininkas: formos'
-            'Bee: Loops':
-              name: 'Bitė: kartojimas'
-            'Bee: Sequence':
-              name: 'Bitė: seka'
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Getting Loopy:
-              name: Kartojimo supratimas
-            Going Places Safely:
-              name: Saugus naršymas internete
-            Happy Maps:
-              name: Laimingieji žemėlapiai
-            'Jigsaw: Learn to drag and drop':
-              name: 'Dėlionės: sudėk paveikslėlius'
-            'Maze: Debugging':
-              name: 'Labirintas: klaidų ieškojimas'
-            'Maze: Loops':
-              name: 'Labirintas: kartojimas'
-            'Maze: Sequence':
-              name: 'Labirintas: seka'
-            Move it, Move it:
-              name: Judėk, judėk
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Spelling Bee:
-              name: Rašanti bitė
-            'Studio: Create a Story':
-              name: 'Žaidimų laboratorija: sukurk istoriją'
-            The Big Event:
-              name: Didelis įvykis
           student_description: Kursas 1 yra skirtas dar tik pradedatiems skaityti.  Čia
             jie lavins sprendimo, bendradarbiavimo įgūdžius bei kantrybę :). Mokiniai
             ne tik spręs užduotis, bet ir sukurs savo istoriją ar žaidimą, kuriuo
@@ -63,45 +22,6 @@ lt:
             kurs  interaktyvius žaidimus ar istorijas. Rekomenduojama 2-5 klasėms.
           description_short: 2 kursas yra skirtas mokiniams, kurie jau moka skaityti.
           description_audience: Amžius 6+ (reikalingas skaitymas)
-          lessons:
-            'Artist: Debugging':
-              name: 'Menininkas: klaidų ieškojimas'
-            'Artist: Loops':
-              name: 'Menininkas: kartojimas'
-            'Artist: Nested Loops':
-              name: 'Menininkas: kartojimas kartojime'
-            'Artist: Sequence':
-              name: 'Menininkas: seka'
-            'Bee: Conditionals':
-              name: 'Bitė: sąlyginiai sakiniai'
-            'Bee: Debugging':
-              name: 'Bitė: klaidų ieškojimas'
-            'Bee: Loops':
-              name: 'Bitė: kartojimas'
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Flappy:
-              name: Flappy
-            Getting Loopy:
-              name: Kartojimo supratimas
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
-            'Maze: Loops':
-              name: 'Labirintas: kartojimas'
-            'Maze: Sequence':
-              name: 'Labirintas: seka'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-            Relay programming:
-              name: Programavimas komandoje
-            'Studio: Create a Story':
-              name: 'Žaidimų laboratorija: sukurk istoriją'
-            The Big Event:
-              name: Didelis įvykis
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
           student_description: Kursas 2 yra skirtas tiems, kas jau išmoko skaityti,
             bet anksčiau niekada neprogramavo. Jo metu, mokiniai spręs programavimo
             galvosūkius, kurs  interaktyvius žaidimus ar istorijas. Rekomenduojama
@@ -115,49 +35,6 @@ lt:
             kuriuos galės pasidalinti su visais. Rekomenduojama 4-5 klasių mokiniams.
           description_short: 3 kursas yra antrojo kurso tęsinys.
           description_audience: Amžius 8-18 metų
-          lessons:
-            Artist:
-              name: Menininkas
-            'Artist: Functions':
-              name: 'Menininkas: komandų kūrimas'
-            'Artist: Nested Loops':
-              name: 'Menininkas: kartojimas kartojime'
-            'Artist: Patterns':
-              name: 'Menininkas: raštai'
-            'Bee: Conditionals':
-              name: 'Bitė: sąlyginiai sakiniai'
-            'Bee: Debugging':
-              name: 'Bitė: klaidų ieškojimas'
-            'Bee: Functions':
-              name: 'Bitė: komandų kūrimas'
-            'Bee: Nested Loops':
-              name: 'Bitė: kartojimas kartojime'
-            Bounce:
-              name: Bounce
-            Computational Thinking:
-              name: Skaičiuojamasis mąstymas
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Dice Race:
-              name: Kauliukų lenktynės
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            'Farmer: While Loops':
-              name: 'Ūkininkas: kartojimas'
-            Functional Suncatchers:
-              name: Sekų suvokimas
-            Internet:
-              name: Internetas
-            Maze:
-              name: Labirintas
-            'Maze: Conditionals':
-              name: 'Labirintas: sąlyginiai sakiniai'
-            Songwriting:
-              name: Dainų rašymas
-            'Studio: Create a Game':
-              name: 'Laboratorija: sukurk žaidimą'
-            'Studio: Create a Story':
-              name: 'Žaidimų laboratorija: sukurk istoriją'
           student_description: 3 kursas yra skirtas mokiniams, kurie įveikė 2 kursą.
             Mokiniai pasiners giliau į programavimo temas, pristatytas praėjusiuose
             kursuose, ir sudarys lankstesnius sprendimus sudėtingesnėms problemoms.
@@ -167,26 +44,17 @@ lt:
           title: Laboratorija
           description: Sukurk istoriją arba žaidimą!
           description_short: Sukurk istoriją arba žaidimą!
-          lessons:
-            Play Lab:
-              name: Laboratorija
           student_description: Sukurk istoriją arba žaidimą!
         artist:
           title: Menininkas
           description: Nupiešk šaunius piešinius ir ornamentus su menininku!
           description_short: Nupiešk šaunius piešinius ir ornamentus su menininku!
-          lessons:
-            Artist:
-              name: Menininkas
           student_description: Nupiešk šaunius piešinius ir ornamentus su menininku!
         hourofcode:
           title: Klasikinis labirintas
           description: Išmėginkite programavimo pradmenis kartu su personažais iš
             Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
-          lessons:
-            Maze:
-              name: Labirintas
           student_description: Išmėginkite programavimo pradmenis kartu su personažais
             iš Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
         frozen:
@@ -196,9 +64,6 @@ lt:
             galėsite pasidalinti su draugais!
           description_short: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
             grožį ir magiją.
-          lessons:
-            Artist:
-              name: Programuokite kartu su Ana ir Elze
           student_description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų
             ledo grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus.
             Savo kūriniais galėsite pasidalinti su draugais!
@@ -211,51 +76,6 @@ lt:
             ciklus, ir funkcijas su parametrais. Rekomenduojama 4-8 klasių mokiniams.
           description_short: Mokiniai turėtų pradėti 4 kursą tik užbaigę 2 ir 3 kursus.
           description_audience: Amžius 9-18
-          lessons:
-            Artist:
-              name: Menininkas
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
-            'Artist: For Loops':
-              name: 'Menininkas: kartojimai'
-            'Artist: Functions':
-              name: 'Menininkas: komandų kūrimas'
-            'Artist: Functions with Parameters':
-              name: 'Menininkas: komandos su parametrais'
-            'Artist: Variables':
-              name: 'Menininkas: kintamieji'
-            'Bee: For Loops':
-              name: 'Bitė: kartojimai'
-            'Bee: Functions with Parameters':
-              name: 'Bitė: komandos su parametrais'
-            Extreme Challenge - Comprehensive:
-              name: Ekstremalus iššūkis - Visapusiškumas
-            Maze and Bee:
-              name: Labirintas ir bitė
-            'Play Lab: For Loops':
-              name: 'Žaidimų laboratorija: kartojimai'
-            'Play Lab: Functions with Parameters':
-              name: 'Žaidimų laboratorija: komandos su parametrais'
-            'Play Lab: Variables':
-              name: 'Žaidimų laboratorija: kintamieji'
-            Super Challenge - For Loops:
-              name: Super iššūkis - Ciklai
-            Super Challenge - Functions and Parameters:
-              name: Super iššūkis - funkcijos ir parametrai
-            Super Challenge - Variables:
-              name: Super iššūkis - Kintamieji
-            'Unplugged: Binary':
-              name: 'Be kompiuterio: dvejetainiai skaičiai'
-            'Unplugged: Envelope Variables':
-              name: 'Be kompiuterių: Vokų kintamieji'
-            'Unplugged: For Loop Fun':
-              name: 'Be kompiuterio: kartojimai'
-            'Unplugged: Madlibs':
-              name: 'Be kompiuterių: Madlibs žodžių žaidimas'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Be kompiuterio: dainų rašymas pagal parametrus'
-            'Unplugged: Tangrams':
-              name: 'Be kompiuterio: tanagramos'
           student_description: 4 kursas yra skirtas mokiniams, kurie įveikė 2 ir 3
             kursus. Mokiniai mokysis spręsti sudėtingesnius galvosūkius, pritaikyti
             keletą idėjų sprendžiant kiekvieną uždavinį. Iki kol kursas bus baigtas,
@@ -266,63 +86,11 @@ lt:
           title: 4 kursas - Prielaidos
           description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
-          lessons:
-            'Artist: Functions':
-              name: 'Menininkas: komandų kūrimas'
-            'Artist: Loops':
-              name: 'Menininkas: kartojimas'
-            'Artist: Nested Loops':
-              name: 'Menininkas: kartojimas kartojime'
-            'Artist: Sequence':
-              name: 'Menininkas: seka'
-            'Bee: Conditionals':
-              name: 'Bitė: sąlyginiai sakiniai'
-            'Bee: Debugging':
-              name: 'Bitė: klaidų ieškojimas'
-            'Bee: Nested Loops':
-              name: 'Bitė: kartojimas kartojime'
-            'Farmer: While Loops':
-              name: 'Ūkininkas: kartojimas'
-            'Maze: Sequence':
-              name: 'Labirintas: seka'
           student_description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
-        usability:
-          lessons:
-            Binary:
-              name: Dvejetainis
-            For Loops:
-              name: Kartojimas
-            Functions and Functions with Parameters:
-              name: Komandos ir komandos su parametrais
-            Intro:
-              name: Įvadas
-            Variables:
-              name: Kintamieji
         algebra:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą.
           description_short: Išmokite programuoti funkcijas panaudojant algebrą.
-          lessons:
-            'Eval: Boolean Operators':
-              name: Būlio loginiai operatoriai
-            'Eval: Conditionals':
-              name: Sąlyginiai sakiniai
-            'Eval: Strings and Images':
-              name: Eilutės ir paveikslėliai
-            'Play Lab: Animation (Big Game)':
-              name: Didysis žaidimas – animacija
-            'Play Lab: Boolean (Big Game)':
-              name: Didysis žaidimas – Būlio kintamieji
-            'Play Lab: Booleans':
-              name: Šikšnosparnis Semas
-            'Play Lab: Defining Functions':
-              name: Raketos aukštis
-            'Play Lab: Defining Variables (Big Game)':
-              name: Didysis žaidimas – kintamieji
-            'Unplugged: Booleans':
-              name: 'Papildoma pamokėlė: Būlio kintamieji ir logika'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
           student_description: Išmokite programuoti funkcijas panaudojant algebrą.
         infinity:
           title: Disnėjaus Infinity laboratorija
@@ -330,31 +98,8 @@ lt:
             bus Disnėjaus Infinity personažai.
           description_short: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
             bus Disnėjaus Infinity personažai.
-          lessons:
-            Infinity:
-              name: Disnėjaus Infinity laboratorija
           student_description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija,
             kurioje bus Disnėjaus Infinity personažai.
-        algebrademo:
-          lessons:
-            Defining Variables:
-              name: Kintamųjų apibrėžimas
-        K5PD:
-          lessons:
-            Computer Science Pedagogy:
-              name: Informatikos pedagogika
-            K-5 Courses:
-              name: Kursai pradinių klasių mokiniams
-            Next Steps:
-              name: Kiti žingsniai
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
-            Unplugged lessons:
-              name: Papildomos pamokėlės
-            Writing computer programs:
-              name: Kompiuterinių programų rašymas
-            new stage:
-              name: naujas lygis
         netsim:
           title: Interneto simuliatorius
         pixelation:
@@ -367,47 +112,6 @@ lt:
           description_short: Šis 20-ties valandų kursas apima 2-4 kursų pagrindines
             informatikos ir programavimo idėjas.
           description_audience: Amžius 10-18
-          lessons:
-            Abstraction:
-              name: Komandos su parametrais
-            Algorithms:
-              name: Algoritmai
-            Computational Thinking:
-              name: Skaičiuojamasis mąstymas
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Functions:
-              name: Komandų kūrimas
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
-            Introduction to Computer Science:
-              name: Informatikos įvadas
-            Relay Programming:
-              name: Programavimas komandoje
-            Song Writing:
-              name: Dainos ir funkcijos
-            The Artist:
-              name: Menininkas
-            The Artist 2:
-              name: Menininkas 2
-            The Artist 3:
-              name: Menininkas 3
-            The Artist 4:
-              name: Menininkas 4
-            The Artist 5:
-              name: Menininkas 5
-            The Farmer:
-              name: Ūkininkas
-            The Farmer 2:
-              name: Ūkininkas 2
-            The Farmer 3:
-              name: Ūkininkas 3
-            The Internet:
-              name: Internetas
-            The Maze:
-              name: Labirintas
-            Wrap-up:
-              name: Apibendrinimas
           student_description: Šis 20-ties valandų informatikos kursas supažindina
             su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės,
             bet smagu mokytis esant bet kurioje amžiaus grupėje.
@@ -415,27 +119,11 @@ lt:
           title: Redaguoti kodą
           description: Redaguoti kodą
           description_short: Redaguoti kodą
-          lessons:
-            Play Lab:
-              name: Laboratorija
-            The Artist:
-              name: Menininkas
-            The Maze:
-              name: Labirintas
           student_description: Redaguoti kodą
         events:
           title: Įvykiai
           description: Įvykiai
           description_short: Įvykiai
-          lessons:
-            Bounce:
-              name: Bounce
-            Calc:
-              name: Skaič
-            Eval:
-              name: Įvert
-            Studio:
-              name: Studija
           student_description: Įvykiai
         flappy:
           title: Flappy Kodas
@@ -443,265 +131,56 @@ lt:
             Flappy Code pamokėles!
           description_short: Parašyk savo nuosavą Flappy žaidimą per mažiau, nei 10
             minučių!
-          lessons:
-            Flappy Code:
-              name: Flappy Kodas
           student_description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių?
             Išmėgink Flappy Code pamokėles!
         jigsaw:
           title: Dėlionės
           description: Išbandykite Dėlionės pamokėlę.
           description_short: Išbandykite Dėlionės pamokėlę.
-          lessons:
-            Jigsaw:
-              name: Dėlionės
           student_description: Išbandykite Dėlionės pamokėlę.
         step:
           title: Žingsnis
           description: Žingsnio pamoka
           description_short: Žingsnio pamoka
-          lessons:
-            Step:
-              name: Žingsnis
           student_description: Žingsnio pamoka
         Hour of Code:
           title: Programavimo valanda 2013
           description: Išmėginkite programavimo pradmenis su personažais iš Angry
             Birds ir Plants vs. Zombies!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
-          lessons:
-            Hour of Code 2013:
-              name: Programavimo valanda 2013
           student_description: Išmėginkite programavimo pradmenis su personažais iš
             Angry Birds ir Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           title: Kodavimo studijos galvosūkiai
           description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
           description_short: Iššūkis tau!
-          lessons:
-            Puzzles:
-              name: Galvosūkiai
           student_description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Pamoka – Kodavimo studijos galvosūkiai
           description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
           description_short: Iššūkis tau!
-          lessons:
-            Puzzles:
-              name: Galvosūkiai
           student_description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
-        cspunit1:
-          lessons:
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-            Number Systems:
-              name: Skaičių sistemos
-            Sending Binary Messages:
-              name: Dvejetainių žinučių siuntimas
-            Sending Bits in the Real World:
-              name: Bitų persiuntimas realiame pasaulyje
         algebraPD:
           title: Informatika algebroje
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
         algPDmiami:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
           description_short: Algebros mokymas per funkcijų programavimą
-          lessons:
-            Booleans:
-              name: Loginės reikšmės
-            Sam the Bat:
-              name: Šikšnosparnis Semas
-            Strings and Images:
-              name: Eilutės ir paveikslėliai
-            Your Game - Animation:
-              name: Tavo žaidimas – animacijos
-            Your Game - Booleans:
-              name: Tavo žaidimas – Loginės reikšmės
-            Your Game - Collision Detection:
-              name: Tavo žaidimas – susidūrimo aptikimas
-            Your Game - Player Movement:
-              name: Tavo žaidimas – veikėjų judėjimas
           student_description: Algebros mokymas per funkcijų programavimą
-        CSPLessonSamples:
-          lessons:
-            Lesson 14:
-              name: 14 pamoka
-            Lesson 15:
-              name: 15 pamoka
-        cspunit3:
-          lessons:
-            Creating Functions:
-              name: Komandų kūrimas
-            While Loops:
-              name: "„Kol“ kartojimas"
-        algebraPD3:
-          lessons:
-            Computer Science Pedagogy:
-              name: Informatikos pedagogika
-            Next Steps:
-              name: Kiti žingsniai
-            Strings and Images:
-              name: Eilutės ir paveikslėliai
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
         algebraPD-NexTech:
           title: Informatika algebroje
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
         algebraPD-iZone:
           title: Informatika algebroje
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
-        sciencePD2:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
         algebraPD2a:
           title: Informatika algebroje
-          lessons:
-            Booleans:
-              name: Loginės reikšmės
-            Defining Variables:
-              name: Kintamųjų apibrėžimas
-            Sam the Bat:
-              name: Šikšnosparnis Semas
-            Strings and Images:
-              name: Eilutės ir paveikslėliai
-        allthethings:
-          lessons:
-            Artist:
-              name: Menininkas
-            Bee:
-              name: Bitė
-            Bounce:
-              name: Bounce
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Dėlionės
-            Match:
-              name: Sujungimas
-            Maze:
-              name: Labirintas
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: Variantai
-            Pixelation:
-              name: Pikseliavimas
-            Studio:
-              name: Studija
         algebraPD2b:
           title: Informatika algebroje
-          lessons:
-            Booleans:
-              name: Loginės reikšmės
-            Defining Functions:
-              name: Komandų apibrėžimas
-            Defining Variables:
-              name: Kintamųjų apibrėžimas
-            Next Steps:
-              name: Kiti žingsniai
-            Strings and Images:
-              name: Eilutės ir paveikslėliai
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
-        cspfacilitator:
-          lessons:
-            App Lab:
-              name: App Lab
-            Internet Simulator:
-              name: Interneto simuliatorius
-            Welcome!:
-              name: Sveiki atvykę!
-        K5-OnlinePD:
-          lessons:
-            Next Steps:
-              name: Kiti žingsniai
-        ECSPD2:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-up:
-              name: Apibendrinimas
-        algebraPD2:
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
-            Welcome!:
-              name: Sveiki atvykę!
-        sciencePD2b:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
-        science-PD2:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
-        Equity-OnlinePD:
-          lessons:
-            Next Steps:
-              name: Kiti žingsniai
-        sciencePD2b-iZone:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
-        ECSPD2-iZone:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-up:
-              name: Apibendrinimas
-        ECSPD2-NexTech:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-up:
-              name: Apibendrinimas
         asUnplugged:
           description_audience: Amžius 6-13
-          lessons:
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Getting Loopy:
-              name: Kartojimo supratimas
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
-            Happy Maps:
-              name: Laimingieji žemėlapiai
-            Move it, Move it:
-              name: Judėk, judėk
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Songwriting:
-              name: Dainų rašymas
-            The Big Event:
-              name: Didelis įvykis
         afterschool1:
           description_audience: Amžius 7-13
         algebraPD3a:
           title: Informatika algebroje
-        ScienceP3OLPT2:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
         algebraPD3b:
           title: Informatika algebroje
         Special Fun:
@@ -712,30 +191,17 @@ lt:
           title: Ledynmečio laboratorija
           description: Sukurk istoriją arba žaidimą su Ledynmečio laboratorija!
           description_short: Sukurk istoriją arba žaidimą su Ledynmečio laboratorija!
-          lessons:
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
           student_description: Sukurk istoriją arba žaidimą su Ledynmečio laboratorija!
-        cspunit3temp:
-          lessons:
-            While Loops:
-              name: "„Kol“ kartojimas"
         gumball:
           title: Gumball laboratorija
           description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
           description_short: Sukurk istoriją arba žaidimą su Gumball laboratorija!
-          lessons:
-            Gumball Play Lab:
-              name: Gumball laboratorija
           student_description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
         starwars:
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą
             tolimoje galaktikoje.
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
             žaidimą tolimoje galaktikoje.
-          lessons:
-            Hour of Code 2015:
-              name: Programavimo valanda 2015
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių
             Karų žaidimą tolimoje galaktikoje.
         starwarsblocks:
@@ -750,83 +216,26 @@ lt:
           description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
             šiame Minecraft pasaulyje
           description_short: Tyrinėk Minecraft pasaulį koduodamas.
-          lessons:
-            Hour of Code 2015:
-              name: Programavimo valanda 2015
           student_description: Panaudokite kodo blokelius aprašant Stivo ir Alekso
             nuotykius šiame Minecraft pasaulyje
-        ScienceP3OLPT3:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
         AlgebraA:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          lessons:
-            'Play Lab: Defining Functions':
-              name: 'Žaidimų laboratorija: komandų apibrėžimas'
           student_description: Išmokite programuoti funkcijas panaudojant algebrą
         AlgebraB:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          lessons:
-            'Play Lab: Animation (Big Game)':
-              name: 'Žaidimų laboratorija: animacijos (Didysis žaidimas)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Žaidimų laboratorija: Logika (Big Game)'
-            'Play Lab: Booleans':
-              name: 'Žaidimų laboratorija: loginės reikšmės'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Žaidimų laboratorija: Susidūrimo nustatymas (Big Game)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Žaidimų laboratorija: kintamųjų apibrėžimas (Didysis žaidimas)'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Papildoma pamokėlė: susidūrimo aptikimas ir atstumo formulė'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
           student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algebraPD1:
           description: Algebros mokymas per funkcijų programavimą
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
           student_description: Algebros mokymas per funkcijų programavimą
         algebraPD3c:
           title: Informatika algebroje
-        csp1-2017:
-          lessons:
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-            Number Systems:
-              name: Skaičių sistemos
-            Sending Binary Messages:
-              name: Dvejetainių žinučių siuntimas
-            The Internet:
-              name: Internetas
-        csp3-2017:
-          lessons:
-            Creating Functions:
-              name: Komandų kūrimas
-        csp5-2017:
-          lessons:
-            While Loops:
-              name: "„Kol“ kartojimas"
-        CSDU3-Draft:
-          lessons:
-            Functions:
-              name: Komandų kūrimas
-            Velocity:
-              name: Greitis
         CSF_Secret_Sample:
           description_audience: Amžius 8-18 metų
         algebraFacilitator:
           description: Algebros mokymas per funkcijų programavimą
           description_short: Algebros mokymas per funkcijų programavimą
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
           student_description: Algebros mokymas per funkcijų programavimą
         cspunit1-support:
           lesson_groups:
@@ -836,9 +245,6 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
-          lessons:
-            Sending Binary Messages:
-              name: Dvejetainių žinučių siuntimas
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -847,25 +253,10 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
-        allthehiddenthings:
-          lessons:
-            Game Lab:
-              name: Žaidimų laboratorija
-        CSDU4-Draft:
-          lessons:
-            Design Mode:
-              name: Dizaino režimas
-        CSDU2-Draft:
-          lessons:
-            Peer Review:
-              name: Tarpusavio peržiūra
         CSF_Secret_Sample_Story:
           description_audience: Amžius 8-18 metų+
         MikeTest:
           description_audience: Amžius 8-98 metų
-          lessons:
-            Artist Functions:
-              name: 'Menininkas: komandos'
         artistExemplar:
           description_audience: Amžius 8-18 metų
         teachercon:
@@ -876,79 +267,16 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Bitė: sąlyginiai sakiniai'
         gradeKinder:
           description_audience: Amžius 5-18 metų
-          lessons:
-            Events:
-              name: Įvykiai
-            'Jigsaw: Learn to drag and drop':
-              name: 'Dėlionės: sudėk paveikslėlius'
-            Loops:
-              name: Kartojimas
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
         grade4:
           description_audience: Amžius 9-99
-          lessons:
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            Songwriting:
-              name: Dainų rašymas
         grade1:
           description_audience: Amžius 5-18 metų
-          lessons:
-            Events:
-              name: Įvykiai
-            'Jigsaw: Learn to drag and drop':
-              name: 'Dėlionės: sudėk paveikslėlius'
-            Loops:
-              name: Kartojimas
         grade5:
           description_audience: Amžius 10-110
-          lessons:
-            'Artist: For Loops':
-              name: 'Menininkas: kartojimai'
-            'Artist: Functions with Parameters':
-              name: 'Menininkas: komandos su parametrais'
-            'Artist: Variables':
-              name: 'Menininkas: kintamieji'
-            'Bee: For Loops':
-              name: 'Bitė: kartojimai'
-            'Bee: Functions with Parameters':
-              name: 'Bitė: komandos su parametrais'
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            'Play Lab: Variables':
-              name: 'Žaidimų laboratorija: kintamieji'
-            'Unplugged: Envelope Variables':
-              name: 'Be kompiuterių: Vokų kintamieji'
-            'Unplugged: For Loop Fun':
-              name: 'Be kompiuterio: kartojimai'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Be kompiuterio: dainų rašymas pagal parametrus'
-        ecs-unit1:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-up:
-              name: Apibendrinimas
         grade3:
           description_audience: Amžius 5-18 metų
-          lessons:
-            " Bee: Conditionals":
-              name: " Bitė: sąlyginiai sakiniai"
-            'Artist: Nested Loops':
-              name: 'Menininkas: kartojimas kartojime'
-            Bee Debugging:
-              name: 'Bitė: klaidų ieškojimas'
-            Bounce:
-              name: Bounce
-            'Farmer: While Loops':
-              name: 'Ūkininkas: kartojimas'
         alltheplcthings:
           lesson_groups:
             required:
@@ -957,73 +285,10 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
-          lessons:
-            Lesson 1,10:
-              name: 1,10 pamoka
-            Lesson 1,11:
-              name: 1,11 pamoka
-            Lesson 1,4:
-              name: 1,4 pamoka
-            Lesson 1,6:
-              name: 1,6 pamoka
-            Lesson 1,9:
-              name: 1,9 pamoka
-            Lesson 2,10:
-              name: 2,10 pamoka
-            Lesson 2,2:
-              name: 2,2 pamoka
-            Lesson 2,3:
-              name: 2,3 pamoka
-        csd3-2017:
-          lessons:
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
         grade2:
           description_audience: Amžius 5-18 metų
-          lessons:
-            Flappy:
-              name: Flappy
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-            The Big Event:
-              name: Didelis įvykis
-        k5concepts:
-          lessons:
-            Binary:
-              name: Dvejetainis
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Events:
-              name: Įvykiai
-            For Loops:
-              name: Kartojimas
-            Functions:
-              name: Komandų kūrimas
-            Functions with Parameters:
-              name: Komandos su parametrais
-            Loops:
-              name: Kartojimas
-            Nested Loops:
-              name: Kartojimas kartojime
-            Variables:
-              name: Kintamieji
-            While Loops:
-              name: "„Kol“ kartojimas"
         algebrapdnext:
           description: Algebros mokymas per funkcijų programavimą
-          lessons:
-            Teacher Dashboard:
-              name: Mokytojo prietaisų skydelis
-            Welcome!:
-              name: Sveiki atvykę!
           student_description: Algebros mokymas per funkcijų programavimą
         csp-online-test:
           lesson_groups:
@@ -1047,14 +312,6 @@ lt:
           description: Sukurk kreipšinio žaidimą
           student_description: Sukurk kreipšinio žaidimą
           name: krepšinio kamuolys
-        csd2-2017:
-          lessons:
-            new stage:
-              name: naujas lygis
-            Peer Review:
-              name: Tarpusavio peržiūra
-            Lists:
-              name: Sąrašai
         csp2-support:
           lesson_groups:
             required:
@@ -1069,108 +326,25 @@ lt:
             Minecraft versijoje.
           description: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje
             Minecraft versijoje.
-          lessons:
-            Minecraft Hour of Code Designer:
-              name: Minecraft „Programavimo valandos“ projektavimo aplinka
           student_description: Programuok gyvūnus ir kitus Minecraft kūrinius savo
             asmeninėje Minecraft versijoje.
-        flappy-impact-study:
-          lessons:
-            Flappy Code:
-              name: Flappy Kodas
-        coursea-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Going Places Safely:
-              name: Saugus naršymas internete
-        courseb-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
-        coursec-draft:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
-            Building a Foundation:
-              name: Laiptuota piramidė
-        coursed-draft:
-          lessons:
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            'Unplugged: Binary':
-              name: 'Be kompiuterio: dvejetainiai skaičiai'
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
-            Nested Loops:
-              name: Kartojimas kartojime
-            Introduction:
-              name: Įvadas
         coursee-draft:
           lesson_groups:
             content:
               display_name: Turinys
-          lessons:
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Introduction:
-              name: Įvadas
-            Conditionals:
-              name: Sąlyginiai sakiniai
         coursef-draft:
           lesson_groups:
             content:
               display_name: Turinys
-          lessons:
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            Songwriting with Parameters:
-              name: Dainų rašymas su parametrais
-            Introduction:
-              name: Įvadas
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
         classic-hoc-impact-study:
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
-          lessons:
-            Hour of Code 2013:
-              name: Programavimo valanda 2013
         hoc-impact-study:
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
-          lessons:
-            Hour of Code 2013:
-              name: Programavimo valanda 2013
         sports:
           title: Sportas
           description_short: Sukurk savo sportą
           description: Sukurk savo sportą
           student_description: Sukurk savo sportą
-        2016_sciencePD-phase2b:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
-        2016_sciencePD_phase2b:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
         csp3-support:
           lesson_groups:
             required:
@@ -1179,10 +353,6 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
-        csdgraveyard:
-          lessons:
-            new stage:
-              name: naujas lygis
         csp4-support:
           lesson_groups:
             required:
@@ -1191,31 +361,10 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
-        sciencepd4:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
-        science-pd-ol-pt-5:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
         csf2harvey:
           lesson_groups:
             content:
               display_name: Turinys
-          lessons:
-            Binary:
-              name: Dvejetainis
-        sciencepd5:
-          lessons:
-            Welcome!:
-              name: Sveiki atvykę!
-            Wrap-Up:
-              name: Apibendrinimas
         csp5-support:
           lesson_groups:
             required:
@@ -1228,132 +377,6 @@ lt:
           lesson_groups:
             content:
               display_name: Turinys
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Sąrašai
-            For Loops:
-              name: Kartojimas
-            Functions with Parameters:
-              name: Komandos su parametrais
-        workshop-gamelab:
-          lessons:
-            Introduction:
-              name: Įvadas
-        csd5-draft:
-          lessons:
-            new stage:
-              name: naujas lygis
-        applab-2hour:
-          lessons:
-            new stage:
-              name: naujas lygis
-        coursed-ramp:
-          lessons:
-            Introduction:
-              name: Įvadas
-        coursee-ramp:
-          lessons:
-            Introduction:
-              name: Įvadas
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            'Real Life Algorithms: Dice Race':
-              name: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Sąrašai
-            For Loops:
-              name: Kartojimas
-            Functions with Parameters:
-              name: Komandos su parametrais
-            Functions with Parameters_:
-              name: Komandos su parametrais
-        csd3-draft:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        csd3-old:
-          lessons:
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Sąrašai
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-            'null':
-              name: nieko
-        coursef-ramp:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
-            Introduction:
-              name: Įvadas
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-        csd2-old:
-          lessons:
-            Peer Review:
-              name: Tarpusavio peržiūra
-        artist-and-bb8:
-          lessons:
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-            Bounce:
-              name: Bounce
-        coursea-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        courseb-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        coursec-2017:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        coursed-2017:
-          lessons:
-            Nested Loops:
-              name: Kartojimas kartojime
-        coursee-2017:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-            Songwriting with Parameters:
-              name: Dainų rašymas su parametrais
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-        coursef-2017:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
-            Building a Foundation:
-              name: Laiptuota piramidė
         cspnovice:
           lesson_groups:
             required:
@@ -1430,318 +453,10 @@ lt:
           lesson_groups:
             content:
               display_name: Turinys
-          lessons:
-            Introduction:
-              name: Įvadas
-            Internet:
-              name: Internetas
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Songwriting with Parameters:
-              name: Dainų rašymas su parametrais
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-        pre-express-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Spelling Bee:
-              name: Rašanti bitė
-        subgoal-labels-opt-in:
-          lessons:
-            Thanks:
-              name: Ačiū
-        csp-pre-survey-test-2017:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp3-research-mxghyt:
-          lessons:
-            new stage:
-              name: naujas lygis
-            Creating Functions:
-              name: Komandų kūrimas
-        e-f-ramp:
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-        new-d:
-          lessons:
-            Introduction:
-              name: Įvadas
-            Nested Loops:
-              name: Kartojimas kartojime
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            'Unplugged: Binary':
-              name: 'Be kompiuterio: dvejetainiai skaičiai'
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
-            Building a Foundation:
-              name: Laiptuota piramidė
-        csp3-a:
-          lessons:
-            new stage:
-              name: naujas lygis
         new-express:
           lesson_groups:
             content:
               display_name: Turinys
-          lessons:
-            Introduction:
-              name: Įvadas
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-        new-e:
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-        new-f:
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-            Songwriting with Parameters:
-              name: Dainų rašymas su parametrais
-        hocali:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp3-staging:
-          lessons:
-            Creating Functions:
-              name: Komandų kūrimas
-        pwc:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp-explore-2017:
-          lessons:
-            new stage:
-              name: naujas lygis
-        aws-demo:
-          lessons:
-            new stage:
-              name: naujas lygis
-        colehoc17:
-          lessons:
-            new stage:
-              name: naujas lygis
-        course-e-2018:
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-            Introduction:
-              name: Įvadas
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-        course-f-2018:
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
-            Introduction:
-              name: Įvadas
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-            Songwriting with Parameters:
-              name: Dainų rašymas su parametrais
-        csd6-old:
-          lessons:
-            Lists:
-              name: Sąrašai
-            For Loops:
-              name: Kartojimas
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        textbook:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csd3-2018:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        csd2-2018:
-          lessons:
-            Lists:
-              name: Sąrašai
-        coursea-2018:
-          lessons:
-            'Programming: Happy Maps':
-              name: Laimingieji žemėlapiai
-            Going Places Safely:
-              name: Saugus naršymas internete
-        express-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Programavimas ant languoto popieriaus
-            Introduction:
-              name: Įvadas
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-            'Events: The Big Event':
-              name: Didelis įvykis
-            'Loops: Getting Loopy':
-              name: Kartojimo supratimas
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            'Functions: Songwriting':
-              name: Dainų rašymas
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            'Unplugged: Binary':
-              name: Dvejetainiai vaizdai
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Relay Programming:
-              name: Programavimas komandoje
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
-        courseb-2018:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
-            Move It, Move It:
-              name: Judėk, judėk
-        coursed-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Programavimas ant languoto popieriaus
-            Introduction:
-              name: Įvadas
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            'Unplugged: Binary':
-              name: Dvejetainiai vaizdai
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
-            Relay Programming:
-              name: Programavimas komandoje
-        coursec-2018:
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            'Loops: Getting Loopy':
-              name: Kartojimo supratimas
-            'Events: The Big Event':
-              name: Didelis įvykis
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-        csd6-2018:
-          lessons:
-            Functions with Parameters_:
-              name: Komandos su parametrais\_
-            Functions with Parameters:
-              name: Komandos su parametrais
-        coursee-2018:
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Mano draugai robotai
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Introduction:
-              name: Įvadas
-            'Functions: Songwriting':
-              name: Dainų rašymas
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Minecraft Hour of Code:
-              name: Minecraft programavimo valanda
-        coursef-2018:
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Mano draugai robotai
-            Building a Foundation:
-              name: Laiptuota piramidė
-            'Algorithms: Tangrams':
-              name: 'Algoritmai: tanagramos'
-            Introduction:
-              name: Įvadas
-            Ice Age Play Lab:
-              name: Ledynmečio laboratorija
-            Songwriting with Parameters:
-              name: Dainų rašymas su parametrais
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-        csp1-2018:
-          lessons:
-            Sending Binary Messages:
-              name: Dvejetainių žinučių siuntimas
-            Number Systems:
-              name: Skaičių sistemos
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-            The Internet:
-              name: Internetas
-        csp3-2018:
-          lessons:
-            Creating Functions:
-              name: Komandų kūrimas
-        csp5-2018:
-          lessons:
-            While Loops:
-              name: "„Kol“ kartojimas"
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1844,43 +559,15 @@ lt:
               display_name: Peržiūra
             content:
               display_name: Turinys
-        pre-express-2018:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-            Spelling Bee:
-              name: Rašanti bitė
-            Move It, Move It:
-              name: Judėk, judėk
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
         fit-test:
           lesson_groups:
             required:
               display_name: Peržiūra
             content:
               display_name: Turinys
-        frozen-2018:
-          lessons:
-            Artist:
-              name: Menininkas
-        frozen-2018-test:
-          lessons:
-            Artist:
-              name: Menininkas
-        dance:
-          lessons:
-            new stage:
-              name: naujas lygis
-        frozen-2018-test-b:
-          lessons:
-            Artist:
-              name: Menininkas
         aquatic:
           title: 'Minecraft: Kelionės vandeniu'
-          lessons:
-            Aquatic:
-              name: 'Minecraft: Kelionės vandeniu'
+          name: vandens
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1899,17 +586,6 @@ lt:
               display_name: Internetas
             csf_digcit:
               display_name: Virtuali pilietybė
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            The Artist:
-              name: Menininkas
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -1922,17 +598,6 @@ lt:
               display_name: Dvejetainis
             csf_digcit:
               display_name: Virtuali pilietybė
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Programavimas ant languoto popieriaus
-            Relay Programming:
-              name: Programavimas komandoje
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Digital Citizenship:
-              name: Virtuali pilietybė
-            'Unplugged: Binary':
-              name: Dvejetainiai vaizdai
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1941,21 +606,6 @@ lt:
               display_name: Kartojimas kartojime
             csf_functions:
               display_name: Komandų kūrimas
-          lessons:
-            Building a Foundation:
-              name: Laiptuota piramidė
-            Nested Loops:
-              name: Kartojimas kartojime
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            'Functions: Songwriting':
-              name: Dainų rašymas
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Songwriting:
-              name: Dainų rašymas
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1968,32 +618,12 @@ lt:
               display_name: Kintamieji
             csf_for_loops:
               display_name: Kartojimas
-          lessons:
-            Relay Programming:
-              name: Programavimas komandoje
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            'Unplugged: Binary':
-              name: 'Be kompiuterio: dvejetainiai skaičiai'
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
         andrea-test:
           lesson_groups:
             required:
               display_name: Peržiūra
             content:
               display_name: Turinys
-          lessons:
-            new stage:
-              name: naujas lygis
-            'null':
-              name: nieko
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2004,13 +634,6 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-            'Events: The Big Event':
-              name: Didelis įvykis
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
         gamelab:
           title: Žaidimų laboratorija
         coursea-2019:
@@ -2021,11 +644,6 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            'Programming: Happy Maps':
-              name: Laimingieji žemėlapiai
-            Going Places Safely:
-              name: Saugus naršymas internete
         courseb-2019:
           lesson_groups:
             csf_digcit:
@@ -2034,52 +652,12 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            Move It, Move It:
-              name: Judėk, judėk
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
-            'Loops: Getting Loopy':
-              name: Kartojimo supratimas
         pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            Move It, Move It:
-              name: Judėk, judėk
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
-            Spelling Bee:
-              name: Rašanti bitė
-        removed19:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        dani-test-script:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csd2-2019:
-          lessons:
-            Lists:
-              name: Sąrašai
-        csd3-2019:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        csd6-2019:
-          lessons:
-            Functions with Parameters:
-              name: Komandos su parametrais
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -2090,49 +668,10 @@ lt:
               display_name: Komandų kūrimas
             required:
               display_name: Peržiūra
-        csp1-2019:
-          lessons:
-            Sending Binary Messages:
-              name: Dvejetainių žinučių siuntimas
-            Number Systems:
-              name: Skaičių sistemos
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-            The Internet:
-              name: Internetas
-        csp3-2019:
-          lessons:
-            Creating Functions:
-              name: Komandų kūrimas
-        csp5-2019:
-          lessons:
-            While Loops:
-              name: "„Kol“ kartojimas"
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Peržiūra
-          lessons:
-            new stage:
-              name: naujas lygis
-            Number Systems:
-              name: Skaičių sistemos
-            Sending Binary Messages:
-              name: Dvejetainių žinučių siuntimas
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-        csd-videos:
-          lessons:
-            new stage:
-              name: naujas lygis
-        time4csdemo:
-          lessons:
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            Building a Foundation:
-              name: Laiptuota piramidė
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2171,10 +710,6 @@ lt:
               display_name: Sąlyginiai sakiniai
             csp_functions:
               display_name: Komandų kūrimas
-        csp7-pilot-staging:
-          lessons:
-            new stage:
-              name: naujas lygis
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2199,10 +734,6 @@ lt:
               display_name: Sąlyginiai sakiniai
             csp_functions:
               display_name: Komandų kūrimas
-        express-2018-vn:
-          lessons:
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -2211,9 +742,6 @@ lt:
               display_name: Kartojimas
             required:
               display_name: Peržiūra
-          lessons:
-            new stage:
-              name: naujas lygis
         fit2019-novice:
           lesson_groups:
             required:
@@ -2226,26 +754,6 @@ lt:
               display_name: Peržiūra
             content:
               display_name: Turinys
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: Sąrašai
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        maddie-test:
-          lessons:
-            stage 1:
-              name: 1 etapas
-            new stage:
-              name: naujas lygis
         csp3-pilot:
           lesson_groups:
             content:
@@ -2282,9 +790,6 @@ lt:
               display_name: Peržiūra
             content:
               display_name: Turinys
-          lessons:
-            new stage:
-              name: naujas lygis
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
@@ -2327,17 +832,6 @@ lt:
               display_name: Turinys
             required:
               display_name: Peržiūra
-          lessons:
-            new stage:
-              name: naujas lygis
-        peru-2019:
-          lessons:
-            new stage:
-              name: naujas lygis
-            Introduction:
-              name: Įvadas
-            Nested Loops:
-              name: Kartojimas kartojime
         csp6-pilot:
           lesson_groups:
             content:
@@ -2348,25 +842,6 @@ lt:
           lesson_groups:
             k5_next_steps:
               display_name: Kiti žingsniai
-          lessons:
-            Next Steps:
-              name: Kiti žingsniai
-            Loops:
-              name: Kartojimas
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Events:
-              name: Įvykiai
-            Functions:
-              name: Komandų kūrimas
-            Variables:
-              name: Kintamieji
-            For Loops:
-              name: Kartojimas
-        csp10-pilot:
-          lessons:
-            new stage:
-              name: naujas lygis
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2375,13 +850,6 @@ lt:
               display_name: Sąlyginiai sakiniai
             csp_functions:
               display_name: Komandų kūrimas
-          lessons:
-            new stage:
-              name: naujas lygis
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: Sąlyginiai sakiniai
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2392,11 +860,6 @@ lt:
               display_name: Kartojimas kartojime
             csf_functions:
               display_name: Komandų kūrimas
-          lessons:
-            Crowdsourcing:
-              name: Komandinis programavimas
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -2407,9 +870,6 @@ lt:
               display_name: Įvykiai
             csf_digcit:
               display_name: Virtuali pilietybė
-          lessons:
-            Conditionals:
-              name: Sąlyginiai sakiniai
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2420,17 +880,10 @@ lt:
               display_name: Įvykiai
             csf_digcit:
               display_name: Virtuali pilietybė
-          lessons:
-            Conditionals:
-              name: Sąlyginiai sakiniai
         csp7-pilot:
           lesson_groups:
             required:
               display_name: Peržiūra
-        csp8-pilot:
-          lessons:
-            new stage:
-              name: naujas lygis
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -2445,26 +898,6 @@ lt:
               display_name: Sąrašai
             csp_loops:
               display_name: Kartojimas
-        csp9-pilot:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csd6-2020:
-          lessons:
-            Functions with Parameters:
-              name: Komandos su parametrais
-        csd3-2020:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-            Text:
-              name: Tekstas
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -2473,11 +906,6 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            Going Places Safely:
-              name: Saugus naršymas internete
-            'Programming: Happy Maps':
-              name: Laimingieji žemėlapiai
         courseb-2020:
           lesson_groups:
             csf_digcit:
@@ -2486,13 +914,6 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            Your Digital Footprint:
-              name: Virtualūs pirštų antspaudai
-            Move It, Move It:
-              name: Judėk, judėk
-            'Loops: Getting Loopy':
-              name: Kartojimo supratimas
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -2503,11 +924,6 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-            'Events: The Big Event':
-              name: Didelis įvykis
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -2520,17 +936,6 @@ lt:
               display_name: Dvejetainis
             csf_digcit:
               display_name: Virtuali pilietybė
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Programavimas ant languoto popieriaus
-            Relay Programming:
-              name: Programavimas komandoje
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-            'Unplugged: Binary':
-              name: Dvejetainiai vaizdai
-            Digital Citizenship:
-              name: Virtuali pilietybė
         coursee-2020:
           lesson_groups:
             csf_digcit:
@@ -2539,9 +944,6 @@ lt:
               display_name: Kartojimas kartojime
             csf_functions:
               display_name: Komandų kūrimas
-          lessons:
-            'Functions: Songwriting':
-              name: Dainų rašymas
         coursef-2020:
           lesson_groups:
             csf_digcit:
@@ -2550,11 +952,6 @@ lt:
               display_name: Kintamieji
             csf_for_loops:
               display_name: Kartojimas
-          lessons:
-            Internet:
-              name: Internetas
-            Crowdsourcing:
-              name: Komandinis programavimas
         express-2020:
           lesson_groups:
             csf_loops:
@@ -2573,115 +970,15 @@ lt:
               display_name: Kartojimas
             csf_events:
               display_name: Įvykiai
-          lessons:
-            Spelling Bee:
-              name: Rašanti bitė
-        csp1-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-        csp2-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp3-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp6-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp8-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp9-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp10-2020:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp-march-virtual:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp3-virtual:
-          lessons:
-            Creating Functions:
-              name: Komandų kūrimas
-        jess-test-script:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp5-virtual:
-          lessons:
-            While Loops:
-              name: "„Kol“ kartojimas"
-            Variables:
-              name: Kintamieji
         virtual-holding-place:
           lesson_groups:
             content:
               display_name: Turinys
-          lessons:
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
-        code-break:
-          lessons:
-            new stage:
-              name: naujas lygis
-            Algorithms:
-              name: Algoritmai
-            Events:
-              name: Įvykiai
-        no-lg:
-          lessons:
-            new stage:
-              name: naujas lygis
-        csp5-virtual-part2:
-          lessons:
-            While Loops:
-              name: "„Kol“ kartojimas"
         k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: Kartojimas
-            Events:
-              name: Įvykiai
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Functions:
-              name: Komandų kūrimas
-            Variables:
-              name: Kintamieji
-            For Loops:
-              name: Kartojimas
           lesson_groups:
             k5_next_steps_1:
               display_name: Kiti žingsniai
-        dani-june-2020-test:
-          lessons:
-            lesson 2:
-              name: 2 pamoka
         csd3-virtual:
-          lessons:
-            Variables:
-              name: Kintamieji
-            Text:
-              name: Tekstas
-            Conditionals:
-              name: Sąlyginiai sakiniai
-            Velocity:
-              name: Greitis
-            Functions:
-              name: Komandų kūrimas
           lesson_groups:
             csd3_1:
               display_name: Turinys
@@ -2711,33 +1008,6 @@ lt:
               display_name: Įvadas
             lessonGroup-3:
               display_name: Kintamieji
-        csd3-2021:
-          lessons:
-            Variables:
-              key: Kintamieji
-              name: Kintamieji
-            Text:
-              key: Tekstas
-              name: Tekstas
-            Conditionals:
-              key: Sąlyginiai sakiniai
-              name: Sąlyginiai sakiniai
-            Velocity:
-              key: Greitis
-              name: Greitis
-            Functions:
-              key: Komandų kūrimas
-              name: Komandų kūrimas
-        csd6-2021:
-          lessons:
-            Functions with Parameters:
-              key: Komandos su parametrais
-              name: Komandos su parametrais
-        csp1-2021:
-          lessons:
-            Binary Numbers:
-              key: Dvejetainiai skaičiai
-              name: Dvejetainiai skaičiai
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2757,9 +1027,6 @@ lt:
             csp_unit6_2020:
               display_name: Algoritmai
         coursea-2021:
-          lessons:
-            'Programming: Happy Maps':
-              name: Laimingieji žemėlapiai
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -2768,12 +1035,6 @@ lt:
             csf_events:
               display_name: Įvykiai
         courseb-2021:
-          lessons:
-            Move It, Move It:
-              key: Judėk, judėk
-              name: Judėk, judėk
-            'Loops: Getting Loopy':
-              name: Kartojimo supratimas
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -2782,12 +1043,6 @@ lt:
             csf_events:
               display_name: Įvykiai
         coursec-2021:
-          lessons:
-            Binary Bracelets:
-              key: Dvejetainės apyrankės
-              name: Dvejetainės apyrankės
-            'Events: The Big Event':
-              name: Didelis įvykis
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -2798,20 +1053,6 @@ lt:
             csf_events:
               display_name: Įvykiai
         coursed-2021:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Programavimas ant languoto popieriaus
-            Relay Programming:
-              key: Programavimas komandoje
-              name: Programavimas komandoje
-            Conditionals with Cards:
-              key: Sąlyginiai sakiniai su kortomis
-              name: Sąlyginiai sakiniai su kortomis
-            'Unplugged: Binary':
-              key: 'Be kompiuterio: dvejetainiai skaičiai'
-              name: Dvejetainiai vaizdai
-            Artist Binary:
-              key: 'Meninkas: dvejetainis'
           lesson_groups:
             csf_events:
               display_name: Įvykiai
@@ -2826,11 +1067,6 @@ lt:
             lessonGroup-6:
               display_name: Virtuali pilietybė
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: Sąlyginiai sakiniai
-            'Functions: Songwriting':
-              name: Dainų rašymas
           lesson_groups:
             ramp_up:
               display_name: Kartojimas kartojime
@@ -2841,10 +1077,6 @@ lt:
             csf_functions:
               display_name: Komandų kūrimas
         coursef-2021:
-          lessons:
-            Internet:
-              key: Internetas
-              name: Internetas
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -2886,10 +1118,6 @@ lt:
               display_name: Kintamieji
             variables:
               display_name: Kintamieji
-        ai-unit-pilot:
-          lessons:
-            intro:
-              name: 1 pamoka
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -2923,25 +1151,6 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         k5-onlinepd-2021:
-          lessons:
-            Loops:
-              key: Kartojimas
-              name: Kartojimas
-            Events:
-              key: Įvykiai
-              name: Įvykiai
-            Conditionals:
-              key: Sąlyginiai sakiniai
-              name: Sąlyginiai sakiniai
-            Functions:
-              key: Komandų kūrimas
-              name: Komandų kūrimas
-            Variables:
-              key: Kintamieji
-              name: Kintamieji
-            For Loops:
-              key: Kartojimas
-              name: Kartojimas
           lesson_groups:
             k5_getting_started_1:
               display_name: Įvadas
@@ -2959,11 +1168,6 @@ lt:
               display_name: 4 pamoka
             Lesson 5:
               display_name: 5 pamoka
-        kodea-pd-2021:
-          lessons:
-            Next Steps:
-              key: Kiti žingsniai
-              name: Kiti žingsniai
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2988,10 +1192,6 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
-        tesspltest:
-          lessons:
-            lesson-2:
-              name: 2 pamoka
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -3002,14 +1202,6 @@ lt:
           lesson_groups:
             lessonGroup-2:
               description: sąlyga
-        dlp21-csd-overview:
-          lessons:
-            lesson-1:
-              name: Peržiūra
-        dlp21-csp-overview:
-          lessons:
-            lesson-1:
-              name: Peržiūra
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -3041,9 +1233,6 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         spelling-bee:
-          lessons:
-            lesson-1:
-              name: Rašanti bitė
           title: Rašanti bitė
         csa5-exemplars:
           lesson_groups:
@@ -3053,10 +1242,8 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Rašanti bitė
+        ai-ethics-2021:
+          description_audience: 6-12 Klasės
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3073,10 +1260,6 @@ lt:
           lesson_groups:
             lessonGroup-3:
               display_name: Kintamieji
-        csd6-pilot-2022:
-          lessons:
-            Functions with Parameters:
-              name: Komandų kūrimas
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3090,11 +1273,6 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         coursea-2022:
-          lessons:
-            Happy Maps:
-              name: Laimingieji žemėlapiai
-            'Programming: Happy Maps':
-              name: Laimingieji žemėlapiai
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -3116,11 +1294,6 @@ lt:
               display_name: Kintamieji
             csf_for_loops:
               display_name: Kartojimas
-        csp1-2022:
-          lessons:
-            Binary Numbers:
-              name: Dvejetainiai skaičiai
-              key: Dvejetainiai skaičiai
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3136,14 +1309,6 @@ lt:
             csp_loops:
               display_name: Kartojimas
         courseb-2022:
-          lessons:
-            Move It, Move It:
-              name: Judėk, judėk
-              key: Judėk, judėk
-            Getting Loopy:
-              name: Kartojimo supratimas
-            'Loops: Getting Loopy':
-              name: Kartojimo supratimas
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -3152,14 +1317,6 @@ lt:
             csf_events:
               display_name: Įvykiai
         coursec-2022:
-          lessons:
-            The Big Event:
-              name: Didelis įvykis
-            Binary Bracelets:
-              name: Dvejetainės apyrankės
-              key: Dvejetainės apyrankės
-            'Events: The Big Event':
-              name: Didelis įvykis
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -3168,17 +1325,6 @@ lt:
             csf_events:
               display_name: Įvykiai
         coursed-2022:
-          lessons:
-            Graph Paper Programming:
-              name: Programavimas ant languoto popieriaus
-            Relay Programming:
-              name: Programavimas komandoje
-              key: Programavimas komandoje
-            Conditionals with Cards:
-              name: Sąlyginiai sakiniai su kortomis
-              key: Sąlyginiai sakiniai su kortomis
-            'Algorithms: Graph Paper Programming':
-              name: Programavimas ant languoto popieriaus
           lesson_groups:
             lessonGroup-6:
               display_name: Virtuali pilietybė
@@ -3189,13 +1335,6 @@ lt:
             csf_conditionals:
               display_name: Sąlyginiai sakiniai
         coursee-2022:
-          lessons:
-            Songwriting:
-              name: Dainų rašymas
-            'Functions: Songwriting':
-              name: Dainų rašymas
-            Conditionals:
-              key: Sąlyginiai sakiniai
           lesson_groups:
             csf_digcit:
               display_name: Virtuali pilietybė
@@ -3206,21 +1345,12 @@ lt:
             csf_nested_loops:
               display_name: Sąlyginiai sakiniai
         coursef-2022:
-          lessons:
-            The Internet:
-              name: Internetas
-            Internet:
-              key: Internetas
-              name: Internetas
           lesson_groups:
             lessonGroup-7:
               display_name: Virtuali pilietybė
             lessonGroup-8:
               display_name: Kintamieji
         csa1-2022:
-          lessons:
-            lesson-9:
-              name: Kartojimas
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -3231,23 +1361,13 @@ lt:
             csf_events:
               display_name: Įvykiai
         csa2-2022:
-          lessons:
-            lesson-6:
-              name: Kintamieji
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
         csa3-2022:
-          lessons:
-            lesson-5:
-              name: Kartojimas
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: Sąlyginiai sakiniai
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3257,9 +1377,6 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: Kartojimas
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -3272,10 +1389,6 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         coursef-2022-pilot:
-          lessons:
-            The Internet:
-              name: Internetas
-              key: Internetas
           lesson_groups:
             lessonGroup-7:
               display_name: Virtuali pilietybė
@@ -3294,29 +1407,83 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        soccer:
+          name: futbolas
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa1-2023:
           lessons:
-            lesson-1:
+            lesson-6:
+              name: Kartojimas
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Turinys
+        csa2-2023:
+          lessons:
+            lesson-4:
               name: Kintamieji
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
-        k5-onlinepd-2022:
+        csa3-2023:
           lessons:
-            Loops:
+            lesson-3:
               name: Kartojimas
-              key: Kartojimas
-            Events:
-              name: Įvykiai
-              key: Įvykiai
-            Conditionals:
-              name: Sąlyginiai sakiniai
-              key: Sąlyginiai sakiniai
-            Functions:
-              name: Komandų kūrimas
-              key: Komandų kūrimas
-            Variables:
-              name: Kintamieji
-              key: Kintamieji
-            For Loops:
-              name: Kartojimas
-              key: Kartojimas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Kintamieji
+            csp_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csp_functions:
+              display_name: Komandų kūrimas
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Kartojimas
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Sąrašai
+            lessonGroup-3:
+              display_name: Kartojimas

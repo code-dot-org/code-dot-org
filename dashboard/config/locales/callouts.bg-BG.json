@@ -249,13 +249,16 @@
           "craft_callout_preplaced_house": "Този код ще започне изграждането на вашия дом. Можете ли да го завършите?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма"
+          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма"
+          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма"
+          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Повторете действията като поставите блокове тук вътре"
@@ -367,7 +370,8 @@
           "snowflake_dropdown": "Използвайте това падащо меню, за да създадете различни снежинки!"
         },
         "frozen line": {
-          "move_elsa_forward": "Плъзнете  блок за преместване и го поставете под блока \"При стартиране\", за  да накарате Елза да се движи напред"
+          "move_elsa_forward": "Плъзнете  блок за преместване и го поставете под блока \"При стартиране\", за  да накарате Елза да се движи напред",
+          "run": "Натиснете \"Старт\", за да пробвате вашата програма!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Използвайте \"завърта\" блок, за да се завърти Елза. Числото в падащото меню определя колко Елза ще се завърти"
@@ -421,7 +425,8 @@
           "craft_callout_preplaced_house": "Този код ще започне изграждането на вашия дом. Можете ли да го завършите?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма"
+          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Повторете действията като поставите блокове тук вътре"
@@ -518,6 +523,356 @@
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Промене номера тук"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Нов блок!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Нов блок!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Добавете вашия нов танцьор тук"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Нов блок!",
+          "dance_callout_11_b": "Нов блок!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Потърсете тук за всички блокчета от вида \"всички патета\""
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Нов блок!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Добавете това блокче към програмата си!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Добавете това блокче към програмата си!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Добавете вашия нов танцьор тук"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Нов блок!",
+          "dance_callout_11_b": "Нов блок!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Потърсете тук за всички блокчета от вида \"всички патета\""
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Натисни \"Старт\", за да запазим и пробваш твоята програма",
+          "New Artist Project_callout1": "Кликни на категориите, за да видиш блоковете в кутията за инструменти! Плъзни блоковете в работното пространство, за да ги добавиш към твоята програма",
+          "sign_in_to_save_project": "Искаш да достъпиш твой проект по-късно? Влез, за да запазиш този проект към твоя акоунт!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Натисни \"Старт\", за да запазим и пробваш твоята програма",
+          "New Play Lab Project_callout1": "Кликни на категориите, за да видиш блоковете в кутията за инструменти! Плъзни блоковете в работното пространство, за да ги добавиш към твоята програма",
+          "sign_in_to_save_project": "Искаш да достъпиш твой проект по-късно? Влез, за да запазиш този проект към твоя акоунт!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Нов блок!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Нов блок!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Нов блок!",
+          "poetry_foreground": "Нов блок!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Нов блок!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Нов блок!",
+          "poetry_music": "Нов блок!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Нов блок!",
+          "poetry_sprite_stops": "Нов блок!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Нов блок!",
+          "poetry_remove_sprite": "Нов блок!"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Когато си готов, натисни \"Старт\", за да тестваш програмата си."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Натисни \"Старт\", за да почнеш да се движиш."
+        },
+        "New Sprite Lab Project": {
+          "make_sprite": "Използвай блокчетата, за да направите спрайт!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Натиснете Старт бутона първо!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "run_button": "Тествайте анимацията си с този бутон. "
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Щракни тук, за да се покаже мрежата."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Промене номера тук"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Тук е кодът",
+          "CSD_U3_rect_c2": "Плъзни този блок в областта за програмиране."
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Промене номера тук"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Нов блок!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Тази малка инструкция казва на компютъра да изпълни ГОЛЯМА част от кода със същото име в работното пространство."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Това е цикъл „повтари“! Щракнете върху него в работното пространство и добавете код, който желаете да се изпълнява отново и отново."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agent може да се носи над водата, но героят не може!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Не можете да изхвърлите тези блокове, но можете да ги редактирате!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agent може да се носи над лавата, но героят не може!  "
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Ние сме поставили някои блокове тук, за да започнете"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Този код ще започне изграждането на вашия дом. Можете ли да го завършите?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Повторете действията като поставите блокове тук вътре"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Този код ще провери за лава, можете ли да добавите команда да вървим напред?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Изкопай това желязо!"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената."
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Това число ви казва колко от тези блокове можете да използвате в този пъзел."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Натиснете крушката, ако ви трябва съвет!"
+        },
+        "Luigi's Pizza 1": {
+          "luigi's pizza 1": "Опитайте да поръчате пица с пеперони"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Това число означава, че само един вид от тези блокове може да бъде използван във финалния отговор."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Това е кутията с инструменти. Тя е откъдето ще намерите допълнителни блокове, за да завършите пъзелите си."
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Раздел костюми"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Раздел костюми"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Натиснете синия бутон, за да отворите или затворите."
         }
       }
     }

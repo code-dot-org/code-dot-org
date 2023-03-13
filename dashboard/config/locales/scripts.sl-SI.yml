@@ -2,10 +2,6 @@
 sl:
   data:
     script:
-      category:
-        hoc_category_name: Ura kode
-        math_category_name: Matematika
-        other_category_name: Drugi
       name:
         course1:
           title: Tečaj 1
@@ -17,41 +13,6 @@ sl:
             prvega razreda osnovne šole.
           description_short: Začnite pri Tečaju 1, če se otrok še uči brati.
           description_audience: Starost 4-6
-          lessons:
-            'Artist: Loops':
-              name: 'Umetnik: Zanke'
-            'Artist: Sequence':
-              name: 'Umetnik: Zaporedje'
-            'Artist: Shapes':
-              name: 'Umetnik: Oblike'
-            'Bee: Loops':
-              name: 'Čebelica: Zanke'
-            'Bee: Sequence':
-              name: 'Čebelica: Zaporedje'
-            Building a Foundation:
-              name: Graditi temelje
-            Going Places Safely:
-              name: Kako varno potovati
-            Happy Maps:
-              name: Veseli zemljevidi
-            'Jigsaw: Learn to drag and drop':
-              name: 'Sestavljanka: Naučiti se programirati na način "povleci in spusti"'
-            'Maze: Debugging':
-              name: 'Labirint: odpravljanje napak'
-            'Maze: Loops':
-              name: 'Labirint: Zanke'
-            'Maze: Sequence':
-              name: 'Labirint: zaporedje'
-            Move it, Move it:
-              name: Dajmo, dajmo
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-            Spelling Bee:
-              name: Čebelica črkuje besede
-            'Studio: Create a Story':
-              name: 'Play Lab: ustvari zgodbo'
-            The Big Event:
-              name: Veliki dogodek
           student_description: Začnite s Tečajom 1 za otroke, ki se še učijo brati.
             Učenci bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati
             z drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti
@@ -67,39 +28,6 @@ sl:
             2. do 5. razreda osnovne šole.
           description_short: Z učenci, ki že znajo brati, začnite pri 2. tečaju.
           description_audience: Starost 6+ (potrebno je znanje branja)
-          lessons:
-            'Artist: Debugging':
-              name: 'Umetnik: Razhroščevanje'
-            'Artist: Loops':
-              name: 'Umetnik: Zanke'
-            'Artist: Nested Loops':
-              name: 'Umetnik: Ugnezdene zanke'
-            'Artist: Sequence':
-              name: 'Umetnik: Zaporedje'
-            'Bee: Conditionals':
-              name: 'Čebelica: Pogoji'
-            'Bee: Debugging':
-              name: 'Čebelica: Razhroščevanje'
-            'Bee: Loops':
-              name: 'Čebelica: Zanke'
-            Conditionals:
-              name: Pogoji
-            Flappy:
-              name: Flappy
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
-            'Maze: Loops':
-              name: 'Labirint: Zanke'
-            'Maze: Sequence':
-              name: 'Labirint: zaporedje'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Življenjski algoritmi: Papirnata letala'
-            Relay programming:
-              name: Relejsko programiranje
-            'Studio: Create a Story':
-              name: 'Play Lab: ustvari zgodbo'
-            The Big Event:
-              name: Veliki dogodek
           student_description: Učenci, ki znajo brati in nimajo nobenih predhodnjih
             izkušen s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci
             naredili programe, ki bodo reševali probleme in razvijali interaktivne
@@ -115,47 +43,6 @@ sl:
             razreda osnovne šole.
           description_short: Tečaj 3 je nadaljevanje Tečaja 2.
           description_audience: Starost 8-18
-          lessons:
-            Artist:
-              name: Umetnik
-            'Artist: Functions':
-              name: 'Umetnik: Funkcije'
-            'Artist: Nested Loops':
-              name: 'Umetnik: Ugnezdene zanke'
-            'Artist: Patterns':
-              name: 'Umetnik: Vzorci'
-            'Bee: Conditionals':
-              name: 'Čebelica: Pogoji'
-            'Bee: Debugging':
-              name: 'Čebelica: Razhroščevanje'
-            'Bee: Functions':
-              name: 'Čebelica: Funkcije'
-            'Bee: Nested Loops':
-              name: 'Čebelica: Ugnezdene zanke'
-            Bounce:
-              name: Skokica
-            Computational Thinking:
-              name: Računalniško razmišljanje
-            Crowdsourcing:
-              name: Crowdsourcing
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            'Farmer: While Loops':
-              name: 'Kmet: Zanka dokler velja'
-            Functional Suncatchers:
-              name: Funkcionalni lovilci svetlobe
-            Internet:
-              name: Internet
-            Maze:
-              name: Labirint
-            'Maze: Conditionals':
-              name: 'Labirint: Pogoji'
-            Songwriting:
-              name: Napiši pesem
-            'Studio: Create a Game':
-              name: 'Play Lab: ustvari igrico'
-            'Studio: Create a Story':
-              name: 'Play Lab: ustvari zgodbo'
           student_description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2.
             Učenci se bodo poglobili v programerske teme, predstavljene v prejšnjih
             tečajih, tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne
@@ -164,31 +51,19 @@ sl:
             4. in 5. razreda osnovne šole.
         playlab:
           title: Play Lab
-          lessons:
-            Play Lab:
-              name: Play Lab
         artist:
           title: Umetnik
           description: Nariši kul slike in oblike z Umetnikom!
           description_short: Nariši kul slike in oblike z Umetnikom!
-          lessons:
-            Artist:
-              name: Umetnik
           student_description: Nariši kul slike in oblike z Umetnikom!
         hourofcode:
           title: Klasičen labirint
-          lessons:
-            Maze:
-              name: Labirint
         frozen:
           title: Frozen (Ledeno kraljestvo) z Ano in Elso
           description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
             čarabnosti in lepote ledu.
           description_short: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
             čarabnosti in lepote ledu.
-          lessons:
-            Artist:
-              name: Frozen (Ledeno kraljestvo) z Ano in Elso
           student_description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
             čarabnosti in lepote ledu.
         course4:
@@ -202,41 +77,6 @@ sl:
           description_short: Učenci, ki delajo Tečaj 4 bi morali že narediti Tečaj
             2 in 3.
           description_audience: Starost 9-18
-          lessons:
-            Artist:
-              name: Umetnik
-            Artist Binary:
-              name: Umetnik Binarno
-            'Artist: For Loops':
-              name: 'Umetnik: "For" zanke'
-            'Artist: Functions':
-              name: 'Umetnik: Funkcije'
-            'Artist: Functions with Parameters':
-              name: 'Umetnik: Funkcije s parametri'
-            'Artist: Variables':
-              name: 'Umetnik: spremenljivke'
-            'Bee: For Loops':
-              name: 'Čebelica: "For" zanke'
-            'Bee: Functions with Parameters':
-              name: 'Čebelica: Funkcije s parametri'
-            Maze and Bee:
-              name: Labirint in čebelica
-            'Play Lab: For Loops':
-              name: 'Play Lab: "for" zanke'
-            'Play Lab: Functions with Parameters':
-              name: 'Play Lab: funkcije s parametri'
-            'Play Lab: Variables':
-              name: 'Play Lab: spremenljivke'
-            'Unplugged: Binary':
-              name: 'Brez prijave: Binarno'
-            'Unplugged: Envelope Variables':
-              name: 'Brez prijave: Spremenljivke v ovojnicah'
-            'Unplugged: For Loop Fun':
-              name: 'Brez prijave: Zabava s "For" zankami '
-            'Unplugged: Songwriting with Parameters':
-              name: 'Brez prijave: Pisanje pesmi s parametri'
-            'Unplugged: Tangrams':
-              name: 'Brez prijave: Tangrami'
           student_description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2
             in 3. Učenci se bodo naučili, kako se spopasti z ugankami, ki so bolj
             kompleksne medtem ko se bodo naučili kako združiti več konceptov med reševanjem
@@ -248,42 +88,10 @@ sl:
             2 in 3.
           description_short: Kratek povzetek konceptov za študente, ki niso končali
             Tečaja 2 in 3.
-          lessons:
-            'Artist: Functions':
-              name: 'Umetnik: Funkcije'
-            'Artist: Loops':
-              name: 'Umetnik: Zanke'
-            'Artist: Nested Loops':
-              name: 'Umetnik: Ugnezdene zanke'
-            'Artist: Sequence':
-              name: 'Umetnik: Zaporedje'
-            'Bee: Conditionals':
-              name: 'Čebelica: Pogoji'
-            'Bee: Debugging':
-              name: 'Čebelica: Razhroščevanje'
-            'Bee: Nested Loops':
-              name: 'Čebelica: Ugnezdene zanke'
-            'Farmer: While Loops':
-              name: 'Kmet: Zanka dokler velja'
-            'Maze: Sequence':
-              name: 'Labirint: zaporedje'
           student_description: Kratek povzetek konceptov za študente, ki niso končali
             Tečaja 2 in 3.
-        usability:
-          lessons:
-            Binary:
-              name: Binarno
-            Variables:
-              name: Spremenljivke
         algebra:
           title: Računalništvo v računstvu
-          lessons:
-            'Eval: Conditionals':
-              name: Pogoji
-            'Play Lab: Animation (Big Game)':
-              name: Velika Igra - Animacija
-            'Play Lab: Defining Variables (Big Game)':
-              name: Velika Igra - Spremenljivke
         20-hour:
           description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
             programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je
@@ -291,47 +99,6 @@ sl:
           description_short: Ta 20-urni tečaj zajema bistvo računalnitšva in programerskih
             konceptov v tečajih 2-4.
           description_audience: Starost 10-18
-          lessons:
-            Abstraction:
-              name: Abstrakcija
-            Algorithms:
-              name: Algoritmi
-            Computational Thinking:
-              name: Računalniško razmišljanje
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
-            Introduction to Computer Science:
-              name: Uvod v računalništvo
-            Relay Programming:
-              name: Relejsko programiranje
-            Song Writing:
-              name: Pisanje pesmi
-            The Artist:
-              name: Umetnik
-            The Artist 2:
-              name: Umetnik 2
-            The Artist 3:
-              name: Umetnik 3
-            The Artist 4:
-              name: Umetnik 4
-            The Artist 5:
-              name: Umetnik 5
-            The Farmer:
-              name: Kmetovanje
-            The Farmer 2:
-              name: Kmetovanje 2
-            The Farmer 3:
-              name: Kmetovanje 3
-            The Internet:
-              name: Internet
-            The Maze:
-              name: Labirint
-            Wrap-up:
-              name: Povzetek
           student_description: Ta 20-urni tečaj predstavlja bistvo računalništva in
             konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8,
             vendar je zabaven za učenje v vseh starostih.
@@ -339,163 +106,39 @@ sl:
           title: Uredi kodo
           description: Uredi kodo
           description_short: Uredi kodo
-          lessons:
-            Play Lab:
-              name: Play Lab
-            The Artist:
-              name: Umetnik
-            The Maze:
-              name: Labirint
           student_description: Uredi kodo
         events:
           title: Dogodki
           description: Dogodki
           description_short: Dogodki
-          lessons:
-            Bounce:
-              name: Skokica
           student_description: Dogodki
         flappy:
           title: Program za Plahutača (Flappyja)
           description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj
             si z priročnikom za Plahutača (Flappy-ja)!
-          lessons:
-            Flappy Code:
-              name: Program za Plahutača (Flappyja)
           student_description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah?
             Pomagaj si z priročnikom za Plahutača (Flappy-ja)!
         jigsaw:
           title: Sestavljanka
-          lessons:
-            Jigsaw:
-              name: Sestavljanka
         step:
           title: Korak
-          lessons:
-            Step:
-              name: Korak
         Hour of Code:
           title: Hour of Code 2013
-          lessons:
-            Hour of Code 2013:
-              name: Hour of Code 2013
-        cspunit3:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-            While Loops:
-              name: 'Zanka: dokler velja'
-        sciencePD2:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        allthethings:
-          lessons:
-            Artist:
-              name: Umetnik
-            Bounce:
-              name: Skokica
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Sestavljanka
-            Maze:
-              name: Labirint
-            Minecraft:
-              name: Minecraft
-        K5-OnlinePD:
-          lessons:
-            Computer Science Fundamentals:
-              name: Osnove Računalništva
-        ECSPD2:
-          lessons:
-            Wrap-up:
-              name: Povzetek
-        sciencePD2b:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        science-PD2:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        sciencePD2b-iZone:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        ECSPD2-iZone:
-          lessons:
-            Wrap-up:
-              name: Povzetek
-        ECSPD2-NexTech:
-          lessons:
-            Wrap-up:
-              name: Povzetek
         asUnplugged:
           description_audience: Starost 6-13
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
-            Happy Maps:
-              name: Veseli zemljevidi
-            Move it, Move it:
-              name: Dajmo, dajmo
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-            Songwriting:
-              name: Napiši pesem
-            The Big Event:
-              name: Veliki dogodek
         afterschool1:
           description_audience: Starost 7-13
-        ScienceP3OLPT2:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
         Special Fun:
           description_audience: Starost 10-18
         SpecialSeries:
           description_audience: Starost 10-18
-        cspunit3temp:
-          lessons:
-            While Loops:
-              name: 'Zanka: dokler velja'
-        starwars:
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
         mc:
           title: Minecraft Ura za kodo
           description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
             v svet Minecraft-a
           description_short: Razišči svet Minecraft-a s pomočjo kode
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
             v svet Minecraft-a
-        ScienceP3OLPT3:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        csp1-2017:
-          lessons:
-            The Internet:
-              name: Internet
-        csp3-2017:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-        csp5-2017:
-          lessons:
-            While Loops:
-              name: 'Zanka: dokler velja'
-        CSDU3-Draft:
-          lessons:
-            Functions:
-              name: Funkcije
         CSF_Secret_Sample:
           description_audience: Starost 8-18
         cspunit1-support:
@@ -514,9 +157,6 @@ sl:
           description_audience: Starost 8-18+
         MikeTest:
           description_audience: Starost 8-98
-          lessons:
-            Artist Functions:
-              name: Umetnik Funkcije
         artistExemplar:
           description_audience: Starost 8-18
         teachercon:
@@ -525,124 +165,24 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Čebelica: Pogoji'
         gradeKinder:
           description_audience: Starost 5-18
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
-            Events:
-              name: Dogodki
-            'Jigsaw: Learn to drag and drop':
-              name: 'Sestavljanka: Naučiti se programirati na način "povleci in spusti"'
-            Loops:
-              name: Zanke
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
         grade4:
           description_audience: Starost 9-99
-          lessons:
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            Songwriting:
-              name: Napiši pesem
         grade1:
           description_audience: Starost 5-18
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
-            Events:
-              name: Dogodki
-            'Jigsaw: Learn to drag and drop':
-              name: 'Sestavljanka: Naučiti se programirati na način "povleci in spusti"'
-            Loops:
-              name: Zanke
         grade5:
           description_audience: Starost 10-110
-          lessons:
-            'Artist: For Loops':
-              name: 'Umetnik: "For" zanke'
-            'Artist: Functions with Parameters':
-              name: 'Umetnik: Funkcije s parametri'
-            'Artist: Variables':
-              name: 'Umetnik: spremenljivke'
-            'Bee: For Loops':
-              name: 'Čebelica: "For" zanke'
-            'Bee: Functions with Parameters':
-              name: 'Čebelica: Funkcije s parametri'
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            'Play Lab: Variables':
-              name: 'Play Lab: spremenljivke'
-            'Unplugged: Envelope Variables':
-              name: 'Brez prijave: Spremenljivke v ovojnicah'
-            'Unplugged: For Loop Fun':
-              name: 'Brez prijave: Zabava s "For" zankami '
-            'Unplugged: Songwriting with Parameters':
-              name: 'Brez prijave: Pisanje pesmi s parametri'
-        ecs-unit1:
-          lessons:
-            Wrap-up:
-              name: Povzetek
         grade3:
           description_audience: Starost 5-18
-          lessons:
-            " Bee: Conditionals":
-              name: " Čebelica: Pogoji"
-            'Artist: Nested Loops':
-              name: 'Umetnik: Ugnezdene zanke'
-            Bee Debugging:
-              name: Čebelica razhroščevanje
-            Bounce:
-              name: Skokica
-            'Farmer: While Loops':
-              name: 'Kmet: Zanka dokler velja'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Pregled
             content:
               display_name: Vsebina
-        csd3-2017:
-          lessons:
-            Functions:
-              name: Funkcije
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
         grade2:
           description_audience: Starost 5-18
-          lessons:
-            Flappy:
-              name: Flappy
-            'Real-life Algorithms: Paper Planes':
-              name: 'Življenjski algoritmi: Papirnata letala'
-            The Big Event:
-              name: Veliki dogodek
-        k5concepts:
-          lessons:
-            Binary:
-              name: Binarno
-            Conditionals:
-              name: Pogoji
-            Events:
-              name: Dogodki
-            Functions:
-              name: Funkcije
-            Functions with Parameters:
-              name: Funkcije s parametri
-            Loops:
-              name: Zanke
-            Nested Loops:
-              name: Gnezdenje zank
-            Variables:
-              name: Spremenljivke
-            While Loops:
-              name: 'Zanka: dokler velja'
         csp-online-test:
           lesson_groups:
             required:
@@ -657,10 +197,6 @@ sl:
               display_name: Vsebina
         basketball:
           name: žoga za košarko
-        csd2-2017:
-          lessons:
-            Lists:
-              name: Seznami
         csp2-support:
           lesson_groups:
             required:
@@ -673,91 +209,16 @@ sl:
             lastni različici Minecrafta.
           description: Sprogramiraj živali in druga Minecraft bitja v svoji lastni
             različici Minecrafta.
-          lessons:
-            Minecraft Hour of Code Designer:
-              name: Minecraft Ura za kodo Oblikovalec
           student_description: Sprogramiraj živali in druga Minecraft bitja v svoji
             lastni različici Minecrafta.
-        flappy-impact-study:
-          lessons:
-            Flappy Code:
-              name: Program za Plahutača (Flappyja)
-        coursea-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-            Going Places Safely:
-              name: Kako varno potovati
-        courseb-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-        coursec-draft:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Življenjski algoritmi: Papirnata letala'
-            Building a Foundation:
-              name: Graditi temelje
-        coursed-draft:
-          lessons:
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            'Unplugged: Binary':
-              name: 'Brez prijave: Binarno'
-            Artist Binary:
-              name: Umetnik Binarno
-            Nested Loops:
-              name: Gnezdenje zank
-            Introduction:
-              name: Uvod
         coursee-draft:
           lesson_groups:
             content:
               display_name: Vsebina
-          lessons:
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Introduction:
-              name: Uvod
-            Conditionals:
-              name: Pogoji
         coursef-draft:
           lesson_groups:
             content:
               display_name: Vsebina
-          lessons:
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Songwriting with Parameters:
-              name: Pisanje pesmi s parametri
-            Introduction:
-              name: Uvod
-        classic-hoc-impact-study:
-          lessons:
-            Hour of Code 2013:
-              name: Hour of Code 2013
-        hoc-impact-study:
-          lessons:
-            Hour of Code 2013:
-              name: Hour of Code 2013
-        2016_sciencePD-phase2b:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        2016_sciencePD_phase2b:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
         csp3-support:
           lesson_groups:
             required:
@@ -770,25 +231,10 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-        sciencepd4:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
-        science-pd-ol-pt-5:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
         csf2harvey:
           lesson_groups:
             content:
               display_name: Vsebina
-          lessons:
-            Binary:
-              name: Binarno
-        sciencepd5:
-          lessons:
-            Wrap-Up:
-              name: Zaključek
         csp5-support:
           lesson_groups:
             required:
@@ -799,102 +245,6 @@ sl:
           lesson_groups:
             content:
               display_name: Vsebina
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Seznami
-            Functions with Parameters:
-              name: Funkcije s parametri
-        workshop-gamelab:
-          lessons:
-            Introduction:
-              name: Uvod
-        coursed-ramp:
-          lessons:
-            Introduction:
-              name: Uvod
-        coursee-ramp:
-          lessons:
-            Introduction:
-              name: Uvod
-            Conditionals:
-              name: Pogoji
-            'Real Life Algorithms: Dice Race':
-              name: 'Življenjski algoritmi: Igra s kocko'
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Seznami
-            Functions with Parameters:
-              name: Funkcije s parametri
-            Functions with Parameters_:
-              name: Funkcije s parametri
-        csd3-draft:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-        csd3-old:
-          lessons:
-            Functions:
-              name: Funkcije
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Seznami
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-            'null':
-              name: prazno
-        coursef-ramp:
-          lessons:
-            Introduction:
-              name: Uvod
-        artist-and-bb8:
-          lessons:
-            Bounce:
-              name: Skokica
-        coursea-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-        courseb-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-        coursec-2017:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Življenjski algoritmi: Papirnata letala'
-        coursed-2017:
-          lessons:
-            Nested Loops:
-              name: Gnezdenje zank
-        coursee-2017:
-          lessons:
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Songwriting with Parameters:
-              name: Pisanje pesmi s parametri
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-        coursef-2017:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
         cspnovice:
           lesson_groups:
             required:
@@ -971,270 +321,10 @@ sl:
           lesson_groups:
             content:
               display_name: Vsebina
-          lessons:
-            Introduction:
-              name: Uvod
-            Internet:
-              name: Internet
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Songwriting with Parameters:
-              name: Pisanje pesmi s parametri
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-        pre-express-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-            Spelling Bee:
-              name: Čebelica črkuje besede
-        subgoal-labels-opt-in:
-          lessons:
-            Thanks:
-              name: Hvala
-        csp3-research-mxghyt:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-        e-f-ramp:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-            Conditionals:
-              name: Pogoji
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        new-d:
-          lessons:
-            Introduction:
-              name: Uvod
-            Nested Loops:
-              name: Gnezdenje zank
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            'Unplugged: Binary':
-              name: 'Brez prijave: Binarno'
-            Artist Binary:
-              name: Umetnik Binarno
-            Building a Foundation:
-              name: Graditi temelje
         new-express:
           lesson_groups:
             content:
               display_name: Vsebina
-          lessons:
-            Introduction:
-              name: Uvod
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-        new-e:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Conditionals:
-              name: Pogoji
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        new-f:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Songwriting with Parameters:
-              name: Pisanje pesmi s parametri
-        csp3-staging:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-        course-e-2018:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-            Introduction:
-              name: Uvod
-            Conditionals:
-              name: Pogoji
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        course-f-2018:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Introduction:
-              name: Uvod
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Songwriting with Parameters:
-              name: Pisanje pesmi s parametri
-        csd6-old:
-          lessons:
-            Lists:
-              name: Seznami
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-        csd3-2018:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-        csd2-2018:
-          lessons:
-            Lists:
-              name: Seznami
-        coursea-2018:
-          lessons:
-            'Programming: Happy Maps':
-              name: Veseli zemljevidi
-            Going Places Safely:
-              name: Kako varno potovati
-        express-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Obarvajmo kvadratke
-            Introduction:
-              name: Uvod
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-            'Events: The Big Event':
-              name: Veliki dogodek
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            'Functions: Songwriting':
-              name: Napiši pesem
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            'Unplugged: Binary':
-              name: Binarne slike
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Relay Programming:
-              name: Relejsko programiranje
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
-        courseb-2018:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-            Move It, Move It:
-              name: Premakni se, premakni
-        coursed-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Obarvajmo kvadratke
-            Introduction:
-              name: Uvod
-            Building a Foundation:
-              name: Graditi temelje
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            'Unplugged: Binary':
-              name: Binarne slike
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
-            Relay Programming:
-              name: Relejsko programiranje
-        coursec-2018:
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            'Events: The Big Event':
-              name: Veliki dogodek
-        csd6-2018:
-          lessons:
-            Functions with Parameters_:
-              name: Funkcije s parametri\_
-            Functions with Parameters:
-              name: Funkcije s parametri
-        coursee-2018:
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Moji robotski prijatelji
-            Building a Foundation:
-              name: Graditi temelje
-            Introduction:
-              name: Uvod
-            'Functions: Songwriting':
-              name: Napiši pesem
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Minecraft Hour of Code:
-              name: Minecraft Ura za kodo
-        coursef-2018:
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Moji robotski prijatelji
-            Building a Foundation:
-              name: Graditi temelje
-            Introduction:
-              name: Uvod
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Songwriting with Parameters:
-              name: Pisanje pesmi s parametri
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-        csp1-2018:
-          lessons:
-            The Internet:
-              name: Internet
-        csp3-2018:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-        csp5-2018:
-          lessons:
-            While Loops:
-              name: 'Zanka: dokler velja'
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1337,32 +427,12 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-        pre-express-2018:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-            Spelling Bee:
-              name: Čebelica črkuje besede
-            Move It, Move It:
-              name: Premakni se, premakni
         fit-test:
           lesson_groups:
             required:
               display_name: Pregled
             content:
               display_name: Vsebina
-        frozen-2018:
-          lessons:
-            Artist:
-              name: Umetnik
-        frozen-2018-test:
-          lessons:
-            Artist:
-              name: Umetnik
-        frozen-2018-test-b:
-          lessons:
-            Artist:
-              name: Umetnik
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1379,21 +449,6 @@ sl:
               display_name: Internet
             csf_digcit:
               display_name: Digitalno državljanstvo
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            The Artist:
-              name: Umetnik
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -1406,17 +461,6 @@ sl:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno državljanstvo
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Obarvajmo kvadratke
-            Relay Programming:
-              name: Relejsko programiranje
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Digital Citizenship:
-              name: Digitalno državljanstvo
-            'Unplugged: Binary':
-              name: Binarne slike
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1425,21 +469,6 @@ sl:
               display_name: Gnezdenje zank
             csf_functions:
               display_name: Funkcije
-          lessons:
-            Building a Foundation:
-              name: Graditi temelje
-            Nested Loops:
-              name: Gnezdenje zank
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            'Functions: Songwriting':
-              name: Napiši pesem
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Songwriting:
-              name: Napiši pesem
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1450,32 +479,12 @@ sl:
               display_name: Funkcije
             csf_variables:
               display_name: Spremenljivke
-          lessons:
-            Relay Programming:
-              name: Relejsko programiranje
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            'Unplugged: Binary':
-              name: 'Brez prijave: Binarno'
-            Artist Binary:
-              name: Umetnik Binarno
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
         andrea-test:
           lesson_groups:
             required:
               display_name: Pregled
             content:
               display_name: Vsebina
-          lessons:
-            'null':
-              name: prazno
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1486,11 +495,6 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Življenjski algoritmi: Papirnata letala'
-            'Events: The Big Event':
-              name: Veliki dogodek
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -1499,11 +503,6 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            'Programming: Happy Maps':
-              name: Veseli zemljevidi
-            Going Places Safely:
-              name: Kako varno potovati
         courseb-2019:
           lesson_groups:
             csf_digcit:
@@ -1512,40 +511,12 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            Move It, Move It:
-              name: Premakni se, premakni
         pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            Move It, Move It:
-              name: Premakni se, premakni
-            Spelling Bee:
-              name: Čebelica črkuje besede
-        removed19:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
-        csd2-2019:
-          lessons:
-            Lists:
-              name: Seznami
-        csd3-2019:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-        csd6-2019:
-          lessons:
-            Functions with Parameters:
-              name: Funkcije s parametri
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1556,30 +527,10 @@ sl:
               display_name: Funkcije
             required:
               display_name: Pregled
-        csp1-2019:
-          lessons:
-            The Internet:
-              name: Internet
-        csp3-2019:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-        csp5-2019:
-          lessons:
-            While Loops:
-              name: 'Zanka: dokler velja'
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Pregled
-        time4csdemo:
-          lessons:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            Building a Foundation:
-              name: Graditi temelje
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1642,10 +593,6 @@ sl:
               display_name: Pogoji
             csp_functions:
               display_name: Funkcije
-        express-2018-vn:
-          lessons:
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -1666,31 +613,12 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: Seznami
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-        maddie-test:
-          lessons:
-            stage 1:
-              name: stopnja 1
         csp3-pilot:
           lesson_groups:
             content:
               display_name: Vsebina
             required:
               display_name: Pregled
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -1703,9 +631,6 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-          lessons:
-            Focus Area 1:
-              name: kurikulum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -1766,32 +691,12 @@ sl:
               display_name: Vsebina
             required:
               display_name: Pregled
-        peru-2019:
-          lessons:
-            Introduction:
-              name: Uvod
-            Nested Loops:
-              name: Gnezdenje zank
         csp6-pilot:
           lesson_groups:
             content:
               display_name: Vsebina
             required:
               display_name: Pregled
-        k5-onlinepd-2019:
-          lessons:
-            Computer Science Fundamentals:
-              name: Osnove Računalništva
-            Loops:
-              name: Zanke
-            Conditionals:
-              name: Pogoji
-            Events:
-              name: Dogodki
-            Functions:
-              name: Funkcije
-            Variables:
-              name: Spremenljivke
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -1800,10 +705,6 @@ sl:
               display_name: Pogoji
             csp_functions:
               display_name: Funkcije
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: Pogoji
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -1814,11 +715,6 @@ sl:
               display_name: Gnezdenje zank
             csf_functions:
               display_name: Funkcije
-          lessons:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Pogojniki s kartami
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1829,9 +725,6 @@ sl:
               display_name: Dogodki
             csf_digcit:
               display_name: Digitalno državljanstvo
-          lessons:
-            Conditionals:
-              name: Pogoji
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -1842,9 +735,6 @@ sl:
               display_name: Dogodki
             csf_digcit:
               display_name: Digitalno državljanstvo
-          lessons:
-            Conditionals:
-              name: Pogoji
         csp7-pilot:
           lesson_groups:
             required:
@@ -1863,20 +753,6 @@ sl:
               display_name: Seznami
             csp_loops:
               display_name: Zanke
-        csd6-2020:
-          lessons:
-            Functions with Parameters:
-              name: Funkcije s parametri
-        csd3-2020:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-            Text:
-              name: Besedilo
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -1885,11 +761,6 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            Going Places Safely:
-              name: Kako varno potovati
-            'Programming: Happy Maps':
-              name: Veseli zemljevidi
         courseb-2020:
           lesson_groups:
             csf_digcit:
@@ -1898,9 +769,6 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            Move It, Move It:
-              name: Premakni se, premakni
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -1911,9 +779,6 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            'Events: The Big Event':
-              name: Veliki dogodek
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -1926,17 +791,6 @@ sl:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno državljanstvo
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Obarvajmo kvadratke
-            Relay Programming:
-              name: Relejsko programiranje
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-            'Unplugged: Binary':
-              name: Binarne slike
-            Digital Citizenship:
-              name: Digitalno državljanstvo
         coursee-2020:
           lesson_groups:
             csf_digcit:
@@ -1945,24 +799,12 @@ sl:
               display_name: Gnezdenje zank
             csf_functions:
               display_name: Funkcije
-          lessons:
-            'Functions: Songwriting':
-              name: Napiši pesem
         coursef-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
             csf_variables:
               display_name: Spremenljivke
-          lessons:
-            Envelope Variables:
-              name: Spremeljivke v ovojnicah
-            For Loop Fun:
-              name: Zabava s "for" zankami
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
         express-2020:
           lesson_groups:
             csf_loops:
@@ -1979,66 +821,11 @@ sl:
               display_name: Zanke
             csf_events:
               display_name: Dogodki
-          lessons:
-            Spelling Bee:
-              name: Čebelica črkuje besede
-        csp3-2020:
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
-        csp3-virtual:
-          lessons:
-            Creating Functions:
-              name: Ustvarjanje funkcij
-        jess-test-script:
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
-        csp5-virtual:
-          lessons:
-            While Loops:
-              name: 'Zanka: dokler velja'
-            Variables:
-              name: Spremenljivke
         virtual-holding-place:
           lesson_groups:
             content:
               display_name: Vsebina
-          lessons:
-            Functions:
-              name: Funkcije
-        code-break:
-          lessons:
-            Algorithms:
-              name: Algoritmi
-            Events:
-              name: Dogodki
-        csp5-virtual-part2:
-          lessons:
-            While Loops:
-              name: 'Zanka: dokler velja'
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: Zanke
-            Events:
-              name: Dogodki
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-            Variables:
-              name: Spremenljivke
         csd3-virtual:
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Text:
-              name: Besedilo
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
           lesson_groups:
             csd3_1:
               display_name: Vsebina
@@ -2070,30 +857,6 @@ sl:
               display_name: Spremenljivke
             debugging:
               display_name: Odpravljanje napak
-        csd3-2021:
-          lessons:
-            Variables:
-              key: Spremenljivke
-              name: Spremenljivke
-            Text:
-              key: Besedilo
-              name: Besedilo
-            Conditionals:
-              key: Pogoji
-              name: Pogoji
-            Functions:
-              key: Funkcije
-              name: Funkcije
-        csd6-2021:
-          lessons:
-            Functions with Parameters:
-              key: Funkcije s parametri
-              name: Funkcije s parametri
-        csp3-2021:
-          lessons:
-            Debugging:
-              key: Odpravljanje napak
-              name: Odpravljanje napak
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2113,9 +876,6 @@ sl:
             csp_unit6_2020:
               display_name: Algoritmi
         coursea-2021:
-          lessons:
-            'Programming: Happy Maps':
-              name: Veseli zemljevidi
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2124,10 +884,6 @@ sl:
             csf_events:
               display_name: Dogodki
         courseb-2021:
-          lessons:
-            Move It, Move It:
-              key: Premakni se, premakni
-              name: Premakni se, premakni
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2136,9 +892,6 @@ sl:
             csf_events:
               display_name: Dogodki
         coursec-2021:
-          lessons:
-            'Events: The Big Event':
-              name: Veliki dogodek
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2149,20 +902,6 @@ sl:
             csf_events:
               display_name: Dogodki
         coursed-2021:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Obarvajmo kvadratke
-            Relay Programming:
-              key: Relejsko programiranje
-              name: Relejsko programiranje
-            Conditionals with Cards:
-              key: Pogojniki s kartami
-              name: Pogojniki s kartami
-            'Unplugged: Binary':
-              key: 'Brez prijave: Binarno'
-              name: Binarne slike
-            Artist Binary:
-              key: Umetnik Binarno
           lesson_groups:
             csf_events:
               display_name: Dogodki
@@ -2177,11 +916,6 @@ sl:
             lessonGroup-6:
               display_name: Digitalno državljanstvo
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: Pogoji
-            'Functions: Songwriting':
-              name: Napiši pesem
           lesson_groups:
             ramp_up:
               display_name: Gnezdenje zank
@@ -2192,16 +926,6 @@ sl:
             csf_functions:
               display_name: Funkcije
         coursef-2021:
-          lessons:
-            Envelope Variables:
-              key: Spremeljivke v ovojnicah
-              name: Spremeljivke v ovojnicah
-            Internet:
-              key: Internet
-              name: Internet
-            For Loop Fun:
-              key: Zabava s "for" zankami
-              name: Zabava s "for" zankami
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2270,32 +994,11 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         k5-onlinepd-2021:
-          lessons:
-            Loops:
-              key: Zanke
-              name: Zanke
-            Events:
-              key: Dogodki
-              name: Dogodki
-            Conditionals:
-              key: Pogoji
-              name: Pogoji
-            Functions:
-              key: Funkcije
-              name: Funkcije
-            Variables:
-              key: Spremenljivke
-              name: Spremenljivke
           lesson_groups:
             k5_getting_started_1:
               display_name: Uvod
             Introduction:
               display_name: Uvod
-        kodea-pd-2021:
-          lessons:
-            Computer Science Fundamentals:
-              key: Osnove Računalništva
-              name: Osnove Računalništva
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2318,14 +1021,6 @@ sl:
           lesson_groups:
             lessonGroup-2:
               description: preizkus
-        dlp21-csd-overview:
-          lessons:
-            lesson-1:
-              name: Pregled
-        dlp21-csp-overview:
-          lessons:
-            lesson-1:
-              name: Pregled
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -2357,9 +1052,6 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         spelling-bee:
-          lessons:
-            lesson-1:
-              name: Čebelica črkuje besede
           title: Čebelica črkuje besede
         csa5-exemplars:
           lesson_groups:
@@ -2369,18 +1061,11 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Čebelica črkuje besede
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
         2022drafting:
-          lessons:
-            For Loop Fun:
-              name: Zabava s "for" zankami
           lesson_groups:
             lessonGroup-8:
               display_name: Ura kode
@@ -2392,10 +1077,6 @@ sl:
           lesson_groups:
             lessonGroup-3:
               display_name: Spremenljivke
-        csd6-pilot-2022:
-          lessons:
-            Functions with Parameters:
-              name: Funkcije
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2409,11 +1090,6 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         coursea-2022:
-          lessons:
-            Happy Maps:
-              name: Veseli zemljevidi
-            'Programming: Happy Maps':
-              name: Veseli zemljevidi
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2433,11 +1109,6 @@ sl:
               display_name: Funkcije
             csf_variables:
               display_name: Spremenljivke
-        csp3-2022:
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
-              key: Odpravljanje napak
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2453,10 +1124,6 @@ sl:
             csp_loops:
               display_name: Zanke
         courseb-2022:
-          lessons:
-            Move It, Move It:
-              name: Premakni se, premakni
-              key: Premakni se, premakni
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2465,11 +1132,6 @@ sl:
             csf_events:
               display_name: Dogodki
         coursec-2022:
-          lessons:
-            The Big Event:
-              name: Veliki dogodek
-            'Events: The Big Event':
-              name: Veliki dogodek
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2478,17 +1140,6 @@ sl:
             csf_events:
               display_name: Dogodki
         coursed-2022:
-          lessons:
-            Graph Paper Programming:
-              name: Obarvajmo kvadratke
-            Relay Programming:
-              name: Relejsko programiranje
-              key: Relejsko programiranje
-            Conditionals with Cards:
-              name: Pogojniki s kartami
-              key: Pogojniki s kartami
-            'Algorithms: Graph Paper Programming':
-              name: Obarvajmo kvadratke
           lesson_groups:
             lessonGroup-6:
               display_name: Digitalno državljanstvo
@@ -2499,13 +1150,6 @@ sl:
             csf_conditionals:
               display_name: Pogoji
         coursee-2022:
-          lessons:
-            Songwriting:
-              name: Napiši pesem
-            'Functions: Songwriting':
-              name: Napiši pesem
-            Conditionals:
-              key: Pogoji
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
@@ -2516,24 +1160,12 @@ sl:
             csf_nested_loops:
               display_name: Pogoji
         coursef-2022:
-          lessons:
-            For Loop Fun:
-              name: Zabava s "for" zankami
-              key: Zabava s "for" zankami
-            The Internet:
-              name: Internet
-            Internet:
-              key: Internet
-              name: Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Digitalno državljanstvo
             lessonGroup-8:
               display_name: Spremenljivke
         csa1-2022:
-          lessons:
-            lesson-9:
-              name: Zanke
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
@@ -2544,9 +1176,6 @@ sl:
             csf_events:
               display_name: Dogodki
         csa2-2022:
-          lessons:
-            lesson-6:
-              name: Spremenljivke
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
@@ -2554,14 +1183,6 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: Pogoji
-            lesson-16:
-              name: Odpravljanje napak
-            lesson-19:
-              name: Odpravljanje napak
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2571,9 +1192,6 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: Zanke
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
@@ -2586,10 +1204,6 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         coursef-2022-pilot:
-          lessons:
-            The Internet:
-              name: Internet
-              key: Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Digitalno državljanstvo
@@ -2608,26 +1222,80 @@ sl:
             lessonGroup-2:
               display_name: Vsebina
         csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        soccer:
+          name: nogomet
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-2023:
           lessons:
-            lesson-1:
+            lesson-6:
+              name: Zanke
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vsebina
+        csa2-2023:
+          lessons:
+            lesson-4:
               name: Spremenljivke
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
-              name: Zanke
-              key: Zanke
-            Events:
-              name: Dogodki
-              key: Dogodki
-            Conditionals:
-              name: Pogoji
-              key: Pogoji
-            Functions:
-              name: Funkcije
-              key: Funkcije
-            Variables:
-              name: Spremenljivke
-              key: Spremenljivke
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Zanke
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Seznami
+            lessonGroup-3:
+              display_name: Zanke

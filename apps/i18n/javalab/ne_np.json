@@ -1,6 +1,8 @@
 {
   "cancel": "रद्द गर्नुहोस्",
+  "create": "बनाउनुहोस्",
   "delete": "हटाउनुहोस्",
   "rename": "Rename",
-  "saving": "सङ्ग्रह गर्दै..."
+  "saving": "सङ्ग्रह गर्दै...",
+  "submit": "Submit"
 }

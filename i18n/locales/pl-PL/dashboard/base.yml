@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 pl:
   errors:
     messages:
@@ -39,6 +45,7 @@ pl:
         personal_email_markdown: "Osobisty adres e-mail [(kliknij tutaj, jeśli nie masz adresu e-mail)](%{url})"
         username: 'Nazwa użytkownika'
         password: 'Hasło'
+        verified_teacher: 'Zweryfikowany nauczyciel'
         password_confirmation: 'Potwierdzenie hasła'
         current_password: 'Aktualne hasło'
         locale: 'Język'
@@ -263,6 +270,7 @@ pl:
   teacher_mailer:
     new_teacher_subject: 'Witaj na Code.org!'
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
+    verified_teacher_subject: 'Weryfikacja nauczyciela Code.org — sukces'
   section:
     your_section:
       one: 'Twoja sekcja:'
@@ -353,6 +361,7 @@ pl:
       educate_beyond: "Poza Code.org"
       educate_inspire: "Inspiruj ucznia"
       educate_community: "Społeczność online"
+      educate_requirements: "Wymagania Techniczne"
       educate_tools: "Narzędzia i filmy"
       about_us: "O nas"
       about_leadership: "Przywództwo"
@@ -369,8 +378,10 @@ pl:
       help_us: "Pomóż nam"
       teach: "Ucz"
       about: "O programie"
+      incubator: "Inkubator"
       legal: "Prywatność i legalność"
       legal_privacy: "Polityka prywatności"
+      legal_cookie_notice: "Informacja o plikach cookie"
       legal_tos: "Regulamin"
     user:
       classroom: 'Domowa strona nauczyciela'
@@ -420,13 +431,13 @@ pl:
       starwars: 'Gwiezdne Wojny'
       starwarsblocks: 'Star Wars (Bloki)'
       starwarsblocks_hour: 'Star Wars (Bloki)'
+      thebadguys: 'Źli faceci'
       loading: 'Trwa pobieranie ...'
       weblab: 'Web Lab'
       view_all: 'Obejrzyj wszystkie projekty...'
     popup:
       progress_for_user: "%{name} w toku"
       progress: 'Twoje postępy'
-      lines: 'Łączna ilość linii kodu: %{lines}'
       close: 'ZAMKNIJ'
       mastery: 'Pojęcia'
       puzzle_map: 'Etapy'
@@ -546,6 +557,7 @@ pl:
     choose_next_course: "Wypróbuj jeden z poniższych kursów w Code Studio"
     print_certificate: "Drukuj Certyfikat"
   certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci sponsorowania Twojej nauki."
+  certificate_hour_of_code: "Godzina Kodowania"
   move_students:
     new_section_dne: "Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź kod innej sekcji."
     section_code_cant_be_current_section: "Bieżąca sekcja nie może być taka sama, jak nowa sekcja."
@@ -573,8 +585,8 @@ pl:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: 'Szczególnie chcielibyśmy podziękować inżynierom z firm Amazon, Google i Microsoft, którzy pomogli nam utworzyć te materiały.'
     help_from_html_old: 'Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć te materiały.'
-    art_from_html: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. <br /> Star Wars &#8482; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone.<br />Frozen&#8482; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br />Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br />The Amazing World of Gumball jest znakiem towarowym i &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. Star Wars &#8482; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. Frozen&#8482; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem towarowym i &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     code_from_html: 'Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
     built_on_github: 'Oparty na GitHub firmy Microsoft'
@@ -598,6 +610,8 @@ pl:
     try_hour_of_code: 'Wypróbuj Godzinę Kodowania!'
     store: 'Skład'
     cookie_notice: 'Informacja o plikach cookie'
+    view_code: 'Obejrzyj kod'
+    locale_select: "Wybierz język"
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -622,6 +636,8 @@ pl:
       applab_unsupported_tablet: "App Lab działa najlepiej na komputerze stacjonarnym lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi na obecnym urządzeniu, mogą wystąpić problemy."
       gamelab_unsupported_tablet: "Game Lab działa najlepiej na komputerze stacjonarnym lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi na obecnym urządzeniu, mogą wystąpić problemy."
       weblab_unsupported_locale_storage: "Mogą wystąpić problemy w czasie używania Web Lab w trybie prywatnego przeglądania. Prosimy o przeładowanie projektu w zwykłym trybie przeglądarki. Przepraszamy za niedogodności."
+  deprecation:
+    algebra_lab: "Program nauczania i treści informatyki w algebrze są przestarzałe. W ciągu najbliższych kilku miesięcy, to laboratorium nie będzie już dostępne. Proszę sprawdzić zamiast tego [Bootstrap: Algebra] (%{bootstrap_algebra_url}). [Dowiedz się więcej] (%{cs_algebra_url})."
   slow_loading: 'To trwa dłużej niż zwykle...'
   try_reloading: 'Spróbuj odświeżyć stronę'
   next_stage: 'Skończyłeś! Przejdź do następnego etapu'
@@ -660,76 +676,156 @@ pl:
       body_short: "Zaprojektuj aplikację i zakoduj za pomocą bloków lub JavaScript, aby działała, następnie natychmiast udostępnij swoją aplikację."
       audience: 'Wiek 13+'
       cta: 'Zobacz instrukcję'
-    dance:
-      title: 'Potańcówka'
+      image_alt: 'Fioletowy króliczek ubrany w plecak zasilany rakietą.'
+    applab-intro:
+      image_alt: 'Ręka dotykająca środka ekranu smartfona. Światło i błyskotki wychodzce z ekranu.'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Steve i Alex z Minecrafta patrzą na ciebie.'
+    artist:
+      image_alt: 'Kreskówkowa osoba trzymająca ogromny ołówek i rysująca trójkąt.'
+    conditionals:
+      image_alt: 'Dwie ręce tasujące talię kart do gry.'
+    course1:
+      image_alt: 'Trzmiel Code.org i pomarańczowa ryba stojące przed jakimś kodem.'
+    course2:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających zielonego czarodzieja, artystę i pomarańczową rybę.'
+    course3:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających grę, zombie i ninja.'
+    course4:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających piłkę nożną, zwierzęta domowe i artystę.'
+    coursea:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających słonia i wiewiórkę.'
+    courseb:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających odkrywcę, klejnoty i kwiat.'
+    coursec:
+      image_alt: 'Kolaż łamigłówek Code.org pokazujących wiewiórkę, liczby binarne i czerwonego ptaka z gry Angry Birds.'
+    coursed:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających pszczołę, kwiaty, miód i zieloną świnię z gry Angry Birds.'
+    coursee:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających osobę trzymającą łopatę, dynię, sad i krowę.'
+    coursef:
+      image_alt: 'Kolaż łamigłówek Code.org ukazujących kolorowe geometryczne kształty, czerwonego pirata i artystę.'
     dance-2019:
       title: 'Potańcówka'
-    hoc:
-      title: 'Klasyczny labirynt'
-      body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
+      image_alt: 'Szczęśliwy kot, leniwiec, i taniec rekina.'
+    dance-2022:
+      image_alt: 'Zielony kosmita i robot tańczący z Saturnem w tle.'
+    dance:
+      title: 'Potańcówka'
+      image_alt: 'Fajny kot i szczęśliwy rekin tańczący na imprezie.'
+    donate:
+      image_alt: 'Dziecko wskazujące na ekran laptopa pokazujący łamigłówkę Code.org.'
+    elementary:
+      image_alt: 'Trzmiel i wiewiórka stojące na polu przed tęczą.'
+    express:
+      image_alt: 'Plants vs Zombies zombi i roślina stojąca obok Flappy Bird.'
     flappy:
       title: 'Kod Flappiego'
       body: 'Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz samouczek dla kodowania Flappiego!'
-    20-hour:
-      title: 'Przyspieszony kurs'
-      body: 'Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!'
-      body_short: 'Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta'
-      try_frozen: 'Artysta z Anną i Elsą, z Frozen'
+      image_alt: 'Żółty ptak latający między zielonymi rurami.'
+    frozen:
+      title: "Kraina lodu (Frozen)"
+      image_alt: 'Anna i Elsa z filmu Kraina lodu. Pomiędzy nimi jest obraz Anny rysującej łyżwami ładny kształt na lodzie.'
     gallery:
       title: "Galeria"
       body: "Zobacz galerię aplikacji i artystycznych obrazów utworzonych przez naszych użytkowników"
+      image_alt: 'Artysta rysujący wiele okręgów i kota, nietoperza i ducha stojących w krainie zimowych wakacji.'
     gamelab:
       title: "Laboratorium Gier (Game Lab)"
       body: "Laboratorium Gier (Game Lab) jest środowiskiem programistycznym, w którym możesz wykonać proste animacje i gry używając obiektów i postaci, które współdziałają ze sobą."
       audience: "Wiek 13+"
       cta: "Zobacz instrukcję"
+      image_alt: 'Wiele kreskówek ludzi i zwierząt stojących na chodniku i uśmiechniętych.'
+    hello-world-food:
+      image_alt: 'Wiele zwierząt, kosmitów i emotikonów krążących wokół Ziemi.'
+    hello-world:
+      title: 'Witaj świecie'
+      body: 'Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
+      image_alt: 'Żelazny Golem z Minecrafta stojący przed widokiem Anny rozwiązującej łamigłówkę.'
     hoc-encryption:
       title: "Proste szyfrowanie"
       body: "Uczniowie poznają techniki tworzenia i łamania zaszyfrowanych wiadomości."
+      image_alt: 'Wykres słupkowy częstotliwości liter w języku angielskim.'
+    hoc:
+      title: 'Klasyczny labirynt'
+      body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
+      image_alt: 'Kolaż obrazów przedstawiających kod, Marka Zuckerberga i Angry Birds.'
+    hourofcode:
+      image_alt: 'Kolaż obrazów przedstawiających kod, Marka Zuckerberga i Angry Birds.'
+    hoc2014:
+      try_new_tutorial: 'Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta'
+      try_frozen: 'Artysta z Anną i Elsą, z Frozen'
+    infinity:
+      title: "Infinity Play Lab"
+      body: "Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych."
+      image_alt: 'Pięć postaci z Krainy Lodu, Splątany i Big Hero 6 stojących razem.'
+    map:
+      image_alt: 'Szary obraz Stanów Zjednoczonych z około 20 stanami podświetlonymi na fioletowo.'
+    mc_escape:
+      image_alt: 'Postać z Minecrafta w cylindrze i monoklu otwierająca skrzynię skarbów pełną szmaragdów.'
+    mc:
+      image_alt: 'Anna i Steve z Minecrafta stojący przed łamigłówką Code.org Minecraft.'
+    minecraft:
+      title: "Minecraft"
+      body: "Odkrywaj świat Minecraft poprzez kodowanie."
+      image_alt: 'Anna i Steve z Minecrafta stojący przed łamigłówką Code.org Minecraft.'
+    minecraft2016:
+      title: "Minecraft"
+      body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta."
+    oceans:
+      image_alt: 'Robot w oceanie skanujący różne stworzenia morskie.'
+    playlab:
+      image_alt: 'Kolaż zdjęć przedstawiających niebieskiego kota, głupkowatego psa i prehistoryczną łasic.ę'
+    poem-art:
+      title: 'Sztuka poezji '
+      body: 'Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.'
+      image_alt: 'Hipsterska kałamarnica występująca na scenie.'
+    pre-express-2017:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    pre-express-2018:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    pre-express-2019:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    pre-express:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    sports:
+      title: "Zawody"
+      body: "Stwórz grę w koszykówkę lub mieszankę różnych sportów."
+      image_alt: 'Logo NBA i WNBA wyświetlane obok piłki nożnej, piłki nożnej, krążka hokejowego i koszykówki.'
+    starwars:
+      title: "Gwiezdne Wojny"
+      image_alt: 'R2-D2, Leia, Rey i BB-8 stojący na pustyni.'
+    text-compression:
+      title: "Kompresja tekstu"
+      body: "Na tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować tekst, zastępując wzorce symbolami."
+      image_alt: 'Tekst skompresowany przez zastąpienie całych słów jednym symbolem.'
     weblab:
       title: "Laboratorium Sieci (beta)"
       body: "Web Lab (Laboratorium sieci) to środowisko programowania, w którym możesz tworzyć proste strony internetowe za pomocą HTML i CSS. Zaprojektuj swoją stronę i udostępnij ją natychmiast."
       audience: "Wiek 13+"
       cta: "Zobacz instrukcję"
-    frozen:
-      title: "Kraina lodu (Frozen)"
-    starwars:
-      title: "Gwiezdne Wojny"
-    infinity:
-      title: "Infinity Play Lab"
-      body: "Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych."
-    minecraft:
-      title: "Minecraft"
-      body: "Odkrywaj świat Minecraft poprzez kodowanie."
-    minecraft2016:
-      title: "Minecraft"
-      body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
-    sports:
-      title: "Zawody"
-      body: "Stwórz grę w koszykówkę lub mieszankę różnych sportów."
-    text-compression:
-      title: "Kompresja tekstu"
-      body: "Na tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować tekst, zastępując wzorce symbolami."
-    unplugged:
-      title: "Lekcje nie wymagające komputera"
-      audience: "Wiek 4+"
-      body: "Przygotowaliśmy zestaw lekcji do użytku w Twojej klasie, niewymagających użycia komputera, Teraz możesz uczyć podstaw informatyki bez względu na to, czy masz komputery w swojej klasie, czy nie! Możesz użyć tych lekcji w samodzielnym kursie lub jako dodatku w jakimkolwiek kursie."
-      body_short: "Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie te lekcje bez komputerów."
-    unplugged_conditionals:
-      title: "Zdania z warunkami"
-      body: "Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera, przy użyciu talii kart."
+      image_alt: 'Ekran komputera wyświetlający kod HTML.'
     widgets:
       title: "Widżety"
       body: "Uczniowie mogą odkrywać pojęcia z naszego kursu Zasady Informatyki w praktyczny sposób, za pomocą tych narzędzi cyfrowych. Użyj samych widżetów lub stwórz jednowymiarową lekcję dla swojej klasy."
       audience: "W wieku 14+"
       cta: "Zobacz instrukcję"
+    unplugged_conditionals:
+      title: "Zdania z warunkami"
+      body: "Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera, przy użyciu talii kart."
+    unplugged:
+      title: "Lekcje nie wymagające komputera"
+      audience: "Wiek 4+"
+      body: "Przygotowaliśmy zestaw lekcji do użytku w Twojej klasie, niewymagających użycia komputera, Teraz możesz uczyć podstaw informatyki bez względu na to, czy masz komputery w swojej klasie, czy nie! Możesz użyć tych lekcji w samodzielnym kursie lub jako dodatku w jakimkolwiek kursie."
+      body_short: "Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie te lekcje bez komputerów."
+    20-hour:
+      title: 'Przyspieszony kurs'
+      body: 'Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!'
+      body_short: 'Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.'
   landing:
     prerelease_tutorial: "Ten poradnik występuje w wersji **beta**. Podlega on weryfikacji w oparciu o otrzymane informacje zwrotne i wprowadzane są poprawki."
     report_bug: "Zgłoś błędy"
@@ -822,14 +918,6 @@ pl:
     reminder_desc: 'Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>. Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript mogą być niedostępny dla Twoich uczniów przed zaakceptowaniem zaktualizowanych postanowień.'
     reminder_desc_markdown: Zaktualizowaliśmy nasze [Warunki użytkowania](%{tos_url}) i [Politykę prywatności](%{privacy_url}). Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych postanowień.
     review_terms: "Wyświetl zaktualizowane Warunki korzystania"
-  donor_interstitial:
-    title: "Twoje bezpłatne kursy CS są możliwe dzięki ..."
-    subtitle: "Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!\n"
-    local_supporters: "Lokalni zwolennicy"
-    global_supporters: "Globalni zwolennicy"
-    support_codeorg_1: "Każdy dolar przekazany Code.org daje szansę większej liczbie uczniów."
-    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
-    get_started: "Zacznij korzystać z Code.org"
   school_info_interstitial:
     title: "Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze postępy!"
     message: "Prosimy o wprowadzenie poniżej danych swojej szkoły."
@@ -902,6 +990,7 @@ pl:
           age: 'Proszę określić wiek'
           abuse_type: 'Proszę odpowiedzieć, jak ta treść narusza regulamin'
           abuse_detail: 'Proszę podać szczegóły dotyczące treści, które zgłaszasz'
+          captcha: 'Wypełnij CAPTCHA, aby zgłosić tę zawartość.'
         abusive_url: 'Adres URL zgłaszanych treści'
         abuse_type:
           question: 'Jak te treści naruszają %{link_start}Terms of Service%{link_end}?'
@@ -992,6 +1081,9 @@ pl:
   no_script_access_teacher: "Nie masz dostępu do tej jednostki. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tej jednostki, proszę napisać na adres: support@code.org tak, abyśmy mogli naprawić sytuację."
   no_level_access_student: "Nie masz dostępu do tego poziomu. Proszę spytać swojego nauczyciela, na jakim powinieneś być poziomie."
   no_level_access_teacher: "Nie masz dostępu do tego poziomu. Jeśli wydaje Ci się, że powinieneś mieć dostęp do tego poziomu, to proszę napisać pod adresem: support@code.org tak, abyśmy mogli naprawić tę sytuację."
+  no_exemplar: "Nie ma żadnego przykładu dla tego poziomu."
+  no_exemplar_access_student: "Studenci nie mają dostępu do przykładowego kodu. Zapytaj swojego nauczyciela, na jakim poziomie powinieneś być."
+  no_exemplar_access_teacher: "Tylko zweryfikowani nauczyciele mają dostęp do przykładowego kodu. Jeśli chcesz zostać zweryfikowanym nauczycielem, napisz na adres support@code.org."
   return_unit_overview: 'Przejdź do przeglądu jednostek'
   return_course_overview: 'Przejdź do omówienia kursu'
   view_all_units: 'Zobacz wszystkie jednostki'
@@ -1033,12 +1125,15 @@ pl:
         not_listed: 'Preferowanego terminu nie ma na liście'
         none: 'Wolę nie odpowiadać'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Kolumbia'
         israel: 'Izrael'
         malaysia: 'Malezja'
         mexico: 'Meksyk'
+        paraguay: 'Paragwaj'
         thailand: 'Tajlandia'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1061,6 +1156,7 @@ pl:
         music: 'Muzyka'
         art: 'Sztuka'
         other: "Inne:"
+        na: 'Nie dotyczy'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1070,7 +1166,8 @@ pl:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       robotics:
         grok: 'Nauka Grok'
         kodable: 'Kodable'
@@ -1080,7 +1177,8 @@ pl:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Warsztaty Wonder'
-        other: "Inne:"
+        other: "Inni/inne"
+        na: 'Nie dotyczy'
       workshop_course:
         csf_af: 'Podstawy informatyki (Kursy A-F)'
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'
@@ -1136,3 +1234,29 @@ pl:
   unit_prefix: "Jednostka %{n}"
   code_org_logo_alt: "Strona domowa Code.org"
   teacher_feedback: "Opinie nauczycieli"
+  lesson_lock:
+    error:
+      no_updates: "Brak aktualizacji do wykonania"
+      missing_params: "Należy podać iużytkownika, poziom i identyfikator jednostki"
+      cannot_view_locked_answers: "Nie można wyświetlić odpowiedzi, gdy jest zablokowany"
+      forbidden: "Użytkownik nie może zaktualizować stanu blokady ucznia"
+  reset_predict_progress_button: "Usuń odpowiedź"
+  pixelation:
+    raw_format: "Format wiersza"
+    raw_format_alt: "Wyświetl bity bez formatowania"
+    readable_format: "Czytelny format"
+    readable_format_alt: "Wyświetl bity oddzielone pikselami"
+    save_image: "Zapisz obraz"
+    actual_size: "Aktualny rozmiar"
+    image_file_format_header: "Format pliku obrazu"
+    image_file_format_width: "Szerokość: 1 bajt"
+    image_file_format_height: "Wysokość: 1 bajt"
+    image_file_format_bits_per_pixel: "Bity na piksel: 1 bajt"
+    image_file_format_data_a: "n bitów danych pikseli"
+    image_file_format_data_b: "n = Szerokość * Wysokość * Bity na piksel"
+    image_width: "Szerokość obrazu"
+    image_height: "Wysokość obrazu"
+    bits_per_pixel_header: "Bity na piksel"
+    binary: "Binarny"
+    hexadecimal: "Szesnastkowy"
+    pixel_format_header: "Format pikseli"

@@ -5,7 +5,7 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import SkipButton from './SkipButton';
 import {connect} from 'react-redux';
 
@@ -26,7 +26,7 @@ export const RunButton = Radium(props => (
     style={props.style}
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
-    <img src={blankImg} className="run26" />
+    <img src={blankImg} className="run26" alt="" />
   </button>
 ));
 RunButton.propTypes = {
@@ -50,7 +50,7 @@ export const ResetButton = Radium(props => (
     style={[commonStyles.hidden, props.style]}
   >
     <div>{!props.hideText && msg.resetProgram()}</div>
-    <img src={blankImg} className="reset26" />
+    <img src={blankImg} className="reset26" alt="" />
   </button>
 ));
 ResetButton.propTypes = {
@@ -67,11 +67,15 @@ ResetButton.displayName = 'ResetButton';
 export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons">
-      <RunButton
-        hidden={props.hideRunButton}
-        runButtonText={props.runButtonText}
-      />
-      <ResetButton hidden={props.hideResetButton} />
+      {!props.noRunResetButton && (
+        <>
+          <RunButton
+            hidden={props.hideRunButton}
+            runButtonText={props.runButtonText}
+          />
+          <ResetButton hidden={props.hideResetButton} />
+        </>
+      )}
       {
         ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
       }
@@ -92,7 +96,8 @@ UnconnectedGameButtons.propTypes = {
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,
   showFinishButton: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  noRunResetButton: PropTypes.bool
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 

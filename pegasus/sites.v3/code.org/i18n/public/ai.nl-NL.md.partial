@@ -21,7 +21,7 @@ social:
 # Leer over Kunstmatige Intelligentie (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NIEUWE module AI en machinaal leren</h2><p>In onze nieuwe leerplanmodule ligt de nadruk op AI-ethiek, worden biaskwesties onderzocht en worden fundamentele concepten verkend en uitgelegd aan de hand van een aantal online en unplugged activiteiten en groepsdiscussies.</p><a  href="#about-aimodule"><button>Meer informatie</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Verken de module</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">NIEUWE module AI en machinaal leren</h2><p>In onze nieuwe leerplanmodule ligt de nadruk op AI-ethiek, worden biaskwesties onderzocht en worden fundamentele concepten verkend en uitgelegd aan de hand van een aantal online en unplugged activiteiten en groepsdiscussies.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ Ga met ons mee en ontdek hoe AI werkt in een nieuwe videoserie, train de AI voor
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## NIEUWE module AI en machinaal leren
 <div>
-<div class="col-50">
-<p>De module AI en machinaal leren is ruwweg een lespakketmodule van vijf weken die kan worden gegeven als <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> of als een optionele <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. Het richt zich op AI-ethiek, onderzoekt bias, en verkent en verklaart fundamentele concepten</p><p>Omdat machinaal leren afhankelijk is van grote datasets, bevat de nieuwe unit real life datasets over gezondheidszorg, demografie en meer om leerlingen bezig te houden met vragen als: "Wat is een probleem dat machinaal leren kan helpen oplossen?" "Hoe kan AI de samenleving helpen?" "Wie profiteert er van AI?" "Wie ondervindt er schade van?" "Wie is erbij betrokken?" "Wie ontbreekt er?"  </p>
-<p>Ethische overwegingen zullen in deze discussies centraal staan, met veelvuldige discussiepunten en lessen rond de gevolgen van deze technologieën. Dit zal de leerlingen helpen een holistisch, doordacht begrip van deze technologieën te ontwikkelen, terwijl zij de technische onderbouwing leren van hoe de technologieën werken.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. Het richt zich op AI-ethiek, onderzoekt bias, en verkent en verklaart fundamentele concepten</p><p>Omdat machinaal leren afhankelijk is van grote datasets, bevat de nieuwe unit real life datasets over gezondheidszorg, demografie en meer om leerlingen bezig te houden met vragen als: "Wat is een probleem dat machinaal leren kan helpen oplossen?" "Hoe kan AI de samenleving helpen?" "Wie profiteert er van AI?" "Wie ondervindt er schade van?" "Wie is erbij betrokken?" "Wie ontbreekt er?"  </p>
+    <p>Ethische overwegingen zullen in deze discussies centraal staan, met veelvuldige discussiepunten en lessen rond de gevolgen van deze technologieën. Dit zal de leerlingen helpen een holistisch, doordacht begrip van deze technologieën te ontwikkelen, terwijl zij de technische onderbouwing leren van hoe de technologieën werken.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## Hoe AI werkt
 
 Met een introductie door de CEO van Microsoft, Satya Nadella, laat deze reeks korte video's je zien hoe kunstmatige intelligentie werkt en waarom het ertoe doet. Leer meer over neurale netwerken, of de AI leerproces, en verdiep je in zaken zoals algoritmische bevooroordeling en de ethiek van de AI besluitvorming.
@@ -115,3 +114,5 @@ De niveaus 2-4 gebruiken een vooraf getraind model geleverd door de [TensorFlow]
 De niveaus 6-8 gebruiken een \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We kijken naar elk onderdeel van de vis (zoals ogen, mond, lichaam) en assembleren alle metadata voor de onderdelen (zoals aantal tanden, lichaamsvorm) in een vector van getallen voor elke vis. We gebruiken deze vectoren om de SVM te trainen. Op basis van de trainingsgegevens verdeelt de SVM de "ruimte" van alle mogelijke vissen in twee delen, die corresponderen met de klassen die we proberen te leren (zoals "blauw" of "niet blauw").
 
 [[Terug aan de top]](#top)
+
+{{ visit_partial_event_logger }}

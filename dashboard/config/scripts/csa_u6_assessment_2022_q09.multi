@@ -1,11 +1,22 @@
 name 'CSA U6 Assessment 2022 q09'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+right '`[0, 5, 1, 3, 7]`'
+wrong '`[7, 0, 5, 1, 3]`'
+wrong '`[1, 3, 7, 0, 5]`'
+wrong '`[5, 1, 3, 7, 0]`'
+wrong '`[7, 3, 1, 5, 0]`'
 
 markdown <<MARKDOWN
-question
+Assume that `nums` has been initialized with the following `Integer` objects: `[0, 5, 1, 3, 7]`. What is the value of `nums` after `mystery(5)` executes?
+
+```
+private ArrayList<Integer> numList;
+
+public void mystery(int n) {
+  for (int i = 0; i < n; i++) {
+    Integer obj = numList.remove(0);
+    numList.add(obj);
+  }
+}
+```
 MARKDOWN

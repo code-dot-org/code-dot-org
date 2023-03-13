@@ -1,0 +1,155 @@
+{
+  "en-GB": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "Plays the MP3 sound file from the specified URL."
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Color"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Color"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Mathematics",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "The minimum number returned"
+                    },
+                    "max": {
+                      "description": "The maximum number returned"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "The minimum number returned"
+                    },
+                    "max": {
+                      "description": "The maximum number returned"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Plays the MP3 sound file from the specified URL."
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Mathematics",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "The minimum number returned"
+                    },
+                    "max": {
+                      "description": "The maximum number returned"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "The minimum number returned"
+                    },
+                    "max": {
+                      "description": "The maximum number returned"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Actions"
+            },
+            "loops": {
+              "name": "Loops"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Mathematics"
+            },
+            "logic": {
+              "name": "Logic"
+            },
+            "text": {
+              "name": "Text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

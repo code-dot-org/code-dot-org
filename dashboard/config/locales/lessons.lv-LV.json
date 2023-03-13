@@ -2,274 +2,761 @@
   "lv-LV": {
     "data": {
       "lessons": {
+        "flappy/Flappy Code": {
+          "name": "Flappy kods"
+        },
+        "hourofcode/Maze": {
+          "name": "Labirints"
+        },
+        "frozen/Artist": {
+          "name": "Programmē ar Annu un Elzu"
+        },
         "artist/Artist": {
+          "name": "Mākslinieks"
+        },
+        "playlab/Play Lab": {
+          "name": "Spēles laboratorija"
+        },
+        "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "gumball/Gumball Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cikli"
         },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Events": {
+          "name": "Pasākumi"
         },
-        "starwars/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Sazarojumi"
         },
-        "applab-intro/Intro to App Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcijas"
         },
-        "hello-world-retro-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Variables": {
+          "name": "Mainīgie"
         },
-        "starwarsblocks/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"par\" cikli"
         },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
         },
-        "sports/Sports": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2022/Relay Programming": {
+          "name": "Releju programmēšana"
         },
-        "dance-extras-2019/Dance Party - Go Further": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2022/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
         },
-        "oceans/Oceans": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursef-2022/The Internet": {
+          "name": "Internets"
         },
-        "poem-art/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
+        "coursee-2022/Songwriting": {
+          "name": "Dziesmu rakstīšana"
         },
-        "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "courseb-2022/Move It, Move It": {
+          "name": "Ej, ej"
         },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "courseb-2022/Getting Loopy": {
+          "name": "Kļūst ciklisks"
         },
-        "coursec-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursea-2022/Happy Maps": {
+          "name": "Laimīgās kartes"
         },
-        "coursec-2021/Debugging in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursec-2022/The Big Event": {
+          "name": "Lielais notikums"
         },
-        "coursec-2021/Programming in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binārās aproces"
         },
-        "coursec-2021/Programming in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Variables": {
+          "name": "Mainīgie"
         },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Text": {
+          "name": "Teksts"
         },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Conditionals": {
+          "name": "Sazarojumi"
         },
-        "coursec-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Velocity": {
+          "name": "Ātrums"
         },
-        "coursec-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Functions": {
+          "name": "Funkcijas"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funkcijas"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Tavs digitālais nospiedums"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Nokļūst galamērķos droši"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Digitālā pilsonība"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Binārie Attēli"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Mani Robotikas draugi"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Aplokšņu mainīgie"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Jautrība ar \"For\" Cikliem"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Aplokšņu mainīgie"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Jautrība ar \"For\" Cikliem"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Binārie Attēli"
+        },
+        "express-2018/Internet": {
+          "name": "Internets"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Pūļa ieguve"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Mani Robotikas draugi"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internets"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Pūļa ieguve"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Tavs digitālais nospiedums"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Burtošanas bite"
+        },
+        "csd3-2018/Variables": {
+          "name": "Mainīgie"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Ātrums"
+        },
+        "csd3-2018/Functions": {
+          "name": "Funkcijas"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funkcijas ar parametriem"
+        },
+        "csd2-2018/Lists": {
+          "name": "Saraksti"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Nokļūst galamērķos droši"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Tavs digitālais nospiedums"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Binārie Attēli"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Digitālā pilsonība"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Aplokšņu mainīgie"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Jautrība ar \"For\" Cikliem"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internets"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Pūļa ieguve"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Burtošanas bite"
+        },
+        "csd3-2019/Variables": {
+          "name": "Mainīgie"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "csd3-2019/Velocity": {
+          "name": "Ātrums"
+        },
+        "csd3-2019/Functions": {
+          "name": "Funkcijas"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Funkcijas ar parametriem"
+        },
+        "csd2-2019/Lists": {
+          "name": "Saraksti"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmi: Tangrams"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Patiesas dzīves algoritms: Iestādi auga sēklas"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Patiesas dzīves algoritms: Iestādi auga sēklas"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Burtošanas bite"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Cikls ciklā"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Reālās dzīves algoritmi: Papīra lidmašīnas"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Patiesas dzīves algoritms: Iestādi auga sēklas"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Cikls ciklā"
+        },
+        "express-2017/Introduction": {
+          "name": "Ievads"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Cikls ciklā"
+        },
+        "csd3-2017/Variables": {
+          "name": "Mainīgie"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "csd3-2017/Velocity": {
+          "name": "Ātrums"
+        },
+        "csd3-2017/Functions": {
+          "name": "Funkcijas"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funkcijas ar parametriem"
+        },
+        "csd2-2017/Lists": {
+          "name": "Saraksti"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Atvienots: Tangrams"
+        },
+        "course4/Maze and Bee": {
+          "name": "Labirints un Bite"
+        },
+        "course4/Artist": {
+          "name": "Mākslinieks"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Atvienots: Aplokšņu mainīgie"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Atvienots: Madlibs spēle"
+        },
+        "course4/Artist: Variables": {
+          "name": "Izpildītājs: Mainīgie"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Spēles laboratorija: Mainīgie"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Atvienots: jautrība ar \"for\" cikliem"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Bite: Cikls ar skaitītāju"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Mākslinieks: Cikls ar skaitītāju"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Spēles laboratorija: Cikls ar skaitītāju"
+        },
+        "course4/Artist: Functions": {
+          "name": "Mākslinieks: Funkcijas"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Atvienots: Dziesmu rakstīšana ar parametriem"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Mākslinieks: Funckijas ar parametriem"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Spēles laboratorija: Funckijas ar parametriem"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bite: Funckijas ar parametriem"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Atvienots: binārs"
+        },
+        "course4/Artist Binary": {
+          "name": "Mākslinieks: Binārais"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Ievads datorzinātnēs"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirints"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Algoritmiska domāšana"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "20-hour/The Artist": {
+          "name": "Mākslinieks"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmi"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Mākslinieks 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcijas"
+        },
+        "20-hour/The Farmer": {
+          "name": "Fermeris"
+        },
+        "20-hour/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Mākslinieks 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Dziesmas rakstīšana"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Fermeris 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakcija"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Mākslinieks 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Fermeris 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internets"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Mākslinieks 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Ietīt"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Reālās dzīves algoritmi: Papīra lidmašīnas"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Labirints: secība"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Māsklinieks: secība"
+        },
+        "course2/Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "course2/Maze: Loops": {
+          "name": "Labirints: Cikli"
+        },
+        "course2/Artist: Loops": {
+          "name": "Mākslinieks: cikli"
+        },
+        "course2/Bee: Loops": {
+          "name": "Bite: Cikli"
+        },
+        "course2/Relay programming": {
+          "name": "Releju programmēšana"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Bite: atkļūdošana"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Mākslinieks: atkļūdošana"
+        },
+        "course2/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Bite: nosacījumi"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "course2/The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "course2/Flappy": {
+          "name": "Flapijs"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Spēļu laboratorija: izvedot stāstu"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Tavs digitālais nospiedums"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Mākslinieks: Cikls ciklā"
+        },
+        "course3/Computational Thinking": {
+          "name": "Algoritmiska domāšana"
+        },
+        "course3/Maze": {
+          "name": "Labirints"
+        },
+        "course3/Artist": {
+          "name": "Mākslinieks"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "funkcionālie saulķērāji"
+        },
+        "course3/Artist: Functions": {
+          "name": "Mākslinieks: Funkcijas"
+        },
+        "course3/Bee: Functions": {
+          "name": "Bites funkcijas"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Bite: nosacījumi"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Labirinta nosacījums"
+        },
+        "course3/Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "course3/Dice Race": {
+          "name": "kauliņu skrējiens"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Mākslinieks: Cikls ciklā"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Lauksaimnieks: Nosacījuma cikli"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Bite: Nosacījuma cikli"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Bite: atkļūdošana"
+        },
+        "course3/Bounce": {
+          "name": "Atlekt"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Spēļu laboratorija: izvedot stāstu"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Spēļu laboratorija: Izveidot spēli"
+        },
+        "course3/Internet": {
+          "name": "Internets"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Pūļa ieguve"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Digitālā pilsonība"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Mākslinieks: raksti"
+        },
+        "course1/Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "course1/Move it, Move it": {
+          "name": "Pārvieto to, pārvieto to"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Puzle: Mācies vilkt un nomest"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirints: secība"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirints: atkļūdošana"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Patiesas dzīves algoritms: Iestādi auga sēklas"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Bite: Secība"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Māsklinieks: secība"
+        },
+        "course1/Building a Foundation": {
+          "name": "Veidot pamatus"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Mākslinieks: formas"
+        },
+        "course1/Spelling Bee": {
+          "name": "Burtošanas bite"
+        },
+        "course1/Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirints: Cikli"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bite: Cikli"
+        },
+        "course1/The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Spēļu laboratorija: izvedot stāstu"
+        },
+        "course1/Going Places Safely": {
+          "name": "Nokļūst galamērķos droši"
+        },
+        "course1/Artist: Loops": {
+          "name": "Mākslinieks: cikli"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "Puzle"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Puzle"
+        },
+        "allthethings/Maze": {
+          "name": "Labirints"
+        },
+        "allthethings/Artist": {
+          "name": "Mākslinieks"
+        },
+        "allthethings/Bee": {
+          "name": "Bite"
+        },
+        "allthethings/Flappy": {
+          "name": "Flapijs"
+        },
+        "allthethings/Bounce": {
+          "name": "Atlekt"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Sakrīt"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Jautrība ar \"For\" Cikliem"
+        },
+        "coursef-2021/Internet": {
+          "name": "Internets"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Laimīgās kartes"
         },
         "coursec-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Picturing Data": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Lielais notikums"
         },
         "coursec-2021/Binary Bracelets": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Binārās aproces"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Rūtiņpapīra programmēšana"
         },
         "coursed-2021/Relay Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Debugging in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Events in Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Releju programmēšana"
         },
         "coursed-2021/Conditionals with Cards": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "nosacījumi ar kārtēm"
         },
-        "coursed-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Dziesmu rakstīšana"
         },
-        "coursed-2021/Conditionals in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd6-2021/Functions with Parameters": {
+          "name": "Funkcijas ar parametriem"
         },
-        "coursed-2021/While Loops in Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Variables": {
+          "name": "Mainīgie"
         },
-        "coursed-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Text": {
+          "name": "Teksts"
         },
-        "coursed-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Ātrums"
+        },
+        "csd3-2021/Functions": {
+          "name": "Funkcijas"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binārie Attēli"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Aplokšņu mainīgie"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internets"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Jautrība ar \"For\" Cikliem"
         }
       }
     }

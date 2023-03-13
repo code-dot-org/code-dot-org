@@ -343,6 +343,7 @@
   homepage_banner_40k_teachers_link: "Más información"
   homepage_slot_text_title_hoc: "Hora del Codigo"
   homepage_slot_text_blurb_hoc: "Todo el mundo puede aprender. Empieza hoy mismo"
+  homepage_slot_text_blurb_hoc_2022: "¡Explora, Juega, Crea!"
   homepage_slot_text_link_hoc: "Prueba la Hora del Código"
   homepage_slot_text_link_about_hoc: "Sobre la Hora del Código"
   homepage_slot_text_link_host: "Organiza una Hora del Código"
@@ -368,14 +369,19 @@
   homepage_slot_text_link_buy: "Participa"
   homepage_slot_text_link_donate: "Haga una donación"
   homepage_slot_text_link_shop: "Camisetas, gorras y más"
+  homepage_slot_text_link_thebadguys: "Código con Los Tipos Malos"
   homepage_slot_text_link_administrators: "Lleva la Informática a tu colegio"
   homepage_gallery_header: "Más de %{project_count} millones de proyectos creados en Code.org"
-  homepage_header_donors: "Code.org agradece a sus patrocinadores"
+  homepage_header_donors: "Code.org agradece a sus colaboradores"
   homepage_donors_seall: "Ver todo"
   homepage_donors_donate: "Dona"
   homepage_below_hero_announcement_text: "Nos preocupamos por su privacidad y estamos haciendo algunas actualizaciones a nuestra política de privacidad, a partir del 25 de mayo."
   homepage_below_hero_announcement_link_text: "Más información"
   homepage_higher_power_body: "Crea un proyecto con Fiesta de Baile y tendrás la oportunidad de ganar entradas para ver a la banda en vivo."
+  homepage_thebadguys_body: "¡Codifica una aventura con la Sra. Tarántula, el Sr. Lobo y el resto de los personajes de la película, **Los Tipos Malos**!"
+  homepage_csa_subhead: "Un nuevo enfoque para"
+  homepage_csa_title: "AP® Informática A"
+  homepage_csa_body: "Capacitar a los estudiantes con proyectos creativos conectados con el mundo real en nuestro plan de estudios basado en la equidad."
   contact_form_topic_student: "Soy un estudiante"
   contact_form_topic_parent: "Soy un padre"
   contact_form_topic_teacher: "Soy un profesor/educador"
@@ -459,7 +465,7 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Descarga</a> Guía de inicio rápido para el moderador y presentaciones en PowerPoint para los estudiantes jóvenes y más mayores ahora."
   minecraft_join_online_training: "¿Listo para organizar tu propia Hora del Código con Minecraft, pero no estás seguro por donde empezar? Echa un vistazo a nuestro <a href='%{minecraft_webinar_url}', target='_blank'>seminario web a petición</a>. Aprenderás las mejores prácticas, accederás a los materiales para organizadores listos para usar y obtendrás un paseo por el nuevo tutorial del Viaje del Héroe del equipo de Minecraft. Adelántate a pensar en lo que necesitas para llevar la Hora del Código a los jóvenes durante la Semana de la Enseñanza de las Ciencias de la Computación (del 4 al 10 de diciembre) y más allá."
   minecraft_continue_learning: 'Ciencias de la computación para todos: más allá de una Hora de Código en la tienda de Microsoft'
-  minecraft_continue_learning_description: "¡No se requiere experiencia en ciencias de la computación! Ayuda a que todos los jóvenes puedan aprender las valiosas habilidades adquirida a través de la enseñanza de estas ciencias. Visita la tienda de Microsoft y participa en una serie gratuita de tres talleres de 1 hora en los que experimentarás la programación en un ambiente divertido y relajado, aprenderás conceptos clave de las ciencias de la computación y te prepararás para liderar una Hora del Código en tu aula o comunidad. ¡Vamos! <a href='%{minecraft_continue_learning_url}', target='_blank'>Regístrate hoy</a>."
+  minecraft_continue_learning_description: "No es necesario tener experiencia en informática. Ayuda a garantizar que todos los jóvenes puedan aprender los valiosos conocimientos adquiridos a través de la enseñanza de la informática. Únete a nosotros en Microsoft Store para participar en una serie gratuita de tres talleres de una hora de duración en los que experimentarás la programación en un entorno divertido y sin estrés, te familiarizarás con los conceptos clave de la informática y te prepararás para dirigir una Hora del Código en tu clase o en tu comunidad. ¡Tú puedes! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
   minecraft_future: "Ayuda a los jóvenes a prepararse para el futuro"
   minecraft_future_description: "Descubre cómo otras escuelas y organizaciones sin ánimo de lucro están llevando las habilidades digitales, desde la alfabetización digital hasta la educación informática, a sus comunidades. Analiza diferentes modelos, obtendrás consejos y trucos, y <a href='%{minecraft_future_url}', target='_blank'>acceso a los recursos</a> que encontraron más valiosos."
   minecraft_og_designer: "Minecraft ha vuelto con una nueva actividad para la Hora del Código. Programa animales y otras criaturas de Minecraft en tu propia versión de Minecraft."
@@ -507,6 +513,8 @@
   video_title_marco_belinelli: "Hora de código con Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh sobre Ciencias de la computación"
   video_title_my_name_is_aracely: "Mi nombre es Aracely"
+  video_title_change_face_of_cs: "Cambia la Cara de la Informática"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -583,6 +591,7 @@
   volunteer_engineer_submission_distance_16: "10 kilómetros"
   volunteer_engineer_submission_distance_24: "15 kilómetros"
   volunteer_engineer_submission_distance_32: "20 kilómetros"
+  volunteer_engineer_submission_distance_80: "80 kilómetros"
   volunteer_engineer_submission_num_volunteers_5: "5 voluntarios"
   volunteer_engineer_submission_num_volunteers_10: "10 voluntarios"
   volunteer_engineer_submission_num_volunteers_25: "25 voluntarios"
@@ -648,7 +657,7 @@
   dashboard_action_print_certificates: "Imprimir certificados"
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: "La mayoría de los docentes miden el progreso de sus estudiantes en la pestaña \"Ver progreso\". Si estás interesado en que tus estudiantes realizan más evaluaciones, puedes encontrar preguntas y áreas recomendadas en los planes de lecciones. Estos son realizados fuera de Code.org."
-  dashboard_assessments_none_part2: "Si enseñas un curso en la escuela secundaria, tenemos preguntas de evaluación como parte de Code.org que ayudarán a tus estudiantes a prepararse para el examen de AP. Para utilizar estas evaluaciones, primero asigna el curso a tu clase, luego escoge el curso en el menú desplegable de arriba y aquí verás las respuestas de tus estudiantes."
+  dashboard_assessments_none_part2: "Si estás enseñando un curso de secundaria o bachillerato, tenemos preguntas de evaluación disponibles como parte de Code.org para ayudar a tus alumnos a prepararse para el examen AP. Para utilizar estas evaluaciones, primero asigna el curso a tu clase y luego elige el curso en el menú desplegable de arriba y verás las respuestas de tus alumnos aquí."
   dashboard_assessments_summaries: "Resúmenes de las evaluaciones"
   dashboard_assessments_answers: "Todas las respuestas de las evaluaciones"
   dashboard_surveys_answers: "Encuestas"
@@ -979,6 +988,12 @@
   coursed-2021_name: Curso D (2021)
   coursee-2021_name: Curso E (2021)
   coursef-2021_name: Curso F (2021)
+  coursea-2022_name: Curso A (2021)
+  courseb-2022_name: Curso B (2021)
+  coursec-2022_name: Curso C (2021)
+  coursed-2022_name: Curso D (2021)
+  coursee-2022_name: Curso E (2022)
+  coursef-2022_name: Curso F (2022)
   express-2018_name: Curso Exprés (2018)
   pre-express-2018_name: Curso Exprés para pre-lectores (2018)
   express-2019_name: Curso Exprés (2019)
@@ -987,6 +1002,8 @@
   pre-express-2020_name: Curso Exprés para pre-lectores (2020)
   express-2021_name: Curso Exprés (2021)
   pre-express-2021_name: Curso Exprés para pre-lectores (2021)
+  express-2022_name: Curso Exprés (2022)
+  pre-express-2022_name: Curso Exprés para Pre-lectores (2022)
   csd2_name: 'Unidad 2: Desarrollo Web'
   csd3_name: 'Unidad 3: Animación y Juegos'
   accelerated_name: "Curso acelerado"
@@ -1101,6 +1118,12 @@
   coursed-2021_gradelevel: Grado 8 +
   coursee-2021_gradelevel: Edad 8-12
   coursef-2021_gradelevel: De 9 a 13 años
+  coursea-2022_gradelevel: De 4 a 7 años
+  courseb-2022_gradelevel: De 5 a 8 años
+  coursec-2022_gradelevel: Edades de 6 a 10 años
+  coursed-2022_gradelevel: Grado 8 +
+  coursee-2022_gradelevel: Edad 8-12
+  coursef-2022_gradelevel: De 9 a 13 años
   accelerated_gradelevel: "Edades de 10 a 18 años"
   codeorg_platformtext: "Cualquier navegador moderno, smartphone, tableta"
   codeintl_platformtext: "Cualquier navegador moderno, smartphone, tableta"
@@ -1239,6 +1262,12 @@
   coursed-2021_shortdescription_congrats: Los estudiantes desarrollan su comprensión de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
   coursee-2021_shortdescription_congrats: Empieza a programar con algoritmos, bucles, condicionales y eventos, y pasa luego a las funciones. En la segunda parte de este curso, diseñarás y crearás un proyecto final que puedes compartir con tus amigos y familiares.
   coursef-2021_shortdescription_congrats: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
+  coursea-2022_shortdescription_congrats: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+  courseb-2022_shortdescription_congrats: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+  coursec-2022_shortdescription_congrats: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
+  coursed-2022_shortdescription_congrats: Los estudiantes desarrollan su comprensión de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
+  coursee-2022_shortdescription_congrats: Empieza a programar con algoritmos, bucles, condicionales y eventos, y pasa luego a las funciones. En la segunda parte de este curso, diseñarás y crearás un proyecto final que puedes compartir con tus amigos y familiares.
+  coursef-2022_shortdescription_congrats: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
   codeorg_longdescription: "Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprende los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas."
   codeintl_longdescription: "Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1493,6 +1522,7 @@
   header_educate_beyond: "Más allá de Code.org"
   header_educate_inspire: "Inspira a un estudiante"
   header_educate_community: "Comunidad en línea"
+  header_educate_requirements: "Requisitos Técnicos"
   header_educate_tools: "Herramientas y videos"
   header_about_us: "Acerca de nosotros"
   header_about_leadership: "Liderazgo"
@@ -1583,6 +1613,9 @@
   hoc_overview_dance_title: "Fiesta de Baile"
   hoc_overview_dance_subtitle: "Programa una Fiesta de baile y compártela con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!"
   hoc_overview_dance_2019_subtitle: "Programa una Fiesta de baile para compartir con tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers, ¡y muchos más!"
+  hoc_overview_dance_2022_subtitle: "Programa una fiesta de baile y compártela con tus amigos. ¡Con música de Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, la película de Disney «Encanto» y más!"
+  hoc_overview_hello_world_2022_subtitle: "Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti."
+  hoc_overview_hello_world_2022_alt_text: "Personajes animados de astronautas y animalitos alrededor de una ilustración de la tierra"
   hoc_overview_title: "Actividades de la Hora del Código de Code.org"
   hoc_overview_subtitle: "La <a href=\"https://hourofcode.com\">Hora del Código</a> es un movimiento global que llega a decenas de millones de estudiantes en más 180 países. Cualquier persona, en cualquier lugar del mundo, puede organizar una Hora del Código o probar uno de los más de 200 tutoriales de una hora, disponibles en más de 45 idiomas."
   hoc_overview_subtitle_markdown: "La [Hora del Código](https://hourofcode.com) es un movimiento global que llega a decenas de millones de estudiantes en más de 180 países. Cualquiera, en cualquier lugar, puede organizar un evento de Hora del Código o probar cualquiera de los más de 500 tutoriales de una hora, que están disponibles en más de 45 idiomas."
@@ -1623,14 +1656,18 @@
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition cuenta con un plan de estudios, entrenamiento y programación en Minecraft que sigue los estándares.'
   hoc2018_mc_educators_box1_button: "Comenzar"
   hoc2018_mc_educators_box2_title: "Descarga la guía para facilitadores"
-  hoc2018_mc_educators_box2_desc: "Este kit de herramientas te ayudará a organizar una Hora del Código y que tus estudiantes se interesen en las ciencias de la computación."
+  hoc2018_mc_educators_box2_desc: "Este kit de herramientas te ayudará a organizar una Hora del Código e involucrar a tus alumnos en la informática."
   hoc2018_mc_educators_box2_button: "Descargar"
   hoc2018_mc_educators_box3_title: "Asiste a un taller gratis para estudiantes"
   hoc2018_mc_educators_box3_desc: "Visita una tienda de Microsoft local y encuentra un taller gratis de la Hora del Código. Para participantes de todos los niveles, mayores de 6 años."
   hoc2018_mc_educators_box3_button: "Encuentra un taller"
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilice este [curso gratuito] bajo demanda (%{free_course_link}) o registre a toda su clase para asistir a un taller en vivo de la Hora del código con un profesor invitado. Se ofrece en varias ocasiones durante el CSEW, del 6 al 11 de diciembre. '
+  hoc2022_mc_educators_box3_button: "Regístrate ahora"
   hoc2018_mc_educators_box4_title: "Accede a más recursos sobre ciencias de la computación"
   hoc2018_mc_educators_box4_desc: "Haz una diferencia en tu comunidad con las habilidades digitales y la enseñanza de ciencias de la computación de Microsoft."
   hoc2018_mc_educators_box4_button: "Explorar recursos"
+  hoc2022_mc_educators_box4_desc: "Inspire la pasión por STEM en los estudiantes de K-12 con 200 horas de plan de estudios de ciencias de la computación, desde block hasta python, respaldado por el desarrollo profesional."
+  hoc2022_mc_educators_box4_button: "Sigue aprendiendo"
   hoc2018_mc_watch_videos: "Antes de empezar, ve uno de estos videos inspiradores"
   hoc2018_mc_videos_more: "Más <a href='%{inspiring_videos_playlist}'>videos inspiradores</a> con la participación de expertos y personajes famosos"
   hoc2018_mc_careers_more: "Más <a href='%{careers_url}' target='_blank'>videos inspiradores</a> con la participación de profesionales en el campo de la tecnología"
@@ -1665,7 +1702,7 @@
   hoc2018_mc_journey: "Un viaje a través de Minecraft con el código."
   hoc2018_dance_party_main_heading: "Fiesta de Baile"
   hoc2018_dance_party_landing_title: "Baile"
-  hoc2018_dance_party_subheading: "Ayuda a traducir la Fiesta de baile"
+  hoc2018_dance_party_subheading: "Ayuda a traducir la Fiesta de Baile"
   hoc2018_dance_create_your_own_dance_title: "Crea tu propia Fiesta de baile"
   hoc2018_dance_party_box_title: "Fiesta de Baile"
   hoc2018_dance_party_box_description: "¡Crea tu propia Fiesta de baile y compártela con tus amigos!"
@@ -1746,6 +1783,9 @@
   hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: "Inteligencia Artificial para el Bienestar"
   hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos y aprende a codificar en Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: "Finca de escape de Minecraft"
+  hoc2022_mc_mee_description: '¡Escapa de la misteriosa mansión al amanecer y gana un millón de esmeraldas! El nuevo tutorial de la Hora del código de Minecraft ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook, iPad y dispositivos móviles. Comience con recursos, capacitaciones y videos gratuitos para educadores. '
+  hoc2022_mc_mee_timecraft_description: 'Viaja en el tiempo para salvar el futuro en esta lección de programación gratuita en Minecraft: Education Edition.'
   footer_powered_by_aws: "Impulsado por Amazon Web Services"
   footer_built_on_github: "Creado en GitHub de Microsoft"
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras mini-lecciones en vivo de CodeBytes!"
@@ -1803,6 +1843,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
   ai_ecs: 'ECS: Inteligencia Artificial (IA)'
   ai_ecs_description: "Una nueva unidad de plan de estudios alternativo para el plan de estudios de Exploración de Ciencias de la Computación (ECS)."
+  ai_aiedu_intro: 'aiEDU: Introducción a la Inteligencia Artificial'
+  ai_aiedu_intro_description: "Introducción a la Inteligencia Artificial es un plan de estudios gratuito, innovador y culturalmente relevante en el que los alumnos desarrollan conocimientos conceptuales sobre qué es la Inteligencia Artificial y cómo se utiliza en el mundo real."
   ai_elements: "Elementos de Inteligencia Artificial"
   ai_elements_description: "Una serie de cursos gratuitos en línea creados por Reaktor y la Universidad de Helsinki."
   ai_cognimates: "Cognimates"
@@ -1812,3 +1854,25 @@
   outbreak_tile_subtitle: "¡Un virus ha infectado Monster Town! Codifica un simulador de brote y haz predicciones sobre lo que les ocurrirá a los vecinos de Monster Town."
   outbreak_tile_alt: "Una simulación de cómo se propaga un virus a través de un grupo de monstruos morados."
   footer_cookie_notice: "Aviso de Cookies"
+  top_hoc_tutorial_applab_alt_text: "Una mano marrón con el dedo índice tocando una tableta de pantalla táctil que emite estrellas y rayos de luz sobre un fondo azul"
+  minecraft_tile_alt: "Dos personajes de Minecraft, Steve y Alex, sobre un fondo que muestra una escena acuática de Minecraft con corales, delfines y algas"
+  hoc2022_banner_title: "¡Explora, Juega, Crea!"
+  hoc2022_banner_description: "Explorar el universo, marcar un gol, hacer un movimiento: ¡hay muchas maneras de probar la informática!"
+  hoc2022_cta_primary: "Ver lo nuevo"
+  hoc2022_cta_secondary: "Prueba más actividades"
+  hoc2022_landing_page_explore_title: "Explorar"
+  hoc2022_landing_page_explore_description: "¡Abre las puertas a nuevos mundos con la informática!"
+  hoc2022_landing_page_play_title: "Jugar"
+  hoc2022_landing_page_play_description: "¡Sal al campo y marca!"
+  hoc2022_landing_page_create_title: "Crear"
+  hoc2022_landing_page_create_description: "¡Haz algo raro y maravilloso!"
+  hoc2022_landing_page_banner_alt_left: "Un extraterrestre bailando junto a Saturno en el espacio"
+  hoc2022_landing_page_banner_alt_right: "Un robot regateando un balón de fútbol en el espacio frente a un cohete que despega"
+  try_it_yourself: "¡Inténtalo tú mismo!"
+  try_an_activity: "Prueba una actividad"
+  see_more_activities: "Ver más actividades"
+  hoc2022_nasa_webb_alt_text: "Ilustración del telescopio James Webb de la NASA"
+  hoc2022_nasa_banner_heading: "¡Aprende sobre las ciencias de la computación en el espacio con la NASA en esta función especial de la Hora del Código!"
+  hoc2022_nasa_banner_description: "Sintonízate a las 10AM EST el 5 de Diciembre via el canal de YouTube de NASA STEM."
+  hoc2022_nasa_banner_heading_posthoc: "¡Echa un vistazo al reportaje especial de La Hora del Código de la NASA sobre informática en el espacio!"
+  microsoft_logo_alt: "Logo de Microsoft"

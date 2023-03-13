@@ -65,6 +65,7 @@ hi:
       name: नाम
       nectar: मधुरस
       nectars: मधुरस
+      object: वस्तु
       padYOffset: padYOffset
       planet: ग्रह
       player_score: player_score
@@ -90,6 +91,7 @@ hi:
       speed: गति
       startX: startX
       startY: startY
+      type: प्रकार
       variable: चर / वेरीयबल 
       width: चौड़ाई
       wizard: जादूगर

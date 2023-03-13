@@ -113,7 +113,7 @@
         },
         "2-3 Artist Functions 10": {
           "big gear": {
-            "name": "menj és gyűjts nektárt"
+            "name": "nagy fogaskerék"
           },
           "small gear": {
             "name": "kis fogaskerék"
@@ -230,17 +230,17 @@
             "name": "rajzolj kört"
           },
           "draw goal": {
-            "name": "rajzold meg a célt"
+            "name": "rajzolj kaput"
           }
         },
         "4-5 Bee Conditionals 7": {
           "check purple flower": {
-            "name": "ellenőrizd lila virágot"
+            "name": "ellenőrizd a lila virágot"
           }
         },
         "4-5 Bee Conditionals 8": {
           "check flower make honey": {
-            "name": "nézd meg a virágot készíts mézet"
+            "name": "virágvizsgálat és mézkészítés"
           }
         },
         "4-5 Bee Conditionals Assessment 1": {
@@ -402,7 +402,7 @@
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "Course 4 Artist Functions challenge": {
@@ -410,7 +410,7 @@
             "name": "rajzolj egy sor négyzetet"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "Course 4 Bee Params 1": {
@@ -458,23 +458,27 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "Ugorj"
+            "name": "Ugorj",
+            "description": "A fő szereplő 100 képpontot ugrik felfelé."
           }
         },
         "Course 4 Play Lab Params 10": {
           "level_up": {
-            "name": "szintlépés"
+            "name": "level_up",
+            "description": "Növelje a szintet 1-gyel, állítsa vissza a pontokat 0-ra, növelje az ellenfél sebességét, és válasszon véletlenszerű hátteret."
           },
           "score_points": {
-            "name": "szerzett_pontok",
+            "name": "score_points",
             "parameters": {
               "points": "pontok"
-            }
+            },
+            "description": "Hozzáadja a kapott pontot a player_score változóhoz."
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "Ugorj"
+            "name": "Ugorj",
+            "description": "A fő szereplő `height` képpontnyit ugrik felfelé."
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -483,12 +487,14 @@
             "parameters": {
               "height": "magasság",
               "actor": "szereplő"
-            }
+            },
+            "description": "A megadott szereplő a megadott magasságra ugrik. "
           }
         },
         "Course 4 Play Lab Params 4": {
           "patrol": {
-            "name": "járőr"
+            "name": "járőr",
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -499,7 +505,8 @@
             "name": "járőr",
             "parameters": {
               "actor": "szereplő"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé"
           }
         },
         "Course 4 Play Lab Params 6": {
@@ -507,7 +514,8 @@
             "name": "járőr",
             "parameters": {
               "actor": "szereplő"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -516,7 +524,8 @@
             "parameters": {
               "actor": "szereplő",
               "speed": "sebesség"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -525,15 +534,17 @@
             "parameters": {
               "actor": "szereplő",
               "speed": "sebesség"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
-            "name": "szerzett_pontok",
+            "name": "score_points",
             "parameters": {
               "points": "pontok"
-            }
+            },
+            "description": "Hozzáadja a kapott pontot a player_score változóhoz."
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -554,7 +565,7 @@
             "name": "rajzolj egy sor hatszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "Course 4 SCF 1a": {
@@ -567,7 +578,7 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw octagons": {
             "name": "rajzolj nyolcszögeket"
@@ -578,7 +589,7 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -602,13 +613,15 @@
         },
         "FoodFight": {
           "level_up": {
-            "name": "szintlépés"
+            "name": "level_up",
+            "description": "Növelje a szintet 1-gyel, állítsa vissza a pontokat 0-ra, növelje az ellenfél sebességét, és válasszon véletlenszerű hátteret."
           },
           "score_points": {
-            "name": "szerzett_pontok",
+            "name": "score_points",
             "parameters": {
               "points": "pontok"
-            }
+            },
+            "description": "Hozzáadja a kapott pontot a player_score változóhoz."
           }
         },
         "Function intro Ryan": {
@@ -832,7 +845,7 @@
             "name": "rajzolj egy sor négyzetet"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -840,7 +853,7 @@
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -848,7 +861,7 @@
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "draw a line of squares": {
             "name": "rajzolj egy sor négyzetet"
@@ -865,7 +878,7 @@
             "name": "rajzolj négyzetet 40"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1107,7 +1120,8 @@
             "parameters": {
               "actor": "szereplő",
               "speed": "sebesség"
-            }
+            },
+            "description": "Mozgassa a szereplőt felfelé vagy lefelé az adott sebességgel"
           }
         },
         "New Artist Project": {
@@ -1245,7 +1259,7 @@
             "name": "csinálj valamit"
           },
           "get 3 nectar or honey": {
-            "name": "gyűjts 3 nektárt és mézet"
+            "name": "szerezz 3 nektárt vagy mézet"
           }
         },
         "course3_bee_functions_challenge2": {
@@ -1253,12 +1267,12 @@
             "name": "csinálj valamit"
           },
           "move and collect": {
-            "name": "lépj és gyűjts"
+            "name": "menj és gyűjts"
           }
         },
         "course3_bee_functions_challenge3": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           },
           "row of nectar": {
             "name": "nektársor"
@@ -1269,7 +1283,7 @@
         },
         "course3_bee_functions_challenge4": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           },
           "row of nectar": {
             "name": "nektársor"
@@ -1338,7 +1352,7 @@
             "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -2657,7 +2671,7 @@
             "name": "csinálj valamit"
           },
           "get 3 nectar or honey": {
-            "name": "gyűjts 3 nektárt és mézet"
+            "name": "szerezz 3 nektárt vagy mézet"
           }
         },
         "courseE_bee_functions_challenge2": {
@@ -2665,7 +2679,7 @@
             "name": "csinálj valamit"
           },
           "move and collect": {
-            "name": "lépj és gyűjts"
+            "name": "menj és gyűjts"
           }
         },
         "courseE_farmer_concept1": {
@@ -3172,7 +3186,7 @@
             "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -3180,7 +3194,7 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "rajzolj négyzetet 20"
+            "name": "rajzolj 20-as négyzetet"
           },
           "do something": {
             "name": "csinálj valamit"
@@ -3197,7 +3211,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_for_challenge1": {
@@ -3232,7 +3246,7 @@
         },
         "courseF_bee_functions3a": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions4": {
@@ -3240,7 +3254,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions5a": {
@@ -3248,7 +3262,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions6": {
@@ -3282,7 +3296,7 @@
             "name": "nektárokSora"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions_challenge2": {
@@ -3293,7 +3307,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_fwp2": {
@@ -4158,6 +4172,471 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "menj és gyűjts nektárt számlálóval"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "függvény 1"
+          },
+          "function 2": {
+            "name": "függvény 2"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "az én függvényem"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "építs hidat"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "tisztítsd meg az ösvényt"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "javítsd meg a hosszú utat"
+          },
+          "fix short path": {
+            "name": "javítsd meg a rövid utat"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "építs rövid hidat"
+          },
+          "build long bridge": {
+            "name": "építs hosszú hidat"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "függvény 1"
+          },
+          "function 2": {
+            "name": "függvény 2"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "lehetséges megoldás"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "name": "rajzolj lángot",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "rajzolj tüzet"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "gyorsító"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "draw hexagon": {
+            "name": "rajzolj hatszöget"
+          },
+          "draw line of hexagons": {
+            "name": "rajzolj egy sor hatszöget"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot"
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "rajzolj ablakot"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "staggered squares": {
+            "name": "lépcsős négyzetek"
+          },
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "staggered squares": {
+            "name": "lépcsős négyzetek"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "draw triangle": {
+            "name": "rajzolj háromszöget"
+          },
+          "draw line of triangles": {
+            "name": "rajzolj vonalat háromszögekből"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw hexagon": {
+            "name": "rajzolj hatszöget"
+          },
+          "draw line of hexagons": {
+            "name": "rajzolj egy sor hatszöget"
+          },
+          "staggered squares": {
+            "name": "lépcsős négyzetek"
+          },
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "my design": {
+            "name": "az én tervem"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "my design": {
+            "name": "az én tervem"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "draw line of polygons": {
+            "name": "rajzolj egy sor sokszöget"
+          },
+          "draw polygon": {
+            "name": "rajzolj sokszöget"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          },
+          "pumpkin square": {
+            "name": "sütőtök négyzet"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "pumpkin square": {
+            "name": "sütőtök négyzet"
+          },
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get produce": {
+            "name": "termény felszedése"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "check for corn": {
+            "name": "kukorica vizsgálata"
+          },
+          "corn rectangle": {
+            "name": "kukorica téglalap"
+          },
+          "lettuce stairs": {
+            "name": "saláta lépcsők"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "kerti négyzet"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "kerti négyzet"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "kerti négyzet"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "játék vége"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "játék vége"
+          }
+        },
+        "courseF_bee_for_challenge12022": {
           "move and get nectar with counter": {
             "name": "menj és gyűjts nektárt számlálóval"
           }

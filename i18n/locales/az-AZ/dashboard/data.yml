@@ -62,7 +62,7 @@ az:
         maze_2_1: Bu donuzun əlindən lələklərim biz-biz olur. Mənə kömək edin ki, onu tapım!
         maze_2_2_5: Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT qutusundan yayınaq, yoxsa lələklərim göyə sovrular!
         maze_2_3: Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)
-        maze_2_4: Təmkinli ol və pis donuzu tapmağıma kömək et. Yoxsa mən acıqlana bilərəm!
+        maze_2_4: Təmkinli ol və pis donuzu tapmağıma kömək et. Yoxsa mən əsəbləşə bilərəm!
         maze_2_5: Mənim yaşıl donuza 2 blokdan istifadə edərək çatmağım üçün bir yol var. Siz onu tapa bilərsinizmi?
         maze_2_6: Məni ancaq üç blokdan istifadə edərək yaşıl cinayətkara çatıdrmağa çalışın.
         maze_2_7: Mənə kömək edin ki, ən az sayda blokdan istifadə edərək pis donuzcuğun dərsini verim. Birdən çox "təkrar et, neçə dəfə" blokundan istifadə etməyə çalışın.
@@ -272,7 +272,7 @@ az:
         loop_for: Sayğac bloku
         parameters: Parametrli funksiyalar
         hoc_wrapup: Kod Saatının yekunu
-        Unplug1: İnformatika nədir?
+        Unplug1: Kompüter Elmləri nədir?
         Unplug2: Hesablama təfəkkürü
         Unplug3: Millimetrlik kağızda proqramlaşdırma
         Unplug4: Alqoritmlər
@@ -286,6 +286,7 @@ az:
         C1_happy_maps_unplugged: Şən xəritələr
         C1_moveitmoveit_unplugged: Hərəkət et
         C1_bigevent_unplugged: Böyük hadisə
+        C1_getting_loopy: Loopy əldə etmək
         C1_pair_programming: Estafet proqramlaşdırması
         C1_maze_intro_sequencing: Labirint Sıralama Girişi
         C1_maze_debugging: Labirint Sazlama
@@ -313,6 +314,8 @@ az:
         C2_binary_bracelets: ikili bilərziklər
         C2_relay_programming: Estafet proqramlaşdırması
         C2_paper_airplanes: Kağız təyyarələr
+        C2_digital_footprint: Rəqəmsal barmaq iziniz
+        C2_digital_footprint_v2: Rəqəmsal barmaq iziniz
         C3_maze_level_4: Labirint Dövrlər
         C3_artist_intro: Rəssam oyununa giriş
         C3_artist_functions: Rəssam Funksiyalar
@@ -328,6 +331,7 @@ az:
         C3_computational_thinking: Hesablama təfəkkürü
         C3_dice_race: Zər Yarışı
         C3_internet: İnternet
+        C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funksional muncuqlar
         C3_songwriting_with_parameters: Parametrlərlə mahnı yazmaq
         C4_intro: Giriş
@@ -481,6 +485,7 @@ az:
         hoc_dance_events: Rəqs Şənliyi - Hadisələr
         hoc_dance_properties: Rəqs Şənliyi - Xüsusiyyətlər
         hoc_dance_congrats: Rəqs Partisi - Parti Açıqdır!
+        c_and_c_great_to_create: Ədalətli Yaratmaq və Oynamaq Əladır
         c_and_c_digital_sharing: Rəqəmsal paylaşım
         teaching_csf_how_it_works: 'Kompüter elmlərinin əsaslarını öyrətmək: Kurs necə işləyir'
         elem_pd_2: İbtidai Sinif Computer Elmləri - PD video 2/2
@@ -561,6 +566,7 @@ az:
         csd_ml_intro_ai_lab_july2021: Süni intellekt laboratoriyasına giriş
         csd_ml_training_testing_ai_lan: Süni intellekt laboratoriyasında təlim və sınaq
         csd_ml_model_cards_july2021: AI Laboratoriyasında Model Kartlar
+        csd_ml_numerical_ai_lab: AI laboratoriyasında rəqəmsal məlumatlar
         Gettting_Started_Progress: Tərəqqi, Əlaqə və Qiymətləndirmə
         Gettting_Started_ClassSection: Sinif bölməsinin yaradılması
         Gettting_Started_StudentExperience: Şagird təcrübəsi
@@ -600,6 +606,88 @@ az:
         outbreak_outro: 'Epidemiya Simulyatoru: Pulsuz Oyna'
         PL_overview_CSP: Kompüter Elmləri Prinsipləri nədir?
         PL_CSP_EIPMOverview: EIPM Dərsləri üçün bələdçi
+        CSA-PL-debugging-temp: Java Laboratoriyasında Sazlamaya Giriş - temp
+        csd_app_lab_design_mode: CSD Tətbiq Laboratoriyası Dizayn Rejimi
+        csd_app_lab_events: CSD Tətbiq Laboratoriyası Hadisələri
+        PL_CSD_Unit4_AppTesting: Kağız Prototip Testi
+        csd_u6_circuit_playground: Fiziki Hesablama
+        CSA-PL-for-loops: Java-da döngələr üçün
+        CSA-PL-variables: Java-da dəyişənlərin yaradılması
+        PL_CS_Journeys_Overview: "CS Səyahətlər\n"
+        CSA-PL-intro-to-java-lab: Java Laboratoriyasının Əsasları
+        CSA-PL-first-program: Java-da proqram yazmaq
+        CSD_u6_variables_part1: 'CSD: Dəyişənlər'
+        csd_u6_if_statements: 'CSD: Əgər bəyanatlar'
+        csc-poem-art-intro: Giriş Videosu
+        csc-poem-art-outro: Xarici Video
+        csd_u6_call_define_functions: 'CSD: Funksiyaların Çağırılması və Müəyyənləşdirilməsi'
+        csp_applab_parameters: Parametrli funksiyalar
+        starquilts_intro_artist: Ulduz yorğanlarına giriş
+        CSA-PL-intro-to-arrays: Birölçülü (1D) massivlər
+        CSA-PL-1d-arrays-new-values: 1D massivlərində dəyərlərin daxil edilməsi
+        CSA-PL-conditionals: Java-da şərti ifadələr
+        CSA-PL-two-way-selection: İki tərəfli seçim
+        CSA-PL-Printing-in-Java: Java-da çap
+        CSA-PL-multi-selection-statements: "Multi-selection Statements\n"
+        PL_CSP_TeacherTips_Advice: 'Müəllim Məsləhətləri: Yeni CS Müəllimlərinə Məsləhət'
+        PL_CSP_TeacherTips_IntroToCSP: 'Müəllim məsləhətləri: CS Prinsiplərinə giriş '
+        PL_CSP_TeacherTips_Debugging: 'Müəllim məsləhətləri: Sazlama ilə bağlı yardım '
+        PL_CSP_TeacherTips_LeadLearner: 'Müəllim məsləhəti: Necə Lider Şagird ola bilərəm'
+        PL_CSP_TeacherTips_APExam: 'Müəllim məsləhəti: AP Sınağına hazırlıq'
+        PL_CSP_TeacherTips_EIPM: 'Müəllim məsləhəti: EIPM Prosesi'
+        PL_CSD_CircuitPlayground_Overview: Oyun ərazisinə ümumi baxış
+        CSA-PL-debugging-22: Java Labaratoriyasında Debugging
+        CSD_Unit6_InteractiveArtExemplar: İnteraktiv İncəsənət Nümunəsi
+        CS_Changing_Everything: Kompüterlər hər şeyi dəyişir
+        csa-alias-video: Bərabərlər və ləqəblər
+        csa-equals-video: bərabərlıq() metodu
+        csa-user-stories: Proqram Mühəndisliyində İstifadəçi Hekayələri
+        csa-pl-vpl-m1-unit-3: 3-cü bölmədə proqram təminatı mühəndisliyi
+        csa-pl-intro-to-equality: Bərabərliyə təqdim etməsi
+        csa-pl-intro-to-equals-method: .equals() metoduna təqdim etməsi
+        csa-pl-equals-book: Book sinfi üçün equals() metodunun yazılması
+        csa-multi-select-pl: Java-da çox seçimli ifadələr
+        csc_timecapsule_intro: Zaman kapsulunun təqdimatı
+        PL_Equity_in_CS_Education: Kompüter elmi təhsilində bərabərlik/ədalət
+        csc_fm_pilot: Funksional Maşınlar (Pilot)
+        csc_fm_pilot_v2: 'Funksional Maşınlar Girişi'
+        csc-sprite-lab-pixel-editor: Öz Sprite'ını(-zı) Çək(-in)
+        csa-pl-intro-to-strings: Java-da sətirlərə giriş
+        csa-pl-compareTo: CompareTo() metodu
+        csc-event-short-intro: Hadisələr Qısa Giriş
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Oyun Ərazisində Ümumi Baxış
+        csa-day-in-pm-pl: Lahiyə meneceri nə edir?
+        csa-pl-intro-to-pm: Lahiyənin İdarə Edilməsinə Giriş
+        PL_CSD_CircuitPlayground_Setup: "Oyun Meydançası Quraşdırma\n"
+        csa_object_oriented_programming: 'CSA: Obyekt-Orientasiya Proqramlaşdırması'
+        csa_creating_objects: 'Kompüter Elmlərinin Assosiasiyası: Obyektlərin Yaradılması'
+        csa_calling_methods: 'CSA: Çağırış Üsulları'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Miras'
+        csa_writing_a_method: 'CSA: Metodun yazılması'
+        csa_software_engineering_code_reviews: 'CSA: Proqram Mühəndisliyi - Kod Baxışları'
+        csa_conditional_statements: 'CSA: Şərti operatorlar'
+        csa_printing_in_java: "\nCSA: Java-da çap"
+        csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim və DEYİL'
+        csa-pl-intro-to-oop: "Obyekt Yönümlü Proqramlaşdırmaya Giriş\nObyekt Yönlü Proqramlaşdırmaya Giriş"
+        csa-pl-welcome-to-Neighborhood: Qonşuluğa Xoş Gəlmisiniz
+        csa-pl-calling-methods: Javada Çağırış Üsulları
+        csa-pl-creating-objects: Obyektlərin yaradılması
+        csa_accessor_methods: 'CSA: Aksesuar Üsulları'
+        csa_constructors: 'CSA: İnşaatçılar'
+        csa_creating_a_scanner_object: "\nCSA: Skaner Obyektinin yaradılması"
+        csa_creating_variables: 'Dəyişənlərin yaradılması'
+        csa_instance_variables_and_attributes: 'CSA: Nümunə Dəyişənləri və Atributları'
+        csa_mutator_methods: 'CSA: Mutator üsulları'
+        csa_overloaded_constructors: 'CSA: Həddindən Artıq Yüklənmiş Konstruktorlar'
+        csa_the_tostring_method: "CSA: ToString () Metodu\nCSA: ToString () Üsulu"
+        csa_scanner_class_methods: 'CSA: Skaner Sinif Üsulları'
+        csa_for_loops: "CSA: For Döngələri\nCSA: For Loops"
+        csa_enhanced_for_loops: "CSA: Gücləndirilmiş For Döngələri\nCSA: Gücləndirilmiş For Lopps"
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D Arrayda Dəyərlər Modifikası'
+        csa_nested_loops: "CSA: Nested Loops\nCSA: İç-içə Döngələr"
+        csa_one_dimensional_arrays: "CSA: Bir Ölçülü (1D) Massivlər\nCSA: Bir Ölçülü (1D) Arrays"
+        csa_polymorphism: 'CSA: Polimorfizm'
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'
@@ -651,14 +739,14 @@ az:
         place_variable: Dəyişəninizi bu bloka sürükləyin
         bee_for_loop: Buraya arının toplamasını istədiyiniz ən çox nektar miqdarını sürükləyin
         place_counter_variable: Sayğac dəyişəninizi bu bloka sürükləyin
-        function_editor_draw_square: Bu sizin funksiya tərifinizdir. Hər dəfə "kvadrat çək" blokundan istifadə etdikdə bu bloklar işləyir.
+        function_editor_draw_square: Bu sizin funksiya tərifinizdir. Hər dəfə "kvadrat çək" blokundan istifadə etdikdə bu bloklar icra olunur.
         change_here: Dəyişikliklərinizi burada edin
         write_draw_square_function: Alət qutusundan kvadrat çəkən blokları buraya sürükləyin 
         write_draw_triangle_function: Alət qutusundan üçbucaq çəkən blokları buraya sürükləyin 
-        edit_add_parameter: Funksiyanıza parametr əlavə etmək üçün "redaktə edin" - ə basın
-        add_and_drag_parameter: Parametrinizin adını buraya yazın, əlavə et üzərinə klikləyin və sonra onu funksiya tərifinizə sürükləyin
+        edit_add_parameter: Funksiyanıza parametr əlavə etmək üçün "redaktə edin" - ə klikləyin
+        add_and_drag_parameter: Parametrinizin adını buraya yazın, əlavə et üzərinə basın və sonra onu funksiya tərifinizə sürükləyin
         fill_in_actor: Hər aktyora uyğun gələn ədədlərlə (1, 2 və 3) ??? hissəsini doldurun
-        repeat: Əmrləri təkrarlamaq üçün döngənin içərisinə bloklar qoyun
+        repeat: Əmrləri təkrarlamaq üçün döngənin içərisinə blokları yerləşdirin
         if_bee_nectar: Əgər arının nektarı alması gərəkdirsə, "əgər" blokundan istifadə  edin
         if_else_bee: '"Əgər/əks halda" blokundan istifadə edin ki, Arı güldən nektarı əldə etsin və əgər o gül deyilsə, bal hazırlasın'
         repeat_full_circle: Tam dairə etmək üçün zombinin neçə dəfə hərəkət etməli olduğunu daxil edin

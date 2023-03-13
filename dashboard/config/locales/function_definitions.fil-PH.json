@@ -2117,6 +2117,262 @@
           "build long bridge": {
             "name": "magtayo ng mahabang tulay"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "ang aking Function"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "magtayo ng tulay"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "linisin ang landas"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "ayusin ang mahabang landas"
+          },
+          "fix short path": {
+            "name": "ayusin ang maikling landas"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "magtayo ng maikling tulay"
+          },
+          "build long bridge": {
+            "name": "magtayo ng mahabang tulay"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          },
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "tapusin ang laro"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "tapusin ang laro"
+          }
         }
       }
     }

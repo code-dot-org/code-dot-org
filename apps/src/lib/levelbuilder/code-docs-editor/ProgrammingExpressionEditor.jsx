@@ -112,10 +112,6 @@ export default function ProgrammingExpressionEditor({
   return (
     <div>
       <h1>{`Editing ${initialProgrammingExpression.key}`}</h1>
-      <h2>
-        This feature is in development. Please continue to use curriculum
-        builder to edit code documentation.
-      </h2>
       <label>
         Display Name
         <input
@@ -190,7 +186,7 @@ export default function ProgrammingExpressionEditor({
         updateImageUrl={imgUrl =>
           setProgrammingExpressionProperty('imageUrl', imgUrl)
         }
-        imageUrl={programmingExpression.imageUrl}
+        initialImageUrl={programmingExpression.imageUrl}
       />
       <label>
         Short Description

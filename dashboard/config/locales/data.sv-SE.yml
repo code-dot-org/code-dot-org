@@ -681,6 +681,7 @@ sv:
           poesi
         poetry_module_conditionals: Villkor – Koda med poesi
         poemart_intro: Poesi Konst Introduktion
+        csp_applab_parameters: Funktioner med parametrar
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket

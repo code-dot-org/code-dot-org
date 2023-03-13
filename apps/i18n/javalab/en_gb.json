@@ -1,4 +1,6 @@
 {
   "cancel": "Cancel",
-  "saving": "Saving..."
+  "create": "Create",
+  "saving": "Saving...",
+  "submit": "Submit"
 }

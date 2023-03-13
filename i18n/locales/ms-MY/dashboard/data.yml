@@ -28,6 +28,7 @@ ms:
         ArtistEC: Pelukis
         TextMatch: Padanan Teks
         Custom: Artis
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Gangsa
@@ -105,12 +106,17 @@ ms:
         Unplug4: Algoritma
         Unplug5: Fungsi
         Unplug6: Bersyarat
+        Unplug7: Songwriting
         Unplug8: Abstraksi
         Unplug9: Pengaturcaraan penyampai
         Unplug10: Internet
         Unplug11: Wrap-up
         C1_happy_maps_unplugged: Peta-peta Gembira
+        C1_bigevent_unplugged: The Big Event
+        C1_getting_loopy: Getting Loopy
         C1_artist_intro: Intro artis
+        C1_building_foundation: Membina Asas
+        C1_going_places_safely: Going Places Safely
         C2_maze_intro: Maze Intro
         C2_artist_intro: Intro artis
         C2_artist_loops: Gelung Artis
@@ -118,7 +124,10 @@ ms:
         C2_bee_conditionals: Lebah Bersyarat
         C2_graph_paper: Pengaturcaraan kertas graf
         C2_conditionals_with_cards: Bersyarat
+        C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Pengaturcaraan penyampai
+        C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_artist_intro: Intro artis
         C3_artist_functions: Fungsi Artis
         C3_bee_conditionals: Lebah Bersyarat
@@ -128,6 +137,8 @@ ms:
         C3_computational_thinking: Pengiraan pemikiran
         C3_dice_race: Perlumbaan Dadu
         C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Functional Suncatchers
         C4_loops_zombie: Gelung
         C4_bee_conditional: Lebah Bersyarat
         C4_variables_artist: Pemboleh Ubah - Artis
@@ -138,6 +149,7 @@ ms:
         CSF_artist_angles: Sudut di dalam Artis
         CSF_debugging_k1_blocks: Penyahpepijatan
         CSF_debugging_text_blocks: Penyahpepijatan
+        CSF_my_robotic_friends: Rakan-rakan Robotik Saya
         frozen_intro: Pengenalan Jam Kod
         frozen_loops: Pengenalan kepada Gelung
         frozen_functions: Pengenalan kepada Fungsi
@@ -169,10 +181,16 @@ ms:
         mc_2017_puzzle_8: Jam Kod Minecraft - Fungsi
         mc_2017_puzzle_12: Jam Kod Minecraft - Permainan Bebas
         CSF_loops_AB: Gelung
+        CSF_SpriteLabIntro_CDEF: Ini ialah Makmal Peperi
         CSF_StarWars_ProjectIntro: Pengenalan kepada Projek Star Wars
         hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
+        hoc_dance_events: Pesta Tarian - Acara
+        hoc_dance_properties: Pesta Tarian - Hartanah
         hoc_dance_congrats: Majlis Tari-Menari - Majlis Bermula!
+        c_and_c_great_to_create: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
+        c_and_c_digital_sharing: Perkongsian Digital
         csd_applab_parameters: Fungsi-fungsi dengan parameter
+        CSF_Spritelab_MakeSprite_v2: Cara Membuat Peperi
         csd_debugging: Penyahpepijatan
         how-to-k5-workshops: 'Asas CS Code.org: Kanak-kanak Diuji, Guru Meluluskan'
         hoc_dance_congrats_2019: Majlis Tari-Menari 2019 - Majlis Bermula!
@@ -180,6 +198,7 @@ ms:
         hoc_dance_events_2019: Majlis Tari-Menari 2019 - Acara
         hoc_dance_measures_2019: Majlis Tari-Menari 2019 - Corak Berirama
         hoc_dance_properties_2019: Majlis Tari-Menari 2019 - Sifat
+        csf_private_and_personal_information: Sulit dan Maklumat Peribadi
         csf_lots_of_sprites: 'Makmal Peperi: Banyak Peperi'
         PL_CSD_TeacherTips_Advise: Tips Guru - Nasihat Kepada Guru Baharu
         PL_CSD_TeacherTips_IntroToCSD: Petua Guru - Pengenalan kepada Penemuan SK
@@ -203,7 +222,32 @@ ms:
         poetry_module_multichoiceprompts: Prom Pelbagai Pilihan - Pengekodan dengan Puisi
         poetry_module_conditionals: Bersyarat - Pengekodan dengan Puisi
         poemart_intro: Pengenalan Seni Puisi
+        CSA-PL-debugging-temp: Pengenalan kepada Penyahpepijatan dalam Makmal Java - temp
+        CSA-PL-for-loops: Untuk gelung dalam Java
+        CSA-PL-variables: Mencipta Pembolehubah dalam Java
+        PL_CS_Journeys_Overview: Perjalanan CS
+        CSA-PL-intro-to-java-lab: Asas Makmal Java
+        CSA-PL-first-program: Menulis Program dalam Java
+        CSD_u6_variables_part1: "CSD: Pembolehubah\n"
+        csd_u6_if_statements: 'CSD: Jika Kenyataan'
+        csc-poem-art-intro: Video Pengenalan
+        csc-poem-art-outro: Video Penutup
+        csd_u6_call_define_functions: 'CSD: Fungsi Memanggil dan Mentakrifkan'
+        csp_applab_parameters: Fungsi-fungsi dengan parameter
+        starquilts_intro_artist: Pengenalan kepada Star Quilts
+        CSA-PL-intro-to-arrays: Tatasusunan Satu Dimensi (1D)
+        CSA-PL-1d-arrays-new-values: Memasukkan nilai dalam tatasusunan 1D
+        CSA-PL-conditionals: Kenyataan Bersyarat dalam Java
+        CSA-PL-two-way-selection: Pemilihan dua hala
+        CSA-PL-Printing-in-Java: Percetakan dalam Java
+        CSA-PL-multi-selection-statements: Kenyataan Pelbagai Pilihan
+        CS_Changing_Everything: Sains Komputer Mengubah Segalanya
     callout:
       text:
-        run: "\nTekan \"Run\" untuk mencuba program anda"
-        craft_run_button_callout: "\nTekan \"Run\" untuk mencuba program anda"
+        run: "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda"
+        craft_run_button_callout: "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda"
+        craft_callout_preplaced: Kami telah meletakkan beberapa blok di sini untuk membantu anda bermula
+        craft_inside_repeat: Ulangi tindakan dengan meletakkan blok di sini
+        craft_callout_preplaced_house: Kod ini akan mula membina rumah anda. Bolehkah anda menyiapkan rumah itu?
+        craft_what_is_iron: Melombong besi ini!
+        craft_callout_moveforward: Kod ini akan memeriksa lahar, bolehkah anda tambahkan perintah untuk bergerak ke hadapan?

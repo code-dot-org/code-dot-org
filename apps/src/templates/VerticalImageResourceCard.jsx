@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import {connect} from 'react-redux';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../util/color';
 import Button from './Button';
 
@@ -15,30 +14,42 @@ import Button from './Button';
 
 class VerticalImageResourceCard extends Component {
   static propTypes = {
+    altText: PropTypes.string,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
     MCShareLink: PropTypes.string,
-    jumbo: PropTypes.bool
+    jumbo: PropTypes.bool,
+    hasAdjustableHeight: PropTypes.bool
   };
 
   render() {
     const {
+      altText,
       title,
       description,
       link,
       buttonText,
-      isRtl,
       jumbo,
       MCShareLink,
-      image
+      image,
+      hasAdjustableHeight
     } = this.props;
-    const cardStyle = jumbo ? styles.jumboCard : styles.card;
-    const imageStyle = jumbo ? styles.jumboImage : styles.image;
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const cardHeight = hasAdjustableHeight ? {} : styles.cardHeight;
+    const cardStyle = jumbo
+      ? {...styles.jumboCard, ...cardHeight}
+      : {...styles.card, ...cardHeight};
+
+    const imageHeight = hasAdjustableHeight ? {} : styles.imageHeight;
+    const imageStyle = jumbo
+      ? {...styles.jumboImage, ...imageHeight}
+      : {...styles.image, ...imageHeight};
+
+    const descriptionStyle = hasAdjustableHeight
+      ? styles.description
+      : {...styles.description, ...styles.descriptionHeight};
 
     const filenameToImgUrl = {
       'another-hoc': require('@cdo/static/resource_cards/anotherhoc.png'),
@@ -59,25 +70,33 @@ class VerticalImageResourceCard extends Component {
       'dance-party': require('@cdo/static/resource_cards/danceparty.png'),
       'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
       'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
-      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png')
+      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png'),
+      course2: pegasus('/shared/images/courses/logo_tall_course2.jpg'),
+      course3: pegasus('/shared/images/courses/logo_tall_course3.jpg'),
+      course4: pegasus('/shared/images/courses/logo_tall_course4.jpg'),
+      courseB: pegasus('/shared/images/courses/logo_tall_courseb.png'),
+      courseC: pegasus('/shared/images/courses/logo_tall_coursec.png'),
+      courseD: pegasus('/shared/images/courses/logo_tall_coursed.png'),
+      courseE: pegasus('/shared/images/courses/logo_tall_coursee.png'),
+      courseF: pegasus('/shared/images/courses/logo_tall_coursef.png')
     };
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={[cardStyle, localeStyle]}>
+      <div style={cardStyle}>
         <div style={imageStyle}>
           <a href={link}>
-            <img src={imgSrc} alt={title} />
+            <img src={imgSrc} alt={altText} />
           </a>
         </div>
         <div>
-          <div style={[styles.text, styles.title, localeStyle]}>{title}</div>
-          <div style={[styles.text, styles.description, localeStyle]}>
+          <div style={{...styles.text, ...styles.title}}>{title}</div>
+          <div style={{...styles.text, ...descriptionStyle}}>
             {description}
             {MCShareLink && (
               <input
                 type="text"
-                style={[styles.text, styles.shareLink, localeStyle]}
+                style={{...styles.text, ...styles.shareLink}}
                 value={MCShareLink}
                 onChange={() => {}}
                 onClick={e => e.target.select()}
@@ -89,7 +108,7 @@ class VerticalImageResourceCard extends Component {
             href={link}
             color={Button.ButtonColor.gray}
             text={buttonText}
-            style={[styles.button, localeStyle]}
+            style={{...styles.button}}
           />
         </div>
       </div>
@@ -97,13 +116,16 @@ class VerticalImageResourceCard extends Component {
   }
 }
 
+VerticalImageResourceCard.defaultProps = {
+  altText: ''
+};
+
 const styles = {
   card: {
     overflow: 'hidden',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    height: 440,
     width: 308,
     backgroundColor: color.white
   },
@@ -112,17 +134,20 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    height: 440,
     width: 473,
     marginBottom: 20,
     backgroundColor: color.white
   },
+  cardHeight: {
+    height: 440
+  },
   image: {
-    width: 310,
-    height: 220
+    width: 310
   },
   jumboImage: {
-    width: 473,
+    width: 473
+  },
+  imageHeight: {
     height: 220
   },
   text: {
@@ -143,7 +168,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 14,
-    lineHeight: 1.5,
+    lineHeight: 1.5
+  },
+  descriptionHeight: {
     height: 89
   },
   shareLink: {
@@ -154,16 +181,7 @@ const styles = {
     marginTop: 5,
     padding: 5,
     width: 258
-  },
-  ltr: {
-    float: 'left'
-  },
-  rtl: {
-    float: 'right',
-    textAlign: 'right'
   }
 };
 
-export default connect(state => ({
-  isRtl: state.isRtl
-}))(Radium(VerticalImageResourceCard));
+export default VerticalImageResourceCard;

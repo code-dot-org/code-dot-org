@@ -1,324 +1,112 @@
 require 'test_helper'
 
 class CodeReviewCommentsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
+  self.use_transactional_test_case = false
 
   setup_all do
-    @project_owner = create :student
-    @project_owner_channel_id = 'encrypted_channel_id'
-    @project_owner_storage_id = 123
-    @project_id = 456
-    @new_comment_params = {
-      channel_id: @project_owner_channel_id,
-      script_id: 1,
-      level_id: 2,
-      comment: 'a comment'
-    }
-
+    @student_1 = create :student
+    @student_2 = create :student
+    @student_3 = create :student
     @teacher = create :teacher
-    @section = create :section, user: @teacher, code_review_expires_at: Time.now.utc + 1.day
-    @another_student = create :student
 
-    create :reviewable_project,
-      user_id: @project_owner.id,
-      project_id: @project_id,
-      level_id: 2,
-      script_id: 1
+    @section = create :section, code_review_expires_at: Time.now.utc + 1.day, teacher: @teacher
+    student_1_follower = create :follower, section: @section, student_user: @student_1
+    student_2_follower = create :follower, section: @section, student_user: @student_2
+    create :follower, section: @section, student_user: @student_3
+
+    # student_1 and student_2 are in a code review group together
+    @code_review_group = create :code_review_group, section: @section
+    create :code_review_group_member, follower: student_1_follower, code_review_group: @code_review_group
+    create :code_review_group_member, follower: student_2_follower, code_review_group: @code_review_group
+
+    @student_1_project = create :project, owner: @student_1
+    @student_2_project = create :project, owner: @student_2
+    @student_3_project = create :project, owner: @student_3
+
+    @code_review = create :code_review, user_id: @student_1.id, project_id: @student_1_project.id
   end
 
-  test 'signed out cannot create CodeReviewComment' do
-    post :create
-    assert_redirected_to_sign_in
-  end
+  test 'create code review comment' do
+    sign_in @student_2
 
-  test 'student can create CodeReviewComment on their own project' do
-    stub_projects_calls
-
-    sign_in @project_owner
-    post :create, params: @new_comment_params
-    assert_response :success
-
-    parsed_response_body = JSON.parse(response.body)
-    refute parsed_response_body['isFromTeacher']
-    assert parsed_response_body['isFromCurrentUser']
-    assert parsed_response_body['isFromProjectOwner']
-
-    comment = CodeReviewComment.find(parsed_response_body['id'])
-    assert_not_nil comment.script_id
-    assert_equal @new_comment_params[:script_id], comment.script_id
-    assert_not_nil comment.level_id
-    assert_equal @new_comment_params[:level_id], comment.level_id
-  end
-
-  test 'student not in same section with project owner cannot comment on project' do
-    stub_projects_calls
-
-    sign_in @another_student
-    post :create, params: @new_comment_params
-
-    assert_response :forbidden
-  end
-
-  test 'student in same section and code review group with project owner can comment on project' do
-    stub_projects_calls
-    put_students_in_section_and_code_review_group
-
-    sign_in @another_student
-    post :create, params: @new_comment_params
-
-    assert_response :success
-    refute JSON.parse(response.body)['isFromTeacher']
-  end
-  test 'teacher can create CodeReviewComment for student in their section' do
-    stub_projects_calls
-
-    create :follower, student_user: @project_owner, section: @section
-
-    sign_in @teacher
-    post :create, params: @new_comment_params
-
-    assert_response :success
-    assert JSON.parse(response.body)['isFromTeacher']
-    assert JSON.parse(response.body)['isFromCurrentUser']
-    refute JSON.parse(response.body)['isFromProjectOwner']
-  end
-
-  test 'teacher cannot create CodeReviewComment for student not in their section' do
-    stub_projects_calls
-
-    sign_in @teacher
-    post :create, params: @new_comment_params
-
-    assert_response :forbidden
-  end
-
-  test 'project owner can resolve comments on their project' do
-    code_review_comment = create :code_review_comment,
-      commenter_id: @another_student.id,
-      project_owner_id: @project_owner.id
-
-    assert_nil code_review_comment.is_resolved
-
-    sign_in @project_owner
-    patch :toggle_resolved, params: {id: code_review_comment.id, is_resolved: true}
-
-    assert_response :success
-    assert code_review_comment.reload.is_resolved
-  end
-
-  test 'project owner can re-open comments on their project' do
-    code_review_comment = create :code_review_comment,
-      commenter_id: @another_student.id,
-      project_owner_id: @project_owner.id,
-      is_resolved: true
-
-    assert code_review_comment.is_resolved
-
-    sign_in @project_owner
-    patch :toggle_resolved, params: {id: code_review_comment.id, is_resolved: false}
-
-    assert_response :success
-    refute code_review_comment.reload.is_resolved
-  end
-
-  test 'someone who is not project owner cannot resolve comments' do
-    code_review_comment = create :code_review_comment,
-      commenter_id: @another_student.id,
-      project_owner_id: @project_owner.id
-
-    assert_nil code_review_comment.is_resolved
-
-    sign_in @another_student
-    patch :toggle_resolved, params: {id: code_review_comment.id, is_resolved: true}
-
-    assert_response :forbidden
-  end
-
-  test 'teacher can delete CodeReviewComment for projects of students in their section' do
-    create :follower, student_user: @project_owner, section: @section
-    code_review_comment = create :code_review_comment,
-      project_owner_id: @project_owner.id
-
-    sign_in @teacher
-    delete :destroy, params: {id: code_review_comment.id}
-
-    assert_response :success
-  end
-
-  test 'teacher cannot delete CodeReviewComment for projects of students not in their section' do
-    code_review_comment = create :code_review_comment,
-      project_owner_id: @project_owner.id
-
-    sign_in @teacher
-    delete :destroy, params: {id: code_review_comment.id}
-
-    assert_response :forbidden
-  end
-
-  test 'student cannot delete their own comments' do
-    code_review_comment = create :code_review_comment,
-      project_owner_id: @project_owner.id
-
-    sign_in @project_owner
-    delete :destroy, params: {id: code_review_comment.id}
-
-    assert_response :forbidden
-  end
-
-  test 'project owner can fetch peer project comments for their projects' do
-    stub_projects_calls
-    setup_project_comments_tests
-
-    sign_in @project_owner
-    get :project_comments, params: {
-      channel_id: @project_owner_channel_id
+    comment_text = "A comment for code review"
+    post :create, params: {
+      comment: comment_text,
+      codeReviewId: @code_review.id,
     }
-
     assert_response :success
-    assert_equal 2, JSON.parse(response.body).length
+
+    response_json = JSON.parse(response.body)
+    assert_not_nil response_json['id']
+    assert_equal @student_2.name, response_json['commenterName']
+    assert_equal comment_text, response_json['comment']
+    assert_equal false, response_json['isResolved']
+    assert_not_nil response_json['createdAt']
   end
 
-  test 'project owner can see teacher comments' do
-    stub_projects_calls
-    setup_project_comments_tests
+  test 'cannot create a code review comment for a closed code review' do
+    student_2_closed_code_review = create :code_review, user_id: @student_2.id, project_id: @student_2_project.id, closed_at: DateTime.now
 
-    create :follower, student_user: @project_owner, section: @section
+    sign_in @student_1
 
-    teacher_comment = create :code_review_comment,
-      commenter: @teacher,
-      project_id: @project_id,
-      project_owner_id: @project_owner.id
-
-    sign_in @project_owner
-    get :project_comments, params: {channel_id: @project_owner_channel_id}
-
-    comment_ids = JSON.parse(response.body).map {|comment| comment['id']}
-    assert_equal 3, JSON.parse(response.body).length
-    assert_includes comment_ids, teacher_comment.id
-  end
-
-  test 'student in same section and code review group as project owner can see non-teacher project comments' do
-    stub_projects_calls
-    setup_project_comments_tests
-    put_students_in_section_and_code_review_group
-
-    sign_in @another_student
-    get :project_comments, params: {
-      channel_id: @project_owner_channel_id
-    }
-
-    assert_response :success
-    assert_equal 2, JSON.parse(response.body).length
-  end
-
-  test 'student in same section and code review group as project owner cannot see teacher comments' do
-    stub_projects_calls
-    setup_project_comments_tests
-    put_students_in_section_and_code_review_group
-
-    teacher_comment = create :code_review_comment,
-      commenter: @teacher,
-      project_id: @project_id,
-      project_owner_id: @project_owner.id
-
-    sign_in @another_student
-    get :project_comments, params: {channel_id: @project_owner_channel_id}
-
-    comment_ids = JSON.parse(response.body).map {|comment| comment['id']}
-    assert_equal 2, JSON.parse(response.body).length
-    refute_includes comment_ids, teacher_comment.id
-  end
-
-  test 'teacher of section project owner is enrolled in can fetch project comments' do
-    stub_projects_calls
-    setup_project_comments_tests
-
-    create :follower, student_user: @project_owner, section: @section
-
-    sign_in @teacher
-    get :project_comments, params: {
-      channel_id: @project_owner_channel_id
-    }
-
-    assert_response :success
-    assert_equal 2, JSON.parse(response.body).length
-  end
-
-  test 'teacher of section project owner is enrolled in can fetch their own comments' do
-    stub_projects_calls
-    setup_project_comments_tests
-
-    create :follower, student_user: @project_owner, section: @section
-    create :code_review_comment,
-      commenter: @teacher,
-      project_id: @project_id,
-      project_owner_id: @project_owner.id
-
-    sign_in @teacher
-    get :project_comments, params: {
-      channel_id: @project_owner_channel_id
-    }
-
-    assert_response :success
-    assert_equal 3, JSON.parse(response.body).length
-  end
-
-  test 'student not in same section as project owner cannot fetch project comments' do
-    stub_projects_calls
-    setup_project_comments_tests
-
-    sign_in @another_student
-    get :project_comments, params: {
-      channel_id: @project_owner_channel_id
+    post :create, params: {
+      comment: "A comment on closed code review",
+      codeReviewId: student_2_closed_code_review.id,
     }
 
     assert_response :forbidden
   end
 
-  test 'teacher cannot fetch project comments if not leading section of project owner' do
-    stub_projects_calls
-    setup_project_comments_tests
+  test 'cannot create a code review comment for someone outside the code review group' do
+    code_review_outside_group = create :code_review, user_id: @student_3.id, project_id: @student_3_project.id
 
-    sign_in @teacher
-    get :project_comments, params: {
-      channel_id: @project_owner_channel_id
+    sign_in @student_2
+
+    post :create, params: {
+      comment: "A comment on project outside code review group",
+      codeReviewId: code_review_outside_group.id,
     }
 
     assert_response :forbidden
   end
 
-  private
+  test 'update resolved for code review comment' do
+    review_comment = create :code_review_comment, code_review: @code_review, commenter: @student_2
 
-  def stub_projects_calls
-    CodeReviewCommentsController.
-      any_instance.
-      expects(:storage_decrypt_channel_id).
-      with(@project_owner_channel_id).
-      returns([@project_owner_storage_id, @project_id])
-    CodeReviewCommentsController.
-      any_instance.
-      expects(:user_id_for_storage_id).
-      with(@project_owner_storage_id).
-      returns(@project_owner.id)
+    sign_in @student_1
+
+    patch :update, params: {
+      id: review_comment.id,
+      isResolved: true
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_not_nil response_json['id']
+    assert_equal true, response_json['isResolved']
   end
 
-  def setup_project_comments_tests
-    2.times do
-      create :code_review_comment,
-        project_id: @project_id,
-        project_owner_id: @project_owner.id
-    end
+  test 'delete code review comment' do
+    review_comment = create :code_review_comment, code_review: @code_review, commenter: @student_2
 
-    # Create third code review comment from another project
-    # to make sure we only fetch the correct set of comments.
-    create :code_review_comment
+    sign_in @teacher
+
+    delete :destroy, params: {
+      id: review_comment.id
+    }
+
+    assert_response :success
   end
 
-  def put_students_in_section_and_code_review_group
-    code_review_group = create :code_review_group, section: @section
-    [@project_owner, @another_student].each do |student|
-      follower = create :follower, student_user: student, section: @section
-      create :code_review_group_member, follower: follower, code_review_group: code_review_group
-    end
+  test 'students cannot delete code review comment' do
+    review_comment = create :code_review_comment, code_review: @code_review, commenter: @student_2
+
+    sign_in @student_1
+
+    delete :destroy, params: {
+      id: review_comment.id
+    }
+
+    assert_response :forbidden
   end
 end

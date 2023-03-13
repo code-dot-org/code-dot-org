@@ -10,7 +10,6 @@
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList
- * @property {Object} initialGeneratedProperties
  * @property {string} levelGameName
  * @property {string} skinId
  * @property {string} baseUrl
@@ -66,6 +65,9 @@
  * @property {?string} authenticityToken
  * @property {boolean} levelRequiresChannel
  * @property {boolean} reduceChannelUpdates
+ * @property {boolean} hasOpenCodeReview
+ * @property {boolean} isViewingOwnProject
+ * @property {?string} codeOwnersName
  */
 
 /**
@@ -226,7 +228,6 @@
  * @typedef {Object} MilestoneResponse
  * @property {?} script_id
  * @property {?} level_id
- * @property {?} total_lines
  * @property {AutoplayVideo} video_info
  * @property {string} redirect - path to 'next' level in the lesson/script sequence.
  * @property {{previous: {position: number, name: string}}} lesson_changing

@@ -236,7 +236,7 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to only create the specified tables when loading the schema.
   module SchemaTableFilter
-    def create_table(name, options)
+    def create_table(name, options = {})
       if (::FakeDashboard::FAKE_DB.keys.map(&:to_s) + [
         ActiveRecord::Base.schema_migrations_table_name,
         ActiveRecord::Base.internal_metadata_table_name,
@@ -249,14 +249,14 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to stub create_view when loading the schema.
   module SchemaViewFilter
-    def create_view(name, options)
+    def create_view(name, options = {})
     end
   end
   ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaViewFilter
 
   # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
   module TempTableFilter
-    def create_table(name, options)
+    def create_table(name, options = {})
       super(name, options.merge(temporary: true))
     end
 
@@ -298,7 +298,10 @@ module FakeDashboard
   # We might want to extract the test data to individual tests in the future,
   # or provide an explicit way to request certain test-data setups.
   def self.create_fake_dashboard_db
+    # rubocop:disable Security/YAMLLoad
     database = YAML.load(ERB.new(File.new(dashboard_dir('config/database.yml')).read).result) || {}
+    # rubocop:enable Security/YAMLLoad
+
     # Temporary tables aren't shared across multiple database connections.
     database['test']['primary']['pool'] = 1
 

@@ -1,16 +1,18 @@
 require_relative '../../deployment'
 require 'cdo/rake_utils'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :install do
   desc 'Install Git hooks.'
-  task :hooks do
-    files = [
-      'pre-commit',
-      'post-commit',
-      'post-checkout',
-      'post-merge',
-      'pre-push'
-    ]
+  timed_task_with_logging :hooks do
+    files = %w(
+      pre-commit
+      post-commit
+      post-checkout
+      post-merge
+      pre-push
+    )
     git_path = ".git/hooks"
 
     files.each do |f|
@@ -23,7 +25,7 @@ namespace :install do
   end
 
   desc 'Create default locals.yml file if it doesn\'t exist'
-  task :locals_yml do
+  timed_task_with_logging :locals_yml do
     config_file = deploy_dir('locals.yml')
     config_defaults = deploy_dir('locals.yml.default')
     unless File.exist?(config_file)
@@ -31,14 +33,14 @@ namespace :install do
     end
   end
 
-  task :apps do
+  timed_task_with_logging :apps do
     if RakeUtils.local_environment?
       RakeUtils.install_npm
     end
   end
 
   desc 'Install Dashboard rubygems and setup database.'
-  task :dashboard do
+  timed_task_with_logging :dashboard do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
@@ -55,7 +57,7 @@ namespace :install do
   end
 
   desc 'Install Pegasus rubygems and setup database.'
-  task :pegasus do
+  timed_task_with_logging :pegasus do
     if RakeUtils.local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
@@ -70,7 +72,7 @@ namespace :install do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task all: tasks
+  timed_task_with_logging all: tasks
 end
 desc 'Install all OS dependencies.'
-task install: ['install:all']
+timed_task_with_logging install: ['install:all']

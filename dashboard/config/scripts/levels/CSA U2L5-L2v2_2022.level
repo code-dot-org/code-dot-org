@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Debug the Program\r\n\r\nThis program is supposed to instantiate the `myPainter` object at the location specified by the user, but it has an error!\r\n\r\nFind and fix the error in this program.\r\n\r\n![](https://images.code.org/db40713cf47f98f86a31f8cd0e164cb8-image-1646577668552.gif)\r\n\r\n![](https://images.code.org/40faa34619987359759659c54b57c36e-image-1646577675574.png)",
+    "long_instructions": "##Debug the Program\r\n\r\nThis program is supposed to instantiate the `myPainter`(#e7e8ea) object at the location specified by the user, but it has an error!\r\n\r\nFind and fix the error in this program.\r\n\r\n![](https://images.code.org/db40713cf47f98f86a31f8cd0e164cb8-image-1646577668552.gif)\r\n\r\n![](https://images.code.org/40faa34619987359759659c54b57c36e-image-1646577675574.png)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -358,6 +358,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-12T12:27:01.784+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L1_2022\\\"\"],\"cloned_from\":\"CSA U2L5-L1_2022\"},{\"changed_at\":\"2022-03-12 12:27:15 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 12:52:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-12T12:27:01.784+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L1_2022\\\"\"],\"cloned_from\":\"CSA U2L5-L1_2022\"},{\"changed_at\":\"2022-03-12 12:27:15 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 12:52:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 21:19:08 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-06-24 14:59:31 +0000\",\"changed\":[\"serialized_maze\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 13:09:49 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-07 20:30:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-08 17:51:27 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-08 17:51:50 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

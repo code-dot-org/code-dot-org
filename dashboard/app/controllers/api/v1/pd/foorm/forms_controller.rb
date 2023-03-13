@@ -8,7 +8,7 @@ class Api::V1::Pd::Foorm::FormsController < ApplicationController
       filled_in_form = Foorm::Form.fill_in_library_items(form_questions)
       render json: filled_in_form
     rescue => e
-      render status: 500, json: {error: e.message}
+      render status: :internal_server_error, json: {error: e.message}
     end
   end
 
@@ -72,9 +72,9 @@ class Api::V1::Pd::Foorm::FormsController < ApplicationController
     form_questions = params[:form_questions].as_json
     errors = Foorm::Form.validate_questions(form_questions)
     if errors.empty?
-      return render status: 200, json: {}
+      return render status: :ok, json: {}
     else
-      return render status: 500, json: {error: errors}
+      return render status: :internal_server_error, json: {error: errors}
     end
   end
 end

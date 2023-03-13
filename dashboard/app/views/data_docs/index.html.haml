@@ -1,0 +1,11 @@
+%script{src: webpack_asset_path('js/data_docs/index.js'), data: {dataDocs: @data_docs.to_json}}
+#see-data-docs
+
+- if current_user.try(:levelbuilder?)
+  = render layout: 'shared/extra_links' do
+    %strong= 'Data Docs'
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to 'Edit All', edit_data_docs_path
+      - else
+        %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", data_docs_path).to_s

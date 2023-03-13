@@ -84,14 +84,15 @@ export const columnWidths = {
 export const rowHeight = 35;
 
 export const cellStyle = {
-  display: 'inline-block',
-  marginTop: 9
+  display: 'inline-block'
 };
 
 const style = {
   wrapper: {
     fontSize: 16,
-    height: rowHeight
+    minHeight: rowHeight,
+    display: 'flex',
+    alignItems: 'center'
   },
   selectedColumn: {
     ...cellStyle,
@@ -109,6 +110,7 @@ const style = {
     width: columnWidths.status
   },
   recommended: {
+    display: 'inline-block',
     borderRadius: 5,
     padding: 8,
     backgroundColor: color.cyan,

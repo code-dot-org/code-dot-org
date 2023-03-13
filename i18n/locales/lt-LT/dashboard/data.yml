@@ -377,6 +377,7 @@ lt:
         csd_applab_parameters: Komandos su parametrais
         playlab_2021: Pažintis su Žaidimų laboratorija
         playlab_2021_reader: Pažintis su Žaidimų laboratorija
+        csp_applab_parameters: Komandos su parametrais
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu

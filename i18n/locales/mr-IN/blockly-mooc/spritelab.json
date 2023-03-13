@@ -84,7 +84,6 @@
   "didntMoveRight": "तुमचा पराक्रम उजवीकडे हलला नाही.",
   "didntMoveUp": "तुमचा स्प्राईट वर हलला नाही.",
   "didntPressKey": "*\"रन\"* दाबल्यानंतर एरो की दाबण्याची खात्री करा. तुम्ही प्ले एरिया अंतर्गत ऑरेंज बटणावर क्लिक करू शकता किंवा तुमच्या कीबोर्डवरील की दाबू शकता.",
-  "errorLoadingAnimation": "तुमचे \"{animationName}\" अॅनिमेशन लोड करण्यात आम्हाला समस्या येत असल्याचे दिसते. तुमच्याकडे चांगले इंटरनेट कनेक्शन असल्याची खात्री करा आणि पेज रीलोड करण्याचा प्रयत्न करा. ही समस्या कायम राहिल्यास, हे अॅनिमेशन तुटलेले असण्याची शक्यता आहे. या प्रकरणात, तुम्हाला अॅनिमेशन काढून पुढे सुरू ठेवण्याची आवश्यकता असू शकते.",
   "eventNotDetected": "ही इव्हेंट सापडली नाही. तुमच्या वर्कस्पेसमध्ये योग्य इव्हेंट ब्लॉक्स आहेत आणि तुम्ही कोडच्या प्रत्येक ब्लॉकमध्ये योग्य *पोशाख* निवडला आहे, याची खात्री करा.\n <xml><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></xml>",
   "eventsOneChange": "तुमचा स्प्राइट बदलला, पण फक्त एकदाच. की काही वेळा दाबून तुमच्या प्रोग्रामची चाचणी घ्या आणि योग्य ब्लॉक वापरण्याची खात्री करा.\n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"स्केल\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\"> \"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></ value></block></xml>",
   "eventsWrongBehaviors": "तुमच्या स्प्राईटमध्ये अगदी 3 वर्तन असावे. तुमच्या कोडमधील `स्टॉप्स एव्हरीथिंग` ब्लॉकला वेगळ्या ठिकाणी हलवून पहा.",

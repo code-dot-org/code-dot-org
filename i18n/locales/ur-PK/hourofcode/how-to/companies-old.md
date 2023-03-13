@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - سوفٹ ویئر انجینئرز کو آپ کی کمپنی میں ایک مقامی کلاس روم کا دورہ کرنے کے لئے کوڈ کا قیام کرنے اور طالب علموں کو کمپیوٹر سائنس کا مطالعہ کرنے میں حوصلہ افزائی کرنے کی حوصلہ افزائی کریں. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. معلوماتی ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. معلوماتی ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

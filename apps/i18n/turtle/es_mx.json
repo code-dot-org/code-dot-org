@@ -32,12 +32,14 @@
   "drawARocket": "dibujar un cohete",
   "drawASnowflake": "dibujar un copo de nieve",
   "drawASnowman": "dibuje un muñeco de nieve",
-  "drawASquare": "Dibuje un cuadrado",
+  "drawASquare": "dibujar un cuadrado",
   "drawAStar": "dibujar una estrella",
   "drawATree": "dibujar un árbol",
   "drawATriangle": "dibujar un triángulo",
   "drawUpperWave": "dibujar la onda superior",
   "drawLowerWave": "dibujar la onda mas baja",
+  "drawShape": "dibuja una figura",
+  "drawShapeWithSideLength": "dibuja la figura con la longitud del lado",
   "drawSticker": "dibuja una calcomanía",
   "drawStickerWithSize": "dibujar la calcomanía con tamaño",
   "forward": "adelante",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Hace que el artista sea visible o invisible.",
   "widthTooltip": "Cambia el ancho del lápiz.",
   "withSize": "con tamaño",
+  "withSideLength": "con longitud lateral",
   "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1."
 }

@@ -1,0 +1,1215 @@
+{
+  "it-IT": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Sviluppo Web",
+          "description": "Editor HTML/CSS basato sul web.",
+          "categories": {
+            "html_tags": {
+              "name": "Tag HTML"
+            },
+            "css_properties": {
+              "name": "Proprietà CSS"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Sviluppo Giochi",
+          "description": "Game Lab è un ambiente di programmazione dove puoi creare entusiasmanti giochi e animazioni. Disegna i tuoi personaggi, programma coi blocchi o JavaScript per farlif unzionare, poi condividi il tuo gioco in pochi secondi.",
+          "categories": {
+            "game_lab": {
+              "name": "Sviluppo Giochi",
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Personaggio"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Personaggio"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Bianco e nero"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Stringa"
+                    },
+                    "loop": {
+                      "type": "Booleano"
+                    }
+                  },
+                  "short_description": "Riproduce il file audio MP3 dall'URL specificato."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Stringa"
+                    },
+                    "gender": {
+                      "type": "Stringa"
+                    },
+                    "language": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "Booleano"
+                    },
+                    "dpadVisible": {
+                      "type": "Booleano"
+                    },
+                    "dpadFourWay": {
+                      "type": "Booleano"
+                    },
+                    "mobileOnly": {
+                      "type": "Booleano"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Stringa"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "name": "Personaggi",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirale"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Stringa"
+                    },
+                    "xOffset": {
+                      "type": "Numero"
+                    },
+                    "yOffset": {
+                      "type": "Numero"
+                    },
+                    "width/radius": {
+                      "type": "Numero"
+                    },
+                    "height": {
+                      "type": "Numero"
+                    },
+                    "rotationOffset": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Numero"
+                    },
+                    "angle": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "width": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    },
+                    "height": {
+                      "type": "Numero"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Gruppi",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Personaggio"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Personaggio"
+                    }
+                  }
+                },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Personaggio"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Stringa"
+                    },
+                    "yOffset": {
+                      "type": "Numero"
+                    },
+                    "width/radius": {
+                      "type": "Numero"
+                    },
+                    "height": {
+                      "type": "Numero"
+                    },
+                    "rotationOffset": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Colore"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Booleano"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Numero"
+                    },
+                    "angle": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Colore"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Booleano"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Numero"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Disegni",
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    },
+                    "w": {
+                      "type": "Numero"
+                    },
+                    "h": {
+                      "type": "Numero"
+                    },
+                    "start": {
+                      "type": "Numero"
+                    },
+                    "stop": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    },
+                    "w": {
+                      "type": "Numero"
+                    },
+                    "h": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Numero"
+                    },
+                    "y1": {
+                      "type": "Numero"
+                    },
+                    "x2": {
+                      "type": "Numero"
+                    },
+                    "y2": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    },
+                    "w": {
+                      "type": "Numero"
+                    },
+                    "h": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    },
+                    "sides": {
+                      "type": "Numero"
+                    },
+                    "size": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Numero"
+                    },
+                    "g": {
+                      "type": "Numero"
+                    },
+                    "b": {
+                      "type": "Numero"
+                    },
+                    "a": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stella"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Numero"
+                    },
+                    "y1": {
+                      "type": "Numero"
+                    },
+                    "x2": {
+                      "type": "Numero"
+                    },
+                    "y2": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "Stringa"
+                    },
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    },
+                    "width": {
+                      "type": "Numero"
+                    },
+                    "height": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Stringa"
+                    },
+                    "vert": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Numero"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "name": "Controlli"
+            },
+            "math": {
+              "name": "Matematica",
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Numero"
+                    },
+                    "value2": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Il più piccolo numero restituito"
+                    },
+                    "max": {
+                      "description": "Il più grande numero restituito"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Il più piccolo numero restituito"
+                    },
+                    "max": {
+                      "description": "Il più grande numero restituito"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variabili",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Assegna il valore ad una variabile esistente. Per esempio, x=0;"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funzioni"
+            }
+          }
+        },
+        "applab": {
+          "name": "Sviluppo App",
+          "description": "Sviluppo App è un ambiente di programmazione in cui puoi creare semplici applicazioni. Progetta una App, sviluppala usando i blocchi o JavaScript e infine condividila.",
+          "categories": {
+            "ui_controls": {
+              "name": "Controlli UI",
+              "expressions": {
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Stringa"
+                    },
+                    "property": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Rimpicciolisci e ingrandisci"
+                    }
+                  },
+                  "palette_params": {
+                    "type": {
+                      "type": "Stringa"
+                    },
+                    "id": {
+                      "type": "Stringa"
+                    },
+                    "callback": {
+                      "type": "Funzione"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Booleano"
+                    }
+                  },
+                  "short_description": "Riproduce il file audio MP3 dall'URL specificato."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Stringa"
+                    },
+                    "gender": {
+                      "type": "Stringa"
+                    },
+                    "language": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Numero"
+                    },
+                    "g": {
+                      "type": "Numero"
+                    },
+                    "b": {
+                      "type": "Numero"
+                    },
+                    "a": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Stringa"
+                    },
+                    "property": {
+                      "type": "Stringa"
+                    }
+                  }
+                }
+              }
+            },
+            "canvas": {
+              "name": "Tela",
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Stringa"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Dati",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Stringa"
+                    },
+                    "column": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "name": {
+                      "type": "Stringa"
+                    },
+                    "id": {
+                      "type": "Stringa"
+                    },
+                    "callback": {
+                      "type": "Funzione"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "oggetto"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "oggetto"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "name": "Tartaruga",
+              "expressions": {
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Stringa"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Numero"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "name": "Controlli",
+              "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "Numero"
+                    },
+                    "callback": {
+                      "type": "Funzione"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematica",
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numero"
+                    },
+                    "y": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Il più piccolo numero restituito"
+                    },
+                    "max": {
+                      "description": "Il più grande numero restituito"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Il più piccolo numero restituito"
+                    },
+                    "max": {
+                      "description": "Il più grande numero restituito"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variabili",
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Stringa"
+                    }
+                  },
+                  "return_value": "Nessuno"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Stringa"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funzioni"
+            },
+            "advanced": {
+              "name": "Avanzate",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Stringa"
+                    },
+                    "css": {
+                      "type": "Stringa"
+                    }
+                  }
+                }
+              }
+            },
+            "maker": {
+              "name": "Autore",
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Numero"
+                    },
+                    "mode": {
+                      "type": "Stringa"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "Booleano"
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Numero"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Booleano"
+                }
+              }
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratorio dei Personaggi",
+          "description": "Sprite Lab è un ambiente di programmazione di Blockly in cui puoi creare progetti interattivi.",
+          "categories": {
+            "sprites": {
+              "name": "Personaggi"
+            },
+            "world": {
+              "name": "Ambiente"
+            },
+            "location": {
+              "name": "Posizioni"
+            },
+            "actions": {
+              "name": "Azioni"
+            },
+            "events": {
+              "name": "Eventi"
+            },
+            "behaviors": {
+              "name": "Comportamenti"
+            },
+            "loops": {
+              "name": "Cicli"
+            },
+            "variables": {
+              "name": "Variabili"
+            },
+            "math": {
+              "name": "Matematica"
+            },
+            "logic": {
+              "name": "Logica"
+            },
+            "functions": {
+              "name": "Funzioni"
+            },
+            "text": {
+              "name": "Testo"
+            },
+            "comments": {
+              "name": "Commenti"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Laboratorio di Java",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Scorciatoie di Java Lab"
+            },
+            "general": {
+              "name": "Basi di Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Strutture di Controllo"
+            },
+            "data_structures": {
+              "name": "Strutture di Dati"
+            }
+          }
+        }
+      }
+    }
+  }
+}

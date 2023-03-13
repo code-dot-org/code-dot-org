@@ -458,6 +458,7 @@ hi-IN:
   homepage_banner_40k_teachers_link: अधिक जानें
   homepage_slot_text_title_hoc: आवर ऑफ़ कोड
   homepage_slot_text_blurb_hoc: हर कोई सीख सकता है। आज ही शुरुआत करें
+  homepage_slot_text_blurb_hoc_2022: खोज करें, खेलें, बनाएं!
   homepage_slot_text_link_hoc: 'एक घंटे कोडिंग की कोशिश करें '
   homepage_slot_text_link_about_hoc: आवर ऑफ़ कोड के बारे में
   homepage_slot_text_link_host: आवर ऑफ़ कोड आयोजित करें
@@ -483,6 +484,7 @@ hi-IN:
   homepage_slot_text_link_buy: शामिल हों
   homepage_slot_text_link_donate: दान करे
   homepage_slot_text_link_shop: टी-शर्टें, टोप आदि
+  homepage_slot_text_link_thebadguys: The Bad Guys के साथ कोड
   homepage_slot_text_link_administrators: CS को अपने स्कूल में लाएं
   homepage_gallery_header: "%{project_count} मिलियन से अधिक Code.org प्रोजेक्ट बनाए
     गए"
@@ -492,6 +494,10 @@ hi-IN:
   homepage_below_hero_announcement_text: हम आपकी गोपनीयता की परवाह करते हैं और अपनी
     गोपनीयता नीति में कुछ अद्यतन कर रहे हैं, जो 25 मई से लागू होंगे।
   homepage_below_hero_announcement_link_text: अधिक जानें
+  homepage_higher_power_body: डांस पार्टी के साथ बनाएं, बैंड को लाइव देखने का मौका
+    पाएं।
+  homepage_thebadguys_body: Ms. Tarantula, Mr. Wolf और फिल्म, **The Bad Guys** के
+    बाकी के पात्रों के साथ एक साहस को कोड करें!
   contact_form_topic_student: मै एक विद्यार्थी हूँ
   contact_form_topic_parent: मैं एक अभिभावक हूं
   contact_form_topic_teacher: मैं एक अध्यापक/शिक्षक हूँ
@@ -676,6 +682,8 @@ hi-IN:
   video_title_marco_belinelli: मार्को बेलीनेली के साथ आवर ऑफ कोड
   video_title_chris_bosh: कंप्यूटर साइंस के बारे में क्रिस बोश
   video_title_my_name_is_aracely: मेरा नाम अरासेली है
+  video_title_change_face_of_cs: कंप्यूटर विज्ञान का चेहरा बदलें
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 मिनट
   video_2min: 2 मिनट
   video_3min: 3 मिनट
@@ -814,6 +822,7 @@ hi-IN:
   volunteer_engineer_submission_distance_16: 10 मील
   volunteer_engineer_submission_distance_24: 15 मील
   volunteer_engineer_submission_distance_32: 20 मील
+  volunteer_engineer_submission_distance_80: 50 मील
   volunteer_engineer_submission_num_volunteers_5: 5 स्वयं सेवक
   volunteer_engineer_submission_num_volunteers_10: 10 स्वयं सेवक
   volunteer_engineer_submission_num_volunteers_25: 25 स्वयं सेवक
@@ -1323,6 +1332,8 @@ hi-IN:
   coursee-2020_name: कोर्स E (2019)
   coursef-2020_name: कोर्स F (2019)
   coursed-2021_name: कोर्स D (2021)
+  coursef-2021_name: कोर्स F (2021)
+  coursed-2022_name: कोर्स D (2021)
   express-2018_name: एक्सप्रेस कोर्स (2018)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
   express-2019_name: एक्सप्रेस कोर्स (2019)
@@ -1330,6 +1341,7 @@ hi-IN:
   express-2020_name: एक्सप्रेस कोर्स (2019)
   pre-express-2020_name: पूर्व-पाठक एक्सप्रेस कोर्स (2020)
   pre-express-2021_name: पूर्व-पाठक एक्सप्रेस कोर्स (2021)
+  pre-express-2022_name: पूर्व-पाठक एक्सप्रेस कोर्स (2022)
   csd2_name: 'यूनिट 2: वेब डेवलपमेंट'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: त्वरित पाठ्यक्रम
@@ -1445,6 +1457,12 @@ hi-IN:
   coursed-2021_gradelevel: आयु 7-11
   coursee-2021_gradelevel: उम्र 8-12
   coursef-2021_gradelevel: आयु 9-13
+  coursea-2022_gradelevel: आयु 4-7
+  courseb-2022_gradelevel: आयु 5-8
+  coursec-2022_gradelevel: आयु 6-10
+  coursed-2022_gradelevel: आयु 7-11
+  coursee-2022_gradelevel: उम्र 8-12
+  coursef-2022_gradelevel: आयु 9-13
   accelerated_gradelevel: आयु 10-18
   codeorg_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
   codeintl_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
@@ -1667,6 +1685,28 @@ hi-IN:
     के साथ कूटलेखन करना शुरू करें। इस कोर्स के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट
     डिजाइन करें और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
   coursef-2021_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
+    और सापेक्षों का उपयोग करना सीखें। सवाल हल करने की विभिन्न तकनीकों का निरीक्षण
+    करें और कंप्यूटिंग व इंटरनेट के समाज पर पड़ने पर प्रभावों की चर्चा करें। इस कोर्स
+    के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिजाइन करें और बनाएं, जिसे आप दोस्तों
+    व परिवार के साथ साझा कर सकें।
+  coursea-2022_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
+    में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप
+    साझा कर सकते हैं।
+  courseb-2022_shortdescription_congrats: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे
+    में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप
+    साझा कर सकते हैं।
+  coursec-2022_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
+    और सापेक्षों का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें,
+    सवाल हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का जवाब
+    कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें, जिसे आप साझा
+    कर सकें।
+  coursed-2022_shortdescription_congrats: छात्र, लूप्स, सापेक्षों और इवेंट्स के बारे
+    में अपनी समझ विकसित करते हैं। कूटलेखन से आगे, छात्र डिजीटल नागरिकता के बारे में
+    सीखते हैं।
+  coursee-2022_shortdescription_congrats: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स
+    के साथ कूटलेखन करना शुरू करें। इस कोर्स के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट
+    डिजाइन करें और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
+  coursef-2022_shortdescription_congrats: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स
     और सापेक्षों का उपयोग करना सीखें। सवाल हल करने की विभिन्न तकनीकों का निरीक्षण
     करें और कंप्यूटिंग व इंटरनेट के समाज पर पड़ने पर प्रभावों की चर्चा करें। इस कोर्स
     के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिजाइन करें और बनाएं, जिसे आप दोस्तों
@@ -2178,6 +2218,7 @@ hi-IN:
   header_educate_beyond: Code.org से परे
   header_educate_inspire: किसी छात्र को प्रेरित करें
   header_educate_community: ऑनलाइन समुदाय
+  header_educate_requirements: तकनीकी जरूरतें
   header_educate_tools: टूल्स और वीडियो
   header_about_us: हमारे बारे में
   header_about_leadership: लीडरशिप
@@ -2300,6 +2341,13 @@ hi-IN:
   hoc_overview_dance_2019_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी
     को कोड करें।पेश करते हैं कैटी पेरी, शॉन मेंडेस, पैनिक को! डिस्को, लिल नास एक्स,
     जोनास ब्रदर्स, निकी मिनाज और 34 और में!
+  hoc_overview_dance_2022_subtitle: अपने दोस्तों के साथ साझा करने के लिए एक डांस पार्टी
+    को कोड करें। जिसमें बेयोंसे, हैरी स्टाइल्स, लिज़ो, लिल नैस एक्स, सेलेना गोमेज़,
+    डिज्नी के “एनकैंटो” के संगीत और बहुत कुछ शामिल हैं!
+  hoc_overview_hello_world_2022_subtitle: आपके द्वारा बनाई गई दुनिया में इंटरैक्टिव
+    वर्णों को कोड करने के लिए चार मज़ेदार थीम्स में से चुनें।
+  hoc_overview_hello_world_2022_alt_text: पृथ्वी के एक चित्रण के चारों ओर तैरते एनिमेटेड
+    अंतरिक्ष यात्री और पशु पात्र
   hoc_overview_title: ऑवर ऑफ़ कोड गतिविधियां code.org के तरफ से
   hoc_overview_subtitle: <a href="https://hourofcode.com">आवर ऑफ़ कोड</a> एक वैश्विक
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं
@@ -2375,11 +2423,20 @@ hi-IN:
     में Microsoft स्टोर पर जाएं। हर कौशल स्तरों, छह वर्ष और इससे अधिक के आयु वर्ग
     के भागीदारों के लिए।
   hoc2018_mc_educators_box3_button: वर्कशॉप ढूंढें
+  hoc2022_mc_educators_box3_desc_markdown: 'डिमांड [फ्री कोर्स](%{free_course_link})
+    पर इसका उपयोग करें या एक अतिथि शिक्षक के साथ लाइव ऑवर ऑफ कोड वर्कशॉप में भाग लेने
+    के लिए अपनी पूरी कक्षा को पंजीकृत करें। CSEW, 6 - 11 दिसंबर के दौरान कई बार पेश
+    किया गया। '
+  hoc2022_mc_educators_box3_button: अब रजिस्टर करें
   hoc2018_mc_educators_box4_title: कंप्यूटर साइंस के और संसाधनों तक पहुंच प्राप्त
     करें
   hoc2018_mc_educators_box4_desc: Microsoft से डिजीटल कौशलों और कंप्यूटर साइंस शिक्षा
     संसाधनों के साथ अपने समुदाय में बदलाव लाएं।
   hoc2018_mc_educators_box4_button: संसाधनों की पड़ताल करें
+  hoc2022_mc_educators_box4_desc: पेशेवर विकास द्वारा समर्थित ब्लॉक से अजगर तक 200
+    घंटे के कंप्यूटर विज्ञान पाठ्यक्रम के साथ K-12 शिक्षार्थियों में STEM जुनून को
+    प्रेरित करें।
+  hoc2022_mc_educators_box4_button: सीखना जारी रखें
   hoc2018_mc_watch_videos: शुरुआत करने से पहले, इनमें से एक प्रेरित वीडियो देखें
   hoc2018_mc_videos_more: रोल मॉडल्स और जानी-मानी हस्तियों के और <a href='%{inspiring_videos_playlist}'>प्रेरणादायक
     वीडियो</a>
@@ -2503,6 +2560,10 @@ hi-IN:
   hoc2018_dance_video2: डांस पार्टी - इवेंट्स
   hoc2018_dance_video3: डांस पार्टी - विशेषताएं
   hoc2018_dance_video4: डांस पार्टी - बधाई हो
+  dance_box_higher_power_line_1: Coldplay के "Higher Power" के लिए एक डांस कोड करें
+    और आपको बैंड को लाइव देखने का मौका मिल सकता है!
+  dance_box_higher_power_line_2: अधिक जानकारी के लिए <a href="%{path}">code.org/coldplay</a>
+    देखें।
   page_not_found_title: पृष्ठ नहीं मिला
   page_not_found_header: '404: पृष्ठ नहीं मिला'
   page_not_found_description: जो पृष्ठ आप खोज रहे हैं, वह इस पते पर मौजूद नहीं है।
@@ -2552,6 +2613,13 @@ hi-IN:
   hoc2021_mc_mee_ai_title: भलाई के लिए AI
   hoc2021_mc_mee_ai_description: 'AI को एक्सप्लोर करें और Minecraft में कोड करना सीखें:
     एजुकेशन एडिशन। '
+  hoc2022_mc_mee_title: 'Minecraft: एस्केप एस्टेट'
+  hoc2022_mc_mee_description: 'भोर तक रहस्यमयी हवेली से भागें और एक लाख पन्ने कमाएँ!
+    नया Minecraft ऑवर ऑफ़ कोड ट्यूटोरियल अब Minecraft: Education Edition for Windows,
+    Mac, Chromebook, Ipad और Mobile में उपलब्ध है। निःशुल्क शिक्षक संसाधनों, प्रशिक्षणों
+    और वीडियो के साथ शुरुआत करें।'
+  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition में इस निःशुल्क
+    कोडिंग पाठ में भविष्य को सेव करने के लिए समय पर वापस यात्रा करें।'
   footer_powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित
   footer_built_on_github: माइक्रोसॉफ्ट से गिटहब पर बनाया गया
   codebytes_skinny_banner_title: हमारे CodeBytes लाइव मिनी-पाठ के लिए 7-11 दिसंबर
@@ -2647,3 +2715,30 @@ hi-IN:
   outbreak_tile_title: प्रकोप
   outbreak_tile_subtitle: Monster Town को एक वायरस ने संक्रमित किया है! एक आउटब्रेक
     सिमुलेटर को कोड करें और भविष्यवाणी करें कि Monster Town के आस पड़ोस का क्या होगा। 
+  outbreak_tile_alt: बैंगनी राक्षसों के एक समूह के जरिए कोई वायरस कैसे फैलता है इसका
+    एक अनुकरण।
+  footer_cookie_notice: कुकी नोटिस
+  top_hoc_tutorial_applab_alt_text: एक नीली पृष्ठभूमि के विरुद्ध सितारों और प्रकाश
+    की किरणों को उत्सर्जित करने वाली टच स्क्रीन टैबलेट को छूने वाली तर्जनी वाला एक
+    भूरा हाथ
+  minecraft_tile_alt: दो माइनक्राफ्ट वर्ण, Steve और Alex, कोरल, डॉल्फ़िन्स, और केल्प
+    के साथ एक जलीय माइनक्राफ्ट दृश्य दिखाती एक पृष्ठभूमि के विरुद्ध
+  hoc2022_banner_title: खोज करें, खेलें, बनाएं!
+  hoc2022_banner_description: ब्रह्मांड में खोज करें, लक्ष्य हासिल करें, परिवर्तन
+    का तोड़ करें - कंप्यूटर विज्ञान को आज़माने के कई तरीके हैं!
+  hoc2022_cta_primary: देखें, क्या नया है
+  hoc2022_cta_secondary: अधिक गतिविधियां आज़माएँ
+  hoc2022_landing_page_explore_title: अन्वेषण करें
+  hoc2022_landing_page_explore_description: कंप्यूटर विज्ञान के साथ नई दुनिया के लिए
+    द्वार खोलें!
+  hoc2022_landing_page_play_title: चलाओ
+  hoc2022_landing_page_play_description: मैदान में आएं और स्कोर करें!
+  hoc2022_landing_page_create_title: बनाए
+  hoc2022_landing_page_create_description: कुछ अजीब और अद्भुत बनाओ!
+  hoc2022_landing_page_banner_alt_left: अंतरिक्ष में शनि के बगल में एक विदेशी नाचता
+    है
+  hoc2022_landing_page_banner_alt_right: एक रोबोट एक रॉकेट के सामने अंतरिक्ष में एक
+    सॉकर बॉल को ड्रिबल करता है
+  try_it_yourself: इसे खुद आजमाएं!
+  try_an_activity: कोई गतिविधि आज़माएं
+  see_more_activities: और गतिविधियाँ देखें

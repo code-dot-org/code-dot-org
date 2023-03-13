@@ -631,6 +631,11 @@ hu:
         infinity_playlab_intro: Játéklabor - bevezetés
         infinity_playlab_events: Játéklabor - események
         infinity_playlab_repeat_forever: Játéklabor - végtelen ciklus
+        csd_concept_computer: 'Hogyan Működnek a Számítógépek: Mi tesz egy Számítógépet,
+          Számítógéppé?'
+        csd_gamelab_velocity: Sebesség
+        csd_weblab_intro_1: Bevezetés a Web Labba - 1. Rész
+        csd_weblab_intro_2: Bevezetés a Web Labba - 2. Rész
         csp_applab_functions: Bevezetés a függvényekbe
         csp_applab_functions_parameters: Paraméteres függvények
         csp_applab_loops: hurkok
@@ -670,6 +675,7 @@ hu:
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Ciklusok BB-8-tel
+        CSF_harvester_skinOverview_K-1: Az arató
         CSF_loops_AB: hurkok
         csd_gamelab_booleans: Logikai kifejezések
         CSF_SpriteLabIntro_CDEF: Íme a Sprite labor
@@ -719,6 +725,24 @@ hu:
         poetry_module_multichoiceprompts: Feleletválasztós promptok – Kódolás költészettel
         poetry_module_conditionals: Kondicionálisok – Kódolás költészettel
         poemart_intro: Költészet - bevezetés
+        csd_u6_input_output: Bemenet és Kimenet
+        CSA-PL-for-loops: Ciklusok Java-nyelven
+        CSA-PL-variables: Változók létrehozása Javaban
+        PL_CS_Journeys_Overview: Számítástechnikai utazások
+        CSA-PL-intro-to-java-lab: Java laboratóriumi alapismeretek
+        CSA-PL-first-program: Program írása Java nyelven
+        CSD_u6_variables_part1: 'CSD: változók'
+        csd_u6_if_statements: 'CSD: Ha utasítások'
+        csc-poem-art-intro: Bevezető videó
+        csc-poem-art-outro: Videó befejező része
+        csd_u6_call_define_functions: 'CSD: Függvények hívása és definiálása'
+        csp_applab_parameters: Paraméteres függvények
+        starquilts_intro_artist: Bevezetés a foltvarrásba
+        CSA-PL-1d-arrays-new-values: Értékek bevitele 1D tömbökbe
+        CSA-PL-conditionals: Feltételes utasítások Javaban
+        CSA-PL-two-way-selection: Kétirányú kiválasztás
+        CSA-PL-Printing-in-Java: Nyomtatás Javaban
+        CSA-PL-multi-selection-statements: Többszörös kiválasztású utasítások
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

@@ -648,6 +648,7 @@ ka:
         csp_applab_functions: ფუნქციები - შესავალი
         csp_applab_functions_parameters: ფუნქციები პარამეტრებით
         csp_applab_loops: ციკლები
+        csp_cs_is_changing_everything: კომპიუტერული მეცნიერება ცვლის ყველაფერს
         starwars_intro: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - შესავალი'
         starwars_typing: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - JavaScript'
         starwars_events: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - მოვლენები'
@@ -725,22 +726,67 @@ ka:
         CDEF_Video_SpritesInAction: სპრაიტები მოქმედებაში
         CSF_SpriteLab_SpritesInAction_CDEF: სპრაიტები მოქმედებაში
         CSF_StarWars_ProjectIntro: შესავალი ვარსკვლავური ომების პროექტში
+        mc_2018_intro: 'Minecraft: ვოიაჟი წყალზე. შესავალი'
+        MC_2018_loops: 'Minecraft: ვოიაჟი წყალზე. გაიმეორე სანამ'
+        mc_2018_conditionals: 'Minecraft: ვოიაჟი წყალზე. პირობები'
+        mc_2018_closing: 'Minecraft: ვოიაჟი წყალზე. მილოცვა'
+        hoc_dance_warmup: საცეკვაო წვეულება - გახურება
         hoc_dance_events: ცეკვის წვეულება - ღონისძიებები
         hoc_dance_properties: ცეკვის პარტია - თვისებები
+        hoc_dance_congrats: საცეკვაო წვეულება - წვეულების დროა!
         c_and_c_digital_sharing: ციფრული გაზიარება
+        teaching_csf_how_it_works: 'კომპიუტერული მეცნიერების სწავლების საფუძვლები:
+          როგორ მუშაობს კურსი?'
+        elem_pd_2: დაწყებითი სკოლის კომპიუტერული მეცნიერება - პროფესიული განვითარების
+          ვიდეო 2/2
+        what_is_cs: რა არის კომპიუტერული მეცნიერება?
+        repeat_block: გამეორების ბლოკის გამოყენება
+        lesson_planning: გაკვეთილის დაგეგმვა
+        what_is_an_event: რა არის ღონისძიება?
         csd_pair_programming: პროგრამირება წყვილებში
         csd_applab_parameters: ფუნქციები პარამეტრებით
         csd_problem_solving_process: პროებლემების გადაჭრის პროცესი
         CSF_SpriteLab_SpritesInAction_v2: სპრაიტები მოქმედებაში
         csd_debugging: გამართვა
+        hoc_dance_congrats_2019: საცეკვაო წვეულება - წვეულების დროა!
+        hoc_dance_warmup_2019: საცეკვაო წვეულება - გახურება
         hoc_dance_events_2019: ცეკვის წვეულება - ღონისძიებები
         hoc_dance_properties_2019: ცეკვის პარტია - თვისებები
         csf_follow_the_digital_trail: მიჰყევით ციფრულ ნაკვალევს
         csf_private_and_personal_information: კონფიდენციალური და პირადი ინფორმაცია
         csd_what_computers_are: რა არის კომპიუტერი?
+        poembot-pilot-text: ჰაიკუ ბოტები - ტექსტის შენახვა [PILOT]
+        poembot-pilot-haiku: ჰაიკუ ბოტები - აჩვენეთ თქვენი ჰაიკუ [PILOT]
+        csd_ml_intro_to_ai_lab: AI ლაბორატორიის შესავალი
+        csd_ml_import_model: AI მოდელის იმპორტი
         playlab_2021: თამაშების ლაბი - შესავალი
         playlab_2021_reader: თამაშების ლაბი - შესავალი
+        csp_defining_calling_functions: ფუნქციების განსაზღვრა და გამოძახება
+        csp_tutorial_libraries: ბიბლიოთეკები აპების ლაბში
+        PL-Video-21: მოგესალმებით Code.org-ის პროფესიონალურ სწავლებაში!
+        csd_ml_intro_ai_lab_july2021: AI ლაბორატორიის შესავალი
+        csd_ml_numerical_ai_lab: რიცხვითი მონაცემები AI ლაბში
         Gettting_Started_Progress: პროგრესი, უკუკავშირი და შეფასება
+        Gettting_Started_ClassSection: კლასის სექციის შექმნა
+        Gettting_Started_StudentExperience: მოსწავლის გამოცდილება
+        Getting_Started_BasicFeatures: Code.org-ის ძირითადი ფუნქციები
+        PL_overview_CSD: რა არის კომპიუტერული მეცნიერების აღმოჩენები?
+        PL_CSD_TeacherTips_Advise: მასწავლებლის რჩევები - რჩევა ახალ მასწავლებლებს
+        PL_CSD_TeacherTips_IntroToCSD: მასწავლებლის რჩევები - შესავალი კომპიუტერული
+          მეცნიერების აღმოჩენებში
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 'მასწავლებლის რჩევები: პრობლემის
+          გადაჭრის პროცესი'
+        PL_CSD_TeacherTips_PairProgramming: მასწავლებლის რჩევები - პროგრამირება წყვილში
+        PL_CSD_TeacherTips_Debugging: მასწავლებლის რჩევები - დებაგირება
+        hello_world_events: გამარჯობა სამყაროვ - პროგრამირება ღონისძიებებით
+        hello_world_congrats: გამარჯობა სამყაროვ - რაც გინდა ქენი
+        csp_global_vs_local: გლობალური vs. ლოკალური ცვლადების დებაგირება
+        csd_ml_ethics_ai: ეთიკა და ხელოვნური ინტელექტი
+        csd_u6_input_output: შესაყვანი და გამოსაყვანი ინფორმაცია
+        PL_CS_Journeys_Overview: კომპიუტერული მეცნიერების მოგზაურობები
+        csp_applab_parameters: ფუნქციები პარამეტრებით
+        CSA-PL-Printing-in-Java: ბეჭდვა ჯავაში
+        CS_Changing_Everything: კომპიუტერული მეცნიერება ცვლის ყველაფერს
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

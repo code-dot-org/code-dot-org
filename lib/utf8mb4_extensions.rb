@@ -19,4 +19,4 @@ module CoreExtensions
   end
 end
 
-String.send(:include, CoreExtensions::String::Utf8mb4)
+String.include CoreExtensions::String::Utf8mb4

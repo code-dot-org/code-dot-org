@@ -3,7 +3,7 @@ class AddMultiAuthViewToReportingDb < ActiveRecord::Migration[5.0]
   def up
     # Unfortunately, it looks like there's no good way to do this without manually selecting *all* the
     # fields from the users table, fiddling the ones we want to change
-    DASHBOARD_REPORTING_DB_WRITER.run <<-multiline
+    DASHBOARD_REPORTING_DB_WRITER.run <<-MULTILINE
       CREATE VIEW users_view AS
       SELECT
         users.id, studio_person_id,
@@ -19,7 +19,7 @@ class AddMultiAuthViewToReportingDb < ActiveRecord::Migration[5.0]
       FROM users
       LEFT JOIN authentication_options
         ON users.primary_contact_info_id = authentication_options.id
-    multiline
+    MULTILINE
   end
 
   def down

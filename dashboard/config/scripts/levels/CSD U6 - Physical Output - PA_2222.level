@@ -64,7 +64,7 @@
     "text_mode_at_start": "true",
     "parent_level_id": 20596,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/maker-toolkit/circuits-and-leds/",
+    "map_reference": "/courses/csd-2022/guides/circuits-and-leds",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -78,11 +78,11 @@
     "encrypted_examples": "bsd2rLhroFR05zfUvpl5qCj/JINQ7Ex5z6PPvKQhc9ltZfwzyzeKcO+fzYwI\nZ0K3VZ8rmkqr6V0XUsQ+H0sQFg==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:11:13.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:11:13.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:13.052+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PA_2022\"},{\"changed_at\":\"2022-04-08 22:52:19 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-15 21:27:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

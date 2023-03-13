@@ -15,12 +15,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-04-21 16:36:48 UTC",
-    "published_state": "beta",
+    "serialized_at": "2022-11-09 16:31:36 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -94,8 +95,7 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "End of Course Project",
-        "description": "\n\n![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
+        "display_name": "End of Course Project"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",
@@ -2391,7 +2391,6 @@
       "key": "f413261b-0a85-4534-bbfd-cc3928eac9ad",
       "position": 2,
       "properties": {
-        "description": "We've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class. \n\n**Prediction Level:** - [Course B, Loops in Artist](https://studio.code.org/levels/8745)"
       },
       "seeding_key": {
         "activity_section.key": "f413261b-0a85-4534-bbfd-cc3928eac9ad",
@@ -6692,11 +6691,10 @@
     },
     {
       "name": "How to Make a Class Section on Code.org",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "url": "https://youtu.be/4Wugxc80fNU",
       "key": "how_to_make_a_class_section_on_code_org",
       "properties": {
-        "audience": "Teacher",
-        "type": "Teacher Video"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "how_to_make_a_class_section_on_code_org"

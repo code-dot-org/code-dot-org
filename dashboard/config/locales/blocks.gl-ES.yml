@@ -138,6 +138,10 @@ gl:
             '"right"': dereita
             '"space"': espazo
             '"enter"': introduza
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': corazóns
       gamelab_atTime:
         options:
           UNIT:
@@ -154,7 +158,7 @@ gl:
           CONDITION:
             '"when"': cando
             '"while"': mentras
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': segundos
@@ -435,3 +439,7 @@ gl:
         text: avance
       craft_placeTorch:
         text: coloque a antorcha
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': corazóns

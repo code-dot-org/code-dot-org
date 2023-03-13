@@ -577,6 +577,7 @@ ja:
         csd_what_computers_do: コンピューターがすること
         csf_my_online_neighborhood_2020: 私のオンラインネイバーフッド
         csf_follow_the_digital_trail: デジタルトレイルをたどる
+        csf_private_and_personal_information: プライベートおよび個人情報を編集
         codebreak_e01: 'コードブレーク 1.0: Hill Harperのアルゴリズム'
         codebreak_e02: 'コードブレーク 2.0: Mark CubanとLyndsey Scottのプロトタイプ'
         codebreak_e03: 'コードブレーク 3.0: Ashton KutcherとMia Gil Epnerの暗号化'
@@ -615,6 +616,28 @@ ja:
         poetry_module_multichoiceprompts: 多肢選択式のプロンプト - 詩を使ったプログラミング
         poetry_module_conditionals: 条件文 - 詩を使ったプログラミング
         poemart_intro: ポエムアート入門
+        CSA-PL-debugging-temp: Java Labへのデバッグ入門 - temp
+        csd_u6_circuit_playground: 物理コンピューティング
+        csd_u6_input_output: 入出力
+        CSA-PL-for-loops: JavaのForループ
+        CSA-PL-variables: Javaでの変数作成
+        PL_CS_Journeys_Overview: コンピュータサイエンスジャーニー
+        CSA-PL-intro-to-java-lab: Javaラボの基本
+        CSA-PL-first-program: Javaでプログラムを書く
+        CSD_u6_variables_part1: 'CSD: 変数'
+        csd_u6_if_statements: 'CSD: If文'
+        csc-poem-art-intro: イントロビデオ
+        csc-poem-art-outro: エンディングビデオ
+        csd_u6_call_define_functions: 'CSD: 関数の呼び出しと定義'
+        csp_applab_parameters: パラメーター付き関数
+        starquilts_intro_artist: イントロからスターキルト
+        CSA-PL-intro-to-arrays: 1次元 (1D) 配列
+        CSA-PL-1d-arrays-new-values: 1D配列に値を入力
+        CSA-PL-conditionals: Javaの条件文
+        CSA-PL-two-way-selection: 双方向選択
+        CSA-PL-Printing-in-Java: Javaでプリント
+        CSA-PL-multi-selection-statements: 複数選択文
+        CS_Changing_Everything: コンピューター サイエンスはすべてを変えています
     callout:
       text:
         drag_blocks: "「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。"

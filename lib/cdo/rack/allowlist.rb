@@ -1,6 +1,6 @@
 # Rack middleware that allowlists cookies and headers based on path-based cache behaviors.
 # Behaviors are defined in http cache config.
-require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'cdo/legacy_varnish_helpers'
 require 'active_support/core_ext/hash/slice'
 require 'cdo/rack/response'
 require 'cdo/aws/cloudfront'
@@ -21,7 +21,7 @@ module Rack
         return [403, {}, ['Unsupported method.']] unless AWS::CloudFront::ALLOWED_METHODS.include?(env['REQUEST_METHOD'].upcase)
         request = Rack::Request.new(env)
         path = request.path
-        behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
+        behavior = LegacyVarnishHelpers.behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
         # Filter query string.
         if behavior[:query] == false
@@ -32,7 +32,7 @@ module Rack
 
         # Filter allowlisted request headers.
         headers = behavior[:headers]
-        REMOVED_HEADERS.each do |remove_header|
+        LegacyVarnishHelpers::REMOVED_HEADERS.each do |remove_header|
           name, value = remove_header.split ':'
           next if headers.include? name
           http_header = "HTTP_#{name.upcase.tr('-', '_')}"
@@ -45,27 +45,27 @@ module Rack
 
         cookies = behavior[:cookies]
         case cookies
-          when 'all'
-            # Pass all cookies.
-            @app.call(env)
-          when 'none'
-            # Strip all cookies
-            env.delete 'HTTP_COOKIE'
-            status, headers, body = @app.call(env)
-            headers.delete 'Set-Cookie'
-            [status, headers, body]
-          else
-            # Strip all request cookies not in allowlist.
-            # Extract allowlisted cookies to X-COOKIE-* request headers.
-            request_cookies = request.cookies
-            request_cookies.slice!(*cookies)
-            cookie_str = request_cookies.map do |key, value|
-              env_key = "HTTP_X_COOKIE_#{key.upcase.tr('-', '_')}"
-              env[env_key] = value
-              Rack::Utils.escape(key) + '=' + Rack::Utils.escape(value)
-            end.join('; ') + ';'
-            env['HTTP_COOKIE'] = cookie_str
-            @app.call(env)
+        when 'all'
+          # Pass all cookies.
+          @app.call(env)
+        when 'none'
+          # Strip all cookies
+          env.delete 'HTTP_COOKIE'
+          status, headers, body = @app.call(env)
+          headers.delete 'Set-Cookie'
+          [status, headers, body]
+        else
+          # Strip all request cookies not in allowlist.
+          # Extract allowlisted cookies to X-COOKIE-* request headers.
+          request_cookies = request.cookies
+          request_cookies.slice!(*cookies)
+          cookie_str = request_cookies.map do |key, value|
+            env_key = "HTTP_X_COOKIE_#{key.upcase.tr('-', '_')}"
+            env[env_key] = value
+            Rack::Utils.escape(key) + '=' + Rack::Utils.escape(value)
+          end.join('; ') + ';'
+          env['HTTP_COOKIE'] = cookie_str
+          @app.call(env)
         end
       end
     end
@@ -74,6 +74,7 @@ module Rack
     # before the response reaches the cache.
     class Upstream
       attr_reader :config
+
       def initialize(app, config)
         @app = app
         @config = config
@@ -82,7 +83,7 @@ module Rack
       def call(env)
         request = Rack::Request.new(env)
         path     = request.path
-        behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
+        behavior = LegacyVarnishHelpers.behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
         status, headers, body = @app.call(env)
         response = Rack::Response.new(body, status, headers)

@@ -397,6 +397,7 @@ ko-KR:
   homepage_banner_40k_teachers_link: 더 알아보기
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
+  homepage_slot_text_blurb_hoc_2022: 탐구하고, 놀고, 창의력을 발휘하세요!
   homepage_slot_text_link_hoc: Hour of Code 해보기
   homepage_slot_text_link_about_hoc: 아워오브코드 소개
   homepage_slot_text_link_host: Hour of Code의 주인
@@ -422,14 +423,20 @@ ko-KR:
   homepage_slot_text_link_buy: 함께 참여하세요
   homepage_slot_text_link_donate: 기부하기
   homepage_slot_text_link_shop: T-셔츠, 모자 등
+  homepage_slot_text_link_thebadguys: 더 배드 가이즈로 코딩
   homepage_slot_text_link_administrators: 학교에 CS 과목 도입
-  homepage_gallery_header: Code.org에서 제작된 프로젝트 %{project_count}개 이상
+  homepage_gallery_header: "%{project_count} 백만 건 이상의 Code.org 프로젝트 제작됨"
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
   homepage_below_hero_announcement_text: 당사는 귀하의 개인 정보를 관리하며 당사의 업데이트된 개인 정보 보호 정책은
     5월 25일에 발효됩니다.
   homepage_below_hero_announcement_link_text: 더 알아보기
+  homepage_higher_power_body: 댄스 파티를 갖고 만들며, 밴드를 라이브로 볼 기회를 얻으세요.
+  homepage_thebadguys_body: '영화 **더 배드 가이즈**의 미세스 타란튤라와 미스터 울프, 나머지 캐릭터로 어드벤처를 코딩하세요!  '
+  homepage_csa_subhead: 다음에 대한 새로운 접근
+  homepage_csa_title: AP® 컴퓨터 과학 A
+  homepage_csa_body: 학생들이 공평한 커리큘럼에서 실제 세계에 연결된 창의적인 프로젝트를 하도록 권한을 부여하세요.
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -578,6 +585,8 @@ ko-KR:
   video_title_marco_belinelli: 마크로 벨리넬리와 함께 하는 아워오브코드
   video_title_chris_bosh: 컴퓨터 과학을 지지하는 크리스 보쉬
   video_title_my_name_is_aracely: 제 이름은 아라셀리예요.
+  video_title_change_face_of_cs: 컴퓨터 과학의 양상을 바꾸세요
+  video_title_latam_hoc: 우리 학교의 부족한 점
   video_1min: 1분
   video_2min: 2분
   video_3min: 3분
@@ -690,6 +699,7 @@ ko-KR:
   volunteer_engineer_submission_distance_16: 10 마일
   volunteer_engineer_submission_distance_24: 15 마일
   volunteer_engineer_submission_distance_32: 20 마일
+  volunteer_engineer_submission_distance_80: 50 마일
   volunteer_engineer_submission_num_volunteers_5: 자원봉사자 5명
   volunteer_engineer_submission_num_volunteers_10: 자원봉사자 10명
   volunteer_engineer_submission_num_volunteers_25: 자원봉사자 25명
@@ -1131,6 +1141,12 @@ ko-KR:
   coursef-2020_name: 과정 F (2020)
   coursea-2021_name: 과정 A (2021)
   coursed-2021_name: 과정 D (2021)
+  coursea-2022_name: 과정 A (2022)
+  courseb-2022_name: 과정 B (2022)
+  coursec-2022_name: 과정 C (2022)
+  coursed-2022_name: 과정 D (2022)
+  coursee-2022_name: 과정 E (2022)
+  coursef-2022_name: 과정 F (2022)
   express-2018_name: 익스프레스 과정 (2018)
   pre-express-2018_name: 프리 리더 익스프레스 과정 (2018)
   express-2019_name: 익스프레스 과정(2019)
@@ -1138,6 +1154,7 @@ ko-KR:
   express-2020_name: 익스프레스 과정(2020)
   pre-express-2020_name: 프리 리더 익스프레스 과정 (2020)
   pre-express-2021_name: 프리 리더 익스프레스 과정 (2021)
+  pre-express-2022_name: 프리 리더 익스프레스 과정 (2022)
   csd2_name: '단원 2: 웹 개발'
   csd3_name: '단원 3: 애니메이션과 게임'
   accelerated_name: 빠른 과정
@@ -1252,6 +1269,12 @@ ko-KR:
   coursed-2021_gradelevel: 8 학년 이상
   coursee-2021_gradelevel: 나이 8세-12세
   coursef-2021_gradelevel: 9-13 세
+  coursea-2022_gradelevel: 4-7 세
+  courseb-2022_gradelevel: 5-8 세
+  coursec-2022_gradelevel: 6-10 세
+  coursed-2022_gradelevel: 8 학년 이상
+  coursee-2022_gradelevel: 나이 8세-12세
+  coursef-2022_gradelevel: 9-13 세
   accelerated_gradelevel: 나이 10세-13세
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
@@ -1417,6 +1440,19 @@ ko-KR:
   coursee-2021_shortdescription_congrats: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈
     수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
   coursef-2021_shortdescription_congrats: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른
+    문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이
+    되는 프로젝트를 설계하고 만드세요.
+  coursea-2022_shortdescription_congrats: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할
+    수 있는 자신의 게임 또는 스토리를 만드세요.
+  courseb-2022_shortdescription_congrats: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할
+    수 있는 자신의 게임 또는 스토리를 만드세요.
+  coursec-2022_shortdescription_congrats: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고
+    다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
+  coursed-2022_shortdescription_congrats: 학생들은 루프와 조건, 이벤트에 관한 그들의 이해를 더 심화합니다. 코딩을
+    너머 학생들은 디지털 시민의식에 대해 배웁니다.
+  coursee-2022_shortdescription_congrats: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈
+    수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+  coursef-2022_shortdescription_congrats: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른
     문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이
     되는 프로젝트를 설계하고 만드세요.
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
@@ -1800,6 +1836,7 @@ ko-KR:
   header_educate_beyond: Code.org 너머
   header_educate_inspire: 학생들에게 영감을 주기
   header_educate_community: 온라인 커뮤니티
+  header_educate_requirements: 기술적 요구사항
   header_educate_tools: 툴과 동영상
   header_about_us: 우리 소개
   header_about_leadership: 리더십
@@ -1904,6 +1941,10 @@ ko-KR:
     Sia, Keith Urban, Ciara 등 25팀과 함께합니다!
   hoc_overview_dance_2019_subtitle: 댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Shawn Mendes,
     Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj 등 34팀이 함께합니다!
+  hoc_overview_dance_2022_subtitle: 댄스 파티를 코딩해서 친구들과 공유하세요. 비욘세, 해리 스타일스, 리조, 릴 나스
+    엑스, 셀레나 고메즈, 디즈니의 “엔칸토” 음악 등이 등장합니다!
+  hoc_overview_hello_world_2022_subtitle: 4개의 재미있는 주제를 골라 당신이 만든 세계에서 상호적인 캐릭터를 코딩하세요.
+  hoc_overview_hello_world_2022_alt_text: 지구의 그림 주위를 떠다니는 움직이는 우주 비행사 및 동물 캐릭터
   hoc_overview_title: Code.org의 아워오브코드 활동
   hoc_overview_subtitle: <a href="https://hourofcode.com">아워오브코드</a>는 180개 이상의 국가에서
     수천만 명에 이르는 학생과 함께 하는 전 세계적인 운동입니다.  누구든지 어디에서나 아워오브코드 이벤트를 개최하거나 또는 45개 이상 언어로
@@ -1964,9 +2005,16 @@ ko-KR:
   hoc2018_mc_educators_box3_desc: '지역 내 마이크로소프트 스토어를 방문하여 무료 아워오브코드 워크숍에 참여하세요. 모든
     스킬 레벨과 6세 이상 참여 가능. '
   hoc2018_mc_educators_box3_button: 워크숍 찾기
+  hoc2022_mc_educators_box3_desc_markdown: '온디맨드 [무료 강좌](%{free_course_link})를 활용하거나
+    전체 수업을 등록하여 초청 강사와 함께 하는 실시간 아워오브코드 워크숍에 참석하세요.12월 6일부터 11일까지 CSEW 기간 동안 여러 번
+    제공됩니다. '
+  hoc2022_mc_educators_box3_button: 지금 등록하기
   hoc2018_mc_educators_box4_title: 더 많은 컴퓨터 과학 리소스에 액세스
   hoc2018_mc_educators_box4_desc: 디지털 능력과 Microsoft의 컴퓨터 과학 교육 리소스로 커뮤니티에 변화를 일으키세요.
   hoc2018_mc_educators_box4_button: 리소스 탐구
+  hoc2022_mc_educators_box4_desc: 전문성 개발을 통해 블록부터 파이썬까지 200시간의 컴퓨터 과학 커리큘럼을 통해 K-12
+    학습자들의 STEM 열정을 고취시키세요.
+  hoc2022_mc_educators_box4_button: 계속 학습하기
   hoc2018_mc_watch_videos: 시작하기 전에 영감을 불러일으키는 동영상 중 한 편을 시청하세요.
   hoc2018_mc_videos_more: 롤모델과 유명인사가 나오는 더 많은 <a href='%{inspiring_videos_playlist}'>
     영감을 주는 비디오 </a>
@@ -2067,6 +2115,9 @@ ko-KR:
   hoc2018_dance_video2: 댄스 파티 - 이벤트
   hoc2018_dance_video3: 댄스 파티 - 속성
   hoc2018_dance_video4: 댄스 파티 - 축하
+  dance_box_higher_power_line_1: 골드플레이의 "보다 높은 힘"에 맞추어 댄스를 코딩하여 밴드를 라이브로 볼 기회를 얻으세요!
+  dance_box_higher_power_line_2: 더 자세한 정보는 <a href="%{path}">code.org/coldplay</a>를
+    참조하세요.
   page_not_found_title: 페이지를 찾을 수 없습니다.
   page_not_found_header: '404: 페이지를 찾을 수 없습니다'
   page_not_found_description: 찾고 계신 페이지는 이 주소에 존재하지 않습니다. 웹 주소를 확인하여 다시 제출하세요. 또는
@@ -2106,6 +2157,12 @@ ko-KR:
     기초를 배워보세요.'
   hoc2021_mc_mee_ai_title: 선의를 위한 AI
   hoc2021_mc_mee_ai_description: 'Minecraft: 교육 에디션에서 학생들과 AI를 알아보고 코드를 배우세요.'
+  hoc2022_mc_mee_title: 마인크래프트 이스케이프 에스테이트
+  hoc2022_mc_mee_description: '새벽이 되기 전에 수수께끼의 저택에서 탈출하여 백만 개의 에메랄드를 획득하세요! 새로운 마인크래프트
+    아워오브코드 튜토리얼을 이제 윈도우, 맥, 크롬북, 아이패드 및 모바일용 마인크래프트: 에듀케이션 버전에서 이용할 수 있습니다.무료 교육자
+    리소스, 교육 및 비디오로 시작해 보세요. '
+  hoc2022_mc_mee_timecraft_description: '마인크래프트: 에듀케이션 버전의 무료 코딩 강의를 통해 시간을 거슬러 올라가
+    미래를 구하세요.'
   footer_powered_by_aws: Amazon Web Services 및 “Powered by AWS” 로고는 Amazon.com, Inc.
     또는 미국 및/또는 다른 국가 내 그 계열회사의 상표입니다.
   footer_built_on_github: 마이크로소프트의 GitHub 위에 구축
@@ -2177,12 +2234,34 @@ ko-KR:
   ai_ibm_machine_learning_for_kids: 'IBM: 아동을 위한 머신러닝'
   ai_ecs: 'ECS: 인공지능 (AI)'
   ai_ecs_description: 컴퓨터 과학 탐구 (ECS) 커리큘럼을 위한 새로운 대안 커리큘럼 단원.
+  ai_aiedu_intro: 'AiEdu: 인공 지능 소개'
+  ai_aiedu_intro_description: AI 인트로 (Intro to AI) 는 학생들이 AI가 무엇이고 실제 세계에서 어떻게 사용되는지에
+    대한 개념적 지식을 개발하는 혁신적이고 문화적으로 관련성이 높은 무료 커리큘럼입니다.
   ai_elements: AI의 요소
   ai_elements_description: Reaktor와 헬싱키 대학이 만든 무료 온라인 과정  시리즈 .
   ai_cognimates: 코그니메이츠
   ai_cognimates_description: 게임을 만들고 로봇을 프로그램하고 트레이닝하기 위한 AI 교육 플랫폼.
   ai_try_activity: 활동 시도
+  outbreak_tile_title: 아웃브레이크
   outbreak_tile_subtitle: 몬스터 타운이 바이러스에 감염되었습니다! 아웃브레이크 시뮬레이터의 코드를 작성해 몬스터 타운 이웃들에게
     어떤 일이 일어날지를 예측하세요.
   outbreak_tile_alt: 한 무리의 보라색 괴물을 통한 바이러스 확산을 보여주는 시뮬레이션
   footer_cookie_notice: 쿠키 방침
+  top_hoc_tutorial_applab_alt_text: 파란색 배경에 별과 광선을 발산하는 터치 스크린 태블릿을 집게 손가락으로 터치하는
+    갈색 손
+  minecraft_tile_alt: 산호와 돌고래, 해초로 구성된 수중 마인크래프트 장면을 배경으로 둔 두 마인크래프트 캐릭터 스티브와 알렉스
+  hoc2022_banner_title: 탐구하고, 놀고, 창의력을 발휘하세요!
+  hoc2022_banner_description: 우주를 탐구하고, 골을 넣고, 바로 시작하세요. 컴퓨터과학을 체험해볼 수 있는 방법은 아주 많습니다!
+  hoc2022_cta_primary: 새로운 내용 보기
+  hoc2022_cta_secondary: 더 많은 활동 시도해보기
+  hoc2022_landing_page_explore_title: 탐색
+  hoc2022_landing_page_explore_description: 컴퓨터 과학의 새로운 세계로 향하는 문을 열어보세요!
+  hoc2022_landing_page_play_title: 재생
+  hoc2022_landing_page_play_description: 필드와 점수를 장악해 보세요!
+  hoc2022_landing_page_create_title: 만들기
+  hoc2022_landing_page_create_description: 이상하고도 아름다운 무언가를 만들어보세요!
+  hoc2022_landing_page_banner_alt_left: 우주의 토성 옆에서 춤추는 외계인
+  hoc2022_landing_page_banner_alt_right: 이륙하는 로켓 앞 우주에서 축구공을 드리블하는 로봇
+  try_it_yourself: 혼자 힘으로 해보세요!
+  try_an_activity: 활동 시도해보기
+  see_more_activities: 더 많은 활동 시도해보기

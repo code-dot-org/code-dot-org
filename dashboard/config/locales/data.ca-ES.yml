@@ -19,7 +19,7 @@ ca:
         Farmer2: La pagesa 2
         Unplug8: Abstracció
         Artist4: L'artista 4
-        Unplug9: Programació en relleus
+        Unplug9: Programació amb relleus
         Farmer3: La pagesa 3
         Unplug10: Internet
         Artist5: L'artista 5
@@ -320,18 +320,18 @@ ca:
         Custom_builder: Arrossega el blocs de la caixa d'eines a l'àrea de treball
           per a dibuixar el nivell que vulguis crear. Prem "Executa" quan estiguis
           a punt.
-        jigsaw_1: Fés clic en el bloc
-        jigsaw_2: Arrossegueu el bloc a l'objectiu
-        jigsaw_3: Organitzar els blocs per formar la imatge
-        jigsaw_4: Organitzar els blocs per formar la imatge
-        jigsaw_5: Organitzar els blocs per formar la imatge
-        jigsaw_6: Organitzar els blocs per formar la imatge
-        jigsaw_7: Organitzar els blocs per formar la imatge
-        jigsaw_8: Organitzar els blocs per formar la imatge
-        jigsaw_9: Organitzar els blocs per formar la imatge
-        jigsaw_10: Organitzar els blocs per formar la imatge
-        jigsaw_11: Organitzar els blocs per formar la imatge
-        jigsaw_12: Organitzar els blocs per formar la imatge
+        jigsaw_1: Fes clic al bloc
+        jigsaw_2: Arrossega el bloc a l'objectiu
+        jigsaw_3: Organitza els blocs per formar la imatge
+        jigsaw_4: Organitza els blocs per formar la imatge
+        jigsaw_5: Organitza els blocs per formar la imatge
+        jigsaw_6: Organitza els blocs per formar la imatge
+        jigsaw_7: Organitza els blocs per formar la imatge
+        jigsaw_8: Organitza els blocs per formar la imatge
+        jigsaw_9: Organitza els blocs per formar la imatge
+        jigsaw_10: Organitza els blocs per formar la imatge
+        jigsaw_11: Organitza els blocs per formar la imatge
+        jigsaw_12: Organitza els blocs per formar la imatge
         jigsaw_13: Corregeix el trencaclosques!
         mazestep_1: Descripció dels passos del laberint aquí
         mazestep_2: Descripció dels passos del laberint aquí
@@ -471,8 +471,8 @@ ca:
         Unplug9: Programació en relleus
         Unplug10: Internet
         Unplug11: Recapitulació
-        C1_happy_maps_unplugged: Mapes feliços
-        C1_moveitmoveit_unplugged: Mou-lo, Mou-lo
+        C1_happy_maps_unplugged: Mapes Feliços
+        C1_moveitmoveit_unplugged: A moure's!
         C1_bigevent_unplugged: El gran esdeveniment
         C1_getting_loopy: Fent bucles
         C1_pair_programming: Programació per parelles
@@ -487,7 +487,7 @@ ca:
         C1_playlab_storytelling: 'Play Lab: Creeu una història'
         C1_planting_seed: Plantant una llavor
         C1_building_foundation: Posant les bases
-        C1_going_places_safely: Anant a llocs segurs
+        C1_going_places_safely: Anar als llocs amb precaució
         C2_maze_intro: Introducció al Laberint
         C2_artist_intro: Introducció a l'Artista
         C2_zuck_repeat_loop: 'Laberint: bucles'
@@ -500,7 +500,7 @@ ca:
         C2_graph_paper: Programació de paper quadriculat
         C2_conditionals_with_cards: Condicionals
         C2_binary_bracelets: Polseres binàries
-        C2_relay_programming: Programació en relleus
+        C2_relay_programming: Programació amb relleus
         C2_paper_airplanes: Avions de paper
         C2_digital_footprint: La vostra empremta digital
         C2_digital_footprint_v2: La vostra empremta digital
@@ -526,9 +526,9 @@ ca:
         C4_bee_conditional: 'Abella: Condicionals'
         C4_variables_artist: Variables - Artista
         C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: Per bucles
-        C4_for_loops_bee: Per bucles
-        C4_for_loops_no_bee: Per bucles
+        C4_for_loops: Bucles "for"
+        C4_for_loops_bee: Bucles "for"
+        C4_for_loops_no_bee: Bucles "for"
         C4_math_artist: Programant l'Artista amb matemàtiques
         C4_function_edit: Editant Funcions
         C4_function_create: Creant Funcions
@@ -537,11 +537,17 @@ ca:
         C4_unplugged_algorithms: Algorismes amb Tangrams
         C4_unplugged_madlibs: Biblioteques boges
         C4_unplugged_variables: Variables en Sobres
-        C4_unplugged_forloops: Per bucles
+        C4_unplugged_forloops: Bucles "for"
         C4_unplugged_parameters: Composició amb paràmetres
         C4_unplugged_binary: Binari
+        CSF_a_b_artist_loops: Bucles a l'Artista
+        CSF_collector_k1_blocks: 'Fonaments de CS: La col·leccionista'
+        CSF_collector_repeat_loops: Bucles de repetir a La col·leccionista
+        CSF_collector_text_blocks: 'Fonaments de CS: La col·leccionista'
         CSF_debugging_k1_blocks: Depuració
         CSF_debugging_text_blocks: Depuració
+        CSF_maze_intro_k1_blocks: Introducció a Code Studio
+        CSF_maze_intro_text_blocks: Introducció a Code Studio
         CSF_my_robotic_friends: Els meus amics robòtics
         frozen_intro: Introducció a l'Hora del Codi
         frozen_loops: Introducció als bucles
@@ -569,16 +575,38 @@ ca:
         mc_if_statements: Minecraft - Condicionals amb si
         mc_congrats_share: Minecraft - Enhorabona
         mc_congrats_no_share: Minecraft - Enhorabona
+        mc_2017_agent_intro: L'Hora del Codi amb Minecraft - L'agent
+        mc_2017_puzzle_1: L'Hora del Codi amb Minecraft - L'agent
+        CSF_skinOverview_Harvester: L'agricultora
+        CSF_harvester_skinOverview_K-1: L'agricultora
+        CSF_scrat_loops_K1: Bucles a l'Edat de Gel
+        CSF_scrat_loops_CF: Bucles a l'Edat de Gel
         CSF_loops_AB: Bucles
+        CSF_SpriteLabIntro_CDEF: El Laboratori d'Sprites
+        CDEF_Video_SpritesInAction: Sprites en acció
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
+        mc_2018_intro: 'Introducció a Minecraft: Viatge aquàtic'
+        hoc_dance_properties: Festa de ball - Propietats
+        c_and_c_digital_sharing: Compartir continguts digitals
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
+        CSF_Going_Places_Safely: El meu barri d'internet
+        CSF_Spritelab_MakeSprite_v2: Com crear un sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
+        oceans_machine_learning: Aprenentatge automàtic
+        hoc_dance_properties_2019: Festa de ball - Propietats
+        csf_my_online_neighborhood_2020: El meu barri d'internet
+        csf_private_and_personal_information: Informació privada i personal
+        csf21pilot_prompts: 'Laboratori d''Sprites: Text i preguntes'
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab
+        csp_applab_parameters: Funcions amb Paràmetres
+        CS_Changing_Everything: La informàtica ho està canviant tot
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc
-        run: Fes clic a "Executa" per provar el teu programa
+        run: Fes clic a "Executar" per provar el teu programa
         watch_again: Feu clic aquí per veure el vídeo de nou
         gray_block_explanation: Els blocs que són de color gris no es poden esborrar.
           Pots resoldre el puzzle de totes maneres?
@@ -685,13 +713,13 @@ ca:
         Infinity_move_directions_callout_arrow: Usa les fletxes per dirigir
         Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
         Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins
-        craft_run_button_callout: Fes clic a "Executa" per provar el teu programa
+        craft_run_button_callout: Fes clic a "Executar" per provar el teu programa
         craft_drag_block_callout: Arrossega un "moveForward()"; bloc i porta'l sota
           l'altre bloc
         craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
         craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa.
           Pots acabar-lo?
-        craft_what_is_iron: Aquest ferro és meu!
+        craft_what_is_iron: Excava el ferro!
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre
           per a seguir endavant?

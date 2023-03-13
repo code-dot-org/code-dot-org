@@ -38,6 +38,7 @@ pt:
         personal_email_markdown: E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})
         username: Nome de usuário
         password: Senha
+        verified_teacher: Professor Verificado
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -137,6 +138,8 @@ pt:
       associadas à contas do Code.org.
     unable_to_connect_provider: Não foi possível conecta sua conta do Code.org ao
       seu %{provider}. Por favor tente novamente.
+    disconnect_successful: Sucesso! Desconectamos a conta externa da sua conta do
+      Code.org.
     already_in_use: Seu %{provider} já está conectado a outra conta do Code.org.
     already_linked: Seu %{provider} já está lincado a outra conta do Code.org.
     existing_account:
@@ -194,6 +197,17 @@ pt:
     mismatch_password: As duas senhas que você digitou são diferentes
     student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
       para usar os serviços do Code.org.
+    agree_us_data_transfer_student: "**Concordo que o Code.org pode transferir dados
+      (incluindo dados pessoais) do meu uso deste site para os Estados Unidos** com
+      a finalidade de hospedar e processar esses dados."
+    agree_us_data_transfer_teacher: "**Concordo que o Code.org pode transferir dados
+      (incluindo dados pessoais) do meu uso (e do uso dos meus alunos) deste site
+      para os Estados Unidos** com a finalidade de hospedar e processar esses dados."
+    data_collection_us: Entendo que o Code.org é um site sem fins lucrativos com sede
+      nos EUA e que as leis que regem a coleta de dados nos EUA podem diferir das
+      leis do meu país.
+    visit_privacy: Visite a [Política de Privacidade](%{privacy_url}) do Code.org
+      para saber mais.
     student_terms_markdown: Os endereços de email não são armazenados em um formulário
       que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails
       do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade]
@@ -203,8 +217,15 @@ pt:
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
     user_type_student: Estudante
+    user_type_student_desc: 'Explore todos os nossos curso e atividades, e mais:'
     user_type_student_ability_1: Salvar seu progresso e projetos
+    user_type_student_ability_2: Participe de uma seção na sala de aula do seu professor
     user_type_teacher: Professor
+    user_type_teacher_desc: 'Tudo a que os alunos têm acesso, e mais:'
+    user_type_teacher_ability_1: Crie seções de salas de aula
+    user_type_teacher_ability_2: Passe trabalho para os alunos e monitore seu desempenho
+    user_type_teacher_ability_3: Inscreva-se em uma aprendizagem profissional
+    user_type_teacher_ability_4: Interaja no nosso fórum de professores
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar para criar uma conta.
     error: Ocorreu um erro.
@@ -323,6 +344,7 @@ pt:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
     registered: Você já está registrado para %{section_name}.
+    captcha_required: Por favor, preencha o CAPTCHA para participar desta seção.
     already_exists: Você já se juntou à seção %{section_name}.
     error:
       signed_in: Saia antes de prosseguir
@@ -336,6 +358,11 @@ pt:
       provider_managed_section: Esta turma é dirigida por outro provedor e não pode
         ser entrada. Por favor pergunte a seu professor via %{provider} e re-sincronize
         a turma.
+      restricted_section: Não foi possível adicionar você à seção %{section_code}
+        porque ela está bloqueada. Entre em contato com seu professor para obter ajuda.
+      full_section: Não foi possível adicionar você à seção %{section_code} porque
+        já existem %{section_capacity} alunos nela. Entre em contato com seu professor
+        para obter ajuda.
       not_participant_type: Não foi possível adicioná-lo à seção %{section_code},
         porque você não é o tipo de participante esperado.
     mail:
@@ -378,6 +405,7 @@ pt:
       sections: Seções
       help_support: Ajuda e suporte
       report_bug: Reportar um erro
+      report_abuse: Reportar abuso
       teacher_community: Comunidade de professores
       professional_learning: Aprendizado Profissional
       documentation: Documentação
@@ -388,6 +416,7 @@ pt:
       game_lab_tutorials: Tutoriais Game Lab
       sprite_lab_documentation: Documentação do Sprite Lab
       sprite_lab_tutorials: Tutoriais do Sprite Lab
+      web_lab_documentation: Documentação do Web Lab
       educate_overview: Visão Geral do Educador
       educate_elementary: Ensino Fundamental
       educate_middle: Ensino Fundamental II
@@ -397,6 +426,7 @@ pt:
       educate_beyond: Além do Code.org
       educate_inspire: Inspire um Estudante
       educate_community: Comunidade On-Line
+      educate_requirements: Requisitos Técnicos
       educate_tools: Vídeos e ferramentas
       about_us: Quem Somos
       about_leadership: Liderança
@@ -413,7 +443,9 @@ pt:
       help_us: Ajude-nos
       teach: Ensinar
       about: Sobre
+      legal: Termos & Privacidade
       legal_privacy: Política de Privacidade
+      legal_cookie_notice: Aviso sobre Cookies
       legal_tos: Termos de Serviço
     user:
       classroom: Página inicial do professor
@@ -463,13 +495,13 @@ pt:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blocos)
       starwarsblocks_hour: Star Wars (Blocos)
+      thebadguys: Os caras maus
       loading: Carregando...
       weblab: Laboratório Web
       view_all: Ver todos os projetos...
     popup:
       progress_for_user: progresso de %{name}'s
       progress: Seu progresso
-      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Fases
@@ -506,6 +538,8 @@ pt:
       worked_with: Trabalhou com
       update_lock_settings: Atualize as configurações de bloqueio aqui.
       clear_response: Apagar resposta
+    student_code_view_diabled: O código do aluno não pode ser visualizado para esta
+      atividade.
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -630,6 +664,7 @@ pt:
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: Hora do Código
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
@@ -690,6 +725,9 @@ pt:
     code_from_html: A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
+    built_on_github: Construído no GitHub da Microsoft
+    google_copyright: "© Google Inc. usado com permissão. Google Classroom é uma marca
+      registrada de Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; são marcas registradas da Code.org."
     copyright: Direitos Autorais
@@ -701,6 +739,7 @@ pt:
     tos_short: Termos
     tos: Termos de Serviço
     privacy: Política de Privacidade
+    privacy_updated: Política de Privacidade Atualizada
     secure: Versão Segura
     report_abuse: Reportar abuso
     built_on_code_studio: Criado no Code Studio
@@ -783,29 +822,18 @@ pt:
         funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
       audience: A partir de 13 anos
       cta: Saiba como
-    dance:
-      title: Festa dançante
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Festa dançante
-    hoc:
-      title: Labirinto clássico
-      body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
-        já experimentaram.
+    dance:
+      title: Festa dançante
     flappy:
       title: Código do Flappy bird
       body: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso
         tutorial sobre o Código do Flappy bird!
-    20-hour:
-      title: Curso acelerado
-      body: Este curso de 20 horas apresenta o núcleo da computação e conceitos de
-        programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental,
-        mas é divertido de aprender em todas as idades.
-      body_short: Aprenda os fundamentos da ciência da computação em uma versão acelerada
-        dos cursos 2 a 4.
-    hoc2014:
-      try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
-        beta
-      try_frozen: O Artista com Anna e Elsa, do filme Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galeria
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos
@@ -817,20 +845,25 @@ pt:
         os outros.
       audience: A partir de 13 anos
       cta: Saiba como
+    hello-world:
+      title: Olá Mundo
+      body: Selecione entre quatro temas divertidos para codificar os personagens
+        interativos em um mundo criado por você.
+    hero:
+      title: Minecraft
+      body: O Minecraft está de volta para a Hora do Código com uma nova atividade!
+        Viaje através de Minecraft com código.
     hoc-encryption:
       title: Criptografia simples
       body: Os alunos vão aprender técnicas para criar e quebrar mensagens encriptadas.
-    weblab:
-      title: Laboratório Web (beta)
-      body: O Laboratório Web é um ambiente de programação onde você pode criar páginas
-        web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site
-        em segundos.
-      audience: A partir de 13 anos
-      cta: Saiba como
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Labirinto clássico
+      body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
+        já experimentaram.
+    hoc2014:
+      try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
+        beta
+      try_frozen: O Artista com Anna e Elsa, do filme Frozen
     infinity:
       title: Laboratório infinito
       body: Use o Laboratório para criar uma história ou um jogo usando personagens
@@ -842,19 +875,36 @@ pt:
       title: Minecraft
       body: Crie animais e outras criaturas de Minecraft em sua própria versão do
         Minecraft.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: O Minecraft está de volta para a Hora do Código com uma nova atividade!
-        Viaje através de Minecraft com código.
+    poem-art:
+      title: Arte poética
     sports:
       title: Esportes
       body: Faça um jogo de basquete ou misture os esportes.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Compressão de texto
       body: Nesta lição, os alunos irão usar a Ferramenta de Compressão de Texto para
         comprimir texto substituindo padrões por símbolos.
+    weblab:
+      title: Laboratório Web (beta)
+      body: O Laboratório Web é um ambiente de programação onde você pode criar páginas
+        web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site
+        em segundos.
+      audience: A partir de 13 anos
+      cta: Saiba como
+    widgets:
+      title: Widgets
+      body: Os alunos podem colocar as mãos na massa para explorar os conceitos do
+        nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas
+        digitais. Eles podem usar os "widgets" como bem entenderem ou criar uma lição
+        envolvendo um único conceito para suas aulas.
+      audience: Maiores de 14 anos
+      cta: Saiba como
+    unplugged_conditionals:
+      title: Condições
+      body: Aprenda sobre algoritmos e declarações condicionais nesta atividade "off-line"
+        usando um baralho de cartas.
     unplugged:
       title: Aulas off-line
       audience: A partir de 4 anos
@@ -865,18 +915,13 @@ pt:
         ciência da computação.
       body_short: Se não tiver computadores, teste essas lições off-line em sua sala
         de aula.
-    unplugged_conditionals:
-      title: Condições
-      body: Aprenda sobre algoritmos e declarações condicionais nesta atividade "off-line"
-        usando um baralho de cartas.
-    widgets:
-      title: Widgets
-      body: Os alunos podem colocar as mãos na massa para explorar os conceitos do
-        nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas
-        digitais. Eles podem usar os "widgets" como bem entenderem ou criar uma lição
-        envolvendo um único conceito para suas aulas.
-      audience: Maiores de 14 anos
-      cta: Saiba como
+    20-hour:
+      title: Curso acelerado
+      body: Este curso de 20 horas apresenta o núcleo da computação e conceitos de
+        programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental,
+        mas é divertido de aprender em todas as idades.
+      body_short: Aprenda os fundamentos da ciência da computação em uma versão acelerada
+        dos cursos 2 a 4.
   landing:
     prerelease_tutorial: Esse tutorial está em **beta**. Ele ainda está sujeito a
       revisões, conforme são recebidos feedbacks e são feitas melhorias.
@@ -1010,9 +1055,6 @@ pt:
       de aceitar explicitamente os termos atualizados, observe que nossas ferramentas
       para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: Ver os termos atualizados
-  donor_interstitial:
-    support_codeorg_1: Cada dólar doado ao Code.org gera oportunidades para mais estudantes.
-    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos
       a acompanhar o nosso progresso!
@@ -1299,6 +1341,7 @@ pt:
         music: Música
         art: Arte
         other: 'Outro:'
+        na: Não aplicável
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1308,7 +1351,8 @@ pt:
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Outro:'
+        other: Outros
+        na: Não aplicável
       robotics:
         grok: Grok Learning (Aprendizagem Grok)
         kodable: Kodable
@@ -1318,7 +1362,8 @@ pt:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Oficina de Maravilhas
-        other: 'Outro:'
+        other: Outros
+        na: Não aplicável
       workshop_course:
         csf_af: Fundamentos de Ciência da Computação (Cursos A-F)
         csf_express: Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)
@@ -1397,3 +1442,13 @@ pt:
   behaviors:
     this_sprite: este personagem
   teacher_feedback: Feedback do Professor
+  lesson_lock:
+    error:
+      no_updates: Nenhuma atualização a ser executada
+      missing_params: As IDs de usuário, nível e unidade são obrigatórias
+      cannot_view_locked_answers: Não é possível visualizar as respostas com o item
+        bloqueado
+      forbidden: O usuário não pode atualizar o status bloqueável do aluno
+  reset_predict_progress_button: Excluir resposta
+  pixelation:
+    binary: Binário

@@ -1,12 +1,14 @@
 require 'cdo/aws/s3'
 require 'rack/csrf'
-require_relative '../shared/middleware/helpers/storage_id'
+require_relative '../shared/middleware/helpers/core'
+require_relative '../shared/middleware/helpers/shared_auth_helpers'
 require 'cdo/asset_helper'
 require 'cdo/cookie_helpers'
 require 'cdo/language_dir'
+require_relative './helpers/analytics_constants'
 
 def avatar_image(name, width=320, square_photo=false)
-  basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
+  basename = name.downcase.gsub(/\W/, '_').squeeze('_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path
   dimensions = "fit-#{width}"
@@ -57,11 +59,6 @@ end
 
 def form_error!(e)
   halt(400, {'Content-Type' => 'text/json'}, e.errors.to_json)
-end
-
-def have_permission?(permission)
-  return false unless dashboard_user_helper
-  dashboard_user_helper.has_permission?(permission)
 end
 
 def no_content!

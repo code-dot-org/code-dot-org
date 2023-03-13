@@ -1,0 +1,401 @@
+{
+  "zh-TW": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab",
+          "categories": {
+            "html_tags": {
+              "name": "HTML 標籤"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Game Lab",
+          "categories": {
+            "game_lab": {
+              "name": "Game Lab",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "黑白"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "製作音樂"
+                    }
+                  },
+                  "short_description": "播放指定網址上的 MP3 音訊檔案。"
+                }
+              }
+            },
+            "sprites": {
+              "name": "角色",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "螺旋"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "群組",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "顏色"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "顏色"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "繪圖",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Star"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "運算",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "傳回的最小數值"
+                    },
+                    "max": {
+                      "description": "傳回的最大數值"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "傳回的最小數值"
+                    },
+                    "max": {
+                      "description": "傳回的最大數值"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "變數",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "將一個值分配給以前宣告的變數。"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "宣告一個具有給定名稱的變數。"
+                },
+                "declareAssign_x": {
+                  "short_description": "宣告並分配一個初始值給變數。"
+                }
+              }
+            },
+            "functions": {
+              "name": "函式"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab 是個編程環境，你可以在裡頭做些簡單的應用程式。可以用積木或是 JavaScript 的方式設計，製作完後也能分享。",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "縮小和放大"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "函式"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "製作音樂"
+                    }
+                  },
+                  "short_description": "播放指定網址上的 MP3 音訊檔案。"
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "對象"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "數據",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "函式"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "對象"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "對象"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "以平滑的圓弧向前和向左移動烏龜。"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "函式"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "運算",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "傳回的最小數值"
+                    },
+                    "max": {
+                      "description": "傳回的最大數值"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "傳回的最小數值"
+                    },
+                    "max": {
+                      "description": "傳回的最大數值"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "變數",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "宣告一個具有給定名稱的變數。"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "選擇你自己的冒險"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "宣告並分配一個初始值給變數。"
+                },
+                "addPair": {
+                  "return_value": "無"
+                }
+              }
+            },
+            "functions": {
+              "name": "函式"
+            },
+            "advanced": {
+              "name": "進階設定"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "角色"
+            },
+            "world": {
+              "name": "世界"
+            },
+            "location": {
+              "name": "座標"
+            },
+            "actions": {
+              "name": "動作"
+            },
+            "events": {
+              "name": "事件"
+            },
+            "behaviors": {
+              "name": "行為"
+            },
+            "loops": {
+              "name": "迴圈"
+            },
+            "variables": {
+              "name": "變數"
+            },
+            "math": {
+              "name": "運算"
+            },
+            "logic": {
+              "name": "邏輯"
+            },
+            "functions": {
+              "name": "函式"
+            },
+            "text": {
+              "name": "文字"
+            },
+            "comments": {
+              "name": "註解"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java 實驗室"
+        }
+      }
+    }
+  }
+}

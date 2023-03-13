@@ -309,6 +309,7 @@
   homepage_banner_40k_teachers_link: "למד עוד"
   homepage_slot_text_title_hoc: "שעת הקוד"
   homepage_slot_text_blurb_hoc: "כל אחד יכול ללמוד. התחל היום"
+  homepage_slot_text_blurb_hoc_2022: "גלו, שחקו, צרו!"
   homepage_slot_text_link_hoc: "נסה את \"שעת הקוד\" (Hour of Code)"
   homepage_slot_text_link_about_hoc: "אודות שעה של קוד"
   homepage_slot_text_link_host: "ארח שעת קוד"
@@ -335,7 +336,7 @@
   homepage_slot_text_link_donate: "תרום"
   homepage_slot_text_link_shop: "חולצות, כובעים, & עוד"
   homepage_slot_text_link_administrators: "הביאו את מדעי המחשב לבית הספר שלכם"
-  homepage_gallery_header: "מעל %{project_count} מיליון פרויקטי Code.org נוצרו"
+  homepage_gallery_header: "מעל %{project_count} מיליון פרויקטים של Code.org נוצרו"
   homepage_header_donors: "code.org מודה לתומכיו"
   homepage_donors_seall: "לכל הפעילויות"
   homepage_donors_donate: "תרום"
@@ -736,6 +737,7 @@
   coursed-2019_name: קורס ד' (2019)
   coursed-2020_name: קורס ד' (2020)
   coursed-2021_name: קורס ד' (2021)
+  coursed-2022_name: קורס ד' (2021)
   accelerated_name: "קורס מואץ"
   20-hour_name: קורס מואץ
   classicmaze_name: "מבוך קלאסי"
@@ -835,6 +837,12 @@
   coursed-2021_gradelevel: כיתות ח' ומעלה
   coursee-2021_gradelevel: גילאי 8-12
   coursef-2021_gradelevel: גילאי 9-13
+  coursea-2022_gradelevel: גילאי 4-7
+  courseb-2022_gradelevel: גילאי 5-8
+  coursec-2022_gradelevel: גילאי 6-10
+  coursed-2022_gradelevel: כיתות ח' ומעלה
+  coursee-2022_gradelevel: גילאי 8-12
+  coursef-2022_gradelevel: גילאי 9-13
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
@@ -923,6 +931,7 @@
   artist_shortdescription: "ציירו תמונות מגניבות ועיצובים עם האומן!"
   coursed-2020_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
   coursed-2021_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
+  coursed-2022_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
   codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   codeintl_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   thinkersmithspanish_longdescription: "באמצעות שימוש ב\"מילון רובוטי\" המוגדר מראש, התלמידים ילמדו להנחות אחד את השני בהשלמת משימות ללא דיון מקדים. השיעור הזה מלמד את הילדים את הקשר בין סמלים לפעולות, וגם את היכולת החשובה מאוד של לדבג."
@@ -1181,6 +1190,8 @@
   account_sign_up_email_opt_in: "האם ניתן לשלוח דוא\"ל עבור עדכונים בקורסים, הזדמנויות מקומיות, או חדשות במדעי המחשב?"
   account_sign_up_child_accept_terms: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
   hoc_overview_dance_title: "מסיבת ריקודים"
+  hoc_overview_dance_2022_subtitle: "תקדדו מסיבת ריקודים לחלוק עם חברים שלכם. בהשתתפות ביונסה, הארי סטיילס, ליזו, ליל נאז X, סלינה גומז, מוזיקה מ\"אנקאנטו\" של דיסני, ועוד!"
+  hoc_overview_hello_world_2022_alt_text: "אסטרונאוט מונפש ודמויות בעלי חיים מרחפים סביב ציור של כדור הארץ"
   hoc_overview_start_tutorial: "התחל"
   hoc2018_creativity_create: "צור"
   hoc2018_creativity_what_will_you_create: "מה אתם תיצרו?"
@@ -1196,6 +1207,10 @@
   hoc2018_mc_no_internet: "אין אינטרנט?"
   hoc2018_mc_educators: "למורים"
   hoc2018_mc_educators_box2_button: "הורד"
+  hoc2022_mc_educators_box3_desc_markdown: 'נצלו את [קורס חינם] בהתאם לביקוש זה (%{free_course_link}) או רשמו את כל הכיתה שלכם להשתתף בסדנת שעת קוד בשידור חי עם מורה אורח. מוצע מספר פעמים במהלך CSEW, בתאריכים 6-11 דצמבר.'
+  hoc2022_mc_educators_box3_button: "הירשמו עכשיו"
+  hoc2022_mc_educators_box4_desc: "תעוררו השראת STEM בתלמידי גן חובה עד כיתה יב עם 200 שעות של תוכנית לימודי קוד, מבלוק עד פייתון, הנתמכת על ידי התקדמות מקצועית."
+  hoc2022_mc_educators_box4_button: "תמשיכו ללמוד"
   hoc2018_mc_watch_videos: "לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו"
   hoc2018_mc_videos_more: "עוד <a href='%{inspiring_videos_playlist}'>סרטונים מעוררי השראה</a> עם מודלים לחיקוי וסלבס."
   hoc2018_mc_careers_more: "עוד <a href='%{careers_url}' target='_blank'>סרטונים מעוררי השראה</a> עם מודלים לחיקוי וסלבס."
@@ -1253,6 +1268,9 @@
   hoc2018_dance_video4: "מסיבת ריקודים - סיום"
   hoc2018_mc_with_microsoft: "בשיתוף עם: "
   hoc2018_mc_thank_microsoft: "אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו – להבטיח שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי להצליח במאה ה־21."
+  hoc2022_mc_mee_title: "מיינקראפט: אחוזת בריחה"
+  hoc2022_mc_mee_description: 'ברחו מהטירה המסתורית עד עלות השחר וזכו במיליון אבני ברקת! מדריך מיינקראפט שעת קוד החדש זמין כעת במיינקראפט: מהדורת חינוך עבור ווינדווס, מאק, כרומבוק, אייפד, ומובייל. תתחילו עם משאבי מחנך חינם, הדרכות וסרטונים.'
+  hoc2022_mc_mee_timecraft_description: 'סעו אחורה בזמן כדי להציל את העתיד בשיעור קידוד חינם זה במיינקראפט: מהדורת חינוך.'
   footer_powered_by_aws: "ממונע ע\"י Amazon Web Services"
   codebytes_skinny_banner_english_only: "אנגלית בלבד"
   footer_privacy_policy: "הצהרת פרטיות"
@@ -1267,3 +1285,16 @@
   ai_activity: "פעילות"
   ai_description: "תיאור"
   outbreak_tile_title: "התפרצות"
+  hoc2022_banner_title: "גלו, שחקו, צרו!"
+  hoc2022_banner_description: "חקרו את היקום, הבקיעו גול, עשו מהלך - יש כל כל הרבה דרכים להתנסות במדעי המחשב!"
+  hoc2022_cta_primary: "ראו מה חדש"
+  hoc2022_cta_secondary: "נסו עוד פעילויות"
+  hoc2022_landing_page_explore_title: "עיין"
+  hoc2022_landing_page_explore_description: "פתחו דלתות לעולמות חדשים עם מדעי המחשב!"
+  hoc2022_landing_page_play_description: "צאו למגרש והבקיעו!"
+  hoc2022_landing_page_create_title: "צור"
+  hoc2022_landing_page_create_description: "צרו משהו בלתי רגיל ונפלא!"
+  hoc2022_landing_page_banner_alt_left: "חייזר רוקד ליד שבתאי בחלל"
+  hoc2022_landing_page_banner_alt_right: "רובוט מכדרר כדור כדורגל בחלל מול טיל במהלך שיגור"
+  try_an_activity: "נסו פעילות"
+  see_more_activities: "ראה פעילויות נוספות"

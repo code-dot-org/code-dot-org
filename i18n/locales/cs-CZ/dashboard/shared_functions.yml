@@ -1,6 +1,23 @@
 cs:
   data:
     shared_functions:
+      driving with arrow keys: ovládání šipkovými klávesami
+      fluttering: třepotání
+      growing: růst
+      jittering: komíhání
+      moving east: posuv na východ
+      moving east and looping: posuv na východ a zacyklení
+      moving north: posuv na sever
       moving north and looping: posuv na sever a zacyklení
+      moving south: posuv na jih
       moving south and looping: posuv na jih a zacyklení
+      moving west: posuv na západ
+      moving west and looping: posuv na západ a zacyklení
       moving with arrow keys: pohyb pomocí kláves se šipkami
+      patrolling: patrolování
+      shrinking: smršťování
+      spinning left: otáčení doleva
+      spinning right: otáčení doprava
+      swimming left and right: plavání doleva a doprava
+      wandering: potulování se
+      wobbling: kymácení

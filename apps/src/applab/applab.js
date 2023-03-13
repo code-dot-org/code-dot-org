@@ -74,15 +74,8 @@ import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '../util/exporter';
-import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
@@ -118,6 +111,15 @@ Applab.log = function(object, logLevel) {
   );
 };
 consoleApi.setLogMethod(Applab.log);
+
+Applab.clear = function() {
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.clear();
+  }
+
+  getStore().dispatch(jsDebugger.clearLog());
+};
+consoleApi.setClearMethod(Applab.clear);
 
 var level;
 var skin;
@@ -301,6 +303,10 @@ function handleExecutionError(err, lineNumber, outputString, libraryName) {
   }
 }
 
+function isCurriculumLevel(validationEnabled) {
+  return validationEnabled === undefined ? false : true;
+}
+
 Applab.getCode = function() {
   return studioApp().getCode();
 };
@@ -388,14 +394,6 @@ Applab.init = function(config) {
 
   // Necessary for tests.
   thumbnailUtils.init();
-
-  Applab.generatedProperties = {
-    ...config.initialGeneratedProperties
-  };
-  getStore().dispatch(
-    setExportGeneratedProperties(Applab.generatedProperties.export)
-  );
-  config.getGeneratedProperties = getGeneratedProperties;
 
   // Set information about the current Applab level being displayed.
   getStore().dispatch(
@@ -661,23 +659,7 @@ Applab.init = function(config) {
     hideRunButton: hideRunResetButtons,
     hideResetButton: hideRunResetButtons,
     channelId: config.channel,
-    allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
-    expoGenerateApk: expoGenerateApk.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
-    expoCheckApkBuild: expoCheckApkBuild.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
-    expoCancelApkBuild: expoCancelApkBuild.bind(
-      null,
-      config.expoSession,
-      Applab.setAndroidExportProps
-    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode,
@@ -699,7 +681,8 @@ Applab.init = function(config) {
     showMakerToggle:
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
     validationEnabled: !!config.level.validationEnabled,
-    widgetMode: config.level.widgetMode
+    widgetMode: config.level.widgetMode,
+    isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled)
   });
 
   config.dropletConfig = dropletConfig;
@@ -1005,11 +988,7 @@ Applab.render = function() {
   );
 };
 
-/**
- * Export the project for web or use within Expo.
- * @param {Object} expoOpts
- */
-Applab.exportApp = function(expoOpts) {
+Applab.exportApp = function() {
   // Run, grab the html from divApplab, then reset:
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
@@ -1018,23 +997,7 @@ Applab.exportApp = function(expoOpts) {
   return Exporter.exportApp(
     project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
-    html,
-    expoOpts,
-    studioApp().config
-  );
-};
-
-Applab.setAndroidExportProps = function(props) {
-  // Spread the previous object so changes here will always fail shallow
-  // compare and trigger react prop changes
-  Applab.generatedProperties.export = {
-    ...Applab.generatedProperties.export,
-    android: props
-  };
-  project.projectChanged();
-  project.saveIfSourcesChanged();
-  getStore().dispatch(
-    setExportGeneratedProperties(Applab.generatedProperties.export)
+    html
   );
 };
 
@@ -1094,6 +1057,7 @@ Applab.resetTurtle = function() {
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
   Applab.turtle.y = Applab.appHeight / 2;
+  Applab.turtle.isPenDown = true; // turtle defaults to penDown on reset
 };
 
 /**
@@ -1260,14 +1224,6 @@ Applab.onReportComplete = function(response) {
   studioApp().onReportComplete(response);
   displayFeedback();
 };
-
-function getGeneratedProperties() {
-  // Must return a new object instance each time so the project
-  // system can properly compare currentSources vs newSources
-  return {
-    ...Applab.generatedProperties
-  };
-}
 
 /**
  * Execute the app

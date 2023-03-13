@@ -1,0 +1,15 @@
+%footer#codeprojects_pagefooter
+  .codeprojects_pagefooter_content
+    %a.codeprojects_pagefooter_link{:href=>CDO.studio_url()}= I18n.t('footer.built_on_code_studio')
+    .codeprojects_pagefooter_dim &nbsp; | &nbsp;
+    %a.codeprojects_pagefooter_link{:href=>CDO.studio_url("report_abuse"), :id=>"pagefooter_report_abuse", :target=>"blank"}= I18n.t('footer.report_abuse')
+    .codeprojects_pagefooter_dim &nbsp; | &nbsp;
+    %a.codeprojects_pagefooter_link{:href=>CDO.studio_url("projects/weblab"), :id=>"pagefooter_view_code"}= I18n.t('footer.view_code')
+    .codeprojects_pagefooter_dim &nbsp; | &nbsp;
+    %a.codeprojects_pagefooter_link{:href=>CDO.code_org_url("tos")}= I18n.t('footer.tos')
+    .codeprojects_pagefooter_dim &nbsp; | &nbsp;
+    %a.codeprojects_pagefooter_link{:href=>CDO.code_org_url("privacy")}= I18n.t('footer.privacy')
+    .codeprojects_pagefooter_dim &nbsp; | &nbsp;
+    %a.codeprojects_pagefooter_link{:href=>CDO.code_org_url("cookies")}= I18n.t('footer.cookie_notice')
+    .codeprojects_pagefooter_dim &nbsp; | &nbsp;
+    %a.codeprojects_pagefooter_link="&copy; Code.org, #{Time.now.year}.".html_safe

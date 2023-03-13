@@ -1,0 +1,14 @@
+{
+  "is-IS": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Tölvunarmiðuð hugsun"
+        },
+        "ccela/L": {
+          "description": "Forritunarmál"
+        }
+      }
+    }
+  }
+}

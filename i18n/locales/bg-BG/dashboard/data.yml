@@ -172,6 +172,7 @@ bg:
         jigsaw_10: Подредете блоковете за оформяне на изображение
         jigsaw_11: Подредете блоковете за оформяне на изображение
         jigsaw_12: Подредете блоковете за оформяне на изображение
+        jigsaw_13: Поправете пъзела!
         mazestep_1: Лабиринт- описание на стъпката
         mazestep_2: Лабиринт- описание на стъпката
         mazestep_3: Лабиринт- описание на стъпката
@@ -351,6 +352,7 @@ bg:
         C4_unplugged_forloops: За циклите
         C4_unplugged_parameters: Композиране на песен с параметри
         C4_unplugged_binary: Двоичен код
+        CSF_a_b_artist_loops: Цикли в Художник
         CSF_artist_angles: Ъгли в художникът
         CSF_collector_k1_blocks: 'CS основи: Колекционерът'
         CSF_collector_repeat_loops: 'Колекционерът: Цикли да повторение'
@@ -377,9 +379,14 @@ bg:
         infinity_playlab_intro: Игрална лаборатория - Въведение
         infinity_playlab_events: Игрална лаборатория - Събития
         infinity_playlab_repeat_forever: Игрална Лаборатория - повторение завинаги
+        csd_concept_how_computers_work: Въведение в Как Компютрите Работят
         csd_concept_computer: 'Как работят компютрите: Какво прави един компютър, компютър?'
         csd_concept_binary_data: 'Как компютрите работят: Двоичен код & данни'
+        csd_concept_circuits_logic: 'Как Компютрите Работят: Вериги & Логика'
+        csd_concept_memory_cpu_input_output: 'Как Компютрите Работят: Памет, CPU, Вход & Изход'
+        csd_concept_hardware_software: 'Как Компютрите Работят: Хардуер и Софтуер'
         csd_concept_search: Как работи търсенето
+        csd_external_netflix_data: Как Netflix Показва Предложения за Предавания и Филми?
         csd_gamelab_animation_tab: Раздел "Анимация"
         csd_gamelab_velocity: Скорост
         csd_weblab_intro_1: Въведение в Web Lab - част 1
@@ -392,6 +399,7 @@ bg:
         csp_applab_loops: Повторения
         csp_concept_internet_ip_dns: 'Интернет: IP адреси & DNS'
         csp_concept_rgb: Малко за пикселите
+        csp_cs_is_changing_everything: Компютърните Науки Променят Всичко
         csp_pixelation_color_1: Приспособление за цветова пикселизация - част 1
         csp_pixelation_color_2: Приспособление за цветова пикселизация - част 2
         csp_pixelation_color_3: Приспособление за цветова пикселизация - част 3
@@ -452,18 +460,124 @@ bg:
         mc_2017_puzzle_3: Minecraft Hour of Code - Повторение на цикли
         mc_2017_puzzle_8: Minecraft Hour of Code - функции
         mc_2017_puzzle_12: Minecraft Hour of Code - свободна игра
+        hint_videos_d_11_3_first: 'Подсказващи Видеа: D.11.3 Първо'
+        hint_videos_d_11_3_last: 'Подсказващи Видеа: D.11.3 Последно'
+        hint_videos_d_11_4_first: 'Подсказващи Видеа: D.11.4 Първо'
+        hint_videos_d_11_4_last: 'Подсказващи Видеа: D.11.4 Последно'
+        hint_videos_d_11_5_first: 'Подсказващи Видеа: D.11.5 Първо'
+        hint_videos_d_11_5_last: 'Подсказващи Видеа: D.11.5 Последно'
+        hint_videos_d_11_6_first: 'Подсказващи Видеа: D.11.6 Първо'
+        hint_videos_d_11_6_last: 'Подсказващи Видеа: D.11.6 Последно'
+        hint_videos_d_11_7_first: 'Подсказващи Видеа: D.11.7 Първо'
+        hint_videos_d_11_7_last: 'Подсказващи Видеа: D.11.7 Последно'
+        hint_videos_d_11_9_first: 'Подсказващи Видеа: D.11.9 Първо'
+        hint_videos_d_11_9_last: 'Подсказващи Видеа: D.11.9 Последно'
+        hint_videos_d_11_11_first: 'Подсказващи Видеа: D.11.11 Първо'
+        hint_videos_d_11_11_last: 'Подсказващи Видеа: D.11.11 Последно'
         applab_intro_welcome: App Lab - първи стъпки
         applab_intro_events: App Lab - направи го интерактивно
         applab_intro_sounds: App Lab - изображения и звуци
         applab_intro_designmode: App Lab - режим на проектиране
         applab_intro_share: App Lab - Споделяне на вашето приложение
+        csd_applab_arrays: Въведение в Масиви
+        CSF_skinOverview_Harvester: Събирачът
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Цикли с BB-8
+        CSF_harvester_skinOverview_K-1: Събирачът
+        CSF_harvester_loops_K1: Цикли в Harvester
+        CSF_scrat_loops_K1: Цикли в Ледена Епоха
+        CSF_scrat_loops_CF: Цикли в Ледена Епоха
+        CSF_if_allskins: Ако/Иначе Блокчето
+        CSF_ifelse_allskins: Използване на Блокове Ако/Иначе
+        CSF_ifelseifelse_allskins: Използване на Блокове Ако/ИначеАко/Иначе
         CSF_loops_AB: Повторения
+        csd_gamelab_booleans: Булеви Изрази
+        csd_gamelab_conditional_statements: Условия
+        csd_gamelab_if_else: Условия Ако/Иначе
+        CSF_SpriteLabIntro_CDEF: Това е Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Как да Направим Спрайт в Sprite Lab
+        CDEF_Video_SpritesInAction: Спрайтове в Действие
+        CSF_SpriteLab_SpritesInAction_CDEF: Спрайтове в Действие
+        CSF_StarWars_ProjectIntro: Въведение в Проекта Междузвездни Войни
+        mc_2018_intro: 'Minecraft: Въведение в Подводното Пътешествие'
+        MC_2018_loops: 'Minecraft: Подводното Пътешествие Повтарай Докато'
+        mc_2018_conditionals: 'Minecraft: Подводното Пътешествие Условия'
+        mc_2018_closing: 'Minecraft: Подводното Пътешествие Поздравления'
+        hoc_dance_warmup: Танцово Парти - Загрявка
+        hoc_dance_events: Танцово Парти - Събития
+        hoc_dance_properties: Танцово Парти - Характеристики
+        teaching_csf_how_it_works: 'Преподаване на CS основи: Как Курсът Работи'
+        what_is_cs: Какво са компютърните науки?
+        repeat_block: Използване на Блокчето Повтаряй
+        lesson_planning: Планиране на Урок
+        opd_closing: 'Преподаване на CS основи: Затваряне & Следващи Стъпки'
         writing_first_program: Напишете първата си компютърна програма!
+        what_is_an_event: Какво е събитие?
         csd_pair_programming: Програмиране по двойки
         csd_applab_parameters: Функции с параметри
+        csd_applab_loops: Цикли в App Lab
+        csd_problem_solving_process: Процеса за Решаване на Проблеми
+        CSF_Going_Places_Safely: Моят Онлайн Квартал
+        CSF_SpriteLab_Intro_v2: Въведение в Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Как да Направиш Спрайт
+        CSF_SpriteLab_SpritesInAction_v2: Спрайтове в Действие
         csd_debugging: Отстраняване на грешки
+        csd_applab_designmode_short: App Lab Режим на Дизайн
+        csp-pd-welcome: Добре дошъл в Семейството!
+        cs-principles-intro-to-objects: 'CS Принципи: Въведение в Обекти'
+        oceans_machine_learning: Машинно Обучение
+        oceans_training_data: Данни за Обучение
+        hoc_dance_warmup_2019: Танцово Парти - Загрявка
+        hoc_dance_events_2019: Танцово Парти - Събития
+        hoc_dance_properties_2019: Танцово Парти - Характеристики
+        csd_what_computers_do: Какво Правят Компютрите?
+        csf_my_online_neighborhood_2020: Моят Онлайн Квартал
+        csf_private_and_personal_information: Лична Информация
+        csd_what_computers_are: Какво е Компютър?
+        csd_how_teamwork_works: Как Работи Работата в Екип
+        csd_teamwork_and_disagreement: Работа в Екип - Справяне с Несъгласие
+        csf21pilot_events: 'Sprite Lab: Спрайтове в Действие'
+        csd_ml_intro_to_ai_lab: Въведение в AI Lab
+        csf_lots_of_sprites: 'Sprite Lab: Много Спрайтове'
         playlab_2021: Въведение в игрална лаборатория
         playlab_2021_reader: Въведение в игрална лаборатория
+        csp_defining_calling_functions: Дефиниране и Извикване на Функции
+        csp_tutorial_libraries: Библиотеки в App Lab
+        PL-Video-21: Добре дошли в Професионалното Обучение на Code.org!
+        csp_tutorial_datavis1: Визуализиране на Данни в App Lab - Част 1
+        csp_tutorial_datavis2: Визуализиране на Данни в App Lab - Част 2
+        csd_ml_intro_ai_lab_july2021: Въведение в AI Lab
+        csd_ml_training_testing_ai_lan: Обучение и Тестване в AI Lab
+        Gettting_Started_ClassSection: Създаване на Клас Секция
+        Gettting_Started_StudentExperience: Ученическото Преживяване
+        Getting_Started_BasicFeatures: Базови Функции на Code.org
+        PL_CSD_TeacherTips_Advise: Съвети за Учители - Съвет към Нови Учители
+        PL_CSD_TeacherTips_IntroToCSD: Съвети за Учители - Въведение в Открития по КН
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Съвети за Учители - Процеса за Решаване на Проблеми
+        hello_world_intro: Здравей Свят - Добре дошъл в Sprite Lab
+        hello_world_events: Здравей Свят - Програмиране със Събития
+        hello_world_congrats: Здравей Свят - Прави Каквото Искаш
+        poetry_module_variables: Променливи - Програмиране с Поезия
+        poetry_module_textandvariables: Текст & Променливи - Програмиране с Поезия
+        csd_u6_variables_part2: Променливи - Част 2
+        csd_ml_ethics_ai: 'Етика и ИТ '
+        outbreak_intro: 'Симулатор на Епидемия: Въведение'
+        outbreak_events: 'Симулатор на Епидемия: Събития'
+        outbreak_scientist: 'Симулатор на Епидемия: Мисли Като Учен'
+        outbreak_outro: 'Симулатор на Епидемия: Свободна Игра'
+        PL_overview_CSP: Какви са Принципите на Компютърните Науки?
+        CSA-PL-for-loops: For цикли в Java
+        CSA-PL-variables: Създаване на Променливи в Java
+        PL_CS_Journeys_Overview: CS Пътешествия
+        CSA-PL-first-program: Писане на Програма в Java
+        csc-poem-art-outro: Outro Видео
+        csp_applab_parameters: Функции с параметри
+        CSA-PL-intro-to-arrays: Едномерни (1D) Масиви
+        CSA-PL-Printing-in-Java: Изписване в Java
+        CS_Changing_Everything: Компютърните Науки Променят Всичко
+        csa-day-in-pm-pl: Какво прави мениджърът на проекта?
+        csa-pl-creating-objects: Създаване на Обекти
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

@@ -3,43 +3,43 @@ require 'test_helper'
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
+    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
       CourseOffering.add_course_offering(unit_group)
       @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
-    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
+    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
       CourseOffering.add_course_offering(unit_group)
       @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
+    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
       @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
     end
 
-    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true).tap do |lesson|
         @login_required_script_level = create(:script_level, script: script, lesson: lesson)
       end
     end
 
-    @pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot).tap do |script|
+    @pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).tap do |script|
       @pilot_course_script_level = create(:script_level, script: script)
     end
 
-    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer).tap do |script|
+    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer).tap do |script|
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
@@ -65,8 +65,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -102,8 +102,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -139,8 +139,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -176,8 +176,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_teacher_to_student_unit)
@@ -220,8 +220,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     refute ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -257,8 +257,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -297,8 +297,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -342,8 +342,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -383,8 +383,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -423,15 +423,15 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, Activity)
     assert ability.cannot?(:read, Game)
     assert ability.cannot?(:read, Level)
-    assert ability.cannot?(:read, Script)
+    assert ability.cannot?(:read, Unit)
     assert ability.cannot?(:read, ScriptLevel)
     assert ability.cannot?(:read, UserLevel)
     assert ability.cannot?(:read, UserScript)
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)
     assert ability.cannot?(:destroy, Activity)
-    assert ability.cannot?(:read, Script.find_by_name('ECSPD'))
-    assert ability.cannot?(:read, Script.find_by_name('flappy'))
+    assert ability.cannot?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.cannot?(:read, Unit.find_by_name('flappy'))
 
     assert ability.cannot?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
@@ -477,8 +477,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -559,7 +559,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute ability.can?(:manage, Game)
     refute ability.can?(:manage, Level)
-    refute ability.can?(:manage, Script)
+    refute ability.can?(:manage, Unit)
     refute ability.can?(:manage, Lesson)
     refute ability.can?(:manage, ReferenceGuide)
     refute ability.can?(:manage, ScriptLevel)
@@ -574,7 +574,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:manage, Game)
     assert ability.can?(:manage, Level)
-    assert ability.can?(:manage, Script)
+    assert ability.can?(:manage, Unit)
     assert ability.can?(:manage, Lesson)
     assert ability.can?(:manage, ReferenceGuide)
     assert ability.can?(:manage, ScriptLevel)
@@ -677,16 +677,42 @@ class AbilityTest < ActiveSupport::TestCase
     peer_reviewer = create :student
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :reviewable_project,
+    create :code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
-      level_id: javalab_script_level.levels[0].id
+      level_id: javalab_script_level.levels[0].id,
+      project_level_id: javalab_script_level.levels[0].id
 
     assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
-  test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer on bubble choice level' do
+  test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer on level with project template' do
+    # Create two javalab levels that share the same project template level.
+    # The first one will be used to create the code review and the second one
+    # will be used to check the ability.
+    script = create :script
+    template_level = create :javalab
+    javalab_level_1 = create :javalab, project_template_level_name: template_level.name
+    javalab_level_2 = create :javalab, project_template_level_name: template_level.name
+    javalab_script_level_2 = create :script_level, script: script,
+      levels: [javalab_level_2]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
+    create :code_review,
+      user_id: project_owner.id,
+      script_id: script.id,
+      level_id: javalab_level_1.id,
+      project_level_id: template_level.id
+
+    assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level_2, project_owner
+    assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level_2, project_owner
+  end
+
+  test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer on bubble choice level' do
     javalab_sublevel = create(:javalab)
     bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
     bubble_choice_script_level = create :script_level,
@@ -696,10 +722,11 @@ class AbilityTest < ActiveSupport::TestCase
     peer_reviewer = create :student
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :reviewable_project,
+    create :code_review,
       user_id: project_owner.id,
       script_id: bubble_choice_script_level.script_id,
-      level_id: javalab_sublevel.id
+      level_id: javalab_sublevel.id,
+      project_level_id: javalab_sublevel.id
 
     assert Ability.new(peer_reviewer).can? :view_as_user, bubble_choice_script_level, project_owner, javalab_sublevel
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel
@@ -714,10 +741,11 @@ class AbilityTest < ActiveSupport::TestCase
     peer_reviewer = create :student
     section = create :section, code_review_expires_at: Time.now.utc - 1.day
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :reviewable_project,
+    create :code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
-      level_id: javalab_script_level.levels[0].id
+      level_id: javalab_script_level.levels[0].id,
+      project_level_id: javalab_script_level.levels[0].id
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -733,10 +761,11 @@ class AbilityTest < ActiveSupport::TestCase
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
     put_students_in_section_and_code_review_group([project_owner], section)
     put_students_in_section_and_code_review_group([peer_reviewer], section)
-    create :reviewable_project,
+    create :code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
-      level_id: javalab_script_level.levels[0].id
+      level_id: javalab_script_level.levels[0].id,
+      project_level_id: javalab_script_level.levels[0].id
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -749,10 +778,11 @@ class AbilityTest < ActiveSupport::TestCase
 
     project_owner = create :student
     peer_reviewer = create :student
-    create :reviewable_project,
+    create :code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
-      level_id: javalab_script_level.levels[0].id
+      level_id: javalab_script_level.levels[0].id,
+      project_level_id: javalab_script_level.levels[0].id
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -780,10 +810,11 @@ class AbilityTest < ActiveSupport::TestCase
     project_owner = create :student
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
     put_students_in_section_and_code_review_group([project_owner], section)
-    create :reviewable_project,
+    create :code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
-      level_id: javalab_script_level.levels[0].id
+      level_id: javalab_script_level.levels[0].id,
+      project_level_id: javalab_script_level.levels[0].id
 
     refute Ability.new(project_owner).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(project_owner).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -795,6 +826,60 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute Ability.new(student_1).can? :view_as_user, @login_required_script_level, student_2
     refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
+  end
+
+  test 'only the project owner can create a code review on that project' do
+    skip 'tests that create a project'
+    project_owner = create :student
+    other_student = create :student
+    project = create :project, owner: project_owner
+    other_project = create :project, owner: other_student
+    code_review = create :code_review, user_id: project_owner.id, project_id: project.id
+
+    assert Ability.new(project_owner).can? :create, code_review, project
+    refute Ability.new(project_owner).can? :create, code_review, other_project
+    refute Ability.new(other_student).can? :create, code_review, project
+    refute Ability.new(other_student).can? :create, code_review, other_project
+  end
+
+  test 'only the code review owner can edit the code review' do
+    code_review_owner = create :student
+    other_student = create :student
+    code_review = create :code_review, user_id: code_review_owner.id
+
+    assert Ability.new(code_review_owner).can? :edit, code_review
+    refute Ability.new(other_student).can? :edit, code_review
+  end
+
+  test 'who can view code reviews on a given project' do
+    skip 'tests that create a project'
+
+    # Create the teacher and 3 students involved in this test.
+    teacher = create :teacher
+    project_owner = create :student
+    student_in_group = create :student
+    student_not_in_group = create :student
+
+    # Create a section that's led by the teacher and has all 3 students.
+    section = create :section, teacher: teacher
+    followers = []
+    followers[0] = create :follower, section: section, student_user: project_owner
+    followers[1] = create :follower, section: section, student_user: student_in_group
+    followers[2] = create :follower, section: section, student_user: student_not_in_group
+
+    # Create a code review group includes 2 students (project_owner and student_in_group)
+    code_review_group = create :code_review_group, section: section
+    create :code_review_group_member, code_review_group: code_review_group, follower: followers[0]
+    create :code_review_group_member, code_review_group: code_review_group, follower: followers[1]
+
+    # Create the project owned by code_review_owner
+    project = create :project, owner: project_owner
+
+    # Now we're finally ready to verify who can index code reviews associated the project
+    assert Ability.new(teacher).can? :index_code_reviews, project
+    assert Ability.new(project_owner).can? :index_code_reviews, project
+    assert Ability.new(student_in_group).can? :index_code_reviews, project
+    refute Ability.new(student_not_in_group).can? :index_code_reviews, project
   end
 
   test 'workshop admins can update scholarship info' do

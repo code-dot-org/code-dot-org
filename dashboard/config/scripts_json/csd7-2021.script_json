@@ -10,7 +10,8 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "c89013b3-d0d5-4faa-842a-718092083fe6"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -26,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 13:32:27 UTC",
+    "serialized_at": "2022-09-28 14:31:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2994,7 +2995,7 @@
       "key": "aa9a6902-38d1-4613-8535-7b515b0f7e04",
       "position": 16,
       "properties": {
-        "description": "Once students have taken the survey, redirect them to the front of the room to see what happens with all of the data they've been generating.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r finding_patterns_in_data/aiml/2021] video.",
+        "description": "Once students have taken the survey, redirect them to the front of the room to see what happens with all of the data they've been generating.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r finding_patterns_in_data/csd/2021] video.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3011,7 +3012,7 @@
       "key": "1060fa91-ba3a-4d55-9a85-493f9b08e027",
       "position": 17,
       "properties": {
-        "description": " **Distribute:** pass out the [r patterns_in_data/aiml/2021] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
+        "description": " **Distribute:** pass out the [r patterns_in_data_1/csd/2021] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3601,7 +3602,7 @@
       "key": "187961bf-44e5-4407-81d7-a47884e32eb6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r introduction_to_ai_lab/aiml/2021] (5:25) video as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r introduction_to_ai_lab_1/csd/2021] (5:25) video as a class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3630,7 +3631,7 @@
       "key": "859c17eb-f742-4430-ab49-fe335f6dc3c0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/aiml/2021] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training-a-model-with-features/aiml/2021] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd/2021] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd/2021] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
         "tips": [
           {
             "type": "teachingTip",
@@ -4513,13 +4514,13 @@
       "key": "30e5080a-05d0-4193-82e4-f7c81f1adb5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/aiml/2021] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/csd/2021] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
         "duration": "5",
         "name": "Model Cards in AI Lab",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"block boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
+            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"black boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
           }
         ]
       },
@@ -7824,7 +7825,7 @@
       "key": "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an issue statement they would like to address with machine learning. Encourage students to use the 5 Why's strategy from the previous lessons. You may even decide to have some copies of the [r 5_why_s_activity_guide/aiml/2021] available for students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an issue statement they would like to address with machine learning. Encourage students to use the 5 Why's strategy from the previous lessons. You may even decide to have some copies of the [r 5_why_s_-_activity_guide/csd/2021] available for students.",
         "name": "Step 1 - Choose an Issue Statement",
         "tips": [
           {
@@ -7907,7 +7908,7 @@
       "key": "3bc8e042-f19f-4233-bebc-baccef07881b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students make a copy of [r survey_template_google_form_/aiml/2021]. This is the same template from the previous lesson to create their survey. Students can re-watch the video on how to use the template and make sure their data is protected.\n\nStudents should create their survey in Google Forms. Once the survey is ready, they can plan how they would like to distribute it. Once students reach this stage, they may need to pause while people complete their survey and they collect data.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students make a copy of [r survey_template_google_form_/csd/2021]. This is the same template from the previous lesson to create their survey. Students can re-watch the video on how to use the template and make sure their data is protected.\n\nStudents should create their survey in Google Forms. Once the survey is ready, they can plan how they would like to distribute it. Once students reach this stage, they may need to pause while people complete their survey and they collect data.\n",
         "name": "Step 4 - Create Your Survey",
         "tips": [
           {
@@ -11790,7 +11791,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"

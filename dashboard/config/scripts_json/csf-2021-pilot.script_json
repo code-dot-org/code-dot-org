@@ -10,24 +10,19 @@
           "details": "Lesson plans for this course are currently available in Google Doc format only. Click the button to access the lesson plans.",
           "link": "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "02f778a3-4470-4711-a353-a93f9ef1e0a6"
         }
       ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "csf-2021-pilot",
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
-        ]
-      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csf-2021-pilot-1",
-    "serialized_at": "2022-04-08 15:41:06 UTC",
+    "serialized_at": "2022-09-28 14:31:46 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

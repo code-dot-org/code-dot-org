@@ -6,12 +6,14 @@ ms:
       Advanced: Lanjutan
       Behaviors: Tingkah laku
       Brushes: Berus
+      Category: Kategori
       Color: Warna
       Comment: Komen
       Comments: Komen
       Conditionals: Bersyarat
       Dancers: Penari
       Default: Lalai
+      Effects: Kesan
       Events: Acara-acara
       Functions: Fungsi
       'Functions ': 'Fungsi '
@@ -28,7 +30,7 @@ ms:
       Properties: Hartanah
       Sprites: Jin
       Text: teks
-      Variables: Pembolehubah
+      Variables: Pemboleh ubah
       'Variables ': 'Pembolehubah '
       'Variables  ': 'Pembolehubah  '
       World: Dunia

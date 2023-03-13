@@ -9,7 +9,7 @@ theme: responsive
 Sınıfınızda kullanmanız için tüm bağlantısız derslerimizin bir listesini derledik. Artık sınıfınızda bilgisayar olsa da olmasa da bilgisayar biliminin temellerini öğretebilirsiniz!
 <br>
 <div class="col-50">
-Öğrencilerin bilgisayarda çalışmadığı derslere “bağlantısız” diyoruz Öğrenciler genellikle kalem ve kâğıt veya fiziksel manipülatiflerle çalışacaklardır.  Bunlar, öğrencilerin karmaşık kavramları kendi yaşamlarıyla ilgili şekillerde sindirmelerine yardımcı olan kasıtlı olarak yerleştirilmiş kinestetik fırsatlardır. <br><br>
+Öğrencilerin bilgisayarda çalışmadığı derslere “bağlantısız” diyoruz Öğrenciler genellikle kalem ve kâğıt veya fiziksel hilelerle çalışacaklardır.  Bunlar, öğrencilerin karmaşık kavramları kendi yaşamlarıyla ilgili şekillerde sindirmelerine yardımcı olan kasıtlı olarak yerleştirilmiş kinestetik fırsatlardır. <br><br>
 Bağlantısız dersler, işbirlikçi bir sınıf ortamı oluşturmak ve sürdürmek için özellikle yararlıdır ve daha soyut kavramları tanıtırken başvurabileceğiniz faydalı mihenk taşı deneyimleridir. Bu etkinliklerin her biri ya tek başına ya da ilgili kavramlarla ilgili diğer bilgisayar bilimi dersleriyle birlikte kullanılabilir.
 </div>
 
@@ -21,8 +21,8 @@ Bağlantısız dersler, işbirlikçi bir sınıf ortamı oluşturmak ve sürdür
 <div style="clear: both;"></div>
 
 ***
-## CS Temelleri 2021-22'de bağlantısız dersler
-Aşağıdaki dersler <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Temelleri 2021-22</a>. <br><br>
+## BB Temelleri 2022-23'te bağlantısız dersler
+Aşağıdaki dersler şurada bulunabilir: <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Temelleri 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -31,7 +31,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t01 {
   width: 10%;
@@ -61,71 +61,71 @@ th, td {
 <table style="width:100%">
   <tr>
     <th><center><big>Kurs</th>
-    <th><center><big>Ders Planı</th> 
-    <th width=10%><center><big>Kavram</th>
+    <th><center><big>Ders Planı</th>
+    <th width=10%><center><big>Konsept</th>
     <th width=20%><center><big>Video</th>
      <tr>
     <th rowspan="3" id="t01">Kurs A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - Mutlu Haritalar</a><br><small>Bu bağlantısız ders, ekipleri basit bir görevle bir araya getiriyor: meyvenin "kafasını" almak. Öğrenciler, talimatları sağlanan sembollere çevirmeye çalışırken kesin talimatlar yazma alıştırması yapacaklardır. Kodda sorunlar ortaya çıkarsa, öğrenciler hataları tanımak ve çözümler oluşturmak için birlikte çalışmalıdır.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Mutlu Haritalar</a><br><small>Bu bağlantısız ders, ekipleri basit bir görevle bir araya getirir: flurb'ı meyveye getirin. Öğrenciler, talimatları sağlanan sembollere çevirmeye çalışırken kesin talimatlar yazma alıştırması yapacaklardır. Kodda sorunlar ortaya çıkarsa, öğrenciler ayrıca hataları tanımak ve çözümler oluşturmak için birlikte çalışmalıdır.</td><td>Sıralama</td> <td>{{curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - Mutlu Döngüler</a><br><small>Bu aktivite Mutlu Haritaları tekrar ziyaret ediyor. Bu sefer, öğrenci koduyla daha büyük, daha uzun bulmacaları çözecek ve daha uzun kodu daha kolay yazabilmelerini sağlayan yapılarda fayda görmelerini sağlayacak.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Mutlu Döngüler</a><br><small>Bu etkinlik, Mutlu Haritalar'ı tekrar ziyaret eder. Bu kez, öğrenciler kodlarıyla daha büyük, daha uzun bulmacalar çözecek ve daha uzun kodları daha kolay bir şekilde yazmalarına olanak tanıyan yapılarda fayda görmelerini sağlayacak.</td><td>Döngüler</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - Büyük Etkinlik Jr.</a><br><small>Etkinlikler, önceden yazılmış bir algoritmaya çeşitlilik katmanın harika bir yoludur. Bazen programınızın kullanıcıya tam olarak kullanıcı istediği zaman yanıt verebilmesini istersiniz. Etkinlikler bunun içindir.</td><td>Etkinlikler</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
-  </tr>
-       <tr>
-    <th rowspan="3" id="t02">Course B</th>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - Hareket Ettir, Hareket Ettir</a><br><small>Bu ders, öğrencileri bu kurs boyunca karşılaşacakları kodlama alıştırmalarına zihinsel olarak hazırlamaya çalışacaktır. Küçük ekiplerde öğrenciler, bir hedefe ulaşılana kadar sınıf arkadaşlarını bir yerden bir yere dikkatli bir şekilde adım atacak şekilde programlamak için fiziksel aktiviteyi kullanacaklardır.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - Döngüsel Olmak</a><br><small>Daha uzun ve daha ilginç programlar yazmaya başladığımızda, kodumuz genellikle çok fazla tekrar içerir. Bu derste öğrenciler, bir dansta tekrarlanan hareket kalıplarına bakarak çok tekrarı olan talimatları daha kolay iletmek için döngülerin nasıl kullanılabileceğini öğrenecekler.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - Doğru Uygulama</a><br><small>Bu ders, öğrencilerin bilgisayar biliminin insanlara gerçek hayatta yardımcı olabileceğini fark etmelerini sağlar. İlk olarak, öğrenciler ihtiyaçlarını karşılayan “doğru uygulamayı” bulmalarına yardımcı olmak için birkaç kurgusal akıllı telefon kullanıcısıyla empati kurar. Ardından öğrenciler, ek bir kullanıcının ihtiyaçlarını karşılayan kendi akıllı telefon uygulamalarını tasarlamak için empati ve yaratıcılık kullanırlar.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Olaylar, önceden yazılmış bir algoritmaya çeşitlilik katmanın harika bir yoludur. Bazen programınızın kullanıcıya tam olarak kullanıcı istediği zaman yanıt verebilmesini istersiniz. Etkinlikler bunun için var.</td><td>Etkinlikler</td> <td>{{curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
-    <th rowspan="4" id="t03">Course C</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - Robotik Arkadaşlarım Jr.</a><br><i>*Malzemeler: Plastik bardaklar (10/2-3'lü grup)</i><br><small>Öğrenciler, kod yerine bir dizi sembol kullanarak, bardakları farklı desenlerde istiflemek için bir "robot" talimatı verecek algoritmalar tasarlayacaklar. Öğrenciler sırayla robot olarak katılacak ve yalnızca akranları tarafından tanımlanan algoritmaya yanıt verecek. Bu bölüm öğrencilere semboller ve eylemler arasındaki bağlantıyı, bir algoritma ile bir program arasındaki farkı ve değerli hata ayıklama becerisini öğretir.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
-  </tr> 
+    <th rowspan="3" id="t02">Kurs B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Taşı, Taşı</a><br><small>Bu ders öğrencileri bu kurs boyunca karşılaşacakları kodlama alıştırmalarına zihinsel olarak hazırlamak için çalışacaktır. Küçük takımlarda öğrenciler, sınıf arkadaşlarını bir hedefe ulaşılana kadar bir yerden bir yere dikkatlice adım atmaya programlamak için fiziksel aktiviteyi kullanacak.</td><td>Sıralama</td> <td>{{curriculum/unplugged/courseb_one_video_thumbnail }} </td>
+  </tr>
   <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - Döngüsel Robotik Arkadaşım Jr</a><br><i>*Malzemeler: Kâğıt bardaklar (20/4'lü grup)</i><br><small>Genel Bakışİlk "Robotik Arkadaşlarım" etkinliğini temel alan öğrenciler, daha büyük ve daha karmaşık tasarımlarla uğraşırlar. Bu daha büyük tasarımları tamamlamak üzere "robotlarını" programlamak için, öğrencilerin talimatlarında bir döngü ile değiştirilebilecek tekrarlanan kalıpları tanımlamaları gerekecektir.</td><td>Döngüler</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
-  </tr> 
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Çıldırmak</a><br><small>Yazmaya başlarken daha uzun ve daha ilginç programlarda, kodumuz genellikle çok fazla tekrar içerir. Bu derste öğrenciler, bir dansta tekrarlanan hareket kalıplarına bakarak, çok tekrar içeren talimatları daha kolay iletmek için döngülerin nasıl kullanılabileceğini öğrenecekler.</td><td>Döngüler</td> <td >{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - Doğru Uygulama</a><br><small>Bu derste öğrenciler, bilgisayar biliminin insanlara gerçek hayatta yardımcı olabileceğini kabul eder. İlk olarak, öğrenciler ihtiyaçlarını karşılayan “doğru uygulamayı” bulmalarına yardımcı olmak için birkaç kurgusal akıllı telefon kullanıcısıyla empati kurar. Ardından öğrenciler, bir ek kullanıcının ihtiyaçlarını karşılayan kendi akıllı telefon uygulamalarını tasarlamak için empati ve yaratıcılık egzersizleri yaparlar.</td><td>Bilgi İşlemin Etkileri</td> <td><img src="/images/b10.png " genişlik="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Kurs C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Sarf Malzemeleri: Plastik bardaklar (10/2-3'lü grup)</i><br><small>Öğrenciler, kod yerine bir dizi sembol kullanarak, bir "robot"a bardakları farklı şekillerde dizmesi talimatını verecek algoritmalar tasarlayacaklar. Öğrenciler sırayla robot olarak katılacak ve yalnızca akranları tarafından tanımlanan algoritmaya yanıt verecek. Bu bölüm, öğrencilere semboller ve eylemler arasındaki bağlantıyı, algoritma ile program arasındaki farkı ve değerli hata ayıklama becerisini öğretir.</td><td>Sıralama</td><td>{{curriculum/unplugged/coursec_one_video_thumbnail } }</td>
+  </tr>
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Sarf Malzemeleri : Kağıt bardaklar (20/4'lü grup)</i><br><small>İlk "Robot Arkadaşlarım" etkinliğine dayanarak genel bakış, öğrenciler daha büyük ve daha karmaşık tasarımlarla uğraşırlar. "Robotlarını" bu daha büyük tasarımları tamamlayacak şekilde programlamak için öğrencilerin, yönergelerinde bir döngüyle değiştirilebilecek tekrarlanan kalıpları tanımlamaları gerekecektir.</td><td>Döngüler</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - Büyük Etkinlik</a><br><small>Öğrenciler, etkinliklerin önceden yazılmış bir algoritmaya esneklik eklemenin harika bir yolu olduğunu yakında öğrenecekler. Bazen programınızın kullanıcıya tam olarak kullanıcı istediği zaman yanıt verebilmesini istersiniz. Etkinlikler, programınızı daha ilginç ve etkileşimli hale getirebilir.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
-   </tr> 
-       </tr> 
-     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - İkili Bilezikler</a><br><i>*Malzemeler: İşaretleyiciler. İsteğe bağlı – 18 siyah/18 beyaz boncuk, öğrenci başına 1 boru temizleyici</i><br><small>İkili, bilgisayar dünyasında son derece önemlidir. Günümüzde bilgisayarların çoğu, her türlü bilgiyi ikili biçimde depolar. Bu ders, gerçek hayattan bir şeyler almanın ve onu bir dizi iniş çıkışlara dönüştürmenin nasıl mümkün olduğunu göstermeye yardımcı olur.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - Büyük Olay</a><br><small>Öğrenciler, Olayların önceden yazılmış bir algoritmaya esneklik katmanın harika bir yolunu yakında öğrenecekler. Bazen programınızın kullanıcıya tam olarak kullanıcı istediği zaman yanıt verebilmesini istersiniz. Etkinlikler, programınızı daha ilginç ve etkileşimli hale getirebilir.</td><td>Etkinlikler</td><td>{{curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr>
+       </tr>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - İkili Bilezikler</a><br><i>*Sarf Malzemeleri: İşaretleyiciler. İsteğe bağlı – 18 siyah/18 beyaz boncuk, öğrenci başına 1 boru temizleyici</i><br><small>İkili, bilgisayar dünyasında son derece önemlidir. Günümüzde bilgisayarların çoğu, her türlü bilgiyi ikili biçimde depolar. Bu ders, gerçek hayattan bir şeyi alıp onu bir dizi açık-kapalılara dönüştürmenin nasıl mümkün olduğunu göstermeye yardımcı olur.</td><td>İkili</td><td>{{curriculum/unplugged/coursec_two_video_thumbnail }}< /td>
   </tr>
          <tr>
     <th rowspan="3" id="t04">Kurs D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - Grafik Kâğıdı Programlama<br></a><small>Birbirlerini resim çizmek için "programlayarak", öğrenciler programlamanın bazı temel kavramlarını eğlenceli ve erişilebilir bir şekilde deneyimleme fırsatı elde ederler. Sınıf, öğrencilerin mevcut bir resmi yeniden oluşturma çabası içinde grafik kâğıdındaki kareleri renklendirmeleri için semboller kullanmalarını sağlayarak başlayacaktır. Zaman varsa ders, öğrencilerin kendi oluşturdukları görüntülerle sonlandırılabilir.</td><td>Sıralama</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Grafik Kağıdı Programlama<br></a><small>"Programlama" ile birbirleriyle resim çizmek için, öğrenciler programlamanın bazı temel kavramlarını eğlenceli ve erişilebilir bir şekilde deneyimleme fırsatı bulurlar. Sınıf, öğrencilerin mevcut bir resmi yeniden oluşturma çabası içinde grafik kâğıdındaki kareleri renklendirmeleri için semboller kullanmalarını sağlayarak başlayacaktır. Zamanınız varsa ders, öğrencilerin kendi oluşturdukları resimlerle sonlandırılabilir.</td><td>Sıralama</td><td>{{curriculum/unplugged/coursed_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Röle Programlama<br></a><small>Bu aktivite, hata ayıklama ve kalıcılık üzerine kısa bir dersle başlayacak, daha sonra öğrenciler ekiplere ayrılarak ve her seferinde bir talimat bir program yazmak için birlikte çalıştıkça hızla zamana karşı bir yarışa geçecektir. </td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Aktarmalı Programlama<br></a><small>Bu aktivite şu şekilde başlayacak: hata ayıklama ve ısrarcılık üzerine kısa bir ders, ardından öğrenciler takımlara ayrılıp her seferinde bir talimat bir program yazmak için birlikte çalışırken hızla zamana karşı bir yarışa geçecektir.</td><td>Sıralama</td><td >{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - Kartlı Koşullar</a><br><small>Bu ders, bir programı belirli bilgilere uyarlamak için koşul ifadelerinin nasıl kullanılabileceğini gösterir. Bir program yazarken ihtiyacımız olan tüm bilgilere her zaman sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun doğru olacağını bilmeseniz bile, bir durumda diğerinden farklı bir şey yapmak isteyeceksiniz. İşte burada koşullu ifadeler devreye girer. Koşullar, bir bilgisayarın, kodunuz her çalıştırıldığında doğru olan bilgilere dayanarak karar vermesine olanak tanır.+</td><td>Koşullar</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Kartlı Koşullar</a><br><small>Bu ders, bir programı belirli bilgilere uyarlamak için koşullu ifadelerin nasıl kullanılacağını gösterir. Bir program yazarken ihtiyacımız olan tüm bilgilere her zaman sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun doğru olacağını bilmeseniz bile, bir durumda diğerinden farklı bir şey yapmak isteyeceksiniz. İşte burada koşullu ifadeler devreye girer. Koşullar, bilgisayarın, kodunuz her çalıştırıldığında doğru olan bilgilere dayanarak karar vermesine olanak tanır.+</td><td>Koşullar</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
+  </tr>
+  <tr>
     <th rowspan="3" id="t05">Kurs E</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - Dijital Paylaşım</a><br><i>>*Malzemeler: Akıllı telefon veya tablet</i><br><small>Telif Hakkı ve Yaratıcılık ekibi tarafından Bilgisayar Bilimi Temelleri'ne ödünç verilen bu ders, öğrencilerin, özellikle dijital ortamlarda mülkiyet ve telif haklarına saygı duymanın zorluklarını ve faydalarını anlamalarına yardımcı olmak için hazırlanmıştır. Öğrenciler, etik bir dijital vatandaş olmanın önemli bir parçası olarak sanatçıların haklarına saygı duymaya teşvik edilmelidir.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Şarkı yazma</a><br><small>Bilgisayar bilimi dünyasının en görkemli yapılarından biri de fonksiyondur. Fonksiyonlar (bazen prosedürler olarak adlandırılır), daha büyük programınızın içinde tekrar tekrar kullanabileceğiniz mini programlardır. Bu ders, öğrencilerin kod parçalarını fonksiyonlarda birleştirmenin neden bu kadar yararlı bir uygulama olabileceğini sezgisel olarak anlamalarına yardımcı olacaktır.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - Erişilebilirlik için Tasarım</a><br><small>Bu derste öğrenciler, beyin fırtınası yaparak ve varsayımsal uygulamalar için erişilebilir çözümler tasarlayarak erişilebilirlik ve empatinin değeri hakkında bilgi edinecekler.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
-  </tr>
-    </tr>
-         <tr>
-    <th rowspan="3" id="t06">Kurs F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 - Boş Uzay Hikayeleri</a><br><i>*Malzemeler: 6 zarf (ayrıca uygundur: ikiye katlanmış kâğıt veya dizin kartları)</i><br><small>Öğrenciler, bilgisayarların bir kullanıcıdan gelen girdileri nasıl alıp sakladığını anlamak için bir bağlam olarak boşluk doldurma hikayelerini (Mad Libs®'e benzer) kullanacak ve daha sonra bunu bir program çalışırken kullanacaklardır.
-   </td><td>Değişkenler</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Şarkı Yazma</a><br><small>Bilgisayar bilimi dünyasının en harika yapılarından biri de fonksiyondur. Fonksiyonlar (bazen prosedürler olarak adlandırılır), daha büyük programınızın içinde tekrar tekrar kullanabileceğiniz mini programlardır. Bu ders, öğrencilerin kod parçalarını birleştirerek fonksiyonlar oluşturmanın neden bu kadar yararlı bir uygulama olabileceğini sezgisel olarak anlamalarına yardımcı olacaktır.</td><td>Fonksiyonlar</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Erişilebilirlik için Tasarım</a><br><small>Bu derste, öğrenciler beyin fırtınası yaparak ve varsayımsal uygulamalar için erişilebilir çözümler tasarlayarak erişilebilirlik ve empatinin değeri hakkında bilgi edinecekler.</td><td>Hesaplamanın Etkileri</td><td><img src="/images/e18.png" width ="90%"></td>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Dijital Paylaşım</a><br><i>*Malzemeler: Akıllı telefon veya tablet</i><br><small>Telif Hakkı ve Yaratıcılık ekibi tarafından Bilgisayar Bilimi Temelleri'ne ödünç verilen bu ders, öğrencilerin, özellikle dijital ortamlarda mülkiyet ve telif hakkına saygı duymanın zorluklarını ve faydalarını anlamalarına yardımcı olmak için hazırlanmıştır. Öğrenciler, etik kurallarına uyan bir dijital vatandaş olmanın önemli bir parçası olarak sanatçıların haklarına saygı duymaya teşvik edilmelidir.</td><td>Dijital Vatandaşlık</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+   </tr>
+     </tr>
+          <tr>
+     <th rowspan="3" id="t06">Kurs F</th>
+            <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Boş Alan Hikayeleri</a><br><i>*Malzemeler: 6 zarf (ayrıca uygun: ikiye katlanmış kağıt veya dizin kartları)</i><br><small>Öğrenciler, bilgisayarların kullanıcıdan gelen girdiyi nasıl alıp kaydettiğini, ardından bir program çalışırken bu girdiyi nasıl kullandığını anlamak için bağlam olarak boşluk doldurma hikayelerini (Mad Libs®'e benzer) kullanacaklardır.
+   </td><td>Değişkenler</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Döngü Eğlencesi İçin</a><br><i>*Malzemeler: Zar (3 zar/2-4'lü grup)</i><br><small>Döngülerin bir şeyleri tekrar tekrar yapmamıza izin verdiğini biliyoruz, ancak şimdi ek yapıları yerleşik olan döngüleri nasıl kullanacağımızı öğreneceğiz. Bu yeni yapılar, öğrencilerin daha güçlü ve dinamik kodlar oluşturmasına olanak sağlayacak.</td><td>Döngüler için</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Döngü Eğlencesi İçin</a><br><i>*Sarf Malzemeleri: Zar (3 zar/2-4'lü grup)</i><br><small>Döngülerin bir şeyleri tekrar tekrar yapmamıza izin verdiğini biliyoruz, ancak şimdi yerleşik ekstra yapılara sahip döngüleri nasıl kullanacağımızı öğreneceğiz. Bu yeni yapılar, öğrencilerin daha güçlü ve dinamik kodlar oluşturmasına olanak sağlayacak.</td><td>Döngüler için</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - İnternet</a><br><small>Birçok insan interneti günlük olarak kullanmasına rağmen, pek çoğu nasıl çalıştığını bilmiyor. Bu derste öğrenciler, bağlantılar, URL'ler, IP Adresleri ve DNS hakkında bilgi edinirken internette akıyormuş gibi yapacaklar.</td><td>Veri</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><<a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - İnternet</a><br><small>Birçok insan interneti her gün kullanmasına rağmen, pek çoğu nasıl çalıştığını bilmiyor. Bu derste öğrenciler, bağlantılar, URL'ler, IP Adresleri ve DNS hakkında bilgi edinirken internette akıyormuş gibi yapacaklar.</td><td>Veri</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
@@ -134,7 +134,7 @@ th, td {
 ***
 ## Ek Bağlantısız dersler
 
-Aşağıdaki dersler kavrama göre düzenlenmiştir ve CS Temelleri kurslarımızın önceki sürümlerinde bulunabilir. Bu dersleri kullanmayı planlarken danışmak isteyebileceğiniz ek kaynaklar şunları içerir:
+Aşağıdaki dersler kavrama göre düzenlenmiştir ve BB Temelleri kurslarımızın önceki sürümlerinde bulunabilir. Bu dersleri kullanmayı planlarken danışmak isteyebileceğiniz ek kaynaklar şunları içerir:
 * [2019 Kurs A-F Müfredat Rehberi](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 Kurs A-F Tedarik Listesi](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [2019 Kurs Amazon Listeleri](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
 * [2018 Kurs A-F Müfredat Rehberi](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
 * [2017 Kurs A-F Müfredat Rehberi (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
@@ -148,7 +148,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t07 {
   width: 10%;
@@ -161,17 +161,17 @@ th, td {
     <th><center><big>Kavram</th>
     <th width=65%><center><big>Ders Planı <br>
 <small> Ders Planı ek kaynaklar (slaytlar, videolar, cevap anahtarları vb.) içerir.
-</th> 
+</th>
     <th><center><big>Kaynaklar</th>
      <tr>
     <th rowspan="2" id=t07 width=5%>Dijital Vatandaşlık</th>
-    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Kitle Kaynak Kullanımı</a></td> <td>{{curriculum/unplugged/archive_one_video_thumbnail }}</ td>
   </tr>
   <tr>
-      <td colspan="2">*Sağduyu Eğitimi, pek çok bağımsız etkinliği içeren <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">tam Dijital Vatandaşlık Müfredatı</a> 'na sahiptir.</td>
+      <td colspan="2">*Common Sense Education'ın pek çok bağlantısız etkinlikler içeren bir <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">tam Dijital Vatandaşlık Müfredatı</a> vardır.</td>
     <tr>
-    <th id=t07>Binary</th>
-        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">İkili Görüntüler </a><br><small>*Malzemeler:İsteğe bağlı - Öğrencilere gösterilecek karşıt öğelerin gruplandırılması. Pek çok kişi ikiliyi kesinlikle sıfırlar ve birler olarak düşünse de, öğrencilere bilginin çeşitli ikili seçeneklerde gösterilebileceği fikri tanıtılacaktır. Bu ders, bir bilgisayarın daha karmaşık bilgileri (görüntüler ve renkler gibi) ikili olarak da nasıl depolayabileceğini gösterdiği için bu kavramı bir adım daha ileri götürür.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+    <th id=t07>İkili</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">İkili Görüntüler </a><br><small>*Sarf Malzemeleri:İsteğe bağlı - Öğrencilere göstermek için karşıt öğelerin gruplandırılması. Pek çok kişi ikiliyi kesinlikle sıfırlar ve birler olarak düşünse de, öğrencilere bilginin çeşitli ikili seçeneklerde gösterilebileceği fikri tanıtılacaktır. Bu ders, bir bilgisayarın daha karmaşık bilgileri (görüntüler ve renkler gibi) ikili olarak da nasıl depolayabileceğini gösterdiği için bu kavramı bir adım daha ileri götürür.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
     <th id=t07>Loops</th>

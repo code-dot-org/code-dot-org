@@ -2,817 +2,464 @@
   "bn-BD": {
     "data": {
       "lessons": {
-        "coursef-2021/lesson-6": {
+        "flappy/Flappy Code": {
+          "name": "ফ্লাপি কোড"
+        },
+        "hourofcode/Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "artist/Artist": {
+          "name": "শিল্পী"
+        },
+        "hoc-encryption/Simple Encryption": {
+          "name": "সাধারণ এনক্রিপশন"
+        },
+        "mc/Hour of Code 2015": {
+          "name": "মাইনক্র্যাফট এক ঘণ্টার কোড"
+        },
+        "playlab/Play Lab": {
+          "name": "প্লে ল্যাব"
+        },
+        "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursef-2021/lesson-7": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Loops": {
+          "name": "চক্র"
         },
-        "coursef-2021/lesson-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Events": {
+          "name": "ঘটনাবলী"
         },
-        "coursef-2021/Virtual Pet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "শর্তযুক্ত"
         },
-        "coursef-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Functions": {
+          "name": "ফাংশনগুলি"
         },
-        "coursef-2021/lesson-9": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Variables": {
+          "name": "চলকগুলো"
         },
-        "coursef-2021/lesson-10": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ফর লুপ"
         },
-        "coursef-2021/lesson-11": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2022/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
         },
-        "coursef-2021/Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2022/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
         },
-        "coursef-2021/Variables that Change in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2022/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
         },
-        "coursef-2021/Nested Loops in the Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursef-2022/The Internet": {
+          "name": "ইন্টারনেট"
         },
-        "coursef-2021/Variables that Change in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursee-2022/Songwriting": {
+          "name": "গান লিখা"
         },
-        "coursef-2021/For Loop Fun": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursea-2022/Happy Maps": {
+          "name": "আনন্দের মানচিত্র"
         },
-        "coursef-2021/For Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursec-2022/The Big Event": {
+          "name": "বড় ঘটনা"
         },
-        "coursef-2021/For Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Variables": {
+          "name": "চলকগুলো"
         },
-        "coursef-2021/Simulating Experiments": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Text": {
+          "name": "পাঠ"
         },
-        "coursef-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Conditionals": {
+          "name": "শর্তযুক্ত"
         },
-        "coursef-2021/AI for Oceans": {
-          "overview": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2022/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "csd6-2022/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "দ্বিমিক ছবি"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "express-2018/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "গান লিখা"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "দ্বিমিক ছবি"
+        },
+        "express-2018/Internet": {
+          "name": "ইন্টারনেট"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "গান লিখা"
+        },
+        "coursee-2018/Internet": {
+          "name": "ইন্টারনেট"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "বানান মৌমাছি"
+        },
+        "csd3-2018/Variables": {
+          "name": "চলকগুলো"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "csd3-2018/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
+        },
+        "csd2-2018/Lists": {
+          "name": "তালিকা"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "দ্বিমিক ছবি"
+        },
+        "coursef-2019/Internet": {
+          "name": "ইন্টারনেট"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "গান লিখা"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "বানান মৌমাছি"
+        },
+        "csd3-2019/Variables": {
+          "name": "চলকগুলো"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "csd3-2019/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
+        },
+        "csd2-2019/Lists": {
+          "name": "তালিকা"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "বানান মৌমাছি"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "নেষ্টেড লুপ"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "নেষ্টেড লুপ"
+        },
+        "express-2017/Introduction": {
+          "name": "ভূমিকা"
+        },
+        "express-2017/Nested Loops": {
+          "name": "নেষ্টেড লুপ"
+        },
+        "csd3-2017/Variables": {
+          "name": "চলকগুলো"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "csd3-2017/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
+        },
+        "csd2-2017/Lists": {
+          "name": "তালিকা"
+        },
+        "course4/Maze and Bee": {
+          "name": "মেজ এবং মৌমাছি"
+        },
+        "course4/Artist": {
+          "name": "শিল্পী"
+        },
+        "course4/Artist Binary": {
+          "name": "শিল্পী দ্বিমিক"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "কম্পিউটার বিজ্ঞান পরিচিতি"
+        },
+        "20-hour/The Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "গণিতিক চিন্তা-ভাবনা"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "20-hour/The Artist": {
+          "name": "শিল্পী"
+        },
+        "20-hour/Algorithms": {
+          "name": "অ্যালগরিদম"
+        },
+        "20-hour/The Artist 2": {
+          "name": "চিত্রকর ২"
+        },
+        "20-hour/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "20-hour/The Farmer": {
+          "name": "কৃষক"
+        },
+        "20-hour/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "20-hour/The Artist 3": {
+          "name": "পটুয়া ৩"
+        },
+        "20-hour/Song Writing": {
+          "name": "গান লিখা"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "কৃষক ২"
+        },
+        "20-hour/Abstraction": {
+          "name": "অপসারণ"
+        },
+        "20-hour/The Artist 4": {
+          "name": "চিত্রকর ৪"
+        },
+        "20-hour/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "কৃষক ৩"
+        },
+        "20-hour/The Internet": {
+          "name": "ইন্টারনেট"
+        },
+        "20-hour/The Artist 5": {
+          "name": "চিত্রকর ৫"
+        },
+        "20-hour/Wrap-up": {
+          "name": "গুটিয়ে নেয়া"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "course2/Maze: Loops": {
+          "name": "মেজ: লুপ"
+        },
+        "course2/Artist: Loops": {
+          "name": "শিল্পী: লুপ"
+        },
+        "course2/Bee: Loops": {
+          "name": "মৌমাছি: লুপ"
+        },
+        "course2/Relay programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "course2/Bee: Debugging": {
+          "name": "মৌমাছি: ডিবাগিং"
+        },
+        "course2/Artist: Debugging": {
+          "name": "শিল্পী: ডিবাগিং"
+        },
+        "course2/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "course2/The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "course2/Flappy": {
+          "name": "ফ্লাপি"
+        },
+        "course3/Computational Thinking": {
+          "name": "গণিতিক চিন্তা-ভাবনা"
+        },
+        "course3/Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "course3/Artist": {
+          "name": "শিল্পী"
+        },
+        "course3/Bee: Functions": {
+          "name": "মৌমাছি: ফাংশন"
+        },
+        "course3/Songwriting": {
+          "name": "গান লিখা"
+        },
+        "course3/Dice Race": {
+          "name": "পাশার লড়াই"
+        },
+        "course3/Bee: Debugging": {
+          "name": "মৌমাছি: ডিবাগিং"
+        },
+        "course3/Bounce": {
+          "name": "বল লাফানো"
+        },
+        "course3/Internet": {
+          "name": "ইন্টারনেট"
+        },
+        "course1/Happy Maps": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "course1/Maze: Debugging": {
+          "name": "মেজ: ডিবাগিং"
+        },
+        "course1/Bee: Sequence": {
+          "name": "মৌমাছি: অনুক্রম"
+        },
+        "course1/Spelling Bee": {
+          "name": "বানান মৌমাছি"
+        },
+        "course1/Maze: Loops": {
+          "name": "মেজ: লুপ"
+        },
+        "course1/Bee: Loops": {
+          "name": "মৌমাছি: লুপ"
+        },
+        "course1/The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "course1/Artist: Loops": {
+          "name": "শিল্পী: লুপ"
+        },
+        "jigsaw/Jigsaw": {
+          "name": "টুকরো কাঠের ধাঁধা"
+        },
+        "allthethings/Jigsaw": {
+          "name": "টুকরো কাঠের ধাঁধা"
+        },
+        "allthethings/Maze": {
+          "name": "গোলকধাঁধা"
+        },
+        "allthethings/Artist": {
+          "name": "শিল্পী"
+        },
+        "allthethings/Bee": {
+          "name": "মৌমাছি"
+        },
+        "allthethings/Flappy": {
+          "name": "ফ্লাপি"
+        },
+        "allthethings/Bounce": {
+          "name": "বল লাফানো"
+        },
+        "allthethings/Minecraft": {
+          "name": "মাইনক্র্যাফট"
         },
         "coursef-2021/Internet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Digital Trails": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Move It, Move It": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Sequencing in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/The Right App": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "ইন্টারনেট"
         },
         "coursea-2021/Programming: Happy Maps": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops: Happy Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Debugging in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "আনন্দের মানচিত্র"
         },
         "coursec-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Picturing Data": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Binary Bracelets": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "বড় ঘটনা"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "ছক-কাগজে প্রোগ্রামিং"
         },
         "coursed-2021/Relay Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Debugging in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Events in Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
         },
         "coursed-2021/Conditionals with Cards": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Conditionals in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/While Loops in Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Programming with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Debugging with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Collecting Treasure with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Creating Art with Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Swimming Fish in Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-3": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Virtual Pet with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Nested Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Snowflakes with Anna and Elsa": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Looking Ahead with Minecraft ": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/If/Else with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/While Loops with the Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Harvesting with Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Variables with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Changing Variables with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Drawing Gardens with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/On the Move with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/A Royal Battle with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Simon Says": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Learning Sprites with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Alien Dance Party with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Private and Personal Information": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/About Me": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Digital Sharing": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Programming and Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Frozen": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "কার্ড সঙ্গে শর্ত"
         },
         "coursee-2021/Functions: Songwriting": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "গান লিখা"
         },
-        "coursee-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd6-2021/Functions with Parameters": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
         },
-        "coursee-2021/Functions in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Variables": {
+          "name": "চলকগুলো"
         },
-        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Text": {
+          "name": "পাঠ"
         },
-        "coursee-2021/Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Conditionals": {
+          "name": "শর্তযুক্ত"
         },
-        "coursee-2021/Functions in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Functions": {
+          "name": "ফাংশনগুলি"
         },
-        "coursee-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
         },
-        "coursee-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2020/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "দ্বিমিক ছবি"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "গান লিখা"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "coursef-2020/Internet": {
+          "name": "ইন্টারনেট"
         }
       }
     }

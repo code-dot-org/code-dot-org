@@ -221,6 +221,7 @@ fil:
         desc: 'Isa sa pinakahanga-hangang istraktura sa mundo ng computer science ay ang function. Ang mga functions (minsan ay tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng isang mas malaki na programa. Ang araling ito ay makakatulong sa iyong mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama ng mga piraso ng code sa isang function ay lubhang nakakatulong na kasanayan.  '
       courseB_unplugged_MRF_2018:
         title: Ang Robot Kong Mga Kaibigan
+        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga kaibigan mo!
       PlantASeed_2018:
         title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
         desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
@@ -265,10 +266,18 @@ fil:
         desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
       MoveItMoveIt_2018:
         title: Galawin ito, Galawin ito
+      courseB_unplugged_CnC_2018:
+        title: Mahusay na Gumawa at Maglaro ng Patas
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging patas sa malikhaing gawain.
+      courseE_unplugged_CnC_2018:
+        title: Digital na Pagbabahagi
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging etikal na digital na mamamayan.
       RelayProgramming_2018:
         title: Relay Programming
+        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
       courseB_unplugged_MRF_2019:
         title: Ang Robot Kong Mga Kaibigan
+        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga kaibigan mo!
       BuildingAFoundation_2019:
         title: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.desc'
@@ -291,6 +300,7 @@ fil:
         desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang drowing.
       RelayProgramming_2018_2019:
         title: Relay Programming
+        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
       courseD_unplugged_digitalCitizenship_2019:
         title: Unplugged na Aktibidad
         desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital na Mamamayan.
@@ -299,9 +309,13 @@ fil:
         desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary. Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga larawan at mga kulay) pati na rin sa binary.
       courseE_unplugged_privateInformation_2019:
         title: Pribado at Personal na Impormasyon
+        desc: Binuo ng Common Sense Education, ang araling ito ay tungkol sa pagkakaiba sa pagitan ng impormasyong ligtas na ibahagi online at impormasyong hindi.
       SongwritingParameters_2019:
         title: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Digital na Pagbabahagi
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging etikal na digital na mamamayan.
       Internet_2019:
         title: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.title'
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.desc'
@@ -340,8 +354,24 @@ fil:
       DigitalFootprint_2019:
         title: Ang Iyong Digital na Bakas
         desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang digital na yapak o "bakas" na mayroong kahihinatnan.
+      courseB_unplugged_CnC_2019:
+        title: Mahusay na Gumawa at Maglaro ng Patas
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging patas sa malikhaing gawain.
+      GraphingData_2019:
+        title: Paglalarawan ng Data
+        desc: Sa araling ito, ang mga mag-aaral ay mangongolekta ng data mula sa isang proyekto sa Play Lab o totoong sitwasyon at gagamitin ito upang gumawa ng mga hula.
+      courseE_unplugged_accessAbility_2019:
+        title: Kakayahang Pag-access
+        desc: Matuto tungkol sa pagiging madaling ma-access at ang halaga ng empatiya sa pamamagitan ng brainstorming at pagdidisenyo ng mga naa-access na solusyon sa mga hypothetical na app.
+      courseE_simon_says_2019:
+        title: Sabi ni Simon
+        desc: "Maglaro at isipin kung anong mga utos ang kailangan upang makuha ang tamang resulta.\\r\n\\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Mga Makapangyarihang Password
+        desc: Tuklasin kung bakit gumagamit ng mga password ang mga tao, alamin ang mga benepisyo ng paggamit ng mga password, at tumuklas ng mga diskarte sa paggawa at pagpapanatiling matatag at secure na mga password.
       timeforcs_demo_crowdsourcing:
         title: Pag-crowdsourcing
+        desc: '_Tala ni Josh: taliwas sa unang aralin, na-format ko ang isang ito tulad ng karaniwang hindi naka-plug na aralin._'
       timeforcs_demo_conditionals:
         title: Mga conditional
         desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha ako ng itim na baraha, makakapuntos ka."

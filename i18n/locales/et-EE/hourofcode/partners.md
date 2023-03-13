@@ -2,13 +2,11 @@
 title: Partnerid
 ---
 
-KoodiTund kampaaniat juhivad Hour of Code ja Computer Science Education Week nõuandvad ja järelvalve komiteed.
+The Hour of Code is driven by the Hour of Code Review Committee.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. See komitee juhib Hour of Code kampaania strateegiat.
+The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Need haridustöötajad hindavad iseseisvaks õppimiseks mõeldud tegevusi ning õpetajate juhendeid, mille on koostanud sajad partnerid. Hinnatakse hariduslikku väärtust ning seda, kui paljudele erinevatele õpilastele tegevus huvi pakuks.
-
-Mõlema komitee tegevus on kaasa aidanud Hour of Code edule ning eesmärgile pakkuda igale õpilasele võimalust õppida arvutiteadusi.
+The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
 # Major Partners and Corporate Supporters
 

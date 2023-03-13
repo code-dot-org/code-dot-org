@@ -36,7 +36,7 @@ end
 
 puts "DONE READING CSV (#{level_source_ids.size} rows)."
 
-puts "UPDATING DB (#{1 + level_source_ids / 1_000} slices)..."
+puts "UPDATING DB (#{1 + (level_source_ids / 1_000)} slices)..."
 
 slice_number = 0
 rows_fixed = 0

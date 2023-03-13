@@ -38,6 +38,8 @@
   "drawATriangle": "bir üçgen çiz",
   "drawUpperWave": "üst dalga çiz",
   "drawLowerWave": "alt dalga çiz",
+  "drawShape": "şekil çiz",
+  "drawShapeWithSideLength": "kenar uzunluğu olan bir şekil çizin",
   "drawSticker": "Etiket çiz",
   "drawStickerWithSize": "belirtilen büyüklükte bir yapıştırma çiz",
   "forward": "ileri",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Sanatçıyı, görünür ya da görünmez yapar.",
   "widthTooltip": "Kalemin kalınlığını değiştirir.",
   "withSize": "büyüklükte",
+  "withSideLength": "yan uzunluğu ile",
   "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir."
 }

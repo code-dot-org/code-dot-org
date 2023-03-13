@@ -2,6 +2,22 @@
 sq:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mesatar
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mesatar
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           MOVE1:
@@ -241,6 +257,10 @@ sq:
             '"5"': '5'
             '"6"': '6'
             '"8"': '8'
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': zemrat
       gamelab_addTarget:
         options:
           OPT:
@@ -259,7 +279,7 @@ sq:
           CONDITION:
             '"when"': kur
             '"while"': ndërsa
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': sekondat
@@ -319,6 +339,12 @@ sq:
             '90': poshtë
             '180': majtas
             '270': lart
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': mesatar
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -336,6 +362,10 @@ sq:
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": qen
             "'sound://category_digital/jump_7.mp3'": hidhu
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": duartrokit
       gamelab_randColor:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
@@ -539,6 +569,11 @@ sq:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:
@@ -658,3 +693,7 @@ sq:
           DIR:
             right: djathtas ↻
             left: majtas ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': zemrat

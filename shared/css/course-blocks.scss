@@ -1,4 +1,4 @@
-@import 'color';
+@import 'color.scss';
 @import 'font';
 
 /* HEADERS */
@@ -53,6 +53,10 @@
   border-radius: 5px;
   margin: 20px 20px 0 0;
   overflow: hidden;
+
+  &:hover {
+    border-color: $neutral_dark70;
+  }
 }
 
 .tutorial-block {
@@ -101,11 +105,7 @@
   margin-top: 30px;
 
   &:hover {
-    border-color: $dark_charcoal;
-
-    h3, .smalltext {
-      color: $dark_charcoal;
-    }
+    border-color: $neutral_dark70;
   }
 
   .course-container {
@@ -125,7 +125,7 @@
   }
 
   h3 {
-    color: $charcoal;
+    color: $neutral_dark;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -142,7 +142,7 @@
     line-height: 17px;
     font-family: $gotham-regular;
     font-weight: normal;
-    color: $charcoal;
+    color: $neutral_dark;
   }
 
   .smalltext {

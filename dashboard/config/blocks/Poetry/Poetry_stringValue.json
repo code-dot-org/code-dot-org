@@ -36,10 +36,6 @@
         "name": "TEXT2"
       }
     ],
-    "color": [
-      160,
-      0.45,
-      0.65
-    ]
+    "style": "text_blocks"
   }
 }

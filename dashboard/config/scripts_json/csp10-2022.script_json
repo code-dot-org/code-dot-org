@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=10",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More",
+          "key": "14b0fb0b-b7a4-4a6c-9f04-644b42d5c331"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +25,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:36:20 UTC",
+    "serialized_at": "2023-01-10 18:57:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -66,7 +79,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. In this lesson, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. ",
-        "preparation": "* Prepare the role badges\r\n* Review the Innovation Simulation Planning Guide",
+        "preparation": "* Prepare the role badges\n* Review the Innovation Simulation Planning Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this unit students will cover information related to computing innovations needed for the Curricular Requirement for the AP Computer Science Principles exam. This lesson sets the stage for the simulation. ",
         "student_overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. In this lesson, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. "
       },
@@ -87,7 +100,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Today is focused on researching three different computing innovations and discussing these innovations with team members. ",
-        "preparation": "* Organize the badges and nameplates for quick distribution at the beginning of class\r\n",
+        "preparation": "* Organize the badges and nameplates for quick distribution at the beginning of class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "In this lesson, students investigate computing innovations, as required by the College Board to meet the Curricular Requirement. They will add to their research throughout the unit. ",
         "student_overview": "Today is focused on researching three different computing innovations and discussing these innovations with team members. "
       },
@@ -107,7 +120,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power.",
-        "preparation": "* Check a few popular websites with students in your school to make sure they'll be able to access those sites' data policies over your school network.",
+        "preparation": "* Check a few popular websites with students in your school to make sure they'll be able to access those sites' data policies over your school network.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-cybersecurity-and-global-impacts-lessons-3-4-6-7-9-10/36492) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is closely tied with the one that follows. In today's lesson students focus primarily on understanding the kinds of data that are collected by modern apps, websites, and computing innovations, and the ways that this may sometimes lead to sharing private information. In the following lesson students will specifically discuss the pros and cons of sharing that information.",
         "student_overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power."
       },
@@ -127,7 +140,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students develop their own opinions on the privacy tradeoffs inherent in many modern computing innovations. At the beginning of the lesson students watch a video on facial recognition technology that presents the tradeoffs between convenience and privacy and asks them to determine whether they think the tradeoff is worth it. Students respond to two videos that look at different tradeoffs between privacy, security, and convenience. Students then evaluate the website or app they investigated in the previous lesson to determine if they think the benefits of the service outweigh the privacy risks. At the end of the class students discuss whether they generally think convenience outweighs privacy concerns.",
-        "preparation": "* Review the videos to make sure you are prepared to lead the subsequent discussions\r\n* Make sure you have access to the activity guides students completed in th previous lesson",
+        "preparation": "* Review the videos to make sure you are prepared to lead the subsequent discussions\n* Make sure you have access to the activity guides students completed in th previous lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-cybersecurity-and-global-impacts-lessons-3-4-6-7-9-10/36492) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The previous lesson exposed students to much of the data that is collected by the services they use, but it didn't ask them to reflect on their own opinions of those practices. This lesson now asks students to form opinions of their own about how a digital world in which more and more important innovations seem to come at the cost of their personal privacy.",
         "student_overview": "Students develop their own opinions on the privacy tradeoffs inherent in many modern computing innovations. At the beginning of the lesson students watch a video on facial recognition technology that presents the tradeoffs between convenience and privacy and asks them to determine whether they think the tradeoff is worth it. Students respond to two videos that look at different tradeoffs between privacy, security, and convenience. Students then evaluate the website or app they investigated in the previous lesson to determine if they think the benefits of the service outweigh the privacy risks. At the end of the class students discuss whether they generally think convenience outweighs privacy concerns.",
         "unplugged": true
@@ -148,8 +161,8 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
-        "preparation": "* Ensure students have access to their project guides.",
+        "overview": "Students make further progress on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
+        "preparation": "* Ensure students have access to their project guides.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In previous lessons students have been considering the ways that computing innovations may risk their privacy. This lesson further builds on those questions by asking students to think more broadly about the ways computing innovations may have unintended consequences.\r\n\r\nThe next project lesson will be spent primarily working on one-pagers. That lesson and the second half of this one are the largest chunks of class time dedicated to students completing those individual projects.",
         "student_overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose."
       },
@@ -169,7 +182,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. ",
-        "preparation": "* Read through the levels on Code Studio to familiarize yourself with the topics.\r\n* Think through the logistics of running the jigsaw activity. ",
+        "preparation": "* Read through the levels on Code Studio to familiarize yourself with the topics.\n* Think through the logistics of running the jigsaw activity. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-cybersecurity-and-global-impacts-lessons-3-4-6-7-9-10/36492) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this lesson students are exposed to common security risks. The purpose of this lesson is to dive into the facts and learn how people are targeted. In a future lesson students will explore how they can protect themselves from these security risks. ",
         "student_overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. "
       },
@@ -189,7 +202,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson begins with a review of security risks by watching a video on Cybersecurity & Crime. Following this, the class does an investigation into the Equifax breach, and what went wrong. The class ends with a Kahoot quiz to review security risks. ",
-        "preparation": "* Listen to the podcast segments and practice starting and stopping at the marked places\r\n* Get the Kahoot quiz set up and ready to go for the Wrap Up",
+        "preparation": "* Listen to the podcast segments and practice starting and stopping at the marked places\n* Get the Kahoot quiz set up and ready to go for the Wrap Up\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-cybersecurity-and-global-impacts-lessons-3-4-6-7-9-10/36492) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "How was Equifax hacked? Why should students care about this? What can we do to protect data in the future? These questions are the focus of this lesson as students consider the reality of security risks that led to millions of people having their private information hacked. ",
         "student_overview": "The lesson begins with a review of security risks by watching a video on Cybersecurity &amp; Crime. Following this, the class does an investigation into the Equifax breach, and what went wrong. The class ends with a Kahoot quiz to review security risks. ",
         "unplugged": true
@@ -211,7 +224,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson is primarily a work day for students to complete their innovation 1-pagers. Students should work close to their teammates in case they want to discuss ways to make their proposals more aligned around a cohesive vision for the Future School. Otherwise students should have the entire class period to work independently.",
-        "preparation": "* Make sure students will have access to the 1-pagers they started in the last project lesson.",
+        "preparation": "* Make sure students will have access to the 1-pagers they started in the last project lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Complete your one pager for your computing innovation."
       },
       "seeding_key": {
@@ -230,7 +243,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. ",
-        "preparation": "* Explore the encryption widgets\r\n* Watch the video",
+        "preparation": "* Explore the encryption widgets\n* Watch the video\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-cybersecurity-and-global-impacts-lessons-3-4-6-7-9-10/36492) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The goal of this lesson is for students to gain a working knowledge of the different types of encryption, focusing specifically on symmetrical and asymmetrical encryption. There is a lot of challenging vocabulary in this lesson, and therefore we want students to have a tangible experience with a widget to anchor their knowledge. This lesson is the first in a pair of lessons exploring how data can be protected. ",
         "student_overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. "
       },
@@ -250,7 +263,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson is a guided tour of multifactor authentication and software updates that students can use to protect their data. Following these discussions, students are introduced to a stimulus question where they will apply their knowledge gained throughout the unit to answer questions about an innovations data, benefits and harms, effects, and security or privacy concerns. ",
-        "preparation": "* Preview the slides\r\n* Read through the stimulus question",
+        "preparation": "* Preview the slides\n* Read through the stimulus question\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-cybersecurity-and-global-impacts-lessons-3-4-6-7-9-10/36492) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson serves two purposes. The first is to provide the final pieces of content students need to know in this unit - related to multifactor authentication and virus scanning software. These are tools students can use to protect the data. The second purpose of this lesson is to introduce students to questions that follow the same format as the questions students will encounter on the AP Multiple Choice Exam.  The specific types of questions students will see in this lesson will help prepare them to answer \"Single-Select Questions with Reading Passage\", or SSQRP.  These types of questions show up on the AP Computer Science Principles Multiple Choice Exam and involve a series of questions about a fictitious computing innovation.  ",
         "student_overview": "This lesson is a guided tour of multifactor authentication and software updates that students can use to protect their data. Following these discussions, students are introduced to a stimulus question where they will apply their knowledge gained throughout the unit to answer questions about an innovations data, benefits and harms, effects, and security or privacy concerns. ",
         "unplugged": true
@@ -272,7 +285,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. ",
-        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.",
+        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this lesson students finish writing their one-pagers and meet to begin developing their group presentation. The goal of this collaborative process is to force students to think about the overall collective impact of their innovations, force them to continue to take multiple perspectives, and encourage collaboration for this last major project of the year.",
         "student_overview": "Students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. "
       },
@@ -293,7 +306,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will get feedback on their group innovation proposal from one other group. They will then have the remainder of the class to finalize their group presentation and individual proposals which will be presented and submitted in the following class",
-        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.",
+        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is primarily a work day but students get some early feedback from another group to enable them to make final adjustments to their projects.",
         "student_overview": "Lesson Overview"
       },
@@ -314,7 +327,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students present the group Innovation Proposal they have been working on throughout the units. After each group does a brief presentation students do a gallery walk of their classmates' projects, asking questions and reviewing any materials. Students then vote for the unified project and overall innovation they found most compelling. At the end of the lesson students will submit their projects for grading. ",
-        "preparation": "* Ensure students have printed their one-pagers or can otherwise make their one-pagers available for their classmates to review during the gallery walk.",
+        "preparation": "* Ensure students have printed their one-pagers or can otherwise make their one-pagers available for their classmates to review during the gallery walk.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is an opportunity for students to share their work throughout the unit and wrap up their study of the ways computing innovations can be used to benefit society, even as they pose potential risks. Aim to make this an exciting and celebratory end to the year.",
         "student_overview": "Lesson Overview"
       },
@@ -2034,7 +2047,7 @@
       "key": "ae9d39e4-4a65-4c9f-87ef-d7802c2e68db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocaublary words: Phishing, Keylogging, Malware, Rogue Access Point. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocabulary words: Phishing, Keylogging, Malware, Rogue Access Point. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "ae9d39e4-4a65-4c9f-87ef-d7802c2e68db",
@@ -3763,7 +3776,7 @@
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1Zjg9DIe4_MAau1LNYFpTNMqV0xI2Rp964UktCEV60eg/view",
+      "url": "https://docs.google.com/presentation/d/1Zjg9DIe4_MAau1LNYFpTNMqV0xI2Rp964UktCEV60eg/copy",
       "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "audience": "Teacher",

@@ -2,15 +2,46 @@ ko:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" 와 벌'
+      8-Bit Binary Number Widget: 8-비트 바이너리 수 위젯
+      AI Lab and Isaac's Data: AI 랩 및 아이작의 데이터
+      AI Lab and Kim's Data: AI 랩 및 김의 데이터
       AI Machine Learning - Video: AI 머신러닝 - 동영상
+      'AI for Oceans: Fish vs Not Fish': '바다를 위한 AI: 물고기 대 물고기 아님'
+      'AI for Oceans: Types of Fish': '바다를 위한 AI: 물고기 유형'
       'AI: Impact on Society - Video': 'AI: 사회에 미치는 영향 - 동영상'
       'AI: Training Data & Bias - Video': 'AI: 교육 데이터 및 편견 - 동영상'
       Accelerometer Events: 가속도계 이벤트
+      Add Content and HTML: 콘텐츠와 HTML 추가
+      Add Content and Structure to Your Page: 페이지에 콘텐츠와 구조 추가
+      Add Movement: 움직임 추가
+      Add Sprites: 스프라이트 추가
+      Add Style: 스타일 추가
+      Add Style to Your Page: 페이지에 스타일 추가
+      Add Text: 텍스트 추가
+      Add a Welcome Screen: 환영 화면 추가
       Adding Images: 이미지 추가
+      Adding New Screens: 새 화면 추가하기
+      Adding Pages: 페이지 추가하기
       Adding Screens: 스크린 추가
       Alien Defender: 외계인 방어대
-      Animate Your Scene: 장면을 애니메이트 하라
+      Alternative Datasets: 대체 데이터세트
+      Animate Your Scene: 장면을 애니메이션으로 제작
       App Lab Intro - Video: 앱 랩 소개 - 동영상
+      'App Project: Screen Design': '앱 프로젝트: 화면 설계'
+      'App: Choose a Kid''s Movie': '앱: 아동 영화 선택'
+      'App: Friend Finder': '앱: 프랜드 파인더'
+      'App: Guess the Number': '앱: 숫자 맞추기'
+      'App: How Many Countries': '앱: 국가 수'
+      'App: Improved Pet App': '앱: 개선된 펫앱'
+      'App: Is It Your Birthday?': '앱: 오늘이 생일이예요?'
+      'App: My Famous Birthday': '앱: 내 유명한 생일'
+      'App: National Parks': '앱: 국립공원'
+      'App: Outfit Picker': '앱: 옷 선택기'
+      'App: Pet Chooser': '앱: 펫 선택기'
+      'App: Stamp Notebook': '앱: 스탬프 노트북'
+      'App: Story Creator': '앱: 스토리 창작자'
+      'App: The Fastest Finger': '앱: 가장 빠른 손가락'
+      'App: Where Should I Live?': '앱: 어디에 살아야 하나요?'
       Artist Intro with JR Hildebrand: 아티스트 인트로 JR 힐데브랜드
       Artist Intro with JR Hildebrande: 아티스트 인트로 JR 힐데브랜드
       Artist Project: 아티스트 프로젝트
@@ -20,21 +51,47 @@ ko:
       Back and Forth: 앞뒤로
       Basic Conditionals: 기본 조건
       Bass, Mid, and Treble: 저음, 중간음, 고음
+      Be a Super Digital Citizen: 슈퍼 디지털 시민 되기
+      Begin planning your project: 프로젝트 계획 시작
+      Begin planning your project_2018: 프로젝트 계획 시작_2018
+      Binary Bracelets - Unplugged Activity: 바이너리 팔찌 - 언플러그드 활동
+      Binary Number Widget: 바이너리 수 위젯
       Binary Numbers: 바이너리 수
       Board Events: 보드 이벤트
       Board Input and Output: 보드 입력 및 출력
+      Book Recommender App: 책 추천 앱
+      Book Recommender Model Card: 책 추천 모델 카드
       Boolean Comparison: 부울 비교
+      Build a Platform Jumper: 플랫폼 점퍼 구축
       Build a Screen: 화면 작성하라
+      Building a UI with Design Mode: 디자인 모드로 UI 구축
       Building an App: 앱 만들기
       'Bunny ': '토끼 '
+      Button Circuits: 버튼 회로
       CS Discoveries Post-Course Survey: CS 발견 과정 후 설문 조사
       CS Discoveries Post-course Survey: CS 발견 과정 후 설문 조사
+      CSD U3 Interactive Card Exemplar: CSD U3 인터랙티브 카드 예시
+      CSD U3 platform intro: CSD U3 플랫폼 소개
+      'CSD: For Loop': 'CSD: For 루프'
       Cake Defender: 케이크 디펜더
+      Cake Survey: 케이크 설문조사
+      Challenge: 도전
       Challenge Levels: 도전 레벨
+      Challenge/Practice: 도전/연습
+      'Challenge: Lists': '도전: 목록'
+      'Challenge: RGB Colors': '도전: RGB 색상'
       Challenges: 도전
       Change: 변경
+      Check Your Work: 작업 확인
+      Check-In Survey: 체크인 설문조사
       Checking for a Winner: 당첨자 확인
+      'Choice Levels: Customize Your App': '선택 레벨: 앱 사용자 지정'
+      Choose Your Own Adventure: 자신만의 모험 선택
+      Choosing Good IDs: 좋은 ID 선택
+      Club Datasets: 클럽 데이터세트
+      Code Prediction: 예측 코딩
       Code Your Own Flappy Game: 자신만의 플래피 게임을 만들어보세요.
+      Code Your Page: 페이지 코딩
       Collector Game: 컬렉터 게임
       Collision Detection: 충돌 감지
       Collisions: 충돌
@@ -42,56 +99,107 @@ ko:
       Color LEDs: 컬러 LED
       Combining Projects: 프로젝트 결합
       Combining Representations: 표현 결합
+      Conditionals with Cards - Unplugged Activity: 카드 조건문 - 언플러그드 레슨
       'Conditionals: If Statements': '조건: :"만약에" 문장들'
       'Conditionals: If and If/Else Statements': '조건: "만약에" 와 "만약에/다른" 문장들'
+      Control Your Player: 플레이어 조정
       Course E Artist Project: 과정 E 아티스트 프로젝트
       Course E Sprite Lab Project: 과정 E 스프라이트 랩 프로젝트
+      'Course E: Play Lab Project': '과정 E: 플레이 랩 프로젝트'
       Course F Artist Project: 과정 F 아티스트 프로젝트
       Course F Sprite Lab Project: 과정 F 스프라이트 랩 프로젝트
+      'Course F: Artist Project': '과정 F: 아티스트 프로젝트'
+      'Course F: Artist Project - Revise': '과정 F: 아티스트 프로젝트 - 수정'
+      'Course F: Play Lab Project': '과정 F: 플레이 랩 프로젝트'
+      'Course F: Play Lab Project - Revise': '과정 F: 플레이 랩 프로젝트 - 수정'
+      Crack Random Substitution: 임의적 치환 풀기
+      Crack a Caesar Cipher: 시저 암호 풀기
       Create Your Own Animation: 자신만의 애니메이션 만들기
+      Create Your Sprites: 스프라이트 만들기
+      Create a Background: 배경 만들기
+      Create a Google Form: 구글 양식 만들기
       Create a Story: 스토리 작성
+      Create an App in App Lab: 앱 랩에서 앱 만들기
       Create your project: 프로젝트 만들기
+      Customize: 사용자 지정
+      Customize Your App: 앱 사용자 지정
       Dance Crews: 댄스 크루
       Data Visualization: 데이터 시각화
       De-bugging with the Step Button: 스텝버튼으로 디버깅하기
       Debugging: 디버깅
       Debugging with the Step Button: 스텝버튼으로 디버깅하기
+      'Demo App: Interactive Card': '데모 앱: 인터랙티브 카드'
       Demo Apps: 데모 앱
       Design Mode: 디자인 모드
+      Design Your Game: 나만의 게임 설계
+      Design Your Prototype: 나만의 프로토타입 설계
+      Design a Screen for your App: 앱 화면 설계
+      Design an AI App - AI Lab: AI 앱 설계 - AI 랩
+      Design an AI App - App Lab: AI 앱 설계 - 앱 랩
       Designing for Accessibility: 접근가능성을 위한 설계
+      Digital Sharing - Unplugged Activity: 디지털 공유 - 언플러그드 활동 
       Dogger Example: 도거 예
+      Draw Your Background: 나만의 배경 그리기
+      Draw a Background: 배경 그리기
       Drawing: 그리기
+      Driver Alert System: 드라이버 경보 시스템
       End of Course Projects: 과정말 프로젝트
+      Escape Room Example: 방 탈출 예시
       Events: 이벤트
       Events and Linking Screens: 이벤트 및 연결 화면
       Events and Properties: 이벤트 및 속성
       Example: 예시
+      Example Animated Scene: 에니메이션 장면 예
+      Example App Types: 앱 유형 예
+      'Example App: Zoo Classification': '앱 예: 동물원 분류'
+      Example Apps: 앱 예
       Example Projects: 예제 프로젝트
       Example projects: 예제 프로젝트
+      Exemplar Personal Websites: 개인 웹사이트 예시
       Expanding Personal Website: 개인 웹 사이트 확장
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: 웹 연구소와 함께 실험 
       Exploration: 탐구
+      'Exploration: Clicker Game': '탐험: 클리커 게임'
+      'Exploration: For Loops': '탐구: For 루프'
+      'Exploration: Rikki''s Poster': '탐구: 리키의 포스터'
+      'Exploration: Sample Apps': '탐구: 샘플 앱'
+      'Exploration: Sample Programs': '탐구: 샘플 프로그램'
+      'Exploration: Sample Project': '탐구: 샘플 프로젝트'
       Explore HTML: HTML 배우자
+      Exploring CS in Entertainment: 엔터테인먼트에서 CS 탐구
       Exploring more CSS: CSS 추가 탐색
       Extra: 기타
+      Extra Challenge: 추가 도전
+      'Extra Challenge: Sound Board': '추가 도전: 사운드 보드'
+      Final Room Escape App: 최종 방 탈출 앱
+      Find the Wizard: 마법사 찾기
       Finish a Screen: 화면 완료하라
       Finish the Prototype: 프로토타입 완성하라
       Finishing Functions: 기능을 완성하라
       Finishing Touches: 마무리 터치
       Flyer Game: 플라이어 게임
+      Follow the Algorithm - Unplugged Activity: 알고리즘 따라가기 - 언플러그드 활동
       Follow the Mouse: 쥐를 따르라
       Fonts and Style: 글꼴 및 스타일
+      FoodFight: 푸드파이터
+      For Loop Fun - Unplugged Activity: For 루프 펀 - 언플러그드 활동
       For Loops: 반복을 위한
       For Loops and Color LEDs: 루프 및 컬러 LED용
-      For Loops and Repeat Blocks: 루프 및 반복 블록의 경우
+      For Loops and Repeat Blocks: For 루프 및 반복 블록
       Free Play: 자유 플레이
+      'Free Play: Make a Scene': '프리 플레이 - 장면 만들기'
+      'Free Play: Make an Interactive Scene': '프리 플레이: 인터랙티브 장면 만들기'
+      Fruit and Veggie Explorer: 과일과 야채 탐구자
       Functions: 함수
       Functions with Parameters: 함수(값 전달)
       Geometric Sun: 기하학 태양
       Get In Formation: 대형 만들기
       Getters and Setters: 게터 및 세터
       Getting Properties: 속성 얻기
+      Graph Paper Programming - Unplugged Activity: 모눈종이 프로그래밍 - 언플러그드 활동
+      Green Glass Door: 녹색 유리문
+      Guess The Number: 숫자 맞추기
       HTML Tags: HTML 태그
       Headings: 제목
       Hello World: 헬로우 월드
@@ -99,40 +207,67 @@ ko:
       How to Make a Sprite: 스프라이트 만드는 방법
       Ice Age Loops: 아이스 에이지 루프
       Images and Sounds: 이미지와 소리
+      Import Your Model: 모델 불러오기
+      Import a Model: 모델 불러오기
+      Importing Your Model: 모델 불러오기
+      Improved Shoe Recommender: 개선된 구두 추천
+      Incorporate Feedback: 피드백 통합
+      Innovation Research: 혁신 리서치
       Input Examples: 입력 예제
       Input with If-Else: 만약-다른 사용하여 입력 
       Inspiration!: 영감!
+      InspirationalArtwork: InspirationalArtwork
+      Intro to Flyer Game: 플라이어 게임 소개
       Intro to For Loops: 루프 소개
+      Intro to Side Scrollers: 사이드 스크롤러 소개
       Intro to Sprites: 스프라이트 소개
       Intro to Variables: 변수에 대한 소개
       Introducing Sprite Lab: 스프라이트 랩 소개
       Introduction to Arrays: 배열 소개
+      Isaac's Survey Data: 아이작의 설문조사 데이터
       Iteration and Parameters: 반복 및 매개변수
+      Keep On Dancing!: 계속 춤추기!
       Keeping Data Secret: 데이터 기밀 유지
       Keyboard Input: 키보드 인풋
+      Kim's Survey: 김의 설문조사
+      Kim's Survey Data: 김의 설문조사 데이터
       LED Apps: LED 어플
       Layout with CSS: CSS 레이아웃
       Learning from Simulations: 시뮬레이션으로 학습
       Lesson Extras: Lesson Extras
+      Level Overview: 레벨 개요
       Levels: 레벨
       Light Show: 라이트 쇼
       Linking Pages: 링크 페이지
       Linking Screens: 화면 링크
       Lists: 리스트
+      Looking for Patterns: 패턴 찾기
+      Looping: 루핑
       Loops with the Artist: 아티스트와의 루프
+      Make Your Sprites: 스프라이트 만들기
+      Make a Prediction: 예측하기
+      Make an Interactive Card: 인터랙티브 카드 만들기
       Make it Interactive: 대화식으로 만들기
       Making Scenes: 장면 만들기
       Making Songs: 노래 만들기
       Making Sounds: 소리 만들기
+      Making an Interactive Card: 인터랙티브 카드 만들기
       'Maze Intro: Programming with Blocks': '메이즈 인트로: 블록으로 프로그래밍'
       Measures: 마디
+      Medical Dataset Model Cards: 의학 데이터세트 모델 카드
+      Medical Priority App: 의료 우선순위 앱
       'Minecraft: Hero''s Journey': '마인크래프트: 히어로의 여정'
       'Mini-Project: About Me': '스프라이트 랩으로 자기 소개'
       'Mini-Project: Alien Dance Moves': '미니 프로젝트: 에일리언 댄스 무브스'
       'Mini-Project: Alien Dance Party': '미니 프로젝트: 에일리언 댄스 파티'
+      'Mini-Project: Clicker Game': '미니 프로젝트: 클리커 게임'
+      'Mini-Project: Collector Game': '미니 프로젝트: 컬렉터 게임'
+      'Mini-Project: Create a Virtual Pet': '미니 프로젝트: 가상 팻 만들기'
+      'Mini-Project: Outbreak Simulator': '미니 프로젝트: 발생 시뮬레이터'
       'Mini-Project: Royal Battle': '미니 프로젝트: 로열 배틀'
       "Mini-Project: Snowflake #1": "미니 프로젝트: 눈송이 #1"
       "Mini-Project: Snowflake #2": "미니 프로젝트: 눈송이 #2"
+      'Mini-Project: Sticker Art': '미니 프로젝트: 스티커 아트'
       'Mini-Project: Swimming Fish': '미니 프로젝트: 수영하는 물고기'
       'Mini-Project: Swimming Fish (continued)': '미니 프로젝트: 수영하는 물고기 (계속하기)'
       'Mini-Project: User Input Programs': '챗봇 만들기'
@@ -141,66 +276,122 @@ ko:
       'Mini-project: Flappy Game': '미니 프로젝트: 플래피 게임'
       'Mini-project: Interactive Poster': '미니 프로젝트: 인터랙티브 포스터'
       'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 호르헤 '
-      'Mini-project: Sticker Design': '미니 프로젝트: 스티커 드자인'
+      'Mini-project: Sticker Art': '미니 프로젝트: 스티커 아트'
+      'Mini-project: Sticker Design': '미니 프로젝트: 스티커 디자인'
       Modify simulation variables: 시뮬레이션 변수 수정
       More Buttons: 더 많은 단추
       More Input: 추가 정보
       More Parameters: 경로 매개 변수
       Motorcycle: 오토바이
+      Move It Move it Video  - Unplugged Activity: 이동 이동 동영상 - 언플러그드 활동
       Movement with the Counter Pattern: 카운터 패턴을 사용한 이동
       Multiframe Animations: 멀티 프레임 애니메이션
       Musical Arrays: 음악 배열
+      My Loopy Robotic Friends - Unplugged Activity: 내 루피 로봇 친구 - 언플러그드 활동
       My Online Neighborhood: 내 온라인 이웃
+      My Robotic Friends - Unplugged Activity: 내 로봇 친구 - 언플러그드 활동
       Nested Loops with the Bee: 벌과 함께 내포된 루프
+      New Challenge Introduction: 새 도전 소개
       New Shapes: 새 도형
       Orientation: 오리엔테이션
       Overview: 개요
+      'Overview: Design Mode': '개관: 디자인 모드'
+      'Overview: If Statements': '개관: If 문'
+      'Overview: Images': '개관: 이미지'
+      'Overview: onEvent': '개관: onEvent'
+      'Overview: setPosition': '개관: setPosition'
       Pair Programming: 페어 프로그래밍
+      Pet Recommender: 펫 추천
       Picturing Data: 데이터 묘사
+      Pizza Party Data: 피자 파티 데이터
+      Pizza Recommendations: 피자 추천
+      Plan Your Project: 프로젝트 계획
+      Plan Your Scene: 장면 계획
       Planning: 계획
       Platform Jumper - Background and Variables: 플랫폼 점퍼 - 배경 및 변수
       Platform Jumper - Items: 플랫폼 점퍼 - 아이템
       Platform Jumper - Platforms: 플랫폼 점퍼 - 플랫폼
       Platform Jumper - Player: 플랫폼 점퍼 - 플레이어
+      Platform Jumper Review: 플랫폼 점퍼 검토
+      Player Controls: 플레이어 제어
       Playing Notes: 플레잉 노트 
       Playing with Notes: 노트와 플레잉 
       Post-Course Survey Instructions: 과정 후 설문 조사 지침
       Practice: 연습
+      Predict: 예측
       Prediction: 예측
+      Prepare for your presentation: 프레젠테이션 준비
+      Prepare for your presentation_2018: 프레젠테이션 준비_2018
+      Problem Solving: 문제해결
+      Problem Solving Process for Programming: 프로그래밍을 위한 문제해결 과정
       Programming with Rey and BB-8: 레이와 BB-8로 프로그래밍
       Programs that Repeat: 반복하는 프로그램
       Project: 프로젝트
       Project - Background and Variables: 프로젝트 - 배경 및 변수
       Project - Sprites and Interactions: 프로젝트 - 스프라이트 및 상호작용
+      Project Guide: 프로젝트 가이드
       Project Work: 프로젝트 작업
       Properties: 등록 정보
+      Publishing Your Website: 웹사이트 출판
       Quarter Notes: 4분 음표
+      Quick Check: 빠른 확인
       RGB Exploration: RGB 탐험
+      Raspado Recommender: 라스파도 추천
       Reading Sensors: 센서 읽기 
+      Recognizing Expressions: 식 인식
+      Recognizing Fish: 물고기 인식
+      Recognizing Fish Features: 물고기 특성 인식
+      Recognizing Shapes: 모양 인식
       Reflection: 성찰
+      Relay Programming - Unplugged Activity: 릴레이 프로그래밍 - 언플러그드 활동
       Repeat Blocks: 반복 블록
-      Repeat Blocks with BB-8: BB-8로 블록 반복
-      Repeat Blocks with the Artist: 아티스트와 블록 반복
+      Repeat Blocks with BB-8: 반복 블록과 BB-8
+      Repeat Blocks with the Artist: 반복 블록과 아티스트
       Repeat Unit Statements: 장치 문장 반복
       Repeat Until Statements: 장치 문장 반복
       Representing Images: 이미지 표현
       Review: 검토
+      Review Your Animated Scene: 애니메이션 장면 검토
+      Review Your App: 앱 검토
+      Review Your Game: 게임 검토
+      Review Your Page: 페이지 검토
+      Review Your Scene: 장면 검토
+      'Review: CSS': '검토: CSS'
+      'Review: HTML': '검토: HTML'
       Revise Artist Project: 아티스트 프로젝트 수정
       Revise Sprite Lab Project: 스프라이트 랩 프로젝트 수정
       Robot Doodle: 로봇 두들
       Run a simulation: 시뮬레이션 실행
+      Safari App: 사파리 앱
+      Safari Model: 사파리 모델
+      Same Game: 동일 게임
+      Sample Apps for Good: 샘플 선의를 위한 앱
+      Sample Games: 샘플 게임
+      Sample Personal Web Pages: 샘플 개인 웹 페이지
+      Sample Personal Websites: 샘플 개인 웹사이트
       Sample Programs: 샘플 프로그램
+      Sample Web Page: 샘플 웹 페이지
+      Sample Website: 샘플 웹사이트
+      Scoring & Scoreboard: 점수 및 점수판
       Screen Design: 스크린 디자인
       Sensor Events: 센서 이벤트
       Sensors to Colors: 센서와 컬러 연결
+      Set Up Sprites: 스프라이트 설정
       Setting Properties: 속성 설정
       Shapes and the Draw Loop: 도형 및 그리기 루프
       Share Your App: 앱 공유하기
+      Share Your Pages: 페이지 공유
+      Share Your Stylesheets: 스타일시트 공유
+      Shoe Recommendation Survey: 구두 추천 설문조사
+      Shoe Recommender: 구두 추천
       Side Scroller: 사이드 스크롤러
       Simple Circuits: 단순 회로
       Skill Building: 실력 향상
+      Skill-Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
+      Social Sleuth: 소셜 탐정
+      Songwriting - Functions Unplugged Activity: 작사 - 함수 언플러그드 활동
       Speed it Up, Slow it Down: 속도를 높여요, 속도는 낮춰요
       Sprite Lab Example Project: 스프라이트 랩 예 프로젝트
       Sprite Lab Project: 스프라이트 랩 프로젝트
@@ -211,35 +402,154 @@ ko:
       Styling Text: 스타일링 텍스트
       Styling with Classes: 클래스를 사용한 스타일링
       Styling your Website: 웹 사이트 스타일 지정하기
+      Teach A.I. a new word: A.I. 에게 새 단어 가르치기
       Teach AI a New Word: 새로운 세상 AI를 가르치세요
+      'Technique: Frequency Analysis': '기법: 빈도 분석'
+      Terminology Recap: 용어 정리
       Text Compression: 텍스트 압축
       The Animation Tab: 애니메이션 탭
       The Artist in Code Studio: 코드 스튜디오 아티스트
+      The Big Event - Unplugged Activity: 빅 이벤트 - 언플러그드 활동
       The Buzzer: 버저 
       The Collector: 컬렉터
       The Harvester: 수확인
+      The Internet - Unplugged Activity: 인터넷 - 언플러그드 활동
+      The Power of Words - Unplugged Activity: 말의 힘 - 언플러그드 활동
+      The Right App - Unplugged Activity: 알맞은 앱 - 언플러그드 활동
+      Top Websites: 상위 웹사이트
+      Train AI to Clean the Ocean: AI에게 바다를 청소하도록 학습시키기
+      Train a Model in AI Lab: AI 랩에서 모델 교육
+      Train an AI to Clean the Ocean: AI를 훈련시켜 해양 청소
       UI Element Properties: UI 요소 속성
+      Ultimate Shoe Recommender: 최종적인 구두 추천
+      Unit 5 Lesson 1 Overview: 단원 5 레슨 1 개관
       Updating Your Prototype: 프로토타입 업데이트
+      Upload Your Images: 이미지 업로드
       User Interface: 사용자 인터페이스
       Using Getters and Setters: 게터 및 세터 사용
       Using HTML Tags: HTML 태그 사용
       Using Random Numbers: 난수 사용
+      Using Training Data: 교육 데이터 사용
       Using the LED: LED 사용
       Using the Repeat Block: 반복 블록 사용
       Using the Switch: 스위치 사용
       Variables: 변수
       Velocity: 속도
+      Velocity and the Counter Pattern: 속도 및 카운터 패턴
       Video: 비디오
+      Video - Encryption and Public Keys: 동영상 - 암호화 및 공개 키
+      'Video - Maze Intro: Programming with Blocks': '동영상 - 미로 소개: 블록으로 프로그래밍'
+      'Video:  Debugging with the Step Button': '동영상: 스텝버튼으로 디버깅'
+      'Video:  Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
+      'Video:  Text  and Prompts': '동영상: 텍스트 및 프롬프트'
+      'Video: "If/Else"': '동영상: "If/Else"'
+      'Video: AI: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
+      'Video: Amazon and Data': '동영상: 아마존과 데이터'
+      'Video: Artist Intro with JR Hildebrand': '동영상: 아티스트 인트로 JR 힐데브랜드'
+      'Video: Artist Intro with JR Hildebrande': '동영상: 아티스트 인트로 JR 힐데브랜드'
       'Video: CS Matters': '동영상: CS 문제'
+      'Video: Circuits and Logic': '동영상: 회로 및 로직'
+      'Video: Code Your Own Flappy Game': '동영상: 자신만의 플래피 게임을 만들어보세요.'
+      'Video: Conditionals: If Statements': '동영상: 조건: If 문'
+      'Video: Conditionals: If and If/Else Statements': '동영상: 조건: If 문 및 If/Else 문'
+      'Video: Dance Party Events': '동영상: 댄스 파티 이벤트'
+      'Video: Dance Party Measures': '동영상: 댄스 파티 마디'
+      'Video: Dance Party Party On!': '동영상: 댄스 파티 파티 시작!'
+      'Video: Dance Party Properties': '동영상: 댄스 파티 속성'
+      'Video: Dance Party Warm Up': '동영상: 댄스 파티 워밍 업'
+      'Video: De-bugging with the Step Button': '동영상: 스텝버튼으로 디버깅'
+      'Video: Debugging': '동영상: 디버깅'
+      'Video: Debugging with Scrat ': '동영상: 스크랫으로 디버깅 '
+      'Video: Debugging with the Step Button': '동영상: 스텝버튼으로 디버깅'
+      'Video: Events': '동영상: 이벤트'
+      'Video: Follow The Digital Trail': '동영상: 디지털 흔적 따라가기'
+      'Video: Getting Loopy': '동영상: 게팅 루피 (Getting Loopy)'
+      'Video: Happy Maps - Unplugged Activity': '동영상: 해피 맵 - 언플러그드 활동'
+      'Video: Harvesting with Conditionals': '동영상: 조건문으로 수확'
+      'Video: Hello World: Do What You Want': '동영상: 헬로 월드: 하고 싶은 일을 하세요'
+      'Video: Hello World: Programming with Events': '동영상: 헬로 월드: 이벤트 프로그래밍'
+      'Video: Hello World: Welcome to Sprite Lab': '동영상: 헬로 월드: 스프라이트 랩에 오신 것을 환영합니다'
+      'Video: How Search Works': '동영상: 검색 작동방법'
+      'Video: How to Create a Simple Function': '동영상: 단순 함수를 만드는 방법'
+      'Video: How to Make a Sprite': '동영상: 스프라이트 만드는 방법'
+      'Video: IOSP Model': '동영상: IOSP 모델'
+      'Video: Ice Age Loops': '동영상: 아이스 에이지 루프'
+      'Video: Impact on Society': '동영상: 사회에 미치는 영향'
+      'Video: Impacts on Society': '동영상: 사회에 미치는 영향'
+      'Video: Intro to CSS - Part 1': '동영상: CSS 소개 - 파트 1'
+      'Video: Intro to CSS - Part 2': '동영상: CSS 소개 - 파트 2'
+      'Video: Intro to Design Mode': '동영상: 디자인 모드 소개'
       'Video: Intro to Web Lab - Part 1': '비디오: 웹 연구소 소개 - 파트 1'
       'Video: Intro to Web Lab - Part 2': '비디오: 웹 연구소 소개 - 파트 2'
+      'Video: Introducing Sprite Lab': '동영상: 스프라이트 랩 소개'
+      'Video: Introduction to Play Lab': '동영상: 플레이 랩 소개'
+      'Video: Introduction to Variables': '동영상: 변수 소개'
+      'Video: Loops in Artist': '동영상: 아티스트 내 루프'
+      'Video: Loops with the Artist': '동영상: 아티스트와의 루프'
+      'Video: Lots of Sprites': '동영상: 많은 스프라이트'
+      'Video: Managing Disagreement': '동영상: 의견 충돌 관리'
+      'Video: Maze Intro - Programming with Blocks': '동영상: 미로 소개  - 블록으로 프로그래밍'
+      'Video: Maze Intro - Programming with Blocks ': '동영상: 미로 소개 - 블록으로 프로그래밍 '
+      'Video: Maze Intro: Programming with Blocks': '동영상: 미로 소개: 블록으로 프로그래밍'
+      'Video: Measures': '동영상: 마디'
+      'Video: Minecraft - Congratulations': '동영상: 마인크래프트 - 축하'
+      'Video: Minecraft - Functions': '동영상: 마인크래프트 - 함수'
+      'Video: Minecraft - Repeat Loops': '동영상: 마인크래프트 - 루프 반복'
+      'Video: Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
+      'Video: Minecraft: Voyage Aquatic Conditionals': '동영상: 마인크래프트: 보야지 아쿠아틱 조건문'
+      'Video: Minecraft: Voyage Aquatic Congratulations': '동영상: 마인크래프트: 보야지 아쿠아틱 축하'
+      'Video: Minecraft: Voyage Aquatic Introduction': '동영상: 마인크래프트: 보야지 아쿠아틱 소개'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': '동영상: 마인크래프트: 보야지 아쿠아틱 까지 반복'
+      'Video: Nested Loops': '동영상: 중첩 루프'
+      'Video: Nested Loops with the Bee': '동영상: 벌과 함께 중첩 루프'
+      'Video: Netflix and Data': '동영상:넷플릭스와 데이터'
+      'Video: Outbreak Simulator: Events': '동영상: 아웃브레이크 시뮬레이터: 이벤트'
+      'Video: Outbreak Simulator: Free Play': '동영상: 아웃브레이크 시뮬레이터: 무료 플레이'
+      'Video: Outbreak Simulator: Introduction': '동영상: 발생 시뮬레이션: 개요'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': '동영상: 아웃브레이크 시뮬레이터: 과학자처럼 생각하기'
+      'Video: Pair Programming': '동영상: 페어 프로그래밍'
+      'Video: Pair Programming ': '동영상: 페어 프로그래밍 '
       'Video: Problem Solving Process': '영상: 문제 해결 과정'
+      'Video: Programming with Blocks': '동영상: 블록으로 프로그래밍'
+      'Video: Programming with Rey and BB-8': '동영상: 레이와 BB-8로 프로그래밍'
+      'Video: Properties': '동영상: 속성'
+      'Video: Publishing Your Website': '동영상: 웹사이트 출판'
+      'Video: Repeat Blocks': '동영상: 반복 블록'
+      'Video: Repeat Blocks with BB-8': '동영상: 반복 블록과 BB-8'
+      'Video: Repeat Blocks with the Artist': '동영상: 반복 블록과 아티스트'
+      'Video: Repeat Until Blocks': '동영상: Until 블록 반복'
+      'Video: Repeat Until Statements': '동영상: Until 문 반복'
+      'Video: Sprites in Action': '동영상: 스프라이트 인 액션'
+      'Video: Star Wars Project': '동영상: 스타워즈 프로젝트'
+      'Video: Teamwork': '동영상: 팀워크'
+      'Video: Text and Prompts': '동영상: 텍스트 및 프롬프트'
+      'Video: The Artist in Code Studio': '동영상: 코드 스튜디오 아티스트'
+      'Video: The Big Event - Unplugged Activity': '동영상: 빅 이벤트 - 언플러그드 활동'
+      'Video: The Collector': '동영상: 수집가'
+      'Video: The Harvester': '동영상: 수확인'
+      'Video: Training Data & Bias': '동영상: 교육 데이터 및 편견'
+      'Video: Training Data and Bias': '동영상: 교육 데이터 및 편견'
+      'Video: Unplugged Variables in Envelopes': '동영상: 언플러그드 봉투 변수'
+      'Video: Using the Repeat Block': '동영상: 반복 블록 사용'
+      'Video: Variables in Artist': '동영상: 아티스트 내 변수'
+      'Video: Warm Up': '동영상: 워밍 업'
+      'Video: Waze and Data': '동영상: 웨이즈와 데이터'
       'Video: What Makes a Computer, a Computer?': '비디오: 컴퓨터는 무엇으로 구성되나?'
+      'Video: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
+      'Video: While Loops with the Farmer': '동영상: While 루프와 농부'
+      'Video: Wrap-up': '동영상: 마무리'
       Warm Up: 워밍업 
       Website Project: 웹사이트 프로젝트 
       Welcome to Monster Town: 몬스터 타운에 오신 것을 환영합니다
       Where'd They Go?: 어디 갔어요?
       While Loops with the Farmer: While 루프와 농부
+      'Widget: Text Compression': '위젯: 텍스트 압축'
       Wrap-up: 마무리
+      'You Choose: Improve Your App': '선택하세요: 앱 개선하기'
+      'You Choose: Restaurant Recommendations': '선택하세요: 레스토랑 추천'
       Your Personal Website: 개인 웹사이트 
+      Your Team Project: 팀 프로젝트
+      Zoo Predictions: 동물원 예측
+      getText vs getNumber: getText 대 getNumber
       isTouching: "\nisTouching"
+      setProperty: setProperty

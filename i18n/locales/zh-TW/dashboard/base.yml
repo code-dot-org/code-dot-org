@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 zh-TW:
   errors:
     messages:
@@ -39,6 +45,7 @@ zh-TW:
         personal_email_markdown: "個人電子信箱 [（如果你沒有個人信箱請點擊這裡）](%{url})"
         username: '用戶名稱'
         password: '密碼'
+        verified_teacher: '認證老師'
         password_confirmation: '密碼確認'
         current_password: '目前的密碼'
         locale: '語言'
@@ -264,6 +271,7 @@ zh-TW:
   teacher_mailer:
     new_teacher_subject: '歡迎來到 Code.org ！'
     delete_teacher_subject: 'Code.org 通知：你的帳戶已被刪除'
+    verified_teacher_subject: 'Code.org 教師驗證 - 成功'
   section:
     your_section:
       one: '你的學習小組：'
@@ -354,6 +362,7 @@ zh-TW:
       educate_beyond: "超越 Code.org"
       educate_inspire: "激勵學生"
       educate_community: "線上社群"
+      educate_requirements: "技術要求"
       educate_tools: "工具和影片"
       about_us: "關於我們"
       about_leadership: "管理團隊"
@@ -372,6 +381,7 @@ zh-TW:
       about: "關於"
       legal: "法律與隱私權"
       legal_privacy: "隱私政策"
+      legal_cookie_notice: "Cookie通知"
       legal_tos: "服務條款"
     user:
       classroom: '教師主頁'
@@ -421,13 +431,13 @@ zh-TW:
       starwars: '星際大戰'
       starwarsblocks: '星際大戰（程式積木）'
       starwarsblocks_hour: '星際大戰（程式積木）'
+      thebadguys: '壞蛋聯盟'
       loading: '正在載入…'
       weblab: 'Web Lab'
       view_all: '瀏覽所有專案…'
     popup:
       progress_for_user: "%{name} 的進度"
       progress: '你的學習進度'
-      lines: '程式碼總計行數：%{lines}'
       close: '關閉'
       mastery: '觀念'
       puzzle_map: '所有階段'
@@ -547,6 +557,7 @@ zh-TW:
     choose_next_course: "從下方的 Code Studio 課程中選一個體驗"
     print_certificate: "列印證書"
   certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮物，以贊助你學習課程。"
+  certificate_hour_of_code: "一小時玩程式"
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
     section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"
@@ -599,6 +610,8 @@ zh-TW:
     try_hour_of_code: '試試「一小時玩程式」！'
     store: '商店'
     cookie_notice: 'Cookie通知'
+    view_code: '檢視程式碼'
+    locale_select: "選擇語言"
   reference_area:
     title: '需要幫忙？'
     subtitle: '看看這些影片和提示'
@@ -623,6 +636,8 @@ zh-TW:
       applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       weblab_unsupported_locale_storage: "很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。"
+  deprecation:
+    algebra_lab: "代數裡的 CS 課程和內容將被廢除。在未來幾個月內，將不再在這個 lab 裡提供。請轉往查看 [Bootstrap：代數](%{bootstrap_algebra_url}。[了解更多](%{cs_algebra_url})。"
   slow_loading: '請再等等，這次讀取的時間比較久一點.......'
   try_reloading: '請重新載入頁面'
   next_stage: '完成！繼續下個關卡'
@@ -661,23 +676,17 @@ zh-TW:
       body_short: "設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a"
       audience: '年齡 13+'
       cta: '學習如何做'
-    dance:
-      title: '舞蹈派對'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: '舞蹈派對'
-    hoc:
-      title: '經典迷宮'
-      body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
+    dance:
+      title: '舞蹈派對'
     flappy:
       title: '像素鳥程式'
       body: '想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！'
-    20-hour:
-      title: '速成課程'
-      body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
-      body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
-    hoc2014:
-      try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
-      try_frozen: '來自冰雪奇緣的安娜及艾莎。'
+    frozen:
+      title: "冰雪奇緣"
     gallery:
       title: "藝廊"
       body: "觀看由用戶建立的應用程式及藝術畫作"
@@ -686,18 +695,21 @@ zh-TW:
       body: "Game Lab 這個編程環境可以讓你利用現成的一些物件、角色創作簡單能互動的動畫、遊戲，。"
       audience: "年齡 13+"
       cta: "學習如何做"
+    hello-world:
+      title: '你好世界'
+      body: '從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。'
+    hero:
+      title: "Minecraft"
+      body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
     hoc-encryption:
       title: "簡單加密"
       body: "學生將會學習建立和破解加密訊息的技術。"
-    weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。"
-      audience: "年齡 13+"
-      cta: "學習如何做"
-    frozen:
-      title: "冰雪奇緣"
-    starwars:
-      title: "星際大戰"
+    hoc:
+      title: '經典迷宮'
+      body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
+    hoc2014:
+      try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
+      try_frozen: '來自冰雪奇緣的安娜及艾莎。'
     infinity:
       title: "迪士尼無限 Play Lab"
       body: "用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。"
@@ -707,30 +719,39 @@ zh-TW:
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
+    poem-art:
+      title: '詩歌藝術'
+      body: '表達自己！使用代碼創建動畫詩歌。'
     sports:
       title: "運動"
       body: "製作一個籃球遊戲或是混合搭配多種不同的運動的遊戲。"
+    starwars:
+      title: "星際大戰"
     text-compression:
       title: "文字壓縮"
       body: "在本節課，學生會利用文字壓縮小工具，將圖型替換成符號來壓縮文字。"
-    unplugged:
-      title: "不插電的教學活動"
-      audience: "年齡 4+"
-      body: "我們已經編寫一系列的不插電教學內容，讓你能夠在課堂上使用。現在你可以教授計算機科學基礎，不管你的班級裡頭有沒有電腦！試著使用這些教學內容，不管是當作一門獨立課程，還是當作任何計算機課程的補充教材。"
-      body_short: "如果你沒有電腦，不妨試試這些不插電教學活動。"
-    unplugged_conditionals:
-      title: "條件判斷（Conditionals）"
-      body: "在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。"
+      audience: "年齡 13+"
+      cta: "學習如何做"
     widgets:
       title: "視窗元件"
       body: "學生可以親身使用這些電子工具，探索計算機科學原理課程中會學到的概念。讓他們使用那些元件去學習，又或者為你的班級建立「單一概念」的課堂。"
       audience: "14 歲以上"
       cta: "學習如何做"
+    unplugged_conditionals:
+      title: "條件判斷（Conditionals）"
+      body: "在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式"
+    unplugged:
+      title: "不插電的教學活動"
+      audience: "年齡 4+"
+      body: "我們已經編寫一系列的不插電教學內容，讓你能夠在課堂上使用。現在你可以教授計算機科學基礎，不管你的班級裡頭有沒有電腦！試著使用這些教學內容，不管是當作一門獨立課程，還是當作任何計算機課程的補充教材。"
+      body_short: "如果你沒有電腦，不妨試試這些不插電教學活動。"
+    20-hour:
+      title: '速成課程'
+      body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
+      body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
   landing:
     prerelease_tutorial: "這個教程仍在 **測試階段**，或會根據收到的意見、作出改善而有所修改。"
     report_bug: "臭蟲回報"
@@ -823,14 +844,6 @@ zh-TW:
     reminder_desc: '我們已經更新了<a href="%{tos_url}"target="_blank"> 服務條款</a>和<a href="%{privacy_url}"target="_blank">隱私政策</a>。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授 JavaScript 的工具。'
     reminder_desc_markdown: 我們更新了[服務條款](%{tos_url})和[隱私政策](%{privacy_url})。同意前請仔細閱讀。注意，在你的學生接受新條款之前，可能無法使用我們教授 JavaScript 的工具。
     review_terms: "查看更新後的條款"
-  donor_interstitial:
-    title: "您學習的免費電腦科學課程可能是由...組成的"
-    subtitle: "我們想要感激這些慷慨又大方的捐贈，這些捐獻讓Code.org離成功的目標又邁進了一大步。我們承諾會讓全球學校的學生免費地使用Code.org網站。再一次地感謝這些持續不斷地 [大方捐獻](%{donors_url})!"
-    local_supporters: "在地支援"
-    global_supporters: "全球支援"
-    support_codeorg_1: "捐贈給本網站的每一筆資金，都可以為更多的學生帶來更多的機會。"
-    support_codeorg_2: "[現在就捐贈](%{donate_url}) 來贊助、支援本網站（Code.org）"
-    get_started: "開始使用 Code.org"
   school_info_interstitial:
     title: "我們想要讓每個學生都能學習計算機科學 - 幫助我們紀錄學生進度！"
     message: "請在下方輸入你的學校資訊。"
@@ -925,6 +938,7 @@ zh-TW:
     instructor_feedback: '教師回饋'
     peer_feedback: '同伴反饋'
     outdated: '這是先前版本的回饋內容'
+    review_count: '您必須完成本單元的%{review_count}評審'
     peer_review: '同儕審查'
   external_links:
     disclaimer: 免責聲明
@@ -991,6 +1005,11 @@ zh-TW:
   no_course_access_teacher: "你沒有權限瀏覽這個課程。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。"
   no_script_access_student: "你沒有權限瀏覽這個單元。請向你的老師查詢指定的單元。"
   no_script_access_teacher: "你沒有權限瀏覽這個單元。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。"
+  no_level_access_student: "你無權訪問此級別。請詢問教師應該訪問什麼級別。"
+  no_level_access_teacher: "你沒有權限訪問此級別。如果你認為你應該有權限，請發送電子郵件至support@code.org讓我們解決這個問題。"
+  no_exemplar: "此級別沒有範例。"
+  no_exemplar_access_student: "學生無法訪問範例代碼。請詢教師應該訪問什麼級別。"
+  no_exemplar_access_teacher: "只有認證教師才能訪問範例代碼。如果你想成為一名認證教師，請寫信給support@code.org。"
   return_unit_overview: '移至單元概覽'
   return_course_overview: '移至課程概覽'
   view_all_units: '檢視所有單元'
@@ -1008,9 +1027,13 @@ zh-TW:
       school_city: '學校所在城市'
       school_city_district: '學校城市/區'
       school_country: '學校所屬國家'
+      school_department_region: '學校部門/區域'
       colombian_school_city: '學校所在城市'
+      colombian_chilean_school_department: '學校部門/區域'
       colombian_school_municipality: '學校當局'
       colombian_chilean_school_name: '學校名稱'
+      chilean_school_commune: '社群'
+      chilean_school_id: '學校ID'
       ages: '你今年教授的學生的年齡？'
       subjects: '你今年教授的科目？'
       resources: '你使用哪些資源來教授計算機科學？'
@@ -1028,13 +1051,17 @@ zh-TW:
         not_listed: '不在清單裡'
         none: '不想回答'
       school_country:
+        barbados: '巴巴多斯'
+        belize: '伯利茲'
         canada: 'Canada'
         chile: 'Chile'
         colombia: '哥倫比亞'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
+        paraguay: '巴拉圭'
         thailand: 'Thailand'
+        uzbekistan: '烏茲別克斯坦'
       ages:
         ages_under_6: '6 歲以下'
         ages_7_8: '7 - 8 歲'
@@ -1055,6 +1082,7 @@ zh-TW:
         music: '音樂'
         art: '藝術'
         other: "其它："
+        na: '不適用'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1063,7 +1091,8 @@ zh-TW:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "其它："
+        other: "其它"
+        na: '不適用'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1073,7 +1102,8 @@ zh-TW:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "其它："
+        other: "其它"
+        na: '不適用'
       workshop_course:
         csf_af: '計算機科學基本原理（課程 A-F）'
         csf_express: '計算機科學基礎（速學先修或速學）'
@@ -1129,3 +1159,29 @@ zh-TW:
   unit_prefix: "%{n} 個單位"
   code_org_logo_alt: "Code.org 首頁"
   teacher_feedback: "老師的回饋\n"
+  lesson_lock:
+    error:
+      no_updates: "沒有要執行的更新"
+      missing_params: "必須提供用戶、級別和單位id"
+      cannot_view_locked_answers: "鎖定時無法查看答案"
+      forbidden: "用戶無法更新學生的可鎖定狀態"
+  reset_predict_progress_button: "刪除答案"
+  pixelation:
+    raw_format: "原始格式"
+    raw_format_alt: "查看無任何格式的位元"
+    readable_format: "可讀格式"
+    readable_format_alt: "按像素分隔檢視位元"
+    save_image: "儲存圖片"
+    actual_size: "實際大小"
+    image_file_format_header: "圖片檔案格式"
+    image_file_format_width: "寬度：1 字節"
+    image_file_format_height: "高度：1 字節"
+    image_file_format_bits_per_pixel: "每像素位元數：1 字節"
+    image_file_format_data_a: "n 位元像素數據"
+    image_file_format_data_b: "n = 寬度 * 高度 * 每像素的位元"
+    image_width: "圖片寬度"
+    image_height: "圖片高度"
+    bits_per_pixel_header: "每像素位元數"
+    binary: "二進制（Binary）"
+    hexadecimal: "十六進制"
+    pixel_format_header: "像素格式"

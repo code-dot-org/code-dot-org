@@ -1,0 +1,98 @@
+{
+  "sk-SK": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Čítanie literatúry"
+        },
+        "csta/AP": {
+          "description": "Algoritmy a programovanie"
+        },
+        "ccela/SL": {
+          "description": "Rozprávanie a počúvanie"
+        },
+        "ccmath/MP": {
+          "description": "Matematické zručnosti"
+        },
+        "csta2011/CPP": {
+          "description": "Výpočtové zručnosti a programovanie"
+        },
+        "csta2011/CT": {
+          "description": "Algoritmické myslenie"
+        },
+        "iste/1": {
+          "description": "Žiaci preukazujú tvorivé myslenie, budujú si vedomosti a pomocou technológie vytvárajú inovatívne produkty a procesy."
+        },
+        "iste/4": {
+          "description": "Žiaci využívajú svoju schopnosť kritického myslenia na plánovanie a realizáciu výskumu, spravovanie projektov, riešenie problémov a robenie informovaných rozhodnutí pomocou vhodných digitálnych nástrojov a zdrojov."
+        },
+        "iste/6": {
+          "description": "Žiaci preukazujú solídne porozumenie technologických pojmov, systémov a operácií."
+        },
+        "ccela/L": {
+          "description": "Jazyk"
+        },
+        "ccela/RI": {
+          "description": "Čítanie s porozumením"
+        },
+        "ccmath/OA": {
+          "description": "Operácie a algebraické myslenie"
+        },
+        "csta2011/CD": {
+          "description": "Počítače a komunikačné zariadenia"
+        },
+        "csta2011/CI": {
+          "description": "Komunitné, globálne a etické vplyvy"
+        },
+        "ccmath/NBT": {
+          "description": "Čísla a matematické operácie v desiatkovej sústave"
+        },
+        "ccmath/G": {
+          "description": "Geometria"
+        },
+        "ccela/W": {
+          "description": "Písanie"
+        },
+        "csta2011/CL": {
+          "description": "Spolupráca"
+        },
+        "iste/2": {
+          "description": "Žiaci používajú digitálne médiá a prostredia na komunikáciu a spoluprácu, a to aj na diaľku, aby podporili individuálne učenie a prispeli k učeniu ostatných."
+        },
+        "csta/IC": {
+          "description": "Vplyv Informatiky"
+        },
+        "csta/NI": {
+          "description": "Siete a internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Porovnanie algoritmov kompresie údajov s cieľom určiť, ktorý je najlepší v konkrétnom kontexte."
+        },
+        "csta/DA": {
+          "description": "Dáta a analýza"
+        },
+        "csta/CS": {
+          "description": "Výpočtové systémy"
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": "Podstata učenia – hľadanie vzorov v údajoch"
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": "Podstata učenia – konštrukcia a používanie argumentov"
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": "Podstata učenia – ľudia a stroje"
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": "Množiny údajov – množiny vlastností"
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": "Podstata učenia – trénovanie modelu"
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": "Množiny údajov – skreslenie"
+        }
+      }
+    }
+  }
+}

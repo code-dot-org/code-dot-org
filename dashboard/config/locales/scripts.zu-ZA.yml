@@ -2,37 +2,7 @@
 zu:
   data:
     script:
-      category:
-        math_category_name: Izibalo
       name:
-        csd2-2017:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
-        csd6-old:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
-        csd2-2018:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
-        csd2-2019:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
@@ -41,27 +11,10 @@ zu:
           lesson_groups:
             csp_lists:
               display_name: Umbhalo olandelanayo
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: Umbhalo olandelanayo
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Umbhalo olandelanayo
-        csd3-2020:
-          lessons:
-            Text:
-              name: Umbhalo
-        csd3-virtual:
-          lessons:
-            Text:
-              name: Umbhalo
-        csd3-2021:
-          lessons:
-            Text:
-              key: Umbhalo
-              name: Umbhalo
         csp5-2021:
           lesson_groups:
             csp_lists:
@@ -69,4 +22,8 @@ zu:
         csp5-2022:
           lesson_groups:
             csp_lists:
+              display_name: Umbhalo olandelanayo
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
               display_name: Umbhalo olandelanayo

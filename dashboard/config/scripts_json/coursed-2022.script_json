@@ -4,18 +4,31 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "8f212dd2-169f-4a3d-9880-f76d3372b6c1",
+          "notice": "Extension Lessons with the micro:bit",
+          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
+          "link": "https://code.org/maker/csf-microbit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn more"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-04-21 16:37:12 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-01-12 01:56:16 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1401,6 +1414,19 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursed-2022"
       }
+    },
+    {
+      "key": "f7559bae-c62e-4cc6-94a2-26b09e8c1eed",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7559bae-c62e-4cc6-94a2-26b09e8c1eed",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -2287,7 +2313,7 @@
       "key": "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f",
       "position": 1,
       "properties": {
-        "description": "\n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect:**\n\n\n - *Why is it important to NOT share private information online?* \n- *How do you know if information is private?*",
+        "description": "\n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect:**\n\n\n - *What type of game did you create today?* \n- *What did you like about your classmates' games?*",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3196,7 +3222,8 @@
       "key": "419b0732-9e07-4ab2-8c48-0fb798dfdfde",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-4 - Skill Building” slide",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "419b0732-9e07-4ab2-8c48-0fb798dfdfde",
@@ -3218,7 +3245,7 @@
       "key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec",
       "position": 5,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-10 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3241,7 +3268,7 @@
       "key": "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-16 - Challenge” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-13 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3265,7 +3292,7 @@
       "key": "268e56b4-6f3e-4a44-8383-2e538ae1ab72",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 18 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3972,6 +3999,18 @@
       "seeding_key": {
         "activity_section.key": "558c0510-2a0d-4302-82d1-98f221ecec6f",
         "lesson_activity.key": "a54509a7-dac6-4985-830d-91272c3de923"
+      }
+    },
+    {
+      "key": "3dcc5ff1-9cad-46cc-985e-e92e1989a304",
+      "position": 1,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course D, click [here](https://code.org/maker/csf-microbit)  to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) cover the following topics: Meet your micro:bit, Loops, Conditionals (if...then...else), Inputs and outputs, Events, and Variables.",
+        "name": "Extension Lessons with the micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dcc5ff1-9cad-46cc-985e-e92e1989a304",
+        "lesson_activity.key": "f7559bae-c62e-4cc6-94a2-26b09e8c1eed"
       }
     }
   ],
@@ -6487,33 +6526,9 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coursed_looking_ahead_minecraft_intro"
-        ],
-        "progression": "Video: Learn the Basics of Computer Science"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_intro"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "33686a06-d5bc-4529-8795-2dff33211d3b"
-      },
-      "level_keys": [
-        "coursed_looking_ahead_minecraft_intro"
-      ]
-    },
-    {
-      "chapter": 102,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "Overworld Move to Sheep2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6530,14 +6545,15 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 3,
+      "chapter": 102,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overworld Chop Tree2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6554,14 +6570,15 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 4,
+      "chapter": 103,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overworld Shear Sheep2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6578,14 +6595,15 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 5,
+      "chapter": 104,
+      "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Overworld Chop Trees2022"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -6602,32 +6620,8 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "coursed_looking_ahead_minecraft_repeat_loops"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_repeat_loops"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "749a46b8-fc1f-4727-85bb-0e225b727c26"
-      },
-      "level_keys": [
-        "coursed_looking_ahead_minecraft_repeat_loops"
-      ]
-    },
-    {
-      "chapter": 107,
-      "position": 7,
+      "chapter": 105,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6651,8 +6645,8 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 8,
+      "chapter": 106,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6676,8 +6670,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 9,
+      "chapter": 107,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6701,8 +6695,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 10,
+      "chapter": 108,
+      "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -6726,8 +6720,8 @@
       ]
     },
     {
-      "chapter": 111,
-      "position": 11,
+      "chapter": 109,
+      "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -6751,8 +6745,8 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 12,
+      "chapter": 110,
+      "position": 10,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -6776,32 +6770,8 @@
       ]
     },
     {
-      "chapter": 113,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "coursed_looking_ahead_minecraft_if_statements"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_if_statements"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "2ef8d43a-13d4-41ee-8d7f-3aa952ae04de"
-      },
-      "level_keys": [
-        "coursed_looking_ahead_minecraft_if_statements"
-      ]
-    },
-    {
-      "chapter": 114,
-      "position": 14,
+      "chapter": 111,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6826,8 +6796,8 @@
       ]
     },
     {
-      "chapter": 115,
-      "position": 15,
+      "chapter": 112,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6852,8 +6822,8 @@
       ]
     },
     {
-      "chapter": 116,
-      "position": 16,
+      "chapter": 113,
+      "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6877,33 +6847,8 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 17,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "coursed_looking_ahead_minecraft_congratulations"
-        ],
-        "progression": "Video: Congratulations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_congratulations"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "c892041f-8717-4cbf-b00b-9d0b5faaf3f5"
-      },
-      "level_keys": [
-        "coursed_looking_ahead_minecraft_congratulations"
-      ]
-    },
-    {
-      "chapter": 118,
-      "position": 18,
+      "chapter": 114,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6927,8 +6872,8 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 19,
+      "chapter": 115,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6952,8 +6897,8 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 20,
+      "chapter": 116,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6977,7 +6922,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7002,7 +6947,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7027,7 +6972,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7052,7 +6997,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7077,7 +7022,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7102,7 +7047,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7127,7 +7072,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -7152,7 +7097,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7177,7 +7122,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 125,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7202,7 +7147,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 126,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7227,7 +7172,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 127,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7253,7 +7198,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 128,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7278,7 +7223,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 129,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -7303,7 +7248,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 130,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7328,7 +7273,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 131,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -7353,7 +7298,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 132,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -7378,7 +7323,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 133,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -7403,7 +7348,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7428,7 +7373,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7453,7 +7398,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7478,7 +7423,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7503,7 +7448,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 138,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7528,7 +7473,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 139,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7553,7 +7498,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 140,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7578,7 +7523,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 141,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7603,7 +7548,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 142,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -7628,7 +7573,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 143,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7654,7 +7599,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 144,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7679,7 +7624,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 145,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7704,7 +7649,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 146,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7729,7 +7674,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 147,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7754,7 +7699,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 148,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7779,7 +7724,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 149,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -7804,7 +7749,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 150,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7829,7 +7774,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 151,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7854,7 +7799,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 152,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7879,7 +7824,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 153,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7904,7 +7849,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 154,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7929,7 +7874,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 155,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7954,7 +7899,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 156,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -7979,7 +7924,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 157,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -8004,7 +7949,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 158,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8030,7 +7975,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 159,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -8055,7 +8000,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 160,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8080,7 +8025,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 161,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -8105,7 +8050,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 162,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -8130,7 +8075,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8155,7 +8100,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 164,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9383,18 +9328,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursed_looking_ahead_minecraft_intro",
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_intro"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "33686a06-d5bc-4529-8795-2dff33211d3b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Overworld Move to Sheep2022",
         "script_level.level_keys": [
           "Overworld Move to Sheep2022"
@@ -9439,18 +9372,6 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "coursed-2022",
         "activity_section.key": "419b0732-9e07-4ab2-8c48-0fb798dfdfde"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "coursed_looking_ahead_minecraft_repeat_loops",
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_repeat_loops"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "749a46b8-fc1f-4727-85bb-0e225b727c26"
       }
     },
     {
@@ -9527,18 +9448,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursed_looking_ahead_minecraft_if_statements",
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_if_statements"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "2ef8d43a-13d4-41ee-8d7f-3aa952ae04de"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Underground Avoiding Lava2022",
         "script_level.level_keys": [
           "Underground Avoiding Lava2022"
@@ -9571,18 +9480,6 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "coursed-2022",
         "activity_section.key": "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "coursed_looking_ahead_minecraft_congratulations",
-        "script_level.level_keys": [
-          "coursed_looking_ahead_minecraft_congratulations"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022",
-        "activity_section.key": "c892041f-8717-4cbf-b00b-9d0b5faaf3f5"
       }
     },
     {
@@ -10416,6 +10313,18 @@
       }
     },
     {
+      "name": "Extension Lessons with the micro:bit",
+      "url": "https://code.org/maker/csf-microbit",
+      "key": "extension_lessons_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit"
+      }
+    },
+    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling_faces",
@@ -11219,6 +11128,12 @@
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit",
         "script.name": "coursed-2022"
       }
     },

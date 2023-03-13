@@ -13,8 +13,8 @@ title: 编程一小时操作指南
 ## 1. 准备你的活动
 
 - 确定地点，日期和时间
-- 发送[信件](https://hourofcode.com/promote/resources#sample-emails)给当地市长、国会议员、州长、或是有影响力的商人，邀请他们来讲话。 在举办编程一小时期间接待民选官员时，查看我们的[指引工具包]({{ localized_files/elected_official }})，了解更多信息。
-- 邀请新闻媒体，比如本地的新闻社，报纸，教育或技术博客。查看我们的[新闻工具包]({{ promote/press_kit_url }})以获取帮助。
+- 发送[信件](https://hourofcode.com/promote/resources#sample-emails)给当地市长、国会议员、州长、或是有影响力的商人，邀请他们来讲话。 在举办编程一小时期间接待民选官员时，查看我们的[指南工具包]({{ localized_files/elected_official }})，了解更多信息。
+- 邀请新闻媒体，比如本地的新闻社、报纸、教育或技术博客。查看我们的[新闻工具包]({{ promote/press_kit_url }})以获取帮助。
 
 ## 2. 活动期间
 
@@ -22,7 +22,7 @@ title: 编程一小时操作指南
 - 利用这些[数据和信息图表]({{ promote/stats_url }})简单介绍计算机科学的重要性。   
       
     
-- ** 其他活动创意**: 
+- **其他活动创意**: 
     - 邀请当地的行业领导者，讨论他们涉及到计算机科学的工作。
     - 邀请当地的官员，让学生们教他们编程。
     - 让学生展示离线活动。
@@ -35,23 +35,17 @@ title: 编程一小时操作指南
 
 * * *
 
-## 借助编程一小时开展家庭编程之夜，邀请父母们也参与进来。
+## Example plan for a school assembly or event
 
-考虑举办K-5 晚会，邀请家长们和他们的孩子们一起参加一小时的计算机科学学习。 这是让更多的社区民众参加进来的好方法，它也鼓励家长们支持你学校学习计算机科学。 我们的合作伙伴在家庭编程之夜已经创作出一个一体化活动工具包，其中有帮助你举办活动的计划清单、演讲脚本、邀请邮件、海报、PPT演示等内容。 点击这里[](http://www.familycodenight.org/DownloadCodeDotOrg.html)来下载活动工具册。
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## 例如计划一次学校集会或活动
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**活动：**学校范围内的计算机科学教育周启动集会
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**日期：**{{ campaign_date/start_short }}（计算机科学教育周开始）
-
-**时间：**上学日期间。推荐早中午活动。大约 1 小时。
-
-**地点：**学校礼堂（如剧院，体育馆，食堂）
-
-## 流程演示
+## Run of Show
 
 | 时长          | 活动                                                    |
 | ----------- | ----------------------------------------------------- |

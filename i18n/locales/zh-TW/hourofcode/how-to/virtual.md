@@ -17,11 +17,11 @@ title: 一小時玩程式虛擬活動指南
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
 ## 你們可能分開了，但你們仍然可以一起開始
-即使你計劃讓學生獨立完成活動，我們還是建議你利用一次虛擬線上啟動來開始你的活動，激發參與者。 有幾種有趣的方式來開始你的活動： 
+即使你計劃讓學生獨立完成活動，我們還是建議你利用一次虛擬線上啟動來開始你的活動，激發參與者。 有幾種有趣的方式來開始你的活動：
 
 <ul>
-<li><b>邀請演講嘉賓</b>：成千上萬來自不同背景的志願者等待著你的消息！ 簡單地使用我們的<a href="https://code.org/volunteer/local">志願者地圖</a>來搜索他們。 使用虛擬一小時玩程式，你將不受距離限制，因此如果需要，可以考慮在你的郵遞區號地區之外搜索遠端提供幫助的志工。 一旦你與志工建立了聯繫，你可以參考<a href="http://hourofcode.com/us/how-to/volunteers">一小時玩程式志工指引</a>作為確定潛在話題、討論問題等的指南。</li> 
-<li><b>展示一個勵志視頻</b>：另一個啟動活動的可靠選擇是向參與者展示我們的眾多<a href="http://hourofcode.com/us/promote/resources#videos">勵志視頻</a>。 許多視訊的長度在5分鐘以內，擁有來自你的學生認識的名人的激勵和鼓舞。</li> 
+<li><b>邀請演講嘉賓</b>：成千上萬來自不同背景的志願者等待著你的消息！ 簡單地使用我們的<a href="https://code.org/volunteer/local">志願者地圖</a>來搜索他們。 使用虛擬一小時玩程式，你將不受距離限制，因此如果需要，可以考慮在你的郵遞區號地區之外搜索遠端提供幫助的志工。 一旦你與志工建立了聯繫，你可以參考<a href="http://hourofcode.com/us/how-to/volunteers">一小時玩程式志工指南</a>作為確定潛在話題、討論問題等的指南。</li>
+<li><b>展示一個勵志視訊</b>：另一個啟動活動的可靠選擇是向參與者展示我們的眾多<a href="http://hourofcode.com/us/promote/resources#videos">勵志視訊</a>。 許多視訊的長度在5分鐘以內，擁有來自你的學生認識的名人的激勵和鼓舞。</li>
 <li><b>討論電腦科學的好處</b>：通過考慮技術對我們日常生活的影響，將你的一小時玩程式活動轉化為對電腦科學的更深層次理解。 向學生提出指導性問題，將活動的開始變成互動討論。 關於如何開始對話的思路，請查看這些<a href="https://code.org/csforgood#prompts">討論問題</a>。</li>
 </ul>
 
@@ -43,7 +43,7 @@ title: 一小時玩程式虛擬活動指南
 
 **一起進行線上一小時玩程式活動**<br> 如果你希望讓你的參與者在活動期間保持視訊通話，請注意，他們需要在所有時間打開兩個視窗 - 一個用於視訊會議平臺，另一個用於學生開展活動。
 
-**與父母**<br> 對於四年級和更低年級的學生，可以考慮鼓勵他們的父母在家裡舉辦一小時玩程式活動。 你可以通過一些推薦教程以及這個有用的<a href="https://hourofcode.com/us/how-to/parents">父母指引</a>支持他們。
+**與父母**<br> 對於四年級和更低年級的學生，可以考慮鼓勵他們的父母在家裡舉辦一小時玩程式活動。 你可以通過一些推薦教程以及這個有用的<a href="https://hourofcode.com/us/how-to/parents">父母指南</a>支持他們。
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 

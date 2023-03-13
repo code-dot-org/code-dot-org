@@ -29,21 +29,10 @@ export default function initPage(unitEditorData) {
   });
   const store = getStore();
   store.dispatch(init(lessonGroups));
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
   store.dispatch(
-    initResources(
-      'teacherResource',
-      scriptData.migrated_teacher_resources || []
-    ),
+    initResources('teacherResource', scriptData.teacher_resources || []),
     initResources('studentResource', scriptData.student_resources || [])
   );
-
-  let announcements = scriptData.announcements || [];
 
   ReactDOM.render(
     <Provider store={store}>
@@ -63,7 +52,7 @@ export default function initPage(unitEditorData) {
           scriptData.student_detail_progress_view
         }
         initialProfessionalLearningCourse={
-          scriptData.professionalLearningCourse || ''
+          scriptData.deeperLearningCourse || ''
         }
         initialOnlyInstructorReviewRequired={
           scriptData.only_instructor_review_required
@@ -72,21 +61,19 @@ export default function initPage(unitEditorData) {
         initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
-        initialTeacherResources={teacherResources}
         initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
         initialPilotExperiment={scriptData.pilot_experiment || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
-        initialAnnouncements={announcements}
+        initialAnnouncements={scriptData.announcements || []}
         initialSupportedLocales={scriptData.supported_locales || []}
         initialLocales={locales}
         initialProjectSharing={scriptData.project_sharing || false}
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
-        initialIsMakerUnit={scriptData.is_maker_unit || false}
         unitFamilies={unitEditorData.script_families}
         versionYearOptions={unitEditorData.version_year_options}
         isLevelbuilder={unitEditorData.is_levelbuilder}
@@ -108,6 +95,7 @@ export default function initPage(unitEditorData) {
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
         courseOfferingEditorLink={scriptData.courseOfferingEditPath}
+        isCSDCourseOffering={scriptData.isCSDCourseOffering}
       />
     </Provider>,
     document.querySelector('.edit_container')

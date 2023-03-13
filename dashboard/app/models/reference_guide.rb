@@ -20,8 +20,8 @@
 class ReferenceGuide < ApplicationRecord
   include CurriculumHelper
 
-  belongs_to :course_version
-  validates_uniqueness_of :key, scope: :course_version_id
+  belongs_to :course_version, optional: true
+  validates_uniqueness_of :key, scope: :course_version_id, case_sensitive: true
   validate :validate_key_format
 
   def course_offering_version
@@ -30,6 +30,13 @@ class ReferenceGuide < ApplicationRecord
 
   def children
     ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: key)
+  end
+
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_reference_guide_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
   def serialize
@@ -60,6 +67,27 @@ class ReferenceGuide < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     file_path = Rails.root.join("config/reference_guides/#{course_offering_version}/#{key}.json")
     File.delete(file_path)
+  end
+
+  def copy_to_course_version(destination_course_version)
+    copied_ref_guide = ReferenceGuide.find_or_create_by(
+      course_version_id: destination_course_version.id,
+      key: key
+    ) do |created_ref_guide|
+      created_ref_guide.update!(
+        parent_reference_guide_key: parent_reference_guide_key,
+        display_name: display_name,
+        content: content,
+        position: position
+      )
+    end
+    copied_ref_guide.write_serialization
+  end
+
+  def self.find_by_course_name_and_key(course_name, key)
+    course_version_id = CurriculumHelper.find_matching_course_version(course_name)&.id
+    return nil unless course_version_id
+    ReferenceGuide.find_by_course_version_id_and_key(course_version_id, key)
   end
 
   # runs through all seed files, creating and deleting records to match the seed files
@@ -105,8 +133,8 @@ class ReferenceGuide < ApplicationRecord
     {
       key: key,
       parent_reference_guide_key: parent_reference_guide_key,
-      display_name: display_name,
-      content: content
+      display_name: get_localized_property(:display_name),
+      content: get_localized_property(:content)
     }
   end
 

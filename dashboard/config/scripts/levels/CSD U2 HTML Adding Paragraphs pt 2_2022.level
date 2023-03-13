@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:01.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
@@ -13,7 +9,7 @@
     "submittable": "false",
     "parent_level_id": 20002,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/html/html-tags/",
+    "map_reference": "/courses/csd-2022/guides/html-tags",
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
     "mini_rubric": "true",
@@ -25,6 +21,10 @@
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images; understand the need for precision when using computer languages and use appropriate syntax.\r\n",
     "teacher_markdown": "## Using the Tool\r\n\r\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated.  This makes the level particularly useful as assessment.  Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab.  Later, any teacher feedback will appear in the same area."
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:01.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:01.546+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Adding Paragraphs pt 2_2021\\\"\"],\"cloned_from\":\"CSD U2 HTML Adding Paragraphs pt 2_2021\"}]"

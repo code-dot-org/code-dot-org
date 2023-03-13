@@ -11,6 +11,8 @@ ar:
       length: الطول
       min: على الاقل
       points: نقاط
+      radius: قُطر
+      sides: جوانب
       size: الحجم
       speed: السرعة
       width: العرض

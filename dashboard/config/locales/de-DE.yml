@@ -40,6 +40,7 @@ de:
           keine E-Mail-Adresse hast)](%{url})
         username: Benutzername
         password: Passwort
+        verified_teacher: Verifizierter Lehrer
         password_confirmation: Passwort Bestätigung
         current_password: Aktuelles Passwort
         locale: Sprache
@@ -133,6 +134,8 @@ de:
       Bitte melde dich stattdessen über dein Clever-Portal an.
     invalid_provider: Entschuldigung, %{provider} Konten können nicht mit Code.org
       Konten verbunden werden.
+    migration_required: Leider können wir keine Konten verbinden oder trennen, die
+      noch den alten Kontomodus verweden. Bitte aktualisieren Sie auf den neuen Kontomodus.
     unable_to_connect_provider: Nicht möglich dein Code.org-Konto mit deinem %{provider}-Konto
       zu verbinden. Bitte versuche es noch einmal.
     disconnect_successful: Erfolg! Wir haben das externe Konto von deinem Code.org
@@ -331,6 +334,7 @@ de:
   teacher_mailer:
     new_teacher_subject: Willkommen bei Code.org!
     delete_teacher_subject: 'Code.org Benachrichtigung: Dein Konto wurde gelöscht'
+    verified_teacher_subject: Code.org Verifikation - Das hat geklappt!
   section:
     your_section:
       one: 'Dein Bereich:'
@@ -372,6 +376,8 @@ de:
       full_section: Wir konnten dich nicht zum Bereich %{section_code} zufügen weil
         bereits %{section_capacity} Studierende dabei sind. Bitte kontaktiere deine
         Lehrperson für Hilfe.
+      not_participant_type: Wir konnten Sie nicht zum Bereich %{section_code} hinzufügen,
+        da Sie nicht dem Teilnehmertyp des Bereichs entsprechen.
     mail:
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e)
@@ -435,6 +441,7 @@ de:
       educate_beyond: Jenseits von Code.org
       educate_inspire: Inspiriere einen Schüler/eine Schülerin
       educate_community: Online Community
+      educate_requirements: Technische Voraussetzungen
       educate_tools: Hilfsmittel und Videos
       about_us: 'Über uns '
       about_leadership: Die Leitung
@@ -453,6 +460,7 @@ de:
       about: Über
       legal: Privatsphäre und Rechtliches
       legal_privacy: Datenschutzerklärung
+      legal_cookie_notice: Cookie-Meldung
       legal_tos: AGBs
     user:
       classroom: Lehrer-Homepage
@@ -502,13 +510,13 @@ de:
       starwars: Star Wars
       starwarsblocks: Star Wars (Bausteine)
       starwarsblocks_hour: Star Wars (Bausteine)
+      thebadguys: Die Gangster Gang
       loading: Wird geladen...
       weblab: Web Lab
       view_all: Alle Projekte anzeigen...
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt
-      lines: 'Gesamte Codezeilen: %{lines}'
       close: SCHLIESSEN
       mastery: Konzepte
       puzzle_map: Level
@@ -677,6 +685,7 @@ de:
     print_certificate: Zertifikat drucken
   certificate_sponsor_message: "%{sponsor_name} machte das großzügige Geschenk, um
     dein Lernerfolg zu fördern."
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Entschuldigung, aber die Lerngruppe %{new_section_code} existiert
       nicht. Bitte geben Sie einen anderen Lerngruppencode ein.
@@ -692,6 +701,8 @@ de:
       dieser Lehrer sie bereits in einer anderen Lerngruppe hat.
     third_party_login: Sie können Schüler nicht in eine Lerngruppe verschieben, der
       mit einem Drittanbieterwerkzeug synchronisiert ist.
+    not_correct_participant_type: Sie können diese Benutzer nicht verschieben, weil
+      sie keine Berechtigung haben, Teilnehmer im neuen Bereich zu sein.
   share:
     title: Mit Code Studio lernen
     description: Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code.
@@ -735,6 +746,8 @@ de:
       GNU LGPL 2.1</a> lizensiert ist.
     powered_by_aws: Betrieben von Amazon Web Services
     built_on_github: Gebaut auf GitHub von Microsoft
+    google_copyright: "&copy; Google Inc. verwendet mit Genehmigung. Google Classroom
+      ist eine Marke von Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, das CODE-Logo sowie
       Hour of Code&reg; sind Marken von Code.org."
     copyright: Copyright
@@ -754,6 +767,8 @@ de:
     how_it_works: So funktioniert es (Code ansehen)
     try_hour_of_code: Probiere die "Hour of Code" aus!
     store: Geschäft
+    cookie_notice: Cookie-Meldung
+    view_code: Zeige den Code
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -832,29 +847,18 @@ de:
         dann teile die App in Sekunden.
       audience: Ab 13 Jahren
       cta: Lerne wie
-    dance:
-      title: Tanzparty
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Tanzparty
-    hoc:
-      title: Klassisches Labyrinth
-      body: Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es
-        schon ausprobiert.
+    dance:
+      title: Tanzparty
     flappy:
       title: Flappy Code
       body: Schreibe dein eigenes Spiel in weniger als 10 Minuten! Probiere unsere
         Flappy-Code-Anleitung!
-    20-hour:
-      title: Beschleunigter Kurs
-      body: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte
-        aus den Kursen 2-4. Der Kurs eignet sich für Kinder und Jugendliche zwischen
-        10 und 18 Jahren. Unsere Kurse 2-4 vermitteln umfassendere Kenntnisse!
-      body_short: Lerne die Informatikgrundlagen in einer beschleunigten Version der
-        Kurse 2-4.
-    hoc2014:
-      try_new_tutorial: Probiere unsere neue "Hour of Code"-Anleitung im Beta-Modus
-        aus
-      try_frozen: Künstler mit Anna und Elsa, aus Frozen -Die Eiskönigin
+    frozen:
+      title: Die Eiskönigin
     gallery:
       title: Galerie
       body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die
@@ -866,21 +870,26 @@ de:
         können.
       audience: Ab 13 Jahren
       cta: Lerne wie
+    hello-world:
+      title: Hallo Welt
+      body: Wähle aus unseren lustigen Themen aus und programmiere interaktiver Charakter
+        in einer Welt, die du erschaffen hast.
+    hero:
+      title: Minecraft
+      body: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke
+        die Welt von Minecraft mit Code.
     hoc-encryption:
       title: Einfache Verschlüsselung
       body: Schüler lernen Techniken um verschlüsselte Nachrichten zu erstellen und
         zu knacken.
-    weblab:
-      title: Weblabor (Beta)
-      body: Web Lab ist eine Programmierumgebung, in der Sie einfache Webseiten mit
-        HTML und CSS erstellen können. Entwerfen Sie Ihre Webseiten und teilen Sie
-        die in Sekunden.
-      audience: Ab 13 Jahren
-      cta: Lerne wie
-    frozen:
-      title: Die Eiskönigin
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klassisches Labyrinth
+      body: Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es
+        schon ausprobiert.
+    hoc2014:
+      try_new_tutorial: Probiere unsere neue "Hour of Code"-Anleitung im Beta-Modus
+        aus
+      try_frozen: Künstler mit Anna und Elsa, aus Frozen -Die Eiskönigin
     infinity:
       title: Infinity Spielelabor
       body: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney
@@ -892,19 +901,36 @@ de:
       title: Minecraft
       body: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern,
         Schafen, Creepern, Zombies und mehr.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke
-        die Welt von Minecraft mit Code.
+    poem-art:
+      title: Dichtkunst
+      body: Drücke dich aus! Erstelle mit Code animierte Gedichte .
     sports:
       title: Sport
       body: Erstelle ein Basketballspiel oder kombiniere mehrere Sportarten.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Text-Kompression
       body: Schüler lernen hier den Text-Kompressions Widget zu benutzen um Texte
         zu komprimieren indem Muster durch Symbole ersetzt werden.
+    weblab:
+      title: Weblabor (Beta)
+      body: Web Lab ist eine Programmierumgebung, in der Sie einfache Webseiten mit
+        HTML und CSS erstellen können. Entwerfen Sie Ihre Webseiten und teilen Sie
+        die in Sekunden.
+      audience: Ab 13 Jahren
+      cta: Lerne wie
+    widgets:
+      title: Widgets
+      body: Die Studenten können Konzepte aus unserem Informatikgrundkurs mit diesen
+        digitalen Werkzeugen praktisch erproben. Verwenden Sie die Widgets einzeln
+        oder erstellen Sie eine Lektion mit einem Konzept für Ihre Klasse.
+      audience: Ab 14 Jahren
+      cta: Lerne wie
+    unplugged_conditionals:
+      title: Bedingungen
+      body: Lerne was Algorithmen und Bedingungen sind in dieser offline Aktivität
+        mit einem Kartenspiel.
     unplugged:
       title: Offline Lektionen
       audience: Alter 4+
@@ -915,17 +941,13 @@ de:
         für beliebige Computerwissenschaftskurse zu verwenden.
       body_short: Wenn Sie keine Computer zur Verfügung haben, probieren Sie diese
         Offline Lektionen in Ihrem Klassenzimmer.
-    unplugged_conditionals:
-      title: Bedingungen
-      body: Lerne was Algorithmen und Bedingungen sind in dieser offline Aktivität
-        mit einem Kartenspiel.
-    widgets:
-      title: Widgets
-      body: Die Studenten können Konzepte aus unserem Informatikgrundkurs mit diesen
-        digitalen Werkzeugen praktisch erproben. Verwenden Sie die Widgets einzeln
-        oder erstellen Sie eine Lektion mit einem Konzept für Ihre Klasse.
-      audience: Ab 14 Jahren
-      cta: Lerne wie
+    20-hour:
+      title: Beschleunigter Kurs
+      body: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte
+        aus den Kursen 2-4. Der Kurs eignet sich für Kinder und Jugendliche zwischen
+        10 und 18 Jahren. Unsere Kurse 2-4 vermitteln umfassendere Kenntnisse!
+      body_short: Lerne die Informatikgrundlagen in einer beschleunigten Version der
+        Kurse 2-4.
   landing:
     prerelease_tutorial: Diese Anleitung ist in der **Beta**-Version.  Sie wird nach
       Rückmeldungen noch überarbeitet und verbessert.
@@ -1067,14 +1089,6 @@ de:
       zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit
       akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
-  donor_interstitial:
-    title: Deine kostenlosen CS Kurse wurden ermöglicht durch...
-    local_supporters: Lokale Unterstützer
-    global_supporters: Globale Unterstützer
-    support_codeorg_1: Jeder an Code.org gespendete Euro bringt mehr Möglichkeiten
-      für mehr Studierende.
-    support_codeorg_2: "[Spende jetzt](%{donate_url}) um Code.org zu unterstützen."
-    get_started: Starte mit Code.org
   school_info_interstitial:
     title: Wir wollen jedem Schüler die Informatik näher bringen - helfen Sie uns,
       unsere Fortschritte zu verfolgen!
@@ -1292,6 +1306,17 @@ de:
   no_script_access_teacher: Sie haben keinen Zugriff auf dieses Gerät. Wenn Sie glauben,
     dass Sie Zugang zu diesem Gerät haben sollten, schreiben Sie bitte an support@code.org,
     damit wir die Situation beheben können.
+  no_level_access_student: Sie haben keinen Zugang zu diesem Level. Bitte fragen Sie
+    Ihren Lehrer, auf welchem Level Sie sein sollten.
+  no_level_access_teacher: Sie haben keinen Zugriff auf dieses Level. Wenn Sie glauben,
+    dass Sie Zugang zu diesem Level haben sollten, schreiben Sie bitte an support@code.org,
+    damit wir die Situation beheben können.
+  no_exemplar: Für dieses Level gibt es kein Exemplar.
+  no_exemplar_access_student: SchülerInnen können nicht auf den Beispielcode zugreifen.
+    Bitte fragen Sie Ihren Lehrer, auf welchem Level sich befinden müssen.
+  no_exemplar_access_teacher: Nur verifizierte Lehrer können auf den Beispielcode
+    zugreifen. Wenn Sie ein verifizierter Lehrer werden möchten, schreiben Sie bitte
+    an support@code.org.
   return_unit_overview: Gehe zur Übersicht der Einheit
   return_course_overview: Gehe zur Übersicht
   view_all_units: Alle Einheiten anzeigen
@@ -1314,6 +1339,7 @@ de:
       colombian_chilean_school_department: Schule Gemeinde / Region
       colombian_school_municipality: Schule Gemeinde
       colombian_chilean_school_name: Schulname
+      chilean_school_commune: Gemeinde
       chilean_school_id: Schul-ID
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
@@ -1345,12 +1371,15 @@ de:
         not_listed: Bevorzugter Termin nicht aufgeführt
         none: Möchte ich nicht beantworten
       school_country:
+        barbados: Barbados
+        belize: Belize
         canada: Kanada
         chile: Chile
         colombia: Kolumbien
         israel: Israel
         malaysia: Malaysien
         mexico: Mexiko
+        paraguay: Paraguay
         thailand: Thailand
         uzbekistan: Usbekistan
       ages:
@@ -1373,6 +1402,7 @@ de:
         music: Musik
         art: Kunst
         other: 'Andere:'
+        na: Nicht anwendbar
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1381,7 +1411,8 @@ de:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Andere:'
+        other: Andere
+        na: Nicht anwendbar
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1391,7 +1422,8 @@ de:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Andere:'
+        other: Andere
+        na: Nicht anwendbar
       workshop_course:
         csf_af: CS Grundlagen (Kurse A-F)
         csf_express: CS Grundlagen (Pre-Express oder Express)
@@ -1416,6 +1448,7 @@ de:
         Sie beim Kennenlernen des Lehrplans und der Tools von Code.org zu unterstützen.
         Bitte teilen Sie uns Ihre Fragen und Anregungen mit, indem Sie uns unter[support@code.org](%{support_email_url})
         eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!
+      facilitator_not_listed: Mein Moderator ist nicht aufgeführt
       facilitator_not_applicable: Nicht anwendbar
       organizer_not_listed: Mein Organisator ist nicht aufgeführt
     logged_out:
@@ -1473,4 +1506,31 @@ de:
   behaviors:
     this_sprite: dieser Sprite
   unit_prefix: Lektion %{n}
+  code_org_logo_alt: Code.org Startseite
   teacher_feedback: Rückmeldung vom Lehrer
+  lesson_lock:
+    error:
+      no_updates: Keine auszuführenden Aktualisierungen
+      missing_params: Muss Benutzer-, Ebenen- und Einheits-ID angeben
+      cannot_view_locked_answers: Antworten können nicht angezeigt werden, wenn sie
+        gesperrt sind
+      forbidden: Benutzer kann den Sperrstatus des Schülers nicht aktualisieren
+  reset_predict_progress_button: Antwort löschen
+  pixelation:
+    raw_format: Raw-Format
+    raw_format_alt: Bits ohne Formatierung anzeigen
+    readable_format: Lesbares Format
+    readable_format_alt: Durch Pixel getrennte Bits anzeigen
+    save_image: Bild speichern
+    actual_size: Originalgröße
+    image_file_format_header: Bilddateiformat
+    image_file_format_width: 'Breite: 1 Byte'
+    image_file_format_height: 'Höhe: 1 Byte'
+    image_file_format_bits_per_pixel: 'Bit pro Pixel: 1 Byte'
+    image_file_format_data_a: n Bit Pixeldaten
+    image_file_format_data_b: n = Breite * Höhe * Bit pro Pixel
+    image_width: Bildbreite
+    image_height: Bildhöhe
+    bits_per_pixel_header: Bit pro Pixel
+    binary: Binärdatei
+    hexadecimal: Hexadezimal

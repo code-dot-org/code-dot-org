@@ -54,7 +54,8 @@ def upload_log_and_get_link(key, body, metadata)
         body,
         {metadata: metadata}
       )
-  " <a href='#{log_url}'>☁ Log on S3</a>"
+  permalink = AWS::S3.get_console_link_from_presigned(log_url)
+  " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
 rescue Exception => msg
   ChatClient.log "Uploading log to S3 failed: #{msg}"
   return ''
@@ -71,7 +72,7 @@ def build
     count = [1, count].max
 
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
-    IO.write(deploy_dir('rebuild'), log)
+    File.write(deploy_dir('rebuild'), log)
 
     git_revision = RakeUtils.git_revision
     git_revision_short = GitUtils.git_revision_short
@@ -129,10 +130,10 @@ def main
     # Upload build log to S3
     log_link = upload_log_and_get_link(
       start_time.strftime('%Y%m%dT%H%M%S%z'),
-      <<-LOG,
-#{log}
-#{status}
-#{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
+      <<~LOG,
+        #{log}
+        #{status}
+        #{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
       LOG
       {
         commit: commit_hash,

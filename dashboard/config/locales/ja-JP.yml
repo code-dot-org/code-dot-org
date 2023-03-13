@@ -10,6 +10,11 @@ ja:
         プログラミングを止めて、もう一度やり直してください。
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: は無効です。各リンクはパスワードのリセットに使用できるのは1回のみです。また機能するのは最後に送信されたリンクのみです。
       messages:
         blank: が必要です
         blank_plural: は必須です
@@ -32,6 +37,11 @@ ja:
         gender: 性別
         edit_header: アカウント詳細を編集する
         finish_sign_up_header: アカウントの作成を完了します
+        finish_sign_up_subheader: "<strong>%{email}</strong>のCode.orgアカウント作成を完了するには、次の情報を入力してください。"
+        finish_sign_up_subheader_markdown: "**%{email}**のCode.orgアカウント作成を完了するには、次の情報を入力してください。"
+        finish_sign_up_subheader_provider: "<strong>%{email}</strong>の<strong>%{provider}</strong>でCode.orgアカウント作成を完了するには、次の情報を入力してください。"
+        finish_sign_up_subheader_provider_markdown: "**%{email}**の**%{provider}**でCode.orgアカウント作成を完了するには、次の情報を入力してください。"
+        reset_password_token: あなたがフォローしたパスワードのリセットリンク
         error:
           future: 現在までの日付にする
   beta: ベータ版
@@ -44,13 +54,16 @@ ja:
   previous_page: 前のページ
   next_page: 次のページ
   next_resource: 次のリソース
+  done_with_module: この学習モジュールで完了
   cancel: キャンセル
   okay: オッケー
   or: または
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
   join_section:
     code:
+      title: Code.orgのセクションに参加
       placeholder: セクション ・ コード (ABCDEF)
+      instructions: '先生が共有した6文字のコード (例: 「ABCDEF」) を入力して、セクションに参加してください。'
       instructions_short: 6 文字のセクションコードを入力してください
       submit: 参加
   add_hint_form:
@@ -81,6 +94,8 @@ ja:
     continue_with: "%{provider} で続きます"
     sign_in_with: "%{provider} を使用してサインインする"
     signed_in: サインイン！
+    signed_out_markdown: "### [Code.org](%{url})からサインアウトしました。"
+    sign_out_of_markdown: "#### %{provider}でサインインしました。%{provider}からサインアウトするには、[こちらをクリック](%{url})してください。"
     already_signedup: もうサインアップしましたか？
     notyet_signedup: まだサインアップしていないですか？
     google_oauth2: Google アカウント
@@ -91,10 +106,23 @@ ja:
     clever: Cleverアカウント
     powerschool: Powerschoolアカウント
     forgot_password: パスワードをお忘れですか？
+    migration_success: 成功しました！私たちの新しいアカウントエクスペリエンスに更新されました。
+    demigration_success: あなたのアカウントで新しいアカウントエクスペリエンスが無効となりました。
     need_confirmation: 確認Eメールが届かない
     need_unlock: ロック解除用のEメールが届いていない
     not_linked: 申し訳ありませんが、あなたのCode.org アカウントは %{provider} にリンクしていません。以下のパスワードを入力してサインインして下さい。
     use_clever: 申し訳ありませんが、あなたのCode.orgアカウントは%{provider}にリンクしていません。代わりにCleverポータルからサインインしてください。
+    invalid_provider: "%{provider}アカウントをCode.orgアカウントにリンクできません。"
+    migration_required: 古いアカウントエクスペリエンスを使っているアカウントの接続や切断はできません。新しいアカウントエクスペリエンスに更新してください。
+    unable_to_connect_provider: あなたのCode.orgアカウントを%{provider}アカウントに接続できません。もう一度お試しください。
+    disconnect_successful: 成功しました！Code.orgアカウントから外部アカウントが切断されました。
+    already_in_use: "%{provider}アカウントはすでに別のCode.orgアカウントに接続されています。"
+    already_linked: "%{provider}アカウントはすでにあなたのCode.orgアカウントにリンクされています。"
+    existing_account:
+      account_exists: 良いニュースです！あなたはすでに%{email}を使用するCode.orgアカウントをお持ちです
+      sign_in: 既存のアカウントにサインインしてください。次に [アカウント設定] ページから%{provider}プロフィールをリンクできます。
+      sign_up: あなたのメールアドレスではありませんか？別のメールアドレスで新しいアカウントを作成しますか？新しいアカウントを作成する場合は [アカウント設定]
+        ページから%{provider}プロフィールをリンクすることも可能です。
   signup_form:
     email_signup: Eメールで登録します
     student_count: "%{count} 人の生徒がサインアップ済みです。"
@@ -128,6 +156,7 @@ ja:
     valid_password: 有効なパスワード ！
     invalid_password: パスワードを%d文字以上で入力
     mismatch_password: 入力した 2 つのパスワードが一致しません
+    student_consent: Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
     agree_us_data_transfer_student: "**私は、本サイト使用によるデータ（個人データを含む）を Code.org がホスティングと処理を行うために**米国へ転送することに同意します。"
     agree_us_data_transfer_teacher: "**私は、本サイト使用（私の学生による使用も含む）によるデータ（個人データを含む）を Code.org
       がホスティングと処理を行うために**米国へ転送することに同意します。"
@@ -135,11 +164,22 @@ ja:
 
 '
     visit_privacy: 詳細は Code.org の [プライバシーポリシー](%{privacy_url}) にアクセスしてください。
+    student_terms_markdown: メールアドレスは私たちが生徒に連絡できるような形式では保存されません。パスワードの回復を除き生徒はCode.orgからメールを受信することはありません。詳しくは、私たちの[プライバシーポリシー](http://code.org/privacy)をご覧ください。
     additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
     user_type_button: アカウントタイプを更新
     user_type_label: アカウントの種類
     user_type_student: 生徒
+    user_type_student_desc: 'コースとアクティビティをすべて見る:'
+    user_type_student_ability_1: 進捗とプロジェクトを保存
+    user_type_student_ability_2: 教師のクラスルーム セクションに参加
     user_type_teacher: 先生
+    user_type_teacher_desc: '生徒はすべてにアクセスでき、他にも:'
+    user_type_teacher_ability_1: クラスルーム セクションを作成
+    user_type_teacher_ability_2: 生徒の作業の割り当ておよび追跡
+    user_type_teacher_ability_3: '専門的学習に参加
+
+'
+    user_type_teacher_ability_4: 先生用フォーラムで交流
     field_is_required: が必要です
     accept_terms: アカウントを作成することに、同意が必要です。
     error: エラーが発生しました。
@@ -197,6 +237,7 @@ ja:
     login: サインイン
     invalid_login: ログインに失敗（しっぱい）しました。もう一度（いちど）入力してください。
     pair_programming: このコンピューターで、パートナーがいます
+    student_privacy_markdown: あなたのフルネームが表示されない理由は[こちら](%{student_privacy_blog})をご覧ください。
   password:
     reset_form:
       title: パスワードをお忘れですか？
@@ -226,6 +267,7 @@ ja:
     parent_email_added_subject: Code.org へようこそ!
   teacher_mailer:
     new_teacher_subject: Code.org へようこそ!
+    delete_teacher_subject: 'Code.org通知: アカウントが削除されました'
   section:
     your_section:
       one: 'あなたのセクション:'
@@ -233,6 +275,7 @@ ja:
     code_with_teacher: "%{teacher_name} と %{section_code}"
     confirm:
       remove: 本当に、このセクションから離れてよいですか？
+    default_name: 無題のセクション
     remove: "(セクションを削除)"
     type:
       picture: 画像パスワード
@@ -244,6 +287,7 @@ ja:
     invite_sent: 招待状を送信しました
     added_teacher: "%{name} あなたの先生として追加"
     registered: "%{section_name} に登録しました"
+    captcha_required: このセクションに参加するにはCAPTCHAに入力してください。
     already_exists: あなたは既にセクション %{section_name} に参加しています。
     error:
       signed_in: 続行する前にサインアウトしてください
@@ -254,6 +298,9 @@ ja:
       blank_code: セクションのコードを入力してください
       cant_join_own_section: 申し訳ありません。あなたはログインすることができません。
       provider_managed_section: このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider}経由で追加し、そのセクションを再同期するよう先生に依頼してください。
+      restricted_section: ロックされているため、セクション%{section_code}にあなたを追加できませんでした。先生に助けを求めてください。
+      full_section: すでに%{section_capacity}人の生徒がいるため、セクション%{section_code}にあなたを追加できませんでした。
+        先生に助けを求めてください。
       not_participant_type: セクションの参加者タイプを満たしていないため、セクション%{section_code}にあなたを追加できませんでした。
     mail:
       student_disassociated:
@@ -303,6 +350,7 @@ ja:
       game_lab_tutorials: ゲームラボのチュートリアル
       sprite_lab_documentation: スプライトラボのドキュメント
       sprite_lab_tutorials: スプライトラボのチュートリアル
+      web_lab_documentation: ウェブラボのドキュメント
       educate_overview: 教育の概要
       educate_elementary: 小学校
       educate_middle: 中学校
@@ -312,6 +360,7 @@ ja:
       educate_beyond: Code.org を超えて
       educate_inspire: 生徒を応援する
       educate_community: オンライン コミュニティ
+      educate_requirements: 技術的な前提条件
       educate_tools: ツールと動画
       about_us: 私たちについて
       about_leadership: リーダーシップ
@@ -330,6 +379,7 @@ ja:
       about: 概要
       legal: プライバシーと法的事項
       legal_privacy: プライバシー ポリシー
+      legal_cookie_notice: クッキーについての通知
       legal_tos: 利用規約
     user:
       classroom: 先生用ホームページ
@@ -342,6 +392,7 @@ ja:
       signin: サインイン
       signup: アカウントを作る
       already_registered: 既にアカウントをお持ちですか?
+      pair_programming: ペア プログラミング
       team: チーム
       driver: ドライバー
       navigator: ナビゲーター
@@ -371,6 +422,7 @@ ja:
       minecraft_aquatic: 'マインクラフト アクアティック
 
 '
+      minecraft_codebuilder: 'Minecraft: コード接続'
       minecraft_designer: マインクラフト
       minecraft_hero: 'マインクラフト ヒーロー
 
@@ -381,18 +433,19 @@ ja:
 '
       poetry: 詩
       poetry_hoc: 詩のアート
+      scratch: Scratch
       sports: スポーツ
       spritelab: スプライト ラボ
       starwars: スター・ウォーズ
       starwarsblocks: スター ・ ウォーズ (ブロック)
       starwarsblocks_hour: スター ・ ウォーズ (ブロック)
+      thebadguys: バッドガイ
       loading: ロード中...
       weblab: ウェッブ ラボ
       view_all: すべてのプロジェクトを表示...
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: あなたの進捗状況
-      lines: 'コードの行の合計:  %{lines}'
       close: 閉じる
       mastery: アイデア
       puzzle_map: ステージ
@@ -428,6 +481,7 @@ ja:
       worked_with: いっしょにする
       update_lock_settings: ここでロックの設定を更新します。
       clear_response: 明確な応答
+    student_code_view_diabled: このアクティビティの生徒コードは表示できません。
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
     email_confirm_needed_required: あなたのメール アドレス %{email} はまだ確認されていません。
@@ -438,6 +492,7 @@ ja:
     current_password_hint: "(変更を確認するためにあなたの現在のパスワードが必要です)"
     delete: アカウントを削除
     delete_text: 下のボタンをクリックすると、あなたのアカウントが削除されます。
+    delete_text_teacher_managed_note: このアカウントは先生が管理しているため、あなたには削除権限がありません。あなたがアカウントを削除する前に、先生がセクションからあなたを削除しなければなりません。
     delete_text_teacher_note: '注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。'
     delete_confirm: このアカウントを削除しますか？
     deleted_user: 削除されたユーザー
@@ -448,6 +503,7 @@ ja:
     create_personal_login_under_13_username: ユーザー名 (本名を使用しないこと)
     create_personal_login_under_13_parent_email: 親/保護者Eメールアドレス
     create_personal_login_info: 学年が終わったあとも、Code.orgアカウントを使い続ける時は、あなたの個人ログインを作ってください。
+    create_personal_login_link_account: 代わりに [リンクされたアカウントの管理] セクションで個人アカウントに接続することも可能です。
     create_personal_login_terms: 個人ログインを作ることによって、Code.org <a href='%{terms_of_service_url}',
       target='_blank'>利用規約</a>によって拘束されることに同意します。13 歳未満の場合、私の親または保護者人の同意を得て Code.org
       サービスを使用することを確認します。
@@ -460,8 +516,13 @@ ja:
       からメールを受信することはありません。詳細は [プライバシーポリシー](%{privacy_policy_url}) を参照してください。'
     enter_new_login_info: 新しいログイン情報の入力
     confirm_secret_words: 秘密の単語を入力してあなたであることを確認
+    parent_email_label: 親/保護者のメールアドレス (オプション)
+    parent_email_hint: "(これはパスワードの回復に使えます)"
     enter_parent_email: あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。
     update: アカウントを更新
+    account_successfully_updated: アカウントは正常に更新されました。
+    auth_option_saved: あなたの%{provider}アカウントをメール%{email}と正常にリンクしました。
+    auth_option_saved_no_email: あなたは%{provider}アカウントを正常にリンクしました。
     update_email: 更新
     for_parents_and_guardians: 親と保護者向け
     link_a_parent_email: 保護者のメールアドレスをこのアカウントにリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！このメールアドレスをパスワードの回復に使用することもできます。
@@ -509,11 +570,16 @@ ja:
     test_videos_help: 学校で新しいビデオプレイヤーを試す
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: このサイトを教師として使用
+    heading_elementary_markdown: |-
+      ## 20時間コース
+
+      # コンピュータサイエンス入門 (全年齢)
     your_gallery: ギャラリー
     no_primary_course: コード スタジオ でコースを見る
     choose_next_course: Code Studio コースを以下のリストから一つ試す
     print_certificate: 証書を印刷
   certificate_sponsor_message: "%{sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
+  certificate_hour_of_code: Hour of Code（アワー オブ コード）
   move_students:
     new_section_dne: 申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。
     section_code_cant_be_current_section: 現在のセクションを、新しいセクションと同じにすることはできません。
@@ -532,6 +598,7 @@ ja:
     male: 男性
     female: 女性
     non_binary: 非バイナリ
+    not_listed: 希望の用語がリストにありません
     none: 答えたくない
   user_type:
     student: 生徒
@@ -562,6 +629,7 @@ ja:
       GNU LGPL 2.1</a> ライセンスのp5.play を使用しています｡
     powered_by_aws: Powered by Amazon Web Services
     built_on_github: マイクロソフトの GitHub 上に構築
+    google_copyright: "&copy; Google Inc. を許可を得て使用。Google Classroomは、Google Inc.の商標です。"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour
       of Code&reg; は Code.org の商標です"
     copyright: 著作権
@@ -585,6 +653,7 @@ ja:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
     teacher: 答えを見る
+    teacher_no_solution: ソリューションの閲覧を停止
     auth_error: 解答を見る権限がありません
     submit: 制作者の居住地を変更する
     direction: 最初の方向 (度)
@@ -643,23 +712,17 @@ ja:
       body_short: アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。
       audience: 13才以上
       cta: もっと知る
-    dance:
-      title: ダンスパーティー
+    aquatic:
+      title: マインクラフト
     dance-2019:
       title: ダンスパーティー
-    hoc:
-      title: 古典的な迷路
-      body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
+    dance:
+      title: ダンスパーティー
     flappy:
       title: フラッピー コード
       body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
-    20-hour:
-      title: 上級コース
-      body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-      body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
-    hoc2014:
-      try_new_tutorial: ベータ版の新しいHour of Codeのチュートリアルを試す
-      try_frozen: "「アナと雪の女王」から、アナとエルサと一緒のアーティスト"
+    frozen:
+      title: アナと雪の女王
     gallery:
       title: ギャラリー
       body: ユーザーが作成したアプリやアーティストの画像のギャラリーを見る
@@ -668,17 +731,21 @@ ja:
       body: ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。
       audience: 13才以上
       cta: もっと知る
+    hello-world:
+      title: ハローワールド
+      body: 楽しい4テーマから選択して作成した世界のインタラクティブなキャラクターをコーディングしましょう。
+    hero:
+      title: マインクラフト
+      body: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ
     hoc-encryption:
       title: 単純な暗号化
-    weblab:
-      title: Web ラボ (ベータ版)
-      body: Webラボは、HTMLとCSSを使って、シンプルなWebページを作ることができるプログラミング環境です。Webページをデザインして、すぐにあなたのサイトを共有しよう。
-      audience: 13才以上
-      cta: もっと知る
-    frozen:
-      title: アナと雪の女王
-    starwars:
-      title: スター・ウォーズ
+      body: 生徒は、暗号化されたメッセージを作成して解読する方法を学びます。
+    hoc:
+      title: 古典的な迷路
+      body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
+    hoc2014:
+      try_new_tutorial: ベータ版の新しいHour of Codeのチュートリアルを試す
+      try_frozen: "「アナと雪の女王」から、アナとエルサと一緒のアーティスト"
     infinity:
       title: インフィニティ プレイ ラボ
       body: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
@@ -688,31 +755,42 @@ ja:
     minecraft2016:
       title: マインクラフト
       body: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
-    aquatic:
-      title: マインクラフト
-    hero:
-      title: マインクラフト
-      body: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ
+    poem-art:
+      title: 詩のアート
+      body: あなた自身を表現しましょう！コードを使って詩をアニメ化します。
     sports:
       title: スポーツ
       body: バスケットボールゲームや、様々なスポーツの混合競技をつくろう！
+    starwars:
+      title: スター・ウォーズ
     text-compression:
       title: テキスト圧縮
+      body: このレッスンで生徒はテキスト圧縮ウィジェットを使って、パターンを記号に置換してテキストを圧縮します。
+    weblab:
+      title: Web ラボ (ベータ版)
+      body: Webラボは、HTMLとCSSを使って、シンプルなWebページを作ることができるプログラミング環境です。Webページをデザインして、すぐにあなたのサイトを共有しよう。
+      audience: 13才以上
+      cta: もっと知る
+    widgets:
+      title: ウィジェット
+      body: これらのデジタル ツールを使用して、学生は実践的なコンピューターサイエンス入門コースを学ぶことができます。ウィジェットを自分で使うか、クラス向けの共通レッスンを作成します。
+      audience: 14才以上
+      cta: もっと知る
+    unplugged_conditionals:
+      title: 条件
+      body: この「コンピュータを使わない」活動では、1組のトランプを使用して、アルゴリズムと条件文を学習します。
     unplugged:
       title: アンプラグド・レッスン
       audience: 4才以上
       body: クラスで使用するためのアンプラグド・レッスンのリストをまとめました。あなたの教室にコンピューターが有るか否かにかかわらず、コンピューターサイエンスの基礎を教えることができます!
         独立したコースとしても、任意のコンピューターサイエンスの補間的なレッスンとしても使うことができます。
       body_short: クラスにコンピューターが無い場合は、 アンプラグド・レッスンを試してください。
-    unplugged_conditionals:
-      title: 条件
-      body: この「コンピュータを使わない」活動では、1組のトランプを使用して、アルゴリズムと条件文を学習します。
-    widgets:
-      title: ウィジェット
-      body: これらのデジタル ツールを使用して、学生は実践的なコンピューターサイエンス入門コースを学ぶことができます。ウィジェットを自分で使うか、クラス向けの共通レッスンを作成します。
-      audience: 14才以上
-      cta: もっと知る
+    20-hour:
+      title: 上級コース
+      body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
+      body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
   landing:
+    prerelease_tutorial: このチュートリアルは**ベータ版**です。フィードバックによって改善と変更が行われることが想定されます。
     report_bug: バグを報告
     support: 説明を見る
     help_resources: ヘルプとリソース
@@ -737,6 +815,7 @@ ja:
     correct_title: ありがとうございます
     correct_body: 回答していただきありがとうございました。
     hide_survey_last_answer: アンケートは匿名です。 集計結果は先生用のダッシュ ボードを参照してください。 少なくとも 5 人の学生がアンケートに回答した場合のみ、結果が表示されることに注意してください。
+    survey_submission_thankyou: アンケートの提出ありがとうございます！回答が匿名になるようとアンケートがクリアされました。先生はクラス全体の回答を閲覧できますが、名前はその回答に紐付けられていません。
   level_group-submittable:
     wrong_title: ありがとうございます
     wrong_body: 回答していただきありがとうございました。
@@ -769,6 +848,8 @@ ja:
     open_response_body: ご回答ありがとうございます。
     correct_title: 正解
     correct_body: 正解です。
+  lesson_extras:
+    bonus_level: ボーナスレベル
   dialog:
     ok: OK
     startover_title: 本当に最初からやり直してもよいですか？
@@ -782,6 +863,9 @@ ja:
   age_interstitial:
     age: 年齢
     header: アカウント情報の更新
+    warning: 私たちはより強力なプライバシー保護を提供するため、体験を更新するプロセスを進めています。このため既存のユーザーはこちらに年齢を入力してください。
+    disclaimer: code.orgはこの情報を第三者に貸与・販売または共有することは絶対にありません。
+    sign_out_markdown: 年齢を公表したくない場合は、[サインアウト](%{url})してください。
   terms_interstitial:
     title: 最新の利用規約とプライバシー ポリシー
     intro_desc: '下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更:
@@ -797,6 +881,8 @@ ja:
       <a href="%{privacy_url}"target="_blank"> プライバシー ポリシー</a> に同意します。
     accept_label_markdown: わたしは、更新された [サービス利用規約](%{tos_url}) および [プライバシー ポリシー](%{privacy_url})
       に同意します。
+    accept_tos: Code.orgに登録すると、あなたは更新された [サービス利用規約](%{tos_url}) および [プライバシー ポリシー](%{privacy_url})
+      に同意したことになります。
     accept: 同意する
     print: プリント
     reminder_desc: 私たちは <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および <a href="%{privacy_url}"target="_blank">
@@ -865,6 +951,10 @@ ja:
     not_saved: 保存されていません
     view_all: マイプロジェクトを見る
     edit_project: プロジェクトを編集します
+    sharing_disabled: 'このプロジェクトは共有できません。これがあなたのプロジェクトまたはいずれかの生徒のプロジェクトである場合、プロジェクトを表示するには、アカウントに<a
+      href=''https://studio.code.org/users/sign_in''>サインイン</a>してください。
+
+'
     abuse:
       tos: このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。
       policy_violation: このプロジェクトには、他の人と共有できない情報が含まれています。アプリの内容を修正するには、アプリ所有者にお問い合わせください。
@@ -890,14 +980,17 @@ ja:
   peer_review:
     accepted:
       name: 承認済
+      description_markdown: "**はい**、この提出は要件を**満たします**"
     rejected:
       name: 却下
+      description_markdown: "**いいえ**、この提出は要件を**満たしません**"
     escalated:
       name: エスカレート
       description: この提出を評価するためのインストラクターが欲しい
     instructor_feedback: インストラクターからのフィードバック
     peer_feedback: ピア ・ フィードバック
     outdated: このフィードバックは、以前提出したバージョンに追加されました
+    review_count: このユニットの%{review_count}件のレビューを完了してください
     peer_review: ピア ・ レビュー
   external_links:
     disclaimer: 免責事項
@@ -962,44 +1055,140 @@ ja:
     mac: Mac OS X
   locked_stage: このステージはロックされているために、このステージの内容は表示されません。あなたの先生は、作業やあなたの答えを確認する時に、このステージのロックを解除できます。
   hidden_stage: 先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。
+  hidden_script: あなたの先生は、あなたの参加を予想していませんでした。どのユニットに参加すべきか、先生に尋ねてください。
+  no_course_access_student: あなたはこのコースにアクセスできません。先生に受講すべきコースをお尋ねください。
+  no_course_access_teacher: このコースにアクセスできません。このコースへのアクセス権があると思われる場合はsupport@code.orgにメールを送信してコースにアクセスできるようにしてください。
+  no_script_access_student: あなたはこのユニットにアクセスできません。先生に受講すべきユニットをお尋ねください。
+  no_script_access_teacher: このユニットにアクセスできません。このユニットへのアクセス権があると思われる場合はsupport@code.orgにメールを送信してユニットにアクセスできるようにしてください。
+  no_level_access_student: あなたはこのレベルにアクセスできません。先生に受講すべきレベルをお尋ねください。
+  no_level_access_teacher: このレベルにアクセスできません。このレベルへのアクセス権があると思われる場合はsupport@code.orgにメールを送信してレベルにアクセスできるようにしてください。
+  no_exemplar: このレベルには見本がありません。
+  no_exemplar_access_student: 生徒は見本コードにアクセスできません。先生に受講すべきレベルをお尋ねください。
+  no_exemplar_access_teacher: 見本コードにアクセスできるのは、認証済みの先生のみです。認証済みの先生になりたいと場合はsupport@code.orgにお問い合わせください。
   return_unit_overview: ユニットの概要へ
   return_course_overview: コースの概要へ
+  view_all_units: すべてのユニットを表示
   view_teacher_guide: 教師用ガイドを表示
   pd:
     form_labels:
+      first_name: ファーストネーム
+      first_name_preferred: 好きなファーストネーム
+      last_name: 姓
       email: Eメール
+      email_alternate: 'メールアドレス2:'
+      gender: 性別
       school: 学校
       school_name: 学校名
       school_city: 学校の市町村名
       school_city_district: 学校の市/地域
       school_country: 学校のある国
+      school_department_region: 学校種別/地域
       colombian_school_city: 学校の市町村名
+      colombian_chilean_school_department: 学校種別/地域
+      colombian_school_municipality: 学校の地方自治体
       colombian_chilean_school_name: 学校名
+      chilean_school_commune: 'コミューン
+
+'
+      chilean_school_id: スクールID
+      ages: 今年教えている年齢をお答えください。
+      subjects: 今年教えている教科をお答えください。
+      resources: 次のCS教育リソースのうち、どのリソースをお使いですか？
+      robotics: 次のロボットリソースのうち、どのリソースをお使いですか？
+      workshop_organizer: ワークショップ主催者
+      workshop_facilitator: ワークショップファシリテーター
+      workshop_course: ワークショップコース
+      email_opt_in: Code.orgの国際プログラム、コースの更新、その他のコンピュータサイエンスニュースについてメールでお知らせしてもよろしいですか？
+      legal_opt_in: このフォームを送信することにより、あなたはCode.orgおよびプロフェッショナル学習リソースの使用方法に関する情報を、Code.orgがあなたの国、学区、および進行役のCode.org国際パートナーと共有することに同意したことになります。私たちはあなたの連絡先情報、使用しているコース/ユニットおよびクラスに関するデータをこれらのパートナーと共有します。これには、あなたのクラス内の学生数、クラスルームの生徒層内訳、学校名と学区名が含まれます。個々の受講者に関する情報をパートナーと共有することはありません。すべての生徒情報は匿名化された上で集約されます。私たちの国際パートナーおよびファシリテーターには契約上Code.orgと同水準の機密性でこの情報を取り扱う義務があります。
     form_entries:
       gender:
         male: 男性
         female: 女性
         non_binary: 非バイナリ
+        not_listed: 希望の用語がリストにありません
         none: 答えたくない
+      school_country:
+        canada: カナダ
+        chile: チリ
+        colombia: コロンビア
+        israel: イスラエル
+        malaysia: マレーシア
+        mexico: メキシコ
+        thailand: タイ
+        uzbekistan: ウズベキスタン
+      ages:
+        ages_under_6: 6歳未満
+        ages_7_8: 7-8歳
+        ages_9_10: 9-10歳
+        ages_11_12: 11-12歳
+        ages_13_14: 13-14歳
+        ages_15_16: 15-16歳
+        ages_17_18: 17-18歳
+        ages_19_over: 19歳以上
       subjects:
         cs: コンピュータサイエンス
+        ict: ICT
         math: 計算(けいさん)
         science: 科学
+        history: 歴史/社会科
         la: 言語芸術
+        efl: 外国語としての英語
+        music: 音楽
+        art: 芸術
+        other: 'その他:'
+        na: 該当なし
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: カーンアカデミー
         kodable: Kodable
         lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
+        other: その他
+        na: 該当なし
       robotics:
+        grok: グロークラーニング
         kodable: Kodable
+        lego: LEGOエデュケーション
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
         raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: その他
+        na: 該当なし
       workshop_course:
+        csf_af: コンピュータサイエンス（CS）入門 (コースA-F)
+        csf_express: コンピュータサイエンス（CS）入門 (プレエクスプレスまたはエクスプレス)
         csd: コンピューターサイエンス 発展
         csp: コンピューターサイエンス 入門
+        not_applicable: 該当なし
       email_opt_in:
         opt_in_yes: はい
         opt_in_no: いいえ
+    international_opt_in:
+      title: ワークショップへの参加
+      intro: Code.orgカリキュラムのトレーニングを受講してくださりありがとうございます。世界中のすべての学校のすべての子どもたちにコンピュータサイエンス教育の機会を提供するという私たちの使命はあなたがいなければ実現できません。
+      instructions: 以下のフォームに記入して次についてお答えください。1) Code.orgの国際パートナーによるトレーニングワークショップに参加したかどうか。2)
+        コンピュータサイエンスの先生としてのあなたの旅をサポートするため、あなたの国にいる私たちの国際パートナーとあなたの情報を共有することに同意するかどうか。
+      thanks_markdown: 提出ありがとうございます。Code.orgのカリキュラムとツールを理解できるよう、あなたをサポートすることを楽しみにしています。質問やフィードバックは引き続き、[support@code.org](%{support_email_url})または[先生フォーラム](%{teacher_forum_url})に投稿して、私たちにお知らせください。
+      facilitator_not_listed: 私のファシリテーターがリストにいません
+      facilitator_not_applicable: 該当なし
+      organizer_not_listed: 私の主催者がリストにいません
+    logged_out:
+      heading: プロフェッショナル学習プログラムへのご関心ありがとうございます！
+      body: 開始するには、まずCode.orgアカウントにログインしてください。アプリケーション開始前にプログラム詳細を知りたい場合は、<a href="%{url}">プロフェッショナル学習プログラム概要</a>をご覧ください。
+    not_teacher:
+      body_markdown: プロフェッショナル学習プログラムへのご関心ありがとうございます！現在、生徒アカウントにサインインしています。教師アカウントを作成するか、[ユーザー設定に移動](%{user_settings})をクリックして、生徒から先生にアカウントをアップグレードしてください。
+      more_markdown: アプリケーション開始前にプログラム詳細を知りたい場合は、[プロフェッショナル学習プログラム概要](%{pl_overview})をご覧ください。
+    no_teacher_email:
+      body_markdown: アカウントにメールアドレスがありません。このフォームに入力する前に、[アカウント設定](%{user_registration})にアクセスしてメールアドレスを追加してください。
   courses_category: すべてのコース
   cookie_banner:
+    message: このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。
+    more_information: Code.orgのプライバシーポリシーを見る。
     accept: 賛成する
   page_not_found_title: ページが見つかりません
   page_not_found_header: 404:ページが見つかりません
@@ -1007,10 +1196,33 @@ ja:
   page_not_found_button: ホームへ戻る
   copy: コピー
   confirm: 確認
+  maker:
+    google_oauth:
+      login_with_google: GoogleでMakerアプリにログイン
+      enter_code: デフォルトのブラウザでGoogleからログインしたときに表示されるコードを入力してください。
+      copy_code: このコードをコピーしてMakerアプリに貼り付けてCode.orgにログインしてください。
+      error_token_expired: トークンの有効期限が切れています。新しいトークンを取得するには再度ログインしてください。
+      error_wrong_provider: プロバイダーが違います。Googleでログインしていることをご確認ください。
+      error_invalid_user: ユーザーIDが無効です。再度ログインしてください。
+      error_no_code: ログインコードを入力してください。
+      confirm_login: Googleアカウントでログインするには [確認] を選択します。
   parent_email_banner:
     text: "**あなたは親または保護者ですか？**このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
     link_your_email: メールアドレスをリンクさせる
     not_now: 後で
+  behaviors:
+    this_sprite: このSprite
+  unit_prefix: ユニット %{n}
+  code_org_logo_alt: Code.orgホーム
   teacher_feedback: '先生のフィードバック
 
 '
+  lesson_lock:
+    error:
+      no_updates: 実行する更新はありません
+      missing_params: ユーザー、レベルおよびユニットIDを指定する必要があります
+      cannot_view_locked_answers: ロックの間は回答を表示できません
+      forbidden: ユーザーは生徒のロック可能ステータスを更新できません
+  reset_predict_progress_button: 回答を削除
+  pixelation:
+    binary: ２しんすう

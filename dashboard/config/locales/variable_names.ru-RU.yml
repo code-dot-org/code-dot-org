@@ -3,47 +3,105 @@ ru:
   data:
     variable_names:
       "???": "???\n"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
       Blue: Синий
       Green: Зеленый
       Red: Красный
       actor: персонаж
+      adjective: adjective
       age: возраст
+      animal1score: animal1score
+      animal1speed: animal1speed
+      animal2score: animal2score
+      animal2speed: animal2speed
       answer: ответ
+      armlength: armlength
       binary: двоичный
       birds: птицы
       bit: бит
+      blue1: blue1
+      blue2: blue2
+      body-part: body-part
+      bodylength: bodylength
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
       cats: кошки
+      centerToPadLeft: centerToPadLeft
       choice: выбор
+      circ: circ
+      codeName: codeName
       color: цвет
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
       counter: счетчик
+      counter2: counter2
+      currentActor: currentActor
       direction: направление
+      dog_score: dog_score
+      dog_speed: dog_speed
       dogs: все собаки
       dragons: драконы
+      enemy_speed: enemy_speed
       energy: энергия
+      firstName: firstName
+      footlength: footlength
       gather: собирать
+      green1: green1
+      green2: green2
       guess: угадать
       height: высота
       honey: мед
       i: Я
       left: влево
+      legangle: legangle
+      leglength: leglength
       length: длина
       level: уровень
+      marginX: marginX
+      marginY: marginY
       meal: еда
+      myName: myName
       name: наименование
       nectar: нектар
       nectars: нектары
+      number: number
+      object: Объекта
+      padYOffset: padYOffset
+      parts: parts
       planet: планета
+      player_score: player_score
       points: очки
+      punchLine: punchLine
       random: случайный
+      red1: red1
+      red2: red2
       repeat: повторить
       repetitions: повторы
       right: вправо
       score: очки
+      score1: score1
+      score2: score2
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: set sides
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: кричать
       sides: стороны
       size: размер
       speed: скорость
+      startX: startX
+      startY: startY
+      stopped-left: stopped-left
+      time: time
+      type: тип
       variable: переменная
       width: ширина
       wizard: волшебник
       x: x
+      your var 1: ваша переменная 1
+      your var 2: ваша переменная 2

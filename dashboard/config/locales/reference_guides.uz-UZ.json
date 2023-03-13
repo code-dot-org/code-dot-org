@@ -1,0 +1,131 @@
+{
+  "uz-UZ": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/accelerometer-events": {
+          "display_name": "Akselerometr hodisalari"
+        },
+        "csd-2022/ai-lab": {
+          "display_name": "AI Lab"
+        },
+        "csd-2022/analog-sensors": {
+          "display_name": "Analog Sensorlar"
+        },
+        "csd-2022/app-lab": {
+          "display_name": "Ilovalar laboratoriyasi"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/arrays": {
+          "display_name": "Massivlar"
+        },
+        "csd-2022/board-events": {
+          "display_name": "Board Events"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "display_name": "Sensor Shkalasini o'zgartirish"
+        },
+        "csd-2022/classes": {
+          "display_name": "Sinflar"
+        },
+        "csd-2022/creative-commons-search": {
+          "display_name": "Creative Commons Qidiruv"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/design-mode": {
+          "display_name": "Design Mode"
+        },
+        "csd-2022/for-loops": {
+          "display_name": "For sikllari"
+        },
+        "csd-2022/formatting-html": {
+          "display_name": "HTML-da formatlash"
+        },
+        "csd-2022/functions": {
+          "display_name": "Funksiyalar"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "O‘yin laboratoriyasi"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/headings-and-paragraphs": {
+          "display_name": "Sarlavha va paragraflar"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/html-tags": {
+          "display_name": "HTML Teglar"
+        },
+        "csd-2022/hyperlinks": {
+          "display_name": "Giperhavolalar"
+        },
+        "csd-2022/images-in-html": {
+          "display_name": "HTMLda rasmlar"
+        },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "6-dars"
+        },
+        "csd-2022/javascript": {
+          "display_name": "JavaScript"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/layout-properties": {
+          "display_name": "Maket (Layout) xususiyatlari"
+        },
+        "csd-2022/lists": {
+          "display_name": "Ro‘yxatlar"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Maker asboblar to‘plami"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/other": {
+          "display_name": "Boshqa"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "Overview"
+        },
+        "csd-2022/physical-input": {
+          "display_name": "Physical Input"
+        },
+        "csd-2022/playing-notes": {
+          "display_name": "Notalarni ijro etish"
+        },
+        "csd-2022/random-numbers": {
+          "display_name": "Tasodifiy sonlar"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Sprait hususiyatlari"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Spraytlar"
+        },
+        "csd-2022/variables": {
+          "display_name": "O‘zgaruvchilar"
+        },
+        "csd-2022/velocity": {
+          "display_name": "Tezlik"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
+        },
+        "csd-2022/which-type-of-chart": {
+          "content": "\\[] [0]"
+        }
+      }
+    }
+  }
+}

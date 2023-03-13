@@ -2,189 +2,26 @@
   "sl-SI": {
     "data": {
       "lessons": {
-        "dance-extras/Dance Party - Go Further": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "minecraft/Minecraft Hour of Code Designer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hero/Minecraft Hour of Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "poem-art-2021/Poem Art": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
+          "name": "Minecraft Ura za kodo Oblikovalec"
         },
         "flappy/Flappy Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Program za Plahutača (Flappyja)"
         },
         "hourofcode/Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Labirint"
         },
         "frozen/Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "iceage/Ice Age Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hello-world-emoji-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Frozen (Ledeno kraljestvo) z Ano in Elso"
         },
         "artist/Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "gumball/Gumball Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "dance/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hello-world-food-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "aquatic/Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hello-world-animals-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "starwars/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Umetnik"
         },
         "mc/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Minecraft Ura za kodo"
         },
         "playlab/Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "applab-intro/Intro to App Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hello-world-retro-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "starwarsblocks/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "sports/Sports": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "basketball/Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "dance-extras-2019/Dance Party - Go Further": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "dance-2019/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "oceans/Oceans": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hello-world-food/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "poem-art/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
+          "name": "Play Lab"
         },
         "outbreak/Outbreak": {
           "overview": "",
@@ -192,823 +29,659 @@
           "purpose": "",
           "student_overview": ""
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Zanke"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Dogodki"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Pogoji"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Spremenljivke"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Osnove Računalništva"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Osnove Računalništva"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Premakni se, premakni"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "csd3-2022/Variables": {
+          "name": "Spremenljivke"
+        },
+        "csd3-2022/Text": {
+          "name": "Besedilo"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Pogoji"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funkcije"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Premakni se, premakni"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Kako varno potovati"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "coursed-2018/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "coursed-2018/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Digitalno državljanstvo"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Binarne slike"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Spremeljivke v ovojnicah"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Spremeljivke v ovojnicah"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Binarne slike"
+        },
+        "express-2018/Internet": {
+          "name": "Internet"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Premakni se, premakni"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Čebelica črkuje besede"
+        },
+        "csd3-2018/Variables": {
+          "name": "Spremenljivke"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Pogoji"
+        },
+        "csd3-2018/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funkcije s parametri"
+        },
+        "csd2-2018/Lists": {
+          "name": "Seznami"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Kako varno potovati"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Premakni se, premakni"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Binarne slike"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Digitalno državljanstvo"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Spremeljivke v ovojnicah"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internet"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Čebelica črkuje besede"
+        },
+        "csd3-2019/Variables": {
+          "name": "Spremenljivke"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Pogoji"
+        },
+        "csd3-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Funkcije s parametri"
+        },
+        "csd2-2019/Lists": {
+          "name": "Seznami"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Življenjski algoritmi: Zasadi seme"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Življenjski algoritmi: Zasadi seme"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Čebelica črkuje besede"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Gnezdenje zank"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Življenjski algoritmi: Papirnata letala"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Življenjski algoritmi: Zasadi seme"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Gnezdenje zank"
+        },
+        "express-2017/Introduction": {
+          "name": "Uvod"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Gnezdenje zank"
+        },
+        "csd3-2017/Variables": {
+          "name": "Spremenljivke"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Pogoji"
+        },
+        "csd3-2017/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funkcije s parametri"
+        },
+        "csd2-2017/Lists": {
+          "name": "Seznami"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Brez prijave: Tangrami"
+        },
+        "course4/Maze and Bee": {
+          "name": "Labirint in čebelica"
+        },
+        "course4/Artist": {
+          "name": "Umetnik"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Brez prijave: Spremenljivke v ovojnicah"
+        },
+        "course4/Artist: Variables": {
+          "name": "Umetnik: spremenljivke"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Play Lab: spremenljivke"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Brez prijave: Zabava s \"For\" zankami "
+        },
+        "course4/Bee: For Loops": {
+          "name": "Čebelica: \"For\" zanke"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Umetnik: \"For\" zanke"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Play Lab: \"for\" zanke"
+        },
+        "course4/Artist: Functions": {
+          "name": "Umetnik: Funkcije"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Brez prijave: Pisanje pesmi s parametri"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Umetnik: Funkcije s parametri"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Play Lab: funkcije s parametri"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Čebelica: Funkcije s parametri"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Brez prijave: Binarno"
+        },
+        "course4/Artist Binary": {
+          "name": "Umetnik Binarno"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "Uvod v računalništvo"
+        },
+        "20-hour/The Maze": {
+          "name": "Labirint"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "Računalniško razmišljanje"
+        },
+        "20-hour/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "20-hour/The Artist": {
+          "name": "Umetnik"
+        },
+        "20-hour/Algorithms": {
+          "name": "Algoritmi"
+        },
+        "20-hour/The Artist 2": {
+          "name": "Umetnik 2"
+        },
+        "20-hour/Functions": {
+          "name": "Funkcije"
+        },
+        "20-hour/The Farmer": {
+          "name": "Kmetovanje"
+        },
+        "20-hour/Conditionals": {
+          "name": "Pogoji"
+        },
+        "20-hour/The Artist 3": {
+          "name": "Umetnik 3"
+        },
+        "20-hour/Song Writing": {
+          "name": "Pisanje pesmi"
+        },
+        "20-hour/The Farmer 2": {
+          "name": "Kmetovanje 2"
+        },
+        "20-hour/Abstraction": {
+          "name": "Abstrakcija"
+        },
+        "20-hour/The Artist 4": {
+          "name": "Umetnik 4"
+        },
+        "20-hour/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "20-hour/The Farmer 3": {
+          "name": "Kmetovanje 3"
+        },
+        "20-hour/The Internet": {
+          "name": "Internet"
+        },
+        "20-hour/The Artist 5": {
+          "name": "Umetnik 5"
+        },
+        "20-hour/Wrap-up": {
+          "name": "Povzetek"
+        },
+        "course2/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Življenjski algoritmi: Papirnata letala"
+        },
+        "course2/Maze: Sequence": {
+          "name": "Labirint: zaporedje"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Umetnik: Zaporedje"
+        },
+        "course2/Maze: Loops": {
+          "name": "Labirint: Zanke"
+        },
+        "course2/Artist: Loops": {
+          "name": "Umetnik: Zanke"
+        },
+        "course2/Bee: Loops": {
+          "name": "Čebelica: Zanke"
+        },
+        "course2/Relay programming": {
+          "name": "Relejsko programiranje"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Čebelica: Razhroščevanje"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Umetnik: Razhroščevanje"
+        },
+        "course2/Conditionals": {
+          "name": "Pogoji"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Čebelica: Pogoji"
+        },
+        "course2/The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "course2/Flappy": {
+          "name": "Flappy"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Play Lab: ustvari zgodbo"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Umetnik: Ugnezdene zanke"
+        },
+        "course3/Computational Thinking": {
+          "name": "Računalniško razmišljanje"
+        },
+        "course3/Maze": {
+          "name": "Labirint"
+        },
+        "course3/Artist": {
+          "name": "Umetnik"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "Funkcionalni lovilci svetlobe"
+        },
+        "course3/Artist: Functions": {
+          "name": "Umetnik: Funkcije"
+        },
+        "course3/Bee: Functions": {
+          "name": "Čebelica: Funkcije"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Čebelica: Pogoji"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Labirint: Pogoji"
+        },
+        "course3/Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "course3/Artist: Nested Loops": {
+          "name": "Umetnik: Ugnezdene zanke"
+        },
+        "course3/Farmer: While Loops": {
+          "name": "Kmet: Zanka dokler velja"
+        },
+        "course3/Bee: Nested Loops": {
+          "name": "Čebelica: Ugnezdene zanke"
+        },
+        "course3/Bee: Debugging": {
+          "name": "Čebelica: Razhroščevanje"
+        },
+        "course3/Bounce": {
+          "name": "Skokica"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Play Lab: ustvari zgodbo"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Play Lab: ustvari igrico"
+        },
+        "course3/Internet": {
+          "name": "Internet"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Digitalno državljanstvo"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Umetnik: Vzorci"
+        },
+        "course1/Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "course1/Move it, Move it": {
+          "name": "Dajmo, dajmo"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Sestavljanka: Naučiti se programirati na način \"povleci in spusti\""
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirint: zaporedje"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirint: odpravljanje napak"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Življenjski algoritmi: Zasadi seme"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Čebelica: Zaporedje"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Umetnik: Zaporedje"
+        },
+        "course1/Building a Foundation": {
+          "name": "Graditi temelje"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Umetnik: Oblike"
+        },
+        "course1/Spelling Bee": {
+          "name": "Čebelica črkuje besede"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirint: Zanke"
+        },
+        "course1/Bee: Loops": {
+          "name": "Čebelica: Zanke"
+        },
+        "course1/The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: ustvari zgodbo"
+        },
+        "course1/Going Places Safely": {
+          "name": "Kako varno potovati"
+        },
+        "course1/Artist: Loops": {
+          "name": "Umetnik: Zanke"
+        },
         "jigsaw/Jigsaw": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Sestavljanka"
         },
-        "coursef-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "allthethings/Jigsaw": {
+          "name": "Sestavljanka"
         },
-        "coursef-2021/lesson-7": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "allthethings/Maze": {
+          "name": "Labirint"
         },
-        "coursef-2021/lesson-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "allthethings/Artist": {
+          "name": "Umetnik"
         },
-        "coursef-2021/Virtual Pet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "coursef-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "allthethings/Bounce": {
+          "name": "Skokica"
         },
-        "coursef-2021/lesson-9": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/lesson-10": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/lesson-11": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/Variables that Change in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/Nested Loops in the Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/Variables that Change in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "coursef-2021/For Loop Fun": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/For Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/For Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/Simulating Experiments": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/AI for Oceans": {
-          "overview": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Zabava s \"for\" zankami"
         },
         "coursef-2021/Internet": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursef-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Digital Trails": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Internet"
         },
         "courseb-2021/Move It, Move It": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Sequencing in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/The Right App": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Premakni se, premakni"
         },
         "coursea-2021/Programming: Happy Maps": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops: Happy Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursea-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Debugging in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Veseli zemljevidi"
         },
         "coursec-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Picturing Data": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Binary Bracelets": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-5": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Veliki dogodek"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Obarvajmo kvadratke"
         },
         "coursed-2021/Relay Programming": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Debugging in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Events in Bounce": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Relejsko programiranje"
         },
         "coursed-2021/Conditionals with Cards": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/lesson-6": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Conditionals in Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/While Loops in Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursed-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Programming with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Debugging with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Collecting Treasure with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Creating Art with Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Swimming Fish in Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-2": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-3": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Virtual Pet with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Nested Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Snowflakes with Anna and Elsa": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Looking Ahead with Minecraft ": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/If/Else with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/While Loops with the Farmer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Until Loops in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Harvesting with Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Functions with Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Variables with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/Changing Variables with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Bee": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/For Loops with Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "express-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Learn to Drag and Drop": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Drawing Gardens with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/On the Move with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/A Royal Battle with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Simon Says": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Learning Sprites with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Alien Dance Party with Sprite Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/lesson-4": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Private and Personal Information": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/About Me": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Digital Sharing": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Programming and Loops with the Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursee-2021/Nested Loops in Frozen": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Pogojniki s kartami"
         },
         "coursee-2021/Functions: Songwriting": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Napiši pesem"
         },
-        "coursee-2021/Functions in Minecraft": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd6-2021/Functions with Parameters": {
+          "name": "Funkcije s parametri"
         },
-        "coursee-2021/Functions in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Variables": {
+          "name": "Spremenljivke"
         },
-        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Text": {
+          "name": "Besedilo"
         },
-        "coursee-2021/Conditionals": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Conditionals": {
+          "name": "Pogoji"
         },
-        "coursee-2021/Functions in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2021/Functions": {
+          "name": "Funkcije"
         },
-        "coursee-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "courseb-2020/Move It, Move It": {
+          "name": "Premakni se, premakni"
         },
-        "coursee-2021/End of Course Project": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binarne slike"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Veliki dogodek"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Spremeljivke v ovojnicah"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internet"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Zabava s \"for\" zankami"
         }
       }
     }

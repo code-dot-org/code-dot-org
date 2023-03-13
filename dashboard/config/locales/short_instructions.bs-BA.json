@@ -17,7 +17,7 @@
         "2-3 Bee Loops 2A": "Možeš li izvršiti isti zadatak na lakši način pomoću petlje?",
         "2-3 Bee Loops 3A": "Možeš li upotrijebiti petlju da sakupiš sav nektar?",
         "2-3 Maze 10": "Vodi me do zelene zloće! (Pazi se TNT-a)",
-        "2-3 Maze 2": "Svinja mi je nakostriješila perje. Pomozi mi da dođem do nje!",
+        "2-3 Maze 2": "Vodi me do zelene zloće! (Pazi se TNT-a)",
         "2-3 Maze 4": "Vodi me do zelene zloće! (Pazi se TNT-a)",
         "2-3 Maze 6": "Smiri se i pomozi mi da nađem nevaljalu svinju. Inače ću se naljutiti!",
         "2-3 Maze 7": "Vodi me do zelene zloće! (Pazi se TNT-a)",
@@ -276,7 +276,19 @@
         "CourseD_Dance_2020_05_2021": "Sada napravi da plesač započne novi pokret svako 6 taktova!",
         "CourseD_Dance_2020_bonus3_2021": "Uspostavimo formaciju! (Klikni \"Opširnije\" za više detalja)",
         "courseD_maze_nestedLoops4_2021": "Dovedi me do suncokreta!",
-        "courseD_maze_nestedLoops6_2021": "Dovedi me do suncokreta!"
+        "courseD_maze_nestedLoops6_2021": "Dovedi me do suncokreta!",
+        "2-3 Maze 1": "Vodi me do zelene zloće! (Pazi se TNT-a)",
+        "2-3 Maze 3": "Smiri se i pomozi mi da nađem nevaljalu svinju. Inače ću se naljutiti!",
+        "allthethings-anigif-instructions": "Pokreni me ka Istoku da bi me doveo/la do svinje!",
+        "CourseD_Dance_2020_052022": "Sada napravi da plesač započne novi pokret svako 6 taktova!",
+        "CourseD_Dance_2020_bonus32022": "Uspostavimo formaciju! (Klikni \"Opširnije\" za više detalja)",
+        "CourseD_Dance_2022_lessonextra": "Uspostavimo formaciju! (Klikni \"Opširnije\" za više detalja)",
+        "CourseD_Dance_2022_lessonextra10b": "Uspostavimo formaciju! (Klikni \"Opširnije\" za više detalja)",
+        "courseC_artist_prog52022": "Ova kuća treba krov! Nacrtaj trokut. Savjet: sve tri stranice su iste dužine.",
+        "courseD_bee_nestedLoops82022": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
+        "courseD_maze_nestedLoops42022": "Dovedi me do suncokreta!",
+        "courseD_maze_nestedLoops62022": "Dovedi me do suncokreta!",
+        "courseF_bee_for82022": "Ako tvoja petlja broji prema gore, prirast je dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi sakupio/la 3, 6, 9 nektara?\\\r"
       }
     }
   }

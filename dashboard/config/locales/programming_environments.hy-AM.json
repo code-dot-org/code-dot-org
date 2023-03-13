@@ -1,0 +1,159 @@
+{
+  "hy-AM": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Գույնը"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Գույնը"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Մաթեմատիկա",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    },
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    },
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            },
+            "functions": {
+              "name": "գործառույթները"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps. Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Ֆունկցիա"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Ֆունկցիա"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Ֆունկցիա"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Մաթեմատիկա",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    },
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    },
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            },
+            "functions": {
+              "name": "գործառույթները"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "գործողություններ"
+            },
+            "events": {
+              "name": "Իրադարձություններ"
+            },
+            "loops": {
+              "name": "loops"
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            },
+            "math": {
+              "name": "Մաթեմատիկա"
+            },
+            "logic": {
+              "name": "տրամաբանություն"
+            },
+            "functions": {
+              "name": "գործառույթները"
+            },
+            "text": {
+              "name": "տեքստ"
+            }
+          }
+        }
+      }
+    }
+  }
+}

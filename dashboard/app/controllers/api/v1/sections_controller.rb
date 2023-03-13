@@ -1,4 +1,4 @@
-class Api::V1::SectionsController < Api::V1::JsonApiController
+class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
@@ -20,7 +20,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Get the set of sections owned by the current user
   def index
     prevent_caching
-    render json: current_user.sections.map(&:summarize)
+    render json: current_user.sections.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
@@ -45,13 +45,20 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
     end
 
+    # If the new grades field exists, it takes precedence.
+    grades = if Section.valid_grades?(params[:grades] || [])
+               params[:grades]
+             elsif Section.valid_grades?([params[:grade].to_s])
+               [params[:grade].to_s]
+             end
+
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         participant_type: params[:participant_type],
-        grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
+        grades: grades,
         script_id: @unit&.id,
         course_id: @course&.id,
         lesson_extras: params['lesson_extras'] || false,
@@ -87,7 +94,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
-    fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
+    fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
+    # If the new grades field exists, it takes precedence.
+    fields[:grades] = params[:grades] if Section.valid_grades?(params[:grades] || [])
     fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
@@ -196,11 +205,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     participant_types =
       if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
       elsif current_user.permission?(UserPermission::FACILITATOR)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
       else
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
       end
 
     render json: {availableParticipantTypes: participant_types}
@@ -248,7 +257,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {result: 'success'}
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
-    render json: {result: 'invalid groups'}, status: 400
+    render json: {result: 'invalid groups'}, status: :bad_request
   end
 
   # POST /api/v1/sections/<id>/code_review_enabled
@@ -277,16 +286,17 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      if course_version.content_root_type == 'UnitGroup'
+      case course_version.content_root_type
+      when 'UnitGroup'
         course_id = course_version.content_root_id
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Script'
+      when 'Unit'
         unit_id = course_version.content_root_id
-        @unit = Script.get_from_cache(unit_id)
+        @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit
         return head :forbidden unless @unit.course_assignable?(current_user)
       end

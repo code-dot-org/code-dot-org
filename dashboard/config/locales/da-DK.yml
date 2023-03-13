@@ -39,6 +39,7 @@ da:
           har en e-mailadresse)](%{url})
         username: brugernavn
         password: Adgangskode
+        verified_teacher: Verificeret lærer
         password_confirmation: Bekræft adgangskode
         current_password: Nuværende adgangskode
         locale: Sprog
@@ -67,6 +68,7 @@ da:
   previous_page: Forrige side
   next_page: Næste side
   next_resource: Næste ressource
+  done_with_module: Færdig med dette læringsmodul
   cancel: Annuller
   okay: Okay
   or: eller
@@ -212,7 +214,15 @@ da:
     user_type_button: Opdater kontotype
     user_type_label: Kontotype
     user_type_student: Elev
+    user_type_student_desc: Udforsk alle vores kurser og aktiviteter, plus
+    user_type_student_ability_1: Gem dine fremskridt og projekter
+    user_type_student_ability_2: Deltag i din lærers klasse
     user_type_teacher: Lærer
+    user_type_teacher_desc: Alt hvad eleverne har adgang til, plus
+    user_type_teacher_ability_1: Opret sektioner i klassen
+    user_type_teacher_ability_2: Tildel og følg med i elevernes arbejde
+    user_type_teacher_ability_3: Tilmeld dig professionel læring
+    user_type_teacher_ability_4: Deltag på vores lærerforum
     field_is_required: er påkrævet
     accept_terms: Du skal acceptere at oprette en konto
     error: Der opstod en fejl.
@@ -222,6 +232,10 @@ da:
     email_preference_yes: Ja
     email_preference_no: Nej
     email_preference_required: Du skal angive en e-mail adresse.
+    share_teacher_email_reg_partner_question: 'Ønsker du at vi deler dine kontaktoplysninger
+      med [Code.org regional partner](%{cdo_regional_partner_desc}) i dit område,
+      så de kan underrette dig om lokale faglige udviklings muligheder, ressourcer
+      og begivenheder? '
     share_teacher_email_reg_partner_preference_yes: Ja
     share_teacher_email_reg_partner_preference_no: Nej
     share_teacher_email_reg_partner_preference_required: Du skal angive en e-mail
@@ -304,6 +318,7 @@ da:
   teacher_mailer:
     new_teacher_subject: Velkommen til Code.org!
     delete_teacher_subject: 'Code.org notifikation: Din konto er blevet slettet'
+    verified_teacher_subject: Code.org Lærer Verifikation - Succes
   section:
     your_section:
       one: 'Din afdeling:'
@@ -321,6 +336,8 @@ da:
     invite_sent: Invitation sendt
     added_teacher: "%{name} er tilføjet som din lærer"
     registered: Du er registreret til %{section_name}.
+    captcha_required: 'Udfyld denne CAPTCHA for at deltage i dette afsnit. '
+    already_exists: Du har allerede tilmeldt dig denne sektion %{section_name}.
     error:
       signed_in: Log ud inden du fortsætter
       username_not_found: Brugernavn %{username} blev ikke fundet
@@ -334,6 +351,12 @@ da:
       provider_managed_section: Denne sektion er styret af en anden udbyder og derfor
         kan ikke tilsluttes. Spørg venligst din lærer om, at tilføje dig via %{provider}
         og synkroniser igen deres sektion.
+      restricted_section: 'Vi kunne ikke tilføje dig denne sektion %{section_code}
+        fordi den er låst. Kontakt din lærer for hjælp. '
+      full_section: 'Vi kunne ikke tilføje dig til sektion %{section_code} fordi der
+        allerede er %{section_capacity} elever i den. Kontakt din lærer for hjælp. '
+      not_participant_type: 'Vi kunne ikke tilføje dig sektion %{section_code} fordi
+        du ikke opfylder deltagertypen for sektionen. '
     mail:
       student_disassociated:
         subject: 'Code.org besked: %{student_name} er ikke længere tilknyttet som
@@ -375,6 +398,7 @@ da:
       report_bug: Rapporter fejl
       teacher_community: Lærer-fælleskab
       professional_learning: Professional learning
+      web_lab_documentation: Web Lab Dokumentation
       educate_overview: Oversigt for undervisere
       educate_elementary: Grundskole
       educate_middle: Grundskole (mellemtrin/udskoling)
@@ -445,7 +469,6 @@ da:
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
-      lines: 'Total linjer kode: %{lines}'
       close: LUK
       mastery: Begreber
       puzzle_map: Etaper
@@ -480,6 +503,7 @@ da:
       worked_with: Samarbejdede med
       update_lock_settings: Opdater låsningsindstillinger her.
       clear_response: Klar feedback
+    student_code_view_diabled: 'Elevkoden kan ikke ses for denne aktivitet. '
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -500,6 +524,7 @@ da:
     deleted_user: slettet bruger
     no_password_because_oauth: Ingen adgangskode, fordi du tilmeldte dig ved brug
       af en tredjepartsudbyder.
+    no_password_because_sponsored: 'Kontakt din lærer for at administrere din adgangskode. '
     create_personal_login: 'Lav et personligt kodeords-login
 
 '
@@ -529,6 +554,8 @@ da:
       epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå
       våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
     enter_new_login_info: Indtast dit nye log-in information
+    confirm_secret_words: Bekræft at det er dig ved at indtaste dine nuværende hemmelige
+      ord
     parent_email_label: 'Forælderens eller værgens e-mail (valgfrit) '
     parent_email_hint: "(det her kan bruges til genopretning af adgangskode)"
     enter_parent_email: Indtast dine forældres eller din værges e-mailadresse (til
@@ -602,6 +629,7 @@ da:
     no_primary_course: Prøv et kursusforløb på Code Studio
     choose_next_course: Prøv en Code Studio kursus ved at vælge en nedenfor
     print_certificate: Udskriv certifikat
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Beklager, men sektionen %{new_section_code} findes ikke. Indtast
       venligst en anden sektionskode.
@@ -749,26 +777,18 @@ da:
         til at virke, og så derefter del din app på få sekunder.
       audience: Alder 13+
       cta: Lær hvordan
-    dance:
-      title: Dance Party
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Dance Party
-    hoc:
-      title: Klassisk labyrint
-      body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
+    dance:
+      title: Dance Party
     flappy:
       title: Flappy kode
       body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy
         kode undervisning!
-    20-hour:
-      title: Accelereret kursus
-      body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering
-        begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det
-        er sjovt at lære i alle aldre.
-      body_short: Lær grundlæggende datalogi i en accelereret version af kurser 2-4.
-    hoc2014:
-      try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
-      try_frozen: Kunstner med Anna og Elsa, fra Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galleri
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
@@ -778,17 +798,18 @@ da:
         og spil med genstande og figurer, der interagere med hinanden.
       audience: Alder 13+
       cta: Lær hvordan
+    hero:
+      title: Minecraft
+      body: Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En
+        rejse gennem Minecraft ved hjælp af kode.
     hoc-encryption:
       title: Enkel kryptering
-    weblab:
-      body: Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved
-        at bruge HTML og CSS. Design dine websider og del din side på få sekunder.
-      audience: Alder 13+
-      cta: Lær hvordan
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klassisk labyrint
+      body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
+    hoc2014:
+      try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
+      try_frozen: Kunstner med Anna og Elsa, fra Frozen
     infinity:
       title: Infinity Play Lab
       body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra
@@ -799,19 +820,26 @@ da:
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-væsner i din egen udgave af Minecraft.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En
-        rejse gennem Minecraft ved hjælp af kode.
-    unplugged:
-      audience: Alder 4+
-    unplugged_conditionals:
-      title: Betingelser
+    starwars:
+      title: Star Wars
+    weblab:
+      body: Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved
+        at bruge HTML og CSS. Design dine websider og del din side på få sekunder.
+      audience: Alder 13+
+      cta: Lær hvordan
     widgets:
       audience: I alderen 14+
       cta: Lær hvordan
+    unplugged_conditionals:
+      title: Betingelser
+    unplugged:
+      audience: Alder 4+
+    20-hour:
+      title: Accelereret kursus
+      body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering
+        begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det
+        er sjovt at lære i alle aldre.
+      body_short: Lær grundlæggende datalogi i en accelereret version af kurser 2-4.
   landing:
     report_bug: Rapporter fejl
     support: Få hjælp
@@ -894,10 +922,6 @@ da:
       for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer
       dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg
       for dine elevar før dei oppdaterte vilkåre er akseptert.
-  donor_interstitial:
-    title: Dine gratis datalogikurser er blevet muliggjort af...
-    support_codeorg_2: "[Doner nu](%{donate_url}) for at støtte Code.org."
-    get_started: Kom i gang med Code.org
   school_info_interstitial:
     save: Gem
   race_interstitial:
@@ -1095,12 +1119,15 @@ da:
         math: Matematik
         science: Videnskab
         la: Sprog kunst
+        other: Andre
       resources:
         bootstrap: Bootstrap
         khan: Khan Academy
         kodable: Kodable
+        other: Andre
       robotics:
         kodable: Kodable
+        other: Andre
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej
@@ -1117,3 +1144,5 @@ da:
     not_now: Ikke nu
   behaviors:
     this_sprite: denne figur
+  pixelation:
+    binary: Binære

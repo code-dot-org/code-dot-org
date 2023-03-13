@@ -5,32 +5,54 @@ vi:
   language: Tiếng Việt
   front_title: Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}
   coming_soon: Sắp diễn ra
-  campaign_date_start_short: 6 tháng Mười Hai
-  campaign_date_start_long: 6 Tháng Mười Hai
-  campaign_date_short: Tháng 12 Ngày 5-11
-  campaign_date_full: Tháng 12 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: Tháng 12 6-12, 2021
+  campaign_date_start_short: Ngày 5 tháng 12
+  campaign_date_start_long: Ngày 6 tháng 12
+  campaign_date_short: Ngày 5-11 tháng 12
+  campaign_date_full: Ngày 5-11 tháng 12
+  campaign_date_year: '2022'
+  campaign_date_full_year: Ngày 5-11 tháng 12 năm 2022
+  nonus_campaign_date_start_short: ngày 1 tháng 10
+  nonus_campaign_date_start_long: 'ngày 1 tháng 10
+
+'
+  nonus_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  nonus_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
   latam_campaign_date_start_short: ngày 1 tháng 10
   latam_campaign_date_start_long: 'ngày 1 tháng 10
 
 '
-  latam_campaign_date_short: ngày 1 tháng 10 - ngày 12 tháng 12
-  latam_campaign_date_full: ngày 1 tháng 10 - ngày 12 tháng 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: ngày 1 tháng 10 năm 2021 - ngày 12 tháng 12 năm 2021
-  europe_campaign_date_start_short: 6 tháng Mười Hai
-  europe_campaign_date_start_long: 6 Tháng Mười Hai
-  europe_campaign_date_short: Tháng 12 Ngày 5-11
-  europe_campaign_date_full: Tháng 12 6-12
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: Tháng 12 6-12, 2021
-  africa_campaign_date_start_short: 6 tháng Mười Hai
-  africa_campaign_date_start_long: 6 Tháng Mười Hai
-  africa_campaign_date_short: Tháng 12 Ngày 5-11
-  africa_campaign_date_full: Tháng 12 6-12
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: Tháng 12 6-12, 2021
+  latam_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  latam_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
+  europe_campaign_date_start_short: Ngày 1 tháng 10
+  europe_campaign_date_start_long: Ngày 1 tháng 10
+  europe_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  europe_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
+    2022
+  africa_campaign_date_start_short: Ngày 1 tháng 10
+  africa_campaign_date_start_long: 'Ngày 1 tháng 10
+
+'
+  africa_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  africa_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
+    2022
+  hoc2022_header: Khám phá, vui chơi, sáng tạo!
+  social_hoc2022_explore_play_create: Sử dụng khoa học máy tính để khám phá, vui chơi
+    và sáng tạo!
+  codeorg_homepage_hoc2022_body: Khám phá vũ trụ, ghi điểm, khoe vũ đạo — có rất nhiều
+    cách để thử nghiệm khoa học máy tính.
+  hoc2022_codeorg_title: Hãy ăn mừng Giờ lập trình cùng NASA và hơn thế nữa
+  hoc2022_codeorg_description: Giờ lập trình lần thứ 10 đã bắt đầu rồi bạn ơi! Hãy
+    cùng chúng tôi khám phá, vui chơi và sáng tạo nhé.
+  social_hoc2022_dance: Với sự góp mặt của Beyoncé, Harry Styles, Lizzo, Lil Nas X,
+    Selena Gomez, âm nhạc từ “Encanto” của Disney và nhiều nghệ sĩ khác!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Học lập trình hôm nay, xây dựng tươi lai tươi sáng hơn ngày mai.
@@ -143,6 +165,10 @@ vi:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Giờ lập trình trực tiếp
   hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
   hoc_live_learn_title: Học với Giờ lập trình trực tiếp
@@ -167,6 +193,11 @@ vi:
     bài học này, các lớp học có thể trải nghiệm những môn học thông thường theo những
     cách mới thú vị!
   hoc_overview_csc_learn_more: Tìm hiểu thêm về Những kết nối Khoa học máy tính
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Trí tuệ nhân tạo là gì?
   ai_video_title_algorithm_bias: Xử lý định kiến trong thuật toán
   ai_video_title_phone_knows_dog: Làm cách nào mà điện thoại biết được đây là con
@@ -503,6 +534,25 @@ vi:
   front_join_us_challenge: Giành chiến thắng cuộc thi trò chuyện video cho lớp của
     bạn với người nổi tiếng!
   front_join_us_learn_more: Tìm hiểu thêm
+  cta_see_whats_new: Xem thông tin mới
+  cta_try_more_activities: Thử các hoạt động khác
+  cta_try_an_activity: Thử một hoạt động
+  hoc_homepage_join_the_movement_heading: Tham gia phong trào
+  hoc_homepage_join_the_movement_description: Giờ lập trình diễn ra quanh năm, nhưng
+    vào tháng 12 hàng năm, lớp của bạn có thể cùng hàng triệu sinh viên trên khắp
+    thế giới kỷ niệm Tuần lễ Giáo dục Khoa học Máy tính với Giờ lập trình. Hãy đăng
+    ký tham gia lễ kỷ niệm thường niên bắt đầu vào tháng Mười hàng năm.
+  hoc_homepage_what_is_hoc_subhead: Những bài hướng dẫn kéo dài 1 giờ với hơn 45 ngôn
+    ngữ. Không cần có kinh nghiệm. Các hoạt động Giờ lập trình được tổ chức miễn phí
+    quanh năm.
+  hoc_homepage_what_is_hoc_description: Giờ lập trình là phần giới thiệu kéo dài một
+    giờ về khoa học máy tính, sử dụng những hướng dẫn thú vị để cho thấy rằng bất
+    kỳ ai cũng có thể học những kiến thức cơ bản. Chiến dịch cấp cơ sở này được hơn
+    400 đối tác và 200.000 nhà giáo trên toàn thế giới ủng hộ.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Xem Hướng dẫn thực hiện](%{howto_guide_url})
+    để lập kế hoạch sự kiện cho lớp của bạn."
+  hoc_homepage_highlights_heading: Điểm nổi bật của Giờ lập trình
+  hoc_homepage_organized_by: Giờ lập trình được tổ chức bởi [Code.org](%{codeorg_url}).
   signup_closed: Đăng ký Giờ Lập Trình đã đóng ngay bây giờ. Vui lòng kiểm tra lại
     vào tháng 10 để đăng ký Giờ Lập Trình ở đợt tiếp theo.
   signup_registration_not_required: Bạn không cần đăng ký để tham gia! Các hoạt động
@@ -517,6 +567,10 @@ vi:
     cùng hàng triệu học sinh trên toàn thế giới kỷ niệm Tuần lễ Giáo dục về Khoa học
     Máy tính với Giờ Lập Trình. Chúng tôi sẽ mở đợt đăng ký tham gia lễ kỷ niệm hàng
     năm vào Tháng 10.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Tổ chức một sự kiện Hour of Code vào %{campaign_date}, và đăng ký
     nó ở đây.
   signup_name_label: Tên của bạn
@@ -551,8 +605,6 @@ vi:
   signup_multiple_event_warning: Chúng tôi sẽ hiển thị tên trường và thành phố bạn
     đăng ký lên bản đồ. Nếu bạn sẽ tổ chức nhiều sự kiện, xin vui lòng đăng ký tên
     sự kiện hoặc email khác nhau cho mỗi sự kiện.
-  signup_registration_deadline: Hạn đăng ký cho sự kiện Hour of Code là ngày 13 tháng
-    12.
   signup_name_placeholder: Tên của bạn
   signup_email_placeholder: You@example.com
   signup_organization_name_placeholder: Ví dụ, Trường THPT Phan Châu Trinh / Tổ chức
@@ -566,6 +618,7 @@ vi:
   signup_send_posters_address_placeholder: Địa chỉ bạn cung cấp tuyệt đối không được
     chia sẻ trên trang của chúng tôi
   signup_event_type_in_school: Trong một trường học
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Bên ngoài trường học
   signup_event_type_at_home: Home
   signup_submit_census_label: Gửi đi/ Chấp nhận
@@ -639,9 +692,14 @@ vi:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Câu hỏi thường gặp
   hoc_faq_what_is_hoc_q: Hour of Code là gì?
-  hoc_faq_what_is_hoc_a: Hour of Cpde là một giờ giới thiệu về khoa học máy tính,
-    được thiết kế để mã rõ ràng và hiển thị mà bất cứ ai có thể học những điều cơ
-    bản. <a href='http://code.org/learn'> kiểm tra các hướng dẫn.
+  hoc_faq_what_is_hoc_a: Giờ lập trình ban đầu là bài giới thiệu kéo dài một giờ về
+    khoa học máy tính, được thiết kế để làm rõ khái niệm “mã lệnh”, để chỉ ra rằng
+    tất cả mọi người đều có thể học những kiến thức cơ bản và mở rộng phạm vi tham
+    gia lĩnh vực khoa học máy tính. Kể từ đó, dự án này đã trở thành nỗ lực toàn cầu
+    để tôn vinh môn khoa học máy tính, bắt đầu với các hoạt động lập trình một giờ
+    và mở rộng đến mọi thành phần xã hội. Hãy xem <a href='%{tutorials}'>các bài hướng
+    dẫn và hoạt động</a>. Chiến dịch cơ sở này nhận được sự hỗ trợ của hơn <a href='%{partners}'>400
+    đối tác</a> và 200.000 nhà giáo trên toàn thế giới.
   hoc_faq_what_is_hoc_a_markdown: Giờ lập trình ban đầu là bài giới thiệu kéo dài
     một giờ về khoa học máy tính, được thiết kế để làm rõ khái niệm “mã lệnh”, để
     chỉ ra rằng tất cả mọi người đều có thể học những kiến thức cơ bản và mở rộng
@@ -650,62 +708,59 @@ vi:
     trình một giờ và mở rộng đến mọi thành phần xã hội. Hãy xem [các bài hướng dẫn
     và hoạt động](%{tutorials}). Chiến dịch cơ sở này nhận được sự hỗ trợ của hơn
     [400 đối tác](%{partners}) và 200.000 nhà giáo trên toàn thế giới.
-  hoc_faq_last_year: Hãy thử các hướng dẫn
+  hoc_faq_last_year: Hãy thử bài hướng dẫn
   hoc_faq_when_is_hoc_q: Hour of Code bắt đầu khi nào?
-  hoc_faq_when_is_hoc_a: Giờ của Lập trình tổ chức sự kiện <a href='%{csedweek_url}'>
-    Tuần lễ đào tạo Khoa học máy tính</a> hàng năm. Năm %{campaign_date_year} sự kiện
-    này sẽ diễn ra vào %{campaign_date_full}, nhưng bạn vẫn có thể tổ chức sự kiện
-    này vào bất cứ thời gian nào. Sự kiện này được tổ chức nhằm kỷ niệm ngày sinh
-    của người đã đặt nền móng cho máy tính <a href='%{grace_hopper}'> Grace Murray
-    Hopper</a> (9 tháng 12 năm 1906).
-  hoc_faq_when_is_hoc_a_markdown: Hour of Code diễn ra hàng năm trong [Tuần Giáo Dục
-    Khoa Học Máy Tính](%{csedweek_url}). Tuần Giáo Dục Khoa Học Máy Tính %{campaign_date_year}
-    diễn ra vào %{campaign_date_full}, nhưng bạn có thể tham gia Hour of Code vào
-    mọi thời điểm trong năm. Tuần Giáo Dục Khoa Học Máy Tính được tổ chức hàng năm
-    nhằm kỷ niệm ngày sinh của [Đô Đốc Grace Murray Hopper](%{grace_hopper}) (9/12/1906),
+  hoc_faq_when_is_hoc_a: Giờ lập trình diễn ra hàng năm trong <a href='%{csedweek_url}'>Tuần
+    lễ Giáo dục Khoa học Máy tính</a>. Tuần lễ Giáo dục Khoa học Máy tính %{campaign_date_year}
+    diễn ra vào %{campaign_date_full}, nhưng bạn có thể tổ chức Giờ lập trình vào
+    mọi thời điểm trong năm. Tuần lễ Giáo dục Khoa học Máy tính được tổ chức hàng
+    năm nhằm kỷ niệm ngày sinh của <a href='%{grace_hopper}'>Đô Đốc Grace Murray Hopper</a>
+    (9/12/1906), người đi tiên phong trong lĩnh vực máy tính.
+  hoc_faq_when_is_hoc_a_markdown: Giờ lập trình diễn ra hàng năm trong [Tuần lễ Giáo
+    dục Khoa học Máy tính](%{csedweek_url}). Tuần lễ Giáo dục Khoa học Máy tính %{campaign_date_year}
+    diễn ra vào %{campaign_date_full}, nhưng bạn có thể tổ chức Giờ lập trình vào
+    mọi thời điểm trong năm. Tuần lễ Giáo dục Khoa học Máy tính được tổ chức hàng
+    năm nhằm kỷ niệm ngày sinh của [Đô Đốc Grace Murray Hopper](%{grace_hopper}) (9/12/1906),
     người đi tiên phong trong lĩnh vực máy tính.
-  hoc_faq_why_cs_q: Tại sao lại là khoa học máy tính?
-  hoc_faq_why_cs_a: "<i>Mỗi</i> học sinh nên có cơ hội để tìm hiểu khoa học máy tính.
-    Nó giúp nuôi dưỡng giải quyết vấn đề kỹ năng, logic và sáng tạo. Bằng cách bắt
-    đầu sớm, học sinh/ sinh viên sẽ có một nền tảng cho sự thành công trong bất kỳ
-    con đường sự nghiệp thế kỷ 21. Xem thêm thống kê trên <a href='http://code.org'>
-    Code.org</a>."
+  hoc_faq_why_cs_q: Tại sao nên chọn khoa học máy tính?
+  hoc_faq_why_cs_a: "<i>Mỗi</i> em học sinh đều phải có cơ hội được học khoa học máy
+    tính. Môn học này giúp rèn luyện kỹ năng giải quyết vấn đề, logic và sáng tạo.
+    Nếu bắt đầu học từ sớm, học sinh sẽ có nền tảng để thành công trên con đường sự
+    nghiệp trong thế kỷ 21. Xem thêm số liệu <a href='%{stats_url}'>tại đây</a>."
   hoc_faq_why_cs_a_markdown: _Mỗi_ em học sinh đều phải có cơ hội được học khoa học
     máy tính. Môn học này giúp rèn luyện kỹ năng giải quyết vấn đề, logic và sáng
     tạo. Nếu bắt đầu học từ sớm, học sinh sẽ có nền tảng để thành công trên con đường
     sự nghiệp trong thế kỷ 21. Xem thêm số liệu [here](%{stats_url}).
-  hoc_faq_how_participate_q: Làm thế nào để tham gia vào Hour of Code?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'> Bắt đầu lập kế hoạch
-    ở đây </a> bằng cách xem hướng dẫn của chúng tôi. Bạn có thể tổ chức một sự kiện
-    Hour of Code tại trường học hoặc tại nơi bạn sinh sống &mdash; giống như một câu
-    lạc bộ ngoại khóa, chương trình phi lợi nhuận hay tổ chức nó ở nơi làm việc. Hoặc,
-    bạn cũng có thể tự trải niệm vào %{campaign_date} khi sự kiện bắt đầu."
+  hoc_faq_how_participate_q: Làm thế nào để tham gia Giờ lập trình?
+  hoc_faq_how_participate_a: "<a href='/how-to'>Bắt đầu lập kế hoạch tại đây</a> bằng
+    cách xem qua hướng dẫn thực hiện của chúng tôi. Bạn có thể tổ chức sự kiện Giờ
+    lập trình tại trường học hoặc trong cộng đồng của mình &mdash; ví dụ như trong
+    câu lạc bộ ngoại khóa, tổ chức phi lợi nhuận hoặc tại nơi làm việc. Ngoài ra,
+    bạn có thể tự mình trải nghiệm vào ngày %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "[Bắt đầu lập kế hoạch tại đây](%{howto}) bằng
-    cách xem qua hướng dẫn thực hiện của chúng tôi. Bạn có thể tổ chức sự kiện Hour
-    of Code tại trường học hoặc trong cộng đồng của mình – ví dụ như trong câu lạc
+    cách xem qua hướng dẫn thực hiện của chúng tôi. Bạn có thể tổ chức sự kiện Giờ
+    lập trình tại trường học hoặc trong cộng đồng của mình – ví dụ như trong câu lạc
     bộ ngoại khóa, tổ chức phi lợi nhuận hoặc tại nơi làm việc. Ngoài ra, bạn có thể
     tự mình trải nghiệm vào ngày %{campaign_date}."
   hoc_faq_behind_hoc_q: Những ai đã làm nên Giờ lập trình?
-  hoc_faq_behind_hoc_a: Giờ lập trình được thực hiện bởi Ủy ban Tư vấn và Đánh giá
-    của Giờ Lập trình và Tuần lễ Giáo dục Khoa học máy tính <a href='%{partner_url}'>
-    </a> cũng như một liên minh rộng lớn các đối tác cùng hợp tác hỗ trợ Giờ Lập trình
-    &mdash; bao gồm Microsoft, Apple, Amazon, câu lạc bộ các chàng trai và cô gái
-    của Mỹ và hội đồng quản trị các trường cao đẳng.
-  hoc_faq_behind_hoc_a_markdown: Chương trình Giờ lập trình được thực hiện bởi Giờ
-    lập trình và [Ủy ban Tư vấn và Đánh giá](%{partner_url}) Tuần Giáo Dục Khoa Học
-    Máy Tính cũng như một liên minh chưa từng có giữa các đối tác cùng nhau hỗ trợ
-    Giờ lập trình – bao gồm Microsoft, Apple, Amazon, Hội Nam Sinh và Nữ Sinh Hoa
-    Kỳ và Hội đồng Đại học.
-  hoc_faq_host_q: Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể
-    đến tham dự sự kiện?
-  hoc_faq_host_a: Tất nhiên. Các hoạt động Hour of Code đều có hướng dẫn tự động trên
-    trang web. Tất cả những gì bạn cần làm là <a href='%{codeorg_url}/learn'>tham
-    gia vào các khóa học của chúng tôi</a>, chọn lấy một khóa học bạn muốn và dành
-    ra 1 giờ, chúng tôi sẽ giúp bạn trong những phần tiếp theo. Chúng tôi cũng có
-    nhiều lựa chọn cho các lứa tuổi và các mức độ người học khác nhau. Băt đầu lên
-    kế hoạch cho việc học của bạn bằng việc đọc <a href='/resources/how-to'>Hướng
-    dẫn</a> của chúng tôi.
-  hoc_faq_host_a_markdown: Tất nhiên. Các hoạt động của Hour of Code đều là tự học.
+  hoc_faq_behind_hoc_a: Giờ lập trình được thực hiện bởi <a href='%{partner_url}'>Ủy
+    ban Tư vấn và Đánh giá</a> của Giờ Lập trình và Tuần lễ Giáo dục Khoa học máy
+    tính cũng như liên minh rộng lớn các đối tác cùng hợp tác hỗ trợ Giờ lập trình
+    &mdash; bao gồm Microsoft, Apple, Amazon, câu lạc bộ nam nữ thanh thiếu niên của
+    Mỹ và hội đồng các trường đại học.
+  hoc_faq_behind_hoc_a_markdown: Giờ lập trình được thực hiện bởi [Ủy ban Tư vấn và
+    Đánh giá](%{partner_url}) của Giờ lập trình và Tuần lễ Giáo dục Khoa học máy tính
+    cũng như một liên minh rộng lớn các đối tác cùng hợp tác hỗ trợ Giờ lập trình
+    — bao gồm Microsoft, Apple, Amazon, câu lạc bộ nam nữ thanh thiếu niên của Mỹ
+    và hội đồng các trường đại học.
+  hoc_faq_host_q: Tôi không biết gì về lập trình. Tôi có thể tổ chức sự kiện không?
+  hoc_faq_host_a: Tất nhiên. Các hoạt động của Giờ lập trình đều là tự học. Tất cả
+    những gì bạn cần làm là <a href='%{codeorg_url}/learn'>xem các bài hướng dẫn hiện
+    hành của chúng tôi</a>, chọn một bài hướng dẫn mà bạn muốn và dành ra một giờ
+    – chúng tôi sẽ giúp bạn trong những bước tiếp theo. Chúng tôi cũng có nhiều lựa
+    chọn cho các lứa tuổi và trình độ khác nhau. Hãy bắt đầu lập kế hoạch học tập
+    bằng cách đọc <a href='/how-to'>Hướng dẫn thực hiện</a> của chúng tôi.
+  hoc_faq_host_a_markdown: Tất nhiên. Các hoạt động của Giờ lập trình đều là tự học.
     Tất cả những gì bạn cần làm là [xem các bài hướng dẫn hiện hành của chúng tôi](%{codeorg_url}/learn),
     chọn một bài hướng dẫn mà bạn muốn và dành ra một giờ – chúng tôi sẽ giúp bạn
     trong những bước tiếp theo. Chúng tôi cũng có nhiều lựa chọn cho các lứa tuổi
@@ -721,30 +776,30 @@ vi:
     nếu bạn không thể truy cập các bài hướng dẫn tại trường học của mình!
   hoc_faq_devices_a_markdown: Các bài hướng dẫn của Code.org hoạt động trên mọi thiết
     bị và trình duyệt. Bạn có thể xem thêm thông tin yêu cầu kỹ thuật đối với bài
-    hướng dẫn của Code.org [tại đây](%{codeorg_url}/educate/it). Yêu cầu kỹ thuật
-    đối với bài hướng dẫn không phải của Code.org được đăng tải tại [%{partner_url}/learn](%{codeorg_url}/learn),
+    hướng dẫn của [here](%{codeorg_url}/educate/it). Yêu cầu kỹ thuật đối với bài
+    hướng dẫn không phải của Code.org được đăng tải tại [%{partner_url}/learn](%{codeorg_url}/learn),
     trong phần mô tả đặc điểm riêng của bài hướng dẫn. Đừng quên rằng chúng tôi còn
     cung cấp [các hoạt động ngoại tuyến](%{unplugged_url}) nếu bạn không thể truy
     cập các bài hướng dẫn tại trường học của mình.
   hoc_faq_need_computers_q: Tôi có cần máy tính cho mọi người tham gia?
-  hoc_faq_need_computers_a: Không. Chúng tôi đã hướng dẫn giờ mã làm việc trên máy
-    tính, điện thoại thông minh, viên nén, và một số đó có yêu cầu máy tính không
-    có ở tất cả! Bạn có thể tham gia ở bất cứ đâu, với bất cứ điều gì bạn có. <p><i>Dưới
-    đây là một vài lựa chọn:</i> <br><ul><li><b>làm việc trong cặp.</b> Nghiên cứu
-    cho thấy học sinh tìm hiểu tốt nhất với <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>
-    cặp lập trình</a>, chia sẻ một máy tính và làm việc cùng nhau. Khuyến khích học
-    sinh của bạn tăng gấp đôi lên. <li><b>Sử dụng một màn hình dự kiến.</b> Nếu bạn
-    có một máy chiếu và màn hình cho một máy tính kết nối Web, toàn bộ nhóm của bạn
-    có thể làm một giờ mã với nhau. Xem video phần với nhau và đưa sang giải những
-    câu đố hoặc trả lời câu hỏi. <li><b>Đi chưa cắm phít được.</b> Chúng tôi cung
-    cấp hướng dẫn yêu cầu máy tính không có ở tất cả. </ul>
+  hoc_faq_need_computers_a: Không. Chúng tôi có các hướng dẫn Giờ lập trình cho máy
+    tính, điện thoại thông minh, máy tính bảng, và một số hướng dẫn không yêu cầu
+    có máy tính! Bạn có thể tham gia ở bất cứ đâu, với bất cứ thiết bị gì bạn có.
+    <p><i>Dưới đây là một vài lựa chọn:</i> <br><ul><li><b>làm theo cặp.</b><a href='%{pair_programming_research}'>Nghiên
+    cứu chỉ ra rằng</a> học sinh sẽ học hiệu quả nhất khi <a href='%{pair_programming_video}'>lập
+    trình theo cặp</a>, chia sẻ máy tính và làm việc cùng nhau. Hãy khuyến khích học
+    sinh hợp tác với nhau. <li><b>Sử dụng màn hình và máy chiếu.</b> Nếu bạn một máy
+    chiếu và màn hình cho máy tính kết nối Web, cả nhóm của bạn có thể cùng nhau tham
+    gia Giờ Lập trình. Hãy xem các nội dung video cùng nhau và lần lượt giải những
+    câu đố hoặc trả lời câu hỏi. <li><b>Học ngoại tuyến.</b> Chúng tôi có cung cấp
+    các <a href='%{unplugged_url}'>bài hướng dẫn hoàn toàn không sử dụng máy tính</a>.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    Không. Chúng tôi có các bài hướng dẫn Hour of Code hoạt động trên máy tính, điện thoại thông minh, máy tính bảng và một số bài hướng dẫn không yêu cầu sử dụng máy tính! Bạn có thể tham gia ở bất cứ đâu, với bất cứ thiết bị nào mà bạn có.
+    Không. Chúng tôi có các bài hướng dẫn Giờ lập trình hoạt động trên máy tính, điện thoại thông minh, máy tính bảng và một số bài hướng dẫn không yêu cầu sử dụng máy tính! Bạn có thể tham gia ở bất cứ đâu, với bất cứ thiết bị nào mà bạn có.
 
     _Dưới đây là một vài lựa chọn:_
 
     - **Làm theo cặp.** [Nghiên cứu chỉ ra rằng](%{pair_programming_research}) học sinh sẽ học hiệu quả nhất khi [lập trình theo cặp](%{pair_programming_video}), chia sẻ máy tính và làm việc cùng nhau. Hãy khuyến khích học sinh hợp tác với nhau.
-    - **Sử dụng màn hình và máy chiếu.** Nếu bạn có máy chiếu và màn hình cho máy tính kết nối Web, cả nhóm của bạn có thể cùng nhau tham gia Hour of Code. Hãy xem các nội dung video cùng nhau và lần lượt giải những câu đố hoặc trả lời câu hỏi.
+    - **Sử dụng màn hình và máy chiếu.** Nếu bạn có máy chiếu và màn hình cho máy tính kết nối Web, cả nhóm của bạn có thể cùng nhau tham gia Giờ Lập trình. Hãy xem các nội dung video cùng nhau và lần lượt giải những câu đố hoặc trả lời câu hỏi.
     - **Học ngoại tuyến.** Chúng tôi có cung cấp các [bài hướng dẫn hoàn toàn không sử dụng máy tính](%{unplugged_url}).
   hoc_faq_international_q: Tôi đang ở <country>. Làm thế nào tôi có thể tham gia các
     sự kiện quốc tế?
@@ -753,35 +808,39 @@ vi:
     Giờ lập trình. Tìm hiểu thêm <a href='/promote'>tại đây</a>.
   hoc_faq_international_a_markdown: Bất cứ ai cũng có thể tổ chức sự kiện Giờ lập
     trình tại bất cứ nơi nào trên thế giới. Năm ngoái, học sinh toàn thế giới đã cùng
-    tham gia Giờ lập trình. Tìm hiểu thêm [tại đây](%{promote}).
-  hoc_faq_tutorial_q: Làm thế nào tôi có thể làm một hướng dẫn về Hour of Code?
-  hoc_faq_tutorial_a: Nếu bạn đang quan tâm đến việc trở thành một đối tác hướng dẫn,
-    <a href='/tutorial-guidelines'> xem hướng dẫn và hướng dẫn của chúng tôi</a>.
-    Chúng tôi muốn lưu trữ một loạt các lựa chọn hấp dẫn, nhưng mục tiêu chính là
-    để tối ưu hóa kinh nghiệm cho học sinh/ sinh viên và giáo viên những người mới
-    tìm hiểu về khoa học máy tính.
+    tham gia Giờ lập trình. Tìm hiểu thêm [here](%{promote}).
+  hoc_faq_tutorial_q: Làm thế nào để tạo hướng dẫn Giờ lập trình?
+  hoc_faq_tutorial_a: Nếu bạn đang quan tâm đến việc trở thành một cộng tác viên hướng
+    dẫn, <a href='/tutorial-guidelines'>hãy xem hướng dẫn và chỉ dẫn của chúng tôi</a>.
+    Chúng tôi muốn tổ chức nhiều lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối
+    ưu hóa trải nghiệm cho các em học sinh và các thầy cô giáo mới bắt đầu tìm hiểu
+    về khoa học máy tính.
   hoc_faq_tutorial_a_markdown: Nếu bạn đang quan tâm đến việc trở thành một cộng tác
     viên hướng dẫn, [hãy xem hướng dẫn và chỉ dẫn của chúng tôi](%{tutorial_guidelines}).
     Chúng tôi muốn tổ chức nhiều lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối
     ưu hóa trải nghiệm cho các em học sinh và các thầy cô giáo mới bắt đầu tìm hiểu
     về khoa học máy tính.
   hoc_faq_account_q: Học sinh có cần phải đăng nhập để sử dụng tài khoản?
-  hoc_faq_account_a: Không. Hoàn toàn không có đăng ký hoặc đăng nhập là cần thiết
-    cho sinh viên để thử "Hour of Code". Hầu hết <a href='http://code.org/learn/beyond'>
-    các khóa học tiếp theo</a> yêu cầu tạo tài khoản để lưu quá trình học tập của
-    học sinh.
+  hoc_faq_account_a: Không. Hoàn toàn không cần thiết phải đăng ký hoặc đăng nhập
+    để tham gia Giờ lập trình. Hầu hết <a href='%{codeorg_url}/learn/beyond'>các khóa
+    học nối tiếp</a> đều yêu cầu tạo tài khoản để lưu tiến độ của học sinh. Ngoài
+    ra, việc đăng ký Giờ lập trình KHÔNG tự động tạo tài khoản Code Studio. Nếu bạn
+    muốn tạo tài khoản cho học sinh của mình, hãy làm theo <a href='https://youtu.be/_smelV_KISE'>hướng
+    dẫn</a>.
   hoc_faq_account_a_markdown: Không. Hoàn toàn không cần thiết phải đăng ký hoặc đăng
-    nhập để tham gia Hour of Code. Hầu hết [các khóa học nối tiếp](%{codeorg_url}/learn/beyond)
-    đều yêu cầu tạo tài khoản để lưu tiến trình của học sinh. Ngoài ra, việc đăng
-    ký Hour of Code KHÔNG tự động tạo tài khoản Code Studio. Nếu bạn muốn tạo tài
-    khoản cho học sinh của mình, hãy làm theo [instructions](https://youtu.be/_smelV_KISE).
+    nhập để tham gia Giờ lập trình. Hầu hết [các khóa học nối tiếp](%{codeorg_url}/learn/beyond)
+    đều yêu cầu tạo tài khoản để lưu tiến độ của học sinh. Ngoài ra, việc đăng ký
+    Giờ lập trình KHÔNG tự động tạo tài khoản Code Studio. Nếu bạn muốn tạo tài khoản
+    cho học sinh của mình, hãy làm theo [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Hoạt động nào mà tôi nên áp dụng với học sinh trung học?
-  hoc_faq_high_school_a: Với mọi lứa tuổi, chúng tôi khuyên bạn nên thử một trong
-    các bản hướng dẫn cho người mới bắt đầu trên <a href='http://code.org/learn'>
-    Code.org/learn</a> để bắt đầu, chẳng hạn như các hướng dẫn với chim tức giận hoặc
-    với Anna và Elsa. Một học sinh trung học có thể hoàn thành một trong những hưỡng
-    dẫn trong 30 phút và có thể thử một hướng dẫn nâng cao hơn trong JavaScript, chẳng
-    hạn như Khan Academy hoặc CodeHS.
+  hoc_faq_high_school_a: Bài hướng dẫn Star Wars và Minecraft của chúng tôi lý tưởng
+    cho học sinh trung học, đặc biệt là phiên bản Star Wars JavaScript và màn chơi
+    tự do trên cả hai bài hướng dẫn. Ngoài ra, chúng tôi còn đề xuất bạn một trong
+    những bài hướng dẫn cho người mới bắt đầu trên <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    để khởi động, chẳng hạn như bài hướng dẫn với Angry Birds hoặc với Anna và Elsa.
+    Học sinh trung học có thể hoàn thành một trong những bài hướng dẫn này chỉ trong
+    30 phút và sau đó có thể thử bài hướng dẫn khó hơn bằng JavaScript, chẳng hạn
+    như KhanAcademy hoặc CodeHS.
   hoc_faq_high_school_a_markdown: Bài hướng dẫn Star Wars và Minecraft của chúng tôi
     lý tưởng cho học sinh trung học, đặc biệt là phiên bản Star Wars JavaScript và
     màn chơi tự do trên cả hai bài hướng dẫn. Ngoài ra, chúng tôi còn đề xuất bạn
@@ -790,50 +849,49 @@ vi:
     Học sinh trung học có thể hoàn thành một trong những bài hướng dẫn này chỉ trong
     30 phút và sau đó có thể thử bài hướng dẫn khó hơn bằng JavaScript, chẳng hạn
     như KhanAcademy hoặc CodeHS.
-  hoc_faq_scratch_q: Tôi đang làm những bước đầu tiên cho chương trình "Hour of Code",
-    nhưng điều gì sẽ xảy ra nếu học sinh của tôi dùng nhiều iPad chứ không phải là
-    máy tính xách tay?
-  hoc_faq_scratch_a: Bản chạy thử không chạy trên máy tính bảng. Nếu học sinh của
-    bạn là người trẻ, họ có thể sử dụng ứng dụng iPad Scratch JR (cho  độc giả lần
-    đầu tham gia). Nếu bạn nhìn vào các hướng dẫn trên <a href='http://code.org/learn'>
-    Code.org/learn</a>, bạn có thể tìm thấy các hướng dẫn để làm việc trên iPad -
-    từ Code.org, Tynker, Lightbot, hoặc CodeSpark.
+  hoc_faq_scratch_q: Tôi đang thực hiện Scratch cho Giờ Lập trình , nhưng nếu học
+    sinh của tôi có iPad chứ không phải là máy tính xách tay thì sao?
+  hoc_faq_scratch_a: Scratch không chạy trên máy tính bảng. Nếu học sinh của bạn còn
+    nhỏ, các em có thể dùng ứng dụng iPad ScratchJR (dành cho trẻ chưa biết đọc).
+    Nếu bạn xem các bài hướng dẫn trên <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
+    bạn có thể tìm thấy các bài hướng dẫn khác hoạt động trên iPad – từ Code.org,
+    Tynker, Lightbot hoặc CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch không chạy trên máy tính bảng. Nếu học sinh
     của bạn còn nhỏ, các em có thể dùng ứng dụng iPad ScratchJR (dành cho trẻ chưa
     biết đọc). Nếu bạn xem các bài hướng dẫn trên [%{partner_url}/learn](%{codeorg_url}/learn),
     bạn có thể tìm thấy các bài hướng dẫn khác hoạt động trên iPad – từ Code.org,
     Tynker, Lightbot hoặc CodeSpark.
-  hoc_faq_count_hoc_q: Làm thế nào bạn đếm" Hours of Code" ?
+  hoc_faq_count_hoc_q: Làm thế nào để đếm Giờ lập trình?
   hoc_faq_map_q: Tại sao tôi không thấy dấu chấm của mình trên bản đồ?
   hoc_faq_map_a: Chúng tôi rất tiếc nếu bạn không thấy sự kiện của mình trên bản đồ
     của Giờ lập trình. Do hàng chục ngàn người tổ chức đăng ký nên bản đồ tập hợp
     dữ liệu và hiển thị một điểm cho nhiều sự kiện. Nếu bạn nhấp chuột vào liên kết
-    <a href='%{events_url}'>trang bản đồ</a> ở phía dưới bản đồ, bạn sẽ được chuyển
+    <a href='%{events_url}'>trang sự kiện</a> ở phía dưới bản đồ, bạn sẽ được chuyển
     hướng đến danh sách tất cả các sự kiện theo bang và có thể tìm thấy sự kiện của
     mình được liệt kê tại đây. Ngoài ra, vì có hàng nghìn người đăng ký Giờ lập trình,
     bản đồ và danh sách sự kiện thường mất 48 giờ để cập nhật. Hãy kiểm tra lại sau
     vài ngày nhé!
-  hoc_faq_map_a_markdown: Chúng tôi rất tiếc nếu bạn không xem được sự kiện của mình
-    trên bản đồ của Hour of Code. Do hàng chục ngàn người tổ chức đăng ký nên bản
-    đồ tập hợp các dữ liệu và hiển thị một điểm cho nhiều sự kiện. Nếu bạn nhấn vào
-    liên kết [trang bản đồ](%{events_url}) ở phía dưới bản đồ, bạn sẽ được chuyển
-    hướng đến một danh sách tất cả các sự kiện theo bang và có thể tìm thấy sự kiện
-    của mình được liệt kê tại đây. Ngoài ra, vì có hàng nghìn người đăng ký Hour of
-    Code, bản đồ và danh sách sự kiện thường mất 48 giờ để cập nhật. Hãy kiểm tra
-    lại sau vài ngày nhé!
-  hoc_faq_count_hoc_a: Bộ theo dõi "Hour of Code"  không phải là một thước đo chính
-    xác của việc sử dụng. Chúng tôi không đếm xem có bao nhiêu cá nhân sinh viên xuất
-    sắc khi tham gia Giờ Lập Trình, vì chúng tôi không yêu cầu các sinh viên đăng
-    nhập hoặc đăng ký. Sau cùng, chúng tôi tính số lượng người tham gia nhiều nhất
-    và ít nhất cùng một thời điểm. Xem chi tiết <a href='http://code.org/loc'> tại
-    đây</a>.
-  hoc_faq_count_hoc_a_markdown: Ứng dụng theo dõi Hour of Code không phải là công
+  hoc_faq_map_a_markdown: Chúng tôi rất tiếc nếu bạn không thấy sự kiện của mình trên
+    bản đồ của Giờ lập trình. Do hàng chục ngàn người tổ chức đăng ký nên bản đồ tập
+    hợp dữ liệu và hiển thị một điểm cho nhiều sự kiện. Nếu bạn nhấp chuột vào liên
+    kết [trang sự kiện](%{events_url} ở phía dưới bản đồ, bạn sẽ được chuyển hướng
+    đến danh sách tất cả các sự kiện theo bang và có thể tìm thấy sự kiện của mình
+    được liệt kê tại đây. Ngoài ra, vì có hàng nghìn người đăng ký Giờ lập trình,
+    bản đồ và danh sách sự kiện thường mất 48 giờ để cập nhật. Hãy kiểm tra lại sau
+    vài ngày nhé!
+  hoc_faq_count_hoc_a: Ứng dụng theo dõi Giờ lập trình không phải là công cụ theo
+    dõi chính xác quá trình sử dụng. Chúng tôi không sử dụng ID duy nhất của học sinh
+    một cách tuyệt đối khi theo dõi quá trình tham gia Giờ lập trình, đặc biệt là
+    khi chúng tôi không bắt buộc học sinh phải đăng nhập hoặc đăng ký. Do đó, chúng
+    tôi có thể vừa đếm dư và đếm thiếu người tham gia cùng lúc. Hãy đọc tất cả thông
+    tin chi tiết <a href='%{codeorg_url}/loc'>tại đây</a>.
+  hoc_faq_count_hoc_a_markdown: Ứng dụng theo dõi Giờ lập trình không phải là công
     cụ theo dõi chính xác quá trình sử dụng. Chúng tôi không sử dụng ID duy nhất của
-    học sinh một cách tuyệt đối khi theo dõi quá trình tham gia Hour of Code, đặc
+    học sinh một cách tuyệt đối khi theo dõi quá trình tham gia Giờ lập trình, đặc
     biệt là khi chúng tôi không bắt buộc học sinh phải đăng nhập hoặc đăng ký. Do
     đó, chúng tôi có thể vừa đếm dư và đếm thiếu người tham gia cùng lúc. Hãy đọc
     tất cả thông tin chi tiết [here](%{codeorg_url}/loc).
-  hoc_faq_one_hour_q: Một người có thể học được bao nhiêu trong một giờ?
+  hoc_faq_one_hour_q: Một người có thể học được bao nhiêu kiến thức trong một giờ?
   hoc_faq_one_hour_a: 'Mục tiêu của Giờ Lập trình không phải là dạy cho bất cứ ai
     để trở thành một chuyên gia khoa học máy tính trong một giờ. Một giờ là chỉ đủ
     để tìm hiểu rằng khoa học máy tính là thật vui và sáng tạo, dành cho mọi lứa tuổi,
@@ -854,12 +912,12 @@ vi:
     cả người tham gia có thể tìm hiểu trong một giờ là điều nằm trong khả năng của
     chúng tôi.'
   hoc_faq_one_hour_a_markdown: |-
-    Mục tiêu của Hour of Code không phải là dạy cho tất cả mọi người để trở thành chuyên gia khoa học máy tính trong một giờ. Một giờ chỉ đủ để hiểu rằng khoa học máy tính thật vui và sáng tạo, rằng bất kỳ lứa tuổi nào cũng có thể tiếp cận, dành cho tất cả các em học sinh ở mọi trình độ. Thước đo thành công của chiến dịch này không nằm ở lượng kiến thức mà học sinh KHMT đã học được – mà thành công được phản ánh ở sự tham gia rộng rãi, không phụ thuộc vào giới tính, các nhóm sắc tộc và kinh tế xã hội, cũng như đạt được kết quả là tăng lượng đăng ký và tham gia các khóa học về khoa học máy tính tại tất cả các khối phổ thông. Hàng triệu người tham gia là các thầy cô giáo và các em học sinh đã quyết định dành nhiều hơn một giờ – để học một ngày hoặc một tuần trở lên, và nhờ đó, nhiều học sinh đã quyết định ghi danh vào một khóa học trọn vẹn (hoặc thậm chí một ngành đại học).
+    Mục tiêu của Giờ lập trình không phải là dạy cho bất cứ ai để trở thành một chuyên gia khoa học máy tính trong một giờ. Một giờ là chỉ đủ để tìm hiểu rằng khoa học máy tính là thật vui và sáng tạo, dành cho mọi lứa tuổi, mọi học sinh, không phụ thuộc vào xuất thân. Thước đo sự thành công của chiến dịch này không nằm ở chỗ một học sinh KHMT học được bao nhiêu kiến thức. Sự thành công này được phản ánh ở phạm vi tham gia rộng ở mọi giới tính, nhóm sắc tộc/chủng tộc và kinh tế xã hội, cũng như tăng số lượng đăng ký và tham gia các khóa học khoa học máy tính tại tất cả các lớp phổ thông. Hàng triệu giáo viên và học sinh tham gia đã quyết định học nhiều hơn một giờ, dành cả ngày, cả tuần hoặc lâu hơn để tìm hiểu, và nhiều học sinh đã quyết định đăng ký một khóa học đầy đủ (hoặc thậm chí chuyên ngành đại học).
 
-    Ngoài các em học sinh, một đối tượng "học viên" khác chính là các nhà giáo dục, những người có được sự tự tin sau một giờ rằng họ có thể dạy môn khoa học máy tính ngay cả khi họ không có văn bằng đại học với tư cách là chuyên gia khoa học máy tính. Hàng chục ngàn giáo viên quyết định theo đuổi khoa học máy tính ở mức độ cao hơn, tham gia khóa chuyên tu hoặc các khóa học trực tuyến nối tiếp, hoặc cả hai. Và điều này cũng đúng với những nhà quản trị trường học, những người nhận ra tiềm năng của khoa học máy tính đối với học sinh và giáo viên của họ.
+    Ngoài học sinh, đối tượng “học viên” khác chính là các nhà giáo, những người có được sự tự tin sau một giờ để có thể dạy môn khoa học máy tính cho dù họ không có một bằng cấp đại học ngành khoa học máy tính. Hàng chục ngàn giáo viên quyết định tiếp tục theo đuổi môn khoa học máy tính: học nghề hoặc dạy học trực tuyến, hoặc cả hai. Và hiện tượng này cũng xảy ra với lãnh đạo các trường học, những người nhận ra tiềm năng của môn khoa học máy tính đối với học sinh và giáo viên của họ.
 
-    Trên tất cả, điều mà tất cả người tham gia hiểu được trong một giờ chính là chúng ta có thể học được môn học này.
-  hoc_faq_more_questions_q: Còn thêm bất cứ câu hỏi nào ko?
+    Hơn hết, những kiến thức mà tất cả người tham gia có thể tìm hiểu trong một giờ là điều nằm trong khả năng của chúng tôi.
+  hoc_faq_more_questions_q: Bạn vẫn có thắc mắc?
   hoc_faq_more_questions_a: Hãy cố gắng tìm một câu trả lời trong chúng tôi <a href='http://support.code.org'>  diễn
     đàn hỗ trợ</a>.
   hoc_faq_more_questions_a_markdown: Hãy thử tìm câu trả lời trong [diễn đàn hỗ trợ](http://support.code.org)
@@ -871,27 +929,27 @@ vi:
     của chúng tôi. Vui lòng truy cập <a href='/promote'>tài liệu hỗ trợ</a> để xem
     hướng dẫn cách tổ chức sự kiện và các tài liệu khác giúp sự kiện Giờ lập trình
     của bạn thành công.
-  hoc_faq_keep_learning_a_markdown: Bất cứ ai cũng có thể tổ chức một Hour of Code
-    vào bất kỳ lúc nào. Bạn có thể truy cập các bài hướng dẫn quanh năm. Bạn có thể
-    an tâm rằng tất cả các bài hướng dẫn và chương trình của chúng tôi sẽ được cung
-    cấp vĩnh viên trên trang web. Vui lòng truy cập [các nguồn hỗ trợ của chúng tôi](%{promote})
-    để xem hướng dẫn cho sự kiện và các nguồn hỗ trợ khác để giúp sự kiện Hour of
-    Code của bạn đạt được thành công.
+  hoc_faq_keep_learning_a_markdown: Bất kỳ ai cũng có thể tổ chức Giờ lập trình bất
+    kỳ lúc nào. Các bài hướng dẫn luôn cập nhật quanh năm. Bạn có thể tìm thấy tất
+    cả các bài hướng dẫn và giáo trình của chúng tôi được chia sẻ vĩnh viễn trên trang
+    web của chúng tôi. Vui lòng truy cập [tài liệu hỗ trợ](%{promote}) để xem hướng
+    dẫn cách tổ chức sự kiện và các tài liệu khác giúp sự kiện Giờ lập trình của bạn
+    thành công.
   hoc_faq_certificates_q: Tôi có thể in chứng chỉ cho học sinh của mình ở đâu?
   hoc_faq_certificates_a: Hãy truy cập <a href='%{codeorg_url}/certificates'>trang
     chứng chỉ</a> của chúng tôi để in trước chứng chỉ cho toàn bộ lớp học của mình.
     Bạn cũng có thể in <a href='%{codeorg_url}/certificates?course=mc'>chứng chỉ đặc
     biệt</a> cho học sinh thực hiện bài hướng dẫn Minecraft.
-  hoc_faq_certificates_a_markdown: Hãy truy cập [trang giấy chứng nhận](%{codeorg_url}/certificates)
+  hoc_faq_certificates_a_markdown: Hãy truy cập [trang chứng chỉ](%{codeorg_url}/certificates)
     để có thể in giấy chứng nhận cho toàn bộ lớp học của bạn trước thời hạn. Bạn cũng
-    có thể in [giấy chứng nhận đặc biệt](%{codeorg_url}/certificates?course=mc) cho
-    học sinh tham gia bài hướng dẫn Minecraft.
+    có thể in [chứng chỉ đặc biệt](%{codeorg_url}/certificates?course=mc) cho học
+    sinh tham gia bài hướng dẫn Minecraft.
   hoc_faq_logo_q: Có giới hạn nào cho cách sử dụng logo hoặc tên của Giờ lập trình
     không?
-  hoc_faq_logo_a: Giờ lập trình đã được đăng ký nhãn hiệu. Chúng tôi không muốn ngăn
-    chặn việc sử dụng, nhưng chúng tôi muốn đảm bảo rằng bạn sử dụng phù hợp trong
-    một vài giới hạn. Vui lòng xem <a href='%{logo_url}'>hướng dẫn sử dụng sau đây</a>.
-  hoc_faq_logo_a_markdown: Hour of Code đã được đăng ký nhãn hiệu. Chúng tôi không
+  hoc_faq_logo_a: Giờ lập trình đã được đăng ký nhãn hiệu. Chúng tôi không muốn cản
+    trở việc sử dụng, nhưng chúng tôi muốn đảm bảo rằng bạn sử dụng phù hợp trong
+    giới hạn nhất định. Vui lòng xem <a href='%{logo_url}'>hướng dẫn sử dụng sau đây</a>.
+  hoc_faq_logo_a_markdown: Giờ lập trình đã được đăng ký nhãn hiệu. Chúng tôi không
     muốn hạn chế việc sử dụng nền tảng này, nhưng chúng tôi muốn đảm bảo rằng việc
     sử dụng nền tảng phải nằm trong những phạm vi nhất định. Vui lòng xem [hướng dẫn
     sử dụng sau đây](%{logo_url}).
@@ -938,7 +996,7 @@ vi:
   resources_stickers: Nhãn dán
   resources_how_to_guides: Hướng dẫn sử dụng
   resources_promote: Khuyến khích
-  resources_nav_tutorials: Hãy thử các hướng dẫn
+  resources_nav_tutorials: Hãy thử bài hướng dẫn
   resources_nav_promote: Truyền tải thông điệp
   resources_nav_spread_word: Tham gia như thế nào
   resources_banner_promote_text: Khuyến khích
@@ -1026,8 +1084,8 @@ vi:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Bản quyền %{current_year} Code.org. Đã đăng ký Bản quyền.
-  footer_trademark_message: Hour of Code là một tác quyền cá nhân/ thương hiệu của
-    Code.org.
+  footer_trademark_message: Hour of Code® và Hora del Código® là nhãn hiệu đăng ký
+    của Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Đối tác
   footer_menu_contact: Liên hệ với chúng tôi
@@ -1035,6 +1093,10 @@ vi:
   footer_menu_terms: Các điều khoản của Code.org
   footer_menu_privacy: Chính sách bảo mật của Code.org
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: GIỜ LẬP TRÌNH
   learn_banner_blurb: Hãy thử làm hướng dẫn một giờ được thiết kế cho mọi lứa tuổi
     trên 45 ngôn ngữ.  Tham gia vào hàng triệu sinh viên và giáo viên tại hơn 180
@@ -1046,10 +1108,6 @@ vi:
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'Giáo viên: [Tổ chức một giờ](%{host_url}) hoặc
     [đọc Hướng dẫn thực hiện](%{howto_url})'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
   tutorial_dance2019_name: Bữa Tiệc Khiêu Vũ 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -1115,7 +1173,7 @@ vi:
   tutorial_tynkercm_name: Code Monsters
   tutorial_codesterswintergreet_name: Winter Greetings
   tutorial_codestersc_name: The Coordinate Plane
-  tutorial_codestersturtle_name: Turtle Drawing
+  tutorial_codestersturtle_name: 'Codesters: Turtle Traffic'
   tutorial_penjee_name: Learn Python with Penjee the Penguin
   tutorial_trinket_name: Trinket's Hour of Python
   tutorial_frogger_name: Make your own 3D Frogger game
@@ -1315,7 +1373,7 @@ vi:
   tutorial_soloweb_name: Your First Webpage in an Hour!
   tutorial_khanweb_name: 'Khan Academy: Webpages'
   tutorial_khandata_name: 'Khan Academy: Databases'
-  tutorial_googlelogo_name: Create your own Google logo
+  tutorial_googlelogo_name: My Google Logo
   tutorial_playtune_name: Play That Tune App
   tutorial_computeit_name: Compute it
   tutorial_codesterssj_name: Space Jokes
@@ -1471,12 +1529,12 @@ vi:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -3182,11 +3240,9 @@ vi:
     a sprite to various locations on the stage! There are demonstration and debugging
     activities included to help students become comfortable with navigating the coordinate
     plane. '
-  tutorial_codestersturtle_longdescription: 'Students start programming in Python
-    right away using our drag to text toolkit and guided instructions! In this activity
-    students learn coding by completing a series of challenges to lead turtle out
-    of a maze! Students learn draw with turtle and finish by creating their own turtle
-    art! '
+  tutorial_codestersturtle_longdescription: Learn the basics of coding in Python while
+    creating your own turtle-crossing game! Use lists and loops to set up your game,
+    and events to create cars and control the turtle! Can you safely cross the road?
   tutorial_penjee_longdescription: 'A  visual way for students to begin their first
     language. Students write Python code to move a Penguin around an ice world. Our
     editor highlights each line of code as it executes, helping kids connect their
@@ -5777,7 +5833,7 @@ vi:
   tutorial_tynkercm_string_detail_grades: Grades 2+
   tutorial_codesterswintergreet_string_detail_grades: Grades 2+
   tutorial_codestersc_string_detail_grades: Lớp 6+ (11 trở lên)
-  tutorial_codestersturtle_string_detail_grades: Grades 2+
+  tutorial_codestersturtle_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
   tutorial_penjee_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_trinket_string_detail_grades: Grades 2+
   tutorial_frogger_string_detail_grades: Lớp 6+ (11 trở lên)
@@ -5977,7 +6033,7 @@ vi:
   tutorial_soloweb_string_detail_grades: Grades 9+
   tutorial_khanweb_string_detail_grades: Grades 2+
   tutorial_khandata_string_detail_grades: Lớp 6+ (11 trở lên)
-  tutorial_googlelogo_string_detail_grades: Grades 2+
+  tutorial_googlelogo_string_detail_grades: Grades 2-8
   tutorial_playtune_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_computeit_string_detail_grades: Grades 2+
   tutorial_codesterssj_string_detail_grades: Grades 2-8
@@ -7244,7 +7300,8 @@ vi:
   tutorial_irobotphone_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_codeguppydraw_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -8214,7 +8271,7 @@ vi:
   tutorial_soloweb_string_detail_programming_languages: HTML, CSS
   tutorial_khanweb_string_detail_programming_languages: HTML & CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_googlelogo_string_detail_programming_languages: Blocks, Scratch
+  tutorial_googlelogo_string_detail_programming_languages: Khối
   tutorial_playtune_string_detail_programming_languages: Khối
   tutorial_computeit_string_detail_programming_languages: Language independent
   tutorial_codesterssj_string_detail_programming_languages: Blocks, Python
@@ -8752,9 +8809,9 @@ vi:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9319,7 +9376,8 @@ vi:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_rpisensehat_string_platforms: Tất cả các trình duyệt hiện đại
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: Tất cả các trình duyệt hiện hành, máy tính
     bảng Android, iPad, điện thoại Android và iPhone hiện hành
@@ -9614,7 +9672,7 @@ vi:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -9826,10 +9884,12 @@ vi:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10160,8 +10220,8 @@ vi:
   tutorial_microsoftforest_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Tất cả các trình duyệt hiện đại
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: All modern browsers, Screen reader
   tutorial_codeartportrait_string_platforms: All modern browsers, Android tablet,
@@ -10449,6 +10509,888 @@ vi:
   tutorial_icomputefireworks_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_icomputefireworks_string_detail_platforms: ''
   tutorial_icomputefireworks_string_detail_programming_languages: Khối
+  tutorial_rpccw_name: 'Code Club World: Make cool stuff with free coding games and
+    activities'
+  tutorial_rpledfirefly_name: 'LED firefly: Meet the Raspberry Pi Pico'
+  tutorial_rpcharting_name: 'Charting champions: The power of Python lists'
+  tutorial_rpsolar_name: 'Solar system simulator: Python models and dictionaries'
+  tutorial_rpwebcards_name: 'Flip treat webcards: Create interactive hover cards that
+    flip'
+  tutorial_codeclubhworld_name: 'Hello world: Say hello to Python coding'
+  tutorial_codeclubspells_name: 'Broadcasting spells: Scratch coding beyond the basics'
+  tutorial_coderdojoanime_name: 'Anime expressions: Create and style a webpage for
+    an anime drawing tutorial'
+  tutorial_coderdojotarget_name: 'Target practice: Introduction to Python graphics'
+  tutorial_creaticodescratch_name: Advanced Scratch Coding (2D/3D/AR/AI)
+  tutorial_bbsierpinski_name: 'Sierpinski Triangle: Make Art with Math!'
+  tutorial_bbstopwatch_name: Stopwatch Builder
+  tutorial_idrpatterns_name: Creating patterns with code
+  tutorial_idrshapes_name: Drawing shapes with code
+  tutorial_edisondetect_name: Detect and avoid with Edison
+  tutorial_edisonmusical_name: Edison's musical talents
+  tutorial_codemonkeydiglit_name: Digital Literacy - Mini Course
+  tutorial_bsdrockpaper_name: Rock, Paper, Scissors with Python
+  tutorial_microbitreaction_name: micro:bit reaction game
+  tutorial_kinderanimal_name: KIBO the Playful Animal
+  tutorial_kindersinger_name: KIBO the Singer
+  tutorial_microbitwwn_name: micro:bit which way now? activity
+  tutorial_grokcyberlive_name: Cyber Live
+  tutorial_codemojimaze_name: 'Unplugged: Code A Maze '
+  tutorial_codemojisnake_name: 'Scratch: Create Your Own Snake Game'
+  tutorial_carnegietoxibots_name: 'Zillah City: Fall of the Toxibots'
+  tutorial_carnegieiris_name: Iris Rover Challenge with VICE Virtual Robot
+  tutorial_carnegiespike_name: " Virtual SPIKE Prime Coding - Iris Rover Challenge"
+  tutorial_spheroincolor_name: indi Color Contest
+  tutorial_kcjdominos_name: Simulating Dominos Using JavaScript
+  tutorial_spherocolortheory_name: Additive Color Theory (RGB) with BOLT
+  tutorial_codecombatesports_name: 'Esports Bootcamp: AI League'
+  tutorial_spherodigdisplay_name: The Technology of Digital Displays with littleBits
+  tutorial_spherorvrincolor_name: RVR+ in Color!
+  tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
+  tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
+    vision and sighted students'
+  tutorial_codecombatgoblins_name: Goblin và Glory
+  tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
+  tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
+    Convey Meaning'
+  tutorial_crayoladrawacode_name: 'Unplugged Coding from Crayola Education: Draw A
+    Code'
+  tutorial_crayolafollowmycode_name: 'Unplugged Coding from Crayola Education: Follow
+    My Code'
+  tutorial_madpicturethis_name: Picture This! HTML Decoded
+  tutorial_mindmakersmaps_name: Maps
+  tutorial_mindmakersjorel_name: Jorel's Brother
+  tutorial_mindmakersroboland_name: Roboland
+  tutorial_mindmakersrobolandjr_name: Roboland Jr
+  tutorial_codehsdraw_name: Drawing and Scratch
+  tutorial_codehscamouflage_name: 'Programming an Adaptation: Camouflage'
+  tutorial_firiapythoncodex_name: Python with CodeX
+  tutorial_bekidscoding_name: bekids Coding Challenges
+  tutorial_rodocodehr_name: 'Rodocodo: Code Hour'
+  tutorial_microbitdice_name: micro:bit dice
+  tutorial_madflashcard_name: Deconstructing Code in a Flash(card)
+  tutorial_madappwars_name: App Wars
+  tutorial_kodablepuppies_name: 'Robots and Puppies '
+  tutorial_googlesuperhero_name: Build a Superhero
+  tutorial_googlename _name: Design Your Name
+  tutorial_carnegiezillah_name: Zillah Beats
+  tutorial_nasachspacejam_name: NASA's Space Jam
+  tutorial_hatchxrsolar_name: Build a 3D/AR Solar System
+  tutorial_hatchxrspace_name: Code a 3D Space Invaders Game
+  tutorial_hatchxrtrex_name: Create a 3D T-Rex Game
+  tutorial_blocksmithguinea_name: Guinea Pig Survivors
+  tutorial_pickcodeshapes_name: 'Pickcode: Shapes and Spirals'
+  tutorial_codesterssketch_name: 'Codesters: Etch-a-Sketch'
+  tutorial_pickcodechatbot_name: 'Pickcode: Ad Libs Chatbot'
+  tutorial_codestersfish_name: 'Codesters: Feed the Fish'
+  tutorial_codestershedgehog_name: 'Codesters: Star Hedgehog'
+  tutorial_pickcodeggame_name: 'Pickcode: Guessing Game Chatbot'
+  tutorial_codestersdino_name: 'Codesters: Flappy Dino'
+  tutorial_pickcodemtpaint_name: 'Pickcode: Mobius Triangle Painting'
+  tutorial_microsoftcarnival_name: Code a Carnival
+  tutorial_thunkablescavenger_name: Build a Scavenger Hunt App with Code Blocks
+  tutorial_codeillusionfund_name: 'Disney Codeillusion: Computer Fundamentals'
+  tutorial_codeillusiongoofybeg_name: 'Disney Codeillusion: Game Development Adventure
+    with Goofy for Beginners'
+  tutorial_codeillusiongoofyint_name: 'Disney Codeillusion: Game Development Adventure
+    with Goofy for Intermediates'
+  tutorial_robotmagicescape_name: 'Escape Room: Code with Bots'
+  tutorial_codespeakclimate_name: Create a Website to Spread Awareness About Climate
+    Change
+  tutorial_codespeaktwinkle_name: Coding Twinkle Little Star in ScratchJr
+  tutorial_coinbasecrypto_name: The Crypto Memory Game
+  tutorial_codespeakcomp_name: Build a Composting Game in Scratch
+  tutorial_codespeaksnake_name: 'Coding Snake: Story Time with ScratchJr'
+  tutorial_prstemalexa_name: Alexa in Space
+  tutorial_coderzfarm_name: 'Code Farm: Plant a Garden'
+  tutorial_intelinofield_name: 'intelino Mission: Field Trip'
+  tutorial_cablockchain_name: New Kids on the Blockchain
+  tutorial_nasaparachute_name: 'NASA: Mars Perseverance Parachute Coding Activity'
+  tutorial_nasascratch_name: 'NASA: Explore Mars With Scratch'
+  tutorial_nasaorbit_name: 'NASA: Crew Orbital Docking Simulation'
+  tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
+  tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
+  tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
+  tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
+    create some music. Earn badges for each completed project.
+  tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
+    basic electronic components to create a blinking LED firefly. Write MicroPython
+    code to light your firefly and create a switch from jumper wires to mimic fireflies
+    in the wild when the switch is closed.
+  tutorial_rpcharting_longdescription: Discover the power of lists in the Python programming
+    language by storing Olympic medal data then use the pygal library to create an
+    interactive chart. Use data analysis skills to uncover patterns and anomalies.
+  tutorial_rpsolar_longdescription: Create an animated, interactive, solar system
+    model using the Python programming language and the p5 graphics library. Use dictionaries
+    to store planet facts that load when an orbiting planet is clicked.
+  tutorial_rpwebcards_longdescription: Create a set of webcards that flip when you
+    hover over them. Use CSS styling and animations then customise with fancy fonts
+    and colour gradients.
+  tutorial_codeclubhworld_longdescription: Write Python text-based code to create
+    an interactive project with user input that prints text and emoji. Use variables
+    to store text and numbers, and functions to organize your code.
+  tutorial_codeclubspells_longdescription: Use Scratch blocks to code a wand that
+    casts spells to turn sprites into toads, grow, and shrink them. Edit and reverse
+    sound to make spell sound effects. Broadcast spell messages so that multiple sprites
+    transform when the message is received.
+  tutorial_coderdojoanime_longdescription: Create a responsive webpage with text and
+    images for an anime drawing tutorial. Use HTML to structure the webpage and CSS
+    styles to apply layout, colour palettes and fonts.
+  tutorial_coderdojotarget_longdescription: Use Python with the p5 graphics library
+    to draw a target and score points by hitting it with arrows. Learn about RGB colours
+    and position your target with x & y coordinates. Use if, elif and else conditions
+    to make scoring decisions.
+  tutorial_creaticodescratch_longdescription: CreatiCode.com offers a wide range of
+    coding activities in many topics, such as 3D games, 3D arts, Augmented Reality
+    games, Artificial Intelligence apps, Youtube video remixing, and UN's sustainable
+    development goals. Scratch-based blocks are used in all activities, so students
+    do not need to learn a different programming language or user interface to code
+    and share their projects.
+  tutorial_bbsierpinski_longdescription: In this short series of lessons, you'll learn
+    to create amazing and colorful math art!
+  tutorial_bbstopwatch_longdescription: In this short series of lessons, you'll learn
+    to create a real, working stopwatch!
+  tutorial_idrpatterns_longdescription: Use the Loop action block in the Weavly coding
+    environment to create geometric patterns like crystals, stars, or other exciting
+    shapes with repeated elements.
+  tutorial_idrshapes_longdescription: 'In this activity, players use the Weavly action
+    blocks to draw simple shapes, such squares, rectangles, triangles, hexagons, and
+    stars. '
+  tutorial_edisondetect_longdescription: Introduce the key computational concepts
+    of loops and an understanding of infrared light using Edison robots and the block
+    based programming language, EdBlocks. This lesson utilizes the Edison robot's
+    drive and obstacle detection functions through a set of progressive programming
+    tasks.
+  tutorial_edisonmusical_longdescription: Simple musical tunes are a great example
+    of sequence in action. Using Edison and the Scratch-based programming language,
+    EdScratch, students can create music and tie together sequence and inputs-outputs
+    into enjoyable programs.
+  tutorial_codemonkeydiglit_longdescription: 'Introduction to some important topics
+    in the digital world: How to use computers, what is software and hardware, possible
+    online threats and protecting your privacy. The course includes 2 lessons - digital
+    use and digital citizenship. Each lesson is made of self guided slides with interactive
+    questions and surveys, 3 mini games and 5 review questions to check the student''s
+    understanding.'
+  tutorial_bsdrockpaper_longdescription: Use the Python programming language to build
+    a 'Rock, Paper, Scissors' game. Don't worry if you have never tried Python, we
+    will walk you through each step.
+  tutorial_microbitreaction_longdescription: Make a micro:bit reaction game with real
+    physical switches made from scrap cardboard and kitchen foil.
+  tutorial_kinderanimal_longdescription: In this lesson, students will turn KIBO into
+    a playful animal that moves in response to a program the children create. Students
+    can also experiment with KIBO's input and output options to take it further.
+  tutorial_kindersinger_longdescription: In this lesson, students will dress KIBO
+    up in a performer's outfit and teach KIBO to sing a favorite song! With KIBO's
+    Sound Record/Playback Module, children will use their sequencing skills to program
+    KIBO to play back their song in the correct order. This lesson is meant for children
+    with prior KIBO experience.
+  tutorial_microbitwwn_longdescription: Shake your micro:bit and be given a random
+    direction to walk.
+  tutorial_grokcyberlive_longdescription: A Navy captain is held captive inside his
+    ship. A major landmark has gone dark. And weapons are pointed at Sydney's busiest
+    sites…It's all connected, and it's up to you to free the captain, track down the
+    culprit, and stop them. Students will need to trace clues, solve puzzles, and
+    figure out how to stop a large-scale simulated cyber attack before it's too late.
+  tutorial_codemojimaze_longdescription: Learn about sequences to help Deeno complete
+    the maze.
+  tutorial_codemojisnake_longdescription: In this unit students will learn how to
+    use coding blocks on Scratch to create a snake game.
+  tutorial_carnegietoxibots_longdescription: No one sleeps on Zillah City. You play
+    as one of the Zeds, a crew dedicated to stamping out the menace of Toxibots, malware-corrupted
+    robots that belong to Toxicorp, a giant corporation. Most of the Toxibots were
+    destroyed, but there are still some around wreaking havoc. Get geared up in the
+    Zed Clubhouse, and program your collaborative robot (aka 'cobot') Beastie to help
+    capture them.
+  tutorial_carnegieiris_longdescription: The Iris Rover Challenge with VICE Virtual
+    Robot provides a structured sequence of programming activities in a real-world
+    project-based context. It is designed to get students thinking about the patterns
+    and structure of not just robotics, but also programming and problem-solving more
+    generally. This lesson includes videos, animations, and a built-in coding environment
+    with the virtual robot.
+  tutorial_carnegiespike_longdescription: The Virtual SPIKE Prime Coding - Iris Rover
+    Challenge provides a structured sequence of programming activities in a real-world
+    project-based context. It is designed to get students thinking about the patterns
+    and structure of not just robotics, but also programming and problem-solving more
+    generally. This lesson includes videos, animations, and a built-in coding environment
+    with virtual robot.
+  tutorial_spheroincolor_longdescription: Sphero indi can see color much like you
+    and me. But who is faster at recognizing colors? Who can recognize the most? In
+    this lesson, discover how we see color and challenge indi to a color contest!
+  tutorial_kcjdominos_longdescription: In this lesson we will simulate falling dominos
+    using JavaScript. Along the way we will learn about variables, functions, loops,
+    mouse events and knocking things over!
+  tutorial_spherocolortheory_longdescription: Mix up your colors by tilting and rotating
+    Sphero BOLT! Explore how additive color theory works by adding different values
+    of red, green, and blue to make many different colors. Learn how you can use your
+    BOLT's sensors to measure its orientation and change colors.
+  tutorial_codecombatesports_longdescription: Mã hóa cạnh tranh chưa bao giờ hoành
+    tráng đến thế! Tìm hiểu các kỹ năng bạn cần để chơi như những người chuyên nghiệp
+    trong Esports Bootcamp của chúng tôi. Không cần kinh nghiệm viết mã. Bắt đầu bằng
+    cách đào tạo trong ngục tối và khám phá các chiến lược và chiến thuật mã hóa mà
+    bạn sẽ cần để cạnh tranh. Sau khi trau dồi kỹ năng, hãy đặt mã của bạn để thử
+    nghiệm trong đấu trường thể thao điện tử của chúng tôi với những người chơi khác
+    trên toàn thế giới! Bạn có phải là nhà vô địch Liên minh AI tiếp theo của chúng
+    tôi không?
+  tutorial_spherodigdisplay_longdescription: Digital Displays are all around us, from
+    phones to computer monitors to television to modern billboards. But how do they
+    work? Dig into the graphic technology behind digital displays and get hands-on
+    experience by programming images and animations with the littleBits codeBit and
+    LED matrix.
+  tutorial_spherorvrincolor_longdescription: 'Visible light is made up of waves of
+    varying lengths which the eye detects as color. While RVR+ doesn''t have eyes
+    (well at least ones that can see) it does have a sensor that is able to detect
+    a wide range of colors. Learn the capabilities of RVR+''s color sensor and how
+    to program it. '
+  tutorial_clbinary_longdescription: Using restone components in Minecraft, participants
+    will learn how binary counting works, create AND and OR logic gates, and use binary
+    counting to create a combination lock for opening a locked door.
+  tutorial_sascollabcode_longdescription: It can be challenging to find resources
+    to teach coding to students with visual impairments. SAS believes that every student
+    should have the opportunity to learn to code and aims to accomplish this using
+    braille code blocks with SAS CodeSnaps - a collaborative coding environment that
+    can get an entire classroom coding with just a single iPad and a Sphero robot.
+  tutorial_codecombatgoblins_longdescription: Chung tôi cân sự giup đơ của bạn!
+    Bắt tay vào một nhiệm vụ hoành tráng, nơi bạn kiểm soát trò chơi thông qua khả
+    năng lập trình của mình. Trở thành anh hùng, mở khóa chiến lợi phẩm và mở rộng
+    kho vũ khí mã của bạn để giải cứu thị trấn. Sau đó, sử dụng các chiến lược AI
+    để tập hợp một nhóm cho trận chiến trùm yêu tinh cuối cùng!
+  tutorial_scratchstorytelling_longdescription: Animate your own story with Scratch!
+    Add sprites, backgrounds, and interactive graphic effects to bring your story
+    to life. Includes an educator facilitation guide, Scratch project tutorial, and
+    coding cards. This activity aligned with Common Core English Language Arts Standards.
+  tutorial_crayolasymbols_longdescription: A picture is worth a thousand words—even
+    small images say a lot! Visual symbols are everywhere, directing us to public
+    restrooms, hospitals, wheelchair ramps, and bus stops. Use shapes and lines to
+    design original symbols that others can count on.
+  tutorial_crayoladrawacode_longdescription: Explore codes from yesterday and today.
+    Ancient people drew symbols on cave walls to tell stories. Ancient Egyptians carved
+    hieroglyphs, a language of visual symbols representing people, objects, and actions,
+    into stone. Create add-on stories with visual codes.
+  tutorial_crayolafollowmycode_longdescription: Create coding dance by sketching visual
+    symbols such as arrows, spirals, and footsteps to create a pattern that you and
+    others will follow. Or make small characters from Model Magic and use them to
+    follow your dance code!
+  tutorial_madpicturethis_longdescription: This lesson will introduce students to
+    HTML language and teach them how to decode it, even if they have never interacted
+    with HTML code before.  By making observations, students will notice patterns
+    and gain a better understanding of how HTML code is written and interpreted.
+  tutorial_mindmakersmaps_longdescription: In this universe, maps of different types
+    serve as a backdrop for fun challenges with autonomous vehicles that obey your
+    programs. To win, you will have to interpret each map and program not only the
+    movements, but adapt to the unexpected using sensors for obstacles and natural
+    events such as weather, temperature, and the passage of time. Have a good trip!
+  tutorial_mindmakersjorel_longdescription: The fun universe of Jorel's Brother is
+    now under your control! But for that, you need to master the fundamentals of programming
+    and develop skills like algorithmic thinking, problem decomposition, pattern identification
+    and abstraction... work hard and maybe you'll find out the name of Jorel's brother!
+  tutorial_mindmakersroboland_longdescription: Program the weird and fun robots Mustachebot
+    and Ladybot! You help them overcome challenges, and they help you develop computational
+    thinking. The more advanced the challenge, the more you learn about algorithms,
+    decomposition, patterns, and abstraction... Work hard and have fun!
+  tutorial_mindmakersrobolandjr_longdescription: Program the weird and funny robots
+    Mustachebot and Ladybot. Whenever you manage to solve a challenge, you get a little
+    green ball and move on to the next one. Capriche!
+  tutorial_codehsdraw_longdescription: Create your own drawing program in Scratch
+    using keyboard and mouse inputs. Anyone will be able to use it make fun and creative
+    digital art!
+  tutorial_codehscamouflage_longdescription: Use ScratchJr to program an animal to
+    show its adaptation of using camouflage in its environment!
+  tutorial_firiapythoncodex_longdescription: Simple step-by-step lessons teach Python
+    coding as you unlock new capabilities, from the beautiful color display to the
+    hi-fi audio system. Use the built-in accelerometer, light sensor, and microphone
+    to code your own unique and interactive projects. And you can directly connect
+    servo motors and external sensors for unlimited expansion possibilities. CodeX
+    = games, music, sensors, art, and more!
+  tutorial_bekidscoding_longdescription: Join Grace, Zak and Dot the Robot on an adventure
+    in the Loop Galaxy! Code with blocks to complete exciting tasks, and learn the
+    basics of algorithms, sequences and loops!
+  tutorial_rodocodehr_longdescription: 'Rodocodo: Code Hour is a self-guided coding
+    game for 4-11 year olds. It teaches the fundamentals of coding such as sequencing,
+    debugging, loops and functions. It also teaches techniques for solving problems
+    so children become more confident, independent learners.'
+  tutorial_microbitdice_longdescription: Shake your micro:bit to make random numbers.
+  tutorial_madflashcard_longdescription: This lesson exposes students to HTML and
+    CSS code and provides them the opportunity to interact with it and see their results
+    in real-time.
+  tutorial_madappwars_longdescription: 'This lesson provides students with the opportunity
+    to explore the business side of app development.  In this activity, students compare
+    two apps that fall under the same umbrella category (example: two travel apps)
+    and evaluate which is better based on specific criteria.'
+  tutorial_kodablepuppies_longdescription: Students will meet Kodable's fluffy friends
+    and learn how to care for them! 'Pets' are in-game puppies that require a lot
+    of love and attention. Students will program Carebots to help with the responsibility
+    of being a new paw-rent using coding concepts such as functions and conditional
+    statements.
+  tutorial_googlesuperhero_longdescription: Turn an everyday hero from your life or
+    community into a superhero by programming them to fly over buildings, spin, work
+    with a sidekick, and score points by touching objects in a game. In Code Your
+    Hero, show off your hero's special powers and your own creativity with CS First
+    and Scratch.
+  tutorial_googlename _longdescription: Pick a name and bring the letters of the word
+    to life using code. Choose a nickname, a pet's name, an animal, a sport, a place
+    or a hobby.
+  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
+    the air. Rumor has it, the famed Gargantua bot is online and sending the last
+    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
+    ready to groove, move, and finish off what you started! Players program their
+    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
+    this rhythm-styled game.
+  tutorial_nasachspacejam_longdescription: Create a solar system that really rocks!
+    Learn about music, astronomy, and coding in this self-guided activity (no coding
+    experience required). Program planets to make music, creating your own musical
+    solar system, complete with spacey melodies.
+  tutorial_hatchxrsolar_longdescription: 'Explore the stars and build your own solar
+    system using concepts of block based programming. Learn about the basics of 3D
+    space, and dive into your imagination to build a universe of your dreams, all
+    in less than an hour. And guess what, you can run your project in AR on any iOS
+    device using the HatchXR app. Don''t forget to share your creations with us using
+    #hatchxr #HourOfCode'
+  tutorial_hatchxrspace_longdescription: 'Code the classic space invaders game in
+    3D, while learning about the basic of game development, motion in 3D space and
+    learn fundamental programming concepts like loops, conditionals, variables, and
+    keyboard events, all in less than an hour. Don''t forget to share your creations
+    with us using #hatchxr #HourOfCode'
+  tutorial_hatchxrtrex_longdescription: 'Build the classic chrome''s T-rex dino game
+    in 3D, while learning about the basic of game development, motion in 3D space
+    and learn fundamental programming concepts like loops, conditionals, variables,
+    and keyboard events, all in less than an hour. Don''t forget to share your creations
+    with us using #hatchxr #HourOfCode'
+  tutorial_blocksmithguinea_longdescription: The guinea pigs are coming and they are
+    hungry. For each round, program Bot to fire carrots, launch lettuce or invoke
+    the mighty Apple shield in this furious, fast-paced coding game. Collect hearts
+    to unlock more tools and contain the feeding frenzy while hoping that your code
+    doesn't break.
+  tutorial_pickcodeshapes_longdescription: Learn to use Pickcode to write code that
+    creates a variety of shapes. Once the course is done, you'll be able to get creative
+    and make whatever design you'd like!
+  tutorial_codesterssketch_longdescription: Learn the basics of coding in Python while
+    creating your own custom Etch-a-Sketch! Learn how to control an onscreen sprite
+    with different key events, accept user input to set the pen width, and use a list
+    to control the pen color.
+  tutorial_pickcodechatbot_longdescription: In this course, you'll learn how to make
+    a simple chatbot that plays a quick ad libs game.
+  tutorial_codestersfish_longdescription: Learn the basics of coding in Python while
+    creating your own falling-object game! You'll learn how to add a background and
+    sprites, and how to use events to create and control sprites on the stage.
+  tutorial_codestershedgehog_longdescription: Learn the basics of coding in Python,
+    then create a game that shoots a sprite to the stars! To shoot your shot you'll
+    first need to learn how to create key, interval, and collision events. BLAST OFF!
+  tutorial_pickcodeggame_longdescription: Learn to make a two player guessing game
+    where one player enters a number into a chatbot, and the chatbot gives hints to
+    the other player as they try to guess.
+  tutorial_codestersdino_longdescription: Learn Python functions and events while
+    creating your own Flappy Dino game. Once the game starts, the dino drops! If you
+    hit a block, you lose.  How many blocks can you navigate the dino through?
+  tutorial_pickcodemtpaint_longdescription: In this course, you'll learn how to use
+    functions to draw a pretty intricate shape (like a mobius strip but in triangle
+    form). After this lesson, you'll have the building blocks for making a ton of
+    different designs.
+  tutorial_microsoftcarnival_longdescription: Code your own classroom carnival with
+    games like Whack-the-Mole, Burstin' Balloons, and Target Practice.
+  tutorial_thunkablescavenger_longdescription: Learn to build your own Scavenger Hunt
+    app in Thunkable, and use your app to hunt for items on your mobile device as
+    soon as your code is complete.
+  tutorial_codeillusionfund_longdescription: Enter into the magical world of coding
+    and computer science as you learn and familiarize yourself with the fundamentals
+    of a computer! This will include practicing clicking and scrolling, dragging and
+    dropping, copy and pasting and typing.
+  tutorial_codeillusiongoofybeg_longdescription: Embark on a magical coding adventure
+    with Goofy! Learn how to draw, color and move shapes, as well as load images and
+    sounds as you master the basics of Game Development using JavaScript.
+  tutorial_codeillusiongoofyint_longdescription: 'Create your very own interactive,
+    digital band with Goofy as you explore the joy of Game Development using JavaScript.
+    This activity will build on what you learned in our introductory activity, Disney
+    Codeillusion: Game Development Adventure with Goofy for Beginners.'
+  tutorial_robotmagicescape_longdescription: Escape from a haunted 3D room with help
+    from programmable bots.
+  tutorial_codespeakclimate_longdescription: Learn how to responsibly build a basic
+    website using HTML and help educate others about climate change.
+  tutorial_codespeaktwinkle_longdescription: Listen to a read aloud of 'Coding Twinkle'
+    and then learn to code it using the ScratchJr app
+  tutorial_coinbasecrypto_longdescription: Test your memory and learn the basics of
+    crypto!
+  tutorial_codespeakcomp_longdescription: Learn about worm composting and build a
+    game in Scratch!
+  tutorial_codespeaksnake_longdescription: Listen to a story about Snake, a classic
+    mobile game star, and code your own game in ScratchJr
+  tutorial_prstemalexa_longdescription: Students will explore voice artificial intelligence
+    - or voice AI - by coding two Alexa skills. Students will start by watching a
+    video covering voice AI basics, and then build a voice AI-powered program in MIT
+    App Inventor that says 'Hello Moon' and a program that can recite random space
+    facts. The lesson ends with a vocabulary review and discussion.
+  tutorial_coderzfarm_longdescription: Program a robot to plant a garden, and learn
+    how robots help farmers in the real world.
+  tutorial_intelinofield_longdescription: Learn to program the intelino smart train
+    unplugged with action snaps and complete the mission of driving students across
+    town on their field trip.
+  tutorial_cablockchain_longdescription: This interactive course explores blockchain
+    technology and cryptocurrencies, the driving force of the next generation web.
+    Follow our characters as they enter the metaverse on a hunt to find a potential
+    scammer. They discover a range of creative applications of blockchain and consider
+    how it could impact society in the future.
+  tutorial_nasaparachute_longdescription: In this activity, you will learn how JPL
+    engineers used a binary code to include a hidden message in the parachute used
+    to help the Mars rover, Perseverance, land successfully on Mars. You will also
+    have the opportunity to create your own hidden message.
+  tutorial_nasascratch_longdescription: Create a Moon or Mars exploration game using
+    Scratch, a visual programming language. Think like NASA space-mission planners
+    to design your game!
+  tutorial_nasaorbit_longdescription: In this activity, students use Scratch, Snap!,
+    or another programming language to create an interactive simulation of a spacecraft
+    docking to the International Space Station. The Crew Orbital Docking Simulation
+    (CODing Sim) engages students in computational thinking, problem-solving, and
+    real-world applications of mathematics.
+  tutorial_nasapackage_longdescription: In this activity, students use Scratch, Snap!,
+    or another programming language to create an interactive simulation of a drone
+    navigating around a geofenced area to deliver a package. The simulation engages
+    students in computational thinking, problem solving, and real-world application
+    of mathematics.
+  tutorial_nasalunar_longdescription: 'Students learn about the Artemis 1 mission
+    and the NASA App Development Challenge (ADC). The goal is for students to follow-along
+    steps we''ve created using Code.org''s App Lab to learn basic programming utilizing
+    block code. '
+  tutorial_meeestate_longdescription: 'Solve puzzles to escape from Dr. Breakowski''s
+    mysterious mansion in the new Minecraft Hour of Code: Escape Estate. Use coding
+    and computational thinking to unlock secrets, open trap doors, and reveal hidden
+    clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
+    or Python, Hour of Code offers a learning pathway for anyone to learn the basics
+    of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
+  tutorial_rpccw_string_detail_grades: Grades 2-5
+  tutorial_rpledfirefly_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_rpcharting_string_detail_grades: Grades 9+
+  tutorial_rpsolar_string_detail_grades: Grades 9+
+  tutorial_rpwebcards_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_codeclubhworld_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_codeclubspells_string_detail_grades: Grades 2-5
+  tutorial_coderdojoanime_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_coderdojotarget_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_creaticodescratch_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bbsierpinski_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_bbstopwatch_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_idrpatterns_string_detail_grades: Pre-reader - Grade 5
+  tutorial_idrshapes_string_detail_grades: Pre-reader - Grade 5
+  tutorial_edisondetect_string_detail_grades: Grades 2-8
+  tutorial_edisonmusical_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codemonkeydiglit_string_detail_grades: Grades 2-8
+  tutorial_bsdrockpaper_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_microbitreaction_string_detail_grades: Grades 2-5
+  tutorial_kinderanimal_string_detail_grades: Pre-reader - Grade 5
+  tutorial_kindersinger_string_detail_grades: Pre-reader - Grade 5
+  tutorial_microbitwwn_string_detail_grades: Grades 2-5
+  tutorial_grokcyberlive_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codemojimaze_string_detail_grades: Pre-reader - Grade 5
+  tutorial_codemojisnake_string_detail_grades: Pre-reader - Grade 5
+  tutorial_carnegietoxibots_string_detail_grades: Grades 2-8
+  tutorial_carnegieiris_string_detail_grades: Grades 2-8
+  tutorial_carnegiespike_string_detail_grades: Grades 2-8
+  tutorial_spheroincolor_string_detail_grades: Pre-reader - Grade 5
+  tutorial_kcjdominos_string_detail_grades: Grades 2-8
+  tutorial_spherocolortheory_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codecombatesports_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_spherodigdisplay_string_detail_grades: Grades 2-8
+  tutorial_spherorvrincolor_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_clbinary_string_detail_grades: Grades 2+
+  tutorial_sascollabcode_string_detail_grades: Pre-reader +
+  tutorial_codecombatgoblins_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_scratchstorytelling_string_detail_grades: Grades 2-8
+  tutorial_crayolasymbols_string_detail_grades: Grades 2+
+  tutorial_crayoladrawacode_string_detail_grades: Pre-reader - Grade 8
+  tutorial_crayolafollowmycode_string_detail_grades: Pre-reader - Grade 8
+  tutorial_madpicturethis_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_mindmakersmaps_string_detail_grades: Grades 9+
+  tutorial_mindmakersjorel_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_mindmakersroboland_string_detail_grades: Grades 2-5
+  tutorial_mindmakersrobolandjr_string_detail_grades: Pre-reader - Grade 1
+  tutorial_codehsdraw_string_detail_grades: Grades 2-8
+  tutorial_codehscamouflage_string_detail_grades: Pre-reader - Grade 5
+  tutorial_firiapythoncodex_string_detail_grades: Pre-reader +
+  tutorial_bekidscoding_string_detail_grades: Pre-reader - Grade 5
+  tutorial_rodocodehr_string_detail_grades: Pre-reader - Grade 5
+  tutorial_microbitdice_string_detail_grades: Grades 2-5
+  tutorial_madflashcard_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_madappwars_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_kodablepuppies_string_detail_grades: Pre-reader - Grade 5
+  tutorial_googlesuperhero_string_detail_grades: Grades 2-8
+  tutorial_googlename _string_detail_grades: Grades 2-8
+  tutorial_carnegiezillah_string_detail_grades: Grades 2-9
+  tutorial_nasachspacejam_string_detail_grades: Grades 2+
+  tutorial_hatchxrsolar_string_detail_grades: Grades 2+
+  tutorial_hatchxrspace_string_detail_grades: Grades 2+
+  tutorial_hatchxrtrex_string_detail_grades: Grades 2+
+  tutorial_blocksmithguinea_string_detail_grades: Grades 2+
+  tutorial_pickcodeshapes_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codesterssketch_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_pickcodechatbot_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codestersfish_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_codestershedgehog_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_pickcodeggame_string_detail_grades: Grades 9+
+  tutorial_codestersdino_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_pickcodemtpaint_string_detail_grades: Grades 9+
+  tutorial_microsoftcarnival_string_detail_grades: Grades 2+
+  tutorial_thunkablescavenger_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_codeillusionfund_string_detail_grades: Pre-reader - Grade 5
+  tutorial_codeillusiongoofybeg_string_detail_grades: Grades 2+
+  tutorial_codeillusiongoofyint_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_robotmagicescape_string_detail_grades: Grades 2+
+  tutorial_codespeakclimate_string_detail_grades: Grades 2+
+  tutorial_codespeaktwinkle_string_detail_grades: Pre-reader - Grade 1
+  tutorial_coinbasecrypto_string_detail_grades: Grades 2-8
+  tutorial_codespeakcomp_string_detail_grades: Grades 2+
+  tutorial_codespeaksnake_string_detail_grades: Pre-reader - Grade 1
+  tutorial_prstemalexa_string_detail_grades: Grades 9+
+  tutorial_coderzfarm_string_detail_grades: Grades 2-8
+  tutorial_intelinofield_string_detail_grades: Pre-reader - Grade 5
+  tutorial_cablockchain_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_nasaparachute_string_detail_grades: Grades 2-5
+  tutorial_nasascratch_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_nasaorbit_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_nasapackage_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_nasalunar_string_detail_grades: Lớp 6-8 (tuổi từ 11-13)
+  tutorial_meeestate_string_detail_grades: Grades 2+
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_kcjhealth_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_msftwakanda_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_nafbrand_string_detail_grades: Grades 9+
+  tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_rpledfirefly_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_rpcharting_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpsolar_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpwebcards_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_codeclubhworld_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeclubspells_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_coderdojoanime_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_coderdojotarget_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_creaticodescratch_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_bbsierpinski_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_bbstopwatch_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_idrpatterns_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_idrshapes_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_edisondetect_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_edisonmusical_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codemonkeydiglit_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_bsdrockpaper_string_platforms: Chrome, Firefox
+  tutorial_microbitreaction_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_kinderanimal_string_platforms: Unplugged
+  tutorial_kindersinger_string_platforms: Unplugged
+  tutorial_microbitwwn_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_grokcyberlive_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codemojimaze_string_platforms: Unplugged
+  tutorial_codemojisnake_string_platforms: Chrome
+  tutorial_carnegietoxibots_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_carnegieiris_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_carnegiespike_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_spheroincolor_string_platforms: Unplugged
+  tutorial_kcjdominos_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_spherocolortheory_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_codecombatesports_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_spherodigdisplay_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_spherorvrincolor_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_clbinary_string_platforms: Unplugged
+  tutorial_sascollabcode_string_platforms: iPad
+  tutorial_codecombatgoblins_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_scratchstorytelling_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_crayolasymbols_string_platforms: Unplugged
+  tutorial_crayoladrawacode_string_platforms: Unplugged
+  tutorial_crayolafollowmycode_string_platforms: Unplugged
+  tutorial_madpicturethis_string_platforms: Unplugged
+  tutorial_mindmakersmaps_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_mindmakersjorel_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_mindmakersroboland_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_mindmakersrobolandjr_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codehsdraw_string_platforms: Unplugged
+  tutorial_codehscamouflage_string_platforms: Unplugged
+  tutorial_firiapythoncodex_string_platforms: Chrome
+  tutorial_bekidscoding_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_rodocodehr_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_microbitdice_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_madflashcard_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_madappwars_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_kodablepuppies_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_googlesuperhero_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_googlename _string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_carnegiezillah_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_nasachspacejam_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_hatchxrsolar_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_hatchxrspace_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_hatchxrtrex_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_blocksmithguinea_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_pickcodeshapes_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codesterssketch_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_pickcodechatbot_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_codestersfish_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codestershedgehog_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_pickcodeggame_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codestersdino_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_pickcodemtpaint_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_microsoftcarnival_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_thunkablescavenger_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codeillusionfund_string_platforms: Chrome
+  tutorial_codeillusiongoofybeg_string_platforms: Chrome
+  tutorial_codeillusiongoofyint_string_platforms: Chrome
+  tutorial_robotmagicescape_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_codespeakclimate_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codespeaktwinkle_string_platforms: Android tablet, iPad, Windows phone,
+    Android phone, iPhone
+  tutorial_coinbasecrypto_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_codespeakcomp_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_codespeaksnake_string_platforms: Android tablet, iPad, Windows phone, Android
+    phone, iPhone
+  tutorial_prstemalexa_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_coderzfarm_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_intelinofield_string_platforms: Unplugged
+  tutorial_cablockchain_string_platforms: Android tablet, iPad, Windows phone, Android
+    phone, iPhone
+  tutorial_nasaparachute_string_platforms: Unplugged
+  tutorial_nasascratch_string_platforms: Android tablet, iPad, Windows phone, Android
+    phone, iPhone
+  tutorial_nasaorbit_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_nasapackage_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_msftwakanda_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_rpccw_string_detail_platforms: ''
+  tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
+  tutorial_rpcharting_string_detail_platforms: ''
+  tutorial_rpsolar_string_detail_platforms: ''
+  tutorial_rpwebcards_string_detail_platforms: ''
+  tutorial_codeclubhworld_string_detail_platforms: ''
+  tutorial_codeclubspells_string_detail_platforms: ''
+  tutorial_coderdojoanime_string_detail_platforms: ''
+  tutorial_coderdojotarget_string_detail_platforms: ''
+  tutorial_creaticodescratch_string_detail_platforms: ''
+  tutorial_bbsierpinski_string_detail_platforms: ''
+  tutorial_bbstopwatch_string_detail_platforms: ''
+  tutorial_idrpatterns_string_detail_platforms: ''
+  tutorial_idrshapes_string_detail_platforms: ''
+  tutorial_edisondetect_string_detail_platforms: Edison Robot
+  tutorial_edisonmusical_string_detail_platforms: Edison Robot
+  tutorial_codemonkeydiglit_string_detail_platforms: ''
+  tutorial_bsdrockpaper_string_detail_platforms: ''
+  tutorial_microbitreaction_string_detail_platforms: BBC micro:bit
+  tutorial_kinderanimal_string_detail_platforms: KIBO 10 Robot Kit
+  tutorial_kindersinger_string_detail_platforms: KIBO 21 Robot Kit
+  tutorial_microbitwwn_string_detail_platforms: BBC micro:bit
+  tutorial_grokcyberlive_string_detail_platforms: ''
+  tutorial_codemojimaze_string_detail_platforms: ''
+  tutorial_codemojisnake_string_detail_platforms: ''
+  tutorial_carnegietoxibots_string_detail_platforms: ''
+  tutorial_carnegieiris_string_detail_platforms: ''
+  tutorial_carnegiespike_string_detail_platforms: ''
+  tutorial_spheroincolor_string_detail_platforms: Sphero Indi Robot
+  tutorial_kcjdominos_string_detail_platforms: ''
+  tutorial_spherocolortheory_string_detail_platforms: Sphero Indi Robot
+  tutorial_codecombatesports_string_detail_platforms: ''
+  tutorial_spherodigdisplay_string_detail_platforms: littleBits STEAM+ Coding Kit
+  tutorial_spherorvrincolor_string_detail_platforms: Sphero
+  tutorial_clbinary_string_detail_platforms: ''
+  tutorial_sascollabcode_string_detail_platforms: iPad, Sphero robot (BOLT, Sphero
+    Mini, or SPRK+)
+  tutorial_codecombatgoblins_string_detail_platforms: ''
+  tutorial_scratchstorytelling_string_detail_platforms: ''
+  tutorial_crayolasymbols_string_detail_platforms: ''
+  tutorial_crayoladrawacode_string_detail_platforms: ''
+  tutorial_crayolafollowmycode_string_detail_platforms: ''
+  tutorial_madpicturethis_string_detail_platforms: ''
+  tutorial_mindmakersmaps_string_detail_platforms: ''
+  tutorial_mindmakersjorel_string_detail_platforms: ''
+  tutorial_mindmakersroboland_string_detail_platforms: ''
+  tutorial_mindmakersrobolandjr_string_detail_platforms: ''
+  tutorial_codehsdraw_string_detail_platforms: ''
+  tutorial_codehscamouflage_string_detail_platforms: ''
+  tutorial_firiapythoncodex_string_detail_platforms: CodeX
+  tutorial_bekidscoding_string_detail_platforms: ''
+  tutorial_rodocodehr_string_detail_platforms: ''
+  tutorial_microbitdice_string_detail_platforms: micro:bit
+  tutorial_madflashcard_string_detail_platforms: ''
+  tutorial_madappwars_string_detail_platforms: ''
+  tutorial_kodablepuppies_string_detail_platforms: ''
+  tutorial_googlesuperhero_string_detail_platforms: ''
+  tutorial_googlename _string_detail_platforms: ''
+  tutorial_carnegiezillah_string_detail_platforms: ''
+  tutorial_nasachspacejam_string_detail_platforms: ''
+  tutorial_hatchxrsolar_string_detail_platforms: ''
+  tutorial_hatchxrspace_string_detail_platforms: ''
+  tutorial_hatchxrtrex_string_detail_platforms: ''
+  tutorial_blocksmithguinea_string_detail_platforms: ''
+  tutorial_pickcodeshapes_string_detail_platforms: ''
+  tutorial_codesterssketch_string_detail_platforms: ''
+  tutorial_pickcodechatbot_string_detail_platforms: ''
+  tutorial_codestersfish_string_detail_platforms: ''
+  tutorial_codestershedgehog_string_detail_platforms: ''
+  tutorial_pickcodeggame_string_detail_platforms: ''
+  tutorial_codestersdino_string_detail_platforms: ''
+  tutorial_pickcodemtpaint_string_detail_platforms: ''
+  tutorial_microsoftcarnival_string_detail_platforms: ''
+  tutorial_thunkablescavenger_string_detail_platforms: ''
+  tutorial_codeillusionfund_string_detail_platforms: ''
+  tutorial_codeillusiongoofybeg_string_detail_platforms: ''
+  tutorial_codeillusiongoofyint_string_detail_platforms: ''
+  tutorial_robotmagicescape_string_detail_platforms: ''
+  tutorial_codespeakclimate_string_detail_platforms: ''
+  tutorial_codespeaktwinkle_string_detail_platforms: ''
+  tutorial_coinbasecrypto_string_detail_platforms: ''
+  tutorial_codespeakcomp_string_detail_platforms: ''
+  tutorial_codespeaksnake_string_detail_platforms: ''
+  tutorial_prstemalexa_string_detail_platforms: ''
+  tutorial_coderzfarm_string_detail_platforms: ''
+  tutorial_intelinofield_string_detail_platforms: intelino J-1 smart train set
+  tutorial_cablockchain_string_detail_platforms: ''
+  tutorial_nasaparachute_string_detail_platforms: ''
+  tutorial_nasascratch_string_detail_platforms: ''
+  tutorial_nasaorbit_string_detail_platforms: ''
+  tutorial_nasapackage_string_detail_platforms: ''
+  tutorial_nasalunar_string_detail_platforms: ''
+  tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
+  tutorial_rpccw_string_detail_programming_languages: Khối
+  tutorial_rpledfirefly_string_detail_programming_languages: Python
+  tutorial_rpcharting_string_detail_programming_languages: Python
+  tutorial_rpsolar_string_detail_programming_languages: Python
+  tutorial_rpwebcards_string_detail_programming_languages: HTML, CSS
+  tutorial_codeclubhworld_string_detail_programming_languages: Python
+  tutorial_codeclubspells_string_detail_programming_languages: Khối
+  tutorial_coderdojoanime_string_detail_programming_languages: HTML, CSS
+  tutorial_coderdojotarget_string_detail_programming_languages: Python
+  tutorial_creaticodescratch_string_detail_programming_languages: Khối
+  tutorial_bbsierpinski_string_detail_programming_languages: JavaScript
+  tutorial_bbstopwatch_string_detail_programming_languages: JavaScript
+  tutorial_idrpatterns_string_detail_programming_languages: Khối
+  tutorial_idrshapes_string_detail_programming_languages: Khối
+  tutorial_edisondetect_string_detail_programming_languages: Khối
+  tutorial_edisonmusical_string_detail_programming_languages: Khối
+  tutorial_codemonkeydiglit_string_detail_programming_languages: Digital Literacy
+  tutorial_bsdrockpaper_string_detail_programming_languages: Python
+  tutorial_microbitreaction_string_detail_programming_languages: Blocks, Python, MakeCode
+  tutorial_kinderanimal_string_detail_programming_languages: Unplugged
+  tutorial_kindersinger_string_detail_programming_languages: Unplugged
+  tutorial_microbitwwn_string_detail_programming_languages: Blocks, Python, MakeCode
+  tutorial_grokcyberlive_string_detail_programming_languages: Cybersecurity concepts
+  tutorial_codemojimaze_string_detail_programming_languages: Unplugged, Sequences
+  tutorial_codemojisnake_string_detail_programming_languages: Khối
+  tutorial_carnegietoxibots_string_detail_programming_languages: Khối
+  tutorial_carnegieiris_string_detail_programming_languages: Khối
+  tutorial_carnegiespike_string_detail_programming_languages: Khối
+  tutorial_spheroincolor_string_detail_programming_languages: Language independent,
+    Color tiles
+  tutorial_kcjdominos_string_detail_programming_languages: JavaScript
+  tutorial_spherocolortheory_string_detail_programming_languages: Khối
+  tutorial_codecombatesports_string_detail_programming_languages: JavaScript, Python,
+    Lua, CoffeeScript
+  tutorial_spherodigdisplay_string_detail_programming_languages: Khối
+  tutorial_spherorvrincolor_string_detail_programming_languages: Khối
+  tutorial_clbinary_string_detail_programming_languages: Unplugged
+  tutorial_sascollabcode_string_detail_programming_languages: Blocks, Tactile braille
+    blocks
+  tutorial_codecombatgoblins_string_detail_programming_languages: JavaScript, Python,
+    Lua, CoffeeScript
+  tutorial_scratchstorytelling_string_detail_programming_languages: Khối
+  tutorial_crayolasymbols_string_detail_programming_languages: Unplugged
+  tutorial_crayoladrawacode_string_detail_programming_languages: Unplugged
+  tutorial_crayolafollowmycode_string_detail_programming_languages: Unplugged
+  tutorial_madpicturethis_string_detail_programming_languages: Unplugged, HTML
+  tutorial_mindmakersmaps_string_detail_programming_languages: Khối
+  tutorial_mindmakersjorel_string_detail_programming_languages: Khối
+  tutorial_mindmakersroboland_string_detail_programming_languages: Khối
+  tutorial_mindmakersrobolandjr_string_detail_programming_languages: Khối
+  tutorial_codehsdraw_string_detail_programming_languages: Khối
+  tutorial_codehscamouflage_string_detail_programming_languages: Khối
+  tutorial_firiapythoncodex_string_detail_programming_languages: Python
+  tutorial_bekidscoding_string_detail_programming_languages: Khối
+  tutorial_rodocodehr_string_detail_programming_languages: Khối
+  tutorial_microbitdice_string_detail_programming_languages: Blocks, Python, MakeCode
+  tutorial_madflashcard_string_detail_programming_languages: HTML, CSS
+  tutorial_madappwars_string_detail_programming_languages: HTML, CSS
+  tutorial_kodablepuppies_string_detail_programming_languages: C/C++, JavaScript,
+    iOS/Swift
+  tutorial_googlesuperhero_string_detail_programming_languages: Khối
+  tutorial_googlename _string_detail_programming_languages: Khối
+  tutorial_carnegiezillah_string_detail_programming_languages: Khối
+  tutorial_nasachspacejam_string_detail_programming_languages: Khối
+  tutorial_hatchxrsolar_string_detail_programming_languages: Khối
+  tutorial_hatchxrspace_string_detail_programming_languages: Khối
+  tutorial_hatchxrtrex_string_detail_programming_languages: Khối
+  tutorial_blocksmithguinea_string_detail_programming_languages: Blocks, JavaScript
+  tutorial_pickcodeshapes_string_detail_programming_languages: JavaScript
+  tutorial_codesterssketch_string_detail_programming_languages: Python
+  tutorial_pickcodechatbot_string_detail_programming_languages: JavaScript
+  tutorial_codestersfish_string_detail_programming_languages: Python
+  tutorial_codestershedgehog_string_detail_programming_languages: Python
+  tutorial_pickcodeggame_string_detail_programming_languages: JavaScript
+  tutorial_codestersdino_string_detail_programming_languages: Python
+  tutorial_pickcodemtpaint_string_detail_programming_languages: JavaScript
+  tutorial_microsoftcarnival_string_detail_programming_languages: Khối
+  tutorial_thunkablescavenger_string_detail_programming_languages: Khối
+  tutorial_codeillusionfund_string_detail_programming_languages: Computer Basics /
+    Fundamentals of a PC
+  tutorial_codeillusiongoofybeg_string_detail_programming_languages: JavaScript
+  tutorial_codeillusiongoofyint_string_detail_programming_languages: JavaScript
+  tutorial_robotmagicescape_string_detail_programming_languages: Blocks,JavaScript
+  tutorial_codespeakclimate_string_detail_programming_languages: HTML
+  tutorial_codespeaktwinkle_string_detail_programming_languages: Khối
+  tutorial_coinbasecrypto_string_detail_programming_languages: Cryptocurrency concepts
+  tutorial_codespeakcomp_string_detail_programming_languages: Khối
+  tutorial_codespeaksnake_string_detail_programming_languages: Khối
+  tutorial_prstemalexa_string_detail_programming_languages: Khối
+  tutorial_coderzfarm_string_detail_programming_languages: Khối
+  tutorial_intelinofield_string_detail_programming_languages: Unplugged
+  tutorial_cablockchain_string_detail_programming_languages: Computational Thinking
+  tutorial_nasaparachute_string_detail_programming_languages: Unplugged, Binary Code
+  tutorial_nasascratch_string_detail_programming_languages: Khối
+  tutorial_nasaorbit_string_detail_programming_languages: Khối
+  tutorial_nasapackage_string_detail_programming_languages: Khối
+  tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
+  tutorial_meeestate_string_detail_programming_languages: Blocks, Python
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Khối
+  tutorial_msftwakanda_string_detail_programming_languages: Khối
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -10505,86 +11447,174 @@ vi:
   all: All
   dont_know: I don't know
   language_label: Language
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: Tiếng Việt
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Tiếng Việt
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Tiếng Việt
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

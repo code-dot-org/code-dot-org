@@ -4,33 +4,21 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSP Virtual PL",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "curriculum",
-          "https://studio.code.org/courses/csp-2021"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing"
-        ]
-      ],
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "vpl-csp",
-    "serialized_at": "2022-04-26 18:56:42 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-10-31 21:19:28 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "vpl-csp-2022"
     }
@@ -51,7 +39,7 @@
   "lessons": [
     {
       "key": "Module 1",
-      "name": "Module 1",
+      "name": "Module 1: Wrapping Up Unit 3 & EIPM",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -66,7 +54,7 @@
     },
     {
       "key": "Module 2",
-      "name": "Module 2",
+      "name": "Module 2: Variables Practice & Make Lessons",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -81,7 +69,7 @@
     },
     {
       "key": "Module 3",
-      "name": "Module 3",
+      "name": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -96,7 +84,7 @@
     },
     {
       "key": "Module 4",
-      "name": "Module 4",
+      "name": "Module 4: Mental Models, Datasets, & Assessment",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -639,7 +627,7 @@
       "key": "4ed1c2db-38f7-42aa-b8e4-2dd889cdb144",
       "position": 3,
       "properties": {
-        "progression_name": "Using the Google Trends Tool (~20 minutes)"
+        "progression_name": "Using the NYT Resource (~20 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "4ed1c2db-38f7-42aa-b8e4-2dd889cdb144",
@@ -722,6 +710,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS1 Workshop Overview_2022"
+        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -744,6 +735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 3 Context-21_2022"
+        ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
       "bonus": false,
@@ -766,6 +760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Unit 4 tasks overview_2022"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -788,6 +785,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1_2022"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -810,6 +810,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL U4 L12 Practice PT 2_2022"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -832,6 +835,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 4 Reflection_2022"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -854,6 +860,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 EIPM Reflection_2022"
+        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
       "bonus": false,
@@ -876,6 +885,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 1 Wrap Up_2022"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -898,6 +910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS2 Workshop Overview_2022"
+        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -920,6 +935,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Practice overview_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -942,6 +960,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L03 Variables numbers practice 1_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -964,6 +985,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables numbers practice 4_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -986,6 +1010,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 1_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1008,6 +1035,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 3_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1030,6 +1060,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 2_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1052,6 +1085,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 5_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1074,6 +1110,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL8 - U4 L03 Variables operator practice 6_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1096,6 +1135,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1118,6 +1160,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Practice Reflection_2022"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1140,6 +1185,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Make overview_2022"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1162,6 +1210,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL U4 L04 Variables Make Project_2022"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1184,6 +1235,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L04 Variables Make Project Submit_2022"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1206,6 +1260,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Make Reflection_2022"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1228,6 +1285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - Unit 4 Wrap-up_2022"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -1250,6 +1310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Collaboration Reflection_2022"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -1272,6 +1335,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 2 Wrap Up_2022"
+        ],
         "progression": "Module 2 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -1294,6 +1360,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS3 Workshop Overview_2022"
+        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1316,6 +1385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_2022"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -1338,6 +1410,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 1_2022"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -1360,6 +1435,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 2_2022"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -1382,6 +1460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Intro to CI_2022"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1404,6 +1485,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Broadening the def_2022"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1426,6 +1510,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Feedback in CI_2022"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1448,6 +1535,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Practice feedback_2022"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1470,6 +1560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 3 Wrap Up_2022"
+        ],
         "progression": "Module 3 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -1492,6 +1585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview_2022"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1514,6 +1610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence_2022"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -1536,6 +1635,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Lists EIPM reflection_2022"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -1558,6 +1660,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5_2022"
+        ],
         "progression": "Mental models in Unit 5 (~35 minutes)"
       },
       "bonus": false,
@@ -1580,6 +1685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - Intro to Traversals_2022"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1602,6 +1710,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2022"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1624,6 +1735,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate_2022"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1646,6 +1760,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2022"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1668,6 +1785,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Reflection on datasets_2022"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1690,6 +1810,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 4 Wrap Up_2022"
+        ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -1712,6 +1835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 5 - Workshop Overview_2022"
+        ],
         "progression": "Module 5 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1734,6 +1860,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Intro to Unit 7_2022"
+        ],
         "progression": "Understanding Unit 7 (~5 minutes)"
       },
       "bonus": false,
@@ -1756,6 +1885,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Explore_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
       },
       "bonus": false,
@@ -1778,6 +1910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 1_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1800,6 +1935,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 1_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1822,6 +1960,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 2_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1844,6 +1985,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 4_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1866,6 +2010,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 3_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1888,12 +2035,15 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Choice Levels_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "PL U7 Param Return Practice Part 5_2022"
+          "PL U7 Param Return Practice Choice Levels_2022"
         ],
         "lesson.key": "Module 5: Unit 7 and Understanding Functions with Parameters and Return",
         "lesson_group.key": "",
@@ -1901,7 +2051,7 @@
         "activity_section.key": "defb1b19-6706-409c-8e48-ff7b99780e4b"
       },
       "level_keys": [
-        "PL U7 Param Return Practice Part 5_2022"
+        "PL U7 Param Return Practice Choice Levels_2022"
       ]
     },
     {
@@ -1910,50 +2060,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PL U7 Param Investigate Calculator App_2022"
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 10_2022"
         ],
-        "lesson.key": "Module 5: Unit 7 and Understanding Functions with Parameters and Return",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2022",
-        "activity_section.key": "defb1b19-6706-409c-8e48-ff7b99780e4b"
-      },
-      "level_keys": [
-        "PL U7 Param Investigate Calculator App_2022"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 11,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PL U7 Param Practice App 2_2022"
-        ],
-        "lesson.key": "Module 5: Unit 7 and Understanding Functions with Parameters and Return",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2022",
-        "activity_section.key": "defb1b19-6706-409c-8e48-ff7b99780e4b"
-      },
-      "level_keys": [
-        "PL U7 Param Practice App 2_2022"
-      ]
-    },
-    {
-      "chapter": 57,
-      "position": 12,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1971,11 +2080,14 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 13,
+      "chapter": 56,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Inclusive Classrooms_2022"
+        ],
         "progression": "Creating inclusive classrooms (~15 minutes)"
       },
       "bonus": false,
@@ -1993,11 +2105,14 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 14,
+      "chapter": 57,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 5 Wrap Up_2022"
+        ],
         "progression": "Module 5 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -2015,11 +2130,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 6 - Workshop Overview_2022"
+        ],
         "progression": "Module 6 overview (~5 minutes)"
       },
       "bonus": false,
@@ -2037,11 +2155,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2022"
+        ],
         "progression": "Requirements of the Create Performance Task (~20 minutes)"
       },
       "bonus": false,
@@ -2059,11 +2180,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Survival Guide_2022"
+        ],
         "progression": "Digging into the Create Performance Task Survival Guide (~40 minutes)"
       },
       "bonus": false,
@@ -2081,11 +2205,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Role of teacher_2022"
+        ],
         "progression": "Role of the teacher during the Create Performance Task (~15 minutes)"
       },
       "bonus": false,
@@ -2103,11 +2230,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 6 Wrap Up_2022"
+        ],
         "progression": "Module 6 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -2125,11 +2255,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 7 - Workshop Overview_2022"
+        ],
         "progression": "Module 7 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -2147,11 +2280,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Unit 9 Overview_2022"
+        ],
         "progression": "Overview of Unit 9 - Data (~10 minutes)"
       },
       "bonus": false,
@@ -2169,12 +2305,15 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using the Google Trends Tool (~20 minutes)"
+        "level_keys": [
+          "CSP-PL M7 - Google Trends_2022"
+        ],
+        "progression": "Using the NYT Resource (~20 minutes)"
       },
       "bonus": false,
       "seeding_key": {
@@ -2191,11 +2330,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 1_2022"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -2213,11 +2355,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 2_2022"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -2235,11 +2380,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 3_2022"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -2257,11 +2405,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 4_2022"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -2279,11 +2430,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 70,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 7 Wrap Up_2022"
+        ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -2301,11 +2455,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview_2022"
+        ],
         "progression": "Module 8 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -2323,11 +2480,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Community 1_2022"
+        ],
         "progression": "Connecting to the CS Community (~15 minutes)"
       },
       "bonus": false,
@@ -2345,11 +2505,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Community 2_2022"
+        ],
         "progression": "Connecting to the CS Community (~15 minutes)"
       },
       "bonus": false,
@@ -2367,11 +2530,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1_2022"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -2389,11 +2555,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 2_2022"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -2411,11 +2580,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 76,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 3_2022"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -2433,11 +2605,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 77,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 8 Wrap Up_2022"
+        ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -3094,33 +3269,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "PL U7 Param Return Practice Part 5_2022",
+        "level.key": "PL U7 Param Return Practice Choice Levels_2022",
         "script_level.level_keys": [
-          "PL U7 Param Return Practice Part 5_2022"
-        ],
-        "lesson.key": "Module 5: Unit 7 and Understanding Functions with Parameters and Return",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2022",
-        "activity_section.key": "defb1b19-6706-409c-8e48-ff7b99780e4b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PL U7 Param Investigate Calculator App_2022",
-        "script_level.level_keys": [
-          "PL U7 Param Investigate Calculator App_2022"
-        ],
-        "lesson.key": "Module 5: Unit 7 and Understanding Functions with Parameters and Return",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2022",
-        "activity_section.key": "defb1b19-6706-409c-8e48-ff7b99780e4b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PL U7 Param Practice App 2_2022",
-        "script_level.level_keys": [
-          "PL U7 Param Practice App 2_2022"
+          "PL U7 Param Return Practice Choice Levels_2022"
         ],
         "lesson.key": "Module 5: Unit 7 and Understanding Functions with Parameters and Return",
         "lesson_group.key": "",

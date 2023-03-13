@@ -5,7 +5,7 @@ class Pd::InternationalOptInController < ApplicationController
   def new
     return render '/pd/application/teacher_application/logged_out' unless current_user
     return render '/pd/application/teacher_application/not_teacher' unless current_user.teacher?
-    return render '/pd/application/teacher_application/no_teacher_email' unless current_user.email.present?
+    return render '/pd/application/teacher_application/no_teacher_email' if current_user.email.blank?
 
     @script_data = {
       props: {

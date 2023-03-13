@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 pt:
   errors:
     messages:
@@ -39,6 +45,7 @@ pt:
         personal_email_markdown: "E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})"
         username: 'Nome de utilizador'
         password: 'Palavra-passe'
+        verified_teacher: 'Professor verificado'
         password_confirmation: 'Confirmação da palavra-passe'
         current_password: 'Palavra-passe atual'
         locale: 'Idioma'
@@ -167,8 +174,15 @@ pt:
     user_type_button: "Atualizar o tipo de conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Aluno"
+    user_type_student_desc: "Explore todos os nossos cursos e atividades, e ainda:"
     user_type_student_ability_1: "Salvar seu progresso e projetos"
+    user_type_student_ability_2: "Junte-se à secção de sala de aula do seu professor"
     user_type_teacher: "Professor"
+    user_type_teacher_desc: "Tudo a que os alunos têm acesso, e ainda:"
+    user_type_teacher_ability_1: "Criar secções de sala de aula"
+    user_type_teacher_ability_2: "Atribuir tarefas e acompanhar o trabalho dos alunos"
+    user_type_teacher_ability_3: "Matricular-se em aprendizagem profissional"
+    user_type_teacher_ability_4: "Interagir no nosso fórum de professores"
     field_is_required: "é obrigatório"
     accept_terms: "Deves concordar em criar uma conta."
     error: "Ocorreu um erro."
@@ -411,7 +425,6 @@ pt:
     popup:
       progress_for_user: "Progresso de %{name}"
       progress: 'O teu progresso'
-      lines: 'Total de linhas de código: %{lines}'
       close: 'FECHAR'
       mastery: 'Conceitos'
       puzzle_map: 'Etapas'
@@ -530,6 +543,7 @@ pt:
     choose_next_course: "Experimenta um dos seguintes cursos do Code Studio"
     print_certificate: "Imprimir certificado"
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: "Hora do Código"
   move_students:
     new_section_dne: "Lamentamos, mas a secção %{new_section_code} não existe. Por favor insere um código de secção diferente."
     section_code_cant_be_current_section: "A secção atual não pode ser a mesma que a nova secção."
@@ -638,23 +652,17 @@ pt:
       body_short: "Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos."
       audience: 'Maiores de 13 anos'
       cta: 'Saiba como'
-    dance:
-      title: 'Festa dançante'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Festa dançante'
-    hoc:
-      title: 'Labirinto clássico'
-      body: 'Explora as noções básicas da Ciência da Computação. Milhões de pessoas já experimentaram.'
+    dance:
+      title: 'Festa dançante'
     flappy:
       title: 'Flappy Bird'
       body: 'Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!'
-    20-hour:
-      title: 'Curso acelerado'
-      body: 'Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.'
-      body_short: 'Aprende as bases da Ciência da Computação com a versão acelerada dos cursos 2 a 4.'
-    hoc2014:
-      try_new_tutorial: 'Experimente nosso novo tutorial da Hora do Código na versão beta'
-      try_frozen: 'O Artista com Anna e Elsa, do filme Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galeria"
       body: "Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários"
@@ -663,18 +671,20 @@ pt:
       body: "O Laboratório de Jogos é um ambiente de programação onde você pode criar animações simples e jogos com objetos e personagens que interagem uns com os outros."
       audience: "Maiores de 13 anos"
       cta: "Saiba como"
+    hello-world:
+      title: 'Olá Mundo'
+    hero:
+      title: "Minecraft"
+      body: "O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código."
     hoc-encryption:
       title: "Criptografia simples"
       body: "Os alunos vão aprender técnicas para criar e quebrar mensagens encriptadas."
-    weblab:
-      title: "Laboratório Web (beta)"
-      body: "O Laboratório Web é um ambiente de programação onde você pode criar páginas web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site em segundos."
-      audience: "Maiores de 13 anos"
-      cta: "Saiba como"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Labirinto clássico'
+      body: 'Explora as noções básicas da Ciência da Computação. Milhões de pessoas já experimentaram.'
+    hoc2014:
+      try_new_tutorial: 'Experimente nosso novo tutorial da Hora do Código na versão beta'
+      try_frozen: 'O Artista com Anna e Elsa, do filme Frozen'
     infinity:
       title: "Laboratório infinito"
       body: "Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity."
@@ -684,30 +694,38 @@ pt:
     minecraft2016:
       title: "Minecraft"
       body: "Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código."
+    poem-art:
+      title: 'Arte poética'
     sports:
       title: "Esportes"
       body: "Faça um jogo de basquete ou misture os esportes."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Compressão de texto"
       body: "Nesta lição, os alunos irão usar a Ferramenta de Compressão de Texto para comprimir texto substituindo padrões por símbolos."
-    unplugged:
-      title: "Aulas off-line"
-      audience: "A partir de 4 anos"
-      body: "Nós fizemos uma lista de aulas off-line para você usar em sua sala de aula. Agora você pode ensinar os conceitos básicos da ciência da computação, independentemente de ter ou não computadores na sala! Use essas aulas como um curso independente ou como aulas complementares para qualquer curso de ciência da computação."
-      body_short: "Se não tiver computadores, teste essas lições off-line em sua sala de aula."
-    unplugged_conditionals:
-      title: "Condicionais"
-      body: "Aprenda sobre algoritmos e declarações condicionais nesta atividade \"off-line\" usando um baralho de cartas."
+    weblab:
+      title: "Laboratório Web (beta)"
+      body: "O Laboratório Web é um ambiente de programação onde você pode criar páginas web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site em segundos."
+      audience: "Maiores de 13 anos"
+      cta: "Saiba como"
     widgets:
       title: "Widgets"
       body: "Os alunos podem colocar as mãos na massa para explorar os conceitos do nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas digitais. Eles podem usar os \"widgets\" como bem entenderem ou criar uma lição envolvendo um único conceito para suas aulas."
       audience: "Maiores de 14 anos"
       cta: "Saiba como"
+    unplugged_conditionals:
+      title: "Condicionais"
+      body: "Aprenda sobre algoritmos e declarações condicionais nesta atividade \"off-line\" usando um baralho de cartas."
+    unplugged:
+      title: "Aulas off-line"
+      audience: "A partir de 4 anos"
+      body: "Nós fizemos uma lista de aulas off-line para você usar em sua sala de aula. Agora você pode ensinar os conceitos básicos da ciência da computação, independentemente de ter ou não computadores na sala! Use essas aulas como um curso independente ou como aulas complementares para qualquer curso de ciência da computação."
+      body_short: "Se não tiver computadores, teste essas lições off-line em sua sala de aula."
+    20-hour:
+      title: 'Curso acelerado'
+      body: 'Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.'
+      body_short: 'Aprende as bases da Ciência da Computação com a versão acelerada dos cursos 2 a 4.'
   landing:
     prerelease_tutorial: "Esse tutorial está em **beta**. Ele ainda está sujeito a revisões, conforme são recebidos feedbacks e são feitas melhorias."
     report_bug: "Comunicar um problema"
@@ -800,9 +818,6 @@ pt:
     reminder_desc: 'Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>. Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.'
     reminder_desc_markdown: Atualizamos nossos [Termos de Serviço](%{tos_url}) e [Política de Privacidade](%{privacy_url}). Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: "Ver os termos atualizados"
-  donor_interstitial:
-    support_codeorg_1: "Cada dólar doado ao Code.org gera oportunidades para mais estudantes."
-    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: "Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos a acompanhar o nosso progresso!"
     message: "Por favor, digite abaixo as informações da sua escola."
@@ -1026,6 +1041,7 @@ pt:
         music: 'Música'
         art: 'Arte'
         other: "Outro:"
+        na: 'Não aplicável'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1034,7 +1050,8 @@ pt:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Outro:"
+        other: "Outro"
+        na: 'Não aplicável'
       robotics:
         grok: 'Grok Learning (Aprendizagem Grok)'
         kodable: 'Kodable'
@@ -1044,7 +1061,8 @@ pt:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Oficina de Maravilhas'
-        other: "Outro:"
+        other: "Outro"
+        na: 'Não aplicável'
       workshop_course:
         csf_af: 'Fundamentos de Ciência da Computação (Cursos A-F)'
         csf_express: 'Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)'
@@ -1094,4 +1112,8 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
+  unit_prefix: "Unidade: %{n}"
+  code_org_logo_alt: "Início - Code.org"
   teacher_feedback: "Feedback do Professor"
+  pixelation:
+    binary: "Binário"

@@ -29,6 +29,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     section: sectionShape,
     unitAllowsHiddenLessons: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
+    unitId: PropTypes.number.isRequired,
     unitName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenLesson: PropTypes.func.isRequired,
@@ -73,6 +74,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hiddenLessonState,
       hasNoSections,
       lockableAuthorized,
+      unitId,
       lesson
     } = this.props;
 
@@ -101,6 +103,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           <div style={styles.buttonContainer}>
             <Button
               __useDeprecatedTag
+              id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
               icon="file-text"
@@ -114,6 +117,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           <div style={styles.buttonContainer}>
             <Button
               __useDeprecatedTag
+              id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
               text={i18n.studentResources()}
               icon="file-text"
@@ -125,7 +129,11 @@ class ProgressLessonTeacherInfo extends React.Component {
           </div>
         )}
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
-          <LessonLock lesson={lesson} />
+          <LessonLock
+            unitId={unitId}
+            lessonId={lesson.id}
+            isHidden={!!isHidden}
+          />
         )}
         {lesson.lessonStartUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
@@ -135,6 +143,25 @@ class ProgressLessonTeacherInfo extends React.Component {
               courseid={courseId}
               analyticsData={JSON.stringify(this.firehoseData())}
               buttonStyle={styles.button}
+            />
+          </div>
+        )}
+        {lesson.lesson_feedback_url && (
+          <div
+            style={{
+              marginBottom: !!showHiddenForSectionToggle ? '0px' : '10px',
+              ...styles.buttonContainer
+            }}
+          >
+            <Button
+              __useDeprecatedTag
+              href={lesson.lesson_feedback_url}
+              text={i18n.rateThisLesson()}
+              icon="bar-chart"
+              color={Button.ButtonColor.gray}
+              target="_blank"
+              style={styles.button}
+              className="rate-lesson-button"
             />
           </div>
         )}
@@ -151,14 +178,19 @@ class ProgressLessonTeacherInfo extends React.Component {
 
 const styles = {
   buttonContainer: {
-    marginTop: 5,
-    marginLeft: 15,
-    marginRight: 15
+    marginTop: '10px',
+    marginRight: '15px',
+    marginLeft: '15px',
+    // Have to set line height to 0 to remove additional 5px bottom margin
+    lineHeight: '0px'
   },
+  // Setting 0px margin here intentionally to override styling
   button: {
     width: '100%',
+    margin: '0px',
     paddingLeft: 0,
-    paddingRight: 0
+    paddingRight: 0,
+    boxShadow: 'none'
   }
 };
 
@@ -170,6 +202,7 @@ export default connect(
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
     unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
     hiddenLessonState: state.hiddenLesson,
+    unitId: state.progress.scriptId,
     unitName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,
     hasNoSections:

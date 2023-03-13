@@ -49,7 +49,7 @@ es:
       description:
         sequence: Secuencia
         if: Bloque si
-        if_else: Bloque si-sino
+        if_else: Bloque if-else
         loop_times: Bloque repetir veces
         loop_until: Bloque repetir hasta que
         loop_while: Bloque mientras
@@ -111,9 +111,9 @@ es:
           bloque girar.'
         turtle_1_5: Ahora, para practicar, dibuja un triángulo y un cuadrado para
           dibujar un sobre.
-        turtle_1_6: "¿Puedes darte cuenta cómo dibujar este triángulo y cuadrado?
-          Ayuda: Haz el triángulo primero, y luego averigua cuánto girar antes de
-          dibujar el cuadrado."
+        turtle_1_6: "¿Puedes averiguar cómo dibujar este triángulo y este cuadrado?
+          Sugerencia: Haz primero el triángulo y luego calcula cuánto hay que girar
+          antes de dibujar el cuadrado."
         turtle_1_7: Vale, vamos a hacerlo un poco más difícil; intenta dibujar estos
           anteojos verdes. Los cuadrados tienen 100 píxeles en cada lado, y están
           separados por 50 píxeles. ¡No te olvides de dibujar en verde!
@@ -202,18 +202,18 @@ es:
           cuadrados que la última vez. Haz que el cuadrado sea del mismo tamaño que
           el contador, usando el bloque "contador". Sugerencia: Está en la categoría
           Variables.'
-        turtle_2_7: Este es un programa para dibujar un espiral, pero los bloques
-          están desactivados así que no funcionan. Haz un nuevo programa utilizando
-          un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la
-          categoría Variables) para dibujar el mismo espiral.
+        turtle_2_7: Aquí tienes un programa para dibujar una espiral, pero los bloques
+          están desactivados para que no se ejecuten. Haz un nuevo programa utilizando
+          un bloque "for" (en la categoría Bucles) y un bloque "contador" (en la categoría
+          Variables) para dibujar la misma espiral.
         turtle_2_7_5: Hay una nueva función de "dibujar un muñeco de nieve" (en la
           categoría de funciones). Dibuja dos muñecos de nieve, de 250 y 100 de altura.
         turtle_2_8: Éste es un poco complicado. Utiliza la función "dibujar un muñeco
           de nieve" y el bloque nuevo "saltar adelante" (en la categoría de Acciones).
           Dibuja 3 muñecos de nieve en diferentes colores, separados por 100 píxeles.
-        turtle_2_9: Utiliza un bloque "desde" para dibujar una familia de muñecos
-          de nieve, con alturas de 110, 100, 90, 80 y 70. Los muñecos de nieve deberían
-          tener 60 pixeles de separación.
+        turtle_2_9: Utiliza un bucle "for" para dibujar una familia de muñecos de
+          nieve con alturas de 110, 100, 90, 80 y 70. Los muñecos de nieve deben estar
+          todos separados por 60 píxeles.
         turtle_2_10: Aquí hay un código para probar con diferentes espirales. ¿Qué
           sucede si cambias la cantidad del giro? O estableces un color al azar en
           la iteración. Dibuja cualquier cosa que quieras.
@@ -328,7 +328,7 @@ es:
         jigsaw_8: Acomoda los bloques para formar una imagen
         jigsaw_9: Acomoda los bloques para formar una imagen
         jigsaw_10: Acomoda los bloques para formar una imagen
-        jigsaw_11: Pon estos bloques en orden según el número
+        jigsaw_11: Ordena estos bloques por número
         jigsaw_12: Acomoda los bloques para formar una imagen
         jigsaw_13: "¡Ordena el rompecabezas!"
         mazestep_1: Aquí va la descripción del paso del laberinto
@@ -624,25 +624,23 @@ es:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Loops en Artista
+        CSF_a_b_artist_loops: Bucles en Artista
         CSF_artist_angles: Ángulos en Artista
-        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
-          Recolector'
-        CSF_collector_repeat_loops: Bucles de repetición del Recolector
-        CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
-          El Recolector'
-        CSF_create_functions: Crear funciones
+        CSF_collector_k1_blocks: 'Fundamentos de Informática: La Coleccionista'
+        CSF_collector_repeat_loops: Bucles Repetir en La Coleccionista
+        CSF_collector_text_blocks: 'Fundamentos de Informática: La Coleccionista'
+        CSF_create_functions: Crear Funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
-        CSF_EF_cs_matters: Asuntos de las Ciencias de la Computación
+        CSF_EF_cs_matters: Importacia de la Informática
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
         CSF_my_robotic_friends: Mis amigos robóticos
-        CSF_Power_of_Words: El poder de las palabras
-        CSF_Super_Digital_Citizen: Superciudadano digital
+        CSF_Power_of_Words: El Poder de las Palabras
+        CSF_Super_Digital_Citizen: Superciudadano Digital
         CSF_stevie_big_project: Stevie y el Gran Proyecto
-        CSF_unspotted_bugs: Errores no detectados
-        CSF_zuck_loops_short: Bucles repetir
+        CSF_unspotted_bugs: Errores no Detectados
+        CSF_zuck_loops_short: Bucles Repetir
         frozen_intro: Prueba la Hora de Code
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
@@ -735,8 +733,8 @@ es:
         mc_2016_intro: Hora del Código de Minecraft - Introducción
         mc_2016_loops: Hora del Código de Minecraft - Bucles
         mc_2016_events: Hora del Código de Minecraft - Eventos
-        mc_2016_spawn: Hora del Código de Minecraft - Generar
-        mc_2016_congrats: Hora del Código de Minecraft - Felicitaciones
+        mc_2016_spawn: Hora del Código de Minecraft - Spawn
+        mc_2016_congrats: Hora del código de Minecraft - Enhorabuena
         applab_hoc_welcome: Hora del Código del Laboratorio de aplicaciones - Bienvenidos
         applab_hoc_setproperty: Hora del Código del Laboratorio de aplicaciones -
           setProperty
@@ -745,11 +743,11 @@ es:
           de diseño
         applab_hoc_share: Hora del Código del Laboratorio de aplicaciones - Compartir
         mc_2017_agent_intro: Hora del Código de Minecraft - El Agente
-        mc_2017_repeat: Hora del Código de Minecraft - Bucles repetir
+        mc_2017_repeat: Hora del Código de Minecraft - Bucles de repetición
         mc_2017_functions: Hora del Código de Minecraft - Funciones
-        mc_2017_congratulations: Hora del Código de Minecraft - Felicitaciones
+        mc_2017_congratulations: Hora del código de Minecraft - Enhorabuena
         mc_2017_puzzle_1: Hora del Código de Minecraft - El Agente
-        mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles repetir
+        mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles de repetición
         mc_2017_puzzle_8: Hora del Código de Minecraft - Funciones
         mc_2017_puzzle_12: Hora del Código de Minecraft - Juego Libre
         hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'
@@ -852,7 +850,7 @@ es:
         hoc_dance_congrats_2019: Fiesta de baile - ¡Que siga la fiesta!
         hoc_dance_warmup_2019: Fiesta de baile - Calentamiento
         hoc_dance_events_2019: Fiesta de baile - Eventos
-        hoc_dance_measures_2019: 'Fiesta de Baile: Compaces'
+        hoc_dance_measures_2019: 'Fiesta de Baile: Compases'
         hoc_dance_properties_2019: Fiesta de Baile - Propiedades
         csd_what_computers_do: "¿Qué hacen los ordenadores?"
         csf_my_online_neighborhood_2020: Mi barrio en línea
@@ -951,6 +949,60 @@ es:
         PL_overview_CSP: "¿Qué son los Principios de la Informática?"
         PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
         tesstest: Prueba Tess
+        CSA-PL-debugging-temp: Introducción a la Depuración en Laboratorio Java -
+          temp
+        csd_app_lab_design_mode: CSD Laboratorio de Aplicaciones - Modo Diseño
+        csd_app_lab_events: CSD Laboratorio de Aplicaciones - Eventos
+        PL_CSD_Unit4_AppTesting: Pruebas de Prototipos en Papel
+        csd_u6_circuit_playground: Computación física
+        csd_u6_input_output: Entrada y salida
+        CSA-PL-for-loops: Bucles For en Java
+        CSA-PL-variables: Creando Variables en Java
+        PL_CS_Journeys_Overview: Jornadas CS
+        CSA-PL-intro-to-java-lab: Fundamentos de Laboratorio Java
+        CSA-PL-first-program: Escribiendo un Programa en Java
+        CSD_u6_variables_part1: 'CSD: Variables'
+        csd_u6_if_statements: CSD:Sentencias If
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Llamando y Definiendo Funciones'
+        csp_applab_parameters: Funciones con parámetros
+        starquilts_intro_artist: Introducción a las Colchas de Estrellas
+        CSA-PL-intro-to-arrays: Arrays Unidimensionales (1D)
+        CSA-PL-1d-arrays-new-values: Introducción de valores en arrays 1D
+        CSA-PL-conditionals: Sentencias Condicionales en Java
+        CSA-PL-two-way-selection: Selección bidireccional
+        CSA-PL-Printing-in-Java: Impresión en Java
+        CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
+        PL_CSP_TeacherTips_Advice: 'Consejos para Docentes: Asesoramiento a Nuevos
+          Profesores de Informática'
+        PL_CSP_TeacherTips_IntroToCSP: 'Consejos para Docentes: Introducción a los
+          Principios de Informática'
+        PL_CSP_TeacherTips_Debugging: 'Consejos para Docentes: Ayuda con la Depuración'
+        PL_CSP_TeacherTips_LeadLearner: 'Consejos para Docentes: Cómo ser un Alumno
+          Aventajado'
+        PL_CSP_TeacherTips_APExam: 'Consejos para Docentes: Preparación para el Examen
+          AP'
+        PL_CSP_TeacherTips_EIPM: 'Consejos para Docentes: El proceso de EIPM'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground - Vista Previa
+        CSA-PL-debugging-22: Depuración en el Laboratorio Java
+        CSD_Unit6_InteractiveArtExemplar: Arte Interactivo - Ejemplo
+        CS_Changing_Everything: Las Ciencias de la Computación están cambiando todo
+        csa-alias-video: Igualdades y Alias
+        csa-equals-video: El método igualdad()
+        csa-user-stories: Historias de Usuario en Ingeniería de Software
+        csa-pl-vpl-m1-unit-3: Ingeniería de Software en la Unidad 3
+        csa-pl-intro-to-equality: Introducción a la Igualdad
+        csa-pl-intro-to-equals-method: Introducción al método .equals()
+        csa-pl-equals-book: Escribir el método equals() para la clase Libro
+        csa-multi-select-pl: Sentencias de selección múltiple en Java
+        csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
+        PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
+        csc_fm_pilot: Máquinas Funcionales (Piloto)
+        csc_fm_pilot_v2: Máquinas Funcionales (Introducción)
+        csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
+        csa-pl-intro-to-strings: Introducción a las Cadenas en Java
+        csa-pl-compareTo: El método compareTo()
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

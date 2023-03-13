@@ -126,7 +126,23 @@
         "CourseD_Dance_2020_bonus1_2021": "Maŋos ja Ovddos (Deaddil “Eanet” detáljaid oažžut)",
         "CourseD_Dance_2020_bonus3_2021": "Álgot Formašuvnnaid ráhkadit! (Deaddil “Eanet” detáljaid oažžut)",
         "HOC 2018 Level_12_2021": "Designe iežat čázevuol-birrasa, don dat mearridat!",
-        "poetry_hoc_backgroundEffects": "Când citești această poezie, ce culoare îți vine în minte? Găsește un efect de fundal care se potrivește cu sentimentul acestei poezii."
+        "poetry_hoc_backgroundEffects": "Când citești această poezie, ce culoare îți vine în minte? Găsește un efect de fundal care se potrivește cu sentimentul acestei poezii.",
+        "U1L13 Text Compression": "Oza minstariid (geardduhuvvon sánit dahje cealkagat) teavsttas. Bija minstariid maid gávnnat sátnelistui olgeš bealde. Go bijat minstara sátnelistui, de biddjo minstara symbola tekstii minstara sadjái.",
+        "CourseD_Dance_2020_012022": "Gaikko <xml><block type=\"Dancelab_makeAnonymousDanceSprite\" block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml>-blohka bargosadjái, ja čana dan siskkobeallai <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\" block-text=\"setup\"></block></xml>-blohkkii.",
+        "CourseD_Dance_2020_022022": "Bija bussái dánsenlihkastagaid go deaddilat boalu.",
+        "CourseD_Dance_2020_032022": "Dál lea dánsengilvvohallanáigi! Prográmmere juohke dánsára lihkadit go deattát iešguđetge boalu. Vállje iežat favorihttalihkastaga juohke dánsárii dahje bija nu ahte \"(Sahtedohko)\" dagaha vuordemeahttun lihkastagaid!",
+        "CourseD_Dance_2020_042022": "Bija dánsára dánsegoahtit ođđa lihkastaga njealját távtta maŋŋil.",
+        "CourseD_Dance_2020_062022": "Bija duogábeal-dánsáriid njunušdánsára birra gii lea gasku.",
+        "CourseD_Dance_2020_072022": "Rievdat duogábeal-dánsáriid joavkku sturrodaga.",
+        "CourseD_Dance_2020_082022": "Geahččal rievdadit ivnni du dánsáris (dahje olles joavkkus)!",
+        "CourseD_Dance_2020_092022": "Leage kreatiiva dáiguin ođđa blohkaiguin!",
+        "CourseD_Dance_2020_bonus12022": "Maŋos ja Ovddos (Deaddil “Eanet” detáljaid oažžut)",
+        "CourseD_Dance_2020_bonus32022": "Álgot Formašuvnnaid ráhkadit! (Deaddil “Eanet” detáljaid oažžut)",
+        "CourseD_Dance_2022_lessonextra": "Álgot Formašuvnnaid ráhkadit! (Deaddil “Eanet” detáljaid oažžut)",
+        "CourseD_Dance_2022_lessonextra1": "Maŋos ja Ovddos (Deaddil “Eanet” detáljaid oažžut)",
+        "CourseD_Dance_2022_lessonextra10a": "Maŋos ja Ovddos (Deaddil “Eanet” detáljaid oažžut)",
+        "CourseD_Dance_2022_lessonextra10b": "Álgot Formašuvnnaid ráhkadit! (Deaddil “Eanet” detáljaid oažžut)",
+        "HOC 2018 Level_122022": "Designe iežat čázevuol-birrasa, don dat mearridat!"
       }
     }
   }

@@ -18,7 +18,7 @@ input[type=radio].with-font ~ label:before {
     display: inline-block;
     content: "\f1db";  /* fa-circle-thin */
     font-size: 18px;
-    color: color.black;
+    color: black;
     width: 15px;
     height: 15px;
     text-align: center;

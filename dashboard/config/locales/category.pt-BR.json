@@ -1,0 +1,74 @@
+{
+  "pt-BR": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Leitura de literatura"
+        },
+        "ccela/SL": {
+          "description": "Falando e Escutando"
+        },
+        "ccmath/MP": {
+          "description": "Práticas Matemáticas"
+        },
+        "csta2011/CPP": {
+          "description": "Programação e Prática Computacional"
+        },
+        "csta2011/CT": {
+          "description": "Pensamento computacional"
+        },
+        "iste/1": {
+          "description": "Estudantes demonstram pensamento crítico, constroem conhecimento e desenvolvem produtos e processos inovadores usando a tecnologia."
+        },
+        "iste/4": {
+          "description": "Estudantes usam habilidades de pensamento crítico para planejar e conduzir pesquisas, gerenciar projetos, solucionar problemas e tomar decisões informadas usando recursos e ferramentas digitais apropriadas."
+        },
+        "iste/6": {
+          "description": "Estudantes demonstram boa compreensão de conceitos, sistemas e operações tecnológicas."
+        },
+        "ccela/L": {
+          "description": "Idioma"
+        },
+        "ccela/RI": {
+          "description": "Lendo Informativos"
+        },
+        "ccmath/OA": {
+          "description": "Operações e raciocínio algébrico"
+        },
+        "csta2011/CD": {
+          "description": "Computadores e dispositivos de comunicação"
+        },
+        "csta2011/CI": {
+          "description": "Impactos na comunidade, globais e éticos"
+        },
+        "ccmath/NBT": {
+          "description": "Números e operações na base dez"
+        },
+        "ccmath/G": {
+          "description": "Geometria"
+        },
+        "ccela/W": {
+          "description": "Escrevendo"
+        },
+        "csta2011/CL": {
+          "description": "Colaboração"
+        },
+        "iste/2": {
+          "description": "Estudantes usam mídia digital para se comunicar e trabalhar de maneira colaborativa, inclusive a distância, para apoiar o aprendizado individual e contribuir para o aprendizado de outras pessoas."
+        },
+        "csta/IC": {
+          "description": "Impacto da computação"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Explique como os recursos de computação podem ser protegidos, mas podem ser utilizados indevidamente."
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Compare os algoritmos de compactação de dados para determinar qual é o melhor em um contexto específico."
+        },
+        "csta/DA": {
+          "description": "Dados e análise"
+        }
+      }
+    }
+  }
+}

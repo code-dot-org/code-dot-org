@@ -16,6 +16,7 @@ ar:
       Board Events: أحداث اللوحة
       'Bunny ': ' باني '
       CS Discoveries Post-Course Survey: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
+      Challenge: تحدي
       Collision Detection: كشف التصادم
       Collisions: التصادمات
       Combining Representations: الجمع بين التمثيلات
@@ -64,6 +65,9 @@ ar:
       Measures: الإجراءات
       'Minecraft: Hero''s Journey': 'ماين كرافت: رحلة البطل'
       'Mini-Project: About Me': 'نبذة عني مع مختبر النقوش المتحركة'
+      'Mini-Project: Sticker Art': 'فن الملصقات مع الحلقات'
+      'Mini-Project: User Input Programs': 'مشروع صغير: برامج إدخال المستخدم'
+      'Mini-Project: Virtual Pet': 'مشروع صغير: الحيوانات الأليفة الافتراضية'
       More Buttons: أزرار إضافية
       Multi-Screen Apps: التطبيقات متعددة الشاشات
       My Online Neighborhood: الحي الذي أقطنه عبر الإنترنت
@@ -88,16 +92,20 @@ ar:
       Sprite Lab Example Project: عينة من مشاريع مختبر الرسوم المتحركة
       Sprite Lab Project: مشروع Sprite Lab
       Sprite Movement: حركة الرسوم المتحركة
+      Sprite Properties: خصائص الكائنات
       Teach AI a New Word: تدريس نشاط الذكاء الاصطناعي - كلمة جديدة
       Text Compression: ضغط النص
       The Animation Tab: تبويب الرسوم المتحركة
       The Draw Loop: حلقة الرسم
       The Harvester: عامِلة الحصاد
+      Train an AI to Clean the Ocean: تدريب الذكاء الاصطناعي لتنظيف المحيط
       Using the Repeat Block: استخدام حلقة "التكرار"
       Variables: المتغيرات
       Velocity: السرعة
       Video: فيديو
       'Video: CS Matters': 'فيديو: أهمية علم الحاسوب'
+      'Video: Outbreak Simulator: Introduction': 'فيديو: انفجار المحاكاة: مقدمة'
+      'Video: Programming with Blocks': 'البرمجة بالقطع البرمجية'
       Warm Up: نشاط تحضيري
       Welcome to Monster Town: مرحبًا بك في Monster Town
       Where'd They Go?: أين ذهبوا؟

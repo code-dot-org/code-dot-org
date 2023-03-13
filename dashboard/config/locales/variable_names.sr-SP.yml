@@ -21,6 +21,7 @@ sr:
       score: Резултат
       size: величина
       speed: брзина
+      type: тип
       variable: променљива
       width: Širina
       x: x

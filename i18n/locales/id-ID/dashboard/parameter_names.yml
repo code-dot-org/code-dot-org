@@ -14,6 +14,8 @@ id:
       nectars: Madu
       numOctagons: numOctagons
       points: poin
+      radius: radius
+      sides: sisi
       size: ukuran
       speed: kecepatan
       theGuess: theGuess

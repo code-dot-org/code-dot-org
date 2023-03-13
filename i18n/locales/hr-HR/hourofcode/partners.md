@@ -2,13 +2,11 @@
 title: Partneri
 ---
 
-Sat kodiranja pokreću Savjetodavni i revizijski odbori Sata kodiranja i Tjedna obrazovanja za računalne znanosti.
+Sat kodiranja vodi Odbor za reviziju Sata kodiranja.
 
-[Savjetodavni odbor]({{ urls/advisory_committee }}) sastoji se od predstavnika K-12, akademske zajednice, neprofitnih, profitnih i međunarodnih organizacija. Ovaj odbor vodi strategiju kampanje Sat kodiranja.
+[Odbor za reviziju ]({{ urls/review_committee }}) sastoji se od 12 sadašnjih i bivših nastavnika iz razreda K-12 koji procjenjuju i preporučuju aktivnosti koristeći rubriku koju je uspostavio savjetodavni odbor. Ovi edukatori pregledavaju aktivnosti koje vode učenici i planove lekcija učitelja koje dostavljaju stotine partnera u aktivnostima, ocjenjujući obrazovnu vrijednost aktivnosti, sposobnost angažiranja učenika i potencijalnu privlačnost različitim grupama učenika.
 
-The [Revizorsko povjerenstvo]({{ urls/review_committee }}) sastoji se od 15 nastavnika iz različitih razreda K-12 koji procjenjuju i preporučuju aktivnosti koristeći strategiju Savjetodavnog odbora. Ovi nastavnici pregledavaju aktivnosti koje vode studenti i nastavne planove koje vode stotine partnera u aktivnostima, ocjenjujući obrazovnu vrijednost aktivnosti, sposobnost uključivanja učenika i potencijalnu privlačnost različitim grupama učenika.
-
-Rad i zalaganje povjerenstava pridonijeli su uspjehu Sata kodiranja i njegovoj viziji da svakom učeniku omogući uvod u računalne znanosti.
+Rad i predanost odbora pridonijeli su uspjehu Sata kodiranja i njegovoj viziji da svakom učeniku ponudi uvod u informatiku.
 
 # Glavni partneri i korporacije
 

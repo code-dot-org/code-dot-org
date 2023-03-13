@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Танцевальная вечеринка</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Напиши программу «Танцевальная вечеринка» и поделись ею с друзьями и со своей семьей. С участием Кэти Перри, Шона Мендес, группы Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj и 34!</div> 
-       <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Пройди занятие</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Напиши программу «Танцевальная вечеринка» и поделись ею с друзьями и со своей семьей. Используйте композиции Бейонсе, Harry Styles, Lizzo, Lil Nas X, Селены Гомес, саундтрек из диснеевского "Энканто" и другую музыку!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
 </div>

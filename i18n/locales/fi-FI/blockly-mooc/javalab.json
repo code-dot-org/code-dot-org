@@ -1,7 +1,9 @@
 {
   "cancel": "Peru",
+  "create": "Luo",
   "delete": "Poista",
   "import": "Tuo",
   "rename": "Nimeä uudelleen",
-  "saving": "Tallennetaan..."
+  "saving": "Tallennetaan...",
+  "submit": "Jatka"
 }

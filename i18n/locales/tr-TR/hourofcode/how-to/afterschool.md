@@ -4,7 +4,7 @@ title: Okul Sonrası için Hour of Code Nasıl Yapılır? Rehberi
 
 {{ signup_button }}
 
-# Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
+# Kulüplerde veya okul sonrası faaliyetlerde Hour of Code nasıl öğretilir
 
 ### Bu harekete katılın ve öğrencilerinizi bilgisayar bilimiyle şu adımlarla tanıştırın.
 
@@ -16,7 +16,7 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 
 * * *
 
-## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Bir öğretici içerik seçin
 
@@ -34,7 +34,7 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 
 ## 4. Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanmak isteğinize bağlı
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar **gerekli değildir** ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz.
+En iyi Hour of Code deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar **gerekli değildir** ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz.
 
 Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Bağlantı hızınız düşük mü?** Videoları tüm sınıfa izletmeyi planlayın. Böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
 
@@ -42,15 +42,15 @@ Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kul
 
 **Yeterli cihazınız yok mu?** O halde [çiftli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
 
-## 5. Kod-Saati etkinliğinizi ilham verici bir video ile başlatın
+## 5. Hour of Code etkinliğinizi ilham verici bir video ile başlatın
 
-Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın.
+Hour of Code etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın.
 
 **İlham verici bir video gösterin:**
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un olduğu orjinal Code.org videosu başlatın ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır).
-- [ Dünya geneli Kod-Saati videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [ Başkan Obama tüm öğrencileri kodlama öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [ Dünya geneli Hour of Code videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Başkan Obama tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Bilgisayar biliminde tecrübeniz yoksa sorun değil. İşte size Hour of Code aktivitelerini tanıtmak için birkaç fikir:**
@@ -74,9 +74,9 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatı
 - Öğrencileriniz için [Sertifika basın]({{ urls/certificates }}).
 - Öğrencileriniz için ["I did an Hour of Code!"]({{ promote/resources_stickers }}) çıkartmalarından bastırın.
 - Katılımcılar için [özel tişörtler sipariş edin](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
-- Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
+- Hour of Code etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
-## Eğitimciler için diğer Kod-Saati kaynakları
+## Eğitimciler için diğer Hour of Code kaynakları
 
 - Daha önce düzenlenmiş Hour of Code etkinliklerinden, [en iyi uygulamalara](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) göz atın.
 - [Eğitimci Rehberliğinde Hour of Code web seminerimizi](https://youtu.be/EJeMeSW2-Mw) izleyin.

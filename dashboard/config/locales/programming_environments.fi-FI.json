@@ -1,0 +1,341 @@
+{
+  "fi-FI": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Nettilabra"
+        },
+        "gamelab": {
+          "name": "Pelilabra",
+          "categories": {
+            "game_lab": {
+              "name": "Pelilabra",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Mustavalkoinen"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Toistaa MP3-äänitiedoston määritetystä URL-osoitteesta."
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Kierre"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Ryhmät",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Väri"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Väri"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Piirustus",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Tähti"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematiikka",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    },
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    },
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Muuttujat"
+            },
+            "functions": {
+              "name": "Funktiot"
+            }
+          }
+        },
+        "applab": {
+          "name": "Sovelluslabra",
+          "description": "Sovelluslabra on koodausympäristö, jossa voit tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä kunnes se toimii, ja jaa työsi sekunneissa.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktio"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Toistaa MP3-äänitiedoston määritetystä URL-osoitteesta."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekti"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktio"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objekti"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekti"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktio"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematiikka",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    },
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    },
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Muuttujat",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Ei mitään"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funktiot"
+            },
+            "advanced": {
+              "name": "Edistyneet"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Maailma"
+            },
+            "location": {
+              "name": "Sijainnit"
+            },
+            "actions": {
+              "name": "Toiminnot"
+            },
+            "events": {
+              "name": "Tapahtumat"
+            },
+            "behaviors": {
+              "name": "Käyttäytymiset"
+            },
+            "loops": {
+              "name": "Silmukat"
+            },
+            "variables": {
+              "name": "Muuttujat"
+            },
+            "math": {
+              "name": "Matematiikka"
+            },
+            "logic": {
+              "name": "Logiikka"
+            },
+            "functions": {
+              "name": "Funktiot"
+            },
+            "text": {
+              "name": "teksti"
+            },
+            "comments": {
+              "name": "Kommentit"
+            }
+          }
+        }
+      }
+    }
+  }
+}

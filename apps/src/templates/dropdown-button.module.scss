@@ -1,0 +1,45 @@
+@import "color.scss";
+
+.main {
+  display: inline-block;
+}
+
+.icon {
+  font-size: 24px;
+  // we want our icon text to be a different size than our button text, which
+  // requires we manually offset to get it centered properly
+  position: relative;
+  top: 3px;
+}
+
+.dropdown {
+  border: 1px solid $charcoal;
+  position: absolute;
+  // without this, this will be below some content, such as ProgressBubble.
+  z-index: 1000;
+}
+
+.anchor,
+a.anchor,
+a:link.anchor,
+a:visited.anchor {
+  padding: 10px;
+  color: $charcoal;
+  background-color: $white;
+  font-family: "Gotham 5r", sans-serif;
+  display: block;
+  text-decoration: none;
+  line-height: 20px;
+  transition: background-color 0.2s ease-out;
+
+  &:hover {
+    background-color: $lightest_gray;
+    cursor: pointer;
+    // Overwrite site-wide application.css a:hover.
+    text-decoration: none;
+  }
+}
+
+.nonFirstAnchor {
+  border-top: 1px solid $charcoal;
+}

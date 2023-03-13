@@ -33,16 +33,30 @@ def main
 
   ChatClient.message 'staging', 'incoming robo-DTS with levelbuilder content'
 
+  # Example branch name: dts_candidate_2022-04-13
+  branch_name = 'dts_candidate_' + Time.new.strftime("%Y-%m-%d")
+  success = GitHub.create_branch_from_commit(
+    branch_name: branch_name,
+    commit: 'origin/levelbuilder',
+    base_branch: 'origin/staging'
+  )
+  raise Exception.new('GitHub.create_and_merge_pull_request failed.') unless success
+
   # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
   # (particularly deploy).
   pr_number = GitHub.create_and_merge_pull_request(
     base: 'staging',
-    head: 'levelbuilder',
+    head: branch_name,
     title: 'DTS (Levelbuilder > Staging) [robo-dts]'
   )
   if pr_number.nil?
     raise Exception.new('GitHub.create_and_merge_pull_request failed.')
   end
+
+  GitHub.delete_branch(
+    branch_name: branch_name,
+    base_branch: 'origin/staging'
+  )
 
   ChatClient.message(
     'staging',

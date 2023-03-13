@@ -19,8 +19,8 @@
 class StandardCategory < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :framework
-  belongs_to :parent_category, class_name: 'StandardCategory'
+  belongs_to :framework, optional: true
+  belongs_to :parent_category, class_name: 'StandardCategory', optional: true
 
   serialized_attrs %w(
     description

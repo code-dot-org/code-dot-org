@@ -43,24 +43,6 @@
         "zh-CN",
         "zh-TW"
       ],
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csf-19/express/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csf"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csf-19/express/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csf-19/express/standards/"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2019"

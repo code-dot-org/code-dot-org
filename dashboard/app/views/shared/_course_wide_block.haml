@@ -1,4 +1,4 @@
-- if id == Script::HOC_NAME
+- if id == Unit::HOC_NAME
   .courseblock-span6.courseblock-wide-small
     = link_to hoc_reset_url do
       .courseblock-span2.imgspan
@@ -7,9 +7,9 @@
         %h3= t('upsell.hoc.title')
         .smalltext= t('upsell.hoc.body')
 
-- elsif id == Script::FLAPPY_NAME
+- elsif id == Unit::FLAPPY_NAME
   .courseblock-span6.courseblock-wide-small
-    = link_to script_reset_url(Script::FLAPPY_NAME) do
+    = link_to script_reset_url(Unit::FLAPPY_NAME) do
       .courseblock-span2.imgspan
         %img{src: CDO.studio_url('/blockly/media/skins/flappy/small_static_avatar.png')}
       .courseblock-span4.heading
@@ -28,10 +28,10 @@
         .smalltext= t("upsell.#{id}.body")
       .bottombar.smalltext.trynow= t("upsell.#{id}.cta")
 
-- elsif id == Script::TWENTY_HOUR_NAME && view == 'large'
+- elsif id == Unit::TWENTY_HOUR_NAME && view == 'large'
   - url = script_reset_url(id)
   .courseblock-span6.courseblock-wide-large
-    = link_to script_url(Script::TWENTY_HOUR_NAME) do
+    = link_to script_url(Unit::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
         %img{src: CDO.code_org_url('/images/fit-150x100/code20hr.jpg')}
       .courseblock-span4.heading
@@ -39,11 +39,11 @@
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
         .smalltext= t('upsell.20-hour.body')
 
-- elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
+- elsif id == Unit::TWENTY_HOUR_NAME && view == 'small'
   - url = script_reset_url(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
   .courseblock-span6.courseblock-wide-small
-    = link_to script_url(Script::TWENTY_HOUR_NAME) do
+    = link_to script_url(Unit::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
         %img{src: CDO.code_org_url('/images/fit-150x100/code20hr.jpg')}
       .courseblock-span4.heading
@@ -73,7 +73,7 @@
         %h4= t("upsell.#{id}.audience")
         .smalltext= t("upsell.#{id}.body_short")
 
-- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME].include? id
+- elsif [Unit::ARTIST_NAME, Unit::PLAYLAB_NAME].include? id
   - url = script_reset_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
@@ -85,7 +85,7 @@
         %h3= title
         .smalltext= body
 
-- elsif [Script::EXPRESS, Script::PREEXPRESS].any? {|course| id.match(/^#{course}/)}
+- elsif [Unit::EXPRESS, Unit::PREEXPRESS].any? {|course| id.match(/^#{course}/)}
   .courseblock-span6.courseblock-wide-small
     = link_to script_url(id)  do
       .courseblock-span2.imgspan
@@ -96,7 +96,7 @@
         %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description_short')
 
-- elsif [Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::ALGEBRA_NAME].include? id
+- elsif [Unit::COURSE1_NAME, Unit::COURSE2_NAME, Unit::COURSE3_NAME, Unit::COURSE4_NAME, Unit::ALGEBRA_NAME].include? id
   .courseblock-span6.courseblock-wide-large
     =link_to script_url(id) do
       .courseblock-span2.imgspan

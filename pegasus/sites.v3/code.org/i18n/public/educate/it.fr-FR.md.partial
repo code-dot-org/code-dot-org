@@ -1,0 +1,126 @@
+---
+title: Exigences en matière de TI
+nav: educate_nav
+theme: responsive
+---
+
+# Exigences techniques relatives aux tutoriels de Code.org
+
+## Matériel
+
+- Nous vous recommandons de mettre à la disposition de votre école une connexion Internet d'au moins 15 MBit/sec.
+- La plus petite taille d'écran supportée est de 1024 x 728 px.
+- Vous aurez besoin d'un ordinateur de bureau ou portable avec une souris (ou un pavé tactile) et un clavier pour nos cours de niveau collège et lycée : CS Discoveries, CS Principles, et Introduction à App Lab. La plupart des tablettes et des appareils mobiles ne sont pas adaptés à ces cours. Voir "Détails relatifs à la prise en charge des téléphones mobiles et des tablettes" ci-dessous pour connaître les particularités liées aux appareils.
+- Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
+- Besoin de détails sur les appareils mobiles pris en charge ? Lire la suite.
+
+## Configuration minimale requise pour les navigateurs et les plateformes
+
+<table>
+ <tr>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Navigateur
+        </th>
+        <tr>
+          <td>Chrome 96.x</td>
+        </tr>
+        <tr>
+          <td>Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 13.x</td>
+        </tr>
+        <tr>
+          <td>Edge 94.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 91.x</td>
+        </tr>
+      </table>
+  </td>
+  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plateforme
+        </th>
+        <tr>
+          <td>macOS 10.13</td>
+        </tr>
+        <tr>
+          <td>iOS 11.x</td>
+        </tr>
+        <tr>
+          <td>Windows 7</td>
+        </tr>
+        <tr>
+          <td>Android 6</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+  </td>
+ </tr>
+</table>
+
+## Sites à débloquer
+
+Pour une meilleure utilisation de tout le contenu de Code.org, nous vous recommandons de consulter le service informatique de votre école ou de votre district pour vous assurer que les sites suivants sont autorisés et ne sont pas bloqués.
+
+| Priorité                                                                              | URL                                                                                                        |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Obligatoire**                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Facultatif**                                                                        | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Pour utiliser les vidéos hébergées par YouTube (mode de confidentialité amélioré)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Pour utiliser les vidéos hébergées par Code.org**                                   | `https://videos.code.org`                                                                                  |
+| **Pour utiliser le simulateur de réseau**                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Pour utiliser Web Lab**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Pour utiliser la fonction de partage de Google Classroom**                          | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+
+## Détails relatifs à la prise en charge des appareils mobiles et tablettes
+
+Tous les cours intitulés CS Discoveries, CS Principles, et Introduction à App Lab ne sont pas compatibles avec les tablettes ou les appareils mobiles - vous devez disposer d'un clavier complet et d'une souris (ou d'un pavé tactile, comme sur les MacBooks). La plupart des tablettes ne sont pas prises en charge, à l'exception des cas suivants :
+
+- Microsoft Surface Pro avec clavier externe
+- iPad fonctionnant sous iPadOS 13.4 ou une version ultérieure, avec un clavier externe et une souris ou un pavé tactile externe
+
+Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
+
+### Téléphone mobile
+
+Nos activités Hour of Code et nos cours CS Fundamentals peuvent être suivis sur des téléphones portables. Bien que ces activités soient faciles à exploiter, elles ne sont pas conçues pour les téléphones mobiles et présentent certaines limites connues (par exemple, les touches peuvent être petites, les composants accessoires peuvent s'afficher hors de l'écran et le texte peut être difficile à saisir à l'aide du clavier à l'écran). Les cours CS Discoveries, CS Principles et Introductions à App Lab ne sont pas compatibles avec les téléphones portables.
+
+## Vidéos
+
+Nous utilisons [YouTube](https://www.youtube.com) pour intégrer des vidéos dans Code.org et notre [plateforme de formation en ligne](https://studio.code.org). Pour les écoles dont YouTube n'est pas accessible, nous proposons un lecteur vidéo hébergé par Code.org en lieu et place.
+
+### Pouvez-vous lire cette vidéo ?
+
+Avant de commencer les cours en ligne de Code.org, essayez de lire la vidéo ci-dessous pour être sûr d'être prêt.
+
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+C'est le lecteur qui sera utilisé tout au long de la formation. Il vous permettra de lire la vidéo sur YouTube et, si YouTube est bloqué, il vous affichera la vidéo hébergée par Code.org en utilisant notre lecteur "de secours" en lieu et place.
+
+### Impossible de lire les vidéos ?
+
+Si vous ne parvenez pas à lire la vidéo, envoyez-nous un courriel à support@code.org.
+
+Cependant, vous pouvez toujours utiliser nos tutoriels sans vidéo.
+
+1. Nous mettons à votre disposition toutes nos vidéos [disponibles en téléchargement ensemble](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Si votre établissement a une faible bande passante, nous vous recommandons de télécharger les vidéos et de les montrer aux élèves en partageant l'écran.
+2. Intégrée à nos tutoriels, nous avons ajouté une icône verte de téléchargement <img src="/images/green-download.png" width=25 height=25 /> pour chaque vidéo, pour permettre aux apprenants de télécharger des vidéos de formation individuelles.
+3. Si tout cela ne marche pas, il existe un onglet " Afficher les notes " qui offre l'équivalent d'un storyboard des vidéos.
+
+  <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
+
+## Paramètres spéciaux des utilisateurs de Google Apps/G-Suite
+
+Si vous êtes un administrateur G-suite, consultez vos paramètres de restriction sur YouTube. Si vous avez défini le paramètre "Accès restreint strict à YouTube" ou si le message "cette vidéo a été restreinte" s'affiche, vous pourrez ajouter notre chaîne à la liste des chaînes approuvées. Consultez [ce guide](https://support.google.com/a/answer/6245597) de Google pour savoir comment ajouter notre chaîne à la liste approuvée. Vous pouvez également consulter [ce guide](https://support.google.com/a/answer/6212415?hl=en) pour en savoir plus sur les différents paramètres et sur celui qui convient le mieux à votre classe.
+
+## Rencontrez-vous toujours des problèmes ?
+
+Nous sommes à votre disposition - veuillez nous envoyer un courriel à support@code.org !

@@ -1,10 +1,10 @@
-$root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/gamelab/"; //TODO: Parameterize for asset pipeline
 
-@import 'font';
-@import 'color';
-@import 'mixins';
+@import "font";
+@import "color.scss";
+@import "mixins";
 @import "../JsDebuggerUi.scss";
-@import '../VisualizationOverlay.scss';
+@import "../VisualizationOverlay.scss";
 
 #divGameLab {
   overflow: hidden;
@@ -23,8 +23,13 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 }
 
 .legacy-share-view {
-  #runButton, #resetButton {
-    display:none !important;
+  #runButton,
+  #resetButton {
+    display: none !important;
+  }
+
+  #studio-dpad-container {
+    margin-top: -24px;
   }
 }
 
@@ -42,13 +47,13 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   background-size: 42px 147px;
 }
 .code {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .link {
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 .run {
-  background-position: 0px -21px;
+  background-position: 0 -21px;
   margin-right: 3px;
 }
 .stop {
@@ -67,11 +72,11 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   margin-right: 3px;
 }
 .up-btn {
-  background-position: 0px -63px;
+  background-position: 0 -63px;
   margin-right: 3px;
 }
 .down-btn {
-  background-position: 0px -42px;
+  background-position: 0 -42px;
   margin-right: 3px;
 }
 
@@ -83,19 +88,13 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   }
 }
 
-.legacy-share-view {
-  #studio-dpad-container {
-    margin-top: -24px;
-  }
-}
-
-$dpad-button: #FFFFFF;
-$dpad-border: #EFEFEF;
-$dpad-shadow: #7F7F7F;
-$dpad-active-border: #9F9F9F;
-$dpad-cone-active: #FFD080;
-$dpad-cone-inactive: #9C9C9C;
-$dpad-rim: #FFFFFF;
+$dpad-button: #fff;
+$dpad-border: #efefef;
+$dpad-shadow: #7f7f7f;
+$dpad-active-border: #9f9f9f;
+$dpad-cone-active: #ffd080;
+$dpad-cone-inactive: #9c9c9c;
+$dpad-rim: #fff;
 
 #studio-dpad {
   position: absolute;
@@ -108,8 +107,8 @@ $dpad-rim: #FFFFFF;
 
 #studio-dpad-rim {
   position: absolute;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border: 76px solid $dpad-rim;
   border-radius: 76px;
   box-shadow: 1px 1px 1px 0 $dpad-shadow;
@@ -118,8 +117,8 @@ $dpad-rim: #FFFFFF;
 #studio-dpad-cone {
   position: absolute;
   margin: 2px;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border: 74px solid $dpad-cone-inactive;
   border-radius: 74px;
   &.left {
@@ -196,10 +195,10 @@ $dpad-rim: #FFFFFF;
   }
 }
 
-$space-fill: #FFA000;
-$space-shadow: #FFD07F;
-$space-border: #666666;
-$space-active-border: #9F9F9F;
+$space-fill: #ffa000;
+$space-shadow: #ffd07f;
+$space-border: #666;
+$space-active-border: #9f9f9f;
 
 #studio-space-button {
   position: absolute;
@@ -210,7 +209,7 @@ $space-active-border: #9F9F9F;
   margin: 5px;
   border-color: $space-border;
   background-color: $space-fill;
-  box-shadow: inset 1px 1px 0px 0 $space-shadow;
+  box-shadow: inset 1px 1px 0 0 $space-shadow;
   &.active {
     border-radius: 39px;
     width: 78px;
@@ -222,4 +221,3 @@ $space-active-border: #9F9F9F;
     outline: 0;
   }
 }
-

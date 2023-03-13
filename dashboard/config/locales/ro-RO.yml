@@ -217,7 +217,15 @@ ro:
     user_type_button: Actualizaţi tipul de contul
     user_type_label: Tipul contului
     user_type_student: Elev
+    user_type_student_desc: 'Studiază toate cursurile și activitățile noastre, plus:'
+    user_type_student_ability_1: Salvează-ți progresul și proiectele
+    user_type_student_ability_2: Alătură-te secțiunii clasei profesorului tău
     user_type_teacher: Profesor
+    user_type_teacher_desc: 'Totul la care elevii au acces, plus:'
+    user_type_teacher_ability_1: Crează secțiuni de clasă
+    user_type_teacher_ability_2: Atribuie și urmărește munca elevilor
+    user_type_teacher_ability_3: Înscrie-te la studiul profesional
+    user_type_teacher_ability_4: Interacționează pe forumul profesorului nostru
     field_is_required: este necesar
     accept_terms: Trebuie să fii de acord pentru a crea un cont
     error: S-a produs o eroare.
@@ -409,6 +417,7 @@ ro:
       educate_beyond: Dincolo de Code.org
       educate_inspire: Inspirați un Student
       educate_community: Comunitate online
+      educate_requirements: Cerințe tehnice
       educate_tools: Instrumente şi clipuri video
       about_us: Despre noi
       about_leadership: Conducere
@@ -482,7 +491,6 @@ ro:
     popup:
       progress_for_user: Progresul lui %{name}
       progress: Progresul tău
-      lines: 'Total linii de cod: %{lines}'
       close: ÎNCHIDE
       mastery: Concepte
       puzzle_map: Etape
@@ -647,6 +655,7 @@ ro:
     print_certificate: Tipărește certificatul
   certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza
     învățarea."
+  certificate_hour_of_code: Oră de Programare
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
@@ -802,27 +811,18 @@ ro:
         a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
       audience: Vârste 13 +
       cta: Află cum
-    dance:
-      title: Petrecere dansantă
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Petrecere dansantă
-    hoc:
-      title: Labirint Clasic
-      body: Încearcă bazele programarii. Milioane de oameni au încercat.
+    dance:
+      title: Petrecere dansantă
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția
         noastră Codul Flappy!
-    20-hour:
-      title: Curs intensiv
-      body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare.
-        Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar
-        este distractiv de învăţat la toate vârstele.
-      body_short: Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor
-        2-4.
-    hoc2014:
-      try_new_tutorial: Încearcă noul nostru tutorial Hour of Code în versiune beta
-      try_frozen: Artist cu Anna și Elsa din Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galerie
       body: Vizualizează o galerie de imagini pentru aplicații și artiști, create
@@ -834,20 +834,23 @@ ro:
         cu celălalt.
       audience: Vârste 13 +
       cta: Află cum
+    hello-world:
+      title: Bună Lume
+      body: Alege din patru teme distractive pentru a codifica personaje interactive
+        într-o lume pe care o creezi tu.
+    hero:
+      title: Minecraft
+      body: Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie
+        prin Minecraft cu cod.
     hoc-encryption:
       title: Criptare simplă
       body: Elevii vor învăţa tehnici pentru a crea şi a sparge mesaje criptate.
-    weblab:
-      title: Laborator Web (beta)
-      body: Laboratorul de web este un mediu de programare în care puteți crea pagini
-        de web simple folosind HTML și CSS. Proiectați paginile dvs. de web și distribuiți
-        site-ul dvs în câteva secunde.
-      audience: Vârste 13 +
-      cta: Află cum
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Labirint Clasic
+      body: Încearcă bazele programarii. Milioane de oameni au încercat.
+    hoc2014:
+      try_new_tutorial: Încearcă noul nostru tutorial Hour of Code în versiune beta
+      try_frozen: Artist cu Anna și Elsa din Frozen
     infinity:
       title: Laborator de joc Infinity
       body: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje
@@ -859,19 +862,35 @@ ro:
       title: Minecraft
       body: Programeaza animale şi alte creaturi Minecraft în propria ta versiune
         a jocului.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie
-        prin Minecraft cu cod.
+    poem-art:
+      title: Arta Poeziei
     sports:
       title: Sporturi (Sports)
       body: Creați un joc de basketball sau un "mix and match" din toate sporturile.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Comprimare de text
       body: În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru
         a comprima textul prin înlocuirea modelelor cu simboluri.
+    weblab:
+      title: Laborator Web (beta)
+      body: Laboratorul de web este un mediu de programare în care puteți crea pagini
+        de web simple folosind HTML și CSS. Proiectați paginile dvs. de web și distribuiți
+        site-ul dvs în câteva secunde.
+      audience: Vârste 13 +
+      cta: Află cum
+    widgets:
+      title: Widget-uri
+      body: Elevii pot explora concepte la cursul nostru de Principii în Informatică,
+        cu ajutorul acestor instrumente digitale. Utilizați widget-urile pe cont propriu
+        sau creați o lecție cu un singur concept pentru clasa dvs.
+      audience: Vârste 14+
+      cta: Află cum
+    unplugged_conditionals:
+      title: Condiţionale
+      body: Aflați mai multe despre algoritmii și instrucțiunile condiționale din
+        această activitate "deconectată" utilizând un pachet de cărți.
     unplugged:
       title: Lecţii offline
       audience: Vârsta +4 ani
@@ -881,17 +900,13 @@ ro:
         sau ca lecţii complementare pentru orice curs de informatică.
       body_short: Daca nu ai calculatoare, încearcă aceste lecţii offline în clasa
         ta.
-    unplugged_conditionals:
-      title: Condiţionale
-      body: Aflați mai multe despre algoritmii și instrucțiunile condiționale din
-        această activitate "deconectată" utilizând un pachet de cărți.
-    widgets:
-      title: Widget-uri
-      body: Elevii pot explora concepte la cursul nostru de Principii în Informatică,
-        cu ajutorul acestor instrumente digitale. Utilizați widget-urile pe cont propriu
-        sau creați o lecție cu un singur concept pentru clasa dvs.
-      audience: Vârste 14+
-      cta: Află cum
+    20-hour:
+      title: Curs intensiv
+      body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare.
+        Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar
+        este distractiv de învăţat la toate vârstele.
+      body_short: Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor
+        2-4.
   landing:
     prerelease_tutorial: Acest tutorial este în **beta**. Se referă la revizuire în
       momentul primirii de feedback-uri și când se efectuează îmbunătățiri.
@@ -1025,17 +1040,6 @@ ro:
       noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră
       înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: Revedeţi termenii actualizati
-  donor_interstitial:
-    title: Cursurile tale gratuite de Informatică au fost posibile de către...
-    subtitle: Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil
-      succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți,
-      în general, datorită generozității continue a [donors](%{donors_url}) noștri!
-    local_supporters: Suporteri Locali
-    global_supporters: Suporteri Globali
-    support_codeorg_1: Fiecare dolar donat la Code.org aduce oportunități mai multor
-      studenți.
-    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
-    get_started: Începe pe Code.org.
   school_info_interstitial:
     title: Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne
       putea urmări progresul!
@@ -1327,6 +1331,7 @@ ro:
         music: Muzică
         art: Artă
         other: 'Altele:'
+        na: Nu se aplică
       resources:
         bootstrap: |2-
 
@@ -1337,7 +1342,8 @@ ro:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altele:'
+        other: Alte
+        na: Nu se aplică
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1347,7 +1353,8 @@ ro:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Atelierul minune
-        other: 'Altele:'
+        other: Alte
+        na: Nu se aplică
       workshop_course:
         csf_af: Fundamentele informaticii (Cursuri A-F)
         csf_express: Fundamentele informaticii (pre-Express sau Express)
@@ -1429,3 +1436,13 @@ ro:
     this_sprite: acest spirit
   unit_prefix: Unitate %{n}
   teacher_feedback: Punctele de vedere ale profesorului
+  lesson_lock:
+    error:
+      no_updates: Nu există actualizări de efectuat.
+      missing_params: Trebuie furnizate id-urile de utilizator, nivel și unitate
+      cannot_view_locked_answers: Nu se pot vizualiza răspunsurile în timp ce sunt
+        blocate
+      forbidden: Utilizatorul nu poate actualiza starea de blocare a elevului.
+  reset_predict_progress_button: Șterge Răspunsul
+  pixelation:
+    binary: Binar

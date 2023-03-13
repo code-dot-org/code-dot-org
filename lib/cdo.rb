@@ -10,7 +10,6 @@ module Cdo
   class Impl < Config
     prepend SecretsConfig
     include Singleton
-    @slog = nil
 
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
@@ -111,6 +110,14 @@ module Cdo
       host
     end
 
+    def dashboard_site_host
+      site_host('studio.code.org')
+    end
+
+    def pegasus_site_host
+      site_host('code.org')
+    end
+
     def site_url(domain, path = '', scheme = '')
       path = '/' + path unless path.empty? || path[0] == '/'
       "#{scheme}//#{site_host(domain)}#{path}"
@@ -138,23 +145,32 @@ module Cdo
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
-        # To use a developer instance of Javabuilder instead, replace this url with
-        # 'wss://<your-javabuilder-domain>.dev-code.org'
-        'ws://localhost:8080/javabuilder'
+        # On localhost, we default to using the "test" Javabuilder stack. To point
+        # to your Javabuilder WebSocket server running on localhost, set
+        # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
+        # deployed development instance of Javabuilder, set
+        # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
+        return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
+        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{stack_name}.code.org"
       else
-        # TODO: Update to use this URL once we have Route53 set up for API Gateway
-        # site_url('javabuilder.code.org', '', 'wss')
-        'wss://javabuilderbeta.code.org'
+        DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
     end
 
     def javabuilder_upload_url(path = '', scheme = '')
       if rack_env?(:development)
-        # To use a developer instance of Javabuilder instead, replace this url with
-        # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
-        'http://localhost:8080/javabuilderfiles/seedsources'
+        # On localhost, we default to using the "test" Javabuilder stack. To point
+        # to your Javabuilder WebSocket server running on localhost, set
+        # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
+        # deployed development instance of Javabuilder, set
+        # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
+        return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
+        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{stack_name}-http.code.org/seedsources/sources.json"
       else
-        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
+        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
+        http_url + "/seedsources/sources.json"
       end
     end
 
@@ -188,9 +204,7 @@ module Cdo
         # the content for that language not updated regularly, but new content is not
         # added automatically. This means if you try to link to a recently-added
         # lesson plan, it may not be there for any of these languages.
-        additional_languages = [
-          'de-de', 'id-id', 'ko-kr', 'tr-tr', 'zh-cn', 'zh-tw'
-        ]
+        additional_languages = %w(de-de id-id ko-kr tr-tr zh-cn zh-tw)
         @@curriculum_languages.merge(additional_languages)
 
         # Don't include English; we do of course _support_ English, but only as
@@ -203,8 +217,8 @@ module Cdo
 
     def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
       return unless uri
-      uri = URI.encode(uri)
-      uri = URI.parse(uri)
+      uri = URI::DEFAULT_PARSER.escape(uri)
+      uri = URI::DEFAULT_PARSER.parse(uri)
 
       uri.host = "curriculum.code.org" if uri.host.nil? && autocomplete_partial_path
       uri.scheme = "https" if uri.scheme.nil? && autocomplete_partial_path
@@ -216,6 +230,15 @@ module Cdo
       end
 
       uri.to_s
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Amplitude API key.
+    def safe_amplitude_api_key
+      CDO.cdo_amplitude_api_key
+    rescue ArgumentError
+      # Return an empty string, instead of raising.
+      ''
     end
 
     def dir(*dirs)
@@ -231,24 +254,6 @@ module Cdo
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
-    end
-
-    # Sets the slogger to use in a test.
-    # slogger must support a `write` method.
-    def set_slogger_for_test(slogger)
-      @@slog = slogger
-      # Set a fake slog token so that the slog method will actually call
-      # the test slogger.
-      stubs(slog_token: 'fake_slog_token')
-    end
-
-    def slog(params)
-      return unless slog_token
-      require 'dynamic_config/gatekeeper'
-      return unless Gatekeeper.allows('slogging', default: true)
-      require 'cdo/slog'
-      @@slog ||= Slog::Writer.new(secret: slog_token)
-      @@slog.write params
     end
 
     def shared_image_url(path)

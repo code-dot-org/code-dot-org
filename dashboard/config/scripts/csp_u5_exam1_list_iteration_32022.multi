@@ -17,7 +17,7 @@ A program is designed to determine the minimum value in a list of positive numbe
 var minimum = <MISSING CODE>
 for(var i = 0; i < numList.length; i++){
   if (numList[i] < minimum){
-    minimum = numList[i]; 
+    minimum = numList[i];
   }
 }
 console.log(“The minimum is” + minimum);
@@ -36,14 +36,14 @@ if (numList[i] < minimum) {
 }
 ````
 
-`numList[i]` will always be greater than the value stored in minimum (in this case 0).   So "minimum" will never be updated and at the end of the program the computer will say 
+`numList[i]` will always be greater than the value stored in minimum (in this case 0).   So "minimum" will never be updated and at the end of the program the computer will say
 
 `"The minimum is 0"`
 however, 0 is not in numList at all, so it is not the minimum of the list.
 
-[Lesson 11 - Traversals Practice](https://studio.code.org/s/csp5-2021/lessons/11) gave students an opportunity to write programs meant to find both the minimum and maximum values in a list.
+[Lesson 11 - Traversals Practice](https://studio.code.org/s/csp5-2022/lessons/11) gave students an opportunity to write programs meant to find both the minimum and maximum values in a list.
 
-::: details [**Essential Knowledge Connected 
+::: details [**Essential Knowledge Connected
 To This Question**]
 
 * AAP-2.O: For algorithms involving elements of a list:

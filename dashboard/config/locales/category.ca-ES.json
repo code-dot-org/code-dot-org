@@ -1,0 +1,14 @@
+{
+  "ca-ES": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Pensament computacional"
+        },
+        "ccela/L": {
+          "description": "Llengua"
+        }
+      }
+    }
+  }
+}

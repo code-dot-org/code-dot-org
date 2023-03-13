@@ -1,10 +1,11 @@
 require_relative 'test_helper'
+require 'cdo/legacy_varnish_helpers'
 require 'cdo/rack/allowlist'
 
 class CookieAllowlistTest < Minitest::Test
   include Rack::Test::Methods
 
-  HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
+  HEADERS = LegacyVarnishHelpers::REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   COOKIE_CONFIG = {
     behaviors: [
       {
@@ -46,7 +47,7 @@ class CookieAllowlistTest < Minitest::Test
 
   def test_allowlisted_cookies
     get '/some/'
-    assert_nil @request_env['HTTP_COOKIE'].match(/three/)
+    refute @request_env['HTTP_COOKIE'].include?('three')
     assert_equal @request_cookies, {'one' => '1', 'two' => '2'}
   end
 
@@ -58,7 +59,7 @@ class CookieAllowlistTest < Minitest::Test
 
   def test_all_cookies
     get '/all/'
-    refute_nil @request_env['HTTP_COOKIE'].match(/three/)
+    assert @request_env['HTTP_COOKIE'].include?('three')
     assert_equal @request_cookies, {'one' => '1', 'two' => '2', 'three' => '3'}
   end
 end

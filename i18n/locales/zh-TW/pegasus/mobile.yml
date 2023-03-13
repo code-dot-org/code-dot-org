@@ -341,6 +341,7 @@
   homepage_banner_40k_teachers_link: "進一步了解"
   homepage_slot_text_title_hoc: "一小時玩程式"
   homepage_slot_text_blurb_hoc: "任何人都可以學習 從今天開始"
+  homepage_slot_text_blurb_hoc_2022: "探索，玩耍，創造！"
   homepage_slot_text_link_hoc: "試試一小時玩程式"
   homepage_slot_text_link_about_hoc: "關於一小時玩程式（Hour of Code）"
   homepage_slot_text_link_host: "舉辦一小時玩程式活動"
@@ -366,13 +367,19 @@
   homepage_slot_text_link_buy: "加入我們"
   homepage_slot_text_link_donate: "贊助"
   homepage_slot_text_link_shop: "T 恤、帽子等更多"
+  homepage_slot_text_link_thebadguys: "壞蛋聯盟編程"
   homepage_slot_text_link_administrators: "將 CS 帶入校園"
-  homepage_gallery_header: "已經建立了超過 %{project_count} 萬個專案"
+  homepage_gallery_header: "已創建超過%{project_count}百萬個Code.org項目"
   homepage_header_donors: "Code.org 感謝所有支持者"
   homepage_donors_seall: "檢視全部"
   homepage_donors_donate: "贊助"
   homepage_below_hero_announcement_text: "我們尊重您的隱私權，並且正在對我們的隱私權政策做一些更新，更新後的政策將於 5 月 25 日生效。"
   homepage_below_hero_announcement_link_text: "進一步了解"
+  homepage_higher_power_body: "與舞蹈派對一起創作，獲得觀看樂隊現場表演的機會。"
+  homepage_thebadguys_body: "利用狼蛛女士、狼先生和**壞蛋聯盟**的其他角色編寫一個冒險故事！"
+  homepage_csa_subhead: "一個新方法-"
+  homepage_csa_title: "AP®電腦科學A"
+  homepage_csa_body: "在我們以公平為導向的課程中，為學生提供與現實世界相連的創意項目。"
   contact_form_topic_student: "我是學生"
   contact_form_topic_parent: "我是家長"
   contact_form_topic_teacher: "我是老師"
@@ -504,6 +511,8 @@
   video_title_marco_belinelli: "和 Marco Belinelli 玩一小時程式"
   video_title_chris_bosh: "Chris Bosh 談計算機科學"
   video_title_my_name_is_aracely: "我是 Aracely"
+  video_title_change_face_of_cs: "改變電腦科學的面貌"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 分鐘"
   video_2min: "2 分鐘"
   video_3min: "3 分鐘"
@@ -580,6 +589,7 @@
   volunteer_engineer_submission_distance_16: "10 英里"
   volunteer_engineer_submission_distance_24: "15 英里"
   volunteer_engineer_submission_distance_32: "20 英里"
+  volunteer_engineer_submission_distance_80: "50 英里"
   volunteer_engineer_submission_num_volunteers_5: "5 名志工"
   volunteer_engineer_submission_num_volunteers_10: "10 名志工"
   volunteer_engineer_submission_num_volunteers_25: "25 名志工"
@@ -963,6 +973,7 @@
   coursee-2020_name: 課程 E（2019）
   coursef-2020_name: 課程 F（2019）
   coursed-2021_name: 課程 D（2021）
+  coursed-2022_name: 課程 D（2021）
   express-2018_name: 速學課程（2018）
   pre-express-2018_name: 學前兒童的速學課程（2018）
   express-2019_name: 速學課程（2019）
@@ -970,6 +981,7 @@
   express-2020_name: 速學課程（2019）
   pre-express-2020_name: 學前兒童的速學課程（2020）
   pre-express-2021_name: 學前兒童的速學課程（2021）
+  pre-express-2022_name: 學前兒童快捷課程（2022）
   csd2_name: '單元 2：網頁開發'
   csd3_name: '單元 3：動畫與遊戲'
   accelerated_name: "速成課程"
@@ -1083,6 +1095,12 @@
   coursed-2021_gradelevel: 年級 8+
   coursee-2021_gradelevel: 年齡 8-12
   coursef-2021_gradelevel: 年齡 9-13
+  coursea-2022_gradelevel: 年齡 4-7
+  courseb-2022_gradelevel: 年齡 5-8
+  coursec-2022_gradelevel: 年齡 6-10
+  coursed-2022_gradelevel: 年級 8+
+  coursee-2022_gradelevel: 年齡 8-12
+  coursef-2022_gradelevel: 年齡 9-13
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "主流的瀏覽器、手機、平板"
   codeintl_platformtext: "主流的瀏覽器、手機、平板"
@@ -1220,6 +1238,12 @@
   coursed-2021_shortdescription_congrats: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
   coursee-2021_shortdescription_congrats: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第 2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
   coursef-2021_shortdescription_congrats: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第 2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
+  coursea-2022_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  courseb-2022_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  coursec-2022_shortdescription_congrats: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+  coursed-2022_shortdescription_congrats: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+  coursee-2022_shortdescription_congrats: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第 2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
+  coursef-2022_shortdescription_congrats: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第 2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
   codeorg_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   codeintl_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   thinkersmithspanish_longdescription: "使用預先定義的「字彙機器人(Vocabulary Robot )」，學生就可以在討論前就理解如何引導彼此去完成特定的任務。此課程教導孩子建立符號及動作的連結，及非常具有價值的除錯技能。My Robotic Friends（我的機器人朋友）以小組活動方式進行最佳，裡頭包含教師手冊給班級使用。"
@@ -1470,6 +1494,7 @@
   header_educate_beyond: "超越 Code.org"
   header_educate_inspire: "激勵學生"
   header_educate_community: "線上社群"
+  header_educate_requirements: "技術要求"
   header_educate_tools: "工具和影片"
   header_about_us: "關於我們"
   header_about_leadership: "管理團隊"
@@ -1560,6 +1585,9 @@
   hoc_overview_dance_title: "舞蹈派對"
   hoc_overview_dance_subtitle: "編寫舞蹈派對的程式，和你的朋友分享。共有超過 25 位巨星登場，Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara…還有更多！"
   hoc_overview_dance_2019_subtitle: "編寫舞蹈派對的程式，和你的朋友分享。共有超過 34 位巨星登場，Featuring Katy Perry、Shawn Mendes、 Panic! At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj…還有更多！"
+  hoc_overview_dance_2022_subtitle: "編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！"
+  hoc_overview_hello_world_2022_subtitle: "從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。"
+  hoc_overview_hello_world_2022_alt_text: "動畫化漂浮在地球插圖周圍的宇航員和動物角色"
   hoc_overview_title: "Code.org 的一小時玩程式活動"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">一小時玩程式（Hour of Code）</a>是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過 45 種語言。"
   hoc_overview_subtitle_markdown: "[一小時玩程式（Hour of Code）](https://hourofcode.com) 是個全球性的運動，遍及 180 多個國家中數以千萬計的學生。不管你是誰，也不管你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過 45 種語言。"
@@ -1605,9 +1633,13 @@
   hoc2018_mc_educators_box3_title: "參加免費的學生工作坊。"
   hoc2018_mc_educators_box3_desc: "到你地區的 Microsoft 商店參加免費的一小時玩程式工作坊，適合任何技能級別、六歲或以上的人參加。"
   hoc2018_mc_educators_box3_button: "尋找工作坊"
+  hoc2022_mc_educators_box3_desc_markdown: '使用這個按需提供的[免費課程](%{free_course_link})或為整個班級注冊與客座老師一起進行的即時一小時玩程式研討會。在12月6日至11日的CSEW期間多次提供。'
+  hoc2022_mc_educators_box3_button: "馬上註冊"
   hoc2018_mc_educators_box4_title: "查看更多計算機科學資源"
   hoc2018_mc_educators_box4_desc: "利用Microsoft的數位技能與電腦科學教育資源，為你的社區帶來變化。"
   hoc2018_mc_educators_box4_button: "探索資源"
+  hoc2022_mc_educators_box4_desc: "在專業開發的支持下，通過200小時的電腦科學課程（從模組到python），激發K-12學生對STEM的熱情。"
+  hoc2022_mc_educators_box4_button: "繼續學習"
   hoc2018_mc_watch_videos: "開始前不妨先看個勵志影片"
   hoc2018_mc_videos_more: "更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>"
   hoc2018_mc_careers_more: "更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>"
@@ -1692,6 +1724,8 @@
   hoc2018_dance_video2: "舞蹈派對 - 事件（Evnets）"
   hoc2018_dance_video3: "舞蹈派對 - 屬性（Properties）"
   hoc2018_dance_video4: "舞蹈派對 - 恭喜"
+  dance_box_higher_power_line_1: "為酷玩樂隊的“更高的力量”編碼一支舞蹈，你就有機會看到樂隊的現場表演！"
+  dance_box_higher_power_line_2: "查看<a href=\"%{path}\">code.org/coldplay</a>獲取更多資訊。"
   page_not_found_title: "找不到頁面"
   page_not_found_header: ' 404：找不到頁面'
   page_not_found_description: "你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。"
@@ -1721,6 +1755,9 @@
   hoc2021_mc_mee_villages_description: '在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。'
   hoc2021_mc_mee_ai_title: "人工智慧"
   hoc2021_mc_mee_ai_description: '與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。'
+  hoc2022_mc_mee_title: "我的世界逃生莊園"
+  hoc2022_mc_mee_description: '在黎明前逃離神秘的豪宅，賺取一百萬顆翡翠！新鮮出爐的我的世界一小時玩程式教程現已在《我的世界：教育版》中推出，適用於Windows、Mac、Chromebook、Ipad和移動設備。開始使用免費的教育工作者資源、培訓和視訊。'
+  hoc2022_mc_mee_timecraft_description: '在《我的世界：教育版》的這個免費編程課中，進行時間旅行，拯救未來。'
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "構建於 Microsoft 的 Github"
   codebytes_skinny_banner_title: "12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。"
@@ -1785,4 +1822,22 @@
   ai_try_activity: "嘗試紀錄"
   outbreak_tile_title: "疫情爆發"
   outbreak_tile_subtitle: "病毒感染了怪物鎮編寫疫情爆發模擬器，並預測怪物鎮的鄰居會發生什麼事。"
+  outbreak_tile_alt: "模擬病毒如何通過一群紫色怪物傳播。"
   footer_cookie_notice: "Cookie通知"
+  top_hoc_tutorial_applab_alt_text: "一只用食指觸碰觸屏平板電腦的棕色手，在藍色背景下發射星星和光線"
+  minecraft_tile_alt: "我的世界中的兩個角色：史蒂夫和亞曆克斯，背景是一個帶珊瑚、海豚和海帶的水生我的世界場景"
+  hoc2022_banner_title: "探索，玩耍，創造！"
+  hoc2022_banner_description: "探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多！"
+  hoc2022_cta_primary: "看看有什麼新內容"
+  hoc2022_cta_secondary: "嘗試更多活動"
+  hoc2022_landing_page_explore_title: "搜索"
+  hoc2022_landing_page_explore_description: "用電腦科學打開通往新世界的大門！"
+  hoc2022_landing_page_play_title: "開始遊戲"
+  hoc2022_landing_page_play_description: "上場得分！"
+  hoc2022_landing_page_create_title: "建立"
+  hoc2022_landing_page_create_description: "做一些怪異而美妙的東西！"
+  hoc2022_landing_page_banner_alt_left: "一個外星人在太空中的土星旁跳舞"
+  hoc2022_landing_page_banner_alt_right: "一個機器人在太空中起飛的火箭前盤帶足球"
+  try_it_yourself: "自己試試！"
+  try_an_activity: "嘗試一個活動"
+  see_more_activities: "查看更多活動"

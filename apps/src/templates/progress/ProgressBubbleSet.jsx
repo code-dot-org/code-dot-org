@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';
@@ -26,19 +26,9 @@ class ProgressBubbleSet extends React.Component {
     lessonExtrasEnabled: PropTypes.bool,
     showSublevels: PropTypes.bool,
     onBubbleClick: PropTypes.func,
+    lessonName: PropTypes.string,
     // Redux
     isRtl: PropTypes.bool
-  };
-
-  bubbleDisabled = level => {
-    const {disabled, lessonExtrasEnabled} = this.props;
-    // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
-    // for the current section.
-    const disableBubble = disabled || (!lessonExtrasEnabled && level.bonus);
-    if (disableBubble) {
-      return true;
-    }
-    return false;
   };
 
   renderBubble = (level, index, isSublevel) => {
@@ -77,12 +67,13 @@ class ProgressBubbleSet extends React.Component {
         <div style={containerStyleProp}>
           <ProgressBubble
             level={level}
-            disabled={this.bubbleDisabled(level)}
+            disabled={this.props.disabled}
             smallBubble={isSublevel}
             selectedSectionId={selectedSectionId}
             selectedStudentId={selectedStudentId}
             hideToolTips={this.props.hideToolTips}
             onClick={this.props.onBubbleClick}
+            lessonName={this.props.lessonName}
           />
         </div>
       </div>

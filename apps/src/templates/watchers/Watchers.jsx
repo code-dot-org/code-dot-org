@@ -2,10 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
+import TetherComponent from 'react-tether';
+
 import i18n from '@cdo/locale';
 import {add, update, remove} from '../../redux/watchedExpressions';
-import TetherComponent from 'react-tether';
 import AutocompleteSelector from './AutocompleteSelector';
+
+import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
@@ -276,9 +279,10 @@ class Watchers extends React.Component {
   }
 
   filterOptions = () => {
-    const text = this.state.text;
+    const text = escapeSpecialCharactersForRegExp(this.state.text);
+    const regexpToCheck = new RegExp(text, 'i');
     const filteredOptions = this.defaultAutocompleteOptions.filter(option =>
-      option.match(new RegExp(text, 'i'))
+      option.match(regexpToCheck)
     );
     const completeMatch =
       filteredOptions.length === 1 && filteredOptions[0] === text;
@@ -328,12 +332,13 @@ class Watchers extends React.Component {
             const varValue = wv.get('lastValue');
             return (
               <div className="debug-watch-item" key={wv.get('uuid')}>
-                <div
+                <button
                   style={styles.watchRemoveButton}
                   onClick={() => this.props.remove(wv.get('expression'))}
+                  type="button"
                 >
                   ×
-                </div>
+                </button>
                 <div style={styles.watchItemDescription}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
@@ -343,9 +348,13 @@ class Watchers extends React.Component {
             );
           })}
           <div style={styles.watchInputSection}>
-            <div style={styles.watchAddButton} onClick={this.addButtonClick}>
+            <button
+              style={styles.watchAddButton}
+              onClick={this.addButtonClick}
+              type="button"
+            >
               +
-            </div>
+            </button>
             <TetherComponent
               attachment="bottom left"
               targetAttachment="top left"
@@ -358,7 +367,7 @@ class Watchers extends React.Component {
               style={styles.autocompleteDropdown}
             >
               <input
-                placeholder="Variable / Property"
+                placeholder={i18n.debugWatchersPlaceholder()}
                 ref="debugInput"
                 onKeyDown={this.onKeyDown}
                 onChange={this.onChange}
@@ -411,7 +420,9 @@ const styles = {
     backgroundColor: '#be0712',
     color: 'white',
     margin: 0,
-    padding: 0
+    padding: 0,
+    border: 'none',
+    borderRadius: 0
   },
   watchAddButton: {
     fontSize: 20,
@@ -424,7 +435,9 @@ const styles = {
     backgroundColor: '#1e93cd',
     color: 'white',
     margin: 0,
-    padding: 0
+    padding: 0,
+    border: 'none',
+    borderRadius: 0
   },
   watchItemDescription: {
     whiteSpace: 'nowrap',

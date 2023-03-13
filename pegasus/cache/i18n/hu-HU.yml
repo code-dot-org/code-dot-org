@@ -25,6 +25,8 @@ hu-HU:
     anyagokat is!
   n_have_learned_an_hoc: "<h1>Próbálj ki egy</h1><h2>Kódolás óráját</h2><h3># ember
     már kipróbálta</h3>"
+  try_hoc_num_served: "<h1><h1>Próbáld ki a</h1><h2>Kódolás óráját,</h2><h3>%{num}személy
+    már kipróbálta</h3>"
   try_hoc_num_served_markdown: |-
     # Próbáld ki a
 
@@ -455,6 +457,7 @@ hu-HU:
   homepage_banner_40k_teachers_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
+  homepage_slot_text_blurb_hoc_2022: Fedezd fel, játssz és alkoss!
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_about_hoc: A Kódolás Órájáról
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
@@ -480,6 +483,7 @@ hu-HU:
   homepage_slot_text_link_buy: Légy részese
   homepage_slot_text_link_donate: Adományozz
   homepage_slot_text_link_shop: Pólók, sapkák & egyéb
+  homepage_slot_text_link_thebadguys: Kódolás A rossz fiúk filmmel
   homepage_slot_text_link_administrators: Hozd a CS-t az iskoládba
   homepage_gallery_header: Több mint %{project_count} millió Code.org projekt készült
     eddig
@@ -489,6 +493,16 @@ hu-HU:
   homepage_below_hero_announcement_text: Törődünk az adataid védelmével, és néhány
     frissítést végezünk az adatvédelmi irányelvünkben, mely május 25-től hatályos.
   homepage_below_hero_announcement_link_text: Tudj meg többet
+  homepage_higher_power_body: Alkoss egy táncos bulit, és akkor láthatód a zenekart
+    élőben.
+  homepage_thebadguys_body: 'Kódolj egy kalandot Ms.Tarantulával, Mr. Farkassal és
+    **A rossz fiúk** c. film többi szereplőjével!
+
+'
+  homepage_csa_subhead: Új megközelítés
+  homepage_csa_title: AP® Számítástechnika (a)
+  homepage_csa_body: A méltányosságra épülő tantervünk célja, hogy a diákok képesek
+    legyenek a való világhoz kapcsolódó kreatív projekteket készíteni.
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
   contact_form_topic_teacher: Tanár/Oktató vagyok
@@ -667,6 +681,8 @@ hu-HU:
   video_title_marco_belinelli: Kódolás Órája Marco Belinellivel
   video_title_chris_bosh: Chris Bosh a számítógéptechnikáról
   video_title_my_name_is_aracely: A nevem Aracely
+  video_title_change_face_of_cs: A számítástechnika arculatának megváltoztatása
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 perc
   video_2min: 2 perc
   video_3min: 3 perc
@@ -938,6 +954,8 @@ hu-HU:
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
   dashboard_progress_submitted: elküldve
   dashboard_progress_view: 'Előrehaladás megtekintése itt:'
+  dashboard_progress_student_in_script: "%{student_name} tanuló előmenetele a(z) %{script_name}
+    tantárgyban"
   dashboard_progress_pair_programming: páros programozás
   dashboard_responses_view: 'Szöveges válaszok megtekintése:'
   dashboard_responses_none: A legtöbb osztályunk úgy van kialakítva, hogy a fiatalabb
@@ -1195,6 +1213,10 @@ hu-HU:
     az alkalmazásokat a számítógépre
   educator_notes: Oktatói jegyzetek
   teach_led_lesson_plans: Tanár által vezetett óratervek
+  learn_footer_all_tutorials: Lásd a <a href="https://code.org/learn">a Kódolás órája
+    gyakorlatok teljes listáját</a>. Ha a Kódolás órája gyakorlatokhoz kapcsolódó
+    kritériumokat és a feladatok beadásának szabályait akarod megismerni, <a href="https://hourofcode.com/activity-guidelines">kattints
+    ide.</a>
   how_to_teach_hoc: Hogyan tarthatsz Kódolás óráját
   more_resources_educators: További segédletek tanárok és oktatók részére
   beyond_submission: Szeretne bemutatni egy oktatóanyagot a Beyond an Hour programra
@@ -1300,6 +1322,7 @@ hu-HU:
   express-2020_name: Expressz tanfolyam (2020)
   pre-express-2020_name: Olvasó előtti expressz tanfolyam (2020)
   pre-express-2021_name: Olvasó előtti expressz tanfolyam (2021)
+  pre-express-2022_name: Előgyakorlat az expressz tanfolyamhoz (2022.)
   csd2_name: '2. egység: Webfejlesztés'
   csd3_name: '3. egység: Animáció és játékok'
   accelerated_name: Gyorsított tanfolyam
@@ -1415,6 +1438,12 @@ hu-HU:
   coursed-2021_gradelevel: 8+ évfolyam
   coursee-2021_gradelevel: 8-tól 12 éves korig
   coursef-2021_gradelevel: 9-től 13 éves korig
+  coursea-2022_gradelevel: 4-től 7 éves korig
+  courseb-2022_gradelevel: 5-tól 8 éves korig
+  coursec-2022_gradelevel: 6-tól 10 éves korig
+  coursed-2022_gradelevel: 8+ évfolyam
+  coursee-2022_gradelevel: 8-tól 12 éves korig
+  coursef-2022_gradelevel: 9-től 13 éves korig
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1633,6 +1662,25 @@ hu-HU:
     részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival
     és családjával.
   coursef-2021_shortdescription_congrats: Ismerje meg a különböző típusú hurkok, események,
+    függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó
+    technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait.
+    A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit
+    megoszthat barátaival és családjával.
+  coursea-2022_shortdescription_congrats: Ismerje meg a számítástechnika és az internetbiztonság
+    alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+  courseb-2022_shortdescription_congrats: Ismerje meg a számítástechnika és az internetbiztonság
+    alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+  coursec-2022_shortdescription_congrats: Hozzon létre programokat szekvenálással,
+    hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg
+    a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra.
+    A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+  coursed-2022_shortdescription_congrats: A diákok fejlesztik a hurkok, feltételrendszerek
+    és események megértését. A kódoláson túl a diákok megismerik a digitális állampolgárságot.
+  coursee-2022_shortdescription_congrats: Kezdje el a kódolást algoritmusokkal, hurkokkal,
+    feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második
+    részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival
+    és családjával.
+  coursef-2022_shortdescription_congrats: Ismerje meg a különböző típusú hurkok, események,
     függvények és feltételrendszerek használatát. Vizsgálja meg a különböző problémamegoldó
     technikákat, és vitassa meg a számítástechnika és az internet társadalmi hatásait.
     A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit
@@ -2140,6 +2188,9 @@ hu-HU:
     böngészőjét <a href='%{supported_browsers_url}', target='_blank'>egyik támogatott
     böngészőnkre</a>. Megpróbálhatja megtekinteni az oldalt, de elvárhatja, hogy a
     funkciók megszakadnak.
+  compatibility_unsupported_browser_markdown: A böngésződ nem támogatott. Frissítsd
+    böngészőt [a támogatott böngészők egyikére](%{supported_browsers_url}). Megtekintheted
+    az oldalt, de számolj azzal, hogy a funkciók nem működnek.
   flappy_shortcode: csapj
   header_home: Főmenü
   header_my_dashboard: Vezérlőpult
@@ -2157,6 +2208,7 @@ hu-HU:
   header_educate_beyond: A Code.org-on túl
   header_educate_inspire: Motiválj egy tanulót
   header_educate_community: Online közösség
+  header_educate_requirements: Technikai követelmények
   header_educate_tools: Eszközök és videók
   header_about_us: Rólunk
   header_about_leadership: Vezetőség
@@ -2277,6 +2329,13 @@ hu-HU:
   hoc_overview_dance_2019_subtitle: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal.
     Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers,
     Nicki Minaj és még 34-en!'
+  hoc_overview_dance_2022_subtitle: 'Kódolj egy Táncos bulit, és oszd meg a barátaiddal.
+    Fellépnek: Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney
+    "Encanto" c. filmjéből stb!'
+  hoc_overview_hello_world_2022_subtitle: Válassz a négy szórakoztató téma közül,
+    ha interaktív karaktereket akarsz kódolni az általad létrehozott világban.
+  hoc_overview_hello_world_2022_alt_text: Animált űrhajós- és állatfigurák lebegnek
+    a Föld képe körül
   hoc_overview_title: Óra Kódolás Tevékenységek a Code.org
   hoc_overview_subtitle: A <a href="https://hourofcode.com">Hour of Code</a> egy globális
     mozgalom, amely több tízmillió diák jut el 180+ országban. Bárki, bárhol szervezhet
@@ -2351,10 +2410,21 @@ hu-HU:
   hoc2018_mc_educators_box3_desc: Látogasson el egy Microsoft Store-ba egy ingyenes
     Code Óra műhelyhez. A résztvevők minden képzettségi szint, korosztály hat és legfeljebb.
   hoc2018_mc_educators_box3_button: Keressen egy műhelyt
+  hoc2022_mc_educators_box3_desc_markdown: Vedd igénybe ezt az [ingyenes tanfolyamot]
+    (%{free_course_link}) vagy regisztráld az osztályod, és egy vendégtanár közreműködésével
+    vegyetek részt egy élő Kódolás óráján. Több alkalommal is elérhető a Számítástechnikai
+    oktatás hetén, december 6-11 között.
+  hoc2022_mc_educators_box3_button: Regisztrálj most!
   hoc2018_mc_educators_box4_title: További számítástechnikai erőforrások elérése
   hoc2018_mc_educators_box4_desc: Változtatást hozhat létre közösségében a Microsoft
     digitális készségeivel és számítástechnika oktatási erőforrásaival.
   hoc2018_mc_educators_box4_button: Források felfedezése
+  hoc2022_mc_educators_box4_desc: '200 órányi informatikai tananyag segítségével ébreszd
+    fel a K-12-es tanulók lelkesedését a STEM iránt, amely szakmai támogatással megerősítve
+    elvezet a blokkoktól a Python-programozásig.
+
+'
+  hoc2022_mc_educators_box4_button: Tanulás folytatása
   hoc2018_mc_watch_videos: Mielőtt elkezdenéd, nézd meg az egyik inspiráló videót
   hoc2018_mc_videos_more: Több <a href='%{inspiring_videos_playlist}'>inspiráló videók</a>
     példaképek és hírességek
@@ -2475,6 +2545,10 @@ hu-HU:
   hoc2018_dance_video2: Tánc Party - Események
   hoc2018_dance_video3: Dance Party - Tulajdonságok
   hoc2018_dance_video4: Táncparti - Gratulálok
+  dance_box_higher_power_line_1: Kódolj egy táncot a Coldplay "Higher Power" című
+    dalára, és akkor élőben láthatod a zenekart!
+  dance_box_higher_power_line_2: További információk a <a href="%{path}">code.org/coldplay</a>
+    oldalon találhatók.
   page_not_found_title: Az oldal nem található
   page_not_found_header: '404: Az oldal nem található'
   page_not_found_description: A keresett oldal nem létezik ezen a címen. Ellenőrizze
@@ -2525,6 +2599,15 @@ hu-HU:
   hoc2021_mc_mee_ai_title: Mesterséges intelligencia jó célokra
   hoc2021_mc_mee_ai_description: Fedezd fel a mesterséges intelligenciát a diákjaiddal,
     és tanulj meg kódolni a Minecraft Oktatási kiadásában.
+  hoc2022_mc_mee_title: Minecraft szabadulószoba
+  hoc2022_mc_mee_description: 'Szökj meg még hajnal előtt a titokzatos kastélyból,
+    és keress egymillió smaragdot!  A tananyag az új Minecraft Kódolás órájához már
+    elérhető a Minecraftban: Oktatási változat Windowsra, Macre, Chromebookra, Ipadre
+    és mobileszközökre. Kezdd el, és használd az oktatók számára ingyenesen elérhető
+    erőforrásokat, képzéseket és videókat.'
+  hoc2022_mc_mee_timecraft_description: 'Utazz vissza a múltba, és mentsd meg a jövőt
+    a Minecraftnak ebben az ingyenesen hozzáférhető kódolási leckéjében: Oktatási
+    kiadás.'
   footer_powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
     Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
   footer_built_on_github: A Microsoft GitHubra épül
@@ -2542,7 +2625,7 @@ hu-HU:
   footer_partners: Partnerek
   footer_blog: Blog
   footer_donate: Adományozz
-  footer_store: Store
+  footer_store: Áruház
   footer_support: Segítség
   footer_terms: Felhasználási feltételek
   ai_for_oceans: AI óceánok
@@ -2618,3 +2701,27 @@ hu-HU:
   ai_try_activity: Tevékenység kipróbálása
   outbreak_tile_subtitle: Egy vírus fertőzte meg a Szörnyek Városát! Kódolj egy járványszimulátort,
     és készíts előrejelzéseket arról, hogy mi fog történni a Szörnyek Városának szomszédaival.
+  outbreak_tile_alt: Szimuláció egy vírus terjedéséről egy lila szörnyekből álló csoportban.
+  footer_cookie_notice: Sütikre vonatkozó figyelmeztetés
+  top_hoc_tutorial_applab_alt_text: Egy barna kéz, a mutatóujj egy érintőképernyős
+    táblagéphez ér, csillagokat és fénysugarakat bocsát ki kék háttér előtt.
+  minecraft_tile_alt: Két Minecraft karakter, Steve és Alex, egy Minecraft vizes jelenetet
+    ábrázoló háttér előtt, korallokkal, delfinekkel és hínárral.
+  hoc2022_banner_title: Fedezd fel, játssz és alkoss!
+  hoc2022_banner_description: Fedezd fel az univerzumot, lőj célba, mozogj - az informatika
+    kipróbálásának sokféle útja-módja van!
+  hoc2022_cta_primary: Újdonságok megtekintése
+  hoc2022_cta_secondary: Próbálj ki még több tevékenységet!
+  hoc2022_landing_page_explore_title: Felfedezés
+  hoc2022_landing_page_explore_description: Fedezz fel új világokat az informatikával!
+  hoc2022_landing_page_play_title: Lejátszás
+  hoc2022_landing_page_play_description: Tiéd a pálya, rúgj gólt!
+  hoc2022_landing_page_create_title: Alkoss
+  hoc2022_landing_page_create_description: Készíts valami izgalmasat és csodálatosat!
+  hoc2022_landing_page_banner_alt_left: Egy földönkívüli táncol az űrben, a Szaturnusz
+    közelében
+  hoc2022_landing_page_banner_alt_right: Egy robot egy focilabdával cselez az űrben,
+    egy felszállásra készülő rakéta előtt.
+  hoc2022_nasa_banner_heading: Csatlakozzon a NASA-hoz egy különleges Hour of Code
+    programhoz, amely az űrbeli számítástechnikáról szól!
+  hoc2022_nasa_banner_description: Premier 10AM ET, december 5-én a NASA STEM YouTube-csatornáján.

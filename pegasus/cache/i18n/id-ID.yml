@@ -461,6 +461,7 @@ id-ID:
   homepage_banner_40k_teachers_link: Pelajari lebih lanjut
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
+  homepage_slot_text_blurb_hoc_2022: Menjelajah, Bermain, Berkreasi!
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
   homepage_slot_text_link_about_hoc: Tentang Hour of Code
   homepage_slot_text_link_host: Selenggarakan Hour of Code
@@ -486,8 +487,9 @@ id-ID:
   homepage_slot_text_link_buy: Terlibat
   homepage_slot_text_link_donate: Membuat sumbangan
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
+  homepage_slot_text_link_thebadguys: Buat Kode dengan The Bad Guys
   homepage_slot_text_link_administrators: Bawa CS ke sekolah mu
-  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org telah
+  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org yang telah
     dibuat
   homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
   homepage_donors_seall: Lihat semua
@@ -495,6 +497,14 @@ id-ID:
   homepage_below_hero_announcement_text: Kami peduli pada privasi anda dan membuat
     beberapa pembaruan pada kebijakan privasi, efektif 25 mei.
   homepage_below_hero_announcement_link_text: Pelajari lebih lanjut
+  homepage_higher_power_body: Buat dengan Dance Party, dapatkan kesempatan untuk melihat
+    band tersebut secara langsung.
+  homepage_thebadguys_body: Buat kode petualangan bersama Ms. Tarantula, Mr. Wolf,
+    dan karakter lainnya dari film, **The Bad Guys**!
+  homepage_csa_subhead: Pendekatan baru ke
+  homepage_csa_title: AP® Computer Science A
+  homepage_csa_body: Berdayakan siswa dengan proyek kreatif yang terhubung ke dunia
+    nyata dalam kurikulum kami yang adil.
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru
@@ -676,6 +686,8 @@ id-ID:
   video_title_marco_belinelli: Jam kode dengan Marco Belinelli
   video_title_chris_bosh: Ilmu komputer di Chris Bosh
   video_title_my_name_is_aracely: Nama saya Aracely
+  video_title_change_face_of_cs: Ubah Rupa Ilmu Komputer
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1 menit
   video_2min: 2 menit
   video_3min: 3 menit
@@ -813,6 +825,7 @@ id-ID:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 relawan
   volunteer_engineer_submission_num_volunteers_10: 10 relawan
   volunteer_engineer_submission_num_volunteers_25: 25 relawan
@@ -1329,6 +1342,7 @@ id-ID:
   coursee-2020_name: Kursus E (2020)
   coursef-2020_name: Kursus F (2020)
   coursed-2021_name: Kursus D (2021)
+  coursed-2022_name: Kursus D (2021)
   express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
   express-2019_name: Kursus Kilat (2019)
@@ -1336,6 +1350,7 @@ id-ID:
   express-2020_name: Kursus Kilat (2020)
   pre-express-2020_name: Kursus Kilat Pre-reader(2020)
   pre-express-2021_name: Kursus ekspres Pre-reader(2021)
+  pre-express-2022_name: Kursus Pre-reader Express (2022)
   csd2_name: 'Unit 2: Pengembangan Web'
   csd3_name: 'Unit 3: Animasi dan Game'
   accelerated_name: Kursus Akselerasi
@@ -1453,6 +1468,12 @@ id-ID:
   coursed-2021_gradelevel: Kelas 8+
   coursee-2021_gradelevel: Usia 8-12
   coursef-2021_gradelevel: Usia 9-13
+  coursea-2022_gradelevel: Usia 4-7
+  courseb-2022_gradelevel: Usia 5-8
+  coursec-2022_gradelevel: Usia 6-10
+  coursed-2022_gradelevel: Kelas 8+
+  coursee-2022_gradelevel: Usia 8-12
+  coursef-2022_gradelevel: Usia 9-13
   accelerated_gradelevel: Usia 10 + (setelah Kursus 3)
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
@@ -1671,6 +1692,26 @@ id-ID:
     event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang
     dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
   coursef-2021_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis
+    loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah
+    dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua
+    kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman
+    dan keluarga.
+  coursea-2022_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan
+    internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda
+    bagikan.
+  courseb-2022_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan
+    internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda
+    bagikan.
+  coursec-2022_shortdescription_congrats: Buat program dengan pengurutan, loop, dan
+    event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan
+    masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir
+    kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+  coursed-2022_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop,
+    conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
+  coursee-2022_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional,
+    event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang
+    dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
+  coursef-2022_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis
     loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah
     dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua
     kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman
@@ -2233,6 +2274,7 @@ id-ID:
   header_educate_beyond: Di Luar Code.org
   header_educate_inspire: Menginspirasi seorang Siswa
   header_educate_community: Komunitas Online
+  header_educate_requirements: Persyaratan Teknis
   header_educate_tools: Alat dan Video
   header_about_us: Tentang Kami
   header_about_leadership: Kepemimpinan
@@ -2351,6 +2393,13 @@ id-ID:
   hoc_overview_dance_2019_subtitle: Kode Pesta Dansa untuk berbagi dengan teman-teman
     Anda. Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas
     Brothers, Nicki Minaj, dan 34 artis lainnya!
+  hoc_overview_dance_2022_subtitle: Buat Kode Pesta Dansa untuk dibagikan kepada teman-temanmu.
+    Menampilkan Beyonce, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musik dari
+    “Encanto” Disney, dan masih banyak lagi!
+  hoc_overview_hello_world_2022_subtitle: Pilih dari empat tema seru untuk membuat
+    coding karakter yang interaktif di dunia yang kamu ciptakan.
+  hoc_overview_hello_world_2022_alt_text: Animasi astronot dan karakter hewan yang
+    mengambang di sekitar ilustrasi bumi
   hoc_overview_title: Aktifitas Hour of Code dari Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code </a> adalah
     gerakan global mencapai puluhan juta siswa di 180+ negara.Siapapun,dimanapun bisa
@@ -2424,10 +2473,19 @@ id-ID:
     Hour of Code gratis. untuk partisipan semua level keterampilan, usia sembilan
     dan diatasnya.
   hoc2018_mc_educators_box3_button: Temukan workshop
+  hoc2022_mc_educators_box3_desc_markdown: 'Manfaatkan [kursus gratis] (%{free_course_link})
+    on demand ini atau daftarkan seluruh kelas Anda untuk menghadiri lokakarya Hour
+    of Code langsung dengan guru tamu. Ditawarkan beberapa kali selama CSEW, 6 - 11
+    Desember. '
+  hoc2022_mc_educators_box3_button: Daftar sekarang
   hoc2018_mc_educators_box4_title: Akses lebih sumber ilmu komputer
   hoc2018_mc_educators_box4_desc: Ciptakan perubahan di komunitas anda dengan keterampilan
     digital dan sumber pendidikan ilmu komputer dari Mikrosoft.
   hoc2018_mc_educators_box4_button: Eksplorasi sumber
+  hoc2022_mc_educators_box4_desc: Bangkitkan semangat STEM pada peserta didik K-12
+    dengan kurikulum ilmu komputer selama 200 jam, mulai dari blok hingga python,
+    yang didukung dengan pengembangan profesi.
+  hoc2022_mc_educators_box4_button: Lanjutkan Pembelajaran
   hoc2018_mc_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif
     ini
   hoc2018_mc_videos_more: Selengkapnya <a href='%{inspiring_videos_playlist}'>video
@@ -2549,6 +2607,10 @@ id-ID:
   hoc2018_dance_video2: Pesta dansa-event
   hoc2018_dance_video3: Pesta dans-properti
   hoc2018_dance_video4: Pesta dansa-selamat
+  dance_box_higher_power_line_1: Buat kode dansa untuk lagu "Higher Power" Coldplay
+    dan Anda bisa mendapatkan kesempatan untuk melihat band ini secara langsung!
+  dance_box_higher_power_line_2: Kunjungi <a href="%{path}">code.org/coldplay</a>
+    untuk informasi selengkapnya.
   page_not_found_title: Halaman tidak ditemukan
   page_not_found_header: '404: halaman tidak ditemukan'
   page_not_found_description: Halaman yang anda cari tidak ada di alamat ini. Periksa
@@ -2598,6 +2660,13 @@ id-ID:
   hoc2021_mc_mee_ai_title: AI Untuk Kebaikan
   hoc2021_mc_mee_ai_description: 'Telusuri AI bersama murid-murid Anda dan belajar
     meng-code di Minecraft: Edisi Pendidikan.'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Selamatkan diri rumah misterius saat fajar dan dapatkan
+    satu juta zamrud! Tutorial Minecraft Hour of Code yang baru kini tersedia di Minecraft:
+    Edisi Pendidikan untuk Windows, Mac, Chromebook, Ipad, dan Mobile. Mulailah dengan
+    sumber daya, pelatihan, dan video edukator gratis. '
+  hoc2022_mc_mee_timecraft_description: 'Kembali ke masa lalu untuk menyelamatkan
+    masa depan dalam pelajaran coding gratis ini dalam Minecraft: Edisi Pendidikan.'
   footer_powered_by_aws: Didukung oleh Amazon Web Services
   footer_built_on_github: Bawaan GitHub dari Microsoft
   codebytes_skinny_banner_title: Bergabunglah dengan kami pada Desember 7-11  untuk  pelajaran
@@ -2683,6 +2752,10 @@ id-ID:
   ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
   ai_ecs_description: Unit kurikulum alternatif baru untuk kurikulum Exploring Computer
     Science (ECS).
+  ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
+  ai_aiedu_intro_description: Pengantar Kecerdasan Buatan adalah sebuah kurikulum
+    yang gratis, inovatif, relevan secara budaya dimana murid mengembangkan pengetahuan
+    konseptual tentang kecerdasan buatan dan bagaimana penggunaannya di dunia nyata.
   ai_elements: Unsur AI
   ai_elements_description: Serangkaian kursus online gratis yang dibuat oleh Reaktor
     dan University of Helsinki.
@@ -2693,4 +2766,34 @@ id-ID:
   outbreak_tile_subtitle: Virus telah menginfeksi Monster Town! Buat code simulator
     kejadian dan buat prediksi tentang dampak yang akan timbul terhadap kota-kota
     di sekitar Monster Town.
+  outbreak_tile_alt: Sebuah simulasi tentang penyebaran virus melalui sekelompok monster
+    ungu.
   footer_cookie_notice: Informasi Cookie
+  top_hoc_tutorial_applab_alt_text: Tangan cokelat dengan jari telunjuk menyentuh
+    tablet layar sentuh yang memancarkan bintang dan sinar cahaya berlatar belakang
+    biru
+  minecraft_tile_alt: Dua karakter Minecraft, Steve dan Alex, dengan latar belakang
+    yang menunjukkan adegan Minecraft air dengan karang, lumba-lumba, dan rumput laut
+  hoc2022_banner_title: Menjelajah, Bermain, Berkreasi!
+  hoc2022_banner_description: Jelajahi alam semesta, cetak gol, atau lakukan gerakan
+    — ada banyak cara untuk mencoba ilmu komputer!
+  hoc2022_cta_primary: Lihat yang baru
+  hoc2022_cta_secondary: Coba kegiatan lainnya
+  hoc2022_landing_page_explore_title: Jelajahi
+  hoc2022_landing_page_explore_description: Buka pintu menuju dunia baru dengan ilmu
+    komputer!
+  hoc2022_landing_page_play_title: Bermain
+  hoc2022_landing_page_play_description: Ambil lapangan dan skor!
+  hoc2022_landing_page_create_title: Buat
+  hoc2022_landing_page_create_description: Ciptakan sesuatu yang unik dan indah!
+  hoc2022_landing_page_banner_alt_left: Alien yang menari di samping Saturnus di luar
+    angkasa
+  hoc2022_landing_page_banner_alt_right: Robot yang menggiring bola di luar angkasa
+    di depan roket yang lepas landas
+  try_it_yourself: Cobalah sendiri!
+  try_an_activity: Coba aktivitas
+  see_more_activities: Lihat aktivitas lainnya
+  hoc2022_nasa_banner_heading: Bergabunglah dengan NASA untuk fitur Hour of Code khusus
+    tentang ilmu komputer di luar angkasa!
+  hoc2022_nasa_banner_description: Tayang perdana pukul 10 pagi ET, 5 Desember di
+    saluran YouTube NASA STEM.

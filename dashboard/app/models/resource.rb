@@ -37,9 +37,9 @@ class Resource < ApplicationRecord
   validates_presence_of :name
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
-  has_and_belongs_to_many :scripts, join_table: :scripts_resources
+  has_and_belongs_to_many :scripts, class_name: 'Unit', join_table: :scripts_resources, association_foreign_key: 'script_id'
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
-  belongs_to :course_version
+  belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create
 
@@ -155,7 +155,7 @@ class Resource < ApplicationRecord
     # to do something manual.
     key_prefix = name.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.squeeze('_')
     potential_clashes = course_version_id ? Resource.where(course_version_id: course_version_id) : Resource.all
     potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
     return key_prefix unless potential_clashes.include?(key_prefix)

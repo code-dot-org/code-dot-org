@@ -1,8 +1,10 @@
-$root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
+@use "sass:math";
 
-@import 'color';
-@import '../common';
-@import 'font';
+$root: "/blockly/media/craft/"; //TODO: Parameterize for asset pipeline
+
+@import "color.scss";
+@import "../common";
+@import "font";
 
 $darkest-gray: #333;
 $very-dark-gray: #3b3b3b;
@@ -12,11 +14,10 @@ $below-header-background: #646464;
 $blockly-header: $very-dark-gray;
 $flyout-background: #4e4e4e;
 $footer-background: #4e4e4e;
-$footer-text–and-arrow: #969292;
+$footer-text-and-arrow: #969292;
 $grabber-dots: #4f4f4f;
-$main-blockspace-background: rgb(161, 161, 161); // #8B8B8B;
+$main-blockspace-background: rgb(161 161 161); // #8B8B8B;
 $callout-fallback-border-color: $very-dark-gray;
-
 $original-background-color: #f2f2f2;
 $button-text-white: #f1f1f1;
 $code-block-background-yellow: #d78c01;
@@ -36,13 +37,17 @@ $text-shadow-gray: #5a5a5a;
 }
 
 @mixin gray-button() {
-  -moz-border-image: url('#{$root}Sliced_Parts/Button_Grey_Slice.png') 4 5 6
+  -moz-border-image:
+    url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6
     stretch !important;
-  -webkit-border-image: url('#{$root}Sliced_Parts/Button_Grey_Slice.png') 4 5 6
+  -webkit-border-image:
+    url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6
     stretch !important;
-  -o-border-image: url('#{$root}Sliced_Parts/Button_Grey_Slice.png') 4 5 6
+  -o-border-image:
+    url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6
     stretch !important;
-  border-image: url('#{$root}Sliced_Parts/Button_Grey_Slice.png') 4 5 6 fill
+  border-image:
+    url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill
     stretch !important;
 
   &:hover {
@@ -54,13 +59,17 @@ $text-shadow-gray: #5a5a5a;
 
     border-image-slice: 2 3 4 3 fill;
     border-image-width: 10px 20px 20px 20px;
-    -moz-border-image: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3 4 3
+    -moz-border-image:
+      url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3
       stretch !important;
-    -webkit-border-image: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3
+    -webkit-border-image:
+      url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3
       4 3 stretch !important;
-    -o-border-image: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3 4 3
+    -o-border-image:
+      url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3
       stretch !important;
-    border-image: url('#{$root}Sliced_Parts/MC_Button_Pressed.png') 2 3 4 3 fill
+    border-image-source:
+      url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 fill
       stretch !important;
   }
 }
@@ -77,7 +86,7 @@ $text-shadow-gray: #5a5a5a;
 }
 
 .pixelated {
-  @include pixelated();
+  @include pixelated;
 }
 
 .instructionsImage {
@@ -91,14 +100,14 @@ $text-shadow-gray: #5a5a5a;
   position: absolute;
   cursor: pointer;
   z-index: 1;
-  background: url('#{$root}Sliced_Parts/X_Button.png') no-repeat center center;
+  background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
   background-size: 100% auto;
   top: -$button-centering-offset;
   right: -$button-centering-offset;
   width: 50px;
   height: 50px;
 
-  html[dir='rtl'] & {
+  html[dir="rtl"] & {
     right: auto;
     left: -$button-centering-offset;
   }
@@ -110,7 +119,7 @@ $text-shadow-gray: #5a5a5a;
   -webkit-transform: scaleX(-1 * $multiple);
   -ms-transform: scaleX(-1 * $multiple);
   transform: scaleX(-1 * $multiple);
-  -ms-filter: 'FlipH';
+  -ms-filter: "FlipH";
   filter: FlipH;
 }
 
@@ -120,24 +129,23 @@ $text-shadow-gray: #5a5a5a;
   -webkit-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
   transform: scaleY(-1);
-  -ms-filter: 'FlipV';
+  -ms-filter: "FlipV";
   filter: FlipV;
 }
 
-@mixin scaleXBrowser($multiple) {
+@mixin scale-x-browser($multiple) {
   -moz-transform: scale($multiple);
   -webkit-transform: scale($multiple);
   transform: scale($multiple);
 }
 
-@mixin scaleXBrowserTwoParam($multipleX, $multipleY) {
+@mixin scale-x-browser-two-param($multipleX, $multipleY) {
   -moz-transform: scale($multipleX, $multipleY);
   -webkit-transform: scale($multipleX, $multipleY);
   transform: scale($multipleX, $multipleY);
 }
 
 @mixin no-interact() {
-  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -148,7 +156,7 @@ $text-shadow-gray: #5a5a5a;
 }
 
 .arrow {
-  @include no-interact();
+  @include no-interact;
   display: inline !important;
   padding: 0 !important;
   margin-top: 5px !important;
@@ -157,14 +165,14 @@ $text-shadow-gray: #5a5a5a;
 }
 
 @mixin arrow-icon($assetUrl) {
-  @include no-interact();
+  @include no-interact;
   background: url($assetUrl) no-repeat !important;
   background-position: center !important;
   // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
   width: 40px !important;
   height: 40px !important;
 
-  @include pixelated();
+  @include pixelated;
 }
 
 #soft-buttons.soft-buttons-compact {
@@ -184,30 +192,30 @@ $text-shadow-gray: #5a5a5a;
 }
 
 .left-btn {
-  @include arrow-icon('#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png');
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   @include flip-horizontal(1);
   background-size: 16px 32px !important;
 }
 .right-btn {
-  @include arrow-icon('#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png');
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   background-size: 16px 32px !important;
 }
 .down-btn {
-  @include arrow-icon('#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png');
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png");
   background-size: 28px 20px !important;
 }
 .up-btn {
-  @include arrow-icon('#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png');
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png");
   background-size: 28px 20px !important;
 }
 .scroll-up-btn {
-  @include arrow-icon('#{$root}CDO_MC_ScrollUp.png');
+  @include arrow-icon("#{$root}CDO_MC_ScrollUp.png");
   background-size: 21px 15px !important;
   width: 30px !important;
   height: 30px !important;
 }
 .scroll-down-btn {
-  @include arrow-icon('#{$root}CDO_MC_ScrollDown.png');
+  @include arrow-icon("#{$root}CDO_MC_ScrollDown.png");
   background-size: 21px 15px !important;
   width: 30px !important;
   height: 30px !important;
@@ -247,9 +255,9 @@ body {
 #copyright-flyout,
 #more-menu {
   background-color: $below-header-background;
-  color: $footer-text–and-arrow;
+  color: $footer-text-and-arrow;
   h4 {
-    color: $footer-text–and-arrow;
+    color: $footer-text-and-arrow;
   }
   a {
     &:link {
@@ -275,8 +283,9 @@ body {
   }
 
   .loading {
-    @include pixelated();
-    background: url('#{$root}Sliced_Parts/MC_Loading_Spinner.gif') no-repeat
+    @include pixelated;
+    background:
+      url("#{$root}Sliced_Parts/MC_Loading_Spinner.gif") no-repeat
       center center;
   }
 }
@@ -307,27 +316,27 @@ body {
 .icon21 {
   height: 21px;
   width: 21px;
-  background-image: url('#{$root}icons.png');
+  background-image: url("#{$root}icons.png");
 }
 .code {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .link {
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 
 #phaser-game canvas {
-  @include pixelated();
+  @include pixelated;
 }
 
 #phaser-game {
   $frame-width: 434;
   $native-game-width: 400;
-  $game-offset-x: (($frame-width - $native-game-width) / 2);
+  $game-offset-x: (($frame-width - $native-game-width) * 0.5);
   $game-margin-side: $game-offset-x * 1px;
 
   margin-left: $game-margin-side;
-  html[dir='rtl'] & {
+  html[dir="rtl"] & {
     margin-left: 0;
     margin-right: $game-margin-side;
   }
@@ -340,7 +349,7 @@ body {
   //@include pixelated();
   width: 434px;
   height: 477px;
-  background-image: url('#{$root}Sliced_Parts/Frame_Large_Plus_Logo.png');
+  background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_Logo.png");
   background-size: 100%;
 }
 
@@ -369,10 +378,10 @@ a.video_link {
  *    min-height
  */
 
-$width-to-height: 477 / 434;
-$height-to-width: 434 / 477;
+$width-to-height: math.div(477, 434);
+$height-to-width: math.div(434, 477);
 
-@media screen and (min-height: 0px) {
+@media screen and (min-height: 0) {
   @include visualization-width-height-original(
     $height-to-width * 200px,
     200px,
@@ -434,14 +443,14 @@ $height-to-width: 434 / 477;
 }
 
 @mixin popup-width-height($width, $height) {
-  $offsetY: -($height/2);
-  $offsetX: -($width/2);
+  $offset-y: -($height * 0.5);
+  $offset-x: -($width * 0.5);
 
   position: fixed;
   top: 50%;
   left: 50%;
   width: $width;
-  margin: $offsetY 0 0 $offsetX;
+  margin: $offset-y 0 0 $offset-x;
 }
 
 #code-connection-log {
@@ -467,14 +476,19 @@ $height-to-width: 434 / 477;
   border-style: solid;
   border-width: 18px 21px 22px 19px;
   box-shadow: none;
-  @include pixelated();
-  -moz-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+
+  @include pixelated;
+  -moz-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  -webkit-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+  -webkit-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  -o-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+  -o-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19 fill
+  border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill
     stretch;
 
   #modal-body {
@@ -483,7 +497,7 @@ $height-to-width: 434 / 477;
 
   .modal-content.no-modal-icon {
     margin-left: 0;
-    html[dir='rtl'] & {
+    html[dir="rtl"] & {
       margin-right: 0;
     }
   }
@@ -496,7 +510,7 @@ $height-to-width: 434 / 477;
   }
 
   .minecraft-big-gray-header {
-    @extend .minecraft-big-yellow-header;
+    @extend .minecraft-big-yellow-header; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
 
     color: #e7e8ea;
     margin-bottom: 23px;
@@ -504,12 +518,11 @@ $height-to-width: 434 / 477;
 }
 
 .craft-popup {
-  @include craft-popup();
+  @include craft-popup;
 }
 
 #craft-popup-connect {
-  @include craft-popup();
-
+  @include craft-popup;
   @include popup-width-height(540px, 516px);
 
   @media screen and (max-height: 630px) {
@@ -523,15 +536,16 @@ $height-to-width: 434 / 477;
   }
 
   #close-popup {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   .download-button {
     border-style: solid !important;
     border-width: 4px 5px 6px 5px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -544,8 +558,7 @@ $height-to-width: 434 / 477;
 }
 
 #craft-popup-player-selection {
-  @include craft-popup();
-
+  @include craft-popup;
   @include popup-width-height(540px, 516px);
 
   @media screen and (max-height: 630px) {
@@ -570,6 +583,7 @@ $height-to-width: 434 / 477;
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
+
     @media screen and (max-height: 630px) {
       padding-left: 25px;
       padding-right: 25px;
@@ -578,7 +592,7 @@ $height-to-width: 434 / 477;
   }
 
   .character-portrait {
-    margin: 0px auto 10px auto;
+    margin: 0 auto 10px auto;
     background-size: 100% auto;
     background-position-x: 0; // 50% for smaller screens
     background-position-y: 0;
@@ -588,17 +602,17 @@ $height-to-width: 434 / 477;
   #steve-portrait {
     $width: 144px;
     $height: 268px;
-    background-image: url('#{$root}Sliced_Parts/Steve_Character_Select.png');
+    background-image: url("#{$root}Sliced_Parts/Steve_Character_Select.png");
     .minecraft-events & {
-      background-image: url('#{$root}Events/Steve_Character_Select.png');
+      background-image: url("#{$root}Events/Steve_Character_Select.png");
     }
     width: $width;
     height: $height;
     margin-top: 13px; // matches bottom with Alex
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
+      width: $width * 0.5;
+      height: $height * 0.5;
       margin-top: 0;
     }
   }
@@ -606,16 +620,16 @@ $height-to-width: 434 / 477;
   #alex-portrait {
     $width: 136px;
     $height: 271px;
-    background-image: url('#{$root}Sliced_Parts/Alex_Character_Select.png');
+    background-image: url("#{$root}Sliced_Parts/Alex_Character_Select.png");
     .minecraft-events & {
-      background-image: url('#{$root}Events/Alex_Character_Select.png');
+      background-image: url("#{$root}Events/Alex_Character_Select.png");
     }
     width: $width;
     height: $height;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
+      width: $width * 0.5;
+      height: $height * 0.5;
     }
   }
 
@@ -634,9 +648,10 @@ $height-to-width: 434 / 477;
   .choose-character-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -649,11 +664,11 @@ $height-to-width: 434 / 477;
 }
 
 #craft-popup-house-selection {
-  @include craft-popup();
+  @include craft-popup;
 
   .modal-content {
     margin-left: 0;
-    html[dir='rtl'] & {
+    html[dir="rtl"] & {
       margin-right: 0;
     }
   }
@@ -684,6 +699,7 @@ $height-to-width: 434 / 477;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
+
     @media screen and (max-height: 630px) {
       padding-left: 5px;
       padding-right: 5px;
@@ -692,9 +708,10 @@ $height-to-width: 434 / 477;
   }
 
   .house-outline-container {
-    @include pixelated();
-    background: url('#{$root}Sliced_Parts/House_Selection_Box.png') no-repeat;
+    @include pixelated;
+    background: url("#{$root}Sliced_Parts/House_Selection_Box.png") no-repeat;
     display: table;
+
     $margin-above: 23px;
     $margin-below: 16px;
     margin: $margin-above auto $margin-below;
@@ -703,9 +720,8 @@ $height-to-width: 434 / 477;
 
     @media screen and (max-height: 630px) {
       $fudge-factor-to-match-bottoms: 7px;
-      $smaller-height: ($house-outline-height / 2) +
-        $fudge-factor-to-match-bottoms;
-      $smaller-width: $house-outline-width / 2;
+      $smaller-height: ($house-outline-height * 0.5) + $fudge-factor-to-match-bottoms;
+      $smaller-width: $house-outline-width * 0.5;
       width: $smaller-width;
       height: $smaller-height;
       background-size: $smaller-width $smaller-height;
@@ -713,7 +729,7 @@ $height-to-width: 434 / 477;
   }
 
   .house-photo {
-    margin: 0px auto 10px auto;
+    margin: 0 auto 10px auto;
     background-size: 100% auto;
     background-position-x: 0; // 50% for smaller screens
     background-position-y: 0;
@@ -724,55 +740,55 @@ $height-to-width: 434 / 477;
   #house-a-picture {
     $width: 112px;
     $height: 111px;
-    background-image: url('#{$root}Sliced_Parts/House_Option_A_v3.png');
+    background-image: url("#{$root}Sliced_Parts/House_Option_A_v3.png");
     width: $width;
     height: $height;
-    $margin-above-photo: ($house-outline-height - $height) / 2 +
-      $extra-offset-for-shadow;
+
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
-      margin-top: $margin-above-photo / 2;
-      margin-bottom: -($margin-above-photo / 2);
+      width: $width * 0.5;
+      height: $height * 0.5;
+      margin-top: $margin-above-photo * 0.5;
+      margin-bottom: -($margin-above-photo * 0.5);
     }
   }
   #house-c-picture {
     $width: 127px;
     $height: 129px;
-    background-image: url('#{$root}Sliced_Parts/House_Option_B_v3.png');
+    background-image: url("#{$root}Sliced_Parts/House_Option_B_v3.png");
     width: $width;
     height: $height;
-    $margin-above-photo: ($house-outline-height - $height) / 2 +
-      $extra-offset-for-shadow;
+
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
-      margin-top: $margin-above-photo / 2;
-      margin-bottom: -($margin-above-photo / 2);
+      width: $width * 0.5;
+      height: $height * 0.5;
+      margin-top: $margin-above-photo * 0.5;
+      margin-bottom: -($margin-above-photo * 0.5);
     }
   }
   #house-b-picture {
     $width: 98px;
     $height: 152px;
-    background-image: url('#{$root}Sliced_Parts/House_Option_C_v3.png');
+    background-image: url("#{$root}Sliced_Parts/House_Option_C_v3.png");
     width: $width;
     height: $height;
-    $margin-above-photo: ($house-outline-height - $height) / 2 +
-      $extra-offset-for-shadow;
+
+    $margin-above-photo: ($house-outline-height - $height) * 0.5 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
     margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
-      width: $width / 2;
-      height: $height / 2;
-      margin-top: $margin-above-photo / 2;
-      margin-bottom: -($margin-above-photo / 2);
+      width: $width * 0.5;
+      height: $height * 0.5;
+      margin-top: $margin-above-photo * 0.5;
+      margin-bottom: -($margin-above-photo * 0.5);
     }
   }
 
@@ -789,15 +805,16 @@ $height-to-width: 434 / 477;
   }
 
   #close-house-select {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   .choose-house-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -810,8 +827,7 @@ $height-to-width: 434 / 477;
 }
 
 #craft-popup-import {
-  @include craft-popup();
-
+  @include craft-popup;
   @include popup-width-height(540px, 516px);
 
   @media screen and (max-height: 630px) {
@@ -819,7 +835,7 @@ $height-to-width: 434 / 477;
   }
 
   #close-popup {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   h2 {
@@ -837,9 +853,10 @@ $height-to-width: 434 / 477;
   .button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
-    @include pixelated();
-    @include gray-button();
-    @include mc-text-shadow();
+
+    @include pixelated;
+    @include gray-button;
+    @include mc-text-shadow;
 
     color: $button-text-white !important;
     font-size: 26px;
@@ -852,8 +869,7 @@ $height-to-width: 434 / 477;
 }
 
 #craft-popup-error {
-  @include craft-popup();
-
+  @include craft-popup;
   @include popup-width-height(540px, 516px);
 
   @media screen and (max-height: 630px) {
@@ -861,7 +877,7 @@ $height-to-width: 434 / 477;
   }
 
   #close-popup {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   h2 {
@@ -879,15 +895,20 @@ $height-to-width: 434 / 477;
   }
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
-  @include pixelated();
 
-  -moz-border-image: url('#{$root}Sliced_Parts/Run_Button_Up_Slice.png') 3 3 5 5
+  @include pixelated;
+
+  -moz-border-image:
+    url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5
     stretch !important;
-  -webkit-border-image: url('#{$root}Sliced_Parts/Run_Button_Up_Slice.png') 3 3
+  -webkit-border-image:
+    url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3
     5 5 stretch !important;
-  -o-border-image: url('#{$root}Sliced_Parts/Run_Button_Up_Slice.png') 3 3 5 5
+  -o-border-image:
+    url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5
     stretch !important;
-  border-image: url('#{$root}Sliced_Parts/Run_Button_Up_Slice.png') 3 3 5 5 fill
+  border-image:
+    url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill
     stretch !important;
 
   &:hover {
@@ -898,14 +919,19 @@ $height-to-width: 434 / 477;
     outline: none;
     border-style: solid !important;
     border-width: 5px 5px 3px 3px !important;
-    @include pixelated();
-    -moz-border-image: url('#{$root}Sliced_Parts/Run_Button_Down_Slice.png') 5 5
+
+    @include pixelated;
+    -moz-border-image:
+      url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5
       3 3 stretch !important;
-    -webkit-border-image: url('#{$root}Sliced_Parts/Run_Button_Down_Slice.png')
+    -webkit-border-image:
+      url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png")
       5 5 3 3 stretch !important;
-    -o-border-image: url('#{$root}Sliced_Parts/Run_Button_Down_Slice.png') 5 5 3
+    -o-border-image:
+      url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3
       3 stretch !important;
-    border-image: url('#{$root}Sliced_Parts/Run_Button_Down_Slice.png') 5 5 3 3
+    border-image:
+      url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3
       fill stretch !important;
   }
 }
@@ -916,15 +942,16 @@ $height-to-width: 434 / 477;
 .minecraft button:not(.no-mc) {
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
-  @include pixelated();
-  @include gray-button();
+
+  @include pixelated;
+  @include gray-button;
 
   $run-width: 16px;
   $reset-width: 40px;
   $run-left-margin: 6px;
 
   &.mc-share-button {
-    @include orange-button();
+    @include orange-button;
 
     & > div {
       margin: 0;
@@ -942,7 +969,7 @@ $height-to-width: 434 / 477;
     padding-top: 6px;
     padding-bottom: 4px;
 
-    @include orange-button();
+    @include orange-button;
 
     & > div {
       margin-top: 4px;
@@ -951,14 +978,16 @@ $height-to-width: 434 / 477;
     }
 
     .run26 {
-      @include scaleXBrowser(2);
+      @include scale-x-browser(2);
       width: 6px;
       height: 34px;
       margin: 16px -3px -18px 23px;
       padding-right: 13px;
-      background: url('#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png')
+      background:
+        url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png")
         no-repeat 0 0;
-      @include pixelated();
+
+      @include pixelated;
     }
   }
 
@@ -976,17 +1005,18 @@ $height-to-width: 434 / 477;
 
     .toggle26 {
       &.more-btn {
-        background: url('#{$root}CDO_MC_More.png') no-repeat;
+        background: url("#{$root}CDO_MC_More.png") no-repeat;
       }
       &.less-btn {
-        background: url('#{$root}CDO_MC_Less.png') no-repeat;
+        background: url("#{$root}CDO_MC_Less.png") no-repeat;
       }
       background-position: center !important;
       background-size: 18px 20px !important;
       width: 18px;
       height: 25px;
       margin-right: 5px;
-      @include pixelated();
+
+      @include pixelated;
     }
   }
 
@@ -1016,18 +1046,24 @@ $height-to-width: 434 / 477;
     padding-bottom: 4px;
     border-style: solid !important;
     border-width: 3px 3px 5px 5px !important;
-    @include pixelated();
-    -moz-border-image: url('#{$root}Sliced_Parts/Reset_Button_Up_Slice.png') 3 3
+
+    @include pixelated;
+    -moz-border-image:
+      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3
       5 5 stretch !important;
-    -webkit-border-image: url('#{$root}Sliced_Parts/Reset_Button_Up_Slice.png')
+    -webkit-border-image:
+      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png")
       3 3 5 5 stretch !important;
-    -o-border-image: url('#{$root}Sliced_Parts/Reset_Button_Up_Slice.png') 3 3 5
+    -o-border-image:
+      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5
       5 stretch !important;
-    border-image: url('#{$root}Sliced_Parts/Reset_Button_Up_Slice.png') 3 3 5 5
+    border-image:
+      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5 5
       fill stretch !important;
 
     .reset26 {
-      background: url('#{$root}Sliced_Parts/MC_Reset_Arrow_Icon.png') no-repeat
+      background:
+        url("#{$root}Sliced_Parts/MC_Reset_Arrow_Icon.png") no-repeat
         0 0;
       width: $reset-width;
       height: 36px;
@@ -1035,7 +1071,8 @@ $height-to-width: 434 / 477;
       margin-top: -2px;
       margin-left: -6px;
       margin-bottom: -3px;
-      @include pixelated();
+
+      @include pixelated;
     }
 
     &:hover {
@@ -1046,19 +1083,24 @@ $height-to-width: 434 / 477;
       outline: none;
       border-style: solid !important;
       border-width: 5px 4px 3px 3px !important;
-      @include pixelated();
-      -moz-border-image: url('#{$root}Sliced_Parts/Reset_Button_Down_Slice.png')
+
+      @include pixelated;
+      -moz-border-image:
+        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png")
         5 4 3 3 stretch !important;
-      -webkit-border-image: url('#{$root}Sliced_Parts/Reset_Button_Down_Slice.png')
+      -webkit-border-image:
+        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png")
         5 4 3 3 stretch !important;
-      -o-border-image: url('#{$root}Sliced_Parts/Reset_Button_Down_Slice.png') 5
+      -o-border-image:
+        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5
         4 3 3 stretch !important;
-      border-image: url('#{$root}Sliced_Parts/Reset_Button_Down_Slice.png') 5 4
+      border-image:
+        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5 4
         3 3 fill stretch !important;
     }
   }
 
-  @include mc-text-shadow();
+  @include mc-text-shadow;
 
   color: $button-text-white !important;
   font-size: 26px;
@@ -1085,19 +1127,24 @@ $height-to-width: 434 / 477;
 
   border-style: solid;
   border-width: 18px 21px 22px 19px;
-  @include pixelated();
-  -moz-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+
+  @include pixelated;
+  -moz-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  -webkit-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+  -webkit-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  -o-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+  -o-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19 fill
+  border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill
     stretch;
 
   .modal-image {
     margin-left: -21px;
-    html[dir='rtl'] & {
+    html[dir="rtl"] & {
       margin-left: 0;
       margin-right: -32px;
     }
@@ -1107,7 +1154,7 @@ $height-to-width: 434 / 477;
   }
 
   .x-close {
-    @include mc-x-close-button();
+    @include mc-x-close-button;
   }
 
   .modal-content .lines-of-code-message,
@@ -1120,7 +1167,7 @@ $height-to-width: 434 / 477;
   #puzzleRatingButtons,
   #sharing {
     margin-left: -100px;
-    html[dir='rtl'] & {
+    html[dir="rtl"] & {
       margin-right: -100px;
       margin-left: 0;
     }
@@ -1171,7 +1218,7 @@ $height-to-width: 434 / 477;
     margin-left: 69px;
   }
   .failure-feedback p.congrats {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   // Video notes
@@ -1189,7 +1236,7 @@ $height-to-width: 434 / 477;
   }
 
   .dialog-title {
-    @include mc-text-shadow();
+    @include mc-text-shadow;
     color: $header-text-yellow;
   }
 
@@ -1216,7 +1263,7 @@ $height-to-width: 434 / 477;
   .ieVersion9 &,
   .ieVersion10 & {
     // Force a background color for ie 10 and 11
-    background-color: rgb(88, 88, 88) !important;
+    background-color: rgb(88 88 88) !important;
     border-radius: 8px;
     border-color: $callout-fallback-border-color;
     border-width: 15px;
@@ -1225,23 +1272,28 @@ $height-to-width: 434 / 477;
   border-style: solid;
   border-width: 18px 21px 22px 19px;
   box-shadow: none;
-  @include pixelated();
-  -moz-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+
+  @include pixelated;
+  -moz-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  -webkit-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+  -webkit-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  -o-border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19
+  -o-border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
     stretch;
-  border-image: url('#{$root}Sliced_Parts/Pop_Up_Slice.png') 18 21 22 19 fill
+  border-image:
+    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill
     stretch;
 }
 
 .tooltip-x-close.qtip-icon {
-  @include pixelated();
+  @include pixelated;
   position: absolute;
   cursor: pointer;
   z-index: 1;
-  background: url('#{$root}Sliced_Parts/X_Button.png') no-repeat center center;
+  background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
   background-size: 100% auto;
   top: -35px;
   right: -35px;
@@ -1261,7 +1313,8 @@ $height-to-width: 434 / 477;
 }
 
 .cdo-qtips .qtip-tip {
-  background: url('#{$root}Sliced_Parts/Callout_Tail.png') no-repeat center
+  background:
+    url("#{$root}Sliced_Parts/Callout_Tail.png") no-repeat center
     center;
   width: 66px !important;
   height: 66px !important;
@@ -1273,11 +1326,14 @@ $height-to-width: 434 / 477;
 }
 
 @mixin translate-x-y-rotate($translateX, $translateY, $degrees) {
-  -webkit-transform: translateX($translateX) translateY($translateY)
+  -webkit-transform:
+    translateX($translateX) translateY($translateY)
     rotate($degrees);
-  -moz-transform: translateX($translateX) translateY($translateY)
+  -moz-transform:
+    translateX($translateX) translateY($translateY)
     rotate($degrees);
-  -ms-transform: translateX($translateX) translateY($translateY)
+  -ms-transform:
+    translateX($translateX) translateY($translateY)
     rotate($degrees);
   -o-transform: translateX($translateX) translateY($translateY) rotate($degrees);
   transform: translateX($translateX) translateY($translateY) rotate($degrees);
@@ -1324,11 +1380,12 @@ $height-to-width: 434 / 477;
   background: $fallback-gray;
   border-style: solid !important;
   border-width: 1px 7px 7px 7px !important;
-  -moz-border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 stretch !important;
-  -webkit-border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 stretch !important;
-  -o-border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 stretch !important;
-  border-image: url('#{$root}Events/MC_HoC_Score_9Slice.png') 7 fill stretch !important;
-  @include pixelated();
+  -moz-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -webkit-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -o-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 fill stretch !important;
+
+  @include pixelated;
 }
 
 .minecraft-events {
@@ -1367,7 +1424,7 @@ $height-to-width: 434 / 477;
     margin-bottom: -100%;
 
     #score-inner {
-      @include scoreboard-background();
+      @include scoreboard-background;
       top: -411px;
       height: 17px;
       float: left;

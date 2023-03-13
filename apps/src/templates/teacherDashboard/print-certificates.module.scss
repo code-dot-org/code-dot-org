@@ -1,0 +1,24 @@
+@use "sass:math";
+@import "color.scss";
+
+$standard-padding: 20px;
+
+.main {
+  margin: 0;
+}
+
+.outerStyle {
+  padding-left: $standard-padding;
+  padding-right: $standard-padding;
+  padding-top: math.div($standard-padding, 4);
+  padding-bottom: math.div($standard-padding, 4);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $lightest_gray;
+  }
+}
+
+.actionText {
+  color: $dark_charcoal;
+}

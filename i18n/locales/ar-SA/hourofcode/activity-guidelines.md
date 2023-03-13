@@ -35,11 +35,10 @@ title: إرشادات النشاط
     - [إرشادات عامة لإنشاء نشاط ساعة من البرمجة™](#guidelines)
     - [كيفية الإرسال](#submit)
     - [كيفية تقييم الأنشطة](#inclusion)
-    - [إرشادات الإرسال لإجراء مراجعة نوعية مبكرة (جديد)](#earlyreview)
-    - [اقتراحات لتصميم نشاطك](#design)
-    - [إرشادات العلامات التجارية](#tm)
-    - [بكسل التتبع](#pixel)
-    - [الترويج لنشاطك و الأسبوع العالمي للبرمجة وعلوم الحاسوب و "ساعة من البرمجة"](#promote)
+    - [إرشادات الإرسال لإجراء مراجعة نوعية مبكرة (جديد)](#design)
+    - [اقتراحات لتصميم نشاطك](#tm)
+    - [إرشادات العلامات التجارية](#pixel)
+    - [بكسل التتبع](#promote)
     
     
 
@@ -199,43 +198,20 @@ title: إرشادات النشاط
     - تتناسب مع الفصول الدراسية في المدارس العامة (بدون أسلحة، أو محتوى فاضح / جنسي، أو محتوى ديني، وما إلى ذلك)
     - لا تتطلب تسجيل الدخول 
     - مجانية (باستثناء أنشطة الروبوتات، يمكن أن يتطلب ذلك شراء الروبوت / مجموعة أدوات) بالنسبة للأنشطة القائمة على التوجيه الذاتي للمعلمين والطلاب الجدد، ستبحث لجنة المراجعة عما إذا كان:
-    - يمكن للمعلمين استخدام البرنامج التعليمي أو النشاط بدون خلفية في علوم الحاسوب
-    - يمكن للطلاب النجاح بدون خلفية في علوم الحاسوب
-    - يمكن للطلاب توجيه أنفسهم من خلال البرنامج التعليمي دون توجيه من الوالدين أو المعلم
     
-    سيتمكَّن المعلمون والطلاب من البحث في قائمة الأنشطة وتصفيتها بناءً على عوامل التصفية مثل الصف ومستوى الخبرة والمادة والأجهزة وما إلى ذلك. وبشكل افتراضي، سنعرض خطط الدروس والأنشطة أولاً:
+    For self-directed activities for new teachers and students the review committee will be looking for whether:
     
     - الحصول على أعلى الدرجات والتقييمات من لجنة المراجعة
     - تم تصميم أنشطة ذاتية التوجيه لمدة ساعة واحدة للمبتدئين (الطلاب والمعلمين)
     - الأنشطة جذابة لمجموعة واسعة من المستخدمين (عبر المنصات واللغات والفئات العمرية المختلفة)
-    - لا تتطلب التثبيت
-    - جديدة ومُحدَّثة
     
-    [**عودة إلى الأعلى**](#top)
+    Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
     
-    
-
-<a id="earlyreview"></a>
-
-    
-    ## إرشادات تقديم الأنشطة لمراجعة نوعية مبكرة (جديد)
-    
-    سيحصل أي نشاط يتم إرساله في الفترة ما بين 30 أبريل و 16 أغسطس على مراجعة نوعية من ثلاثة أعضاء على الأقل من [لجنة مراجعة أنشطة "ساعة من البرمجة"](/review-committee).
-    
-    سيركز المراجعون على توفير ما يلي:
-    
-    * تعليقات وملاحظات إيجابية - ما الذي يعمل بشكل جيد؟
-    * تعليقات وملاحظات نقدية - ما الذي يمكن تحسينه؟
-    * الثغرات أو الأخطاء - هل هناك أي ثغرات أو أخطاء في بناء الجملة أو أخطاء نحوية؟ إذا كان الأمر كذلك، فأين توجد تلك الثغرات والأخطاء في النشاط؟
-    * هل يشجِّع هذا النشاط الطلاب على إنشاء شيء فريد؟
-    
-    يرجى ملاحظة: هذه هي الإرشادات العامة لتقديم التعليقات والملاحظات. وقد تتضمن المراجعة المبكرة لنشاطك تعليقات وملاحظات عبر جميع هذه الفئات، أو قد تتضمن فقط تعليقات وملاحظات في فئة واحدة أو فئتين. ليس هناك أيضًا **ضمان بأننا سنتعرف على جميع الأخطاء أو المشكلات في أي نشاط**.
-    
-    **المراجعة المبكرة ليست فرصة لجمع التعليقات والملاحظات حول نشاط غير مكتمل. ولن تتم مراجعة أي نشاط يعتبره المراجع غير كامل في تقييمه.**
-    
-    ستتلقى جميع الأنشطة المقدَّمة للمراجعة المبكرة تعليقات وملاحظات قبل 1 سبتمبر. سنوفر أيضًا رابطًا لنموذج يمكنك استخدامه لشرح تغييرات معينة تم إجراؤها على النشاط ردًا على التعليقات والملاحظات.
-    
-    كل نشاط يتم إرساله قبل يوم 1 أكتوبر سيحصل على مراجعة قياسية، سواء تلقى مراجعة مبكرة أم لا. وأثناء فترة المراجعة القياسية (سبتمبر - أكتوبر)، سيركِّز المراجعون على تصنيف الأنشطة وفقًا للمعايير الموضحة في قسم "كيفية تقييم الأنشطة" أعلاه. وما لم تلاحظ تغييرات محددة على نشاط ما، يمكن للمراجعين، بل من المرجح، أن يعتمدوا على ملاحظات المراجعة المبكرة لتقييم الأنشطة.
+    - تعليقات وملاحظات إيجابية - ما الذي يعمل بشكل جيد؟
+    - تعليقات وملاحظات نقدية - ما الذي يمكن تحسينه؟
+    - Appeal to a wide range of users (across platforms, languages, and ages)
+    - هل يشجِّع هذا النشاط الطلاب على إنشاء شيء فريد؟
+    - Are new this year
     
     [**عودة إلى الأعلى**](#top)
     
@@ -244,28 +220,28 @@ title: إرشادات النشاط
 <a id="design"></a>
 
     
-    ## اقتراحات لتصميم دروس وبرامج تعليمية قائمة على التوجيه الذاتي لمدة ساعة واحدة
+    ## إرشادات تقديم الأنشطة لمراجعة نوعية مبكرة (جديد)
     
-    يمكنك تضمين [شعار "ساعة من البرمجة"](https://hourofcode.com/us/promote/resources#logo) في الدرس أو البرنامج التعليمي الخاص بك، ولكن هذا غير مطلوب. إذا كنت تستخدم شعار "ساعة من البرمجة"، يرجى الرجوع إلى إرشادات العلامات التجارية أدناه. <u>لا يمكن بأي حال من الأحوال استخدام شعار واسم Code.org.</u> كلاهما علامة تجارية، ولا يمكن خلطهما مع اسم علامة تجارية لطرف ثالث دون إذن كتابي صريح.
+    You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
     
-    **تأكَّد من أن الطالب العادي يمكنه الانتهاء بشكل مريح في غضون ساعة.** فكِّر في إضافة نشاط مفتوح في النهاية للطلاب الذين ينجزون الدروس بسرعة أكبر. تذكَّر أن معظم الأطفال سيكونون مبتدئين تمامًا في علوم الحاسوب والبرمجة.
+    يرجى ملاحظة: هذه هي الإرشادات العامة لتقديم التعليقات والملاحظات. وقد تتضمن المراجعة المبكرة لنشاطك تعليقات وملاحظات عبر جميع هذه الفئات، أو قد تتضمن فقط تعليقات وملاحظات في فئة واحدة أو فئتين.
     
-    **تضمين ملاحظات المعلم.** يجب أن تكون معظم الأنشطة موجَّهة من قِبل الطلاب، ولكن إذا تم تسهيل النشاط أو إدارته من قِبل المعلم، يرجى تضمين توجيهات واضحة وبسيطة للمعلم في شكل ملاحظات المعلم في عنوان إلكتروني منفصل يتم إرساله مع نشاطك. ليس فقط الطلاب المبتدئين، ولكن بعض المعلمين كذلك. كما يجب تضمين معلومات مثل:
+    **Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
     
     - ما المنصات والمتصفحات التي يعمل عليها البرنامج التعليمي بشكل أفضل؟
     - هل يعمل على الهواتف الذكية؟ والأجهزة اللوحية؟
     - هل توصي بالبرمجة الثنائية؟ 
     - هل يراعي اعتبارات الاستخدام في الفصول الدراسية؟ على سبيل المثال، إذا كانت هناك مقاطع فيديو، يجب أن تنصح المعلمين بعرض مقاطع الفيديو على شاشة عرض ليطلع عليها الفصل بأكمله معًا
     
-    **أدرج التعليقات والملاحظات في نهاية النشاط.** (على سبيل المثال، "لقد أنهيت 10 مستويات وتعرفت على الحلقات البرمجية! أحسنت!")
+    ستتلقى جميع الأنشطة المقدَّمة للمراجعة المبكرة تعليقات وملاحظات قبل 1 سبتمبر. سنوفر أيضًا رابطًا لنموذج يمكنك استخدامه لشرح تغييرات معينة تم إجراؤها على النشاط ردًا على التعليقات والملاحظات.
     
-    **شجِّع الطلاب على النشر على وسائل التواصل الاجتماعي (عند الاقتضاء) عند الانتهاء.** على سبيل المثال، "لقد أنجزت نشاط "ساعة من البرمجة" مع ________ هل قمت بذلك أيضًا؟ #HourOfCode "أو" لقد أنجزت نشاط #HourOfCode كجزء من #CSEdWeek. هل فعلتم ذلك أيضًا؟ @Scratch.” استخدم هاشتاج **#HourOfCode** (مع كتابة حروف H و O و C بأحرف كبيرة)
+    كل نشاط يتم إرساله قبل يوم 1 أكتوبر سيحصل على مراجعة قياسية، سواء تلقى مراجعة مبكرة أم لا. وأثناء فترة المراجعة القياسية (سبتمبر - أكتوبر)، سيركِّز المراجعون على تصنيف الأنشطة وفقًا للمعايير الموضحة في قسم "كيفية تقييم الأنشطة" أعلاه. وما لم تلاحظ تغييرات محددة على نشاط ما، يمكن للمراجعين، بل من المرجح، أن يعتمدوا على ملاحظات المراجعة المبكرة لتقييم الأنشطة. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
     
-    **قم بإنشاء نشاطك باللغة الإسبانية أو بلغات أخرى بجانب اللغة الإنجليزية.**
+    **Create your activity in Spanish or in other languages besides English.**
     
-    **اشرح النشاط أو اربطه بسياق مهم اجتماعيًا.** تصبح برمجة الحاسوب قوة عظمى عندما يرى الطلاب كيف يمكنها تغيير العالم للأفضل!
+    **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
     
-    **تأكَّد من إمكانية استخدام البرنامج التعليمي في نموذج [البرمجة الثنائية](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** هذا مفيد بشكل خاص لساعة البرمجة لأن العديد من الفصول الدراسية لا تحتوي على أجهزة 1: 1 لجميع الطلاب.
+    **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
     
     [**عودة إلى الأعلى**](#top)
     
@@ -274,14 +250,17 @@ title: إرشادات النشاط
 <a id="tm"></a>
 
     
-    ## إرشادات العلامات التجارية
+    ## اقتراحات لتصميم دروس وبرامج تعليمية قائمة على التوجيه الذاتي لمدة ساعة واحدة
     
-    لقد استخدم العديد من شركائنا في البرامج التعليمية علامتنا التجارية "ساعة من البرمجة" على مواقع الويب الخاصة بهم. لا نريد منع هذا الاستخدام، لكننا نريد التأكد من أن الاستخدام يقع ضمن حدود قليلة وملائمة:
+    **أدرج التعليقات والملاحظات في نهاية النشاط.** (على سبيل المثال، "لقد أنهيت 10 مستويات وتعرفت على الحلقات البرمجية! أحسنت!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
-    1. يجب استخدام أي إشارة إلى "ساعة من البرمجة" بطريقة لا توحي بأنها اسم علامتك التجارية الخاصة، ولكنها تشير بدلًا من ذلك إلى "ساعة من البرمجة" باعتبارها مبادرة مجتمعية. مثال جيد: "شارك في ساعة من البرمجة™ على ACMECorp.com". مثال سيئ: "جرِّب أنشطة ساعة من البرمجة المقدَّمة من شركة ACME Corp".
-    2. استخدم العلامة الفوقية "TM" في أبرز الأماكن التي تذكر فيها "ساعة من البرمجة"، سواء في موقعك الإلكتروني أو في وصف التطبيق الخاص بك.
-    3. قم بإدراج فقرة على الصفحة (أو في التذييل)، تتضمن روابط إلى مواقع "ساعة من البرمجة" و الأسبوع العالمي للبرمجة وعلوم الحاسوب وموقع Code.org، والتي تنص على ما يلي: "إن ["ساعة من البرمجة](http://hourofcode.com)™" هي مبادرة وطنية مقدمة من [الأسبوع العالمي للبرمجة وعلوم الحاسوب](http://csedweek.org) وموقع [Code.org](http://code.org) لتعريف ملايين الطلاب بعلوم الحاسوب والبرمجة من خلال انشطة مدتها ساعة واحدة فقط."
-    4. لا تستخدم "ساعة من البرمجة" في أسماء التطبيقات.
+    1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+    2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+    3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+    4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+    5. Do not use "Hour of Code" in app names.
+    6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+    7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
     
     [**عودة إلى الأعلى**](#top)
     
@@ -290,17 +269,17 @@ title: إرشادات النشاط
 <a id="pixel"></a>
 
     
-    ## عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة من البرمجة
+    ## إرشادات العلامات التجارية
     
-    من أجل تتبع المشاركة بدقة، نطلب من كل شريك في البرامج التعليمية تضمين برنامج تتبع زوار المواقع (1-pixel image) في صفحتهم الأولى لدورات "ساعة من البرمجة الخاصة" بهم. يجن أن يكون برنامج التتبع (1-pixel image) في الصفحة الرئيسية فقط. لا تقم بتضمين أي صفحات مؤقتة من البرنامج التعليمي الخاص بك.
+    In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
     
-    سيتيح لنا ذلك إحصاء المستخدمين الذين يقومون بالبرنامج التعليمي لساعة البرمجة. وسيؤدي إلى إحصاء أكثر دقة للمشاركة في البرنامج التعليمي الخاص بك.
+    This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
     
-    إذا تمت الموافقة على البرنامج التعليمي الخاص بك وتم تضمينه في صفحة البرنامج التعليمي النهائية، فستوفر لك منظمة Code.org برنامج تتبع فريد لتتمكن من الاندماج في البرنامج التعليمي الخاص بك. انظر المثال أدناه.
+    If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
     
-    ملاحظة: هذا ليس مهمًا للتطبيقات القابلة للتثبيت (تطبيقات الهواتف التي تعمل بنظام iOS أو Android أو تطبيقات التثبيت على أجهزة الحاسوب)
+    NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
     
-    مثال لتتبع وحدات البكسل لـ Dance Party:
+    Example tracking pixels for Dance Party:
     
     IMG SRC = <http://code.org/api/hour/begin_dance.png>   
     
@@ -312,9 +291,9 @@ title: إرشادات النشاط
 <a id="promote"></a>
 
     
-    ## الترويج لأنشطتك، والأسبوع العالمي للبرمجة وعلوم الحاسوب، وساعة البرمجة
+    ## عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة من البرمجة
     
-    يرجى الترويج لنشاطك على شبكتك! قم بتوجيهها إلى صفحة "ساعة من البرمجة" الخاصة بك. من المرجح أن يتفاعل المستخدمون مع رسالة بريدية منك بشأن نشاطك. استخدم حملة "ساعة من البرمجة" الدولية خلال الأسبوع العالمي للبرمجة وعلوم الحاسوب كوسيلة لتشجيع المستخدمين على دعوة الآخرين للانضمام، ومساعدتنا في الوصول إلى المزيد من الطلاب!
+    سيتيح لنا ذلك إحصاء المستخدمين الذين يقومون بالبرنامج التعليمي لساعة البرمجة. وسيؤدي إلى إحصاء أكثر دقة للمشاركة في البرنامج التعليمي الخاص بك. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
     
     - الإعلان عن حملة "ساعة من البرمجة" والأسبوع العالمي للبرمجة وعلوم الحاسوب على موقعك الإلكتروني. على سبيل المثال: <http://www.tynker.com/hour-of-code>
     - الإعلان عن أنشطة "ساعة من البرمجة" باستخدام وسائل التواصل الاجتماعي ووسائل الإعلام التقليدية والقوائم البريدية وما إلى ذلك، باستخدام هاشتاج #HourOfCode (مع كتابة الحروف H و O و C بأحرف كبيرة)
@@ -323,4 +302,4 @@ title: إرشادات النشاط
     
     [**عودة إلى الأعلى**](#top)
     
-    {{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+    ملاحظة: هذا ليس مهمًا للتطبيقات القابلة للتثبيت (تطبيقات الهواتف التي تعمل بنظام iOS أو Android أو تطبيقات التثبيت على أجهزة الحاسوب)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

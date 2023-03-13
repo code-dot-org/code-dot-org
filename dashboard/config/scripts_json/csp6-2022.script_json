@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=6",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More",
+          "key": "297b1d0f-a66c-4ac2-8ba0-65053901fcc2"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 22:12:34 UTC",
+    "serialized_at": "2023-01-13 23:48:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,7 +77,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
-        "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.",
+        "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is an approachable and interactive introduction to the main concepts of this short unit. Students have been writing a lot of code, and now they are ready to think on a high level about the patterns that make two different problems, or two different algorithms, similar or different. This mindset will be important as they tackle the more challenging material later in the unit where students will learn to compare different algorithms that address the same problem.",
         "student_overview": "Learn how computer scientists think about problems and the way different algorithms can be designed to solve them.",
         "unplugged": true
@@ -86,7 +98,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students follow a demonstration of Linear Search before writing their own search algorithms. Following this, students are introduced to Binary Search after which they compare graphs of the search algorithms to determine which is most efficient. ",
-        "preparation": "* Preview the slides and click through all animations\r\n* Practice running Binary Search yourself",
+        "preparation": "* Preview the slides and click through all animations\n* Practice running Binary Search yourself\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In the previous lesson students learned that there are many different ways to write an algorithm to solve a problem. However, not all solutions are good options, and some algorithms require many fewer steps to run than others. This lesson focuses on comparing Linear Search to Binary Search. The longer the length of the list being searched, the more efficient Binary Search is compared to Linear Search. That said, Binary Search has a constraint: the list must first be sorted. This lesson more broadly introduces students to thinking about the efficiency of an algorithm, an idea that will be explored more in future lessons.",
         "student_overview": "Learn how computers describe how fast different algorithms are and the fact that different algorithms that solve the same problem may be faster than others.",
         "unplugged": true
@@ -107,7 +119,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students investigate two different types of raffles that highlight the way seemingly small problems can quickly grow large. The first raffle asks students to hunt for pairs of tickets that add to a target value. The second raffle asks students to hunt for any group of tickets that adds to a target value. After trying out each raffle live students will try to figure out the patterns for how many total combinations need to be checked in each. At the end they discuss the difference between reasonable and unreasonable algorithms based on their experiences.",
-        "preparation": "* Review the slides to make sure you are prepared to lead the different discussions in this lesson.",
+        "preparation": "* Review the slides to make sure you are prepared to lead the different discussions in this lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson explores some tricky mathematical concepts in a hands on and interactive way. Building off the raffle analogy used in the previous lesson, it gives students an experience with two types of problems that grow quickly in size, though as they'll see one grows much faster than the other. This lesson should give students a sense of how computer scientists use mathematics to think about problems without relying too heavily on mathematical background that not all students may have.",
         "student_overview": "Explore two different types of algorithms that seem similar but take fundamentally different amounts of computing power to run.",
         "unplugged": true
@@ -128,7 +140,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore the limits of what algorithms are able to compute. First they use a widget that exposes students to the Traveling Salesman Problem. After recognizing this problem can only be solved using an unreasonable time algorithm the develop their own good enough solutions that run more efficiently. Later in the lesson students watch a video about undecidable problems for which no algorithm can ever be developed to solve them.",
-        "preparation": "* Read through the slides\r\n* Preview the Traveling Salesman widgets",
+        "preparation": "* Read through the slides\n* Preview the Traveling Salesman widgets\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Prior to this lesson students have learned about the efficiencies of different algorithms and have considered the difference between reasonable and unreasonable algorithms. In this lesson they explore what happens when you reach that limit. In one instance the response is to accept good enough solutions that run more reasonably. In the other case the problem simply can't be solved at all.",
         "student_overview": "Explore two different kinds of problems at the limits of what a computer is capable of solving and learn the difference in how computer scientists respond."
       },
@@ -148,7 +160,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the benefits and limitations of parallel and distributed computing. First they discuss the way human problem solving changes when additional people lend a hand. Then they run a series of demonstrations that show how simple tasks like sorting cards get faster when more people help, but there is a limitation to the efficiency gains. Later in the lesson students watch a video about distributed computing that highlights the ways distributed computing can help tackle new kinds of problems. To conclude the lesson students record new vocabulary in their journals and discuss any open questions.",
-        "preparation": "* Collect the manipulatives you will use for the main activity. While decks of cards are suggested, other manipulatives are possible. See the teaching tip in the main activity for suggestions.",
+        "preparation": "* Collect the manipulatives you will use for the main activity. While decks of cards are suggested, other manipulatives are possible. See the teaching tip in the main activity for suggestions.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is a quick tour of the challenges and benefits of parallel and distributed computing. It caps off the unit to showcase ways these techniques are being used to push the boundaries of how efficiently computer can solve problems. ",
         "student_overview": "Learn how algorithms are designed to run on many computers and the benefits and challenges that result.",
         "unplugged": true
@@ -2585,7 +2597,7 @@
     },
     {
       "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/view",
+      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/copy",
       "key": "csp_unit_6_-_algorithms",
       "properties": {
         "audience": "Teacher",
@@ -2606,6 +2618,18 @@
       },
       "seeding_key": {
         "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "name": "KEY - Unreasonable Time",
+      "url": "https://docs.google.com/document/d/1wn2Z0k76KdotURzPG69GeYFzWvpMq1qiWUSlKfeDOfQ/edit?usp=sharing",
+      "key": "key_-_unreasonable_time",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_-_unreasonable_time"
       }
     },
     {
@@ -2693,6 +2717,12 @@
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "key_-_unreasonable_time"
       }
     },
     {

@@ -12,7 +12,8 @@ import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
-  ConditionallyPublishableProjectTypes
+  ConditionallyPublishableProjectTypes,
+  RestrictedPublishProjectTypes
 } from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
@@ -20,6 +21,8 @@ import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
+import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -35,101 +38,14 @@ export const COLUMNS = {
   ACTIONS: 5
 };
 
-export const styles = {
-  cellFirst: {
-    borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray
-  },
-  headerCellFirst: {
-    borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray
-  },
-  cellThumbnail: {
-    width: THUMBNAIL_SIZE,
-    minWidth: THUMBNAIL_SIZE,
-    padding: 2,
-    overflow: 'hidden'
-  },
-  headerCellThumbnail: {
-    padding: 0
-  },
-  cellName: {
-    borderWidth: '1px 1px 1px 0px',
-    borderColor: color.border_light_gray,
-    padding: 15,
-    width: 250
-  },
-  headerCellName: {
-    borderWidth: '0px 1px 1px 0px',
-    borderColor: color.border_light_gray,
-    padding: 15
-  },
-  cellType: {
-    width: 120
-  },
-  centeredCell: {
-    textAlign: 'center'
-  },
-  thumbnailWrapper: {
-    height: THUMBNAIL_SIZE,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  bottomMargin: {
-    marginBottom: 20
-  }
-};
-
-// Cell formatters.
-const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
-  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
-  return (
-    <a
-      style={tableLayoutStyles.link}
-      href={projectUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <ImageWithStatus
-        src={thumbnailUrl}
-        width={THUMBNAIL_SIZE}
-        wrapperStyle={styles.thumbnailWrapper}
-      />
-    </a>
-  );
-};
-
-const nameFormatter = (projectName, {rowData}) => {
-  const updatedName = rowData.isEditing ? rowData.updatedName : '';
-  return (
-    <PersonalProjectsNameCell
-      id={rowData.id}
-      projectId={rowData.channel}
-      projectType={rowData.type}
-      projectName={projectName}
-      isEditing={rowData.isEditing}
-      updatedName={updatedName}
-    />
-  );
-};
-
-const typeFormatter = type => {
-  return PROJECT_TYPE_MAP[type];
-};
-
-const dateFormatter = function(time) {
-  const date = new Date(time);
-  return date.toLocaleDateString();
-};
-
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
     canShare: PropTypes.bool.isRequired,
 
     // Provided by Redux
-    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType)
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType),
+    isLoadingPersonalProjectsList: PropTypes.bool.isRequired,
+    isUserSignedIn: PropTypes.bool.isRequired
   };
 
   state = {
@@ -145,7 +61,9 @@ class PersonalProjectsTable extends React.Component {
     const {canShare} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
-      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) &&
+        canShare) ||
+      RestrictedPublishProjectTypes.includes(rowData.type);
 
     return (
       <PersonalProjectsPublishedCell
@@ -308,9 +226,7 @@ class PersonalProjectsTable extends React.Component {
   };
 
   render() {
-    if (!this.props.personalProjectsList) {
-      return null;
-    }
+    const personalProjectsList = this.props.personalProjectsList || [];
 
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -325,31 +241,42 @@ class PersonalProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy
-    })(this.props.personalProjectsList);
+    })(personalProjectsList);
 
-    const noProjects = this.props.personalProjectsList.length === 0;
+    const noProjects = personalProjectsList.length === 0;
 
     return (
       <div>
-        <div id="uitest-personal-projects" style={styles.bottomMargin}>
-          {!noProjects && (
-            <Table.Provider
-              columns={columns}
-              style={tableLayoutStyles.table}
-              className="ui-personal-projects-table"
-            >
-              <Table.Header />
-              <Table.Body
-                rows={sortedRows}
-                rowKey="channel"
-                className="ui-personal-projects-row"
+        {!this.props.isLoadingPersonalProjectsList && (
+          <div id="uitest-personal-projects" style={styles.bottomMargin}>
+            {!noProjects && (
+              <Table.Provider
+                columns={columns}
+                style={tableLayoutStyles.table}
+                className="ui-personal-projects-table"
+              >
+                <Table.Header />
+                <Table.Body
+                  rows={sortedRows}
+                  rowKey="channel"
+                  className="ui-personal-projects-row"
+                />
+              </Table.Provider>
+            )}
+            {noProjects && this.props.isUserSignedIn && (
+              <div style={styles.noPersonalProjects}>
+                {i18n.noPersonalProjects()}
+              </div>
+            )}
+            {noProjects && !this.props.isUserSignedIn && (
+              <SafeMarkdown
+                markdown={i18n.noSavedProjects({
+                  signInUrl: '/users/sign_in?user_return_to=/projects'
+                })}
               />
-            </Table.Provider>
-          )}
-          {noProjects && (
-            <h3 style={{textAlign: 'center'}}>{i18n.noPersonalProjects()}</h3>
-          )}
-        </div>
+            )}
+          </div>
+        )}
         <PublishDialog />
         <DeleteProjectDialog />
       </div>
@@ -360,5 +287,99 @@ class PersonalProjectsTable extends React.Component {
 export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
 
 export default connect(state => ({
-  personalProjectsList: state.projects.personalProjectsList.projects
+  personalProjectsList: state.projects.personalProjectsList.projects,
+  isLoadingPersonalProjectsList: state.projects.personalProjectsList.isLoading,
+  isUserSignedIn: isSignedIn(state.currentUser)
 }))(PersonalProjectsTable);
+
+export const styles = {
+  cellFirst: {
+    borderWidth: '1px 0px 1px 1px',
+    borderColor: color.border_light_gray
+  },
+  headerCellFirst: {
+    borderWidth: '0px 0px 1px 0px',
+    borderColor: color.border_light_gray
+  },
+  cellThumbnail: {
+    width: THUMBNAIL_SIZE,
+    minWidth: THUMBNAIL_SIZE,
+    padding: 2,
+    overflow: 'hidden'
+  },
+  headerCellThumbnail: {
+    padding: 0
+  },
+  cellName: {
+    borderWidth: '1px 1px 1px 0px',
+    borderColor: color.border_light_gray,
+    padding: 15,
+    width: 250
+  },
+  headerCellName: {
+    borderWidth: '0px 1px 1px 0px',
+    borderColor: color.border_light_gray,
+    padding: 15
+  },
+  cellType: {
+    width: 120
+  },
+  centeredCell: {
+    textAlign: 'center'
+  },
+  thumbnailWrapper: {
+    height: THUMBNAIL_SIZE,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  bottomMargin: {
+    marginBottom: 20
+  },
+  noPersonalProjects: {
+    fontSize: 14
+  }
+};
+
+// Cell formatters.
+const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
+  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  return (
+    <a
+      style={tableLayoutStyles.link}
+      href={projectUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ImageWithStatus
+        src={thumbnailUrl}
+        width={THUMBNAIL_SIZE}
+        wrapperStyle={styles.thumbnailWrapper}
+      />
+    </a>
+  );
+};
+
+const nameFormatter = (projectName, {rowData}) => {
+  const updatedName = rowData.isEditing ? rowData.updatedName : '';
+  return (
+    <PersonalProjectsNameCell
+      id={rowData.id}
+      projectId={rowData.channel}
+      projectType={rowData.type}
+      projectName={projectName}
+      isEditing={rowData.isEditing}
+      updatedName={updatedName}
+    />
+  );
+};
+
+const typeFormatter = type => {
+  return PROJECT_TYPE_MAP[type];
+};
+
+const dateFormatter = function(time) {
+  const date = new Date(time);
+  return date.toLocaleDateString();
+};

@@ -1,47 +1,52 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import color from '@cdo/apps/util/color';
 
-export default function ImageInput({updateImageUrl, imageUrl}) {
-  const [removeImageDialogOpen, setRemoveImageDialogOpen] = useState(false);
+export default function ImageInput({
+  updateImageUrl,
+  initialImageUrl,
+  showPreview = false
+}) {
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
+
+  const [currentImageUrl, setCurrentImageUrl] = useState(initialImageUrl);
+
+  const onImageUrlChange = newImageUrl => {
+    setCurrentImageUrl(newImageUrl);
+    updateImageUrl(newImageUrl);
+  };
+
   return (
     <div>
-      <label>
-        Image
-        <Button
-          onClick={() => setUploadImageDialogOpen(true)}
-          text={!!imageUrl ? 'Replace Image' : 'Choose Image'}
-          color="gray"
-          icon="plus-circle"
-        />
-        {imageUrl && <span>{imageUrl}</span>}
-        {imageUrl && (
-          <Button
-            text="Remove Image"
-            color="red"
-            icon="trash"
-            onClick={() => setRemoveImageDialogOpen(true)}
+      <div style={{display: 'flex'}}>
+        <label>
+          Image
+          <input
+            type="text"
+            onChange={e => onImageUrlChange(e.target.value)}
+            value={currentImageUrl}
+            style={{width: 350, margin: 5}}
           />
+          <Button
+            onClick={e => {
+              e.preventDefault();
+              setUploadImageDialogOpen(true);
+            }}
+            text={!!currentImageUrl ? 'Replace Image' : 'Choose Image'}
+            color="gray"
+            icon="plus-circle"
+          />
+        </label>
+        {showPreview && !!currentImageUrl && (
+          <img src={currentImageUrl} style={styles.image} />
         )}
-      </label>
-      {removeImageDialogOpen && (
-        <StylizedBaseDialog
-          body="Are you sure you want to remove this image?"
-          handleConfirmation={() => {
-            updateImageUrl(null);
-            setRemoveImageDialogOpen(false);
-          }}
-          handleClose={() => setRemoveImageDialogOpen(false)}
-          isOpen
-        />
-      )}
+      </div>
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
         handleClose={() => setUploadImageDialogOpen(false)}
-        uploadImage={imgUrl => updateImageUrl(imgUrl)}
+        uploadImage={imgUrl => onImageUrlChange(imgUrl)}
         allowExpandable={false}
       />
     </div>
@@ -50,5 +55,16 @@ export default function ImageInput({updateImageUrl, imageUrl}) {
 
 ImageInput.propTypes = {
   updateImageUrl: PropTypes.func.isRequired,
-  imageUrl: PropTypes.string
+  initialImageUrl: PropTypes.string,
+  showPreview: PropTypes.bool
+};
+
+const styles = {
+  image: {
+    width: 100,
+    marginLeft: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: color.lighter_gray
+  }
 };

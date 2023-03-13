@@ -32,11 +32,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -80,16 +80,16 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20462,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/maker-toolkit/analog-sensors/"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/analog-sensors"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+    "map_reference": "/courses/csd-2022/guides/changing-sensor-scale",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -109,7 +109,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:10.814+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2022\"},{\"changed_at\":\"2022-04-08 22:43:31 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:10.814+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2022\"},{\"changed_at\":\"2022-04-08 22:43:31 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-16 17:44:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

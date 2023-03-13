@@ -1,0 +1,409 @@
+{
+  "is-IS": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Vefsmiðja"
+        },
+        "gamelab": {
+          "name": "Leikjasmiðjan",
+          "categories": {
+            "game_lab": {
+              "name": "Leikjasmiðjan",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Kviki"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Kviki"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Svarthvítt"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Lagasmíð"
+                    }
+                  },
+                  "short_description": "Spilar MP3 hljóðskrá frá skilgreindri vefslóð."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Kvikar",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spírall"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Hópar",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Kviki"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Kviki"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Kviki"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Litir"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Litir"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Teikning",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stjarna"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Reikningur",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Lægsta talan sem skilað er"
+                    },
+                    "max": {
+                      "description": "Hæsta talan sem skilað er"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Lægsta talan sem skilað er"
+                    },
+                    "max": {
+                      "description": "Hæsta talan sem skilað er"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Breytur",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Setur gildi í breytu sem var áður skilgreind."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Tilgreinir breytu með gefna heitinu."
+                },
+                "declareAssign_x": {
+                  "short_description": "Tilgreinir breytu og setur í hana upphafsgildi."
+                }
+              }
+            },
+            "functions": {
+              "name": "Föll"
+            }
+          }
+        },
+        "applab": {
+          "name": "Appsmiðjan",
+          "description": "App Lab smiðjan er forritunarumhverfi þar sem þú getur búið til einföld öpp. Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki. Deildu því svo með öðrum.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Aðgerð"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Lagasmíð"
+                    }
+                  },
+                  "short_description": "Spilar MP3 hljóðskrá frá skilgreindri vefslóð."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "hlutur"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Gögn",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Aðgerð"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "hlutur"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "hlutur"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Aðgerð"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Reikningur",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Lægsta talan sem skilað er"
+                    },
+                    "max": {
+                      "description": "Hæsta talan sem skilað er"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Lægsta talan sem skilað er"
+                    },
+                    "max": {
+                      "description": "Hæsta talan sem skilað er"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Breytur",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Tilgreinir breytu með gefna heitinu."
+                },
+                "declareAssign_x": {
+                  "short_description": "Tilgreinir breytu og setur í hana upphafsgildi."
+                },
+                "addPair": {
+                  "return_value": "Ekkert"
+                }
+              }
+            },
+            "functions": {
+              "name": "Föll"
+            },
+            "advanced": {
+              "name": "Ítarlegt"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Kvikasmiðjan",
+          "categories": {
+            "sprites": {
+              "name": "Kvikar"
+            },
+            "world": {
+              "name": "Heimur"
+            },
+            "location": {
+              "name": "Staðir"
+            },
+            "actions": {
+              "name": "Aðgerðir"
+            },
+            "events": {
+              "name": "Atvik"
+            },
+            "behaviors": {
+              "name": "Hegðun"
+            },
+            "loops": {
+              "name": "Lykkjur"
+            },
+            "variables": {
+              "name": "Breytur"
+            },
+            "math": {
+              "name": "Reikningur"
+            },
+            "logic": {
+              "name": "Rökvísi"
+            },
+            "functions": {
+              "name": "Föll"
+            },
+            "text": {
+              "name": "texti"
+            },
+            "comments": {
+              "name": "Athugasemdir"
+            }
+          }
+        }
+      }
+    }
+  }
+}

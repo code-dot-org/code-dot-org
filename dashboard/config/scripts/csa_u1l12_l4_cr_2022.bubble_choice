@@ -1,6 +1,6 @@
 name 'CSA U1L12-L4 CR_2022'
 display_name 'More PainterPlus Methods'
-description 'Request a code review from your peers.'
+description 'Request a code review from your peers. When giving feedback, be sure to choose the level that your peer completed.'
 
 sublevels
 level 'CSA U1L12-L4a_2022'

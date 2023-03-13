@@ -1,0 +1,11 @@
+{
+  "en-GB": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Computational Thinking"
+        }
+      }
+    }
+  }
+}

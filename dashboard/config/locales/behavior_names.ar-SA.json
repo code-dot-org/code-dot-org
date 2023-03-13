@@ -14,7 +14,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 1_2019": {
           "mystery": "غموض",
@@ -28,7 +29,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "growing": "النمو",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 1_2020": {
           "mystery": "غموض",
@@ -42,7 +44,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "growing": "النمو",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 1": {
           "mystery behavior": "سلوك غامِض",
@@ -57,7 +60,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 1_2020": {
           "mystery behavior": "سلوك غامِض",
@@ -72,7 +76,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 2": {
           "flying": "يطير",
@@ -87,7 +92,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 2_2020": {
           "flying": "يطير",
@@ -102,7 +108,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 3": {
           "zooming east": "تكبير/تصغير للشرق",
@@ -117,7 +124,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 3_2020": {
           "zooming east": "تكبير/تصغير للشرق",
@@ -132,7 +140,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 3a": {
           "zooming east": "تكبير/تصغير للشرق",
@@ -147,7 +156,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 3a_2020": {
           "zooming east": "تكبير/تصغير للشرق",
@@ -162,7 +172,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 4": {
           "move south and west": "حرِّك للجنوب وللغرب",
@@ -177,7 +188,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 4_2020": {
           "move south and west": "حرِّك للجنوب وللغرب",
@@ -192,7 +204,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 6": {
           "rolling": "دحرجة",
@@ -207,7 +220,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 6_2020": {
           "rolling": "دحرجة",
@@ -222,7 +236,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 7": {
           "rolling": "دحرجة",
@@ -237,7 +252,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors 7_2020": {
           "rolling": "دحرجة",
@@ -252,7 +268,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "behaviors free play": {
           "spinning and growing": "يدور وينمو"
@@ -272,7 +289,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "outbreak1": {
           "recovering": "التعافي",
@@ -449,7 +467,13 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "CourseF_outbreak1": {
           "recovering": "التعافي",
@@ -476,7 +500,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "CourseF_outbreak5": {
           "recovering": "التعافي",
@@ -530,7 +555,13 @@
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
-          "moving west": "التحرك ناحية الغرب"
+          "moving west": "التحرك ناحية الغرب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseE_aboutme_1_2021": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -569,21 +600,21 @@
           "driving with arrow keys": "التحرك من خلال الأسهم",
           "spinning left2": "الدوران باتجاه اليسار ٢",
           "spinning right2": "الدوران باتجاه اليمين ٢",
-          "shrinking2": "الانقباض ٢",
+          "shrinking2": "الانكماش ٢",
           "growing2": "النمو ٢",
           "moving south2": "التحرك باتجاه الجنوب ٢",
           "swimming left and right2": "السباحة لليسار ولليمين ٢",
           "moving north2": "التحرك باتجاه الشمال ٢",
-          "jittering2": "الغضب ٢",
+          "jittering2": "النرفزة ٢",
           "patrolling2": "الدوريات ٢",
           "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
           "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
         },
         "courseF_apps_card": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
-          "wandering": "التحرك",
+          "wandering": "التجوُّل",
           "shrinking": "الانقباض",
-          "patrolling": "التجوُّل",
+          "patrolling": "الدوريات",
           "growing": "النمو",
           "jittering": "الاهتزاز",
           "moving east": "التحرك ناحية الشرق",
@@ -616,12 +647,12 @@
           "moving east2": "التحرك باتجاه الشرق ٢",
           "spinning left2": "الدوران باتجاه اليسار ٢",
           "spinning right2": "الدوران باتجاه اليمين ٢",
-          "shrinking2": "الانقباض ٢",
+          "shrinking2": "الانكماش ٢",
           "growing2": "النمو ٢",
           "moving south2": "التحرك باتجاه الجنوب ٢",
           "swimming left and right2": "السباحة لليسار ولليمين ٢",
           "moving north2": "التحرك باتجاه الشمال ٢",
-          "jittering2": "الغضب ٢",
+          "jittering2": "النرفزة ٢",
           "moving west2": "التحرك باتجاه الغرب ٢",
           "patrolling2": "الدوريات ٢",
           "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
@@ -655,7 +686,7 @@
           "moving south2": "التحرك باتجاه الجنوب ٢",
           "swimming left and right2": "السباحة لليسار ولليمين ٢",
           "moving north2": "التحرك باتجاه الشمال ٢",
-          "jittering2": "الغضب ٢",
+          "jittering2": "النرفزة ٢",
           "patrolling2": "الدوريات ٢"
         },
         "courseF_apps_madlib": {
@@ -679,8 +710,8 @@
         },
         "courseF_apps_pet": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
-          "patrolling": "التجوُّل",
-          "wandering": "التحرك",
+          "patrolling": "الدوريات",
+          "wandering": "التجوُّل",
           "moving east": "التحرك ناحية الشرق",
           "spinning left": "الدوران ناحية اليسار",
           "spinning right": "الدوران ناحية اليمين",
@@ -710,7 +741,9 @@
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
-          "blocking movement": "إعاقة الحركة"
+          "blocking movement": "إعاقة الحركة",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseF_editable_chatbot": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -725,7 +758,9 @@
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
-          "blocking movement": "إعاقة الحركة"
+          "blocking movement": "إعاقة الحركة",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseF_editable_madlib": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -739,7 +774,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_practice_reorder": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -753,7 +793,13 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "wobbling": "الاهتزاز",
+          "moving forward": "التقدم للأمام",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_predict": {
           "mystery behavior": "سلوك غامِض",
@@ -768,7 +814,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving east": "التحرك ناحية الشرق"
+          "moving east": "التحرك ناحية الشرق",
+          "swimming left and right": "السباحة لليسار ولليمين"
         },
         "courseF_label_predict": {
           "mystery behavior": "سلوك غامِض",
@@ -783,14 +830,15 @@
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseF_sprites_predict": {
           "mystery behavior": "سلوك غامِض",
           "running east": "الجري نحو الشرق",
           "moving east": "التحرك ناحية الشرق",
           "moving west": "التحرك ناحية الغرب",
-          "wandering": "التحرك",
+          "wandering": "التجوُّل",
           "spinning left": "الدوران ناحية اليسار",
           "spinning right": "الدوران ناحية اليمين",
           "shrinking": "الانقباض",
@@ -813,7 +861,13 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_choice_events": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -827,7 +881,13 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_choice_freeplay": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -841,7 +901,13 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_choice_interview": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -855,7 +921,13 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_choice_multiprompt": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -869,7 +941,13 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_card": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -883,7 +961,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_card_finish": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -897,7 +980,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_chatbot": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -911,7 +999,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_chatbot_finish": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -925,7 +1018,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_madlib": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -939,7 +1037,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_madlib_finish": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -953,7 +1056,12 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_variables_predict": {
           "mystery behavior": "سلوك غامِض",
@@ -968,7 +1076,8 @@
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "simcustom_2021": {
           "moving with arrow keys": "التحرك من خلال الأسهم",
@@ -982,7 +1091,13 @@
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
-          "moving west": "التحرك ناحية الغرب"
+          "moving west": "التحرك ناحية الغرب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "driving with arrow keys": "التحرك من خلال الأسهم",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "CourseE_Project_SpriteLab": {
           "wandering": "التحرك",
@@ -995,7 +1110,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "CourseE_Project_SpriteLab_2019": {
           "wandering": "التحرك",
@@ -1008,7 +1124,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "CourseE_Project_SpriteLab_2020": {
           "wandering": "التحرك",
@@ -1021,7 +1138,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "CourseE_Project_SpriteLab_2021": {
           "wandering": "التجوُّل",
@@ -1048,7 +1166,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "CourseF_Project_SpriteLab_2019": {
           "moving east": "التحرك ناحية الشرق",
@@ -1061,7 +1180,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "wandering": "التحرك"
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "CourseF_Project_SpriteLab_2020": {
           "moving east": "التحرك ناحية الشرق",
@@ -1074,7 +1194,8 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "wandering": "التحرك"
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 2": {
           "shrinking": "الانقباض",
@@ -1087,7 +1208,8 @@
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 2_2019": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1100,7 +1222,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 2_2020": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1113,7 +1236,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 2_2021": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1140,7 +1264,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 3_2020": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1153,7 +1278,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 3_2021": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1180,7 +1306,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 4_2020": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1193,7 +1320,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 4_2021": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1220,7 +1348,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 5_2020": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1233,7 +1362,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 5_2021": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1259,7 +1389,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 6_2019": {
           "jittering": "الاهتزاز",
@@ -1271,7 +1402,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 6_2020": {
           "jittering": "الاهتزاز",
@@ -1283,7 +1415,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 6_2021": {
           "jittering": "الغضب",
@@ -1308,7 +1441,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 7_2020": {
           "jittering": "الاهتزاز",
@@ -1320,7 +1454,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Dance Party 7_2021": {
           "jittering": "الغضب",
@@ -1345,7 +1480,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 2-validated_2019": {
           "shrinking": "الانقباض",
@@ -1357,7 +1493,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 2-validated_2020": {
           "shrinking": "الانقباض",
@@ -1369,7 +1506,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 2-validated_2021": {
           "shrinking": "الانقباض",
@@ -1394,7 +1532,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 3-validated_2020": {
           "shrinking": "الانقباض",
@@ -1406,7 +1545,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 3-validated_2021": {
           "shrinking": "الانقباض",
@@ -1431,7 +1571,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 4-validated_2020": {
           "shrinking": "الانقباض",
@@ -1443,7 +1584,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 4-validated_2021": {
           "shrinking": "الانقباض",
@@ -1468,7 +1610,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 5-validated_2020": {
           "shrinking": "الانقباض",
@@ -1480,7 +1623,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 5-validated_2021": {
           "shrinking": "الانقباض",
@@ -1505,7 +1649,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 6-validated_2020": {
           "shrinking": "الانقباض",
@@ -1517,7 +1662,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Fish Tank 6-validated_2021": {
           "shrinking": "الانقباض",
@@ -1542,7 +1688,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "OPD-K5-spritelab-3": {
           "shrinking": "الانقباض",
@@ -1554,7 +1701,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "OPD-K5-spritelab-4": {
           "shrinking": "الانقباض",
@@ -1566,7 +1714,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "OPD-K5-spritelab-6": {
           "shrinking": "الانقباض",
@@ -1578,7 +1727,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "OPD-K5-spritelab-7": {
           "shrinking": "الانقباض",
@@ -1590,7 +1740,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 2": {
           "shrinking": "الانقباض",
@@ -1603,7 +1754,8 @@
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 2_2019": {
           "wandering": "التحرك",
@@ -1616,7 +1768,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 2_2020": {
           "wandering": "التحرك",
@@ -1629,7 +1782,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 2_2021": {
           "wandering": "التحرك",
@@ -1642,7 +1796,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 3_2019": {
           "wandering": "التحرك",
@@ -1655,7 +1810,20 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "wandering2": "التجول ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "patrolling2": "الدوريات ٢"
         },
         "Virtual Pet 3_2020": {
           "wandering": "التحرك",
@@ -1668,7 +1836,20 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "wandering2": "التجول ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "patrolling2": "الدوريات ٢"
         },
         "Virtual Pet 3_2021": {
           "wandering": "التحرك",
@@ -1681,7 +1862,20 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "wandering2": "التجول ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانكماش ٢",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "النرفزة ٢",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "patrolling2": "الدوريات ٢"
         },
         "Virtual Pet 4": {
           "shrinking": "الانقباض",
@@ -1706,7 +1900,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 4_2020": {
           "wandering": "التحرك",
@@ -1719,7 +1914,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "Virtual Pet 5": {
           "shrinking": "الانقباض",
@@ -1768,7 +1964,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_1": {
           "wandering": "التحرك",
@@ -1781,7 +1978,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_1_2020": {
           "wandering": "التحرك",
@@ -1794,7 +1992,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_2": {
           "wandering": "التحرك",
@@ -1807,7 +2006,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_2_2020": {
           "wandering": "التحرك",
@@ -1820,7 +2020,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_2_2021": {
           "wandering": "التجول",
@@ -1847,7 +2048,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_3_2020": {
           "wandering": "التحرك",
@@ -1860,7 +2062,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_3_2021": {
           "wandering": "التجول",
@@ -1887,7 +2090,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_4_2020": {
           "wandering": "التحرك",
@@ -1900,7 +2104,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_4_2021": {
           "wandering": "التجول",
@@ -1927,7 +2132,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_5_2020": {
           "wandering": "التحرك",
@@ -1940,7 +2146,8 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل"
+          "patrolling": "التجوُّل",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseE_aboutme_5_2021": {
           "wandering": "التجول",
@@ -1967,7 +2174,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "التجوُّل",
@@ -1979,7 +2190,11 @@
           "moving south": "التحرك ناحية الجنوب",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "التجوُّل",
@@ -1992,7 +2207,12 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "wobbling": "الاهتزاز",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "التجوُّل",
@@ -2005,7 +2225,12 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "wobbling": "الاهتزاز",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_conflict": {
           "patrolling": "التجوُّل",
@@ -2034,7 +2259,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_events_freeplay_animals": {
           "moving east": "التحرك ناحية الشرق",
@@ -2046,7 +2275,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_events_freeplay_aquatic": {
           "moving east": "التحرك ناحية الشرق",
@@ -2058,7 +2291,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_events_freeplay_blank": {
           "moving east": "التحرك ناحية الشرق",
@@ -2070,7 +2307,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_events_freeplay_food": {
           "moving east": "التحرك ناحية الشرق",
@@ -2082,7 +2323,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_events_freeplay_space": {
           "moving east": "التحرك ناحية الشرق",
@@ -2094,7 +2339,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_events_key": {
           "patrolling": "التجوُّل",
@@ -2125,7 +2374,12 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "wobbling": "الاهتزاز",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_events_ship": {
           "patrolling": "التجوُّل",
@@ -2173,7 +2427,12 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "wobbling": "الاهتزاز",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_place_fruit": {
           "moving east": "التحرك ناحية الشرق",
@@ -2211,7 +2470,10 @@
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
-          "fluttering": "رفرفة"
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_sprites_desert": {
           "moving east": "التحرك ناحية الشرق",
@@ -2286,7 +2548,11 @@
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
           "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز"
+          "jittering": "الاهتزاز",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران",
+          "fluttering": "رفرفة",
+          "wobbling": "الاهتزاز"
         },
         "courseF_sprites_freeplay_food": {
           "moving east": "التحرك ناحية الشرق",
@@ -2406,7 +2672,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_choice_color": {
           "patrolling": "التجوُّل",
@@ -2419,7 +2689,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_choice_title": {
           "patrolling": "التجوُّل",
@@ -2432,7 +2706,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_concat": {
           "patrolling": "التجوُّل",
@@ -2445,7 +2723,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_events": {
           "patrolling": "التجوُّل",
@@ -2458,7 +2740,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_print": {
           "patrolling": "التجوُّل",
@@ -2471,7 +2757,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_prompts": {
           "patrolling": "التجوُّل",
@@ -2484,7 +2774,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "courseF_text_review": {
           "patrolling": "التجوُّل",
@@ -2497,7 +2791,11 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام",
+          "fluttering": "رفرفة",
+          "moving west and looping": "التحرك إلى الغرب والدوران",
+          "moving east and looping": "التحرك إلى الشرق والدوران"
         },
         "international_outbreak_freeplay": {
           "recovering": "التعافي",
@@ -2529,7 +2827,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_animals_behaviors": {
           "wandering": "التحرك",
@@ -2545,7 +2844,8 @@
           "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_animals_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2569,7 +2869,8 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام"
         },
         "helloworld_animals_sounds": {
           "shrinking": "الانقباض",
@@ -2585,7 +2886,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_emoji_backgrounds": {
           "shrinking": "الانقباض",
@@ -2601,7 +2903,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "التحرك",
@@ -2617,7 +2920,8 @@
           "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_emoji_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2641,7 +2945,8 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام"
         },
         "helloworld_emoji_sounds": {
           "shrinking": "الانقباض",
@@ -2657,7 +2962,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_food_backgrounds": {
           "shrinking": "الانقباض",
@@ -2673,7 +2979,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_food_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2697,7 +3004,8 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام"
         },
         "helloworld_food_sounds": {
           "shrinking": "الانقباض",
@@ -2713,7 +3021,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_retro_backgrounds": {
           "shrinking": "الانقباض",
@@ -2729,7 +3038,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_retro_behaviors": {
           "wandering": "التحرك",
@@ -2745,7 +3055,8 @@
           "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_retro_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2769,7 +3080,8 @@
           "jittering": "الاهتزاز",
           "wandering": "التحرك",
           "shrinking": "الانقباض",
-          "spinning left": "الدوران ناحية اليسار"
+          "spinning left": "الدوران ناحية اليسار",
+          "moving forward": "التقدم للأمام"
         },
         "helloworld_retro_sounds": {
           "shrinking": "الانقباض",
@@ -2785,7 +3097,8 @@
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "helloworld_food_behaviors": {
           "wandering": "التحرك",
@@ -2801,7 +3114,8 @@
           "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم",
           "moving north and looping": "تحريك إلى الشمال والدوران",
-          "moving south and looping": "تحريك إلى الجنوب والدوران"
+          "moving south and looping": "تحريك إلى الجنوب والدوران",
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "poetry_hoc_spriteSizes": {
           "wandering": "التحرك",
@@ -2886,6 +3200,1494 @@
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "AllTheThings sprite lab with video": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "allthethings_fish_tank": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "CourseE_Project_SpriteLab2022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples2022": {
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "growing": "النمو",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "patrolling": "التجوُّل",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "growing2": "النمو ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "jittering2": "الغضب ٢",
+          "wandering2": "التجول ٢",
+          "shrinking2": "الانقباض ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "CourseE_Project_SpriteLab_examples2022": {
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "growing": "النمو",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "patrolling": "التجوُّل",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "growing2": "النمو ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "jittering2": "الغضب ٢",
+          "wandering2": "التجول ٢",
+          "shrinking2": "الانقباض ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "CourseF_outbreak1_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك"
+        },
+        "CourseF_outbreak3_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك"
+        },
+        "CourseF_outbreak4_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "CourseF_outbreak5_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك"
+        },
+        "CourseF_outbreak6_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "recovering": "التعافي",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "Fish Tank 2-validated2022": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "Fish Tank 3-validated2022": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "Fish Tank 4-validated2022": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "Fish Tank 5-validated2022": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "Fish Tank 6-validated2022": {
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين"
+        },
+        "Virtual Pet 1_-2022-2": {
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل"
+        },
+        "Virtual Pet 3_-2022-2": {
+          "wandering": "التحرك",
+          "wandering2": "التجول ٢",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "shrinking": "الانقباض",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "growing": "النمو",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "moving south": "التحرك ناحية الجنوب",
+          "shrinking2": "الانقباض ٢",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "patrolling": "التجوُّل",
+          "jittering2": "الغضب ٢",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "patrolling2": "الدوريات ٢"
+        },
+        "courseE_aboutme_22022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل"
+        },
+        "courseE_aboutme_32022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل"
+        },
+        "courseE_aboutme_42022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل"
+        },
+        "courseE_aboutme_52022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل"
+        },
+        "courseF_apps_aquarium2022": {
+          "wandering2": "التجول ٢",
+          "wandering": "التحرك",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "moving west": "التحرك ناحية الغرب",
+          "moving east": "التحرك ناحية الشرق",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
+          "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "wandering2": "التجول ٢",
+          "wandering": "التحرك",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "moving west": "التحرك ناحية الغرب",
+          "moving east": "التحرك ناحية الشرق",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
+          "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
+        },
+        "courseF_apps_card2022": {
+          "blocking movement": "إعاقة الحركة",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_apps_card_-2022-2": {
+          "blocking movement": "إعاقة الحركة",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_apps_chatbot2022": {
+          "blocking movement": "إعاقة الحركة",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "wandering2": "التجول ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
+          "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "blocking movement": "إعاقة الحركة",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "wandering2": "التجول ٢",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
+          "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
+        },
+        "courseF_apps_collector2022": {
+          "wandering": "التحرك",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "flying west and looping": "الطيران إلى الغرب والدوران",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering2": "التجول ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
+          "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "wandering": "التحرك",
+          "moving west2": "التحرك باتجاه الغرب ٢",
+          "flying west and looping": "الطيران إلى الغرب والدوران",
+          "moving east2": "التحرك باتجاه الشرق ٢",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering2": "التجول ٢",
+          "spinning left2": "الدوران باتجاه اليسار ٢",
+          "spinning right2": "الدوران باتجاه اليمين ٢",
+          "shrinking2": "الانقباض ٢",
+          "growing2": "النمو ٢",
+          "moving south2": "التحرك باتجاه الجنوب ٢",
+          "swimming left and right2": "السباحة لليسار ولليمين ٢",
+          "moving north2": "التحرك باتجاه الشمال ٢",
+          "jittering2": "الغضب ٢",
+          "patrolling2": "الدوريات ٢",
+          "moving with arrow keys2": "التحرك من خلال الأسهم ٢",
+          "driving with arrow keys2": "التحرك من خلال الأسهم ٢"
+        },
+        "courseF_apps_madlib2022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_apps_pet2022": {
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "patrolling": "التجوُّل",
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_editable_card_-2022-2": {
+          "blocking movement": "إعاقة الحركة",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "blocking movement": "إعاقة الحركة",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "wandering": "التحرك",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "shrinking": "الانقباض",
+          "patrolling": "التجوُّل",
+          "growing": "النمو",
+          "jittering": "الاهتزاز",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_events_choice_conflict2_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_choice_conflict_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_choice_pufferfish_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_freeplay_air_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_events_freeplay_animals_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_events_freeplay_aquatic_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_events_freeplay_blank_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_events_freeplay_food_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_events_freeplay_space_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_events_key_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_predict_-2022-2": {
+          "mystery behavior": "سلوك غامِض",
+          "wandering": "التحرك",
+          "running east": "الجري نحو الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving east": "التحرك ناحية الشرق"
+        },
+        "courseF_events_review_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_ship_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_stops_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_events_time_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_label_predict_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "mystery behavior": "سلوك غامِض",
+          "wandering": "التحرك",
+          "running east": "الجري نحو الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل"
+        },
+        "courseF_place_fruit_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_clouds_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_desert_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_freeplay_air_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_sprites_freeplay_animals_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_sprites_freeplay_blank_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_sprites_freeplay_food_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_sprites_freeplay_space_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "wandering": "التحرك",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز"
+        },
+        "courseF_sprites_make_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_moreSprites_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_predict_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "mystery behavior": "سلوك غامِض",
+          "wandering": "التحرك",
+          "running east": "الجري نحو الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل"
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_sprites_ship_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب"
+        },
+        "courseF_text_answer_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_concat_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_events_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_print_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_text_review_-2022-2": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "courseF_variables_card_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_variables_chatbot_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_variables_madlib_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "moving east": "التحرك ناحية الشرق",
+          "moving west": "التحرك ناحية الغرب",
+          "mystery behavior": "سلوك غامِض",
+          "wandering": "التحرك",
+          "running east": "الجري نحو الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "patrolling": "التجوُّل"
+        },
+        "coursee_helloworld_events": {
+          "patrolling": "التجوُّل",
+          "moving forward": "التقدم للأمام",
+          "growing": "النمو",
+          "moving west": "التحرك ناحية الغرب",
+          "spinning right": "الدوران ناحية اليمين",
+          "moving east": "التحرك ناحية الشرق",
+          "moving north": "التحرك ناحية الشمال",
+          "moving south": "التحرك ناحية الجنوب",
+          "jittering": "الاهتزاز",
+          "wandering": "التحرك",
+          "shrinking": "الانقباض",
+          "spinning left": "الدوران ناحية اليسار"
+        },
+        "simcustom_-2022-2": {
+          "wandering": "التحرك",
+          "patrolling": "التجوُّل",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "swimming left and right": "السباحة ناحية اليسار واليمين",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         }
       }
     }

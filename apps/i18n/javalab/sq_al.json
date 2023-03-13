@@ -1,6 +1,8 @@
 {
   "cancel": "Anulo",
+  "create": "Krijo",
   "delete": "Fshi",
   "rename": "Riemëro",
-  "saving": "Duke u ruajtur.."
+  "saving": "Duke u ruajtur..",
+  "submit": "Dorëzo"
 }

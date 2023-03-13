@@ -65,18 +65,15 @@
     "skip_autosave": true,
     "display_name": "Timed Events",
     "thumbnail_url": "https://images.code.org/a61f638ee2ea76dc54236483324d7fbc-image-1648496940150.48.45 PM.png",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-04-04T10:52:17.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-04-04T10:52:17.000Z",
   "user_id": 182,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-04T10:52:17.488+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_bugs_selection_counters_two\\\"\"],\"cloned_from\":\"csc_ecosystems_bugs_selection_counters_two\"},{\"changed_at\":\"2022-04-04 10:55:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:03:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:20:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:35:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"callout_json\",\"instructions_icon\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-18 22:35:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-19 18:46:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 22:41:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:32:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 18:33:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-26 22:06:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-04T10:52:17.488+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_bugs_selection_counters_two\\\"\"],\"cloned_from\":\"csc_ecosystems_bugs_selection_counters_two\"},{\"changed_at\":\"2022-04-04 10:55:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:03:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:20:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:35:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"callout_json\",\"instructions_icon\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-18 22:35:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-19 18:46:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 22:41:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:32:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 18:33:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-26 22:06:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-28 01:47:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-05-27 16:18:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-05-27 16:18:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-05-27 16:18:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-05-27 16:18:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -114,7 +111,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_bear"</field>
+              <field name="ANIMATION">"owl"</field>
             </block>
           </value>
           <next>
@@ -136,7 +133,7 @@
                   <next>
                     <block type="gamelab_makeBurst">
                       <field name="EFFECT">"pop"</field>
-                      <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+                      <field name="ANIMATION_NAME">"beetle2"</field>
                       <value name="NUM">
                         <block type="variables_get">
                           <field name="VAR">greenBugsNumber</field>
@@ -145,7 +142,7 @@
                       <next>
                         <block type="gamelab_makeBurst">
                           <field name="EFFECT">"pop"</field>
-                          <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+                          <field name="ANIMATION_NAME">"beetle"</field>
                           <value name="NUM">
                             <block type="variables_get">
                               <field name="VAR">redBugsNumber</field>
@@ -160,21 +157,17 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME">do something</field>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
           <mutation>
             <description>Sets the green and red bug population</description>
           </mutation>
           <field name="NAME" id="desertSetup">desertSetup</field>
           <statement name="STACK">
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"hw_sky_background_1"</field>
+              <field name="IMG">"forest"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+                  <field name="ANIMATION_NAME">"owl"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
                       <field name="LOCATION">{"x":56,"y":81}</field>
@@ -182,7 +175,7 @@
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+                      <field name="ANIMATION_NAME">"beetle"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
                           <field name="LOCATION">{"x":131,"y":353}</field>
@@ -193,7 +186,7 @@
                           <field name="PROPERTY">"scale"</field>
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"cuteanimals_bear"</field>
+                              <field name="ANIMATION">"beetle"</field>
                             </block>
                           </value>
                           <value name="VAL">
@@ -203,7 +196,7 @@
                           </value>
                           <next>
                             <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+                              <field name="ANIMATION_NAME">"beetle2"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
                                   <field name="LOCATION">{"x":325,"y":349}</field>
@@ -214,7 +207,7 @@
                                   <field name="PROPERTY">"scale"</field>
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"cuteanimals_bear"</field>
+                                      <field name="ANIMATION">"beetle2"</field>
                                     </block>
                                   </value>
                                   <value name="VAL">
@@ -235,6 +228,10 @@
             </block>
           </statement>
         </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME">do something</field>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -243,7 +240,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"beetle"</field>
+              <field name="ANIMATION">"beetle2"</field>
             </block>
           </value>
         </block>
@@ -258,7 +255,7 @@
         </block>
         <block type="gamelab_makeBurst">
           <field name="EFFECT">"pop"</field>
-          <field name="ANIMATION_NAME">"beetle"</field>
+          <field name="ANIMATION_NAME">"beetle2"</field>
           <value name="NUM">
             <block type="math_number">
               <field name="NUM">50</field>

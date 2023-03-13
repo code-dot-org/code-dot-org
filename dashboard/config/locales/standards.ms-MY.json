@@ -1,0 +1,461 @@
+{
+  "ms-MY": {
+    "data": {
+      "standards": {
+        "ccela/3.RL.4": {
+          "description": "Tentukan makna perkataan dan frasa seperti yang digunakan dalam teks, membezakan bahasa tersurat daripada bahasa bukan huruf."
+        },
+        "ccela/4.RL.7": {
+          "description": "Buat perkaitan antara teks cerita atau drama dan persembahan visual atau lisan teks, mengenal pasti tempat setiap versi menggambarkan penerangan dan arahan khusus dalam teks."
+        },
+        "ccela/5.RL.4": {
+          "description": "Tentukan makna perkataan dan frasa seperti yang digunakan dalam teks, termasuk bahasa kiasan seperti metafora dan simile."
+        },
+        "ccela/5.RL.7": {
+          "description": "Analisis bagaimana elemen visual dan multimedia menyumbang kepada makna, nada atau keindahan teks (cth., novel grafik, persembahan multimedia fiksyen, cerita rakyat, mitos, puisi)."
+        },
+        "ccela/6.SL.1": {
+          "description": "Libatkan diri secara berkesan dalam pelbagai perbincangan kolaboratif (satu lawan satu, dalam kumpulan dan diterajui guru) dengan rakan kongsi yang pelbagai tentang topik, teks dan isu gred 6, membina idea orang lain dan menyatakan mereka sendiri dengan jelas."
+        },
+        "ccela/7.SL.1": {
+          "description": "Libatkan diri secara berkesan dalam pelbagai perbincangan kolaboratif (satu-satu, dalam kumpulan dan diterajui guru) dengan rakan kongsi yang pelbagai tentang topik, teks dan isu gred 7, membina idea orang lain dan menyatakan mereka sendiri dengan jelas."
+        },
+        "ccmath/MP.1": {
+          "description": "Memahami masalah dan tabah dalam menyelesaikannya"
+        },
+        "ccmath/MP.2": {
+          "description": "Alasan secara abstrak dan kuantitatif"
+        },
+        "ccmath/MP.5": {
+          "description": "Menggunakan alatan yang sesuai secara strategik"
+        },
+        "ccmath/MP.6": {
+          "description": "Menjaga kejituan"
+        },
+        "ccmath/MP.7": {
+          "description": "Mencari dan menggunakan struktur"
+        },
+        "ccmath/MP.8": {
+          "description": "Mencari dan menyatakan kenalaran dalam penaakulan berulang"
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Laksanakan penyelesaian masalah menggunakan bahasa pengaturcaraan visual berasaskan blok."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Gunakan langkah asas dalam penyelesaian masalah algoritma untuk mereka bentuk penyelesaian (cth., pernyataan masalah dan penerokaan, pemeriksaan contoh contoh, reka bentuk, melaksanakan penyelesaian, ujian dan penilaian)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Gunakan abstraksi untuk menguraikan masalah kepada submasalah."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Huraikan dan analisis urutan arahan yang diikuti (cth., huraikan tingkah laku watak dalam permainan video seperti yang didorong oleh peraturan dan algoritma)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Mewakili data dalam pelbagai cara termasuk teks, bunyi, gambar dan nombor."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Gunakan perwakilan visual keadaan masalah, struktur dan data (cth., graf, carta, rajah rangkaian, carta alir)."
+        },
+        "iste/1.a": {
+          "description": "Gunakan pengetahuan sedia ada untuk menjana idea, produk atau proses baharu."
+        },
+        "iste/1.b": {
+          "description": "Cipta karya asli sebagai alat ekspresi peribadi atau kumpulan."
+        },
+        "iste/1.c": {
+          "description": "Gunakan model dan simulasi untuk meneroka sistem dan isu yang kompleks."
+        },
+        "iste/4.b": {
+          "description": "Rancang dan uruskan aktiviti untuk membangunkan penyelesaian atau menyiapkan projek."
+        },
+        "iste/6.a": {
+          "description": "Memahami dan menggunakan sistem teknologi."
+        },
+        "iste/6.c": {
+          "description": "Selesaikan masalah sistem dan aplikasi."
+        },
+        "iste/6.d": {
+          "description": "Memindahkan pengetahuan semasa kepada pembelajaran teknologi baharu."
+        },
+        "ccela/1.L.6": {
+          "description": "Gunakan perkataan dan frasa yang diperoleh melalui perbualan, membaca dan dibacakan, dan membalas teks, termasuk menggunakan kata hubung yang kerap berlaku untuk menandakan hubungan mudah (mis., kerana)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Mengambil bahagian dalam perbualan kolaboratif dengan rakan kongsi yang pelbagai tentang topik dan teks gred 1 dengan rakan sebaya dan orang dewasa dalam kumpulan kecil dan lebih besar."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Tentukan makna kata dan frasa kerana ia digunakan dalam teks, termasuk makna kiasan, konotatif dan teknikal; menganalisis cara pengarang menggunakan dan menyempurnakan makna istilah atau istilah-istilah utama sepanjang teks (misalnya, cara Madison mentakrifkan"
+        },
+        "ccela/2.L.6": {
+          "description": "Gunakan perkataan dan frasa yang diperoleh melalui perbualan, membaca dan dibacakan, dan membalas teks, termasuk menggunakan kata adjektif dan kata keterangan untuk menerangkan (cth., Apabila kanak-kanak lain gembira itu membuatkan saya gembira)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Mengambil bahagian dalam perbualan kolaboratif dengan rakan kongsi yang pelbagai tentang topik dan teks gred 2 dengan rakan sebaya dan orang dewasa dalam kumpulan kecil dan lebih besar."
+        },
+        "ccela/3.L.6": {
+          "description": "Dapatkan dan gunakan perkataan dan frasa perbualan, akademik umum dan domain khusus yang sesuai gred dengan tepat, termasuk yang menandakan perhubungan spatial dan temporal (cth., Selepas makan malam pada malam itu kami pergi mencarinya)."
+        },
+        "ccela/3.SL.1": {
+          "description": "Libatkan diri secara berkesan dalam pelbagai perbincangan kolaboratif (satu-satu, dalam kumpulan, dan diterajui guru) dengan rakan kongsi yang pelbagai tentang topik dan teks gred 3, membina idea orang lain dan menyatakan mereka sendiri dengan jelas."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Gunakan penambahan dan penolakan dalam 20 untuk menyelesaikan masalah perkataan yang melibatkan situasi menambah, mengambil, menyatukan, memisahkan dan membandingkan, dengan yang tidak diketahui pada semua kedudukan, misalnya, dengan menggunakan objek, lukisan dan persamaan dengan simbol "
+        },
+        "ccmath/2.OA.1": {
+          "description": "Gunakan penambahan dan penolakan dalam 100 untuk menyelesaikan masalah perkataan satu dan dua langkah yang melibatkan situasi menambah, mengambil, menyatukan, memisahkan dan membandingkan, dengan yang tidak diketahui pada semua kedudukan, misalnya, dengan menggunakan lukisan dan persamaan dengan sy "
+        },
+        "ccmath/3.OA.3": {
+          "description": "Gunakan pendaraban dan pembahagian dalam lingkungan 100 untuk menyelesaikan masalah perkataan dalam situasi yang melibatkan kumpulan yang sama, tatasusunan dan kuantiti ukuran, cth., dengan menggunakan lukisan dan persamaan dengan simbol untuk nombor yang tidak diketahui untuk mewakili masalah."
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Gunakan peranti input dan output standard untuk berjaya mengendalikan komputer dan teknologi yang berkaitan."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Amalkan kewarganegaraan digital yang bertanggungjawab (tingkah laku yang sah dan beretika) dalam penggunaan sistem dan perisian teknologi."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Gunakan sumber teknologi (cth., kalkulator, probe pengumpulan data, peranti mudah alih, video, perisian pendidikan dan alatan web) untuk penyelesaian masalah dan pembelajaran terarah kendiri."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataaan dan frasa akademik am dan khusus domain, mencukupi untuk membaca, menulis, bercakap dan mendengar pada peringkat kesediaan kolej dan kerjaya; menunjukkan kebebasan dalam mengumpulkan pengetahuan perbendaharaan kata apabila mempertimbangkannya"
+        },
+        "ccela/4.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataan dan frasa akademik am dan khusus domain mengikut gred, termasuk yang menunjukkan tindakan, emosi, atau keadaan yang tepat (misalnya disoal, merengek, tergagap) dan yang merupakan asas kepada topik tertentu (misalnya"
+        },
+        "ccela/5.L.6": {
+          "description": "Memperoleh dan menggunakan perkataan dan frasa akademik umum dan khusus domain yang sesuai gred dengan tepat, termasuk yang menandakan kontras, penambahan dan perhubungan logik lain (cth., walau bagaimanapun, walaupun, namun begitu, serupa, tambahan pula, sebagai tambahan)."
+        },
+        "ccmath/4.MD.6": {
+          "description": "Ukur sudut dalam darjah nombor bulat menggunakan protraktor. Lakarkan sudut ukuran yang ditentukan."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Tambah dan tolak nombor bulat berbilang digit dengan lancar menggunakan algoritma standard."
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Darabkan nombor bulat hingga empat digit dengan nombor bulat satu digit dan darabkan dua nombor dua digit, dengan menggunakan strategi berdasarkan nilai tempat dan sifat operasi. Gambarkan dan terangkan pengiraan dengan menggunakan persamaan, segi empat tepat"
+        },
+        "ccmath/7.G.2": {
+          "description": "Lukis (lakaran, dengan pembaris dan protraktor, dan dengan teknologi) bentuk geometri dengan keadaan tertentu. Fokus pada membina segitiga daripada tiga ukuran sudut atau sisi, perhatikan apabila keadaan menentukan segitiga unik, lebih daripada satu segi tiga"
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Gunakan sumber multimedia yang sesuai dari segi pembangunan (cth., buku interaktif dan perisian pendidikan) untuk menyokong pembelajaran merentas kurikulum."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Bina satu set pernyataan untuk dilakonkan bagi menyelesaikan tugasan mudah (cth., arahan penyu)."
+        },
+        "ccela/11-12.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan dan mengemas kini produk penulisan individu atau kongsi sebagai tindak balas kepada maklum balas yang berterusan, termasuk hujah atau maklumat baharu."
+        },
+        "ccela/4.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau dibayangkan menggunakan teknik yang berkesan, perincian deskriptif, dan urutan peristiwa yang jelas."
+        },
+        "ccela/6.W.6": {
+          "description": "Menggunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan penulisan serta berinteraksi dan bekerjasama dengan orang lain; menunjukkan penguasaan kemahiran papan kekunci yang mencukupi untuk menaip sekurang-kurangnya tiga muka surat dalam sekaligus."
+        },
+        "ccela/7.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau yang dibayangkan menggunakan teknik yang berkesan, butiran deskriptif yang relevan, dan urutan peristiwa yang tersusun dengan baik."
+        },
+        "ccela/7.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan serta memaut dan memetik sumber serta berinteraksi dan bekerjasama dengan orang lain, termasuk memaut dan memetik sumber."
+        },
+        "ccela/8.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan serta mempersembahkan hubungan antara maklumat dan idea dengan cekap serta berinteraksi dan bekerjasama dengan orang lain."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan dan mengemas kini produk penulisan individu atau kongsi, mengambil kesempatan daripada kapasiti teknologi untuk memaut kepada maklumat lain dan untuk memaparkan maklumat secara fleksibel dan dinamik."
+        },
+        "ccmath/MP.4": {
+          "description": "Model dengan matematik"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Gunakan sumber dalam talian (cth., e-mel, perbincangan dalam talian, persekitaran web kolaboratif) untuk mengambil bahagian dalam aktiviti penyelesaian masalah kolaboratif bagi tujuan membangunkan penyelesaian atau produk."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Gunakan sumber teknologi untuk menjalankan penyelidikan yang bersesuaian dengan umur."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "Mereka bentuk, membangun, menerbitkan dan mempersembahkan produk (cth., halaman web, aplikasi mudah alih, animasi) menggunakan sumber teknologi yang menunjukkan dan menyampaikan konsep kurikulum."
+        },
+        "iste/2.a": {
+          "description": "Berinteraksi, bekerjasama dan terbitkan dengan rakan sebaya, pakar atau orang lain yang menggunakan pelbagai persekitaran dan media digital."
+        },
+        "iste/2.b": {
+          "description": "Menyampaikan maklumat dan idea secara berkesan kepada pelbagai khalayak menggunakan pelbagai media dan format."
+        },
+        "iste/4.d": {
+          "description": "Gunakan pelbagai proses dan perspektif yang pelbagai untuk meneroka penyelesaian alternatif."
+        },
+        "csp2021/IOC-2.B.5": {
+          "description": "Penyulitan ialah proses pengekodan data untuk menghalang capaian yang tidak dibenarkan. Penyahsulitan ialah proses menyahkod data. Dua pendekatan penyulitan biasa ialah: ● Penyulitan kunci simetri melibatkan satu kunci untuk kedua-dua penyulitan dan penyahsulitan.● Penyulitan kunci awam memasangkan kunci awam untuk penyulitan dan kunci peribadi untuk penyahsulitan. Pengirim tidak memerlukan kunci peribadi penerima untuk menyulitkan mesej, tetapi kunci peribadi penerima diperlukan untuk menyahsulit mesej. PERNYATAAN PENGECUALIAN(EKIOC-2.B.5): Prosedur matematik khusus untuk penyulitan dan penyahsulitan adalah di luar skop kursus ini dan Peperiksaan AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Mengesyorkan langkah keselamatan untuk menangani pelbagai senario berdasarkan faktor seperti kecekapan, kebolehlaksanaan dan kesan etika."
+        },
+        "csta/3A-NI-07": {
+          "description": "Bandingkan pelbagai langkah keselamatan, mempertimbangkan pertukaran antara kebolehgunaan dan keselamatan sistem komputer."
+        },
+        "csta/3B-NI-04": {
+          "description": "Bandingkan cara pembangun perisian melindungi peranti dan maklumat daripada capaian yang tidak dibenarkan."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Pemampatan data boleh mengurangkan saiz (bilangan bit) data yang dihantar atau disimpan."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Bandingkan algoritma pemampatan data untuk menentukan yang terbaik dalam konteks tertentu."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Jumlah pengurangan saiz daripada pemampatan bergantung pada kedua-dua jumlah lebihan dalam perwakilan data asal dan algoritma pemampatan yang digunakan."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Algoritma pemampatan data tanpa kerugian biasanya boleh mengurangkan bilangan bit yang disimpan atau dihantar sambil menjamin pembinaan semula lengkap data asal."
+        },
+        "csta/3A-DA-10": {
+          "description": "Nilaikan pertukaran dalam cara elemen data disusun dan tempat data disimpan."
+        },
+        "csta/1B-IC-18": {
+          "description": "Bincangkan teknologi pengkomputeran yang telah mengubah dunia dan nyatakan bagaimana teknologi tersebut mempengaruhi, dan dipengaruhi oleh, amalan budaya."
+        },
+        "csta/1B-DA-07": {
+          "description": "Gunakan data untuk menyerlahkan atau mencadangkan hubungan sebab-akibat, meramalkan hasil atau menyampaikan idea."
+        },
+        "1B-DA-07": {
+          "description": "Gunakan data untuk menyerlahkan atau mencadangkan hubungan sebab-akibat, meramalkan hasil atau menyampaikan idea."
+        },
+        "1B-IC-18": {
+          "description": "Bincangkan teknologi pengkomputeran yang telah mengubah dunia dan nyatakan bagaimana teknologi tersebut mempengaruhi, dan dipengaruhi oleh, amalan budaya."
+        },
+        "3A-DA-10": {
+          "description": "Nilaikan pertukaran dalam cara elemen data disusun dan tempat data disimpan."
+        },
+        "3A-NI-06": {
+          "description": "Mengesyorkan langkah keselamatan untuk menangani pelbagai senario berdasarkan faktor seperti kecekapan, kebolehlaksanaan dan kesan etika."
+        },
+        "3A-NI-07": {
+          "description": "Bandingkan pelbagai langkah keselamatan, mempertimbangkan pertukaran antara kebolehgunaan dan keselamatan sistem komputer."
+        },
+        "3B-NI-04": {
+          "description": "Bandingkan cara pembangun perisian melindungi peranti dan maklumat daripada capaian yang tidak dibenarkan."
+        },
+        "DAT-1.D.1": {
+          "description": "Pemampatan data boleh mengurangkan saiz (bilangan bit) data yang dihantar atau disimpan."
+        },
+        "DAT-1.D.2": {
+          "description": "Bandingkan algoritma pemampatan data untuk menentukan yang terbaik dalam konteks tertentu."
+        },
+        "DAT-1.D.3": {
+          "description": "Jumlah pengurangan saiz daripada pemampatan bergantung pada kedua-dua jumlah lebihan dalam perwakilan data asal dan algoritma pemampatan yang digunakan."
+        },
+        "DAT-1.D.4": {
+          "description": "Algoritma pemampatan data tanpa kerugian biasanya boleh mengurangkan bilangan bit yang disimpan atau dihantar sambil menjamin pembinaan semula lengkap data asal."
+        },
+        "IOC-2.B.5": {
+          "description": "Penyulitan ialah proses pengekodan data untuk menghalang capaian yang tidak dibenarkan. Penyahsulitan ialah proses menyahkod data. Dua pendekatan penyulitan biasa ialah: ● Penyulitan kunci simetri melibatkan satu kunci untuk kedua-dua penyulitan dan penyahsulitan.● Penyulitan kunci awam memasangkan kunci awam untuk penyulitan dan kunci peribadi untuk penyahsulitan. Pengirim tidak memerlukan kunci peribadi penerima untuk menyulitkan mesej, tetapi kunci peribadi penerima diperlukan untuk menyahsulit mesej. PERNYATAAN PENGECUALIAN(EKIOC-2.B.5): Prosedur matematik khusus untuk penyulitan dan penyahsulitan adalah di luar skop kursus ini dan Peperiksaan AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Gunakan peranti input dan output standard untuk berjaya mengendalikan komputer dan teknologi yang berkaitan."
+        },
+        "CI.L1:3-01": {
+          "description": "Amalkan kewarganegaraan digital yang bertanggungjawab (tingkah laku yang sah dan beretika) dalam penggunaan sistem dan perisian teknologi."
+        },
+        "CL.L1:6-02": {
+          "description": "Gunakan sumber dalam talian (cth., e-mel, perbincangan dalam talian, persekitaran web kolaboratif) untuk mengambil bahagian dalam aktiviti penyelesaian masalah kolaboratif bagi tujuan membangunkan penyelesaian atau produk."
+        },
+        "CPP.L1:3-01": {
+          "description": "Gunakan sumber teknologi untuk menjalankan penyelidikan yang bersesuaian dengan umur."
+        },
+        "CPP.L1:3-02": {
+          "description": "Gunakan sumber multimedia yang sesuai dari segi pembangunan (cth., buku interaktif dan perisian pendidikan) untuk menyokong pembelajaran merentas kurikulum."
+        },
+        "CPP.L1:3-04": {
+          "description": "Bina satu set pernyataan untuk dilakonkan bagi menyelesaikan tugasan mudah (cth., arahan penyu)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Gunakan sumber teknologi (cth., kalkulator, probe pengumpulan data, peranti mudah alih, video, perisian pendidikan dan alatan web) untuk penyelesaian masalah dan pembelajaran terarah kendiri."
+        },
+        "CPP.L1:6-06": {
+          "description": "Laksanakan penyelesaian masalah menggunakan bahasa pengaturcaraan visual berasaskan blok."
+        },
+        "CPP.L2:3": {
+          "description": "Mereka bentuk, membangun, menerbitkan dan mempersembahkan produk (cth., halaman web, aplikasi mudah alih, animasi) menggunakan sumber teknologi yang menunjukkan dan menyampaikan konsep kurikulum."
+        },
+        "CT.L2:1": {
+          "description": "Gunakan langkah asas dalam penyelesaian masalah algoritma untuk mereka bentuk penyelesaian (cth., pernyataan masalah dan penerokaan, pemeriksaan contoh contoh, reka bentuk, melaksanakan penyelesaian, ujian dan penilaian)."
+        },
+        "CT.L2:12": {
+          "description": "Gunakan abstraksi untuk menguraikan masalah kepada submasalah."
+        },
+        "CT.L2:6": {
+          "description": "Huraikan dan analisis urutan arahan yang diikuti (cth., huraikan tingkah laku watak dalam permainan video seperti yang didorong oleh peraturan dan algoritma)."
+        },
+        "CT.L2:7": {
+          "description": "Mewakili data dalam pelbagai cara termasuk teks, bunyi, gambar dan nombor."
+        },
+        "CT.L2:8": {
+          "description": "Gunakan perwakilan visual keadaan masalah, struktur dan data (cth., graf, carta, rajah rangkaian, carta alir)."
+        },
+        "1.L.6": {
+          "description": "Gunakan perkataan dan frasa yang diperoleh melalui perbualan, membaca dan dibacakan, dan membalas teks, termasuk menggunakan kata hubung yang kerap berlaku untuk menandakan hubungan mudah (mis., kerana)."
+        },
+        "11-12.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataaan dan frasa akademik am dan khusus domain, mencukupi untuk membaca, menulis, bercakap dan mendengar pada peringkat kesediaan kolej dan kerjaya; menunjukkan kebebasan dalam mengumpulkan pengetahuan perbendaharaan kata apabila mempertimbangkannya"
+        },
+        "2.L.6": {
+          "description": "Gunakan perkataan dan frasa yang diperoleh melalui perbualan, membaca dan dibacakan, dan membalas teks, termasuk menggunakan kata adjektif dan kata keterangan untuk menerangkan (cth., Apabila kanak-kanak lain gembira itu membuatkan saya gembira)."
+        },
+        "3.L.6": {
+          "description": "Dapatkan dan gunakan perkataan dan frasa perbualan, akademik umum dan domain khusus yang sesuai gred dengan tepat, termasuk yang menandakan perhubungan spatial dan temporal (cth., Selepas makan malam pada malam itu kami pergi mencarinya)."
+        },
+        "4.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataan dan frasa akademik am dan khusus domain mengikut gred, termasuk yang menunjukkan tindakan, emosi, atau keadaan yang tepat (misalnya disoal, merengek, tergagap) dan yang merupakan asas kepada topik tertentu (misalnya"
+        },
+        "5.L.6": {
+          "description": "Memperoleh dan menggunakan perkataan dan frasa akademik umum dan khusus domain yang sesuai gred dengan tepat, termasuk yang menandakan kontras, penambahan dan perhubungan logik lain (cth., walau bagaimanapun, walaupun, namun begitu, serupa, tambahan pula, sebagai tambahan)."
+        },
+        "9-10.L.6": {
+          "description": "Memperoleh dan menggunakan dengan tepat perkataaan dan frasa akademik am dan khusus domain, mencukupi untuk membaca, menulis, bercakap dan mendengar pada peringkat kesediaan kolej dan kerjaya; menunjukkan kebebasan dalam mengumpulkan pengetahuan perbendaharaan kata apabila mempertimbangkannya"
+        },
+        "11-12.RI.4": {
+          "description": "Tentukan makna kata dan frasa kerana ia digunakan dalam teks, termasuk makna kiasan, konotatif dan teknikal; menganalisis cara pengarang menggunakan dan menyempurnakan makna istilah atau istilah-istilah utama sepanjang teks (misalnya, cara Madison mentakrifkan"
+        },
+        "3.RL.4": {
+          "description": "Tentukan makna perkataan dan frasa seperti yang digunakan dalam teks, membezakan bahasa tersurat daripada bahasa bukan huruf."
+        },
+        "4.RL.7": {
+          "description": "Buat perkaitan antara teks cerita atau drama dan persembahan visual atau lisan teks, mengenal pasti tempat setiap versi menggambarkan penerangan dan arahan khusus dalam teks."
+        },
+        "5.RL.4": {
+          "description": "Tentukan makna perkataan dan frasa seperti yang digunakan dalam teks, termasuk bahasa kiasan seperti metafora dan simile."
+        },
+        "5.RL.7": {
+          "description": "Analisis bagaimana elemen visual dan multimedia menyumbang kepada makna, nada atau keindahan teks (cth., novel grafik, persembahan multimedia fiksyen, cerita rakyat, mitos, puisi)."
+        },
+        "1.SL.1": {
+          "description": "Mengambil bahagian dalam perbualan kolaboratif dengan rakan kongsi yang pelbagai tentang topik dan teks gred 1 dengan rakan sebaya dan orang dewasa dalam kumpulan kecil dan lebih besar."
+        },
+        "2.SL.1": {
+          "description": "Mengambil bahagian dalam perbualan kolaboratif dengan rakan kongsi yang pelbagai tentang topik dan teks gred 2 dengan rakan sebaya dan orang dewasa dalam kumpulan kecil dan lebih besar."
+        },
+        "3.SL.1": {
+          "description": "Libatkan diri secara berkesan dalam pelbagai perbincangan kolaboratif (satu-satu, dalam kumpulan, dan diterajui guru) dengan rakan kongsi yang pelbagai tentang topik dan teks gred 3, membina idea orang lain dan menyatakan mereka sendiri dengan jelas."
+        },
+        "6.SL.1": {
+          "description": "Libatkan diri secara berkesan dalam pelbagai perbincangan kolaboratif (satu lawan satu, dalam kumpulan dan diterajui guru) dengan rakan kongsi yang pelbagai tentang topik, teks dan isu gred 6, membina idea orang lain dan menyatakan mereka sendiri dengan jelas."
+        },
+        "7.SL.1": {
+          "description": "Libatkan diri secara berkesan dalam pelbagai perbincangan kolaboratif (satu-satu, dalam kumpulan dan diterajui guru) dengan rakan kongsi yang pelbagai tentang topik, teks dan isu gred 7, membina idea orang lain dan menyatakan mereka sendiri dengan jelas."
+        },
+        "11-12.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan dan mengemas kini produk penulisan individu atau kongsi sebagai tindak balas kepada maklum balas yang berterusan, termasuk hujah atau maklumat baharu."
+        },
+        "3.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau dibayangkan menggunakan teknik yang berkesan, perincian deskriptif, dan urutan peristiwa yang jelas."
+        },
+        "4.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau dibayangkan menggunakan teknik yang berkesan, perincian deskriptif, dan urutan peristiwa yang jelas."
+        },
+        "5.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau dibayangkan menggunakan teknik yang berkesan, perincian deskriptif, dan urutan peristiwa yang jelas."
+        },
+        "6.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau yang dibayangkan menggunakan teknik yang berkesan, butiran deskriptif yang relevan, dan urutan peristiwa yang tersusun dengan baik."
+        },
+        "6.W.6": {
+          "description": "Menggunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan penulisan serta berinteraksi dan bekerjasama dengan orang lain; menunjukkan penguasaan kemahiran papan kekunci yang mencukupi untuk menaip sekurang-kurangnya tiga muka surat dalam sekaligus."
+        },
+        "7.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau yang dibayangkan menggunakan teknik yang berkesan, butiran deskriptif yang relevan, dan urutan peristiwa yang tersusun dengan baik."
+        },
+        "7.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan serta memaut dan memetik sumber serta berinteraksi dan bekerjasama dengan orang lain, termasuk memaut dan memetik sumber."
+        },
+        "8.W.3": {
+          "description": "Tulis naratif untuk membangunkan pengalaman atau peristiwa sebenar atau yang dibayangkan menggunakan teknik yang berkesan, butiran deskriptif yang relevan, dan urutan peristiwa yang tersusun dengan baik."
+        },
+        "8.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan serta mempersembahkan hubungan antara maklumat dan idea dengan cekap serta berinteraksi dan bekerjasama dengan orang lain."
+        },
+        "9-10.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan dan mengemas kini produk penulisan individu atau kongsi, mengambil kesempatan daripada kapasiti teknologi untuk memaut kepada maklumat lain dan untuk memaparkan maklumat secara fleksibel dan dinamik."
+        },
+        "11-12.WHST.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan dan mengemas kini produk penulisan individu atau kongsi sebagai tindak balas kepada maklum balas yang berterusan, termasuk hujah atau maklumat baharu."
+        },
+        "9-10.WHST.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan dan mengemas kini produk penulisan individu atau kongsi, mengambil kesempatan daripada kapasiti teknologi untuk memaut kepada maklumat lain dan untuk memaparkan maklumat secara fleksibel dan dinamik."
+        },
+        "7.G.2": {
+          "description": "Lukis (lakaran, dengan pembaris dan protraktor, dan dengan teknologi) bentuk geometri dengan keadaan tertentu. Fokus pada membina segitiga daripada tiga ukuran sudut atau sisi, perhatikan apabila keadaan menentukan segitiga unik, lebih daripada satu segi tiga"
+        },
+        "4.MD.6": {
+          "description": "Ukur sudut dalam darjah nombor bulat menggunakan protraktor. Lakarkan sudut ukuran yang ditentukan."
+        },
+        "MP.1": {
+          "description": "Memahami masalah dan tabah dalam menyelesaikannya"
+        },
+        "MP.2": {
+          "description": "Alasan secara abstrak dan kuantitatif"
+        },
+        "MP.4": {
+          "description": "Model dengan matematik"
+        },
+        "MP.5": {
+          "description": "Menggunakan alatan yang sesuai secara strategik"
+        },
+        "MP.6": {
+          "description": "Menjaga kejituan"
+        },
+        "MP.7": {
+          "description": "Mencari dan menggunakan struktur"
+        },
+        "MP.8": {
+          "description": "Mencari dan menyatakan kenalaran dalam penaakulan berulang"
+        },
+        "4.NBT.4": {
+          "description": "Tambah dan tolak nombor bulat berbilang digit dengan lancar menggunakan algoritma standard."
+        },
+        "4.NBT.5": {
+          "description": "Darabkan nombor bulat hingga empat digit dengan nombor bulat satu digit dan darabkan dua nombor dua digit, dengan menggunakan strategi berdasarkan nilai tempat dan sifat operasi. Gambarkan dan terangkan pengiraan dengan menggunakan persamaan, segi empat tepat"
+        },
+        "1.OA.1": {
+          "description": "Gunakan penambahan dan penolakan dalam 20 untuk menyelesaikan masalah perkataan yang melibatkan situasi menambah, mengambil, menyatukan, memisahkan dan membandingkan, dengan yang tidak diketahui pada semua kedudukan, misalnya, dengan menggunakan objek, lukisan dan persamaan dengan simbol "
+        },
+        "2.OA.1": {
+          "description": "Gunakan penambahan dan penolakan dalam 100 untuk menyelesaikan masalah perkataan satu dan dua langkah yang melibatkan situasi menambah, mengambil, menyatukan, memisahkan dan membandingkan, dengan yang tidak diketahui pada semua kedudukan, misalnya, dengan menggunakan lukisan dan persamaan dengan sy "
+        },
+        "3.OA.3": {
+          "description": "Gunakan pendaraban dan pembahagian dalam lingkungan 100 untuk menyelesaikan masalah perkataan dalam situasi yang melibatkan kumpulan yang sama, tatasusunan dan kuantiti ukuran, cth., dengan menggunakan lukisan dan persamaan dengan simbol untuk nombor yang tidak diketahui untuk mewakili masalah."
+        },
+        "1.a": {
+          "description": "Gunakan pengetahuan sedia ada untuk menjana idea, produk atau proses baharu."
+        },
+        "1.b": {
+          "description": "Cipta karya asli sebagai alat ekspresi peribadi atau kumpulan."
+        },
+        "1.c": {
+          "description": "Gunakan model dan simulasi untuk meneroka sistem dan isu yang kompleks."
+        },
+        "2.a": {
+          "description": "Berinteraksi, bekerjasama dan terbitkan dengan rakan sebaya, pakar atau orang lain yang menggunakan pelbagai persekitaran dan media digital."
+        },
+        "2.b": {
+          "description": "Menyampaikan maklumat dan idea secara berkesan kepada pelbagai khalayak menggunakan pelbagai media dan format."
+        },
+        "4.b": {
+          "description": "Rancang dan uruskan aktiviti untuk membangunkan penyelesaian atau menyiapkan projek."
+        },
+        "4.d": {
+          "description": "Gunakan pelbagai proses dan perspektif yang pelbagai untuk meneroka penyelesaian alternatif."
+        },
+        "6.a": {
+          "description": "Memahami dan menggunakan sistem teknologi."
+        },
+        "6.c": {
+          "description": "Selesaikan masalah sistem dan aplikasi."
+        },
+        "6.d": {
+          "description": "Memindahkan pengetahuan semasa kepada pembelajaran teknologi baharu."
+        }
+      }
+    }
+  }
+}

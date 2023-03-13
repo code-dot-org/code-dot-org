@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "fb75ffba-d42e-42ef-9764-e09ab685e140"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,12 +23,13 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 15:39:30 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-10-24 17:53:16 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -88,7 +85,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**What if the data I need to store is best represented as a table?**\n\nStudents explore the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students learn to access and modify individual elements by referring to their row and column index values. Students then practice declaring and initializing 2D arrays using the `new` keyword and initializer lists and work with the elements stored in the arrays.",
-        "preparation": "* Print copies of the Unit 5 Guide (one for each student)",
+        "preparation": "* Print copies of the Unit 5 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-1-two-dimensional-2d-arrays/36358/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nYou have worked with 1D arrays to store primitive values and object references. In this lesson, you explore the structure of a two-dimensional (2D) array and identify similarities and differences between 1D and 2D arrays. You learn to access and modify individual elements by referring to their row and column index values. You then practice declaring and initializing 2D arrays using the `new` keyword and initializer lists and work with the elements stored in the arrays."
       },
       "seeding_key": {
@@ -105,6 +102,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-2-row-major-traversal/36357/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -121,7 +119,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
-        "preparation": "* Print copies of the Tracing Column-Major Traversals handout (one for each pair of students)",
+        "preparation": "* Print copies of the Tracing Column-Major Traversals handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-3-column-major-traversal/36356/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
       },
       "seeding_key": {
@@ -139,7 +137,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I apply my algorithm to reverse a 1D array to a 2D array?**\n\nStudents revisit the algorithm they developed to reverse a 1D array and plan an algorithm to reverse a 2D array using pseudocode and manipulatives. Students then implement their algorithm in Java and practice applying their algorithm to various scenarios.",
-        "preparation": "* Print copies of the Reversing a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Reversing a 2D Array handout\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Reversing a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Reversing a 2D Array handout\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-4-reverse-a-2d-array/36355/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I apply my algorithm to reverse a 1D array to a 2D array?**\n\nYou have seen how standard 1D array algorithms can be applied to 2D arrays. In this lesson, you revisit the algorithm you developed to reverse a 1D array and plan an algorithm to reverse a 2D array using pseudocode and manipulatives. You then implement your algorithm in Java and practice applying your algorithm to various scenarios."
       },
       "seeding_key": {
@@ -157,7 +155,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I use enhanced for loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
-        "preparation": "* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Print copies of the Tracing Enhanced For Loops handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Print copies of the Tracing Enhanced For Loops handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-5-enhanced-for-loops/36354/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use enhanced for loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
       },
       "seeding_key": {
@@ -175,7 +173,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
-        "preparation": "* Print copies of the Creating Image Filters handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout",
+        "preparation": "* Print copies of the Creating Image Filters handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-6-images-in-the-theater/36353/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
       },
       "seeding_key": {
@@ -192,6 +190,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**What are the beneficial and harmful impacts of programs?**\n\nStudents explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deepfakes. Students discover that deepfakes are created using large amounts of data and reflect on how data is collected and the ethical and social implications of data collection.",
+        "preparation": "* Create stations labeled \"School\", \"Home\", and \"Hobbies\" for the Data Collection activity\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-7-impacts-of-programs/36352/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nYou explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deepfakes. You discover that deepfakes are created using large amounts of data and reflect on how data is collected and the ethical and social implications of data collection."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -208,7 +209,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with 2D arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a grayscale image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
-        "preparation": "* Print copies of the Grayscale Image handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Grayscale Image handout (one for each pair of students)\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-8-modifying-images/36351/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with 2D arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a grayscale image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
       },
       "seeding_key": {
@@ -226,7 +227,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I apply a standard 1D array algorithm to find duplicates to a 2D array?**\n\nStudents revisit the algorithm they developed to find duplicate values in a 1D array and plan an algorithm to find duplicates in a 2D array using pseudocode and manipulatives. Students then implement their algorithm in Java and practice applying their algorithm to various scenarios.",
-        "preparation": "* Print copies of the Finding Duplicates handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Finding Duplicates handout\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Finding Duplicates handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Finding Duplicates handout\n* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-9-finding-duplicates/36350/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I apply a standard 1D array algorithm to find duplicates to a 2D array?**\n\nYou have applied several standard 1D array algorithms to 2D arrays. In this lesson, you revisit the algorithm you developed to find duplicates in a 1D array and plan an algorithm to find duplicates in a 2D array using pseudocode and manipulatives. You then implement your algorithm in Java and practice applying your algorithm to various scenarios."
       },
       "seeding_key": {
@@ -244,7 +245,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I shift the elements in an array?**\n\nStudents practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. Students explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array.",
-        "preparation": "* Print copies of the Shifting a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Shifting a 2D Array handout\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 5 Study Guide (one for each student)",
+        "preparation": "* Print copies of the Shifting a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Shifting a 2D Array handout\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-lesson-10-shifting-a-2d-array/36349/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I shift the elements in an array?**\n\nIn this lesson, you practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. You explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array."
       },
       "seeding_key": {
@@ -262,7 +263,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters to use in a collage or animation that portrays personal experiences and/or interests. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters to use in a collage or animation that portrays your personal experiences and/or interests. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
@@ -280,7 +281,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents planned their visuals and algorithms to create a collage or animation about their personal experiences and/or interests. Students continue to develop their projects to implement algorithms to create a new image filter and their collage or animation. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now planned your visuals and algorithms to create a collage or animation about your personal experiences and/or interests. You continue developing your project to implement algorithms to create a new image filter and your collage or animation. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -299,7 +300,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-personal-narrative-project/36348/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -317,7 +318,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)",
+        "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-frq-practice/36347/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -336,7 +337,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-5-assessment/36346/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 5 Assessment."
       },
       "seeding_key": {
@@ -648,7 +649,7 @@
       "key": "400e454f-27c0-466b-9577-2efc26950e6f",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -676,7 +677,7 @@
       "key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1075,7 +1076,7 @@
       "key": "988189ac-2661-4cdf-a22e-2bc32a908117",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 4 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 5 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1412,7 +1413,7 @@
       "key": "da8a09a0-727d-4032-8ff3-0856e4561440",
       "position": 6,
       "properties": {
-        "description": "We have used a standard algorithm to find the sum of all elements in a 1D array. Let's use what we know about traversing a 2D array to modify this algorithm to find the sum of all elements in a 2D array.",
+        "description": "We have used a standard algorithm to find the sum of all elements in a 1D array. All standard 1D array algorithms can be applied to 2D arrays. Let's use what we know about traversing a 2D array to modify this algorithm to find the sum of all elements in a 2D array.",
         "remarks": true
       },
       "seeding_key": {
@@ -1975,7 +1976,7 @@
       "key": "68a575fb-f54a-4d2d-b97c-ffbf550f44a6",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is using an enhanced `for` loop with a 2D array similar to using it with a 1D array?*\n* *How is it different?*\n\n**Discussion Goal:** Students identify the similarities in the syntax and that the enhanced `for` loop traverses each row and column from first to last. Students note that traversing a 2D array requires nested loops to traverse each row with the outer loop and each column with the inner loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Enhanced For Loops and 2D Arrays*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using an enhanced `for` loop with a 2D array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is using an enhanced `for` loop with a 2D array similar to using it with a 1D array?*\n* *How is it different?*\n\n**Discussion Goal:** Students identify the similarities in the syntax and that the enhanced `for` loop traverses each row and column from first to last. Students note that traversing a 2D array requires nested loops to traverse each row with the outer loop and each column with the inner loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Enhanced For Loops and 2D Arrays*."
       },
       "seeding_key": {
         "activity_section.key": "68a575fb-f54a-4d2d-b97c-ffbf550f44a6",
@@ -1983,8 +1984,31 @@
       }
     },
     {
-      "key": "b5522023-9b57-4500-a22a-df021439258e",
+      "key": "87d00a4d-8716-4174-ba2a-250cae355473",
       "position": 8,
+      "properties": {
+        "description": "When using nested enhanced `for` loops to traverse a 2D array, the outer loop traverses the row. The enhanced `for` loop variable in the outer loop must be the type of each row, which is a 1D array. The inner loop traverses a single row, so the enhanced `for` loop variable for the inner loop must be the same type as the elements stored in the 1D array.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "87d00a4d-8716-4174-ba2a-250cae355473",
+        "lesson_activity.key": "f323fd2f-f4e5-4f59-82dd-20ae3cd097d3"
+      }
+    },
+    {
+      "key": "9e13961e-7106-47b7-a848-956c72666b1d",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using an enhanced `for` loop with a 2D array."
+      },
+      "seeding_key": {
+        "activity_section.key": "9e13961e-7106-47b7-a848-956c72666b1d",
+        "lesson_activity.key": "f323fd2f-f4e5-4f59-82dd-20ae3cd097d3"
+      }
+    },
+    {
+      "key": "b5522023-9b57-4500-a22a-df021439258e",
+      "position": 10,
       "properties": {
         "description": "Traversing a 2D array using enhanced `for` loops is similar to traversing a 1D array using enhanced `for` loops. Tracing an enhanced `for` loop with a 2D array is also similar to tracing it with a 1D array.",
         "duration": "15",
@@ -1998,7 +2022,7 @@
     },
     {
       "key": "9e7d4285-cf6e-470d-861c-0dad4ffb52b2",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Tracing Enhanced For Loops handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Enhanced For Loops handout.",
         "tips": [
@@ -2015,7 +2039,7 @@
     },
     {
       "key": "3bf0aa0e-b766-4e84-b922-3c6be4244c05",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "Let's practice using enhanced `for` loops with 2D arrays!",
         "remarks": true
@@ -2027,7 +2051,7 @@
     },
     {
       "key": "d8894d77-5587-4f52-8a52-4cd529439af3",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students complete a choice level to use an enhanced `for` loop with a 2D array using the console or The Theater.",
         "progression_name": "Using Enhanced For Loops with 2D Arrays"
@@ -2039,7 +2063,7 @@
     },
     {
       "key": "25c52786-b0de-4aff-9e79-719fad2513fa",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Using Enhanced For Loops with 2D Arrays"
@@ -2252,10 +2276,39 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students write a method to create a 2D array of `Pixel` objects on Level 2, then continue to Level 3 to complete a choice level to create an image filter.",
-        "progression_name": "Creating Image Filters"
+        "progression_name": "Creating Image Filters",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The `ImagePlus` class is revisited throughout the curriculum. Students develop the `ImagePlus` class in this lesson to practice traversing a 2D array of `Pixel` objects to create image filters. Students expand on this class to add new behaviors in upcoming lessons and units.\n\nYou can choose to ask students how creating an `ImagePlus` class is similar to creating the `PainterPlus` class. Have students consider what this means they can do with the `ImagePlus` class and additional subclasses they might create."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "aa029cc2-0726-4b0d-91ec-ac4eb7f5c062",
+        "lesson_activity.key": "d6614c0e-9620-4f10-bf82-6887543d6204"
+      }
+    },
+    {
+      "key": "a5edc7db-6e4c-410c-b1ec-cbfa1269e30d",
+      "position": 8,
+      "properties": {
+        "description": "This is a good time to commit our code and save our `ImagePlus` class to the Backpack.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a5edc7db-6e4c-410c-b1ec-cbfa1269e30d",
+        "lesson_activity.key": "d6614c0e-9620-4f10-bf82-6887543d6204"
+      }
+    },
+    {
+      "key": "40b94c46-1ba2-4cf3-8cc1-e7142c983924",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `ImagePlus` class to the Backpack."
+      },
+      "seeding_key": {
+        "activity_section.key": "40b94c46-1ba2-4cf3-8cc1-e7142c983924",
         "lesson_activity.key": "d6614c0e-9620-4f10-bf82-6887543d6204"
       }
     },
@@ -2323,6 +2376,9 @@
       "key": "9880eb70-f58d-4acd-ab7c-b52010bc1c3d",
       "position": 1,
       "properties": {
+        "description": "In the previous lesson, we discussed examples of image filters that you have seen, and you used your software engineering skills to create image filters. Let's look at some examples of how images are manipulated.",
+        "name": "Is This Real?",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "9880eb70-f58d-4acd-ab7c-b52010bc1c3d",
@@ -2330,9 +2386,41 @@
       }
     },
     {
+      "key": "bc0c2081-1cd4-4b64-b877-7fd4926c7e13",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Am I Real? activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity can also be done without physical movement for different classroom setups. You could ask students to use a signal (raise left or right hand) to decide whether each person is real."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0c2081-1cd4-4b64-b877-7fd4926c7e13",
+        "lesson_activity.key": "400e454f-27c0-466b-9577-2efc26950e6f"
+      }
+    },
+    {
+      "key": "2d3faf73-0b55-43db-ae71-474096a9778c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the first pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the second pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real."
+      },
+      "seeding_key": {
+        "activity_section.key": "2d3faf73-0b55-43db-ae71-474096a9778c",
+        "lesson_activity.key": "400e454f-27c0-466b-9577-2efc26950e6f"
+      }
+    },
+    {
       "key": "78e1f0f7-58c7-4023-b530-28e65959d486",
       "position": 1,
       "properties": {
+        "description": "In each pair of images, one of them was a manipulated image called a deepfake.",
+        "duration": "15",
+        "name": "Deepfakes",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "78e1f0f7-58c7-4023-b530-28e65959d486",
@@ -2340,13 +2428,150 @@
       }
     },
     {
-      "key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+      "key": "bb1690b7-93b5-48c3-9d29-ac29283ad6a4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Where have you seen deepfakes before?*\n\n**Discussion Goal:** Students share examples of deepfakes they have seen, including in media and TV shows or on social media.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *This is Not Morgan Freeman*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did this example make you wonder or feel?*\n* *What do you think are some benefits of deepfakes?*\n* *What do you think are some harmful impacts of deepfakes?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deepfakes. Students identify some benefits of deepfakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Given the harmful impacts of deepfakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deepfakes should be developed. Students justify their ideas with positive or negative impacts of deepfakes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider their role as software engineers in creating software that enables people to create deepfakes. If students support the technology, have students consider if they would implement restrictions or limitations in creating deepfakes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb1690b7-93b5-48c3-9d29-ac29283ad6a4",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "5c4f6ae8-a2ac-498d-b47d-c63936d7796b",
+      "position": 3,
+      "properties": {
+        "description": "To generate deepfakes, software engineers use a technique called machine learning. Machine learning, or ML, uses data and models to make predictions and decisions. This requires lots of data to improve the accuracy of the predictions and decisions. For deepfakes, this requires lots of images for the program to learn from.",
+        "duration": "15",
+        "name": "Data Collection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5c4f6ae8-a2ac-498d-b47d-c63936d7796b",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "f1d12301-516b-4258-aae7-06861e97fb64",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data Collection handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data Collection activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "f1d12301-516b-4258-aae7-06861e97fb64",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "48c04230-868c-4e6b-a7c0-8fe721a48321",
+      "position": 5,
+      "properties": {
+        "description": "The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial or harmful. Now that you have a list of how your data is collected, let's think about the ethical and social implications of data collection.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "48c04230-868c-4e6b-a7c0-8fe721a48321",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "0f5c4fe3-744b-4b57-897e-828d7c3fd927",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Who is collecting data about you?*\n* *Given how data is collected, who is this giving power to? Why?*\n\n**Discussion Goal:** Students identify organizations or companies that are collecting data about them. Students share ideas about what organizations and companies have more power because of the amount and type of data they have about people.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the headline and quote to the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share their reactions and feelings about the headline. Encourage students to consider the thoughts and ideas they shared throughout the lesson and make connections to their reactions to the headline."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f5c4fe3-744b-4b57-897e-828d7c3fd927",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "f8b5d4f4-682c-468e-9888-224c7033db27",
       "position": 1,
       "properties": {
+        "description": "There are a lot of researchers studying the impacts of programs. Let's meet one of them!",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8b5d4f4-682c-468e-9888-224c7033db27",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "c673e786-5882-462e-9f34-b485905c7487",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the biography of Ruha Benjamin to the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, you can also choose to show the video [***Ruha Benjamin discusses 'Race After Technology'***](https://youtu.be/rY8RkET3KC0) and have students share their reactions and thoughts about the work she is doing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c673e786-5882-462e-9f34-b485905c7487",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "dae66009-ecc0-4968-90b9-2baffe9e71e3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including deepfakes and data collection. Students suggest what they might want to do differently in their lives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "dae66009-ecc0-4968-90b9-2baffe9e71e3",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "e67773cc-a0d1-4840-a3ca-0e513c29d36c",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "e67773cc-a0d1-4840-a3ca-0e513c29d36c",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "60de88e8-eacf-4a3f-91b0-e5bb93d765dc",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "60de88e8-eacf-4a3f-91b0-e5bb93d765dc",
         "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
       }
     },
@@ -2404,7 +2629,7 @@
       "key": "5ad3a73d-f402-459d-890f-58340ba2ecb6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the color of each pixel is modified by finding the average of the red, green, and blue values. Students may wonder about other ways they can manipulate colors or make connections to image filters they might have seen in other apps and programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Grayscale Images handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create a grayscale image.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the color of each pixel is modified by calculating new values for the red, green, and blue values. Students may wonder about other ways they can manipulate colors or make connections to image filters they might have seen in other apps and programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Grayscale Images handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create a grayscale image.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2604,7 +2829,7 @@
       "key": "31ec7960-7864-403b-9f29-a60d7f7ce6a8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 and 2. Students implement their algorithm on Level 1, then continue to Level 2 to complete a choice level to find duplicate elements in 2D arrays using the console or The Theater.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 and 2. Students implement their algorithm on Level 1, then continue to Level 2 to complete a choice level to find duplicate elements in 2D arrays.",
         "progression_name": "Finding Duplicates in a 2D Array"
       },
       "seeding_key": {
@@ -5569,6 +5794,18 @@
       }
     },
     {
+      "name": "[KEY] Data Collection",
+      "url": "https://docs.google.com/document/d/1eEBLQtcNYopYxqIOzlLD2D6U0dheujMkG6xMZt13zkY/edit?usp=sharing",
+      "key": "_key_data_collection",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_collection"
+      }
+    },
+    {
       "name": "[KEY] Enhanced For Loops Anticipation Guide",
       "url": "https://docs.google.com/document/d/1Hm7ASTM5S77BM2s9i3x-HM6Pb0MFWp3b4ACqUzSJfzw/edit?usp=sharing",
       "key": "_key_enhanced_for_loops_anticipation_guide",
@@ -5761,6 +5998,18 @@
       }
     },
     {
+      "name": "[KEY] U5L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/10g0VJqBGhXq4hma1MuAr_8ZXKpTYUu3QazGqbfP7NzA/edit?usp=sharing",
+      "key": "_key_u5l7_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l7_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U5L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1sf1oBfCvnRUw82PIPILhzksyH5vFOe_e2Ve8ha_KW8s/edit?usp=sharing",
       "key": "_key_u5l8_extra_practice",
@@ -5818,15 +6067,78 @@
       }
     },
     {
+      "name": "Column-Major Traversal",
+      "url": "https://youtu.be/wgYqBhDDNEc",
+      "key": "column-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "column-major_traversal"
+      }
+    },
+    {
       "name": "Creating Image Filters",
       "url": "https://docs.google.com/document/d/1roMH6K4FHugoTNiOwls50lZLvpk_pGpzPKjbRaVaK-8/edit?usp=sharing",
       "key": "creating_image_filters",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "creating_image_filters"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/16qhMybtO3vrR0sUUWUEfZm2jw-1U_ydKoH5K0CwTjaw/edit?usp=sharing",
+      "key": "cs_bingo_definitions_4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_4"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/presentation/d/1AQwPa-7VUblfOh8XGPPxHi6ycMXqr_g681HyKfSSDzo/edit?usp=sharing",
+      "key": "cs_bingo_definitions_5",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_5"
+      }
+    },
+    {
+      "name": "Data Collection",
+      "url": "https://docs.google.com/document/d/1Dpulq-6DqTkObdQzDM4R65nx_Pt-jwKzK4JlsX_x6pA/edit?usp=sharing",
+      "key": "data_collection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_collection"
+      }
+    },
+    {
+      "name": "Enhanced For Loops and 2D Arrays",
+      "url": "https://youtu.be/N-ePqqu_D9w",
+      "key": "enhanced_for_loops_and_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
       }
     },
     {
@@ -5835,6 +6147,7 @@
       "key": "enhanced_for_loops_anticipation_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5847,6 +6160,7 @@
       "key": "finding_duplicates_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5859,6 +6173,7 @@
       "key": "grayscale_images",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5883,6 +6198,7 @@
       "key": "grayscaleimage_frq_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5895,10 +6211,23 @@
       "key": "grayscaleimage_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Images and Pixels",
+      "url": "https://youtu.be/eTcPLcODrk0",
+      "key": "images_and_pixels",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "images_and_pixels"
       }
     },
     {
@@ -5907,6 +6236,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -5919,6 +6249,7 @@
       "key": "personal_narrative_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5931,10 +6262,23 @@
       "key": "reversing_a_2d_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "reversing_a_2d_array"
+      }
+    },
+    {
+      "name": "Row-Major Traversal",
+      "url": "https://youtu.be/vS_yPc-2Eb8",
+      "key": "row-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -5943,10 +6287,23 @@
       "key": "shifting_a_2d_array",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "shifting_a_2d_array"
+      }
+    },
+    {
+      "name": "This is Not Morgan Freeman",
+      "url": "https://youtu.be/oxXpB9pSETo",
+      "key": "this_is_not_morgan_freeman",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "this_is_not_morgan_freeman"
       }
     },
     {
@@ -5955,6 +6312,7 @@
       "key": "tracing_2d_array_traversals",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5967,6 +6325,7 @@
       "key": "tracing_column-major_traversals",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5979,10 +6338,23 @@
       "key": "tracing_enhanced_for_loops",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "Two-Dimensional (2D) Arrays",
+      "url": "https://youtu.be/QIPNA3p6FBo",
+      "key": "two-dimensional_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-dimensional_2d_arrays"
       }
     },
     {
@@ -5991,6 +6363,7 @@
       "key": "u5l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6003,6 +6376,7 @@
       "key": "u5l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6015,6 +6389,7 @@
       "key": "u5l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6027,6 +6402,7 @@
       "key": "u5l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6039,6 +6415,7 @@
       "key": "u5l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6051,6 +6428,7 @@
       "key": "u5l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6063,10 +6441,24 @@
       "key": "u5l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l6_extra_practice"
+      }
+    },
+    {
+      "name": "U5L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BHrgpzGZ8u-a5ppylHgmHXmqct23bVuuyzmkLqFmk6g/edit?usp=sharing",
+      "key": "u5l7_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l7_extra_practice"
       }
     },
     {
@@ -6075,6 +6467,7 @@
       "key": "u5l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6087,6 +6480,7 @@
       "key": "u5l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6099,10 +6493,23 @@
       "key": "unit_5_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1m2H0g23S-c8HQ_M24nAKhH-DpyDlbeRu0AnIBqgx6G8",
+      "key": "unit_5_guide_exemplar_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_guide_exemplar_"
       }
     },
     {
@@ -6135,6 +6542,7 @@
       "key": "unit_5_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6151,6 +6559,18 @@
       },
       "seeding_key": {
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Working with 2D Array Elements",
+      "url": "https://youtu.be/t0ZyG6uWSLE",
+      "key": "working_with_2d_array_elements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_2d_array_elements"
       }
     }
   ],
@@ -6332,6 +6752,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u5l1_extra_practice"
       }
     },
@@ -6349,6 +6775,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "working_with_2d_array_elements"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_tracing_2d_array_traversals"
       }
@@ -6357,6 +6789,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -6392,6 +6830,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "column-major_traversal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "tracing_column-major_traversals"
       }
     },
@@ -6417,6 +6861,18 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_5"
       }
     },
     {
@@ -6458,6 +6914,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "enhanced_for_loops_anticipation_guide"
       }
     },
@@ -6481,6 +6943,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u5l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "this_is_not_morgan_freeman"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u5l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_creating_image_filters"
       }
@@ -6495,6 +6993,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "creating_image_filters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "images_and_pixels"
       }
     },
     {
@@ -6532,6 +7036,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_5_guide",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide_exemplar_",
         "script.name": "csa5-2022"
       }
     },
@@ -6744,6 +7254,16 @@
       }
     },
     {
+      "key": "35624f51-912c-44c1-a544-f24995724d34",
+      "properties": {
+        "description": "Identify ethical and social implications of data collection"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "35624f51-912c-44c1-a544-f24995724d34"
+      }
+    },
+    {
       "key": "409d8d07-5d87-4fdb-ae52-1d214ebe1171",
       "properties": {
         "description": "Conduct code reviews to give and receive feedback on program code"
@@ -6871,6 +7391,16 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "objective.key": "b03c38f5-63f1-48a6-a9fd-f6b654ff9b60"
+      }
+    },
+    {
+      "key": "b1ab6ccb-c53e-4e4a-9b61-cdacb3eafab3",
+      "properties": {
+        "description": "Explain the beneficial and harmful impacts of image manipulations"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "b1ab6ccb-c53e-4e4a-9b61-cdacb3eafab3"
       }
     },
     {
@@ -7120,6 +7650,13 @@
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.3"
       }
     },
     {

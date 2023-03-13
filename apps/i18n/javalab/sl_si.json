@@ -1,6 +1,8 @@
 {
   "cancel": "Prekliči",
+  "create": "Ustvari",
   "delete": "Izbriši",
   "rename": "Preimenuj",
-  "saving": "Shranjevanje..."
+  "saving": "Shranjevanje...",
+  "submit": "Pošlji"
 }

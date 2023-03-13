@@ -17,11 +17,96 @@
         "loops/aquatic/unversioned": {
           "word": "រង្វិល​ជុំ"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "កូដ"
         },
+        "conditionals/coursed/2022": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "behavior/coursef/2022": {
+          "word": "ឥរិយាបទ"
+        },
+        "variable/coursef/2022": {
+          "word": "អថេរ"
+        },
+        "input/coursef/2022": {
+          "word": "ធាតុបញ្ចូល"
+        },
+        "define/coursef/2022": {
+          "word": "កំណត់"
+        },
+        "behavior/coursee/2022": {
+          "word": "ឥរិយាបទ"
+        },
+        "function/coursee/2022": {
+          "word": "អនុគមន៍"
+        },
+        "conditionals/coursee/2022": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "copyright/coursee/2022": {
+          "word": "រក្សាសិទ្ធដោយ"
+        },
+        "define/coursee/2022": {
+          "word": "កំណត់"
+        },
+        "behavior/express/2022": {
+          "word": "ឥរិយាបទ"
+        },
+        "conditionals/express/2022": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "function/express/2022": {
+          "word": "អនុគមន៍"
+        },
+        "variable/express/2022": {
+          "word": "អថេរ"
+        },
+        "define/express/2022": {
+          "word": "កំណត់"
+        },
+        "input/csd/2022": {
+          "word": "ធាតុបញ្ចូល"
+        },
+        "variable/csd/2022": {
+          "word": "អថេរ"
+        },
+        "conditionals/csd/2022": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "function/csd/2022": {
+          "word": "អនុគមន៍"
+        },
+        "copyright/csd/2022": {
+          "word": "រក្សាសិទ្ធដោយ"
+        },
         "code/poem-art/unversioned": {
-          "word": "កូដ"
+          "word": "កូដ",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "ឥរិយាបទ"

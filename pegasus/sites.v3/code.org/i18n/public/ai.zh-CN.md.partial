@@ -21,7 +21,7 @@ social:
 # 了解人工智能（AI）
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">关于人工智能和机器学习的新模块</h2><p>我们的新课程模块侧重于人工智能伦理、偏见问题研究，并通过多种在线和不插电活动以及全组讨论，探索和解释基本概念。</p><a  href="#about-aimodule"><button>了解更多</button></a> &nbsp;&nbsp; <a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>探索模块</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">关于人工智能和机器学习的新模块</h2><p>我们的新课程模块侧重于人工智能伦理、偏见问题研究，并通过多种在线和不插电活动以及全组讨论，探索和解释基本概念。</p><a  href="#about-aimodule"><button>了解更多</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>探索模块</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="人工智能实验室"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ social:
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## 关于人工智能和机器学习的新模块
 <div>
-<div class="col-50">
-<p>人工智能和机器学习课程模块大约时长为五周，可以作为<a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >独立模块</a>或作为<a href="https://studio.code.org/s/csd7-2021">计算机科学探索</a>的一个选修单元来教授。 该模块侧重于人工智能伦理、偏见问题研究，及基本概念的探索和阐述。</p><p>由于机器学习依赖于大量的数据，因此新单元中涵盖有关医疗保健、人口统计等现实生活的数据集，让学生们在探索一系列问题时积极参与，此类问题诸如“机器学习可以帮助解决哪些难题？” “人工智能如何协助社会？” “谁可以从人工智能中受益？” “谁会受到不利影响” “谁参与其中？” “谁会被遗漏？”  </p>
-<p>道德考量将是这些讨论的重心，这些科技所产生的的影响将是频繁讨论的要点及课程重点。 这将有助于学生在学习技术原理时，对这些科技产生全面、周密的理解。</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>人工智能和机器学习课程模块大约时长为五周，可以作为<a href="https://studio.code.org/s/aiml?viewAs=Instructor" >独立模块</a>或作为<a href="https://studio.code.org/s/csd7-2022">计算机科学探索</a>的一个选修单元来教授。 该模块侧重于人工智能伦理、偏见问题研究，及基本概念的探索和阐述。</p><p>由于机器学习依赖于大量的数据，因此新单元中涵盖有关医疗保健、人口统计等现实生活的数据集，让学生们在探索一系列问题时积极参与，此类问题诸如“机器学习可以帮助解决哪些难题？” “人工智能如何协助社会？” “谁可以从人工智能中受益？” “谁会受到不利影响” “谁参与其中？” “谁会被遗漏？”  </p>
+    <p>道德考量将是这些讨论的重心，这些科技所产生的的影响将是频繁讨论的要点及课程重点。 这将有助于学生在学习技术原理时，对这些科技产生全面、周密的理解。</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>探索模块</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## 人工智能的工作原理
 
 这一系列短片将通过微软首席执行官萨提亚·纳德拉的介绍，阐述人工智能的工作原理及其重要性。 了解神经网络，或人工智能的学习方式，并深入探索算法偏见和人工智能决策的伦理等问题。
@@ -115,3 +114,5 @@ social:
 6-8级使用了[支持向量机]（SVM） (https://en.wikipedia.org/wiki/Support-vector_machine)。 我们查看鱼的每个组成部分（例如眼睛、嘴巴、身体），并将这些组成部分的所有元数据（例如牙齿数量、身体形状）汇总成每条鱼的数字向量。 我们使用这些向量来训练支持向量机。 根据训练数据，支持向量机将所有可能的鱼的“空间”分成两部分，分别对应我们要学习的类别（例如“蓝色”或“非蓝色”）。
 
 [[返回顶部]](#top)
+
+{{ visit_partial_event_logger }}

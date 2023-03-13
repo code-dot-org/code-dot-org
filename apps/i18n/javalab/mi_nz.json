@@ -1,6 +1,8 @@
 {
   "cancel": "Whakakore",
+  "create": "Waihanga",
   "import": "Kawemai",
   "rename": "Whakaingoa anō",
-  "saving": "E tiakina ana..."
+  "saving": "E tiakina ana...",
+  "submit": "Tāpaetia"
 }

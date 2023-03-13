@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Calc is DEPRECATED
  */
 var Calc = module.exports;
 
@@ -41,6 +43,7 @@ var Token = require('./token');
 var InputIterator = require('./inputIterator');
 
 import {TestResults, ResultType} from '../constants';
+import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
 var level;
 var skin;
@@ -202,6 +205,8 @@ Calc.init = function(config) {
   };
 
   studioApp().setPageConstants(config);
+
+  showDeprecatedAlgebraLabWarning();
 
   ReactDOM.render(
     <Provider store={getStore()}>

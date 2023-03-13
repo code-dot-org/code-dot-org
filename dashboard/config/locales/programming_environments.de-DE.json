@@ -1,0 +1,413 @@
+{
+  "de-DE": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab",
+          "description": "Web basierter HTML/CSS-Editor.",
+          "categories": {
+            "html_tags": {
+              "name": "HTML-Tags"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Spielelabor",
+          "categories": {
+            "game_lab": {
+              "name": "Spielelabor",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Schwarzweiß"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Musik machen"
+                    }
+                  },
+                  "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Sprites",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirale"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Gruppen",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farbe"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farbe"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Zeichnung",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stern"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Mathematik",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    },
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    },
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variablen"
+            },
+            "functions": {
+              "name": "Funktionen"
+            }
+          }
+        },
+        "applab": {
+          "name": "App-Labor",
+          "description": "App-Lab ist eine Programmierumgebung, wo man einfache apps machen kann. Entwerfe eine Anwendung/App, Code mit Blöcken oder JavaScript damit es funktioniert, dann teile die App in Sekunden.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Vergrößern und verkleinern"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Musik machen"
+                    }
+                  },
+                  "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Objekt"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Daten",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "Objekt"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Objekt"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Mathematik",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    },
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    },
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variablen",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Wähle dein eigenes Abenteuer"
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "Keiner"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funktionen"
+            },
+            "advanced": {
+              "name": "Erweitert"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "Sprites"
+            },
+            "world": {
+              "name": "Welt"
+            },
+            "location": {
+              "name": "Orte"
+            },
+            "actions": {
+              "name": "Aktionen"
+            },
+            "events": {
+              "name": "Ereignisse"
+            },
+            "behaviors": {
+              "name": "Verhaltensweisen"
+            },
+            "loops": {
+              "name": "Schleifen"
+            },
+            "variables": {
+              "name": "Variablen"
+            },
+            "math": {
+              "name": "Mathematik"
+            },
+            "logic": {
+              "name": "Logik"
+            },
+            "functions": {
+              "name": "Funktionen"
+            },
+            "text": {
+              "name": "Text"
+            },
+            "comments": {
+              "name": "Kommentare"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java-Labor"
+        }
+      }
+    }
+  }
+}

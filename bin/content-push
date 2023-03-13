@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'optparse'
-require_relative '../deployment.rb'
+require_relative '../deployment'
 require 'cdo/git_utils'
 require 'cdo/only_one'
 
@@ -27,13 +27,13 @@ def disallow_case_change
   ignore_levelbuilder_omissions
   `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
     next unless (%r{^R  ([^ ]+) -> ([^ ]+)}.match(line) || %r{^R  ("[^"]+") -> ("[^"]+")}.match(line)) && $1.casecmp($2) == 0
-    STDERR.puts "\nAborting due to case-only rename:\n\n    #{line}\n\n"
-    STDERR.puts "To fix this, run the following commands:\n\n"
-    STDERR.puts "    git add #{$2}\n\n"
-    STDERR.puts "    git mv #{$2} #{$2}.tmp\n\n"
-    STDERR.puts "    git commit --only #{$1} #{$2}.tmp -m 'temporarily rename #{$1} -> #{$2}.tmp'\n\n"
-    STDERR.puts "    git mv #{$2}.tmp #{$2}\n\n"
-    STDERR.puts "    bin/content-push\n\n"
+    warn "\nAborting due to case-only rename:\n\n    #{line}\n\n"
+    warn "To fix this, run the following commands:\n\n"
+    warn "    git add #{$2}\n\n"
+    warn "    git mv #{$2} #{$2}.tmp\n\n"
+    warn "    git commit --only #{$1} #{$2}.tmp -m 'temporarily rename #{$1} -> #{$2}.tmp'\n\n"
+    warn "    git mv #{$2}.tmp #{$2}\n\n"
+    warn "    bin/content-push\n\n"
     # unstage all changes so the above instructions can be followed
     `git reset HEAD`
     exit 1
@@ -42,9 +42,9 @@ end
 
 def disallow_state_pdf
   `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
-    next unless %r{pegasus/sites.v3/code.org/public/advocacy/state-facts/..\.pdf$} =~ line
-    STDERR.puts "\nAborting because state pdf generation appears to be in progress:\n\n    #{line}\n\n"
-    STDERR.puts "Please wait 10 minutes and then try again.\n\n"
+    next unless %r{pegasus/sites.v3/code.org/public/advocacy/state-facts/..\.pdf$}.match?(line)
+    warn "\nAborting because state pdf generation appears to be in progress:\n\n    #{line}\n\n"
+    warn "Please wait 10 minutes and then try again.\n\n"
     `git reset HEAD`
     exit 1
   end
@@ -73,7 +73,7 @@ def check_changes
   system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
   input = gets.chomp
-  if input == '' || input[0].downcase == 'y'
+  if input == '' || input[0].casecmp?('y')
     puts "Cool!"
     true
   else

@@ -4,9 +4,14 @@
   "allFilesCompile": "Hamma fayllar joylandi",
   "backpackSaveErrorMessage": "Iltimos yana urinib kuring",
   "cancel": "Bekor qilish",
+  "create": "Yaratmoq",
+  "createNewFile": "Yangi fayl yaratish",
   "delete": "O'chirish",
   "genericErrorMessage": "Iltimos yana urinib kuring",
   "import": "import",
+  "invalidMainMethod": "Asosiy usulingizda xatolik yuz berdi. Asosiy usulingiz ommaviy, statik, bekor qilish turiga ega va faqat bitta argumentga ega ekanligiga ishonch hosil qiling (String [] args).",
   "rename": "Qayta nomlash",
-  "saving": "Saqlash ..."
+  "renameFile": "Faylni qayta nomlash",
+  "saving": "Saqlash ...",
+  "submit": "Taqdim qilmoq"
 }

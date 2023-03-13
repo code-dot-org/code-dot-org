@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:10:16.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -29,10 +25,10 @@
       "console.log": null,
       "functionParams_n": null,
       "comment": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -54,7 +50,8 @@
       "setText": null,
       "setPosition": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "colorLeds[0].pulse": null
     },
     "edit_code": true,
     "embed": "false",
@@ -96,11 +93,11 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "palette_category_at_start": "functions",
     "parent_level_id": 20574,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/6a78fb12e01bde21792db9ff53caa436-image-1649197807725.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor. It has a function called `loopCloud()` which uses the parameter `cloudID` to move a cloud across the screen.\r\n\r\nBut, right now the function only moves `\"cloud0\"` across the screen. We need to update the function to use our parameter to move each cloud instead.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Update the function to use the `cloudID` parameter]\r\n\t* Scroll down to the `loopCloud()` function ([**Show Me Where**](#triggercallout=define))\r\n\t* Update the function so it uses the `cloudID` parameter\r\n    :::\r\n\r\n**Run the code!** Every cloud should move across the screen when you blow on the sensor!",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -115,9 +112,13 @@
     "encrypted_examples": "Oi45yaRgAL4b9oM9ND2kIS0g7rvKV0z8fCN4xp875Q+UF6OL063HegmB/v3n\nRIFwGMlkeW6/TkUbX8hy9s0y+g==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:10:16.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:10:16.950+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2A_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:10:16.950+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2A_2022\"},{\"changed_at\":\"2023-02-17 21:29:16 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

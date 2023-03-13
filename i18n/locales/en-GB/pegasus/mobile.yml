@@ -232,6 +232,11 @@
   coursed-2021_gradelevel: Ages 7-11
   coursee-2021_gradelevel: Ages 8-12
   coursef-2021_gradelevel: Ages 9-13
+  coursea-2022_gradelevel: Ages 4-7
+  courseb-2022_gradelevel: Ages 5-8
+  coursed-2022_gradelevel: Ages 7-11
+  coursee-2022_gradelevel: Ages 8-12
+  coursef-2022_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   monsterocding_shortdescription: "A colourful self-guided programming adventure for children."
   hourofcode_longdescription: "Write your first computer program"
@@ -257,3 +262,4 @@
   footer_donate: "Donate"
   ai_activity: "Activity"
   ai_description: "Description"
+  hoc2022_landing_page_create_title: "Create"

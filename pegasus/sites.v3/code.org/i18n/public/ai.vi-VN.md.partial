@@ -21,7 +21,7 @@ social:
 # Học về Trí tuệ Nhân tạo (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">MỚI: AI và Mô-đun Học Máy</h2><p>Mô-đun chương trình giảng dạy mới của chúng tôi tập trung vào đạo đức AI, kiểm tra các vấn đề về thành kiến, khám phá và giải thích các khái niệm cơ bản thông qua một số hoạt động trực tuyến và ngoại tuyến cũng như qua các cuộc thảo luận toàn nhóm.</p><a  href="#about-aimodule"><button>Tìm hiểu thêm</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Khám phá mô-đun</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">MỚI: AI và Mô-đun Học Máy</h2><p>Mô-đun chương trình giảng dạy mới của chúng tôi tập trung vào đạo đức AI, kiểm tra các vấn đề về thành kiến, khám phá và giải thích các khái niệm cơ bản thông qua một số hoạt động trực tuyến và ngoại tuyến cũng như qua các cuộc thảo luận toàn nhóm.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="Phòng thí nghiệm AI"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ Tham gia với chúng tôi để khám phá AI trong một sê-ri các video m�
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## MỚI: AI và Mô-đun Học Máy
 <div>
-<div class="col-50">
-<p>"AI và Mô-đun Học Máy" là một mô-đun chương trình giảng dạy trong khoảng 5 tuần mà có thể được dạy như một <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >mô-đun độc lập</a> hay như một đơn vị <a href="https://studio.code.org/s/csd7-2021">không bắt buộc trong Các khám phá về CS</a>. Nó tập trung về đạo đức AI, kiểm tra các vấn đề và giải thích về các khái niệm cơ bản</p><p>Bởi vì học máy phụ thuộc vào các tập dữ liệu lớn nên đơn vị mới bao gồm các bộ dữ liệu đời thực về chăm sóc sức khỏe, nhân khẩu học, và hơn nữa là để thu hút học sinh trong khi khám phá những câu hỏi như, "Học Máy có thể giúp giải quyết vấn đề gì?" "AI giúp xã hội như thế nào?" "Ai sẽ được hưởng lợi từ AI?" "Ai bị hại?" "Ai có liên quan?" "Ai vẫn còn thiếu?"  </p>
-<p>Các cân nhắc về đạo đức sẽ được đặt lên hàng đầu trong các cuộc thảo luận này, với các điểm thảo luận thường xuyên và các bài học xung quanh các tác động của những công nghệ này. Điều này sẽ giúp học sinh phát triển một sự hiểu biết toàn diện, sâu sắc về các công nghệ này trong khi họ học các nền tảng kỹ thuật về cách hoạt động của các công nghệ.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. Nó tập trung về đạo đức AI, kiểm tra các vấn đề và giải thích về các khái niệm cơ bản</p><p>Bởi vì học máy phụ thuộc vào các tập dữ liệu lớn nên đơn vị mới bao gồm các bộ dữ liệu đời thực về chăm sóc sức khỏe, nhân khẩu học, và hơn nữa là để thu hút học sinh trong khi khám phá những câu hỏi như, "Học Máy có thể giúp giải quyết vấn đề gì?" "AI giúp xã hội như thế nào?" "Ai sẽ được hưởng lợi từ AI?" "Ai bị hại?" "Ai có liên quan?" "Ai vẫn còn thiếu?"  </p>
+    <p>Các cân nhắc về đạo đức sẽ được đặt lên hàng đầu trong các cuộc thảo luận này, với các điểm thảo luận thường xuyên và các bài học xung quanh các tác động của những công nghệ này. Điều này sẽ giúp học sinh phát triển một sự hiểu biết toàn diện, sâu sắc về các công nghệ này trong khi họ học các nền tảng kỹ thuật về cách hoạt động của các công nghệ.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## Cách thức hoạt động của AI
 
 Với phần giới thiệu của Giám đốc Điều hành Microsoft Satya Nadella, loạt video ngắn này sẽ giới thiệu cho bạn cách thức hoạt động của trí tuệ nhân tạo và tầm quan trọng của nó. Tìm hiểu về mạng nơ-ron hoặc cách AI học và đi sâu vào các vấn đề như sai lệch thuật toán và đạo đức ra quyết định của AI.
@@ -115,3 +114,5 @@ Các cấp độ 2-4 sử dụng mô hình đào tạo trước được cung c�
 Cấp độ 6-8 sử dụng \[Máy hỗ trợ vector\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Chúng tôi xem xét từng bộ phận của cá (chẳng hạn như mắt, miệng, cơ thể) và tập hợp tất cả siêu dữ liệu cho các bộ phận (chẳng hạn như số lượng răng, hình dạng cơ thể) thành một vector số cho mỗi con cá. Chúng tôi sử dụng các vector này để đào tạo SVM. Dựa trên dữ liệu đào tạo, SVM tách "không gian" của tất cả các loài cá có thể thành hai phần, tương ứng với các phân lớp mà chúng ta đang cố gắng học (chẳng hạn như "màu xanh" hoặc "không phải màu xanh").
 
 [[Trở lại đầu trang]](#top)
+
+{{ visit_partial_event_logger }}

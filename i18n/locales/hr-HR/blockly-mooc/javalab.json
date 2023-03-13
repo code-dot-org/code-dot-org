@@ -1,6 +1,11 @@
 {
   "cancel": "Odustani",
+  "create": "Stvori",
+  "createNewFile": "Stvori novu datoteku",
   "delete": "izbriši",
   "import": "Uvoz",
-  "rename": "Preimenuj"
+  "invalidMainMethod": "Došlo je do pogreške u vašoj glavnoj metodi. Provjerite je li vaša glavna metoda javna, statična, ima void povratni tip i ima samo jedan argument (String[] args).",
+  "rename": "Preimenuj",
+  "renameFile": "Preimenuj datoteku",
+  "submit": "Pošalji"
 }

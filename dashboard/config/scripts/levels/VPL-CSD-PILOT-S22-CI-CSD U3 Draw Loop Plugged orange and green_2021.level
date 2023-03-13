@@ -50,16 +50,16 @@
     "parent_level_id": 20711,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/sprites",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/animation-tab",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/sprite-properties",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/random-numbers",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/variables",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/naming-variables",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/drawing-shapes",
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/game-lab/the-draw-loop/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/the-draw-loop",
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -69,11 +69,11 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-25T20:16:42.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-25T20:16:42.000Z",
   "user_id": 106,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-25T20:16:42.721+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged orange and green_2021\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged orange and green_2021\"},{\"changed_at\":\"2022-03-26 00:23:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-26 00:50:16 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

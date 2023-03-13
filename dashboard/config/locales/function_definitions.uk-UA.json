@@ -841,11 +841,17 @@
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "щось зробити"
+          },
+          "get 3 nectar or honey": {
+            "name": "зібрати 3 нектари чи мед"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "щось зробити"
+          },
+          "move and collect": {
+            "name": "рухатись та збирати"
           }
         },
         "course4_artist_functions_challenge2": {
@@ -1356,11 +1362,17 @@
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "щось зробити"
+          },
+          "get 3 nectar or honey": {
+            "name": "зібрати 3 нектари чи мед"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "щось зробити"
+          },
+          "move and collect": {
+            "name": "рухатись та збирати"
           }
         },
         "courseE_farmer_concept1": {
@@ -1626,21 +1638,24 @@
           "rowOfNectar": {
             "parameters": {
               "length": "довжина"
-            }
+            },
+            "name": "рядНектару"
           }
         },
         "courseF_bee_fwp5": {
           "rowOfNectar": {
             "parameters": {
               "width": "ширина"
-            }
+            },
+            "name": "рядНектару"
           }
         },
         "courseF_bee_fwp6": {
           "rowOfNectar": {
             "parameters": {
               "width": "ширина"
-            }
+            },
+            "name": "рядНектару"
           }
         },
         "courseF_bee_fwp7": {
@@ -2864,6 +2879,612 @@
           },
           "draw goal": {
             "name": "намалювати ціль"
+          }
+        },
+        "2-3 Artist Functions 10": {
+          "big gear": {
+            "name": "велика шестерня"
+          },
+          "small gear": {
+            "name": "маленька шестерня"
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": "зібрати 2 нектари"
+          }
+        },
+        "2-3 Bee Functions 2": {
+          "get 5": {
+            "name": "зібрати 5"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "рухатись та взяти нектар"
+          }
+        },
+        "2-3 Bee Functions 5": {
+          "move and get 4": {
+            "name": "рухатись та зібрати 4"
+          }
+        },
+        "2-3 Bee Functions 6": {
+          "move and get 4": {
+            "name": "рухатись та зібрати 4"
+          }
+        },
+        "2-3 Bee Functions 8": {
+          "get 7 nectar make 7 honey": {
+            "name": "взяти 7 нектару зробити 7 меду"
+          }
+        },
+        "2-3 Bee Functions 9": {
+          "get 7 make 7": {
+            "name": "зібрати 7 зробити 7"
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": "зібрати 7"
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": "рухатись та взяти 3"
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": "перевірити фіолетову квітку"
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": "перевірити квітку зробити мед"
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": "зібрати нектар чи зробити мед"
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "зробити мед 3"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "зробити увесь мед"
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          },
+          "row of nectar": {
+            "name": "ряд з нектару"
+          },
+          "rowOfNectar": {
+            "name": "рядНектару"
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          },
+          "row of nectar": {
+            "name": "ряд з нектару"
+          },
+          "rowOfNectar": {
+            "name": "рядНектару"
+          },
+          "move and check": {
+            "name": "рухатись та перевіряти"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "перемога"
+          },
+          "lose game": {
+            "name": "програти"
+          },
+          "keep playing": {
+            "name": "продовжити"
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": "зібрати 2 нектари"
+          }
+        },
+        "courseE_bee_functions3": {
+          "get 5": {
+            "name": "зібрати 5"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "рухатись та взяти нектар"
+          }
+        },
+        "courseE_bee_functions5": {
+          "move and get 4": {
+            "name": "рухатись та зібрати 4"
+          }
+        },
+        "courseE_bee_functions6": {
+          "get 7 nectar make 7 honey": {
+            "name": "взяти 7 нектару зробити 7 меду"
+          }
+        },
+        "courseE_bee_functions7": {
+          "get 7 make 7": {
+            "name": "зібрати 7 зробити 7"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "перемога"
+          },
+          "lose game": {
+            "name": "програти"
+          },
+          "keep playing": {
+            "name": "продовжити"
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "move and check": {
+            "name": "рухатись та перевіряти"
+          },
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          }
+        },
+        "courseF_bee_functions4": {
+          "move and check": {
+            "name": "рухатись та перевіряти"
+          },
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "move and check": {
+            "name": "рухатись та перевіряти"
+          },
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "row of nectar": {
+            "name": "ряд з нектару"
+          },
+          "rowOfNectar": {
+            "name": "рядНектару"
+          },
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "rowOfNectar": {
+            "name": "рядНектару"
+          },
+          "move and check": {
+            "name": "рухатись та перевіряти"
+          },
+          "check nectar or honey": {
+            "name": "перевірити нектар чи мед"
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": "рядНектару"
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": "рядНектару"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "функція 1"
+          },
+          "function 2": {
+            "name": "функція 2"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "моя функція"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина",
+              "sides": "сторони"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "побудувати міст"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "очистити шлях"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "виправити довгий шлях"
+          },
+          "fix short path": {
+            "name": "виправити короткий шлях"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "побудувати короткий міст"
+          },
+          "build long bridge": {
+            "name": "побудувати довгий міст"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "функція 1"
+          },
+          "function 2": {
+            "name": "функція 2"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "можливе рішення"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "намалювати зірку"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          },
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          },
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          },
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "щось зробити"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+            "name": "малювати лінію квадрату"
+          },
+          "draw square": {
+            "name": "намалюйте квадрат"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "намалювати квадрат"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "щось зробити"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "завершити гру"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "завершити гру"
           }
         }
       }

@@ -1,6 +1,6 @@
 name 'CSA U7L4-L2_2022'
-display_name 'Writing Overloaded Methods'
-description 'Practice writing overloaded methods using the console, The Neighborhood, or The Theater.'
+display_name 'Writing Private Methods'
+description 'Practice writing private methods using the console or The Theater.'
 
 sublevels
 level 'CSA U7L4-L2a_2022'

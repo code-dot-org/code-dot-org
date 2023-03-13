@@ -7,6 +7,16 @@ import * as utils from '@cdo/apps/utils';
 import * as browserChecks from '@cdo/apps/lib/kits/maker/util/browserChecks';
 import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
+import {Provider} from 'react-redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import microBitReducer, {
+  setMicroBitFirmataUpdatePercent
+} from '@cdo/apps/lib/kits/maker/microBitRedux';
 
 describe('SetupChecklist', () => {
   let checker;
@@ -19,27 +29,66 @@ describe('SetupChecklist', () => {
   const WAITING_ICON = '.fa-clock-o';
   const SUCCESS_ICON = '.fa-check-circle';
   const FAILURE_ICON = '.fa-times-circle';
+  const error = new Error('test error');
 
   beforeEach(() => {
     sinon.stub(utils, 'reload');
     sinon.stub(window.console, 'error');
-    checker = new StubSetupChecker();
+    sinon
+      .stub(SetupChecker.prototype, 'detectSupportedBrowser')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectChromeAppInstalled')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectBoardPluggedIn')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectCorrectFirmware')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectBoardType')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'detectComponentsInitialize')
+      .callsFake(() => Promise.resolve());
+    sinon
+      .stub(SetupChecker.prototype, 'celebrate')
+      .callsFake(() => Promise.resolve());
+    stubRedux();
+    registerReducers({microBit: microBitReducer});
+    getStore().dispatch(setMicroBitFirmataUpdatePercent(0));
   });
 
   afterEach(() => {
     window.console.error.restore();
     utils.reload.restore();
+    SetupChecker.prototype.detectSupportedBrowser.restore();
+    SetupChecker.prototype.detectChromeAppInstalled.restore();
+    SetupChecker.prototype.detectBoardPluggedIn.restore();
+    SetupChecker.prototype.detectCorrectFirmware.restore();
+    SetupChecker.prototype.detectBoardType.restore();
+    SetupChecker.prototype.detectComponentsInitialize.restore();
+    SetupChecker.prototype.celebrate.restore();
+    restoreRedux();
   });
 
   describe('on Chrome OS', () => {
-    before(() => sinon.stub(browserChecks, 'isChromeOS').returns(true));
-    before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(false));
-    after(() => browserChecks.isCodeOrgBrowser.restore());
-    after(() => browserChecks.isChromeOS.restore());
+    before(() => {
+      sinon.stub(browserChecks, 'isChrome').returns(true);
+      sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(false); // maker app
+    });
+
+    after(() => {
+      browserChecks.isCodeOrgBrowser.restore();
+      browserChecks.isChrome.restore();
+    });
 
     it('renders success', async () => {
       const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+        <Provider store={getStore()}>
+          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+        </Provider>
       );
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
       expect(wrapper.find(WAITING_ICON)).to.have.length(1);
@@ -50,10 +99,30 @@ describe('SetupChecklist', () => {
     });
 
     describe('test with expected console.error', () => {
-      it('reloads the page on re-detect if plugin not installed', async () => {
-        checker.detectChromeAppInstalled.rejects(new Error('not installed'));
+      it('does not reload the page on re-detect if successful', async () => {
         const wrapper = mount(
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+          <Provider store={getStore()}>
+            <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+          </Provider>
+        );
+        await yieldUntilDoneDetecting(wrapper);
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        wrapper.find(REDETECT_BUTTON).simulate('click');
+        expect(wrapper.find(WAITING_ICON)).to.have.length(1);
+        await yieldUntilDoneDetecting(wrapper);
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        expect(utils.reload).not.to.have.been.called;
+      });
+
+      it('reloads the page on re-detect if plugin not installed', async () => {
+        SetupChecker.prototype.detectChromeAppInstalled.restore();
+        sinon
+          .stub(SetupChecker.prototype, 'detectChromeAppInstalled')
+          .callsFake(() => Promise.reject(error));
+        const wrapper = mount(
+          <Provider store={getStore()}>
+            <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+          </Provider>
         );
         await yieldUntilDoneDetecting(wrapper);
         expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
@@ -63,30 +132,24 @@ describe('SetupChecklist', () => {
         expect(utils.reload).to.have.been.called;
       });
     });
-
-    it('does not reload the page on re-detect if successful', async () => {
-      const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-      );
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-      wrapper.find(REDETECT_BUTTON).simulate('click');
-      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-      expect(utils.reload).not.to.have.been.called;
-    });
   });
 
   describe('on Code.org Browser', () => {
-    before(() => sinon.stub(browserChecks, 'isChrome').returns(false));
-    before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(true));
-    after(() => browserChecks.isCodeOrgBrowser.restore());
-    after(() => browserChecks.isChrome.restore());
+    before(() => {
+      sinon.stub(browserChecks, 'isChrome').returns(false);
+      sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(true);
+    });
+
+    after(() => {
+      browserChecks.isCodeOrgBrowser.restore();
+      browserChecks.isChrome.restore();
+    });
 
     it('renders success', async () => {
       const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+        <Provider store={getStore()}>
+          <SetupChecklist stepDelay={STEP_DELAY_MS} />
+        </Provider>
       );
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
       expect(wrapper.find(WAITING_ICON)).to.have.length(1);
@@ -98,10 +161,14 @@ describe('SetupChecklist', () => {
 
     describe('test with expected console.error', () => {
       it('fails if Code.org browser version is wrong', async () => {
-        const error = new Error('test error');
-        checker.detectSupportedBrowser.rejects(error);
+        SetupChecker.prototype.detectSupportedBrowser.restore();
+        sinon
+          .stub(SetupChecker.prototype, 'detectSupportedBrowser')
+          .callsFake(() => Promise.reject(error));
         const wrapper = mount(
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+          <Provider store={getStore()}>
+            <SetupChecklist stepDelay={STEP_DELAY_MS} />
+          </Provider>
         );
         expect(wrapper.find(WAITING_ICON)).to.have.length(1);
         await yieldUntilDoneDetecting(wrapper);
@@ -111,9 +178,14 @@ describe('SetupChecklist', () => {
       });
 
       it('reloads the page on re-detect if browser check fails', async () => {
-        checker.detectSupportedBrowser.rejects(new Error('test error'));
+        SetupChecker.prototype.detectSupportedBrowser.restore();
+        sinon
+          .stub(SetupChecker.prototype, 'detectSupportedBrowser')
+          .callsFake(() => Promise.reject(error));
         const wrapper = mount(
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+          <Provider store={getStore()}>
+            <SetupChecklist stepDelay={STEP_DELAY_MS} />
+          </Provider>
         );
         await yieldUntilDoneDetecting(wrapper);
         expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
@@ -126,7 +198,9 @@ describe('SetupChecklist', () => {
 
     it('does not reload the page on re-detect if successful', async () => {
       const wrapper = mount(
-        <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
+        <Provider store={getStore()}>
+          <SetupChecklist stepDelay={STEP_DELAY_MS} />
+        </Provider>
       );
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
@@ -155,7 +229,7 @@ describe('SetupChecklist', () => {
  * @param {number} intervalMs - time to wait between steps
  * @return {Promise}
  */
-function yieldUntil(wrapper, predicate, timeoutMs = 2000, intervalMs = 5) {
+function yieldUntil(wrapper, predicate, timeoutMs = 3500, intervalMs = 5) {
   return new Promise((resolve, reject) => {
     let elapsedTime = 0;
     const key = setInterval(() => {
@@ -172,24 +246,4 @@ function yieldUntil(wrapper, predicate, timeoutMs = 2000, intervalMs = 5) {
       }
     }, intervalMs);
   });
-}
-
-/**
- * SetupChecker with all methods stubbed and by default everything succeeds.
- * Since methods are sinon stubs, individual tests can modify stub behavior
- * as needed.
- * @see http://sinonjs.org/releases/v2.1.0/stubs/#defining-stub-behavior-on-consecutive-calls
- */
-class StubSetupChecker extends SetupChecker {
-  constructor() {
-    super();
-    sinon.stub(this, 'detectSupportedBrowser').resolves();
-    sinon.stub(this, 'detectChromeAppInstalled').resolves();
-    sinon.stub(this, 'detectBoardPluggedIn').resolves();
-    sinon.stub(this, 'detectCorrectFirmware').resolves();
-    sinon.stub(this, 'detectBoardType').resolves();
-    sinon.stub(this, 'detectComponentsInitialize').resolves();
-    sinon.stub(this, 'celebrate').resolves();
-    sinon.stub(this, 'teardown');
-  }
 }

@@ -2,6 +2,7 @@ require 'cdo/firehose'
 require 'cdo/honeybadger'
 
 class RegistrationsController < Devise::RegistrationsController
+  include User::GenderExperimentHelper
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
@@ -21,7 +22,6 @@ class RegistrationsController < Devise::RegistrationsController
       @user = User.new_with_session(user_params.permit(:user_type), session)
     else
       save_default_sign_up_user_type
-      @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
     end
@@ -101,6 +101,9 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
+    gender = params.dig(:user, :gender)
+    gender_input_type = gender_input_type?(request, session)
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
         Honeybadger.notify(
@@ -111,7 +114,7 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    should_send_new_teacher_email = current_user && current_user.teacher?
+    should_send_new_teacher_email = current_user&.teacher?
     TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
     ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
@@ -120,6 +123,7 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
+      SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'email_signup', current_user)
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -182,12 +186,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def sign_up_params
     super.tap do |params|
-      if params[:user_type] == "teacher"
+      case params[:user_type]
+      when 'teacher'
         params[:email_preference_opt_in_required] = true
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
-      elsif params[:user_type] == "student"
+      when 'student'
         params[:parent_email_preference_request_ip] = request.ip
         params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
       end
@@ -211,7 +216,7 @@ class RegistrationsController < Devise::RegistrationsController
   # from cached pages which will not populate the CSRF token
   def set_age
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) unless current_user.age.present?
+    current_user.update(age: params[:user][:age]) if current_user.age.blank?
   end
 
   def upgrade

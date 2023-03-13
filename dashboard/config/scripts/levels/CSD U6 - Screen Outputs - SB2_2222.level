@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T16:52:38.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -11,10 +7,10 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Changing Position\r\n\r\nEvery design element (except for the screen) has an \"x\" and a \"y\" property that controls its position. We can use these properties to re-position elements on the screen.\r\n\r\n_Note: We've removed the Design Mode tab for now so you can practice working with setProperty, but it'll come back later once you're building apps of your own._\r\n\r\n# Do This\r\n\r\n<div markdown=\"1\" style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)\r\n\r\n</div>\r\n\r\n1) Look at the image to the right (click to see the image in full size). We want to make our app match this picture\r\n2) Look at the example code that moves the `greenButton` to the upper-right corner\r\n3) Move \"redButton\" so it is in the upper-left corner\r\n\t- Use two [`setProperty()`(#fff176)](/docs/applab/setProperty/) blocks to change the `x` and `y` properties of the `\"redButton\"` element",
+    "long_instructions": "# Changing Position\r\n\r\nEvery design element (except for the screen) has an \"x\" and a \"y\" property that controls its position. We can use these properties to re-position elements on the screen.\r\n\r\nThe App Lab screen is 320 pixels wide and 450 pixels tall.\r\n\r\n_Note: We've removed the Design Mode tab for now so you can practice working with setProperty, but it'll come back later once you're building apps of your own._\r\n\r\n# Do This\r\n\r\n<div markdown=\"1\" style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)\r\n\r\n</div>\r\n\r\n1) Look at the image to the right (click to see the image in full size). We want to make our app match this picture\r\n2) Look at the example code that moves the `greenButton` to the upper-right corner\r\n3) Move \"redButton\" so it is in the upper-left corner\r\n\t- Use two [`setProperty()`(#fff176)](/docs/applab/setProperty/) blocks to change the `x` and `y` properties of the `\"redButton\"` element",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "//2) Look at the example code below\n//This code positions the green button at x: 160 and y: 0\nsetProperty(\"greenButton\", \"x\", 160);\nsetProperty(\"greenButton\", \"y\", 0);\n\n//3) Move \"redButton\" so it is in the upper-left corner\n",
+    "start_blocks": "//2) Look at the example code below\r\n//This code positions the green button at x: 160 and y: 0\r\nsetProperty(\"greenButton\", \"x\", 160);\r\nsetProperty(\"greenButton\", \"y\", 0);\r\n\r\n//3) Move \"redButton\" so it is in the upper-left corner\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -55,7 +51,7 @@
     "parent_level_id": 20377,
     "name_suffix": "_2222",
     "show_type_hints": "false",
-    "map_reference": "/docs/concepts/app-lab/designing-screens-with-code/",
+    "map_reference": "/courses/csd-2022/guides/designing-screens-with-code",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -69,9 +65,13 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T16:52:38.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:38.692+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB2_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:38.692+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB2_2022\"},{\"changed_at\":\"2022-05-19 17:03:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

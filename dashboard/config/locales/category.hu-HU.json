@@ -1,0 +1,14 @@
+{
+  "hu-HU": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Számítógépes gondolkodás"
+        },
+        "ccela/L": {
+          "description": "Nyelv"
+        }
+      }
+    }
+  }
+}

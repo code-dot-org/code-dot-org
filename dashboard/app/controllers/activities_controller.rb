@@ -26,10 +26,10 @@ class ActivitiesController < ApplicationController
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
+      @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      @level = Script.cache_find_level(params[:level_id].to_i)
+      @level = Unit.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -44,7 +44,7 @@ class ActivitiesController < ApplicationController
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
     #  - this is the final level in the script - we always post on final level
     unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
-      head 503
+      head :service_unavailable
       return
     end
 
@@ -98,7 +98,7 @@ class ActivitiesController < ApplicationController
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
       # we have a lockable lesson, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
-        return head 403
+        return head :forbidden
       end
     end
 
@@ -119,14 +119,9 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    total_lines = if current_user && current_user.total_lines
-                    current_user.total_lines
-                  end
-
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
-      total_lines: total_lines,
       solved?: solved,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
@@ -217,13 +212,6 @@ class ActivitiesController < ApplicationController
           attempt: params[:attempt]
         )
       end
-    end
-
-    passed = ActivityConstants.passing?(test_result)
-    if lines > 0 && passed
-      current_user.total_lines += lines
-      # bypass validations/transactions/etc
-      User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
   end
 

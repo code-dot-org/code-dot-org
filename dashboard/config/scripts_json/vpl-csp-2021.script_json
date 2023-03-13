@@ -9,20 +9,6 @@
       "is_migrated": true,
       "pilot_experiment": "20-21-virtual-AYW-CSP",
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "curriculum",
-          "https://studio.code.org/courses/csp-2021"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing"
-        ]
-      ],
       "version_year": "2021"
     },
     "new_name": null,
@@ -30,8 +16,8 @@
     "serialized_at": "2022-04-08 15:41:08 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "vpl-csp-2021"
     }

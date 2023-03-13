@@ -38,11 +38,11 @@ Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và n
 
 <a id="logo"></a>
 
-## Dùng logo Hour of Code để quảng bá
+## Dùng logo Giờ lập trình để quảng bá
 
 [![hình ảnh]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![hình ảnh]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Tải về phiên bản hi-res](https://images.code.org/share/hour-of-code-logo.zip)
+[Tải về phiên bản độ phân giải cao](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" (Giờ lập trình) và "Hora del Código" đã được đăng ký bản quyền. Chúng tôi không muốn ngăn bạn sử dụng, nhưng chúng tôi mong bạn sử dụng trong những giới hạn nhất định:**
 
@@ -66,9 +66,9 @@ Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và n
 
 <a id="stickers"></a>
 
-## In những stickers để cung cấp cho học sinh của bạn
+## In sticker để phát cho học sinh của bạn
 
-(Sticker có đường kính 2,5 cm, 63 cái mỗi trang) <br />
+(Sticker có đường kính 2,5 cm, 63 cái mỗi tờ) <br />
 
 [![hình ảnh](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
@@ -86,13 +86,13 @@ Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và n
 
 **Dòng tiêu đề:** Hãy cùng tôi và hơn 100 triệu học sinh tham gia Giờ lập trình <br />
 
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools offer computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã nghe nói về Hour of Code trước đây, bạn có thể biết nó đã làm nên lịch sử. Hơn 100 triệu sinh viên đã cố gắng Hour of Code.
+Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. Nhưng chỉ 51% trường trung học dạy môn khoa học máy tính. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã nghe nói về Giờ lập trình trước đây, có thể bạn đã biết chương trình này từng làm nên lịch sử. Hơn 100 triệu sinh viên đã thử Giờ lập trình.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Tất cả Cửa hàng Apple trên thế giới đều đã tổ chức Giờ lập trình và những nhà lãnh đạo như Tổng thống Obama và Thủ tướng Canada Justin Trudeau đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch.
 
 Chúng ta cùng tổ chức sự kiện lớn hơn trong năm nay nhé. Tôi đang mời bạn tham gia Giờ lập trình {{ campaign_date/year }}. Hãy tham gia sự kiện Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính, {{ campaign_date/full }}.
 
-Hãy nói ra. Hãy tổ chức một sự kiện. Mời một trường học địa phương đăng nhập. Hoặc tự thử nghiệm Hour of Code\--- mọi người đều tìm thấy lợi ích từ những điều cơ bản.
+Hãy lan truyền tin tức. Hãy tổ chức một sự kiện. Mời một trường học địa phương đăng ký. Hoặc tự thử nghiệm Giờ lập trình - mọi người đều tìm thấy lợi ích từ những điều cơ bản.
 
 Bắt đầu tại http://hourofcode.com/{{ country_language }} <br />
 
@@ -112,7 +112,7 @@ Trong {{ campaign_date/short }}, 10% học sinh trên khắp thế giới sẽ �
 
 Học sinh sẽ tự tạo ứng dụng và game để khoe với cha mẹ. Chúng tôi cũng sẽ in chứng chỉ Giờ lập trình để các em mang về nhà. Sự kiện này sẽ rất vui đấy! Với các hoạt động thực hành tương tác, học sinh sẽ tìm hiểu các kỹ năng tư duy máy tính bằng phương pháp dễ tiếp cận.
 
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools offer computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã từng nghe tới Giờ lập trình trước đây, có thể bạn biết rằng sự kiện này đã làm nên lịch sử - hơn 100 triệu học sinh trên toàn thế giới đã tham gia Giờ lập trình. Ngay cả các nhà lãnh đạo như Tổng thống Obama và Thủ tưởng Canada Justin Trudeau cũng đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch này.
+Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. Nhưng chỉ 51% trường trung học dạy môn khoa học máy tính. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã từng nghe tới Giờ lập trình trước đây, có thể bạn biết rằng sự kiện này đã làm nên lịch sử - hơn 100 triệu học sinh trên toàn thế giới đã tham gia Giờ lập trình. Ngay cả các nhà lãnh đạo như Tổng thống Obama và Thủ tưởng Canada Justin Trudeau cũng đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch này.
 
 Bạn có thể đọc thêm về sự kiện tại http://hourofcode.com. Ngoài ra, hãy cho chúng tôi biết nếu bạn muốn lên lịch hẹn để trò chuyện về cách tham gia của [tên trường].<br />
 
@@ -128,11 +128,11 @@ Các bậc phụ huynh thân mến,
 
 Chúng ta đang được sống trong thế giới của công nghệ. Và chúng ta đều hiểu rằng dù khi lớn lên những đứa trẻ của chúng ta có chọn đi theo chuyên ngành nào thì khả năng thành công của chúng sẽ cao hơn nếu các em có những hiểu biết cơ bản về của công nghệ.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
+Nhưng rất ít người trong số chúng ta đang được học về **cách hoạt động** của công nghệ. Chỉ 51% trường trung học dạy môn khoa học máy tính.
 
-Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code. Giờ lập trình của chúng ta sẽ gửi đi thông điệp rằng [TÊN TRƯỜNG] đã sẵn sàng giảng dạy những kỹ năng căn bản của thế kỷ 21 này. Để tiếp tục mang hoạt động lập trình đến con em của các bạn, chúng tôi muốn làm cho sự kiện Giờ Lập trình với quy mô lớn hơn. Tôi khuyến khích các bạn hãy tham gia tình nguyện, liên hệ với phương tiện truyền thông địa phương, chia sẻ tin tức trên kênh phương tiện truyền thông xã hội của các bạn và xem xét việc tổ chức thêm sự kiện Giờ Lập Trình ở cộng đồng.
+Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã thử Giờ lập trình. Giờ lập trình của chúng ta sẽ gửi đi thông điệp rằng [TÊN TRƯỜNG] đã sẵn sàng giảng dạy những kỹ năng căn bản của thế kỷ 21 này. Để tiếp tục mang hoạt động lập trình đến với học sinh của bạn, chúng tôi muốn làm sự kiện Giờ lập trình với quy mô lớn hơn. Tôi khuyến khích các bạn hãy tham gia tình nguyện, liên hệ với phương tiện truyền thông địa phương, chia sẻ tin tức trên kênh mạng xã hội và xem xét việc tổ chức thêm sự kiện Giờ lập trình ở cộng đồng.
 
-Đây là thời cơ để thay đổi nền giáo dục tương lai ở [THỊ TRẤN/ TÊN THÀNH PHỐ].
+Đây là thời cơ để thay đổi nền giáo dục tương lai ở [THỊ TRẤN/TÊN THÀNH PHỐ].
 
 Xem chi tiết tại http://hourofcode.com/{{ country_language }} và giúp quảng bá sự kiện.<br />
 
@@ -140,13 +140,13 @@ Xem chi tiết tại http://hourofcode.com/{{ country_language }} và giúp qu�
 
 <a id="media-pitch"></a>
 
-### Lôi cuốn truyền thông vào sự kiện:
+### Mời truyền thông tham gia sự kiện:
 
 #### [Xem bộ công cụ truyền thông của chúng tôi để biết thêm thông tin về việc mời các đơn vị truyền thông tới dự sự kiện của bạn.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
+Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh này, nhưng chỉ 51% trường trung học dạy môn khoa học máy tính. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang thay đổi thực trạng này.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Tất cả Apple Store trên thế giới đều tổ chức Giờ lập trình. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -172,14 +172,14 @@ I look forward to being in touch. <br />
 
 [Họ của Thị trưởng/Thống đốc/Ban đại diện/thượng nghị sĩ] kính mến:
 
-Ông/bà có biết rằng máy tính là nguồn #1 của lương tại Mỹ.? Có hơn 500.000 tính toán công việc mở trên toàn quốc, nhưng năm ngoái chỉ 42,969 máy tính khoa học sinh viên tốt nghiệp vào lực lượng lao động.
+Ông/bà có biết rằng máy tính là nguồn thu nhập hàng đầu tại Hoa Kỳ? Có hơn 500.000 công việc liên quan đến máy tính trên toàn quốc, nhưng năm ngoái chỉ có 42,969 sinh viên tốt nghiệp ngành khoa học máy tính bước vào thị trường lao động.
 
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
+Khoa học máy tính là nền tảng của mọi ngành công nghiệp hiện nay, nhưng hầu hết các trường học không dạy môn này. Tại [TÊN TRƯỜNG], chúng tôi đang cố gắng thay đổi thực trạng đó.
 
-Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code.
+Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã thử Giờ lập trình.
 
-Tôi viết thư này kính mời ông/bà tham dự sự kiện Giờ lập trình và phát kiểu tại hội nghị khai mạc của chúng tôi. Sự kiện sẽ diễn ra vào [NGÀY, GIỜ, ĐỊA ĐIỂM] và sẽ trịnh trọng tuyên bố rằng [Tên thành phố hoặc bang] đã sẵn sàng giảng dạy những kỹ năng thiết yếu của thế kỷ 21 cho học sinh. Chúng tôi muốn đảm bảo rằng học sinh của chúng tôi đang đi đầu trong việc tạo ra các công nghệ của tương lai-không chỉ tiêu thụ nó.
+Tôi viết thư này kính mời ông/bà tham dự sự kiện Giờ lập trình và phát kiểu tại hội nghị khai mạc của chúng tôi. Sự kiện sẽ diễn ra vào [NGÀY, GIỜ, ĐỊA ĐIỂM] và sẽ trịnh trọng tuyên bố rằng [Tên thành phố hoặc bang] đã sẵn sàng giảng dạy những kỹ năng thiết yếu của thế kỷ 21 cho học sinh. Chúng tôi muốn đảm bảo rằng học sinh của chúng tôi đang đi đầu trong việc tạo ra các công nghệ của tương lai, thay vì chỉ sử dụng chúng.
 
-Làm ơn liên hệ với chúng tôi theo số [SỐ ĐIỆN THOẠI HOẶC ĐỊA CHỈ EMAIL]. Tôi mong chờ hồi âm của ông/bà.
+Vui lòng liên hệ với chúng tôi theo số [SỐ ĐIỆN THOẠI HOẶC ĐỊA CHỈ EMAIL]. Tôi mong chờ hồi âm của ông/bà.
 
 {{ signup_button }}

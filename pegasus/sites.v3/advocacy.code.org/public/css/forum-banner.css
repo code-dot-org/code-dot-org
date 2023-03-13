@@ -1,11 +1,11 @@
 .announcement {
   width: 100%;
   color: white;
-  background-color: #00adbc;
+  background-color: #293555;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow:hidden;
-  padding: 14px;
+  padding: 10px;
   border-radius: 5px
 }
 

@@ -41,6 +41,7 @@ body.modal-open .supreme-container{
 #homepage #hero {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 #homepage #hero .widehero {
@@ -392,6 +393,12 @@ body.modal-open .supreme-container{
   border-color: black;
 }
 
+#homepage #actions .herohocbutton-hollow-black {
+  color: black;
+  background: none;
+  border-color: black;
+}
+
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;
@@ -701,3 +708,73 @@ body.modal-open .supreme-container{
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
+
+/* Custom banner styles */
+/* CSA launch */
+#homepage .csa {
+  max-width: 960px;
+  margin: 2em auto 5em;
+}
+
+  #homepage .csa .action {
+    text-align: left;
+  }
+
+  #homepage .csa img {
+    position: absolute;
+    top: -48px;
+    z-index: -1;
+  }
+
+  #homepage .csa .text {
+    color: white;
+    text-align: left;
+    line-height: 1.3;
+    max-width: 470px;
+  }
+    #homepage .csa .text:nth-of-type(1) {
+      font-size: 24px;
+      margin-bottom: -4px;
+    }
+      #homepage .csa .text:nth-of-type(2) {
+        font-size: 32px;
+        font-family: 'Gotham 7r', sans-serif;
+        margin: 0 0 .75em;
+      }
+        #homepage .csa .text:nth-of-type(3) {
+          font-size: 18px;
+          margin: 0 0 1.75em;
+        }
+
+  /* Tablet styles */
+  @media screen and (max-width: 969px) {
+    #homepage .csa .text:nth-of-type(3) {
+      width: 52%;
+    }
+
+    #homepage .csa img {
+      width: 50%;
+      top: 1em;
+      right: -3em;
+    }
+  }
+
+  /* Mobile styles */
+  @media screen and (max-width: 745px) {
+    #homepage .csa .text,
+    #homepage .csa .action {
+      text-align: center;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+      #homepage .csa .text:nth-of-type(2) {
+        font-size: 26px;
+      }
+        #homepage .csa .text:nth-of-type(3) {
+          width: 100%;
+        }
+
+    #homepage .csa img {
+      display: none;
+    }
+  }

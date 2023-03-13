@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import UnitOverviewTopRow from './UnitOverviewTopRow';
@@ -9,8 +9,7 @@ import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/Un
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import UnitOverviewHeader from './UnitOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
@@ -23,6 +22,9 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -37,8 +39,7 @@ class UnitOverview extends React.Component {
     courseLink: PropTypes.string,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(resourceShape),
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
@@ -56,6 +57,9 @@ class UnitOverview extends React.Component {
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
+    isProfessionalLearningCourse: PropTypes.bool,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    participantAudience: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -63,7 +67,8 @@ class UnitOverview extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    userType: PropTypes.string
   };
 
   constructor(props) {
@@ -71,6 +76,15 @@ class UnitOverview extends React.Component {
     const showRedirectDialog =
       props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName
+        }
+      );
+    }
   }
 
   onCloseRedirectDialog = () => {
@@ -86,7 +100,6 @@ class UnitOverview extends React.Component {
     const {
       excludeCsfColumnInLegend,
       teacherResources,
-      migratedTeacherResources,
       studentResources,
       scriptId,
       scriptName,
@@ -112,7 +125,10 @@ class UnitOverview extends React.Component {
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse,
+      publishedState,
+      participantAudience
     } = this.props;
 
     const displayRedirectDialog =
@@ -171,7 +187,6 @@ class UnitOverview extends React.Component {
           )}
           <UnitOverviewTopRow
             teacherResources={teacherResources}
-            migratedTeacherResources={migratedTeacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
@@ -183,6 +198,10 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
+            isProfessionalLearningCourse={isProfessionalLearningCourse}
+            courseLink={this.props.courseLink}
+            publishedState={publishedState}
+            participantAudience={participantAudience}
           />
         </div>
         <ProgressTable minimal={false} />

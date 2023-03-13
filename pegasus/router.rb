@@ -8,7 +8,7 @@ require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
-require 'cdo/properties'
+require_relative 'helpers/properties'
 require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
@@ -59,7 +59,7 @@ class Documents < Sinatra::Base
   def self.load_config_in(dir)
     path = File.join(dir, 'config.json')
     return {} unless File.file?(path)
-    JSON.parse(IO.read(path), symbolize_names: true)
+    JSON.parse(File.read(path), symbolize_names: true)
   end
 
   def self.load_configs_in(dir)
@@ -110,9 +110,14 @@ class Documents < Sinatra::Base
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
+    # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
-    Sass::Plugin.options[:template_location] = shared_dir('css')
+    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+      Sass::Plugin.add_template_location(
+        sites_v3_dir(site, 'public', 'css'),
+        sites_v3_dir(site, 'public', 'css', 'generated')
+      )
+    end
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
@@ -177,7 +182,7 @@ class Documents < Sinatra::Base
     end
 
     update_actionview_assigns
-    @actionview.instance_variable_set("@_request", request)
+    @actionview.instance_variable_set(:@_request, request)
   end
 
   # This will make all instance variables on our sinatra controller also
@@ -190,7 +195,7 @@ class Documents < Sinatra::Base
   def update_actionview_assigns
     view_assigns = {}
     instance_variables.each do |name|
-      view_assigns[name[1..-1]] = instance_variable_get(name)
+      view_assigns[name[1..]] = instance_variable_get(name)
     end
     @actionview.assign(view_assigns)
   end
@@ -239,9 +244,9 @@ class Documents < Sinatra::Base
   end
 
   # rubocop:disable Security/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(File.read(path), nil, path, 1)}
   unless rack_env?(:production)
-    Dir.glob(pegasus_dir('routes/dev/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
+    Dir.glob(pegasus_dir('routes/dev/*.rb')).sort.each {|path| eval(File.read(path), nil, path, 1)}
   end
   # rubocop:enable Security/Eval
 
@@ -286,14 +291,14 @@ class Documents < Sinatra::Base
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, {body: body.join('').html_safe})
+      body render_template(template, {body: body.join.html_safe})
     end
 
     theme = @header['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, {body: body.join('').html_safe})
+      body render_template(template, {body: body.join.html_safe})
     end
   end
 
@@ -333,11 +338,11 @@ class Documents < Sinatra::Base
     end
 
     def parse_yaml_header(path)
-      content = IO.read path
+      content = File.read path
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content, 1] unless match
 
-      header = YAML.load(match[:yaml], path) || {}
+      header = YAML.safe_load(match[:yaml]) || {}
       raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
 
       remaining_content = match.post_match
@@ -442,7 +447,12 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
+        # Negotiate for a locale specific partial
+        found = []
+        ["#{uri}.#{request.locale}", uri].each do |search_uri|
+          found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), search_uri, extnames)
+          break unless found.empty?
+        end
         return found.first unless found.empty?
       end
 
@@ -512,7 +522,7 @@ class Documents < Sinatra::Base
 
         path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
         if path
-          request.env[:splat_path_info] = uri[parent.length..-1]
+          request.env[:splat_path_info] = uri[parent.length..]
           return path
         end
 
@@ -532,7 +542,7 @@ class Documents < Sinatra::Base
     end
 
     def render_template(path, locals={})
-      render_(IO.read(path), path, 0, locals)
+      render_(File.read(path), path, 0, locals)
     rescue => e
       Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
@@ -546,18 +556,18 @@ class Documents < Sinatra::Base
       # IE, "foo.md.erb" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
       result = body
-      extensions.reverse.each do |extension|
+      extensions.reverse_each do |extension|
         case extension
         when '.erb', '.html', '.haml', '.md'
           # Symbolize the keys of the locals hash; previously, we supported
           # using either symbols or strings in locals hashes but ActionView
           # only allows symbols.
-          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
+          result = @actionview.render(inline: result, type: extension[1..], locals: locals.symbolize_keys)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
             FileUtils.mkdir_p File.dirname(cache_file)
-            IO.binwrite(cache_file, Net::HTTP.get(URI(result)))
+            File.binwrite(cache_file, Net::HTTP.get(URI(result.chomp)))
           end
           pass unless File.file?(cache_file)
 

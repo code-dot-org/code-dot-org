@@ -11,10 +11,10 @@ In addition to declaring and initializing variables, we also want to update the 
 
 ```
 1. // declare and initialize a String bestDate
-2. String bestDate = “April 25th”
+2. String bestDate = “April 25th”;
 3. 
 4. // update the variable bestDate
-5. bestDate = “May 4th”
+5. bestDate = “May 4th”;
 ```
 
 **Explanation:** In the example above, we would read line 5 as “bestDate gets May 4th”.  `“May 4th”` is now stored in `bestDate` and the old value is essentially "forgotten" by the computer.
@@ -53,7 +53,9 @@ Looking for more practice and resource understanding variables in Java? Consider
 
 * <a href="https://codehs.com/textbook/apcsa_textbook/1.4" target="_blank">CodeHS's chapter on variables</a>
 
+--- 
 
+**Up next:** We will do a Check for Understanding of the material we have seen so far and then practice writing some code using these concepts. 
 
 
 

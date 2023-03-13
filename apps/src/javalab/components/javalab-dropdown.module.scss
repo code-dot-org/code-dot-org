@@ -1,0 +1,39 @@
+@import "color.scss";
+
+// The placeholder classes (%) allow these to be extended in other modules
+.dropdown,
+%dropdown {
+  padding: 5px 0;
+  position: absolute;
+  // without this, this will be below some content
+  z-index: 1000;
+  background-color: $white;
+  border: 1px solid $charcoal;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anchor,
+%anchor {
+  padding: 5px 12px;
+  color: $dark_charcoal;
+  font-family: "Gotham 4r", sans-serif;
+  font-size: 14px;
+  display: block;
+  background-color: $white;
+  text-decoration: none;
+  line-height: 20px;
+  transition: background-color 0.2s ease-out;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $lightest_gray;
+    cursor: pointer;
+    box-shadow: none;
+  }
+}

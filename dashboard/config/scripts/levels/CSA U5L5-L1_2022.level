@@ -2,11 +2,23 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Song blinding = new Song(\"Blinding Lights\", 1);\n    Song perfect = new Song(\"Perfect\", 2);\n    Song lovely = new Song(\"Lovely\", 3);\n    Song memories = new Song(\"Memories\", 4);\n    Song photograph = new Song(\"Photograph\", 5);\n\n    Song[] mySongs = {blinding, perfect, lovely, memories, photograph};\n\n    System.out.println(\"Original List\");\n    for (Song item : mySongs) {\n      System.out.println(item.getTitle() + \": \" + item.getRank());\n    }\n\n    System.out.println(\"\\nChanging the ranks of each song...\");\n    for (Song item : mySongs) {\n      item.setRank(item.getRank() + 1);\n    }\n\n    System.out.println(\"\\nUpdated List\");\n    for (Song item : mySongs) {\n      System.out.println(item.getTitle() + \": \" + item.getRank());\n    }\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Song.java": {
+        "text": "/*\n * Represents a song\n */\npublic class Song {\n\n  private String title;   // The title of the song\n  private int rank;      // The rank of the song\n\n  /*\n   * Constructor to create a Song with\n   * the specified title and rank\n   */\n  public Song(String title, int rank) {\n    this.title = title;\n    this.rank = rank;\n  }\n\n  /*\n   * Returns the title of the song\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  /*\n   * Returns the rank of the song\n   */\n  public int getRank() {\n    return rank;\n  }\n\n  /*\n   * Changes the title of the song\n   */\n  public void setTitle(String title) {\n    this.title = title;\n  }\n\n  /*\n   * Changes the rank of the song\n   */\n  public void setRank(int rank) {\n    this.rank = rank;\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "contained_level_names": [
+      "CSA U5L5-L1 Contained_2022"
+    ],
     "encrypted_examples": [
 
     ]
@@ -16,6 +28,6 @@
   "created_at": "2022-04-12T19:17:07.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:17:07.286+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2d_2022\"},{\"changed_at\":\"2022-04-12 19:17:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:17:07.286+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2d_2022\"},{\"changed_at\":\"2022-04-12 19:17:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 15:08:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 15:10:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 15:10:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

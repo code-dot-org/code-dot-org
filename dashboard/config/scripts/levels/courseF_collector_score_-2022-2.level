@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-04-07T19:56:39.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -59,7 +55,7 @@
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "short_instructions": "After enough time has passed, end the game and show the final score.",
-    "long_instructions": "# Ending the Game\r\n\r\nAt this point, your games works! However, we might still want to end the game after enough time has passed.\r\n\r\n## Do This\r\n\r\n* Drag another `at seconds` event block to your work space.\r\n* To end the game, stop all behaviors on the \"player\" sprite.\r\n* Use `say` or `print` block to congratulate or thank the user.\r\n\r\n*Extra Challenges:*\r\n* Remove all remaining \"collectible\" sprites from the screen at the end of the game.\r\n* Combine your score variable with other text in your message to the player.",
+    "long_instructions": "# Ending the Game\r\n\r\nAt this point, your game works! However, we might still want to end the game after enough time has passed.\r\n\r\n## Do This\r\n\r\n* Drag another `at seconds` event block to your work space.\r\n* To end the game, stop all behaviors on the \"player\" sprite.\r\n* Use `say` or `print` block to congratulate or thank the user.\r\n\r\n*Extra Challenges:*\r\n* Remove all remaining \"collectible\" sprites from the screen at the end of the game.\r\n* Combine your score variable with other text in your message to the player.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Now your program should have two `at seconds` event blocks. The first event will be used to make more sprites and the second event will end the game.\\n\\n<xml><block type=\\\"gamelab_atTime\\\">\\n  <field name=\\\"UNIT\\\">\\\"seconds\\\"</field>\\n  <value name=\\\"N\\\">\\n    <block type=\\\"math_number\\\">\\n      <field name=\\\"NUM\\\">3</field>\\n    </block>\\n  </value>\\n</block><block type=\\\"gamelab_atTime\\\">\\n  <field name=\\\"UNIT\\\">\\\"seconds\\\"</field>\\n  <value name=\\\"N\\\">\\n    <block type=\\\"math_number\\\">\\n      <field name=\\\"NUM\\\">10</field>\\n    </block>\\n  </value>\\n</block></xml>\",\"hint_id\":\"collector_time_events\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a0d8b22d89caacabe6904e6ec3cd1913/courseF_collector_score.mp3\"}]",
     "hint_prompt_attempts_threshold": "1",
     "project_template_level_name": "courseF_collector_template_-2022-2",
@@ -74,9 +70,13 @@
     "encrypted_examples": "ko7Ctjw57883EVyPZ11ln8gKTP/gKs89jKn9q/2UDDgzlebGbsWj7GnnFg6a\n4HhMQg0zoiLu/5itzFoYjjbTVGx0nvcNnuAIHIIg8Wy9PVeCwRBFdZOxLkSV\nzgcSrEOc0miyZTceecD+KlDpYVGkPw==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-04-07T19:56:39.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T19:56:39.157+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score_2022_pilot\\\"\"],\"cloned_from\":\"courseF_collector_score_2022_pilot\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-07T19:56:39.157+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score_2022_pilot\\\"\"],\"cloned_from\":\"courseF_collector_score_2022_pilot\"},{\"changed_at\":\"2022-05-19 13:41:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

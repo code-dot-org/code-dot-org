@@ -3,7 +3,10 @@ title: CS Curriculum for grades 9-12
 video_player: true
 theme: responsive
 ---
-<%= view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
+
+<link href="/css/afe-promo-box.css" rel="stylesheet">
+
+<%= view :professional_learning_marketing_banner, link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
 
 [solid-block-header]
 
@@ -28,15 +31,33 @@ For high schools, we offer two years computer science courses for beginners: Com
 <br>
 <hr>
 
-# Computer Science A (coming in 2022)
+# AP® Computer Science A
 <%=view :csa_information %>
 <hr>
 
+<%= view :maker_info %>
+
+<br>
+<hr>
+
+
 # Artificial Intelligence and Machine Learning
 
-Artificial intelligence (AI) and machine learning (ML) are shaping the world around us. As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. In this <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher">standalone module</a>, which spans roughly 5 weeks, students can learn the fundamentals of these technologies and discuss their ethical implications.
+<div class="col-40" style="padding-right: 10px;">
 
-[<button>Learn about AI</button>](/ai)&nbsp;&nbsp;[<button>Explore the AI module</button>](https://studio.code.org/s/aiml-2021?viewAs=Teacher)&nbsp;&nbsp;
+<img src="/images/fill-473x258/oceans/ai_2020_overview.png" style="max-width: 100%" alt>
+
+</div>
+
+[col-60]
+
+Artificial intelligence (AI) and machine learning (ML) are shaping the world around us. As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. In this <a href="https://studio.code.org/s/aiml?viewAs=Instructor">standalone module</a>, which spans roughly 5 weeks, students can learn the fundamentals of these technologies and discuss their ethical implications.
+
+[<button>Learn about AI</button>](/ai)&nbsp;&nbsp;[<button>Explore the AI module</button>](https://studio.code.org/s/aiml?viewAs=Instructor)&nbsp;&nbsp;
+
+[/col-60]
+
+<div style="clear: both;"></div>
 
 <br>
 <hr>
@@ -45,7 +66,7 @@ Artificial intelligence (AI) and machine learning (ML) are shaping the world aro
 
 <div class="col-40" style="padding-right: 10px;">
 
-<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%">
+<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%" alt>
 
 </div>
 
@@ -79,13 +100,14 @@ In addition to our courses, we have tools and resources that you can blend into 
 [<button>App Lab</button>](/applab)
 
 <br>
-<hr>
+<%=view :afe_promo_box %>
 
 <a name="thirdparty"></a>
-
 
 # Recommended courses from 3rd parties
 
 If you want to go even further with your students, or you're looking for other options, check out our [recommended third party resources](https://code.org/educate/curriculum/3rd-party) for additional courses in programming, game design, and more!
 
 <br>
+
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::HIGH_SCHOOL_CURRICULUM_PAGE_VISITED_EVENT %>

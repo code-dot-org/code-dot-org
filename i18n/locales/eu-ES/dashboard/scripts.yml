@@ -2,298 +2,61 @@
 eu:
   data:
     script:
-      category:
-        hoc_category_name: Kode Ordua
-        math_category_name: Matematika
-        other_category_name: Beste bat
       name:
         course1:
           title: 1.  Kurtsoa
           description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.
           description_short: Hasi 1. kurtsoarekin irakurle goiztiarrekin.
           description_audience: 4-6 urte
-          lessons:
-            'Artist: Loops':
-              name: 'Artista: Begiztak'
-            'Artist: Sequence':
-              name: 'Artista: sekuentzia'
-            'Artist: Shapes':
-              name: 'Artista: Formak'
-            'Bee: Loops':
-              name: 'Erlea: Begiztak'
-            'Bee: Sequence':
-              name: 'Erlea: sekuentzia'
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Getting Loopy:
-              name: Iteratzen
-            Going Places Safely:
-              name: Joan segurtasunez
-            Happy Maps:
-              name: Mapa Zoriontsuak
-            'Jigsaw: Learn to drag and drop':
-              name: 'Buruhaustea: ikasi arrastatu eta askatzen'
-            'Maze: Debugging':
-              name: 'Labirintoa: Arazketa'
-            'Maze: Loops':
-              name: 'Labirintoa: Begiztak'
-            'Maze: Sequence':
-              name: 'Labirintoa: Sekuentzia'
-            Move it, Move it:
-              name: Mugitu, mugitu
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Spelling Bee:
-              name: Letraz-letra
-            'Studio: Create a Story':
-              name: 'Jolas laborategia: sortu istorioa'
-            The Big Event:
-              name: Gertaera Handia
           student_description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.
         course2:
           title: 2.  Kurtsoa
           description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
           description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
           description_audience: 6+ urte (Nahitaezko irakurketa)
-          lessons:
-            'Artist: Debugging':
-              name: 'Artista: arazketa'
-            'Artist: Loops':
-              name: 'Artista: Begiztak'
-            'Artist: Nested Loops':
-              name: 'Artista: habiatutako begiztak'
-            'Artist: Sequence':
-              name: 'Artista: sekuentzia'
-            'Bee: Conditionals':
-              name: 'Erlea: baldintzazkoak'
-            'Bee: Debugging':
-              name: 'Erlea: Arazketa'
-            'Bee: Loops':
-              name: 'Erlea: Begiztak'
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            Conditionals:
-              name: Baldintzak
-            Flappy:
-              name: Flappy
-            Getting Loopy:
-              name: Iteratzen
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
-            'Maze: Loops':
-              name: 'Labirintoa: Begiztak'
-            'Maze: Sequence':
-              name: 'Labirintoa: Sekuentzia'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-            Relay programming:
-              name: Txandaka programatzen
-            'Studio: Create a Story':
-              name: 'Jolas laborategia: sortu istorioa'
-            The Big Event:
-              name: Gertaera Handia
-            Your Digital Footprint:
-              name: Zure aztarna digitala
           student_description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
         course3:
           title: 3.  Kurtsoa
           description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
           description_short: 3.  kurtsoa 2. kurtsoaren jarraipena da.
           description_audience: 8-18 bitarteko adina
-          lessons:
-            Artist:
-              name: Artista
-            'Artist: Functions':
-              name: 'Artista: funtzioak'
-            'Artist: Nested Loops':
-              name: 'Artista: habiatutako begiztak'
-            'Artist: Patterns':
-              name: 'Artista: patroiak'
-            'Bee: Conditionals':
-              name: 'Erlea: baldintzazkoak'
-            'Bee: Debugging':
-              name: 'Erlea: Arazketa'
-            'Bee: Functions':
-              name: 'Elea: funtzioak'
-            'Bee: Nested Loops':
-              name: 'Erlea: habiatutako begiztak'
-            Bounce:
-              name: Errebotea
-            Computational Thinking:
-              name: Pentsamendu konputazionala
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dice Race:
-              name: Dado lasterketa
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            'Farmer: While Loops':
-              name: 'Nekazaria: While begiztak'
-            Functional Suncatchers:
-              name: Funtzioak aztertzen
-            Internet:
-              name: Internet
-            Maze:
-              name: Labirintoa
-            'Maze: Conditionals':
-              name: 'Labirintoa: Funtzioak'
-            Songwriting:
-              name: Musika idazten
-            'Studio: Create a Game':
-              name: 'Joku laborategia: sortu joku bat'
-            'Studio: Create a Story':
-              name: 'Jolas laborategia: sortu istorioa'
           student_description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
         playlab:
           title: Jolas Laborategia
           description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
           description_short: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
-          lessons:
-            Play Lab:
-              name: Jolas Laborategia
           student_description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
         artist:
           title: Artista
           description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
-          lessons:
-            Artist:
-              name: Artista
           student_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
         hourofcode:
           title: Labirinto klasikoa
           description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-          lessons:
-            Maze:
-              name: Labirintoa
           student_description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
         frozen:
           title: Anna eta Elsarekin programatu
           description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
           description_short: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun izotz mundu magiko eta ederra esploratzeko.
-          lessons:
-            Artist:
-              name: Anna eta Elsarekin programatu
           student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
         course4:
           title: 4.  Kurtsoa
           description_short: 4.  kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.
           description_audience: 10-18 bitarteko adina
-          lessons:
-            Artist:
-              name: Artista
-            Artist Binary:
-              name: Artista bitarra
-            'Artist: For Loops':
-              name: 'Artista: For begizta'
-            'Artist: Functions':
-              name: 'Artista: funtzioak'
-            'Artist: Functions with Parameters':
-              name: 'Artista: funtzioak eta aldagaiak'
-            'Artist: Variables':
-              name: 'Artista: aldagaiak'
-            'Bee: For Loops':
-              name: 'Erlea: For Begiztak'
-            'Bee: Functions with Parameters':
-              name: 'Erlea: Funtzioak parametroekin'
-            Extreme Challenge - Comprehensive:
-              name: Muturreko erronka - osokoa
-            Maze and Bee:
-              name: Labirintoa eta Erlea
-            'Play Lab: For Loops':
-              name: 'Laborategia: For begiztak'
-            'Play Lab: Functions with Parameters':
-              name: 'Jokoen Laborategia: Parametrodun Funtzioak'
-            'Play Lab: Variables':
-              name: 'Jokoen Laborategia: Aldagaiak'
-            Super Challenge - For Loops:
-              name: Super erronka - For begiztak
-            Super Challenge - Functions and Parameters:
-              name: Super erronka - funtzioak eta parametroak
-            Super Challenge - Variables:
-              name: Super erronka - Aldagaiak
-            'Unplugged: Binary':
-              name: 'Desnkonektatua: binarioa'
-            'Unplugged: Envelope Variables':
-              name: 'Deskonektatua: gutun-azaleko aldagaiak'
-            'Unplugged: For Loop Fun':
-              name: 'Lineaz kanpo: For begizta dibertigarriak'
-            'Unplugged: Madlibs':
-              name: 'Deskonektauta: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Deskonektatua: abestiak idatzi aldagaiekin'
-            'Unplugged: Tangrams':
-              name: 'Lineaz kanpo: tangramak'
         Course4pre:
           title: 4 kurtsoko aurrebaldintza
           description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
-          lessons:
-            'Artist: Functions':
-              name: 'Artista: funtzioak'
-            'Artist: Loops':
-              name: 'Artista: Begiztak'
-            'Artist: Nested Loops':
-              name: 'Artista: habiatutako begiztak'
-            'Artist: Sequence':
-              name: 'Artista: sekuentzia'
-            'Bee: Conditionals':
-              name: 'Erlea: baldintzazkoak'
-            'Bee: Debugging':
-              name: 'Erlea: Arazketa'
-            'Bee: Nested Loops':
-              name: 'Erlea: habiatutako begiztak'
-            'Farmer: While Loops':
-              name: 'Nekazaria: While begiztak'
-            'Maze: Sequence':
-              name: 'Labirintoa: Sekuentzia'
           student_description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
-        usability:
-          lessons:
-            Binary:
-              name: Bitarra
-            For Loops:
-              name: For begiztak
-            Functions and Functions with Parameters:
-              name: Funtzioak eta parametrodun funtzioak
-            Intro:
-              name: Sarrera
-            Variables:
-              name: Aldagaiak
         algebra:
           title: Informatika Aljebran
-          lessons:
-            'Eval: Conditionals':
-              name: Baldintzak
-            'Eval: Strings and Images':
-              name: Karaktere-kateak eta irudiak
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Lineaz kanpo: Baldintzazko eta zatikako funtzioak'
-            'Unplugged: The Design Recipe':
-              name: 'Lineaz kanpo: Diseinurako errezeta'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Lineaz kanpo: Bideo jokoak eta koordenatuen planoak'
         infinity:
           title: Disneyren Infinity Play Lab
           description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
           description_short: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
-          lessons:
-            Infinity:
-              name: Disneyren Infinity Play Lab
           student_description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
-        algebrademo:
-          lessons:
-            Defining Variables:
-              name: Aldagaiak definitzen
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            The Design Recipe:
-              name: Diseinuaren errezeta
-        K5PD:
-          lessons:
-            Teacher Dashboard:
-              name: Irakaslearen arbela
         netsim:
           title: Internet simulagailua
         20-hour:
@@ -303,47 +66,6 @@ eu:
             Gehiago ikasteko ikusi maila bereko gure ikastaroak!
           description_short: 20 orduko ikastaro honek 2-4 kurtsotako informatikako eta programazioko oinarrizko kontzeptuak biltzen ditu.
           description_audience: 10-18 bitarteko adina
-          lessons:
-            Abstraction:
-              name: Abstrakzioa
-            Algorithms:
-              name: Algoritmoak
-            Computational Thinking:
-              name: Pentsamendu konputazionala
-            Conditionals:
-              name: Baldintzak
-            Functions:
-              name: Funtzioak
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
-            Introduction to Computer Science:
-              name: Konputazio zientzetarako sarrera
-            Relay Programming:
-              name: Txandaka programatzen
-            Song Writing:
-              name: Abestiak idazten
-            The Artist:
-              name: Artista
-            The Artist 2:
-              name: Artista 2
-            The Artist 3:
-              name: Artista 3
-            The Artist 4:
-              name: Artista 4
-            The Artist 5:
-              name: Artista 5
-            The Farmer:
-              name: Baserritarra
-            The Farmer 2:
-              name: Baserritarra 2
-            The Farmer 3:
-              name: Baserritarra 3
-            The Internet:
-              name: Internet
-            The Maze:
-              name: labirintoa
-            Wrap-up:
-              name: Ixtea
           student_description: |-
             20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
             Gehiago ikasteko ikusi maila bereko gure ikastaroak!
@@ -351,262 +73,66 @@ eu:
           title: Editatu kodea
           description: Editatu kodea
           description_short: Editatu kodea
-          lessons:
-            Play Lab:
-              name: Jolas Laborategia
-            The Artist:
-              name: Artista
-            The Maze:
-              name: labirintoa
           student_description: Editatu kodea
         events:
           title: Gertaerak
           description: Gertaerak
           description_short: Gertaerak
-          lessons:
-            Bounce:
-              name: Errebotea
-            Calc:
-              name: Kalk
-            Eval:
-              name: Ebal
           student_description: Gertaerak
         flappy:
           title: Flappy Code
           description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
           description_short: Idatz ezazu zure Flappy joko propioa
-          lessons:
-            Flappy Code:
-              name: Flappy Code
           student_description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
         jigsaw:
           title: Buruhaustea
           description: Proba ezazu gure buruhauste tutoriala!!!
           description_short: Proba ezazu gure buruhauste tutoriala!!!
-          lessons:
-            Jigsaw:
-              name: Buruhaustea
           student_description: Proba ezazu gure buruhauste tutoriala!!!
         step:
           title: Pauso
           description: Pausokako tutoriala
           description_short: Pausokako tutoriala
-          lessons:
-            Step:
-              name: Pauso
           student_description: Pausokako tutoriala
         Hour of Code:
           title: Kodearen ordua 2013
           description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-          lessons:
-            Hour of Code 2013:
-              name: Kodearen ordua 2013
           student_description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
-        algebraPD:
-          lessons:
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-        algPDmiami:
-          lessons:
-            Booleans:
-              name: Boolearrak
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Strings and Images:
-              name: Karaktere-kateak eta irudiak
-        cspunit3:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-            While Loops:
-              name: '"Bitartean" begiztak'
-        algebraPD3:
-          lessons:
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Strings and Images:
-              name: Karaktere-kateak eta irudiak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-            The Design Recipe:
-              name: Diseinuaren errezeta
-        algebraPD-NexTech:
-          lessons:
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-        algebraPD-iZone:
-          lessons:
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-        sciencePD2:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
         algebraPD2a:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Booleans:
-              name: Boolearrak
-            Defining Variables:
-              name: Aldagaiak definitzen
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Free Play:
-              name: Joku askea
-            Strings and Images:
-              name: Karaktere-kateak eta irudiak
-            The Design Recipe:
-              name: Diseinuaren errezeta
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        allthethings:
-          lessons:
-            Artist:
-              name: Artista
-            Bee:
-              name: Erlea
-            Bounce:
-              name: Errebotea
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Buruhaustea
-            Match:
-              name: Parekatu
-            Maze:
-              name: Labirintoa
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: Multi
-            Web Lab:
-              name: Web Lab
         algebraPD2b:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Booleans:
-              name: Boolearrak
-            Defining Functions:
-              name: Funtzioak definitzen
-            Defining Variables:
-              name: Aldagaiak definitzen
-            'Eval: Conditionals':
-              name: 'Eval: Baldintzak'
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Strings and Images:
-              name: Karaktere-kateak eta irudiak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        cspfacilitator:
-          lessons:
-            App Lab:
-              name: App laborategia
-            Internet Simulator:
-              name: Internet simulagailua
-            Welcome!:
-              name: Ongi etorri!
         ECSPD2:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-up:
-              name: Ixtea
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        algebraPD2:
-          lessons:
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-            The Design Recipe:
-              name: Diseinuaren errezeta
-            Welcome!:
-              name: Ongi etorri!
         sciencePD2b:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        science-PD2:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
         sciencePD2b-iZone:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         ECSPD2-iZone:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-up:
-              name: Ixtea
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         ECSPD2-NexTech:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-up:
-              name: Ixtea
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         asUnplugged:
           description_audience: 6-13 adinak
-          lessons:
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Getting Loopy:
-              name: Iteratzen
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
-            Happy Maps:
-              name: Mapa Zoriontsuak
-            Move it, Move it:
-              name: Mugitu, mugitu
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Songwriting:
-              name: Musika idazten
-            The Big Event:
-              name: Gertaera Handia
         afterschool1:
           description_audience: 7-13 adinak
         cspunit4draft:
           description_short: Datu
-        ScienceP3OLPT2:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
         Special Fun:
           description_audience: 10-18 bitarteko adina
         SpecialSeries:
@@ -615,28 +141,15 @@ eu:
           title: Ice Age joku laborategia
           description: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
           description_short: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
-          lessons:
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
           student_description: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
-        cspunit3temp:
-          lessons:
-            While Loops:
-              name: '"Bitartean" begiztak'
         gumball:
           title: Gumball joko laborategia
           description: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
           description_short: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
-          lessons:
-            Gumball Play Lab:
-              name: Gumball joko laborategia
           student_description: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
         starwars:
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
-          lessons:
-            Hour of Code 2015:
-              name: 2015 Code ordua
           student_description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
         starwarsblocks:
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
@@ -646,86 +159,9 @@ eu:
           title: Minecraft Kode Ordua
           description: Erabili kode blokeak Steve edo Alex eramateko abentura batera Minecraft mundu honetan.
           description_short: Esploratu Minecraft mundu bat kodearen bitartez.
-          lessons:
-            Hour of Code 2015:
-              name: 2015 Code ordua
           student_description: Erabili kode blokeak Steve edo Alex eramateko abentura batera Minecraft mundu honetan.
-        ScienceP3OLPT3:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
-        AlgebraA:
-          lessons:
-            'Calc: Defining Variables':
-              name: 'Calc: Aldagaiak deinitzen'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Ebaluazio Blokeak'
-            'Eval: Strings and Images':
-              name: 'Eval: Kateak eta Irudiak'
-            'Eval: Writing Contracts':
-              name: 'Eval: Kontratuak idazten'
-            'Unplugged: Contracts':
-              name: 'Lineaz kanpo: Kontratuak'
-            'Unplugged: The Design Recipe':
-              name: 'Lineaz kanpo: Diseinurako errezeta'
-        AlgebraB:
-          lessons:
-            'Eval: Boolean Operators':
-              name: 'Eval: Boolear eragileak'
-            'Eval: Conditionals':
-              name: 'Eval: Baldintzak'
-            'Play Lab: Animation (Big Game)':
-              name: 'Jolas laborategia: Animazioak'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Jokoen Laborategia: Boolearra (Joko Handia)'
-            'Play Lab: Booleans':
-              name: 'Jokoen Laborategia: Boolearrak'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Jokoen Laborategia: Talka Atzematea (Joko Handia)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Jolas Laborategia: Aldagaiak definitzen (Joko Handia)'
-            'Unplugged: Booleans':
-              name: 'Lineaz kanpo: Boolearrak'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Lineaz kanpo: Talka Atzematea eta Distantzia Formula'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Lineaz kanpo: Baldintzazko eta zatikako funtzioak'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Lineaz kanpo: Bideo jokoak eta koordenatuen planoak'
-        algebraPD1:
-          lessons:
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-        csp1-2017:
-          lessons:
-            The Internet:
-              name: Internet
-        csp3-2017:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-        csp5-2017:
-          lessons:
-            While Loops:
-              name: '"Bitartean" begiztak'
-        CSDU3-Draft:
-          lessons:
-            Functions:
-              name: Funtzioak
-            Velocity:
-              name: Abiadura
         CSF_Secret_Sample:
           description_audience: 8-18 bitarteko adina
-        algebraFacilitator:
-          lessons:
-            Evaluation Blocks:
-              name: Ebaluazio blokeak
-            Teacher Dashboard:
-              name: Irakaslearen arbela
         cspunit1-support:
           lesson_groups:
             required:
@@ -734,157 +170,34 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        allthehiddenthings:
-          lessons:
-            Game Lab:
-              name: Jolas laborategia
         CSDU5-Draft:
           description_short: Datu
         CSF_Secret_Sample_Story:
           description_audience: 8-18 bitarteko adina+
         MikeTest:
           description_audience: 8-98 bitarteko adina
-          lessons:
-            Artist Functions:
-              name: 'Artista: Funtzioak'
         artistExemplar:
           description_audience: 8-18 bitarteko adina
         teachercon:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Erlea: baldintzazkoak'
         gradeKinder:
           description_audience: 5-18 urte bitarteko adinak
-          lessons:
-            Debugging:
-              name: Arazketa
-            Events:
-              name: Gertaerak
-            'Jigsaw: Learn to drag and drop':
-              name: 'Buruhaustea: ikasi arrastatu eta askatzen'
-            Loops:
-              name: Itzuliak
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
         grade4:
           description_audience: 9-99 adin bitartea
-          lessons:
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            Songwriting:
-              name: Musika idazten
         grade1:
           description_audience: 5-18 urte bitarteko adinak
-          lessons:
-            Debugging:
-              name: Arazketa
-            Events:
-              name: Gertaerak
-            'Jigsaw: Learn to drag and drop':
-              name: 'Buruhaustea: ikasi arrastatu eta askatzen'
-            Loops:
-              name: Itzuliak
         grade5:
           description_audience: 10 eta 110 urte bitartean
-          lessons:
-            'Artist: For Loops':
-              name: 'Artista: For begizta'
-            'Artist: Functions with Parameters':
-              name: 'Artista: funtzioak eta aldagaiak'
-            'Artist: Variables':
-              name: 'Artista: aldagaiak'
-            'Bee: For Loops':
-              name: 'Erlea: For Begiztak'
-            'Bee: Functions with Parameters':
-              name: 'Erlea: Funtzioak parametroekin'
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            'Play Lab: Variables':
-              name: 'Jokoen Laborategia: Aldagaiak'
-            'Unplugged: Envelope Variables':
-              name: 'Deskonektatua: gutun-azaleko aldagaiak'
-            'Unplugged: For Loop Fun':
-              name: 'Lineaz kanpo: For begizta dibertigarriak'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Deskonektatua: abestiak idatzi aldagaiekin'
-        ecs-unit1:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-up:
-              name: Ixtea
         grade3:
           description_audience: 5-18 urte bitarteko adinak
-          lessons:
-            " Bee: Conditionals":
-              name: " Erlea: baldintzazkoak"
-            'Artist: Nested Loops':
-              name: 'Artista: habiatutako begiztak'
-            Bee Debugging:
-              name: 'Erlea: Arazketa'
-            Bounce:
-              name: Errebotea
-            'Farmer: While Loops':
-              name: 'Nekazaria: While begiztak'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csd3-2017:
-          lessons:
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
         grade2:
           description_audience: 5-18 urte bitarteko adinak
-          lessons:
-            Flappy:
-              name: Flappy
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            'Real-life Algorithms: Paper Planes':
-              name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-            The Big Event:
-              name: Gertaera Handia
-        k5concepts:
-          lessons:
-            Binary:
-              name: Bitarra
-            Conditionals:
-              name: Baldintzak
-            Events:
-              name: Gertaerak
-            For Loops:
-              name: For begiztak
-            Functions:
-              name: Funtzioak
-            Functions with Parameters:
-              name: Parametrodun funtzioak
-            Loops:
-              name: Itzuliak
-            Nested Loops:
-              name: Kabiatutako begiztak
-            Variables:
-              name: Aldagaiak
-            While Loops:
-              name: '"Bitartean" begiztak'
-        algebrapdnext:
-          lessons:
-            Teacher Dashboard:
-              name: Irakaslearen arbela
-            The Design Recipe:
-              name: Diseinuaren errezeta
-            Welcome!:
-              name: Ongi etorri!
         csp-online-test:
           lesson_groups:
             required:
@@ -895,104 +208,14 @@ eu:
               display_name: Bista orokorra
         basketball:
           name: saskibaloia
-        csd2-2017:
-          lessons:
-            Lists:
-              name: Zerrendak
         csp2-support:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        flappy-impact-study:
-          lessons:
-            Flappy Code:
-              name: Flappy Code
-        coursea-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Going Places Safely:
-              name: Joan segurtasunez
-        courseb-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-        coursec-draft:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-        coursed-draft:
-          lessons:
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            'Unplugged: Binary':
-              name: 'Desnkonektatua: binarioa'
-            Artist Binary:
-              name: Artista bitarra
-            Nested Loops:
-              name: Kabiatutako begiztak
-            Introduction:
-              name: Sarrera
-        coursee-draft:
-          lessons:
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Introduction:
-              name: Sarrera
-            Conditionals:
-              name: Baldintzak
-        coursef-draft:
-          lessons:
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Songwriting with Parameters:
-              name: Abestiak idazten parametroekin
-            Introduction:
-              name: Sarrera
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
         classic-hoc-impact-study:
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-          lessons:
-            Hour of Code 2013:
-              name: Kodearen ordua 2013
         hoc-impact-study:
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-          lessons:
-            Hour of Code 2013:
-              name: Kodearen ordua 2013
-        2016_sciencePD-phase2b:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
-        2016_sciencePD_phase2b:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
         csp3-support:
           lesson_groups:
             required:
@@ -1001,150 +224,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        sciencepd4:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
-        science-pd-ol-pt-5:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
-        csf2harvey:
-          lessons:
-            Binary:
-              name: Bitarra
-        sciencepd5:
-          lessons:
-            Welcome!:
-              name: Ongi etorri!
-            Wrap-Up:
-              name: Itxi
         csp5-support:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Zerrendak
-            For Loops:
-              name: For begiztak
-            Functions with Parameters:
-              name: Parametrodun funtzioak
-        workshop-gamelab:
-          lessons:
-            Introduction:
-              name: Sarrera
-        coursed-ramp:
-          lessons:
-            Introduction:
-              name: Sarrera
-        coursee-ramp:
-          lessons:
-            Introduction:
-              name: Sarrera
-            Conditionals:
-              name: Baldintzak
-            'Real Life Algorithms: Dice Race':
-              name: 'Benetako algoritmoak: dado lasterketa'
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Zerrendak
-            For Loops:
-              name: For begiztak
-            Functions with Parameters:
-              name: Parametrodun funtzioak
-            Functions with Parameters_:
-              name: Parametrodun funtzioak
-        csd3-draft:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-        csd3-old:
-          lessons:
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Zerrendak
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-            'null':
-              name: baliogabea
-        coursef-ramp:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
-            Introduction:
-              name: Sarrera
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-        artist-and-bb8:
-          lessons:
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-            Bounce:
-              name: Errebotea
-        coursea-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        courseb-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        coursec-2017:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-        coursed-2017:
-          lessons:
-            Nested Loops:
-              name: Kabiatutako begiztak
-        coursee-2017:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Songwriting with Parameters:
-              name: Abestiak idazten parametroekin
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-        coursef-2017:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
         cspnovice:
           lesson_groups:
             required:
@@ -1193,300 +276,6 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        express-2017:
-          lessons:
-            Introduction:
-              name: Sarrera
-            Internet:
-              name: Internet
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Songwriting with Parameters:
-              name: Abestiak idazten parametroekin
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-        pre-express-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Spelling Bee:
-              name: Letraz-letra
-        subgoal-labels-opt-in:
-          lessons:
-            Thanks:
-              name: Eskerrik asko
-        csp3-research-mxghyt:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-        e-f-ramp:
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-            Conditionals:
-              name: Baldintzak
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        new-d:
-          lessons:
-            Introduction:
-              name: Sarrera
-            Nested Loops:
-              name: Kabiatutako begiztak
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            'Unplugged: Binary':
-              name: 'Desnkonektatua: binarioa'
-            Artist Binary:
-              name: Artista bitarra
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-        new-express:
-          lessons:
-            Introduction:
-              name: Sarrera
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-        new-e:
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Conditionals:
-              name: Baldintzak
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        new-f:
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Songwriting with Parameters:
-              name: Abestiak idazten parametroekin
-        csp3-staging:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-        course-e-2018:
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-            Introduction:
-              name: Sarrera
-            Conditionals:
-              name: Baldintzak
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-        course-f-2018:
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
-            Introduction:
-              name: Sarrera
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Songwriting with Parameters:
-              name: Abestiak idazten parametroekin
-        csd6-old:
-          lessons:
-            Lists:
-              name: Zerrendak
-            For Loops:
-              name: For begiztak
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-        csd3-2018:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-        csd2-2018:
-          lessons:
-            Lists:
-              name: Zerrendak
-        coursea-2018:
-          lessons:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie eta Big Proiektua
-            'Programming: Happy Maps':
-              name: Mapa Zoriontsuak
-            Going Places Safely:
-              name: Joan segurtasunez
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie eta Big Proiektua
-        express-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Paper grafiko programazioa
-            Introduction:
-              name: Sarrera
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-            'Events: The Big Event':
-              name: Gertaera Handia
-            'Loops: Getting Loopy':
-              name: Iteratzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            'Functions: Songwriting':
-              name: Musika idazten
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            'Unplugged: Binary':
-              name: Irudi bitarrak
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Relay Programming:
-              name: Txandaka programatzen
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
-        courseb-2018:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-            Move It, Move It:
-              name: Mugi ezazu, mugi ezazu!
-        coursed-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Paper grafiko programazioa
-            Introduction:
-              name: Sarrera
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            'Unplugged: Binary':
-              name: Irudi bitarrak
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
-            Relay Programming:
-              name: Txandaka programatzen
-        coursec-2018:
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            'Loops: Getting Loopy':
-              name: Iteratzen
-            'Events: The Big Event':
-              name: Gertaera Handia
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-        csd6-2018:
-          lessons:
-            Functions with Parameters_:
-              name: Parametrodun funtzioak\_
-            Functions with Parameters:
-              name: Parametrodun funtzioak
-        coursee-2018:
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Nire lagun robotikoak
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Introduction:
-              name: Sarrera
-            'Functions: Songwriting':
-              name: Musika idazten
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Minecraft Hour of Code:
-              name: Minecraft Kode Ordua
-        coursef-2018:
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Nire lagun robotikoak
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            'Algorithms: Tangrams':
-              name: 'Algoritmoak: Tangramak'
-            Introduction:
-              name: Sarrera
-            Ice Age Play Lab:
-              name: Ice Age joku laborategia
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Songwriting with Parameters:
-              name: Abestiak idazten parametroekin
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-        csp1-2018:
-          lessons:
-            The Internet:
-              name: Internet
-        csp3-2018:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-        csp5-2018:
-          lessons:
-            While Loops:
-              name: '"Bitartean" begiztak'
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -1555,36 +344,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        pre-express-2018:
-          lessons:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie eta Big Proiektua
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-            Spelling Bee:
-              name: Letraz-letra
-            Move It, Move It:
-              name: Mugi ezazu, mugi ezazu!
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie eta Big Proiektua
         fit-test:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        frozen-2018:
-          lessons:
-            Artist:
-              name: Artista
-        frozen-2018-test:
-          lessons:
-            Artist:
-              name: Artista
-        frozen-2018-test-b:
-          lessons:
-            Artist:
-              name: Artista
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1603,23 +366,10 @@ eu:
               display_name: For begiztak
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            The Artist:
-              name: Artista
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -1632,40 +382,16 @@ eu:
               display_name: Bitarra
             csf_digcit:
               display_name: Hiritartasun digitala
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Paper grafiko programazioa
-            Relay Programming:
-              name: Txandaka programatzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Digital Citizenship:
-              name: Hiritartasun digitala
-            'Unplugged: Binary':
-              name: Irudi bitarrak
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
               display_name: Kabiatutako begiztak
             csf_functions:
               display_name: Funtzioak
-          lessons:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
-            Nested Loops:
-              name: Kabiatutako begiztak
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            'Functions: Songwriting':
-              name: Musika idazten
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
-            Songwriting:
-              name: Musika idazten
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1678,32 +404,12 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
-          lessons:
-            Relay Programming:
-              name: Txandaka programatzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            'Unplugged: Binary':
-              name: 'Desnkonektatua: binarioa'
-            Artist Binary:
-              name: Artista bitarra
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
+            csf_sprites:
+              display_name: Pertsonaiak
         andrea-test:
           lesson_groups:
             required:
               display_name: Bista orokorra
-          lessons:
-            'null':
-              name: baliogabea
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1716,13 +422,6 @@ eu:
               display_name: Gertaerak
             csf_data:
               display_name: Datu
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-            'Events: The Big Event':
-              name: Gertaera Handia
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
         gamelab:
           title: Jolas laborategia
         coursea-2019:
@@ -1733,11 +432,6 @@ eu:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-          lessons:
-            'Programming: Happy Maps':
-              name: Mapa Zoriontsuak
-            Going Places Safely:
-              name: Joan segurtasunez
         courseb-2019:
           lesson_groups:
             csf_digcit:
@@ -1746,48 +440,12 @@ eu:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-          lessons:
-            Move It, Move It:
-              name: Mugi ezazu, mugi ezazu!
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-            'Loops: Getting Loopy':
-              name: Iteratzen
         pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-          lessons:
-            Move It, Move It:
-              name: Mugi ezazu, mugi ezazu!
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-            Spelling Bee:
-              name: Letraz-letra
-        removed19:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        csd2-2019:
-          lessons:
-            Lists:
-              name: Zerrendak
-        csd3-2019:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-        csd6-2019:
-          lessons:
-            Functions with Parameters:
-              name: Parametrodun funtzioak
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1798,30 +456,14 @@ eu:
               display_name: Funtzioak
             required:
               display_name: Bista orokorra
-        csp1-2019:
-          lessons:
-            The Internet:
-              name: Internet
-        csp3-2019:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-        csp5-2019:
-          lessons:
-            While Loops:
-              name: '"Bitartean" begiztak'
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Bista orokorra
         time4csdemo:
-          lessons:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
+          lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1884,10 +526,6 @@ eu:
               display_name: Baldintzak
             csp_functions:
               display_name: Funtzioak
-        express-2018-vn:
-          lessons:
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -1904,33 +542,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: Zerrendak
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-            Sprite Properties:
-              name: Sprite-n Propietateak
-        maddie-test:
-          lessons:
-            stage 1:
-              name: 1.  etapa
         csp3-pilot:
           lesson_groups:
             required:
               display_name: Bista orokorra
-          lessons:
-            Debugging:
-              name: Arazketa
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -1941,9 +556,6 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-          lessons:
-            Focus Area 1:
-              name: Kurrikuluma
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -1984,30 +596,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        peru-2019:
-          lessons:
-            Introduction:
-              name: Sarrera
-            Nested Loops:
-              name: Kabiatutako begiztak
         csp6-pilot:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        k5-onlinepd-2019:
-          lessons:
-            Loops:
-              name: Itzuliak
-            Conditionals:
-              name: Baldintzak
-            Events:
-              name: Gertaerak
-            Functions:
-              name: Funtzioak
-            Variables:
-              name: Aldagaiak
-            For Loops:
-              name: For begiztak
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2016,10 +608,6 @@ eu:
               display_name: Baldintzak
             csp_functions:
               display_name: Funtzioak
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: Baldintzak
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2030,11 +618,6 @@ eu:
               display_name: Kabiatutako begiztak
             csf_functions:
               display_name: Funtzioak
-          lessons:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -2043,11 +626,10 @@ eu:
               display_name: Baldintzak
             csf_events:
               display_name: Gertaerak
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
-          lessons:
-            Conditionals:
-              name: Baldintzak
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2056,11 +638,10 @@ eu:
               display_name: Baldintzak
             csf_events:
               display_name: Gertaerak
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
-          lessons:
-            Conditionals:
-              name: Baldintzak
         csp7-pilot:
           lesson_groups:
             required:
@@ -2079,24 +660,6 @@ eu:
               display_name: Zerrendak
             csp_loops:
               display_name: Itzuliak
-        csd6-2020:
-          lessons:
-            Functions with Parameters:
-              name: Parametrodun funtzioak
-        csd3-2020:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Sprite Properties:
-              name: Sprite-n Propietateak
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-            Text:
-              name: Testua
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -2105,11 +668,6 @@ eu:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-          lessons:
-            Going Places Safely:
-              name: Joan segurtasunez
-            'Programming: Happy Maps':
-              name: Mapa Zoriontsuak
         courseb-2020:
           lesson_groups:
             csf_digcit:
@@ -2118,13 +676,6 @@ eu:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-          lessons:
-            Your Digital Footprint:
-              name: Zure aztarna digitala
-            Move It, Move It:
-              name: Mugi ezazu, mugi ezazu!
-            'Loops: Getting Loopy':
-              name: Iteratzen
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -2137,11 +688,6 @@ eu:
               display_name: Gertaerak
             csf_data:
               display_name: Datu
-          lessons:
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-            'Events: The Big Event':
-              name: Gertaera Handia
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -2154,28 +700,16 @@ eu:
               display_name: Bitarra
             csf_digcit:
               display_name: Hiritartasun digitala
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Paper grafiko programazioa
-            Relay Programming:
-              name: Txandaka programatzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-            'Unplugged: Binary':
-              name: Irudi bitarrak
-            Digital Citizenship:
-              name: Hiritartasun digitala
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
               display_name: Kabiatutako begiztak
             csf_functions:
               display_name: Funtzioak
-          lessons:
-            'Functions: Songwriting':
-              name: Musika idazten
         coursef-2020:
           lesson_groups:
             csf_digcit:
@@ -2186,15 +720,8 @@ eu:
               display_name: Datu
             csf_for_loops:
               display_name: For begiztak
-          lessons:
-            Envelope Variables:
-              name: Gutun-azaleko aldagarriak
-            For Loop Fun:
-              name: Begizta jostarirako
-            Internet:
-              name: Internet
-            Crowdsourcing:
-              name: Crowdsourcing
+            csf_sprites:
+              display_name: Pertsonaiak
         express-2020:
           lesson_groups:
             csf_loops:
@@ -2207,77 +734,14 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-          lessons:
-            Spelling Bee:
-              name: Letraz-letra
-        csp3-2020:
-          lessons:
-            Debugging:
-              name: Arazketa
-        csp3-virtual:
-          lessons:
-            Creating Functions:
-              name: Funtzioak sortzen
-        jess-test-script:
-          lessons:
-            Debugging:
-              name: Arazketa
-        csp5-virtual:
-          lessons:
-            While Loops:
-              name: '"Bitartean" begiztak'
-            Variables:
-              name: Aldagaiak
-        virtual-holding-place:
-          lessons:
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
-        code-break:
-          lessons:
-            Algorithms:
-              name: Algoritmoak
-            Events:
-              name: Gertaerak
-        csp5-virtual-part2:
-          lessons:
-            While Loops:
-              name: '"Bitartean" begiztak'
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: Itzuliak
-            Events:
-              name: Gertaerak
-            Conditionals:
-              name: Baldintzak
-            Functions:
-              name: Funtzioak
-            Variables:
-              name: Aldagaiak
-            For Loops:
-              name: For begiztak
-        csd3-virtual:
-          lessons:
-            Variables:
-              name: Aldagaiak
-            Sprite Properties:
-              name: Sprite-n Propietateak
-            Text:
-              name: Testua
-            Conditionals:
-              name: Baldintzak
-            Velocity:
-              name: Abiadura
-            Functions:
-              name: Funtzioak
         2021drafting:
           lesson_groups:
             introduction:
@@ -2286,36 +750,6 @@ eu:
               display_name: Aldagaiak
             debugging:
               display_name: Arazketa
-        csd3-2021:
-          lessons:
-            Variables:
-              key: Aldagaiak
-              name: Aldagaiak
-            Sprite Properties:
-              key: Sprite-n Propietateak
-              name: Sprite-n Propietateak
-            Text:
-              key: Testua
-              name: Testua
-            Conditionals:
-              key: Baldintzak
-              name: Baldintzak
-            Velocity:
-              key: Abiadura
-              name: Abiadura
-            Functions:
-              key: Funtzioak
-              name: Funtzioak
-        csd6-2021:
-          lessons:
-            Functions with Parameters:
-              key: Parametrodun funtzioak
-              name: Parametrodun funtzioak
-        csp3-2021:
-          lessons:
-            Debugging:
-              key: Arazketa
-              name: Arazketa
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2335,9 +769,6 @@ eu:
             csp_unit6_2020:
               display_name: Algoritmoak
         coursea-2021:
-          lessons:
-            'Programming: Happy Maps':
-              name: Mapa Zoriontsuak
           lesson_groups:
             csf_digcit:
               display_name: Hiritartasun digitala
@@ -2346,12 +777,6 @@ eu:
             csf_events:
               display_name: Gertaerak
         courseb-2021:
-          lessons:
-            Move It, Move It:
-              key: Mugi ezazu, mugi ezazu!
-              name: Mugi ezazu, mugi ezazu!
-            'Loops: Getting Loopy':
-              name: Iteratzen
           lesson_groups:
             csf_digcit:
               display_name: Hiritartasun digitala
@@ -2360,12 +785,6 @@ eu:
             csf_events:
               display_name: Gertaerak
         coursec-2021:
-          lessons:
-            Binary Bracelets:
-              key: Eskumuturreko bitarrak
-              name: Eskumuturreko bitarrak
-            'Events: The Big Event':
-              name: Gertaera Handia
           lesson_groups:
             csf_digcit:
               display_name: Hiritartasun digitala
@@ -2378,20 +797,6 @@ eu:
             csf_data:
               display_name: Datu
         coursed-2021:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Paper grafiko programazioa
-            Relay Programming:
-              key: Txandaka programatzen
-              name: Txandaka programatzen
-            Conditionals with Cards:
-              key: Baldintzak Txartelekin
-              name: Baldintzak Txartelekin
-            'Unplugged: Binary':
-              key: 'Desnkonektatua: binarioa'
-              name: Irudi bitarrak
-            Artist Binary:
-              key: Artista bitarra
           lesson_groups:
             csf_events:
               display_name: Gertaerak
@@ -2406,14 +811,11 @@ eu:
             lessonGroup-6:
               display_name: Hiritartasun digitala
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: Baldintzak
-            'Functions: Songwriting':
-              name: Musika idazten
           lesson_groups:
             ramp_up:
               display_name: Kabiatutako begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
@@ -2421,17 +823,9 @@ eu:
             csf_functions:
               display_name: Funtzioak
         coursef-2021:
-          lessons:
-            Envelope Variables:
-              key: Gutun-azaleko aldagarriak
-              name: Gutun-azaleko aldagarriak
-            Internet:
-              key: Internet
-              name: Internet
-            For Loop Fun:
-              key: Begizta jostarirako
-              name: Begizta jostarirako
           lesson_groups:
+            ramp_up:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_variables:
@@ -2456,6 +850,8 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
             lessonGroup-9:
               display_name: Gertaerak
         pre-express-2021:
@@ -2470,28 +866,11 @@ eu:
               display_name: Sarrera
             lessonGroup-3:
               display_name: Aldagaiak
+            Sprites:
+              display_name: Pertsonaiak
             variables:
               display_name: Aldagaiak
         k5-onlinepd-2021:
-          lessons:
-            Loops:
-              key: Itzuliak
-              name: Itzuliak
-            Events:
-              key: Gertaerak
-              name: Gertaerak
-            Conditionals:
-              key: Baldintzak
-              name: Baldintzak
-            Functions:
-              key: Funtzioak
-              name: Funtzioak
-            Variables:
-              key: Aldagaiak
-              name: Aldagaiak
-            For Loops:
-              key: For begiztak
-              name: For begiztak
           lesson_groups:
             k5_getting_started_1:
               display_name: Sarrera
@@ -2519,44 +898,19 @@ eu:
           lesson_groups:
             lessonGroup-2:
               description: proba
-        dlp21-csd-overview:
-          lessons:
-            lesson-1:
-              name: Bista orokorra
-        dlp21-csp-overview:
-          lessons:
-            lesson-1:
-              name: Bista orokorra
         spelling-bee:
-          lessons:
-            lesson-1:
-              name: Letraz-letra
           title: Letraz-letra
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Letraz-letra
         2022drafting:
-          lessons:
-            For Loop Fun:
-              name: Begizta jostarirako
           lesson_groups:
             lessonGroup-8:
               display_name: Kode Ordua
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
             lessonGroup-3:
               display_name: Aldagaiak
-        csd6-pilot-2022:
-          lessons:
-            Functions with Parameters:
-              name: Funtzioak
         coursea-2022:
-          lessons:
-            Happy Maps:
-              name: Mapa Zoriontsuak
-            'Programming: Happy Maps':
-              name: Mapa Zoriontsuak
           lesson_groups:
             csf_digcit:
               display_name: Hiritartasun digitala
@@ -2566,6 +920,8 @@ eu:
               display_name: Gertaerak
         express-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             lessonGroup-9:
               display_name: Gertaerak
             csf_loops:
@@ -2578,11 +934,6 @@ eu:
               display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
-        csp3-2022:
-          lessons:
-            Debugging:
-              name: Arazketa
-              key: Arazketa
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -2598,14 +949,6 @@ eu:
             csp_loops:
               display_name: Itzuliak
         courseb-2022:
-          lessons:
-            Move It, Move It:
-              name: Mugi ezazu, mugi ezazu!
-              key: Mugi ezazu, mugi ezazu!
-            Getting Loopy:
-              name: Iteratzen
-            'Loops: Getting Loopy':
-              name: Iteratzen
           lesson_groups:
             csf_digcit:
               display_name: Hiritartasun digitala
@@ -2614,14 +957,6 @@ eu:
             csf_events:
               display_name: Gertaerak
         coursec-2022:
-          lessons:
-            The Big Event:
-              name: Gertaera Handia
-            Binary Bracelets:
-              name: Eskumuturreko bitarrak
-              key: Eskumuturreko bitarrak
-            'Events: The Big Event':
-              name: Gertaera Handia
           lesson_groups:
             csf_digcit:
               display_name: Hiritartasun digitala
@@ -2632,17 +967,6 @@ eu:
             csf_data:
               display_name: Datu
         coursed-2022:
-          lessons:
-            Graph Paper Programming:
-              name: Paper grafiko programazioa
-            Relay Programming:
-              name: Txandaka programatzen
-              key: Txandaka programatzen
-            Conditionals with Cards:
-              name: Baldintzak Txartelekin
-              key: Baldintzak Txartelekin
-            'Algorithms: Graph Paper Programming':
-              name: Paper grafiko programazioa
           lesson_groups:
             lessonGroup-6:
               display_name: Hiritartasun digitala
@@ -2653,14 +977,9 @@ eu:
             csf_conditionals:
               display_name: Baldintzak
         coursee-2022:
-          lessons:
-            Songwriting:
-              name: Musika idazten
-            'Functions: Songwriting':
-              name: Musika idazten
-            Conditionals:
-              key: Baldintzak
           lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
             csf_digcit:
               display_name: Hiritartasun digitala
             ramp_up:
@@ -2670,81 +989,62 @@ eu:
             csf_nested_loops:
               display_name: Baldintzak
         coursef-2022:
-          lessons:
-            For Loop Fun:
-              name: Begizta jostarirako
-              key: Begizta jostarirako
-            The Internet:
-              name: Internet
-            Internet:
-              key: Internet
-              name: Internet
           lesson_groups:
+            ramp_up:
+              display_name: Pertsonaiak
             lessonGroup-7:
               display_name: Hiritartasun digitala
             lessonGroup-8:
               display_name: Aldagaiak
-        csa1-2022:
-          lessons:
-            lesson-9:
-              name: Itzuliak
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: Aldagaiak
-        csa3-2022:
-          lessons:
-            lesson-5:
-              name: For begiztak
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: Baldintzak
-            lesson-16:
-              name: Arazketa
-            lesson-19:
-              name: Arazketa
-        csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: Itzuliak
         coursef-2022-pilot:
-          lessons:
-            The Internet:
-              name: Internet
-              key: Internet
           lesson_groups:
             lessonGroup-7:
               display_name: Hiritartasun digitala
+            ramp_up:
+              display_name: Pertsonaiak
             lessonGroup-8:
               display_name: Aldagaiak
-        csa2-2022-exemplars:
+        soccer:
+          name: futbola
+        csa1-2023:
           lessons:
-            lesson-1:
-              name: Aldagaiak
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
+            lesson-6:
               name: Itzuliak
-              key: Itzuliak
-            Events:
-              name: Gertaerak
-              key: Gertaerak
-            Conditionals:
-              name: Baldintzak
-              key: Baldintzak
-            Functions:
-              name: Funtzioak
-              key: Funtzioak
-            Variables:
+        csa2-2023:
+          lessons:
+            lesson-4:
               name: Aldagaiak
-              key: Aldagaiak
-            For Loops:
+        csa3-2023:
+          lessons:
+            lesson-3:
               name: For begiztak
-              key: For begiztak
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Ausazkoa
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Datu
+            csp_loops:
+              display_name: Itzuliak
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zerrendak
+            lessonGroup-3:
+              display_name: Itzuliak

@@ -1,7 +1,7 @@
 name 'CSA U2 Assessment 2022 q10'
 
-wrong 'The return type of the `getOwne`r method needs to be defined as `void`.'
-wrong 'The `getOwne`r method should be declared as `private`.'
+wrong 'The return type of the `getOwner` method needs to be defined as `void`.'
+wrong 'The `getOwner` method should be declared as `private`.'
 right 'The return type of the `getOwner` method needs to be defined as `String`.'
 wrong 'The `getOwner` method requires a parameter.'
 wrong 'The return type of the `getOwner` method needs to be defined as `boolean`.'

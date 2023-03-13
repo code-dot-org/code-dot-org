@@ -21,6 +21,14 @@ class ImmersiveReaderButton extends Component {
     }
   }
 
+  handleKeyDown(event, locale, title, text) {
+    // should trigger button press on enter or space pressed
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleLaunchImmersiveReader(locale, title, text);
+      event.preventDefault();
+    }
+  }
+
   render() {
     const {title, text} = this.props;
     // Get the current language from the language cookie.
@@ -32,6 +40,8 @@ class ImmersiveReaderButton extends Component {
 
     return (
       <div
+        tabIndex={0}
+        role="button"
         ref={el => (this.container = el)}
         className={'immersive-reader-button'}
         data-button-style={'icon'}
@@ -39,6 +49,7 @@ class ImmersiveReaderButton extends Component {
         onClick={function() {
           handleLaunchImmersiveReader(locale, title, text);
         }}
+        onKeyDown={e => this.handleKeyDown(e, locale, title, text)}
       />
     );
   }

@@ -69,31 +69,30 @@ class ManifestBuilder
     info "Mapped #{category_map.size} categories"
 
     # Write result to file
-    File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
-      file.write(
-        JSON.pretty_generate(
-          {
-            # JSON-style file comment
-            '//': [
-              'Sound Library Manifest',
-              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
-            ],
+    File.write(
+      DEFAULT_OUTPUT_FILE,
+      JSON.pretty_generate(
+        {
+          # JSON-style file comment
+          '//': [
+            'Sound Library Manifest',
+            'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+            'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
+          ],
 
-            # Strip aliases from metadata - they're no longer needed since they
-            #   are represented in the alias map.
-            # Also sort for stable updates
-            'metadata': sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+          # Strip aliases from metadata - they're no longer needed since they
+          #   are represented in the alias map.
+          # Also sort for stable updates
+          metadata: sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
-            # Sort category map for stable updates
-            'categories': category_map.sort.to_h,
+          # Sort category map for stable updates
+          categories: category_map.sort.to_h,
 
-            # Sort alias map for stable updates
-            'aliases': alias_map.sort.to_h
-          }
-        )
+          # Sort alias map for stable updates
+          aliases: alias_map.sort.to_h
+        }
       )
-    end
+    )
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -138,7 +137,7 @@ class ManifestBuilder
       if result.is_a? String
         @warnings.push result
       end
-      download_progress_bar.increment unless download_progress_bar.nil?
+      download_progress_bar&.increment
     end
 ) do |name|
       # This is the parallel block.  This block should return a string to
@@ -159,16 +158,16 @@ class ManifestBuilder
         verbose "Writing #{mp3_destination}"
         objects['mp3'].get(response_target: mp3_destination)
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json and #{name}.mp3 from S3:
-#{service_error}
-The sound has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json and #{name}.mp3 from S3:
+          #{service_error}
+          The sound has been skipped.
         WARN
       end
 
       true
     end
-    download_progress_bar.finish unless download_progress_bar.nil?
+    download_progress_bar&.finish
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -256,7 +255,7 @@ The sound has been skipped.
       else
         @warnings.push result
       end
-      metadata_progress_bar.increment unless metadata_progress_bar.nil?
+      metadata_progress_bar&.increment
     end
 ) do |name|
       # This is the parallel block.  This block should return a string to
@@ -290,22 +289,22 @@ The sound has been skipped.
         categories = []
         aliases.each do |a|
           if a.start_with? "category_"
-            categories.push (a.delete_prefix "category_")
+            categories.push(a.delete_prefix("category_"))
           end
         end
         metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}
         metadata['categories'] = categories
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json from S3:
-#{service_error}
-The sound has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json from S3:
+          #{service_error}
+          The sound has been skipped.
         WARN
       rescue JSON::JSONError => json_error
-        next <<-WARN
-There was an error parsing #{name}.json:
-#{json_error}
-The sound has been skipped.
+        next <<~WARN
+          There was an error parsing #{name}.json:
+          #{json_error}
+          The sound has been skipped.
         WARN
       end
 
@@ -325,14 +324,14 @@ The sound has been skipped.
       # Generate appropriate sourceUrl pointing to the sound library API
       metadata['sourceUrl'] = "/api/v1/sound-library/#{name}.mp3"
 
-      verbose <<-EOS
-#{bold name} @ #{metadata['version']}
-#{JSON.pretty_generate metadata}
+      verbose <<~EOS
+        #{bold name} @ #{metadata['version']}
+        #{JSON.pretty_generate metadata}
       EOS
 
       metadata
     end
-    metadata_progress_bar.finish unless metadata_progress_bar.nil?
+    metadata_progress_bar&.finish
     sound_metadata_by_name
   end
 
@@ -347,9 +346,9 @@ The sound has been skipped.
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
       end
-      alias_progress_bar.increment unless alias_progress_bar.nil?
+      alias_progress_bar&.increment
     end
-    alias_progress_bar.finish unless alias_progress_bar.nil?
+    alias_progress_bar&.finish
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
     alias_map
   end
@@ -363,9 +362,9 @@ The sound has been skipped.
       categories.each do |category|
         category_map[category] = (category_map[category] + [name]).uniq.sort
       end
-      category_progress_bar.increment unless category_progress_bar.nil?
+      category_progress_bar&.increment
     end
-    category_progress_bar.finish unless category_progress_bar.nil?
+    category_progress_bar&.finish
     category_map
   end
 

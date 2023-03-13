@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ky:
   errors:
     messages:
@@ -116,6 +122,7 @@ ky:
     none: "Жок"
   home:
     trynow: 'Дагы кара'
+  certificate_hour_of_code: "Код сааты"
   video:
     tab: 'Видео.'
     notes: 'Видео жокпу? Эскертмелери көрсөт.'
@@ -130,16 +137,16 @@ ky:
   upsell:
     applab:
       title: 'App Lab'
-    hoc:
-      title: 'Классикалык лабиринт'
     flappy:
       title: 'Flappy Code'
     gamelab:
       title: "Оюн лабы"
-    infinity:
-      body: "Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө."
     hero:
       body: "Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код жазып Minecraft өткүлө."
+    hoc:
+      title: 'Классикалык лабиринт'
+    infinity:
+      body: "Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө."
     unplugged_conditionals:
       title: "Шартуулар"
   landing:
@@ -196,11 +203,14 @@ ky:
         math: 'Математика'
         science: 'Илим'
         la: 'Тил өнөрлөрү'
+        other: "Башка"
       resources:
         khan: 'Khan Academy'
         scratch: 'Scratch'
+        other: "Башка"
       robotics:
         grok: 'Grok үйрөнүү'
+        other: "Башка"
       email_opt_in:
         opt_in_yes: 'Ооба'
         opt_in_no: 'Жок'

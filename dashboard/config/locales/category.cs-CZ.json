@@ -1,0 +1,74 @@
+{
+  "cs-CZ": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Čtení literatury"
+        },
+        "ccela/SL": {
+          "description": "Mluvení a poslech"
+        },
+        "ccmath/MP": {
+          "description": "Cvičení z matematiky"
+        },
+        "csta2011/CPP": {
+          "description": "Počítačová praxe a programování"
+        },
+        "csta2011/CT": {
+          "description": "Aritmetické Myšlení"
+        },
+        "iste/1": {
+          "description": "Studenti prokážou tvůrčí myšlení a znalost konstruktů, vyvinou inovativní produkty a vytvoří procesy, které využívají technologie."
+        },
+        "iste/4": {
+          "description": "Studenti využijí dovednost kritického myšlení při plánování a vedení výzkumu, správě projektů, řešení problémů a provádění informovaných rozhodnutí za pomoci vhodných digitálních nástrojů a zdrojů."
+        },
+        "iste/6": {
+          "description": "Studenti demonstrují dobré porozumění technologickým konceptům, systémům a operacím."
+        },
+        "ccela/L": {
+          "description": "Jazyk"
+        },
+        "ccela/RI": {
+          "description": "Čtení informačně"
+        },
+        "ccmath/OA": {
+          "description": "Operace a algebraické myšlení"
+        },
+        "csta2011/CD": {
+          "description": "Počítače a komunikační zařízení"
+        },
+        "csta2011/CI": {
+          "description": "Společenství, globální a etické vlivy"
+        },
+        "ccmath/NBT": {
+          "description": "Číslo a operace v desítkové soustavě"
+        },
+        "ccmath/G": {
+          "description": "Geometrie"
+        },
+        "ccela/W": {
+          "description": "Psaní"
+        },
+        "csta2011/CL": {
+          "description": "Spolupráce"
+        },
+        "iste/2": {
+          "description": "Studenti používají digitální média a prostředí ke komunikaci a spolupráci, včetně práce na dálku, k podpoře individuálního učení a rozvoji vzdělání u ostatních."
+        },
+        "csta/IC": {
+          "description": "Dopady počítačů"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Vysvětlete, jak můžou být výpočetní prostředky chráněny a zneužívány."
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Srovnejte algoritmy komprese dat a určete, který je v daném kontextu nejlepší."
+        },
+        "csta/DA": {
+          "description": "Data a analýza"
+        }
+      }
+    }
+  }
+}

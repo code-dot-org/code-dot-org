@@ -36,6 +36,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -46,6 +47,7 @@ describe('ProgressLessonTeacherInfo', () => {
 
     assert.equal(wrapperWithoutPlan.find('Button').length, 0);
     assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
+    assert.equal(wrapperWithPlan.find('Button').props().href, 'foo/bar');
   });
 
   it('updates the lesson url to require login', () => {
@@ -60,6 +62,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={false}
         toggleHiddenLesson={() => {}}
@@ -93,6 +96,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -125,6 +129,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -133,8 +138,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('Connect(LessonLock)').length, 1);
-    assert.equal(wrapperUnlockable.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapperLockable.find('LessonLock').length, 1);
+    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
   });
 
   it('does not render LessonLock button when lesson is lockable and teacher is not lockable authorized', () => {
@@ -153,6 +158,7 @@ describe('ProgressLessonTeacherInfo', () => {
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
+          unitId={17}
           unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
@@ -161,8 +167,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('Connect(LessonLock)').length, 0);
-    assert.equal(wrapperUnlockable.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapperLockable.find('LessonLock').length, 0);
+    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
   });
 
   it('does not render our LessonLock button when we have no sections', () => {
@@ -176,6 +182,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -183,7 +190,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapper.find('LessonLock').length, 0);
   });
 
   it('renders SendLessonDialog with only start url', () => {
@@ -199,6 +206,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -220,6 +228,7 @@ describe('ProgressLessonTeacherInfo', () => {
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
+        unitId={17}
         unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
@@ -228,6 +237,31 @@ describe('ProgressLessonTeacherInfo', () => {
     );
 
     assert.equal(wrapper.find('SendLesson').length, 0);
+  });
+
+  it('renders Rate This Lesson only if lesson feedback url', () => {
+    const lesson = {
+      ...fakeLesson('Maze', 1),
+      lesson_feedback_url: 'foo/bar/feedback'
+    };
+
+    const wrapper = shallow(
+      <ProgressLessonTeacherInfo
+        lesson={lesson}
+        section={MOCK_SECTION}
+        unitAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
+          lessonsBySection: {11: {}}
+        })}
+        unitId={17}
+        unitName="My Unit"
+        hasNoSections={true}
+        toggleHiddenLesson={() => {}}
+        lockableAuthorized={true}
+      />
+    );
+
+    assert.equal(wrapper.find('.rate-lesson-button').length, 1);
   });
 
   it('renders our HiddenForSectionToggle when we have a section', () => {
@@ -241,6 +275,7 @@ describe('ProgressLessonTeacherInfo', () => {
             hiddenLessonState={Immutable.fromJS({
               lessonsBySection: {11: {}}
             })}
+            unitId={17}
             unitName="My Unit"
             hasNoSections={false}
             toggleHiddenLesson={() => {}}

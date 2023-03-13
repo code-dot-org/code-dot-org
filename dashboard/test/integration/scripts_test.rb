@@ -51,7 +51,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
   test 'assigned student can follow script family redirect' do
     unit = create(
       :script, name: 'coursez-2020', family_name: 'coursez', version_year: 'unversioned', is_course: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     )
     CourseOffering.add_course_offering(unit)
 

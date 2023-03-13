@@ -1,7 +1,7 @@
-$root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/turtle/"; //TODO: Parameterize for asset pipeline
 
-@import 'color';
-@import 'font';
+@import "color.scss";
+@import "font";
 
 $alabaster: #fafafa;
 $own-node-background-color: $white;
@@ -17,7 +17,7 @@ $narrow-column-width: 50px;
 $wide-column-width: 121px;
 
 // Cross-browser helper for user_select property
-@mixin user_select($val) {
+@mixin user-select($val) {
   -moz-user-select: $val;
   -webkit-user-select: $val;
   -ms-user-select: $val;
@@ -45,9 +45,7 @@ $wide-column-width: 121px;
   clear: both;
 }
 
-//
 // NetSim-specific styles
-//
 #netsim {
   position: absolute;
   top: 0;
@@ -63,7 +61,7 @@ $wide-column-width: 121px;
     top: -15px;
     left: 50%;
     width: $netsim-alert-container-width;
-    margin-left: -($netsim-alert-container-width/2);
+    margin-left: -($netsim-alert-container-width * 0.5);
     z-index: 99999;
   }
 
@@ -99,7 +97,6 @@ $wide-column-width: 121px;
       background-color: lighten($red, 50%);
       border-color: lighten($red, 20%);
     }
-
   }
 
   .netsim-alert-button {
@@ -133,7 +130,7 @@ $wide-column-width: 121px;
       font-family: monospace;
       white-space: pre-wrap;
       // Make sure table text can be selected and copied
-      @include user_select(text);
+      @include user-select(text);
     }
 
     .log-browser-limit-message {
@@ -201,14 +198,16 @@ $wide-column-width: 121px;
     font-family: $gotham-bold;
   }
 
-  p, label {
+  p,
+  label {
     font-family: $gotham-regular;
   }
 
   table {
     width: 100%;
 
-    th, td {
+    th,
+    td {
       padding: 1px 5px;
       border-collapse: collapse;
     }
@@ -224,11 +223,12 @@ $wide-column-width: 121px;
       font-family: $gotham-regular;
 
       // Make sure table text can be selected and copied
-      @include user_select(text);
+      @include user-select(text);
     }
 
     tbody {
-      th, td {
+      th,
+      td {
         vertical-align: top;
       }
     }
@@ -237,7 +237,8 @@ $wide-column-width: 121px;
   // Span around clickable icons and text that show/hide panels.
   .minimizer {
     cursor: pointer;
-    @include user_select(none);
+
+    @include user-select(none);
   }
 
   .single-line-with-ellipsis {
@@ -252,7 +253,7 @@ $wide-column-width: 121px;
     font-family: monospace;
 
     // Make sure user data can always be selected and copied
-    @include user_select(text);
+    @include user-select(text);
   }
 
   // Orange SPAN button
@@ -268,7 +269,7 @@ $wide-column-width: 121px;
     cursor: pointer;
 
     // Button text should not be selectable
-    @include user_select(none);
+    @include user-select(none);
 
     &.large-button {
       font-size: 14px;
@@ -350,9 +351,10 @@ $wide-column-width: 121px;
       .viz-wire {
         stroke: $charcoal;
         stroke-width: 2;
+
         @include transition(
-                stroke 1s,
-                stroke-width 1s); // Fade back to normal stroke color
+          stroke 1s,
+          stroke-width 1s); // Fade back to normal stroke color
 
         &.hidden-wire {
           display: none;
@@ -364,6 +366,7 @@ $wide-column-width: 121px;
           font-family: monospace;
           font-size: 26pt;
           text-anchor: middle;
+
           @include transition(fill 1s);
 
           &.question-mark {
@@ -383,8 +386,10 @@ $wide-column-width: 121px;
           }
         }
 
-        &.state-on, &.state-off {
+        &.state-on,
+        &.state-off {
           stroke-width: 4;
+
           @include transition(none); // Snap to this state
 
           .state-label {
@@ -393,6 +398,7 @@ $wide-column-width: 121px;
 
           .question-mark {
             fill: transparent;
+
             @include transition(none); // Snap to this state
           }
         }
@@ -425,7 +431,7 @@ $wide-column-width: 121px;
     }
 
     .clearfix {
-      clear:both;
+      clear: both;
     }
   }
 
@@ -521,7 +527,7 @@ $wide-column-width: 121px;
   // and user controls.
 
   // How rounded are the corners of the panel?
-  $panel_border_radius: 0.3em;
+  $panel-border-radius: 0.3em;
 
   div.netsim-panel {
     margin: 0 0 0.5em;
@@ -536,7 +542,7 @@ $wide-column-width: 121px;
       line-height: 110%;
       background-color: $cyan;
       color: $white;
-      border-radius: $panel_border_radius $panel_border_radius 0 0;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
 
       .panel-controls {
         float: right;
@@ -560,7 +566,7 @@ $wide-column-width: 121px;
       border-right: solid darkgray 1px;
       border-bottom: solid darkgray 1px;
       border-top: solid $cyan 1px;
-      border-radius: 0 0 $panel_border_radius $panel_border_radius;
+      border-radius: 0 0 $panel-border-radius $panel-border-radius;
     }
 
     .content-wrap {
@@ -570,7 +576,7 @@ $wide-column-width: 121px;
     // Minimized panel, contents are hidden.
     &.minimized {
       h1 {
-        border-radius: $panel_border_radius;
+        border-radius: $panel-border-radius;
         .clear_button {
           display: none;
         }
@@ -645,7 +651,7 @@ $wide-column-width: 121px;
           font-family: monospace;
 
           // Make sure table text can be selected and copied
-          @include user_select(text);
+          @include user-select(text);
         }
 
         tr.ascii td.message {
@@ -654,23 +660,31 @@ $wide-column-width: 121px;
       }
     }
 
-    th.encodingLabel, td.encodingLabel,
-    th.toAddress, td.toAddress,
-    th.fromAddress, td.fromAddress,
-    th.packetInfo, td.packetInfo {
+    th.encodingLabel,
+    td.encodingLabel,
+    th.toAddress,
+    td.toAddress,
+    th.fromAddress,
+    td.fromAddress,
+    th.packetInfo,
+    td.packetInfo {
       text-align: center;
     }
 
-    th.encodingLabel, td.encodingLabel {
+    th.encodingLabel,
+    td.encodingLabel {
       width: 1%; // Depend on nowrap
     }
 
-    th.toAddress, td.toAddress,
-    th.fromAddress, td.fromAddress {
+    th.toAddress,
+    td.toAddress,
+    th.fromAddress,
+    td.fromAddress {
       width: $narrow-column-width;
     }
 
-    th.packetInfo, td.packetInfo {
+    th.packetInfo,
+    td.packetInfo {
       width: $wide-column-width;
     }
 
@@ -720,7 +734,8 @@ $wide-column-width: 121px;
       }
 
       // All input fields
-      input, textarea {
+      input,
+      textarea {
         resize: none;
         padding: 0.2em;
         margin-bottom: 0.2em;
@@ -748,10 +763,14 @@ $wide-column-width: 121px;
       }
 
       // All columns but "message"
-      th.encodingLabel, td.encodingLabel,
-      th.toAddress, td.toAddress,
-      th.fromAddress, td.fromAddress,
-      th.packetInfo, td.packetInfo {
+      th.encodingLabel,
+      td.encodingLabel,
+      th.toAddress,
+      td.toAddress,
+      th.fromAddress,
+      td.fromAddress,
+      th.packetInfo,
+      td.packetInfo {
         text-align: center;
 
         input {
@@ -760,16 +779,20 @@ $wide-column-width: 121px;
         }
       }
 
-      th.encodingLabel, td.encodingLabel {
+      th.encodingLabel,
+      td.encodingLabel {
         width: 1%; // depend on nowrap
       }
 
-      th.toAddress, td.toAddress,
-      th.fromAddress, td.fromAddress {
+      th.toAddress,
+      td.toAddress,
+      th.fromAddress,
+      td.fromAddress {
         width: $narrow-column-width;
       }
 
-      th.packetInfo, td.packetInfo {
+      th.packetInfo,
+      td.packetInfo {
         width: $wide-column-width;
       }
 
@@ -798,7 +821,6 @@ $wide-column-width: 121px;
             width: 100%;
           }
         }
-
       }
     }
 
@@ -875,7 +897,8 @@ $wide-column-width: 121px;
         }
 
         &.wide-labels {
-          .max-value, .min-value {
+          .max-value,
+          .min-value {
             width: 4em;
           }
         }
@@ -973,7 +996,8 @@ $wide-column-width: 121px;
     overflow-y: scroll;
 
     table {
-      th, td {
+      th,
+      td {
         font-size: 8pt;
       }
     }
@@ -1017,16 +1041,24 @@ $wide-column-width: 121px;
   // Really garish terrible style for debug buttons that we should not ship.
   input.debug-button {
     background: #f9f968;
-    background: -moz-linear-gradient(top,  #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f968), color-stop(82%,#ffa73d), color-stop(100%,#ff7f04));
-    background: -webkit-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
-    background: -o-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
-    background: -ms-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
-    background: linear-gradient(to bottom,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f968', endColorstr='#ff7f04',GradientType=0 );
+    background: -moz-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background:
+      -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, #f9f968),
+        color-stop(82%, #ffa73d),
+        color-stop(100%, #ff7f04)
+      );
+    background: -webkit-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -o-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -ms-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: linear-gradient(to bottom, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f968", endColorstr="#ff7f04", GradientType=0);
     border: outset #ff7f04 3px;
     color: black;
-    font-weight:bold;
+    font-weight: bold;
   }
 
   .lobby-hint {
@@ -1054,4 +1086,3 @@ $wide-column-width: 121px;
     clear: right;
   }
 }
-

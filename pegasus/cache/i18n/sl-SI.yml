@@ -868,6 +868,12 @@ sl-SI:
   coursed-2021_gradelevel: 8. razred in višje
   coursee-2021_gradelevel: Starost 8-12
   coursef-2021_gradelevel: Starost 9-13
+  coursea-2022_gradelevel: Starost 4-7
+  courseb-2022_gradelevel: Starost 5-8
+  coursec-2022_gradelevel: Starost 6-10
+  coursed-2022_gradelevel: 8. razred in višje
+  coursee-2022_gradelevel: Starost 8-12
+  coursef-2022_gradelevel: Starost 9-13
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
@@ -1497,3 +1503,4 @@ sl-SI:
   ai_for_oceans_lesson_plan: po učnem načrtu
   ai_activity: Dejavnost
   ai_description: Opis
+  hoc2022_landing_page_create_title: Ustvari

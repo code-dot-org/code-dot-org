@@ -32,11 +32,10 @@ Néhány tipp:
 - [Általános irányelvek a Kódolás órája™ tevékenységek létrehozásához](#guidelines)
 - [Hogyan küldd el](#submit)
 - [Hogyan lesznek értékelve az ötletek](#inclusion)
-- [Javaslatok a tevékenységek megtervezéséhez](#earlyreview)
-- [Védjegyre vonatkozó irányelvek](#design)
-- [Pixel követése](#tm)
-- [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#pixel)
-- [Tevékenységek reklámozása, Számítástechnikai Oktatási Hét, Kódolás Órája ](#promote)
+- [Javaslatok a tevékenységek megtervezéséhez](#design)
+- [Védjegyre vonatkozó irányelvek](#tm)
+- [Pixel követése](#pixel)
+- [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -184,98 +183,81 @@ Mindezeken túl minden tevékenységnek meg kell felelnie az alábbi feltételek
 - Megfelelőnek kell lennie egy állami iskolai tanórán való megtartáshoz (fegyveres, erőszakos, szexuális és vallásos tartalom tilos)
 - Nincs szükség regisztrációra 
 - Nem igényel fizetést (kivétel a robotika tevékenységekhez, amelyek robot / kiegészítő vásárlást igényelhetnek) A felülvizsgálati bizottság az önálló munka során feldolgozandó tevékenységek esetében megvizsgálja, hogy:
-- A tanárok a gyakorlatot vagy a tevékenységet informatikai háttér nélkül is tudják-e használni
-- A hallgatók sikeresen tudják-e teljesíteni akkor is, ha nem rendelkeznek számítástechnikai ismeretekkel
-- A hallgatók szülői vagy tanári útmutatás nélkül meg tudják-e oldani önállóan a gyakorlatot
 
-A tanárok és a diákok képesek lesznek a tevékenységek listájában keresni olyan szűrők alapján, mint péládul az osztály, tapasztalati szint, tantárgy, hardver stb. Alapértelmezés szerint először az olyan óraterveket és tevékenységeket mutatjuk be, amelyek:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Megkapták a legmagasabb értékelést a felülvizsgálati bizottságtól
 - Egyórás önálló munkára épülő tevékenységeket céloznak kezdőknek (diákoknak és tanároknak egyaránt)
 - Alkalmazható a felhasználók széles köre számára (platform, nyelv és életkor alapján is)
-- Nem igényel telepítést
-- Az idei évben kerültek benyújtásra 
 
-[**Vissza az elejére**](#top)
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-<a id="earlyreview"></a>
-
-## Javaslatok egyórás önálló gyakorlatok megtervezéséhez
-
-Az április 30. és augusztus 16. között benyújtott tevékenységek minőségi szempontból átnézésre kerülnek a  Kódolás Órája Tevékenység Felügyelő Bizottág legalább három tagja által.</p> 
-
-A bírálók a következőkre fognak összpontosítani:
-
-* Mely platformon és böngészőn működik a legjobban az oktatóprogram?
-* Kritikai szempontok - Mit lehetne javítani?
-* Hibák - Vannak-e hibák, szintaktikai problémák vagy nyelvtani elütések? Ha igen, akkor hol tart a tevékenység?
-* Arra ösztönzi ez a tevékenység a diákokat, hogy valami egyedi dolgot alkossanak?
-
-** Tartalmazzon tanároknak szóló feljegyzéseket. ** A legtöbb tevékenységnek bár önállóan végrehajthatónak kell lennie, de ha egy tevékenység során esetleg egy tanár irányítására lesz szükség, kérjük, csatolj egy egyértelmű és egyszerű utasításításokat tartalmazó leírást külön tanári jegyzetek formájában. A tevékenységedhez benyújtott URL nemcsak a hallgatóknak lesz ismeretlen, hanem a tanárok egy részének is. Adj meg olyan információkat, mint például:
-
-**A bizottság általi áttekintés nem arra ad lehetőséget, hogy egy befejezetlen munka esetén visszajelzéseket gyűjthessetek. Minden olyan tevékenységet, amelyet a bíráló túl hiányosnak tart az értékeléséhez, nem fogjuk felülvizsgálni.**
-
-** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként.
-
-Minden október 1-je előtt beküldött tevékenység normál áttekintésben részesül, függetlenül attól, hogy részt vesz-e a korai felülvizsgálatban. A szokásos felülvizsgálati időszakban (szeptember-október) a bírálók a tevékenységek értékelésére összpontosítanak a fenti "Hogyan értékeljük a tevékenységeket" részben ismertetett kritériumok szerint. Hacsak te nem szeretnél változtatni a tevékenységen, a véleményezők a korai felülvizsgálati visszajelzésekre fognak támaszkodni a tevékenységek értékelésénél.
+- Mely platformon és böngészőn működik a legjobban az oktatóprogram?
+- Kritikai szempontok - Mit lehetne javítani?
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- Arra ösztönzi ez a tevékenység a diákokat, hogy valami egyedi dolgot alkossanak?
+- Are new this year
 
 [**Vissza az elejére**](#top)
 
 <a id="design"></a>
 
-## Védjegyre vonatkozó irányelvek
+## Javaslatok egyórás önálló gyakorlatok megtervezéséhez
 
-Az oktatóanyagba beillesztheted a [ A Kódolás órája logóját](https://hourofcode.com/us/promote/resources#logo), de nem kötelező. Ha a Kódolás órája logót használod, olvasd el az alábbi védjegy-irányelveket. <u> A Code.org embléma és név semmilyen körülmények között nem használható fel.</u> Mindkettő védjegyoltalom alatt áll, és kifejezett írásbeli engedély nélkül nem keverhető össze harmadik fél márkanevével.
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-** Ügyelj arra, hogy egy átlagos diák is képes legyen egy óra alatt kényelmesen befejezni a gyakorlatot. ** Fontold meg azt is, hogy a végén további tevékenységet adsz hozzá azoknak a hallgatóknak, akik gyorsabban haladnak az óra alatt. Ne feledd, hogy a legtöbb gyerek abszolút kezdőnek számít a számítástechnika és a kódolás területén.
+** Tartalmazzon tanároknak szóló feljegyzéseket. ** A legtöbb tevékenységnek bár önállóan végrehajthatónak kell lennie, de ha egy tevékenység során esetleg egy tanár irányítására lesz szükség, kérjük, csatolj egy egyértelmű és egyszerű utasításításokat tartalmazó leírást külön tanári jegyzetek formájában. A tevékenységedhez benyújtott URL nemcsak a hallgatóknak lesz ismeretlen, hanem a tanárok egy részének is.
 
-Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: Adj meg olyan információkat, mint például:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
 - Mely platformon és böngészőn működik a legjobban az oktatóprogram?
 - Működik-e okostelefonokon? Tableten?
 - Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban. 
 - Az osztályteremben történő használat szempontjai? Például, ha vannak videók, javasold a tanárokat, hogy mutassák meg a őket az egész osztálynak
 
-** Adj lehetőséget a visszajelzésre a tevékenységek végén. ** (Pl. „Befejezted a 10. szintet, mellyel megtanultad a loopokat!”. Remek munka!")
+** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként.
 
-** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként. És te? @Scratch.” Használd a ** #HourOfCode ** hashtag-et (nagybetűkkel H, O, C)
+Minden október 1-je előtt beküldött tevékenység normál áttekintésben részesül, függetlenül attól, hogy részt vesz-e a korai felülvizsgálatban. A szokásos felülvizsgálati időszakban (szeptember-október) a bírálók a tevékenységek értékelésére összpontosítanak a fenti "Hogyan értékeljük a tevékenységeket" részben ismertetett kritériumok szerint. Hacsak te nem szeretnél változtatni a tevékenységen, a véleményezők a korai felülvizsgálati visszajelzésekre fognak támaszkodni a tevékenységek értékelésénél. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Hozd létre tevékenységet spanyol vagy más nyelveken, az angol mellett.**
+**Create your activity in Spanish or in other languages besides English.**
 
-** Kapcsold össze és magyarázd el a tevékenység egy társadalmilag jelentős kontextusát.** A számítógépes programozás szuperhatalommá válik, amikor a diákok meglátják, hogyan képes jobbá tenni a világot!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-** Győződj meg arról, hogy az oktatóanyag használható [ páros programozásra is](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). ** Ez különösen hasznos a Kódolás órája számára, ugyanis sok osztályteremben nem jut minden diákra egy számítógép.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Vissza az elejére**](#top)
 
 <a id="tm"></a>
 
-## Pixel követése
+## Védjegyre vonatkozó irányelvek
 
-Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: 
+** Adj lehetőséget a visszajelzésre a tevékenységek végén. ** (Pl. „Befejezted a 10. szintet, mellyel megtanultad a loopokat!”. Remek munka!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. A Kódolás órájára történő bármilyen utalást csak az alábbi módokon szabad alkalmazni. Példa helyes felhasználásra: "Vegyen részt a Kódolás óráján™ az ACMECorp.com-on". Példa helytelen felhasználásra: "Próbálja ki a Kódolás óráját az ACME Corp-nál".
-2. Használd a "TM" feliratot a legfontosabb megjelenésekkor, weboldalakon vagy az alkalmazásleírásokban.
-3. Helyezd el az idegen nyelvű leírásokat az oldal aján (lábléc), továbbá a Kódolás órája, a CSEdWeek és a Code.org webhelyekre mutató linkeket is az alábbi szöveggel együtt: "A Kódolás órája™ egy országos kezdeményezés, amelyet a Számítástechnikai Oktatási Hét [csedweek.org] és a Code.org [code.org] közösen hívott életre, hogy több millió diákot vezessen be egy óra leforgás alatt a számítástechnika és a számítógépes programozás világába."
-4. Ne használd a Kódolás órája kifejezést applikációk elnevezésekor.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**Vissza az elejére**](#top)
 
 <a id="pixel"></a>
 
-## Tevékenységeid promotálása, a CSEdWeek és a Kódolás órája
+## Pixel követése
 
-Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a Kódolás órája oldaladdal. A felhasználók sokkal nagyobb valószínűséggel reagálnak a Tőled érkező levelekre.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-Ez lehetővé teszi számunkra, hogy megszámoljuk azokat a felhasználókat, akik elkészítik a Kódolás óráját. Mindez pontosabb részvételi adatokat eredményez az oktatóprogramban.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Ha az oktatóprogram jóváhagyásra és beillesztésre kerül a végső oktatóoldalon, akkor a Code.org egyedi nyomkövetési képpontot biztosít Neked, amelyet integrálhatsz az oktatóanyagba. Mutatunk egy példát.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-MEGJEGYZÉS: a telepíthető alkalmazásokra (iOS / Android vagy asztali) ez nem vonatkozik
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Példakövető pixelek az AppInventor számára:
+Example tracking pixels for Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
 [**Vissza az elejére**](#top)
@@ -284,7 +266,7 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 ## Tevékenységeid promotálása, a CSEdWeek és a Kódolás órája
 
-Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a Kódolás órája oldaladdal. A felhasználók sokkal nagyobb valószínűséggel reagálnak a Tőled érkező levelekre. Használd a Számítástechnika Ismeretek Oktatási Hetének nemzetközi Kódolás órája kampányát arra, hogy ösztönzöd a felhasználókat mások meghívására, igy sikerülhet közösen elérnünk a 100 millió résztvevőt.
+Ez lehetővé teszi számunkra, hogy megszámoljuk azokat a felhasználókat, akik elkészítik a Kódolás óráját. Mindez pontosabb részvételi adatokat eredményez az oktatóprogramban. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Ajánld a Kódolás óráját és CSEdWeek-et a weboldaladon. Pl.: <http://www.tynker.com/hour-of-code>
 - Reklámozd a Kódolás óráját a közösségi médiában, a hagyományos médiában, levelezőlistákon stb. használva a #HourOfCode hashtag-et (nagybetűkkel H, O, C)
@@ -293,4 +275,4 @@ Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a
 
 [**Vissza az elejére**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+MEGJEGYZÉS: a telepíthető alkalmazásokra (iOS / Android vagy asztali) ez nem vonatkozik<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

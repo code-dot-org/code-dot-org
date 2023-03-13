@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "3f32b98d-dd57-4681-a94f-9c80befc46b6"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,12 +23,13 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 14:55:21 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-01-31 17:00:34 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -88,7 +85,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nStudents are introduced to the Natural Language Processing Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and comments by identifying best practices and exploring the use of Javadocs to generate program documentation.",
-        "preparation": "* Print copies of the Unit 6 Guide (one for each student)",
+        "preparation": "* Print copies of the Unit 6 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-1-projects-and-documentation/36345/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nNatural language processing is used in many programs and apps that we use every day. In this unit, we will explore some of the techniques and algorithms used in our apps and smart devices to develop our own program that uses natural language processing. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation."
       },
       "seeding_key": {
@@ -106,6 +103,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**Why would I want to represent primitive values as objects?**\n\nStudents construct `Integer` and `Double` objects to represent `int` and `double` primitive values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Additionally, students explore the minimum and maximum values for integers to avoid overflow errors.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-2-integer-and-double-objects/36344/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I want to represent primitive values as objects?**\n\nYou have worked with integer and decimal values in your programs as `int` and `double` values. In this lesson, you learn how to instantiate `Integer` and `Double` objects to represent `int` and `double` primitive values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors."
       },
       "seeding_key": {
@@ -123,6 +121,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**Why would I use an `ArrayList` instead of an array?**\n\nStudents explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. Students identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. Students then practice creating an `ArrayList` and adding values to the list.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-3-arraylists/36343/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use an `ArrayList` instead of an array?**\n\nWhen working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the size of the list constantly changes. In this lesson, you explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. You identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. You then practice creating an `ArrayList` and adding values to the list."
       },
       "seeding_key": {
@@ -140,6 +139,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nStudents work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to obtain and modify elements in an `ArrayList`.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-4-manipulating-elements/36342/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nIn this lesson, you use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to obtain and modify elements in an `ArrayList`."
       },
       "seeding_key": {
@@ -157,7 +157,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**Why does an `ArrayList` only store objects?**\n\nStudents explore generic types in Java and learn why an `ArrayList` can only store objects. Students then practice applying the algorithms they learned with 1D and 2D arrays to `ArrayList`s to find information and perform calculations with `ArrayList` data.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-5-lists-of-objects/36341/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why does an `ArrayList` only store objects?**\n\nSo far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store other objects that you create in an `ArrayList`. In this lesson, you explore why an `ArrayList` can only store objects and apply standard algorithms to find information and perform calculations with `ArrayList` data."
       },
       "seeding_key": {
@@ -175,6 +175,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nStudents explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students learn about stop word removal and practice removing elements from an `ArrayList`.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-6-removing-elements/36340/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nIn this lesson, you explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. You learn about stop word removal and practice removing elements from an `ArrayList`."
       },
       "seeding_key": {
@@ -192,6 +193,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I analyze parts of a `String`?**\n\nStudents explore the structure of a `String` and discover the `IndexOutOfBoundsException`. Students learn about text segmentation and use the `indexOf()` and `substring()` methods to implement algorithms to break text into words or sentences and apply natural language processing techniques.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-7-string-methods/36339/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I analyze parts of a `String`?**\n\nIn this lesson, you explore the structure of a `String` and discover the `IndexOutOfBoundsException`. You learn about text segmentation and use the `indexOf()` and `substring()` methods to implement algorithms to break text into words or sentences and apply natural language processing techniques."
       },
       "seeding_key": {
@@ -209,6 +211,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I determine if a list of `String`s are in alphabetical order?**\n\nStudents explore the functionality of the `compareTo()` method then write an algorithm to sort a list of `String`s in alphabetical order. Students implement their algorithms in Java and practice using the `compareTo()` method to determine if one `String` comes before another and to sort a list of `String`s in alphabetical order.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-8-comparing-strings/36338/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I determine if a list of `String`s are in alphabetical order?**\n\nIn this lesson, you explore the functionality of the `compareTo()` method then write an algorithm to sort a list of `String`s in alphabetical order. You implement their algorithms in Java and practice using the `compareTo()` method to determine if one `String` comes before another and to sort a list of `String`s in alphabetical order."
       },
       "seeding_key": {
@@ -226,7 +229,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I apply standard algorithms to `String`s?**\n\nStudents combine their knowledge of standard algorithms and `String`s to write an algorithm to check if a `String` is a palindrome. Students implement their algorithm in Java, then apply standard algorithms to traverse `String`s find if one or more substrings has a particular property or to determine the number of substrings that meet specific criteria.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-9-string-algorithms/36337/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I apply standard algorithms to `String`s?**\n\nIn this lesson, you combine your knowledge of standard algorithms and `String`s to write an algorithm check if a `String` is a palindrome. You implement your algorithm in Java, then apply standard algorithms to traverse `String`s to find if one or more substrings has a particular property or to determine the number of substrings that meet specific criteria."
       },
       "seeding_key": {
@@ -244,7 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I modify standard algorithms to implement natural language processing techniques?**\n\nStudents explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. Students write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.",
-        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 6 Study Guide (one for each student)",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 6 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-lesson-10-arraylist-algorithms/36336/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I modify standard algorithms to implement natural language processing techniques?**\n\nIn this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply your algorithm to various scenarios to find the overall sentiment value of text."
       },
       "seeding_key": {
@@ -262,7 +265,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)",
+        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-natural-language-processing-project/36335/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
@@ -280,7 +283,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I implement my plans to create my program?**\n\nStudents planned their classes and algorithms to create a program that analyzes, manipulates, and/or generates text using natural language processing techniques. Students continue to develop their projects to implement algorithms to analyze text and interact with a user. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-natural-language-processing-project/36335/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I implement my plans to create my program?**\n\nYou have now planned your classes and algorithms to create a program that analyzes, manipulates, and/or generates text using natural language processing techniques. You continue developing your project to implement algorithms to analyze text and interact with a user. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program."
       },
       "seeding_key": {
@@ -299,7 +302,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
-        "preparation": "* Gather several sticky notes for each student",
+        "preparation": "* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-natural-language-processing-project/36335/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
       "seeding_key": {
@@ -317,7 +320,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the TemperatureAction FRQ handout (one for each student)\n* Print copies of the Java Quick Reference resource (one for each student)\n* Print copies of the TemperatureAction FRQ Scoring Guidelines (one for each student)",
+        "preparation": "* Print copies of the TemperatureAction FRQ handout (one for each student)\n* Print copies of the Java Quick Reference resource (one for each student)\n* Print copies of the TemperatureAction FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-frq-practice/36334/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -336,7 +339,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-6-assessment/36333/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Assess your progress through the Unit 6 Assessment."
       },
       "seeding_key": {
@@ -1347,10 +1350,27 @@
       }
     },
     {
-      "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
+      "key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider the similarities and differences between creating `Integer` and `Double` objects and `String` objects. Have students make predictions about what might be happening when `Integer` and `Double` objects are created without the `new` keyword."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 1*."
       },
       "seeding_key": {
         "activity_section.key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
@@ -1359,7 +1379,7 @@
     },
     {
       "key": "adf69d73-a52d-4d84-940d-b41b0844563e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "The `Integer` and `Double` classes have methods to work with integer and decimal values. Let's take a look at some of their methods and capabilities.",
         "duration": "10",
@@ -1373,9 +1393,9 @@
     },
     {
       "key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the Integer and Double constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 2*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
       },
       "seeding_key": {
         "activity_section.key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
@@ -1384,7 +1404,7 @@
     },
     {
       "key": "df2d7f1f-a6a2-42e4-89bb-361c709cc63c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "When you were exploring the program, you might have noticed something interesting that happens when you add one to the maximum value for an integer or subtract one from the minimum value for an integer.",
         "remarks": true
@@ -1396,7 +1416,7 @@
     },
     {
       "key": "03056206-b674-4ff0-994f-7153bccab613",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did you notice about the maximum and minimum values for an `int`?*\n* *What happens when you add or subtract one from the maximum or minimum values?*\n\n**Discussion Goal:** Students share the maximum and minimum values and their findings from adding to the maximum value or subtracting from the minimum value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the minimum and maximum values for integers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *overflow* and *underflow*."
       },
@@ -1407,7 +1427,7 @@
     },
     {
       "key": "430d4997-36f0-4b3e-a512-8550550bada2",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Representing integer and decimal values as objects are useful for specific scenarios. When represented as objects, we can use the methods in the `Integer` and `Double` classes to work with these values.",
         "duration": "15",
@@ -1420,10 +1440,33 @@
       }
     },
     {
-      "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
-      "position": 9,
+      "key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing."
+      },
+      "seeding_key": {
+        "activity_section.key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "0225c47d-f493-40e7-b5cd-16b01930d533",
+      "position": 11,
+      "properties": {
+        "description": "Autoboxing also occurs when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class. On the other hand, unboxing occurs when a wrapper class object is passed as a parameter to a method that expects a value of the corresponding primitive type.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0225c47d-f493-40e7-b5cd-16b01930d533",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
         "progression_name": "Using Wrapper Classes"
       },
       "seeding_key": {
@@ -1550,7 +1593,13 @@
       "key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` methods."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to predict the size of the `ArrayList` before and after the values are added. Have students identify how initializing an `ArrayList` is different from initializing a 1D or 2D array, including that they do not need to specify the size of the `ArrayList` like they did for a 1D or 2D array."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
@@ -1558,8 +1607,19 @@
       }
     },
     {
-      "key": "febbf1fa-21d8-4d81-828c-5b969dcb413e",
+      "key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the constructor for an `ArrayList`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
+      },
+      "seeding_key": {
+        "activity_section.key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
+        "lesson_activity.key": "9d42c3ff-5a59-448b-8bc1-ea9b37f8f505"
+      }
+    },
+    {
+      "key": "febbf1fa-21d8-4d81-828c-5b969dcb413e",
+      "position": 5,
       "properties": {
         "description": "Because `ArrayList` is a class, it has the same three parts that we’ve seen in other classes: instance variables, constructors, and methods. Let's take a look at some of the source code for the `ArrayList` class.",
         "remarks": true
@@ -1571,7 +1631,7 @@
     },
     {
       "key": "9b2d6b34-88e0-48f9-99c4-8c829a06949c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the purpose of each instance variable?*\n* *What is the relationship between an array and an `ArrayList`?*\n\n**Discussion Goal:** Students identify that the `DEFAULT_CAPACITY` instance variable is the default size of an `ArrayList`, the `size` instance variable is the number of elements in the `ArrayList`, and the `data` instance variable is a 1D array. Students suggest that the relationship between an `ArrayList` and an array is a has-a relationship and an `ArrayList` stores data in the array instance variable.\n\n**Do This:** Explain the purpose of each instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `DEFAULT_CAPACITY` constant\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `size` instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `data` instance variable",
         "tips": [
@@ -1588,7 +1648,7 @@
     },
     {
       "key": "0045fddd-7806-4e40-8ea8-ed0623e499c6",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "An `ArrayList` is useful when we are working with an unknown amount of data or we need the flexibility to add elements at specific locations or expand the size of the list.",
         "name": "Using ArrayLists",
@@ -1601,7 +1661,7 @@
     },
     {
       "key": "7329cb11-a543-405f-909c-43c65783eb4e",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to declare and initialize an `ArrayList`. On Level 4, students complete a choice level to add elements to an `ArrayList`.",
         "progression_name": "Using ArrayLists"
@@ -1733,8 +1793,31 @@
       }
     },
     {
-      "key": "ea74ab24-9dc5-47d9-a071-4c54b54fd102",
+      "key": "410f1e39-fa61-4041-9b50-5a922d1f015c",
       "position": 4,
+      "properties": {
+        "description": "We can traverse an `ArrayList` similar to how we traverse a 1D array. We can use either a `for` or a `while` loop and use the loop control variable to refer to the index of a value in the list. Let's take a look at how a `for` loop can be used to access each element in an `ArrayList`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "410f1e39-fa61-4041-9b50-5a922d1f015c",
+        "lesson_activity.key": "65f59731-d6b4-4578-8ffa-e0f31777503d"
+      }
+    },
+    {
+      "key": "3af9240c-ed70-4c2c-84ce-8f5737bc22cf",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate traversing an `ArrayList` and review the `ArrayIndexOutofBoundsException`."
+      },
+      "seeding_key": {
+        "activity_section.key": "3af9240c-ed70-4c2c-84ce-8f5737bc22cf",
+        "lesson_activity.key": "65f59731-d6b4-4578-8ffa-e0f31777503d"
+      }
+    },
+    {
+      "key": "ea74ab24-9dc5-47d9-a071-4c54b54fd102",
+      "position": 6,
       "properties": {
         "description": "What if we wanted to find words in a list that met certain criteria, like words with a certain number of characters? Since a `String` is an object, the `String` class has a method to help us solve this problem!",
         "duration": "15",
@@ -1748,10 +1831,10 @@
     },
     {
       "key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
-        "progression_name": "Changing Values in an ArrayList"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `atlanta.length()` return?*\n* *How many characters will `tennessee.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `atlanta` and 9 for `tennessee`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
+        "progression_name": "Working with ArrayLists"
       },
       "seeding_key": {
         "activity_section.key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
@@ -1872,7 +1955,7 @@
       "key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Generic Types*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the example."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`."
       },
       "seeding_key": {
         "activity_section.key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
@@ -1898,7 +1981,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. On Level 2, students translate the given code with a 1D array to an `ArrayList`. On Level 3, students complete a choice level to apply standard algorithms to an `ArrayList`.",
-        "progression_name": "ArrayLists of Objects"
+        "progression_name": "ArrayList Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "b4920d1d-b2f0-43f2-816c-7cb73504ce83",
@@ -1910,7 +1993,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
-        "progression_name": "Code Review: ArrayLists of Objects"
+        "progression_name": "Code Review: ArrayList Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "91c82164-a515-4d04-b4f9-e97712efedeb",
@@ -2054,7 +2137,7 @@
       "key": "e8de4dff-bdc6-4c68-bc32-306659c7b397",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `remove()` method removes items from the `ArrayList` and updates the size accordingly. Students may wonder how they could use this method in other algorithms or scenarios.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How is the `remove()` method different from how we would remove items from an array?*\n\n**Discussion Goal:** Students identify that since arrays are immutable, they would need to set the item's index to remove to `null` to remove it and then shift the other items in the array. Doing so would leave an empty index. In an `ArrayList`, using `remove()` allows the item to be completely removed, shifting the rest of the items up in the `ArrayList`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Removing Data from an ArrayList*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `remove()` with a `for` loop and how to avoid skipping elements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `remove()` method removes items from the `ArrayList` and updates the size accordingly. Students may wonder how they could use this method in other algorithms or scenarios."
       },
       "seeding_key": {
         "activity_section.key": "e8de4dff-bdc6-4c68-bc32-306659c7b397",
@@ -2062,8 +2145,54 @@
       }
     },
     {
-      "key": "1bcc8c25-7d69-4d3f-a513-53fe974bc975",
+      "key": "632ba3db-67a5-4f1f-b74d-066993c7d728",
       "position": 4,
+      "properties": {
+        "description": "As we saw in this program, the `remove()` method removes elements from the specified index. The elements in the `ArrayList` that are at the specified index and higher are then shifted to the left by one place, subtracting one from their indices and subtracting one from the size. We also saw that the value that was at the specified index is returned from calling the `remove()` method.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "632ba3db-67a5-4f1f-b74d-066993c7d728",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "97e37f93-627e-4655-a0f8-db615469e388",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How is the `remove()` method different from how we would remove items from an array?*\n\n**Discussion Goal:** Students identify that since arrays are immutable, they would need to set the item's index to remove to `null` to remove it and then shift the other items in the array. Doing so would leave an empty index. In an `ArrayList`, using `remove()` allows the item to be completely removed, shifting the rest of the items up in the `ArrayList`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Removing Data from an ArrayList*."
+      },
+      "seeding_key": {
+        "activity_section.key": "97e37f93-627e-4655-a0f8-db615469e388",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "d492f023-8143-4764-9726-991e014fcd19",
+      "position": 6,
+      "properties": {
+        "description": "When we use the `remove()` method to remove an element from a specified index, the elements that are at the specified index and higher are then shifted to the left by one place. This can result in elements being skipped during traversal since the loop control variable continues to increase by one. We need a way to avoid skipping elements when an element is removed from the list.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d492f023-8143-4764-9726-991e014fcd19",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "b563e131-eeb6-42aa-9d10-b4e2fdaf285f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `remove()` with a `for` loop and how to avoid skipping elements."
+      },
+      "seeding_key": {
+        "activity_section.key": "b563e131-eeb6-42aa-9d10-b4e2fdaf285f",
+        "lesson_activity.key": "ab9ec308-1155-438e-ab48-f7f9d5a100ce"
+      }
+    },
+    {
+      "key": "1bcc8c25-7d69-4d3f-a513-53fe974bc975",
+      "position": 8,
       "properties": {
         "description": "Like with 1D and 2D arrays, we can also use an enhanced `for` loop to traverse an `ArrayList`. Let's look at some similarities and differences between using enhanced `for` loops with arrays and `ArrayList`s.",
         "duration": "10",
@@ -2077,7 +2206,7 @@
     },
     {
       "key": "bc0c1a29-0bc3-4516-b92f-7ed8e6e0b345",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to predict the outcome of the program, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Using an Enhanced For Loop"
@@ -2089,7 +2218,7 @@
     },
     {
       "key": "ff74cd10-914a-4947-92c2-0bdbb5a7cb27",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What differences do you notice between these two pieces of code?*\n\n**Discussion Goal:** Students notice that while the structures look similar, the enhanced `for` loop used with an array uses a primitive data type (`int`) whereas the enhanced `for` loop with an `ArrayList` uses an object (`Integer`).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Removing with an Enhanced For Loop"
@@ -2101,7 +2230,7 @@
     },
     {
       "key": "bc091993-f59c-4cb0-82fb-c2fb116a7ec3",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain `ConcurrentModificationException` and how to avoid it."
       },
@@ -2112,9 +2241,9 @@
     },
     {
       "key": "5dac9d95-0de7-4926-ad73-8a7102fd1327",
-      "position": 8,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *stop word` and `stop word removal* and demonstrate how it is applied in natural language processing.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *stop word* and *stop word removal* and demonstrate how it is applied in natural language processing.",
         "duration": "10",
         "name": "Stop Word Removal"
       },
@@ -2125,7 +2254,7 @@
     },
     {
       "key": "d5b51ae3-8a87-4d02-8fa8-89a4de84cb44",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "You learned in a previous lesson about using the `equals()` method to compare objects for equality, which includes `String`s. We can use this to find and remove stop words.",
         "remarks": true
@@ -2137,7 +2266,7 @@
     },
     {
       "key": "a542134b-6cc3-4cf9-853c-8bcb6f8d90f2",
-      "position": 10,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. On Level 4, students debug code that results in a `ConcurrentModificationException`. On Level 5, students complete a choice level to use the `remove()` method to remove values from an `ArrayList`.",
         "progression_name": "Removing Values from an ArrayList"
@@ -2274,7 +2403,7 @@
       "key": "f96bd7c0-e240-4629-9c9c-8b6639a696dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from a sentence and counting the most frequent words in the text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
         "progression_name": "Keywords and Parts-of-Speech"
       },
       "seeding_key": {
@@ -3812,7 +3941,7 @@
         "level_keys": [
           "CSA U6L4-L2v2_2022"
         ],
-        "progression": "Changing Values in an ArrayList"
+        "progression": "Working with ArrayLists"
       },
       "bonus": false,
       "seeding_key": {
@@ -3837,7 +3966,7 @@
         "level_keys": [
           "CSA U6L4-L3v2_2022"
         ],
-        "progression": "Changing Values in an ArrayList"
+        "progression": "Working with ArrayLists"
       },
       "bonus": false,
       "seeding_key": {
@@ -3912,7 +4041,7 @@
         "level_keys": [
           "CSA U6L5-L2v2_2022"
         ],
-        "progression": "ArrayLists of Objects"
+        "progression": "ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -3937,7 +4066,7 @@
         "level_keys": [
           "CSA U6L5-L3v2_2022"
         ],
-        "progression": "ArrayLists of Objects"
+        "progression": "ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -3962,7 +4091,7 @@
         "level_keys": [
           "CSA U6L5-L4 CR_2022"
         ],
-        "progression": "Code Review: ArrayLists of Objects"
+        "progression": "Code Review: ArrayList Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -5779,11 +5908,37 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1d6wlrYMUCmyMxHdUAi-n-KZIDQbUW1F8cWNv6apnzhc/edit?usp=sharing",
+      "key": "cs_bingo_cards_4",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_4"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1ywaPCOCsqkJtQAGvbTwYvD1T5nF-1qWfU_TMYWdnILE/edit?usp=sharing",
+      "key": "cs_bingo_definitions_6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_6"
+      }
+    },
+    {
       "name": "Java Quick Reference",
       "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -5796,6 +5951,7 @@
       "key": "natural_language_processing_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5808,10 +5964,35 @@
       "key": "project_characteristics",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "project_characteristics"
+      }
+    },
+    {
+      "name": "Removing Data from an ArrayList",
+      "url": "https://youtu.be/XXARwZLpAVI",
+      "key": "removing_data_from_an_arraylist",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "removing_data_from_an_arraylist"
+      }
+    },
+    {
+      "name": "Software Engineering: Natural Language Processing",
+      "url": "https://youtu.be/vdjAg0CBwdQ",
+      "key": "software_engineering_natural_language_processing",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_natural_language_processing"
       }
     },
     {
@@ -5820,6 +6001,7 @@
       "key": "temperatureaction_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5832,10 +6014,23 @@
       "key": "temperatureaction_frq_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "temperatureaction_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "The ArrayList Class",
+      "url": "https://youtu.be/Wqk9PrPIkXs",
+      "key": "the_arraylist_class",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_arraylist_class"
       }
     },
     {
@@ -5844,6 +6039,7 @@
       "key": "u6l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5856,6 +6052,7 @@
       "key": "u6l1_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5868,6 +6065,7 @@
       "key": "u6l2_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5880,6 +6078,7 @@
       "key": "u6l3_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5892,6 +6091,7 @@
       "key": "u6l4_extra_practice_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5904,6 +6104,7 @@
       "key": "u6l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5916,6 +6117,7 @@
       "key": "u6l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5928,6 +6130,7 @@
       "key": "u6l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5940,6 +6143,7 @@
       "key": "u6l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5952,6 +6156,7 @@
       "key": "u6l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -5960,11 +6165,9 @@
     },
     {
       "name": "Unit 6 Guide",
-      "url": "https://docs.google.com/document/d/1adl-rqpAW8FvKofCVfMt997IVLzvzhnDW87Q3bG3t_k/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-Kwx3qvUpaTit5A1e69GrfnSPnoluupyJf1HdnRs_iM/edit?usp=sharing",
       "key": "unit_6_guide",
       "properties": {
-        "audience": "Student",
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_6_guide"
@@ -5976,10 +6179,23 @@
       "key": "unit_6_guide_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_6_guide_1"
+      }
+    },
+    {
+      "name": "Unit 6 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1jC9mAMdOqCFe3iZci0-gGroLP-KgYFws2uq16eksE8w",
+      "key": "unit_6_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_guide_exemplar_"
       }
     },
     {
@@ -6012,6 +6228,7 @@
       "key": "unit_6_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6029,6 +6246,42 @@
       "seeding_key": {
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "name": "Working with ArrayList Data",
+      "url": "https://youtu.be/C8i8q-07OUI",
+      "key": "working_with_arraylist_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_arraylist_data"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 1",
+      "url": "https://youtu.be/PrhYsHlqxMs",
+      "key": "wrapper_classes_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "name": "Wrapper Classes - Part 2",
+      "url": "https://youtu.be/kog78g2fvqU",
+      "key": "wrapper_classes_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes_-_part_2"
+      }
     }
   ],
   "lessons_resources": [
@@ -6042,6 +6295,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "project_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_natural_language_processing"
       }
     },
     {
@@ -6178,8 +6437,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u6l3_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "the_arraylist_class"
       }
     },
     {
@@ -6203,6 +6480,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_cards_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "cs_bingo_definitions_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "u6l4_extra_practice_1"
       }
     },
@@ -6210,6 +6499,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "working_with_arraylist_data"
       }
     },
     {
@@ -6234,6 +6529,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u6l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "removing_data_from_an_arraylist"
       }
     },
     {
@@ -6325,6 +6626,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_6_guide",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_guide_exemplar_",
         "script.name": "csa6-2022"
       }
     },

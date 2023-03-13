@@ -262,7 +262,7 @@ class PardotV2
   rescue StandardError => e
     # If the input pardot_id does not exist, Pardot will response with
     # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
-    return false if e.message =~ /Pardot request failed with HTTP 400/
+    return false if /Pardot request failed with HTTP 400/.match?(e.message)
     raise e
   end
 
@@ -270,12 +270,12 @@ class PardotV2
   # @param email [String]
   # @return [Array<String>]
   def self.retrieve_pardot_ids_by_email(email)
-    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{URI.escape(email)}"
+    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
     doc.xpath('//prospect/id').map(&:text)
   rescue StandardError => e
     # If the input email does not exist, Pardot will response with
     # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
-    return [] if e.message =~ /Pardot request failed with HTTP 400/
+    return [] if /Pardot request failed with HTTP 400/.match?(e.message)
     raise e
   end
 
@@ -352,7 +352,7 @@ class PardotV2
   # @param [Array<Hash>] prospects an array of prospect data
   # @return [String] a URL
   def self.build_batch_url(api_endpoint, prospects)
-    prospects_payload_json_encoded = URI.encode({prospects: prospects}.to_json)
+    prospects_payload_json_encoded = URI::DEFAULT_PARSER.escape({prospects: prospects}.to_json)
 
     # Encode plus signs in email addresses because it is invalid in a query string
     # (even though it is valid in the base of a URL).

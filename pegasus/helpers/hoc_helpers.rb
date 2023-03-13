@@ -1,5 +1,4 @@
 require 'rmagick'
-require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'.freeze
@@ -131,7 +130,7 @@ def complete_tutorial(tutorial={})
   end
 
   dont_cache
-  redirect (destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}")
+  redirect(destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}")
 end
 
 def complete_tutorial_pixel(tutorial={})

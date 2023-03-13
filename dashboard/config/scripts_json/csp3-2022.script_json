@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=3",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More",
+          "key": "cf2c84fe-cbbb-4e69-8650-5c0dbd937855"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 03:52:16 UTC",
+    "serialized_at": "2022-12-06 15:28:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,7 +65,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore and investigate what makes an app an app. They begin by looking at and discussing five different apps. Following this, students watch a video explaining the basics of how computers work. Finally students return to the apps and consider the various inputs and outputs.",
-        "preparation": "* Preview the How Computers Work Video\r\n* Explore the apps used in this lesson",
+        "preparation": "* Preview the How Computers Work Video\n* Explore the apps used in this lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is an introduction to a unit that introduces programming through the broader context of designing apps that help people. This lesson is designed to build excitement about the skills that students will develop throughout the unit and get them thinking early about the ways programming can help others. This lesson also establishes shared vocabulary for talking about apps in a generic sense, for example its inputs, outputs, and overall user interface.",
         "student_overview": "Welcome to the Introduction to App Development! We begin this unit by examining the basics of an app. "
       },
@@ -73,7 +85,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
-        "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.",
+        "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
         "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab."
       },
@@ -94,7 +106,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
-        "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
+        "preparation": "* Read over the [r app_development_planning_guide/csp/2022]\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
         "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true
@@ -116,7 +128,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "preparation": "* Make sure students have access to their App Development Planning Guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab"
       },
       "seeding_key": {
@@ -135,7 +147,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
-        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students",
+        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this.",
         "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true
@@ -156,7 +168,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
-        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides at the conclusion of the lesson",
+        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides at the conclusion of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is written in an Investigate style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. \r\n\r\nThis lesson introduces a number of concepts and vocabulary around what programs are and how they run that will need to be reinforced in future lessons. ",
         "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps."
       },
@@ -176,7 +188,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students practice using the different programming concepts that they were introduced to in the last lesson. To begin, however, they are introduced to the concept of debugging and are encouraged to use and reflect on this practice throughout the lesson. At the end of the lesson students share their experiences debugging as well as an new realizations about programming.",
-        "preparation": "* Review the steps of the debugging process\n* Review the [r debugging/csp/2022] one-pager\n* Review the levels students will need to complete on Code Studio",
+        "preparation": "* Review the steps of the debugging process\n* Review the [r debugging/csp/2022] one-pager\n* Review the levels students will need to complete on Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
         "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate."
       },
@@ -197,7 +209,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Student learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "preparation": "* Make sure students have access to their App Development Planning Guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Pair Programming is an effective collaboration strategy both inside the classroom and in professional setting. As this is the first opportunity students have to program starting from a blank screen, this is a good opportunity to explore the usefulness of Pair Programming. ",
         "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code."
       },
@@ -218,7 +230,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.  ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "preparation": "* Make sure students have access to their App Development Planning Guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson reinforces the importance of feedback in the process of developing software. Feedback and testing help make sure that an app actually works for lots of people and in the context in which it will be used. This process also reinforces the importance of making iterative improvements in making software.",
         "student_overview": "Continue working on your app and get feedback to make sure you're on the right track."
       },
@@ -239,7 +251,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
-        "preparation": "* Make sure students have access to their App Development Planning Guides\r\n* Review the two sample project submissions, available in the \"For Teachers Only\" area on the first level of this lesson on Code Studio",
+        "preparation": "* Make sure students have access to their App Development Planning Guides\n* Review the two sample project submissions, available in the \"For Teachers Only\" area on the first level of this lesson on Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson concludes the project students have been working on throughout the unit. Students will have a chance to respond to any feedback they received and incorporate that into their project. The reflection prompts in the activity help students synthesize their overall experience with a focus on how collaboration within their team and within their classroom impacted the final projects they designed.",
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app."
       },
@@ -965,7 +977,7 @@
       "key": "63a85b8b-4764-41c2-ac27-7b556c8b34c3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 1. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
       },
       "seeding_key": {
         "activity_section.key": "63a85b8b-4764-41c2-ac27-7b556c8b34c3",
@@ -1045,7 +1057,7 @@
       "key": "5a8a5afe-ace3-4092-a972-eab5e1bc215c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 6-10:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 6-10:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 6. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
         "name": "App Investigation",
         "tips": [
           {
@@ -1864,7 +1876,7 @@
       "key": "f6745fcf-3de5-4ac6-8c83-5068708dae40",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Optional Warmup Discussion:** This discussionis optional and included for instances where you need a warm up discussion on the board when students walk in. If your classroom is able to move directly to main activity you should feel free to skip this discussion in the interest of time.\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
         "name": "Preview the Lesson\r"
       },
       "seeding_key": {
@@ -1888,7 +1900,7 @@
       "key": "e7aae2bf-0c1a-4776-b50e-4fd058c1de78",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Debugging video and then show the debugging process.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the [Debugging video](https://youtu.be/auv10y-dN4s\t\n) and then show the debugging process.",
         "name": "Practice Time\r"
       },
       "seeding_key": {
@@ -1975,7 +1987,13 @@
       "position": 3,
       "properties": {
         "description": "Debugging is an important and entirely normal part of programming. Your code won't always work the first time, and that's OK! Debugging is a skill that you can practice and get better at. Using documentation and leaving comments for yourself are important skills, but so is working with classmates or learning to more effectively search for bugs. We'll keep using these skills.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Chats Video** If time allows, consider showing [this clip](https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing) of Amazon Web Service's Olawale Oladehin discussing the value of creating bugs on purpose!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "65fd5b45-b0ec-498e-986f-44afeb63feab",
@@ -3989,6 +4007,19 @@
       }
     },
     {
+      "name": "Class Chats: Olawale Oladehin",
+      "url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
+      "key": "class_chats_olawale_oladehin",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "class_chats_olawale_oladehin"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -4012,7 +4043,7 @@
     },
     {
       "name": "CSP Unit 3 - Intro to App Design",
-      "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/view",
+      "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/copy",
       "key": "csp_unit_3_-_intro_to_app_design",
       "properties": {
         "audience": "Teacher",
@@ -4146,6 +4177,12 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "resource.key": "csp_unit_3_-_intro_to_app_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "class_chats_olawale_oladehin"
       }
     },
     {
@@ -4395,7 +4432,7 @@
     {
       "key": "83010a59-0e11-47a9-a4ca-124c18fb013c",
       "properties": {
-        "description": "Use the speed slider, break points, and documentation as part of the debugging process"
+        "description": "Use the speed slider, error messages, and documentation as part of the debugging process"
       },
       "seeding_key": {
         "lesson.key": "Debugging",

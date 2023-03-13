@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:52.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -44,7 +40,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "code_functions": {
       "accelerometer.getOrientation": null,
       "onBoardEvent": null,
@@ -62,11 +58,11 @@
       "ifBlock": null,
       "ifElseBlock": null,
       "randomNumber_min_max": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
       "toggleSwitch.isOpen": null,
-      "blink": null,
+      "colorLeds[0].blink": null,
       "led.on": null,
       "led.off": null,
       "led.blink": null,
@@ -75,7 +71,7 @@
       "buzzer.frequency": null,
       "buzzer.note": null,
       "buzzer.stop": null,
-      "pulse": null,
+      "colorLeds[0].pulse": null,
       "isPressed": null,
       "stop": null,
       "color": null,
@@ -92,10 +88,10 @@
     "parent_level_id": 20567,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/accelerometer-events/"
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/accelerometer-events"
     ],
-    "map_reference": "/docs/concepts/app-lab/the-counter-pattern/",
+    "map_reference": "/courses/csd-2022/guides/the-counter-pattern",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -110,9 +106,13 @@
     "encrypted_examples": "4wfHY+KhWx+zuNzGKCaryI3vs9UHT7n+Got2lTVspJIddR4fwD10EpvBhrhz\nj5S1Dz+rX8FiGuTzW/cKNhU/1g==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:06:52.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:52.019+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PD_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:52.019+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PD_2022\"},{\"changed_at\":\"2023-02-16 17:51:06 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

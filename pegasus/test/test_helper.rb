@@ -1,5 +1,6 @@
 # Test setup for unit tests in pegasus folder
 require_relative '../../shared/test/common_test_helper'
+require_relative '../../shared/test/capture_queries'
 
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]

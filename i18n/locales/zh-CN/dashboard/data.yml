@@ -527,7 +527,7 @@ zh-CN:
         hoc_dance_congrats_2019: 舞蹈派对 2019 - 开跳！
         hoc_dance_warmup_2019: 舞蹈派对 2019 - 热身！
         hoc_dance_events_2019: 舞蹈派对 2019 - 事件
-        hoc_dance_measures_2019: 舞蹈派对 2019 - 小节
+        hoc_dance_measures_2019: 舞蹈派对 2019 - 方法
         hoc_dance_properties_2019: 舞蹈派对 2019 - 属性
         csd_what_computers_do: 计算机做什么？
         csf_my_online_neighborhood_2020: 我的在线邻居
@@ -548,14 +548,14 @@ zh-CN:
         codebreak_e10: '编程解密 10.0：跟 Kat Graham 和 Kate Park 一起学AI'
         codebreak_e11: '编程解密 11.0：跟Susan Wojcicki 和 China Anne McClain 一起学抽象概念'
         codebreak_e12: '编程解密 12.0：跟 Aloe Blacc、Bret Taylor 和 Paula Mejia 一起学硬件'
-        csf21pilot_events: '精灵图实验室：在活动的精灵图 （计算机科学基础 2021 试航）'
-        csf21pilot_prompts: '精灵图实验室：精灵实验室：文本和提示 (CSF 2021 Pilot)'
-        outbreak_mike: 麦克的CodeBytes第3集-爆发模拟器
+        csf21pilot_events: '精灵图实验室：行动的精灵图'
+        csf21pilot_prompts: '精灵图实验室：精灵实验室：文本和提示'
+        outbreak_mike: 麦克的 CodeBytes 第3集—爆发模拟器
         poembot-pilot-prompts: 俳句机器人-带选择的提示[PILOT]
         poembot-pilot-text: 俳句机器人-存储文本[PILOT]
         poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
         csd_ml_intro_to_ai_lab: 人工智能实验室的介绍
-        csd_ml_import_model: 导入AI模型
+        csd_ml_import_model: 导入 AI 模型
         csf_lots_of_sprites: '精灵图实验室：许多精灵'
         playlab_2021: 游戏实验室的介绍
         playlab_2021_reader: 游戏实验室的介绍
@@ -568,6 +568,7 @@ zh-CN:
         csd_ml_intro_ai_lab_july2021: 人工智能实验室的介绍
         csd_ml_training_testing_ai_lan: 人工智能实验室中的训练和测试
         csd_ml_model_cards_july2021: 人工智能实验室中的模型卡
+        csd_ml_numerical_ai_lab: 人工智能实验室中的数值数据
         Gettting_Started_Progress: 进度、反馈和评估
         Gettting_Started_ClassSection: 创建类部件
         Gettting_Started_StudentExperience: 学生体验
@@ -606,7 +607,56 @@ zh-CN:
         outbreak_scientist: '爆发模拟器：像科学家一样思考'
         outbreak_outro: '爆发模拟：自由发挥'
         PL_overview_CSP: 什么是计算机科学原则？
-        PL_CSP_EIPMOverview: EIPM课程指南
+        PL_CSP_EIPMOverview: EIPM 课程指南
+        CSA-PL-debugging-temp: 在 Java 实验室中调试简介—temp
+        csd_app_lab_design_mode: CSD 应用程序实验室设计模式
+        csd_app_lab_events: CSD 应用程序实验室活动
+        PL_CSD_Unit4_AppTesting: 纸质原型测试
+        csd_u6_circuit_playground: 物理计算
+        csd_u6_input_output: 输入和输出
+        CSA-PL-for-loops: Java 中的 For 循环
+        CSA-PL-variables: 在 Java 中创建变量
+        PL_CS_Journeys_Overview: CS旅行
+        CSA-PL-intro-to-java-lab: Java 实验室基础
+        CSA-PL-first-program: 在 Java 中编写程序
+        CSD_u6_variables_part1: 'CSD：变量'
+        csd_u6_if_statements: 'CSD：If 语句'
+        csc-poem-art-intro: 简介视频
+        csc-poem-art-outro: 结尾视频
+        csd_u6_call_define_functions: 'CSD：调用和定义函数'
+        csp_applab_parameters: 有参数的函数
+        starquilts_intro_artist: CSD：调用和定义函数
+        CSA-PL-intro-to-arrays: 一维（1D）数组
+        CSA-PL-1d-arrays-new-values: 在1维数组中输入值
+        CSA-PL-conditionals: Java中的条件语句
+        CSA-PL-two-way-selection: 双向选择
+        CSA-PL-Printing-in-Java: Java中的打印
+        CSA-PL-multi-selection-statements: 多重选择语句
+        PL_CSP_TeacherTips_Advice: '老师小贴士：给计算机科学新老师的建议'
+        PL_CSP_TeacherTips_IntroToCSP: '老师小贴士：计算机科学原理简介'
+        PL_CSP_TeacherTips_Debugging: '老师小贴士：帮助排错'
+        PL_CSP_TeacherTips_LeadLearner: '老师小贴士：如何成为领导学习者'
+        PL_CSP_TeacherTips_APExam: '老师小贴士：为AP考试做准备'
+        PL_CSP_TeacherTips_EIPM: '老师小贴士：EIPM学习模式的过程'
+        PL_CSD_CircuitPlayground_Overview: 电路游戏板概述
+        CSA-PL-debugging-22: 在Java实验室中排错
+        CSD_Unit6_InteractiveArtExemplar: 互动艺术形式
+        CS_Changing_Everything: 计算机科学正在改变一切
+        csa-alias-video: 相等关系和别名
+        csa-equals-video: equals() 方法
+        csa-user-stories: 软件工程中的用户故事
+        csa-pl-vpl-m1-unit-3: 第三单元中的软件工程
+        csa-pl-intro-to-equality: 相等关系的介绍
+        csa-pl-intro-to-equals-method: .equals() 方法的介绍
+        csa-pl-equals-book: 为 Book 类编写 equals()方法
+        csa-multi-select-pl: Java 中的多重选择语句
+        csc_timecapsule_intro: 时光胶囊简介
+        PL_Equity_in_CS_Education: 计算机科学教育中的平等
+        csc_fm_pilot: 功能机器（指引）
+        csc_fm_pilot_v2: '功能机器简介'
+        csc-sprite-lab-pixel-editor: 画自己的精灵图
+        csa-pl-intro-to-strings: Java 中的字符串简介
+        csa-pl-compareTo: compareTo() 方法
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

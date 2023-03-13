@@ -4,6 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=5",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More",
+          "key": "7264ade6-1bfd-47a2-b1b2-1e17d8afb9a4"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 22:26:38 UTC",
+    "serialized_at": "2023-01-10 18:28:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -101,7 +113,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will learn the ways that lists are created, accessed, and changed through a teacher-guided activity using plastic baggies and pieces of paper. The lesson begins with a brief reflection on the value of lists. Students then complete the main activity which introduces the syntax to use lists and the ways they can be used. To wrap up students watch two short videos on lists and record the main concepts in their journals.",
-        "preparation": "* 7+ sandwich baggies per pair of students\r\n* 1 gallon-sized baggy per pair of students\r\n* packs of red and orange stickies\r\n* pens / pencils\r\n* 1 dry erase marker per four students (pairs can share)\r\n* Review the slides and click through all animations",
+        "preparation": "* 7+ sandwich baggies per pair of students\n* 1 gallon-sized baggy per pair of students\n* packs of red and orange stickies\n* pens / pencils\n* 1 dry erase marker per four students (pairs can share)\n* Review the slides and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In the warmup, students brainstorm different lists of information that they encounter on a daily basis. Then in the activity, students return to baggies and sticky notes from the previous unit to build a concrete model of a list before seeing how lists are programmed in Javascript. Students are exposed to different ways of interacting with a list like accessing, removing, appending, and inserting elements. The wrap up concludes the lesson with a summary video and a journal vocabulary exercise. ",
         "student_overview": "Develop a mental model for how computers store and access lists of information.",
         "unplugged": true
@@ -122,7 +134,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate three different apps that use lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
-        "preparation": "* Review the three apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.",
+        "preparation": "* Review the three apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "After building a conceptual model for list and list operations in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using lists. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists will come in the following lesson.",
         "student_overview": "Investigate and modify sample apps that use lists learn common programming patterns with lists."
       },
@@ -142,7 +154,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Practice the basics of lists including creating lists and accessing, inserting, and removing elements from lists. ",
-        "preparation": "* Review the slide on string indexes which you'll cover at the beginning of the lesson\r\n* Review the programming progression to understand what students will be asked to do. ",
+        "preparation": "* Review the slide on string indexes which you'll cover at the beginning of the lesson\n* Review the programming progression to understand what students will be asked to do. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "student_overview": "Practice programming with lists through a set of programming puzzles."
       },
@@ -162,6 +174,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-lists-lessons-1-4/36478) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "student_overview": "Make an app that uses lists and programming patterns with lists."
       },
@@ -181,7 +194,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students begin the lesson by discussing the purpose of loops before completing the unplugged activity. This activity involves moving a \"robot\" around a game board while practicing tracing blocks of code by hand. To conclude, the lesson is wrapped up with a vocabulary discussion and a video.  ",
-        "preparation": "* 1 game board per pair of students\r\n* 1 \"robot\" per pair of students\r\n* Game pieces, markers, or tokens that can be used to represent barriers\r\n* Review the Intro to Loops presentation and click through all animations",
+        "preparation": "* 1 game board per pair of students\n* 1 \"robot\" per pair of students\n* Game pieces, markers, or tokens that can be used to represent barriers\n* Review the Intro to Loops presentation and click through all animations\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students are introduced to the concept of loops through a robot maze activity. This unplugged lessons provides students a physical mental model they will be able to use when they start programming with loops in the subsequent lessons.",
         "student_overview": "Develop a mental model for how computers repeat instructions over and over using loops.",
         "unplugged": true
@@ -202,7 +215,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice using the for loop in order to repeatedly run pieces of code. The lesson begins with a quick investigation of an app that flips coins. After that code investigation students complete another investigation with an app that uses loops to update screen elements. ",
-        "preparation": "Review the two apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.",
+        "preparation": "- Review the two apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Practice activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "student_overview": "Investigate and modify sample apps that use loops and learn common programming patterns with loops."
       },
@@ -222,7 +235,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice the basics of loops including using while loops, for loops, and updating multiple screen elements with a for loop. Along the way students develop debugging practices with loops.",
-        "preparation": "* Review the programming progression to understand what students will be asked to do",
+        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "student_overview": "Practice programming with loops through a set of programming puzzles."
       },
@@ -242,6 +255,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "student_overview": "Practice making an app that uses loops and programming patterns with loops."
       },
@@ -261,7 +275,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson begins with a quick review of lists and loops before moving into the main activity. Here students explore the concept with the Traversal Machine, a physical model of traversal using a for loop. ",
-        "preparation": "Per pair of students:\r\n\r\n* 1 Traversal Machine \r\n\r\n\t* The index sheet contains enough sections to divide between six students\r\n\r\n* Preview the Intro to Traversals slideshow. Click through all animations.  ",
+        "preparation": "Per pair of students:\n\n* 1 Traversal Machine \n\n\t* The index sheet contains enough sections to divide between six students\n\n* Preview the Intro to Traversals slideshow. Click through all animations.  \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students are introduced to the concept of traversal using the Traversal Machine. This unplugged lessons provides students a physical mental model they will be able to use when they transition to programming traversals in App Lab. ",
         "student_overview": "Develop a mental model for how computers use loops to traverse and process lists of information.",
         "unplugged": true
@@ -282,6 +296,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate three different apps that use traversal to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "After building a conceptual model using a for loop to traverse a list in the previous lesson, this lesson allows students to see how this is actually implemented in code. This lesson also introduces common programming patterns when using lists and traverals. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists and traversals will come in the following lesson.",
         "student_overview": "Investigate and modify sample apps that use traversals."
       },
@@ -301,7 +316,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice traversing lists, filtering and reducing lists, and using the data import tools. Along the way students develop debugging practices with traversals.",
-        "preparation": "* Review the levels that students will be completing with an eye for how you will encourage them to use the debugging practices emphasized in today's lesson.",
+        "preparation": "* Review the levels that students will be completing with an eye for how you will encourage them to use the debugging practices emphasized in today's lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "student_overview": "Practice programming with list traversals through a set of programming puzzles."
       },
@@ -321,7 +336,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Random Forecaster app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\r\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck",
+        "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-traversals-lessons-9-12/36481) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "student_overview": "Practice making an app that processes a list from a data set using traversal. "
       },
@@ -342,7 +357,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the first day of a five-day unit project. Students begin the project by choosing a partner, determining a dataset to design the app around, and creating a paper prototype. ",
-        "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines\r\n* Go to the last lesson of the project to review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\r\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
+        "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines\n- Review the Example Student Projects, Planning Guides, and Written Responses under the \"Resources\" section\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-hackathon-unit-5-lessons-13-17/36482) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "student_overview": "This is the first day of a five-day unit project. Students begin the project by choosing a partner, determining a dataset to design the app around, and creating a paper prototype. "
       },
@@ -363,7 +378,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the second day of a five-day unit project. Students continue to plan for the project by filling out tables of information on element IDs and programming constructs before each tackling a different role in the project as a designer or a programmer. ",
-        "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines",
+        "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-hackathon-unit-5-lessons-13-17/36482) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "student_overview": "This is the second day of a five-day unit project. Students continue to plan for the project by filling out tables of information on element IDs and programming constructs before each tackling a different role in the project as a designer or a programmer. "
       },
@@ -384,7 +399,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the third day of a five-day unit project. Students continue to build their apps. ",
-        "preparation": "* Read through the Planning Guide\r\n\t* Pay particular focus to the Scoring Guidelines",
+        "preparation": "* Read through the Planning Guide\n\t* Pay particular focus to the Scoring Guidelines\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-hackathon-unit-5-lessons-13-17/36482) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "student_overview": "This is the third day of a five-day unit project. Students continue to build their apps. "
       },
@@ -405,7 +420,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the fourth day of a five-day unit project. Students continue to build their apps. ",
-        "preparation": "* Read through the Planning Guide\r\n\t* Pay particular focus to the Scoring Guidelines",
+        "preparation": "* Read through the Planning Guide\n\t* Pay particular focus to the Scoring Guidelines\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-hackathon-unit-5-lessons-13-17/36482) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "student_overview": "This is the fourth day of a five-day unit project. Students continue to build their apps. "
       },
@@ -426,7 +441,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is the final day of a five-day unit project. Students complete a Written Response, individually answering prompts about the project. Students then share their apps during a gallery walk. ",
-        "preparation": "* Read through the Planning Guide paying particular focus to the Scoring Guidelines\n* Review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
+        "preparation": "* Read through the Planning Guide paying particular focus to the Scoring Guidelines\n- Review the Example Student Projects, Planning Guides, and Written Responses under the \"Resources\" section\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-hackathon-unit-5-lessons-13-17/36482) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "student_overview": "This is the final day of a five-day unit project. Students complete a Written Response, individually answering prompts about the project. Students then share their apps during a gallery walk. "
       },
@@ -2500,7 +2515,7 @@
       "key": "3a8658b4-b115-4a31-8093-9303fc1e4d98",
       "position": 5,
       "properties": {
-        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results"
+        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results\n* Level 4: Students complete a choice level."
       },
       "seeding_key": {
         "activity_section.key": "3a8658b4-b115-4a31-8093-9303fc1e4d98",
@@ -2533,7 +2548,7 @@
       "key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 4-6 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
+        "description": "\n**Levels 5-7 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 5: Students use a for loop to print the numbers 0-99\n* Level 6: Students use a for loop to print a message 100 times\n* Level 7: Students use a for loop to fill an array and print the results"
       },
       "seeding_key": {
         "activity_section.key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
@@ -2555,7 +2570,7 @@
       "key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
       "position": 10,
       "properties": {
-        "description": "\n\n**Levels 7-8 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 7: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 8: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
+        "description": "\n\n**Levels 8-9 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 8: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 9: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
       },
       "seeding_key": {
         "activity_section.key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
@@ -2918,7 +2933,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n"
+            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n\n**A Note About Datasets:** In general, one of our [Code.org Curriculum Values](https://code.org/educate/curriculum/values) is \"Teachers in Classrooms\" - we believe individual teachers have the best knowledge of their students and the content that will engage them. From that perspective, we also think it's appropriate to make choices about our content & curriculum that best suits your classroom. With that said, the Spotify dataset updates automatically every day according to the latest trends - we hope it provides a real-world social connection for students to engage with datasets, but also understand that we can't control the songs that make it to the top 200 and don't have the bandwidth to filter it on our end. If the songs for a particular day are not appropriate for your students, it may be a good idea to skip that dataset.\n"
           }
         ]
       },
@@ -3694,7 +3709,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp-u5-hackathon-submission-on-ap-classroom/csp/2021] for instructions on how to set up an assessment on AP Classroom.\n"
+            "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp_u5_hackathon_submission_on_ap_classroom/csp/2022] for instructions on how to set up an assessment on AP Classroom.\n"
           }
         ]
       },
@@ -6367,7 +6382,7 @@
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/view",
+      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/copy",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "audience": "Teacher",
@@ -6709,6 +6724,42 @@
       "seeding_key": {
         "lesson.key": "Project   Hackathon Part 1",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "u5_hackathon_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "u5_hackathon_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "u5_hackathon_high_score_sample_written_responses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "u5_hackathon_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "u5_hackathon_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "u5_hackathon_mid_score_sample_written_responses"
       }
     },
     {

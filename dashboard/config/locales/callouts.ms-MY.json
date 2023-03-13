@@ -127,15 +127,15 @@
           "costumes_callout": "Klik untuk mencipta kostum baru"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_run_button_callout": "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda",
           "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_run_button_callout": "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda",
           "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_run_button_callout": "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda",
           "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "Overworld Move to Sheep_2021": {
@@ -336,13 +336,13 @@
           "MC_HOC_2016_New_Walk_callout2": "Tekan \"Run\" untuk mula bergerak."
         },
         "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `berulang`! Klik pada ruang kerja dan masukkan kod yang anda mahu jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `berulang`! Klik pada ruang kerja dan masukkan kod yang anda mahu jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `berulang`! Klik pada ruang kerja dan masukkan kod yang anda mahu jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `berulang`! Klik pada ruang kerja dan masukkan kod yang anda mahu jalankan berulang kali."
@@ -546,7 +546,7 @@
           "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
         },
         "courseC_maze_programming5_2021": {
-          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahu!"
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
         },
         "courseC_maze_programming7_2021": {
           "courseC_maze_programming7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan.",
@@ -556,14 +556,14 @@
           "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
         },
         "courseD_maze_intro5a_2021": {
-          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahu!"
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
           "stone_block_2": "Blok kelabu tidak boleh dibuang."
         },
         "courseD_maze_ramp5_2021": {
-          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahu!"
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
@@ -609,6 +609,1376 @@
         },
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Cuba melangkah melalui kod anda satu blok pada satu masa."
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Gunakan blok ini untuk meninggalkan nota kepada diri anda sendiri atau guru anda tentang cara kod anda berfungsi."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Gunakan blok ini untuk meninggalkan nota kepada diri anda sendiri atau guru anda tentang cara kod anda berfungsi."
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Gunakan blok ini untuk meninggalkan nota kepada diri anda sendiri atau guru anda tentang cara kod anda berfungsi."
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "Bawa pelakon ke bendera ini untuk bergerak kepada tahap seterusnya."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "Gunakan blok ini untuk meninggalkan nota kepada diri anda sendiri atau guru anda tentang cara kod anda berfungsi."
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Kami telah meletakkan beberapa blok di sini untuk membantu anda bermula"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "Kami telah meletakkan beberapa blok di sini untuk membantu anda bermula"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "Kami telah meletakkan beberapa blok di sini untuk membantu anda bermula"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Kod ini akan mula membina rumah anda. Bolehkah anda menyiapkan rumah itu?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "Kod ini akan mula membina rumah anda. Bolehkah anda menyiapkan rumah itu?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "Kod ini akan mula membina rumah anda. Bolehkah anda menyiapkan rumah itu?"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "Ulangi tindakan dengan meletakkan blok di sini"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "Ulangi tindakan dengan meletakkan blok di sini"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Ulangi tindakan dengan meletakkan blok di sini"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Kod ini akan memeriksa lahar, bolehkah anda tambahkan perintah untuk bergerak ke hadapan?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "Kod ini akan memeriksa lahar, bolehkah anda tambahkan perintah untuk bergerak ke hadapan?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "Kod ini akan memeriksa lahar, bolehkah anda tambahkan perintah untuk bergerak ke hadapan?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "Melombong besi ini!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "Melombong besi ini!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "Melombong besi ini!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Melombong besi ini!"
+        },
+        "Virtual Pet 2_2019": {
+          "": "Klik di sini!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Klik di sini!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Klik di sini untuk melihat cara tingkah laku ini berfungsi."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Klik di sini untuk melihat cara tingkah laku ini berfungsi."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Klik di sini untuk melihat cara tingkah laku ini berfungsi."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Klik di sini untuk melihat cara tingkah laku ini berfungsi."
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Nombor ini bermaksud hanya satu daripada blok jenis ini boleh digunakan dalam jawapan akhir."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "Nombor ini bermaksud hanya satu daripada blok jenis ini boleh digunakan dalam jawapan akhir."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "Nombor ini bermaksud hanya satu daripada blok jenis ini boleh digunakan dalam jawapan akhir."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "Nombor ini bermaksud hanya satu daripada blok jenis ini boleh digunakan dalam jawapan akhir."
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Adakah anda tahu bahawa anda boleh melukis kembali di atas garisan pada bila-bila masa yang anda perlu?"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "Adakah anda tahu bahawa anda boleh melukis kembali di atas garisan pada bila-bila masa yang anda perlu?"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "Adakah anda tahu bahawa anda boleh melukis kembali di atas garisan pada bila-bila masa yang anda perlu?"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "Adakah anda tahu bahawa anda boleh melukis kembali di atas garisan pada bila-bila masa yang anda perlu?"
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Ini ialah rentetan pendek"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "Ini ialah rentetan pendek"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "Ini ialah rentetan pendek"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "Ini ialah rentetan pendek"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Klik di sini untuk mengubah arah anak panah peristiwa."
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "Klik di sini untuk mengubah arah anak panah peristiwa."
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "Klik di sini untuk mengubah arah anak panah peristiwa."
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "Klik di sini untuk mengubah arah anak panah peristiwa."
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Ini membolehkan anda memilih bunyi \"rawak\", yang bermaksud anda tidak tahu bunyi yang akan anda dapat sehingga anda mendengarnya!"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "Ini membolehkan anda memilih bunyi \"rawak\", yang bermaksud anda tidak tahu bunyi yang akan anda dapat sehingga anda mendengarnya!"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "Ini membolehkan anda memilih bunyi \"rawak\", yang bermaksud anda tidak tahu bunyi yang akan anda dapat sehingga anda mendengarnya!"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "Ini membolehkan anda memilih bunyi \"rawak\", yang bermaksud anda tidak tahu bunyi yang akan anda dapat sehingga anda mendengarnya!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "Hanya terdapat satu daripada blok ini di dalam kotak alatan. Bagaimanakah anda akan menggunakan blok tersebut?"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "Hanya terdapat satu daripada blok ini di dalam kotak alatan. Bagaimanakah anda akan menggunakan blok tersebut?"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "Hanya terdapat satu daripada blok ini di dalam kotak alatan. Bagaimanakah anda akan menggunakan blok tersebut?"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "Hanya terdapat satu daripada blok ini di dalam kotak alatan. Bagaimanakah anda akan menggunakan blok tersebut?"
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "Gunakan anak panah ke bawah hijau untuk mengubah arah."
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "Gunakan anak panah ke bawah hijau untuk mengubah arah."
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "Gunakan anak panah ke bawah hijau untuk mengubah arah."
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "Gunakan anak panah ke bawah hijau untuk mengubah arah."
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "Bawa pelakon ke bendera ini untuk bergerak kepada tahap seterusnya."
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "Bawa pelakon ke bendera ini untuk bergerak kepada tahap seterusnya."
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini apabila Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini apabila Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini apabila Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini apabila Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Blok ini sangat penting untuk projek ini. Pastikan ia digunakan!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Blok ini sangat penting untuk projek ini. Pastikan ia digunakan!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Tambahkan ini ke bahagian tengah atur cara anda."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Tambahkan ini ke bahagian tengah atur cara anda."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "Adakah anda dapat melihat beberapa blok baharu di dalam kotak alatan? Jangan bimbang, kita akan menunjukkan kepada anda cara menggunakan blok tersebut dalam pelajaran lain."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "Adakah anda dapat melihat beberapa blok baharu di dalam kotak alatan? Jangan bimbang, kita akan menunjukkan kepada anda cara menggunakan blok tersebut dalam pelajaran lain."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "Adakah anda dapat melihat beberapa blok baharu di dalam kotak alatan? Jangan bimbang, kita akan menunjukkan kepada anda cara menggunakan blok tersebut dalam pelajaran lain."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "Anda boleh mengambil lebih banyak blok dari kotak alatan jika anda memerlukan blok tersebut!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "Anda boleh mengambil lebih banyak blok dari kotak alatan jika anda memerlukan blok tersebut!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "Anda boleh mengambil lebih banyak blok dari kotak alatan jika anda memerlukan blok tersebut!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "Anda boleh mengambil lebih banyak blok dari kotak alatan jika anda memerlukan blok tersebut!"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "Nombor empat pada labu memberitahu anda bahawa terdapat empat labu yang tersedia untuk dikutip."
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "Nombor empat pada labu memberitahu anda bahawa terdapat empat labu yang tersedia untuk dikutip."
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "Nombor empat pada labu memberitahu anda bahawa terdapat empat labu yang tersedia untuk dikutip."
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "Nombor empat pada labu memberitahu anda bahawa terdapat empat labu yang tersedia untuk dikutip."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Blok ini dikunci dan tidak boleh dipadamkan!"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Blok ini dikunci dan tidak boleh dipadamkan!"
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "courseC_maze_programming3_3": "Blok ini ialah batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "courseC_maze_programming3_3": "Blok ini ialah batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "courseC_maze_programming3_3": "Blok ini ialah batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "courseC_maze_programming3_3": "Blok ini ialah batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseC_maze_programming5": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan.",
+          "courseC_maze_programming7_2": "Blok ini dibuat daripada batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan.",
+          "courseC_maze_programming7_2": "Blok ini dibuat daripada batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan.",
+          "courseC_maze_programming7_2": "Blok ini dibuat daripada batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan.",
+          "courseC_maze_programming7_2": "Blok ini dibuat daripada batu dan tidak boleh dibuang."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak perlu menggunakan warna untuk mendapat teka-teki yang betul. Jika anda mahukan, blok `warna rawak` ini boleh memudahkan!"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak perlu menggunakan warna untuk mendapat teka-teki yang betul. Jika anda mahukan, blok `warna rawak` ini boleh memudahkan!"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak perlu menggunakan warna untuk mendapat teka-teki yang betul. Jika anda mahukan, blok `warna rawak` ini boleh memudahkan!"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak perlu menggunakan warna untuk mendapat teka-teki yang betul. Jika anda mahukan, blok `warna rawak` ini boleh memudahkan!"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak perlu menggunakan warna untuk mendapat teka-teki yang betul. Jika anda mahukan, blok `warna rawak` ini boleh memudahkan!"
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda perlu menggunakan blok `semasa laluan di hadapan` untuk menyelesaikan teka-teki ini."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda perlu menggunakan blok `semasa laluan di hadapan` untuk menyelesaikan teka-teki ini."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda perlu menggunakan blok `semasa laluan di hadapan` untuk menyelesaikan teka-teki ini."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda perlu menggunakan blok `semasa laluan di hadapan` untuk menyelesaikan teka-teki ini."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "stone_block_2": "Blok kelabu tidak boleh dibuang."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "stone_block_2": "Blok kelabu tidak boleh dibuang."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_ramp5": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_scrat_ramp5": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan."
+        },
+        "courseE_aboutme_2": {
+          "": "Klik di sini!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Klik di sini!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Klik di sini!"
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Blok anda yang digunakan untuk mencipta fungsi telah dipindahkan di bawah label ini di dalam kotak alatan."
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "Blok anda yang digunakan untuk mencipta fungsi telah dipindahkan di bawah label ini di dalam kotak alatan."
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "Blok anda yang digunakan untuk mencipta fungsi telah dipindahkan di bawah label ini di dalam kotak alatan."
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "Blok anda yang digunakan untuk mencipta fungsi telah dipindahkan di bawah label ini di dalam kotak alatan."
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Blok anda yang digunakan untuk mencipta fungsi telah dipindahkan di bawah label ini di dalam kotak alatan."
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "Pada masa ini, kotak alatan disusun sedikit berbeza! Klik pada kategori yang berbeza untuk melihat blok yang anda miliki."
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "Pada masa ini, kotak alatan disusun sedikit berbeza! Klik pada kategori yang berbeza untuk melihat blok yang anda miliki."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "Pada masa ini, kotak alatan disusun sedikit berbeza! Klik pada kategori yang berbeza untuk melihat blok yang anda miliki."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "Pada masa ini, kotak alatan disusun sedikit berbeza! Klik pada kategori yang berbeza untuk melihat blok yang anda miliki."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Pada masa ini, kotak alatan disusun sedikit berbeza! Klik pada kategori yang berbeza untuk melihat blok yang anda miliki."
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "Bawa pelakon ke bendera ini untuk bergerak kepada tahap seterusnya."
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "Anda boleh menemui pemboleh ubah anda di bawah sini!"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "Anda boleh menemui pemboleh ubah anda di bawah sini!"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "Anda boleh menemui pemboleh ubah anda di bawah sini!"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Cuba ubah apabila kepada semasa."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Blok baharu di sini!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Gunakan blok peristiwa baharu yang ditemui di sini."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Blok ini dalam susunan yang salah."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Klik di sini untuk membuka kategori Tingkah Laku."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Klik di sini untuk membuka kategori Peperi."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Cari blok baharu di sini."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Cari blok baharu di sini!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Adakah latar belakang berubah warna apabila anda menjawab soalan? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Adakah anda sudah selesai? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Cari dua blok baharu di sini!",
+          "text_answer_finish": "Adakah skrin tajuk dipaparkan selama 3 saat? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Cari blok baharu di sini!"
+        },
+        "courseF_text_print": {
+          "print_block": "Cari blok cetakan di sini!",
+          "text_print_finish": "Adakah mesej anda dicetak di atas? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Cari blok prom di sini!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Selepas memasang semua blok bersama, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Selepas memasang semua blok bersama, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Selepas memasang semua blok bersama, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda.",
+          "make_sprite": "Gunakan blok di sini untuk membuat sprite!"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Tambah blok ini kepada atur cara anda!"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Tambah blok ini kepada atur cara anda.",
+          "arrow_buttons": "Tekan butang anak panah untuk mengawal penari anda."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Tambah blok ini kepada atur cara anda!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Tambah acara baru ke program."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Blok baru!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Blok baru!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Blok baru!",
+          "new_block_4": "Blok baru!"
+        },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "Gunakan blok ini untuk meninggalkan nota kepada diri anda sendiri atau guru anda tentang cara kod anda berfungsi."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Arahan kecil ini memberitahu komputer untuk menjalankan sebahagian besar kod dengan nama yang sama dalam ruang kerja."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `berulang`! Klik pada ruang kerja dan masukkan kod yang anda mahu jalankan berulang kali."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Ejen boleh berlegar di atas air, tetapi pemain tidak boleh!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak boleh membuang blok ini, tetapi anda boleh mengeditnya!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Ejen boleh melayang di atas lava, tetapi Steve dan Alex tidak boleh!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Kami telah meletakkan beberapa blok di sini untuk membantu anda bermula"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Kod ini akan mula membina rumah anda. Bolehkah anda menyiapkan rumah itu?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "\n\nTekan \"Jalankan\" untuk mencuba atur cara anda",
+          "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Ulangi tindakan dengan meletakkan blok di sini"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Kod ini akan memeriksa lahar, bolehkah anda tambahkan perintah untuk bergerak ke hadapan?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Melombong besi ini!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "Klik di sini untuk menambah kostum baharu kepada projek anda!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Klik di sini untuk menambah kostum baharu kepada projek anda!"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Nombor ini bermaksud hanya satu daripada blok jenis ini boleh digunakan dalam jawapan akhir."
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Adakah anda tahu bahawa anda boleh melukis kembali di atas garisan pada bila-bila masa yang anda perlu?"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Ini ialah rentetan pendek"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Klik di sini untuk mengubah arah anak panah peristiwa."
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "Ini membolehkan anda memilih bunyi \"rawak\", yang bermaksud anda tidak tahu bunyi yang akan anda dapat sehingga anda mendengarnya!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "Hanya terdapat satu daripada blok ini di dalam kotak alatan. Bagaimanakah anda akan menggunakan blok tersebut?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "Gunakan anak panah ke bawah hijau untuk mengubah arah."
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "Bawa pelakon ke bendera ini untuk bergerak kepada tahap seterusnya."
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini apabila Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "Blok ini sangat penting untuk projek ini. Pastikan ia digunakan!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "Tambahkan ini ke bahagian tengah atur cara anda."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Anda boleh memperlahankan atur cara anda di sini."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Adakah anda dapat melihat beberapa blok baharu di dalam kotak alatan? Jangan bimbang, kita akan menunjukkan kepada anda cara menggunakan blok tersebut dalam pelajaran lain."
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "Anda boleh mengambil lebih banyak blok dari kotak alatan jika anda memerlukan blok tersebut!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Nombor empat pada labu memberitahu anda bahawa terdapat empat labu yang tersedia untuk dikutip."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Blok ini dikunci dan tidak boleh dipadamkan!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "courseC_maze_programming3_3": "Blok ini ialah batu dan tidak boleh dibuang."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseC_maze_programming52022": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "Ini ialah teka-teki cabaran pertama anda! Teka-teki ini sememangnya sukar dan mungkin memerlukan beberapa kali percubaan.",
+          "courseC_maze_programming7_2": "Blok ini dibuat daripada batu dan tidak boleh dibuang."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan gelung ini untuk mengumpul semua nektar (atau madu) daripada satu bunga (atau sarang lebah)."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Cuba melangkah melalui kod anda satu blok pada satu masa."
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda perlu menggunakan blok `semasa laluan di hadapan` untuk menyelesaikan teka-teki ini."
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "Apabila blok berwarna hijau ini berjalan, semua kod dalam fungsi akan berjalan. Apakah yang perlu dilakukan oleh artis selepas melukiskan segi empat sama yang pertama?"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "Blok anda yang digunakan untuk mencipta fungsi telah dipindahkan di bawah label ini di dalam kotak alatan."
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "Teruskan atur cara ini dengan menambahkan lebih banyak kod di bahagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika anda tidak menyukai reka bentuk ini, ubahkan kepada apa sahaja yang anda mahukan!"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Pada masa ini, kotak alatan disusun sedikit berbeza! Klik pada kategori yang berbeza untuk melihat blok yang anda miliki."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "Sayur ini tidak diketahui. Maklumat berubah setiap kali anda menjalankan atur cara."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_artist_for12022": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for92022": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "Anda boleh menemui pemboleh ubah anda di bawah sini!"
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Cuba ubah apabila kepada semasa."
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Blok baharu di sini!"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Gunakan blok peristiwa baharu yang ditemui di sini."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Blok ini dalam susunan yang salah."
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "Klik di sini untuk melihat cara tingkah laku ini berfungsi."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Klik di sini untuk membuka kategori Peristiwa."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Klik di sini untuk membuka kategori Tingkah Laku."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Klik di sini untuk membuka kategori Peperi."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Cari blok baharu di sini."
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Cari blok baharu di sini!"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "Adakah latar belakang berubah warna apabila anda menjawab soalan? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Adakah anda sudah selesai? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "Cari dua blok baharu di sini!",
+          "text_answer_finish": "Adakah skrin tajuk dipaparkan selama 3 saat? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Cari blok baharu di sini!"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Klik di sini untuk membuka kategori Peristiwa."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Cari blok cetakan di sini!",
+          "text_print_finish": "Adakah mesej anda dicetak di atas? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Tetapkan Semula', ubah kod anda dan tekan 'Jalankan' sekali lagi."
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Cari blok prom di sini!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Lihat dengan teliti pada kod di bawah titik ini."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Lihat dengan teliti pada kod di bawah titik ini."
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Klik sini untuk kembangkan blok.",
+          "pointerlocation": "Tarik blok subjek ke sini."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpul harta karun."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "Nombor ini memberitahu anda jumlah bilangan blok ini yang boleh anda gunakan dalam teka-teki ini."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Klik mentol apabila anda memerlukan petunjuk!"
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak perlu menggunakan warna untuk mendapat teka-teki yang betul. Jika anda mahukan, blok `warna rawak` ini boleh memudahkan!"
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Ini ialah had blok anda. Had ini memberitahu anda jumlah bilangan blok ini yang tinggal untuk anda gunakan."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Selepas menyambungkan semua blok, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Ini ialah kotak alatan. Kotak ini ialah lokasi anda akan menemui blok tambahan untuk menyelesaikan teka-teki anda."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "stone_block_2": "Blok kelabu tidak boleh dibuang."
+        },
+        "courseD_maze_ramp52022": {
+          "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahukan!"
+        },
+        "courseE_aboutme_22022": {
+          "": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Lihat dengan teliti pada kod di bawah titik ini."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Selepas memasang semua blok bersama, tekan \"Jalankan\" untuk memulakan atur cara anda."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Guna blok ini untuk tetapkan latar belakang baru."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Guna blok ini untuk tetapkan latar belakang baru."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu kelakuan di bawah."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu kelakuan di bawah."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klik di sini untuk menjalankan kod."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Klik di sini dahulu!"
         }
       }
     }

@@ -2,20 +2,125 @@
 kn:
   data:
     progressions:
+      '"If/Else" with the Bee': ಜೇನುನೊಣದ ಜೊತೆಗೆ "ಇಫ್‌/ಎಲ್ಸ್‌"
+      8-Bit Binary Number Widget: 8-ಬಿಟ್ ಬೈನರಿ ಸಂಖ್ಯೆ ವಿಜೆಟ್
+      AI Lab and Isaac's Data: AI ಲ್ಯಾಬ್ ಮತ್ತು ಐಸಾಕ್ ಡೇಟಾ
+      AI Lab and Kim's Data: AI ಲ್ಯಾಬ್ ಮತ್ತು ಕಿಮ್ಸ್ ಡೇಟಾ
       AI Machine Learning - Video: ಎಐ ಮಶಿನ್ ಲರ್ನಿಂಗ್ - ವೀಡಿಯೋ
+      'AI for Oceans: Fish vs Not Fish': 'ಸಾಗರಗಳಿಗೆ AI: ಮೀನು ವಿರುದ್ಧ ಮೀನು ಅಲ್ಲ'
+      'AI for Oceans: Types of Fish': 'ಸಾಗರಗಳಿಗೆ AI: ಮೀನುಗಳ ವಿಧಗಳು'
       'AI: Impact on Society - Video': 'ಎಐ: ಸಮಾಜದ ಮೇಲೆ ಪರಿಣಾಮ - ಸಮಾಜ'
       'AI: Training Data & Bias - Video': 'ಎಐ: ತರಬೇತಿ ಡೇಟಾ ಮತ್ತು ತಾರತಮ್ಯ - ವೀಡಿಯೋ'
+      Accelerometer Events: ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು
+      Add Content and HTML: ವಿಷಯ ಮತ್ತು HTML ಸೇರಿಸಿ
+      Add Content and Structure to Your Page: ನಿಮ್ಮ ಪುಟಕ್ಕೆ ವಿಷಯ ಮತ್ತು ರಚನೆಯನ್ನು ಸೇರಿಸಿ
+      Add Movement: ಚಲನೆಯನ್ನು ಸೇರಿಸಿ
+      Add Sprites: ಸ್ಪ್ರೈಟ್ಗಳನ್ನು ಸೇರಿಸಿ
+      Add Style: ಶೈಲಿಯನ್ನು ಸೇರಿಸಿ
+      Add Style to Your Page: ನಿಮ್ಮ ಪುಟಕ್ಕೆ ಶೈಲಿಯನ್ನು ಸೇರಿಸಿ
+      Add Text: ಪಠ್ಯವನ್ನು ಸೇರಿಸಿ
+      Add a Welcome Screen: ಸ್ವಾಗತ ಪರದೆಯನ್ನು ಸೇರಿಸಿ
+      Adding Images: ಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಲಾಗುತ್ತಿದೆ
+      Adding New Screens: ಹೊಸ ಪರದೆಗಳನ್ನು ಸೇರಿಸಲಾಗುತ್ತಿದೆ
+      Adding Pages: ಪುಟಗಳನ್ನು ಸೇರಿಸಲಾಗುತ್ತಿದೆ
+      Adding Screens: ಪರದೆಗಳನ್ನು ಸೇರಿಸಲಾಗುತ್ತಿದೆ
+      Alternative Datasets: ಪರ್ಯಾಯ ಡೇಟಾಸೆಟ್‌ಗಳು
+      Animate Your Scene: ನಿಮ್ಮ ದೃಶ್ಯವನ್ನು ಅನಿಮೇಟ್ ಮಾಡಿ
       App Lab Intro - Video: ಆಪ್ ಲ್ಯಾಬ್ ಇಂಟ್ರೋ - ವೀಡಿಯೋ
+      'App Project: Screen Design': 'ಅಪ್ಲಿಕೇಶನ್ ಯೋಜನೆ: ಪರದೆಯ ವಿನ್ಯಾಸ'
+      'App: Choose a Kid''s Movie': 'ಅಪ್ಲಿಕೇಶನ್: ಮಕ್ಕಳ ಚಲನಚಿತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ'
+      'App: Friend Finder': 'ಅಪ್ಲಿಕೇಶನ್: ಫ್ರೆಂಡ್ ಫೈಂಡರ್'
+      'App: Guess the Number': 'ಅಪ್ಲಿಕೇಶನ್: ಸಂಖ್ಯೆಯನ್ನು ಊಹಿಸಿ'
+      'App: How Many Countries': 'ಅಪ್ಲಿಕೇಶನ್: ಎಷ್ಟು ದೇಶಗಳು'
+      'App: Improved Pet App': 'ಅಪ್ಲಿಕೇಶನ್: ಸುಧಾರಿತ ಪೆಟ್ ಅಪ್ಲಿಕೇಶನ್'
+      'App: Is It Your Birthday?': 'ಅಪ್ಲಿಕೇಶನ್: ಇದು ನಿಮ್ಮ ಜನ್ಮದಿನವೇ?'
+      'App: My Famous Birthday': 'ಅಪ್ಲಿಕೇಶನ್: ನನ್ನ ಪ್ರಸಿದ್ಧ ಜನ್ಮದಿನ'
+      'App: National Parks': 'ಅಪ್ಲಿಕೇಶನ್: ರಾಷ್ಟ್ರೀಯ ಉದ್ಯಾನಗಳು'
+      'App: Outfit Picker': 'ಅಪ್ಲಿಕೇಶನ್: ಔಟ್ಫಿಟ್ ಪಿಕರ್'
+      'App: Pet Chooser': 'ಅಪ್ಲಿಕೇಶನ್: ಪೆಟ್ ಚೂಸರ್'
+      'App: Stamp Notebook': 'ಅಪ್ಲಿಕೇಶನ್: ಸ್ಟಾಂಪ್ ನೋಟ್ಬುಕ್'
+      'App: Story Creator': 'ಅಪ್ಲಿಕೇಶನ್: ಸ್ಟೋರಿ ಕ್ರಿಯೇಟರ್'
+      'App: The Fastest Finger': 'ಅಪ್ಲಿಕೇಶನ್: ದಿ ಫಾಸ್ಟೆಸ್ಟ್ ಫಿಂಗರ್'
+      'App: Where Should I Live?': 'ಅಪ್ಲಿಕೇಶನ್: ನಾನು ಎಲ್ಲಿ ವಾಸಿಸಬೇಕು?'
+      Artist Intro with JR Hildebrand: JR ಹಿಲ್ಡೆಬ್ರಾಂಡ್ ಜೊತೆ ಕಲಾವಿದರ ಪರಿಚಯ
+      Artist Intro with JR Hildebrande: JR ಹಿಲ್ಡೆಬ್ರಾಂಡ್ ಜೊತೆ ಕಲಾವಿದರ ಪರಿಚಯ
       Artist Project: ಆರ್ಟಿಸ್ಟ್ ಪ್ರಾಜೆಕ್ಟ್‌
+      'Artist: Variables': 'ಕಲಾವಿದ: ವೇರಿಯಬಲ್ಸ್‌'
       Assessment: ಮೌಲ್ಯಮಾಪನ
+      Attribution: ಗುಣಲಕ್ಷಣ
       Back and Forth: ಹಿಂದೆ ಮತ್ತು ಮುಂದೆ
+      Basic Conditionals: ಮೂಲ ಕಂಡೀಷನಲ್‌ಗಳು
       Bass, Mid, and Treble: ಬೇಸ್, ಮಿಡ್ ಮತ್ತು ಟ್ರೆಬಲ್
+      Be a Super Digital Citizen: ಸೂಪರ್ ಡಿಜಿಟಲ್ ಸಿಟಿಜನ್ ಆಗಿ
+      Begin planning your project: ನಿಮ್ಮ ಯೋಜನೆಯನ್ನು ಯೋಜಿಸಲು ಪ್ರಾರಂಭಿಸಿ
+      Begin planning your project_2018: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್_2018 ಅನ್ನು ಯೋಜಿಸಲು ಪ್ರಾರಂಭಿಸಿ
+      Binary Bracelets - Unplugged Activity: ಬೈನರಿ ಬಳೆಗಳು - ಅನ್‌ಪ್ಲಗ್ಡ್ ಚಟುವಟಿಕೆ
+      Binary Number Widget: ಬೈನರಿ ಸಂಖ್ಯೆ ವಿಜೆಟ್
+      Binary Numbers: ಬೈನರಿ ಸಂಖ್ಯೆಗಳು
+      Board Events: ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು
+      Board Input and Output: ಬೋರ್ಡ್ ಇನ್ಪುಟ್ ಮತ್ತು ಔಟ್ಪುಟ್
+      Book Recommender App: ಪುಸ್ತಕ ಶಿಫಾರಸು ಮಾಡುವ ಅಪ್ಲಿಕೇಶನ್
+      Book Recommender Model Card: ಪುಸ್ತಕ ಶಿಫಾರಸು ಮಾಡೆಲ್ ಕಾರ್ಡ್
+      Boolean Comparison: ಬೂಲಿಯನ್ ಹೋಲಿಕೆ
+      Build a Platform Jumper: ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಜಂಪರ್ ಅನ್ನು ನಿರ್ಮಿಸಿ
+      Build a Screen: ಒಂದು ಪರದೆಯನ್ನು ನಿರ್ಮಿಸಿ
+      Building a UI with Design Mode: ವಿನ್ಯಾಸ ಮೋಡ್‌ನೊಂದಿಗೆ UI ಅನ್ನು ನಿರ್ಮಿಸುವುದು
+      Building an App: ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ನಿರ್ಮಿಸುವುದು
+      Button Circuits: ಬಟನ್ ಸರ್ಕ್ಯೂಟ್‌ಗಳು
+      CS Discoveries Post-Course Survey: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+      CS Discoveries Post-course Survey: CS ಡಿಸ್ಕವರೀಸ್ ಪೋಸ್ಟ್-ಕೋರ್ಸ್ ಸಮೀಕ್ಷೆ
+      CSD U3 Interactive Card Exemplar: CSD U3 ಇಂಟರಾಕ್ಟಿವ್ ಕಾರ್ಡ್ ಎಕ್ಸೆಂಪ್ಲರ್
+      CSD U3 platform intro: CSD U3 ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪರಿಚಯ
+      'CSD: For Loop': 'CSD: ಲೂಪ್ಗಾಗಿ'
+      Cake Defender: ಕೇಕ್ ಡಿಫೆಂಡರ್
+      Cake Survey: ಕೇಕ್ ಸಮೀಕ್ಷೆ
+      Challenge: ಚಾಲೆಂಜ್
+      Challenge Levels: ಚಾಲೆಂಜ್ ಲೆವೆಲ್‌ಗಳು
+      'Challenge: Lists': 'ಸವಾಲು: ಪಟ್ಟಿಗಳು'
+      'Challenge: RGB Colors': 'ಸವಾಲು: RGB ಬಣ್ಣಗಳು'
+      Challenges: ಸವಾಲು
+      Change: ಬದಲಿಸಿ
+      Check Your Work: ನಿಮ್ಮ ಕೆಲಸವನ್ನು ಪರಿಶೀಲಿಸಿ
+      Check-In Survey: ಚೆಕ್-ಇನ್ ಸಮೀಕ್ಷೆ
+      Checking for a Winner: ವಿಜೇತರಿಗಾಗಿ ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ
+      'Choice Levels: Customize Your App': 'ಆಯ್ಕೆ ಮಟ್ಟಗಳು: ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು
+        ಕಸ್ಟಮೈಸ್ ಮಾಡಿ'
+      Choose Your Own Adventure: ನಿಮ್ಮ ಸ್ವಂತ ಸಾಹಸವನ್ನು ಆರಿಸಿ
+      Choosing Good IDs: ಉತ್ತಮ ID ಗಳನ್ನು ಆರಿಸುವುದು
+      Club Datasets: ಕ್ಲಬ್ ಡೇಟಾಸೆಟ್‌ಗಳು
+      Code Prediction: ಕೋಡ್ ಭವಿಷ್ಯ
       Code Your Own Flappy Game: ನಿಮ್ಮದೇ ಫ್ಲಾಪ್ಪಿ ಗೇಮ್‌ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ
+      Code Your Page: ನಿಮ್ಮ ಪುಟವನ್ನು ಕೋಡ್ ಮಾಡಿ
+      Collector Game: ಕಲೆಕ್ಟರ್ ಗೇಮ್
+      Collisions: ಡಿಕ್ಕಿಗಳು
+      Collisions in Games: ಗೇಮ್ಸ್‌ನಲ್ಲಿ ಡಿಕ್ಕಿಗಳು
+      Color LEDs: ಕಲರ್‌ LED ಗಳು
+      Combining Projects: ಯೋಜನೆಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+      Combining Representations: ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು
+      Conditionals with Cards - Unplugged Activity: ಕಾರ್ಡ್‌ಗಳೊಂದಿಗೆ ಷರತ್ತುಗಳು - ಅನ್‌ಪ್ಲಗ್ಡ್
+        ಚಟುವಟಿಕೆ
+      'Conditionals: If Statements': 'ಷರತ್ತುಗಳು: ಇಫ್‌ ಹೇಳಿಕೆಗಳು'
+      'Conditionals: If and If/Else Statements': 'ಷರತ್ತುಗಳು: ಇಫ್‌ ಮತ್ತು ಇಫ್‌/ಎಲ್ಸ್‌
+        ಹೇಳಿಕೆಗಳು'
+      Control Your Player: ನಿಮ್ಮ ಆಟಗಾರನನ್ನು ನಿಯಂತ್ರಿಸಿ
+      'Course E: Play Lab Project': 'ಕೋರ್ಸ್ ಇ: ಪ್ಲೇ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್'
+      'Course F: Artist Project': 'ಕೋರ್ಸ್ ಎಫ್: ಆರ್ಟಿಸ್ಟ್ ಪ್ರಾಜೆಕ್ಟ್'
+      'Course F: Artist Project - Revise': 'ಕೋರ್ಸ್ ಎಫ್: ಕಲಾವಿದ ಯೋಜನೆ - ಪರಿಷ್ಕರಿಸಿ'
+      'Course F: Play Lab Project': 'ಕೋರ್ಸ್ ಎಫ್: ಪ್ಲೇ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್'
+      'Course F: Play Lab Project - Revise': 'ಕೋರ್ಸ್ ಎಫ್: ಪ್ಲೇ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ -
+        ಪರಿಷ್ಕರಿಸಿ'
+      Crack Random Substitution: ಕ್ರ್ಯಾಕ್ ಯಾದೃಚ್ಛಿಕ ಪರ್ಯಾಯ
+      Crack a Caesar Cipher: ಸೀಸರ್ ಸೈಫರ್ ಅನ್ನು ಕ್ರ್ಯಾಕ್ ಮಾಡಿ
+      Create Your Own Animation: ನಿಮ್ಮ ಸ್ವಂತ ಅನಿಮೇಷನ್ ರಚಿಸಿ
+      Create Your Sprites: ನಿಮ್ಮ ಸ್ಪ್ರೈಟ್ಗಳನ್ನು ರಚಿಸಿ
+      Create a Background: ಹಿನ್ನೆಲೆ ರಚಿಸಿ
+      Create a Google Form: Google ಫಾರ್ಮ್ ಅನ್ನು ರಚಿಸಿ
       Dance Crews: ಡ್ಯಾನ್ಸ್‌ ಸಿಬ್ಬಂದಿ
       Debugging: ಡಿಬಗ್ ಮಾಡುವುದು
       Drawing: ಡ್ರಾಯಿಂಗ್‌
       Events: ಈವೆಂಟ್‌ಗಳು
       Example: ಉದಾಹರಣೆ
+      For Loops: ಲೂಪ್ಸಗಾಗಿ
       Get In Formation: ಒಟ್ಟಾಗಿಸಿ
       Hello World: ಹಲೋ ವರ್ಲ್ಡ್
       Learning from Simulations: ಸಿಮ್ಯುಲೇಶನ್‌ಗಳಿಂದ ಕಲಿಯುವುದು
@@ -25,12 +130,16 @@ kn:
       'Mini-Project: Outbreak Simulator': 'ಮಿನಿ-ಪ್ರಾಜೆಕ್ಟ್‌: ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಟರ್'
       More Buttons: ಇನ್ನಷ್ಟು ಬಟನ್‌ಗಳು
       Overview: ಮುನ್ನೋಟ
+      Picturing Data: ಚಿತ್ರಣ ಡೇಟಾ
       Programming with Rey and BB-8: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
       Quarter Notes: ಕ್ವಾರ್ಟರ್ ಟಿಪ್ಪಣಿಗಳು
       Review: ರಿವ್ಯೂ
       Speed it Up, Slow it Down: ವೇಗಗೊಳಿಸಿ, ನಿಧಾನ ಮಾಡಿ
       Sprite Lab Project: ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್
+      Sprite Properties: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
       Teach AI a New Word: ಎಐ ಗೆ ಹೊಸ ಶಬ್ದವನ್ನು ಬೋಧಿಸಿ
+      Train an AI to Clean the Ocean: ಸಮುದ್ರವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲು AI ಗೆ ತರಬೇತಿ ನೀಡಿ
+      Using the Repeat Block: ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸುವುದು
       Variables: ವೇರಿಯಬಲ್‌ಗಳು
       Video: ವೀಡಿಯೊ
       'Video: Outbreak Simulator: Introduction': 'ವಿಡಿಯೋ: ಔಟ್‌ಬ್ರೇಕ್‌ ಸಿಮ್ಯುಲೇಟರ್:

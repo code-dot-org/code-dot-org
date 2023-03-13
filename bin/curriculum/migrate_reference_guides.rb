@@ -11,6 +11,8 @@ raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 #  Help and Tips tab: 'map_reference' and 'reference_links' fields
 #  Map levels: 'reference' field in properties
 
+COURSE_NAME = ARGV[0].freeze
+
 $verbose = false
 def log(str)
   puts str if $verbose
@@ -36,8 +38,8 @@ def find_matching_course_version_and_levels(course_name)
   matching_unit_group = UnitGroup.find_by_name(course_name)
   # if we need to handle pilots, add alternate_unit_groups
   return [matching_unit_group.course_version.id, matching_unit_group.default_units.flat_map(&:all_descendant_levels)] if matching_unit_group
-  matching_standalone_course = Script.find_by_name(course_name)
-  return [matching_standalone_course.course_version.id, matching_standalone_course.all_descendant_levels] if matching_standalone_course&.is_course
+  matching_standalone_course = Unit.find_by_name(course_name)
+  return [matching_standalone_course.get_course_version.id, matching_standalone_course.all_descendant_levels] if matching_standalone_course
   return [nil, nil]
 end
 
@@ -78,6 +80,7 @@ end
 
 # needs to match logic in import script for renaming duplicate entries
 def convert_concept_map_url_to_ref_guide_url(url, course_name, course_version_id)
+  url.strip!
   return url unless url&.start_with? '/docs/concepts'
   # match the category keys without docs/concepts or index.html at the end
   match = /^\/docs\/concepts\/(.+\/)+(index\.html)?/.match(url)
@@ -218,4 +221,4 @@ end
 
 #test_regex
 
-migrate_course_reference_guides 'csp-2022'
+migrate_course_reference_guides COURSE_NAME

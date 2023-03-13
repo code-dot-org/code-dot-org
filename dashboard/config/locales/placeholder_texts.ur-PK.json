@@ -21,7 +21,8 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "مچھلی",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "مخلوق"
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "مخلوق",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "دیگر"
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
@@ -46,7 +47,9 @@
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
-          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
+          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "سکور ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "سطح "
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
@@ -199,7 +202,8 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "آپ جیت گئے!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "آپ جیت گئے!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " سیکنڈز"
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
@@ -244,6 +248,75 @@
         "CourseF_outbreak8": {
           "fac94901e68fc1dea6e749c012e3efc0": "سپرائٹس کو ماسک دینے کے لیے ان پر کلک کریں۔",
           "968c8b54671ab303d48320f86937c40b": "ماسک وائرس کے پھیلاؤ کو سست کرنے میں مدد کرتے ہیں!"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "براہِ مہربانی دوبارہ کوشش کریں."
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "fac94901e68fc1dea6e749c012e3efc0": "سپرائٹس کو ماسک دینے کے لیے ان پر کلک کریں۔",
+          "968c8b54671ab303d48320f86937c40b": "ماسک وائرس کے پھیلاؤ کو سست کرنے میں مدد کرتے ہیں!"
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
+          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
+          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
+          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
+          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "یہاں متن ٹائپ کریں",
+          "30fcc1693fa8402931d13ac3a5f396fd": "یہاں عنوان ٹائپ کریں"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "ہیلو ورلڈ!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "ہیلو ورلڈ!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "ہیلو ورلڈ!"
+        },
+        "courseF_apps_aquarium2022": {
+          "83e4a96aed96436c621b9809e258b309": "مچھلی",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "مخلوق",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "دیگر"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "83e4a96aed96436c621b9809e258b309": "مچھلی",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "مخلوق",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "دیگر"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "آپ جیت گئے!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " سیکنڈز"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "آپ جیت گئے!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " سیکنڈز"
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "ہیلو، دنیا!"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "ہیلو، دنیا!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "ہیلو، دنیا!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "ہیلو، دنیا!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "ہیلو، دنیا!"
         }
       }
     }

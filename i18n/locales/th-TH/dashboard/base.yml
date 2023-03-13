@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 th:
   errors:
     messages:
@@ -129,9 +135,18 @@ th:
     mismatch_password: "รหัสผ่านที่คุณป้อนไม่ตรงกัน"
     student_consent: "ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ Code.org ได้"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
+    user_type_button: "อัปเดตประเภทบัญชี"
     user_type_label: "ประเภทบัญชี"
     user_type_student: "นักเรียน"
+    user_type_student_desc: "สำรวจบทเรียนและกิจกรรมของเราทั้งหมด:"
+    user_type_student_ability_1: "บันทึกความคืบหน้าและโปรเจกต์"
+    user_type_student_ability_2: "เข้าร่วมชั้นเรียนของครูของคุณ"
     user_type_teacher: "ครู"
+    user_type_teacher_desc: "รายการทุกรายการที่นักเรียนได้รับสิทธิ์เข้าถึง:"
+    user_type_teacher_ability_1: "สร้างหมวดชั้นเรียนใหม่"
+    user_type_teacher_ability_2: "ให้การบ้านนักเรียนและติดตามผล"
+    user_type_teacher_ability_3: "ลงทะเบียนเรียนในระดับอาชีพ"
+    user_type_teacher_ability_4: "โต้ตอบในกระดานพูดคุยของครู"
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
@@ -239,6 +254,10 @@ th:
     created: '%{model} สร้างเสร็จแล้ว'
     updated: '%{model} ได้รับอัพเดทแล้ว'
     destroyed: '%{model} ถูกลบออกแล้ว'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "ที่อยู่อีเมลที่คุณป้อนไม่ตรงกับที่อยู่อีเมลของบัญชีนี้"
   nav:
     header:
       finished_hoc: "ฉันผ่านชั่วโมงแห่งการเขียนโค้ดของฉันแล้ว"
@@ -262,6 +281,7 @@ th:
       teach: "สอน"
       about: "เกี่ยวกับ"
       legal_privacy: "นโยบายความเป็นส่วนตัว"
+      legal_cookie_notice: "ประกาศเกี่ยวกับคุกกี้"
       legal_tos: "เงื่อนไขการให้บริการ"
     user:
       classroom: 'หน้าแรกของคุณครู'
@@ -309,7 +329,6 @@ th:
     popup:
       progress_for_user: "ความคืบหน้าของ %{name}"
       progress: 'ความคืบหน้าของคุณ'
-      lines: 'จำนวนบรรทัดของโค้ด: %{lines}'
       close: 'ปิด'
       mastery: 'แนวคิด'
       puzzle_map: 'ขั้นตอน'
@@ -392,6 +411,7 @@ th:
     no_primary_course: "ทดลองคอร์ส Code Studio"
     choose_next_course: "ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้"
     print_certificate: "พิมพ์ใบรับรอง"
+  certificate_hour_of_code: "ช่วงเวลาของ Code"
   move_students:
     not_correct_participant_type: "คุณไม่สามารถย้ายผู้ใช้งานได้ เนื่องจากผู้ใช้งานเหล่านั้นยังไม่มีสิทธิ์เข้าร่วมในหมวดใหม่"
   share:
@@ -459,38 +479,37 @@ th:
     applab:
       title: 'แอ๊ปแล็บ'
       audience: 'อายุ 13+'
-    dance:
-      title: 'Dance Party'
+    aquatic:
+      title: "ไมน์คราฟท์"
     dance-2019:
       title: 'Dance Party'
-    hoc:
-      title: 'เขาวงกตสุดคลาสสิค'
-      body: 'ลองศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ เพราะหลายล้านคนได้ลองแล้วด้วยตัวเอง'
+    dance:
+      title: 'Dance Party'
     flappy:
       title: 'แฟลปปี้โค้ด'
       body: 'อยากจะลองเขียนเกมในแบบของคุณโดยใช้เวลาไม่ถึง 10 นาทีรึเปล่า แนะนำให้อ่านบทช่วยสอน "แฟลปปี้โค้ด" ดูนะ'
-    20-hour:
-      title: 'หลักสูตรเร่งรัด'
-      body: 'This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!'
-      body_short: 'เรียนรู้วิทยาการคอมพิวเตอร์พื้นฐานในเวอร์ชั่นเร่งรัดของหลักสูตร 2-4'
-    hoc2014:
-      try_frozen: 'ศิลปินร่วมกับแอนนาและเอลซ่าจากโฟรเซ่น'
+    frozen:
+      title: "โฟรเซ่น"
     gallery:
       title: "แกลเลอรี่"
     gamelab:
       title: "เกมแล๊บ (Game Lab)"
       body: "เกมแลป(Game Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างภาพเคลื่อนไหวหรือที่เรียกกันว่าแอนนิเมชั่นแบบง่ายๆ หรือเกมที่มีวัตถุและตัวแสดงต่างๆ ที่สามารถโต้ตอบซึ่งกันและกันได้"
       audience: "อายุ 13+"
+    hello-world:
+      title: 'สวัสดีชาวโลก'
+      body: 'เลือกธีมสนุกๆ จากสี่ธีมเพื่อเขียนโค้ดตัวอักษรแบบอินเทอร์แอคทีฟในโลกที่คุณสร้างขึ้น'
+    hero:
+      title: "ไมน์คราฟท์"
+      body: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
     hoc-encryption:
       title: "การเข้ารหัสแบบง่าย ๆ"
       body: "นักเรียนจะได้ศึกษาเทคนิคที่นำมาใช้สร้างและแคร็คข้อความที่เข้ารหัสไว้"
-    weblab:
-      body: "เว็ปแลป(Web Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรม ที่ซึ่งคุณสามารถสร้างหน้าเว็ปอย่างง่ายๆ โดยการใช้ HTML และ CSS ออกแบบหน้าเว็ปของคุณและแบ่งปันไซท์ของคุณในชั่วเวลาไม่กี่วินาที"
-      audience: "อายุ 13+"
-    frozen:
-      title: "โฟรเซ่น"
-    starwars:
-      title: "สตาร์วอร์ส"
+    hoc:
+      title: 'เขาวงกตสุดคลาสสิค'
+      body: 'ลองศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ เพราะหลายล้านคนได้ลองแล้วด้วยตัวเอง'
+    hoc2014:
+      try_frozen: 'ศิลปินร่วมกับแอนนาและเอลซ่าจากโฟรเซ่น'
     infinity:
       title: "เพลย์แลปแบบไม่สิ้นสุด"
       body: "ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity"
@@ -500,26 +519,32 @@ th:
     minecraft2016:
       title: "ไมน์คราฟท์"
       body: "เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง"
-    aquatic:
-      title: "ไมน์คราฟท์"
-    hero:
-      title: "ไมน์คราฟท์"
-      body: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+    poem-art:
+      title: 'ภาพปกบทกวี'
     sports:
       title: "กีฬา"
       body: "สร้างเกมบาสเก็ตบอลหรือมิกซ์แอนด์แมทช์หลาย ๆ เกม"
+    starwars:
+      title: "สตาร์วอร์ส"
     text-compression:
       title: "การบีบอัดข้อความ"
       body: "ในบทเรียนนี้ นักเรียนจะได้ใช้วิดเจ็ตการบีบอัดข้อความเพื่อบีบข้อความด้วยการใช้สัญลักษณ์แทนรูปแบบ"
+    weblab:
+      body: "เว็ปแลป(Web Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรม ที่ซึ่งคุณสามารถสร้างหน้าเว็ปอย่างง่ายๆ โดยการใช้ HTML และ CSS ออกแบบหน้าเว็ปของคุณและแบ่งปันไซท์ของคุณในชั่วเวลาไม่กี่วินาที"
+      audience: "อายุ 13+"
+    widgets:
+      audience: "อายุ 14+"
+    unplugged_conditionals:
+      title: "เงื่อนไข "
+      body: "ใช้ไพ่หนึ่งสำรับเพื่อเรียนเรื่องอัลกอริทึมและเงื่อนไขต่าง ๆ จากกิจกรรม \"ออฟไลน์\" นี้"
     unplugged:
       title: "บทเรียนแบบออฟไลน์"
       audience: "อายุ 4+"
       body_short: "หากคุณไม่มีคอมพิวเตอร์ ให้ลองบทเรียนแบบออฟไลน์เหล่านี้ในห้องเรียน"
-    unplugged_conditionals:
-      title: "เงื่อนไข "
-      body: "ใช้ไพ่หนึ่งสำรับเพื่อเรียนเรื่องอัลกอริทึมและเงื่อนไขต่าง ๆ จากกิจกรรม \"ออฟไลน์\" นี้"
-    widgets:
-      audience: "อายุ 14+"
+    20-hour:
+      title: 'หลักสูตรเร่งรัด'
+      body: 'This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!'
+      body_short: 'เรียนรู้วิทยาการคอมพิวเตอร์พื้นฐานในเวอร์ชั่นเร่งรัดของหลักสูตร 2-4'
   landing:
     support: "ขอความช่วยเหลือ"
     help_support: "การช่วยเหลือและสนับสนุน"
@@ -641,10 +666,13 @@ th:
         math: 'คณิตศาสตร์'
         science: 'วิทยาศาสตร์'
         la: 'ศิลปะการใช้ภาษา'
+        other: "อาชีพอื่น ๆ"
       resources:
         kodable: 'Kodable'
+        other: "อาชีพอื่น ๆ"
       robotics:
         kodable: 'Kodable'
+        other: "อาชีพอื่น ๆ"
       workshop_course:
         csf_express: 'CS พื้นฐาน (Pre-Express หรือ Express)'
       email_opt_in:
@@ -661,3 +689,10 @@ th:
     link_your_email: "เชื่อมต่ออีเมลของคุณ"
     not_now: "ไม่ใช่ตอนนี้"
   teacher_feedback: "ข้อเสนอแนะของผู้สอน"
+  lesson_lock:
+    error:
+      no_updates: "ไม่มีการอัปเดตที่ต้องดำเนินการ"
+      missing_params: "ต้องระบุผู้ใช้ ระดับ และรหัสหน่วย"
+      cannot_view_locked_answers: "ไม่สามารถดูคำตอบขณะล็อกได้"
+      forbidden: "ผู้ใช้ไม่สามารถอัปเดตสถานะล็อกของนักเรียนได้"
+  reset_predict_progress_button: "ลบคำตอบ"

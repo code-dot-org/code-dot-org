@@ -1,7 +1,7 @@
 import React from 'react';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import style from './duplicate-element-button.module.scss';
 
 /**
  * A duplicate button that helps replicate elements
@@ -15,10 +15,11 @@ class DuplicateElementButton extends React.Component {
 
   render() {
     return (
-      <div style={styles.main}>
+      <div>
         <button
           type="button"
-          style={[commonStyles.button, styles.duplicateButton]}
+          className={style.duplicateButton}
+          style={commonStyles.button}
           onClick={this.handleDuplicate}
         >
           Duplicate
@@ -28,12 +29,4 @@ class DuplicateElementButton extends React.Component {
   }
 }
 
-const styles = {
-  duplicateButton: {
-    backgroundColor: '#0aa',
-    color: 'white',
-    float: 'right'
-  }
-};
-
-export default Radium(DuplicateElementButton);
+export default DuplicateElementButton;

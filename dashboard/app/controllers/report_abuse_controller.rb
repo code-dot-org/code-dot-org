@@ -33,6 +33,13 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless protected_project?
+
+      unless verify_recaptcha || !require_captcha?
+        flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
+        redirect_to report_abuse_path
+        return
+      end
+
       unless Rails.env.development? || Rails.env.test?
         subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
           'Featured Project: Abuse Reported' :
@@ -64,38 +71,13 @@ class ReportAbuseController < ApplicationController
         raise ZendeskError.new(response.code, response.body) unless response.success?
       end
 
-      unless params[:channel_id].blank?
-        channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
-        assets_path = "/v3/assets/#{params[:channel_id]}/"
-        files_path = "/v3/files/#{params[:channel_id]}/"
+      if params[:channel_id].present?
+        channel_id = params[:channel_id]
 
-        _, _, body = ChannelsApi.call(
-          'REQUEST_METHOD' => 'POST',
-          'PATH_INFO' => channels_path,
-          'REQUEST_PATH' => channels_path,
-          'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-          'rack.input' => StringIO.new
-        )
+        abuse_score = update_channel_abuse_score(channel_id)
 
-        abuse_score = JSON.parse(body[0])["abuse_score"]
-
-        FilesApi.call(
-          'REQUEST_METHOD' => 'PATCH',
-          'PATH_INFO' => assets_path,
-          'REQUEST_PATH' => assets_path,
-          'QUERY_STRING' => "abuse_score=#{abuse_score}",
-          'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-          'rack.input' => StringIO.new
-        )
-
-        FilesApi.call(
-          'REQUEST_METHOD' => 'PATCH',
-          'PATH_INFO' => files_path,
-          'REQUEST_PATH' => files_path,
-          'QUERY_STRING' => "abuse_score=#{abuse_score}",
-          'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
-          'rack.input' => StringIO.new
-        )
+        update_file_abuse_score('assets', channel_id, abuse_score)
+        update_file_abuse_score('files', channel_id, abuse_score)
       end
     end
 
@@ -104,9 +86,129 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse_form
     @react_props = {
-      name: (current_user.name unless current_user.nil?),
-      email: (current_user.email unless current_user.nil?),
-      age: (current_user.age unless current_user.nil?),
+      name: current_user&.name,
+      email: current_user&.email,
+      age: current_user&.age,
+      requireCaptcha: require_captcha?,
+      captchaSiteKey: CDO.recaptcha_site_key,
     }
+  end
+
+  # API routes, moved from legacy channels_api.rb and files_api.rb.
+
+  # GET /v3/channels/:channel_id/abuse
+  # Get an abuse score.
+  def show_abuse
+    begin
+      value = Projects.get_abuse(params[:channel_id])
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    render json: {abuse_score: value}
+  end
+
+  # DELETE /v3/channels/:channel_id/abuse
+  # POST /v3/channels/:channel_id/abuse/delete
+  # Clear an abuse score. Requires project_validator permission
+  def reset_abuse
+    return head :unauthorized unless can?(:destroy_abuse, nil)
+
+    channel_id = params[:channel_id]
+
+    begin
+      value = Projects.new(get_storage_id).reset_abuse(channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    render json: {abuse_score: value}
+  end
+
+  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
+  def update_file_abuse
+    return head :unauthorized unless can?(:update_file_abuse, nil)
+
+    value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
+
+    render json: {abuse_score: value}
+  end
+
+  # Non-actions, public methods so they can be tested easier.
+  # The methods below are in this controller because they depend on the
+  # storage_id helper, which has dependencies on current_user.
+
+  # Increment an abuse score.
+  # Was POST /v3/channels/:channel_id/abuse
+  def update_channel_abuse_score(channel_id)
+    # Reports of abuse from verified teachers are more reliable than reports
+    # from students so we increase the abuse score enough to block the project
+    # with only one report from a verified teacher.
+    #
+    # Temporarily ignore anonymous reports and only allow verified teachers
+    # and signed in users to report.
+    restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
+    amount =
+      if current_user&.verified_teacher?
+        20
+      elsif current_user && !restrict_reporting_to_verified_users
+        10
+      else
+        0
+      end
+    begin
+      value = Projects.new(get_storage_id).increment_abuse(channel_id, amount)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    value
+  end
+
+  # Update all assets for the given channelId to have the provided abuse score
+  # Was PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=<abuse_score>
+  def update_file_abuse_score(endpoint, encrypted_channel_id, abuse_score)
+    return if abuse_score.nil?
+
+    buckets = get_bucket_impl(endpoint).new
+
+    begin
+      files = buckets.list(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    files.each do |file|
+      break unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
+      buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
+    end
+
+    abuse_score
+  end
+
+  private
+
+  def get_bucket_impl(endpoint)
+    case endpoint
+    when 'animations'
+      AnimationBucket
+    when 'assets'
+      AssetBucket
+    when 'files'
+      FileBucket
+    when 'sources'
+      SourceBucket
+    when 'libraries'
+      LibraryBucket
+    else
+      raise ActionController::RoutingError, 'Not Found'
+    end
+  end
+
+  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
+    return true if current_user&.project_validator? || new_score.nil?
+
+    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
+  end
+
+  def require_captcha?
+    return false if current_user&.admin? || current_user&.project_validator?
+    true
   end
 end

@@ -61,11 +61,15 @@ export function postContainedLevelAttempt({
   attempts,
   onAttempt
 }) {
-  if (!hasContainedLevels || attempts !== 1) {
+  if (!hasContainedLevels) {
+    return;
+  }
+  const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
+
+  if (!isTeacher && attempts !== 1) {
     return;
   }
 
-  const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
   if (isTeacher) {
     if (!!queryString.parse(window.location.search).user_id) {
       // if we have a user_id in the search params, we are a viewing student
@@ -120,19 +124,19 @@ export function initializeContainedLevel() {
   if (!store.getState().instructions.hasContainedLevels) {
     return;
   }
+  let runButton = $('#runButton');
+  let stepButton = $('#stepButton');
+  const disabledRunButtonHandler = e => {
+    $(window).trigger('attemptedRunButtonClick');
+  };
   if (codeStudioLevels.hasValidContainedLevelResult()) {
     // We already have an answer, don't allow it to be changed, but allow Run
     // to be pressed so the code can be run again.
     codeStudioLevels.lockContainedLevelAnswers();
   } else {
     // No answers yet, disable Run button until there is an answer
-    let runButton = $('#runButton');
-    let stepButton = $('#stepButton');
     runButton.prop('disabled', true);
     stepButton.prop('disabled', true);
-    const disabledRunButtonHandler = e => {
-      $(window).trigger('attemptedRunButtonClick');
-    };
     $('#runButton').bind('click', disabledRunButtonHandler);
 
     callouts.addCallouts([
@@ -153,21 +157,20 @@ export function initializeContainedLevel() {
       }
     ]);
     store.dispatch(setAwaitingContainedResponse(true));
-
-    codeStudioLevels.registerAnswerChangedFn(() => {
-      // Ideally, runButton would be declaratively disabled or not based on redux
-      // store state. We might be close to a point where we can do that, but
-      // because runButton is also mutated outside of React (here and elsewhere)
-      // we need to worry about cases where the DOM gets out of sync with the
-      // React layer
-      const validResult = codeStudioLevels.hasValidContainedLevelResult();
-      runButton.prop('disabled', !validResult);
-      stepButton.prop('disabled', !validResult);
-      if (validResult) {
-        runButton.qtip('hide');
-        $('#runButton').unbind('click', disabledRunButtonHandler);
-      }
-      getStore().dispatch(setAwaitingContainedResponse(!validResult));
-    });
   }
+  codeStudioLevels.registerAnswerChangedFn(() => {
+    // Ideally, runButton would be declaratively disabled or not based on redux
+    // store state. We might be close to a point where we can do that, but
+    // because runButton is also mutated outside of React (here and elsewhere)
+    // we need to worry about cases where the DOM gets out of sync with the
+    // React layer
+    const validResult = codeStudioLevels.hasValidContainedLevelResult();
+    runButton.prop('disabled', !validResult);
+    stepButton.prop('disabled', !validResult);
+    if (validResult) {
+      runButton.qtip('hide');
+      $('#runButton').unbind('click', disabledRunButtonHandler);
+    }
+    getStore().dispatch(setAwaitingContainedResponse(!validResult));
+  });
 }

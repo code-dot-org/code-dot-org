@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../util/color';
 import _ from 'lodash';
@@ -108,7 +107,7 @@ class MultiCheckboxSelector extends Component {
           <h2 style={styles.header}>
             <input
               type="checkbox"
-              style={[styles.checkbox, styles.selectAllCheckbox]}
+              style={{...styles.checkbox, ...styles.selectAllCheckbox}}
               checked={this.areAllSelected()}
               onChange={this.toggleSelectAll}
               disabled={this.props.disabled}
@@ -137,4 +136,4 @@ class MultiCheckboxSelector extends Component {
   }
 }
 
-export default Radium(MultiCheckboxSelector);
+export default MultiCheckboxSelector;

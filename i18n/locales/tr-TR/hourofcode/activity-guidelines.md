@@ -1,5 +1,5 @@
 ---
-title: Öğretici kılavuzu
+title: Etkinlik yönergeleri
 ---
 
 <style>
@@ -32,11 +32,10 @@ Birkaç ipucu:
 - [Hour of Code™ aktivitesi yaratmak için genel bilgiler](#guidelines)
 - [Nasıl Gönderilmeli?](#submit)
 - [Aktiviteler nasıl değerlendirilecek?](#inclusion)
-- [Erken nitelik incelemesi için gönderim yönergeleri YENİ](#earlyreview)
-- [Aktivitenizi tasarlamak için öneriler](#design)
-- [Ticari Marka Yönergeleri](#tm)
+- [Etkinliğinizi tasarlamak için öneriler](#design)
+- [Ticari marka yönergeleri](#tm)
 - [Takip Pikseli](#pixel)
-- [Aktivitelerinizin tanıtımı, Bilgisayar Bilimi Eğitim Haftası ve Hour of Code](#promote)
+- [Etkinliğinizi,CSEdWeek ve Hour of Code'u tanıtma](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -58,16 +57,16 @@ Ders planınız için bu [şablon](https://docs.google.com/document/d/1DhaLNd6ui
 
 **Diğer konularda/alanlarda öğretmenler için aktiviteler**
 
-Ayrıca farklı konu alanları için tasarlanmış ders planları da sunuyoruz. Örneğin geometri dersinde kod öğretmek için bir saatlik ders planı. Veya İngilizce dersi için isim-şehit tarzı bir alıştırma. Veya tarih dersi için yaratıcı bir sınav oluşturma aktivitesi. Bunlar, bilgisayar biliminin birçok farklı konu alanını nasıl etkileyebileceğini ve geliştirebileceğini gösterirken, kendi alanlarına özgü bir Hour of Code aktivitesine rehberlik etmeleri için başka alan öğretmenlerinden yardım istenmesini sağlayabilir.
+Ayrıca farklı konu alanları için tasarlanmış ders planları da sunuyoruz. Örneğin geometri dersinde kod öğretmek için bir saatlik ders planı. Veya İngilizce dersi için isim-şehir tarzı bir alıştırma. Veya tarih dersi için yaratıcı bir sınav oluşturma aktivitesi. Bunlar, bilgisayar biliminin birçok farklı konu alanını nasıl etkileyebileceğini ve geliştirebileceğini gösterirken, kendi alanlarına özgü bir Hour of Code aktivitesine rehberlik etmeleri için başka alan öğretmenlerinden yardım istenmesini sağlayabilir.
 
 Örnekler:
 
 - Ayna Görüntüleri (sanat öğretmeni için aktivite)
 - Fizik öğretmeni için arduino aktivitesi
-- Fizik öğretmeni için teknoloji tarihi aktivitesi
+- Tarih öğretmeni için teknoloji tarihi aktivitesi
 - Eğitimcilerden daha fazla fikir almak (veya başkalarına ilham vermek için listeye kendi fikirlerinizi eklemek) için [bu listeye](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) göz atın.
 
-**Özel eğitim ihtiyacı olan öğrenciler için**
+**Özel ihtiyacı olan öğrenciler için**
 
 Özel ihtiyaçları olan öğrenciler için tasarlanmış bir aktivite veya öğretici materyal gönderiyorsanız lütfen açıklamada bunu belirtin. Özellikle görme engelliler için çok az seçenek var. Aktiviteniz bu kitle için tasarlanmışsa lütfen bize bildirin.
 
@@ -75,7 +74,7 @@ Ayrıca farklı konu alanları için tasarlanmış ders planları da sunuyoruz. 
 
 <a id="guidelines"></a>
 
-## Hour of Code aktivitesi yaratmak için genel bilgiler
+## Hour of Code aktivitesi yaratmak için genel yönergeler
 
 Hour of Code etkinliğinin amacı, yeni başlayanlara bilgisayar bilimi veya programlamayı ilk kez tanıtmaktır. Ton şu olmalıdır:
 
@@ -138,7 +137,7 @@ Oluşturabileceğiniz çok çeşitli öğretici ve ders planları hakkında fiki
         * iOS mobil Safari (mobile uyarlanmış)
         * Android Chrome (mobile uyarlanmış)
     * Web tabanlı değil: yerel kod için platform belirtin (Mac, Win, iOS, Android, xBox, diğer)
-    * İnternetsiz
+    * Bağlantısız
 * Hour of Code aktivitesinin ekran görüntüsü veya pazarlama resmi. Lütfen 4: 3 boyutlarında en az bir resim gönderin. En az 520 piksele 390 piksel olmalıdır. İngilizce bilmeyenler için daha erişilebilir olması için bu görselin üzerinde (logonuz dışında) HİÇBİR metin olmamalıdır. Eğer uygun bir görsel sağlanamazsa biz sizin için öğreticinizin ekran görüntüsünü alabiliriz VEYA öğreticinizi listeye koymayabiliriz. Tüm resimler .jpg, .jpeg veya .png'ye URL bağlantısı olarak gönderilmelidir.
 * Katılımı daha doğru bir şekilde izlemek için, üçüncü taraf öğretici iş ortaklarının Hour of Code öğreticilerinin ilk sayfasına 1 piksellik izleme resimleri eklemesi gerekir. Daha fazla bilgi için [Takip Pikseli](#pixel) bölümüne göz atın.
 * Aktivitenizi bitiren kullanıcılar aşağıdakileri yapabilecekleri [code.org/api/hour/finish](https://code.org/api/hour/finish) adresine yönlendirilmelidir: 
@@ -184,80 +183,63 @@ Ek olarak, listeye alınması için tüm aktivitelerin:
 - Bir devlet okulu sınıfına uygun olması gerekir (silah yok, açık/yetişkin içeriği yok, dini içerik yok vb.)
 - Kayıt gerektirmemesi gerekir 
 - Paralı olmaması gerekir (robotik faaliyetler istisnaidir; bunlar robot/kit satın almayı gerektirebilir) Yeni öğretmenler ve öğrenciler için kendi kendine yönlendirmeli aktivitelerde değerlendirme komitesi aşağıdakileri araştıracaktır:
-- Öğretmenler, bilgisayar bilimlerinde deneyim sahibi olmadan öğreticiyi veya aktiviteyi kullanabiliyor mu?
-- Öğrenciler, bilgisayar bilimlerinde deneyim sahibi olmadan başarılı olabiliyor mu?
-- Öğrenciler, öğreticide ebeveyn veya öğretmen rehberliği olmadan kendileri ilerleyebiliyorlar mı?
 
-Öğretmenler ve öğrenciler; sınıf, deneyim seviyesi, konu, donanım vb. filtrelere göre aktivite listemizde arama ve filtreleme yapabileceklerdir. Varsayılan olarak, önce şu ders planlarını ve aktiviteleri gösteririz:
+Yeni öğretmenler ve öğrenciler için kendi kendini yöneten etkinlikler için inceleme komitesi aşağıdakileri araştıracaktır:
 
-- Değerlendirme komitesinden en yüksek puanları alanlar
-- Yeni başlayanlar (öğrenciler ve öğretmenler) için tasarlanmış bir saatlik kendi kendine yönlendirmeli aktiviteler
-- Çok çeşitli kullanıcılara hitap edenler (farklı platform, dil ve yaşlarda)
-- Kurulum gerektirmeyenler
-- Bu yılın yenileri
+- Öğretmenler öğreticiyi veya etkinliği bilgisayar bilimi geçmişi olmadan kullanabilir
+- Öğrenciler bilgisayar bilimlerinde geçmişleri olmadan başarılı olabilirler
+- Öğrenciler, ebeveyn veya öğretmen rehberliği olmadan eğitim boyunca kendilerini yönlendirebilir
 
-[**Başa dön**](#top)
+Öğretmenler ve öğrenciler, sınıf, deneyim düzeyi, konu, donanım vb. filtrelere göre etkinlik listemizi arayabilir ve filtreleyebilir. Varsayılan olarak, öncelikle aşağıdakileri sağlayan ders planlarını ve etkinlikleri göstereceğiz:
 
-<a id="earlyreview"></a>
-
-## Erken nitelik incelemesi için gönderim yönergeleri (YENİ)
-
-30 Nisan ile 16 Ağustos arasında gönderilen tüm aktiviteler, [Hour of Code Değerlendirme komitesinin](/review-committee) en az üç üyesi tarafından nitelik incelemesinden geçirilecektir.
-
-Komite üyeleri aşağıdakileri sağlamaya odaklanacaktır:
-
-* Olumlu geri bildirim - İyi çalışan yönleri nedir?
-* Eleştirel geri bildirim - Neler geliştirilebilir?
-* Hatalar veya kusurlar - Herhangi bir hata, sözdizimi hatası veya gramer hatası var mı? Varsa, aktivitenin neresinde?
-* Bu aktivite öğrencileri benzersiz bir şey yaratmaya teşvik ediyor mu?
-
-Lütfen unutmayın: Bunlar, geri bildirim sağlamaya yönelik genel yönergelerdir. Aktiviteniz erken incelendiğinde, tüm bu kategorilerde geri bildirim alabilir veya yalnızca bir veya ikisinde geri bildirim alabilir. Ayrıca, **bir aktivitedeki tüm hataları veya sorunları tespit edemeyebiliriz**.
-
-**Erken inceleme, tamamlanmamış bir aktivite için geri bildirim alma fırsatı değildir. Komite üyelerinin incelemeye alınamayacak kadar eksik olduğunu düşündükleri hiçbir aktivite incelenmeyecektir.**
-
-Erken inceleme için gönderilen tüm aktivitelere 1 Eylül'e kadar geri bildirim verilecektir. Ayrıca, geri bildirim karşılığında bir aktivitede yapılan değişiklikleri açıklamak için kullanabileceğiniz bir form bağlantısı da vereceğiz.
-
-1 Ekim'den önce gönderilen her aktivite, erken incelemeden geçenler dahil, standart bir incelemeden geçirilir. Standart inceleme döneminde (Eylül-Ekim), komite üyeleri yukarıdaki "Aktiviteler nasıl değerlendirilecek?" bölümünde açıklanan kriterlere göre aktivitelere puan vermeye odaklanacaklardır. Bir aktivitede yapılan değişiklikleri belirtmezseniz komite üyeleri, aktiviteleri puanlandırmada erken inceleme geri bildirimlerine güvenebilirler ve muhtemelen güveneceklerdir de.
+- Olumlu geri bildirim - İyi çalışan yönleri nedir?
+- Yeni başlayanlar (öğrenciler ve öğretmenler) için tasarlanmış bir saatlik kendi kendini yöneten etkinliklerdir.
+- Çok çeşitli kullanıcılara hitap edin (platformlar, diller ve yaşlar arasında)
+- Kurulum gerektirmez
+- Bu sene yeni
 
 [**Başa dön**](#top)
 
 <a id="design"></a>
 
-## Bir saatlik kendi kendine yönlendirmeli öğreticiler tasarlamak için öneriler
+## Bir saatlik kendi kendine rehberli eğitimler tasarlamak için öneriler
 
 Öğretici materyalinize [Hour of Code logosunu ](https://hourofcode.com/us/promote/resources#logo) ekleyebilirsiniz ancak bu zorunlu değildir. Hour of Code logosunu kullanıyorsanız aşağıdaki ticari marka yönergelerine bakın. <u>Code.org logosu ve adı hiçbir koşulda kullanılamaz.</u> İkisi de ticari markadır ve açık yazılı izin olmadan 3. taraf bir marka adıyla karıştırılamaz.
 
-**Ortalama bir öğrencinin aktiviteyi bir saat içerisinde rahatlıkla bitirebileceğinden emin olun.** Aktiviteyi çabuk bitiren öğrenciler için dersin sonuna ucu açık bir başka aktivite daha koymayı düşünebilirsiniz. Çoğu çocuğun bilgisayar bilimi ve kodlamaya tamamen yeni başlıyor olduğunu unutmayın.
+**Ortalama bir öğrencinin bir saatte rahatça bitirebileceğinden emin olun.** Derste daha hızlı ilerleyen öğrenciler için sonuna açık uçlu bir etkinlik eklemeyi düşünün. Çoğu çocuğun bilgisayar bilimi ve kodlamaya yeni başlayanlar olacağını unutmayın.
 
-**Öğretmen notlarını dahil edin.** Çoğu aktivite öğrenciye yönelik olmalıdır ancak bir aktivite öğretmen tarafından kolaylaştırılıyor veya yönetiliyorsa, lütfen aktivitenizle birlikte ayrı bir URL'de öğretmen için öğretmen notları şeklinde açık ve basit talimatlar sunun. Acemi olan sadece öğrenciler değil, bazı öğretmenler de bu konuda acemi olabilir. Şu bilgileri ekleyin:
+**Öğretmen notlarını ekleyin.** Çoğu aktiviteler öğrenciler tarafından yönlendirilmelidir, ancak eğer aktivite bir öğretmen tarafından yönetiliyorsa, lütfen ayrı bir URL'ye, açık ve basit yönlendirmeler kullanarak aktivitenizin bir öğretmen notunu yükleyin. Sadece öğrenciler acemi değil, bazı öğretmenler de acemi. Şu bilgileri ekleyin:
 
 - Öğretici en iyi hangi platformlarda ve tarayıcılarda çalışıyor?
 - Akıllı telefonlarda çalışıyor mu? Tabletlerde?
 - Çiftli programlamayı öneriyor musunuz? 
 - Sınıfta kullanım için dikkat edilmesi gerekenler? Örneğin video varsa öğretmene videoları projeksiyon kullanarak tüm sınıfın görebileceği şekilde izletmesini tavsiye edin
 
-** Aktivitenin sonuna geri bildirimi dahil edin.** (Ör. "10 seviyeyi bitirdiniz ve döngüleri öğrendiniz! Harikasın!")
+**Etkinliğin sonuna geri bildirim ekleyin.** (Örn. "10 seviyeyi tamamladınız ve döngüleri öğrendiniz! İyi iş!")
 
-**Öğrencileri bitirdiklerini sosyal medyada (uygun olduğunda) paylaşmaya teşvik edin.** Örneğin "________ ile Hour of Code yaptım? Ya sen? "#HourOfCode" veya "#CSEdWeek içinde bir #HourOfCode yaptım. Ya sen? @Scratch.” **#HourOfCode** etiketini kullanın (büyük H, O, C harfleri ile)
+strong>Öğrencileri, bitirdikten sonra (uygun olan yerlerde) sosyal medyada paylaşımda bulunmaya teşvik edin.</strong> Örneğin, "________ ile bir Hour of Code yaptım, ya siz? #HourOfCode” veya “#CSEdWeek kapsamında bir #HourOfCode yaptım. Senin var mı? @Scratch.” **#HourOfCode** etiketini kullanın (büyük H, O, C harfleri ile)
 
 **Aktivitenizi İspanyolca veya İngilizce dışında başka dillerde oluşturun.**
 
-**Aktiviteyi toplum için önemli bir bağlamda anlatın veya bağlantı kurun.** Öğrenciler dünyayı bilgisayar programlama ile daha iyiye taşıyabileceklerini gördüklerinde bu beceri bir süper güce dönüşecek!
+**Aktiviteyi toplum için önemli bir içerikte anlatın veya bağlantı kurun.** Öğrenciler dünyayı bilgisayar programlama ile daha iyiye taşıyabileceklerini gördüklerinde bu beceri bir süper güce dönüşecek!
 
-**Öğretici materyalinizin [Çiftli Programlama](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmasında kullanılabileceğinden emin olun.** Bu özellikle Hour of Code için kullanışlıdır çünkü birçok sınıfta tüm öğrenciler için birer donanım bulunmamaktadır.
+**Öğretici materyalinizin [Çiftli Programlama](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmasında kullanılabileceğinden emin olun.** Bu özellikle Hour of Code için kullanışlıdır çünkü birçok sınıfta her öğrenciye bir donanım bulunmamaktadır.
 
 [**Başa dön**](#top)
 
 <a id="tm"></a>
 
-## Ticari Marka Yönergeleri
+## Ticari marka yönergeleri
 
-Öğretici ortaklarımızın çoğu "Hour of Code"' ticari markamızı web sitelerinde kullandılar. Bu kullanıma engel olmak istemiyoruz ancak bazı kısıtlamalara uyulmasını istiyoruz:
+Hour of Code® ve Hora del Código®, Code.org'un tescilli ticari markalarıdır. Eğitmen ortaklarımızın çoğu, Hour of Code faaliyetleriyle bağlantılı olarak web sitelerinde "Hour of Code" ticari markalarımızı kullandı. Bu kullanıma engel olmak istemiyoruz ancak bazı kısıtlamalara uyulmasını istiyoruz:
 
-1. "Hour of Code"a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü hareketi ifade etmelidir. Doğru kullanım: "ACMECorp.com'daki Hour of Code™a katılın". Yanlış kullanım: "ACME Corp'un Hour of Code'unu deneyin."
-2. Hem web sitenizde hem uygulama açıklamalarınızda "Hour of Code" yazdığınız her yerde "TM" işaretini kullanın.
-3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Hour of Code, Bilgisayar Bilimi Eğitim Haftası ve Code.org web sitelerinin bağlantılarını paylaşın ve şu ifadeleri ekleyin: a. “'[Hour of Code](http://hourofcode.com)™' ülke çapında [Bilgisayar Bilimi Eğitim Haftası](http://csedweek.org) ve [Code.org](http://code.org) tarafından düzenlenen, milyonlarca öğrenciyi bir saatliğine bilgisayar bilimi ve bilgisayar programlama ile tanıştırmayı amaçlayan bir girişimdir."
-4. Uygulama isimleri olarak ''Hour of Code'' kullanmayın.
+1. "Hour of Code"u yalnızca Hour of Code kampanyası kapsamındaki ticari olmayan CS Education etkinlikleriyle bağlantılı olarak kullanın ve başka hiçbir amaçla kullanmayın.
+2. "Hour of Code"a yapılan herhangi bir atıf, bunun kendi marka adınız olduğu izlenimini uyandırmayacak, bunun yerine Hour of Code'a bir taban hareketi olarak atıfta bulunacak şekilde kullanılmalıdır. İyi bir örnek: "ACMECorp.com'daki Hour of Code ® 'a katılın". Kötü örnek : "Hour of Code'u ACME Corp ile deneyin".
+3. Hem web sitenizde hem uygulama açıklamalarınızda "Hour of Code" yazdığınız her yerde “®” işaretini kullanın.
+4. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Hour of Code, CSEdWeek ve Code.org web sitelerinin bağlantılarını paylaşın ve şu ifadeleri ekleyin: a. Hour of Code® ve Hora del Código®, Code.org'in tescilli ticari markalarıdır; ve b. “'[Hour of Code](http://hourofcode.com)™' ülke çapında [Bilgisayar Bilimi Eğitim Haftası](http://csedweek.org) ve [Code.org](http://code.org) tarafından düzenlenen, milyonlarca öğrenciyi bir saatliğine bilgisayar bilimi ve bilgisayar programlama ile tanıştırmayı amaçlayan bir girişimdir."
+5. Uygulama isimlerinde ''Hour of Code'' 'u kullanmayın.
+6. "Hour of Code"u herhangi bir ticari kullanım veya amaçla bağlantılı olarak kullanmayın (ör. Hour of Code etkinliğinizi bir ödeme duvarının arkasına yerleştirmek; Hour of Code etkinliğinizin bir parçası olarak başka bir ücretli hizmeti tanıtmak; Hour of Code ürünlerini satmak).
+7. Oturum açma veya hesap oluşturma gerektiren herhangi bir etkinlikle bağlantılı olarak "Hour of Code" kullanmayın.
 
 [**Başa dön**](#top)
 
@@ -265,13 +247,13 @@ Erken inceleme için gönderilen tüm aktivitelere 1 Eylül'e kadar geri bildiri
 
 ## Takip Pikseli
 
-Katılımı daha doğru bir şekilde izlemek için, her öğretici iş ortağının Hour of Code öğreticilerinin ilk sayfasına 1 piksellik izleme resimleri eklemesi gerekir. Piksel görüntüsü yalnızca başlangıç ​​sayfasında olmalıdır. Öğretici materyalinizin ara sayfalarına koymayın.
+Katılımı daha doğru bir şekilde takip edebilmek için her eğitim ortağından Hour of Code eğitimlerinin ilk sayfasına 1 piksellik bir takip resmi eklemelerini istiyoruz. Piksel görüntüsü yalnızca başlangıç ​​sayfasında olmalıdır. Eğitiminizin herhangi bir ara sayfasına dahil etmeyin.
 
 Bu, Hour of Code öğreticinizi kullanan kullanıcıları saymamıza olanak tanır. Öğreticiniz için daha doğru katılım sayıları elde edilmesini sağlayacaktır.
 
 Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinize yerleştirmeniz için size verecektir. Aşağıdaki örneğe bakın.
 
-NOT: Bu, yüklenebilir uygulamalar için önemli değildir (iOS/Android uygulamaları ya da masaüstüne indirilen uygulamalar)
+NOT: Bu, yüklenebilir uygulamalar için önemli değildir (iOS/Android uygulamaları, ya da masaüstüne indirilen uygulamalar)
 
 Dans Partisi için örnek takip pikselleri:
 
@@ -282,15 +264,15 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 <a id="promote"></a>
 
-## Aktivitelerinizin tanıtımı, Bilgisayar Bilimi Eğitim Haftası ve Hour of Code
+## Aktivitelerinizi tanıtım,CSEdWeek, ve Hour of Code
 
-Lütfen aktivitenizi ağınıza tanıtın! Lütfen onları kendi Hour of Code sayfanıza yönlendirin. Kullanıcılarınız aktiviteniz hakkında sizden e-posta aldıklarında harekete geçme olasılıkları çok daha yüksek olur. Bilgisayar Bilimi Eğitim Haftası boyunca uluslararası Hour of Code kampanyasını kullanarak kullanıcıları başkalarını davet etmeye teşvik edin ve daha fazla öğrenciye ulaşmamıza yardımcı olun!
+Lütfen etkinliğinizi ağınıza tanıtın! Onları Hour of Code sayfanıza yönlendirin. Kullanıcılarınız aktiviteniz hakkında sizden e-posta aldıklarında harekete geçme olasılıkları çok daha yüksek olur. CSEdWeek boyunca uluslararası Hour of Code kampanyasını kullanarak kullanıcıları başkalarını davet etmeye teşvik edin ve daha fazla öğrenciye ulaşmamıza yardımcı olun!
 
 - Web sitenizde Hour of Code ve CSEdWeek'i öne çıkarın. Örneğin: <http://www.tynker.com/hour-of-code>
-- Genel medya, sosyal medya, e-posta listeleri vs. aracılığıyla #HourOfCode (büyük H, O, C harfleriyle) etiketini kullanarak Hour of Code!u destekleyin
+- Geleneksel medya, sosyal medya, e-posta listeleri vs. aracılığıyla #HourOfCode (büyük H, O, C harfleriyle) etiketini kullanarak Hour of Code!u destekleyin
 - Yerel bir etkinliğe ev sahipliği yapın ya da çalışanlarınızdan yerel okullarda ve yerel sosyal gruplarda bir etkinlik düzenlemelerini rica edin.
 - Daha fazla bilgi için [kaynak kitimize](https://hourofcode.com/us/promote) bakın.
 
 [**Başa dön**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

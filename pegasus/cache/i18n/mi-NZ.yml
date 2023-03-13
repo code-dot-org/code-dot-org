@@ -355,6 +355,12 @@ mi-NZ:
   coursed-2021_gradelevel: Ngā Tau 7-11
   coursee-2021_gradelevel: Ngā Tau 8-12
   coursef-2021_gradelevel: Ngā Tau 9-13
+  coursea-2022_gradelevel: Ngā Tau 4-7
+  courseb-2022_gradelevel: Ngā Tau 5-8
+  coursec-2022_gradelevel: Ngā Tau 6-10
+  coursed-2022_gradelevel: Ngā Tau 7-11
+  coursee-2022_gradelevel: Ngā Tau 8-12
+  coursef-2022_gradelevel: Ngā Tau 9-13
   accelerated_gradelevel: Ngā Tau 10-18
   starwars_shortdescription: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
     ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
@@ -528,3 +534,4 @@ mi-NZ:
     i te Hangarau Matihiko me nga pukenga kia angitu.
   ai_activity: Ngohe
   ai_description: Whakaahuatanga
+  hoc2022_landing_page_create_title: Waihanga

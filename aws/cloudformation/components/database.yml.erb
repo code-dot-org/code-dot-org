@@ -1,36 +1,23 @@
-  AuroraCluster:
-    Type: AWS::RDS::DBCluster
-    Properties:
-      DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
-      Engine: aurora-mysql
-      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
-      EngineVersion: 5.7.12
-      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
-      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
-      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
-      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+<%
+  PRODUCTION_DB_CLUSTER_ID = 'production-aurora-cluster'.freeze
+  # Integer range identifying each of the DB Instances to provision in the cluster.
+  DB_INSTANCE_RANGE=(0..1)
+-%>
 
-<% 2.times do |i| %>
-  Aurora<%=i%>:
-    Type: AWS::RDS::DBInstance
+# We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
+# working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
+<%
+  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+-%>
+  <%=key%>DBParameters:
+    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
     Properties:
-      DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
-      DBClusterIdentifier: !Ref AuroraCluster
-      DBInstanceClass: db.r4.large
-      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
-      Engine: aurora-mysql
-      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
-<% end -%>
-
-  AuroraClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
+      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql5.7
-      Parameters: {'innodb_monitor_enable': 'all'}
+      Parameters: <%=values.compact.to_json%>
+<%end -%>
 
-<% db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
+<%  db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
   DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
     Type: AWS::SecretsManager::Secret
     Properties:
@@ -41,20 +28,8 @@
         PasswordLength: 10
         ExcludePunctuation: True
       Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
-<% secret; end -%>
+<%  secret; end -%>
 
-  DBProxy:
-    Type: AWS::RDS::DBProxy
-    Properties:
-      DBProxyName: !Ref AWS::StackName
-      EngineFamily: MYSQL
-      RoleArn: !GetAtt DBProxyRole.Arn
-      Auth:
-<% db_secrets.each do |secret| -%>
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
-<%end -%>
-      VpcSubnetIds: <%=subnets.to_json%>
-      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
@@ -63,16 +38,153 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-<% db_secrets.each do |secret| -%>
+<%  db_secrets.each do |secret| -%>
               - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
-<%end -%>
+<%  end -%>
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+  ReportingDBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Sub "${AWS::StackName}-reporting"
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReportingDBDomainName:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        # The method 'subdomain' returns the fully qualified domain name and 'domain' returns the base domain name.
+        - Name: <%="#{subdomain.delete_suffix('.' + domain)}-db-reporting.#{domain}"%>
+          Type: CNAME
+          TTL: <%= DNS_TTL %>
+          ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]
+  ReportingDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reporting"
+      DBProxyName: !Ref ReportingDBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [ !ImportValue VPC-DBSecurityGroup ]
+  ReportingDBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+<% unless rack_env?(:production)%>
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    # These Database Instances are not yet provisioned by this Stack.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%end -%>
+    Properties:
+      DBProxyName: !Ref ReportingDBProxy
+      DBClusterIdentifiers: [<%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10
+        # Send reporting/analytics queries to the reader database instances, but use the database connection
+        # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
+        # and to permit long running queries.
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
+        # exceed 5% of the total database connection capacity of a reader instance.
+        MaxConnectionsPercent: 5
+
+# Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
+# populate CDO.* application configuration settings.
+# TODO: Transition these configuration settings to AWS Systems Manager Parameter Store.
+# TODO: Add Stack name to the Secret name to support multiple deployments with the same environment type.
+  DBClusterIDConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
+      Name: '<%=environment%>/cdo/db_cluster_id'
+      SecretString: <%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>
+  DBWriterEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_writer_endpoint'
+      Name: '<%=environment%>/cdo/db_writer_endpoint'
+      # Publish a placeholder string for production. We set the value of the Secret manually in production.
+      SecretString: <%=rack_env?(:production) ? 'PLACEHOLDER' : '!GetAtt AuroraCluster.Endpoint.Address'%>
+  DBProxyReportingEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_proxy_reporting_endpoint'
+      Name: '<%=environment%>/cdo/db_proxy_reporting_endpoint'
+      SecretString: !GetAtt ReportingDBProxyEndpoint.Endpoint
+
+
+
+# We don't provision these in production via CloudFormation ... yet!
+<% unless rack_env?(:production)%>
+  AuroraCluster:
+    Type: AWS::RDS::DBCluster
+    Properties:
+      DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters # Resource name generated from db_parameters.yml.erb.
+      Engine: aurora-mysql
+      # Updating a Stack with a change to EngineVersion causes "Some Interruption".
+      # Each Database Instance in the cluster is restarted.
+      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
+      EngineVersion: 5.7.mysql_aurora.2.11.1
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      EnableIAMDatabaseAuthentication: true
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      EnableCloudwatchLogsExports:
+        - general
+        - audit
+        - error
+        - slowquery
+      DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
+      BackupRetentionPeriod: !Ref DBBackupRetention
+<%
+    DB_INSTANCE_RANGE.each do |i| %>
+  Aurora<%=i%>:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
+      # Resource name generated from db_parameters.yml.erb
+      # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
+      DBParameterGroupName: !Ref AuroraWriterDBParameters
+      DBClusterIdentifier: !Ref AuroraCluster
+      DBInstanceClass: !Ref DBInstanceType
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      Engine: aurora-mysql
+      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
+<%  end -%>
+
+  DBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Ref AWS::StackName
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+<%  db_secrets.each do |secret| -%>
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
+<%  end -%>
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReaderDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
+      DBProxyName: !Ref DBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   DBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
-    DependsOn: [Aurora0, Aurora1]
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
     Properties:
       DBProxyName: !Ref DBProxy
       DBClusterIdentifiers: [!Ref AuroraCluster]
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+<%end -%>

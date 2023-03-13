@@ -12,6 +12,7 @@
         "pre-express": "Hraðnámskeið ólæsra",
         "csd": "Uppgötvanir í Tölvunarfræði",
         "csp": "Undirstöðuatriði tölvunarfræði",
+        "aiml": "Gervigreind og vélanámseining",
         "20-hour": "Kynning á tölvunarfræði, hraðnámskeið",
         "flappy": "Flappy kóði",
         "jigsaw": "Púsl",
@@ -33,7 +34,12 @@
         "playlab": "Leikjasmiðjan",
         "sports": "Kóðaðu þinn eigin íþróttaleik",
         "text-compression": "Þjöppun texta",
-        "edit-code": "Breyta kóða"
+        "edit-code": "Breyta kóða",
+        "valentine": "ástarkveðja",
+        "allthethingscourse": "allthethings námskeið",
+        "halloween": "hrekkjavaka",
+        "step": "þrep",
+        "soccer": "fótbolti"
       }
     }
   }

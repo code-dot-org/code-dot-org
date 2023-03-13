@@ -22,7 +22,7 @@
         %a.btn.btn-large.btn-primary.next-lesson.submitButton.pull-right= t('continue')
 
   = render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css'), postcontent: postcontent, source_level: level}
-  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.localized_teacher_markdown}}
 
 - if in_level_group
   -# This partial will take care of milestone posts in the contexts of levelgroups,

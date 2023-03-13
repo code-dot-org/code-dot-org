@@ -1,11 +1,14 @@
+- require '../shared/middleware/helpers/experiments'
 -# OneTrust Cookies Consent Notice scripts for hourofcode.com
-- cookie_script_env = DCDO.get('onetrust_cookie_scripts', 'off')
-- if cookie_script_env == 'production' && request.path == '/cookies'
+- cookie_script_env = experiment_value('onetrust_cookie_scripts')
+- if cookie_script_env == 'production'
+  %script{:src=>"#{CDO.code_org_url}/js/jquery.min.js"}
   %script{src: 'https://cdn.cookielaw.org/consent/7c79c547-a2fc-4998-9b21-0c7a5e67e345/OtAutoBlock.js', type: 'text/javascript'}
   %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345'}
   :javascript
     function OptanonWrapper() { }
-- elsif cookie_script_env == 'test' && request.path == '/cookies'
+- elsif cookie_script_env == 'test'
+  %script{:src=>"#{CDO.code_org_url}/js/jquery.min.js"}
   %script{src: 'https://cdn.cookielaw.org/consent/7c79c547-a2fc-4998-9b21-0c7a5e67e345-test/OtAutoBlock.js', type: 'text/javascript'}
   %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345-test'}
   :javascript

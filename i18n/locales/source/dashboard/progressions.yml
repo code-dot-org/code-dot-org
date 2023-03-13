@@ -91,6 +91,7 @@ en:
       Cake Survey: Cake Survey
       Challenge: Challenge
       Challenge Levels: Challenge Levels
+      Challenge/Practice: Challenge/Practice
       'Challenge: Add More Inputs': 'Challenge: Add More Inputs'
       'Challenge: Checking for Multiple Conditions': 'Challenge: Checking for Multiple Conditions'
       'Challenge: Draw an Image': 'Challenge: Draw an Image'
@@ -181,6 +182,8 @@ en:
       Editing Images: Editing Images
       Emotion Machine Example: Emotion Machine Example
       End of Course Projects: End of Course Projects
+      End-Of-Unit Survey: End-Of-Unit Survey
+      End-of-Unit Survey: End-of-Unit Survey
       Escape Room Example: Escape Room Example
       Event Types: Event Types
       Events: Events
@@ -199,6 +202,7 @@ en:
       Experiment with Web Lab: Experiment with Web Lab
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration: Adding Style'
+      'Exploration: Clicker Game': 'Exploration: Clicker Game'
       'Exploration: For Loops': 'Exploration: For Loops'
       'Exploration: Rikki''s Poster': 'Exploration: Rikki''s Poster'
       'Exploration: Sample Apps': 'Exploration: Sample Apps'
@@ -210,6 +214,7 @@ en:
       Extra: Extra
       Extra Challenge: Extra Challenge
       'Extra Challenge: Sound Board': 'Extra Challenge: Sound Board'
+      Field Collector App: Field Collector App
       Final Personal Website: Final Personal Website
       Final Room Escape App: Final Room Escape App
       Find the Wizard: Find the Wizard
@@ -248,6 +253,7 @@ en:
       Hello World: Hello World
       How to Create a Simple Function: How to Create a Simple Function
       How to Make a Sprite: How to Make a Sprite
+      Human Device Interaction: Human Device Interaction
       Hyperlinks: Hyperlinks
       Ice Age Loops: Ice Age Loops
       If Statements: If Statements
@@ -266,6 +272,7 @@ en:
       Input with If-Else: Input with If-Else
       Inspiration!: Inspiration!
       InspirationalArtwork: InspirationalArtwork
+      Interactive Art: Interactive Art
       Interactive Card: Interactive Card
       Intro to Design Mode: Intro to Design Mode
       Intro to Flyer Game: Intro to Flyer Game
@@ -278,6 +285,7 @@ en:
       Introduction to Game Lab: Introduction to Game Lab
       Introduction to Variables: Introduction to Variables
       Introduction to Variables - Part 1: Introduction to Variables - Part 1
+      Investigate: Investigate
       Isaac's Survey Data: Isaac's Survey Data
       Iteration and Parameters: Iteration and Parameters
       Keep On Dancing!: Keep On Dancing!
@@ -289,6 +297,7 @@ en:
       Layout Properties: Layout Properties
       Layout with CSS: Layout with CSS
       Learning from Simulations: Learning from Simulations
+      Lesson Extra: Lesson Extra
       Lesson Extras: Lesson Extras
       Lesson Overview: Lesson Overview
       Level Overview: Level Overview
@@ -319,11 +328,14 @@ en:
       'Mini-Project: About Me': 'Mini-Project: About Me'
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-Project: Alien Dance Party'
+      'Mini-Project: Clicker Game': 'Mini-Project: Clicker Game'
+      'Mini-Project: Collector Game': 'Mini-Project: Collector Game'
       'Mini-Project: Create a Virtual Pet': 'Mini-Project: Create a Virtual Pet'
       'Mini-Project: Outbreak Simulator': 'Mini-Project: Outbreak Simulator'
       'Mini-Project: Royal Battle': 'Mini-Project: Royal Battle'
       "Mini-Project: Snowflake #1": "Mini-Project: Snowflake #1"
       "Mini-Project: Snowflake #2": "Mini-Project: Snowflake #2"
+      'Mini-Project: Sticker Art': 'Mini-Project: Sticker Art'
       'Mini-Project: Swimming Fish': 'Mini-Project: Swimming Fish'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Swimming Fish (continued)'
       'Mini-Project: User Input Programs': 'Mini-Project: User Input Programs'
@@ -396,6 +408,7 @@ en:
       Project Guide: Project Guide
       Project Work: Project Work
       Properties: Properties
+      Prototype an Innovation: Prototype an Innovation
       Publishing Your Website: Publishing Your Website
       Quarter Notes: Quarter Notes
       Quick Check: Quick Check
@@ -452,6 +465,7 @@ en:
       Sensors to Colors: Sensors to Colors
       Set Up Sprites: Set Up Sprites
       Setting Properties: Setting Properties
+      Setup: Setup
       Shapes and Parameters: Shapes and Parameters
       Shapes and the Draw Loop: Shapes and the Draw Loop
       Share Your App: Share Your App
@@ -526,7 +540,13 @@ en:
       Velocity and the Counter Pattern Review: Velocity and the Counter Pattern Review
       Video: Video
       Video - Encryption and Public Keys: Video - Encryption and Public Keys
+      Video - Functions: Video - Functions
+      Video - If Statements: Video - If Statements
+      Video - Introduction to Arrays: Video - Introduction to Arrays
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programming with Blocks'
+      Video - Parameters: Video - Parameters
+      Video - The Counter Pattern: Video - The Counter Pattern
+      Video - Variables: Video - Variables
       'Video:  Debugging with the Step Button': 'Video:  Debugging with the Step Button'
       'Video:  Minecraft - The Agent': 'Video:  Minecraft - The Agent'
       'Video:  Text  and Prompts': 'Video:  Text  and Prompts'
@@ -556,12 +576,16 @@ en:
       'Video: Drawing in Game Lab - Part 1': 'Video: Drawing in Game Lab - Part 1'
       'Video: Drawing in Game Lab - Part 2': 'Video: Drawing in Game Lab - Part 2'
       'Video: Events': 'Video: Events'
+      'Video: Events in App Lab': 'Video: Events in App Lab'
       'Video: Follow The Digital Trail': 'Video: Follow The Digital Trail'
       'Video: For Loops': 'Video: For Loops'
       'Video: Functions': 'Video: Functions'
       'Video: Getting Loopy': 'Video: Getting Loopy'
       'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Unplugged Activity'
       'Video: Harvesting with Conditionals': 'Video: Harvesting with Conditionals'
+      'Video: Hello World: Do What You Want': 'Video: Hello World: Do What You Want'
+      'Video: Hello World: Programming with Events': 'Video: Hello World: Programming with Events'
+      'Video: Hello World: Welcome to Sprite Lab': 'Video: Hello World: Welcome to Sprite Lab'
       'Video: How Search Works': 'Video: How Search Works'
       'Video: How to Create a Simple Function': 'Video: How to Create a Simple Function'
       'Video: How to Make a Sprite': 'Video: How to Make a Sprite'
@@ -585,6 +609,7 @@ en:
       'Video: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
       'Video: Loops in Artist': 'Video: Loops in Artist'
       'Video: Loops with the Artist': 'Video: Loops with the Artist'
+      'Video: Lots of Sprites': 'Video: Lots of Sprites'
       'Video: Managing Disagreement': 'Video: Managing Disagreement'
       'Video: Maze Intro - Programming with Blocks': 'Video: Maze Intro - Programming with Blocks'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Maze Intro - Programming with Blocks '
@@ -601,7 +626,10 @@ en:
       'Video: Nested Loops': 'Video: Nested Loops'
       'Video: Nested Loops with the Bee': 'Video: Nested Loops with the Bee'
       'Video: Netflix and Data': 'Video: Netflix and Data'
+      'Video: Outbreak Simulator: Events': 'Video: Outbreak Simulator: Events'
+      'Video: Outbreak Simulator: Free Play': 'Video: Outbreak Simulator: Free Play'
       'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduction'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Video: Outbreak Simulator: Thinking Like a Scientist'
       'Video: Pair Programming': 'Video: Pair Programming'
       'Video: Pair Programming ': 'Video: Pair Programming '
       'Video: Problem Solving Process': 'Video: Problem Solving Process'

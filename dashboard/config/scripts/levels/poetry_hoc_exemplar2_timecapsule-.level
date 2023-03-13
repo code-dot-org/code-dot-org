@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2022-04-21T19:08:53.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -17,7 +13,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "show_type_hints": true,
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "true",
     "instructions_important": "true",
     "short_instructions": "What images come to mind?",
@@ -47,38 +43,42 @@
     "name_suffix": "_timecapsule-",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 69,
+  "created_at": "2022-04-21T19:08:53.000Z",
+  "user_id": 13468,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-21T19:08:53.458+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_exemplar2\\\"\"],\"cloned_from\":\"poetry_hoc_exemplar2\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-21T19:08:53.458+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_exemplar2\\\"\"],\"cloned_from\":\"poetry_hoc_exemplar2\"},{\"changed_at\":\"2022-05-04 00:32:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" id="156">
+        <block type="when_run" id="163">
           <next>
-            <block type="gamelab_setBackgroundImageAs" id="157">
+            <block type="gamelab_setBackgroundImageAs" id="164">
               <field name="IMG">"library_dark"</field>
               <next>
-                <block type="Poetry_setFontColor" id="158">
+                <block type="Poetry_setFontColor" id="165">
                   <value name="FILL">
-                    <shadow type="colour_picker" id="159">
+                    <shadow type="colour_picker" id="166">
                       <field name="COLOUR">#ffffff</field>
                     </shadow>
                   </value>
                   <next>
-                    <block type="Poetry_setForegroundEffect" id="160">
+                    <block type="Poetry_setForegroundEffect" id="167">
                       <field name="EFFECT">"rain"</field>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon" id="161">
+                        <block type="gamelab_makeNewSpriteAnon" id="168">
                           <field name="ANIMATION_NAME">"book"</field>
                           <value name="LOCATION">
-                            <block type="gamelab_location_picker" id="162">
+                            <block type="gamelab_location_picker" id="169">
                               <field name="LOCATION">{"x":195,"y":205}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="Poetry_startBehavior" id="163">
+                            <block type="Poetry_startBehavior" id="170">
                               <field name="ANIMATION_NAME">"book"</field>
                               <field name="BEHAVIOR">"fluttering"</field>
                             </block>
@@ -92,42 +92,42 @@
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows" id="164">
+        <block type="Poetry_whenLineShows" id="171">
           <field name="N">2</field>
           <next>
-            <block type="Poetry_startBehavior" id="165">
+            <block type="Poetry_startBehavior" id="172">
               <field name="ANIMATION_NAME">"book"</field>
               <field name="BEHAVIOR">"fluttering"</field>
               <next>
-                <block type="Poetry_setForegroundEffect" id="166">
+                <block type="Poetry_setForegroundEffect" id="173">
                   <field name="EFFECT">"glass"</field>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows" id="167">
+        <block type="Poetry_whenLineShows" id="174">
           <field name="N">3</field>
           <next>
-            <block type="Poetry_destroy" id="168">
+            <block type="Poetry_destroy" id="175">
               <field name="ANIMATION_NAME">"book"</field>
               <next>
-                <block type="Poetry_setFontColor" id="169">
+                <block type="Poetry_setFontColor" id="176">
                   <value name="FILL">
-                    <shadow type="colour_picker" id="170">
+                    <shadow type="colour_picker" id="177">
                       <field name="COLOUR">#000000</field>
                     </shadow>
                   </value>
                   <next>
-                    <block type="Poetry_setBackgroundEffect" id="171">
+                    <block type="Poetry_setBackgroundEffect" id="178">
                       <field name="EFFECT">"clouds"</field>
                       <field name="PALETTE">"grayscale"</field>
                       <next>
-                        <block type="gamelab_makeBurst" id="172">
+                        <block type="gamelab_makeBurst" id="179">
                           <field name="EFFECT">"pop"</field>
                           <field name="ANIMATION_NAME">"open_book"</field>
                           <value name="NUM">
-                            <block type="math_number" id="173">
+                            <block type="math_number" id="180">
                               <field name="NUM">20</field>
                             </block>
                           </value>
@@ -140,48 +140,48 @@
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows" id="174">
+        <block type="Poetry_whenLineShows" id="181">
           <field name="N">5</field>
           <next>
-            <block type="gamelab_setBackgroundImageAs" id="175">
+            <block type="gamelab_setBackgroundImageAs" id="182">
               <field name="IMG">"library_dark"</field>
               <next>
-                <block type="Poetry_setFontColor" id="176">
+                <block type="Poetry_setFontColor" id="183">
                   <value name="FILL">
-                    <shadow type="colour_picker" id="177">
+                    <shadow type="colour_picker" id="184">
                       <field name="COLOUR">#ffffff</field>
                     </shadow>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon" id="178">
+                    <block type="gamelab_makeNewSpriteAnon" id="185">
                       <field name="ANIMATION_NAME">"emoji_05"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" id="179">
+                        <block type="gamelab_location_picker" id="186">
                           <field name="LOCATION">{"x":31,"y":78}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon" id="180">
+                        <block type="gamelab_makeNewSpriteAnon" id="187">
                           <field name="ANIMATION_NAME">"emoji_05"</field>
                           <value name="LOCATION">
-                            <block type="gamelab_location_picker" id="181">
+                            <block type="gamelab_location_picker" id="188">
                               <field name="LOCATION">{"x":367,"y":347}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_makeNewSpriteAnon" id="182">
+                            <block type="gamelab_makeNewSpriteAnon" id="189">
                               <field name="ANIMATION_NAME">"emoji_05"</field>
                               <value name="LOCATION">
-                                <block type="gamelab_location_picker" id="183">
+                                <block type="gamelab_location_picker" id="190">
                                   <field name="LOCATION">{"x":190,"y":186}</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="Poetry_setSize" id="184">
+                                <block type="Poetry_setSize" id="191">
                                   <field name="SPRITE">"emoji_05"</field>
                                   <field name="VAL">50</field>
                                   <next>
-                                    <block type="Poetry_startBehavior" id="185">
+                                    <block type="Poetry_startBehavior" id="192">
                                       <field name="ANIMATION_NAME">"emoji_05"</field>
                                       <field name="BEHAVIOR">"fluttering"</field>
                                     </block>
@@ -199,27 +199,27 @@
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows" id="186">
+        <block type="Poetry_whenLineShows" id="193">
           <field name="N">7</field>
           <next>
-            <block type="Poetry_setFontColor" id="187">
+            <block type="Poetry_setFontColor" id="194">
               <value name="FILL">
-                <shadow type="colour_picker" id="188">
+                <shadow type="colour_picker" id="195">
                   <field name="COLOUR">#ffffff</field>
                 </shadow>
               </value>
               <next>
-                <block type="Poetry_setForegroundEffect" id="189">
+                <block type="Poetry_setForegroundEffect" id="196">
                   <field name="EFFECT">"twinkling"</field>
                   <next>
-                    <block type="Poetry_destroy" id="190">
+                    <block type="Poetry_destroy" id="197">
                       <field name="ANIMATION_NAME">"emoji_05"</field>
                       <next>
-                        <block type="Poetry_makeNewSpriteAnon" id="191">
+                        <block type="Poetry_makeNewSpriteAnon" id="198">
                           <field name="ANIMATION_NAME">"blue_shirt_hands_behind"</field>
                           <field name="LOCATION">{"x":32,"y":341}</field>
                           <next>
-                            <block type="Poetry_glideTo" id="192">
+                            <block type="Poetry_glideTo" id="199">
                               <field name="SPRITE">"blue_shirt_hands_behind"</field>
                               <field name="LOCATION">{"x":199,"y":261}</field>
                             </block>
@@ -233,35 +233,35 @@
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows" id="193">
+        <block type="Poetry_whenLineShows" id="200">
           <field name="N">8</field>
           <next>
-            <block type="gamelab_setBackgroundImageAs" id="194">
+            <block type="gamelab_setBackgroundImageAs" id="201">
               <field name="IMG">"library_color"</field>
               <next>
-                <block type="Poetry_setFontColor" id="195">
+                <block type="Poetry_setFontColor" id="202">
                   <value name="FILL">
-                    <shadow type="colour_picker" id="196">
-                      <field name="COLOUR">#ffff00</field>
+                    <shadow type="colour_picker" id="203">
+                      <field name="COLOUR">#000000</field>
                     </shadow>
                   </value>
                   <next>
-                    <block type="Poetry_destroy" id="197">
+                    <block type="Poetry_destroy" id="204">
                       <field name="ANIMATION_NAME">"blue_shirt_hands_behind"</field>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon" id="198">
+                        <block type="gamelab_makeNewSpriteAnon" id="205">
                           <field name="ANIMATION_NAME">"sticker_12"</field>
                           <value name="LOCATION">
-                            <block type="gamelab_location_picker" id="199">
+                            <block type="gamelab_location_picker" id="206">
                               <field name="LOCATION">{"x":192,"y":283}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="Poetry_startBehavior" id="200">
+                            <block type="Poetry_startBehavior" id="207">
                               <field name="ANIMATION_NAME">"sticker_12"</field>
                               <field name="BEHAVIOR">"fluttering"</field>
                               <next>
-                                <block type="Poetry_setForegroundEffect" id="201">
+                                <block type="Poetry_setForegroundEffect" id="208">
                                   <field name="EFFECT">"emojis"</field>
                                 </block>
                               </next>

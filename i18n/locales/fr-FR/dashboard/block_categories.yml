@@ -5,14 +5,16 @@ fr:
       Advanced: Avancé
       Behaviors: Comportements
       Brushes: Pinceaux
+      Category: Catégorie
       Color: Couleur
       Comment: Commentaire
       Comments: Commentaires
       Conditionals: Instructions conditionnelles
       Dancers: Danseurs
       Default: Par défaut
+      Effects: Effets
       Events: Événements
-      Functions: fonctions
+      Functions: Fonctions
       'Functions ': 'Fonctions '
       Game/Score: Jeu/Score
       Games/Score: Jeux/Score
@@ -21,13 +23,13 @@ fr:
       Location: Localisation
       Locations: Emplacements
       Logic: Logique
-      Loops: boucles
+      Loops: Boucles
       Math: Math
       Numbers: Nombres
       Properties: Propriétés
-      Sprites: Les Lutins
+      Sprites: Sprites
       Text: Texte
-      Variables: variables
+      Variables: Variables
       'Variables ': 'Variables '
       'Variables  ': 'Variables  '
       World: Monde

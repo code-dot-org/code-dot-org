@@ -21,7 +21,7 @@ social:
 # आर्टिफिशियल इंटेलिजेंस (AI) के बारे में जानें
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">नया AI और मशीन लर्निंग मॉड्यूल</h2><p>हमारा नया पाठ्यक्रम मॉड्यूल AI नैतिकता पर केंद्रित है, पूर्वाग्रह के मुद्दों की जांच करता है, मौलिक अवधारणाओं की खोज करता है और कई सारे ऑनलाइन और अनप्लग्ड गतिविधियों और फुल ग्रुप चर्चाओं के माध्यम से व्याख्या करता है।</p><a  href="#about-aimodule"><button>और सीखें</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button> मॉड्यूल को एक्स्प्लोर करें</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">नया AI और मशीन लर्निंग मॉड्यूल</h2><p>हमारा नया पाठ्यक्रम मॉड्यूल AI नैतिकता पर केंद्रित है, पूर्वाग्रह के मुद्दों की जांच करता है, मौलिक अवधारणाओं की खोज करता है और कई सारे ऑनलाइन और अनप्लग्ड गतिविधियों और फुल ग्रुप चर्चाओं के माध्यम से व्याख्या करता है।</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI लैब"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ AI और मशीन लर्निंग हमारी पूरी दु
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## नया AI और मशीन लर्निंग मॉड्यूल
 <div>
-<div class="col-50">
-<p>AI और मशीन लर्निंग मॉड्यूल मोटे तौर पर पांच सप्ताह का पाठ्यक्रम मॉड्यूल है जो एक <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >स्टैंडअलोन मॉड्यूल</a> के रूप में या वैकल्पिक <a href="https://studio.code.org/s/csd7-2021">यूनिट CS डिस्कवरी में </a>। यह AI नैतिकता पर केंद्रित है, पूर्वाग्रह के मुद्दों की जांच करता है, और मौलिक अवधारणाओं की खोज और व्याख्या करता है</p><p>क्योंकि मशीन लर्निंग डेटा के बड़े सेट पर निर्भर करता है, नई यूनिट में स्वास्थ्य देखभाल, जनसांख्यिकी और छात्रों को शामिल करने के लिए वास्तविक जीवन डेटासेट शामिल हैं, जैसे प्रश्नों की खोज करते हुए, "एक समस्या क्या है जिसे मशीन लर्निंग हल करने में मदद कर सकता है?" “AI समाज की सहायता कैसे कर सकता है?” “AI से किसे लाभ हो रहा है?” "किसको नुकसान पहुंचाया जा रहा है?" "कौन शामिल है?" "कौन गायब है?"  </p>
-<p>नैतिक विचार इन चर्चाओं में सबसे प्रधान होगा, इन तकनीकों के प्रभाव को लेकर नित्य चर्चा और पाठ।  यह छात्रों को इन तकनीकों के बारे में एक समग्र, विचारशील समझ विकसित करने में मदद करेगा, जबकि वे इन तकनीकों के पीछे की कारीगरी को सीखते हैं। </p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. यह AI नैतिकता पर केंद्रित है, पूर्वाग्रह के मुद्दों की जांच करता है, और मौलिक अवधारणाओं की खोज और व्याख्या करता है</p><p>क्योंकि मशीन लर्निंग डेटा के बड़े सेट पर निर्भर करता है, नई यूनिट में स्वास्थ्य देखभाल, जनसांख्यिकी और छात्रों को शामिल करने के लिए वास्तविक जीवन डेटासेट शामिल हैं, जैसे प्रश्नों की खोज करते हुए, "एक समस्या क्या है जिसे मशीन लर्निंग हल करने में मदद कर सकता है?" “AI समाज की सहायता कैसे कर सकता है?” “AI से किसे लाभ हो रहा है?” "किसको नुकसान पहुंचाया जा रहा है?" "कौन शामिल है?" "कौन गायब है?"  </p>
+    <p>नैतिक विचार इन चर्चाओं में सबसे प्रधान होगा, इन तकनीकों के प्रभाव को लेकर नित्य चर्चा और पाठ।  यह छात्रों को इन तकनीकों के बारे में एक समग्र, विचारशील समझ विकसित करने में मदद करेगा, जबकि वे इन तकनीकों के पीछे की कारीगरी को सीखते हैं। </p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## AI कैसे काम करता है
 
 माइक्रोसॉफ्ट के सीईओ सत्य नडेला द्वारा इंट्रोडक्शन के साथ, इन लघु वीडियोस के श्रृंखला से आपको यह पता लगेगा कि आर्टिफिशियल इंटेलिजेंस कैसे काम करता है और यह क्यों मायने रखता है।  न्यूरल नेटवर्क के बारे में जानें, या AI कैसे सीखता है, और एल्गोरिथमिक बायस और AI डिसीजन-मेकिंग से जुड़ी नैतिकता के मुद्दों को समझे। 
@@ -115,3 +114,5 @@ AI और मशीन लर्निंग हमारी पूरी दु
 स्तर 6-8 एक \[सपोर्ट-वेक्टर मशीन\](https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) का उपयोग करता है।  हम मछली के प्रत्येक अंगों (जैसे आंखें, मुंह, शरीर) को देखते हैं और हर संख्यांक मछली के लिए संपूर्ण मेटा डाटा को अंगों (जैसे दांतों की संख्या, शरीर का आकार) के लिए एक वेक्टर में असेंबल करते हैं।  SVM को प्रशिक्षित करने के लिए हम तीन वेक्टर का उपयोग करते हैं।  प्रशिक्षण डेटा के आधार पर, SVM सभी संभावित मछलियों के "स्पेस" को दो भागों में विभाजित करता है, जो उन कक्षाओं के अनुरूप हैं जिन्हें हम सीखने की कोशिश कर रहे हैं (जैसे "नीला" या "नीला नहीं")।
 
 [[वापस शीर्ष पर]](#top)
+
+{{ visit_partial_event_logger }}

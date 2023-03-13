@@ -43,7 +43,8 @@ import {
   KeyCodes,
   TestResults,
   TOOLBOX_EDIT_MODE,
-  NOTIFICATION_ALERT_TYPE
+  NOTIFICATION_ALERT_TYPE,
+  START_BLOCKS
 } from './constants';
 import {assets as assetsApi} from './clientApi';
 import {
@@ -75,6 +76,10 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import {
+  setUserRoleInCourse,
+  CourseRoles
+} from '@cdo/apps/templates/currentUserRedux';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
@@ -82,13 +87,14 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {closeWorkspaceAlert} from './code-studio/projectRedux';
 
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-const MIN_WIDTH = 1200;
+const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
@@ -433,6 +439,14 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
+  if (config.muteBackgroundMusic) {
+    this.muteBackgroundMusic = config.muteBackgroundMusic;
+  }
+
+  if (config.unmuteBackgroundMusic) {
+    this.unmuteBackgroundMusic = config.unmuteBackgroundMusic;
+  }
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -556,7 +570,7 @@ StudioApp.prototype.init = function(config) {
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        avatar={this.icon}
+        avatar={this.icon || this.skin.staticAvatar}
         handleCancel={() => {
           this.skipLevel();
         }}
@@ -573,6 +587,20 @@ StudioApp.prototype.init = function(config) {
 
   if (!config.readonlyWorkspace) {
     this.addChangeHandler(this.editDuringRunAlertHandler.bind(this));
+  }
+
+  // If url contains `reset=true`, clear the version history of the puzzle, reload page,
+  // and remove `reset` from the url params
+  const url = new URL(document.URL);
+  const params = new URLSearchParams(url.search);
+  if (params.get('reset')) {
+    params.delete('reset');
+    url.search = params.toString();
+
+    let handler = this.handleClearPuzzle.bind(this, config);
+    handler()
+      .then(project.save(true))
+      .then(window.location.replace(url.toString()));
   }
 
   this.emit('afterInit');
@@ -929,6 +957,11 @@ export function makeFooterMenuItems() {
       text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
+    },
+    {
+      text: msg.cookieNotice(),
+      link: 'https://code.org/cookies',
+      newWindow: true
     }
   ];
 
@@ -1038,7 +1071,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   if (showRun) {
     if (this.editDuringRunAlert !== undefined) {
-      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.closeAlert(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
     }
     getStore().dispatch(setIsEditWhileRun(false));
@@ -1178,6 +1211,13 @@ StudioApp.prototype.inject = function(div, options) {
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
+
+  // Allows Google Blockly labs to use the Zelos or Thrasos renderer instead of the default.
+  if (experiments.isEnabled('zelos')) {
+    options.renderer = 'cdo_renderer_zelos';
+  } else if (experiments.isEnabled('thrasos')) {
+    options.renderer = 'cdo_renderer_thrasos';
+  }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -1387,17 +1427,17 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Debounced onResize operations that update the layout to support sizing
+ * Throttled onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
-var onResizeSmallFooter = _.debounce(function() {
+var onResizeSmallFooter = _.throttle(function() {
   resizePinnedBelowVisualizationArea();
-}, 10);
+}, 1000 / 60);
 
 /**
  * Passthrough to local static resizePinnedBelowVisualizationArea, which needs
- * to be static so it can be statically debounced as onResizeSmallFooter
+ * to be static so it can be statically throttled as onResizeSmallFooter.
  */
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function() {
   resizePinnedBelowVisualizationArea();
@@ -1501,17 +1541,23 @@ StudioApp.prototype.resizeVisualization = function(width) {
  */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (
-    this.editCode &&
-    this.editor &&
-    this.editor.session &&
-    this.editor.session.paletteEnabled
-  ) {
-    // If in the droplet editor, set toolboxWidth based on the block palette width:
-    var categories = document.querySelector('.droplet-palette-wrapper');
-    toolboxWidth = categories.getBoundingClientRect().width;
+  if (this.editCode && this.editor && this.editor.session) {
+    const isRtl = getStore().getState().isRtl;
+    const categories = document.querySelector('.droplet-palette-wrapper');
+
+    if (isRtl) {
+      // If Rtl - handle show/hide toolbox functionality
+      categories.style.zIndex = this.editor.session.paletteEnabled
+        ? 'inherit'
+        : '0';
+    }
+
+    if (this.editor.session.paletteEnabled) {
+      // If in the droplet editor, set toolboxWidth based on the block palette width:
+      toolboxWidth = categories.getBoundingClientRect().width;
+    }
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -2420,7 +2466,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
         this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display = this.editor.session.paletteEnabled
           ? 'none'
-          : 'inline-block';
+          : 'flex';
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
           : 'inline-block';
@@ -3100,6 +3146,8 @@ StudioApp.prototype.displayWorkspaceAlert = function(
   bottom = false,
   onClose = () => {}
 ) {
+  // close currently any open workspace alert from CodeWorkspace.jsx
+  getStore().dispatch(closeWorkspaceAlert());
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
@@ -3109,7 +3157,7 @@ StudioApp.prototype.displayWorkspaceAlert = function(
       type: type,
       onClose: () => {
         onClose();
-        ReactDOM.unmountComponentAtNode(container[0]);
+        this.closeAlert(container[0]);
       },
       isBlockly: this.usingBlockly_,
       displayBottom: bottom
@@ -3143,9 +3191,7 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
   var renderElement = container[0];
 
   let alertProps = {
-    onClose: () => {
-      ReactDOM.unmountComponentAtNode(renderElement);
-    },
+    onClose: () => this.closeAlert(renderElement),
     type: type
   };
 
@@ -3161,6 +3207,14 @@ StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
 };
 
 /**
+ * Remove an alert from the DOM. This is just an alias for ReactDOM.unmountComponentAtNode.
+ * @param {Node} alert
+ */
+StudioApp.prototype.closeAlert = function(alert) {
+  ReactDOM.unmountComponentAtNode(alert);
+};
+
+/**
  * If the current project is considered abusive, display a small alert box
  */
 StudioApp.prototype.alertIfAbusiveProject = function() {
@@ -3170,7 +3224,11 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       <AbuseError
         i18n={{
           tos: msg.tosLong({url: 'http://code.org/tos'}),
-          contact_us: msg.contactUs({url: 'https://code.org/contact'})
+          contact_us: msg.contactUs({
+            url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+              `Abuse error for project at url: ${window.location.toString()}`
+            )}`
+          })
         }}
       />
     );
@@ -3188,7 +3246,11 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       <AbuseError
         i18n={{
           tos: msg.policyViolation(),
-          contact_us: msg.contactUs({url: 'https://code.org/contact'})
+          contact_us: msg.contactUs({
+            url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+              `Abuse error for project at url: ${window.location.toString()}`
+            )}`
+          })
         }}
       />
     );
@@ -3298,6 +3360,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
     {
       exampleSolutions: config.exampleSolutions,
       isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
+      hasBackgroundMusic: level.levelTracks && level.levelTracks.length !== 0,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
@@ -3305,6 +3368,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       showNextHint: this.showNextHint.bind(this),
       locale: config.locale,
       assetUrl: this.assetUrl,
+      inStartBlocksMode: level.edit_blocks === START_BLOCKS,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
@@ -3334,17 +3398,25 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      isProjectTemplateLevel:
+        !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverProjectLevelId: config.serverProjectLevelId,
+      codeOwnersName: config.codeOwnersName
     },
     appSpecificConstants
   );
 
   getStore().dispatch(setPageConstants(combined));
+
+  if (config.isInstructor) {
+    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+  }
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));

@@ -64,6 +64,7 @@
     "DEFINE_HEADER_DEFINITION": "व्याख्या",
     "DEFINE_FUNCTION_DEFINE": "नेमुन द्या",
     "DEFINE_FUNCTION_FOR_EXAMPLE": "खालील क्रिया नेमुन द्या व पुन्हा प्रयत्न करा.",
+    "DELETE": "हटवा",
     "DELETE_BLOCK": "ब्लॉक हटवा ",
     "DELETE_PARAMETER": "पॅरामीटर हटवा...",
     "DELETE_PARAMETER_TITLE": "त्यामुळे पॅरामीटर '%1' जिथे आहे तिथून सगळीकडून हटवला जाईल. तुम्हाला नक्की तसे करायचे आहे का?",

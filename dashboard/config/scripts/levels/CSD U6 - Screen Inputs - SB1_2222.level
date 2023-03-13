@@ -40,11 +40,10 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20430,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
+    "map_reference": "/courses/csd-2022/guides/taking-input-with-getproperty",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -67,7 +66,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:38.893+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB1_2022\"},{\"changed_at\":\"2022-04-13 21:34:05 +0000\",\"changed\":[\"hide_design_mode\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-13 21:35:31 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-13 21:35:45 +0000\",\"changed\":[\"hide_design_mode\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:38.893+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB1_2022\"},{\"changed_at\":\"2022-04-13 21:34:05 +0000\",\"changed\":[\"hide_design_mode\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-13 21:35:31 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-13 21:35:45 +0000\",\"changed\":[\"hide_design_mode\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-04 21:38:34 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

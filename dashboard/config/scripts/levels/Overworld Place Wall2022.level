@@ -12,7 +12,7 @@
     "short_instructions": "Every house starts with a wall. Build the first part of your house by putting the \"place\" and \"move forward\" commands inside the repeat loop.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "true",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -67,7 +67,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:42.223+00:00\",\"changed\":[\"cloned from \\\"Overworld Place Wall_2021\\\"\"],\"cloned_from\":\"Overworld Place Wall_2021\"},{\"changed_at\":\"2022-03-07 17:08:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"available_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:42.223+00:00\",\"changed\":[\"cloned from \\\"Overworld Place Wall_2021\\\"\"],\"cloned_from\":\"Overworld Place Wall_2021\"},{\"changed_at\":\"2022-03-07 17:08:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"available_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-06-22 17:20:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1

@@ -1,6 +1,7 @@
 export const PoetryStandaloneApp = {
   Poetry: 'poetry',
-  PoetryHoc: 'poetry_hoc'
+  PoetryHoc: 'poetry_hoc',
+  TimeCapsule: 'time_capsule'
 };
 
 export const PALETTES = {
@@ -28,10 +29,11 @@ export const PALETTES = {
 
 // Notes:
 // - author is not translated.
-// - Poems are shown in all languages, unless there is a locale attribute, in which case
-//   the poem is shown in the dropdown only for users with that current locale.
-// - If the locale attribute is set, then title is used and is not translated.
-// - If the locale attribute is set, then linesSplit is used and is not translated.
+// - Poems are shown in all languages, unless there is a locales attribute, in which case
+//   the poem is shown in the dropdown only for users with a current locale that is included
+//   in the array.
+// - If the locales attribute is set, then title is used and is not translated.
+// - If the locales attribute is set, then linesSplit is used and is not translated.
 export const POEMS = {
   hafez: {author: 'Hafez'},
   field: {author: 'Eugene Field'},
@@ -61,8 +63,25 @@ export const POEMS = {
   lomeli1: {author: 'Caia Lomeli'},
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
+  cb: {
+    locales: ['en_us'],
+    author: 'C. B.',
+    title: 'My City',
+    linesSplit: [
+      'My city.',
+      'I love the smell of the donuts',
+      'on Avenue 6.',
+      'The sound of the cats screeching',
+      'at five in the morning.',
+      'The feeling of my favorite song playing',
+      'over and over again.',
+      'When I go to a new city',
+      'with different smells, sounds, and feelings,',
+      "I'll still remember everything my city had."
+    ]
+  },
   rusinek1: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'WIESZAKI',
     linesSplit: [
@@ -82,7 +101,7 @@ export const POEMS = {
     ]
   },
   rusinek2: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'PRYSZNIC',
     linesSplit: [
@@ -98,7 +117,7 @@ export const POEMS = {
     ]
   },
   rusinek3: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'TOSTER',
     linesSplit: [
@@ -124,7 +143,7 @@ export const POEMS = {
     ]
   },
   rusinek4: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'WAZON',
     linesSplit: [
@@ -135,7 +154,7 @@ export const POEMS = {
     ]
   },
   rusinek5: {
-    locale: 'pl_pl',
+    locales: ['pl_pl'],
     author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
     title: 'SŁOIKI',
     linesSplit: [
@@ -154,5 +173,156 @@ export const POEMS = {
       'wtedy ze środka uleci wokół',
       'trochę powietrza – z zeszłego roku!'
     ]
+  },
+  quasimodo: {
+    locales: ['it_it'],
+    author: 'Salvatore Quasimodo',
+    title: 'Specchio',
+    linesSplit: [
+      'Ed ecco sul tronco',
+      'si rompono gemme:',
+      "un verde più nuovo dell'erba",
+      'che il cuore riposa:',
+      'il tronco pareva già morto,',
+      'piegato sul botro.',
+      '  ',
+      'E tutto mi sa di miracolo;',
+      "e sono quell'acqua di nube",
+      'che oggi rispecchia nei fossi',
+      'più azzurro il suo pezzo di cielo,',
+      'quel verde che spacca la scorza',
+      "che pure stanotte non c'era."
+    ]
+  },
+  pascoli: {
+    locales: ['it_it'],
+    author: 'Giovanni Pascoli',
+    title: 'Mare',
+    linesSplit: [
+      "M'affaccio alla finestra, e vedo il mare:",
+      "vanno le stelle, tremolano l'onde.",
+      'Vedo stelle passare, onde passare:',
+      'un guizzo chiama, un palpito risponde.',
+      '  ',
+      "Ecco sospira l'acqua, alita il vento:",
+      "sul mare è apparso un bel ponte d'argento.",
+      '  ',
+      'Ponte gettato sui laghi sereni,',
+      'per chi dunque sei fatto e dove meni?'
+    ]
+  },
+  rodari: {
+    locales: ['it_it'],
+    author: 'Gianni Rodari',
+    title: 'Como nel comò',
+    linesSplit: [
+      'Una volta un accento per distrazione cascò',
+      'sulla città di Como mutandola in comò.',
+      '  ',
+      'Figuratevi i cittadini comaschi, poveretti:',
+      'detto e fatto si trovarono rinchiusi nei cassetti.',
+      '  ',
+      'Per fortuna uno scolaro rilesse il componimento',
+      "e liberò i prigionieri cancellando l'accento.",
+      '  ',
+      'Ora ai giardini pubblici han dedicato un busto',
+      '"A colui che sa mettere gli accenti al posto giusto".'
+    ]
+  },
+  ungaretti: {
+    locales: ['it_it'],
+    author: 'Giuseppe Ungaretti',
+    title: 'Sereno',
+    linesSplit: [
+      'Dopo tanta nebbia',
+      'a una a una',
+      'si svelano le stelle',
+      '  ',
+      'Respiro il fresco',
+      'che mi lascia il colore del cielo',
+      '  ',
+      'Mi riconosco',
+      'immagine passeggera',
+      '  ',
+      'Presa in un giro immortale.'
+    ]
+  },
+  carducci1: {
+    locales: ['it_it'],
+    author: 'Giosuè Carducci',
+    title: 'Il bove',
+    linesSplit: [
+      "T'amo pio bove; e mite un sentimento",
+      "Di vigore e di pace al cor m'infondi,",
+      'O che solenne come un monumento',
+      'Tu guardi i campi liberi e fecondi,',
+      '  ',
+      'O che al giogo inchinandoti contento',
+      "L'agil opra de l'uom grave secondi:",
+      "Ei t'esorta e ti punge, e tu co 'l lento",
+      'Giro dè pazienti occhi rispondi.',
+      '  ',
+      "E del grave occhio glauco entro l'austera",
+      'Dolcezza si rispecchia ampio e quieto',
+      'Il divino del pian silenzio verde.'
+    ]
+  },
+  carducci2: {
+    locales: ['it_it'],
+    author: 'Giosuè Carducci',
+    title: 'San Martino',
+    linesSplit: [
+      "La nebbia a gl'irti colli piovigginando sale,",
+      'e sotto il maestrale urla e biancheggia il mar;',
+      "ma per le vie del borgo dal ribollir de' tini",
+      "va l'aspro odor de i vini l'anime a rallegrar.",
+      "Gira su' ceppi accesi lo spiedo scoppiettando:",
+      "sta il cacciator fischiando sull'uscio a rimirar",
+      "tra le rossastre nubi stormi d'uccelli neri,",
+      "com'esuli pensieri, nel vespero migrar."
+    ]
   }
+};
+
+export const TIME_CAPSULE_POEMS = {
+  pat: {
+    locales: ['en_us'],
+    author: 'Pat Y.',
+    title: '1990 - My Poem 1',
+    linesSplit: [
+      'I love to ride my skateboard all around',
+      "With my Walkman blasting, I don't hear a sound",
+      'I just learned how to do a sweet new trick',
+      "It's called the kickflip and it's really sick",
+      '\n',
+      'Something happening right now is Yo MTV Raps',
+      'Watching Salt-N-Pepa and LL Cool J, mad snaps',
+      'Slap bracelets are something cool',
+      'And neon colors, they totally rule.'
+    ]
+  },
+  erin: {author: 'Erin P.'},
+  aryanna: {
+    locales: ['en_us'],
+    author: 'Aryanna T.',
+    title: '2021 - My Poem 3',
+    linesSplit: [
+      "Today in 2021, I'm cool as can be,",
+      "I love to dance, and listen to music that's so me.",
+      "I just learned to skateboard, and it's rad,",
+      "I'm thinking about trying out for the cheer squad.",
+      '\n',
+      'In my neighborhood, we all have our own flair,',
+      'People I know like to ride bikes, and style their hair.',
+      "Something fun right now is TikTok, can't you see?",
+      'Dancing is popular, and I love the energy.'
+    ]
+  },
+  tj: {author: 'TJ'},
+  erik: {author: 'Erik D.'},
+  aaron: {author: 'Aaron H.'},
+  noemi: {author: 'Noemi R.'},
+  ken: {author: 'Ken A.'},
+  mike: {author: 'Mike H.'},
+  jess: {author: 'Jess B.'}
 };

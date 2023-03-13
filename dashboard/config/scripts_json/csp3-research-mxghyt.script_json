@@ -9,7 +9,8 @@
           "notice": "Check out the CSP mid-course survey",
           "details": "We recently added a mid-course survey to the end of Unit 3.  Please allow your students some time to complete it.",
           "link": "",
-          "type": "success"
+          "type": "success",
+          "key": "3fec9534-8c5b-4e4f-86a9-e69934fc4387"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -20,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 21:16:32 UTC",
+    "serialized_at": "2022-09-28 14:31:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4679,7 +4680,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_3",
+        "level.key": "csp_affirmation_intervention_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"
@@ -4692,7 +4693,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_3",
+        "level.key": "csp_affirmation_control_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"

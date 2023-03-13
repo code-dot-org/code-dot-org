@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: pd_applications
@@ -43,12 +42,15 @@ module Pd::Application
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
-
-    validates_presence_of :teacher_application
+    after_create :update_teacher_app_status
 
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year
+    end
+
+    def update_teacher_app_status
+      teacher_application.update!(status: 'unreviewed') if teacher_application.status == 'awaiting_admin_approval'
     end
 
     def self.next_year(year)
@@ -63,14 +65,14 @@ module Pd::Application
     end
 
     def underrepresented_minority_percent
-      sanitize_form_data_hash.select do |k, _|
+      sanitized_form_data_hash.select do |k, _|
         [
           :black,
           :hispanic,
           :pacific_islander,
           :american_indian
         ].include? k
-      end.values.map(&:to_f).reduce(:+)
+      end.values.sum(&:to_f)
     end
 
     def placeholder?
@@ -78,7 +80,7 @@ module Pd::Application
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
-      teacher_application.queue_email :principal_approval, deliver_now: true
+      teacher_application.queue_email :admin_approval, deliver_now: true
 
       Pd::Application::PrincipalApprovalApplication.create(
         form_data: {}.to_json,
@@ -96,6 +98,7 @@ module Pd::Application
     def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         title: COMMON_OPTIONS[:title],
+        can_email_you: [YES, NO],
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
@@ -111,64 +114,6 @@ module Pd::Application
           'No, computer science is new to my school',
           TEXT_FIELDS[:dont_know_explain]
         ],
-        replace_which_course_csp: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csd:  [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csa: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
           'Yes, my school would be able to pay the full program fee.',
           'No, my school would not be able to pay the program fee. We would like to be considered for a scholarship.'
@@ -183,6 +128,7 @@ module Pd::Application
             :first_name,
             :last_name,
             :email,
+            :can_email_you,
             :confirm_principal
           ]
 
@@ -199,20 +145,9 @@ module Pd::Application
               :other,
               :committed_to_master_schedule,
               :replace_course,
-              :committed_to_diversity,
               :understand_fee,
               :pay_fee
             ]
-
-            if hash[:replace_course] == self.class.options(year)[:replace_course][0]
-              if teacher_application&.course == 'csd'
-                required << :replace_which_course_csd
-              elsif teacher_application&.course == 'csp'
-                required << :replace_which_course_csp
-              elsif teacher_application&.course == 'csa'
-                required << :replace_which_course_csa
-              end
-            end
           end
         end
       end
@@ -226,10 +161,6 @@ module Pd::Application
       [
         [:committed_to_master_schedule],
         [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
-        [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
-        [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
-        [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
-        [:replace_which_course_csa, TEXT_FIELDS[:other_please_explain], :replace_which_course_csa_other],
         [:do_you_approve],
         [:contact_invoicing],
         [:contact_invoicing_detail]
@@ -238,7 +169,7 @@ module Pd::Application
 
     # full_answers plus the other fields from form_data
     def csv_data
-      sanitize_form_data_hash.tap do |hash|
+      sanitized_form_data_hash.tap do |hash|
         additional_text_fields.each do |field_name, option, additional_text_field_name|
           next unless hash.key? field_name
 
@@ -251,17 +182,17 @@ module Pd::Application
     end
 
     def school
-      @school ||= School.includes(:school_district).find_by(id: sanitize_form_data_hash[:school])
+      @school ||= School.includes(:school_district).find_by(id: sanitized_form_data_hash[:school])
     end
 
     def district_name
       school ?
         school.try(:school_district).try(:name).try(:titleize) :
-        sanitize_form_data_hash[:school_district_name]
+        sanitized_form_data_hash[:school_district_name]
     end
 
     def school_name
-      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+      school ? school.name.try(:titleize) : sanitized_form_data_hash[:school_name]
     end
   end
 end

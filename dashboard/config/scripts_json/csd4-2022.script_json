@@ -10,7 +10,19 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be",
+          "buttonText": "Learn More"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey",
+          "key": "0d48422e-8580-494d-bca8-1cc758561e48"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -22,12 +34,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 23:18:20 UTC",
+    "serialized_at": "2023-02-08 16:51:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,7 +103,7 @@
         "assessment_opportunities": "1. **Critically evaluate an object for how well its design meets a given set of needs**\n\nIn the discussion at the end of the activity, ensure that students are connecting specifics of the user descriptions to the features of the shoes that they have chosen for those respective users.   \n\n2. **Identify empathy for the user as an important component of the design process**\n\nIn the discussion at the end of the activity, check that students are referencing the user descriptions for their explanations, rather than the general advantages and disadvantages of each shoe.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we choose products based on the needs of a user?**\n\nTo kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one set of shoes that would make it more useful or usable.",
-        "preparation": "* Print a copy of the activity guide for each student (or prepare to distribute the document digitally).\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print a copy of the activity guide for each student (or prepare to distribute the document digitally).\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "Students will enter this unit with an understanding of the problem solving process from prior units.\n\nThe problem solving process used throughout CS Discoveries is:\n\n* Define\n* Prepare\n* Try\n* Reflect\n\nIn this lesson, students look at real-world objects to understand how the problem-solving process can be applied to help others. Starting with this lesson, we will be reframing this process to include a layer of empathy, encouraging students to consider how others will experience and use the things they create.\n\nWe are purposefully starting out by looking at non-technical objects to encourage students to think more broadly about what it means to consider the end-user of a product before honing in on how it specifically applies to software design",
         "student_overview": "**Question of the Day: How can we choose products based on the needs of a user?**\n\nIn this lesson, you will explore the relationship between users, their needs, and the design of objects they use. "
       },
@@ -111,7 +124,7 @@
         "assessment_opportunities": "1. **Critique a design through the perspective of a user profile.**\r\n\r\n    Activity Guide, page 1: Students should connect the information in the user profile to their predictions about the user's preferences.\r\n\r\n2. **Design improvements to a product based on a user profile.**\r\n\r\n    Activity Guide, page 2: In the first discussion question, students should make explicit connections between the user profile and their added features.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\r\n\r\nDesigners need to understand their users' needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n",
-        "preparation": "* Print out enough user profiles for all students, ensuring as much variety as possible\n* Print an activity guide for each user\n* Prepare prompt questions for warm up exercise\n* Label four corners of the room as A, B, C, and D\n* Arrange room in table groups of 4, and place a number on each table group (1, 2, 3,...)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "* Print out enough user profiles for all students, ensuring as much variety as possible\n* Print an activity guide for each user\n* Prepare prompt questions for warm up exercise\n* Label four corners of the room as A, B, C, and D\n* Arrange room in table groups of 4, and place a number on each table group (1, 2, 3,...)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)\n",
         "purpose": "This lesson builds on the previous by asking students to not only consider that there _is_ a user that products are designed for, but also empathize with those potential users. Throughout this unit, students will work to apply the problem solving process from Unit 1 to problems for other people. Empathy is a key element of this kind of user-centered design and a difficult skill for students at this age to master.\r\n",
         "student_overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\n\nIn this lesson, you will explore how different users might react to a variety of products. "
       },
@@ -132,7 +145,7 @@
         "assessment_opportunities": "1. **Generate multiple strategies for meeting user needs.**\r\n\r\n\tActivity Guide, Page 2: At the top of the page, students should have have generated multiple relevant ideas for meeting the user's needs.\r\n\r\n2. **Organize ideas and strategies into meaningful categories.**\r\n\r\n\tCirculate the room as students group their ideas into categories.  There should be multiple related ideas in each category, with multiple categories for each group.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we design for people other than ourselves?**\r\n\r\nThis is the first part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. This lesson focuses on the Define and Prepare steps of the process. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. In the next lesson, students will complete the Try and Reflect steps of the design process.\r\n",
-        "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\n* Set up groups with preferably 3 students each\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\n* Set up groups with preferably 3 students each\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This micro activity is the first of three design projects in this unit. It is a fast-paced introduction to the user-centered design process, intended to give students an experience with user-centered design that they can build on in later projects. In this lesson the primary goal is to establish that design decisions will be made with the user's needs in mind. The practice of categorizing lots of disparate ideas to help make decisions will also reappear later in the unit.\r\n\r\nThe activity in this lesson is an adaptation of the [Design Charrette from the University of Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
         "student_overview": "**Question of the Day: How can we design for people other than ourselves?**\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. "
       },
@@ -153,7 +166,7 @@
         "assessment_opportunities": "1. **Analyze and select the most appropriate strategies to meet user needs.**\r\n\r\n\tActivity: Students should present justification for how their chosen strategy meets the user need.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we design a product to meet a user's needs?**\r\n \r\nThis is the second part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. Yesterday students completed the Define and Prepare steps of the design process. Today, they complete the Try and Reflect portions. Students continue their work from yesterday by designing a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. Students have a chance to share their decision-making process and get feedback on how well their product addresses the user needs they selected.\r\n",
-        "preparation": "* Return the activity guide from yesterday to students\n* Make copies of the Try & Reflect activity guide - one for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Return the activity guide from yesterday to students\n* Make copies of the Try & Reflect activity guide - one for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This micro activity is the first of three design projects in this unit. It is a fast-paced introduction to the user-centered design process, intended to give students an experience with user-centered design that they can build on in later projects. In this lesson the primary goal is to align the design of a product to the needs of the user, sometimes setting aside personal beliefs or preferences. The act of basing decisions around a user rather than yourself is a key mindset that appears throughout the unit.\r\n\r\nThe activity in this lesson is an adaptation of the [Design Charrette from the University of Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
         "student_overview": "**Question of the Day: How can we design a product to meet a user's needs?**\n\nIn this lesson, you will continue to work on designing a piece of smart clothing, using the specific needs and concerns you brainstormed. "
       },
@@ -174,7 +187,7 @@
         "assessment_opportunities": "1. **Use a paper prototype to test the design of an app.**\r\n\r\n\tActivity & Discussion: Circulate the room as students are using the paper prototype.  Ensure that \"computers\" are following the diagram and not giving hints to the \"users\" and that \"users\" are trying to accomplish their given tasks and writing down relevant information in the chart.  Use the discussion to check students' understanding of how the activity allows them to test the design of the app.\r\n\r\n2. **Collect and analyze feedback from user testing with a paper prototype.**\r\n\r\n\tJournal: Students should share feedback and improvements related to the users' experiences as shared in the class discussion or indicated in the chart filled out in the activity.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:** How can we test an app to make sure it meets a user's needs?\r\n \r\nFollowing the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called \"Txt Ur Grndkdz\". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After \"using\" the provided prototype students begin to identify ways to improve the next iteration.\r\n",
-        "preparation": "* Print one copy of the User Interface Screens activity guide for each pair of students\n* Print one copy of the User Experience (computer) activity guide for each pair of students\n* Print one copy of the User Experience (user) activity guide for each pair of students\n* Cut out the UI Screens or provide scissors for students to do so themselves\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print one copy of the User Interface Screens activity guide for each pair of students\n* Print one copy of the User Experience (computer) activity guide for each pair of students\n* Print one copy of the User Experience (user) activity guide for each pair of students\n* Cut out the UI Screens or provide scissors for students to do so themselves\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson introduces students to the concept of a paper prototype as a quick and dirty tool to kick off the development of an app. Paper prototypes will return in both the next few lessons and the chapter two project as well. This prototype will also serve as the context around which students will start to parse and organize feedback from a wide variety of users. While this lesson asks students to work with an existing prototype, they will soon be developing prototypes of their own design.",
         "student_overview": "**Question of the Day: How can we test an app to make sure it meets a user's needs?**\n\nIn this lesson, you will examine a paper prototype for a chat app and start identifying ways that it could be improved. "
       },
@@ -195,7 +208,7 @@
         "assessment_opportunities": "1. **Categorize and prioritize user feedback for an app**\r\n\r\n\t\r\n\r\n2. **Use feedback to create a plan for further development of an app**\r\n\r\n\tActivity Guide, page 1: The table should have several suggestions for improvement to the app that clearly relate to the feedback categories the students have identified.\r\n\r\n3. **Create a paper prototype for the screens of an app**\r\n\r\n\tActivity Guide: The screen sketches should reflect the app improvements identified on the first page of the guide.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use feedback to improve an app?**\n\nIn this lesson, students use feedback from \"users\" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.",
-        "preparation": "* Either print one copy of the User Interface Screens resource for each group, or be prepared to display the screens at the front of the classroom\n* Print one copy of the Prototype Feedback resource for each group. If possible, cut into strips ahead of time\n* Print one copy of Improve a Screen for each group. If possible, print single-sided so students can divy up the activity guide.\n* Colored pencils or markers for the paper prototypes\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Either print one copy of the User Interface Screens resource for each group, or be prepared to display the screens at the front of the classroom\n* Print one copy of the Prototype Feedback resource for each group. If possible, cut into strips ahead of time\n* Print one copy of Improve a Screen for each group. If possible, print single-sided so students can divy up the activity guide.\n* Colored pencils or markers for the paper prototypes\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson introduces several skills that students will need to use later in the unit. They will learn to categorize feedback in order to organize and prioritize their response. They learn to interpret human needs with a piece of technology in terms of the changes to the user interface. They have their first opportunity to create a paper prototype of their own by designing a new screen of an app. As students move towards designing apps of their own from scratch these will be important skills that students use repeatedly.",
         "student_overview": "**Question of the Day: How can we use feedback to improve an app?**\n\nIn this lesson, you will start revising the paper prototype using feedback and requests from users. "
       },
@@ -216,7 +229,7 @@
         "assessment_opportunities": "1. **Analyze interview notes to identify specific user needs**\r\n\r\n\tActivity Guide: There should be multiple barriers identified on the bottom of the last page of the activity guide, which connect to the notes from the interview.\r\n\r\n\t",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can user interviews help us create apps to meet the needs of a user?**\n\nIn this lesson, students interpret user interviews to determine the needs & interests of a user. They then speculate on the barriers these users are facing or the opportunities that are available for each user. In a group, they share these barriers & opportunities and brainstorm different apps that could be used to address these issues. By the end of the lesson, students will have decided on an app idea that addresses a barrier or opportunity for a user.",
-        "preparation": "* Print one copy of User Interview activity guide for each student\n* Print a copy of the Example User Interviews for each group\n* Gather poster paper and brainstorming materials (pens, sticky notes, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print one copy of User Interview activity guide for each student\n* Print a copy of the Example User Interviews for each group\n* Gather poster paper and brainstorming materials (pens, sticky notes, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "In previous lessons, needs & interests have been presented more explicitly to students. In this lesson, they have the task of extracting that information from a user interview, which motivates the app they will create. Even though example user interviews are provided, this lesson can be more impactful if real user interviews are used from people in the community. This lesson also bridges to the project in the next lesson, which uses the app brainstorm as the starting point for creating a paper prototype.",
         "student_overview": "**Question of the Day: How can user interviews help us create apps to meet the needs of a user?**\n\nIn this lesson, you will interview classmates in order to identify user needs that could be addressed by developing an app. "
       },
@@ -237,7 +250,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I develop an app prototype for a user?**\n\nBased on user interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing \"screens\" on individual notecards. A project guide directs students through the process including building the paper prototype and testing it with their user to see if their assumptions about the user interfaces they created are accurate.\n\nThis is a two-day lesson, with specific timings outlined in the lesson plan below",
-        "preparation": "* Print one copy of the project guide for each student\n* Print one copy of the rubric for each student\n* 6 notecards for each student\n* Drawing supplies (colored pencils, markers, rulers, etc.)\n* Poster paper for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-paper-prototype-the-design-process-lesson-8/36212) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print one copy of the project guide for each student\n* Print one copy of the rubric for each student\n* 6 notecards for each student\n* Drawing supplies (colored pencils, markers, rulers, etc.)\n* Poster paper for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-paper-prototype-the-design-process-lesson-8/36212) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson concludes the first chapter of Unit 4 and is another opportunity to practice the problem solving process for designing an app. The focus in this project is on the design process, especially empathizing with their user and the testing & feedback steps of the app design process. In the next chapter students will continue using this process to design apps and learn how to program their prototypes in App Lab.",
         "student_overview": "**Question of the Day: How can I develop an app prototype for a user?**\n\nIn this lesson, you will use the classmate interview from the previous lesson to come up with app ideas that would address the needs of your users. "
       },
@@ -258,7 +271,7 @@
         "assessment_opportunities": "1. **Develop a plan for collaborating with others to design a computational artifact**\r\n\r\n\tActivity Guide, page 1: There should be a reasonable plan for managing disagreement under \"Decision Making\".\r\n\r\n2. **Describe the target users for a computational artifact**\r\n\r\n\tAs students share their user groups at the end of the main activity, the descriptions should include enough specificity and detail to later identity a common set of needs among the group members.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What is an App for Good we want to create?**\n \nThis lesson starts an app design project that lasts through the end of the unit. Students first explore a number of apps designed for social impact that have been created by other students. Students form project teams and lay out a contract for how the team will function throughout the development of their app. Finally, they brainstorm a team name, a topic for their app, and potential users.\n",
-        "preparation": "* Assign teams of 3-4, ideally based on similar interest in an app topic\n* Print one copy per team of the activity guide\n* Choose 1-3 of the apps from the example apps to share with the class\n* Arrange classroom seating for pre-selected teams of 3-4 students\n* Put out sticky notes for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Assign teams of 3-4, ideally based on similar interest in an app topic\n* Print one copy per team of the activity guide\n* Choose 1-3 of the apps from the example apps to share with the class\n* Arrange classroom seating for pre-selected teams of 3-4 students\n* Put out sticky notes for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson lays the foundation for the project that will last the remainder of the unit. Students are introduced to apps where people their age have used technology to address issues they care about. The resources provided are a great starting place, but you can make this lesson pack a bigger punch if you find examples (even those from your own previous classes) that demonstrate local examples of students designing apps for social good. Students also complete a teamwork contract, which will anchor how they collaborate for the remainder of the unit.",
         "student_overview": "**Question of the Day: What is an App for Good we want to create?**\n\nIn this lesson, you will begin the process of designing an app that will last through the end of this unit and starts with making a plan for how your team will function together while creating this app, a topic for your app and potential users. "
       },
@@ -279,7 +292,7 @@
         "assessment_opportunities": "1. **Evaluate a design based its ability to meet target user's needs**\r\n\r\n\tActivity Guide: The \"liked\" and \"didn't like\" columns of the chart should clearly relate back to the user needs as described in the \"Who is the target user\" column.\r\n\r\n2. **Evaluate the purpose and impact of a computational artifact**\r\n\r\n\tActivity Guide: The apps and descriptions identified in the first column of the chart should show a relationship to the team's original app topic from the previous lesson, and the second column should identify how the apps meet the target group's needs.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use existing apps as inspiration for our own apps?**\n\nIn this lesson students research apps similar to the one they intend on creating to better understand the needs of their users. Students work within their teams to search the Internet for other apps, then evaluate the ones they find interesting. By the end of the lesson, each team will have a clearer idea about the type of app they want to create and further refine who their target users are. Each team will maintain a list of citations for all the apps they examined for use in their final presentation.",
-        "preparation": "* Arrange classroom seating for teams of 4-5 students\n* Print one copy per team of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Arrange classroom seating for teams of 4-5 students\n* Print one copy per team of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson is the primary opportunity students have to get user input into the original conception of their app. By looking at apps similar to the ones they have proposed needing they may be inspired to change the structure of their app or may even identify an aspect of their problem they had previously ignored. In later lessons students will test out prototypes of their app to perform further refinements.",
         "student_overview": "**Question of the Day: How can we use existing apps as inspiration for our own apps?**\n\nIn this lesson, you will dive into app development by exploring existing apps that may serve similar users as the app you are working on. "
       },
@@ -300,7 +313,7 @@
         "assessment_opportunities": "1. **Explain the purpose of individual UI elements when developing an app**\r\n\r\n\tActivity Guide: Students will list the intended use of each UI element, and brainstorm how these elements connect to the features they’re planning for their apps.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What user interface elements will be useful for our app?**\n\nBefore starting to design apps, we need to help students scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that can be made using AppLab’s tools. Today focuses on having teams look at several example apps made in AppLab and identifying the components of the user interface. They then make a plan for which features could use which components in their app.",
-        "preparation": "* Print a copy of the activity guide for each team\n* (Optional) Preview Lesson 14 - Design Mode in AppLab to help answer questions from students about UI elements in AppLab.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "* Print a copy of the activity guide for each team\n* (Optional) Preview Lesson 14 - Design Mode in AppLab to help answer questions from students about UI elements in AppLab.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)\n",
         "purpose": "This lesson helps narrow the scope of the types of design elements students can include in their apps. Up until now, students have explored and brainstormed apps with a variety of functionality - they may have discovered apps that use maps, or connect to social media, or access data on your phone. In this lesson, they explore only apps built with AppLab tools so they have more realistic expectations for the apps they can create by the end of the unit.",
         "student_overview": "**Question of the Day: What user interface elements will be useful for our app?**\n\nIn this lesson, you will explore some example apps created in App Lab and use these examples to help inform your first paper prototype of your app. "
       },
@@ -321,7 +334,7 @@
         "assessment_opportunities": "1. **Explain the role of paper prototypes in app development.**\r\n\r\n\tActivity discussion: Students should identify several key ways that paper prototypes contribute to app development, and these reasons should highlight the advantages over both a full product and digital prototypes.\r\n\r\n2. **Create a paper prototype that incorporates the user flow for a computational artifact.**\r\n\r\n\tStudents' prototypes are collected at the end of the lesson, but there are also opportunities in the second activity to circulate, assess, and give feedback to students as they work.  Each notecard should be drawn with enough detail to identify the functionality of each element on the screen.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we build a paper prototype for our app?**\n\nStudents work in their teams to create paper prototypes for the apps they’ve been developing. They begin by making a plan for each screen, then assigning different team members to work on each screen so the task can be completed in time. They can use 3x5 index cards to develop their paper prototypes, or the Paper Prototype template.",
-        "preparation": "* Prepare 3x5 index cards (or copies of the prototype template), sticky notes, colored pens and pencils, scissors for each team\n* Print a copy of the activity guide for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Prepare 3x5 index cards (or copies of the prototype template), sticky notes, colored pens and pencils, scissors for each team\n* Print a copy of the activity guide for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson kicks off the actual design phase of this project. Students last created paper prototypes in Lesson 7, but at that point very few constraints were placed on the prototype user interface. Because these prototypes will eventually be converted into App Lab apps, it's important to better scope the types of apps teams design and the interface elements they use. Teams will use their paper prototypes tomorrow to test their apps and get feedback.",
         "student_overview": "**Question of the Day: How can we build a paper prototype for our app?**\n\nIn this lesson, you will work with your team to create a paper prototype for your app. \n"
       },
@@ -342,7 +355,7 @@
         "assessment_opportunities": "1. **Design and run test that use paper prototypes to gather feedback on a design**\r\n\r\n\tActivity Guide: Several relevant tasks should be identified in the chart, along with notes describing the user testing around those tasks.\r\n\r\n2. **Analyze user tests to identify features that should be removed, added, or improved**\r\n\r\n\tActivity Guide: The left side of the T-chart should include at least four descriptions of things that happened in the test, and the right side should list respective proposed improvements to the app.\r\n   ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How does our prototype work when tested by real users?**\n\nThe primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.",
-        "preparation": "* Either have other people lined up to test each team’s paper prototypes, or schedule enough time for teams to test each other's prototypes\n* Print a copy of the Paper Prototype User Testing activity guide for each team\n* Print a copy of the User Test Cases activity guide for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Either have other people lined up to test each team’s paper prototypes, or schedule enough time for teams to test each other's prototypes\n* Print a copy of the Paper Prototype User Testing activity guide for each team\n* Print a copy of the User Test Cases activity guide for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "The goal of this lesson is to give students a clear format for testing and iteration of their apps. This will be the first of multiple opportunities teams have to test various stages of their prototypes, and each stage will serve a different purpose. At this point the primary purpose is to gut check assumptions about how the app should be laid out and navigated - this is _not_ the time for students to be overly concerned about fine details.",
         "student_overview": "**Question of the Day: How does our prototype work when tested by real users?**\n\nIn this lesson, you will work with your team to test your paper prototype with other members of the class. "
       },
@@ -363,7 +376,7 @@
         "assessment_opportunities": "1. **Assign roles and responsibilities to each team member when collaborating to create a digital artifact**\n\n\tActivity Guide \"Screen Ownership\": Check that all screens have been assigned an owner and that the division of labor seems reasonable.\n\n2. **Select the appropriate input element for a given type of information**\n\n\tCode Studio, level 8: See rubric",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use App Lab and Design Mode to create apps?**\n \nStudents are introduced to the App Lab programming environment that they will use to build their apps. Students work through a progression of skill-building levels to learn how to use the drag-and-drop design mode of App Lab. They end the lesson by making a plan to adapt one of their Paper Prototype screens into App Lab, focusing on having unique IDs for each element.\n",
-        "preparation": "* Print one copy of the Screen Ownership activity guide for each group\n* Print one copy of the Screen Design activity guide for each student\n* (Optional) Print one copy of the Model Screen Design activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print one copy of the Screen Ownership activity guide for each group\n* Print one copy of the Screen Design activity guide for each student\n* (Optional) Print one copy of the Model Screen Design activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson introduces students to the design mode interface of App Lab, and to the process of translating a paper prototype to digital. They'll use this as a tool to iterate on their paper prototypes. In today’s lesson, they build up an exemplar app screen. In tomorrow’s lesson, they will build a screen from their paper prototype, incorporating the feedback from yesterday’s lesson.",
         "student_overview": "**Question of the Day: How can we use App Lab and Design Mode to create apps?**\n\nIn this lesson, you will work with your team to start building the next iteration of your app in App Lab. "
       },
@@ -384,7 +397,7 @@
         "assessment_opportunities": "1. **Create a digital prototype of an application screen**\r\n\r\n\tCode Studio, level 2: See rubric. You may need students to turn in their paper prototypes, or circulate while students are working on the project, to ensure that the digital and paper prototypes are consistent.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I design a digital prototype from a paper prototype?**\n\nHaving collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.",
-        "preparation": "* Have extra copies of the Screen Design Activity Guide available for students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Have extra copies of the Screen Design Activity Guide available for students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson introduces students to the design mode interface of App Lab, and to the process of translating a paper prototype to digital. They'll use this as a tool to iterate on their paper prototypes, first by building up an exemplar app screen, and eventually building up to an interactive app prototype by the end of the lesson.",
         "student_overview": "**Question of the Day: How can I design a digital prototype from a paper prototype?**\n\nIn this lesson, you will work with your team to build the next iteration of your app with each team member building out at least one page of your app. "
       },
@@ -405,7 +418,7 @@
         "assessment_opportunities": "1. **Create an event that detects and responds to user input**\n\n\tCode Studio: See rubric on bubble 9.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I use events to create an app?**\n \nIn this lesson, students learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens. Students learn basic event-driven programming by building up the model app that they started in the previous lesson. At the end of the lesson, students make a plan for how they will stay organized when importing each other’s screens in tomorrow’s lesson.\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson gives enough programming context for students to be successful creating their digital prototypes. The goal of this lesson is not to teach programming in App Lab (there will be time for that in Unit 6), but rather to teach the minimum amount of programming skills to allow students to make their apps interactive.",
         "student_overview": "**Question of the Day: How can I use events to create an app?**\n\nIn this lesson, you will combine the screens each team member built into a single app and learn how to program events so that you can navigate between your screens. "
       },
@@ -426,7 +439,7 @@
         "assessment_opportunities": "1. **Integrate all components from collaborative work into a final computational artifact.**\n\n\tCode Studio: See rubric on bubble 9.\n\n2. **Create a digital prototype that incorporates the user flow for a computational artifact**\n\n\tWrap up: Student solutions should allow the user to click through several of the proposed tasks for the apps.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I combine screens to create a complete digital prototype?**\n \nIn this lesson, teams combine their digital prototype screens into a single app, which they can then link together using code. They share their project’s import URLs with each other, then import each teammate’s screen into their own app. Each student works independently to add events to their code to link the screens together, completing their digital prototype.\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson is the final step in creating their digital prototypes, which they will then test and adjust in the next few lessons. Team Working skills are emphasized in deciding how to communicate their project URLs with each other, and design skills are emphasized when each student has imported their screens and is continuing to build their app.",
         "student_overview": "**Question of the Day: How can I combine screens to create a complete digital prototype?**\n\nIn this lesson, you will import each teammate's screen into your own app and work independently to add events to your code to link the screens together. "
       },
@@ -447,7 +460,7 @@
         "assessment_opportunities": "1. **Design and run tests that use digital prototypes to gather feedback on a design**\r\n\r\n\tActivity Guide: Several relevant tasks should be identified in the chart on the second page, along with notes describing the user testing around those tasks.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How does our digital prototype work when tested by real users?**\n \nBy the end of the previous lesson, each team should have a working prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests.\n",
-        "preparation": "* Print one copy of the activity guide for each student\n* If possible, have outside users available to test the teams’ apps prior to this testing day\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print one copy of the activity guide for each student\n* If possible, have outside users available to test the teams’ apps prior to this testing day\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "By now students should be fairly practiced at testing with users. This time around, the role of the computer is actually done by the computer! This means that the team running the test needs to focus their energy on getting carefully watching what the user does, and encourage the user to say aloud what they are experiencing. While it may seem at first that testing with an interactive prototype is easier (since no one has to manually change screens), it can actually be significantly more difficult to observe the user's experience.",
         "student_overview": "**Question of the Day: How does our digital prototype work when tested by real users?**\n\nIn this lesson, you will run another round of user testing with your digital prototype and gather feedback that will be used to inform the final iteration of your app. "
       },
@@ -468,7 +481,7 @@
         "assessment_opportunities": "1. **Analyze user feedback and test results on a computational artifact**\r\n\r\n\tActivity Guide: The left side of the T-chart on the first page should include at least four descriptions of things that happened in the test, and the right side should list a reasonable interpretation of the descriptions.  \r\n\r\n2. **Categorize and prioritize the issues according to impact and ease of implementation**\r\n\r\n\tStudent poster: The chart should include several improvements to the app, categorized according to urgency and ease of implementation.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we create a plan to address bugs and features in our prototype?**\n \nTeams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.\n",
-        "preparation": "* Print one copy of the activity guide for each team\n* Set out sticky notes for each team\n* (Optional) Have poster paper or a large whiteboard area prepared for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print one copy of the activity guide for each team\n* Set out sticky notes for each team\n* (Optional) Have poster paper or a large whiteboard area prepared for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "While improvement can mean adding programmatic functionality, it can also mean a more eye-catching design, more informative text copy, better uniformity of iconography, or any number of other non-programming related features. Encourage each student to find the elements of app design that interest them and focus on that for their personal improvements.\r\n\r\nAt this point in the development process, you can choose to spend as much time as you like iterating and testing. There is no further time budgeted for testing after this iteration, but feel free to use the previous two lessons as a guideline for cycling through further iterations.\r\n",
         "student_overview": "**Question of the Day: How can we create a plan to address bugs and features in our prototype?**\n\nIn this lesson, you will use feedback from the previous lesson to address the needs of users as well as any bugs that you need to fix. "
       },
@@ -489,7 +502,7 @@
         "assessment_opportunities": "**1. Track progress while making changes to their app**\n\nActivity Guide: Monitor students as they move post-its across the “To Do / Doing / Done” chart, ensuring that their current work is reflected on the chart.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I track my work while we make updates to our app?**\n \nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\n",
-        "preparation": "* Print one copy of the activity guide for each team\n* (Optional) Prepare poster paper or a large whiteboard space for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "* Print one copy of the activity guide for each team\n* (Optional) Prepare poster paper or a large whiteboard space for each team\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)\n",
         "purpose": "Students should focus the majority of their time on updating their apps based on user feedback, but they should also use the “To Do / Doing / Done” chart to stay organized and track their work. Moving a task across the board to the “Done” stage is a major accomplishment and, by the end of class, teams can celebrate how many tasks they completed in a single period.",
         "student_overview": "**Question of the Day: How can I track my work while we make updates to our app?**\n\nIn this lesson, you will work with your team to implement changes that address the needs of your users. "
       },
@@ -507,10 +520,21 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.  You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I present the steps in our design process to people outside of our team?**\n \nAt this point, teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.\n",
-        "preparation": "* Determine how much time each group has to present. Typically this is 8-10 minutes per team, but remember to leave time for transitioning between teams\n* Create a copy of the presentation template slide deck for each team\n* Print one copy of the rubric for each team. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Determine how much time each group has to present. Typically this is 8-10 minutes per team, but remember to leave time for transitioning between teams\n* Create a copy of the presentation template slide deck for each team\n* Print one copy of the rubric for each team. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "purpose": "This lesson is the culmination of the last several weeks of project work. In preparing to present their work, it's important that students see this as more than just the programming element of their app - the goal of the presentation is to acknowledge the research, design, testing, and iteration that teams have gone through.",
         "student_overview": "**Question of the Day: How can I present the steps in our design process to people outside of our team?**\n\nIn this lesson, you will work with your team to prepare a presentation to \"pitch\" the app you've developed. "
       },
@@ -553,8 +577,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "554b4180-2899-4be8-a390-3e108705d899",
+      "key": "efd63a8a-28a5-4796-bb80-b3203ee15b9a",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "efd63a8a-28a5-4796-bb80-b3203ee15b9a",
+        "lesson.key": "Designing With Empathy",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-2022"
+      }
+    },
+    {
+      "key": "554b4180-2899-4be8-a390-3e108705d899",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -568,7 +605,7 @@
     },
     {
       "key": "5695acff-6d30-4aa5-944d-738e19e52b12",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -582,7 +619,7 @@
     },
     {
       "key": "6e81b9dc-3fdd-4b0c-846b-ffa8d1b2a325",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1476,8 +1513,21 @@
       }
     },
     {
-      "key": "15e4e2e5-9559-42e0-87af-f96ac932f5aa",
+      "key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795",
       "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795",
+        "lesson.key": "Project - App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2022"
+      }
+    },
+    {
+      "key": "15e4e2e5-9559-42e0-87af-f96ac932f5aa",
+      "position": 6,
       "properties": {
         "name": "Extension Activities"
       },
@@ -1515,6 +1565,18 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "bc45ee61-2fd4-4754-89b2-4eca64872a39",
+      "position": 1,
+      "properties": {
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc45ee61-2fd4-4754-89b2-4eca64872a39",
+        "lesson_activity.key": "efd63a8a-28a5-4796-bb80-b3203ee15b9a"
+      }
+    },
     {
       "key": "2c18236d-898f-423a-945f-b7580dfbb1eb",
       "position": 1,
@@ -1598,7 +1660,13 @@
       "key": "d5cbe650-e941-402e-9253-acebd19f07d1",
       "position": 2,
       "properties": {
-        "description": "###***Designing with Empathy***\n\n\n\n#### Determine the User\n\n**Overview:** Have students read through the Determine the User section of the activity guide. The first part of this activity asks students to match different shoes with the most likely user. Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each connection. This is a great place to discuss the design of shoes and the needs of users.\n\n**Circulate:** Monitor students as they complete the first page of the activity guide, asking students to justify some of the decisions that they made. It’s okay if students disagree about a particular shoe choice. There are no right or wrong answers here - the discussion and ability to reasonably justify a decision are what matter."
+        "description": "###***Designing with Empathy***\n\n\n\n#### Determine the User\n\n**Overview:** Have students read through the Determine the User section of the activity guide. The first part of this activity asks students to match different shoes with the most likely user. Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each connection. This is a great place to discuss the design of shoes and the needs of users.\n\n**Circulate:** Monitor students as they complete the first page of the activity guide, asking students to justify some of the decisions that they made. It’s okay if students disagree about a particular shoe choice. There are no right or wrong answers here - the discussion and ability to reasonably justify a decision are what matter.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d5cbe650-e941-402e-9253-acebd19f07d1",
@@ -3036,7 +3104,13 @@
       "position": 1,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\nAlso distribute a copy of the rubric or the student checklist.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed. Students can use the rubric or student checklist to self-assess and reflect as they progress through the project.",
-        "name": "Getting Started\r"
+        "name": "Getting Started\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e397d996-dc5b-42de-89ef-703458ff0392",
@@ -3062,7 +3136,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Scoping Projects:** Encourage students at this point to scope the functionality of their app to the minimum amount necessary to address their user's needs. As they work they'll likely discover new components they need to add so it's best to start with a small set early on.\r\n"
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
           }
         ]
       },
@@ -3302,7 +3376,7 @@
       "key": "7fa30068-6660-487b-9075-6d87ada8a30f",
       "position": 1,
       "properties": {
-        "description": "This lesson sets up a larger project that students will work on for the remainder of this unt. Throughout the remaining lessons, students will:\n- develop an app idea\n- make a paper prototype\n- make a digital prototype\n- perform user testing\n- create a presentation about their app.\n\nTo prepare for this, you may want to skim through the remaining lessons in this unit to see how this project builds across multiple lessons. You may also want to look at the resources in the [final lesson of this unit](/s/csd4-2021/lessons/21/), especially the **rubric** and **student checklist**, to see how each lesson builds on each other towards the final presentation.",
+        "description": "This lesson sets up a larger project that students will work on for the remainder of this unt. Throughout the remaining lessons, students will:\n- develop an app idea\n- make a paper prototype\n- make a digital prototype\n- perform user testing\n- create a presentation about their app.\n\nTo prepare for this, you may want to skim through the remaining lessons in this unit to see how this project builds across multiple lessons. You may also want to look at the resources in the [final lesson of this unit](/s/csd4-2022/lessons/21/), especially the **rubric** and **student checklist**, to see how each lesson builds on each other towards the final presentation.",
         "name": "Looking Ahead"
       },
       "seeding_key": {
@@ -3411,7 +3485,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Forming Teams:** The remainder of this unit has students completing a project in teams of 3-4. They will work together to choose a topic, develop an app, refine the app through testing and feedback, and present their work at the end of the unit. Consider how you would like to group together students to form teams, since this is a decision that will impact the rest of the unit. Also consider whether any of your class norms can be used in this unit to help reinforce teamwork & collaborative behavior.\r\n\r\n"
+            "markdown": "**Forming Teams:** The remainder of this unit has students completing a project in teams of 3-4. They will work together to choose a topic, develop an app, refine the app through testing and feedback, and present their work at the end of the unit. Consider how you would like to group together students to form teams, since this is a decision that will impact the rest of the unit. Also consider whether any of your class norms can be used in this unit to help reinforce teamwork & collaborative behavior.\n\n"
           }
         ]
       },
@@ -3457,7 +3531,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Customizing Rules:** The rules in the team contract are general enough to work for most classrooms, but to make it more impactful you should consider customizing the contract to include wording from your classroom or school rules.\r\n\r\n**Teamwork Videos:** Consider reminding your students of the Teamwork videos they watched in Unit 2 when building a website together - or, if you and your students didn’t complete Unit 2, consider watching those videos at this point in the lesson. \r\n\r\n* [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\r\n* [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\r\n"
+            "markdown": "**Customizing Rules:** The rules in the team contract are general enough to work for most classrooms, but to make it more impactful you should consider customizing the contract to include wording from your classroom or school rules.\n\n\n**Team Project Resources:** Consider showing these two videos to the class at this stage in the lesson and revisiting throughout the unit:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
           }
         ]
       },
@@ -4370,13 +4444,7 @@
       "position": 1,
       "properties": {
         "description": "**Display:** Show the Model Screen Design activity guide. This image will also be available to them during the level progression, and can optionally be printed for each team to use as a reference.",
-        "name": "Design Mode in App Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students will be using App Lab to create a simple prototype for their app. Students who want to go further in making their apps functional can learn more about App Lab, watch demo videos, and work through tutorials at [https://code.org/educate/applab](https://code.org/educate/applab).\r\n"
-          }
-        ]
+        "name": "Design Mode in App Lab\r"
       },
       "seeding_key": {
         "activity_section.key": "4a48d593-ad1b-4693-a027-041759320afd",
@@ -4411,7 +4479,13 @@
       "key": "95d0c831-8b6a-4a34-80b1-92befbf89ba0",
       "position": 4,
       "properties": {
-        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels."
+        "description": "**Code Studio:** Have students log into their computers and open Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Programming Levels:** These programming levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "95d0c831-8b6a-4a34-80b1-92befbf89ba0",
@@ -4422,7 +4496,13 @@
       "key": "0244527b-aac8-48c8-8c0f-02f3c490b4be",
       "position": 5,
       "properties": {
-        "progression_name": "Build a Screen"
+        "progression_name": "Build a Screen",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0244527b-aac8-48c8-8c0f-02f3c490b4be",
@@ -4433,7 +4513,13 @@
       "key": "73c9926c-51c3-4b0f-969c-b4120379004b",
       "position": 6,
       "properties": {
-        "progression_name": "Finish a Screen"
+        "progression_name": "Finish a Screen",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "73c9926c-51c3-4b0f-969c-b4120379004b",
@@ -4790,7 +4876,7 @@
       "key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
       "position": 2,
       "properties": {
-        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels.",
+        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you used Pair Programming in previous lessons, consider having students use it throughout these levels.",
         "name": "Events in App Lab\r"
       },
       "seeding_key": {
@@ -4802,7 +4888,13 @@
       "key": "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d",
       "position": 3,
       "properties": {
-        "progression_name": "Adding Screens"
+        "progression_name": "Adding Screens",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d",
@@ -5823,7 +5915,7 @@
       "key": "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Have students log into Code Studio and complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
+        "description": "**Code Studio:** Have students log into Code Studio and complete a short survey about the unit.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
         "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
@@ -5843,15 +5935,39 @@
       }
     },
     {
-      "key": "1e4bd477-d1df-4a8b-ab31-1ed7a3145652",
+      "key": "a7ae6aaf-372c-40ab-911c-2400279d873c",
       "position": 3,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7ae6aaf-372c-40ab-911c-2400279d873c",
+        "lesson_activity.key": "36b07898-2f7d-4b48-a979-d2f46cef659b"
+      }
+    },
+    {
+      "key": "4650c6de-71ab-47d0-bea2-61ff838fba65",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "4650c6de-71ab-47d0-bea2-61ff838fba65",
+        "lesson_activity.key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795"
+      }
+    },
+    {
+      "key": "efa0a609-ffec-4ca4-81b8-c245f0383e9c",
+      "position": 2,
       "properties": {
         "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End of Course Survey"
       },
       "seeding_key": {
-        "activity_section.key": "1e4bd477-d1df-4a8b-ab31-1ed7a3145652",
-        "lesson_activity.key": "36b07898-2f7d-4b48-a979-d2f46cef659b"
+        "activity_section.key": "efa0a609-ffec-4ca4-81b8-c245f0383e9c",
+        "lesson_activity.key": "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795"
       }
     },
     {
@@ -7406,6 +7522,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "Design Mode",
       "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
       "key": "design_mode",
@@ -7486,7 +7613,6 @@
       "key": "designing_with_empathy_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8148,7 +8274,6 @@
       "key": "understanding_your_user",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8187,7 +8312,6 @@
       "key": "user_centered_design_-_define_and_prepare",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8200,7 +8324,6 @@
       "key": "user_centered_design_-_try_and_reflect",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8276,7 +8399,6 @@
       "key": "user_interfaces",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8966,6 +9088,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd4-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd4-2022"
       }
     },

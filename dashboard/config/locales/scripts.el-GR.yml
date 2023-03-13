@@ -2,22 +2,6 @@
 el:
   data:
     script:
-      category:
-        csf_category_name: Βασικές αρχές της Επιστήμης των Υπολογιστών
-        csf_international_category_name: Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών
-        csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
-        csp_category_name: Αρχές επιστήμης υπολογιστών ('15-'16)
-        csp_2018_category_name: Αρχές επιστήμης υπολογιστών ('18-'19)
-        csp_2019_category_name: Αρχές επιστήμης υπολογιστών ('19-'20)
-        csp_2020_category_name: Αρχές επιστήμης υπολογιστών ('20-'21)
-        csp_2021_category_name: Αρχές επιστήμης υπολογιστών ('21-'22)
-        cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
-        csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
-        full_course_category_name: Πλήρη μαθήματα
-        hoc_category_name: Ώρα του Κώδικα
-        math_category_name: Μαθηματικά
-        twenty_hour_category_name: 20ωρο
-        other_category_name: Άλλα
       name:
         course1:
           title: Μάθημα 1
@@ -29,43 +13,6 @@ el:
             μπορούν να μοιραστούν. Συνιστάται για παιδιά Νηπιαγωγείου.
           description_short: Εισαγωγή στην Πληροφορική για νεαρούς αναγνώστες.
           description_audience: Ηλικίες 4-6
-          lessons:
-            'Artist: Loops':
-              name: 'Καλλιτέχνης: Επαναλήψεις'
-            'Artist: Sequence':
-              name: 'Καλλιτέχνης: Ακολουθία'
-            'Artist: Shapes':
-              name: 'Καλλιτέχνης: Σχήματα'
-            'Bee: Loops':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Sequence':
-              name: 'Μέλισσα: Ακολουθία'
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            Happy Maps:
-              name: Χαρούμενοι Χάρτες
-            'Jigsaw: Learn to drag and drop':
-              name: 'Παζλ: Μάθε την μεταφορά και απόθεση'
-            'Maze: Debugging':
-              name: 'Λαβύρινθο: εντοπισμός σφαλμάτων'
-            'Maze: Loops':
-              name: 'Λαβύρινθος: Επαναλήψεις'
-            'Maze: Sequence':
-              name: 'Λαβύρινθος: Ακολουθία'
-            Move it, Move it:
-              name: Κούνισέ το, Κούνισέ το
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-            'Studio: Create a Story':
-              name: 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
           student_description: Το Μάθημα 1 σχεδιάστηκε για να επιτρέψει σε νεαρούς
             αναγνώστες να δημιουργήσουν προγράμματα για τον υπολογιστή τα οποία τους
             βοηθούν να μάθουν να συνεργάζονται με άλλους, να αναπτύσσουν δεξιότητες
@@ -82,45 +29,6 @@ el:
           description_short: Εισαγωγή στην Πληροφορική για μαθητές που μπορούν να
             διαβάζουν.
           description_audience: Ηλικίες 6+ (απαιτείται ανάγνωση)
-          lessons:
-            'Artist: Debugging':
-              name: 'Καλλιτέχνης: Εκσφαλμάτωση'
-            'Artist: Loops':
-              name: 'Καλλιτέχνης: Επαναλήψεις'
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            'Artist: Sequence':
-              name: 'Καλλιτέχνης: Ακολουθία'
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
-            'Bee: Debugging':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Loops':
-              name: 'Μέλισσα: Επαναλήψεις'
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Conditionals:
-              name: Συνθήκες
-            Flappy:
-              name: Πουλάκι
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            'Maze: Loops':
-              name: 'Λαβύρινθος: Επαναλήψεις'
-            'Maze: Sequence':
-              name: 'Λαβύρινθος: Ακολουθία'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            Relay programming:
-              name: Προγραμματισμός με αναμετάδοση
-            'Studio: Create a Story':
-              name: 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
           student_description: Το Μάθημα 2 σχεδιάστηκε για μαθητές που μπορούν να
             διαβάσουν και χωρίς προηγούμενη εμπειρία προγραμματισμού. Στο μάθημα αυτό
             οι μαθητές θα δημιουργήσουν προγράμματα για επίλυση προβλημάτων και να
@@ -138,49 +46,6 @@ el:
             δημιουργείτε παιχνίδια και διαδραστικές ιστορίες. Αυτή είναι η συνέχεια
             του Μαθήματος 2.
           description_audience: Ηλικίες 8-18
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
-            'Artist: Functions':
-              name: 'Καλλιτέχνης: Συναρτήσεις'
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            'Artist: Patterns':
-              name: 'Καλλιτέχνης: Σχέδια'
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
-            'Bee: Debugging':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Functions':
-              name: Λειτουργίες μέλισσας
-            'Bee: Nested Loops':
-              name: 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-            Bounce:
-              name: Αναπήδηση
-            Computational Thinking:
-              name: Αλγοριθμική Σκέψη
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dice Race:
-              name: Αγώνας ζαριών
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Farmer: While Loops':
-              name: 'Αγρότης: Βρόχοι όσο'
-            Functional Suncatchers:
-              name: Λειτουργικές Ηλιοκυνηγοί
-            Internet:
-              name: Διαδίκτυο
-            Maze:
-              name: Λαβύρινθος
-            'Maze: Conditionals':
-              name: 'Λαβύρινθος: Συνθήκες'
-            Songwriting:
-              name: Σύνθεση τραγουδιού
-            'Studio: Create a Game':
-              name: 'Εργαστήριο παιχνιδιών: Δημιουργήστε ένα παιχνίδι'
-            'Studio: Create a Story':
-              name: 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
           student_description: Έτοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν
             σε θέματα προγραμματισμού που εισήχθησαν σε προηγούμενα μαθήματα και να
             βρουν ευέλικτες λύσεις σε πιο σύνθετα προβλήματα. Με το τέλος αυτού του
@@ -193,18 +58,12 @@ el:
             Παιχνιδιού!
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
             Παιχνιδιού!
-          lessons:
-            Play Lab:
-              name: Εργαστήριο Παιχνιδιού
           student_description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο
             Εργαστήριο Παιχνιδιού!
         artist:
           title: Καλλιτέχνης
           description: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
           description_short: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
           student_description: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
         hourofcode:
           title: Κλασικός λαβύρινθος
@@ -213,9 +72,6 @@ el:
             των Παγετών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
-          lessons:
-            Maze:
-              name: Λαβύρινθος
           student_description: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής
             με χαρακτήρες από τα Angry Birds, τα Plants vs. Zombies και τον Scrat
             από την Εποχή των Παγετών!
@@ -228,9 +84,6 @@ el:
             με τους φίλους σας!
           description_short: Ας χρησιμοποιήσουμε τον κώδικα για να πάμε μαζί με την
             Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
-          lessons:
-            Artist:
-              name: Γράψτε Κώδικα με την Άννα και την Έλσα
           student_description: Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί
             με την Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του
             πάγου. Θα δημιουργήσετε νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ
@@ -249,51 +102,6 @@ el:
             βρόχοι και συναρτήσεις με παραμέτρους. Αυτή είναι η συνέχεια του Μαθήματος
             3.
           description_audience: Ηλικίες 9-18
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            'Artist: For Loops':
-              name: 'Καλλιτέχνης: Βρόχοι Για'
-            'Artist: Functions':
-              name: 'Καλλιτέχνης: Συναρτήσεις'
-            'Artist: Functions with Parameters':
-              name: 'Καλλιτέχνης: Συναρτήσεις με Παραμέτρους'
-            'Artist: Variables':
-              name: 'Καλλιτέχνης: Μεταβλητές'
-            'Bee: For Loops':
-              name: 'Μέλισσα: Βρόχοι Για'
-            'Bee: Functions with Parameters':
-              name: 'Μέλισσα: Συναρτήσεις με Παραμέτρους'
-            Extreme Challenge - Comprehensive:
-              name: Ακραία πρόκληση - ολοκληρωμένη
-            Maze and Bee:
-              name: Λαβύρινθος και Μέλισσα
-            'Play Lab: For Loops':
-              name: 'Εργαστήριο Παιχνιδιού: Βρόχοι Για'
-            'Play Lab: Functions with Parameters':
-              name: 'Εργαστήριο Παιχνιδιού: Συναρτήσεις με Παραμέτρους'
-            'Play Lab: Variables':
-              name: 'Εργαστήριο Παιχνιδιού: Μεταβλητές'
-            Super Challenge - For Loops:
-              name: Σούπερ πρόκληση - για βρόχους
-            Super Challenge - Functions and Parameters:
-              name: Σούπερ πρόκληση - λειτουργίες και παραμέτρους
-            Super Challenge - Variables:
-              name: Σούπερ πρόκληση - μεταβλητές
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            'Unplugged: Envelope Variables':
-              name: 'Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών'
-            'Unplugged: For Loop Fun':
-              name: 'Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για'
-            'Unplugged: Madlibs':
-              name: 'Εκτός Σύνδεσης: Malibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
-            'Unplugged: Tangrams':
-              name: 'Εκτός Σύνδεσης: Tangram'
           student_description: Το Μάθημα 4 έχει σχεδιαστεί για τους μαθητές που έχουν
             πάρει τα μαθήματα 2 και 3. Οι μαθητές θα μάθουν πώς να αντιμετωπίσουν
             παζλ με αυξημένη πολυπλοκότητα δεδομένου ότι μαθαίνουν πώς να συνδυάσουν
@@ -307,69 +115,16 @@ el:
             ολοκληρώσει τα Μαθήματα 2 και 3.
           description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν
             έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
-          lessons:
-            'Artist: Functions':
-              name: 'Καλλιτέχνης: Συναρτήσεις'
-            'Artist: Loops':
-              name: 'Καλλιτέχνης: Επαναλήψεις'
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            'Artist: Sequence':
-              name: 'Καλλιτέχνης: Ακολουθία'
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
-            'Bee: Debugging':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Nested Loops':
-              name: 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-            'Farmer: While Loops':
-              name: 'Αγρότης: Βρόχοι όσο'
-            'Maze: Sequence':
-              name: 'Λαβύρινθος: Ακολουθία'
           student_description: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν
             έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
         usability:
           title: Δοκιμή χρηστικότητας
           description: Μία επιλογή επιπέδων από το Μάθημα 4 για δοκιμή χρηστικότητας.
-          lessons:
-            Binary:
-              name: Δυαδικό
-            For Loops:
-              name: Βρόχοι Για
-            Functions and Functions with Parameters:
-              name: Συναρτήσεις και Συναρτήσεις με Παραμέτρους
-            Intro:
-              name: Εισαγωγή
-            Variables:
-              name: Μεταβλητές
           student_description: Μία επιλογή επιπέδων από το Μάθημα 4 για δοκιμή χρηστικότητας.
         algebra:
           title: Η Επιστήμη των υπολογιστών στην Άλγεβρα
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας.
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας.
-          lessons:
-            'Calc: Defining Variables':
-              name: Καθορισμός μεταβλητών και υποκατάσταση
-            'Calc: Evaluation Blocks':
-              name: Μπλοκ αξιολόγησης και αριθμητικές εκφράσεις
-            'Eval: Boolean Operators':
-              name: Λογικοί τελεστές
-            'Eval: Conditionals':
-              name: Συνθήκες
-            'Eval: Defining Functions':
-              name: Σύνθετες συναρτήσεις
-            'Eval: Strings and Images':
-              name: Strings και εικόνες
-            'Play Lab: Booleans':
-              name: Sam η νυχτερίδα
-            'Play Lab: Defining Variables (Big Game)':
-              name: Το Μεγάλο Παιχνίδι - Μεταβλητές
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise'
-            'Unplugged: The Design Recipe':
-              name: 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
           student_description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας.
         infinity:
           title: Disney Εργαστήριο Άπειρου Παιχνιδιού
@@ -377,27 +132,8 @@ el:
             παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
           description_short: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
             ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
-          lessons:
-            Infinity:
-              name: Disney Εργαστήριο Άπειρου Παιχνιδιού
           student_description: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
             ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
-        algebrademo:
-          lessons:
-            Defining Variables:
-              name: Ορίζοντας μεταβλητές
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Making Pictures:
-              name: Δημιουργία εικόνων
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
-        K5PD:
-          lessons:
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            Writing computer programs:
-              name: Γραφή προγραμμάτων υπολογιστών
         netsim:
           title: Προσομοιωτής Διαδικτύου
         20-hour:
@@ -408,47 +144,6 @@ el:
           description_short: Αυτό το 20ωρο μάθημα καλύπτει τα βασικά των εννοιών της
             επιστήμης των υπολογιστών και του προγραμματισμού στα μαθήματα 2-4.
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
-          lessons:
-            Abstraction:
-              name: Αφαίρεση
-            Algorithms:
-              name: Αλγόριθμοι
-            Computational Thinking:
-              name: Αλγοριθμική Σκέψη
-            Conditionals:
-              name: Συνθήκες
-            Functions:
-              name: Συναρτήσεις
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Introduction to Computer Science:
-              name: Εισαγωγή στην Επιστήμη των Υπολογιστών
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Song Writing:
-              name: Συγγραφή τραγουδιού
-            The Artist:
-              name: Ο Καλλιτέχνης
-            The Artist 2:
-              name: Ο Καλλιτέχνης 2
-            The Artist 3:
-              name: Ο Καλλιτέχνης 3
-            The Artist 4:
-              name: Ο Καλλιτέχνης 4
-            The Artist 5:
-              name: Ο Καλλιτέχνης 5
-            The Farmer:
-              name: Ο Αγρότης
-            The Farmer 2:
-              name: Ο Αγρότης 2
-            The Farmer 3:
-              name: Ο Αγρότης 3
-            The Internet:
-              name: Το Διαδίκτυο
-            The Maze:
-              name: Ο Λαβύρινθος
-            Wrap-up:
-              name: συνοψίζω
           student_description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες
             Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση
             από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική
@@ -457,21 +152,11 @@ el:
           title: Επεξεργασία κώδικα
           description: Επεξεργασία κώδικα
           description_short: Επεξεργασία κώδικα
-          lessons:
-            Play Lab:
-              name: Εργαστήριο Παιχνιδιού
-            The Artist:
-              name: Ο Καλλιτέχνης
-            The Maze:
-              name: Ο Λαβύρινθος
           student_description: Επεξεργασία κώδικα
         events:
           title: Συμβάντα
           description: Συμβάντα
           description_short: Συμβάντα
-          lessons:
-            Bounce:
-              name: Αναπήδηση
           student_description: Συμβάντα
         flappy:
           title: Flappy κώδικα
@@ -479,26 +164,17 @@ el:
             Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
           description_short: Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
             λεπτά!
-          lessons:
-            Flappy Code:
-              name: Flappy κώδικα
           student_description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο
             από 10 λεπτά; Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
         jigsaw:
           title: Παζλ
           description: Δοκιμάστε τον οδηγό παζλ.
           description_short: Δοκιμάστε τον οδηγό παζλ.
-          lessons:
-            Jigsaw:
-              name: Παζλ
           student_description: Δοκιμάστε τον οδηγό παζλ.
         step:
           title: Βήμα
           description: Οδηγός με βήματα
           description_short: Οδηγός με βήματα
-          lessons:
-            Step:
-              name: Βήμα
           student_description: Οδηγός με βήματα
         Hour of Code:
           title: Ώρα του Κώδικα 2013
@@ -506,240 +182,44 @@ el:
             από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
-          lessons:
-            Hour of Code 2013:
-              name: Ώρα του Κώδικα 2013
           student_description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με
             χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
-        cspunit1:
-          lessons:
-            Text Compression:
-              name: Συμπίεση κειμένου
-        algebraPD:
-          lessons:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-        algPDmiami:
-          lessons:
-            Booleans:
-              name: Δυαδικοί
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Sam the Bat:
-              name: Sam η νυχτερίδα
-            Strings and Images:
-              name: Strings και εικόνες
         text-compression:
           title: Συμπίεση κειμένου
-          lessons:
-            Text Compression:
-              name: Συμπίεση κειμένου
-        rbo-reference:
-          lessons:
-            reference:
-              name: αναφορά
-        cspunit3:
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
-            While Loops:
-              name: Βρόχοι με «Όσο»
-        algebraPD3:
-          lessons:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Strings and Images:
-              name: Strings και εικόνες
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
-        algebraPD-NexTech:
-          lessons:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-        algebraPD-iZone:
-          lessons:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-        sciencePD2:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
         algebraPD2a:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Big Game - Variables:
-              name: Μεγάλο Kυνήγι - Mεταβλητές
-            Booleans:
-              name: Δυαδικοί
-            Defining Variables:
-              name: Ορίζοντας μεταβλητές
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Free Play:
-              name: Ελεύθερο παιχνίδι
-            Sam the Bat:
-              name: Sam η νυχτερίδα
-            Strings and Images:
-              name: Strings και εικόνες
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-        allthethings:
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
-            Bee:
-              name: Μέλισσα
-            Bounce:
-              name: Αναπήδηση
-            Farmer:
-              name: Αγρότης
-            Flappy:
-              name: Πουλάκι
-            Jigsaw:
-              name: Παζλ
-            Match:
-              name: Ταίριασμα
-            Maze:
-              name: Λαβύρινθος
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: Πολύ
-            Text Compression:
-              name: Συμπίεση κειμένου
-            Sprite Lab:
-              name: Sprite Lab
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Booleans:
-              name: Δυαδικοί
-            Defining Functions:
-              name: Ορίζοντας συναρτήσεις
-            Defining Variables:
-              name: Ορίζοντας μεταβλητές
-            'Eval: Conditionals':
-              name: 'Εκτιμητής: Συνθήκες'
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Strings and Images:
-              name: Strings και εικόνες
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-        cspfacilitator:
-          lessons:
-            App Lab:
-              name: App Lab
-            Internet Simulator:
-              name: Προσομοιωτής Διαδικτύου
-            Welcome!:
-              name: Καλώς ήρθατε!
-        K5-OnlinePD:
-          lessons:
-            Computer Science Fundamentals:
-              name: Βασικές αρχές της επιστήμης υπολογιστών
         ECSPD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-        algebraPD2:
-          lessons:
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
-            Welcome!:
-              name: Καλώς ήρθατε!
         sciencePD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-        science-PD2:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
         sciencePD2b-iZone:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
         ECSPD2-iZone:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
         ECSPD2-NexTech:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
         asUnplugged:
           description_audience: Ηλικίες 6-13
-          lessons:
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Happy Maps:
-              name: Χαρούμενοι Χάρτες
-            Move it, Move it:
-              name: Κούνισέ το, Κούνισέ το
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Songwriting:
-              name: Σύνθεση τραγουδιού
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
         afterschool1:
           description_audience: Ηλικίες 7-13
-        ScienceP3OLPT2:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
+        cspunit4draft:
+          description_short: Δεδομένα
         Special Fun:
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
         SpecialSeries:
@@ -750,24 +230,14 @@ el:
             Lab της Εποχής των Παγετώνων!
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
             Play Lab της Εποχής των Παγετώνων!
-          lessons:
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
           student_description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με
             το Play Lab της Εποχής των Παγετώνων!
-        cspunit3temp:
-          lessons:
-            While Loops:
-              name: Βρόχοι με «Όσο»
         gumball:
           title: Play Lab Τσιχλόμπαλα
           description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play
             Lab της Τσιχλόμπαλας!
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
             Play Lab της Τσιχλόμπαλας!
-          lessons:
-            Gumball Play Lab:
-              name: Play Lab Τσιχλόμπαλα
           student_description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με
             το Play Lab της Τσιχλόμπαλας!
         starwars:
@@ -775,9 +245,6 @@ el:
             Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
-          lessons:
-            Hour of Code 2015:
-              name: Ώρα του Κώδικα 2015
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
         starwarsblocks:
@@ -792,123 +259,44 @@ el:
           description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την
             Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
-          lessons:
-            Hour of Code 2015:
-              name: Ώρα του Κώδικα 2015
           student_description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve
             ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
-        ScienceP3OLPT3:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
+        oceans:
+          title: ΤΝ για τους Ωκεανούς
         AlgebraA:
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
-          lessons:
-            'Calc: Defining Variables':
-              name: 'Υπολογιστήρας: Ορισμός Μεταβλητών'
-            'Calc: Evaluation Blocks':
-              name: 'Εκτιμητής: Μπλοκ Αξιολόγησης'
-            'Eval: Functions':
-              name: 'Eval: συναρτήσεις'
-            'Eval: Strings and Images':
-              name: 'Εκτιμητής: Κείμενα και Εικόνες'
-            'Eval: Writing Contracts':
-              name: 'Εκτιμητής: Σύνταξη Συμβολαίων'
-            'Play Lab: Defining Functions':
-              name: 'Εργαστήριο Παιχνιδιού: Ορισμός συναρτήσεων'
-            'Unplugged: Contracts':
-              name: 'Εκτός Σύνδεσης: Συμβόλαια'
-            'Unplugged: The Design Recipe':
-              name: 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
           student_description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
         AlgebraB:
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
-          lessons:
-            'Eval: Boolean Operators':
-              name: 'Εκτιμητής: Δυαδικοί Τελεστές'
-            'Eval: Conditionals':
-              name: 'Εκτιμητής: Συνθήκες'
-            'Play Lab: Animation (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια (Μεγάλο Παιχνίδι)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Δυαδικοί (Μεγάλο Παιχνίδι)'
-            'Play Lab: Booleans':
-              name: 'Εργαστήριο Παιχνιδιού: Δυαδικοί'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Ανίχνευση Σύγκρουσης (Μεγάλο Παιχνίδι)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Ορισμός Μεταβλητών (Μεγάλο Παιχνίδι)'
-            'Unplugged: Booleans':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Εκτός Σύνδεσης: Ανίχνευση Σύγκρουσης και Τύπος Απόστασης'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
           student_description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
-        algebraPD1:
-          lessons:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
         csp1-2017:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            The Internet:
-              name: Το Διαδίκτυο
         csp2-2017:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Text Compression:
-              name: Συμπίεση κειμένου
         csp3-2017:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
         csp4-2017:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
         csp5-2017:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            While Loops:
-              name: Βρόχοι με «Όσο»
         CSDU3-Draft:
           description_short: Προγραμματισμός
-          lessons:
-            Functions:
-              name: Συναρτήσεις
-            Velocity:
-              name: Ταχύτητα
         TEMP CSD Unit 3:
           description_short: Προγραμματισμός
         CSF_Secret_Sample:
           description_audience: Ηλικίες 8-18
-        algebraFacilitator:
-          lessons:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
         cspunit1-support:
           lesson_groups:
             required:
@@ -917,114 +305,34 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-        allthehiddenthings:
-          lessons:
-            Game Lab:
-              name: Game Lab
-        CSDU4-Draft:
-          lessons:
-            Design Mode:
-              name: Κατάσταση Σχεδίασης
+        CSDU1-Draft:
+          description_short: Επίλυση Προβλημάτων
+        CSDU5-Draft:
+          description_short: Δεδομένα
         CSF_Secret_Sample_Story:
           description_audience: Ηλικίες 8-18+
         MikeTest:
           description_audience: Ηλικίες 8-98
-          lessons:
-            Artist Functions:
-              name: Λειτουργίες Καλλιτέχνη
         artistExemplar:
           description_audience: Ηλικίες 8-18
         teachercon:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
         gradeKinder:
           description_audience: Ηλικίες 5-18
-          lessons:
-            Debugging:
-              name: Εντοπισμός σφαλμάτων
-            Events:
-              name: Συμβάντα
-            'Jigsaw: Learn to drag and drop':
-              name: 'Παζλ: Μάθε την μεταφορά και απόθεση'
-            Loops:
-              name: Βρόχοι
-            Programming:
-              name: Προγραμματισμός
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         grade4:
           description_audience: Ηλικίες 9-99
-          lessons:
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Songwriting:
-              name: Σύνθεση τραγουδιού
         grade1:
           description_audience: Ηλικίες 5-18
-          lessons:
-            Debugging:
-              name: Εντοπισμός σφαλμάτων
-            Events:
-              name: Συμβάντα
-            'Jigsaw: Learn to drag and drop':
-              name: 'Παζλ: Μάθε την μεταφορά και απόθεση'
-            Loops:
-              name: Βρόχοι
-            Programming:
-              name: Προγραμματισμός
-            Unspotted Bugs:
-              name: Μη εντοπισμένα bugs
         grade5:
           description_audience: Ηλικίες 10-110
-          lessons:
-            'Artist: For Loops':
-              name: 'Καλλιτέχνης: Βρόχοι Για'
-            'Artist: Functions with Parameters':
-              name: 'Καλλιτέχνης: Συναρτήσεις με Παραμέτρους'
-            'Artist: Variables':
-              name: 'Καλλιτέχνης: Μεταβλητές'
-            'Bee: For Loops':
-              name: 'Μέλισσα: Βρόχοι Για'
-            'Bee: Functions with Parameters':
-              name: 'Μέλισσα: Συναρτήσεις με Παραμέτρους'
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Play Lab: Variables':
-              name: 'Εργαστήριο Παιχνιδιού: Μεταβλητές'
-            'Unplugged: Envelope Variables':
-              name: 'Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών'
-            'Unplugged: For Loop Fun':
-              name: 'Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
-        ecs-unit1:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
         ecs-unit4:
           description: Αρχές CS - Ενότητα 4
           description_short: Αρχές CS - Ενότητα 4
           student_description: Αρχές CS - Ενότητα 4
         grade3:
           description_audience: Ηλικίες 5-18
-          lessons:
-            " Bee: Conditionals":
-              name: " Μέλισσα: Συνθήκες"
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            Bee Debugging:
-              name: Εκσφαλμάτωση της Μέλισσας
-            Bounce:
-              name: Αναπήδηση
-            'Farmer: While Loops':
-              name: 'Αγρότης: Βρόχοι όσο'
         alltheplcthings:
           lesson_groups:
             required:
@@ -1033,58 +341,8 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
         grade2:
           description_audience: Ηλικίες 5-18
-          lessons:
-            Flappy:
-              name: Πουλάκι
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
-        k5concepts:
-          lessons:
-            Binary:
-              name: Δυαδικό
-            Conditionals:
-              name: Συνθήκες
-            Events:
-              name: Συμβάντα
-            For Loops:
-              name: Βρόχοι Για
-            Functions:
-              name: Συναρτήσεις
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
-            Loops:
-              name: Βρόχοι
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Variables:
-              name: Μεταβλητές
-            While Loops:
-              name: Βρόχοι με «Όσο»
-        algebrapdnext:
-          lessons:
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
-            Welcome!:
-              name: Καλώς ήρθατε!
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -1103,14 +361,6 @@ el:
           description: Φτιάξτε ένα παιχνίδι μπάσκετ
           student_description: Φτιάξτε ένα παιχνίδι μπάσκετ
           name: μπάσκετ
-        hoc-encryption:
-          lessons:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
-        csd2-2017:
-          lessons:
-            Lists:
-              name: Λίστες
         csp2-support:
           lesson_groups:
             required:
@@ -1123,97 +373,31 @@ el:
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
             δικιά σου έκδοση του Minecraft.
         flappy-impact-study:
-          lessons:
-            Flappy Code:
-              name: Flappy κώδικα
-        coursea-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-        courseb-draft:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
+          title: Κώδικας Flappy με Έρευνα
         coursec-draft:
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
         coursed-draft:
-          lessons:
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Introduction:
-              name: Εισαγωγή
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
         coursee-draft:
-          lessons:
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Introduction:
-              name: Εισαγωγή
-            Conditionals:
-              name: Συνθήκες
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
         coursef-draft:
-          lessons:
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
         classic-hoc-impact-study:
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
-          lessons:
-            Hour of Code 2013:
-              name: Ώρα του Κώδικα 2013
         hoc-impact-study:
+          title: Κλασσικός Λαβύρινθος με Έρευνα
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
-          lessons:
-            Hour of Code 2013:
-              name: Ώρα του Κώδικα 2013
-        2016_sciencePD-phase2b:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
-        2016_sciencePD_phase2b:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
+        sports:
+          title: Κωδικοποιήστε το δικό σας αθλητικό παιχνίδι
+          description_short: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
+          description: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
+          student_description: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
         csp3-support:
           lesson_groups:
             required:
@@ -1222,28 +406,6 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-        sciencepd4:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
-        science-pd-ol-pt-5:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
-        csf2harvey:
-          lessons:
-            Binary:
-              name: Δυαδικό
-        sciencepd5:
-          lessons:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
         csp5-support:
           lesson_groups:
             required:
@@ -1252,148 +414,83 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Λίστες
-            For Loops:
-              name: Βρόχοι Για
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
-        workshop-gamelab:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-            Sprites:
-              name: Χαρακτήρας
-            Input:
-              name: Είσοδος
-        coursed-ramp:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-        coursee-ramp:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-            Conditionals:
-              name: Συνθήκες
-            'Real Life Algorithms: Dice Race':
-              name: 'Αλγόριθμοι στην πραγματικότητα: Αγώνας ζαριών'
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Λίστες
-            For Loops:
-              name: Βρόχοι Για
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
-            Functions with Parameters_:
-              name: Συναρτήσεις με παραμέτρους
-        csd3-draft:
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-        csd3-old:
-          lessons:
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Λίστες
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            'null':
-              name: τίποτε
-        coursef-ramp:
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
         csp-post-survey:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        artist-and-bb8:
-          lessons:
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Bounce:
-              name: Αναπήδηση
         coursea-2017:
           title: Μάθημα A
           assignment_family_title: Μάθημα A
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         courseb-2017:
           title: Μάθημα B
           assignment_family_title: Μάθημα B
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες. (Παρόμοιο με το Μάθημα Α, αλλά με περισσότερη ποικιλία για
+            μεγαλύτερους μαθητές.)
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         coursec-2017:
           title: Μάθημα C
           assignment_family_title: Μάθημα C
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
+          description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων, και
+            γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε διαφορετικές
+            τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε στον διαδικτυακό
+            εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα εξολοκλήρου δικό
+            σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
         coursed-2017:
           title: Μάθημα D
           assignment_family_title: Μάθημα D
-          lessons:
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
+          description_short: Γρήγορα καλύψτε έννοιες από το μάθημα C, και έπειτα προχωρήστε
+            περαιτέρω με αλγόριθμους, εκφωλευμένους βρόχους, συνθήκες, και άλλα πολλά.
         coursee-2017:
           title: Μάθημα E
           assignment_family_title: Μάθημα E
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
+          description_short: Γρήγορα διδάξτε έννοιες στα Μαθήματα C & D έπειτα προχωρήστε
+            περισσότερο με τις λειτουργίες.
+          description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων, συνθήκες
+            και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο μέρος
+            αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο που μπορείτε
+            να μοιραστείτε με τους φίλους και την οικογένειά σας.
+          student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
+            συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
+            μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
+            που μπορείτε να μοιραστείτε με τους φίλους και την οικογένειά σας.
         coursef-2017:
           title: Μάθημα F
           assignment_family_title: Μάθημα F
-          lessons:
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+          description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
+          student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
         cspnovice:
           lesson_groups:
             required:
@@ -1443,113 +540,29 @@ el:
             required:
               display_name: Επισκόπηση
         express-2017:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-            Internet:
-              name: Διαδίκτυο
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
+          title: Εντατικό Μάθημα
+          assignment_family_title: Εντατικό Μάθημα
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         pre-express-2017:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-        subgoal-labels-opt-in:
-          lessons:
-            Thanks:
-              name: Ευχαριστούμε
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         csp3-research-mxghyt:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
-        e-f-ramp:
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Conditionals:
-              name: Συνθήκες
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-        new-d:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-        new-express:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-        new-e:
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Conditionals:
-              name: Συνθήκες
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-        new-f:
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-        csp3-staging:
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
-        pwc:
-          lessons:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
         hero:
+          title: 'Ναρκαλιευτής: Το Ταξίδι του Ήρωα'
+          description_short: Ο Ναρκαλιευτής επέστρεψε με μια ολοκαίνουρια δραστηριότητα
+            για την Ώρα του Κώδικα!
           description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια
             δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
           student_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
@@ -1562,223 +575,101 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        course-e-2018:
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Introduction:
-              name: Εισαγωγή
-            Conditionals:
-              name: Συνθήκες
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-        course-f-2018:
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-        csd6-old:
-          lessons:
-            Lists:
-              name: Λίστες
-            For Loops:
-              name: Βρόχοι Για
         csd3-1819draft:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
         csd3-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
         csd2-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Lists:
-              name: Λίστες
         coursea-2018:
+          title: Μάθημα A (2018)
           assignment_family_title: Μάθημα A
-          lessons:
-            'Debugging: Unspotted Bugs':
-              name: Μη εντοπισμένα bugs
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         express-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Introduction:
-              name: Εισαγωγή
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
+          title: Εντατικό Μάθημα
+          assignment_family_title: Εντατικό Μάθημα
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         courseb-2018:
+          title: Μάθημα B (2018)
           assignment_family_title: Μάθημα B
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         coursed-2018:
+          title: Μάθημα D (2018)
           assignment_family_title: Μάθημα D
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Introduction:
-              name: Εισαγωγή
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
         coursec-2018:
+          title: Μάθημα C (2018)
           assignment_family_title: Μάθημα C
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
+          description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων, και
+            γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε διαφορετικές
+            τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε στον διαδικτυακό
+            εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα εξολοκλήρου δικό
+            σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
         csd6-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Functions with Parameters_:
-              name: Συναρτήσεις με παραμέτρους\_
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
         coursee-2018:
+          title: Μάθημα E (2018)
           assignment_family_title: Μάθημα E
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Οι Ρομποτικοί φίλοι μου
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Introduction:
-              name: Εισαγωγή
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Minecraft Hour of Code:
-              name: Η Ώρα του Κώδικα με το Minecraft
+          description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων, συνθήκες
+            και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο μέρος
+            αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο που μπορείτε
+            να μοιραστείτε με τους φίλους και την οικογένειά σας.
+          student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
+            συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
+            μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
+            που μπορείτε να μοιραστείτε με τους φίλους και την οικογένειά σας.
         coursef-2018:
+          title: Μάθημα F (2018)
           assignment_family_title: Μάθημα F
-          lessons:
-            'Programming: My Robotic Friends':
-              name: Οι Ρομποτικοί φίλοι μου
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            'Algorithms: Tangrams':
-              name: 'Αλγόριθμοι: Tangram'
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
+          description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+          student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
         csp1-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            The Internet:
-              name: Το Διαδίκτυο
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -1791,17 +682,10 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        csp2-2018:
-          lessons:
-            Text Compression:
-              name: Συμπίεση κειμένου
         csp3-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
         csp-explore-2018:
           lesson_groups:
             cspSurvey:
@@ -1814,16 +698,10 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
         csp5-2018:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            While Loops:
-              name: Βρόχοι με «Όσο»
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -1897,63 +775,28 @@ el:
             required:
               display_name: Επισκόπηση
         pre-express-2018:
-          lessons:
-            'Debugging: Unspotted Bugs':
-              name: Μη εντοπισμένα bugs
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         fit-test:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-        frozen-2018:
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
-        frozen-2018-test:
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
         dance:
           description_short: Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ
             Ούρμπαν, Κιάρα, και 25 ακόμα!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
-          lessons:
-            Dance Party:
-              name: Πάρτι Χορού
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
-        frozen-2018-test-b:
-          lessons:
-            Artist:
-              name: Καλλιτέχνης
         aquatic:
           title: 'Minecraft: Υδάτινο Ταξίδι'
           description_short: Το Minecraft επιστρέφει με μία ολοκαίνουργια δραστηριότητα
             για την Ώρα του Κώδικα!
-          lessons:
-            Aquatic:
-              name: 'Minecraft: Υδάτινο Ταξίδι'
           name: θαλάσσιο
-        dance--draft:
-          lessons:
-            Dance Party:
-              name: Πάρτι Χορού
-        dance-draft:
-          lessons:
-            Dance Party:
-              name: Πάρτι Χορού
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1970,9 +813,19 @@ el:
             πρότζεκτ.
         coursef-2019:
           title: Μάθημα F (2019)
+          description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
           lesson_groups:
             csf_variables:
               display_name: Μεταβλητές
+            csf_data:
+              display_name: Δεδομένα
             csf_for_loops:
               display_name: Βρόχοι Για
             csf_internet:
@@ -1981,27 +834,17 @@ el:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            The Artist:
-              name: Ο Καλλιτέχνης
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-        dance-low:
-          lessons:
-            Dance Party:
-              name: Πάρτι Χορού
+          student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
         coursed-2019:
           title: Μάθημα D (2019)
+          description: Οι μαθητές καλλιεργούν την κατανόησή τους αναφορικά σε κύβους
+            βρόχων, συνθήκες, και γεγονότα. Πέρα από την κωδικοποίηση, οι μαθητές
+            μαθαίνουν για την ψηφιακή υπηκοότητα.
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -2013,23 +856,15 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Dance Party:
-              name: Πάρτι Χορού
+          student_description: Οι μαθητές καλλιεργούν την κατανόησή τους αναφορικά
+            σε κύβους βρόχων, συνθήκες, και γεγονότα. Πέρα από την κωδικοποίηση, οι
+            μαθητές μαθαίνουν για την ψηφιακή υπηκοότητα.
         coursee-2019:
           title: Μάθημα E (2019)
+          description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων, συνθήκες
+            και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο μέρος
+            αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο που μπορείτε
+            να μοιραστείτε με τους φίλους και την οικογένειά σας.
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -2039,22 +874,12 @@ el:
               display_name: Φωλιασμένες Επαναλήψεις
             csf_functions:
               display_name: Συναρτήσεις
-          lessons:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Songwriting:
-              name: Σύνθεση τραγουδιού
+          student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
+            συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
+            μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
+            που μπορείτε να μοιραστείτε με τους φίλους και την οικογένειά σας.
         express-2019:
+          title: Εντατικό Μάθημα (2019)
           lesson_groups:
             csf_warmup:
               display_name: Ζέσταμα
@@ -2070,27 +895,6 @@ el:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
-          lessons:
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dance Party:
-              name: Πάρτι Χορού
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2099,9 +903,6 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-          lessons:
-            'null':
-              name: τίποτε
         dance-extras-gallery:
           title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
@@ -2109,6 +910,13 @@ el:
             πρότζεκτ.
         coursec-2019:
           title: Μάθημα C (2019)
+          description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων, και
+            γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε διαφορετικές
+            τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε στον διαδικτυακό
+            εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα εξολοκλήρου δικό
+            σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2118,13 +926,13 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
+            csf_data:
+              display_name: Δεδομένα
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2133,6 +941,11 @@ el:
           title: Game Lab
         coursea-2019:
           title: Μάθημα A (2019)
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2140,13 +953,14 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         courseb-2019:
           title: Μάθημα B (2019)
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2154,54 +968,23 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-        removed19:
-          lessons:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         csd2-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Lists:
-              name: Λίστες
         csd3-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
         csd4-2019:
           lesson_groups:
             cspSurvey:
@@ -2214,9 +997,6 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -2229,44 +1009,26 @@ el:
               display_name: Έργο
             required:
               display_name: Επισκόπηση
-          lessons:
-            Surveys:
-              name: Έρευνες
         csp1-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            The Internet:
-              name: Το Διαδίκτυο
         csp2-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Text Compression:
-              name: Συμπίεση κειμένου
         csp3-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
         csp4-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
         csp5-2019:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            While Loops:
-              name: Βρόχοι με «Όσο»
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -2289,13 +1051,6 @@ el:
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
-          lessons:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2350,9 +1105,6 @@ el:
           lesson_groups:
             csp_libraries:
               display_name: Βιβλιοθήκες
-          lessons:
-            Libraries:
-              name: Βιβλιοθήκες
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2383,10 +1135,6 @@ el:
               display_name: Συναρτήσεις
             csp_project:
               display_name: Έργο
-        express-2018-vn:
-          lessons:
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -2421,55 +1169,24 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Lists:
-              name: Λίστες
         csd3-pilot:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Sprites:
-              name: Χαρακτήρας
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
-        maddie-test:
-          lessons:
-            stage 1:
-              name: στάδιο 1
         csp3-pilot:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-          lessons:
-            Debugging:
-              name: Εντοπισμός σφαλμάτων
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-          lessons:
-            Focus Area 1:
-              name: Πρόγραμμα σπουδών
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2510,40 +1227,21 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
-        peru-2019:
-          lessons:
-            Introduction:
-              name: Εισαγωγή
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
         csp6-pilot:
           lesson_groups:
             required:
               display_name: Επισκόπηση
         dance-2019:
+          title: Πάρτι Χορού
+          description_short: Κωδικοποιήστε ένα Dance Party για να το μοιραστείτε με
+            τους φίλους και την οικογένεια. Οι Beyoncé, Harry Styles, Lizzo, Lil Nas
+            X, Selena Gomez, μουσική από το «Encanto» της Disney και πολλά άλλα!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
-        k5-onlinepd-2019:
-          lessons:
-            Computer Science Fundamentals:
-              name: Βασικές αρχές της επιστήμης υπολογιστών
-            Loops:
-              name: Βρόχοι
-            Conditionals:
-              name: Συνθήκες
-            Events:
-              name: Συμβάντα
-            Functions:
-              name: Συναρτήσεις
-            Sprite Lab:
-              name: Sprite Lab
-            Variables:
-              name: Μεταβλητές
-            For Loops:
-              name: Βρόχοι Για
         dance-extras-2019:
+          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
@@ -2557,10 +1255,6 @@ el:
               display_name: Συναρτήσεις
             csp_project:
               display_name: Έργο
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: Συνθήκες
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2571,11 +1265,6 @@ el:
               display_name: Φωλιασμένες Επαναλήψεις
             csf_functions:
               display_name: Συναρτήσεις
-          lessons:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -2588,9 +1277,6 @@ el:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
-          lessons:
-            Conditionals:
-              name: Συνθήκες
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2603,9 +1289,6 @@ el:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
-          lessons:
-            Conditionals:
-              name: Συνθήκες
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -2654,32 +1337,17 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
         csd3-2020:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Text:
-              name: κείμενο
-            Sprites:
-              name: Χαρακτήρας
         coursea-2020:
           title: Μάθημα A (2020)
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2687,13 +1355,14 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         courseb-2020:
           title: Μάθημα B (2020)
+          description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και της διαδικτυακής
+            ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου δικό σας
+            παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2701,15 +1370,18 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         coursec-2020:
           title: Μάθημα C (2020)
+          description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων, και
+            γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε διαφορετικές
+            τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε στον διαδικτυακό
+            εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα εξολοκλήρου δικό
+            σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2719,13 +1391,18 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
+            csf_data:
+              display_name: Δεδομένα
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
         coursed-2020:
           title: Μάθημα D (2020)
+          description: Οι μαθητές καλλιεργούν την κατανόησή τους αναφορικά σε κύβους
+            βρόχων, συνθήκες, και γεγονότα. Πέρα από την κωδικοποίηση, οι μαθητές
+            μαθαίνουν για την ψηφιακή υπηκοότητα.
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -2737,23 +1414,15 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Dance Party:
-              name: Πάρτι Χορού
+          student_description: Οι μαθητές καλλιεργούν την κατανόησή τους αναφορικά
+            σε κύβους βρόχων, συνθήκες, και γεγονότα. Πέρα από την κωδικοποίηση, οι
+            μαθητές μαθαίνουν για την ψηφιακή υπηκοότητα.
         coursee-2020:
           title: Μάθημα E (2020)
+          description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων, συνθήκες
+            και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο μέρος
+            αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο που μπορείτε
+            να μοιραστείτε με τους φίλους και την οικογένειά σας.
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -2763,30 +1432,39 @@ el:
               display_name: Φωλιασμένες Επαναλήψεις
             csf_functions:
               display_name: Συναρτήσεις
-          lessons:
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
+          student_description: Ξεκινήστε να κωδικοποιείτε με αλγόριθμους, κύβους βρόχων,
+            συνθήκες και γεγονότα και έπειτα θα προχωρήσετε σε λειτουργίες. Στο δεύτερο
+            μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε ένα ατομικό έργο
+            που μπορείτε να μοιραστείτε με τους φίλους και την οικογένειά σας.
         coursef-2020:
           title: Μάθημα F (2020)
+          description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_variables:
               display_name: Μεταβλητές
+            csf_data:
+              display_name: Δεδομένα
             csf_for_loops:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
-          lessons:
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
+          student_description: Μάθετε να χρησιμοποιείτε διαφορετικά είδη βρόχων, γεγονότων,
+            λειτουργιών και συνθηκών. Ερευνήστε διαφορετικές τεχνικές επίλυσης προβλημάτων
+            και συζητήστε τον κοινωνικό αντίκτυπο της υπολογιστικής σκέψης και του
+            διαδικτύου. Στο δεύτερο μέρος αυτού του μαθήματος, σχεδιάστε και δημιουργήστε
+            ένα ατομικό έργο που μπορείτε να μοιραστείτε με τους φίλους και την οικογενειά
+            σας.
         express-2020:
+          title: Γρήγορο Μάθημα (2020)
           lesson_groups:
             csf_warmup:
               display_name: Ζέσταμα
@@ -2802,118 +1480,25 @@ el:
               display_name: Βρόχοι Για
             csf_sprites:
               display_name: Χαρακτήρας
-          lessons:
-            Dance Party:
-              name: Πάρτι Χορού
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-          lessons:
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
         csp1-2020:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        csp3-2020:
-          lessons:
-            Debugging:
-              name: Εντοπισμός σφαλμάτων
-        csp3-virtual:
-          lessons:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
-        jess-test-script:
-          lessons:
-            Debugging:
-              name: Εντοπισμός σφαλμάτων
-        csp5-virtual:
-          lessons:
-            While Loops:
-              name: Βρόχοι με «Όσο»
-            Variables:
-              name: Μεταβλητές
-        virtual-holding-place:
-          lessons:
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-        code-break:
-          lessons:
-            Algorithms:
-              name: Αλγόριθμοι
-            Events:
-              name: Συμβάντα
-        csp5-virtual-part2:
-          lessons:
-            While Loops:
-              name: Βρόχοι με «Όσο»
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: Βρόχοι
-            Events:
-              name: Συμβάντα
-            Conditionals:
-              name: Συνθήκες
-            Functions:
-              name: Συναρτήσεις
-            Variables:
-              name: Μεταβλητές
-            For Loops:
-              name: Βρόχοι Για
-            Sprite Lab:
-              name: Sprite Lab
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        csd3-virtual:
-          lessons:
-            Variables:
-              name: Μεταβλητές
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprites:
-              name: Χαρακτήρας
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
-            Text:
-              name: κείμενο
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-        curriculum-sandbox-levels:
-          lessons:
-            Course A:
-              name: Μάθημα A
-            Course B:
-              name: Μάθημα B
-            Course E:
-              name: Μάθημα E
-            Course F:
-              name: Μάθημα F
-            csf:
-              name: Βασικές αρχές της Επιστήμης των Υπολογιστών
         virustest:
           title: Εξομοιώνοντας μία Έξαρση
           description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε
             μια προσομοίωση από μία έξαρση ιού.
         outbreak:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: Κωδικοποίηση μίας προσομοίωσης
-            Outbreak:
-              name: Κωδικοποίηση μίας προσομοίωσης
           lesson_groups:
             outbreak:
               display_name: Προσομοίωση Επιδημικής Έξαρσης
@@ -2926,11 +1511,6 @@ el:
           student_description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε
             μια προσομοίωση από μία έξαρση ιού.
         2021drafting:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: Κωδικοποίηση μίας προσομοίωσης
-            Sprites in Action:
-              name: Χαρακτήρες σε Δράση
           lesson_groups:
             introduction:
               display_name: Εισαγωγή
@@ -2949,31 +1529,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd3-2021:
-          lessons:
-            Variables:
-              key: Μεταβλητές
-              name: Μεταβλητές
-            Random Numbers:
-              key: Τυχαίοι αριθμοί
-              name: Τυχαίοι αριθμοί
-            Sprites:
-              key: Χαρακτήρας
-              name: Χαρακτήρας
-            Sprite Properties:
-              key: Ιδιότητες Χαρακτήρα
-              name: Ιδιότητες Χαρακτήρα
-            Text:
-              key: κείμενο
-              name: κείμενο
-            Conditionals:
-              key: Συνθήκες
-              name: Συνθήκες
-            Velocity:
-              key: Ταχύτητα
-              name: Ταχύτητα
-            Functions:
-              key: Συναρτήσεις
-              name: Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2986,10 +1541,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd6-2021:
-          lessons:
-            Functions with Parameters:
-              key: Συναρτήσεις με παραμέτρους
-              name: Συναρτήσεις με παραμέτρους
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3001,11 +1552,6 @@ el:
           lesson_groups:
             lessonGroup-2:
               display_name: Έρευνα
-        csp3-2021:
-          lessons:
-            Debugging:
-              key: Εντοπισμός σφαλμάτων
-              name: Εντοπισμός σφαλμάτων
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3039,9 +1585,6 @@ el:
             lessonGroup-3:
               display_name: Έρευνα
         csp9-2021:
-          lessons:
-            Machine Learning and Bias:
-              name: Εκμάθηση μηχανής
           lesson_groups:
             lessonGroup-2:
               display_name: Έρευνα
@@ -3050,11 +1593,8 @@ el:
             lessonGroup-2:
               display_name: Έρευνα
         coursea-2021:
-          lessons:
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
-            Loops in Ice Age:
-              key: Βρόχοι στην Εποχή των Παγετώνων
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3062,13 +1602,10 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         courseb-2021:
-          lessons:
-            Move It, Move It:
-              key: Μετακίνησέ το, Μετακίνησέ το
-              name: Μετακίνησέ το, Μετακίνησέ το
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3076,13 +1613,12 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         coursec-2021:
-          lessons:
-            Binary Bracelets:
-              key: Δυαδικά Βραχιόλια
-              name: Δυαδικά Βραχιόλια
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3092,28 +1628,15 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            csf_data:
+              display_name: Δεδομένα
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
         coursed-2021:
           title: Μάθημα D (2021)
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              key: Προγραμματισμός Ρελέ
-              name: Προγραμματισμός Ρελέ
-            Dance Party:
-              key: Πάρτι Χορού
-              name: Πάρτι Χορού
-            Loops in Ice Age:
-              key: Βρόχοι στην Εποχή των Παγετώνων
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Conditionals with Cards:
-              key: Υποθέσεις με Κάρτες
-              name: Υποθέσεις με Κάρτες
-            'Unplugged: Binary':
-              key: 'Εκτός Σύνδεσης: Δυαδικοί'
-              name: Δυαδικές Εικόνες
-            Artist Binary:
-              key: Δυαδικοί Καλλιτέχνη
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -3128,11 +1651,6 @@ el:
             lessonGroup-6:
               display_name: Ψηφιακή υπηκοότητα
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: Συνθήκες
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
           lesson_groups:
             ramp_up:
               display_name: Φωλιασμένες Επαναλήψεις
@@ -3145,20 +1663,8 @@ el:
             csf_functions:
               display_name: Συναρτήσεις
         coursef-2021:
-          lessons:
-            Envelope Variables:
-              key: Μεταβλητές
-              name: Μεταβλητές
-            Internet:
-              key: Διαδίκτυο
-              name: Το Διαδίκτυο
-            For Loop Fun:
-              key: Διασκέδαση με το Βρόχο Για
-              name: Διασκέδαση με το Βρόχο Για
-            lesson-8:
-              name: Χαρακτήρες σε Δράση
-            lesson-5:
-              name: Έξαρση
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
           lesson_groups:
             ramp_up:
               display_name: Χαρακτήρας
@@ -3175,15 +1681,9 @@ el:
             lessonGroup-7:
               display_name: Ψηφιακή υπηκοότητα
         express-2021:
-          lessons:
-            Dance Party:
-              key: Πάρτι Χορού
-              name: Πάρτι Χορού
-            lesson-1:
-              name: Πάρτι Χορού
-            lesson-3:
-              name: Χαρακτήρες σε Δράση
           lesson_groups:
+            csf_warmup:
+              display_name: Προθέρμανση
             csf_loops:
               display_name: Βρόχοι
             csf_conditionals:
@@ -3205,11 +1705,6 @@ el:
             csf_events:
               display_name: Συμβάντα
         csf-2021-pilot:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: Κωδικοποίηση μίας προσομοίωσης
-            Sprites in Action:
-              name: Χαρακτήρες σε Δράση
           lesson_groups:
             ramp_up:
               display_name: Εισαγωγή
@@ -3239,27 +1734,6 @@ el:
           student_description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε
             μια προσομοίωση από μία έξαρση ιού.
         k5-onlinepd-2021:
-          lessons:
-            Loops:
-              key: Βρόχοι
-              name: Βρόχοι
-            Events:
-              key: Συμβάντα
-              name: Συμβάντα
-            Conditionals:
-              key: Συνθήκες
-              name: Συνθήκες
-            Functions:
-              key: Συναρτήσεις
-              name: Συναρτήσεις
-            Variables:
-              key: Μεταβλητές
-              name: Μεταβλητές
-            For Loops:
-              key: Βρόχοι Για
-              name: Βρόχοι Για
-            Sprite Lab:
-              key: Sprite Lab
           lesson_groups:
             k5_getting_started_1:
               display_name: Εισαγωγή
@@ -3277,15 +1751,12 @@ el:
           lesson_groups:
             lessonGroup-4:
               display_name: Έρευνα
-        kodea-pd-2021:
-          lessons:
-            Computer Science Fundamentals:
-              key: Βασικές αρχές της επιστήμης υπολογιστών
-              name: Βασικές αρχές της επιστήμης υπολογιστών
         outbreak-module:
           title: Έξαρση
         csa-videos:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Πόροι
             lessonGroup-2:
               display_name: Μονάδα 1
             lessonGroup-4:
@@ -3306,67 +1777,39 @@ el:
           lesson_groups:
             lessonGroup-2:
               description: δοκιμή
-        dlp21-csd-overview:
-          lessons:
-            lesson-1:
-              name: Επισκόπηση
-        dlp21-csp-overview:
-          lessons:
-            lesson-1:
-              name: Επισκόπηση
         csa-u6-dev:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Μαθήματα
             lessonGroup-3:
               display_name: Έργο
-        csdu6-playground:
-          lessons:
-            lesson-19:
-              name: Έργο
         csa-u7-dev:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Μαθήματα
             lessonGroup-3:
               display_name: Έργο
         spelling-bee:
-          lessons:
-            lesson-1:
-              name: Η μέλισσα της ορθογραφίας
           title: Η μέλισσα της ορθογραφίας
         outbreak-csc:
           title: Έξαρση
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Η μέλισσα της ορθογραφίας
+        csd-post-survey-2021:
+          title: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+        ai-ethics-2021:
+          description_audience: Τάξεις Έκτης Δημοτικού ως Γ Λυκείου
+        explore-data-1-2021:
+          title: Οπτικοποίηση Δεδομένων
         2022drafting:
-          lessons:
-            lesson-4:
-              name: Προσομοιωτής Επιδημικής Έξαρσης
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
           lesson_groups:
             lessonGroup-8:
               display_name: Ώρα του Κώδικα
         csf-2022-pilot:
-          lessons:
-            Sprites in Action:
-              name: Χαρακτήρες σε Δράση
           lesson_groups:
             lessonGroup-2:
               display_name: Χαρακτήρας
             lessonGroup-3:
               display_name: Μεταβλητές
-        csd6-pilot-2022:
-          lessons:
-            Functions with Parameters:
-              name: Συναρτήσεις
         coursea-2022:
-          lessons:
-            Happy Maps:
-              name: Χαρούμενοι Χάρτες
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
-            Loops in Ice Age:
-              key: Βρόχοι στην Εποχή των Παγετώνων
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3374,16 +1817,12 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
         express-2022:
-          lessons:
-            Sprites in Action:
-              name: Χαρακτήρες σε Δράση
-            Dance Party:
-              name: Πάρτι Χορού
-            lesson-3:
-              name: Χαρακτήρες σε Δράση
-            lesson-1:
-              name: Πάρτι Χορού
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -3403,11 +1842,6 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
-        csp3-2022:
-          lessons:
-            Debugging:
-              name: Εντοπισμός σφαλμάτων
-              key: Εντοπισμός σφαλμάτων
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -3427,14 +1861,6 @@ el:
             csp_project:
               display_name: Έργο
         courseb-2022:
-          lessons:
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-              key: Μετακίνησέ το, Μετακίνησέ το
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3442,15 +1868,10 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         coursec-2022:
-          lessons:
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-              key: Δυαδικά Βραχιόλια
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3458,34 +1879,20 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+            csf_data:
+              display_name: Δεδομένα
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
         csp7-2022:
           lesson_groups:
             csp_libraries:
               display_name: Βιβλιοθήκες
-        csp9-2022:
-          lessons:
-            Machine Learning:
-              name: Εκμάθηση μηχανής
-            Machine Learning and Bias:
-              name: Εκμάθηση μηχανής
         coursed-2022:
-          lessons:
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-              key: Προγραμματισμός Ρελέ
-            Dance Party:
-              name: Πάρτι Χορού
-              key: Πάρτι Χορού
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-              key: Βρόχοι στην Εποχή των Παγετώνων
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-              key: Υποθέσεις με Κάρτες
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
           lesson_groups:
             lessonGroup-6:
               display_name: Ψηφιακή υπηκοότητα
@@ -3497,13 +1904,6 @@ el:
               display_name: Συνθήκες
           title: Μάθημα D (2021)
         coursee-2022:
-          lessons:
-            Songwriting:
-              name: Σύνθεση τραγουδιού
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Conditionals:
-              key: Συνθήκες
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -3516,21 +1916,6 @@ el:
             csf_nested_loops:
               display_name: Συνθήκες
         coursef-2022:
-          lessons:
-            Sprites in Action:
-              name: Χαρακτήρες σε Δράση
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-              key: Διασκέδαση με το Βρόχο Για
-            Outbreak:
-              name: Έξαρση
-            The Internet:
-              name: Το Διαδίκτυο
-            lesson-8:
-              name: Χαρακτήρες σε Δράση
-            Internet:
-              key: Διαδίκτυο
-              name: Το Διαδίκτυο
           lesson_groups:
             ramp_up:
               display_name: Χαρακτήρας
@@ -3538,47 +1923,19 @@ el:
               display_name: Ψηφιακή υπηκοότητα
             lessonGroup-8:
               display_name: Μεταβλητές
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
         csa1-2022:
-          lessons:
-            lesson-9:
-              name: Βρόχοι
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: Μεταβλητές
-        csa3-2022:
-          lessons:
-            lesson-5:
-              name: Βρόχοι Για
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: Συνθήκες
-            lesson-16:
-              name: Εντοπισμός σφαλμάτων
-            lesson-19:
-              name: Εντοπισμός σφαλμάτων
-        csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: Βρόχοι
         coursef-2022-pilot:
-          lessons:
-            Sprites in Action:
-              name: Χαρακτήρες σε Δράση
-              key: Χαρακτήρες σε Δράση
-            Outbreak:
-              name: Έξαρση
-              key: Έξαρση
-            The Internet:
-              name: Το Διαδίκτυο
-              key: Το Διαδίκτυο
           lesson_groups:
             lessonGroup-7:
               display_name: Ψηφιακή υπηκοότητα
@@ -3586,33 +1943,130 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-8:
               display_name: Μεταβλητές
-        vpl-csd1-summer-pilot-2022:
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        csd-playground:
           lessons:
-            lesson-9:
-              name: Σχεδιασμός μαθημάτων
-        csa2-2022-exemplars:
+            lesson-7:
+              name: Εισαγωγή στα μοτίβα
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd3-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd4-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        csd6-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        csd-post-survey-2022:
+          title: Μελέτη μετά το μάθημα για τις Ανακαλύψεις της Επιστήμης της Πληροφορικής
+        testtess2:
+          name: testtess2
+        aiml-2022:
+          name: aiml-2022
+          description_short: Μάθετε για την Τεχνητή Νοημοσύνη και την Μηχανική Μάθηση
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Ασύγχρονη επέκταση εντοπισμού σφαλμάτων
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Ενότητα 2 Ασύγχρονη Εργασία
+        soccer:
+          name: ποδόσφαιρο
+          title: Δημιουργήστε κώδικα για το δικό σας παιχνίδι ποδοσφαίρου
+          description_short: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
+          description: Δημιουργήστε ένα παιχνίδι ποδοσφαίρου
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Εργαστήριο Java
+            lesson-6:
+              name: Βρόχοι
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Έρευνα
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Μεταβλητές
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Βρόχοι Για
+        hello-world-space-2022:
+          title: 'Γεια σας κόσμο: Διάστημα'
+        hello-world-soccer-2022:
+          title: 'Γεια σας κόσμο: Ποδόσφαιρο'
+        csd1-2023:
+          title: Επίλυση Προβλημάτων
+        csc-function-machines-pilot:
           lessons:
             lesson-1:
-              name: Μεταβλητές
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
-              name: Βρόχοι
-              key: Βρόχοι
-            Events:
-              name: Συμβάντα
-              key: Συμβάντα
-            Conditionals:
-              name: Συνθήκες
-              key: Συνθήκες
-            Functions:
-              name: Συναρτήσεις
-              key: Συναρτήσεις
-            Variables:
-              name: Μεταβλητές
-              key: Μεταβλητές
-            For Loops:
-              name: Βρόχοι Για
-              key: Βρόχοι Για
-            Lesson Planning:
-              key: Σχεδιασμός μαθημάτων
+              name: Τι είναι αυτός ο ήχος;
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Μεταβλητές
+            csp_conditionals:
+              display_name: Συνθήκες
+            csp_functions:
+              display_name: Συναρτήσεις
+            csp_project:
+              display_name: Έργο
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Δεδομένα
+            csp_loops:
+              display_name: Βρόχοι
+            csp_project:
+              display_name: Έργο
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Λίστες
+            lessonGroup-3:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Έργο
+        csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Βιβλιοθήκες

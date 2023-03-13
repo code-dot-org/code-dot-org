@@ -12,22 +12,22 @@ private ArrayList<Integer> num;
  * Precondition: nums contains Integer objects
 */
 public void remove_num() {
-   int a = 0;
-   Integer zero = new Integer(0);
+  int a = 0;
+  Integer zero = new Integer(0);
    
-   while (a < num.size()) {
-      if (num.get(a).equals(zero)) {
-         num.remove(a);
-      }
+  while (a < num.size()) {
+    if (num.get(a).equals(zero)) {
+      num.remove(a);
+    }
       
-      a++;
-   }
+    a++;
+  }
 }
 ```
 MARKDOWN
 
-wrong '[5, 0, 2, 7, 2, 4, 0, 8]'
-wrong '[5, 2, 7, 2, 4, 8, 0, 0]'
-wrong '[0, 0, 2, 7, 2, 4, 8, 5]'
-right '[5, 2, 7, 2, 4, 8]'
-wrong '[0, 2, 7, 2, 4, 8]'
+wrong '`[5, 0, 2, 7, 2, 4, 0, 8]`'
+wrong '`[5, 2, 7, 2, 4, 8, 0, 0]`'
+wrong '`[0, 0, 2, 7, 2, 4, 8, 5]`'
+right '`[5, 2, 7, 2, 4, 8]`'
+wrong '`[0, 2, 7, 2, 4, 8]`'

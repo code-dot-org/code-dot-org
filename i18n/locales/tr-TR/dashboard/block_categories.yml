@@ -4,13 +4,17 @@ tr:
       Actions: İşlemler
       Advanced: İleri seviye
       Behaviors: Davranışlar
+      'Behaviors ': 'Davranışlar '
+      Boolean: Boolean
       Brushes: Fırçalar
+      Category: Kategori
       Color: Renk
       Comment: Yorum
       Comments: Yorumlar
       Conditionals: Koşullar
       Dancers: Dansçılar
       Default: Varsayılan
+      Effects: Efektler
       Events: Olaylar
       Functions: Fonksiyonlar
       'Functions ': 'Fonksiyonlar'
@@ -23,10 +27,15 @@ tr:
       Logic: Mantık
       Loops: Döngüler
       Math: Matematik
+      Number: Sayı
       Numbers: Sayılar
-      Properties: Özellikleri
+      Picker: Seçici
+      Prebuilt: Önceden oluşturulmuş
+      Properties: Özellikler
       Sprites: Hareketli Nesneler
+      String: Dize
       Text: yazı
       Variables: Değişkenler
       'Variables ': 'Değişkenler'
+      'Variables  ': 'Değişkenler  '
       World: Dünya

@@ -2,6 +2,22 @@
 kk:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': орта
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': орта
+            '2.00': large
+            '3.00': extra large
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -128,6 +144,10 @@ kk:
             '"space"': кеңестік
             '"enter"': еңгізу
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер
       gamelab_atTime:
         options:
           UNIT:
@@ -142,7 +162,7 @@ kk:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': секунд
@@ -183,6 +203,12 @@ kk:
             '90': төмен
             '180': солға
             '270': жоғары
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': орта
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -417,3 +443,7 @@ kk:
         text: алдыға қозғалу
       craft_placeTorch:
         text: Шам орнату
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер

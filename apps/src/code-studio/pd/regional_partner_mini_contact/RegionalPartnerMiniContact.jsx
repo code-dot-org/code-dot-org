@@ -8,6 +8,8 @@ import FieldGroup from '../form_components/FieldGroup';
 import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ROLES = [
   'Teacher',
@@ -101,6 +103,9 @@ export class RegionalPartnerMiniContact extends React.Component {
       }
     } else if (results.responseJSON) {
       this.setState({submitted: true, submitting: false});
+      analyticsReporter.sendEvent(EVENTS.SUBMIT_RP_CONTACT_FORM_EVENT, {
+        'source page id': this.props.sourcePageId
+      });
     } else {
       this.setState({submitted: false, submitting: false});
     }

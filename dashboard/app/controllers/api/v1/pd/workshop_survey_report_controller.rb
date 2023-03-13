@@ -1,4 +1,4 @@
-require 'pd/survey_pipeline/survey_pipeline_helper.rb'
+require 'pd/survey_pipeline/helper'
 require 'honeybadger/ruby'
 
 module Api::V1::Pd

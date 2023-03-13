@@ -1,6 +1,8 @@
 // Modern skin for applab apps
 
-#divApplab.appModern, #designModeViz.appModern, .draggingParent {
+#divApplab.appModern,
+#designModeViz.appModern,
+.draggingParent {
   color: #333;
 
   button {
@@ -18,7 +20,9 @@
     }
   }
 
-  input[type=text], input:not([type]), div.textArea {
+  input[type="text"],
+  input:not([type]),
+  div.textArea {
     border: 1px solid #999;
     padding: 5px; /* padding clips text in text inputs in Firefox */
   }
@@ -37,22 +41,25 @@
     // IE9 cant get rid of the native dropdown, so dont show our custom image and
     // get rid of our right padding so that the arrow is properly aligned
     padding-right: 0\9;
-    background: transparent\9;
+    background-color: transparent\9;
 
     &::-ms-expand {
       display: none;
     }
 
     &:hover {
-      opacity: 0.8
+      opacity: 0.8;
     }
   }
 
-  button, select, input, .textArea {
+  button,
+  select,
+  input,
+  .textArea {
     outline: 0;
   }
 
-  img[data-canonical-image-url=''] {
+  img[data-canonical-image-url=""] {
     display: none;
   }
 
@@ -61,24 +68,34 @@
   }
 }
 
+/* stylelint-disable */
 // IE 11 dropdown arrow position
-_:-ms-fullscreen, :root #divApplab.appModern, #designModeViz.appModern, .draggingParent {
+_:-ms-fullscreen,
+:root #divApplab.appModern,
+#designModeViz.appModern,
+.draggingParent {
   select {
     background-position-x: right -35px;
   }
 }
+/* stylelint-enable */
 
-#divApplab.notRunning, #designModeViz.appModern, .draggingParent {
-  img[data-canonical-image-url=''], canvas:not(#turtleCanvas), .chart {
+#divApplab.notRunning,
+#designModeViz.appModern,
+.draggingParent {
+  img[data-canonical-image-url=""],
+  canvas:not(#turtleCanvas),
+  .chart {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     outline: 1px solid #bdc3c7;
     outline-offset: -1px;
   }
 
-  img[data-canonical-image-url=''] {
+  img[data-canonical-image-url=""] {
     display: block;
-    // Using !important so that object-fit-images polyfill (which creates inline background styles) doesn't override the placeholder
+    // Using !important so that object-fit-images polyfill (which creates inline background styles)
+    // doesn't override the placeholder
     background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat !important;
   }
 

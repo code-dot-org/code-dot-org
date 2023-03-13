@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import commonStyles from '../commonStyles';
 import color from '../util/color';
 import {singleton as studioApp} from '../StudioApp';

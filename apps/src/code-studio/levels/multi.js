@@ -1,9 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
-import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
+import {
+  registerGetResult,
+  onAnswerChanged,
+  resetContainedLevel
+} from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 var Multi = function(
   levelId,
@@ -143,6 +148,10 @@ Multi.prototype.ready = function() {
       // show the Unsubmit button.
       $('#' + this.id + ' .unsubmitButton').show();
     }
+
+    if (this.standalone) {
+      reportTeacherReviewingStudentNonLabLevel();
+    }
   }
 
   $('#' + this.id + ' .answerbutton').click(
@@ -188,11 +197,23 @@ Multi.prototype.ready = function() {
 
   if (this.standalone) {
     $('.submitButton').click($.proxy(this.submitButtonClick, this));
+  } else {
+    var resetButton = $('#reset-predict-progress-button');
+    if (resetButton) {
+      resetButton.click(() => resetContainedLevel());
+    }
   }
 };
 
 Multi.prototype.lockAnswers = function() {
   $('#' + this.id + ' .answerbutton').addClass('lock-answers');
+  $('#reset-predict-progress-button')?.prop('disabled', false);
+};
+
+Multi.prototype.resetAnswers = function() {
+  $('#' + this.id + ' .answerbutton').removeClass('lock-answers');
+  $('#reset-predict-progress-button')?.prop('disabled', true);
+  this.selectedAnswers.forEach(idx => this.unclickItem(idx));
 };
 
 Multi.prototype.getAppName = function() {

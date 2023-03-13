@@ -2083,23 +2083,163 @@ zh-TW:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "我叫Caia，是一名詩人，也是一名電腦科學專業的學生。我從程式設計中學到了很多東西，這些東西讓我成為了一個更好的詩人，而我的詩歌也讓我在程式設計方面做得更好，因為你必須認真思考你選擇的詞語，還有當它們彙集在一起時你會創造什麼。"
       2:
         image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "在接下來的一個小時裡，你將通過創作一首動畫詩來學習電腦科學和詩歌。從本質上講，詩歌是用文字創造藝術。我創作詩歌是為了表達我自己；我試圖用自己獨特的風格和韻律去激發受眾的想像力和情感。"
       3:
         image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "就像藝術一樣，詩歌可以有很多不同的解釋。同一首詩對不同的人可能有不同的含義，每首詩都有自己的意境。意境是你從一首詩中得到的感覺。有時人們會將某些顏色和意象與不同的意境聯繫起來。"
       4:
         image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "例如，黃色使我感到愉悅。當我想到恐懼之類的情緒時，我有時會在腦海中浮現一個漆黑的暴風雨之夜。在這個活動中，你將有機會根據你的感受來闡述和動畫化一首詩的意境。"
       5:
         image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "讓我們看看如何使用代碼來實現這一點。你將看到螢幕被分為三個主要部分。左邊是遊戲空間。你的動畫詩將在這裡出現。每首詩都有一個標題和一個作者。"
       6:
         image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "這個中間區域是工具箱。繼續進行課堂時，新的程式碼積木便會在這個位置提供。"
       7:
         image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "右邊的空間是工作區。你可將積木從工具箱拖曳至工作區，以建立你的程式。"
       8:
         image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "每個關卡的說明都會在螢幕頂部這裡顯示。若你需要提示，只需點擊燈泡即可。"
       9:
         image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "首先，選擇一首你喜歡的詩。這裡有各種各樣的詩歌，你可以在每個級別選擇新的。"
       10:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "接下來，你將從工具箱拖模動塊到你的工作區，以動畫化你的詩。 你可以選擇與詩歌意境相匹配的背景顏色或效果，然後點擊“運行”來查看詩歌的效果。"
       11:
         image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "花點時間閱讀不同的詩歌，找到一首能激發你情感的詩。考慮你的感受以及你如何通過圖像和代碼來傳達這種感受。"
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "有時一首詩的意境會在詩的一部分發生變化。一開始可能是一首聽起來歡快的詩，然後變成悲傷，或者黑暗變成光明。"
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "在這個活動中，你將使用事件。當你的詩歌中的某一行出現時，你可以使用這個事件模組來改變程式的進程。 注意，事件模組並沒有插入到主程序中。相反，它們會創建自己的小程式。"
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "通讀你的詩，尋找一個意境轉變的時刻。數一下發生在哪一行：一、二、三。在事件模組中，輸入行號。"
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "然後編寫一些程式來反映當那該行出現在螢幕上時意境的變化。當你按下“運行”，你可以看到你編碼了什麼。"
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "在詩歌中，作者用意象在讀者的腦海中描繪一幅畫面。當我們看到“鱷魚”這個詞時，我們腦海中會自動想像出一條綠色的鱷魚。為了將這樣的圖像變成動畫，我們將使用精靈圖。"
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "這將創造一個新的精靈圖模組，讓你能夠製作一個精靈圖並為它選擇服裝。選擇一套你認為與詩歌匹配的服裝。"
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "要改變精靈圖的位置，你可以點擊位置模組中的大頭針圖示，然後點擊播放區中你想讓它前往的位置。"
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "在接下來的幾個級別中，你會看到一些新的模組。這個模組允許你改變精靈圖的大小。這個模組允許你使用行為讓你的精靈圖動起來。"
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "如果一首詩提到徘徊的雲朵，首先製作雲精靈圖，然後選擇這個行為模組，將其拖出來，選擇徘徊。"
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "確保你的精靈圖服裝相配。當你按下運行鍵時，你會讀到並看到一片徘徊的雲朵。"
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "現在你可以添加文字圖像來說明詩中的文字。玩得開心！"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "恭喜！你剛剛學習了電腦科學的基礎知識以及如何找到一首詩的意境。現在，你可以創建自己的動畫詩歌，與朋友們分享。"
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "你會仔細地為整首詩選擇一個簡單的場景嗎？"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "還是會用大量事件為你的每一行詩創造一個新的場景？"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "在教程的最後，你可以與朋友分享作品的連結。"
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "發揮你的想像力，玩得開心！"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "大家好！我叫Erin，是Code.org的一名軟體工程師。太令人激動了，因為我要做你們使用的教程了！我們稱之為“你好世界”。"
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "“你好世界”是電腦科學中的一個著名短語，展示這個短語是學習電腦科學常見的第一步。在接下來的一個小時裡，你將在精靈圖實驗室中通過程式設計開始學習電腦科學。"
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "精靈圖實驗室是一個你可以用來創建富有想像力和有趣項目的工具。你將看到螢幕被分為三個主要部分。左邊是播放區，這是你的精靈圖將出現的地方。"
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "精靈圖是螢幕上你可以與之互動的對象，就像故事或遊戲中的角色或道具。"
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "這個中間區域是工具箱。繼續進行課堂時，新的程式碼積木便會在這個位置提供。"
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "右邊的空間是工作區。你可將積木從工具箱拖曳至工作區，以建立你的程式。"
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "每個關卡的說明都會在螢幕頂部這裡顯示。若你需要提示，只需點擊燈泡即可。"
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "首先，讓我們製作一個精靈圖！這個模組讓你賦予精靈圖一個服裝和一個位置。我們用服裝這個詞來形容精靈圖的外表。要改變精靈圖的位置，你可以點擊位置模組中的大頭針圖示，然後點擊你想要它去的地方。"
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "現在讓我們讓精靈圖介紹自己！為了讓精靈圖說些什麼，使用這個“Say”模組，並將其添加到你的程式中。確保在“Say”模組中選擇的服裝與精靈圖中的服裝相匹配。"
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "當你按下“運行”時，精靈圖將說出你所告知它的任何文本。現在開始使用精靈圖實驗室，看看你的想像力會把你帶到哪裡！"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "現在你已經學習了如何使用精靈圖實驗室，你想讓你的程式在有人使用它時做出反應。要做到這一點，你需要使用事件。事件告訴程式監聽將要發生的事情，然後立即做出反應。"
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "事件的一些例子是監聽滑鼠點擊、箭頭按鈕或螢幕上的點擊。\"when clicked\"這樣的模組被稱為事件模組。當檢測到適當的操作時，連接到事件模組的代碼就會運行。"
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "例如，如果我將這個“say”模組附加到“when clicked”事件中，那麼當用戶點擊它時，我的精靈圖就會說話。注意，事件模組並沒有插入到主程序中。相反，他們會創建自己的小程式。"
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "如果你有多個精靈圖，你可以使用額外的事件來講述一個互動故事。"
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "你將很快學習如何在精靈圖實驗室中做更多的事情，包括改變一個精靈圖的大小或外觀，設置不同的背景，播放聲音等等。 當有人與你的精靈圖互動時，你希望它們做什麼？這由你來決定！"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "恭喜！你剛剛學習了電腦科學的基礎知識。現在你可以使用精靈圖實驗室創建任何你想要的東西。"
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "你會看到一個寫著服裝的按鈕。當你點擊它時，你可以從庫中選擇新的精靈圖服裝。"
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "你也可以自己繪製！一旦你有喜歡的服裝，就可以回到代碼中。"
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "現在，為你的精靈圖選擇服裝。"
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "如果你看一下工具箱，你會發現一些你之前沒有見過的全新模組。例如，有許多行為模組能夠讓你的精靈圖以有趣的方式移動。"
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "你可以使用“when touches”事件模組來控制兩個精靈圖碰撞時發生的事情。"
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "找到“create effect”模組。這個強大的模組可以用來製作大量根據命令爆炸、爆破或下雨的精靈圖。"
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "看看周圍，嘗試試驗這些新的模組和功能。在教程的最後，點擊“分享”按鈕，與朋友分享你的作品連結。"
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "在精靈圖實驗室，你擁有開始開發應用程式、遊戲和其他新程式所需的所有強大技能！用你的新能力做好的事情。要友善和尊重，就像你在紙上創作東西或與朋友交談一樣。"
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "那麼你會創造什麼呢？你可以講一個關於你自己的故事，或者用你自己的特殊角色編一個。也許你會在學校的下一個專案中使用你的新電腦科學技能！發揮你的想像力，玩得開心！"

@@ -15,6 +15,20 @@ it:
       'App Project: Bugs and Features': 'App Project: Malfunzionamenti e Funzionalità'
       'App Project: Linking Screens': 'App Project: Linking Screens'
       'App Project: Screen Import': 'App Project: Importazione videata'
+      'App: Choose a Kid''s Movie': 'App: scegli un film per bambini'
+      'App: Friend Finder': 'App: il trovamico'
+      'App: Guess the Number': 'App: indovina il numero'
+      'App: How Many Countries': 'App: quanti paesi'
+      'App: Improved Pet App': 'App: app per animali domestici migliorata'
+      'App: Is It Your Birthday?': 'App: è il tuo compleanno?'
+      'App: My Famous Birthday': 'App: Il mio compleanno famoso'
+      'App: National Parks': 'App: Parchi nazionali'
+      'App: Outfit Picker': 'App: scelta di abiti'
+      'App: Pet Chooser': 'App: selettore per animali domestici'
+      'App: Stamp Notebook': 'App: quaderno dei timbri'
+      'App: Story Creator': 'App: generatore di storie'
+      'App: The Fastest Finger': 'App: il dito più veloce'
+      'App: Where Should I Live?': 'App: dove dovrei andare a vivere?'
       Arrays: Insiemi
       Artist Intro with JR Hildebrand: Introduzione Artistica con JR Hildebrand
       Artist Intro with JR Hildebrande: Introduzione artistica con JR Hildebrande
@@ -25,6 +39,8 @@ it:
       Back and Forth: Avanti e indietro!
       Basic Conditionals: Condizionali di Base
       Bass, Mid, and Treble: Bassi, medi e alti
+      Be a Super Digital Citizen: Super cittadino digitale
+      Binary Bracelets - Unplugged Activity: Braccialetti binari - Attività tradizionale
       Binary Numbers: Numeri Binari
       Board Input and Output: Input e Output del Circuito
       Boolean Comparison: Confronto Booleano
@@ -33,6 +49,7 @@ it:
       'Bunny ': Flipper
       CS Discoveries Post-course Survey: Sondaggio Post-corso di Alla Scoperta dell'Informatica
       Cake Defender: Difensore della Torta
+      Challenge: Sfida
       Challenge Levels: Livelli della Sfida
       'Challenge: Draw an Image': 'Sfida: Disegna un''Immagine'
       Challenges: Sfide
@@ -45,6 +62,8 @@ it:
       Collisions in Games: Collisioni nei Giochi
       Color LEDs: LED colorati
       Combining Projects: Combinare Progetti
+      Conditionals with Cards - Unplugged Activity: Istruzioni condizionali con le
+        carte da gioco - Attività tradizionale
       'Conditionals: If Statements': 'Condizionali: Istruzioni If'
       'Conditionals: If and If/Else Statements': 'Condizionali: Istruzioni If e If/Else'
       Course E Artist Project: 'Corso E: Progetto con l''Artista'
@@ -54,6 +73,7 @@ it:
       Create Your Own Animation: Crea la Tua Animazione
       Create a Story: Crea una Storia
       Create your project: Crea il tuo progetto
+      Customize: Personalizza
       Dance Crews: Squadre di ballo
       Data Visualization: Visualizzazione dei Dati
       De-bugging with the Step Button: Debugging con il Pulsante di Fase
@@ -61,6 +81,8 @@ it:
       Debugging with the Step Button: Debugging con il Pulsante di Fase
       Demo Apps: App Demo
       Design Mode: Design Mode
+      Designing for Accessibility: Progettare per l'accessibilità
+      Digital Sharing - Unplugged Activity: Condivisione digitale - Attività tradizionale
       Dogger Example: È pericoloso attraversare
       Drawing: Disegni
       Drawing Shapes: Disegnare Forme
@@ -69,11 +91,17 @@ it:
       Events and Linking Screens: Eventi e Collegare Schermate
       Events and Properties: Eventi e Proprietà
       Example: Esempio
+      Example Projects: Progetti di esempio
       Example projects: Progetti d'esempio
       Expanding Personal Website: Espandere il Sito Web Personale
       Expanding Your Website: Espandere il Tuo Sito Web
       Experiment with Web Lab: Sperimenta con il Web Lab
       Exploration: Esplorazione
+      'Exploration: For Loops': 'Esplorazione: cicli con contatore'
+      'Exploration: Rikki''s Poster': Esplorazione - Il cartellone di Rikki
+      'Exploration: Sample Apps': Esplorazione - Programmi di esempio
+      'Exploration: Sample Programs': Esplorazione - Programmi di esempio
+      'Exploration: Sample Project': Esplorazione - Programmi di esempio
       Explore HTML: Esplora HTML
       Exploring more CSS: Esplorare altri CSS
       Extra: Supplementare
@@ -82,19 +110,26 @@ it:
       Finishing Functions: Finire le Funzioni
       Finishing Touches: Finire Tocchi
       Flyer Game: Gioco del Volantino
+      Follow the Algorithm - Unplugged Activity: Segui l'algoritmo - Attività tradizionale
       Follow the Mouse: Segui il Topo
       Fonts and Style: Caratteri e Stile
+      For Loop Fun - Unplugged Activity: Divertirsi con i cicli con contatore - Attività
+        tradizionale
       For Loops: Cicli con contatore
       For Loops and Color LEDs: Per Cicli e LED colorati
       For Loops and Repeat Blocks: Cicli Continui Per e Blocchi di Ripetizione
       Free Play: Tempo di giocare
+      'Free Play: Make a Scene': Esercizio libero - Crea una scena
+      'Free Play: Make an Interactive Scene': Esercizio libero - Crea una scena interattiva
       Functions: Funzioni
       Functions with Parameters: Funzioni con parametri
       Geometric Sun: Sole geometrico
       Get In Formation: Tutti in formazione!
+      Graph Paper Programming - Unplugged Activity: Programmazione su carta a quadretti
+        - Attività tradizionale
       HTML Tags: Tag HTML
       Headings in HTML: Intestazioni in HTML
-      Hello World: Ciao Mondo
+      Hello World: Ciao mondo
       How to Create a Simple Function: Come Creare una Semplice Funzione
       How to Make a Sprite: Come creare un personaggio
       Ice Age Loops: Cicli dell'Era Glaciale
@@ -105,14 +140,14 @@ it:
       Intro to For Loops: Introduzione ai Cicli Per
       Intro to Sprites: Introduzione agli Sprite
       Intro to Variables: Introduzione alle Variabili
-      Introducing Sprite Lab: Introduzione al Laboratorio dei Personaggi
+      Introducing Sprite Lab: Introduzione al Laboratorio dei personaggi
       Introduction to Arrays: Introduzione agli array
       Introduction to Game Lab: Introduzione al Game Lab
       Iteration and Parameters: Iterazione e Parametri
       LED Apps: App LED
       Layout with CSS: Layout con CSS
       Learning from Simulations: Imparare dalle simulazioni
-      Lesson Extras: Esercizi Supplementari
+      Lesson Extras: Esercizi supplementari
       Lesson Overview: Panoramica della Lezione
       Levels: Esercizi
       Light Show: Spettacolo di Luci
@@ -127,35 +162,47 @@ it:
         con i Blocchi'
       Measures: Battute
       'Minecraft: Hero''s Journey': 'Minecraft: Il viaggio dell''eroe'
+      'Mini-Project: About Me': Mini progetto - A proposito di me
       'Mini-Project: Alien Dance Moves': 'Mini Progetto: Mosse di Ballo dell''Alieno'
       'Mini-Project: Alien Dance Party': 'Mini progetto: Festa da Ballo dell''Alieno'
-      'Mini-Project: Outbreak Simulator': Mini progetto - Simulatore di pandemia
-      'Mini-Project: Royal Battle': 'Mini Progetto: Battaglia Reale'
-      'Mini-Project: Snowflake #1': 'Mini Progetto: Fiocco di neve #1'
-      'Mini-Project: Snowflake #2': 'Mini Progetto: Fiocco di neve #2'
+      'Mini-Project: Create a Virtual Pet': Mini progetto - Crea un animaletto virtuale
+      'Mini-Project: Outbreak Simulator': Mini progetto - Simulatore di epidemia
+      'Mini-Project: Royal Battle': Mini progetto - Una battaglia con gli eventi
+      'Mini-Project: Snowflake #1': 'Mini progetto - Fiocco di neve #1'
+      'Mini-Project: Snowflake #2': 'Mini progetto - Fiocco di neve #2'
+      'Mini-Project: Sticker Art': Mini progetto - L'arte degli adesivi
       'Mini-Project: Swimming Fish': 'Mini Progetto: Pesce che Nuota'
       'Mini-Project: Swimming Fish (continued)': 'Mini Progetto: Pesce che Nuota (continua)'
-      'Mini-Project: Virtual Pet': 'Mini progetto: Animaletto Virtuale'
-      'Mini-project: Chase Game': 'Mini Progetto: Gioco di Inseguimento'
-      'Mini-project: Flappy Game': 'Mini Progetto: Gioco Flappy'
+      'Mini-Project: User Input Programs': Mini progetto - Programmi basati sull'input
+        dell'utente
+      'Mini-Project: Virtual Pet': Mini progetto - Animaletto domestico virtuale
+      'Mini-project: Chase Game': Mini progetto - Gioco di inseguimento
+      'Mini-project: Flappy Game': Mini progetto - Gioco Flappy
       'Mini-project: Interactive Poster': 'Mini Progetto: Poster Interattivo'
-      'Mini-project: Jorge the Dog': 'Mini Progetto: Cane'
-      'Mini-project: Sticker Design': 'Mini progetto: Progettazione dell''Adesivo'
+      'Mini-project: Jorge the Dog': Mini progetto - Il cane
+      'Mini-project: Sticker Art': Mini progetto - L'arte degli adesivi
+      'Mini-project: Sticker Design': Mini progetto - Progettazione degli adesivi
       Modify simulation variables: Modifica le variabili di simulazione
       More Buttons: Più pulsanti
       More Input: Altri Input
       More Parameters: Più Parametri
       Motorcycle: Motocicletta
+      Move It Move it Video  - Unplugged Activity: Video - Muovilo Muovilo - Attività
+        tradizionale
       Movement with the Counter Pattern: Movimento con lo Schema Contatore
       Multiframe Animations: Animazioni Multi-Fotogramma
       Musical Arrays: Insiemi Musicali
+      My Loopy Robotic Friends - Unplugged Activity: I miei ciclici amici robotici
+        - Attività tradizionale
       My Online Neighborhood: Il mio quartiere digitale
+      My Robotic Friends - Unplugged Activity: I miei amici robotici - Attività tradizionale
       Naming Variables: Nominare le Variabili
       Nested Loops with the Bee: Cicli Nidificati con l'Ape
       New Shapes: Nuove Forme
       Orientation: Orientamento
       Overview: Panoramica
       Pair Programming: Programmazione in coppia
+      Picturing Data: Rappresentazione grafica dei dati
       Planning: Gestione della classe
       Platform Jumper - Background and Variables: Saltatore di Piattaforme - Sfondo
         e Variabili
@@ -168,12 +215,13 @@ it:
       Post-Course Survey Instructions: Istruzioni del Sondaggio Post-Corso
       Practice: Pratica
       Predict: Predict
-      Prediction: Previsione
+      Prediction: Esercizio di previsione
       Programming with Rey and BB-8: Programmare con Rey e BB-8
       Programs that Repeat: Programmi che Ripetono
       Project: Progetto
       Project - Background and Variables: Progetto - Sfondo e Variabili
       Project - Sprites and Interactions: Progetto - Sprite e Interazioni
+      Project Guide: Guida al progetto
       Project Work: Lavoro Progettuale
       Properties: Proprietà
       Publishing Your Website: Pubblicare il tuo sito web
@@ -182,6 +230,8 @@ it:
       Random Numbers: Numeri Casuali
       Reading Sensors: Leggere i Sensori
       Reflection: Riflessione
+      Relay Programming - Unplugged Activity: Programmazione a staffetta - Attività
+        tradizionale
       Repeat Blocks: Blocchi Ripeti
       Repeat Blocks with BB-8: Blocchi Ripeti con BB-8
       Repeat Blocks with the Artist: Blocchi Ripeti con l'Artista
@@ -203,29 +253,43 @@ it:
       Side Scroller: Scorrimento Laterale
       Simple Circuits: Circuiti Semplici
       Skill Building: Esercizi per lo sviluppo delle competenze
+      Skill-Building: Esercizi per lo sviluppo delle competenze
       Sliders: Cursori
       Smart Bike - Blinkers: Bici Intelligente - Frecce
+      Songwriting - Functions Unplugged Activity: Composizione di canzoni - Attività
+        tradizionale sulle funzioni
       Speed it Up, Slow it Down: Accelerare, rallentare
       Sprite Lab Example Project: Progetto di esempio nel Laboratorio dei personaggi
       Sprite Lab Project: Progetto del Laboratorio dei personaggi
+      Sprite Properties: Proprietà del personaggio
       Sprite Scenes: Scene dello Sprite
       Sprites and the Draw Loop: Sprite e Cicli Infiniti
       Star Chaser: Cacciatore di Stelle
       Styling Text: Stilizzare il Testo
       Styling with Classes: Stilizzare con le Classi
       Styling your Website: Stilizzare il tuo Sito Web
+      Teach A.I. a new word: 'Insegna una nuova parola: Intelligenza Artificiale (IA)'
       Teach AI a New Word: 'Apprendimento automatico IA: video'
       Text Compression: Compressione del testo
       The Animation Tab: The Animation Tab
       The Artist in Code Studio: L'Artista in Code Studio
+      The Big Event - Unplugged Activity: Il grande evento - Attività tradizionale
       The Buzzer: Il Cicalino
       The Collector: Il Collezionista
       The Harvester: La contadina
+      The Internet - Unplugged Activity: Internet - Attività tradizionale
+      The Power of Words - Unplugged Activity: Il potere delle parole - Attività tradizionale
+      The Right App - Unplugged Activity: L'app giusta - Attività tradizionale
+      Train AI to Clean the Ocean: Addestra l'Intelligenza Artificiale a ripulire
+        l'oceano
+      Train an AI to Clean the Ocean: Addestra l'Intelligenza Artificiale a pulire
+        l'oceano
       UI Element Properties: Proprietà Elemento UI
       User Interface: Interfaccia Utente
       Using Getters and Setters: Usare Getter e Setter
       Using HTML Tags: Usare Tag HTML
       Using Random Numbers: Usare i Numeri Casuali
+      Using Training Data: Utilizzo dei dati di apprendimento
       Using the Grid: Usare la Griglia
       Using the LED: Usare i LED
       Using the Repeat Block: Uso del blocco Ripeti
@@ -233,23 +297,119 @@ it:
       Variables: Variabili
       Velocity: Velocità
       Video: Video
+      'Video - Maze Intro: Programming with Blocks': 'Video - Introduzione al labirinto:
+        programmare con i blocchi'
+      'Video:  Debugging with the Step Button': Video - Correggere gli errori con
+        il pulsante "Fai un passo"
+      'Video:  Minecraft - The Agent': Video - Minecraft - L'agente
+      'Video:  Text  and Prompts': Video -  Testo  e richieste all'utente
+      'Video: "If/Else"': Video - "Se/Altrimenti"
+      'Video: AI: What is Machine Learning?': 'Video - AI: Cos''è l''apprendimento
+        automatico (machine learning)'
+      'Video: Artist Intro with JR Hildebrand': Video - JR Hildebrand presenta l'artista
+      'Video: Artist Intro with JR Hildebrande': Video - JR Hildebrand presenta l'artista
       'Video: CS Matters': 'Video: L''importanza dell''informatica'
+      'Video: Code Your Own Flappy Game': Video - Programma il tuo gioco in stile
+        Flappy
       'Video: Conditional Statements': 'Video: Dichiarazioni condizionali'
+      'Video: Conditionals: If Statements': 'Video - Istruzioni conditionali: le istruzioni
+        "se"'
+      'Video: Conditionals: If and If/Else Statements': 'Video - Istruzioni condizionali:
+        le istruzioni "se" e "se/altrimenti"'
+      'Video: Dance Party Events': Video - Ballando col codice - Eventi
+      'Video: Dance Party Measures': Video - Ballando col codice - Battute
+      'Video: Dance Party Party On!': Video - Ballando col codice - Parte la festa!
+      'Video: Dance Party Properties': Video - Ballando col codice - Proprietà
+      'Video: Dance Party Warm Up': Video - Ballando col codice - Preparazione
+      'Video: De-bugging with the Step Button': Video - Correggere gli errori con
+        il pulsante "Fai un passo"
+      'Video: Debugging with Scrat ': 'Video - Debugging con Scrat '
+      'Video: Debugging with the Step Button': Video - Correggere gli errori con il
+        pulsante "Fai un passo"
       'Video: Drawing in Game Lab - Part 1': 'Video: Disegnare nel Game Lab - Parte
         1'
       'Video: Drawing in Game Lab - Part 2': 'Video: Disegnare nel Game Lab - Parte
         2'
-      'Video: For Loops': 'Video: per i loop'
+      'Video: Events': Video - Eventi
+      'Video: Follow The Digital Trail': Video - Segui le tue tracce digitali
+      'Video: For Loops': Video - Cicli con contatore
       'Video: Functions': 'Video: Funzioni'
+      'Video: Getting Loopy': Video - Diventare ripetitivi
+      'Video: Happy Maps - Unplugged Activity': Video - Mappe felici - Attività tradizionale
+      'Video: Harvesting with Conditionals': Video - Istruzioni condizionali con la
+        contadina
+      'Video: Hello World: Do What You Want': Video - Ciao mondo - Crea ciò che vuoi
+      'Video: Hello World: Programming with Events': Video - Ciao mondo - Programmare
+        con gli eventi
+      'Video: Hello World: Welcome to Sprite Lab': Video - Ciao mondo - Benvenuti
+        nel Laboratorio dei personaggi
+      'Video: How to Create a Simple Function': Video - Come creare una funzione semplice
+      'Video: How to Make a Sprite': Video - Come creare un personaggio
+      'Video: Ice Age Loops': Video - Cicli dell'era glaciale
       'Video: If/Else Statements': 'Video: Dichiarazioni If/Else'
+      'Video: Impacts on Society': Video - Ripercussioni sociali
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a Web Lab - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a Web Lab - Parte 2'
+      'Video: Introducing Sprite Lab': Video - Introduzione al Laboratorio dei personaggi
       'Video: Introduction to Arrays': 'Video: introduzione agli Insiemi'
-      'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduzione'
-      'Video: Problem Solving Process': 'Video: Processo di Risoluzione di Problemi'
-      'Video: What Makes a Computer, a Computer?': 'Video: Che cosa rende un Computer,
-        un Computer?'
-      Warm Up: Riscaldamento
+      'Video: Introduction to Play Lab': Video - Introduzione al Laboratorio
+      'Video: Loops in Artist': Video - Cicli con l'artista
+      'Video: Loops with the Artist': Video - Cicli con l'artista
+      'Video: Maze Intro - Programming with Blocks': 'Introduzione al labirinto: programmare
+        con i blocchi'
+      'Video: Maze Intro - Programming with Blocks ': 'Video - Introduzione al labirinto:
+        programmare con i blocchi '
+      'Video: Maze Intro: Programming with Blocks': 'Video - Introduzione al labirinto:
+        programmare con i blocchi'
+      'Video: Measures': Video - Battute
+      'Video: Minecraft - Congratulations': Video - Minecraft - Congratulazioni
+      'Video: Minecraft - Functions': Video - Minecraft - Funzioni
+      'Video: Minecraft - Repeat Loops': Video - Minecraft - Istruzioni di ripetizione
+        (cicli)
+      'Video: Minecraft - The Agent': Video - Minecraft - L'agente
+      'Video: Minecraft: Voyage Aquatic Conditionals': Video - Minecraft - Viaggio
+        acquatico - Istruzioni condizionali
+      'Video: Minecraft: Voyage Aquatic Congratulations': Video - Minecraft - Viaggio
+        acquatico - Congratulazioni
+      'Video: Minecraft: Voyage Aquatic Introduction': Video - Minecraft - Viaggio
+        acquatico - Introduzione
+      'Video: Minecraft: Voyage Aquatic Repeat Until': Video - Minecraft - Viaggio
+        acquatico - Ripeti fino a che -
+      'Video: Nested Loops': Video - Cicli annidati
+      'Video: Nested Loops with the Bee': Video - cicli annidati con l'ape
+      'Video: Outbreak Simulator: Introduction': Video - Simulatore di epidemia -
+        Introduzione
+      'Video: Pair Programming': Video - La programmazione in coppia
+      'Video: Pair Programming ': 'Video - Programmazione a coppie '
+      'Video: Problem Solving Process': 'Video: processo di risoluzione di problemi'
+      'Video: Programming with Blocks': Video - Programmare con i blocchi
+      'Video: Programming with Rey and BB-8': Video - Programmare con Rey e BB-8
+      'Video: Properties': Video - Proprietà
+      'Video: Repeat Blocks': Video - Blocchi di ripetizione
+      'Video: Repeat Blocks with BB-8': Video - Blocchi di ripetizione con BB-8
+      'Video: Repeat Blocks with the Artist': Video - Blocchi di ripetizione con l'artista
+      'Video: Repeat Until Blocks': Video - Blocco di ripetizione "fino a che"
+      'Video: Repeat Until Statements': Video - Istruzione di ripetizione "fino a
+        che"
+      'Video: Sprites in Action': Video - Personaggi in azione
+      'Video: Star Wars Project': Video - Progetto Star Wars
+      'Video: Text and Prompts': Video - Testo e richieste all'utente
+      'Video: The Artist in Code Studio': Video - L'artista in Code Studio
+      'Video: The Big Event - Unplugged Activity': Video - Il grande evento - Attività
+        tradizionale
+      'Video: The Collector': Video - La collezionista
+      'Video: The Harvester': Video - La contadina
+      'Video: Training Data & Bias': Video - Dati di apprendimento e distorsioni
+      'Video: Unplugged Variables in Envelopes': Video - Variabili nelle buste - Attività
+        tradizionale
+      'Video: Using the Repeat Block': Video - Usare i blocchi di ripetizione
+      'Video: Variables in Artist': Video - Variabili con l'artista
+      'Video: Warm Up': Video - Preparazione
+      'Video: What Makes a Computer, a Computer?': 'Video: cos''è che fa di un computer,
+        un computer?'
+      'Video: While Loops with the Farmer': Video - Cicli "mentre" con la contadina
+      'Video: Wrap-up': Video - Conclusione
+      Warm Up: Preparazione
       Website Project: Progetto del Sito Web
       Welcome to Monster Town: Benvenuto nella Città dei Mostri
       Where'd They Go?: Dove sono andati?

@@ -49,7 +49,7 @@ Wir hoffen, dass es bei den Schülern das Interesse weckt weiterzulernen. Die Fo
 
 #### Warum ist das wichtig?
 
-Die Technologie verändert alle Branchen auf unserem Planeten. 2015 gab es in den USA 7 Millionen offene Stellen, einschließlich Kunst und Design, die Programmierfähigkeiten voraussetzen. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Was unsere Schüler auch sein werden, wenn sie erwachsen sind, ob sie Arzt, Unternehmer Politiker oder Künstler, sie werden Selbstvertrauen und einen Wettbewerbsvorteil haben, wenn sie wissen, wie Technologie geschaffen wird. <br />
+Die Technologie verändert alle Bereich unserer Welt. 2015 gab es in den USA 7 Millionen offene Stellen, einschließlich Kunst und Design, die Programmierfähigkeiten voraussetzen. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Was unsere Schüler auch sein werden, wenn sie erwachsen sind, ob Arzt, Unternehmer Politiker oder Künstler, sie werden Selbstvertrauen und einen Wettbewerbsvorteil haben, wenn sie wissen, wie Technologie geschaffen wird. <br />
 
 <a id="sample-emails"></a>
 
@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-Die Hour of Code soll das Programmieren entmystifizieren und zeigen, dass Informatik keine Raketenwissenschaft ist - jeder kann die Grundlagen lernen," sagte Hadi Partovi, Gründer und CEO von Code.org. Mehr als 100 Millionen Schüler haben bereits bei der Hour of Code mitgemacht. Die Nachfrage nach Informatikbildung für das 21. Jahrhundert überschreitet alle Grenzen und kennt keine Grenzen." <br /> <br />
+Die Hour of Code soll das Programmieren entmystifizieren und zeigen, dass Informatik keine Raketenwissenschaft ist - jeder kann die Grundlagen lernen," sagte Hadi Partovi, Gründer und CEO von Code.org. Mehr als 100 Millionen SchülerInnen haben bereits bei der Hour of Code mitgemacht. Die Nachfrage nach Informatikbildung für das 21. Jahrhundert überschreitet alle Grenzen und kennt keine Grenzen." <br /> <br />
 
 #### Über Code.org
 
-Code.org ist eine gemeinnützige 501c3-Organisation, die sich dafür einsetzt, dass mehr junge Frauen und Schüler aus anderen unterrepräsentierten Gruppen an Informatikunterricht teilnehmen. Unsere Vision ist, dass alle Schüler in allen Schulen die Möglichkeit haben, Computerprogrammierung zu lernen. Nach ihrer Gründung 2013 organisierte Code.org die Kampagne Hour of Code, die bisher mehr als 100 Millionen Schüler in die Informatik eingeführt hat. Sie arbeitet landesweit mit 70 öffentlichen Schulbezirken zusammen, um die Informatikprogramme zu erweitern. Code.org wird durch philanthropische Spenden von Konzernen, Stiftungen und großzügigen Privatpersonen, einschließlich Microsoft, Facebook, Infosys Foundation USA, Amazon und anderen unterstützt. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org ist eine gemeinnützige 501c3-Organisation, die sich dafür einsetzt, dass mehr junge Frauen und SchülerInnen aus anderen unterrepräsentierten Gruppen am Informatik-Unterricht teilnehmen. Unsere Vision ist, dass alle Schüler in allen Schulen die Möglichkeit haben, Computerprogrammierung zu lernen. Nach ihrer Gründung 2013 organisierte Code.org die Kampagne Hour of Code, die bisher mehr als 100 Millionen SchülerInnen in die Informatik eingeführt hat. Sie arbeitet landesweit mit 70 öffentlichen Schulbezirken zusammen, um die Informatikprogramme zu erweitern. Code.org wird durch philanthropische Spenden von Konzernen, Stiftungen und großzügigen Privatpersonen, einschließlich Microsoft, Facebook, Infosys Foundation USA, Amazon und anderen unterstützt. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

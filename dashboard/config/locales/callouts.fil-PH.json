@@ -1428,6 +1428,340 @@
         },
         "MC HOC 2016 New Walk": {
           "MC_HOC_2016_New_Walk_callout2": "Pindutin ang \"Run\" upang magsimulang gumalaw."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo.",
+          "make_sprite": "Gamitin ang mga block dito para gumawa ng sprite!"
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Mag-click dito para maipakita ang grid."
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Baguhin ang numero dito"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Narito ang code"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Idagdag ang iyong code dito"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Baguhin ang numero dito"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Add this block to your program!"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Idagdag ang block na ito sa iyong program.",
+          "arrow_buttons": "Pindutin ang mga arrow button para kontrolin ang iyong dancer."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Idagdag ang block na ito sa iyong program!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Magdagdag ng isang bagong kaganapan sa iyong programa."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Bagong block!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Bagong block!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Bagong block!",
+          "new_block_4": "Bagong block!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Mag-click dito upang palakihin ang bloke.",
+          "pointerlocation": "Mag-drag ng isang bloke ng paksa dito."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Ang maliit na mga instruksyon na ito ay nagsasabi sa kompyuter na magpatakbo ng MALALAKING tipag ng code na may parehong mga pangalan sa workspace."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Isa itong `paulit-ulit` na loop! I-click ito sa workspace at magdagdag ng code na gusto mong patakbuhin nang paulit-ulit."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Maaaring mag-hover ang Agent sa ibabaw ng tubig, ngunit hindi ang manlalaro!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Hindi mo maaaring itapon ang mga bloke na ito, ngunit maaari mong i-edit ang mga ito!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Naglagay tayo ng ilang mga bloke dito para makapagsimula ka"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Ang code na ito ay magsisimula sa paggawa ng iyong bahay. Matatapos mo ba ito?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program",
+          "craft_drag_block_callout": "Mag-drag ng \"move forward\" na block at i-snap ito sa ibaba ng kabilang bloke"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga bloke dito"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Ang code na ito ay magusuri sa laba, maaari ka bang makadagdag ng utos para makasulong?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Minahin ang bakal na ito!"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan."
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "Ito ay nagbibigay-daan sa iyo na makapili ng \"random\" na tunog, kung saan nangangahulugan na hindi mo alam kung ano ang makukuha mo hanggang marinig mo ito!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Matapos ikonekta ang lahat ng mga bloke, pindutin ang \"Run\" para simulan ang iyong programa."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan."
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "Mayroong isa lang sa mga blokeng ito sa loob ng toolbox. Paano mo ito magagamit?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto."
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "Gamitin ang berdeng drop down na arrow para baguhin ang mga direksyon."
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro."
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "Maaari kang kumuha ng karagdagang mga bloke sa toolbox kung kailangan mo ang mga ito!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Ang numerong apat na nasa kalabasa ay nagsasabi sa iyo na mayroong apat na mga kalabasa ang magagamit sa pagpili."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!"
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Matapos ikonekta ang lahat ng mga bloke, pindutin ang \"Run\" para simulan ang iyong programa."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.",
+          "courseC_maze_programming3_3": "Ang mga blokeng ito ay bato at hindi maaaring itapon."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo."
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.",
+          "courseC_maze_programming7_2": "Ang mga blokeng ito ay yari sa bato at hindi maaaring itapon."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "Mayroon ka lang isa sa mga blokeng ito ang magagamit sa palaisipang ito."
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "Hindi ko kinakailangang gumamit ng mga kulay para makuha nang tama ang palaisipang ito. Kung gusto mo, ang `random color` na bloke ay nagpapadali nito!"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Tandaan, suriin kung makita kung BAWAT ulap ay mayroong BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "Gamitin ang loop na ito para kolektahin ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan)."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo."
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Matapos ikonekta ang lahat ng mga bloke, pindutin ang \"Run\" para simulan ang iyong programa."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.",
+          "stone_block_2": "Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring itapon."
+        },
+        "courseE_aboutme_22022": {
+          "": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "Kapag ang berdeng bloke ito ay tumatakbo, lahat ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos iguhit ang unang parisukat?"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "Ang iyong mga bloke para sa paglikha ng mga function ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Matapos ikonekta ang lahat ng mga bloke, pindutin ang \"Run\" para simulan ang iyong programa."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Gamitin ang block na ito upang magtakda ng bagong background."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Gamitin ang block na ito upang magtakda ng bagong background."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gamitin ang block na ito kasama ang isa sa mga pag-uugali sa ibaba."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gamitin ang block na ito kasama ang isa sa mga pag-uugali sa ibaba."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Mag-click dito para paganahin ang code."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Bagong block!",
+          "hello_world_new_block": "Bagong block!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Bagong block!",
+          "hello_world_new_block": "Bagong block!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Mag-click muna dito!"
         }
       }
     }

@@ -38,7 +38,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'counts puzzle position and total in lesson' do
     # default script
-    sl = Script.twenty_hour_unit.script_levels[1]
+    sl = Unit.twenty_hour_unit.script_levels[1]
     assert_equal 1, sl.position
     assert_equal 20, sl.lesson_total
 
@@ -58,7 +58,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @student = create :student
 
-      @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_script = create(:script, name: 'test-script',  instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
       @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
       @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
     end
@@ -105,7 +105,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
 
     test 'get_example_solutions returns empty array if not instructor of course' do
-      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: unit)
 
@@ -139,15 +139,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sl = create(:script_level, levels: [level])
 
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
-    end
-
-    # Should be removed as part of this task:
-    # https://codedotorg.atlassian.net/browse/JAVA-525
-    test 'get_example_solutions for javalab level with example (deprecated)' do
-      level = create(:javalab, :with_example_solutions)
-      sl = create(:script_level, levels: [level])
-
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/s/csa-examples/lessons/1/levels/1/"]
     end
 
     test 'get_example_solutions for javalab level with exemplar' do
@@ -248,7 +239,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with custom route' do
-    summary = Script.hoc_2014_unit.script_levels.first.summarize
+    summary = Unit.hoc_2014_unit.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
@@ -766,7 +757,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'end of lesson' do
-    script = Script.find_by_name('course1')
+    script = Unit.find_by_name('course1')
 
     assert script.lessons[0].script_levels.last.end_of_lesson?
     assert script.lessons[1].script_levels.last.end_of_lesson?
@@ -777,11 +768,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    script_level = ScriptLevel.cache_find(Script.twenty_hour_unit.script_levels[0].id)
-    assert_equal(Script.twenty_hour_unit.script_levels[0], script_level)
+    script_level = ScriptLevel.cache_find(Unit.twenty_hour_unit.script_levels[0].id)
+    assert_equal(Unit.twenty_hour_unit.script_levels[0], script_level)
 
-    script_level2 = ScriptLevel.cache_find(Script.course1_unit.script_levels.last.id)
-    assert_equal(Script.course1_unit.script_levels.last, script_level2)
+    script_level2 = ScriptLevel.cache_find(Unit.course1_unit.script_levels.last.id)
+    assert_equal(Unit.course1_unit.script_levels.last, script_level2)
 
     # Make sure that we can also locate a newly created level.
     script_level3 = create(:script_level)

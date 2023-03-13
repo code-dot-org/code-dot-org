@@ -819,6 +819,12 @@
   coursed-2021_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2021_gradelevel: 8-12-vuotiaille
   coursef-2021_gradelevel: 9-13-vuotiaille
+  coursea-2022_gradelevel: 4-7-vuotiaille
+  courseb-2022_gradelevel: 5-8-vuotiaille
+  coursec-2022_gradelevel: 6-10-vuotiaille
+  coursed-2022_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2022_gradelevel: 8-12-vuotiaille
+  coursef-2022_gradelevel: 9-13-vuotiaille
   accelerated_gradelevel: "10+ -vuotiaille (kurssin 3 jälkeen)"
   codeorg_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
   codeintl_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
@@ -1267,3 +1273,4 @@
   ai_microsoft_thanks: "Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä ja taitoja menestyä 2000-luvulla."
   ai_activity: "Toiminta"
   ai_description: "Kuvaus"
+  hoc2022_landing_page_create_title: "Luo"

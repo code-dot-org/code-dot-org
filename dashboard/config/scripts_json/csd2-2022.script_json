@@ -10,7 +10,18 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey",
+          "key": "340a3627-eb27-42c9-8649-24b9b77e8c48"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -22,12 +33,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 22:52:01 UTC",
+    "serialized_at": "2022-10-06 17:33:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,7 +102,7 @@
         "assessment_opportunities": "1. **Identify the reasons someone might visit a given website**\r\n\r\n\tOn the activity guide, check that students have reasons that a user might visit each website, such as learning more about a topic or entertaining themselves.\r\n    \r\n2. **Identify the reasons someone might create a given website**\r\n\r\n\tOn the activity guide, check students' reasons for why the creators would make their respective sites. Student explanations may include pragmatic reasons, such as getting feedback and advice from others, or more social reasons such as personal expression.\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  Why do people create web pages?**  \r\n\r\n\r\nEvery website has a purpose, a reason someone created it and others use it. In this lesson, students will start to consider the purposes a website might serve, both for the users and the creators. Students will explore some sample websites and discuss the purpose they serve for their creators. They are then asked to reflect on reasons that someone might want to create websites.",
-        "preparation": "* Print a copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print a copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This unit is all about the World Wide Web, with a focus on creating websites for self expression. To start students thinking about why they might want to create a website, they must begin to consider how websites are useful tools for both users and creators. The lesson opens with popular websites because students are familiar with them, but students are asked to narrow their vision to simpler sites that are within the scope of what they will be able to make in this course.",
         "student_overview": "**Question of the Day:  Why do people create web pages?**\n\nIn this lesson, you will explore the various purposes that web pages serve users and creators. \n"
       },
@@ -111,7 +123,7 @@
         "assessment_opportunities": "1. **Explain that HTML allows a programmer to communicate the way content should be structured on a web page**\n\n\tIn the final reflection prompt, students should give an explanation of how HTML is used to structure content on a page.\n\n2. **Write a simple HTML document that uses opening and closing tags to structure content**\n\n\tLevel 6 on Code Studio provides a mini-rubric to assess student use of HTML.\n\n3. **Understand how to use lesson resources provided in Web Lab**\n\n\tAs students progress through the HTML lesson, check that they are looking through the drop-down tips on the right hand side of the instructions, clicking into the map levels in the \"Help and Tips\" tab, and making use of the inspector tool.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\nIn this lesson students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson.",
-        "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson introduces many new concepts and tools to students. They are introduced to HTML, the Web Lab tool, and how to navigate lesson resources on Code.org in general. While the understanding of HTML as a way to communicate the structure of a web page is a critical learning objective, this lesson has students do minimal programming since there are many other new ideas and tools to grasp. In the next lesson students will have more time to spend programming in HTML.",
         "student_overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
@@ -132,7 +144,7 @@
         "assessment_opportunities": "1. **Use heading tags to change the appearance of text on a web page.**\r\n\r\n\tSee the multiple choice question on Level 8 and the rubric on Level 9.\r\n\r\n2. **Structure content into headings, subheadings, and paragraphs.**\r\n\r\n\tSee the rubric on Level 9.\r\n    \r\n3. **Use a structured practice to collaboratively create a digital artifact.**\r\n\r\n\tAs students move through the lesson, ensure that that are following the guidelines for pair programming as described in the video.  In the wrap up journal prompt, check that student responses describe effective collaboration.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we work together to fix problems with our websites?**\r\n\r\nIn this lesson, students continue to use HTML to structure text on web pages, this time in pairs,  with a focus on working together and debugging problems with their sites.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  ",
-        "preparation": "* Have student journals ready to give back.\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Have student journals ready to give back.\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson introduces the core practices of pair programming and debugging.  These will be used throughout the unit and align with authentic practices used by industry professionals. It also covers the heading tags that students will use in their pages for the rest of the unit and reinforces the general structure of HTML (opening tag / content / closing tag).\r\n\r\n",
         "student_overview": "**Question of the Day: How can we work together to fix problems with our websites?**\n\nIn this lesson, you will learn about HTML headings and how to use them to create page and section titles for web pages. \n\n"
       },
@@ -153,7 +165,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals. ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I use HTML to express a personal value?**\r\n\r\nIn this optional mini-project, students use what they have learned to create their own personal web page on a topic of their choice.  The lesson starts with a review of the HTML that students have learned.  They then begin their project by designing a web page and identifying which tags they will use to implement it.  They then create their web pages in Web Lab and share with the class. Optionally, after engaging in a formal feedback process, they may make final changes to their websites before reflecting on their process.  This project can be completed in one day or expanded over several days, depending on the scheduling needs of the class.",
-        "preparation": "* Print out a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print out a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This project allows students more time to practice the content that they have already learned. It is intentionally open-ended and flexible to allow classes to spend one or several days, depending on the pacing needs of the students or the school calendar.",
         "student_overview": "**Question of the Day: How can I use HTML to express a personal value?**\n\nIn this lesson, you will create a simple personal web page on a topic of your choice. \n\n"
       },
@@ -174,8 +186,8 @@
         "assessment_opportunities": "1. **Understand and explain reasons that it is difficult to control who sees information published online.**\r\n\r\n\tIn page 2 the Social Sleuth activity guide, look at students' explanations of how information was accidentally shared.\r\n\r\n2. **Understand and justify guidelines for safely publishing information online.**\r\n\r\n\tReview students' checklists in the lesson wrap up.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can you make sure that your private information stays private?**\r\n\r\nThis lesson takes a step back from students’ work developing web pages to help them articulate what personal information they choose to share digitally and with whom. It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents look at several social media pages to determine what sorts of information people are sharing about themselves or one another. Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realize that they don’t have control over information released online.",
-        "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "Now that students are beginning to share information publicly, it's crucial that they are instilled with an understanding of the potential consequences of sharing personal information online.\n\nIn this lesson students look through several example social media profiles for fake students. Individually these pages contain relatively innocuous information, but when students cross reference information across multiple profiles they see how a detailed picture (or [v digital_footprint/csd/2021]) can start to form. Through this activity students see that even information that they may not see as private on its own can share more information than intended when combined with other small details.",
+        "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "purpose": "Now that students are beginning to share information publicly, it's crucial that they are instilled with an understanding of the potential consequences of sharing personal information online.\n\nIn this lesson students look through several example social media profiles for fake students. Individually these pages contain relatively innocuous information, but when students cross reference information across multiple profiles they see how a detailed picture (or [v digital_footprint/csd/2022]) can start to form. Through this activity students see that even information that they may not see as private on its own can share more information than intended when combined with other small details.",
         "student_overview": "**Question of the Day: How can you make sure that your private information stays private?**\n\nIn this lesson, you will think about the personal information that you choose to share digitally through various websites, apps, and social media. \n\n"
       },
       "seeding_key": {
@@ -195,7 +207,7 @@
         "assessment_opportunities": "1. **Use CSS selectors to style HTML text elements.**\r\n\r\n\tSee Level 10 in Code Studio.\r\n\r\n2. **Link to an external style sheet.**\r\n\r\n\tSee Level 10 in Code Studio.\r\n\r\n3. **Explain the differences between HTML and CSS in both use and syntax.**\r\n\r\n\tSee the review at the main activity.  You may also want to collect a T-chart from each group.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we change the style of text on a web page?**\r\n\r\nThis lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. ",
-        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson introduces students to a new language (CSS), and to the idea that different computer languages have different functions and syntax.  While only a few CSS properties are introduced in the core lesson, students are encouraged to use the optional activities at the end of the lesson to explore more ways that they can express themselves using CSS.",
         "student_overview": "**Question of the Day: How can we change the style of text on a web page?**\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },
@@ -216,7 +228,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**How can you express your personal style on a web page?**\r\n\r\nIn this optional mini-project, students use what they have learned to create their own styled web page on a topic of their choice. The lesson starts with a review of the CSS that students have learned. They then begin their project by designing a web page and identifying which properties they will use to implement it. They create their web pages in Web Lab and share with the class.  After engaging in a formal feedback process, they make final changes to their websites before reflecting on their process.  This project can be completed in one day or expanded over several days, depending on the scheduling needs of the class.",
-        "preparation": "* Print a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This project gives students more time to practice the content that they have already learned. It is intentionally open-ended and flexible to allow classes to spend one or several days, depending on the pacing needs of the students or the school calendar.",
         "student_overview": "**Question of the Day: How can you express your personal style on a web page?**\n\nIn this lesson, you will create your own styled web page!\n\n"
       },
@@ -237,7 +249,7 @@
         "assessment_opportunities": "1. **Explain the purpose of copyright.**\r\n\r\n\tIn the wrap up journal prompt, check that students are thinking of reasons that people may want their intellectual property covered under copyright law.\r\n\r\n2. **Identify the rights and restrictions granted by various Creative Commons licenses**\r\n\r\n\tIn the activity guide, check that students are choosing licenses and providing explanations consistent with the given scenarios.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What kind of rules protect everyone's rights when we use each other's content?**\r\n\r\nStarting with a discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content. They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. ",
-        "preparation": "* Preview Creative Commons Overview - Video. You may need to download it before school if YouTube is blocked.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview Creative Commons Overview - Video. You may need to download it before school if YouTube is blocked.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "Until this point the only content that students have used on their web pages is their own, but in the next lesson they will be adding images to their sites. Before they do so, they need to understand the rules governing how to legally use content they find on the web. We use the Creative Commons license as a clearer alternative to the more restrictive standard copyright and guide students through searching for, using, and properly citing Creative Commons licensed media.",
         "student_overview": "**Question of the Day: What kind of rules protect everyone's rights when we use each other's content?**\n\nIn this lesson, you will explore the various Creative Commons licenses. \n"
       },
@@ -258,7 +270,7 @@
         "assessment_opportunities": "1. **Follow copyright law, accurately attributing others when using their work.**\n\n\tSee Level 7 in the Code Studio lesson.\n    \n2. **Add an image to a web page**\n\n    See Level 7 in the Code Studio lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\r\n\r\nStudents start the class by considering the ethical implications of using images on their websites, specifically in terms of intellectual property. They then learn how to add images to their web pages using the &lt;img&gt; tag and how to cite the image sources appropriately.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson introduces images, which are different from earlier tags in that they are 'self-closing' and include attributes.  Students should understand that these tags do not surround content in the same way as other tags.\r\n\r\nThis is also the first time that students are encouraged to use content from others, and provides them an opportunity to put into practice what they have learned about intellectual property and copyright.",
         "student_overview": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\nIn this lesson, you will learn how to add images to your web pages making sure to keep copyright and Creative Commons licenses in mind. \n\n"
       },
@@ -279,7 +291,7 @@
         "assessment_opportunities": "1. **Identify websites as a form of personal expression**\r\n\r\n\tIn the activity guide and discussion, check that students have clearly explained the purpose of their own web pages and why that purpose is personally relevant to them.\r\n    ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use websites to express ourselves?**\r\n\r\nIn this lesson students investigate ways to use websites as a means of personal expression and develop a list of topics and interests that they would want to include on a personal website. Students begin by brainstorming different ways that people express and share their interests and ideas. Students then look at a few exemplar websites to identify ways they express ideas. Finally, students brainstorm and share a list of topics and interests they might want to include on a personal website; they will reference this list as they progress through the unit.",
-        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson emphasizes that web development, and by extension computer science, is an avenue for self expression. The warm up situates web development as another means of self-expression alongside visual art, dance, music, fashion, social media, and many other ways students are likely already expressing themselves. Seeing student exemplars helps scope students' expectations for their own pages. The activity situates web development within the Problem Solving Process framework, and brainstorming content for their website provides students an opportunity to define the ways that they would like to express themselves through their pages. ",
         "student_overview": "**Question of the Day: How can we use websites to express ourselves?**\n\nIn this lesson, you will explore and brainstorm different interests and ideas that people can express and share using websites. "
       },
@@ -300,7 +312,7 @@
         "assessment_opportunities": "1. **Use CSS properties to change the layout properties of elements.**\n\n\tSee Level 8 in Code Studio.\n\n2. **Create a CSS rule-set for the body element that impacts all elements on the page.**\n\n\tSee Level 8 in Code Studio",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we style the images and layouts of our pages?**\r\n\r\nThis lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to their personal websites.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson builds on what students previously learned about CSS properties, this time looking at properties that can be used on elements.  These new properties impact the visual look of the web page beyond its text and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href=\"http://www.w3schools.com/cssref/\"> W3 Schools </a>.",
         "student_overview": "**Question of the Day: How can we style the images and layouts of our pages?**\n\nIn this lesson, you will learn more CSS style properties, this time focusing on non-text elements.\n"
       },
@@ -321,7 +333,7 @@
         "assessment_opportunities": "1. **Logically separate the content, structure and formatting of a digital artifact**\r\n    \r\n    In the activity guide, check that the design sketch includes the content, and that the tag and style columns in the \"Describe your styles\" section are filled out with HTML tags on the left and style descriptions or CSS on the right.\r\n    \r\n2. **Create documentation that explains the design decisions of an artifact**\r\n\r\n\tIn the wrap up, check that students have tied their design decisions in the Activity Guide with the goal of the website as stated in the earlier lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What do we need to do to prepare to build our web pages?**\r\n\r\nIn this lesson, students engage in the \"prepare\" stage of the problem-solving process, deciding what elements and style their web page will have. They begin by reviewing the different HTML, CSS, and digital citizenship guidelines they will need in building their web pages. They then describe and sketch their pages, listing the tags and styles they will use to get the layout and design that they decided on. They then move online to find and download the images they will need for their pages. Afterwards, they reflect on how their plan will ensure that the website does what it is designed to do.",
-        "preparation": "* Print out one copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print out one copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson reinforces the idea that students should design and plan their pages before they start coding.  It provides a structured process for planning that ties into the problem solving process that threads throughout the course.  The plan should tie back to the \"Define\" worksheet that students completed a couple lessons before, and gives them something to use as they build their pages in the next lesson.",
         "student_overview": "**Question of the Day: What do we need to do to prepare to build our web pages?**\n\nIn this lesson, you will work on the \"prepare\" stage of the problem-solving process to decide what elements and style your web page will have. \n\n"
       },
@@ -342,7 +354,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of this chapter's learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What skills and practices help when we code web pages?**\r\n\r\nAfter quickly reviewing their debugging process, students go online to create the pages that they have planned out in previous lessons, with the project guides as a reference. Once they have finished with their pages, they complete a short reflection on the process, what they are most proud of, and what they would like feedback on. They then engage in a structured peer feedback process before making final edits to the pages. Afterwards, they reflect on the skills and practices that helped them to be successful.\r\n\r\n",
-        "preparation": "* Ensure students have access to the Project Guide from the last lesson.\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Ensure students have access to the Project Guide from the last lesson.\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "In the previous lessons, students have planned out their personal web page. In this lesson, they'll get to create and share it with the rest of the world. This should reinforce the value of the planning process, and also give them a chance to practice effective communication through peer feedback. Students should have a chance to engage in all five practices in this lesson: Problem Solving, Persistence, Communication, Collaboration, and Creativity.",
         "student_overview": "**Question of the Day: What skills and practices help when we code web pages?**\n\nIn this lesson, you will work on creating the web pages that you have planned out in previous lessons. "
       },
@@ -363,7 +375,7 @@
         "assessment_opportunities": "1. **Identify the reasons someone might create a given website**\r\n\r\n\tCheck the table in the activity guide for reasonable purposes for each websites.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What are the different reasons people make websites?**\r\n\r\n\r\nIn this lesson, students explore the different reasons people make websites. They first think of different reasons that they visit websites, then investigate web sites that have been created to address a particular problem. After deciding what different purposes those websites might serve for the creators, they begin to think about the problem that they might want to solve with a web site. At the end of the lesson, students form the groups that they will be in for their chapter projects.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lessons transitions students from thinking about websites as a form of personal expression to considering how websites might serve broader purposes for their creators. It also serves as a soft introduction to the chapter project, in which students will work in teams to create websites to solve a problem of their choosing.",
         "student_overview": "**Question of the Day: What are the different reasons people make websites?**\n\nIn this lesson, you will explore different reason that people make websites and the problems that may be solved with your own website.  \n\n"
       },
@@ -384,7 +396,7 @@
         "assessment_opportunities": "**1. Students ablility to work as a team**\n\nUse the short answer responses on the second page of the activity guide to assess student mastery of learning goals of this lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we work together to make a great team?**\r\n\r\nStudents work together to set group norms and brainstorm what features they would like their websites to have. The class starts by thinking of some popular teams in different contexts, then reflects on what makes teams successful. They then get into their own teams and make a plan for how they will interact and reach success in their own projects. Afterwards, the teams begin to brainstorm ideas for their website project.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson explicitly addresses the challenges students may find working in a group and supports them in crafting a plan to overcome these challenges.  Students should refer back to this lesson throughout the unit as they work in teams to complete their projects.",
         "student_overview": "**Question of the Day: How can we work together to make a great team?**\n\nYou will work together with a team to brainstorm possible features you'd like your websites to have and discuss how you will interact with your team in order to be successful. "
       },
@@ -405,7 +417,7 @@
         "assessment_opportunities": "1. **Use basic web searching techniques to find relevant information online**\r\n\r\n\tIn the activity guide, check that students have filled out the chart with relevant web sites.\r\n\r\n2. **Identify elements that contribute to a website's trustworthiness or untrustworthiness**\r\n\r\n\tUse the students' trustworthiness checklist and discussions around it to get a broader sense of the elements students can identify, as well as the final journal prompt for more individual reflection about how a student could use those elements in a personal website.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How do we find relevant and trustworthy information on the Internet?**\r\n\r\nThis lesson encourages students to think more about how to find relevant and trustworthy information online. After viewing and discussing a video about how search engines work, students will search for information relevant to their site. They'll need to analyze the sites they find for credibility to decide which are appropriate to use on their own website.",
-        "preparation": "* Print a copy of the Internet Scavenger Hunt activity guide for each pair of students, or prepare to project the questions to the class.\n* Create a blank poster titled **Trustworthiness Checklist** and place it on the wall.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "* Print a copy of the Internet Scavenger Hunt activity guide for each pair of students, or prepare to project the questions to the class.\n* Create a blank poster titled **Trustworthiness Checklist** and place it on the wall.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "As students are finishing up their own websites, this lesson encourages them to also think about their responsibilities as consumers of information. By the end of this lesson, students should have developed strategies for determining which websites are more trustworthy and tie these strategies back to their own role as content producers by looking for ways to make their own sites appear more trustworthy.",
         "student_overview": "**Question of the Day: How do we find relevant and trustworthy information on the Internet?**\n\nIn this lesson, you will discover how to find relevant and trustworthy information online!\n"
       },
@@ -426,7 +438,7 @@
         "assessment_opportunities": "1. **Group elements using classes in order to create more specific styles on their website.**\r\n\r\n\tSee Level 5 on Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can we create different styles for the same type of element?**\r\n\r\nThis lesson expands on the CSS that students have already learned by introducing classes, which allow web developers to treat groups of elements they want styled differently than other elements of the same type. Students first investigate and modify classes on various pages, then create their own classes and use them to better control the appearance of their pages.  They then reflect on how they could use this skill to improve their team websites.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "Up until this point, the only styling students have been able to do is styling by element, which means that every element of a particular kind has the same style. Classes allow for web developers to group together a set of elements they want to style.  This means students can single out a certain element they want to style or group together elements from one or more types of elements. Once elements are in a class, the class can be used as a selector in a style rule. \r\n\r\nNote: Single elements can also be selected by id, but this type of selection is possible with a class applied only to that single element. Because id selection does not add any extra functionality, it is not taught in this course.",
         "student_overview": "**Question of the Day:  How can we create different styles for the same type of element?**\n\nYou will learn about CSS classes in this lesson which will allow you to style groups of elements differently than other elements of the same type. \n"
       },
@@ -447,7 +459,7 @@
         "assessment_opportunities": "**1. Distribute tasks amongst team members.**\r\n\r\nCheck over the work plan at the bottom of the activity guide and make sure that it is specific enough to be useful and that it seems to be a fair and reasonable division of work.\r\n\r\n**2. Seek and incorporate feedback from team members.**\r\n\r\nIn the wrap up, check that students have reasonable ways of handling disagreement with one another.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How do we plan a web page as a group?**\r\n\r\nStudents work in teams to plan out their web sites and create a sketch of each page. They then download the media that they will need for their sites. At the end of the activity, they decide how the work will be distributed among team members and report whether the entire group agreed to the plan.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This lesson gives students a chance to plan as a team. They will need to make many group decisions and have effective ways of resolving disagreements. The plan that they create will be referenced over the next few lessons as they build their sites.",
         "student_overview": "**Question of the Day:  How do we plan a web page as a group?**\n\nYou will work together with a team today to plan out your final websites and decide how the work will be distributed among yourselves.  \n\n"
       },
@@ -468,7 +480,7 @@
         "assessment_opportunities": "1. **Use HTML to create links between pages**\r\n\r\n\tSee assessment level in Code Studio.\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we combine several different web pages into one website?**\r\n\r\nStudents begin the lesson by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.",
-        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "Links are the defining characteristic of the web.  Although they seem simple, they are what allow us to move seamlessly across the Internet. This lesson will give students practice in using links and introduce them to good navigation practices for their sites.",
         "student_overview": "**Question of the Day: How can we combine several different web pages into one website?**\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
       },
@@ -489,7 +501,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What skills and practices will help us work together to make a great website?**\r\n\r\nTeams have spent a lot of time throughout the chapter planning their websites. In this lesson they are finally able to code their pages. Using the project guide, the team works together and individually to code all of the pages, then puts all of the work together into a single site.",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "This project emphasizes many of the core practices of this course. Students will need creativity, problem solving skills, persistence, collaboration and communication to complete their websites. ",
         "student_overview": "**Question of the Day: What skills and practices will help us work together to make a great website?**\n\nIn this lesson, your team will finally code the pages that you have been planning!"
       },
@@ -507,10 +519,21 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of the learning goals for this unit. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can we use feedback to make our websites better?**\r\n\r\nThis lesson focuses on the value of peer feedback. Students first reflect on what they are proud of, and what they would like feedback on. Teams then work with peers to get that feedback through a structured process that includes the project rubric criteria. Afterwards, students decide how they would like to respond to the feedback and put the finishing touches on their sites.  After a final review of the rubric, they reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n",
-        "preparation": "* Print a copy of the peer review guide for each student.",
+        "preparation": "* Print a copy of the peer review guide for each student.\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "purpose": "Peer review encourages students to leverage their peers as resources and develop effective communications skills. The final reflection and presentation allow students to practice communication about their work.\r\n",
         "student_overview": "**Question of the Day:  How can we use feedback to make our websites better?**\n\nIn this lesson, you will give and get feedback on your finished website.\n"
       },
@@ -553,13 +576,13 @@
   ],
   "lesson_activities": [
     {
-      "key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd",
+      "key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
-        "lesson_activity.key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd",
+        "lesson_activity.key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566",
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2022"
@@ -608,21 +631,8 @@
       }
     },
     {
-      "key": "e4d5205e-166e-452a-9758-d7b0f8cafd87",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e4d5205e-166e-452a-9758-d7b0f8cafd87",
-        "lesson.key": "Intro to HTML",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "b7284a94-d4c6-416d-ac6e-8db87fe43f80",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -636,7 +646,7 @@
     },
     {
       "key": "216a3a56-dfdd-4a03-bc80-c0dfffe009bd",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -650,7 +660,7 @@
     },
     {
       "key": "1a2a84d4-cc75-4b8a-bdf5-d4e33f627f71",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -663,21 +673,8 @@
       }
     },
     {
-      "key": "81bb8234-0f93-4929-830b-9f5be9244ce5",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "81bb8234-0f93-4929-830b-9f5be9244ce5",
-        "lesson.key": "Headings",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "43ee246e-5e64-422c-b38c-9faaf86606f9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -691,7 +688,7 @@
     },
     {
       "key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -705,7 +702,7 @@
     },
     {
       "key": "90ffaa05-aebe-47e5-ad88-7c5fb8a687d0",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -718,21 +715,8 @@
       }
     },
     {
-      "key": "8c61a720-096c-4718-aeab-0196c25338f2",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8c61a720-096c-4718-aeab-0196c25338f2",
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "d8e45faa-a949-4eb7-bcb4-8428f585d898",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -746,7 +730,7 @@
     },
     {
       "key": "e6274218-3d12-4142-9853-c5181cd56475",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -760,7 +744,7 @@
     },
     {
       "key": "cbffb42a-d529-47b3-957e-b99c9888f122",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -773,21 +757,8 @@
       }
     },
     {
-      "key": "494adfb9-31e5-4dd9-bd31-82125745c039",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "494adfb9-31e5-4dd9-bd31-82125745c039",
-        "lesson.key": "Digital Footprint",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "be6c8c89-1f6c-4c2f-b0eb-bbc3fe33ec1b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -801,7 +772,7 @@
     },
     {
       "key": "8b87f42a-4c87-4dc5-ae0a-5f25fd83c33a",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -815,7 +786,7 @@
     },
     {
       "key": "5b83fc12-537f-4016-9cb0-d89459a568f8",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -828,21 +799,8 @@
       }
     },
     {
-      "key": "4d1e126a-258d-4824-8a09-6493096298a5",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4d1e126a-258d-4824-8a09-6493096298a5",
-        "lesson.key": "Styling Text with CSS",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "14517b9b-38cb-4ae8-8d50-bc78b3e98acf",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -856,7 +814,7 @@
     },
     {
       "key": "dbe502b7-e665-4270-aaf6-1a80fd72fad0",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -870,7 +828,7 @@
     },
     {
       "key": "a9d55428-be9a-4d17-ab25-053b97d7c5fb",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -883,21 +841,8 @@
       }
     },
     {
-      "key": "eca89b8c-ced8-4095-94aa-28845e7f02aa",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "eca89b8c-ced8-4095-94aa-28845e7f02aa",
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "21690070-90bc-4081-98b7-b76a0292efc9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -911,7 +856,7 @@
     },
     {
       "key": "389875ac-ca56-4ae8-8a27-8f14801f6c39",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -925,7 +870,7 @@
     },
     {
       "key": "5550e320-7c53-4e4e-aa3a-0611572b648a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -938,21 +883,8 @@
       }
     },
     {
-      "key": "9795f7c0-50e5-45be-8079-de390e552456",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9795f7c0-50e5-45be-8079-de390e552456",
-        "lesson.key": "Intellectual Property",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "4a7e57fd-fb56-42e5-a11c-6054e2e6c5da",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -966,7 +898,7 @@
     },
     {
       "key": "c37b5ded-66ba-45ec-8539-3e20e9278381",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -980,7 +912,7 @@
     },
     {
       "key": "452957e5-f649-44e3-b5dd-206a8ef433ce",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -993,21 +925,8 @@
       }
     },
     {
-      "key": "a6824f85-7fad-436b-abfc-92b3f76636b2",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6824f85-7fad-436b-abfc-92b3f76636b2",
-        "lesson.key": "Using Images",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "228d432d-d102-4c02-a6eb-4d61bb7100fb",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1021,7 +940,7 @@
     },
     {
       "key": "7ad73074-fded-4be1-af2b-26e07e84b877",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1035,7 +954,7 @@
     },
     {
       "key": "6343886f-c66a-45e3-9887-d6c0f6323964",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1048,21 +967,8 @@
       }
     },
     {
-      "key": "f0120630-16ea-4d75-beec-62312fb9041d",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f0120630-16ea-4d75-beec-62312fb9041d",
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "46ff741f-0e49-45c4-857d-c300c99b2962",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1076,7 +982,7 @@
     },
     {
       "key": "1c5f0cad-10b0-4160-a136-12f002671e6e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1090,7 +996,7 @@
     },
     {
       "key": "f673cfec-03bf-4d85-9f0e-6eac3e983577",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1103,21 +1009,8 @@
       }
     },
     {
-      "key": "98d22984-9c4a-47d6-9d93-2fa4e0303ddc",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "98d22984-9c4a-47d6-9d93-2fa4e0303ddc",
-        "lesson.key": "Styling Elements with CSS",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "8e50d8fc-539c-48fa-bad5-e1ec1803e421",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1131,7 +1024,7 @@
     },
     {
       "key": "8068a8ea-049d-49f0-bcb9-1601b6ff0490",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity "
@@ -1145,7 +1038,7 @@
     },
     {
       "key": "820c7973-cf54-4074-a5a4-a3d79e03fb20",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1158,21 +1051,8 @@
       }
     },
     {
-      "key": "0cad116e-945b-4457-9d32-6916125a22c6",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0cad116e-945b-4457-9d32-6916125a22c6",
-        "lesson.key": "Your Web Page - Prepare",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "5149e17c-def7-4ceb-9e3f-b42b99b26289",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1186,7 +1066,7 @@
     },
     {
       "key": "c8931be5-1809-4c48-bc6f-78a3b1b6f0d3",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1200,7 +1080,7 @@
     },
     {
       "key": "fa510359-a1cb-44b6-837c-b28f08794e26",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1213,21 +1093,8 @@
       }
     },
     {
-      "key": "1f7e0185-cdd8-4d24-a501-c12b48ef3701",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1f7e0185-cdd8-4d24-a501-c12b48ef3701",
-        "lesson.key": "Project - Personal Web Page",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "68c0a134-8cc6-4a5f-b220-ee3c270cf1cf",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1241,7 +1108,7 @@
     },
     {
       "key": "6224d9de-e42e-483f-b2e1-6dbbc4e8fede",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 210,
         "name": "Activity"
@@ -1255,7 +1122,7 @@
     },
     {
       "key": "70cd181d-0952-4d8c-9163-7affbf737dc8",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -1268,21 +1135,8 @@
       }
     },
     {
-      "key": "59b44d1f-be83-4196-ae01-b3ac9a705bb6",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "59b44d1f-be83-4196-ae01-b3ac9a705bb6",
-        "lesson.key": "Websites for a Purpose",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "b71f135e-d19b-4c1f-97a2-2481fe81bc2a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1296,7 +1150,7 @@
     },
     {
       "key": "1b86c4c4-fe9b-4fb6-b514-18f581445cc3",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1310,7 +1164,7 @@
     },
     {
       "key": "06493f49-cf92-41f2-8b5f-c39264524d3a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Forming Groups"
       },
@@ -1323,7 +1177,7 @@
     },
     {
       "key": "c64be7c4-7e90-4ad0-b357-48875f7c3f4a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1336,21 +1190,8 @@
       }
     },
     {
-      "key": "5a754650-ad5f-4e74-b1d7-c9b36d5dfc19",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5a754650-ad5f-4e74-b1d7-c9b36d5dfc19",
-        "lesson.key": "Team Problem Solving",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "0a7e6e70-9ef2-4206-a5fd-50edc395040c",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1364,7 +1205,7 @@
     },
     {
       "key": "0650b4ca-7e20-4aa0-bd09-5b3dd8c3d7b0",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1378,7 +1219,7 @@
     },
     {
       "key": "94b55b41-83c8-4aca-ae29-04e7ede540b2",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1391,21 +1232,8 @@
       }
     },
     {
-      "key": "a74d4101-07c2-4af5-a9f4-00f4caed60e8",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a74d4101-07c2-4af5-a9f4-00f4caed60e8",
-        "lesson.key": "Sources and Research",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "a4f528d4-2780-43c8-8dc5-504898c69e3f",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1419,7 +1247,7 @@
     },
     {
       "key": "0514b8a9-0f74-4faa-b69f-864caee91b3a",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1433,7 +1261,7 @@
     },
     {
       "key": "894e74ec-fbdc-4f46-8318-8bb4d13e615d",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1446,21 +1274,8 @@
       }
     },
     {
-      "key": "be9c3415-40d5-408c-ae05-8b792cc1ef77",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "be9c3415-40d5-408c-ae05-8b792cc1ef77",
-        "lesson.key": "CSS Classes",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "c346f5ba-78c4-4e36-81b3-0f31f5f6cf99",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1474,7 +1289,7 @@
     },
     {
       "key": "9c513b6a-1d47-4395-8c08-5829adc76027",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1488,7 +1303,7 @@
     },
     {
       "key": "014dec36-c8c4-44ef-bca4-61e95aa529ef",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1501,21 +1316,8 @@
       }
     },
     {
-      "key": "a840675d-02f4-470b-915b-065cd1cceb43",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a840675d-02f4-470b-915b-065cd1cceb43",
-        "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "2d0708ed-383e-4e11-a6bf-2fb25907e8a9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1529,7 +1331,7 @@
     },
     {
       "key": "456dfd41-4f34-49f4-902a-8f72b13a36b0",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 80,
         "name": "Activity"
@@ -1543,7 +1345,7 @@
     },
     {
       "key": "1893e6e8-55b6-48c7-b44e-74bcb8201147",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1556,21 +1358,8 @@
       }
     },
     {
-      "key": "197e61be-629e-41fe-b89c-a2b781def2ef",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "197e61be-629e-41fe-b89c-a2b781def2ef",
-        "lesson.key": "Linking Pages",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "9c1908f3-e14b-41ba-b93f-1a78bcb2a10a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1584,7 +1373,7 @@
     },
     {
       "key": "897d12c3-5f71-4989-a5e6-b503cb913f1f",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 80,
         "name": "Activity"
@@ -1598,7 +1387,7 @@
     },
     {
       "key": "105f9ac0-82e3-4103-8c21-519e165ec022",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1611,21 +1400,8 @@
       }
     },
     {
-      "key": "a2c79bb7-8044-4117-b3b5-c45eb541c9af",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a2c79bb7-8044-4117-b3b5-c45eb541c9af",
-        "lesson.key": "Project - Website for a Purpose",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "a9bf40b2-8994-40f7-912c-0da5bdf4a351",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1639,7 +1415,7 @@
     },
     {
       "key": "2926147f-24e1-4728-b0b9-15f32d544182",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 80,
         "name": "Activity"
@@ -1653,7 +1429,7 @@
     },
     {
       "key": "85db205d-063f-4971-9c32-2bd96b2839e5",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1666,21 +1442,8 @@
       }
     },
     {
-      "key": "fe8959e3-1861-490c-9722-710583326bea",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fe8959e3-1861-490c-9722-710583326bea",
-        "lesson.key": "Peer Review and Final Touches",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
       "key": "e11819a0-81a5-414c-b3fe-71e31ccfaaf7",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1694,7 +1457,7 @@
     },
     {
       "key": "7f1d3b52-252a-4c4b-87a5-0c983b8a9c64",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 40,
         "name": "Feedback and Iteration"
@@ -1708,7 +1471,7 @@
     },
     {
       "key": "cb6bf053-345c-47af-a7b9-39a67a9c70fa",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Showcase"
@@ -1722,25 +1485,12 @@
     },
     {
       "key": "305d1465-9166-4ac4-a4e2-bc3bb6d1478e",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "name": "Post-Project Test"
+        "name": "After the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "305d1465-9166-4ac4-a4e2-bc3bb6d1478e",
-        "lesson.key": "Peer Review and Final Touches",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
-      "key": "67ac3895-fbb0-4cbe-ad7e-38a09bda4651",
-      "position": 6,
-      "properties": {
-        "name": "End of Course Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "67ac3895-fbb0-4cbe-ad7e-38a09bda4651",
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2v2",
         "script.name": "csd2-2022"
@@ -1774,32 +1524,23 @@
   ],
   "activity_sections": [
     {
-      "key": "a2e1159a-9b1a-4816-8448-f224af9b7d17",
+      "key": "9e251e38-16aa-4539-bed3-194074664e5b",
       "position": 1,
       "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "name": "Preparing for the Unit"
       },
       "seeding_key": {
-        "activity_section.key": "a2e1159a-9b1a-4816-8448-f224af9b7d17",
-        "lesson_activity.key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd"
-      }
-    },
-    {
-      "key": "4c43d2e4-464c-46f2-8439-e0fde03d95fb",
-      "position": 1,
-      "properties": {
-        "description": "**Journal and Discussion**"
-      },
-      "seeding_key": {
-        "activity_section.key": "4c43d2e4-464c-46f2-8439-e0fde03d95fb",
-        "lesson_activity.key": "3bdeb93a-6ace-48f2-940e-594eb4fa00d4"
+        "activity_section.key": "9e251e38-16aa-4539-bed3-194074664e5b",
+        "lesson_activity.key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566"
       }
     },
     {
       "key": "e62ce10c-b80c-4463-b585-1ba755d17ad9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?",
+        "name": "Journal",
         "tips": [
           {
             "type": "discussionGoal",
@@ -1814,7 +1555,7 @@
     },
     {
       "key": "062f5aa7-ce44-4667-b468-97c0df0e33f6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Allow students to share out their contributions to the group."
       },
@@ -1825,7 +1566,7 @@
     },
     {
       "key": "27e7fcc2-89b1-4e45-8dca-ec8403ab9c1f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "There are lots of ways that people share with the world.  Today, we're going to look at how people use web pages to share what they have to say.",
         "remarks": true
@@ -1837,7 +1578,7 @@
     },
     {
       "key": "9bb85d89-c2f4-44d2-badf-9a0ac4189b73",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Question of the Day:  Why do people create web pages?**"
       },
@@ -1860,10 +1601,27 @@
       }
     },
     {
-      "key": "6f6470cd-6589-428d-b3fc-30fbdd935e19",
+      "key": "d43801bf-efbb-477d-8bdc-4365121344d0",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Web Pages\" level on Code Studio.\n\n\n\n\n\n\n    \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d43801bf-efbb-477d-8bdc-4365121344d0",
+        "lesson_activity.key": "5114c102-679b-43ce-9399-33bff161328c"
+      }
+    },
+    {
+      "key": "6f6470cd-6589-428d-b3fc-30fbdd935e19",
+      "position": 3,
+      "properties": {
+        "description": "\n**Code Studio:** Direct students to the \"Sample Web Pages\" level on Code Studio.",
         "progression_name": "Sample Personal Web Pages"
       },
       "seeding_key": {
@@ -1873,7 +1631,7 @@
     },
     {
       "key": "cd25afa1-2718-46ab-870d-64e47ec1e98f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "This activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
         "name": "Exploring Websites",
@@ -1891,7 +1649,7 @@
     },
     {
       "key": "49fd921c-33fb-4ecd-9268-837e829c6201",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "* What is this person sharing with the world?\r\n* Why is it important to them?\r\n\r\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites."
       },
@@ -1902,7 +1660,7 @@
     },
     {
       "key": "1f3c093c-6764-4f4f-b863-6fcb17e5f415",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Share:** Once everyone has had a chance to brainstorm about their sites, give students a chance to share out their thoughts."
       },
@@ -1913,7 +1671,7 @@
     },
     {
       "key": "b046dcc5-3dd8-422d-9e5e-462e8a03877f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Discuss:** Give students an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.",
         "tips": [
@@ -1938,17 +1696,6 @@
       "seeding_key": {
         "activity_section.key": "2a7a4656-c1df-4435-97c7-86deaa3b1e18",
         "lesson_activity.key": "8de03792-c957-4389-9d07-66563ce920e1"
-      }
-    },
-    {
-      "key": "4341aaa2-fcd4-4af7-aaec-61232c63d213",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "4341aaa2-fcd4-4af7-aaec-61232c63d213",
-        "lesson_activity.key": "e4d5205e-166e-452a-9758-d7b0f8cafd87"
       }
     },
     {
@@ -2052,7 +1799,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. Wait until after students have seen all of these resources to review at the end of the lesson, but add them to the list and model the correct usage as they appear.\r\n\r\n* **Videos:** Watched as a class, but students can always return to them.\r\n* **Help and Tips Tab** This tab contains all of the relevant videos and map levels for a particular level.\r\n* **Map Levels:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels.\r\n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important.\r\n* **Level Drop-down Tips:** Students can click these tips in the instruction areas of lessons. Students should use these as a first place to check for help before talking with peers or a teacher.\r\n* **Inspector Tool:** Highlights the code corresponding to a web page element when hovered over in the Preview Area.\r\n* **Bubble Color:** Bubbles may turn green but there is no validation of correctness. Green only means a student clicked Continue or Finish for a level. Set the understanding early that this is more a tool for them than an indication of either completeness or correctness.\r\n"
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. Wait until after students have seen all of these resources to review at the end of the lesson, but add them to the list and model the correct usage as they appear.\n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation** A link to Web Lab's documentation is available in the upper-right corner of the instructions panel. Students can use this to refresh their memory on important tags introduced in the unit.\n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important.\n* **Level Drop-down Tips:** Students can click these tips in the instruction areas of lessons.\n* **Inspector Tool:** Highlights the code corresponding to a web page element when hovered over in the Preview Area."
           }
         ]
       },
@@ -2104,7 +1851,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using the Tool**\nAs students explore the site, make sure that they understand how to use the inspector tool, the drop-down tips on the right side of the instruction pane, and the \"Help and Tips\" tab, which will give them access to the previous video.\n\n**HTML Discussion**\nYou should bring students back together once they've spent a couple of minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.\n- What text is appearing in both the code and the web page?\n- How is this language communicating extra information about the way to represent text?\n\nThe goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed."
+            "markdown": "**Using the Tool**\nAs students explore the site, make sure that they understand how to use the inspector tool, the drop-down tips on the right side of the instruction pane, and the \"Help and Tips\" tab, which will give them access to the previous video.\n\n**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           }
         ]
       },
@@ -2114,10 +1861,21 @@
       }
     },
     {
-      "key": "deb0583d-27f9-418c-84c6-b51da846f056",
+      "key": "eb5a7696-af19-4552-bb1b-d937fa3a4d18",
       "position": 6,
       "properties": {
-        "description": "**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?",
+        "description": "**HTML Discussion**\nYou should bring students back together once they've spent a couple of minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.\n- What text is appearing in both the code and the web page?\n- How is this language communicating extra information about the way to represent text?\n\nThe goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed."
+      },
+      "seeding_key": {
+        "activity_section.key": "eb5a7696-af19-4552-bb1b-d937fa3a4d18",
+        "lesson_activity.key": "216a3a56-dfdd-4a03-bc80-c0dfffe009bd"
+      }
+    },
+    {
+      "key": "deb0583d-27f9-418c-84c6-b51da846f056",
+      "position": 7,
+      "properties": {
+        "description": "**Video:** Show students the following video\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?",
         "progression_name": "Video: Intro to Web Lab - Part 2",
         "tips": [
           {
@@ -2133,7 +1891,7 @@
     },
     {
       "key": "03e38fe6-5d63-4c76-bcb6-e9bb799073e4",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Practice",
         "tips": [
@@ -2150,7 +1908,7 @@
     },
     {
       "key": "743410de-0104-458b-9a14-ab44c6c6eb8f",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2167,7 +1925,7 @@
     },
     {
       "key": "4b25582e-dd7b-4811-812c-cac61772e0fd",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Challenge",
         "tips": [
@@ -2243,17 +2001,6 @@
       "seeding_key": {
         "activity_section.key": "adc692f2-5859-494c-b04a-dfb7301d9e52",
         "lesson_activity.key": "1a2a84d4-cc75-4b8a-bdf5-d4e33f627f71"
-      }
-    },
-    {
-      "key": "e573f26e-83a7-45d5-8539-10e97ad9b6a8",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "e573f26e-83a7-45d5-8539-10e97ad9b6a8",
-        "lesson_activity.key": "81bb8234-0f93-4929-830b-9f5be9244ce5"
       }
     },
     {
@@ -2379,48 +2126,8 @@
       }
     },
     {
-      "key": "f09c4888-63ca-4183-bbdb-a35ca684dc1d",
-      "position": 4,
-      "properties": {
-        "description": "**Review:** Ensure that students understand the rules for pair programming:",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, remind them that their main goal today is to learn how to work together on a web page, which is even more important than the heading tag!\r\n\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f09c4888-63ca-4183-bbdb-a35ca684dc1d",
-        "lesson_activity.key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e"
-      }
-    },
-    {
-      "key": "7520f115-42c2-4a53-a364-774b7c5b74a3",
-      "position": 5,
-      "properties": {
-        "description": "* There is only one computer.\r\n* The driver is the only one to touch the keyboard/mouse.\r\n* The navigator should look for problems in the code and keep track of the high-level plan.\r\n* Both driver and navigator should be communicating constantly.\r\n* Driver and navigator must switch when the teacher indicates, typically every few minutes."
-      },
-      "seeding_key": {
-        "activity_section.key": "7520f115-42c2-4a53-a364-774b7c5b74a3",
-        "lesson_activity.key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e"
-      }
-    },
-    {
-      "key": "b0c54e14-74d3-4a55-8bf4-2b7681238d11",
-      "position": 6,
-      "properties": {
-        "description": "**Transition:** Have pairs go to Code Studio and both log in using the \"Pair Programming\" feature. \r\n\r\n**Prompt:** Remind students to switch driver and navigator every three minutes.  You may want to project a digital timer at the front of the room.",
-        "name": "Web Lab: Headings\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "b0c54e14-74d3-4a55-8bf4-2b7681238d11",
-        "lesson_activity.key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e"
-      }
-    },
-    {
       "key": "457c0d92-0f75-47d7-88da-a6eee762959f",
-      "position": 7,
+      "position": 4,
       "properties": {
         "description": "**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?",
         "progression_name": "Video: Pair Programming",
@@ -2437,6 +2144,46 @@
       }
     },
     {
+      "key": "f09c4888-63ca-4183-bbdb-a35ca684dc1d",
+      "position": 5,
+      "properties": {
+        "description": "**Review:** Ensure that students understand the rules for pair programming:",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, remind them that their main goal today is to learn how to work together on a web page, which is even more important than the heading tag!\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f09c4888-63ca-4183-bbdb-a35ca684dc1d",
+        "lesson_activity.key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e"
+      }
+    },
+    {
+      "key": "7520f115-42c2-4a53-a364-774b7c5b74a3",
+      "position": 6,
+      "properties": {
+        "description": "* There is only one computer.\r\n* The driver is the only one to touch the keyboard/mouse.\r\n* The navigator should look for problems in the code and keep track of the high-level plan.\r\n* Both driver and navigator should be communicating constantly.\r\n* Driver and navigator must switch when the teacher indicates, typically every few minutes."
+      },
+      "seeding_key": {
+        "activity_section.key": "7520f115-42c2-4a53-a364-774b7c5b74a3",
+        "lesson_activity.key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e"
+      }
+    },
+    {
+      "key": "b0c54e14-74d3-4a55-8bf4-2b7681238d11",
+      "position": 7,
+      "properties": {
+        "description": "**Transition:** Have pairs go to Code Studio and both log in using the \"Pair Programming\" feature. \r\n\r\n**Prompt:** Remind students to switch driver and navigator every three minutes.  You may want to project a digital timer at the front of the room.",
+        "name": "Web Lab: Headings\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0c54e14-74d3-4a55-8bf4-2b7681238d11",
+        "lesson_activity.key": "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e"
+      }
+    },
+    {
       "key": "f07ea960-3ec3-4d96-86e0-cc073c17b228",
       "position": 8,
       "properties": {
@@ -2444,7 +2191,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging**:\nStudents may note that when code is organized and uses whitespace, it's much easier to find bugs, but any reasonable piece of advice around debugging could work here.\n\nAllow students to share out their advice, and continue to emphasize that getting bugs is a normal part of programming. Students will be introduced to a formal debugging process later in the lesson."
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. "
           }
         ]
       },
@@ -2478,7 +2225,7 @@
         "progression_name": "Video: Debugging",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "discussionGoal",
             "markdown": "Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describe the bug, hunt for the bug, try out small solutions (or change your code), and document what you have learned.\n\nYou may also want to reference the Guide to Debugging found on the CS Discoveries curriculum page."
           }
         ]
@@ -2492,7 +2239,13 @@
       "key": "91162ef9-2afa-4ddc-b382-2d5bd220fdfb",
       "position": 11,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "91162ef9-2afa-4ddc-b382-2d5bd220fdfb",
@@ -2503,7 +2256,13 @@
       "key": "20649a32-e25a-48d4-b642-5c62900f9a2b",
       "position": 12,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "20649a32-e25a-48d4-b642-5c62900f9a2b",
@@ -2514,7 +2273,13 @@
       "key": "6c97c37a-209b-4258-84ea-d3dbeecdd625",
       "position": 13,
       "properties": {
-        "progression_name": "Challenges"
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6c97c37a-209b-4258-84ea-d3dbeecdd625",
@@ -2548,17 +2313,6 @@
       "seeding_key": {
         "activity_section.key": "b34827f9-2e24-462c-a693-db24b8201e39",
         "lesson_activity.key": "90ffaa05-aebe-47e5-ad88-7c5fb8a687d0"
-      }
-    },
-    {
-      "key": "294dbe85-d2e1-4563-a9fe-8af1929e4142",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "294dbe85-d2e1-4563-a9fe-8af1929e4142",
-        "lesson_activity.key": "8c61a720-096c-4718-aeab-0196c25338f2"
       }
     },
     {
@@ -2606,7 +2360,13 @@
       "key": "8600f333-fd3e-46ab-81ab-764018ab6813",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day: How can I use HTML to express a personal value?**"
+        "description": "**Question of the Day: How can I use HTML to express a personal value?**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8600f333-fd3e-46ab-81ab-764018ab6813",
@@ -2641,7 +2401,13 @@
       "position": 3,
       "properties": {
         "description": "As students answer questions about the design of the page, ensure that they are differentiating between the content of the page and the way that content is organized or structured.  After they have completed their designs, ensure that they can identify which tags will be needed for different text on the web pages.",
-        "name": "Step 2: Prepare - Design your Page\r"
+        "name": "Step 2: Prepare - Design your Page\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "347a163d-847a-47cd-aa36-7fe36784752f",
@@ -2686,7 +2452,13 @@
       "key": "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15",
       "position": 7,
       "properties": {
-        "progression_name": "Code Your Page"
+        "progression_name": "Code Your Page",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15",
@@ -2766,17 +2538,6 @@
       "seeding_key": {
         "activity_section.key": "cb9326d3-237f-4e7e-9dcc-659a0699d870",
         "lesson_activity.key": "cbffb42a-d529-47b3-957e-b99c9888f122"
-      }
-    },
-    {
-      "key": "ba926806-dc87-4338-904c-11dea405c72f",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "ba926806-dc87-4338-904c-11dea405c72f",
-        "lesson_activity.key": "494adfb9-31e5-4dd9-bd31-82125745c039"
       }
     },
     {
@@ -2957,17 +2718,6 @@
       }
     },
     {
-      "key": "cb6ae7c2-bdcf-4fc8-812e-25605cd55d2c",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "cb6ae7c2-bdcf-4fc8-812e-25605cd55d2c",
-        "lesson_activity.key": "4d1e126a-258d-4824-8a09-6493096298a5"
-      }
-    },
-    {
       "key": "f9ee2fa7-7a07-484b-a7fa-03d1498dd88b",
       "position": 1,
       "properties": {
@@ -3036,7 +2786,13 @@
       "properties": {
         "description": "**Group:** Put students in pairs.\r\n\r\n**Transition:** Send students to Code Studio.\r\n\r\nAllow students to explore the sample web page in Code Studio.",
         "name": "Web Lab: Introduction to CSS\r",
-        "progression_name": "Sample Website"
+        "progression_name": "Sample Website",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d3fdeb5c-af82-4887-8b01-8451380d7778",
@@ -3108,7 +2864,13 @@
       "key": "2f24bcd8-4cad-4f5e-8e48-e447e7f11643",
       "position": 6,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f24bcd8-4cad-4f5e-8e48-e447e7f11643",
@@ -3163,7 +2925,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3247,17 +3009,6 @@
       }
     },
     {
-      "key": "09af4e4f-7aa4-478c-b637-635d4ca9faac",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "09af4e4f-7aa4-478c-b637-635d4ca9faac",
-        "lesson_activity.key": "eca89b8c-ced8-4095-94aa-28845e7f02aa"
-      }
-    },
-    {
       "key": "9d166a5d-2ae5-4e13-892f-9270cb0c01b1",
       "position": 1,
       "properties": {
@@ -3313,7 +3064,13 @@
       "key": "bc957d4e-fb61-42e3-baf0-98aca6e96cf3",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Project Guide."
+        "description": "**Distribute:** Give each student a copy of the Project Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar websites to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bc957d4e-fb61-42e3-baf0-98aca6e96cf3",
@@ -3337,7 +3094,13 @@
       "position": 3,
       "properties": {
         "description": "As students answer questions about the design of the page, ensure that they are differentiating between the content of the page and the way that content is styled.  After they have completed their designs, ensure that they can identify which CSS properties will be needed for different text on the web pages.",
-        "name": "Step 2: Prepare - Design your Page"
+        "name": "Step 2: Prepare - Design your Page",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5e40e0e2-c1f1-4cd6-8330-e851d8973119",
@@ -3388,7 +3151,13 @@
       "key": "64552bfc-d25b-4850-921a-2bc32d6d450d",
       "position": 7,
       "properties": {
-        "progression_name": "Add Content and Structure to Your Page"
+        "progression_name": "Add Content and Structure to Your Page",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "64552bfc-d25b-4850-921a-2bc32d6d450d",
@@ -3468,17 +3237,6 @@
       "seeding_key": {
         "activity_section.key": "ea742e55-aa70-433b-abfc-83b1bcf386cf",
         "lesson_activity.key": "5550e320-7c53-4e4e-aa3a-0611572b648a"
-      }
-    },
-    {
-      "key": "e17db056-b5fa-4f49-b06e-826fc5e96926",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "e17db056-b5fa-4f49-b06e-826fc5e96926",
-        "lesson_activity.key": "9795f7c0-50e5-45be-8079-de390e552456"
       }
     },
     {
@@ -3722,17 +3480,6 @@
       }
     },
     {
-      "key": "a4c2fa4e-82ee-4ce6-8d4a-d0edba049840",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "a4c2fa4e-82ee-4ce6-8d4a-d0edba049840",
-        "lesson_activity.key": "a6824f85-7fad-436b-abfc-92b3f76636b2"
-      }
-    },
-    {
       "key": "cfe0b0a4-aecc-4bb0-b76e-9d1123a438b7",
       "position": 1,
       "properties": {
@@ -3783,6 +3530,10 @@
           {
             "type": "contentCorner",
             "markdown": "As students start to use images, they may have trouble finding the right size to fit their pages.  In the two lessons, students will learn how to resize their images with CSS.  For now, students can use an online image resizer, such as the one found at [https://resizeimage.net/](https://resizeimage.net/), to resize their images.  Alternatively, they can use the [`height`](/docs/weblab/height/) or [`width`](/docs/weblab/width/) attribute inside the [`img`](/docs/weblab/img/) tag to resize it as the page loads.\r\n\r\n\r\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3838,7 +3589,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -3868,17 +3619,6 @@
       "seeding_key": {
         "activity_section.key": "ce272d06-0c26-4bb2-bbf6-2d5dc2980626",
         "lesson_activity.key": "6343886f-c66a-45e3-9887-d6c0f6323964"
-      }
-    },
-    {
-      "key": "ce146d58-cd32-4f1c-a0a4-8428d56541d1",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "ce146d58-cd32-4f1c-a0a4-8428d56541d1",
-        "lesson_activity.key": "f0120630-16ea-4d75-beec-62312fb9041d"
       }
     },
     {
@@ -4122,17 +3862,6 @@
       }
     },
     {
-      "key": "110d9378-5ffb-4f1d-8fec-fe05e728d3a6",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "110d9378-5ffb-4f1d-8fec-fe05e728d3a6",
-        "lesson_activity.key": "98d22984-9c4a-47d6-9d93-2fa4e0303ddc"
-      }
-    },
-    {
       "key": "c7663f8e-9dd8-4ab8-ad7e-e4f9c028ad31",
       "position": 1,
       "properties": {
@@ -4193,7 +3922,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Pair Programming:** Consider using pair programming for some or all of this lesson, in particular as students are learning new CSS properties.\r\n"
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4254,7 +3983,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -4283,17 +4012,6 @@
       "seeding_key": {
         "activity_section.key": "eac53139-002c-4ed0-92a5-0cc9da0d8856",
         "lesson_activity.key": "820c7973-cf54-4074-a5a4-a3d79e03fb20"
-      }
-    },
-    {
-      "key": "f58a0b67-c7cd-4fdf-adc3-a928ce78f0d9",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "f58a0b67-c7cd-4fdf-adc3-a928ce78f0d9",
-        "lesson_activity.key": "0cad116e-945b-4457-9d32-6916125a22c6"
       }
     },
     {
@@ -4429,17 +4147,6 @@
       }
     },
     {
-      "key": "b8655529-847b-49e6-89f1-aa93a8c8e502",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "b8655529-847b-49e6-89f1-aa93a8c8e502",
-        "lesson_activity.key": "1f7e0185-cdd8-4d24-a501-c12b48ef3701"
-      }
-    },
-    {
       "key": "71fb209c-e346-4092-836c-8f2d317d2fe2",
       "position": 1,
       "properties": {
@@ -4506,7 +4213,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2022] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -4519,7 +4226,13 @@
       "key": "523e9cfe-861d-487e-b922-43f06047aa06",
       "position": 3,
       "properties": {
-        "progression_name": "Website Project"
+        "progression_name": "Website Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "523e9cfe-861d-487e-b922-43f06047aa06",
@@ -4665,17 +4378,6 @@
       "seeding_key": {
         "activity_section.key": "7bac6258-0fe0-4ea8-b72b-55e41b2430d8",
         "lesson_activity.key": "70cd181d-0952-4d8c-9163-7affbf737dc8"
-      }
-    },
-    {
-      "key": "8fedad15-1ead-4f40-89d5-c49e6f9a0a57",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "8fedad15-1ead-4f40-89d5-c49e6f9a0a57",
-        "lesson_activity.key": "59b44d1f-be83-4196-ae01-b3ac9a705bb6"
       }
     },
     {
@@ -4892,17 +4594,6 @@
       "seeding_key": {
         "activity_section.key": "881093ac-2c6c-4184-a593-2debc1c6ec88",
         "lesson_activity.key": "c64be7c4-7e90-4ad0-b357-48875f7c3f4a"
-      }
-    },
-    {
-      "key": "34d6f1f8-c41e-45fb-867e-8824cd44dee8",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "34d6f1f8-c41e-45fb-867e-8824cd44dee8",
-        "lesson_activity.key": "5a754650-ad5f-4e74-b1d7-c9b36d5dfc19"
       }
     },
     {
@@ -5149,17 +4840,6 @@
       }
     },
     {
-      "key": "350d0380-2c7e-4a5f-8d28-8902d76a13e4",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "350d0380-2c7e-4a5f-8d28-8902d76a13e4",
-        "lesson_activity.key": "a74d4101-07c2-4af5-a9f4-00f4caed60e8"
-      }
-    },
-    {
       "key": "fc248ed1-6ea3-4efa-93dc-5e778e08d8b3",
       "position": 1,
       "properties": {
@@ -5356,17 +5036,6 @@
       }
     },
     {
-      "key": "318fb2a2-0990-4512-9332-a8f23cbb05a7",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "318fb2a2-0990-4512-9332-a8f23cbb05a7",
-        "lesson_activity.key": "be9c3415-40d5-408c-ae05-8b792cc1ef77"
-      }
-    },
-    {
       "key": "2424a28d-2124-4754-bd7c-2c8d720ca256",
       "position": 1,
       "properties": {
@@ -5423,7 +5092,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio.",
-        "name": "Classes\r"
+        "name": "Classes\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f569c2b7-4743-4c63-99b0-5e9cb150b0f8",
@@ -5482,7 +5157,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5512,17 +5187,6 @@
       "seeding_key": {
         "activity_section.key": "863aab44-6b09-4282-87f3-6032bc25d654",
         "lesson_activity.key": "014dec36-c8c4-44ef-bca4-61e95aa529ef"
-      }
-    },
-    {
-      "key": "4abcc571-45ef-41bc-a795-03be461705bb",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "4abcc571-45ef-41bc-a795-03be461705bb",
-        "lesson_activity.key": "a840675d-02f4-470b-915b-065cd1cceb43"
       }
     },
     {
@@ -5707,17 +5371,6 @@
       }
     },
     {
-      "key": "3f029d94-e62c-43ec-b874-6bac6d1a6077",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "3f029d94-e62c-43ec-b874-6bac6d1a6077",
-        "lesson_activity.key": "197e61be-629e-41fe-b89c-a2b781def2ef"
-      }
-    },
-    {
       "key": "414d8dc0-04e6-4d53-a210-802c21683933",
       "position": 1,
       "properties": {
@@ -5733,7 +5386,7 @@
       "key": "ffda900a-8bdf-48b8-a840-e6372047c0b1",
       "position": 2,
       "properties": {
-        "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.",
+        "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.\n\n1. What was the first web page ever created?\n2. What's the one feature it has that we haven't learned how to do yet?",
         "tips": [
           {
             "type": "teachingTip",
@@ -5750,7 +5403,7 @@
       "key": "6b9eb1e8-4a21-47a5-ba81-b7fe9615bfe2",
       "position": 3,
       "properties": {
-        "description": "1. What was the first web page ever created?\r\n2. What's the one feature it has that we haven't learned how to do yet?\r\n\r\n**Share:**  After giving students time to search online, let them share out their answers."
+        "description": "\n\n**Share:**  After giving students time to search online, let them share out their answers."
       },
       "seeding_key": {
         "activity_section.key": "6b9eb1e8-4a21-47a5-ba81-b7fe9615bfe2",
@@ -5785,7 +5438,13 @@
       "position": 1,
       "properties": {
         "description": "**Group:** Allow students to continue in their pairs.\r\n\r\n**Transition:** Send students to Code Studio.",
-        "name": "Web Lab\r"
+        "name": "Web Lab\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b4c82606-44ed-49c1-9ac1-5a672b1a5c00",
@@ -5833,7 +5492,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -5880,17 +5539,6 @@
       "seeding_key": {
         "activity_section.key": "8332a1cb-7d77-494c-b924-d4a712455db5",
         "lesson_activity.key": "105f9ac0-82e3-4103-8c21-519e165ec022"
-      }
-    },
-    {
-      "key": "ec8151d3-37b2-40e5-8ef8-0a6c72035873",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "ec8151d3-37b2-40e5-8ef8-0a6c72035873",
-        "lesson_activity.key": "a2c79bb7-8044-4117-b3b5-c45eb541c9af"
       }
     },
     {
@@ -5944,7 +5592,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2022] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -5968,7 +5616,13 @@
       "key": "3a14abd4-7d6f-4742-be18-b32c2faaf3b4",
       "position": 4,
       "properties": {
-        "progression_name": "Add Content and HTML"
+        "progression_name": "Add Content and HTML",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3a14abd4-7d6f-4742-be18-b32c2faaf3b4",
@@ -6012,7 +5666,13 @@
       "key": "231de8d8-f781-423f-8820-1ec396d59ac1",
       "position": 8,
       "properties": {
-        "progression_name": "Check Your Work"
+        "progression_name": "Check Your Work",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "231de8d8-f781-423f-8820-1ec396d59ac1",
@@ -6029,17 +5689,6 @@
       "seeding_key": {
         "activity_section.key": "feea0eea-7b8b-4ce3-a6ad-3a40cd36ff5a",
         "lesson_activity.key": "85db205d-063f-4971-9c32-2bd96b2839e5"
-      }
-    },
-    {
-      "key": "d187ff5b-acbf-4d56-9cc0-015c7be35cd0",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) to access modifications that can be used during this lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "d187ff5b-acbf-4d56-9cc0-015c7be35cd0",
-        "lesson_activity.key": "fe8959e3-1861-490c-9722-710583326bea"
       }
     },
     {
@@ -6129,12 +5778,24 @@
       "key": "02053aac-92d9-4d70-a1fa-9e82cbb76686",
       "position": 3,
       "properties": {
-        "description": "**Distribute:** Hand out one copy of the project reflection **to each student**.\n\n\n\n\nIn the reflection, students will reflect on both the process and the product. They should identify aspects of the page itself that they are proud of, as well as how the group worked together.  They also describe what they have learned in the course of the project.\n\n\n\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "**Distribute:** Hand out one copy of the project reflection **to each student**.\n\n\n\n\nIn the reflection, students will reflect on both the process and the product. They should identify aspects of the page itself that they are proud of, as well as how the group worked together.  They also describe what they have learned in the course of the project.\n\n\nSend students to Code Studio to complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
         "name": "Reflect: Final Reflection\r",
         "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "02053aac-92d9-4d70-a1fa-9e82cbb76686",
+        "lesson_activity.key": "7f1d3b52-252a-4c4b-87a5-0c983b8a9c64"
+      }
+    },
+    {
+      "key": "6e5a14b1-ae25-4737-8d74-beeea1388b0c",
+      "position": 4,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e5a14b1-ae25-4737-8d74-beeea1388b0c",
         "lesson_activity.key": "7f1d3b52-252a-4c4b-87a5-0c983b8a9c64"
       }
     },
@@ -6166,7 +5827,8 @@
       "key": "7d00d4b5-a67a-49b7-8bfd-e9b76f0895d2",
       "position": 1,
       "properties": {
-        "description": "The post-project test is found at the bottom of the Web Development unit overview page on Code Studio.\n\nThis test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear."
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
       },
       "seeding_key": {
         "activity_section.key": "7d00d4b5-a67a-49b7-8bfd-e9b76f0895d2",
@@ -6174,14 +5836,15 @@
       }
     },
     {
-      "key": "e594389d-57c1-4954-a26f-ac69e2d80871",
-      "position": 1,
+      "key": "6dcffd20-f9fd-45a2-b864-237a4b513b91",
+      "position": 2,
       "properties": {
-        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. "
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End Of Course Survey"
       },
       "seeding_key": {
-        "activity_section.key": "e594389d-57c1-4954-a26f-ac69e2d80871",
-        "lesson_activity.key": "67ac3895-fbb0-4cbe-ad7e-38a09bda4651"
+        "activity_section.key": "6dcffd20-f9fd-45a2-b864-237a4b513b91",
+        "lesson_activity.key": "305d1465-9166-4ac4-a4e2-bc3bb6d1478e"
       }
     },
     {
@@ -9766,6 +9429,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
       "key": "csd_programming_levels_guide",
@@ -9819,7 +9493,6 @@
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9869,7 +9542,6 @@
       "key": "exploring_web_pages_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9906,7 +9578,6 @@
       "key": "headings",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10058,7 +9729,6 @@
       "key": "intro_to_html",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10171,7 +9841,6 @@
       "key": "mini-project_html_web_page",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11485,6 +11154,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd2-2022"
       }
     },

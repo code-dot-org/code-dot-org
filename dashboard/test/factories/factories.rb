@@ -110,6 +110,9 @@ FactoryGirl.define do
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
+      trait :not_first_sign_in do
+        sign_in_count 2
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
       end
@@ -321,6 +324,16 @@ FactoryGirl.define do
         end
       end
 
+      trait :migrated_imported_from_clever do
+        clever_sso_provider
+        without_email
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
@@ -500,13 +513,13 @@ FactoryGirl.define do
     trait :teacher_participants do
       participant_type 'teacher'
       login_type 'email'
-      grade 'pl'
+      grades ['pl']
     end
 
     trait :facilitator_participants do
       participant_type 'facilitator'
       login_type 'email'
-      grade 'pl'
+      grades ['pl']
     end
   end
 
@@ -630,6 +643,11 @@ FactoryGirl.define do
     trait :with_reference_links do
       reference_links ['/test/abc.html', '/test/def.html']
     end
+  end
+
+  factory :ailab, parent: :level, class: Ailab do
+    game {Game.ailab}
+    level_num 'custom'
   end
 
   factory :free_response, parent: :level, class: FreeResponse do
@@ -766,7 +784,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script, aliases: [:unit] do
+  factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
@@ -813,42 +831,42 @@ FactoryGirl.define do
 
     factory :csf_script do
       after(:create) do |csf_script|
-        csf_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
+        csf_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
         csf_script.save!
       end
     end
 
     factory :csd_script do
       after(:create) do |csd_script|
-        csd_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
+        csd_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
         csd_script.save!
       end
     end
 
     factory :csp_script do
       after(:create) do |csp_script|
-        csp_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
+        csp_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
         csp_script.save!
       end
     end
 
     factory :csa_script do
       after(:create) do |csa_script|
-        csa_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
+        csa_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
         csa_script.save!
       end
     end
 
     factory :csc_script do
       after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
+        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
       end
     end
 
     factory :hoc_script do
       after(:create) do |hoc_script|
-        hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+        hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
       end
     end
@@ -858,6 +876,24 @@ FactoryGirl.define do
         standalone_unit.is_course = true
         standalone_unit.save!
       end
+    end
+  end
+
+  # WARNING: Using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail.
+  factory :project_storage do
+  end
+
+  factory :project do
+    transient do
+      owner create :user
+    end
+
+    updated_ip '127.0.0.1'
+
+    after(:build) do |project, evaluator|
+      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project.storage_id = project_storage.id
     end
   end
 
@@ -921,7 +957,7 @@ FactoryGirl.define do
       props = {}
       # If multiple levels are specified, mark all but the first as inactive
       if script_level.levels.length > 1
-        script_level.levels[1..-1].each do |level|
+        script_level.levels[1..].each do |level|
           props[level.name] = {active: false}
         end
       end
@@ -1107,7 +1143,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
+    script {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -1135,6 +1171,7 @@ FactoryGirl.define do
 
   factory :level_group, class: LevelGroup do
     game {create(:game, app: "level_group")}
+    sequence(:name) {|n| "Level_Group_Level_#{n}"}
     transient do
       title 'title'
       submittable false
@@ -1428,6 +1465,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
     pl_programs_offered ['CSD', 'CSP']
+    applications_principal_approval RegionalPartner::ALL_REQUIRE_APPROVAL
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do
@@ -1523,7 +1561,7 @@ FactoryGirl.define do
       country 'United States'
       postal_code '98109'
       latitude 47.620470
-      longitude (-122.349181)
+      longitude(-122.349181)
     end
 
     # Sydney Opera House
@@ -1532,7 +1570,7 @@ FactoryGirl.define do
       state 'New South Wales'
       country 'Australia'
       postal_code '2000'
-      latitude (-33.859100)
+      latitude(-33.859100)
       longitude 151.200200
     end
   end
@@ -1550,12 +1588,22 @@ FactoryGirl.define do
     end
   end
 
+  factory :code_review do
+    user_id 1
+    project_id 1
+    script_id 1
+    level_id 1
+    project_level_id 1
+    project_version "1"
+    storage_id 1
+  end
+
   factory :code_review_comment do
     association :commenter, factory: :student
-    association :project_owner, factory: :student
+    association :code_review
 
-    project_id 1
-    comment 'a comment about your project'
+    is_resolved false
+    comment 'a note about the project'
   end
 
   factory :code_review_group do
@@ -1568,11 +1616,10 @@ FactoryGirl.define do
     association :code_review_group
   end
 
-  factory :reviewable_project do
+  factory :project_commit do
     sequence(:project_id)
-    association :user, factory: :student
-    association :level
-    association :script
+    sequence(:object_version_id)
+    comment 'a commit comment'
   end
 
   factory :teacher_score do
@@ -1608,7 +1655,7 @@ FactoryGirl.define do
   end
 
   factory :contact_rollups_pardot_memory do
-    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}

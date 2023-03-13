@@ -1,3 +1,6 @@
+# Temporarily skip this test to unblock Drone builds. See ticket for details:
+# https://codedotorg.atlassian.net/browse/SL-288
+@skip
 Feature: Minecraft aquatic
 
   Background:

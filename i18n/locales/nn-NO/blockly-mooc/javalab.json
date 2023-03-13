@@ -1,7 +1,9 @@
 {
   "cancel": "Avbryt",
+  "create": "Opprett",
   "delete": "Slett",
   "import": "Importér",
   "rename": "Gje nytt navn",
-  "saving": "Lagrar..."
+  "saving": "Lagrar...",
+  "submit": "Send inn"
 }

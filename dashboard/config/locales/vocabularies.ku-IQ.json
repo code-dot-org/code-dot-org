@@ -17,11 +17,93 @@
         "loops/aquatic/unversioned": {
           "word": "گرێکان"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "کۆد"
         },
+        "conditionals/coursed/2022": {
+          "word": "مەرجیەکان"
+        },
+        "variable/coursef/2022": {
+          "word": "گۆڕاو"
+        },
+        "input/coursef/2022": {
+          "word": "داخڵکردن"
+        },
+        "define/coursef/2022": {
+          "word": "پێناسە بکە"
+        },
+        "function/coursee/2022": {
+          "word": "فرمان"
+        },
+        "conditionals/coursee/2022": {
+          "word": "مەرجیەکان"
+        },
+        "define/coursee/2022": {
+          "word": "پێناسە بکە"
+        },
+        "drop/courseb/2022": {
+          "word": "درۆپ"
+        },
+        "conditionals/express/2022": {
+          "word": "مەرجیەکان"
+        },
+        "function/express/2022": {
+          "word": "فرمان"
+        },
+        "variable/express/2022": {
+          "word": "گۆڕاو"
+        },
+        "define/express/2022": {
+          "word": "پێناسە بکە"
+        },
+        "drop/pre-express/2022": {
+          "word": "درۆپ"
+        },
+        "drop/coursea/2022": {
+          "word": "درۆپ"
+        },
+        "input/csd/2022": {
+          "word": "داخڵکردن"
+        },
+        "variable/csd/2022": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2022": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2022": {
+          "word": "پوختە"
+        },
+        "function/csd/2022": {
+          "word": "فرمان"
+        },
         "code/poem-art/unversioned": {
-          "word": "کۆد"
+          "word": "کۆد",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "گۆڕاو"

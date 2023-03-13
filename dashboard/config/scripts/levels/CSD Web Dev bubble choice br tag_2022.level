@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:10.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
@@ -25,11 +21,15 @@
     "thumbnail_url": "https://images.code.org/a5886e61dac0133034f01502fa2d337a-image-1585675761262.png",
     "encrypted_examples": "94tNxM2G5wBdH1wayPDyWegSbgwKwYh2D6YzcwKki/BiVNe3VJ65m1PSS6Ci\n9XUIEN20/1WEUB21a7FvU/SPHg==\n",
     "reference_links": [
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/lists/"
+    "map_reference": "/courses/csd-2022/guides/lists"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:10.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:10.027+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev bubble choice br tag_2021\\\"\"],\"cloned_from\":\"CSD Web Dev bubble choice br tag_2021\"}]"

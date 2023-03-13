@@ -15,7 +15,7 @@
 
 class Callout < ApplicationRecord
   include Seeded
-  belongs_to :script_level, inverse_of: :callouts
+  belongs_to :script_level, inverse_of: :callouts, optional: true
 
   CSV_HEADERS = {
     element_id: 'element_id',
@@ -32,7 +32,7 @@ class Callout < ApplicationRecord
 
   def self.find_or_create_all_from_tsv!(filename)
     created = []
-    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
+    CSV.read(filename, **CSV_IMPORT_OPTIONS).each do |row|
       created << first_or_create_from_tsv_row!(row)
     end
     created

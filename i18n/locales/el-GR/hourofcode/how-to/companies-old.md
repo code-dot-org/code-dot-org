@@ -5,7 +5,7 @@ title: Πώς να φιλοξενήσετε μια ώρα του κώδικα - 
 {{ signup_button }}
 
 # Πώς να φέρετε την Ώρα του Κώδικα στην εταιρεία σας
-### Μάθετε πώς εσείς και οι υπάλληλοί σας μπορείτε να εμπνεύσετε τους μαθητές να δοκιμάσουν την επιστήμη των υπολογιστών!
+### Μάθετε πώς εσείς και οι υπάλληλοί σας μπορείτε να εμπνεύσετε τους μαθητές να δοκιμάσουν την επιστήμη της πληροφορικής!
 
 ***
 
@@ -31,7 +31,7 @@ title: Πώς να φιλοξενήσετε μια ώρα του κώδικα - 
 - Προωθήστε τη δική σας εκδήλωση [Ώρα του κώδικα]({{ urls/promote }}) και ενθαρρύνετε κι άλλους να την φιλοξενήσουν.
 - Ενθαρρύνετε τους προγραμματιστές της εταιρείας σας να επισκεφθούν μια τάξη για να βοηθήσουν σε μια Ώρα του Κώδικα και να εμπνεύσουν μαθητές να σπουδάσουν την επιστήμη των υπολογιστών. Μπορούν να [εγγραφούν]({{ urls/volunteer_engineer }}) για να συνδεθούν με μια τάξη.
 
-## 2. Δείτε το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Δείτε το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

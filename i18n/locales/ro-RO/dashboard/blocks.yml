@@ -2,8 +2,28 @@
 ro:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: solicită utilizatorului {QUESTION} pentru variabila [VAR][VAR] cu variantele {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}spune{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra mic
+            '0.75': mic
+            '1.00': mediu
+            '2.00': mare
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra mic
+            '0.75': mic
+            '1.00': mediu
+            '2.00': mare
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alternează fiecare {N} \nmăsuri între {MOVE1} și {MOVE2}"
         options:
@@ -212,20 +232,12 @@ ro:
             MOVES.XArmsUp: Mâini sus
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-      Dancelab_everyMeasuresRange:
-        text: 'repetă fiecare {N} măsuri după {START} '
       Dancelab_everySeconds:
         text: 'la fiecare {N} {UNIT} '
         options:
           UNIT:
             '"measures"': măsuri
             '"seconds"': secunde
-      Dancelab_everySecondsRange:
-        text: 'la fiecare {N} {UNIT} de la {START} la {STOP} '
-        options:
-          UNIT:
-            measures: Măsuri
-            seconds: Secunde
       Dancelab_everyVerseChorus:
         text: 'la fiecare {UNIT} '
         options:
@@ -981,6 +993,39 @@ ro:
         text: configurare
       Dancelab_whenSetup2:
         text: configurare
+      DansBlocks_getMicroscope:
+        text: Microscopul are {INPUT1}
+        options:
+          INPUT1:
+            '1': suc de lămâie
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: realizează efectul {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Baloane
+            '"confetti"': Confeti
+            '"hearts"': inimi
+            '"emojis"': Emoji-uri Vesele
+            '"rain"': ploaie
+            '"starburst"': Accelerare
+            '"glass"': Cioburi de Sticlă
+            '"twinkling"': Licărire
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': suc de lămâie
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Comunică {VAR1} cu {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: creează {NUM} noi {ANIMATION_NAME} spiriduși {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: reprezintă {NUM} noi {ANIMATION_NAME} spiriduși [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}spune{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} începe {BEHAVIOR}
       gamelab_addTarget:
@@ -1026,6 +1071,15 @@ ro:
       gamelab_collectibleBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): învârtit spre dreapta
+            new Behavior(spinning_left, []): învârtit spre stânga
+            new Behavior(fluttering, []): fluturat
+            new Behavior(jittering, []): tremurat
+            new Behavior(wobbling, []): clătinat
+            new Behavior(wandering, []): rătăcit
+            new Behavior(patrolling, []): patrulare
+            new Behavior(moving_west_and_looping, []): deplasare către vest și buclă
+            new Behavior(moving_east_and_looping, []): deplasare către est și buclă
             new Behavior(moving_north_and_looping, []): mergând către nord și formarea de bucle
             new Behavior(moving_south_and_looping, []): mergând către sud și formarea de bucle
       gamelab_comment:
@@ -1044,7 +1098,7 @@ ro:
         text: trage o linie {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: marginile blochează {SPRITE} să se deplaseze
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'la fiecare {N} {UNIT} '
         options:
           UNIT:
@@ -1070,6 +1124,7 @@ ro:
         options:
           CHOICE:
             '"this"': acest
+            '"other"': alta
       gamelab_getTime:
         text: ora în {UNIT}
         options:
@@ -1202,8 +1257,6 @@ ro:
             '"pop"': pop
             '"rain"': ploaie
             '"spiral"': spirală
-      gamelab_makeNewScaledSprite:
-        text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       gamelab_makeNumSprites:
@@ -1218,6 +1271,12 @@ ro:
             '90': jos
             '180': stânga
             '270': sus
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': mic
+            '50': mediu
+            '100': mare
       gamelab_mirrorSprite:
         text: "{SPRITE} îndreptat {DIRECTION}"
         options:
@@ -1288,12 +1347,39 @@ ro:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": selectează
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass neuzual
             "'sound://category_digital/jump_7.mp3'": sari
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": claxon pnematic
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauze
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cântec
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": aclamare
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": lovitură
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": două fluiere
+            "'sound://category_sports/One_Whistle_SFX.mp3'": fluier
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": gaura neagră
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": grup de buline
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopeea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebuloasa crabului
+            "'sound://category_space/Launch_SFX.mp3'": lansare
+            "'sound://category_space/Lift_Off.mp3'": lansare
+            "'sound://category_space/Pillars_SFX.mp3'": stâlpi
+            "'sound://category_space/Southern_ring_SFX.mp3'": inel sudic
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: reprodu discursul {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): mutare cu tastele săgeată
+            new Behavior(driving_with_arrow_keys, []): condus cu tastele cu săgeți
             draggable(): fiind draggable
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
@@ -1845,6 +1931,38 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Microscopul are {INPUT1}
+        options:
+          INPUT1:
+            '1': suc de lămâie
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': suc de lămâie
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): solid
+            new Behavior(liquid, []): lichid
+            new Behavior(wandering, []): gaz
+      ParticlesBlocks_statesOfMatter2:
+        text: Aplică {COSTUME} la {BEHAVIOR} comportament
+        options:
+          BEHAVIOR:
+            '"solid"': particulă solidă
+            '"liquid"': particulă lichidă
+            '"gas"': particulă de gaz
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': particulă solidă
+            '"liquid"': particulă lichidă
+            '"gas"': particulă de gaz
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1915,6 +2033,21 @@ ro:
             '"sound://category_achievements/peaceful_win_1.mp3"': Câștig
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Vârtej
             '"sound://category_achievements/peaceful_win_6.mp3"': Clopoței de vânt
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": gaura neagră
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": grup de buline
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopeea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebuloasa crabului
+            "'sound://category_space/Launch_SFX.mp3'": lansare
+            "'sound://category_space/Lift_Off.mp3'": lansare
+            "'sound://category_space/Pillars_SFX.mp3'": stâlpi
+            "'sound://category_space/Southern_ring_SFX.mp3'": inel sudic
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: seteazu autorul {AUTHOR}
       Poetry_setBackground:
@@ -2002,12 +2135,28 @@ ro:
         text: spiridușul {ANIMATION_NAME} începe {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"fluttering"': fluturat
+            '"growing"': creștere
+            '"jittering"': tremurat
+            '"shrinking"': micșorare
+            '"spinning_left"': învârtit spre stânga
+            '"spinning_right"': învârtit spre dreapta
             '"swimming_left_and_right"': înot
+            '"wandering"': rătăcit
+            '"wobbling"': clătinat
       Poetry_stopBehavior:
         text: spiridușul {ANIMATION_NAME} oprește {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"fluttering"': fluturat
+            '"growing"': creștere
+            '"jittering"': tremurat
+            '"shrinking"': micșorare
+            '"spinning_left"': învârtit spre stânga
+            '"spinning_right"': învârtit spre dreapta
             '"swimming_left_and_right"': înot
+            '"wandering"': rătăcit
+            '"wobbling"': clătinat
             '"all"': "--toate comportamentele--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
@@ -2030,6 +2179,11 @@ ro:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: când se răspunde la {VAR}
       RyanLab_moveForward:
@@ -2141,7 +2295,7 @@ ro:
         text: dacă stă pe {TYPE}{STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": coral roșu
+            "'blueCoralBlock'": coral albastru
             "'redCoralBlock'": coral roșu
             "'sand'": nisip
             "'wool_blue'": apă adâncă
@@ -2212,5 +2366,19 @@ ro:
           DIR:
             right: dreapta ↻
             left: stânga ↺
+      storylab_setForegroundEffect2:
+        text: realizează efectul {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Baloane
+            '"confetti"': Confeti
+            '"hearts"': inimi
+            '"rain"': ploaie
+            '"starburst"': Accelerare
+            '"twinkling"': Licărire
+      storylab_setHeading:
+        text: stabilește titlul {HEADING}
+      storylab_setSubheading:
+        text: stabilește subtitlul {SUBHEADING}
       validation_validatedBackground:
         text: setează fundalul cu {IMG}

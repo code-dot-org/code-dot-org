@@ -28,7 +28,7 @@ def make_all_users_with_students_into_teachers
     # find_each does this in batches of 1000
     teacher = follower.user
     if teacher.user_type != User::TYPE_TEACHER
-      teacher.update_attributes(user_type: User::TYPE_TEACHER)
+      teacher.update(user_type: User::TYPE_TEACHER)
     end
   end
 
@@ -44,7 +44,7 @@ def make_all_users_without_user_type_into_students
 
   users_without_type.find_each do |user|
     # find_each does this in batches of 1000
-    user.update_attributes(user_type: User::TYPE_STUDENT)
+    user.update(user_type: User::TYPE_STUDENT)
   end
 
   puts "now #{users_without_type.count} users without type"

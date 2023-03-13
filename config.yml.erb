@@ -38,10 +38,6 @@ dashboard_schoolproject_secret: !Secret
 recaptcha_site_key: !Secret
 recaptcha_secret_key: !Secret
 
-# Logentries (aka 'slog')
-logentries_secret: !Secret
-slog_token:
-
 # Twilio
 twilio_auth:               !Secret
 twilio_auth_test:          !Secret
@@ -322,18 +318,16 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
-i18n_key_value:
 i18n_backend:
 cache:
 app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org codecurricula.com
 skip_locales:
 secret_pictures_csv:
 no_https_store:
-expo_session_secret: !Secret
 firebase_debug:
 pd_teacher_application_list_secret_key:
 
@@ -417,6 +411,10 @@ proxy: false # If true, generated URLs will not include explicit port numbers in
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
 
+# Use different color header for local environment than the one on production to
+# make it easier to tell the difference
+use_local_header_color:
+
 default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
@@ -460,7 +458,8 @@ image_optim: <%=chef_managed && !ci_test%>
 # Used to export data on professional learning to gsheets
 enrollments_summer_2020_gsheet_key:
 csf_workshop_attendance_gsheet_key: !Secret
-applications_2022_2023_gsheet_key:
+applications_gsheet_key:
+eir_teacher_enrollments_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
@@ -515,7 +514,19 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-db_cluster_id:
+# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+db_cluster_id: !Secret
+db_proxy_reporting_endpoint: !Secret
+db_writer_endpoint: !Secret
+
+db_admin_user: master
+db_admin_password: !Secret
+db_writer_user: application-writer
+db_writer_password: !Secret
+db_reader_user: readonly
+db_reader_password: !Secret
+
+# Legacy database configuration settings contain a complete URI (username, password, servername, and database).
 db_admin: !Secret
 reporting_db_admin:
 db_proxy_admin:
@@ -555,3 +566,17 @@ spotify_api_client_secret: !Secret
 
 # Credentials for the Open Weather API, used to provide weather data in App Labs
 open_weather_api_key: !Secret
+
+# Local Javabuilder configuration. Set 'use_localhost_javabuilder: true' to point to
+# your Javabuilder WebSocket server running on localhost.
+# Set 'local_javabuilder_stack_name: "your stack name"' to point to a deployed development
+# instance of Javabuilder. This will likely be 'javabuilder-adhoc-your_branch_name'
+use_localhost_javabuilder:
+local_javabuilder_stack_name:
+
+# Amplitude keys
+
+# Music lab key
+amplitude_api_key: !Secret
+# General CDO key
+cdo_amplitude_api_key:

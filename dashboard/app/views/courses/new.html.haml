@@ -1,5 +1,5 @@
 %h1= "New Course"
-%script{src: webpack_asset_path('js/courses/new.js'), data: {families: UnitGroup.family_names.to_json, versionYearOptions: UnitGroup.get_version_year_options.to_json}}
+%script{src: webpack_asset_path('js/courses/new.js'), data: {families: @versioned_course_families.to_json, familiesCourseTypes: @course_families_course_types.to_json, versionYearOptions: UnitGroup.get_version_year_options.to_json}}
 #form
 = link_to t('crud.back'), courses_path
 

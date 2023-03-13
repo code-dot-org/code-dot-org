@@ -30,11 +30,11 @@ class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
 
-  belongs_to :game
+  belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
-  belongs_to :user
+  belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
+  belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
@@ -51,7 +51,7 @@ class Level < ApplicationRecord
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
 
   validate :validate_game, on: [:create, :update]
 
@@ -91,6 +91,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
+    start_html
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -150,7 +151,7 @@ class Level < ApplicationRecord
   end
 
   def unplugged?
-    game && game.unplugged?
+    game&.unplugged?
   end
 
   def finishable?
@@ -199,11 +200,11 @@ class Level < ApplicationRecord
 
   def available_callouts(script_level)
     if custom?
-      unless callout_json.blank?
+      if callout_json.present?
         return JSON.parse(callout_json).map do |callout_definition|
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
-          callout_text = should_localize? &&
-            I18n.t(i18n_key, default: nil) ||
+          callout_text = (should_localize? &&
+            I18n.t(i18n_key, default: nil)) ||
             callout_definition['callout_text']
 
           Callout.new(
@@ -379,8 +380,8 @@ class Level < ApplicationRecord
   ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
-    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where('ideal_level_source_id is null').
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where(ideal_level_source_id: nil).
     to_a.reject {|level| level.try(:free_play)}
   end
 
@@ -492,7 +493,7 @@ class Level < ApplicationRecord
   end
 
   def self.cache_find(id)
-    Script.cache_find_level(id)
+    Unit.cache_find_level(id)
   end
 
   def icon
@@ -725,6 +726,19 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_rubric_property(property)
+    if should_localize?
+      I18n.t(
+        property,
+        scope: [:data, :mini_rubric, name],
+        default: properties[property],
+        smart: true
+      )
+    else
+      properties[property]
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -741,11 +755,11 @@ class Level < ApplicationRecord
       ],
       scriptOptions: [
         ['All scripts', ''],
-        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
       ],
       ownerOptions: [
         ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
+        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| a[0].present? && a[1].present?}.sort_by {|a| a[0]}
       ]
     }
   end

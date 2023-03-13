@@ -358,6 +358,7 @@
   homepage_banner_40k_teachers_link: "Daha ətraflı"
   homepage_slot_text_title_hoc: "Kod Saatı"
   homepage_slot_text_blurb_hoc: "Hər kəs öyrənə bilər. Elə bu gün başlayın"
+  homepage_slot_text_blurb_hoc_2022: "Kəşf et, oyna, yarat!"
   homepage_slot_text_link_hoc: "Kod Saatında özünüzü sınayın"
   homepage_slot_text_link_about_hoc: "Kod Saatı haqqında"
   homepage_slot_text_link_host: "Bir Kod Saatı təşkil edin"
@@ -383,6 +384,7 @@
   homepage_slot_text_link_buy: "İştriak edin"
   homepage_slot_text_link_donate: "İanə verin"
   homepage_slot_text_link_shop: "T-shirt, papaqlar və s."
+  homepage_slot_text_link_thebadguys: "Pis adamlarla kodlaşdır"
   homepage_slot_text_link_administrators: "KE öz məktəbinizə gətirin"
   homepage_gallery_header: "%{project_count} milyondan çox Code.org layihəsi yaradılıb"
   homepage_header_donors: "\"Code.org\" onu dəstəkləyənlərə təşəkkür edir"
@@ -391,6 +393,10 @@
   homepage_below_hero_announcement_text: "Məxfiliyinizə əhəmiyyət veririk və 25 may tarixindən etibarən gizlilik siyasətimizdə bəzi yeniləmələr edirik."
   homepage_below_hero_announcement_link_text: "Daha ətraflı"
   homepage_higher_power_body: "\"Dance Party\" ilə yarat, qrupu canlı görmə şansı əldə et."
+  homepage_thebadguys_body: "Xanım Tarantula, cənab Wolf və **The Bad Guys** filminin qalan personajları ilə bir macəra kodlayın!"
+  homepage_csa_subhead: "Yeni bir yanaşma"
+  homepage_csa_title: "AP® Kompüter Elmləri A"
+  homepage_csa_body: "Sərmayə əsaslanan kurikulumumuzda real dünya ilə əlaqəli yaradıcı layihələrlə tələbələri gücləndirin."
   contact_form_topic_student: "Mən şagirdəm"
   contact_form_topic_parent: "Mən valideynəm"
   contact_form_topic_teacher: "Mən müəllim/təlimçiyəm"
@@ -522,6 +528,8 @@
   video_title_marco_belinelli: "Marco Belinelli ilə Kod Saatı"
   video_title_chris_bosh: "Chris Bosh Kompüter Elmlərində"
   video_title_my_name_is_aracely: "Mənim adım Arasel-dir"
+  video_title_change_face_of_cs: "Kompüter Elminin Üzünü Dəyişdirin"
+  video_title_latam_hoc: "Məktəblərimizdə nələr çatışmır"
   video_1min: "1 dəq"
   video_2min: "2 dəq"
   video_3min: "3 dəq"
@@ -598,6 +606,7 @@
   volunteer_engineer_submission_distance_16: "16 km"
   volunteer_engineer_submission_distance_24: "24 km"
   volunteer_engineer_submission_distance_32: "32 km"
+  volunteer_engineer_submission_distance_80: "50 mil"
   volunteer_engineer_submission_num_volunteers_5: "5 konüllü"
   volunteer_engineer_submission_num_volunteers_10: "10 konüllü"
   volunteer_engineer_submission_num_volunteers_25: "25 konüllü"
@@ -693,9 +702,9 @@
   dashboard_progress_in_progress: "davam edir"
   dashboard_progress_not_completed: "tamamlanmayıb"
   dashboard_progress_completed_too_many_blocks: "tamamlandı, həddən artıq çox blok var"
-  dashboard_progress_completed_perfect: "tamamlanıb, əladır"
+  dashboard_progress_completed_perfect: "tamamlanıb, mükəmməl"
   dashboard_progress_furthest_level_attempted: "sonuncu cəhd istifadə edildi."
-  dashboard_progress_submitted: "təqdim edilmişdir"
+  dashboard_progress_submitted: "göndərilmişdir"
   dashboard_progress_view: 'İrəliləyişə bununla baxın:'
   dashboard_progress_student_in_script: "%{script_name} proqramında %{student_name} üçün irəliləyiş məlumatı"
   dashboard_progress_pair_programming: "cüt proqramlaşdırma"
@@ -810,7 +819,7 @@
   dashboard_correctness: "Düzgünlük"
   dashboard_correctness_free_response: "Azad cavab"
   dashboard_correctness_unsubmitted: "Göndərilməyib"
-  dashboard_correctness_correct: "Doğru"
+  dashboard_correctness_correct: "Düzgün"
   dashboard_correctness_incorrect: "Yalnış"
   dashboard_submission_submitted: "Göndərilib"
   dashboard_submission_in_progress: "Tamamlanmayıb"
@@ -981,6 +990,7 @@
   coursee-2020_name: E Kursu (2020)
   coursef-2020_name: F Kursu (2020)
   coursed-2021_name: D Kursu (2021)
+  coursed-2022_name: D Kursu (2021)
   express-2018_name: Ekspress Kurs (2018)
   pre-express-2018_name: Ön-oxucu Ekspres Kursu (2018)
   express-2019_name: Ekspress Kurs (2019)
@@ -988,6 +998,7 @@
   express-2020_name: Ekspress Kurs (2020)
   pre-express-2020_name: Ön-oxucu Ekspres Kursu (2020)
   pre-express-2021_name: Ön-oxucu Ekspres Kursu (2021)
+  pre-express-2022_name: Öncədən Oxucu Ekspres Kursu (2022)
   csd2_name: 'Hissə 2: Veb İnkişafı'
   csd3_name: 'Bölmə 3: Animasiya və Oyunlar'
   accelerated_name: "Sürətləndirilmiş kurs"
@@ -1101,6 +1112,12 @@
   coursed-2021_gradelevel: 8+ siniflər
   coursee-2021_gradelevel: 8-12 yaş
   coursef-2021_gradelevel: 9-13 yaş
+  coursea-2022_gradelevel: 4-7 yaş
+  courseb-2022_gradelevel: 5-8 yaş
+  coursec-2022_gradelevel: 6-10 yaş
+  coursed-2022_gradelevel: 8+ siniflər
+  coursee-2022_gradelevel: 8-12 yaş
+  coursef-2022_gradelevel: 9-13 yaş
   accelerated_gradelevel: "10+ yaş (Kurs 3-dən sonra)"
   codeorg_platformtext: "Müasir brauzerlər, smartfonlar, planşetlər"
   codeintl_platformtext: "Müasir brauzerlər, smartfonlar, planşetlər"
@@ -1237,6 +1254,12 @@
   coursed-2021_shortdescription_congrats: Şagirdlər döngələr, şərtlər və hadisələr haqqında anlayışlarını inkişaf etdirirlər. Kodlaşdırmadan əlavə, tələbələr rəqəmsal vətəndaşlıq haqqında məlumat əldə edirlər.
   coursee-2021_shortdescription_congrats: Alqoritmlər, döngələr, şərtlər və hadisələrlə kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
   coursef-2021_shortdescription_congrats: Müxtəlif növ döngələrdən, hadisələrdən, funksiyalardan və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli üsullarını araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə edin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
+  coursea-2022_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
+  courseb-2022_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
+  coursec-2022_shortdescription_congrats: Ardıcıllıq, döngələr və hadisələrlə proqramlar yaradın. Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
+  coursed-2022_shortdescription_congrats: Şagirdlər döngələr, şərtlər və hadisələr haqqında anlayışlarını inkişaf etdirirlər. Kodlaşdırmadan əlavə, tələbələr rəqəmsal vətəndaşlıq haqqında məlumat əldə edirlər.
+  coursee-2022_shortdescription_congrats: Alqoritmlər, döngələr, şərtlər və hadisələrlə kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
+  coursef-2022_shortdescription_congrats: Müxtəlif növ döngələrdən, hadisələrdən, funksiyalardan və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli üsullarını araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə edin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
   codeorg_longdescription: "İnfromatikanın təməl anlayışlarını sürüklə-burax tipli proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin video mühazirələri, \"Angry Birds\" və \"Plants vs. Zombies\" yer alır. \"Təkrar et\" dövrləri, şərti ifadələr və sadə alqoritmləri öyrənin. 34 dildə təqdim olunur."
   codeintl_longdescription: "İnfromatikanın təməl anlayışlarını sürüklə-burax tipli proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin video mühazirələri, \"Angry Birds\" və \"Plants vs. Zombies\" yer alır. \"Təkrar et\" dövrləri, şərti ifadələr və sadə alqoritmləri öyrənin. 34 dildə təqdim olunur."
   khan_longdescription: "Kodunuzla əyləncəli çertyojlar yaratarkən JavaScript proqramlaşdırmasının əsaslarını öyrənin. Bunu özünüz və ya sinifinizlə edin!"
@@ -1468,6 +1491,7 @@
   header_educate_beyond: "Daha çox Code.org"
   header_educate_inspire: "Bir şagirdi həvəsləndirin"
   header_educate_community: "Onlayn icma"
+  header_educate_requirements: "texniki tələblər"
   header_educate_tools: "Alətlər və videolar"
   header_about_us: "Haqqımızda"
   header_about_leadership: "Rəhbərlik"
@@ -1502,7 +1526,7 @@
   sprite_lab_tutorials: "Sprite Laboratoriyası Dərslikləri"
   header_documentation: "Təlimat və sənədlər"
   user_header_label: "Salam %{username}"
-  user_header_team: "Komanda"
+  user_header_team: "Qrup"
   user_header_my_projects: "Mənim layihələrim"
   user_header_settings: "Hesab parametrləri"
   user_header_logout: "Çıxış"
@@ -1558,6 +1582,9 @@
   hoc_overview_dance_title: "Rəqs şənliyi"
   hoc_overview_dance_subtitle: "Dostlarnızla paylaşmaq üçün rəqs şənliyini kodlaşdırarın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, və 25 -dən çox iştirakçı ilə!"
   hoc_overview_dance_2019_subtitle: "Dostlarnızla paylaşmaq üçün rəqs şənliyini kodlaşdırarın. Katy Perry, Shawn Mendes, Şənlikdə panika!, Lil Nas X, Jonas Brothers, Nicki Minaj, və 34-dən çox iştirakçı ilə!"
+  hoc_overview_dance_2022_subtitle: "Dostlarınızla bölüşmək üçün Rəqs Partiyası kodla. Beyonse, Harri Stayts, Lizzo, Lil Nas X, Selena Qomez, Disneyin \"Encanto\"larından musiqi və daha çox şey ifa edir!"
+  hoc_overview_hello_world_2022_subtitle: "Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli mövzudan birini seçin."
+  hoc_overview_hello_world_2022_alt_text: "Animasiyalı astronavt və heyvan personajları Yer kürəsi illüstrasiyası ətrafında üzürlər."
   hoc_overview_title: "Code.org-dan Kod saatı Aktivlikləri"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Kod Saatı</a> 180-dən çox ölkədə on milyonlarla tələbəni əhatə edən qlobal hərəkatdır. Hər kəs, istənilən yerdə Kod Saatı tədbiri təşkil edə və ya 45-dən çox dildə mövcud olan 500+ bir saatlıq dərsliklərdən hər hansı birini sınaya bilər."
   hoc_overview_subtitle_markdown: "[Hour of Code](https://hourofcode.com) 180+ ölkədə on milyonlarla tələbəni əhatə edən qlobal hərəkatdır. Hər kəs, istənilən yerdə Kod Saatı tədbiri təşkil edə və ya 45-dən çox dildə mövcud olan 500+ bir saatlıq dərsliklərdən hər hansı birini sınaya bilər."
@@ -1603,9 +1630,13 @@
   hoc2018_mc_educators_box3_title: "Pulsuz tələbə seminarında iştirak edin"
   hoc2018_mc_educators_box3_desc: "Pulsuz Kod Saatı seminarı üçün ərazinizdəki Microsoft Mağazasına baş çəkin. Altı yaşdan yuxarı bütün bacarıq səviyyələrində olan iştirakçılar üçün."
   hoc2018_mc_educators_box3_button: "Bir atelye tapın"
+  hoc2022_mc_educators_box3_desc_markdown: 'Bunu tələb [pulsuz kurs](%{free_course_link}) tələbi ilə istifadə edin və ya qonaq müəllimlə canlı Kod Saatı seminarında iştirak etmək üçün bütün sinifinizi qeydiyyatdan keçirin. Bakı, 2006, s.66- 11. '
+  hoc2022_mc_educators_box3_button: "İndi qeydiyyatdan keçin"
   hoc2018_mc_educators_box4_title: "Daha çox kompüter elmi resursuna daxil olun"
   hoc2018_mc_educators_box4_desc: "Microsoft-dan rəqəmsal bacarıqlar və kompüter elmləri üzrə təhsil resursları ilə icmanızda dəyişiklik yaradın."
   hoc2018_mc_educators_box4_button: "Resursları araşdırın"
+  hoc2022_mc_educators_box4_desc: "200 saat kompüter elmləri üzrə tədris proqramı ilə K-12 öyrənənlərdə STEM ehtirası ruhlandır. Blokdan pythona qədər, peşəkar inkişaf tərəfindən dəstəklənir."
+  hoc2022_mc_educators_box4_button: "Öyrənməyə davam edin"
   hoc2018_mc_watch_videos: "Başlamazdan əvvəl bu həvəsləndirici videolardan birinə baxın"
   hoc2018_mc_videos_more: "Məşhurlar və Aktyorların iştirakı ilə daha çox <a href='%{inspiring_videos_playlist}'>həvəsləndirici videolar</a>"
   hoc2018_mc_careers_more: "Texnologiya sahəsindəki məşhurların iştirakı ilə daha çox <a href='%{careers_url}' target='_blank'>həvəsləndirici videolar</a>"
@@ -1715,27 +1746,43 @@
   hoc2020_mc_available_mee: 'Minecraft-da Mpvcuddur: Təhsil Nəşri'
   hoc2020_mc_mee_title: "Minecraft iki kəndin nağılı"
   hoc2020_mc_mee_description: 'Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün Education Eddition. Tələbələrinlə kodlaşdırmanın əsaslarını öyrən və müxtəlifliyi kəşf et. Ödənişsiz mənbələrə- dərs planı, videolar, kompüter elmləri programı, ədalətlilik dərsləri, və müəllim təlimlərinə giriş et'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
   hoc2021_mc_mee_description: 'Keçmişə səyahət et və kodlaşdırmanı öyrən! Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün Education Eddition. Ödənişsiz tədris mənbələri, təlimlərlə və videolarla başla.'
   hoc2021_mc_mee_villages_title: "2 kəndin hekayəsi"
   hoc2021_mc_mee_villages_description: 'Tələbələrinlə Minecraft''da kodlaşdırmanın əsaslarını öyrən: Təhsil Buraxılışı'
+  hoc2021_mc_mee_ai_title: "Yaxşılıq üçün AI"
   hoc2021_mc_mee_ai_description: 'Tələbələrinlə Al''ı kəşf et və kodlaşdırmanən əsaslarını öyrən: Education Eddition.'
+  hoc2022_mc_mee_title: "Minecraft Qurtuluş Əmlakı"
+  hoc2022_mc_mee_description: 'Sübh tezdən sirli köşkdən qaçıb milyon zümrüd qazan! Yeni Minecraft Kod Saarı təlimatı hal-hazırda Minecraft: Education Edition-da Windows, Mac, Chromebook, Ipad və Mobile-da mövcuddur. Pulsuz tədris resursları, təlimlər və videolarla başlayın. '
+  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition adlı bu pulsuz kodlaşdırma dərsində gələcəyi xilas etmək üçün vaxtda geriyə səyahət edin.'
   footer_powered_by_aws: "Amazon Veb Xidmətləri və “Powered by AWS” loqosu Amazon.com, Inc. və ya onun ABŞ və/və ya digər ölkələrdəki filiallarının ticarət nişanlarıdır."
   footer_built_on_github: "Microsoft tərəfindən GitHub-da qurulub"
+  codebytes_skinny_banner_title: "7-11 dekabr CodeBytes canlı mini dərslərimizə qoşulun!"
+  codebytes_skinny_banner_description: 'CodeBytes, 20 dəqiqəlik interaktiv informatika dərsləri üçün CS Təhsil Həftəsinin hər günü bizə qoşulun. Gündə iki dəfə canlı yayımlanan CodeBytes tələbələr üçün virtual #HourOfCode-da iştirak etmək üçün əla yoldur!'
   codebytes_skinny_banner_english_only: "Yalnız ingilis dili"
+  codebytes_skinny_banner_learn: "[code.org/codebytes](%{code_bytes_url}) ünvanında ətraflı öyrənin."
   footer_privacy_policy: "Məxfilik siyasəti"
+  footer_privacy_policy_updated: "Məxfilik Siyasəti (yenilənib)"
   footer_about: "Haqqımızda"
-  footer_partners: "Tərəfdaşlar"
+  footer_partners: "Həmkarlar"
   footer_blog: "Bloq"
   footer_donate: "İanə verin"
   footer_store: "Mağaza"
   footer_support: "Dəstək"
   footer_terms: "Şərtlər"
+  ai_for_oceans: "\nOkeanlar üçün AI"
   ai_for_oceans_lesson_plan: "dərs planı"
+  ai_for_oceans_tile_description: "Kömək edin A.I. zibil aşkar etmək üçün öyrətməklə okeanları təmizləyin! Təlim məlumatları və qərəzliliyi və AI-nin dünya problemlərini necə həll edə biləcəyi haqqında öyrənin. Baxın"
   how_ai_works: "Süni İntelekt (Sİ) necə işləyir? "
+  how_ai_works_tile_description: "Bu qısa videolar silsiləsi ilə süni intellektin necə işlədiyini və nə üçün vacib olduğunu öyrənin. Microsoft-un baş direktoru Satya Nadella və müxtəlif ekspertlər heyəti"
   watch_the_videos: "Videolara baxın"
+  ai_and_ethics: "AI və Etika"
+  ai_and_ethics_tile_description: "Tələbələr süni intellektin etik təsirləri üzərində düşünür, sonra hər yerdə AI yaradıcıları və qanunvericilər üçün “AI Etika Kodeksi” resursu yaratmaq üçün birlikdə işləyirlər."
   view_lesson_plan: "Dərs planına baxın"
   ai_in_partnership_with: "Tərəfdaşlarımız: "
   ai_microsoft_thanks: "Hər bir uşağın 21-ci əsrdə kompüter elmini öyrənmək və uğur qazanmaq üçün bacarıqlara sahib olmasını təmin etmək üçün bizim vizyonumuzu və missiyamızı dəstəklədiyi üçün Microsoft-a təşəkkür edirik."
+  ai_ethics_panel_header: "AI Etikasının araşdırılması panel müzakirəsi"
+  ai_ethics_panel_description_1: "Sevimli süni intellekt mütəxəssislərimizlə daha da dərinləşin! Bu panel müzakirəsi alqoritmik qərəz və işin gələcəyi kimi mühüm məsələlərə toxunur. Bizimlə birləşdirin"
   ai_ethics_lesson_plan: "AI və Etika dərs planı"
   ai_ethics_panel_description_2: "süni intellektin etikasına böyük bir giriş üçün!"
   cs_for_good: "Yaxşılıq üçün CS"
@@ -1765,6 +1812,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Üşaqlar üçün maşın öyrənməsi'
   ai_ecs: 'ECS: Süni İntelekt (Sİ)'
   ai_ecs_description: "Exploring Computer Science (ECS) kurikulumu üçün yeni alternativ kurikulum vahidi."
+  ai_aiedu_intro: 'aiEDU: Süni intellektə giriş'
+  ai_aiedu_intro_description: "Süni intellektə giriş tələbələrin süni intellektin nə olduğu və onun real dünyada necə istifadə olunması haqqında konseptual biliklər inkişaf etdirdiyi pulsuz, innovativ, mədəni baxımdan uyğun kurikulumdur."
   ai_elements: "Süni İntellektin elementləri"
   ai_elements_description: "Reaktor və Helsinki Universiteti tərəfindən yaradılmış bir sıra pulsuz onlayn kurslar."
   ai_cognimates: "Bilir"
@@ -1772,3 +1821,21 @@
   ai_try_activity: "Aktivliyi cəhd et"
   outbreak_tile_subtitle: "Monster Town-a virus yoluxdu! Bir epidemiya simulyatorunu kodlayın və Monster Town qonşularının başına nə gələcəyi barədə proqnozlar verin."
   outbreak_tile_alt: "Virusun bir qrup bənövşəyi canavar vasitəsilə necə yayıldığının simulyasiyası."
+  footer_cookie_notice: "Kuki Xəbərdarlığı"
+  top_hoc_tutorial_applab_alt_text: "Mavi fonda ulduzlar və işıq şüaları yayan sensor ekran planşetinə şəhadət barmağı toxunan qəhvəyi əl"
+  minecraft_tile_alt: "ki Minecraft personajı, Stiv və Aleks, fonda mərcan, delfinlər və laminarlarla su Minecraft səhnəsini göstərən"
+  hoc2022_banner_title: "Kəşf edin, Oynayın, Yaradın!"
+  hoc2022_banner_description: "Dünyanı öyrənin, xal qazan, hərəkəti dayandır - kompüter elmlərini öyrənməyi bir çox yolu var!\n"
+  hoc2022_cta_primary: "Yeniliklərə baxın"
+  hoc2022_cta_secondary: "Daha çox fəaliyyət sınayın"
+  hoc2022_landing_page_explore_title: "Araşdır"
+  hoc2022_landing_page_explore_description: "Kompüter elmləri ilə yeni dünyalara qapılar açın!"
+  hoc2022_landing_page_play_title: "Oyna"
+  hoc2022_landing_page_play_description: "Sahəni götür və hesab et!"
+  hoc2022_landing_page_create_title: "Düzəlt"
+  hoc2022_landing_page_create_description: "Qəribə və gözəl bir şey edin!"
+  hoc2022_landing_page_banner_alt_left: "Kosmosda Saturnun yanında rəqs edən yadplanetli"
+  try_it_yourself: "Özünüz edin!"
+  try_an_activity: "Aktivitə sınayın"
+  see_more_activities: "Daha çox aktivitəyə bax"
+  microsoft_logo_alt: "Microsoft Loqosu"

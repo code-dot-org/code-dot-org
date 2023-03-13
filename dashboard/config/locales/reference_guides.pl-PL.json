@@ -1,0 +1,155 @@
+{
+  "pl-PL": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/accelerometer-events": {
+          "display_name": "Akcelerometr Zdarzeń"
+        },
+        "csd-2022/ai-lab": {
+          "display_name": "AI Lab"
+        },
+        "csd-2022/animation-tab": {
+          "display_name": "Karta Animacja"
+        },
+        "csd-2022/app-lab": {
+          "display_name": "App Lab"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/arrays": {
+          "display_name": "Tablice"
+        },
+        "csd-2022/board-events": {
+          "display_name": "Zdarzenia na tablicy"
+        },
+        "csd-2022/classes": {
+          "display_name": "Klasy"
+        },
+        "csd-2022/collision-detection": {
+          "display_name": "Wykrywanie kolizji"
+        },
+        "csd-2022/css": {
+          "display_name": "CSS"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/debugging-html": {
+          "display_name": "Debugowanie w HTML",
+          "content": "## Debugowanie w HTML\n\n\\*\\* Co to jest błąd? \\*\\*\n\nBłędy to pomyłki w kodzie, które powodują, że nie działa on zgodnie z planem.\n\n\\*\\* Co to jest debugowanie? \\*\\*\n\nDebugowanie to proces znajdowania i naprawiania błędów. Debugowanie jest procesem rozwiązywania problemów, więc użyj kroków rozwiązywania problemów podczas próby debugowania.\n\n\\*\\*Jakie są przykłady błędów? \\*\\* \n\nBłędem może być wszystko, co powoduje, że kod nie działa zgodnie z planem. Niektóre przykłady to błędna pisownia, umieszczenie kodu w niewłaściwym miejscu, użycie niewłaściwego tagu, lub zapominanie o zamknięciu tagu."
+        },
+        "csd-2022/design-mode": {
+          "display_name": "Tryb projektowania"
+        },
+        "csd-2022/for-loops": {
+          "display_name": "Pętle dla (for)"
+        },
+        "csd-2022/formatting-html": {
+          "display_name": "Formatowanie HTML"
+        },
+        "csd-2022/functions": {
+          "display_name": "Funkcje"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "Laboratorium Gier (Game Lab)"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/headings-and-paragraphs": {
+          "display_name": "Nagłówki i akapity"
+        },
+        "csd-2022/html": {
+          "display_name": "HTML",
+          "content": "HTML (Hypertext Markup Language) to język używany do definiowania zawartości stron internetowych. Więcej informacji na temat tagów i atrybutów HTML można znaleźć na stronie [Dokumentacja Web Lab](/docs/weblab/)."
+        },
+        "csd-2022/html-overview": {
+          "display_name": "Streszczenie",
+          "content": "HTML (Hypertext Markup Language) to język używany do definiowania zawartości stron internetowych. Więcej informacji na temat tagów i atrybutów HTML można znaleźć na stronie [Dokumentacja Web Lab](/docs/weblab/)."
+        },
+        "csd-2022/html-tags": {
+          "display_name": "Tagi HTML"
+        },
+        "csd-2022/hyperlinks": {
+          "display_name": "Odnośniki"
+        },
+        "csd-2022/images-in-html": {
+          "display_name": "Obrazy w HTML"
+        },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Wprowadzenie do AI Lab"
+        },
+        "csd-2022/javascript": {
+          "display_name": "JavaScript"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/lists": {
+          "display_name": "Listy"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Przybornik konstruktora"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Karty modeli w AI Lab"
+        },
+        "csd-2022/multi-screen-apps": {
+          "display_name": "Aplikacje wieloekranowe"
+        },
+        "csd-2022/other": {
+          "display_name": "Inni/inne"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/patterns": {
+          "display_name": "Wzorce"
+        },
+        "csd-2022/patterns-2": {
+          "display_name": "Wzorce"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "Streszczenie"
+        },
+        "csd-2022/physical-input": {
+          "display_name": "Wejście fizyczne"
+        },
+        "csd-2022/playing-notes": {
+          "display_name": "Granie z nut"
+        },
+        "csd-2022/random-numbers": {
+          "display_name": "Losowe liczby"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Właściwości duszka"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Duszki"
+        },
+        "csd-2022/variables": {
+          "display_name": "Zmienne"
+        },
+        "csd-2022/velocity": {
+          "display_name": "Prędkość"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab",
+          "content": "# Web Lab\n\nAby pomóc Ci odnieść sukces podczas korzystania z naszego narzędzia, znajdziesz kilka typowych pytań użytkowników z Web Lab.\n\n## Informacje ogólne\n\n### Organizacja plików\n\nZauważysz, że pliki są oznaczone kolorami według ich typu i mają nowe ikony. Mamy nadzieję, że ułatwia to szybkie rozróżnienie między plikiem CSS, plikiem HTML lub obrazem.\n\n<img src=\"https://images.code.org/64255c7e081f479a042e9e23e5bb1cf2-fileOrg.png\" style=\"width:100px\">\n\n### Code Selector\n\nDodając kolory w pliku CSS, zauważysz fioletową ikonę, która pojawia się po kliknięciu nazwy koloru. Ta ikona otwiera widżet wyboru kolorów, który ułatwia wybieranie nowych kolorów dla Twojej witryny. Zobacz to w akcji poniżej!\n\n<img src=\"https://images.code.org/c54abfd05f80fee79cfd9489bd1bcb59-filter.gif\" style=\"width:400px\">\n\n### Metadane obrazu i filtry\n\nPo przesłaniu obrazu można wyświetlić dodatkowe informacje o obrazie, takie jak jego wymiary, kod początkowy do użycia obrazu w projekcie oraz widoczne kolory, które pojawiają się na obrazie. Istnieje również fajna funkcja, aby zastosować filtry do obrazu bezpośrednio w Web Lab. Zobacz te w akcji poniżej!\n\n<img src=\"https://images.code.org/0aae6fadac85f866dbf88c7beca6f541-Image.gif\" style=\"width:400px\">\n\n### Project Size Limits\n\nWeb Lab ma teraz ograniczenie, jak duże mog być projekty - co najwyżej 20mb. Możesz śledzić, jak duże są Twoje projekty, korzystając z miernika postępu u góry każdego projektu. Większość projektów pozostanie poniżej tego ograniczenia, chyba że używasz wielu obrazów. Jeśli tak, możesz użyć zewnętrznego programu do hostowania obrazów.\n\n<img src=\"https://images.code.org/8e88dc0ed5bdab512f7a02a39c7ac7cf-projectSize.png\" style=\"width:200px\">\n\n## FAQ\n\n1.  \\*\\*Dlaczego HTML wydaje się działać, nawet gdy jest uszkodzony? \\*\\*\n    -   HTML jest odczytywany przez przeglądarkę internetową w celu generowania stron internetowych. Ponieważ ludzie często popełniają małe błędy podczas pisania swoich stron internetowych, przeglądarki są zaprogramowane tak, aby „najlepiej zgadywać”, co zamierzałeś zrobić. Czasami różne przeglądarki są nawet zaprogramowane do różnych domysłów! Jedynym sposobem, aby upewnić się, że Twój kod wygląda tak, jak zamierzasz, jest upewnienie się, że zawsze używasz tagów poprawnie.\n2.  \\*\\*Dlaczego kod czasami zmienia kolor na różowy? \\*\\*\n    -   Web Lab jest zaprogramowany do automatycznego wykrywania niektórych błędów w HTML. Kiedy zauważy błąd, zmienia ten kod na różowy. Błąd może być w kolorze różowym, lub może być gdzieś przed różowym kodem. Musisz dokładnie debugować, aby znaleźć swój błąd.\n3.  \\*\\*Jak przełączać się między plikami? \\*\\*\n    -   Kliknij nazwę pliku, który chcesz obejrzeć w menu po lewej stronie ekranu.\n4.  \\*\\*Jak zmienić nazwę pliku? \\*\\*\n    -   Aby zmienić nazwę pliku, możesz kliknąć nazwę pliku prawym przyciskiem myszy (lub kliknąć klawisz Control) i wybrać opcję „Zmień nazwę”. Umożliwi to wpisanie nowej nazwy pliku. Kliknięcie nazwy pliku po jego podświetleniu umożliwi również zmianę nazwy pliku."
+        },
+        "csd-2022/when-to-make-a-function": {
+          "display_name": "Kiedy utworzyć funkcję?",
+          "content": "Ważnym pytaniem dla nowych programistów jest „Kiedy powinienem zdecydować się na funkcję”. Ogólnie rzecz biorąc, im wcześniej zdasz sobie sprawę, że potrzebujesz funkcji, tym lepiej. To umiejętność, w której będziesz lepiej ćwiczyć. **Pod koniec tego kursu powinieneś dążyć do znalezienia się w rzędach W trakcie lub Przed.**\n\n| Kiedy tworzysz funkcje | Opis                                                                                                                                                                                   | Komentarze                                                                                                                                                                                                                                                                                           |\n| :--------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|          Nigdy         | Nigdy nie tworzysz funkcji w ogóle.                                                                                                                                                    | Twój kod będzie trudny do odczytania i debugowania i będzie miał dużo powtarzającego się kodu. Postaraj się przejść przynajmniej do kroku „Po”.                                                                                                                                                      |\n|           Po           | Piszesz cały program bez funkcji. Gdy skończysz, szukasz powtarzającego się fragmentu kodu i przenosisz go do funkcji.                                                                 | Twój kod jest teraz znacznie łatwiejszy do odczytania i debugowania. Coraz lepiej widzisz, jak zorganizowany jest Twój program. Gdy poczujesz się bardziej komfortowo, spróbuj przejść do „Podczas” lub „Przed”.                                                                                     |\n|         Podczas        | Pisząc kod zauważasz, że masz zamiar przepisać kod, który już napisałeś gdzieś indziej w swoim programie. Przed przejściem dalej, deklarujesz funkcję i wywołujesz tę funkcję zamiast. | Dobrze rozumiesz swój program i potrafisz go uporządkować w trakcie jego opracowywania. Sprawdź, czy czasami możesz przejść do „Przed”.                                                                                                                                                              |\n|          Przed         | Zanim napiszesz swój program, tworzysz plan i identyfikujesz miejsca, w których prawdopodobnie użyjesz powtarzającego się kodu. Tworzysz swoją funkcję na początku                     | Ten poziom odzwierciedla silne zrozumienie, w jaki sposób Twój program zostanie zaprojektowany. Możesz prawie „zobaczyć to w swojej głowie”, zanim zaczniesz pisać. To znaczy, jest OK, jeśli czasami zdasz sobie sprawę, że potrzebujesz funkcji podczas programowania i pracy na etapie „Podczas”. |"
+        },
+        "csd-2022/which-type-of-chart": {
+          "display_name": "Jaki typ wykresu?",
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        }
+      }
+    }
+  }
+}

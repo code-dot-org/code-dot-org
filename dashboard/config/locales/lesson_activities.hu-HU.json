@@ -2,29 +2,89 @@
   "hu-HU": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Előkészület (5 perc)"
+        },
+        "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "13553f81-6547-4b09-b32e-7aab19725967": {
+          "name": "Megosztás"
+        },
+        "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
+          "name": "Kiértékelés (2 perc)"
+        },
         "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
           "name": "Első lépések"
+        },
+        "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "2ccc0a90-872b-424b-ae39-d7f92ceb8c06": {
+          "name": "Kiértékelés (2 perc)"
+        },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Előkészület (5 perc)"
+        },
+        "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "2caf682d-0389-4b9f-830a-60d398a8260d": {
+          "name": "Kiértékelés (2 perc)"
+        },
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Bemelegítés"
         },
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
           "name": "Első lépések"
         },
+        "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
+          "name": "Tevékenység (30-45 perc)"
+        },
         "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
           "name": "Értékelés"
+        },
+        "372347a4-5034-4888-9232-160ad727c83d": {
+          "name": "Bemelegítés"
         },
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
           "name": "Első lépések"
         },
+        "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
+          "name": "Tevékenység (30-45 perc)"
+        },
         "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
           "name": "Értékelés"
+        },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Előkészület (5 perc)"
+        },
+        "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "838f000b-c756-4d71-abfc-877a61b59a91": {
+          "name": "Kiértékelés (2 perc)"
         },
         "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
           "name": "Első lépések"
         },
+        "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
+          "name": "Tevékenység (30-45 perc)"
+        },
         "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
           "name": "Értékelés"
         },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Bemelegítés"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Bemelegítés"
+        },
         "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
           "name": "Első lépések"
+        },
+        "d31e813b-9457-415f-8632-009132bb5e48": {
+          "name": "Tevékenység (30-45 perc)"
         },
         "0e9caf95-fa34-4ffc-b218-0859134ee293": {
           "name": "Értékelés"
@@ -35,8 +95,29 @@
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Szintek"
         },
+        "14d674a9-18e0-43f3-ae74-d593dfc0fbda": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "2d33d18f-944d-4408-992a-31d1311733fc": {
+          "name": "Kiértékelés (2 perc)"
+        },
+        "74e90ab8-051a-45fd-bfd7-ec1e72686dc4": {
+          "name": "Megosztás"
+        },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Bemelegítés"
+        },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
           "name": "Első lépések"
+        },
+        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "09d516b6-38b7-42e0-900c-5d427b051b65": {
+          "name": "Összefoglalás (5 perc)"
+        },
+        "3b10ea82-0421-4583-a1cf-561c09edc727": {
+          "name": "Kiértékelés (2 perc)"
         },
         "d42497ec-48f5-404c-90b9-2133dd4759cc": {
           "name": "Első lépések"
@@ -47,17 +128,62 @@
         "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
           "name": "Összefoglaló"
         },
+        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
+          "name": "Bemelegítés"
+        },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Bemelegítés"
+        },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Előkészület (5 perc)"
+        },
+        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": "Kiértékelés (2 perc)"
+        },
         "37f266a7-4b80-449e-805a-4a06aad37292": {
           "name": "Első lépések"
+        },
+        "301e5420-a6e3-46c3-a76f-c2e042652974": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
+          "name": "Kiértékelés (2 perc)"
+        },
+        "efd4f483-32c2-4810-96fd-186649c2efe2": {
+          "name": "Összefoglalás (5 perc)"
         },
         "f266050e-62e6-415d-8735-b80cb922587d": {
           "name": "Első lépések"
         },
+        "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
+          "name": "Tevékenység (30-45 perc)"
+        },
         "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
           "name": "Értékelés"
         },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Bemelegítés"
+        },
         "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
           "name": "Tevékenység"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Bemelegítés"
+        },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Előkészület (5 perc)"
+        },
+        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
+          "name": "Összefoglalás (5 perc)"
+        },
+        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
+          "name": "Kiértékelés (2 perc)"
         },
         "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
           "name": "Első lépések"
@@ -68,11 +194,41 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Összefoglaló"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Bemelegítés"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": ""
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": ""
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Bemelegítés"
+        },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Előkészület (5 perc)"
+        },
+        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
+          "name": "Összefoglalás (5 perc)"
+        },
+        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
+          "name": "Kiértékelés (2 perc)"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Bemelegítés"
+        },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
           "name": "Tevékenység"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Szintek"
+        },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": "Kiértékelés (2 perc)"
         },
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Szintek"
@@ -83,8 +239,14 @@
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Szintek"
         },
+        "4cf19609-58ef-497b-b48d-2b9a0281a490": {
+          "name": "Megosztás"
+        },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
           "name": "Értékelés"
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Bemelegítés"
         },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Tevékenység"
@@ -130,6 +292,15 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Szintek"
+        },
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Bemelegítés"
+        },
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": ""
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": ""
         },
         "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
           "name": "Szintek"
@@ -256,6 +427,1209 @@
         },
         "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
           "name": "Szintek"
+        },
+        "def8fa0a-2a44-4633-b219-592a1c026814": {
+          "name": "Szintek"
+        },
+        "abaa6b2f-5158-4a3b-b861-28580f6362af": {
+          "name": "Bemelegítés"
+        },
+        "5cbfab6e-7ad8-476d-a15a-11c31bc85447": {
+          "name": "Bemelegítés"
+        },
+        "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5": {
+          "name": "Bemelegítés"
+        },
+        "e982d792-ed3f-403f-8782-58d0e74eb342": {
+          "name": "Bemelegítés"
+        },
+        "e0ff1760-cf11-4aea-a9c4-22eb56b368c5": {
+          "name": "Bemelegítés"
+        },
+        "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
+          "name": "Bemelegítés"
+        },
+        "f4151504-1d9a-4bf3-9d39-94f6fd1e142a": {
+          "name": "Első lépések"
+        },
+        "cab760ed-3878-474c-a0f0-e9392b4bb0b5": {
+          "name": "Tevékenység"
+        },
+        "88ef108d-c468-473b-baf1-9c6e2ec76ef7": {
+          "name": "Bemelegítés"
+        },
+        "c5b3762a-7ec7-45ad-8562-eed33738a7ad": {
+          "name": "Bemelegítés"
+        },
+        "f6fded2d-a57f-48a5-b947-da8fad8826c9": {
+          "name": "Bemelegítés"
+        },
+        "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
+          "name": "Bemelegítés"
+        },
+        "1253667e-4b6d-4ef3-9274-070f711e4b3d": {
+          "name": "Bemelegítés"
+        },
+        "c44d899c-3a93-40bf-b986-05f28dd6c8d6": {
+          "name": "Bemelegítés"
+        },
+        "02e66171-eb71-4c24-8669-fb18e86f77fd": {
+          "name": "Bemelegítés"
+        },
+        "6dd1db92-1559-4c2f-8608-70f9707a186b": {
+          "name": "Bemelegítés"
+        },
+        "41c25d95-9f6c-432e-89f8-223a863b2f87": {
+          "name": "Bemelegítés"
+        },
+        "7cde513f-d979-4541-bc42-59000562fd58": {
+          "name": "Bemelegítés"
+        },
+        "b3506973-239b-4824-a385-2f03108c216a": {
+          "name": "Bemelegítés"
+        },
+        "d69af928-e1f1-4a06-9658-945085e43f97": {
+          "name": "Bemelegítés"
+        },
+        "944b794e-9bf3-425c-9131-6e4c3662af4f": {
+          "name": "Bemelegítés"
+        },
+        "78530493-657f-4a50-bd1c-16933b560f2c": {
+          "name": "Bemelegítés"
+        },
+        "028bb774-7cbc-42be-ad21-8bea489a6df6": {
+          "name": "Bemelegítés"
+        },
+        "a1d70f29-8c5a-4d71-a255-b35b990fd9a3": {
+          "name": "Bemelegítés"
+        },
+        "ae88d237-aee6-4450-8e61-50a10fb79b36": {
+          "name": "Bemelegítés"
+        },
+        "abe59550-aed1-48e4-a510-2f90824a0511": {
+          "name": "Bemelegítés"
+        },
+        "457ab8d4-39af-4b6b-b9c3-50817773d057": {
+          "name": "Bemelegítés"
+        },
+        "f66783e8-d1a3-41bf-9a02-5b14352a11ae": {
+          "name": "Tevékenység"
+        },
+        "e0464ee7-4360-4686-8654-b8f858f536c2": {
+          "name": "Bemelegítés"
+        },
+        "3bfb35f7-e9ae-404c-8c91-2c78d4f1d5ee": {
+          "name": "Bemelegítés"
+        },
+        "9cad9c6c-1877-4c63-beae-56fe65aa9194": {
+          "name": "Bemelegítés"
+        },
+        "23b00639-c986-4733-8177-00a94bce228f": {
+          "name": "Értékelés"
+        },
+        "522e566a-4230-4479-b810-bdac5c37634e": {
+          "name": "Szintek"
+        },
+        "4d2e3a7b-6f10-4ae8-a150-38c094379da1": {
+          "name": "Bemelegítés"
+        },
+        "a18d4bd3-bd12-49fd-9ce0-be5a87553023": {
+          "name": "Bemelegítés"
+        },
+        "124a474b-26b3-42dc-bb84-af0a9be14cc5": {
+          "name": "Bemelegítés"
+        },
+        "ca73e49f-ddae-48b1-88b4-99adf0c7d092": {
+          "name": "Bemelegítés"
+        },
+        "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2": {
+          "name": "Bemelegítés"
+        },
+        "ddea6cb3-a9cd-4715-9026-d36bf966b753": {
+          "name": "Bemelegítés"
+        },
+        "4eec94f8-b49f-4b9a-944a-ab0ad4f03b6e": {
+          "name": "Bemelegítés"
+        },
+        "dac66c49-0189-4dc9-b2d1-f00cbdfa8ce7": {
+          "name": "Értékelés"
+        },
+        "29e0563f-459b-4d33-8100-3677a52b69d0": {
+          "name": "Bemelegítés"
+        },
+        "7fef7c1f-99e3-4375-9440-2e0b2dc05349": {
+          "name": "Bemelegítés"
+        },
+        "f60e6276-8f62-4f08-a89d-f237f44e58bc": {
+          "name": "Bemelegítés"
+        },
+        "9b886d19-0e05-49b1-ba50-07065b389704": {
+          "name": "Bemelegítés"
+        },
+        "8587af1b-82c6-44bb-aee2-1500f125d768": {
+          "name": "Bemelegítés"
+        },
+        "fa98ed40-e7cd-4ad2-a13d-bfe4109fb78a": {
+          "name": "Bemelegítés"
+        },
+        "15ae43a1-06b0-4baa-b04e-8699ef3fb26f": {
+          "name": "Összegzés"
+        },
+        "5b342453-cd42-4221-8375-618cf1ddb41b": {
+          "name": "A Digitális nyomvonal követésének megtekintése"
+        },
+        "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
+          "name": "Játék: Állati útvonalak"
+        },
+        "ac5b3240-5c06-438d-b651-7ba0caa67c28": {
+          "name": "Áttekintés: Kész vagy megosztani?"
+        },
+        "2d902c04-594b-4595-a677-3c45978e14d8": {
+          "name": "Bemelegítés"
+        },
+        "07fd7769-b0ad-43eb-b0d1-ea4ccfac4baf": {
+          "name": "Összefoglaló"
+        },
+        "3dd03748-95a1-4a80-921c-79ca88f9c0d8": {
+          "name": "Bemelegítés"
+        },
+        "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
+          "name": "Bemelegítés"
+        },
+        "af4312be-c462-4833-8519-b405d96f2b2c": {
+          "name": "Bemelegítés"
+        },
+        "b0af1c83-5e0a-4858-bb9b-3a90c6974933": {
+          "name": "Bemelegítés"
+        },
+        "ea581e79-d9a4-41f0-a762-14f3f3c29bba": {
+          "name": "Értékelés"
+        },
+        "27fcf5f0-a9af-4634-a3f5-6ee183c9bce8": {
+          "name": "Összegzés"
+        },
+        "148289f4-4345-49b1-bb7d-d96e9c999fb9": {
+          "name": "Bemelegítés"
+        },
+        "7e002958-d294-4986-bfdb-8d5cad5312e5": {
+          "name": "Bemelegítés"
+        },
+        "81967def-358e-4733-aedd-9aa01a30d8e8": {
+          "name": "Bemelegítés"
+        },
+        "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
+          "name": "Bemelegítés"
+        },
+        "5e5b0210-18c5-477b-9210-189a155e155a": {
+          "name": "Tevékenység"
+        },
+        "737e13d1-e7a2-4f63-be94-b9f2e7db97ee": {
+          "name": "Bemelegítés"
+        },
+        "de886c32-4827-44b6-a34d-ed3e07ef767d": {
+          "name": "Értékelés"
+        },
+        "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
+          "name": "Bemelegítés"
+        },
+        "acde8fd8-754e-47b9-bd4e-a4fcf27b878b": {
+          "name": "Bemelegítés"
+        },
+        "6b9e69c5-cb90-40e3-9130-f40a91e1e3ac": {
+          "name": "Bemelegítés"
+        },
+        "1cd41560-d425-4c55-b269-ced0b1d8d561": {
+          "name": "Bemelegítés"
+        },
+        "90198481-f560-4b5b-9229-5e51f18c29ac": {
+          "name": "Bemelegítés"
+        },
+        "24856a1c-4bbd-4d30-a0a2-008175a93fca": {
+          "name": "Bemelegítés"
+        },
+        "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
+          "name": "Bemelegítés"
+        },
+        "eb4e7f77-0313-4f4f-94c0-f0529ff532f3": {
+          "name": "Bemelegítés"
+        },
+        "9b2f3c76-9f1d-4c78-ad3c-fa2af2cab780": {
+          "name": "Bemelegítés"
+        },
+        "6f4ecd68-c7b8-46a9-a7f7-d78c902604b0": {
+          "name": "Bemelegítés"
+        },
+        "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
+          "name": "Bemelegítés"
+        },
+        "96e3c582-25a1-4209-86f5-a15a19f5c221": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "dc6e401d-5f08-4449-b404-9f5390acfa3d": {
+          "name": "Bemelegítés"
+        },
+        "70b4e0eb-e7bc-4317-a1d9-18fe9ce48353": {
+          "name": "Bemelegítés"
+        },
+        "26877025-2ce3-4c89-8827-b7519c974edc": {
+          "name": "Bemelegítés"
+        },
+        "533fe4fd-4ce1-4085-b8d3-38e05237f35c": {
+          "name": "Bemelegítés"
+        },
+        "1b4f431b-2591-4b3e-961d-d6fd5e62b3bb": {
+          "name": "Bemelegítés"
+        },
+        "ed28a98c-cc1e-4e7d-9e0c-d38e4856fafa": {
+          "name": "Bemelegítés"
+        },
+        "b938281e-0cd0-459e-a65e-6d90e9d38cd8": {
+          "name": "Bemelegítés"
+        },
+        "d8d7b243-06ca-48f2-a644-db75e5fa6e28": {
+          "name": "Bemelegítés"
+        },
+        "c963266f-b222-4601-bc31-c985c0b01904": {
+          "name": "Bemelegítés"
+        },
+        "a1218000-260d-4261-aaf9-9ae2f301cc7e": {
+          "name": "Bemelegítés"
+        },
+        "a297e9ad-b7ae-4597-bc0a-8170357e0297": {
+          "name": "Bemelegítés"
+        },
+        "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624": {
+          "name": "Bemelegítés"
+        },
+        "0155bb1f-f515-455c-8840-1944c6d52c49": {
+          "name": "Bemelegítés"
+        },
+        "05222c29-d06f-4f0d-9c57-fb756176712c": {
+          "name": "Bemelegítés"
+        },
+        "9ce3273c-9779-4593-a194-f2587287f9dd": {
+          "name": "Bemelegítés"
+        },
+        "deba3deb-ae26-46d4-89c3-42552a652310": {
+          "name": "Bemelegítés"
+        },
+        "9d268685-17bd-4661-9611-011e4c7e1f31": {
+          "name": "Bemelegítés"
+        },
+        "cd8ce7f2-eb53-48a3-91d7-c8de92d6d9f9": {
+          "name": "Bemelegítés"
+        },
+        "b0e6a592-befd-4cde-8182-b240bd487a11": {
+          "name": "Bemelegítés"
+        },
+        "ba6f45d2-ed08-448b-bbd5-3b79c9b84917": {
+          "name": "Bemelegítés"
+        },
+        "b2d3a6a7-15e7-4144-afed-b659a105270e": {
+          "name": "Bemelegítés"
+        },
+        "32f8d56f-0681-4253-8457-7347e55de868": {
+          "name": "Bemelegítés"
+        },
+        "476f0a7e-0f8c-48fb-855e-ed6245e473b1": {
+          "name": "Bemelegítés"
+        },
+        "cf80987f-c93b-4518-834a-f43d1724b759": {
+          "name": "Bemelegítés"
+        },
+        "7f14fa67-b053-43f1-b54e-1372448ae19f": {
+          "name": "Bemelegítés"
+        },
+        "31cead7b-04b5-4f08-ad69-d024f371debc": {
+          "name": "Bemelegítés"
+        },
+        "ee6ea4fb-151a-48af-aa6e-a83b9d779302": {
+          "name": "Bemelegítés"
+        },
+        "b455bd64-1bbc-4c9a-b5a8-e0099ee42e8b": {
+          "name": "Bemelegítés"
+        },
+        "e93a2018-fd89-4629-9861-4d0e8990d1bb": {
+          "name": "Bemelegítés"
+        },
+        "7fa61201-c4ac-49d0-855a-853fca164cf6": {
+          "name": "Bemelegítés"
+        },
+        "e624bae9-e201-4036-92dc-003b8468256a": {
+          "name": "Bemelegítés"
+        },
+        "26024df9-6e4f-4347-a9e6-2d28952f5729": {
+          "name": "Bemelegítés"
+        },
+        "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
+          "name": "Bemelegítés"
+        },
+        "26a6d7b6-4e7f-45eb-9f06-0aac920cadf6": {
+          "name": "Bemelegítés"
+        },
+        "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
+          "name": "Bemelegítés"
+        },
+        "29a3b6da-7fae-4611-910a-ba1103473edf": {
+          "name": "Bemelegítés"
+        },
+        "97af5df7-745a-49e3-bd61-3ddd22defa7c": {
+          "name": "Bemelegítés"
+        },
+        "fc7902ec-363b-4c18-b1b6-841de04061b5": {
+          "name": "Bemelegítés"
+        },
+        "e68d3049-5654-4527-9c7b-8dc1426e138d": {
+          "name": "Bemelegítés"
+        },
+        "23f581d0-c75d-456e-97cc-28bddf192f50": {
+          "name": "Bemelegítés"
+        },
+        "7ae3d9c5-3492-44e0-be39-bc00114371c0": {
+          "name": "Bemelegítés"
+        },
+        "8c544c95-64d5-4c31-8e0a-99f9c63478ba": {
+          "name": "Szintek"
+        },
+        "e56a02fc-2b09-45ef-91bc-40a40ba87709": {
+          "name": "Bemelegítés"
+        },
+        "d0023712-1596-4547-ad29-d742aab5fea5": {
+          "name": "Tevékenység"
+        },
+        "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
+          "name": "Bemelegítés"
+        },
+        "69b9baec-7332-406c-837a-fb64ae1fe34d": {
+          "name": "Bemelegítés"
+        },
+        "d3e694da-2437-407e-9478-53c69d99ba8d": {
+          "name": "Bemelegítés"
+        },
+        "a91088f0-aa3f-4df8-9274-d0311f23690b": {
+          "name": "Bemelegítés"
+        },
+        "85aac025-b9a7-410d-aa32-833228487252": {
+          "name": "Bemelegítés"
+        },
+        "bc37d277-781e-45ce-a009-5b860924fd0f": {
+          "name": "Tevékenység"
+        },
+        "7aa3d9d0-5f51-4169-935f-83c34e385ec4": {
+          "name": "Bemelegítés"
+        },
+        "45ac5681-de1e-49f9-8135-957e7c79e3d7": {
+          "name": "Bemelegítés"
+        },
+        "b1684e39-7a0d-4473-a2e2-3ca41cf53430": {
+          "name": "Bemelegítés"
+        },
+        "c8520741-98b8-4caf-a698-966ba8b01e4e": {
+          "name": "Bemelegítés"
+        },
+        "b1fb0e94-332b-43de-b96f-70188d1852ef": {
+          "name": "Bemelegítés"
+        },
+        "7124ed35-c669-491b-8481-6406fa13bd93": {
+          "name": "Bemelegítés"
+        },
+        "88aa1b29-4bee-44d8-80ec-1e533e712cc2": {
+          "name": "Bemelegítés"
+        },
+        "f4b09758-1a3c-413b-b493-8e8f620af413": {
+          "name": "Bemelegítés"
+        },
+        "0dc09009-c0c3-4970-ba5f-1afc56c122be": {
+          "name": "Bemelegítés"
+        },
+        "e756dd3c-ceff-4018-ae32-e393404279eb": {
+          "name": "Bemelegítés"
+        },
+        "5c108e1d-49dc-4541-af3a-664a08b5ec6b": {
+          "name": "Tevékenység"
+        },
+        "c18e05f7-0d0f-4e39-abc2-4fb8562e01b6": {
+          "name": "Bemelegítés"
+        },
+        "07da61ee-3e60-401f-93f5-db5db83b5056": {
+          "name": "Tevékenység"
+        },
+        "a64b966d-88ef-42b1-84e0-e2610580157f": {
+          "name": "Bemelegítés"
+        },
+        "24ad4aba-e165-4dea-8db6-936603069320": {
+          "name": "Tevékenység"
+        },
+        "ec11628f-ec7b-4f6d-a127-f2144ae20304": {
+          "name": "Bemelegítés"
+        },
+        "fd4e41b1-b556-479f-960a-1be1a17f1058": {
+          "name": "Tevékenység"
+        },
+        "a0797d40-4d44-4c63-a9a7-e53a60f6ca38": {
+          "name": "Bemelegítés"
+        },
+        "1ab5bbd8-cd8a-487b-83f0-69698df3e468": {
+          "name": "Bemelegítés"
+        },
+        "0c4ae373-7471-46ed-aaac-ee3113f2f52e": {
+          "name": "Tevékenység"
+        },
+        "242e2ca2-60f5-4f86-b620-d4204314584f": {
+          "name": "Szintek"
+        },
+        "96fef0a5-f9aa-48e8-b294-7459fae2ecb4": {
+          "name": "Bemelegítés"
+        },
+        "c5502c0a-28af-4325-8755-11faa13b36a7": {
+          "name": "Tevékenység"
+        },
+        "afbe3ff5-7c5e-4992-858a-461c5252b3c7": {
+          "name": "Bemelegítés"
+        },
+        "5b44cfa8-86de-4ae9-a288-42985ed29e6b": {
+          "name": "Tevékenység"
+        },
+        "0c85934b-00e5-4627-b251-3d0d05371580": {
+          "name": "Tevékenység"
+        },
+        "4ad7640f-a2b8-41f6-8556-48484f04bffc": {
+          "name": "Bemelegítés"
+        },
+        "20ef37d7-df6d-4214-844d-1cd93d421675": {
+          "name": "Tevékenység"
+        },
+        "d3038d43-d974-424a-94cb-4b8717d97333": {
+          "name": "Bemelegítés"
+        },
+        "265785d2-284a-4835-80dd-a449ebf9ad71": {
+          "name": "Tevékenység"
+        },
+        "72e6ee76-5d28-4cf5-a9f5-557cf9f0a73f": {
+          "name": "Bemelegítés"
+        },
+        "fcc352da-7cf2-499d-8a19-c0c3c1bb1847": {
+          "name": "Tevékenység"
+        },
+        "c4404910-4445-4834-9459-fec525857c4e": {
+          "name": "Bemelegítés"
+        },
+        "0b582f6f-8192-49b4-bdae-041484ea1d42": {
+          "name": "Tevékenység"
+        },
+        "3586fc87-0dfd-47e6-9c18-b5f81a5ec9d1": {
+          "name": "Bemelegítés"
+        },
+        "e88fa8a2-2e45-4f0b-a797-0b61d4d0488e": {
+          "name": "Tevékenység"
+        },
+        "6970dd73-1a71-4023-9766-c14e22a18629": {
+          "name": "Bemelegítés"
+        },
+        "1b3f90a6-8f37-427e-bb28-75792a792293": {
+          "name": "Tevékenység"
+        },
+        "efed0d23-c1a2-415e-9982-e6ea83c57ea5": {
+          "name": "Bemelegítés"
+        },
+        "7f34d9dc-d8b8-4dbf-a5b4-c771d005d163": {
+          "name": "Tevékenység"
+        },
+        "e4a1b801-8e00-42e8-b7fc-fa00f74c5225": {
+          "name": "Bemelegítés"
+        },
+        "2a645427-0586-4abf-b14b-6789a23a4f5e": {
+          "name": "Tevékenység"
+        },
+        "b0a3e5f1-b099-4c4e-bf6b-f43c7613785c": {
+          "name": "Bemelegítés"
+        },
+        "35d9c7f2-6ad6-4875-a15f-61f278c698a9": {
+          "name": "Tevékenység"
+        },
+        "3c85f039-d3a0-4661-9469-4e067ccb6087": {
+          "name": "Bemelegítés"
+        },
+        "e5ddeae1-6e94-45ef-b40a-6d8e9dc4678d": {
+          "name": "Tevékenység"
+        },
+        "3217ddab-b066-408d-a2aa-8d61a48b2aec": {
+          "name": "Bemelegítés"
+        },
+        "deb52a7c-ec15-4eac-8c11-eaffc098db24": {
+          "name": "Tevékenység"
+        },
+        "bcd0f7b3-83fc-4e1a-b668-66405f1e3f23": {
+          "name": "Bemelegítés"
+        },
+        "48a288ba-308a-458f-b350-f91b7dcca923": {
+          "name": "Tevékenység"
+        },
+        "16d8f0fb-2f62-4b15-80f2-ec5c46906bb1": {
+          "name": "Bemelegítés"
+        },
+        "a3173c02-6bf3-454c-acd1-c598f8da8c66": {
+          "name": "Tevékenység"
+        },
+        "18e1d53a-81d5-4277-b3b9-5cdc2aa0112e": {
+          "name": "Bemelegítés"
+        },
+        "9fe916be-c6e6-4110-92a5-f8d81c66f4fa": {
+          "name": "Tevékenység"
+        },
+        "c230327a-c087-4af7-831c-9375d08aeca2": {
+          "name": "Bemelegítés"
+        },
+        "b8b4db41-5016-48ff-a505-5de9d1a46a81": {
+          "name": "Tevékenység"
+        },
+        "4891ceab-a23e-43af-a690-d4fd35b61d51": {
+          "name": "Bemelegítés"
+        },
+        "501c47ee-09fa-4dee-9b4c-c5d571a0f9e3": {
+          "name": "Tevékenység"
+        },
+        "cd5ffe12-60ad-4579-bba1-01cc93c1d482": {
+          "name": "Bemelegítés"
+        },
+        "f6e30882-c142-4fe0-861c-f39cc4709b61": {
+          "name": "Tevékenység"
+        },
+        "f986b891-90fb-4cb6-810d-df9b0542ddfd": {
+          "name": "Bemelegítés"
+        },
+        "4f2de664-9f55-486c-b023-e3b3dd390d51": {
+          "name": "Tevékenység"
+        },
+        "ffda23cf-6828-4ae7-a507-bc1c70470ca7": {
+          "name": "Bemelegítés"
+        },
+        "fc64d4db-8228-441f-aca0-73c7724260db": {
+          "name": "Tevékenység"
+        },
+        "eb6e5112-8208-4b17-856c-0074dfddb319": {
+          "name": "Bemelegítés"
+        },
+        "b553c458-f2cc-4394-9edc-e7191a58fb55": {
+          "name": "Tevékenység"
+        },
+        "29c29273-e188-41d0-8559-b9048c892737": {
+          "name": "Bemelegítés"
+        },
+        "97df4d19-713a-44eb-bb9b-6f4d2cb96d74": {
+          "name": "Tevékenység"
+        },
+        "6c950123-2be4-4cf5-8c94-9a28a00ae1b8": {
+          "name": "Bemelegítés"
+        },
+        "2773e12e-b565-452b-a66e-a0b657a0906c": {
+          "name": "Tevékenység"
+        },
+        "ecb2d3e3-291d-4d27-af6b-f3102c7f3af5": {
+          "name": "Bemelegítés"
+        },
+        "4bb4979a-ae04-425d-8bf7-9d26ca5eed48": {
+          "name": "Tevékenység"
+        },
+        "e0da2bc7-8e5c-4cf8-bde4-1a438d67ca59": {
+          "name": "Bemelegítés"
+        },
+        "e5088b76-9596-4cb9-b9dc-707e69a69551": {
+          "name": "Tevékenység"
+        },
+        "727c9926-67ff-4ce1-8aa2-e26e3e07c382": {
+          "name": "Bemelegítés"
+        },
+        "84ce8e86-48df-4e3e-b293-c6bbbfaa0539": {
+          "name": "Tevékenység"
+        },
+        "970788e4-daae-4378-a1fd-227d5cdb3eec": {
+          "name": "Bemelegítés"
+        },
+        "58d9800a-a564-45bd-a3e4-61af3a999221": {
+          "name": "Tevékenység"
+        },
+        "5bc756b7-83fa-4988-bfde-301c4ccc0c42": {
+          "name": "Bemelegítés"
+        },
+        "511d4a56-c929-4069-8fb2-34717c3d6fd2": {
+          "name": "Tevékenység"
+        },
+        "e8e76a38-0ce0-43b1-abe8-416ffc9dd684": {
+          "name": "Bemelegítés"
+        },
+        "c0d1ee30-3e0c-411f-9f65-c1220ffc6fe1": {
+          "name": "Tevékenység"
+        },
+        "df0020cf-ecf6-4190-81c3-c3160f8300b0": {
+          "name": "Bemelegítés"
+        },
+        "04c570b6-1657-47dd-a90f-26f7ce510830": {
+          "name": "Tevékenység"
+        },
+        "88d2e8d2-0264-49f8-8cf6-60f7580d4055": {
+          "name": "Bemelegítés"
+        },
+        "ac23bd8d-6baf-42d4-8aef-d322a53d99d7": {
+          "name": "Tevékenység"
+        },
+        "44a7328d-f579-4a62-b88f-c577b965ce02": {
+          "name": "Bemelegítés"
+        },
+        "7884dd96-0810-4aa3-abee-f67a7a34c157": {
+          "name": "Tevékenység"
+        },
+        "a2b843f4-be98-44e2-9e33-9732fd313bc8": {
+          "name": "Bemelegítés"
+        },
+        "b2890ea6-34d2-48be-9b59-5e67fe0a0611": {
+          "name": "Tevékenység"
+        },
+        "6b7ab187-4a2d-46b0-b63c-19e4436c640e": {
+          "name": "Bemelegítés"
+        },
+        "5c4c0ced-8cfb-42e6-af12-a96934458594": {
+          "name": "Tevékenység"
+        },
+        "43cd18fc-8b9d-4601-a153-e8d2244ef3ef": {
+          "name": "Bemelegítés"
+        },
+        "cf1179d1-af78-4056-aa91-e0cecd4e0629": {
+          "name": "Tevékenység"
+        },
+        "e1484999-183b-477a-bd63-0502cfcd852b": {
+          "name": "Bemelegítés"
+        },
+        "be2e1125-e22a-47c7-a07b-a6696f599e1d": {
+          "name": "Tevékenység"
+        },
+        "3b595e9c-8701-4f83-8f3e-e64728a30a5b": {
+          "name": "Bemelegítés"
+        },
+        "66b9e286-bacf-418c-9329-ab1c811ee009": {
+          "name": "Tevékenység"
+        },
+        "5c62cd8b-efb4-4ea5-b95f-19ef62c58e54": {
+          "name": "Bemelegítés"
+        },
+        "e6086123-6746-4d2c-a6bd-a33f30ba7360": {
+          "name": "Tevékenység"
+        },
+        "d0e91d2f-0a6a-4613-89a5-ca30b30a84b8": {
+          "name": "Bemelegítés"
+        },
+        "210e0797-3249-436a-8aa3-311783d8b543": {
+          "name": "Tevékenység"
+        },
+        "f543b07b-da7c-4079-9ba3-f068e40f77ba": {
+          "name": "Bemelegítés"
+        },
+        "d7da7037-0930-435f-872f-472480568a45": {
+          "name": "Tevékenység"
+        },
+        "0b583145-ecdc-4e8d-9cc5-4731c756fe58": {
+          "name": "Bemelegítés"
+        },
+        "feb7e645-107d-4334-af6c-de26fedf3e43": {
+          "name": "Tevékenység"
+        },
+        "ddfbcbdd-45a0-4976-a52f-aa64c5e61a77": {
+          "name": "Bemelegítés"
+        },
+        "ac7c5ebe-a37b-44f8-a5ba-0c25d0d9efa2": {
+          "name": "Tevékenység"
+        },
+        "b25eca7e-dec3-4dd1-a957-70d88f3159b4": {
+          "name": "Bemelegítés"
+        },
+        "6d23908a-d067-4836-a9b6-8031652528e8": {
+          "name": "Tevékenység"
+        },
+        "3d7be7f2-a571-4172-b4d1-9e1ed5c4c763": {
+          "name": "Bemelegítés"
+        },
+        "7eb392a8-4fee-468e-8069-090228cfcac9": {
+          "name": "Tevékenység"
+        },
+        "2e55afbe-ae39-45bb-988a-8cac756ca299": {
+          "name": "Bemelegítés"
+        },
+        "a4b00121-b902-44e1-a3c8-9671b82e4f02": {
+          "name": "Tevékenység"
+        },
+        "7943d176-74bf-473e-9e8f-5505838c33e2": {
+          "name": "Bemelegítés"
+        },
+        "f6e3764a-25c2-4a69-9683-f7823d3ff91a": {
+          "name": "Tevékenység"
+        },
+        "71400edf-d893-4a4c-9a2f-b2cfdc086704": {
+          "name": "Bemelegítés"
+        },
+        "42456ccb-4cdc-4cd1-a487-f241db9d20b9": {
+          "name": "Tevékenység"
+        },
+        "5da59a99-01fb-4b35-95dd-b65bf65a336e": {
+          "name": "Bemelegítés"
+        },
+        "37150fb2-5983-44a9-bf23-91a8690bc5cf": {
+          "name": "Tevékenység"
+        },
+        "3bdeb93a-6ace-48f2-940e-594eb4fa00d4": {
+          "name": "Bemelegítés"
+        },
+        "5114c102-679b-43ce-9399-33bff161328c": {
+          "name": "Tevékenység"
+        },
+        "b7284a94-d4c6-416d-ac6e-8db87fe43f80": {
+          "name": "Bemelegítés"
+        },
+        "216a3a56-dfdd-4a03-bc80-c0dfffe009bd": {
+          "name": "Tevékenység"
+        },
+        "43ee246e-5e64-422c-b38c-9faaf86606f9": {
+          "name": "Bemelegítés"
+        },
+        "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e": {
+          "name": "Tevékenység"
+        },
+        "d8e45faa-a949-4eb7-bcb4-8428f585d898": {
+          "name": "Bemelegítés"
+        },
+        "e6274218-3d12-4142-9853-c5181cd56475": {
+          "name": "Tevékenység"
+        },
+        "be6c8c89-1f6c-4c2f-b0eb-bbc3fe33ec1b": {
+          "name": "Bemelegítés"
+        },
+        "8b87f42a-4c87-4dc5-ae0a-5f25fd83c33a": {
+          "name": "Tevékenység"
+        },
+        "14517b9b-38cb-4ae8-8d50-bc78b3e98acf": {
+          "name": "Bemelegítés"
+        },
+        "dbe502b7-e665-4270-aaf6-1a80fd72fad0": {
+          "name": "Tevékenység"
+        },
+        "21690070-90bc-4081-98b7-b76a0292efc9": {
+          "name": "Bemelegítés"
+        },
+        "389875ac-ca56-4ae8-8a27-8f14801f6c39": {
+          "name": "Tevékenység"
+        },
+        "4a7e57fd-fb56-42e5-a11c-6054e2e6c5da": {
+          "name": "Bemelegítés"
+        },
+        "c37b5ded-66ba-45ec-8539-3e20e9278381": {
+          "name": "Tevékenység"
+        },
+        "228d432d-d102-4c02-a6eb-4d61bb7100fb": {
+          "name": "Bemelegítés"
+        },
+        "7ad73074-fded-4be1-af2b-26e07e84b877": {
+          "name": "Tevékenység"
+        },
+        "46ff741f-0e49-45c4-857d-c300c99b2962": {
+          "name": "Bemelegítés"
+        },
+        "1c5f0cad-10b0-4160-a136-12f002671e6e": {
+          "name": "Tevékenység"
+        },
+        "8e50d8fc-539c-48fa-bad5-e1ec1803e421": {
+          "name": "Bemelegítés"
+        },
+        "5149e17c-def7-4ceb-9e3f-b42b99b26289": {
+          "name": "Bemelegítés"
+        },
+        "c8931be5-1809-4c48-bc6f-78a3b1b6f0d3": {
+          "name": "Tevékenység"
+        },
+        "68c0a134-8cc6-4a5f-b220-ee3c270cf1cf": {
+          "name": "Bemelegítés"
+        },
+        "6224d9de-e42e-483f-b2e1-6dbbc4e8fede": {
+          "name": "Tevékenység"
+        },
+        "b71f135e-d19b-4c1f-97a2-2481fe81bc2a": {
+          "name": "Bemelegítés"
+        },
+        "1b86c4c4-fe9b-4fb6-b514-18f581445cc3": {
+          "name": "Tevékenység"
+        },
+        "0a7e6e70-9ef2-4206-a5fd-50edc395040c": {
+          "name": "Bemelegítés"
+        },
+        "0650b4ca-7e20-4aa0-bd09-5b3dd8c3d7b0": {
+          "name": "Tevékenység"
+        },
+        "a4f528d4-2780-43c8-8dc5-504898c69e3f": {
+          "name": "Bemelegítés"
+        },
+        "0514b8a9-0f74-4faa-b69f-864caee91b3a": {
+          "name": "Tevékenység"
+        },
+        "c346f5ba-78c4-4e36-81b3-0f31f5f6cf99": {
+          "name": "Bemelegítés"
+        },
+        "9c513b6a-1d47-4395-8c08-5829adc76027": {
+          "name": "Tevékenység"
+        },
+        "2d0708ed-383e-4e11-a6bf-2fb25907e8a9": {
+          "name": "Bemelegítés"
+        },
+        "456dfd41-4f34-49f4-902a-8f72b13a36b0": {
+          "name": "Tevékenység"
+        },
+        "9c1908f3-e14b-41ba-b93f-1a78bcb2a10a": {
+          "name": "Bemelegítés"
+        },
+        "897d12c3-5f71-4989-a5e6-b503cb913f1f": {
+          "name": "Tevékenység"
+        },
+        "a9bf40b2-8994-40f7-912c-0da5bdf4a351": {
+          "name": "Bemelegítés"
+        },
+        "2926147f-24e1-4728-b0b9-15f32d544182": {
+          "name": "Tevékenység"
+        },
+        "e11819a0-81a5-414c-b3fe-71e31ccfaaf7": {
+          "name": "Bemelegítés"
+        },
+        "554b4180-2899-4be8-a390-3e108705d899": {
+          "name": "Bemelegítés"
+        },
+        "5695acff-6d30-4aa5-944d-738e19e52b12": {
+          "name": "Tevékenység"
+        },
+        "1dc53972-5670-4038-935c-33a8c746f51b": {
+          "name": "Bemelegítés"
+        },
+        "934e392d-6cab-41e9-9957-1548f68f4ff7": {
+          "name": "Tevékenység"
+        },
+        "cc36be14-c8ce-4cfe-9a94-c383e404ba44": {
+          "name": "Bemelegítés"
+        },
+        "c9d5f938-c934-419c-b2a4-db28b0d70ef6": {
+          "name": "Tevékenység"
+        },
+        "2d7a4302-268b-4be7-8857-201ff45d0e04": {
+          "name": "Bemelegítés"
+        },
+        "08b8577c-70ea-49ff-86d3-60f3401b7e31": {
+          "name": "Tevékenység"
+        },
+        "941e46bc-c09d-46df-95f9-5ea2110e2883": {
+          "name": "Bemelegítés"
+        },
+        "94794a22-cc33-4073-bc60-c9856790ee24": {
+          "name": "Tevékenység"
+        },
+        "78319b2e-056c-4269-9c6c-5ba7f0059027": {
+          "name": "Bemelegítés"
+        },
+        "2a5d2dbd-4196-4f24-84a8-f3dcd2703cdf": {
+          "name": "Tevékenység"
+        },
+        "d1c98a06-5bb9-4674-9d07-97c89ed92a18": {
+          "name": "Bemelegítés"
+        },
+        "49215dc6-089c-40d2-8ab1-39757d05cebd": {
+          "name": "Tevékenység"
+        },
+        "bdc1832c-271c-4c74-827f-fe2056cb1698": {
+          "name": "Bemelegítés"
+        },
+        "11ff35c2-043f-464c-80fa-7b72f4506105": {
+          "name": "Bemelegítés"
+        },
+        "e3cd87f5-66c6-4535-b848-a09b679b96c6": {
+          "name": "Tevékenység"
+        },
+        "5e5ee1f9-e1ed-4c3e-b358-b366d1ce9e04": {
+          "name": "Bemelegítés"
+        },
+        "e3ab1257-3d56-4995-bae3-aef2d6932543": {
+          "name": "Tevékenység"
+        },
+        "534abf34-f00b-4b48-b4d3-c7d8a63dc4ba": {
+          "name": "Bemelegítés"
+        },
+        "e3b35b62-f109-48ca-9081-3e8a3beb21a1": {
+          "name": "Tevékenység"
+        },
+        "62c8636f-f5de-4a88-8075-cf27309703a3": {
+          "name": "Bemelegítés"
+        },
+        "9c1968bf-e510-4461-aa55-8d993a816d24": {
+          "name": "Tevékenység"
+        },
+        "3c4071c4-5ed6-46fe-9181-f19e8d744f6b": {
+          "name": "Bemelegítés"
+        },
+        "0faf4648-0575-421f-ab72-d974343f5b21": {
+          "name": "Tevékenység"
+        },
+        "79ef43ea-eec6-4224-b126-7685de830ca8": {
+          "name": "Bemelegítés"
+        },
+        "bd0ece15-5d54-47ca-ba2e-c9bc8056a27c": {
+          "name": "Tevékenység"
+        },
+        "5d8d63bc-df1f-45a1-a6f7-7ca9198696d2": {
+          "name": "Bemelegítés"
+        },
+        "fa1940da-4345-4691-a2bf-4612f106693d": {
+          "name": "Tevékenység"
+        },
+        "5289faca-0ff5-47b8-8efb-78164d14d6cf": {
+          "name": "Bemelegítés"
+        },
+        "4c606841-1658-4523-a9e3-71c3df7fe9ee": {
+          "name": "Tevékenység"
+        },
+        "f2a2951e-94bc-4f63-9995-0af311b42c51": {
+          "name": "Bemelegítés"
+        },
+        "d594bf4d-13a0-4460-945e-1381b97d2c27": {
+          "name": "Tevékenység"
+        },
+        "d14d3354-1503-4df0-89dd-d2a3d7d2c800": {
+          "name": "Bemelegítés"
+        },
+        "534ff3df-c8a1-41a9-9dd1-721c2fa29a8d": {
+          "name": "Tevékenység"
+        },
+        "825e9c69-2ee8-438a-ba5f-e3d5b017b8a3": {
+          "name": "Bemelegítés"
+        },
+        "e20df4b6-6d72-47c7-97bd-7c75f15b9241": {
+          "name": "Tevékenység"
+        },
+        "3477d5db-24f2-4761-a31b-6f5b7f561a97": {
+          "name": "Bemelegítés"
+        },
+        "7a6bb4ac-139b-4d2b-80f3-ad71ea454d54": {
+          "name": "Tevékenység"
+        },
+        "51e81087-45de-4e07-9398-390f4e2789d8": {
+          "name": "Bemelegítés"
+        },
+        "b863b736-7488-420c-84c2-e9ff135ac7fb": {
+          "name": "Bemelegítés"
+        },
+        "fff615c4-7747-483e-b4c7-6714cc65f995": {
+          "name": "Tevékenység"
+        },
+        "a6fce4e5-46e2-4e4a-9120-52014cd62354": {
+          "name": "Bemelegítés"
+        },
+        "d9bea663-1af3-425f-8352-cf4bd58b5211": {
+          "name": "Tevékenység"
+        },
+        "497560c4-a4cc-4a54-8f5f-017a9e604cff": {
+          "name": "Bemelegítés"
+        },
+        "1e1439c7-d7c1-49e9-bfa9-f218f4dbc72f": {
+          "name": "Tevékenység"
+        },
+        "25d3f4c1-410a-4ab8-845d-962bc0887028": {
+          "name": "Bemelegítés"
+        },
+        "54939123-6a71-40d4-8486-66fdc98e000f": {
+          "name": "Tevékenység"
+        },
+        "8acdea08-64f6-4c2a-a2eb-4430b915ded0": {
+          "name": "Bemelegítés"
+        },
+        "0c236fea-e8b0-4948-b5b1-15c35cc59c33": {
+          "name": "Tevékenység"
+        },
+        "6ee23a8a-e115-463b-a6fe-85a36a97406a": {
+          "name": "Bemelegítés"
+        },
+        "f08286ef-f4b1-40dd-bb1f-f8608630a62c": {
+          "name": "Tevékenység"
+        },
+        "10c7736c-f5d1-41e5-9040-30abb38a95bf": {
+          "name": "Bemelegítés"
+        },
+        "1d1969fe-7e86-4bb1-821e-7902db075258": {
+          "name": "Tevékenység"
+        },
+        "028e4b7f-bc82-4686-a40e-c2232541a4ef": {
+          "name": "Bemelegítés"
+        },
+        "8c2e71e0-ca88-4730-a840-a53cd72d1615": {
+          "name": "Tevékenység"
+        },
+        "533692d3-a914-4927-a542-a4b86b99c79e": {
+          "name": "Bemelegítés"
+        },
+        "16282696-f79e-43df-9bf0-49f0feebad0f": {
+          "name": "Tevékenység"
+        },
+        "e442e49a-0f47-4f9d-a2f1-2bb40bf49f09": {
+          "name": "Bemelegítés"
+        },
+        "135daa7f-57f2-4612-8709-11a0b969b67d": {
+          "name": "Tevékenység"
+        },
+        "fb244265-6cd6-459d-bc88-e056d9902b8d": {
+          "name": "Tevékenység"
+        },
+        "cdebc121-9bb7-4512-a38f-ec2adaabed91": {
+          "name": "Tevékenység"
+        },
+        "591f1e39-f37c-4e7b-862b-f450ba4d018a": {
+          "name": "Bemelegítés"
+        },
+        "65a363ea-5ba3-4db2-bb72-c6485e998fc9": {
+          "name": "Tevékenység"
+        },
+        "8b4381a8-2c44-4715-a96f-318b5e328758": {
+          "name": "Bemelegítés"
+        },
+        "98874052-3ce4-460e-b161-718d1ee1e25f": {
+          "name": "Tevékenység"
+        },
+        "5d930123-ea0a-4e50-8815-8813c49866ad": {
+          "name": "Bemelegítés"
+        },
+        "5fa916ff-3207-4da4-b2ad-bc847a4ed9d4": {
+          "name": "Tevékenység"
+        },
+        "642bece0-6dc3-45e9-918e-4d01f8034a1c": {
+          "name": "Bemelegítés"
+        },
+        "129d02c0-71b0-4e97-b1bd-63eca8331a93": {
+          "name": "Tevékenység"
+        },
+        "519efadb-6bb4-4341-a9ec-1b666d76ac01": {
+          "name": "Bemelegítés"
+        },
+        "57c698fe-4587-4753-857e-553962cbdc41": {
+          "name": "Tevékenység"
+        },
+        "af36124c-854d-449a-b766-4edfec01a4b2": {
+          "name": "Bemelegítés"
+        },
+        "e35a001b-4856-4fa0-a6d4-2b51e012373f": {
+          "name": "Tevékenység"
+        },
+        "e6738f2d-2d59-4965-aa83-18f60e92c95d": {
+          "name": "Bemelegítés"
+        },
+        "d25fb97a-14ac-40a5-b91c-440fdebeccf6": {
+          "name": "Tevékenység"
+        },
+        "a0dc357a-b824-4e6c-a39d-f8402c58e42e": {
+          "name": "Bemelegítés"
+        },
+        "f0564a8b-eb3c-47d3-9a3e-f7acf60af266": {
+          "name": "Tevékenység"
+        },
+        "3ba70d05-0cde-4daa-9fdd-c1f2a7ec4990": {
+          "name": "Bemelegítés"
+        },
+        "5ce61ecd-a09d-469e-958c-ddf78afe1c8f": {
+          "name": "Tevékenység"
+        },
+        "a8b25f5b-4f74-46e7-9da9-521455433867": {
+          "name": "Bemelegítés"
+        },
+        "55aedbab-2a35-42ca-a2fd-11f2fa8104b9": {
+          "name": "Tevékenység"
+        },
+        "61f7872e-28fa-4031-a325-c067b40dd315": {
+          "name": "Bemelegítés"
+        },
+        "9ae2b570-bf7c-4c27-a790-634794f49f5c": {
+          "name": "Tevékenység"
+        },
+        "59e97048-db21-49ba-90be-2ff36429fab5": {
+          "name": "Bemelegítés"
+        },
+        "c1318cee-8830-4680-9766-ffd360084f36": {
+          "name": "Tevékenység"
+        },
+        "d2258940-bfb7-4f05-823e-341447471edd": {
+          "name": "Bemelegítés"
+        },
+        "ba7b2df1-5624-4338-9d69-c43fda40f0f6": {
+          "name": "Tevékenység"
+        },
+        "1929de60-6a38-4380-941d-d427d66d3c14": {
+          "name": "Bemelegítés"
+        },
+        "8edc2136-2fdd-4b7a-b6c6-bc14f3fbc08b": {
+          "name": "Tevékenység"
+        },
+        "dabec012-cf74-4af4-bbb7-4bbcd3880d3c": {
+          "name": "Bemelegítés"
+        },
+        "7e87d2a8-bb00-4acc-988a-515ef68f0a13": {
+          "name": "Tevékenység"
+        },
+        "34d44725-b18a-482c-98f9-a0e7186e449f": {
+          "name": "Bemelegítés"
+        },
+        "a39bf254-98b6-4651-b58b-6266e0b341df": {
+          "name": "Tevékenység"
+        },
+        "2eeb1679-d0c4-47e6-9038-0b6822a8876c": {
+          "name": "Bemelegítés"
+        },
+        "de30e01a-00f8-4f2b-a102-9d2477306672": {
+          "name": "Tevékenység"
+        },
+        "90dc9ffa-1773-4247-b8f2-7b1ef9629c19": {
+          "name": "Bemelegítés"
+        },
+        "b40fd704-c5b0-4fe1-b1d6-6d10151298f1": {
+          "name": "Tevékenység"
+        },
+        "639fc035-feb9-48fe-91a7-9a067ad86d4e": {
+          "name": "Bemelegítés"
+        },
+        "77a4b457-9076-4e02-a5f7-25db3eeeaaa2": {
+          "name": "Tevékenység"
+        },
+        "34aa1a1a-3574-414f-82bf-991ada5c0625": {
+          "name": "Bemelegítés"
+        },
+        "e79f2b2d-aaab-48ff-adab-7f07581428c1": {
+          "name": "Tevékenység"
+        },
+        "2c34fcea-f792-4df6-88b7-394c59a4b411": {
+          "name": "Bemelegítés"
+        },
+        "66d863be-9095-4b09-840c-69ec0a716048": {
+          "name": "Tevékenység"
+        },
+        "69e2f822-2586-4060-afb1-7645fcbc0ab2": {
+          "name": "Bemelegítés"
+        },
+        "08279951-0bfd-4354-9aab-8e5429dcbf74": {
+          "name": "Tevékenység"
+        },
+        "121f6636-b5c4-4a5f-99fc-ba15fa88e6a8": {
+          "name": "Bemelegítés"
+        },
+        "f137c621-93e1-442f-acf2-b09728c3432e": {
+          "name": "Tevékenység"
+        },
+        "aaff9866-d420-45f1-86ac-d1fd314368b2": {
+          "name": "Bemelegítés"
+        },
+        "5e0f5491-a162-40a1-8b51-032327b79512": {
+          "name": "Tevékenység"
+        },
+        "61707bc4-8f60-455e-977c-c728d46517b5": {
+          "name": "Bemelegítés"
+        },
+        "d7a74b12-1ed6-4164-8802-6de5de46ea00": {
+          "name": "Tevékenység"
         },
         "dde1ab27-53a2-4c39-a80e-317f9df72651": {
           "name": "Szintek"
@@ -800,7 +2174,7 @@
         "c83b9067-f5cf-4d5c-a246-effde510c121": {
           "name": "Szintek"
         },
-        "a701bcb3-040d-450f-8427-d0ff90f42549": {
+        "996ce33a-6eec-46a8-8b02-9282b006dd20": {
           "name": "Szintek"
         },
         "3678b5ba-0e26-4abb-9612-d5a525799e9f": {
@@ -1505,10 +2879,10 @@
         "8946e76d-d595-423c-8408-0eca539f9f5f": {
           "name": "Szintek"
         },
-        "0d26b1ca-c97f-445a-ab3a-83e45d4ae4a9": {
+        "191d4843-f7ab-4d54-b9ce-d6ceb7d5f680": {
           "name": "Szintek"
         },
-        "175a5a5f-9f19-40fc-b8d3-f6e429270c14": {
+        "19aa92d5-e95f-42dd-98dc-9f0c86e37dc2": {
           "name": "Szintek"
         },
         "a7514510-0928-419c-bb19-a184dd082bbe": {
@@ -1571,10 +2945,10 @@
         "c81a77e3-a658-44f5-9f98-ba67b99803e4": {
           "name": "Szintek"
         },
-        "9da22490-6037-4b05-b56c-878535e11f89": {
+        "9392c057-99c8-4778-bf37-e2fa872aaa71": {
           "name": "Szintek"
         },
-        "a1fb9f1c-ccb6-4398-adcf-41955f04b6cb": {
+        "c5cdda6b-df76-47a7-bc8a-3225e427086d": {
           "name": "Szintek"
         },
         "381a9096-cef4-47ec-a3e2-33d47118a8b5": {
@@ -1619,10 +2993,10 @@
         "419d2c6b-4626-4471-915f-a4f0ad231e1a": {
           "name": "Szintek"
         },
-        "3b1e4fc8-7dba-4cfd-afa4-664c1e020c8e": {
+        "d8216aa3-1f88-4194-a809-83c0a8bfd136": {
           "name": "Szintek"
         },
-        "2ab18f57-fbb7-4c1c-89d8-d3fae21d412f": {
+        "48f3c49b-4a66-4e20-aa29-042e49ddda48": {
           "name": "Szintek"
         },
         "63e800fd-6f35-412f-bec1-97179ec2b1e4": {
@@ -1667,10 +3041,10 @@
         "5b041434-0018-4533-bbc3-52be39bde755": {
           "name": "Szintek"
         },
-        "b9dff44c-ae84-46cd-a39c-e607dcdc72b4": {
+        "9e49263a-8c10-4bf2-93d0-6ce8f78935a8": {
           "name": "Szintek"
         },
-        "0b3fca52-a420-4487-8859-85980c6a7923": {
+        "fcd16875-49dc-4b20-994d-0c6fc99ba57d": {
           "name": "Szintek"
         },
         "d1b95303-ac24-4c45-a772-b7ce97e45660": {
@@ -1715,7 +3089,7 @@
         "1f2d2416-1810-4934-ba29-7657b37b5413": {
           "name": "Szintek"
         },
-        "3aea3cc5-5d95-4617-be21-4912a2cfd7ff": {
+        "5b3ade8b-ca99-40c0-b0bb-3e97bbbd3ab5": {
           "name": "Szintek"
         },
         "c9898bd6-88cf-471c-946a-115ee0730aac": {
@@ -1736,10 +3110,10 @@
         "040d1bd7-ae82-4e60-b015-17baad1279d1": {
           "name": "Szintek"
         },
-        "5c672516-04f3-484d-a5bc-8808b4bba3b3": {
+        "a88c8f88-88f9-4590-9123-46bf5608ee34": {
           "name": "Szintek"
         },
-        "06c4a690-d2a7-4e5b-ac4b-d064673db8cd": {
+        "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5": {
           "name": "Szintek"
         },
         "ed41ea87-b959-4053-96de-0dc5e5e50e5c": {
@@ -2261,10 +3635,10 @@
         "34bf035e-c547-4be5-b486-53afb9a48f7f": {
           "name": "Szintek"
         },
-        "3b998e7c-a5ca-4ecf-806e-0a66dccc7485": {
+        "6d9a6010-5625-41f6-9cba-4c508e3f5304": {
           "name": "Szintek"
         },
-        "dacf5b73-defa-4bce-8c41-ff0c1e60a6c9": {
+        "11422ae0-1498-4ab6-8542-76d01f48318a": {
           "name": "Szintek"
         },
         "b5927137-3ab3-49f2-a657-1f0b039bc671": {
@@ -2327,7 +3701,7 @@
         "4f1eef78-4a22-4c44-b694-b76057add793": {
           "name": "Szintek"
         },
-        "f6fcadb1-5887-41c2-bd41-c716efccfb91": {
+        "d3efaf4a-d127-47f9-86fe-e79c7fb49ba8": {
           "name": "Szintek"
         },
         "e2aa5dc7-5442-4a69-b36a-dbedfa325bb8": {
@@ -2375,7 +3749,7 @@
         "675154ec-8181-4691-92cb-dbf2ed090fa6": {
           "name": "Szintek"
         },
-        "086b9e87-7672-4d56-b1a8-dbca21eedf59": {
+        "6d602a27-eb6d-48bb-b6f6-6abf34ddb38e": {
           "name": "Szintek"
         },
         "1141dd35-49c4-4803-bab8-2b4dcf5e150b": {
@@ -2444,7 +3818,7 @@
         "db825aec-ea4c-406c-9b76-d7e82f77c720": {
           "name": "Szintek"
         },
-        "36da18f0-ea4c-42d2-b26c-52c5b2df0677": {
+        "1c77cf41-b082-436b-9c70-bfab4c0bc086": {
           "name": "Szintek"
         },
         "cda71fb9-9e3e-4de6-a2cc-9342ad84ee0e": {
@@ -2489,7 +3863,7 @@
         "888f5102-6f2c-43dc-b4d7-f5b1597f404e": {
           "name": "Szintek"
         },
-        "cc5c8226-aaca-482f-b271-e2e681a1696d": {
+        "3ec86279-3061-4f41-bc0b-a3272a4a19bf": {
           "name": "Szintek"
         },
         "9efa84e0-99a8-4ef5-a789-e2d1c418b365": {
@@ -2536,6 +3910,15 @@
         },
         "ff1dfcf5-d986-40f8-8b7c-6514a123aa59": {
           "name": "Szintek"
+        },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+          "name": "Bemelegítés"
+        },
+        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
+          "name": ""
+        },
+        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+          "name": ""
         },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Szintek"
@@ -2858,23 +4241,236 @@
         "606f8633-b648-4ef3-80e3-9fc76b86f556": {
           "name": "Szintek"
         },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Bemelegítés"
+        },
         "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
           "name": "Értékelés"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
           "name": "Szintek"
         },
+        "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
+          "name": "Szintek"
+        },
+        "83fafdc5-ad91-43a1-a3f6-b7312346a3ab": {
+          "name": "Szintek"
+        },
+        "6aec6572-d76b-45c3-b69e-c140c8e5077e": {
+          "name": "Szintek"
+        },
+        "1c529a06-0eb8-49b1-ab18-608c6c63de01": {
+          "name": "Szintek"
+        },
+        "4f5887f4-1526-473b-bd29-1a6b60c9849a": {
+          "name": "Szintek"
+        },
+        "4914687d-6ea0-486d-b5d2-833db8f1260e": {
+          "name": "Szintek"
+        },
+        "6a90aeea-2071-4871-9dd3-9b8738c69423": {
+          "name": "Szintek"
+        },
+        "d79baf7b-176a-4cc0-8bb6-93d974793855": {
+          "name": "Szintek"
+        },
+        "e1194726-0b93-4ebe-a524-a36051b19654": {
+          "name": "Szintek"
+        },
+        "94a5ed09-24e4-4733-afd4-24ff516ec2db": {
+          "name": "Szintek"
+        },
+        "236d8f94-151e-4c5e-98d9-255293ad71fa": {
+          "name": "Szintek"
+        },
+        "05418fbe-29fd-46d9-b2a3-3f9c552a09d9": {
+          "name": "Szintek"
+        },
+        "99aa9251-89ad-4f11-ad8b-54cc32286b72": {
+          "name": "Szintek"
+        },
+        "348ae6bb-4dfd-4be5-b00f-f3cf2ea5d0bd": {
+          "name": "Szintek"
+        },
+        "3c7a5185-6a3b-41cd-a9d2-ba274e436816": {
+          "name": "Szintek"
+        },
+        "fb982e59-8b24-4b0a-9bda-5ff9658d7c11": {
+          "name": "Szintek"
+        },
+        "8f2a0453-ef6a-45f7-a702-53af16c82074": {
+          "name": "Szintek"
+        },
+        "c4f2cf1c-f8f2-4e01-b627-750d01ac7fae": {
+          "name": "Szintek"
+        },
+        "17074694-5220-4c93-8128-70e3af715344": {
+          "name": "Szintek"
+        },
+        "e056b1c0-3ffe-4fca-89aa-094da2060f3f": {
+          "name": "Szintek"
+        },
+        "8a8b1b99-3128-4adc-8ced-333285da77b3": {
+          "name": "Szintek"
+        },
+        "2e329f95-3c8d-482a-83ca-d21564c9f4c6": {
+          "name": "Szintek"
+        },
+        "f8c96c1a-f122-4c14-b110-20157785406c": {
+          "name": "Szintek"
+        },
+        "f34d7f79-ff9c-49c8-93c9-bf0ecb5faffb": {
+          "name": "Szintek"
+        },
+        "9da9391a-f33f-4c48-a573-a0ee6858b111": {
+          "name": "Szintek"
+        },
+        "c91cb0fd-6857-46b3-9b26-daab7f2be908": {
+          "name": "Szintek"
+        },
+        "44ef4c93-b89f-4a4d-bf38-4d376fcfee12": {
+          "name": "Szintek"
+        },
+        "72d1f168-1a5e-4015-9f4e-767aadf1d12a": {
+          "name": "Szintek"
+        },
+        "245481d9-3ff6-4f2c-9147-8af79d8c98d5": {
+          "name": "Szintek"
+        },
+        "a0bfcf67-8e9c-4792-96ac-3f13d1ee67cb": {
+          "name": "Szintek"
+        },
+        "37a8e94b-7199-462b-aec7-10c55e8feba6": {
+          "name": "Szintek"
+        },
+        "ac3d127a-ec6f-4d0f-9fc6-e8750ed9ee10": {
+          "name": "Szintek"
+        },
+        "f1a32532-fa4e-4094-b179-db7504e3fbf1": {
+          "name": "Szintek"
+        },
+        "26b60f43-a34f-4e95-bb23-21495b5757c3": {
+          "name": "Szintek"
+        },
+        "5511f790-bf8a-4094-aed2-b0cf6058b87b": {
+          "name": "Szintek"
+        },
+        "c8fb0fe2-b420-42b8-b4d3-540d9c3b0d79": {
+          "name": "Szintek"
+        },
+        "8bb15d3d-31b7-422a-b8c7-fa150f172044": {
+          "name": "Szintek"
+        },
+        "b17d58c5-9439-455e-ae90-b73257ae8260": {
+          "name": "Szintek"
+        },
+        "7bdacd27-cfa5-415b-aa1e-63d93c0032ac": {
+          "name": "Szintek"
+        },
+        "e974a735-db1b-4b89-85a1-a50a4942e445": {
+          "name": "Szintek"
+        },
+        "5347fb67-2f83-4286-9613-89dea87db66b": {
+          "name": "Szintek"
+        },
+        "b9c84d52-3377-4e35-985e-96dd083f81fa": {
+          "name": "Szintek"
+        },
+        "6d8b34e5-23aa-4678-a6b3-e60b1eae6ec9": {
+          "name": "Szintek"
+        },
+        "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Szintek"
+        },
+        "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
+          "name": "Bemelegítés"
+        },
+        "8be95f76-3e59-4701-906f-cfa1005ac3a6": {
+          "name": "Bemelegítés"
+        },
+        "6cd8aaa8-8689-41c8-bbbf-2c396782b090": {
+          "name": "Bemelegítés"
+        },
+        "0c41f900-2229-42ab-b5bd-15b78bb97e4e": {
+          "name": "Bemelegítés"
+        },
+        "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
+          "name": "Bemelegítés"
+        },
+        "5750d053-1daa-409c-9b83-bc4306ba4aef": {
+          "name": "Bemelegítés"
+        },
+        "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae": {
+          "name": "Bemelegítés"
+        },
+        "9f8478ca-8f75-4594-b236-d3a1bfde400e": {
+          "name": "Bemelegítés"
+        },
+        "37d588db-3870-49d8-abc6-0d9bf5403123": {
+          "name": "Bemelegítés"
+        },
+        "7f8fd47b-526e-48ab-9ac2-33db70ea3b72": {
+          "name": "Bemelegítés"
+        },
+        "eb628dad-be05-4a67-83d9-b33a3a2b9a2c": {
+          "name": "Bemelegítés"
+        },
+        "dfb06a32-f536-4cb1-8784-bc67619ceacc": {
+          "name": "Bemelegítés"
+        },
         "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
           "name": "Értékelés"
+        },
+        "8362c620-cea5-4a56-b0b4-74a606bf62da": {
+          "name": "Bemelegítés"
+        },
+        "7995b5c0-d654-49d1-ac76-89931d3723e4": {
+          "name": "Bemelegítés"
+        },
+        "7815d72f-def9-4c77-b4c9-4954d60ef232": {
+          "name": "Bemelegítés"
         },
         "eba207ca-a259-40be-93b5-0a9c0c906b80": {
           "name": "Tevékenység"
         },
+        "9fc4791f-a664-44db-9185-6162b40db705": {
+          "name": "Bemelegítés"
+        },
+        "3c96f7f3-f8fc-45f7-8222-8de9223b9551": {
+          "name": "Bemelegítés"
+        },
+        "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
+          "name": "Bemelegítés"
+        },
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Értékelés"
         },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "A Digitális nyomvonal követésének megtekintése"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Játék: Állati útvonalak"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Áttekintés: Kész vagy megosztani?"
+        },
+        "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
+          "name": "Bemelegítés"
+        },
         "339d5151-756f-4b66-b647-0f86a1dce7f9": {
           "name": "Összefoglaló"
+        },
+        "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
+          "name": "Bemelegítés"
+        },
+        "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
+          "name": "Bemelegítés"
+        },
+        "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
+          "name": "Bemelegítés"
+        },
+        "f5cb74b0-f882-49c4-97ca-2695652b352c": {
+          "name": "Bemelegítés"
         },
         "240e1172-8a94-4e2b-931b-2d87bef6f364": {
           "name": "Értékelés"
@@ -2882,26 +4478,143 @@
         "ee775447-c327-4e95-a523-663a02856cad": {
           "name": "Összegzés"
         },
+        "10140329-cade-4307-8132-d9ac56d8182c": {
+          "name": "Bemelegítés"
+        },
+        "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
+          "name": "Bemelegítés"
+        },
+        "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
+          "name": "Bemelegítés"
+        },
+        "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
+          "name": "Bemelegítés"
+        },
         "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
           "name": "Tevékenység"
+        },
+        "edc16824-0eba-4aa8-b4a5-0cbac9b9afe7": {
+          "name": "Bemelegítés"
         },
         "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
           "name": "Értékelés"
         },
+        "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
+          "name": "Bemelegítés"
+        },
+        "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
+          "name": "Bemelegítés"
+        },
+        "07c33815-2515-4a63-91f1-51db34b0a00e": {
+          "name": "Bemelegítés"
+        },
+        "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
+          "name": "Bemelegítés"
+        },
+        "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
+          "name": "Bemelegítés"
+        },
+        "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
+          "name": "Bemelegítés"
+        },
+        "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
+          "name": "Bemelegítés"
+        },
+        "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
+          "name": "Bemelegítés"
+        },
+        "6aab5f16-5596-4536-b404-f46152246d24": {
+          "name": "Bemelegítés"
+        },
+        "b6b94275-4d8a-4564-86ee-65c63e153d33": {
+          "name": "Bemelegítés"
+        },
+        "e1843002-564c-4803-9eaa-44f48a8e4159": {
+          "name": "Bemelegítés"
+        },
+        "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
+          "name": "Bemelegítés"
+        },
+        "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
+          "name": "Bemelegítés"
+        },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Szintek"
+        },
+        "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
+          "name": "Bemelegítés"
         },
         "15bbd3a3-247c-4e2a-be79-52d802f01920": {
           "name": "Tevékenység"
         },
+        "260a48d0-8cd7-4f15-b303-32e5c685a349": {
+          "name": "Bemelegítés"
+        },
+        "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
+          "name": "Bemelegítés"
+        },
+        "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
+          "name": "Bemelegítés"
+        },
+        "b5b68733-e757-4aec-84e2-8bea7936175b": {
+          "name": "Bemelegítés"
+        },
+        "1c265744-1a1f-44f4-8380-7328759249ea": {
+          "name": "Bemelegítés"
+        },
         "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
           "name": "Tevékenység"
+        },
+        "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
+          "name": "Bemelegítés"
+        },
+        "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
+          "name": "Bemelegítés"
+        },
+        "63075b82-d582-409b-afd8-a8967040c94c": {
+          "name": "Bemelegítés"
+        },
+        "8d10f0a0-909f-482c-a17f-3477280c7375": {
+          "name": "Bemelegítés"
+        },
+        "38b78816-4a04-4c9b-b112-3704e9511c42": {
+          "name": "Bemelegítés"
+        },
+        "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
+          "name": "Bemelegítés"
+        },
+        "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
+          "name": "Bemelegítés"
+        },
+        "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
+          "name": "Bemelegítés"
         },
         "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
           "name": "Értékelés"
         },
+        "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
+          "name": "Bemelegítés"
+        },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Szintek"
+        },
+        "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
+          "name": "Bemelegítés"
+        },
+        "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
+          "name": "Bemelegítés"
+        },
+        "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
+          "name": "Bemelegítés"
+        },
+        "380a0a21-1ede-432e-bd0a-433c37514bba": {
+          "name": "Bemelegítés"
+        },
+        "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
+          "name": "Bemelegítés"
+        },
+        "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
+          "name": "Bemelegítés"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
           "name": "Első lépések"
@@ -2909,164 +4622,500 @@
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
           "name": "Tevékenység"
         },
+        "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
+          "name": "Bemelegítés"
+        },
+        "46464e07-b5ac-4ca4-84b2-3b43873360da": {
+          "name": "Bemelegítés"
+        },
+        "7ff09578-5e62-4772-8f16-03bec23fca87": {
+          "name": "Bemelegítés"
+        },
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Értékelés"
+        },
+        "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
+          "name": "Bemelegítés"
+        },
+        "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
+          "name": "Bemelegítés"
+        },
+        "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
+          "name": "Bemelegítés"
+        },
+        "07c64430-a32e-455c-bd8b-4a9baa439a1f": {
+          "name": "Bemelegítés"
+        },
+        "94431ce1-3b6a-4bff-b20c-eda2abf867e3": {
+          "name": "Bemelegítés"
+        },
+        "171c9649-255a-4357-b532-6e6dc632285a": {
+          "name": "Bemelegítés"
+        },
+        "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
+          "name": "Bemelegítés"
+        },
+        "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
+          "name": "Bemelegítés"
+        },
+        "a42e7dc3-d50c-4be9-b17c-338d432a17ca": {
+          "name": "Bemelegítés"
+        },
+        "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
+          "name": "Bemelegítés"
+        },
+        "82634dba-ecce-4213-9e2b-4435bf9c1b5d": {
+          "name": "Bemelegítés"
+        },
+        "46e18a1e-d87a-4452-aa83-d5f742e61da6": {
+          "name": "Bemelegítés"
+        },
+        "ca2f991e-1866-4b1d-994c-d7a6a3c33b45": {
+          "name": "Bemelegítés"
+        },
+        "4e59783c-7761-4afe-9775-d8c51ca075d0": {
+          "name": "Bemelegítés"
+        },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Tevékenység (30-45 perc)"
+        },
+        "1924e7bb-be68-49eb-b3fb-1099623da9f6": {
+          "name": "Bemelegítés"
+        },
+        "e1b92a7f-657f-4825-aa00-576f89e67200": {
+          "name": "Bemelegítés"
+        },
+        "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
+          "name": "Bemelegítés"
+        },
+        "4f1634b7-4e0e-471d-9c41-53ea1eaebcdb": {
+          "name": "Bemelegítés"
+        },
+        "46092127-2648-4c2c-ada8-f13deb240e11": {
+          "name": "Bemelegítés"
+        },
+        "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
+          "name": "Bemelegítés"
+        },
+        "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
+          "name": "Bemelegítés"
+        },
+        "5ad8f2f2-18ef-4477-b1ea-b57cb5cb328a": {
+          "name": "Bemelegítés"
+        },
+        "4b6c37da-c087-41f8-94bd-6eddba55804d": {
+          "name": "Bemelegítés"
+        },
+        "e2d15199-1c11-455d-b75b-2cae049dd245": {
+          "name": "Bemelegítés"
+        },
+        "cc1c021d-e09b-40fc-8e6a-dff336140731": {
+          "name": "Bemelegítés"
+        },
+        "94a2ea7b-e3cb-425d-a1f0-2a519b162fb3": {
+          "name": "Bemelegítés"
+        },
+        "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
+          "name": "Bemelegítés"
+        },
+        "3e2704f0-2560-4797-8c72-11016aee5c28": {
+          "name": "Bemelegítés"
+        },
+        "80c82efc-16a4-446c-81b9-718fc3a5d1a9": {
+          "name": "Bemelegítés"
+        },
+        "eef7a8c5-5a54-442c-ac88-6ed7ba0cc4fb": {
+          "name": "Bemelegítés"
+        },
+        "414b4e57-110f-441f-a5ca-cbdc9f741a4c": {
+          "name": "Bemelegítés"
+        },
+        "24f48744-cb50-4dd5-8a1f-95571f2ff1ba": {
+          "name": "Bemelegítés"
+        },
+        "91422f13-9b33-46bf-890c-709607a6cdb1": {
+          "name": "Bemelegítés"
+        },
+        "f544f06e-e5d9-4ca1-9baf-288bba9ff616": {
+          "name": "Bemelegítés"
+        },
+        "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
+          "name": "Bemelegítés"
+        },
+        "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
+          "name": "Bemelegítés"
+        },
+        "a653b35f-9c27-4961-a91a-578072f1ae35": {
+          "name": "Bemelegítés"
+        },
+        "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
+          "name": "Bemelegítés"
+        },
+        "59675efe-890a-48b9-bd56-947f991df50b": {
+          "name": "Bemelegítés"
+        },
+        "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
+          "name": "Bemelegítés"
+        },
+        "ead863af-cc82-48f6-855f-0e2a4563ed9b": {
+          "name": "Bemelegítés"
+        },
+        "3ad79f2e-3afc-4238-a58d-7f88ea78de65": {
+          "name": "Bemelegítés"
+        },
+        "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
+          "name": "Bemelegítés"
+        },
+        "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
+          "name": "Bemelegítés"
+        },
+        "d7c5d028-ebdb-4366-9856-f36f780cd472": {
+          "name": "Bemelegítés"
+        },
+        "8f8f7be8-e984-40ce-9b30-b423814535f8": {
+          "name": "Bemelegítés"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Szintek"
         },
+        "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
+          "name": "Bemelegítés"
+        },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Összegzés"
+        },
+        "1014e6a8-473d-46e2-a448-ca92a6697405": {
+          "name": "Bemelegítés"
+        },
+        "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
+          "name": "Bemelegítés"
+        },
+        "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
+          "name": "Bemelegítés"
+        },
+        "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
+          "name": "Bemelegítés"
         },
         "a0d784ef-8d53-486a-ac4c-eba8617be681": {
           "name": "Értékelés"
         },
+        "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
+          "name": "Bemelegítés"
+        },
+        "9d8a6daa-38de-42a0-995f-16d869ca1101": {
+          "name": "Bemelegítés"
+        },
+        "da87c8ba-9486-43e4-9dde-e6eac223396e": {
+          "name": "Bemelegítés"
+        },
+        "82c8173b-040e-41ec-b6ca-f1369b308268": {
+          "name": "Bemelegítés"
+        },
+        "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
+          "name": "Bemelegítés"
+        },
+        "0118e81c-812d-4001-976a-ad2dd2a8dd77": {
+          "name": "Bemelegítés"
+        },
         "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
           "name": "Kurzus Projekt vége"
+        },
+        "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee": {
+          "name": "Bemelegítés"
         },
         "3dd1254c-b1de-486d-803a-cd5b89ea1a47": {
           "name": "Tevékenység"
         },
+        "816793d2-3155-4838-9a16-ba286bead156": {
+          "name": "Bemelegítés"
+        },
         "3f5a4bdd-213f-4275-b48e-0cac9c216610": {
           "name": "Tevékenység"
+        },
+        "5c3bcd7d-8427-4721-89b0-2f108b8a7a09": {
+          "name": "Bemelegítés"
         },
         "8118c20a-f8a2-4de0-a5e9-e34b206c5e86": {
           "name": "Tevékenység"
         },
+        "38eab9f7-b033-4e5b-965a-3eb2f27f5912": {
+          "name": "Bemelegítés"
+        },
         "3dbcce13-3c8e-4eee-a9e5-06d38c3b0d58": {
           "name": "Tevékenység"
+        },
+        "51d6802a-006e-49b9-ab1e-2df825642381": {
+          "name": "Bemelegítés"
         },
         "da9c162b-7810-4bea-955e-05c213dbf55d": {
           "name": "Tevékenység"
         },
+        "e264e7c7-b049-4df7-9a0b-cf563b78b337": {
+          "name": "Bemelegítés"
+        },
         "6d1d534e-0aad-47aa-8eef-22cd0a519a83": {
           "name": "Tevékenység"
+        },
+        "383c8d03-96b1-4d5e-93cc-54c238116c0c": {
+          "name": "Bemelegítés"
         },
         "d5076b4a-5a03-45cd-b650-5469ab56c98f": {
           "name": "Tevékenység"
         },
+        "7f204217-26d5-46d3-ac48-93ecc6f84045": {
+          "name": "Bemelegítés"
+        },
         "c83f82b2-742a-4785-8983-14391e0b774f": {
           "name": "Tevékenység"
+        },
+        "ad95b04a-2feb-4401-adfc-ec8c28ba2db7": {
+          "name": "Bemelegítés"
         },
         "8e65c08e-13d9-43d5-928b-ca3421f606d8": {
           "name": "Tevékenység"
         },
+        "03ba9598-5b31-43d9-a146-ecc04d863d7e": {
+          "name": "Bemelegítés"
+        },
         "473b748b-3eb9-4753-8cdb-7d2b5b02ab1c": {
           "name": "Tevékenység"
+        },
+        "86a8b2c7-4754-4019-8709-47a98dadc6ef": {
+          "name": "Bemelegítés"
         },
         "54db2b83-e7bd-4ca3-9ba7-63ca15b72187": {
           "name": "Tevékenység"
         },
+        "a9116092-7bd2-45d8-9824-9d2943a640a3": {
+          "name": "Bemelegítés"
+        },
         "ed160324-6429-4ff1-90bb-abd785bb6b53": {
           "name": "Tevékenység"
+        },
+        "89f2503d-4e63-425c-8d29-ea151fe30e0d": {
+          "name": "Bemelegítés"
         },
         "d007f573-e403-48b9-8178-2922b329c878": {
           "name": "Tevékenység"
         },
+        "d6bba00e-c1a8-4b8b-9adb-01a2afd7cfdb": {
+          "name": "Bemelegítés"
+        },
         "31623c1a-bcef-465a-abf4-bd42d0578c3e": {
           "name": "Tevékenység"
+        },
+        "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
+          "name": "Bemelegítés"
         },
         "9720e203-87bf-47f6-9e42-0d63712f4816": {
           "name": "Tevékenység"
         },
+        "a024167d-3c2d-4559-84fb-9146533f1cea": {
+          "name": "Bemelegítés"
+        },
         "b12c79ae-36b0-4853-b799-527d520d2d9b": {
           "name": "Tevékenység"
+        },
+        "e809434f-4c36-4d12-8913-f96ddf9d6cd8": {
+          "name": "Bemelegítés"
         },
         "8b5fccc2-132a-4c64-ba9f-a89ee576b760": {
           "name": "Tevékenység"
         },
+        "7609c319-8a5f-46ca-aef2-0abbca334761": {
+          "name": "Bemelegítés"
+        },
         "bcb8ee1c-146e-4442-98de-83ac220d074b": {
           "name": "Tevékenység"
+        },
+        "ec3dd48d-ddff-49ff-8eed-a4a95e83f057": {
+          "name": "Bemelegítés"
         },
         "fbf2d75e-dd6d-416c-8065-67a5e230ac12": {
           "name": "Tevékenység"
         },
+        "f6defd2f-09e1-4dd2-bdbf-b7d539cd651c": {
+          "name": "Bemelegítés"
+        },
         "4024c757-460a-4c1e-b9ba-0921922e446f": {
           "name": "Tevékenység"
         },
-        "d9ce0330-5c0e-41e2-837c-d4eba9da6310": {
-          "name": "Szintek"
+        "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca": {
+          "name": "Bemelegítés"
+        },
+        "9057adaa-50f5-48cb-b7b7-1371ef765e1c": {
+          "name": "Tevékenység"
+        },
+        "b6431e82-34e6-4e30-a587-42d2b8b4bd45": {
+          "name": "Bemelegítés"
         },
         "084345cc-db08-4c77-bc28-be51fb79dd0d": {
           "name": "Tevékenység"
         },
+        "2227e40d-8afc-4781-b754-90202fff194b": {
+          "name": "Bemelegítés"
+        },
         "88f424ec-df8f-42ff-b119-c556008dfea7": {
           "name": "Tevékenység"
+        },
+        "a47a0ad5-f3d8-4221-b156-9ab515cae5ed": {
+          "name": "Bemelegítés"
         },
         "6ca92cea-d2a1-458e-8db9-709a95333aae": {
           "name": "Tevékenység"
         },
+        "cc1e90a8-c328-4329-99ae-007c2b32a0b0": {
+          "name": "Bemelegítés"
+        },
         "f35f26af-8e10-45bd-8c84-89e2e6e20f43": {
           "name": "Tevékenység"
+        },
+        "999079a5-883e-4dd2-a2a1-8f862f54b572": {
+          "name": "Bemelegítés"
         },
         "d83211f4-e007-452b-a5e2-f97629f1e597": {
           "name": "Tevékenység"
         },
+        "7de677d4-93fd-4122-a399-36d5dc3def5f": {
+          "name": "Bemelegítés"
+        },
         "80deb03d-786b-4eaa-aee7-17d734850224": {
           "name": "Tevékenység"
+        },
+        "6be6c7d6-44c4-4fc2-96a0-a45805228aa8": {
+          "name": "Bemelegítés"
+        },
+        "5aa1b4d5-0d87-4e15-87db-51011f0a8751": {
+          "name": "Bemelegítés"
         },
         "c50c799f-b401-406a-b4c2-6a01e8f1c548": {
           "name": "Tevékenység"
         },
+        "46b11dc4-968e-4e0e-9d4f-40f3c6578cef": {
+          "name": "Bemelegítés"
+        },
         "70ec98e0-3066-4f1f-84c7-be9d76266337": {
           "name": "Tevékenység"
+        },
+        "a96114fa-8db5-435d-af1e-e0fa642884c2": {
+          "name": "Bemelegítés"
         },
         "f7e9181a-0686-4d7a-b513-75351c14acb4": {
           "name": "Tevékenység"
         },
+        "a753e5d9-0e63-40ee-8f7c-36bfdb2ad5d9": {
+          "name": "Bemelegítés"
+        },
         "e1fd553e-ed7e-4eb4-ab51-58017d886b11": {
           "name": "Tevékenység"
+        },
+        "a1617d40-6785-49e4-b561-204d00047c02": {
+          "name": "Bemelegítés"
         },
         "4755fcca-85c5-4f39-acba-485c57676f3b": {
           "name": "Tevékenység"
         },
+        "0d30f79e-34e9-48fe-a12a-8b0f371978d4": {
+          "name": "Bemelegítés"
+        },
         "2f24c116-10b3-4af8-bdc5-a51bcf1774da": {
           "name": "Tevékenység"
+        },
+        "c789c70d-29b1-4cf5-aece-7711d029ccaf": {
+          "name": "Bemelegítés"
         },
         "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d": {
           "name": "Tevékenység"
         },
+        "39782149-2c5f-4895-8551-bba742a5ade5": {
+          "name": "Bemelegítés"
+        },
         "7d2b43ce-ec07-43c9-bd67-39a4b85102c5": {
           "name": "Tevékenység"
+        },
+        "411138d2-8c9a-49a9-94d8-50c39c0169bd": {
+          "name": "Bemelegítés"
         },
         "85dc0809-df8e-4c21-b33c-6525dcc0c747": {
           "name": "Tevékenység"
         },
+        "91cbb1a3-213d-4268-b4fb-39fa76273d7d": {
+          "name": "Bemelegítés"
+        },
         "4e159304-5bcf-4392-8fc4-dec6c0d38c63": {
           "name": "Tevékenység"
+        },
+        "d967d9e5-5f37-45a6-944d-5aec753a921b": {
+          "name": "Bemelegítés"
         },
         "6696a89e-fd41-4622-9305-71a6590ec797": {
           "name": "Tevékenység"
         },
+        "6bcda0c6-95be-448f-b833-e73476a35b59": {
+          "name": "Bemelegítés"
+        },
         "9bbaadd9-354f-4ff6-b019-700d851293fa": {
           "name": "Tevékenység"
         },
-        "e618f9e4-3aaa-4aa6-a43b-498fef6c72b0": {
-          "name": "Szintek"
+        "9964a143-7893-42ba-b74f-c36b7707cde0": {
+          "name": "Bemelegítés"
+        },
+        "83194b44-89d2-4b23-8601-b26ce5caa6af": {
+          "name": "Bemelegítés"
+        },
+        "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f": {
+          "name": "Tevékenység"
+        },
+        "7b0be7ad-5d23-4932-b902-3a8ecac6de48": {
+          "name": "Bemelegítés"
         },
         "2fff60de-5366-470f-ad77-577397a87071": {
           "name": "Tevékenység"
         },
+        "0209e705-bb92-4abd-ab05-1d7a5e4a75d7": {
+          "name": "Bemelegítés"
+        },
         "cc88c5f7-4a54-4ec9-b548-194fb175932d": {
           "name": "Tevékenység"
+        },
+        "f29a14ec-18f2-432b-bd53-2733dcccf763": {
+          "name": "Bemelegítés"
         },
         "c9774311-07cd-4d0b-ae5e-c487a5e628c0": {
           "name": "Tevékenység"
         },
+        "aa94922e-e0f8-4904-8cd8-85deb77c2fb5": {
+          "name": "Bemelegítés"
+        },
         "87a42a0e-c065-49e6-a16d-42c7c66a8374": {
           "name": "Tevékenység"
+        },
+        "ab9fd0ea-6fb7-4c2f-af28-884019f22f2c": {
+          "name": "Bemelegítés"
         },
         "994368f3-b53e-4f5a-a1ab-f4a76c265a20": {
           "name": "Tevékenység"
         },
+        "b28bb858-5cd3-4f28-80d3-76cc74628df1": {
+          "name": "Bemelegítés"
+        },
         "a8f87090-0743-4286-86bc-e579a765d277": {
           "name": "Tevékenység"
+        },
+        "c03168ed-89c2-4ce7-85d2-641c03d490e5": {
+          "name": "Bemelegítés"
         },
         "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664": {
           "name": "Tevékenység"
         },
+        "8392e6dd-4082-4c70-861f-eaff1d89ffd1": {
+          "name": "Bemelegítés"
+        },
         "fe4547e7-73f8-4c7b-a67f-a61b4a10332c": {
           "name": "Tevékenység"
+        },
+        "449cef53-c3a4-4edd-8476-31e9df0e87f6": {
+          "name": "Bemelegítés"
         },
         "d43f4114-8c37-45a7-b61b-3aca56ee5790": {
           "name": "Tevékenység"
@@ -3074,29 +5123,59 @@
         "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
           "name": "Tevékenység"
         },
+        "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
+          "name": "Bemelegítés"
+        },
         "4b4cc069-5970-4809-bb0c-b2f8e1aae26c": {
           "name": "Tevékenység"
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Tevékenység"
         },
+        "1e259b12-ec38-426b-944e-f5778651c422": {
+          "name": "Bemelegítés"
+        },
         "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97": {
           "name": "Tevékenység"
+        },
+        "26057f9e-5b1c-4617-a7b1-e4e457e863fa": {
+          "name": "Bemelegítés"
+        },
+        "a4a373a9-8067-4100-ac1d-ec5f142fb754": {
+          "name": "Bemelegítés"
         },
         "c61550fb-464b-4871-92d2-f532c0ec62cf": {
           "name": "Tevékenység"
         },
-        "87851095-c111-49f0-b9eb-bbe31736cef0": {
-          "name": "Szintek"
+        "95526ba9-ab16-49b6-a013-d52be08b2753": {
+          "name": "Bemelegítés"
+        },
+        "cf690c94-3a16-4106-8bb0-260d9a235edc": {
+          "name": "Tevékenység"
+        },
+        "4128a59a-9016-49c1-b024-dfdf80c1c433": {
+          "name": "Bemelegítés"
         },
         "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
           "name": "Tevékenység"
         },
+        "a236992e-e7c9-421c-acf6-b514973090f3": {
+          "name": "Bemelegítés"
+        },
         "7ca84cbe-1c13-4126-9078-d6413f5ed5b4": {
           "name": "Tevékenység"
         },
+        "e3c1e42f-d1cc-43fb-b67d-8891a213f382": {
+          "name": "Bemelegítés"
+        },
         "6039132d-56d7-42d2-acdb-ef7f1a25738f": {
           "name": "Tevékenység"
+        },
+        "5a4d3e42-27fd-46e5-a022-a20242f61ebc": {
+          "name": "Bemelegítés"
+        },
+        "8174009e-cbb9-49cf-95d6-f36a96d41eb5": {
+          "name": "Bemelegítés"
         },
         "3ab3f540-cdac-498b-b4b5-49dba2a528bf": {
           "name": "Tevékenység"
@@ -3104,8 +5183,14 @@
         "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7": {
           "name": "Szintek"
         },
+        "434e1e94-f6aa-4bff-9376-154e62262354": {
+          "name": "Bemelegítés"
+        },
         "cf8ee96e-a948-4c2c-9565-beb1bee1bba1": {
           "name": "Tevékenység"
+        },
+        "3cc22b01-089f-4dab-b3e8-fc62116c4901": {
+          "name": "Bemelegítés"
         },
         "e7fed683-5b06-451a-83b6-44bd6135abba": {
           "name": "Tevékenység"
@@ -3113,203 +5198,407 @@
         "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
           "name": "Tevékenység"
         },
+        "422a0e5f-bc1c-44e7-80ce-5a43d59f4fa8": {
+          "name": "Bemelegítés"
+        },
         "2e669b5a-1c6c-41f0-a5f9-3a79fcbf7fcd": {
           "name": "Tevékenység"
+        },
+        "47dfd54a-dde6-4b61-81e3-db9405196209": {
+          "name": "Bemelegítés"
         },
         "44ae7025-981f-4dae-b225-555618d67b2a": {
           "name": "Tevékenység"
         },
+        "ae2bd4be-26b3-4558-9767-0b8a79334bfb": {
+          "name": "Bemelegítés"
+        },
         "711c240c-07ab-449d-9ebb-b4bc6472d58a": {
           "name": "Tevékenység"
+        },
+        "4d45a04e-3cd0-46cd-9a84-18f5b851b651": {
+          "name": "Bemelegítés"
         },
         "926cd18a-3e1a-44b9-96df-d0099cbc2ac8": {
           "name": "Tevékenység"
         },
+        "80a5f11f-25ea-4558-8512-14fdaf973674": {
+          "name": "Bemelegítés"
+        },
         "f99bbd39-3dca-43a4-ac09-0248fea7bf8f": {
           "name": "Tevékenység"
+        },
+        "81f15cf0-2f76-47e0-ac5b-ce9297fe585a": {
+          "name": "Bemelegítés"
         },
         "f41592ef-5ee3-4e3e-a31a-57e5984ae0fb": {
           "name": "Tevékenység"
         },
+        "e2fa70c3-8c9d-4efa-a176-b4690bc9d425": {
+          "name": "Bemelegítés"
+        },
         "de11024e-5469-41b6-bc28-627c9515eff1": {
           "name": "Tevékenység"
         },
-        "0f4a9cea-1a4a-4312-be99-79edfadbb6db": {
-          "name": "Szintek"
+        "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
+          "name": "Bemelegítés"
+        },
+        "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309": {
+          "name": "Tevékenység"
+        },
+        "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
+          "name": "Bemelegítés"
         },
         "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
           "name": "Tevékenység"
         },
+        "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
+          "name": "Bemelegítés"
+        },
         "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
           "name": "Tevékenység"
+        },
+        "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
+          "name": "Bemelegítés"
         },
         "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
           "name": "Tevékenység"
         },
+        "fa1d9228-1d94-46f9-8a49-d075d82546d9": {
+          "name": "Bemelegítés"
+        },
         "b2692599-66de-4bb5-aeb5-c63a06dd7040": {
           "name": "Tevékenység"
+        },
+        "3cca2572-607f-4925-8b36-6cf02506c1b6": {
+          "name": "Bemelegítés"
         },
         "752eddc2-eb93-48e1-90f0-19932c4f53cd": {
           "name": "Tevékenység"
         },
+        "936100bf-97fb-4931-84be-dda8766c0ec4": {
+          "name": "Bemelegítés"
+        },
         "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
           "name": "Tevékenység"
+        },
+        "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df": {
+          "name": "Bemelegítés"
         },
         "a2816f13-47a2-43e5-bbfa-0e7d57301037": {
           "name": "Tevékenység"
         },
+        "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e": {
+          "name": "Bemelegítés"
+        },
         "2e5b6973-dcd9-405c-958d-2366095f4375": {
           "name": "Tevékenység"
+        },
+        "6dfd29b9-13c7-4603-989a-bbeecf4800ff": {
+          "name": "Bemelegítés"
         },
         "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
           "name": "Tevékenység"
         },
+        "e0b108a8-9649-4dbe-81b2-18f26ef90572": {
+          "name": "Bemelegítés"
+        },
         "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
           "name": "Tevékenység"
+        },
+        "434c6d86-9182-4098-bdf9-a778a50a078a": {
+          "name": "Bemelegítés"
         },
         "81d5093b-fe94-4257-bc54-ca5311532cdc": {
           "name": "Tevékenység"
         },
+        "f34a570f-40d4-4d59-a68b-73775272bd4c": {
+          "name": "Bemelegítés"
+        },
         "e22dd0d5-97b3-4829-9d90-3a213360c254": {
           "name": "Tevékenység"
+        },
+        "bec6d0f0-443d-4368-aa3e-6ff205f0524d": {
+          "name": "Bemelegítés"
         },
         "f664c4cd-edcd-4afe-b5e6-5e2902ae866f": {
           "name": "Tevékenység"
         },
+        "e9f7c2c0-864d-48ee-b321-8d5f9be28800": {
+          "name": "Bemelegítés"
+        },
         "d7b339c7-1053-4301-bba3-6c5befbc61fe": {
           "name": "Tevékenység"
+        },
+        "7d4b68b8-c0ed-439b-996f-a3f992dc9824": {
+          "name": "Bemelegítés"
         },
         "06f944ce-4a81-48b5-a87d-96072d1bfa7b": {
           "name": "Tevékenység"
         },
+        "b73c5968-42c4-4b4c-ac51-a6694f99c29b": {
+          "name": "Bemelegítés"
+        },
         "ee232401-7aef-488e-b0f1-4b169a7a854e": {
           "name": "Tevékenység"
+        },
+        "177ca896-863b-456d-8703-29c35534f2d5": {
+          "name": "Bemelegítés"
         },
         "c56d186e-9346-4a55-b871-3547db946cb0": {
           "name": "Tevékenység"
         },
+        "bd0c46dd-1416-4ca4-9882-cc070c732bcb": {
+          "name": "Bemelegítés"
+        },
         "22daa03a-31f9-4048-98d6-180a94b49a68": {
           "name": "Tevékenység"
+        },
+        "78332cff-112e-4d7a-b0d5-dc027283de09": {
+          "name": "Bemelegítés"
         },
         "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
           "name": "Tevékenység"
         },
+        "91e4043a-b85e-4965-bb48-7dba5ae5b20d": {
+          "name": "Bemelegítés"
+        },
         "ec2b845c-4b81-4798-848a-37dd04f0ab69": {
           "name": "Tevékenység"
+        },
+        "4500c96e-1367-4b79-867f-061dfdb75d5c": {
+          "name": "Bemelegítés"
         },
         "ac036a2c-ddfd-4afa-8990-2c0488a6cac5": {
           "name": "Tevékenység"
         },
+        "82bb121e-9ad5-4b29-bf75-30eb4170b1dd": {
+          "name": "Bemelegítés"
+        },
         "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
           "name": "Tevékenység"
+        },
+        "28cdb81b-9ed2-4623-8c97-76a04c4b296f": {
+          "name": "Bemelegítés"
         },
         "e44e0ad1-b586-42a4-9be2-75e0eee0cccc": {
           "name": "Tevékenység"
         },
+        "5057296f-03f5-4ac1-b9b7-4b1e170c1224": {
+          "name": "Bemelegítés"
+        },
         "ee6441ac-3fe1-451b-846f-24a977986f9c": {
           "name": "Tevékenység"
+        },
+        "69970ef2-e960-449e-8650-84b53151315d": {
+          "name": "Bemelegítés"
         },
         "06cc83f5-66b2-401e-850a-466b164ef104": {
           "name": "Tevékenység"
         },
+        "d318c194-f178-4185-be90-b70771605b6d": {
+          "name": "Bemelegítés"
+        },
         "064fad66-35a6-480e-ad60-dff751b5230c": {
           "name": "Tevékenység"
+        },
+        "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
+          "name": "Bemelegítés"
         },
         "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
           "name": "Tevékenység"
         },
-        "a03605f6-2db6-446e-ba25-a91492277402": {
-          "name": "Szintek"
+        "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
+          "name": "Bemelegítés"
+        },
+        "675f7979-4687-4193-bd1e-10332a1ac050": {
+          "name": "Tevékenység"
+        },
+        "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
+          "name": "Bemelegítés"
         },
         "c8d05b47-5ef6-429d-8162-74d7c1198428": {
           "name": "Tevékenység"
         },
+        "17fde997-cb09-459a-a1fb-8e8d9a582343": {
+          "name": "Bemelegítés"
+        },
         "9612f586-66a9-4418-8a79-40080b796a76": {
           "name": "Tevékenység"
+        },
+        "2329539a-1db5-45ec-b998-3d2f32f6b03c": {
+          "name": "Bemelegítés"
         },
         "004e7885-e515-4aa8-b5b4-230b884cb6b8": {
           "name": "Tevékenység"
         },
+        "05118f86-6a73-4845-98b1-8ae7b80a3548": {
+          "name": "Bemelegítés"
+        },
         "a8aae27a-c021-4027-8ce0-37a888ec37f5": {
           "name": "Tevékenység"
+        },
+        "4046b95d-cc3b-4913-ad2f-591fae47b6a4": {
+          "name": "Bemelegítés"
         },
         "185f50c6-2c50-4650-91f6-f061d1051c91": {
           "name": "Tevékenység"
         },
+        "0b410a5f-fa45-4bac-a573-be593612cb48": {
+          "name": "Bemelegítés"
+        },
         "faf4b5ae-838a-4a44-bfe5-9450699ab59f": {
           "name": "Tevékenység"
+        },
+        "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
+          "name": "Bemelegítés"
         },
         "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
           "name": "Tevékenység"
         },
+        "2b979bba-aad6-49d0-a32a-d436d4288649": {
+          "name": "Bemelegítés"
+        },
         "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
           "name": "Tevékenység"
+        },
+        "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
+          "name": "Bemelegítés"
         },
         "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
           "name": "Tevékenység"
         },
+        "37d45c14-f225-4476-a638-7c7b11953ca1": {
+          "name": "Bemelegítés"
+        },
         "0e95e394-2a11-4fab-908d-ed712cd9f6b0": {
           "name": "Tevékenység"
+        },
+        "759e83e6-0f30-4645-8966-a6feb2298480": {
+          "name": "Bemelegítés"
         },
         "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
           "name": "Tevékenység"
         },
-        "5618c307-5639-4715-8735-c545ded5de85": {
-          "name": "Szintek"
+        "a0381dd6-760a-46a9-9217-7e7744252d97": {
+          "name": "Bemelegítés"
+        },
+        "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3": {
+          "name": "Tevékenység"
+        },
+        "a0692a63-008e-4013-9089-9f9c9b22d67c": {
+          "name": "Bemelegítés"
         },
         "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
           "name": "Tevékenység"
         },
+        "5ea39814-570e-4b27-a399-fe1e3f197d77": {
+          "name": "Bemelegítés"
+        },
         "c3347e87-c7d1-4002-aa31-a53dd8deee41": {
           "name": "Tevékenység"
+        },
+        "ff0f61fd-a59d-4c4b-aae7-ad0c35798747": {
+          "name": "Bemelegítés"
         },
         "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14": {
           "name": "Tevékenység"
         },
+        "13fad4d8-f6df-4655-9054-9fdb847371db": {
+          "name": "Bemelegítés"
+        },
         "03d57f25-1cca-49af-8487-43c3a7efceb8": {
           "name": "Tevékenység"
+        },
+        "2882d381-78b9-4874-8f84-6b9e4c251861": {
+          "name": "Bemelegítés"
         },
         "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
           "name": "Tevékenység"
         },
+        "479d0cbe-6860-44be-bd76-9d7e266e0785": {
+          "name": "Bemelegítés"
+        },
         "9982617c-045f-447f-8f83-522ea617c3b9": {
           "name": "Tevékenység"
+        },
+        "d8c9fbdb-b731-44f3-aa89-3bfd07111678": {
+          "name": "Bemelegítés"
         },
         "87977467-a47d-46de-90b9-df606358da99": {
           "name": "Tevékenység"
         },
+        "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4": {
+          "name": "Bemelegítés"
+        },
         "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
           "name": "Tevékenység"
+        },
+        "17a16dd3-54c2-4e6a-b6cf-f6bbb3394f62": {
+          "name": "Bemelegítés"
         },
         "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
           "name": "Tevékenység"
         },
+        "54db6e45-9f93-4f70-aef0-f2820b64ad6d": {
+          "name": "Bemelegítés"
+        },
+        "481b15da-1d94-404a-859d-31a4cfe544ef": {
+          "name": "Bemelegítés"
+        },
         "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
           "name": "Tevékenység"
+        },
+        "ff6415fc-9140-4824-ac75-30b80fff14ce": {
+          "name": "Bemelegítés"
         },
         "50301e64-0051-4071-ab27-c0f0eb834ca5": {
           "name": "Tevékenység"
         },
+        "d0d7583f-c507-4ad5-92fa-0dff5d463423": {
+          "name": "Bemelegítés"
+        },
         "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
           "name": "Tevékenység"
+        },
+        "0e81302e-2d3e-4a15-a0be-8b8efd6c082f": {
+          "name": "Bemelegítés"
         },
         "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
           "name": "Tevékenység"
         },
+        "ba30039c-8c54-4e5a-a810-18052eac7d45": {
+          "name": "Bemelegítés"
+        },
         "54106bc6-dce5-43e9-965a-07567d1856dc": {
           "name": "Tevékenység"
+        },
+        "6fed748d-07a5-4be9-a535-2a1bd073cbd5": {
+          "name": "Bemelegítés"
         },
         "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
           "name": "Tevékenység"
         },
+        "ed6098ff-6be9-40e7-838e-eef99d12259b": {
+          "name": "Bemelegítés"
+        },
         "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
           "name": "Tevékenység"
+        },
+        "0051624b-1122-464c-a805-9dfd4e8afb4c": {
+          "name": "Bemelegítés"
         },
         "12d9a87a-588e-43d1-b12d-ad4b83414276": {
           "name": "Tevékenység"
         },
+        "3a252e7c-c299-41f2-8617-a6b165dfd91f": {
+          "name": "Bemelegítés"
+        },
         "9c7bec47-be70-4024-a4f2-21f687434008": {
           "name": "Tevékenység"
+        },
+        "5994929e-9d47-4037-9bf0-50728d56d31d": {
+          "name": "Bemelegítés"
         },
         "e159a5eb-31ca-47d9-bc81-e2777d7027a0": {
           "name": "Szintek"

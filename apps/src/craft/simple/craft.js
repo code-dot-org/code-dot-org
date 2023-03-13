@@ -27,6 +27,7 @@ import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
+import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -204,15 +205,29 @@ Craft.init = function(config) {
       return config.skin.assetUrl(`music/${filename}`);
     },
     levelTracks,
-    levelTracks.length > 1 ? 7500 : null
+    levelTracks.length > 1 ? 7500 : null,
+    muteCookieWithLevel(Craft.level)
   );
+
+  config.muteBackgroundMusic = function() {
+    Craft.musicController.setMuteMusic(true);
+  };
+
+  config.unmuteBackgroundMusic = function() {
+    var songToPlayFirst = Craft.getFirstSong();
+    Craft.musicController.setMuteMusic(false, songToPlayFirst);
+  };
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function() {
+    var songToPlayFirst = Craft.getFirstSong();
+    Craft.musicController.play(songToPlayFirst);
+  };
+
+  Craft.getFirstSong = function() {
     Sounds.getSingleton().whenAudioUnlocked(function() {
       var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-      Craft.musicController.play(songToPlayFirst);
+      return hasSongInLevel ? Craft.level.songs[0] : null;
     });
   };
 
@@ -221,6 +236,7 @@ Craft.init = function(config) {
   config.skin.smallStaticAvatar = character.smallStaticAvatar;
   config.skin.failureAvatar = character.failureAvatar;
   config.skin.winAvatar = character.winAvatar;
+  config.level.levelTracks = levelTracks;
 
   var levelConfig = config.level;
   var specialLevelType = levelConfig.specialLevelType;
