@@ -5,6 +5,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import QuickAssignTable from './QuickAssignTable';
 import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
+import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const MARKETING_AUDIENCE = {
@@ -92,6 +93,14 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
       )}
       {marketingAudience && isPlOrHoc() && courseOfferings && (
         <QuickAssignTableHocPl
+          marketingAudience={marketingAudience}
+          courseOfferings={courseOfferings}
+          updateCourse={course => updateSection('course', course)}
+          sectionCourse={sectionCourse}
+        />
+      )}
+      {(sectionCourse.versionId || sectionCourse.unitId) && (
+        <VersionUnitDropdowns
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
           updateCourse={course => updateSection('course', course)}

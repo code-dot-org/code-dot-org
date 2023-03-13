@@ -32,8 +32,8 @@ export function renderRows(courseData, sectionCourse, updateCourse) {
   selected at a time. Selecting one immediately calls updateCourse.
 */
 function renderOfferings(courseValues, sectionCourse, updateCourse) {
-  const values = courseValues.map(cv => cv.display_name);
-  return values.map(display_name => (
+  const values = courseValues.map(cv => [cv.display_name, cv.id]);
+  return values.map(([display_name, id]) => (
     <div className={moduleStyles.flexDisplay} key={display_name}>
       <input
         id={display_name}
@@ -43,7 +43,7 @@ function renderOfferings(courseValues, sectionCourse, updateCourse) {
         value={display_name}
         checked={sectionCourse?.displayName === display_name}
         onChange={() => {
-          updateCourse({displayName: display_name});
+          updateCourse({displayName: display_name, courseOfferingId: id});
         }}
       />
       <label className={moduleStyles.label} htmlFor={display_name}>
