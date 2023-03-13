@@ -9,22 +9,23 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white"} How Blockchain Works
-      %p{style: "color: white"} Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!
+      %h1{style: "color: white"}=I18n.t(:blockchain_hero_heading)
+      %p{style: "color: white"}=I18n.t(:blockchain_hero_desc)
     %figure.col-33{style: "float: right"}
       %img{src: "shared/images/banners/blockchain-laptop-silver.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
 %section
   .wrapper
-    %h2 See how blockchain works
-    %p The video series, made in partnership with Coinbase, features industry experts and aims to demystify this technology.
+    %h2=I18n.t(:blockchain_intro_heading)
+    %p=I18n.t(:blockchain_intro_desc)
     %div.col-50{style: "margin-bottom: 1em"}
-      %p <strong>This series will:</strong>
+      %p
+        %strong=I18n.t(:blockchain_intro_list_heading)
       %ul
-        %li Explain what blockchain is
-        %li Explore why it's important
-        %li Unpack its societal impacts — both good and bad
+        %li=I18n.t(:blockchain_intro_list_item_01)
+        %li=I18n.t(:blockchain_intro_list_item_02)
+        %li=I18n.t(:blockchain_intro_list_item_03)
     %figure.col-45{style: "float:right; margin: 2em auto;"}
       %img{src: "/images/blockchain-works-logo.png", alt: "", style: "width: 100%"}
     .clear
@@ -54,68 +55,69 @@ theme: responsive_full_width
 %div.divider.no-margin-bottom
   %hr
 
+- if request.language == "en"
+  %section
+    .wrapper
+      %h2 Blockchain lessons for your class
+      %p Bring blockchain to life in your classroom with lessons that correspond with the above videos! Each lesson can stand alone or as part of a "How Blockchain Works" series.
+      .action-block__wrapper.action-block__wrapper--three-col
+        .action-block.action-block--one-col
+          %p.overline Grade Levels: 7-12
+          %h3 Why Blockchain
+          %img{src: "/images/blockchain-lesson-01.png", alt: ""}
+          %p{style: "height: 105px"} Students participate in a marketplace simulation to learn about the factors that motivated the creation of Blockchain technology.
+          %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button"} See lesson details
+        .action-block.action-block--one-col
+          %p.overline Grade Levels: 9-12
+          %h3 Under the Hood
+          %img{src: "/images/blockchain-lesson-02.png", alt: ""}
+          %p{style: "height: 105px"} Students learn how transactions work on a blockchain network.
+          %a{href: CDO.studio_url("/s/blockchain-2023/lessons/2"), class: "link-button"} See lesson details
+        .action-block.action-block--one-col
+          %p.overline Grade Levels: 7-12
+          %h3 Beyond Currencies
+          %img{src: "/images/blockchain-lesson-03.png", alt: ""}
+          %p{style: "height: 105px"} Students see how digital assets can be represented on the blockchain using an input, processing, storage, output model.
+          %a{href: CDO.studio_url("/s/blockchain-2023/lessons/3"), class: "link-button"} See lesson details
+        .action-block.action-block--one-col
+          %p.overline Grade Levels: 9-12
+          %h3 Marketplace &amp; Price
+          %img{src: "/images/blockchain-lesson-04.png", alt: ""}
+          %p{style: "height: 105px"} Students participate in a simulation where they can buy and sell different cryptocurrencies and commodities, and see how their investments change based on world events.
+          %a{href: CDO.studio_url("/s/blockchain-2023/lessons/4"), class: "link-button"} See lesson details
+        .action-block.action-block--one-col
+          %p.overline Grade Levels: 7-12
+          %h3 Societal Impact
+          %img{src: "/images/blockchain-lesson-05.png", alt: ""}
+          %p{style: "height: 105px"} Students explore current events related to blockchain and cryptocurrency and discuss the impacts of blockchain technology.
+          %a{href: CDO.studio_url("/s/blockchain-2023/lessons/5"), class: "link-button"} See lesson details
+        .action-block.action-block--one-col
+          %p.overline Grade levels: 7-12
+          %h3 Blockchain in a Day
+          %img{src: "/images/blockchain-lesson-06.png", alt: ""}
+          %p{style: "height: 105px"} Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video.
+          %a{href: CDO.studio_url("/s/blockchain-2023/lessons/6"), class: "link-button"} See lesson details
+
+  %div.divider.no-margin-bottom
+    %hr
+
 %section
   .wrapper
-    %h2 Blockchain lessons for your class
-    %p Bring blockchain to life in your classroom with lessons that correspond with the above videos! Each lesson can stand alone or as part of a "How Blockchain Works" series.
+    %h2=I18n.t(:heading_additional_resources)
+    %p=I18n.t(:blockchain_resources_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col
-        %p.overline Grade Levels: 7-12
-        %h3 Why Blockchain
-        %img{src: "/images/blockchain-lesson-01.png", alt: ""}
-        %p{style: "height: 105px"} Students participate in a marketplace simulation to learn about the factors that motivated the creation of Blockchain technology.
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/1") , class: "link-button"} See lesson details
-      .action-block.action-block--one-col
-        %p.overline Grade Levels: 9-12
-        %h3 Under the Hood
-        %img{src: "/images/blockchain-lesson-02.png", alt: ""}
-        %p{style: "height: 105px"} Students learn how transactions work on a blockchain network.
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/2"), class: "link-button"} See lesson details
-      .action-block.action-block--one-col
-        %p.overline Grade Levels: 7-12
-        %h3 Beyond Currencies
-        %img{src: "/images/blockchain-lesson-03.png", alt: ""}
-        %p{style: "height: 105px"} Students see how digital assets can be represented on the blockchain using an input, processing, storage, output model.
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/3"), class: "link-button"} See lesson details
-      .action-block.action-block--one-col
-        %p.overline Grade Levels: 9-12
-        %h3 Marketplace &amp; Price
-        %img{src: "/images/blockchain-lesson-04.png", alt: ""}
-        %p{style: "height: 105px"} Students participate in a simulation where they can buy and sell different cryptocurrencies and commodities, and see how their investments change based on world events.
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/4"), class: "link-button"} See lesson details
-      .action-block.action-block--one-col
-        %p.overline Grade Levels: 7-12
-        %h3 Societal Impact
-        %img{src: "/images/blockchain-lesson-05.png", alt: ""}
-        %p{style: "height: 105px"} Students explore current events related to blockchain and cryptocurrency and discuss the impacts of blockchain technology.
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/5"), class: "link-button"} See lesson details
-      .action-block.action-block--one-col
-        %p.overline Grade levels: 7-12
-        %h3 Blockchain in a Day
-        %img{src: "/images/blockchain-lesson-06.png", alt: ""}
-        %p{style: "height: 105px"} Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video.
-        %a{href: CDO.studio_url("/s/blockchain-2023/lessons/6"), class: "link-button"} See lesson details
-
-%div.divider.no-margin-bottom
-  %hr
-
-%section
-  .wrapper
-    %h2 Additional resources
-    %p Interested in learning more about blockchain? Here are some additional resources that can help extend your students' learning.
-    .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col
-        %h3 Coinbase Learn
+        %h3=I18n.t(:blockchain_resources_01_heading)
         %img{src: "/images/blockchain-coinbase-learn.png", alt: ""}
-        %p{style: "height: 120px"} Crypto questions answered, beginner guides, practical tips, and market updates for first-timers, experienced investors, and everyone in between.
-        %a{href: "https://www.coinbase.com/learn", class: "link-button", target: "_blank", rel: "noopener noreferrer"} Learn more
+        %p{style: "height: 120px"}=I18n.t(:blockchain_resources_01_desc)
+        %a{href: "https://www.coinbase.com/learn", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=I18n.t(:call_to_action_learn_more)
       .action-block.action-block--one-col
-        %h3 Whiteboard Crypto
+        %h3=I18n.t(:blockchain_resources_02_heading)
         %img{src: "/images/blockchain-resource-image-generic.png", alt: ""}
-        %p{style: "height: 120px"} Watch videos from Whiteboard Crypto's YouTube channel to learn even more about blockchain technology.
-        %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button", target: "_blank", rel: "noopener noreferrer"} Watch now
+        %p{style: "height: 120px"}=I18n.t(:blockchain_resources_02_desc)
+        %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=I18n.t(:call_to_action_watch_now)
       .action-block.action-block--one-col
-        %h3 Hour of Code Activity
+        %h3=I18n.t(:blockchain_resources_03_heading)
         %img{src: "/images/blockchain-coinbase-hoc-activity.png", alt: ""}
-        %p{style: "height: 120px"} Try a crypto memory game created by Coinbase.
-        %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button", target: "_blank", rel: "noopener noreferrer"} See activity
+        %p{style: "height: 120px"}=I18n.t(:blockchain_resources_03_desc)
+        %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=I18n.t(:call_to_action_see_activity)
