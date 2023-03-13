@@ -9,23 +9,23 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white"}=I18n.t(:blockchain_hero_heading)
-      %p{style: "color: white"}=I18n.t(:blockchain_hero_desc)
+      %h1{style: "color: white"}=hoc_s(:blockchain_hero_heading)
+      %p{style: "color: white"}=hoc_s(:blockchain_hero_desc)
     %figure.col-33{style: "float: right"}
       %img{src: "/images/banners/blockchain-laptop-silver.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
 %section
   .wrapper
-    %h2=I18n.t(:blockchain_intro_heading)
-    %p=I18n.t(:blockchain_intro_desc)
+    %h2=hoc_s(:blockchain_intro_heading)
+    %p=hoc_s(:blockchain_intro_desc)
     %div.col-50{style: "margin-bottom: 1em"}
       %p
-        %strong=I18n.t(:blockchain_intro_list_heading)
+        %strong=hoc_s(:blockchain_intro_list_heading)
       %ul
-        %li=I18n.t(:blockchain_intro_list_item_01)
-        %li=I18n.t(:blockchain_intro_list_item_02)
-        %li=I18n.t(:blockchain_intro_list_item_03)
+        %li=hoc_s(:blockchain_intro_list_item_01)
+        %li=hoc_s(:blockchain_intro_list_item_02)
+        %li=hoc_s(:blockchain_intro_list_item_03)
     %figure.col-45{style: "float:right; margin: 2em auto;"}
       %img{src: "/images/blockchain-works-logo.png", alt: "", style: "width: 100%"}
     .clear
@@ -101,21 +101,21 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2=I18n.t(:heading_additional_resources)
-    %p=I18n.t(:blockchain_resources_desc)
+    %h2=hoc_s(:heading_additional_resources)
+    %p=hoc_s(:blockchain_resources_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col
-        %h3=I18n.t(:blockchain_resources_01_heading)
+        %h3=hoc_s(:blockchain_resources_01_heading)
         %img{src: "/images/blockchain-coinbase-learn.png", alt: ""}
-        %p{style: "height: 120px"}=I18n.t(:blockchain_resources_01_desc)
-        %a{href: "https://www.coinbase.com/learn", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=I18n.t(:call_to_action_learn_more)
+        %p{style: "height: 120px"}=hoc_s(:blockchain_resources_01_desc)
+        %a{href: "https://www.coinbase.com/learn", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:call_to_action_learn_more)
       .action-block.action-block--one-col
-        %h3=I18n.t(:blockchain_resources_02_heading)
+        %h3=hoc_s(:blockchain_resources_02_heading)
         %img{src: "/images/blockchain-resource-image-generic.png", alt: ""}
-        %p{style: "height: 120px"}=I18n.t(:blockchain_resources_02_desc)
-        %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=I18n.t(:call_to_action_watch_now)
+        %p{style: "height: 120px"}=hoc_s(:blockchain_resources_02_desc)
+        %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:call_to_action_watch_now)
       .action-block.action-block--one-col
-        %h3=I18n.t(:blockchain_resources_03_heading)
+        %h3=hoc_s(:blockchain_resources_03_heading)
         %img{src: "/images/blockchain-coinbase-hoc-activity.png", alt: ""}
-        %p{style: "height: 120px"}=I18n.t(:blockchain_resources_03_desc)
-        %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=I18n.t(:call_to_action_see_activity)
+        %p{style: "height: 120px"}=hoc_s(:blockchain_resources_03_desc)
+        %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:call_to_action_see_activity)
