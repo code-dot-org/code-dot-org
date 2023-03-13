@@ -212,6 +212,7 @@
   "behaviorEditorHeader": "Behavior",
   "behaviorEditorLabel": "Name your behavior:",
   "behaviorEditorDescription": "What is your behavior supposed to do?",
+  "behaviorsNotFound": "No behaviors found",
   "beta": "beta",
   "betterThanPerfectDescription": "WOW!",
   "bigQuestions": "Big questions",

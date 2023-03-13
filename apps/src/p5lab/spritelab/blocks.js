@@ -58,12 +58,11 @@ function backgroundList() {
   return animations(true);
 }
 function getAllBehaviors() {
-  const behaviors = [
-    [
-      Blockly.FieldDropdown.NO_OPTIONS_MESSAGE,
-      Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
-    ]
-  ];
+  let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+  const noBehaviorLabel = allowBehaviorEditing
+    ? `${i18n.createBlocklyBehavior()}\u2026`
+    : i18n.behaviorsNotFound();
+  const behaviors = [];
   Blockly.mainBlockSpace?.getAllBlocks().forEach(function(block) {
     if (
       block.type === 'behavior_definition' &&
@@ -74,17 +73,14 @@ function getAllBehaviors() {
         block.getProcedureInfo().name,
         block.getProcedureInfo().id
       ];
-      if (
-        behaviors[behaviors.length - 1].includes(
-          Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
-        )
-      ) {
-        behaviors.pop();
-      }
       behaviors.push(newOption);
     }
   });
-  return behaviors.sort();
+  behaviors.sort();
+  if (allowBehaviorEditing || behaviors.length === 0) {
+    behaviors.push([noBehaviorLabel, Blockly.FieldDropdown.NO_OPTIONS_MESSAGE]);
+  }
+  return behaviors;
 }
 
 // This color palette is limited to colors which have different hues, therefore
@@ -426,10 +422,17 @@ const customInputTypes = {
     },
     openEditor(e) {
       e.stopPropagation();
-      Blockly.behaviorEditor.openEditorForFunction(
-        this,
-        this.getFieldValue('BEHAVIOR')
-      );
+      if (
+        this.getFieldValue('BEHAVIOR') ===
+        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
+      ) {
+        Blockly.behaviorEditor.openWithNewFunction();
+      } else {
+        Blockly.behaviorEditor.openEditorForFunction(
+          this,
+          this.getFieldValue('BEHAVIOR')
+        );
+      }
     }
   },
   limitedColourPicker: {
