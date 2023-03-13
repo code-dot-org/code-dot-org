@@ -99,8 +99,7 @@ const TimelineSimple2Events = ({
               left: (uniqueFunction.positionLeft - 1) * barWidth,
               width:
                 (uniqueFunction.positionRight - uniqueFunction.positionLeft) *
-                  barWidth -
-                4,
+                barWidth,
               top: 20 + uniqueFunction.positionTop,
               height:
                 uniqueFunction.positionBottom - uniqueFunction.positionTop - 3

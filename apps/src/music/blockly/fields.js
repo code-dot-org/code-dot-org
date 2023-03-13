@@ -31,7 +31,7 @@ export const fieldRestDurationDefinition = {
   type: 'field_dropdown',
   name: FIELD_REST_DURATION_NAME,
   options: [
-    ['1/2 beat', '0.125'],
+    ['\u00bd beat', '0.125'],
     ['1 beat', '0.25'],
     ['2 beats', '0.5'],
     ['1 measure', '1'],
