@@ -22,7 +22,7 @@ module OmniauthCallbacksControllerTests
           name: args[:name] || 'someone',
           email: args[:email] || 'auth_test@code.org',
           user_type: args[:user_type].presence,
-          dob: args[:dob] || (Date.today - 20.years),
+          dob: args[:dob] || (Time.zone.today - 20.years),
           gender: args[:gender] || 'f'
         },
         credentials: {

@@ -61,7 +61,7 @@ module UserHelpers
   end
 
   def self.age_from_birthday(birthday)
-    ((Date.today - birthday) / 365).to_i
+    ((Time.zone.today - birthday) / 365).to_i
   end
 
   AGE_CUTOFFS = [18, 13, 8, 4].freeze

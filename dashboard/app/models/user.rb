@@ -2222,7 +2222,7 @@ class User < ApplicationRecord
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
