@@ -136,7 +136,7 @@ module Pd::Application
     end
 
     def set_status_from_admin_approval
-      # Do not modify status is application is not incomplete.
+      # Do not modify status if application is incomplete.
       return if status == 'incomplete'
 
       # Do not modify status if admin approval status has not changed.
