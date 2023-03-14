@@ -142,6 +142,22 @@ module Curriculum
       history
     ).freeze
 
+    # Device types for course offerings
+    DEVICE_TYPES = %w(
+      computer
+      chromebook
+      tablet
+      mobile
+      no_device
+    ).freeze
+
+    # Device compatibility levels for course offerings
+    DEVICE_COMPATIBILITY_LEVELS = %w(
+      ideal
+      not_recommended
+      incompatible
+    ).freeze
+
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be
     # participants in the course. There this will tell you give the participant_audience of the
