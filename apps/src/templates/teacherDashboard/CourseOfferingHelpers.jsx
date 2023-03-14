@@ -1,8 +1,5 @@
 import i18n from '@cdo/locale';
 
-// The (None) option in editor dropdowns
-export const translatedNoneOption = `(${i18n.none()})`;
-
 // Same list as CourseOfferingCsTopics in sharedCourseConstants but with translated strings
 export const translatedCourseOfferingCsTopics = {
   art_and_design: i18n.courseOfferingCsTopicArtAndDesign(),

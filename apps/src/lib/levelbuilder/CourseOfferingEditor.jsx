@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import i18n from '@cdo/locale';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
@@ -17,12 +18,13 @@ import {
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 import {
-  translatedNoneOption,
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDeviceCompatibilityLevels
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+
+const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
