@@ -7,11 +7,11 @@ MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rg
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
     yield
-  rescue Selenium::WebDriver::Error::UnknownError => e
-    puts "Unknown error: #{e}"
+  rescue Selenium::WebDriver::Error::UnknownError => exception
+    puts "Unknown error: #{exception}"
     false
-  rescue Selenium::WebDriver::Error::WebDriverError => e
-    raise unless e.message.include?('no such element')
+  rescue Selenium::WebDriver::Error::WebDriverError => exception
+    raise unless exception.message.include?('no such element')
     false
   rescue Selenium::WebDriver::Error::StaleElementReferenceError
     false
@@ -25,17 +25,17 @@ end
 def element_stale?(element)
   element.enabled?
   false
-rescue Selenium::WebDriver::Error::JavascriptError => e
-  e.message.starts_with? 'Element does not exist in cache'
-rescue Selenium::WebDriver::Error::UnknownError => e
-  puts "Unknown error: #{e}"
+rescue Selenium::WebDriver::Error::JavascriptError => exception
+  exception.message.starts_with? 'Element does not exist in cache'
+rescue Selenium::WebDriver::Error::UnknownError => exception
+  puts "Unknown error: #{exception}"
   true
 rescue Selenium::WebDriver::Error::StaleElementReferenceError
   true
-rescue Selenium::WebDriver::Error::WebDriverError => e
-  return true if e.message.include?('stale element reference') ||
-    e.message.include?('no such element')
-  puts "Unknown error: #{e}"
+rescue Selenium::WebDriver::Error::WebDriverError => exception
+  return true if exception.message.include?('stale element reference') ||
+    exception.message.include?('no such element')
+  puts "Unknown error: #{exception}"
   true
 end
 
