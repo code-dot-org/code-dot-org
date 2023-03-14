@@ -76,7 +76,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # regional partners, and an empty set for everyone else.
   def upcoming_teachercons
     workshops = Pd::Workshop.
-      scheduled_start_on_or_after(Date.today.beginning_of_day).
+      scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
       where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
 
     if params[:course]
@@ -151,7 +151,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
     end
 
-    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
+    @workshops = Pd::Workshop.scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
       where(conditions).where.not(processed_location: nil)
     if params['geojson']
       render json: to_geojson(@workshops)

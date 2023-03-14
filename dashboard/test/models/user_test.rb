@@ -577,7 +577,7 @@ class UserTest < ActiveSupport::TestCase
       assert_creates(User) do
         user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
-        assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
+        assert_equal Date.new(Time.zone.today.year - 7, Time.zone.today.month, Time.zone.today.day), user.birthday
         assert_equal 7, user.age
       end
     end
@@ -588,7 +588,7 @@ class UserTest < ActiveSupport::TestCase
       assert_creates(User) do
         user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
 
-        assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
+        assert_equal Date.new(Time.zone.today.year - 21, Time.zone.today.month, Time.zone.today.day), user.birthday
         assert_equal "21+", user.age
       end
     end
@@ -630,7 +630,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 7, user.age
 
       user.update(age: '9')
-      assert_equal Date.new(Date.today.year - 9, Date.today.month, Date.today.day), user.birthday
+      assert_equal Date.new(Time.zone.today.year - 9, Time.zone.today.month, Time.zone.today.day), user.birthday
       assert_equal 9, user.age
     end
   end
@@ -669,7 +669,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
     assert_equal 7, user.age
 
-    Timecop.freeze(Date.today + 40) do
+    Timecop.freeze(Time.zone.today + 40) do
       assert_no_difference('user.reload.birthday') do
         user.update(age: '7')
       end
@@ -3051,20 +3051,20 @@ class UserTest < ActiveSupport::TestCase
 
   test "age is nil for Google OAuth users under age 4" do
     # Users created this way will be asked for their age when they first sign in.
-    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'google_oauth2'
+    three_year_old = create :user, birthday: (Time.zone.today - 3.years), provider: 'google_oauth2'
     assert_nil three_year_old.age
   end
 
   test "age is set exactly for Google OAuth users between ages 4 and 20" do
-    four_year_old = build :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
+    four_year_old = build :user, birthday: (Time.zone.today - 4.years), provider: 'google_oauth2'
     assert_equal 4, four_year_old.age
 
-    twenty_year_old = build :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
+    twenty_year_old = build :user, birthday: (Time.zone.today - 20.years), provider: 'google_oauth2'
     assert_equal 20, twenty_year_old.age
   end
 
   test "age is 21+ for Google OAuth users over the age of 20" do
-    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'google_oauth2'
+    twenty_something = create :user, birthday: (Time.zone.today - 22.years), provider: 'google_oauth2'
     assert_equal '21+', twenty_something.age
   end
 
@@ -3076,20 +3076,20 @@ class UserTest < ActiveSupport::TestCase
 
   test "age is nil for Clever users under age 4" do
     # Users created this way will be asked for their age when they first sign in.
-    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'clever'
+    three_year_old = create :user, birthday: (Time.zone.today - 3.years), provider: 'clever'
     assert_nil three_year_old.age
   end
 
   test "age is set exactly for Clever users between ages 4 and 20" do
-    four_year_old = build :user, birthday: (Date.today - 4.years), provider: 'clever'
+    four_year_old = build :user, birthday: (Time.zone.today - 4.years), provider: 'clever'
     assert_equal 4, four_year_old.age
 
-    twenty_year_old = build :user, birthday: (Date.today - 20.years), provider: 'clever'
+    twenty_year_old = build :user, birthday: (Time.zone.today - 20.years), provider: 'clever'
     assert_equal 20, twenty_year_old.age
   end
 
   test "age is 21+ for Clever users over the age of 20" do
-    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'clever'
+    twenty_something = create :user, birthday: (Time.zone.today - 22.years), provider: 'clever'
     assert_equal '21+', twenty_something.age
   end
 
@@ -3731,12 +3731,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'students share setting updates after turning 13 if they are in no sections' do
     # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
+    birthday = Time.zone.today - (12 * 365)
     student = create :user, birthday: birthday
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel(Date.today + 366) do
+    Timecop.travel(Time.zone.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
@@ -3748,7 +3748,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'students share setting does not update after turning 13 if they are in sections' do
     # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
+    birthday = Time.zone.today - (12 * 365)
     student = create :user, birthday: birthday
 
     teacher = create :teacher
@@ -3758,7 +3758,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel(Date.today + 366) do
+    Timecop.travel(Time.zone.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
