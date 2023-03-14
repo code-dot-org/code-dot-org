@@ -49,7 +49,9 @@
     -# If we're a instructor, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
     - if @script_level && @script_level.lesson.lockable? && @script_level.script.can_be_instructor?(current_user)
       = render 'levels/locked_lesson', hidden: true
-    - if @game.unplugged?
+    - if params[:view] == 'summary'
+      = render partial: 'levels/summary'
+    - elsif @game.unplugged?
       :javascript
         var appOptions = #{app_options.to_json};
       = render partial: 'levels/unplug', locals: {app: @game.app}
