@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-03-14 17:32:27 UTC",
+    "serialized_at": "2023-03-14 20:12:58 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3115,7 +3115,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\r\n"
+            "markdown": "<img src=\"https://images.code.org/3d122473886889443e423633d7346994-css properties 2.png\" style=\"margin-left:20px; width:200px; float:right\">\n\n**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\n"
           }
         ]
       },
@@ -3128,7 +3128,7 @@
       "key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their journals or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their new \"CSS Properties\" chart or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
