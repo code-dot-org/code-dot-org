@@ -1,8 +1,45 @@
 import React, {Component} from 'react';
 import HeaderBanner from '../HeaderBanner';
 import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import createPubSub from '@cdo/apps/lib/util/PubSubService';
 
 class Incubator extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      members: []
+    };
+
+    this.pubSub = createPubSub({
+      usePusher: true,
+      pusherApplicationKey: ''  // todo: pass this in from server
+    });
+
+    this.pubSubChannel = this.pubSub.subscribe('presence-incubator-page');
+    this.pubSubChannel.subscribe(
+      'pusher:subscription_succeeded',
+      this.channelChanged
+    );
+    this.pubSubChannel.subscribe(
+      'pusher:member_added',
+      this.channelChanged
+    );
+    this.pubSubChannel.subscribe(
+      'pusher:member_removed',
+      this.channelChanged
+    );
+  }
+
+  channelChanged = () => {
+    // .pusherChannel_ shouldn't be necessary.
+    //const members = this.pubSubChannel.pusherChannel_.members.members;
+    const membersArray = [];
+    this.pubSubChannel.pusherChannel_.members.each(member => membersArray.push(member.info.name));
+    console.log(membersArray);
+    this.setState({members: membersArray});
+  };
+
   render() {
     return (
       <div>
@@ -15,6 +52,19 @@ class Incubator extends Component {
         />
         <div className="main" style={{maxWidth: 970, margin: '0 auto'}}>
           <div style={{margin: '40px 0'}}>
+            <strong>
+              Users currently on this page:
+            </strong>
+            {this.state.members.map(member => {
+              return (
+                <div key={member}>
+                  {member}
+                </div>
+              )
+            })}
+            <div style={{height: 200}}>
+              &nbsp;
+            </div>
             <p>
               The Incubator is where you get to try out some of the latest ideas
               from inside Code.org.

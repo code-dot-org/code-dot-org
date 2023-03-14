@@ -73,7 +73,7 @@ class NullService {
  */
 class PusherService {
   constructor(applicationKey) {
-    this.api_ = new Pusher(applicationKey, {encrypted: true});
+    this.api_ = new Pusher(applicationKey, {encrypted: true, cluster: "mt1"});
   }
 
   subscribe(channelID) {
