@@ -10,6 +10,9 @@ class WebPurifyTest < Minitest::Test
     CDO.stubs(webpurify_key: 'mocksecret')
   end
 
+  # Character limit per submission taken from https://www.webpurify.com/faq/
+  WEBPURIFY_CHARACTER_LIMIT = 30000
+
   # Do additional VCR configuration so as to prevent the CDO.webpurify_key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
   VCR.configure do |c|
@@ -29,5 +32,13 @@ class WebPurifyTest < Minitest::Test
     assert_nil WebPurify.find_potential_profanities('scheiße', ['en'])
     assert_equal ['scheiße'], WebPurify.find_potential_profanities('scheiße', ['de'])
     assert_equal ['puta'], WebPurify.find_potential_profanities('puta madre', ['es'])
+  end
+
+  def test_entity_too_large
+    too_long_string = 'f' * WEBPURIFY_CHARACTER_LIMIT
+    err = assert_raises OpenURI::HTTPError do
+      WebPurify.find_potential_profanities(too_long_string)
+    end
+    assert_match /414 Request-URI Too Large/, err.message
   end
 end
