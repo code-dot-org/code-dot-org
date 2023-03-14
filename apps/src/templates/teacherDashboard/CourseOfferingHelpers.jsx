@@ -21,3 +21,19 @@ export const translatedCourseOfferingSchoolSubjects = {
   english_language_arts: i18n.courseOfferingSchoolSubjectEnglishLanguageArts(),
   history: i18n.courseOfferingSchoolSubjectHistory()
 };
+
+// Same list as DeviceTypes in sharedCourseConstants but with translated strings
+export const translatedCourseOfferingDeviceTypes = {
+  computer: i18n.courseOfferingDeviceTypeComputer(),
+  chromebook: i18n.courseOfferingDeviceTypeChromebook(),
+  tablet: i18n.courseOfferingDeviceTypeTablet(),
+  mobile: i18n.courseOfferingDeviceTypeMobile(),
+  no_device: i18n.courseOfferingDeviceTypeNoDevice()
+};
+
+// Same list as DeviceCompatibilityLevels in sharedCourseConstants but with translated strings
+export const translatedCourseOfferingDeviceCompatibilityLevels = {
+  ideal: i18n.courseOfferingDeviceCompatibilityLevelIdeal(),
+  not_recommended: i18n.courseOfferingDeviceCompatibilityLevelNotRecommended(),
+  incompatible: i18n.courseOfferingDeviceCompatibilityLevelIncompatible()
+};
