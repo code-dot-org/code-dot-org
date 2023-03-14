@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_14_123814) do
+ActiveRecord::Schema.define(version: 2023_03_09_041659) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -426,6 +426,10 @@ ActiveRecord::Schema.define(version: 2023_02_14_123814) do
     t.string "marketing_initiative"
     t.string "grade_levels"
     t.string "header"
+    t.string "image"
+    t.string "cs_topic"
+    t.string "school_subject"
+    t.string "device_compatibility"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -1549,6 +1553,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_123814) do
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
     t.text "properties"
+    t.boolean "is_active"
   end
 
   create_table "regional_partners_school_districts", id: false, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

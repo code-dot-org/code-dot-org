@@ -22,7 +22,7 @@
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2023",
     "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
-    "long_instructions": "**In this level you need to add the fish into this simulation and give them a realistic size and movement.**\r\n\r\n Do This: \r\n- Connect a `make 10 new sprites` block under when run.\r\n- Add a `set sprite size` block to make the fish smaller.\r\n- Connect a `sprite begins wandering`  block.\r\n- Press \"Run\" when you are finished to see your healthy, balanced ecosystem in action!\r\n",
+    "long_instructions": "**In this level, you will add fish into your ecosystem and give them a realistic size and movement.**\r\n\r\n Do This: \r\n- Connect a `make 10 new sprites` block under when run.\r\n- Add a `set sprite size` block to make the fish smaller.\r\n- Connect a `sprite begins wandering` block.\r\n- Press \"Run\" when you are finished to see your healthy, balanced ecosystem in action!\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -49,7 +49,7 @@
   "created_at": "2023-02-22T20:21:57.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:57.849+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_fish_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_fish_2\"},{\"changed_at\":\"2023-02-23 21:19:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:57.849+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_fish_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_fish_2\"},{\"changed_at\":\"2023-02-23 21:19:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-28 14:59:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-28 15:08:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 21:08:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

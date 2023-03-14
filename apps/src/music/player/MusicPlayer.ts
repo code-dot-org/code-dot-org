@@ -1,5 +1,6 @@
 import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
+
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 
@@ -27,9 +28,40 @@ interface FunctionContext {
   uniqueInvocationId: number;
 }
 
+interface SkipContext {
+  insideRandom: boolean;
+  skipSound: boolean;
+}
+
+type EffectValue = 'normal' | 'medium' | 'low';
+export interface Effects {
+   volume?: EffectValue;
+   filter?: EffectValue;
+   delay?: EffectValue;
+}
+
 interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
+  skipContext?: SkipContext;
+  effects?: Effects;
+}
+
+interface PatternTickEvent {
+  tick: number;
+  src: string;
+}
+
+interface PatternEventValue {
+  kit: string;
+  events: PatternTickEvent[];
+}
+
+interface PatternEvent extends PlaybackEvent {
+  type: 'pattern';
+  value: PatternEventValue;
+  skipContext?: SkipContext;
+  effects?: Effects;
 }
 
 interface TrackMetadata {
@@ -50,6 +82,8 @@ interface TrackMetadata {
 export default class MusicPlayer {
   private bpm: number;
   private playbackEvents: PlaybackEvent[];
+  private lastTriggeredMeasure: number;
+  private lastWhenRunMeasure: number;
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
@@ -62,6 +96,8 @@ export default class MusicPlayer {
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
     this.library = {groups: []};
+    this.lastTriggeredMeasure = 0;
+    this.lastWhenRunMeasure = 0;
   }
 
   /**
@@ -99,15 +135,31 @@ export default class MusicPlayer {
     measure: number,
     insideWhenRun: boolean,
     trackId?: string,
-    functionContext?: FunctionContext
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
   ) {
     if (!this.samplePlayer.initialized()) {
       console.log('MusicPlayer not initialized');
       return;
     }
-    if (!id || this.getSoundForId(id) === null || !measure) {
+    const soundData = this.getSoundForId(id);
+    if (!id || soundData === null || !measure) {
       console.log(`Invalid input. id: ${id} measure: ${measure}`);
       return;
+    }
+
+    const endingMeasure = measure + soundData.length - 1;
+    if (insideWhenRun) {
+      this.lastWhenRunMeasure = Math.max(
+        endingMeasure,
+        this.lastWhenRunMeasure
+      );
+    } else {
+      this.lastTriggeredMeasure = Math.max(
+        endingMeasure,
+        this.lastTriggeredMeasure
+      );
     }
 
     const soundEvent: SoundEvent = {
@@ -116,13 +168,54 @@ export default class MusicPlayer {
       triggered: !insideWhenRun,
       when: measure,
       trackId,
-      functionContext
+      functionContext,
+      skipContext,
+      effects
     };
 
     this.playbackEvents.push(soundEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
+    }
+  }
+
+  playPatternAtMeasureById(
+    value: PatternEventValue,
+    measure: number,
+    insideWhenRun: boolean,
+    trackId?: string,
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
+  ) {
+    if (!this.samplePlayer.initialized()) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (
+      !value ||
+      !measure
+    ) {
+      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
+      return;
+    }
+
+    const patternEvent: PatternEvent = {
+      type: 'pattern',
+      value,
+      triggered: !insideWhenRun,
+      when: measure,
+      trackId,
+      functionContext,
+      skipContext,
+      effects
+    };
+
+    this.playbackEvents.push(patternEvent);
+
+    if (this.samplePlayer.playing()) {
+      this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
     }
   }
 
@@ -161,18 +254,12 @@ export default class MusicPlayer {
    */
   stopSong() {
     this.samplePlayer.stopPlayback();
+    this.clearTriggeredEvents();
   }
 
   /**
-   * Stops all sounds that have not yet been played. Used when code has changed and
-   * the list of sounds has been regenerated mid-playback.
-   */
-  stopAllSoundsStillToPlay() {
-    this.samplePlayer.stopAllSamplesStillToPlay();
-  }
-
-  /**
-   * Clear all non-triggered events from the list of playback events.
+   * Clear all non-triggered events from the list of playback events, and stop
+   * any sounds that have not yet been played, if playback is in progress.
    */
   clearWhenRunEvents() {
     this.playbackEvents = this.playbackEvents.filter(
@@ -183,25 +270,18 @@ export default class MusicPlayer {
         delete this.tracksMetadata[trackId];
       }
     });
-  }
 
-  /**
-   * Clear all triggered events from the list of playback events.
-   */
-  clearTriggeredEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => !playbackEvent.triggered
-    );
-
-    Object.keys(this.tracksMetadata).forEach(trackId => {
-      if (!this.tracksMetadata[trackId].insideWhenRun) {
-        delete this.tracksMetadata[trackId];
-      }
-    });
+    // If playing, stop all non-triggered samples that have not yet been played.
+    this.samplePlayer.stopAllSamplesStillToPlay();
+    this.lastWhenRunMeasure = 0;
   }
 
   getPlaybackEvents(): PlaybackEvent[] {
     return this.playbackEvents;
+  }
+
+  getLastMeasure(): number {
+    return Math.max(this.lastWhenRunMeasure, this.lastTriggeredMeasure);
   }
 
   // Returns the current playhead position, in floating point for an exact position,
@@ -233,7 +313,7 @@ export default class MusicPlayer {
 
   /**
    * Create a new track.
-   * 
+   *
    * @param id unique ID of this track
    * @param name display name of the track (does not have to be unique)
    * @param measureStart starting measure of the track
@@ -265,9 +345,9 @@ export default class MusicPlayer {
 
   /**
    * Add the given sounds to the track identified by the track Id
-   * 
-   * @param trackId 
-   * @param soundIds 
+   *
+   * @param trackId
+   * @param soundIds
    */
   addSoundsToTrack(trackId: string, ...soundIds: string[]) {
     if (!this.tracksMetadata[trackId]) {
@@ -300,9 +380,9 @@ export default class MusicPlayer {
 
   /**
    * Add a rest of the given length to the track identified by the track ID.
-   * 
-   * @param trackId 
-   * @param lengthMeasures 
+   *
+   * @param trackId
+   * @param lengthMeasures
    */
   addRestToTrack(trackId: string, lengthMeasures: number) {
     if (!this.tracksMetadata[trackId]) {
@@ -347,6 +427,23 @@ export default class MusicPlayer {
     return this.uniqueInvocationIdUpto++;
   }
 
+  /**
+   * Clear all triggered events from the list of playback events.
+   */
+  private clearTriggeredEvents() {
+    this.playbackEvents = this.playbackEvents.filter(
+      playbackEvent => !playbackEvent.triggered
+    );
+
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (!this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
+
+    this.lastTriggeredMeasure = 0;
+  }
+
   private getSoundForId(id: string): SoundData | null {
     const splitId = id.split('/');
     const path = splitId[0];
@@ -366,13 +463,40 @@ export default class MusicPlayer {
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
+
+      if (soundEvent.skipContext?.skipSound) {
+        return [];
+      }
+
       return [
         {
           sampleId: soundEvent.id,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
-          triggered: soundEvent.triggered
+          triggered: soundEvent.triggered,
+          effects: soundEvent.effects
         }
       ];
+    } else if (event.type === 'pattern') {
+      const patternEvent = event as PatternEvent;
+
+      const results = [];
+
+      const kit = patternEvent.value.kit;
+
+      for (let event of patternEvent.value.events) {
+        const resultEvent = {
+          sampleId: `${kit}/${event.src}`,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(
+            patternEvent.when + (event.tick-1) / 16
+          ),
+          triggered: patternEvent.triggered,
+          effects: patternEvent.effects
+        };
+
+        results.push(resultEvent);
+      }
+
+      return results;
     }
 
     return [];

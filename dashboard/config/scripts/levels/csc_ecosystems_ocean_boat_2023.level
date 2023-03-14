@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-22T20:21:58.000Z",
-  "level_num": "custom",
-  "user_id": 18528,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -12,7 +8,8 @@
       "GamelabJr"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "oceanSetup"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -21,11 +18,11 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does your event look like this?\\n<xml><block type=\\\"gamelab_checkTouching\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><value name=\\\"SPRITE1\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"fish_05\\\"</field></block></value><value name=\\\"SPRITE2\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"boat-net\\\"</field></block></value></block></xml> \",\"hint_id\":\"event_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3aad10c8584d0f97435ca1f701ac1160/csc_ecosystems_ocean_boat_2022.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the blue plus sign to get the fish sprite subject block.\",\"hint_id\":\"subject_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d279e2857c4a6258de163cf5419a5c26/csc_ecosystems_ocean_boat_2022.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does your event look like this?\\n<xml><block type=\\\"gamelab_checkTouching\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><value name=\\\"SPRITE1\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"fish_05\\\"</field></block></value><value name=\\\"SPRITE2\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"boat-net\\\"</field></block></value></block></xml> \",\"hint_id\":\"event_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3aad10c8584d0f97435ca1f701ac1160/csc_ecosystems_ocean_boat_2023.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the blue plus sign to get the fish sprite subject block.\\n\\n![](https://images.code.org/59bb77699f0ec9f41eef55e3c900d590-image-1650493439980.gif)\",\"hint_id\":\"subject_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/462522d3800918fafa01c207702cf344/csc_ecosystems_ocean_boat_2023.mp3\"}]",
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2023",
     "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
-    "long_instructions": "**The fishing boat at the top is taking fish out of their ecosystem. Build code that removes fish one at a time when  they touch the fishing boat.**\r\n\r\nDo This:\r\n- Make a new `when fish touches boat` event\r\n- Connect a blue `remove` block under your new event. \r\n- Click on the blue plus sign on the `when touches` event and drag out a fish block to snap to the `remove` block.\r\n- Press \"Run\" to check that each time a fish touches the boat it disappears from the ecosystem. \r\n\r\n![](https://images.code.org/59bb77699f0ec9f41eef55e3c900d590-image-1650493439980.gif)",
+    "long_instructions": "**The fishing boat at the top is taking fish out of their ecosystem. Build code that removes fish one at a time when  they touch the fishing boat.**\r\n\r\nDo This:\r\n- Make a new `when fish touches boat` event\r\n- Connect a blue `remove` block under your new event. \r\n- Click on the blue plus sign on the `when touches` event and drag out a fish block to snap to the `remove` block.\r\n- Press \"Run\" to check that each time a fish touches the boat it disappears from the ecosystem. ",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -47,8 +44,12 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:58.490+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2\"}]",
+  "created_at": "2023-02-22T20:21:58.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:21:58.490+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2\"},{\"changed_at\":\"2023-02-28 15:09:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:25:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
