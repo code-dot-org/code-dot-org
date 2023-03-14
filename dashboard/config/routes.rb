@@ -69,6 +69,8 @@ Dashboard::Application.routes.draw do
     get 'maker/display_google_oauth_code', to: 'maker#display_code'
     get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
+    post 'pusher/auth', to: 'pusher#auth'
+
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
 

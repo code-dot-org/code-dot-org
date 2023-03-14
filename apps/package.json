@@ -168,7 +168,7 @@
     "prettier": "1.16.1",
     "process": "^0.11.10",
     "progress-bar-webpack-plugin": "^2.1.0",
-    "pusher-js": "4.1.0",
+    "pusher-js": "8.0.1",
     "qtip2": "2.2.0",
     "radium": "^0.25.2",
     "raw-loader": "^4.0.2",
@@ -297,9 +297,9 @@
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "timers-browserify": "^2.0.12",
-    "usb": "^2.8.1",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
+    "usb": "^2.8.1",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
