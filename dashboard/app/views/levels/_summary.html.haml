@@ -21,7 +21,7 @@
   js_data = {
     level: {
       properties: level.properties,
-      height: level.respond_to?(:height) && level.height || nil,
+      height: level.respond_to?(:height) ? level.height : nil,
       type: level.type,
       id: level.id,
     },
