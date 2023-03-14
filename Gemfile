@@ -70,12 +70,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-
-  # Ref: https://github.com/e2/ruby_dep/issues/24
-  # https://github.com/e2/ruby_dep/issues/25
-  # https://github.com/e2/ruby_dep/issues/30
-  gem 'ruby_dep', '~> 1.3.1'
-
   gem 'shotgun'
   gem 'thin'
   # Use debugger
