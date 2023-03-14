@@ -41,8 +41,8 @@ And(/^I close my eyes$/) do
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
   begin
     @eyes.close(fail_on_mismatch)
-  rescue Applitools::TestFailedError => e
-    puts "<span style=\"color: red;\">#{EYES_ERROR_PREFIX} #{Rinku.auto_link(e.to_s)}</span>"
+  rescue Applitools::TestFailedError => exception
+    puts "<span style=\"color: red;\">#{EYES_ERROR_PREFIX} #{Rinku.auto_link(exception.to_s)}</span>"
   end
 end
 

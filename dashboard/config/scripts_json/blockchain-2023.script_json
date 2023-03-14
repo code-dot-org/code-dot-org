@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-11 03:44:09 UTC",
+    "serialized_at": "2023-03-13 15:12:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3600,7 +3600,7 @@
     },
     {
       "name": "Blockchain: Societal Impact",
-      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
+      "url": "https://www.youtube.com/watch?v=C3C_JfG8cNg",
       "key": "blockchain_societal_impact",
       "properties": {
         "audience": "Student",
