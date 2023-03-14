@@ -99,7 +99,7 @@ export default class FieldChord extends Field<ChordEventValue> {
     this.newDiv.style.color = 'white';
     this.newDiv.style.width = 'auto';
     this.newDiv.style.backgroundColor = 'black';
-    this.newDiv.style.padding = '10px';
+    this.newDiv.style.padding = '5px';
 
     return this.newDiv;
   }
