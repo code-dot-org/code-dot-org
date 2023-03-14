@@ -117,6 +117,13 @@
   blockchain_intro_list_item_01: 'Explain what blockchain is'
   blockchain_intro_list_item_02: "Explore why it's important"
   blockchain_intro_list_item_03: 'Unpack its societal impacts — both good and bad'
+  blockchain_video_title_01: 'Introduction to Blockchain'
+  blockchain_video_title_02: 'Why Blockchain'
+  blockchain_video_title_03: 'Under the Hood'
+  blockchain_video_title_04: 'Beyond Currencies'
+  blockchain_video_title_05: 'Marketplace and Price'
+  blockchain_video_title_06: 'Trustworthy or a Scam?'
+  blockchain_video_title_07: 'Societal Impact'
   blockchain_lessons_heading: 'Blockchain lessons for your class'
   blockchain_lessons_desc: 'Bring blockchain to life in your classroom with lessons that correspond with the above videos! Each lesson can stand alone or as part of a "How Blockchain Works" series.'
   blockchain_resources_desc: "Interested in learning more about blockchain? Here are some additional resources that can help extend your students' learning."
