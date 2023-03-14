@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-10 02:57:12 UTC",
+    "serialized_at": "2023-03-11 03:44:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -55,7 +55,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Applied Blockchain & Bitcoin",
+      "name": "Under the Hood",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -78,6 +78,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "Students learn about ways that Blockchain technologies can be used for more than cryptocurrencies with digital “smart contracts”. Using an Input - Processing -Storage - Output model, students create their own “smart contracts” to represent different situations. Then students analyze each other’s contracts for vulnerabilities from the perspective of someone looking to hack or exploit the contract.\n\n**Big Question:** How are input, output, storage, and processing represented on the blockchain",
+        "preparation": "- Have post-its available for students to leave feedback during a gallery walk\n- (Optional) Have Poster Paper / Whiteboard space for students to work on\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -87,7 +89,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Value on the Blockchain",
+      "name": "Marketplace & Price",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -112,11 +114,27 @@
       "relative_position": 5,
       "properties": {
         "overview": "Students research applications of blockchain and its impact. They share what they learned and decide which applications of blockchain have the potential for the most benefit and the most harm.\n\n**Big Question:** : What are the societal impacts of blockchain?",
-        "preparation": "- Print copies of the Blockchain Research Reflection handout (one for each group of three or four)\n- Label one side of the classroom \"good\" and one side \"bad\" for the Societal Impacts activity. Make sure there is space to stand between the two sides, as if on a sliding scale.\n",
+        "preparation": "- Print copies of the Blockchain Research Reflection handout (one for each group of three or four)\n- Label one side of the classroom \"helpful\" and one side \"harmful\" for the Societal Impacts activity. Make sure there is space to stand between the two sides, as if on a sliding scale.\n",
         "student_overview": "Research applications of blockchain and its impact,  then share what you learned and decide which applications of blockchain have the potential for the most benefit and the most harm."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "How Blockchain Works (Video Series)",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How Blockchain Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "blockchain-2023"
       }
@@ -221,6 +239,48 @@
       }
     },
     {
+      "key": "7213cace-3672-4d30-b72a-cabf17613238",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7213cace-3672-4d30-b72a-cabf17613238",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "f68743ab-aed3-4361-8ebe-8e73eff9332a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "d1a8b870-0f36-4c36-92b6-4bcb7d3b005b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1a8b870-0f36-4c36-92b6-4bcb7d3b005b",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
       "key": "e250fceb-f88a-49b2-97c3-d4daa63860d8",
       "position": 1,
       "properties": {
@@ -313,6 +373,104 @@
       "seeding_key": {
         "lesson_activity.key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "3134829c-f99d-47b5-97a9-75aebcf1ed6d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Introduction to Blockchain"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3134829c-f99d-47b5-97a9-75aebcf1ed6d",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "68de187b-6744-4d09-b179-0fd9b0b9bcdf",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Why Blockchain?"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "68de187b-6744-4d09-b179-0fd9b0b9bcdf",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "986c4329-7737-4ddb-9a8d-71794e67a5f9",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Under the Hood"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "986c4329-7737-4ddb-9a8d-71794e67a5f9",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "59cfe9dd-333e-480b-be37-22644b156c9d",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Beyond Currencies"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59cfe9dd-333e-480b-be37-22644b156c9d",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "59b0f97f-3933-41f8-9586-dc20688e51c0",
+      "position": 5,
+      "properties": {
+        "duration": 10,
+        "name": "Marketplace & Price"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59b0f97f-3933-41f8-9586-dc20688e51c0",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "aa93080a-014d-4a76-8c0d-67e867b102d1",
+      "position": 6,
+      "properties": {
+        "duration": 10,
+        "name": "Trustworthy or a Scam"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa93080a-014d-4a76-8c0d-67e867b102d1",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "2b927ab9-42fe-4cde-b1ea-47ca87448504",
+      "position": 7,
+      "properties": {
+        "duration": 10,
+        "name": "Societal Impact"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b927ab9-42fe-4cde-b1ea-47ca87448504",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "blockchain-2023"
       }
@@ -729,7 +887,7 @@
       "key": "b686dc40-791e-4ae9-b924-0e4aa7b998c2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the Why Blockchain? Video. After the previous activities, students should recognize and be able to relate to many of the themes in the video.\n\n# TODO: ADD VIDEO HERE\n\n[Temporary video here for reviewers](https://vimeo.com/793087073/f9a46e6a94)"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r how_blockchain_works_why_blockchain_/blockchain/2023] video. After the previous activities, students should recognize and be able to relate to many of the themes in the video."
       },
       "seeding_key": {
         "activity_section.key": "b686dc40-791e-4ae9-b924-0e4aa7b998c2",
@@ -751,7 +909,7 @@
       "key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Discussion Goal: Answers will vary depending on the experiences students had during the simulation - however, hopefully students see how their experiences are reflected in the lead-up to blockchain technology as presented in the video."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary depending on the experiences students had during the simulation - however, hopefully students see how their experiences are reflected in the lead-up to blockchain technology as presented in the video."
       },
       "seeding_key": {
         "activity_section.key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
@@ -914,13 +1072,7 @@
       "key": "f5c89b6f-508d-4a91-a0b0-c60f105ed419",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r vocabulary_matching/blockchain/2023] activity guide to each student. Students will use this while watching the video to identify vocabulary",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
-          }
-        ]
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r vocabulary_matching/blockchain/2023] activity guide to each student. Students will use this while watching the video to identify vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f5c89b6f-508d-4a91-a0b0-c60f105ed419",
@@ -1149,7 +1301,7 @@
       "key": "2279beb1-ade1-4963-a227-3918d4c2ba13",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Applied Blockchain & Bitcoin - Activity Guide. Have students complete the section on verifying signatures. They can fill in one of the rows from the example completed as a class."
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r blockchain_scenarios/blockchain/2023] Activity Guide. Have students complete the section on verifying signatures. They can fill in one of the rows from the example completed as a class.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2279beb1-ade1-4963-a227-3918d4c2ba13",
@@ -1160,7 +1312,13 @@
       "key": "c51d2dde-dad9-4157-b584-818a1c6ddf5d",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor that students verifying each signature. You can check-in with students as the widget is running to verify that they understand that the decrypted signature and the original hash should match in order to verify the sender."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor that students verifying each signature. You can check-in with students as the widget is running to verify that they understand that the decrypted signature and the original hash should match in order to verify the sender.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Splitting the Lesson:** If you need to split this lesson into two days, this is a good break point. Students should leave Day 1 with a better understanding of cryptography and encryption, and will start Day 2 learning how it's applied to Blockchain and Bitcoin."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c51d2dde-dad9-4157-b584-818a1c6ddf5d",
@@ -1184,7 +1342,7 @@
       "key": "9f5d443f-57ee-4e69-b9cf-a79c6d354e5b",
       "position": 25,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the Blockchain Under the Hood video (~6 minutes). Have students match the vocabulary words from the video on their notetaker as well.\n\n# TODO - UPDATE WITH YOUTUBE VIDEO!\n**[Temporary video link for reviewers](https://vimeo.com/800769426/627b7c670d)**"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_blockchain_works_under_the_hood/blockchain/2023] video (~6 minutes). Have students match the vocabulary words from the video on their notetaker as well."
       },
       "seeding_key": {
         "activity_section.key": "9f5d443f-57ee-4e69-b9cf-a79c6d354e5b",
@@ -1340,9 +1498,10 @@
       "key": "46c29b28-306e-4b59-a932-ea158764aa02",
       "position": 38,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the next 3 scenarios on Code Studio, filling in their activity guide as they continue.",
+        "description": "Congratulations - we've successfully mined our first block on a blockchain! We looked at a pool of messages and verified their signatures, compiled them into a \"block\", then completed the proof of work that allows us to send this block to the rest of the blockchain. However, mining is not a collaborative activity - it's intentionally designed to be a competition, and that competition helps keep the network secure. Let's see who can be the first to mine new blocks in these next three scenarios!",
         "duration": "20",
-        "name": "Investigating Scenarios"
+        "name": "Investigating Scenarios",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "46c29b28-306e-4b59-a932-ea158764aa02",
@@ -1350,8 +1509,25 @@
       }
     },
     {
-      "key": "23881066-95c4-4c46-bad4-c53db9ff74aa",
+      "key": "200a9384-b540-44bc-bb15-269261a39e8e",
       "position": 39,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the next 3 scenarios on Code Studio, filling in their activity guide as they continue.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Make it a Competition...** These scenarios are an opportunity to create a dynamic classroom environment where students are \"racing\" to be the first to mine a blockchain block. You could consider having students compete within their groups, or you could encourage groups to work together to validate signatures and then try different nonce's for the block they create. The video mentions how the winning miner gets a little extra bitcoin - you could consider offering candy or high-fives to the first 4-5 groups who can mine a block.\n\n**...But don't go too far:** Not all students will respond positively to a competitive classroom and may be discouraged from participating if the environment becomes too antagonistic. Even though competition is an intentional part of the Blockchain algorithm, be cautious in how much you lean into this during these scenarios.\n\n**Forged Messages:** Each of these scenarios has at least one message that is forged, but students still have the option of adding it to their \"block\" to send to the network. This is also how the actual blockchain network works - however, it relies on the other miners on the network to verify the transactions themselves. If a student solves a block, make sure to ask them to share the messages that make up their block - if there are any forgeries in there, then the network (aka: the class) can reject the block!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "200a9384-b540-44bc-bb15-269261a39e8e",
+        "lesson_activity.key": "72969b51-c3f3-407e-aa02-48555f06ca2b"
+      }
+    },
+    {
+      "key": "23881066-95c4-4c46-bad4-c53db9ff74aa",
+      "position": 40,
       "properties": {
         "progression_name": "Widget: Blockchain Scenario 2"
       },
@@ -1362,7 +1538,7 @@
     },
     {
       "key": "754bb320-961a-43aa-8217-ccf11375aca0",
-      "position": 40,
+      "position": 41,
       "properties": {
         "progression_name": "Widget: Blockchain Scenario 3"
       },
@@ -1373,7 +1549,7 @@
     },
     {
       "key": "fce39193-57c3-4cb5-9cfc-dc65cc2d0c84",
-      "position": 41,
+      "position": 42,
       "properties": {
         "progression_name": "Widget: Blockchain Scenario 4"
       },
@@ -1384,7 +1560,7 @@
     },
     {
       "key": "47fe6e64-8b5a-4045-a39e-eb49da7e60ce",
-      "position": 42,
+      "position": 43,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Look back at the scenarios in each of these levels. Since the transactions are public, we can see how these people are trading money. Look through the scenarios and see if you can identify one that seems like it has a pattern. What story can you tell about that scenario amongst that group of friends?"
       },
@@ -1395,7 +1571,7 @@
     },
     {
       "key": "f7b1651e-a9b6-456d-b671-ba0fd301da27",
-      "position": 43,
+      "position": 44,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is the same prompt repeated on the activity guide. Invite students to share any ideas or observations that they noticed while validating transactions. Some examples may include:\n\n- in Blockchain Scenario 1: A group of friends paying each other back for meals when they can’t split the check and 1 person has to pay for everyone (similar to Venmo or Zelle transactions)\n- in Blockchain Scenario 2: One person trying to create fraudulent transactions and steal money from others\n- in Blockchain Scenario 3: Some kind of gambling ring, where everyone sends their “bets” to a central person who then redistributes it to the winner\n- in Blockchain Scenario 4: One person gives “loans” to their friends, who pay it back later with a little extra as interest.\n"
       },
@@ -1424,6 +1600,352 @@
       "seeding_key": {
         "activity_section.key": "ed763334-833a-4b15-a82c-05b61d736052",
         "lesson_activity.key": "d0dfedcd-96ff-499a-b027-ceed71856b2f"
+      }
+    },
+    {
+      "key": "7ea837ab-7d9c-4eff-9fd7-2283d1d3c7b1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine you go out to dinner with a large group of friends where each person orders their meal. When the bill comes, they’re not able to split it individually - the group needs to handle it themselves.\n\nHow would you go about trying to split the bill? What are important factors to consider? How can you be sure it’s being done fairly?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ea837ab-7d9c-4eff-9fd7-2283d1d3c7b1",
+        "lesson_activity.key": "7213cace-3672-4d30-b72a-cabf17613238"
+      }
+    },
+    {
+      "key": "41cf211b-cc1e-416b-b1fd-7dc92fd64c1b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no one right answer to this prompt - instead, this scenario helps motivate the complexities of executing an agreement amongst a group of people. Students may consider the cost of each person’s meal and whether or not someone ordered a drink, or students may go the “simple route” and split the entire check evenly which means some people may be paying more or less than their meal would have been individually."
+      },
+      "seeding_key": {
+        "activity_section.key": "41cf211b-cc1e-416b-b1fd-7dc92fd64c1b",
+        "lesson_activity.key": "7213cace-3672-4d30-b72a-cabf17613238"
+      }
+    },
+    {
+      "key": "3c1ca6e2-2db9-4e87-876e-ea3ccf45c0b2",
+      "position": 3,
+      "properties": {
+        "description": "This scenario is just one example of how trying to coordinate with a large group of people fairly and efficiently can be difficult. Today we’re going to look at how technology can help with this - specifically, how Blockchain technology could offer some solutions to this scenario.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3c1ca6e2-2db9-4e87-876e-ea3ccf45c0b2",
+        "lesson_activity.key": "7213cace-3672-4d30-b72a-cabf17613238"
+      }
+    },
+    {
+      "key": "16a7450d-2457-43e4-b997-7b32849e6bab",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of \n[r vocabulary_matching_2/blockchain/2023] notetaker to each student.",
+        "duration": "15",
+        "name": "Blockchain & Smart Contracts"
+      },
+      "seeding_key": {
+        "activity_section.key": "16a7450d-2457-43e4-b997-7b32849e6bab",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "df5b8bfc-1bb5-4868-91e2-d9e43a9dbc20",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the [r how_blockchain_works_beyond_currencies/blockchain/2023] video as a class"
+      },
+      "seeding_key": {
+        "activity_section.key": "df5b8bfc-1bb5-4868-91e2-d9e43a9dbc20",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "656756a1-cf32-4072-adc7-411a5253efb3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary slide and allow students to check their responses from their vocabulary notetaker.\n- **Smart Contract** - An autonomous program that ensures rules of a transaction are followed without the need for legal contracts\n- **NFT (Non-Fungible Token)** - An asset, tracked on the blockchain, associated with ownership of digital collectibles, artwork, or items in a game\n- **Asset** - Something you own that is valuable. Often, assets are exchanged or converted into currency."
+      },
+      "seeding_key": {
+        "activity_section.key": "656756a1-cf32-4072-adc7-411a5253efb3",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "478f3824-dad5-4af4-9a8b-0ceeaf32bd0d",
+      "position": 4,
+      "properties": {
+        "description": "A smart contract is how Blockchain would solve the problem from the warm-up - it could look at what each person ate, determine how much each person should pay, and automatically pool the correct money together to pay the restaurant. Just like a computer, smart contracts use four essential components to function: **input, processing, storage,** and **output**.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "478f3824-dad5-4af4-9a8b-0ceeaf32bd0d",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "89197a02-2101-40d1-b074-a9c090fcbceb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the [r what_do_computers_do_/blockchain/2023] video, which introduces the input - processing - storage - output model for how computers work."
+      },
+      "seeding_key": {
+        "activity_section.key": "89197a02-2101-40d1-b074-a9c090fcbceb",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "37dc4629-6dce-478f-a30f-c58b9250373a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary slide and allow students to check their responses from their vocabulary notetaker.\n- **Input** - The information computers get from users, devices, or other computers\n- **Output** - The information computers give to users, devices, or other computers\n- **Processing** - The thinking work computers do to turn input into output\n- **Storage** - Saving information to use in the future\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "37dc4629-6dce-478f-a30f-c58b9250373a",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "8e780025-eccc-4c16-9077-ee3f2cf5977b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** In the restaurant scenario...\n- What are the inputs?\n- What is being processed?\n- What is being stored?\n- What are the outputs?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e780025-eccc-4c16-9077-ee3f2cf5977b",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "94c83fdd-99ed-4245-b7c6-ea5c3f5ba754",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Have students discuss with their neighbors or in small groups, but don’t have them share as full group. Instead, be listening for insights that match the smart contract example that will be revealed in the next section. This can be an opportunity to highlight student insights from small group conversations as they match the next part of the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "94c83fdd-99ed-4245-b7c6-ea5c3f5ba754",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "53f4db92-d47e-4218-96a4-99e471cd35d7",
+      "position": 9,
+      "properties": {
+        "description": "I heard some great insights into how this situation could be handled by a computer. Let’s take a look at how a smart contract specifically could address this situation.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53f4db92-d47e-4218-96a4-99e471cd35d7",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "3486e27d-4396-4d6c-9c54-b87962a1a7d2",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  Show the example Restaurant Bill Smart Contract."
+      },
+      "seeding_key": {
+        "activity_section.key": "3486e27d-4396-4d6c-9c54-b87962a1a7d2",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "ab7bb5bd-8fda-4bdf-a3cd-c66864293c1d",
+      "position": 11,
+      "properties": {
+        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/320e3d9432c4b14c6ebc174ea7e9bb61-slides1-sm.png) | <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Highlight each row of the smart contract and the purpose it serves. Shout out any students whose ideas matched the smart contract representation, but also acknowledge that there could be many different ways to write this contract and could have different results. Emphasize that the “Storage” row is always “On the blockchain” because that’s how smart contracts operate. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab7bb5bd-8fda-4bdf-a3cd-c66864293c1d",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "40f95ce9-935d-4cb4-889e-c4f5ed21213a",
+      "position": 12,
+      "properties": {
+        "description": "Now that we’ve looked at one example of a situation requiring a smart contract, we’re going to try and create our own using this same template! You’ll be working with a partner to come up with a scenario that could be handled with a smart contract. You can use examples from the video, or you can think of your own - think of scenarios that involve exchanging or redistributing goods between people in complicated ways.",
+        "duration": "10",
+        "name": "Creating Smart Contracts",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "40f95ce9-935d-4cb4-889e-c4f5ed21213a",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "4b2b518a-5180-4706-a3b0-96cfe189e4c1",
+      "position": 13,
+      "properties": {
+        "description": "**Group:** Put students into groups of 2 to work on a smart contract together."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b2b518a-5180-4706-a3b0-96cfe189e4c1",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "279d5109-e968-4c7c-bcdd-9265ca06754c",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r smart_contract_template/blockchain/2023]. If you have poster paper or whiteboards, also assign students a piece of poster paper or whiteboard to copy this template onto. Working on poster paper or whiteboards will make the gallery walk in the second half of this activity easier to facilitate."
+      },
+      "seeding_key": {
+        "activity_section.key": "279d5109-e968-4c7c-bcdd-9265ca06754c",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "a33c7650-1408-4ec9-805b-2379fd6de9cc",
+      "position": 15,
+      "properties": {
+        "description": "**(Optional)** <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** You may decide to distribute the [r example_user_stories/blockchain/2023] resource to groups to give them an idea of a smart contract to create."
+      },
+      "seeding_key": {
+        "activity_section.key": "a33c7650-1408-4ec9-805b-2379fd6de9cc",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "8efac7c1-99b0-4bff-b581-8dc92337b5a6",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each group should come up with a scenario that could be made simpler with a smart contract, then represent that scenario on their smart contract template.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**More Examples:** If students need more examples of what smart contracts can look like, you can invite students to look at [r _examples_smart_contract_template/blockchain/2023] for additional example smart contracts."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8efac7c1-99b0-4bff-b581-8dc92337b5a6",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "aa17f924-ad62-4966-8685-664c16648452",
+      "position": 17,
+      "properties": {
+        "description": "Smart contracts can help make complex situations simpler, but you also have to be extra careful when writing them. If you don’t account for every possible situation, your contract may be exploited and cause unintended consequences.",
+        "name": "Analyzing Smart Contracts",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aa17f924-ad62-4966-8685-664c16648452",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "331d71f2-77e3-40b4-8af9-5a3e664c7b45",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the headline from the news story about the Blockchain alarm clock. Emphasize that this is an example where someone was able to find a loophole in the contract and exploit it for profit."
+      },
+      "seeding_key": {
+        "activity_section.key": "331d71f2-77e3-40b4-8af9-5a3e664c7b45",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "a3488ec3-e612-4148-aac9-9960a8c6e06b",
+      "position": 19,
+      "properties": {
+        "description": "We’re going to walk around and look at the smart contracts that everyone has created. However, we’re going to pretend we’re hackers looking for vulnerabilities we can exploit. This means looking for situations the creator may not have accounted for or expected. When we see this, we’ll use post-it notes to ask “What If…” questions to give feedback on each group’s smart contract.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a3488ec3-e612-4148-aac9-9960a8c6e06b",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "0360d0ff-ebae-4c73-96a2-cb38a74ed3e8",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the bill splitting example from earlier."
+      },
+      "seeding_key": {
+        "activity_section.key": "0360d0ff-ebae-4c73-96a2-cb38a74ed3e8",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "e10151c0-4cf8-48bf-88af-eb64bdab58d3",
+      "position": 21,
+      "properties": {
+        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/e4d614b94cec345596c649d8f63e6b7b-slides2-sm.png) | <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** The template now shows two post-it notes asking “What if someone doesn’t have any money in their wallet?” and “What if someone only has foreign currency, like pesos or euros?”. Emphasize that in this situation, the contract may not know how to process these inputs and may make a mistake that could let someone get a free meal, or may leave the restaurant without a full payment. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "e10151c0-4cf8-48bf-88af-eb64bdab58d3",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "e6fc918d-90d8-401d-8163-d6fa7f6ad7ed",
+      "position": 22,
+      "properties": {
+        "description": "**Gallery Walk:** Have students walk around the classroom with post-it notes visiting other smart contracts. They should only give feedback in the form of “What if…”."
+      },
+      "seeding_key": {
+        "activity_section.key": "e6fc918d-90d8-401d-8163-d6fa7f6ad7ed",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "41691a13-94dd-4887-a140-97a706d38758",
+      "position": 23,
+      "properties": {
+        "description": "**Regroup:** Have students return to their table and look at the feedback from their peers."
+      },
+      "seeding_key": {
+        "activity_section.key": "41691a13-94dd-4887-a140-97a706d38758",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "4a8ff5f6-a5e8-44a2-ae7c-ba10cdfd43a4",
+      "position": 24,
+      "properties": {
+        "description": "**(Optional) Revise:** If there’s time, you can have students revise their smart contracts based on the feedback."
+      },
+      "seeding_key": {
+        "activity_section.key": "4a8ff5f6-a5e8-44a2-ae7c-ba10cdfd43a4",
+        "lesson_activity.key": "f68743ab-aed3-4361-8ebe-8e73eff9332a"
+      }
+    },
+    {
+      "key": "7d41e60a-a1e8-4fed-b7c7-8f0a6727efaa",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Which do you think is the most important part of a smart contract - input, processing, storage, or output? Why?"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d41e60a-a1e8-4fed-b7c7-8f0a6727efaa",
+        "lesson_activity.key": "d1a8b870-0f36-4c36-92b6-4bcb7d3b005b"
+      }
+    },
+    {
+      "key": "1fccf4e3-29f5-4ef9-b0aa-71c7a79795b8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a chance for students to further solidify the connection between these four components and smart contracts. It’s also a chance to reflect on the second half of the activity where students may have discovered vulnerabilities in their smart contracts, usually stemming from the input or processing part of their contract."
+      },
+      "seeding_key": {
+        "activity_section.key": "1fccf4e3-29f5-4ef9-b0aa-71c7a79795b8",
+        "lesson_activity.key": "d1a8b870-0f36-4c36-92b6-4bcb7d3b005b"
+      }
+    },
+    {
+      "key": "34afa60b-3446-49e1-a6a3-b9acbcdf78f2",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "34afa60b-3446-49e1-a6a3-b9acbcdf78f2",
+        "lesson_activity.key": "d1a8b870-0f36-4c36-92b6-4bcb7d3b005b"
       }
     },
     {
@@ -1499,7 +2021,7 @@
       "key": "098281b0-6bb1-438e-b077-5ee372e1090a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show students the Marketplaces & Price video\n\n# TODO: ADD VIDEO HERE!\n**[Temporary video link for reviewers](https://vimeo.com/775334662/b79e2e1c1d)**"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show students the [r how_blockchain_works_marketplace_price/blockchain/2023] video"
       },
       "seeding_key": {
         "activity_section.key": "098281b0-6bb1-438e-b077-5ee372e1090a",
@@ -2149,7 +2671,7 @@
       "key": "ba76ce16-8286-4e99-b29f-ab2e8017f056",
       "position": 56,
       "properties": {
-        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/909067d558c55c3d127df4b32d1965b1-widget-summary.png) | ![](https://images.code.org/b129845bd945e69b24474eae16dcafa4-guide-summary.png) | **Say:** **Say:** Fill in the last two columns of your activity guide, then add up all the items in your last column to get your final fund value.<br /><br />**Widget:** Nothing needs to change on the widget, but make sure students see that their Stablecoins (especially Connect USD) have updated.<br /><br />**Activity Guide:** Have students complete the _Quantity We Own_ and _Fund Value_ columns of their guide, then add up the elements in the _Fund Value_ column to fill in the _Total Fund Value_ at the bottom of the guide. |"
+        "description": "| Widget | Activity Guide | Modeling |\n|---|---|---|\n|![](https://images.code.org/909067d558c55c3d127df4b32d1965b1-widget-summary.png) | ![](https://images.code.org/b129845bd945e69b24474eae16dcafa4-guide-summary.png) | **Say:** Fill in the last two columns of your activity guide, then add up all the items in your last column to get your final fund value.<br /><br />**Widget:** Nothing needs to change on the widget, but make sure students see that their Stablecoins (especially Connect USD) have updated.<br /><br />**Activity Guide:** Have students complete the _Quantity We Own_ and _Fund Value_ columns of their guide, then add up the elements in the _Fund Value_ column to fill in the _Total Fund Value_ at the bottom of the guide. |"
       },
       "seeding_key": {
         "activity_section.key": "ba76ce16-8286-4e99-b29f-ab2e8017f056",
@@ -2394,7 +2916,7 @@
       "key": "441b3c74-2786-4115-a058-116e88f2cf69",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the Societal Impacts Blockchain video\n\n# TODO: ADD VIDEO HERE\n\n[Temporary video for reviewers](https://drive.google.com/file/d/1_3l_IMY7x3zDWh8dBPaw15EKW0hFCknA/view)",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [r blockchain_societal_impact/blockchain/2023] video",
         "duration": " 25",
         "name": "Research"
       },
@@ -2570,6 +3092,184 @@
       "seeding_key": {
         "activity_section.key": "d3fc6873-086c-4d10-8fd0-8c8931dbecb9",
         "lesson_activity.key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c"
+      }
+    },
+    {
+      "key": "8182f204-5f99-4564-bf15-5af00babe87c",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to learn about Blockchain technology! What is Blockchain you ask? Let's find out together!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8182f204-5f99-4564-bf15-5af00babe87c",
+        "lesson_activity.key": "3134829c-f99d-47b5-97a9-75aebcf1ed6d"
+      }
+    },
+    {
+      "key": "71b674d2-2e86-4933-8fe1-88e26d30cac9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/blockchain/2023] video"
+      },
+      "seeding_key": {
+        "activity_section.key": "71b674d2-2e86-4933-8fe1-88e26d30cac9",
+        "lesson_activity.key": "3134829c-f99d-47b5-97a9-75aebcf1ed6d"
+      }
+    },
+    {
+      "key": "2a8a93d7-bb05-4f1c-9f2e-ad7301faccd1",
+      "position": 3,
+      "properties": {
+        "description": "We're going to spend class watching this entire series! Ecah video will have some new vocabulary to keep track of. After each video, there will be a reflection question to answer and discuss. Let's get started!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2a8a93d7-bb05-4f1c-9f2e-ad7301faccd1",
+        "lesson_activity.key": "3134829c-f99d-47b5-97a9-75aebcf1ed6d"
+      }
+    },
+    {
+      "key": "64adeba7-9bd4-4244-8fae-04d5d55d0957",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** the [r vocabulary_matching_3/blockchain/2023] notetaker to students."
+      },
+      "seeding_key": {
+        "activity_section.key": "64adeba7-9bd4-4244-8fae-04d5d55d0957",
+        "lesson_activity.key": "3134829c-f99d-47b5-97a9-75aebcf1ed6d"
+      }
+    },
+    {
+      "key": "224520ec-0afa-45fa-864f-767ccbda6372",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_why_blockchain_/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "224520ec-0afa-45fa-864f-767ccbda6372",
+        "lesson_activity.key": "68de187b-6744-4d09-b179-0fd9b0b9bcdf"
+      }
+    },
+    {
+      "key": "430d17b4-453a-48e1-9401-85e7b48f2e54",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one issue in today’s society that might be improved by blockchain? What is a potential new issue that you think could occur because of Blockchain?"
+      },
+      "seeding_key": {
+        "activity_section.key": "430d17b4-453a-48e1-9401-85e7b48f2e54",
+        "lesson_activity.key": "68de187b-6744-4d09-b179-0fd9b0b9bcdf"
+      }
+    },
+    {
+      "key": "7c692a80-3869-4995-a96a-6cce1d747365",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_under_the_hood/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "7c692a80-3869-4995-a96a-6cce1d747365",
+        "lesson_activity.key": "986c4329-7737-4ddb-9a8d-71794e67a5f9"
+      }
+    },
+    {
+      "key": "66f223c8-9d62-4d88-8026-154d10cec739",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. What are some of the ways the blockchain helps ensure this trust or helps make sure people don’t abuse the network?"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f223c8-9d62-4d88-8026-154d10cec739",
+        "lesson_activity.key": "986c4329-7737-4ddb-9a8d-71794e67a5f9"
+      }
+    },
+    {
+      "key": "a47e806c-1373-45e5-9986-f43e07af9afc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_beyond_currencies/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "a47e806c-1373-45e5-9986-f43e07af9afc",
+        "lesson_activity.key": "59cfe9dd-333e-480b-be37-22644b156c9d"
+      }
+    },
+    {
+      "key": "e93d42f1-c682-4701-b667-5970fb9337e0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s a real-world situation that you think smart contracts could help with? What might make them better than how it’s handled now?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e93d42f1-c682-4701-b667-5970fb9337e0",
+        "lesson_activity.key": "59cfe9dd-333e-480b-be37-22644b156c9d"
+      }
+    },
+    {
+      "key": "acc2028d-8dea-4af9-ae92-ebb0db661e74",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_marketplace_price/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "acc2028d-8dea-4af9-ae92-ebb0db661e74",
+        "lesson_activity.key": "59b0f97f-3933-41f8-9586-dc20688e51c0"
+      }
+    },
+    {
+      "key": "d3f00fcd-faef-483e-a6cb-200cc7f316b5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of something whose value has changed over time? What factors caused it to change? Did it go mostly up, mostly down, or mostly stay the same?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3f00fcd-faef-483e-a6cb-200cc7f316b5",
+        "lesson_activity.key": "59b0f97f-3933-41f8-9586-dc20688e51c0"
+      }
+    },
+    {
+      "key": "b17564a8-2121-41ea-8b0f-6a41833a9573",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_trustworthy_or_a_scam_/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "b17564a8-2121-41ea-8b0f-6a41833a9573",
+        "lesson_activity.key": "aa93080a-014d-4a76-8c0d-67e867b102d1"
+      }
+    },
+    {
+      "key": "240aedfc-69c1-469b-8b5f-f812f41bc004",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** After watching the video, do you think Blockchain is mostly trustworthy? Or mostly a scam?"
+      },
+      "seeding_key": {
+        "activity_section.key": "240aedfc-69c1-469b-8b5f-f812f41bc004",
+        "lesson_activity.key": "aa93080a-014d-4a76-8c0d-67e867b102d1"
+      }
+    },
+    {
+      "key": "e6294a6a-1d22-433a-9946-da9c914171c8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_societal_impact/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+      },
+      "seeding_key": {
+        "activity_section.key": "e6294a6a-1d22-433a-9946-da9c914171c8",
+        "lesson_activity.key": "2b927ab9-42fe-4cde-b1ea-47ca87448504"
+      }
+    },
+    {
+      "key": "427b2b83-444a-41f0-914c-88171f19bbbc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s one way Blockchain could be beneficial to society? What’s one way Blockchain might be harmful?"
+      },
+      "seeding_key": {
+        "activity_section.key": "427b2b83-444a-41f0-914c-88171f19bbbc",
+        "lesson_activity.key": "2b927ab9-42fe-4cde-b1ea-47ca87448504"
       }
     }
   ],
@@ -2813,11 +3513,23 @@
       }
     },
     {
+      "name": "[Examples] Smart Contract Template",
+      "url": "https://docs.google.com/document/d/1D4L39xgFVYH8V6TVawVqajq93TzciddmZy4pjCTiFG8/edit",
+      "key": "_examples_smart_contract_template",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_examples_smart_contract_template"
+      }
+    },
+    {
       "name": "[Key] Blockchain Scenarios",
       "url": "https://docs.google.com/document/d/1CyuoQPSozVpsUi-EbjnKgd-oIJFzzVhvqEqV4j45WdU/edit#",
       "key": "_key_blockchain_scenarios",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "include_in_pdf": true,
         "type": "Answer Key"
       },
@@ -2830,7 +3542,7 @@
       "url": "https://docs.google.com/document/d/1nVfF2NkQon-P2pm4skC3eJBS_h_s7XhbmgpYvBiazjM/edit",
       "key": "_key_vocabulary_matching",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -2838,7 +3550,7 @@
       }
     },
     {
-      "name": "Applied Blockchain & Bitcoin",
+      "name": "Under the Hood",
       "url": "https://docs.google.com/presentation/d/1PT6NNzHnbEdoqI_VIWgU-lnmMgvYJr6Knwhwm90m4JE/template/preview",
       "key": "applied_blockchain_bitcoin",
       "properties": {
@@ -2862,6 +3574,18 @@
       }
     },
     {
+      "name": "Beyond Currencies",
+      "url": "https://docs.google.com/presentation/d/1kO3pP_TrdU3t9f1Rsz6jNGSrwFPaHRPON3B4QUmi9XU/template/preview",
+      "key": "beyond_currencies",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "beyond_currencies"
+      }
+    },
+    {
       "name": "Blockchain Scenarios",
       "url": "https://docs.google.com/document/d/1-eaC5C-avcrnc-SWylUFjTgxQxgHzuEsIuirOohCy7c/edit",
       "key": "blockchain_scenarios",
@@ -2872,6 +3596,30 @@
       },
       "seeding_key": {
         "resource.key": "blockchain_scenarios"
+      }
+    },
+    {
+      "name": "Blockchain: Societal Impact",
+      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
+      "key": "blockchain_societal_impact",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "blockchain_societal_impact"
+      }
+    },
+    {
+      "name": "Blockchain: Trustworthy or a Scam?",
+      "url": "https://www.youtube.com/watch?v=WzxbwEQRJPo",
+      "key": "blockchain_trustworthy_or_a_scam_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "blockchain_trustworthy_or_a_scam_"
       }
     },
     {
@@ -2960,6 +3708,102 @@
       }
     },
     {
+      "name": "Example User Stories",
+      "url": "https://docs.google.com/document/d/1BzeFDsJ9kHmfr9KeFpRGo25JWDWEvuw9Jo9umhrhLIU/edit",
+      "key": "example_user_stories",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "example_user_stories"
+      }
+    },
+    {
+      "name": "How Blockchain Works",
+      "url": "https://docs.google.com/presentation/d/12LSqxNVap6ERjOrt5Nl644-6_r4VKrh0yJY5KmS-L3A/template/preview",
+      "key": "how_blockchain_works",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Beyond Currencies",
+      "url": "https://www.youtube.com/watch?v=3EwkfUz_BPs",
+      "key": "how_blockchain_works_beyond_currencies",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_beyond_currencies"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Introduction",
+      "url": "https://www.youtube.com/watch?v=MjibPL4tGqo",
+      "key": "how_blockchain_works_introduction",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_introduction"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Marketplace & Price",
+      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
+      "key": "how_blockchain_works_marketplace_price",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_marketplace_price"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Under the Hood",
+      "url": "https://www.youtube.com/watch?v=It_Ivgm5wQA",
+      "key": "how_blockchain_works_under_the_hood",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_under_the_hood"
+      }
+    },
+    {
+      "name": "How Blockchain Works: Why Blockchain?",
+      "url": "https://www.youtube.com/watch?v=10wYLCnDHao",
+      "key": "how_blockchain_works_why_blockchain_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_why_blockchain_"
+      }
+    },
+    {
+      "name": "How Blockchain Works Youtube Playlist",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf",
+      "key": "how_blockchain_works_youtube_playlist",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_blockchain_works_youtube_playlist"
+      }
+    },
+    {
       "name": "Crypto Market Simulation News Articles",
       "url": "https://docs.google.com/document/d/1SU5WMXQweMTOqX-l-4r80tJCl7p7_O4u1qVqyoVEL5Y/edit#",
       "key": "news_articles",
@@ -2981,6 +3825,19 @@
       },
       "seeding_key": {
         "resource.key": "printable_asset_sheets"
+      }
+    },
+    {
+      "name": "Smart Contract Template",
+      "url": "https://docs.google.com/document/d/1ZWjmfaFl6KDubjKbVoYgOj1EfRVp9lpym2EMc9KiTVo/edit",
+      "key": "smart_contract_template",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "smart_contract_template"
       }
     },
     {
@@ -3022,7 +3879,7 @@
       }
     },
     {
-      "name": "Value on the Blockchain",
+      "name": "Marketplace & Price",
       "url": "https://docs.google.com/presentation/d/1aZ--vmCT_6CHtrqSkFvQIw1jTpRQoDLB2MrcH-wozKA/template/preview",
       "key": "value_on_the_blockchain",
       "properties": {
@@ -3073,6 +3930,44 @@
       }
     },
     {
+      "name": "Vocabulary Matching",
+      "url": "https://docs.google.com/document/d/1DCvi0VH69IpvpbdnZLVgGPuW_TRsRclzKVQQWa-Ldk0/edit",
+      "key": "vocabulary_matching_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_matching_2"
+      }
+    },
+    {
+      "name": "Vocabulary Matching",
+      "url": "https://docs.google.com/document/d/1Ns3EMBk8gNumJ9SMbXbnDbvsCi7wA0XjKbIainuiU4M/edit",
+      "key": "vocabulary_matching_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_matching_3"
+      }
+    },
+    {
+      "name": "What Do Computers Do?",
+      "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
+      "key": "what_do_computers_do_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "what_do_computers_do_"
+      }
+    },
+    {
       "name": "Why Blockchain?",
       "url": "https://docs.google.com/presentation/d/1iD8HdiceTQfEEhOeKYN3f1UK5i95fey3EMN4p2yhJl0/template/preview",
       "key": "why_blockchain_",
@@ -3108,6 +4003,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "decentralized_market_resource_cutouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "how_blockchain_works_why_blockchain_"
       }
     },
     {
@@ -3149,7 +4050,55 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "how_blockchain_works_under_the_hood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "vocabulary_matching"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_examples_smart_contract_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "beyond_currencies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "example_user_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "how_blockchain_works_beyond_currencies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "smart_contract_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "vocabulary_matching_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "what_do_computers_do_"
       }
     },
     {
@@ -3174,6 +4123,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "crypto_market_simulation_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "how_blockchain_works_marketplace_price"
       }
     },
     {
@@ -3209,6 +4164,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "blockchain_societal_impact"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "societal_impact_research_areas"
       }
     },
@@ -3222,6 +4183,66 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "societal_impacts_of_blockchain"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "blockchain_societal_impact"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "blockchain_trustworthy_or_a_scam_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works_beyond_currencies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works_marketplace_price"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works_under_the_hood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works_why_blockchain_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "how_blockchain_works_youtube_playlist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "vocabulary_matching_3"
       }
     }
   ],
@@ -3293,6 +4314,16 @@
       }
     },
     {
+      "key": "input",
+      "word": "Input",
+      "definition": "The information computers get from users, devices, or other computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
       "key": "key",
       "word": "Key",
       "definition": "A secret password for unlocking a message",
@@ -3343,6 +4374,16 @@
       }
     },
     {
+      "key": "nft_non_fungible_token_",
+      "word": "NFT (Non-Fungible Token)",
+      "definition": "An asset, tracked on the blockchain, associated with ownership of digital collectibles, artwork, or items in a game",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nft_non_fungible_token_"
+      }
+    },
+    {
       "key": "nonce",
       "word": "Nonce",
       "definition": "A number used to try and change the hash of a block of messages so that it starts with a unique set of 0’s. It’s an abbreviation for “Number used once”",
@@ -3353,6 +4394,16 @@
       }
     },
     {
+      "key": "output",
+      "word": "Output",
+      "definition": "The information computers give to users, devices, or other computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
+      }
+    },
+    {
       "key": "private_key",
       "word": "Private Key",
       "definition": "A key that is kept private so only a specific person can decrypt a message",
@@ -3360,6 +4411,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "private_key"
+      }
+    },
+    {
+      "key": "processing",
+      "word": "Processing",
+      "definition": "The thinking work computers do to turn input into output",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "processing"
       }
     },
     {
@@ -3380,6 +4441,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "public_key"
+      }
+    },
+    {
+      "key": "smart_contract",
+      "word": "Smart Contract",
+      "definition": "An autonomous program that ensures rules of a transaction are followed without the need for legal contracts",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "smart_contract"
+      }
+    },
+    {
+      "key": "storage",
+      "word": "Storage",
+      "definition": "Saving information to use in the future",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "storage"
       }
     },
     {
@@ -3480,6 +4561,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "asset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "nft_non_fungible_token_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "processing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "smart_contract"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "storage"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "vocabulary.key": "asset"
       }
@@ -3506,6 +4629,16 @@
       }
     },
     {
+      "key": "2976a867-d481-414d-aac4-15976f1a6b17",
+      "properties": {
+        "description": "Explain how Blockchain works"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "2976a867-d481-414d-aac4-15976f1a6b17"
+      }
+    },
+    {
       "key": "34a5389f-3ba2-4456-bf13-1bf84d87f5df",
       "properties": {
         "description": "Explain how an NFT, cryptocurrency, and stablecoin can gain or lose value in a digital marketplace"
@@ -3523,6 +4656,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "621b691d-e28c-4932-b1e3-c1c52a8b4a13"
+      }
+    },
+    {
+      "key": "69b3f8cc-4b2c-4c53-bf4a-f21aed810567",
+      "properties": {
+        "description": "Explain how smart contracts use input, output, storage, and processing"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "69b3f8cc-4b2c-4c53-bf4a-f21aed810567"
       }
     },
     {
@@ -3563,6 +4706,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "ba1844fd-8866-4115-a085-8bd7acd69a38"
+      }
+    },
+    {
+      "key": "c04063bb-66d8-4057-a062-8e1ad2a9662e",
+      "properties": {
+        "description": "Create a smart contract and analyze it for vulnerabilities"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "c04063bb-66d8-4057-a062-8e1ad2a9662e"
       }
     },
     {
