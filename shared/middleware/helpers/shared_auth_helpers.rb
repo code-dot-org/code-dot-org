@@ -15,5 +15,5 @@ end
 # @returns [Hash] the dashboard user row associated with the current request.
 def current_user
   return nil if (id = current_user_id).nil?
-  @dashboard_user ||= DASHBOARD_DB[:users][id: id]
+  @current_user ||= DASHBOARD_DB[:users][id: id]
 end
