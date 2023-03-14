@@ -356,8 +356,11 @@ export const repeatSimple2 = {
     message0: 'repeat %1 times',
     args0: [
       {
-        type: 'input_value',
-        name: 'times'
+        type: 'field_number',
+        name: 'times',
+        value: 1,
+        min: 0,
+        max: 100
       }
     ],
     message1: 'do %1',
@@ -375,12 +378,7 @@ export const repeatSimple2 = {
     helpUrl: ''
   },
   generator: block => {
-    const repeats =
-      Blockly.JavaScript.valueToCode(
-        block,
-        'times',
-        Blockly.JavaScript.ORDER_ASSIGNMENT
-      ) || 0;
+    const repeats = block.getFieldValue('times');
 
     let branch = Blockly.JavaScript.statementToCode(block, 'code');
     branch = Blockly.JavaScript.addLoopTrap(branch, block);
@@ -390,13 +388,11 @@ export const repeatSimple2 = {
       Blockly.Names.NameType.VARIABLE
     );
     let endVar = repeats;
-    if (!repeats.match(/^\w+$/) && !Blockly.utils.string.isNumber(repeats)) {
-      endVar = Blockly.JavaScript.nameDB_.getDistinctName(
-        'repeat_end',
-        Blockly.Names.NameType.VARIABLE
-      );
-      code += 'var ' + endVar + ' = ' + repeats + ';\n';
-    }
+    endVar = Blockly.JavaScript.nameDB_.getDistinctName(
+      'repeat_end',
+      Blockly.Names.NameType.VARIABLE
+    );
+    code += 'var ' + endVar + ' = ' + repeats + ';\n';
     code +=
       'for (var ' +
       loopVar +

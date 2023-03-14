@@ -984,6 +984,7 @@ $default-modal-width: 640px;
 
 .video-modal {
   z-index: 10000;
+  overflow: visible;
 
   .ui-tabs {
     height: 100%;
