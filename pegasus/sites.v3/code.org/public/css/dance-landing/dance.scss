@@ -79,6 +79,7 @@ div[dir='rtl'] .img-dance-stars{
 
   a {
     text-decoration: underline;
+    color: $brand_secondary_default
   }
 }
 
@@ -128,6 +129,7 @@ a:hover {
 
   a {
     text-decoration: underline;
+    color: $brand_secondary_default
   }
 }
 
@@ -345,6 +347,11 @@ a:hover {
   .tutorial-info {
     a {
       text-decoration: underline;
+      color: $brand_secondary_default;
+
+      &:hover {
+        color: $brand_secondary_dark;
+      }
     }
   }
 }
