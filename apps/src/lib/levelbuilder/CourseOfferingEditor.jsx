@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import i18n from '@cdo/locale';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
@@ -10,14 +11,20 @@ import {
   CourseOfferingCurriculumTypes,
   CourseOfferingMarketingInitiatives,
   CourseOfferingCsTopics,
-  CourseOfferingSchoolSubjects
+  CourseOfferingSchoolSubjects,
+  DeviceTypes,
+  DeviceCompatibilityLevels
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 import {
   translatedCourseOfferingCsTopics,
-  translatedCourseOfferingSchoolSubjects
+  translatedCourseOfferingSchoolSubjects,
+  translatedCourseOfferingDeviceTypes,
+  translatedCourseOfferingDeviceCompatibilityLevels
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+
+const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
@@ -74,6 +81,37 @@ export default function CourseOfferingEditor(props) {
       }
     }
     updateCourseOffering(fieldName, selectedOptions.join(','));
+  };
+
+  // Converts selected device compatibility options into a string for the table
+  const updateDeviceCompatibilities = (device, compatibilityLevel) => {
+    let updatedDeviceCompatibilities = {};
+    let deviceCompatibilities = courseOffering.device_compatibility;
+
+    // Initialize device compatibility values if empty, otherwise update given device compatibility level.
+    if (!deviceCompatibilities) {
+      DeviceTypes.forEach(currDevice => {
+        updatedDeviceCompatibilities[currDevice] =
+          currDevice === device ? compatibilityLevel : '';
+      });
+    } else {
+      updatedDeviceCompatibilities = JSON.parse(deviceCompatibilities);
+      updatedDeviceCompatibilities[device] = compatibilityLevel;
+    }
+
+    // Update device_compatibility field
+    updateCourseOffering(
+      'device_compatibility',
+      JSON.stringify(updatedDeviceCompatibilities)
+    );
+  };
+
+  // Gets the current device compatibility dropdown value
+  const getDeviceCompatibility = device => {
+    let deviceCompatibilities = courseOffering.device_compatibility;
+    return deviceCompatibilities
+      ? JSON.parse(deviceCompatibilities)[device]
+      : translatedNoneOption;
   };
 
   return (
@@ -154,7 +192,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => handleMultipleSelected(e, 'grade_levels')}
         >
-          <option value="">(None)</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(StudentGradeLevels).map(level => (
             <option key={level} value={level}>
               {level}
@@ -178,7 +216,7 @@ export default function CourseOfferingEditor(props) {
             updateCourseOffering('curriculum_type', e.target.value)
           }
         >
-          <option value="">(None)</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingCurriculumTypes).map(type => (
             <option key={type} value={type}>
               {type}
@@ -196,7 +234,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => updateCourseOffering('header', e.target.value)}
         >
-          <option value="">(None)</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingHeaders).map(header => (
             <option key={header} value={header}>
               {header}
@@ -213,7 +251,7 @@ export default function CourseOfferingEditor(props) {
             updateCourseOffering('marketing_initiative', e.target.value)
           }
         >
-          <option value="">(None)</option>
+          <option value="">{translatedNoneOption}</option>
           {Object.values(CourseOfferingMarketingInitiatives).map(initiative => (
             <option key={initiative} value={initiative}>
               {initiative}
@@ -235,7 +273,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => handleMultipleSelected(e, 'cs_topic')}
         >
-          <option value="">(None)</option>
+          <option value="">{translatedNoneOption}</option>
           {CourseOfferingCsTopics.map(topic => (
             <option key={topic} value={topic}>
               {translatedCourseOfferingCsTopics[topic]}
@@ -257,7 +295,7 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => handleMultipleSelected(e, 'school_subject')}
         >
-          <option value="">(None)</option>
+          <option value="">{translatedNoneOption}</option>
           {CourseOfferingSchoolSubjects.map(subject => (
             <option key={subject} value={subject}>
               {translatedCourseOfferingSchoolSubjects[subject]}
@@ -265,6 +303,24 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
+      <h3>Device Compatibility</h3>
+      {DeviceTypes.map(device => (
+        <label key={device}>
+          {translatedCourseOfferingDeviceTypes[device]}
+          <select
+            value={getDeviceCompatibility(device)}
+            style={styles.dropdown}
+            onChange={e => updateDeviceCompatibilities(device, e.target.value)}
+          >
+            <option value="">{translatedNoneOption}</option>
+            {DeviceCompatibilityLevels.map(compLevel => (
+              <option key={compLevel} value={compLevel}>
+                {translatedCourseOfferingDeviceCompatibilityLevels[compLevel]}
+              </option>
+            ))}
+          </select>
+        </label>
+      ))}
 
       <SaveBar
         handleSave={handleSave}
@@ -289,7 +345,8 @@ CourseOfferingEditor.propTypes = {
     header: PropTypes.string,
     marketing_initiative: PropTypes.string,
     cs_topic: PropTypes.string,
-    school_subject: PropTypes.string
+    school_subject: PropTypes.string,
+    device_compatibility: PropTypes.string
   })
 };
 
