@@ -1886,11 +1886,50 @@
         "ecea80e7-e990-44d4-96e2-7523c983847a": {
           "description": "Utiliza las entradas de los elementos de diseño de la aplicación para actualizar los elementos de la pantalla o producir una salida en el Circuit Playground."
         },
+        "56bd593f-cd49-4672-8df1-be90f5f1588b": {
+          "description": "Crea un proyecto que utilice una variedad de entradas y salidas del Circuit Playground y de la pantalla de la aplicación."
+        },
+        "cf2e7187-6bfd-4eda-9f6b-fafcb5d86ffa": {
+          "description": "Crea un proyecto que incorpore materiales físicos en su diseño"
+        },
         "78d91696-530a-4830-bbdc-3a45ff7bb276": {
           "description": "Escalar un rango de números para satisfacer una necesidad específica"
         },
+        "eac70362-73a3-4386-91c0-9a3d8fd62040": {
+          "description": "Desarrollar programas que respondan a las entradas de los sensores"
+        },
         "063186ca-fd1a-4987-8e3a-1591d644f5f1": {
           "description": "Utilizar los datos de eventos para actualizar continuamente las propiedades de un elemento."
+        },
+        "a1f79a13-5ac2-46a9-a53d-b1aeb0435285": {
+          "description": "Utiliza la orientación del acelerómetro (cabeceo y balanceo) al crear aplicaciones"
+        },
+        "abf9d62a-36a1-4892-8d2d-09737c823da4": {
+          "description": "Utiliza el zumbador para producir notas individuales o secuencias de notas"
+        },
+        "21ae580a-2932-4baa-946f-1ad4cdf1dc88": {
+          "description": "Utiliza parámetros para generalizar el propósito de una función"
+        },
+        "663803b7-72f9-4533-a0ed-9d096ae3d17b": {
+          "description": "Utiliza funciones para organizar bloques de código repetidos"
+        },
+        "26ad9b1f-943e-4dea-bc32-f5cbbcbb52c6": {
+          "description": "Crea un proyecto que integre a la perfección el Circuit Playground con materiales físicos."
+        },
+        "67f2dba7-e2dd-4941-970d-c8abeea0105e": {
+          "description": "Crea un proyecto que combine los resultados del Circuit Playground con materiales físicos."
+        },
+        "0fe7da07-6561-4184-b4a0-fb201cf28032": {
+          "description": "Crear prototipos de dispositivos que controlen un LED con código"
+        },
+        "ca0b849c-5eb7-44f8-a5b5-99fe88a54a65": {
+          "description": "Crear y depurar un circuito con un LED"
+        },
+        "3bb246da-89ac-4011-a4af-1468c922f719": {
+          "description": "Crear prototipos de dispositivos que utilicen un botón externo como entrada"
+        },
+        "98c5dc79-e2c4-4901-a50b-4ca08caed038": {
+          "description": "Crea y depura un circuito con un botón"
         },
         "6efb1275-2649-4451-9c98-408abe6dcba5": {
           "description": "Explorar las características de una pieza de programa de forma independiente."

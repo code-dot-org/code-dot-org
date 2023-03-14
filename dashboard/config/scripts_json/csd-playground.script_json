@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2023-02-20 20:21:29 UTC",
+    "serialized_at": "2023-03-13 17:12:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -182,6 +182,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Pulse Survey to Clone",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -614,6 +629,18 @@
       "seeding_key": {
         "lesson_activity.key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "2eff2040-dbbf-4e9a-9bce-f5120cd48091",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2eff2040-dbbf-4e9a-9bce-f5120cd48091",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1812,6 +1839,17 @@
       "seeding_key": {
         "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128",
         "lesson_activity.key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5"
+      }
+    },
+    {
+      "key": "4837d466-7593-409f-af3d-6276bb460446",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pulse Survey!"
+      },
+      "seeding_key": {
+        "activity_section.key": "4837d466-7593-409f-af3d-6276bb460446",
+        "lesson_activity.key": "2eff2040-dbbf-4e9a-9bce-f5120cd48091"
       }
     }
   ],
@@ -3640,6 +3678,28 @@
       "level_keys": [
         "microbit test v1"
       ]
+    },
+    {
+      "chapter": 74,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Pulse Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4837d466-7593-409f-af3d-6276bb460446"
+      },
+      "level_keys": [
+        "intro-pulse-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4517,6 +4577,18 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey",
+        "script_level.level_keys": [
+          "intro-pulse-survey"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4837d466-7593-409f-af3d-6276bb460446"
       }
     }
   ],

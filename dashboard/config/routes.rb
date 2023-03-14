@@ -38,7 +38,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: "musiclab#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
@@ -206,7 +207,6 @@ Dashboard::Application.routes.draw do
       passwords: 'passwords'
     }
     get 'discourse/sso' => 'discourse_sso#sso'
-    post '/auth/lti', to: 'lti_provider#sso'
 
     root to: "home#index"
     get '/home_insert', to: 'home#home_insert'
@@ -728,8 +728,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
-      post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'

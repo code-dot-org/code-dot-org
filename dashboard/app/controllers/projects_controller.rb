@@ -162,6 +162,9 @@ class ProjectsController < ApplicationController
     science: {
       name: 'New Science Project'
     },
+    time_capsule: {
+      name: 'New Time Capsule Project'
+    }
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}

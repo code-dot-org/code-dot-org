@@ -39,9 +39,9 @@ class ApiController < ApplicationController
         subdomain: subdomain,
       }
       render json: response
-    rescue RestClient::Exception => e
+    rescue RestClient::Exception => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -50,9 +50,9 @@ class ApiController < ApplicationController
         }
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
-    rescue JSON::JSONError => e
+    rescue JSON::JSONError => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -572,8 +572,8 @@ class ApiController < ApplicationController
       auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
       yield JSON.parse(response)['data']
-    rescue RestClient::ExceptionWithResponse => e
-      render status: e.response.code, json: {error: e.response.body}
+    rescue RestClient::ExceptionWithResponse => exception
+      render status: exception.response.code, json: {error: exception.response.body}
     end
   end
 
@@ -594,8 +594,8 @@ class ApiController < ApplicationController
 
     begin
       yield service
-    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
-      render status: :forbidden, json: {error: error}
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
+      render status: :forbidden, json: {error: exception}
     end
   end
 

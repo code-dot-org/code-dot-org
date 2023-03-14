@@ -109,6 +109,10 @@ def main
       COURSE_OFFERING_CURRICULUM_TYPES
       COURSE_OFFERING_HEADERS
       COURSE_OFFERING_MARKETING_INITIATIVES
+      COURSE_OFFERING_CS_TOPICS
+      COURSE_OFFERING_SCHOOL_SUBJECTS
+      DEVICE_TYPES
+      DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
@@ -157,7 +161,17 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(PRINCIPAL_APPROVAL_STATE YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(
+        PRINCIPAL_APPROVAL_STATE
+        SEND_ADMIN_APPROVAL_EMAIL_STATUSES
+        YEAR SECTION_HEADERS
+        PAGE_LABELS
+        VALID_SCORES
+        LABEL_OVERRIDES
+        TEXT_FIELDS
+        MULTI_ANSWER_QUESTION_FIELDS
+        SCOREABLE_QUESTIONS
+      ),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),

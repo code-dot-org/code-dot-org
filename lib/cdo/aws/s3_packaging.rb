@@ -44,8 +44,8 @@ class S3Packaging
     rescue Aws::S3::Errors::NoSuchKey
       @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name.underscore} and use_my_#{@package_name.underscore} to true in locals.yml"
       return false
-    rescue Exception => e
-      @logger.info "update_from_s3 failed: #{e.message}"
+    rescue Exception => exception
+      @logger.info "update_from_s3 failed: #{exception.message}"
       return false
     end
     return true
@@ -109,10 +109,10 @@ class S3Packaging
         }
       end.compact
     )
-  rescue => e
+  rescue => exception
     # Just log and continue
     warn 'Failed to log bundle size with error:'
-    warn e
+    warn exception
     warn 'Proceeding with build...'
   end
 

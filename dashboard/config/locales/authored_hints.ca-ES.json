@@ -7507,8 +7507,7 @@
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Aquest similar és molt semblant a l'anterior, però la funció \"dibuixar línia\" ara traça una forma diferent.",
-          "courseD_artist_functions10_a": "Per evitar haver de fer servir diversos blocs \"avançar\", crea una funció de \"dibuixar hexàgon\" i crida-la diverses vegades.",
-          "courseD_artist_functions10_c": "Veus on podries fer servir una funció que es digués \"línia d'hexàgons\" en aquest dibuix?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_a": "Per evitar haver de fer servir diversos blocs \"avançar\", crea una funció de \"dibuixar hexàgon\" i crida-la diverses vegades."
         },
         "courseE_artist_functions10_2018": {
           "courseD_artist_functions10_b": "Aquest similar és molt semblant a l'anterior, però la funció \"dibuixar línia\" ara traça una forma diferent.",
@@ -7723,11 +7722,7 @@
           "courseD_artist_functions9_d": "Per dibuixar el rombe:\n\n-   Repeteix això 2 vegades\n    -   dibuixar una línia de triangles\n    -   girar 60°\n    -   dibuixar una línia de triangles\n    -   girar 120°"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Pots trobar els quatre llocs on pots fer servir \"línia de triangles\" en aquest dibuix?",
-          "courseD_artist_functions9_a": "Aquest trencaclosques es pot dividir en tres parts:\n\n-   crea la funció \"dibuixar un triangle\"\n-   crea la funció \"dibuixar una línia de triangles\"\n-   fes servir la funció \"dibuixar una línia de triangles\" quatre vegades per acabar el dibuix",
-          "courseD_artist_functions9_b": "Per fer aquest dibuix, cal dibuixar una línia de triangles 4 vegades i girar o bé 60° o bé 120° abans de dibuixar la següent línia de triangles.",
-          "courseD_artist_functions9_c": "Per dibuixar una línia de triangles:\n\n-   Repeteix això 4 vegades\n    -   dibuixar un triangle\n    -   saltar 50 píxels cap endavant",
-          "courseD_artist_functions9_d": "Per dibuixar el rombe:\n\n-   Repeteix això 2 vegades\n    -   dibuixar una línia de triangles\n    -   girar 60°\n    -   dibuixar una línia de triangles\n    -   girar 120°"
+          "courseD_artist_functions9_b": "Per fer aquest dibuix, cal dibuixar una línia de triangles 4 vegades i girar o bé 60° o bé 120° abans de dibuixar la següent línia de triangles."
         },
         "courseE_artist_functions9_2018": {
           "courseD_artist_functions9_e": "Pots trobar els quatre llocs on pots fer servir \"línia de triangles\" en aquest dibuix?",
@@ -8719,9 +8714,6 @@
         "courseF_events_choice_pufferfish": {
           "changeProp": "També hauràs de fer servir aquest bloc:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
-        "courseF_events_choice_pufferfish_-2022-2": {
-          "changeProp": "També hauràs de fer servir aquest bloc:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
         "courseF_events_key": {
           "changePropBlock": "També hauràs de fer servir aquest bloc:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
@@ -8738,9 +8730,6 @@
           "behavior_list": "Fes servir comportaments com \"anar cap a l'est en bucle\", \"veltejar cap a la dreta\" i \"deambular\"."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Prova de canviar l'etiqueta de la variable del bloc \"quan contestada\". Com que hi ha diverses preguntes, has de fer servir l'etiqueta de _l'última_ pregunta que es respondrà.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
           "when_answered_var": "Prova de canviar l'etiqueta de la variable del bloc \"quan contestada\". Com que hi ha diverses preguntes, has de fer servir l'etiqueta de _l'última_ pregunta que es respondrà.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat": {
