@@ -231,7 +231,7 @@ export default class VersionHistory extends React.Component {
       <div className="modal-content" style={{margin: 0}}>
         <h5 className="dialog-title">{title}</h5>
         {body}
-        {this.state.statusMessage}
+        <p className="caption-text">{this.state.statusMessage}</p>
       </div>
     );
   }

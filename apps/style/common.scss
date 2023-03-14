@@ -1277,8 +1277,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       color: $neutral_dark;
       margin-bottom: 10px;
 
+      &.caption-text {
+        font-family: $gotham-bold;
+      }
+
       a {
-        font-family: $gotham-extra-bold;
+        font-family: $gotham-regular;
         font-weight: normal;
         color: $brand_secondary_default;
         text-decoration: underline;
@@ -1292,6 +1296,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-size: 14px;
     overflow: scroll;
     max-height: 400px;
+    margin: 12px 0;
   }
 }
 
