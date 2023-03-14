@@ -339,13 +339,7 @@ class ShareAllowedDialog extends React.Component {
                     style={styles.sendToPhoneButton}
                   >
                     <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span
-                      style={{
-                        padding: 0,
-                        paddingLeft: 10,
-                        verticalAlign: 'text-top'
-                      }}
-                    >
+                    <span style={styles.sendToPhoneSpan}>
                       {i18n.sendToPhone()}
                     </span>
                   </Button>
@@ -572,6 +566,11 @@ const styles = {
     padding: '0 16px',
     paddingRight: 6,
     height: 45
+  },
+  sendToPhoneSpan: {
+    padding: 0,
+    paddingLeft: 10,
+    verticalAlign: 'text-top'
   },
   sendToPhoneLeft: {
     float: 'left',

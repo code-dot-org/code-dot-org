@@ -55,6 +55,11 @@ const style = {
     width: 465,
     height: 80,
     margin: 0
+  },
+  shareLibraryButton: {
+    margin: 0,
+    fontSize: 'large',
+    height: 40
   }
 };
 
@@ -190,7 +195,7 @@ class AdvancedShareOptions extends React.Component {
         <Button
           color={Button.ButtonColor.neutralDark}
           onClick={this.props.openLibraryCreationDialog}
-          style={{margin: 0, fontSize: 'large', height: 40}}
+          style={style.shareLibraryButton}
           text={i18n.shareLibrary()}
         />
       </div>
