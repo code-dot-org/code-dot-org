@@ -25,9 +25,9 @@ class CreateChannelTokens < ActiveRecord::Migration[4.2]
       next unless user && user[:user_id]
       begin
         ChannelToken.create!(channel: channel, user_id: user[:user_id], level_id: big_game_template)
-      rescue => e
+      rescue => exception
         puts "Failed to import channel '#{channel}' with ID '#{row[:id]}' and user '#{user[:user_id]}'"
-        puts e.backtrace.join("\n")
+        puts exception.backtrace.join("\n")
       end
     end
   end

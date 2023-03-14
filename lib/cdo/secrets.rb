@@ -65,8 +65,8 @@ module Cdo
       @values[key] ||= begin
         client_promise.then do |client|
           parse_json(get_secret_value(client, key))
-        rescue => e
-          e.message << " Key: #{key}"
+        rescue => exception
+          exception.message << " Key: #{key}"
           raise
         end
       end
@@ -139,8 +139,8 @@ module Cdo
         secret_id: key,
         version_stage: CURRENT
       ).secret_string
-    rescue NOT_FOUND => e
-      e.set_backtrace []
+    rescue NOT_FOUND => exception
+      exception.set_backtrace []
       raise
     end
 

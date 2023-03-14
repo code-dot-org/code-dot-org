@@ -79,8 +79,8 @@ module ProxyHelper
     end
   rescue URI::InvalidURIError
     render_error_response 400, "Invalid URI #{location}"
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => e
-    render_error_response 400, "Network error #{e.class} #{e.message}"
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => exception
+    render_error_response 400, "Network error #{exception.class} #{exception.message}"
   rescue OpenSSL::SSL::SSLError
     render_error_response 400, "Remote host SSL certificate error"
   rescue EOFError
@@ -127,8 +127,8 @@ module ProxyHelper
     end
   rescue URI::InvalidURIError
     return 400, "Invalid URI #{location}"
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
-    return 400, "Network error #{e.class} #{e.message}"
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => exception
+    return 400, "Network error #{exception.class} #{exception.message}"
   end
 
   def dashboard_ip_address
