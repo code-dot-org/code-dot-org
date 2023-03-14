@@ -25,14 +25,23 @@
   h2 {
     color: $neutral_dark;
     margin-top: 32px;
-    margin-bottom: 12px;
+    margin-bottom: 0.4em;
     border-bottom: 1px solid $neutral_dark20;
+    line-height: 1.2;
   }
 
   .levelTitle,
   .markdown h1,
   .markdown h2 {
     border-bottom: unset;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 34px;
   }
 
   p,
@@ -79,10 +88,10 @@
   }
 
   %students-submitted {
-    height: 24px;
-    line-height: 24px;
+    height: 40px; // h2 line-height
+    line-height: 40px; // h2 line-height
     position: relative;
-    top: -44px; // h2 height+margins
+    top: -52px; // h2 height+margins
   }
 
   .studentsSubmittedLeft {
@@ -98,6 +107,7 @@
   .studentsSubmittedLeft span,
   .studentsSubmittedRight span {
     vertical-align: middle;
+    line-height: 40px; // h2 line-height
   }
 
   /* stylelint-disable selector-pseudo-class-no-unknown */
