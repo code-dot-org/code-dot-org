@@ -17,6 +17,6 @@ export async function update(
   const url = rootUrl(channelId) + stringifyQueryParams(options);
   return fetch(url, {
     method: 'PUT',
-    body: JSON.stringify(source)
+    body: JSON.stringify({source: JSON.stringify(source)})
   });
 }
