@@ -1,5 +1,9 @@
 :ruby
-  level ||= @level
+  level ||= if @level.contained_levels.empty?
+    @level
+  else
+    @level.contained_levels.first
+  end
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   left_align = local_assigns[:left_align]
   responses = UserLevel.where(level: level, user: @section&.students)
@@ -15,12 +19,18 @@
   end
 
   js_data = {
-    level: level,
+    level: {
+      properties: level.properties,
+      height: level.respond_to?(:height) && level.height || nil,
+      type: level.type,
+      id: level.id,
+    },
     last_attempt: last_attempt,
     left_align: left_align,
     responses: responses,
     teacher_markdown: teacher_markdown,
   }
+
 
 #check-for-understanding
 
