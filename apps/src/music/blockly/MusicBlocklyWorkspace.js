@@ -19,17 +19,29 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import Registry from '@cdo/apps/labs/Registry';
+import ProjectManager from '@cdo/apps/labs/ProjectManager';
+import {S3SourcesStore} from '@cdo/apps/labs/SourcesStore';
+import {S3ChannelsStore} from '@cdo/apps/labs/ChannelsStore';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
- * workspace view, execute code, and save/load projects from local storage.
+ * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
   constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
+
+    this.channel = null;
+    // TODO: pass channelId in to constructor
+    this.projectManager = new ProjectManager(
+      'UZhQ1Ap2xV1VwRzssldBfA' || this.getLocalStorageKeyName(),
+      new S3SourcesStore(),
+      new S3ChannelsStore(),
+      this.getProject.bind(this)
+    );
+    console.log(this.projectManager);
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -92,7 +104,6 @@ export default class MusicBlocklyWorkspace {
     this.resizeBlockly();
 
     // Set initial blocks.
-    // TODO: await this?
     this.loadCode();
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
@@ -283,6 +294,13 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
+  getProject() {
+    return {
+      source: Blockly.serialization.workspaces.save(this.workspace),
+      channel: this.channel
+    };
+  }
+
   getAllBlocks() {
     return this.workspace.getAllBlocks();
   }
@@ -290,39 +308,34 @@ export default class MusicBlocklyWorkspace {
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.
-    if (window.channelId) {
-      return window.channelId;
-    }
-
     return 'musicLabSavedCode' + getBlockMode();
   }
 
   async loadCode() {
-    const {
-      source: existingCode
-    } = await Registry.getInstance().sourcesStore.load(
-      this.getLocalStorageKeyName()
-    );
-    if (existingCode) {
-      const exitingCodeJson = JSON.parse(existingCode);
+    const projectResponse = await this.projectManager.load();
+    if (!projectResponse.ok) {
+      // TODO: Error handling
+    }
+
+    const {source} = await projectResponse.json();
+    if (source) {
+      const exitingCodeJson = JSON.parse(source.source);
       Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
+      // TODO: don't do this?
       this.resetCode();
     }
   }
 
-  saveCode() {
-    const code = Blockly.serialization.workspaces.save(this.workspace);
-    const codeJson = JSON.stringify(code);
-    Registry.getInstance().sourcesStore.save(this.getLocalStorageKeyName(), {
-      source: codeJson
-    });
+  async saveCode() {
+    await this.projectManager.save();
   }
 
   resetCode() {
     const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
+    // TODO: This will overwrite data on the server.
     this.saveCode();
   }
 

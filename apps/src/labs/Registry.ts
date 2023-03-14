@@ -1,21 +1,19 @@
-import {SourcesStore} from './SourcesStore';
+import ProjectManager from './ProjectManager';
 
-// global singleton for registering shared modules
-// maybe ProjectRegistry instead?
-// is this the right way to make a singleton in typescript?
+// Singleton for registering shared modules
 export default class Registry {
-  sourcesStore: SourcesStore;
+  projectManager: ProjectManager;
 
   private static _instance: Registry;
 
-  constructor(sourcesStore: SourcesStore) {
+  constructor(projectManager: ProjectManager) {
     if (Registry._instance) {
       throw new Error('Registry instance already initialized.');
     } else {
       Registry._instance = this;
     }
 
-    this.sourcesStore = sourcesStore;
+    this.projectManager = projectManager;
   }
 
   public static getInstance(): Registry {

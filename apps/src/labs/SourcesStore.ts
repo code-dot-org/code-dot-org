@@ -3,14 +3,18 @@ import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
 
 export interface SourcesStore {
-  load: (key: string) => Promise<Source>;
+  load: (key: string) => Promise<Response>;
 
   save: (key: string, source: Source) => Promise<Response>;
 }
 
 export class LocalSourcesStore implements SourcesStore {
   load(key: string) {
-    return Promise.resolve({source: localStorage.getItem(key) || ''});
+    const source = {source: localStorage.getItem(key) || ''};
+    const blob = new Blob([JSON.stringify(source, null, 2)], {
+      type: 'application/json'
+    });
+    return Promise.resolve(new Response(blob));
   }
 
   save(key: string, source: Source) {
@@ -30,9 +34,9 @@ export class S3SourcesStore implements SourcesStore {
 
     if (response.ok) {
       this.currentVersionId = response.headers.get('S3-Version-Id');
-      return response.json();
+      return response;
     } else {
-      return Promise.resolve('');
+      return new Response('');
     }
   }
 

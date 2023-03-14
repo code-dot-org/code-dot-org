@@ -1171,7 +1171,6 @@ var projects = (module.exports = {
           replaceCurrentSourceVersion = !forceNewVersion;
           current.migratedToS3 = true;
 
-          // NOTE TO SELF: START HERE
           // Normally, reduceChannelUpdates is false and we update the channel
           // metadata every time source code is saved. When in emergency mode,
           // reduceChannelUpdates is true for HoC levels and we only update

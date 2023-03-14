@@ -29,3 +29,8 @@ export type SourceUpdateOptions = {
   firstSaveTimestamp: string;
   tabId: string | null;
 };
+
+export type Project = {
+  source: Source;
+  channel: Channel;
+};

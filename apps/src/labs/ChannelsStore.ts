@@ -2,7 +2,7 @@ import {Channel, NewChannel} from './types';
 import * as channelsApi from './channelsApi';
 
 export interface ChannelsStore {
-  load: (key: string) => Promise<Channel | null>;
+  load: (key: string) => Promise<Response>;
 
   create: (channel: Channel) => Promise<Response>;
 
@@ -14,7 +14,7 @@ export interface ChannelsStore {
 // projects stored locally.
 export class LocalChannelsStore implements ChannelsStore {
   load(key: string) {
-    return Promise.resolve(null);
+    return Promise.resolve(new Response());
   }
 
   create(channel: Channel) {
