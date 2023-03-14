@@ -680,8 +680,8 @@ class Level < ApplicationRecord
       level.save!
 
       level
-    rescue Exception => e
-      raise e, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    rescue Exception => exception
+      raise exception, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{exception.message}", exception.backtrace
     end
   end
 

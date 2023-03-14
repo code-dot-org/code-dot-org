@@ -15,8 +15,8 @@ ActiveRecord::Base.transaction do
         applications_emailed << "id: #{application.id}, status: #{application.status}"
       end
     end
-  rescue => e
-    puts "Failure on application #{application.id}:\n#{e.message}\n#{application&.errors&.messages}"
+  rescue => exception
+    puts "Failure on application #{application.id}:\n#{exception.message}\n#{application&.errors&.messages}"
     raise
   end
 

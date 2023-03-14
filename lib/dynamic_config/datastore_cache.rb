@@ -86,9 +86,9 @@ class DatastoreCache
         updated = true if value != old_value
       end
       notify_change_listeners if updated
-    rescue => exc
+    rescue => exception
       retry unless (tries -= 1).zero?
-      Honeybadger.notify(exc)
+      Honeybadger.notify(exception)
     end
   end
 

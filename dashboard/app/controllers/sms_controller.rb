@@ -37,8 +37,8 @@ class SmsController < ApplicationController
       body: body
     )
     head :ok
-  rescue Twilio::REST::RestError => e
-    case e.message
+  rescue Twilio::REST::RestError => exception
+    case exception.message
     when /The message From\/To pair violates a blacklist rule./
       # recipient unsubscribed from twilio, pretend it succeeded
       head :ok

@@ -66,9 +66,9 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )
     end
-  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => e
-    Honeybadger.notify e
-    render json: e.to_s, status: :bad_request
+  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => exception
+    Honeybadger.notify exception
+    render json: exception.to_s, status: :bad_request
   end
 
   REQUIRED_PARAMETERS = %w(

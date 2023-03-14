@@ -30,8 +30,8 @@ module Poste
   # @return [Integer, nil] decrypted id, or nil if it could not be decrypted.
   def self.decrypt_id(encrypted)
     decrypt(encrypted).to_i
-  rescue OpenSSL::Cipher::CipherError, ArgumentError => e
-    CDO.log.warn "Unable to decrypt poste id: #{encrypted}. Error: #{e.message}"
+  rescue OpenSSL::Cipher::CipherError, ArgumentError => exception
+    CDO.log.warn "Unable to decrypt poste id: #{encrypted}. Error: #{exception.message}"
     nil
   end
 

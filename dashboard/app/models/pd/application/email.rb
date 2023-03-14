@@ -37,8 +37,8 @@ module Pd::Application
       errors = {}
       unsent.find_each do |email|
         email.send!
-      rescue => e
-        errors[email.id] = "#{e.message}, #{e.backtrace.first}"
+      rescue => exception
+        errors[email.id] = "#{exception.message}, #{exception.backtrace.first}"
       end
 
       if errors.any?

@@ -1,9 +1,0 @@
-{
-  "key": "play_sequential",
-  "name": "Play Sequential",
-  "category": "Control",
-  "category_key": "control",
-  "content": "When using the [`play together`(#94E4FF)](/docs/ide/projectbeats/expressions/play_together), sometimes there are times where you want to play some sounds in sequence. This block lets you play sounds in sequence regardless as to whether the blocks are in a [`play together`(#94E4FF)](/docs/ide/projectbeats/expressions/play_together) block.",
-  "image_url": "https://images.code.org/330de73e642a0eb1c6d4a9d2718dcec5-Screenshot 2023-03-09 at 10.17.48 AM.png",
-  "short_description": "When in a \"play together\" block, play a set of sounds sequentially."
-}

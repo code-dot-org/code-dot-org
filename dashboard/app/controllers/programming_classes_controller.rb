@@ -71,8 +71,8 @@ class ProgrammingClassesController < ApplicationController
       @programming_class.save! if @programming_class.changed?
       @programming_class.write_serialization
       render json: @programming_class.summarize_for_edit.to_json
-    rescue ActiveRecord::RecordInvalid => e
-      render(status: :not_acceptable, plain: e.message)
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception.message)
     end
   end
 

@@ -248,8 +248,8 @@ class ScriptsController < ApplicationController
     begin
       Unit.rake
       redirect_to scripts_path, notice: 'Updated.'
-    rescue StandardError => e
-      @errors << e.to_s
+    rescue StandardError => exception
+      @errors << exception.to_s
       render action: 'index'
     end
   end

@@ -169,8 +169,8 @@ class ContactRollupsV2
         ContactRollupsPardotMemory.download_pardot_ids
       end
     end
-  rescue StandardError => e
-    @log_collector.record_exception e
+  rescue StandardError => exception
+    @log_collector.record_exception exception
   ensure
     @log_collector.record_metrics(
       {SyncNewContactsDuration: Time.now - start_time}

@@ -152,8 +152,8 @@ module Cdo
     private def flush_batch
       @last_flush = now
       flush(take_batch.map(&:object))
-    rescue => e
-      Honeybadger.notify(e)
+    rescue => exception
+      Honeybadger.notify(exception)
     end
 
     # Take a single batch of objects from the buffer.

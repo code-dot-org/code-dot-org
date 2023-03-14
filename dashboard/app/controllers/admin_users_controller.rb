@@ -284,8 +284,8 @@ class AdminUsersController < ApplicationController
 
     flash[:alert] = "MERGED: #{params[:studio_person_a_id]} and #{params[:studio_person_b_id]}"
     redirect_to studio_person_form_path
-  rescue ArgumentError => e
-    flash[:alert] = "MERGE FAILED: #{e.message}"
+  rescue ArgumentError => exception
+    flash[:alert] = "MERGE FAILED: #{exception.message}"
     redirect_to studio_person_form_path
   end
 
@@ -297,8 +297,8 @@ class AdminUsersController < ApplicationController
 
     flash[:alert] = "SPLIT: #{params[:studio_person_id]}"
     redirect_to studio_person_form_path
-  rescue ArgumentError => e
-    flash[:alert] = "SPLIT FAILED: #{e.message}"
+  rescue ArgumentError => exception
+    flash[:alert] = "SPLIT FAILED: #{exception.message}"
     redirect_to studio_person_form_path
   end
 
@@ -310,8 +310,8 @@ class AdminUsersController < ApplicationController
 
     flash[:alert] = "ADDED: #{params[:email]} to #{params[:studio_person_id]}"
     redirect_to studio_person_form_path
-  rescue ArgumentError => e
-    flash[:alert] = "ADD EMAIL FAILED: #{e.message}"
+  rescue ArgumentError => exception
+    flash[:alert] = "ADD EMAIL FAILED: #{exception.message}"
     redirect_to studio_person_form_path
   end
 
