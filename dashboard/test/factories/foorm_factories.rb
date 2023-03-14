@@ -296,6 +296,16 @@ FactoryGirl.define do
     end
   end
 
+  factory :facilitator_post_survey_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :foorm_submission, factory: :facilitator_post_survey_foorm_submission
+  end
+
+  factory :facilitator_post_survey_foorm_submission, class: 'Foorm::Submission' do
+    form_name 'surveys/pd/csd_csp_facilitator_post_survey'
+    foorm_submission_metadata
+    answers '{}'
+  end
+
   factory :csf_intro_post_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/workshop_csf_intro_post_test"
     foorm_submission_metadata

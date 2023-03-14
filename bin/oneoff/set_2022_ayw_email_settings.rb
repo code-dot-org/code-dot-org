@@ -8,7 +8,7 @@ Pd::Workshop.where("subject LIKE '%Academic Year Workshop%'").select {|w| w.crea
       workshop.update!(suppress_email: false)
       puts "Successfully updated workshop id #{workshop.id}"
     end
-  rescue => e
-    puts "Error updating workshop id #{workshop.id}: #{e}"
+  rescue => exception
+    puts "Error updating workshop id #{workshop.id}: #{exception}"
   end
 end
