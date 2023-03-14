@@ -7935,6 +7935,8 @@ en:
               name: Physical Computing PSP
             lesson-9:
               name: Microbit Playground
+            lesson-10:
+              name: Pulse Survey to Clone
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
