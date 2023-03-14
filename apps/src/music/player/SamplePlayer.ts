@@ -81,6 +81,30 @@ export default class SamplePlayer {
     soundApi.PlaySound(GROUP_PREFIX + '/' + sampleId, PREVIEW_GROUP, 0, onStop);
   }
 
+  previewSamples(events: SampleEvent[], onStop: () => any) {
+    if (!this.isInitialized) {
+      console.warn('Sample player not initialized.');
+      return;
+    }
+
+    this.cancelPreviews();
+
+    let counter = 0;
+    events.forEach(event => {
+      soundApi.PlaySound(
+        GROUP_PREFIX + '/' + event.sampleId,
+        PREVIEW_GROUP,
+        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
+        () => {
+          counter++;
+          if (counter === events.length) {
+            onStop();
+          }
+        }
+      );
+    });
+  }
+
   playing(): boolean {
     return this.isPlaying;
   }
