@@ -8,10 +8,16 @@ import {
   CourseOfferingCategories,
   CourseOfferingHeaders,
   CourseOfferingCurriculumTypes,
-  CourseOfferingMarketingInitiatives
+  CourseOfferingMarketingInitiatives,
+  CourseOfferingCsTopics,
+  CourseOfferingSchoolSubjects
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
+import {
+  translatedCourseOfferingCsTopics,
+  translatedCourseOfferingSchoolSubjects
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
@@ -58,16 +64,16 @@ export default function CourseOfferingEditor(props) {
       });
   };
 
-  // Converts selected grade levels into a string for the table
-  const handleGradeLevels = e => {
+  // Converts selected options within the given fieldName into a string for the table
+  const handleMultipleSelected = (e, fieldName) => {
     var options = e.target.options;
-    var gradeLevels = [];
+    var selectedOptions = [];
     for (var i = 0, l = options.length; i < l; i++) {
       if (options[i].selected && options[i].value !== '') {
-        gradeLevels.push(options[i].value);
+        selectedOptions.push(options[i].value);
       }
     }
-    updateCourseOffering('grade_levels', gradeLevels.join(','));
+    updateCourseOffering(fieldName, selectedOptions.join(','));
   };
 
   return (
@@ -146,7 +152,7 @@ export default function CourseOfferingEditor(props) {
           multiple
           value={courseOffering.grade_levels?.split(',')}
           style={styles.dropdown}
-          onChange={handleGradeLevels}
+          onChange={e => handleMultipleSelected(e, 'grade_levels')}
         >
           <option value="">(None)</option>
           {Object.values(StudentGradeLevels).map(level => (
@@ -215,6 +221,50 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
+      <label>
+        CS Topic
+        <HelpTip>
+          <p>
+            Select all related CS topics. Shift-click or cmd-click to select
+            multiple.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={courseOffering.cs_topic?.split(',')}
+          style={styles.dropdown}
+          onChange={e => handleMultipleSelected(e, 'cs_topic')}
+        >
+          <option value="">(None)</option>
+          {CourseOfferingCsTopics.map(topic => (
+            <option key={topic} value={topic}>
+              {translatedCourseOfferingCsTopics[topic]}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        School Subject
+        <HelpTip>
+          <p>
+            Select all related school subjects. Shift-click or cmd-click to
+            select multiple.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={courseOffering.school_subject?.split(',')}
+          style={styles.dropdown}
+          onChange={e => handleMultipleSelected(e, 'school_subject')}
+        >
+          <option value="">(None)</option>
+          {CourseOfferingSchoolSubjects.map(subject => (
+            <option key={subject} value={subject}>
+              {translatedCourseOfferingSchoolSubjects[subject]}
+            </option>
+          ))}
+        </select>
+      </label>
 
       <SaveBar
         handleSave={handleSave}
@@ -237,7 +287,9 @@ CourseOfferingEditor.propTypes = {
     grade_levels: PropTypes.string,
     curriculum_type: PropTypes.string,
     header: PropTypes.string,
-    marketing_initiative: PropTypes.string
+    marketing_initiative: PropTypes.string,
+    cs_topic: PropTypes.string,
+    school_subject: PropTypes.string
   })
 };
 
