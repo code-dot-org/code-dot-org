@@ -69,14 +69,14 @@ class ExpiredDeletedAccountPurger
     expired_soft_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
       @num_accounts_purged += 1
-    rescue StandardError => err
-      QueuedAccountPurge.create(user: account, reason_for_review: err.message) unless @dry_run
+    rescue StandardError => exception
+      QueuedAccountPurge.create(user: account, reason_for_review: exception.message) unless @dry_run
       @num_accounts_queued += 1
     end
 
     QueuedAccountPurge.clean_up_resolved_records!
-  rescue StandardError => err
-    yell err.message
+  rescue StandardError => exception
+    yell exception.message
     raise
   ensure
     report_results

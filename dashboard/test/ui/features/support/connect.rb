@@ -132,16 +132,16 @@ def log_result(result)
     body: {"passed" => result}.to_json,
     headers: {'Content-Type' => 'application/json'}
   )
-rescue => e
-  puts "Error logging result: #{e}"
+rescue => exception
+  puts "Error logging result: #{exception}"
 end
 
 # Quit current browser session.
 def quit_browser
   with_read_timeout(5.seconds) do
     $browser&.quit
-  rescue => e
-    puts "Error quitting browser session: #{e}"
+  rescue => exception
+    puts "Error quitting browser session: #{exception}"
   end
   $browser = @browser = nil
 end
@@ -154,8 +154,8 @@ After do |scenario|
     # clear session state
     with_read_timeout(10) do
       steps 'Then I sign out' if $browser
-    rescue => e
-      puts "Session reset error: #{e}"
+    rescue => exception
+      puts "Session reset error: #{exception}"
     end
   else
     log_result scenario.passed?
@@ -167,8 +167,8 @@ def context(str)
   unless ENV['TEST_LOCAL'] == 'true'
     $browser&.execute_script("sauce:context=#{str}")
   end
-rescue => e
-  puts "Context error: #{e}"
+rescue => exception
+  puts "Context error: #{exception}"
 end
 
 failed = false
