@@ -25,12 +25,12 @@ module PardotHelpers
     begin
       tries += 1
       yield
-    rescue *retriable_errors => e
+    rescue *retriable_errors => exception
       if tries < max_tries
         sleep([2**tries, max_sleep_seconds].min)
         retry
       end
-      raise e
+      raise exception
     end
   end
 

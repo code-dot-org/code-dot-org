@@ -31,10 +31,10 @@ class BlocksController < ApplicationController
       edit_block_path(pool: @block.pool, id: @block.name),
       notice: 'Block saved',
     )
-  rescue => e
+  rescue => exception
     redirect_back(
       fallback_location: @block.name ? edit_block_path(id: @block.name) : new_block_path,
-      alert: "Error saving block: #{e}",
+      alert: "Error saving block: #{exception}",
     )
   end
 

@@ -420,10 +420,10 @@ def create_fake_survey_questions(workshop)
       }
     ].to_json
   )
-rescue => e
+rescue => exception
   puts "Unable to create SurveyQuestions. If you are running this locally, please make
     sure that you have overridden jotform_forms in your locals.yml"
-  raise e
+  raise exception
 end
 
 def create_fake_daily_survey_results(workshop)

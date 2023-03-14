@@ -67,8 +67,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
         send_as_csv_attachment workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
       end
     end
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   # GET /api/v1/pd/workshops/upcoming_teachercons
@@ -104,8 +104,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   def to_geojson(workshops)

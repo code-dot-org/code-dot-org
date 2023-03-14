@@ -53,6 +53,9 @@ Layout/SpaceInsideBlockBraces:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
 

@@ -48,8 +48,8 @@ class ProgrammingEnvironmentsController < ApplicationController
       @programming_environment.save! if @programming_environment.changed?
       @programming_environment.write_serialization
       render json: @programming_environment.summarize_for_edit.to_json
-    rescue ActiveRecord::RecordInvalid => e
-      render(status: :not_acceptable, plain: e.message)
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception.message)
     end
   end
 
@@ -70,8 +70,8 @@ class ProgrammingEnvironmentsController < ApplicationController
   def destroy
     @programming_environment.destroy!
     render(status: :ok, plain: "Destroyed #{@programming_environment.name}")
-  rescue => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def get_summary_by_name

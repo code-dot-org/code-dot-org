@@ -91,15 +91,15 @@ module Api::V1::Pd
       return create_generic_survey_report if [COURSE_CSP, COURSE_CSD, COURSE_CSA].include?(@workshop.course)
 
       raise 'Action generic_survey_report should not be used for this workshop'
-    rescue => e
-      notify_error e
+    rescue => exception
+      notify_error exception
     end
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
     def experiment_survey_report
       render json: {experiment: true}
-    rescue => e
-      notify_error e
+    rescue => exception
+      notify_error exception
     end
 
     private def create_csf_survey_report

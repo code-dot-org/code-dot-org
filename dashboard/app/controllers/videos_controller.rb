@@ -19,8 +19,8 @@ class VideosController < ApplicationController
       begin
         require 'cdo/video/youtube'
         Youtube.process @video.key
-      rescue Exception => e
-        render(layout: false, plain: "Error processing video: #{e}. Contact an engineer for support.", status: :internal_server_error) && return
+      rescue Exception => exception
+        render(layout: false, plain: "Error processing video: #{exception}. Contact an engineer for support.", status: :internal_server_error) && return
       end
     end
     video_info = @video.summarize(params.key?(:autoplay))
