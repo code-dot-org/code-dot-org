@@ -8,17 +8,19 @@ import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
 import ProgramSequencer from '../player/ProgramSequencer';
+import RandomSkipManager from '../player/RandomSkipManager';
 import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from '../context';
+import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
+import Video from './Video';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -54,6 +56,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
+    this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
@@ -80,7 +83,8 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: false,
-      instructionsPosIndex
+      instructionsPosIndex,
+      showingVideo: true
     };
   }
 
@@ -149,13 +153,19 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadLibrary = async () => {
-    const libraryParameter = AppConfig.getValue('library');
-    const libraryFilename = libraryParameter
-      ? `music-library-${libraryParameter}.json`
-      : 'music-library.json';
-    const response = await fetch(baseUrl + libraryFilename);
-    const library = await response.json();
-    return library;
+    if (AppConfig.getValue('local-library') === 'true') {
+      const localLibraryFilename = 'music-library';
+      const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
+      return localLibrary;
+    } else {
+      const libraryParameter = AppConfig.getValue('library');
+      const libraryFilename = libraryParameter
+        ? `music-library-${libraryParameter}.json`
+        : 'music-library.json';
+      const response = await fetch(baseUrl + libraryFilename);
+      const library = await response.json();
+      return library;
+    }
   };
 
   loadInstructions = async () => {
@@ -197,16 +207,6 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      // Stop all when_run sounds that are still to play, because if they
-      // are still valid after the when_run code is re-executed, they
-      // will be scheduled again.
-      this.stopAllSoundsStillToPlay();
-
-      // Also clear all when_run sounds from the events list, because it
-      // will be recreated in its entirely when the when_run code is
-      // re-executed.
-      this.player.clearWhenRunEvents();
-
       this.executeCompiledSong();
 
       this.analyticsReporter.onBlocksUpdated(
@@ -251,28 +251,28 @@ class UnconnectedMusicView extends React.Component {
   };
 
   compileSong = () => {
-    return this.musicBlocklyWorkspace.compileSong();
+    return this.musicBlocklyWorkspace.compileSong({
+      MusicPlayer: this.player,
+      ProgramSequencer: this.programSequencer,
+      RandomSkipManager: this.randomSkipManager,
+      getTriggerCount: () => this.triggerCount
+    });
   };
 
   executeCompiledSong = () => {
-    this.musicBlocklyWorkspace.executeCompiledSong({
-      MusicPlayer: this.player,
-      ProgramSequencer: this.programSequencer,
-      getTriggerCount: () => this.triggerCount
-    });
+    // Clear the events list of when_run sounds, because it will be
+    // populated next.
+    this.player.clearWhenRunEvents();
+
+    this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
   playSong = () => {
     this.player.stopSong();
 
-    const codeChanged = this.compileSong();
-    if (codeChanged) {
-      // Clear the events list of when_run sounds, because it will be
-      // populated next.
-      this.player.clearWhenRunEvents();
+    this.compileSong();
 
-      this.executeCompiledSong();
-    }
+    this.executeCompiledSong();
 
     this.player.playSong();
 
@@ -282,16 +282,10 @@ class UnconnectedMusicView extends React.Component {
   stopSong = () => {
     this.player.stopSong();
 
-    // Clear the events list, and hence the visual timeline, of any
-    // user-triggered sounds.
-    this.player.clearTriggeredEvents();
+    this.executeCompiledSong();
 
     this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
-  };
-
-  stopAllSoundsStillToPlay = () => {
-    this.player.stopAllSoundsStillToPlay();
   };
 
   handleKeyUp = event => {
@@ -301,10 +295,13 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    if (event.key === 't') {
+    // When assigning new keyboard shortcuts, be aware that the following
+    // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
+    // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
+    if (event.key === 'v') {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
-    if (event.key === 'i') {
+    if (event.key === 'b') {
       this.toggleInstructions(true);
     }
     if (event.key === 'n') {
@@ -330,6 +327,10 @@ class UnconnectedMusicView extends React.Component {
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
+  };
+
+  onVideoClosed = () => {
+    this.setState({showingVideo: false});
   };
 
   renderInstructions(position) {
@@ -386,6 +387,9 @@ class UnconnectedMusicView extends React.Component {
     const instructionsPosition =
       instructionPositionOrder[this.state.instructionsPosIndex];
 
+    const showVideo =
+      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
@@ -393,46 +397,53 @@ class UnconnectedMusicView extends React.Component {
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id)
+            getTypeForId: id => this.player.getTypeForId(id),
+            getLastMeasure: () => this.player.getLastMeasure()
           }}
         >
-          <div id="music-lab-container" className={moduleStyles.container}>
-            {this.state.showInstructions &&
-              instructionsPosition === InstructionsPositions.TOP &&
-              this.renderInstructions(InstructionsPositions.TOP)}
+          <PlayingContext.Provider value={{isPlaying: this.state.isPlaying}}>
+            <div id="music-lab-container" className={moduleStyles.container}>
+              {this.state.showInstructions &&
+                instructionsPosition === InstructionsPositions.TOP &&
+                this.renderInstructions(InstructionsPositions.TOP)}
 
-            {this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                true,
-                instructionsPosition === InstructionsPositions.RIGHT
+              {showVideo && (
+                <Video id="initial-modal-0" onClose={this.onVideoClosed} />
               )}
 
-            <div className={moduleStyles.middleArea}>
-              {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.LEFT &&
-                this.renderInstructions(InstructionsPositions.LEFT)}
+              {this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  true,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
 
-              <div id="blockly-area" className={moduleStyles.blocklyArea}>
-                <div className={moduleStyles.topButtonsContainer}>
-                  <TopButtons
-                    clearCode={this.clearCode}
-                    uploadSound={file => this.soundUploader.uploadSound(file)}
-                  />
+              <div className={moduleStyles.middleArea}>
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.LEFT &&
+                  this.renderInstructions(InstructionsPositions.LEFT)}
+
+                <div id="blockly-area" className={moduleStyles.blocklyArea}>
+                  <div className={moduleStyles.topButtonsContainer}>
+                    <TopButtons
+                      clearCode={this.clearCode}
+                      uploadSound={file => this.soundUploader.uploadSound(file)}
+                    />
+                  </div>
+                  <div id="blockly-div" />
                 </div>
-                <div id="blockly-div" />
+
+                {this.state.showInstructions &&
+                  instructionsPosition === InstructionsPositions.RIGHT &&
+                  this.renderInstructions(InstructionsPositions.RIGHT)}
               </div>
 
-              {this.state.showInstructions &&
-                instructionsPosition === InstructionsPositions.RIGHT &&
-                this.renderInstructions(InstructionsPositions.RIGHT)}
+              {!this.state.timelineAtTop &&
+                this.renderTimelineArea(
+                  false,
+                  instructionsPosition === InstructionsPositions.RIGHT
+                )}
             </div>
-
-            {!this.state.timelineAtTop &&
-              this.renderTimelineArea(
-                false,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
-          </div>
+          </PlayingContext.Provider>
         </PlayerUtilsContext.Provider>
       </AnalyticsContext.Provider>
     );

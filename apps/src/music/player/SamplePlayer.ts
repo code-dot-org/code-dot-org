@@ -1,4 +1,5 @@
 import MusicLibrary from './MusicLibrary';
+import {Effects} from './MusicPlayer';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -7,6 +8,7 @@ export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
+  effects?: Effects;
 }
 
 interface PlayingSample {
@@ -120,7 +122,10 @@ export default class SamplePlayer {
         const uniqueId = soundApi.PlaySound(
           GROUP_PREFIX + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
-          eventStart
+          eventStart,
+          null,
+          false,
+          sampleEvent.effects
         );
 
         this.playingSamples.push({
@@ -144,6 +149,9 @@ export default class SamplePlayer {
     soundApi.StopSound(PREVIEW_GROUP);
   }
 
+  /**
+   * Stops all non-triggered samples that have not yet been played.
+   */
   stopAllSamplesStillToPlay() {
     if (!this.isPlaying) {
       return;
