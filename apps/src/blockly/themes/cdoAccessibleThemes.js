@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {Themes} from '../constants';
 import {
   deuteranopiaBlockStyles,
   protanopiaBlockStyles,
@@ -6,7 +7,7 @@ import {
 } from './cdoAccessibleStyles';
 
 export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdoprotanopia',
+  Themes.PROTANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
     blockStyles: protanopiaBlockStyles,
@@ -22,7 +23,7 @@ export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
 );
 
 export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdodeuteranopia',
+  Themes.DEUTERANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
     blockStyles: deuteranopiaBlockStyles,
@@ -38,7 +39,7 @@ export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
 );
 
 export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdotritanopia',
+  Themes.TRITANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
     blockStyles: tritanopiaBlockStyles,

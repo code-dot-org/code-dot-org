@@ -62,6 +62,7 @@ class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
+    userType: PropTypes.string,
     participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
@@ -75,9 +76,14 @@ class CourseOverview extends Component {
       props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
     this.state = {showRedirectDialog};
 
-    analyticsReporter.sendEvent(EVENTS.COURSE_OVERVIEW_PAGE_VISITED_EVENT, {
-      'unit group name': props.name
-    });
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit group name': props.name
+        }
+      );
+    }
   }
 
   onChangeVersion = versionId => {

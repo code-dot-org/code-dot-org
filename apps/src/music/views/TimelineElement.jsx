@@ -60,7 +60,7 @@ const TimelineElement = ({
         isSkipSound && moduleStyles.timelineElementSkipSound
       )}
       style={{
-        width: barWidth * length - 4,
+        width: barWidth * length,
         height,
         top,
         left

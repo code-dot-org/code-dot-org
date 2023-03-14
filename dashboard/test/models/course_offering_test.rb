@@ -437,6 +437,20 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal facilitator_to_teacher_course_versions[@unit_facilitator_to_teacher.course_version.id][:units].keys, [@unit_facilitator_to_teacher.id]
   end
 
+  test 'query count for assignable_course_offerings' do
+    Unit.stubs(:should_cache?).returns true
+
+    assert_cached_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@teacher)
+    end
+
+    assert_cached_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@facilitator)
+    end
+
+    Unit.clear_cache
+  end
+
   test "can serialize and seed course offerings" do
     course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: '/images/sample_image_ref', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
     serialization = course_offering.serialize
