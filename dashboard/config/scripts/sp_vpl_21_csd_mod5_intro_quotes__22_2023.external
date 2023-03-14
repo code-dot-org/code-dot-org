@@ -5,25 +5,26 @@ description 'description here'
 markdown <<MARKDOWN
 # CS Connections Modules
 
-##### The table below provides a quick overview of what CS Connections offers, the core content standards it addresses, and what the expected student learning outcomes are.
+##### The dropdown  menu below provides a quick overview of what CS Connections modules, the core content standards it addresses, and what the expected student learning outcomes are.
 
 ## Overview of Modules
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
 <details>
-<summary><strong>Lesson 2: Types of Machine Learning</strong></summary>
+<summary><strong>Animal Adaptations</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/34bede0fe356ba31cea2862bd38e0263-image-1678821828301.png" alt="Image of a bird in the sky and a deer in a green field" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-**Question of the Day:** What are the different types of machine learning? 
+**Module Overview:**
 
-**Lesson Overview:**
+Students will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. To begin, students create a hypothesis for a potential future aquatic animal adaptation to survive overfishing. To end, students
 
-In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
+**By the end of the module, students will be able to:** 
+* 
 
-**Students will be able to:** 
-* Describe the differences between supervised and unsupervised learning.
+**Suggest time to complete this module:  XX days**
+The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 </details>
 
@@ -32,18 +33,19 @@ In this lesson students will consider how they create “mental” models when l
 
 <details>
 
-<summary><strong>Lesson 3: Innovations in AI</strong></summary>
+<summary><strong>Time Capsules</strong></summary>
 
 <img src="https://images.code.org/3df14392372d770ff2d4dfae050c6e29-image-1635957745827.41.42 AM.png" alt="Image of a student activity guide" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-**Question of the Day:** How is AI helping to solve problems around the world?
-
-**Lesson Overview:**
+**Module Overview:**
 
 In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
 
-**Students will be able to:**
+**By the end of the module, students will be able to:**
 * Describe how Artificial Intelligence is having an impact on society
+
+**Suggest time to complete this module:  XX days**
+The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">XXXX</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 </details>
 
@@ -52,30 +54,77 @@ In this lesson, students explore an application of AI called Seeing AI and exami
 
 <details>
 
-<summary><strong>Lesson 4: Patterns in Data</strong></summary>
+<summary><strong>Star Quilts</strong></summary>
 
 <img src="https://images.code.org/708300a2e109c438cc5716a4a405ca36-image-1635957741359.40.25 AM.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-**Question of the Day:** What strategies do computer models use to make decisions?
-
-**Lesson Overview:**
+**Module Overview:**
 
 In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
 
-**Students will be able to:**
+**By the end of the module, students will be able to:**
 * Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)
 * Look for patterns in data to help make a decision
+
+**Suggest time to complete this module:  XX days**
+The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">XXXX Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Mapmakers</strong></summary>
+
+<img src="https://images.code.org/d0b2326d8853983862e13b220af57328-image-1678820194326.png" alt="Image of a person with map of the United States and a compass" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 60px;">
+
+**Module Overview:**
+
+Students learn social studies concepts by creating a map with code as they learn to create and animate sprites on a map. To begin, students will examine several examples of maps and discuss what features make up the map. To end, students .
+
+**By the end of the module, students will be able to:** 
+* Develop and use a project plan
+* Code "events" in Sprite Lab
+* Use tips for effective presentations
+
+**Suggest time to complete this module:  XX days**
+
+The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">XXXX Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Poetry</strong></summary>
+
+<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+**Module Overview:**
+
+In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
+
+**By the end of the module, students will be able to:** 
+* 
+
+**Suggest time to complete this module:  XX days**
+
+The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">XXXX Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 </details>
 
 <div style="clear:both"/>
 
 
+## Types of lesson activities 
+
+##### **Off the computer**
+* ##### Planning - include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
+
+##### **On the computer**
+* ##### Skill-building - 
 
 
-## Purpose of unplugged activities 
-
-##### The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
 
 ## 
 
@@ -83,19 +132,14 @@ In this lesson students will examine several apps that make decisions about what
 
 ### **Implementation guidance** 
 
-* ##### Complete the first three lessons of the Problem Solving and Computing unit of CS Discoveries before starting.
+* ##### Complete XXX lessons of any module before starting. Consider using this Planning and Preparing guide.
 
-* ##### This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">App Lab Hour of Code</a> before starting this unit.
+* ##### Modules assumes students are familiar with XXXX, specifically using XXXX to XXX. This can be accomplished by having students complete the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">App Lab Hour of Code</a> before starting a module.
 
-* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview" target="blank" rel="noopener noreferrer">Programming Levels Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview" target="blank" rel="noopener noreferrer">Differentiation Guide</a>.
+* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview" target="blank" rel="noopener noreferrer">XXXX</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview" target="blank" rel="noopener noreferrer">XXXX</a>.
 
-* ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview" target="blank" rel="noopener noreferrer">Curriculum Guide</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information about this unit.
+* ##### You can view <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview" target="blank" rel="noopener noreferrer">XXXX</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview" target="blank" rel="noopener noreferrer">XXXX</a> for more information.
 
-
-### **Suggested time to complete the unit:** 5 weeks 
-##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 <div style="clear:both"/>
-
-
 MARKDOWN

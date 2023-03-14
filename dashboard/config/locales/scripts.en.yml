@@ -10362,3 +10362,21 @@ en:
           description_short: ''
           description: "#Welcome to the 2023 Ceeper Learning: Core Foundations course"
           student_description: ''
+        csc-particles-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-particles-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-bookcovers-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-bookcovers-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
