@@ -520,20 +520,20 @@ db_cluster_id: !Secret
 db_proxy_reporting_endpoint: !Secret
 db_writer_endpoint: !Secret
 # FOLLOW ON: Transition from the above naming convention to the `db_endpoint_[type]` convention below.
-db_endpoint_writer: PLACEHOLDER
-db_endpoint_proxy_reporting: PLACEHOLDER
+db_endpoint_writer: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-db_credential_admin: !Secret
+db_credential_admin: !StackSecret
 db_admin_user: master
 db_admin_password: !Secret
-db_credential_writer: !Secret
+db_credential_writer: !StackSecret
 db_writer_user: application-writer
 db_writer_password: !Secret
-db_credential_reader: !Secret
+db_credential_reader: !StackSecret
 db_reader_user: readonly
-db_reader_password: !Secret
+db_reader_password: !StackSecret
 
 # Legacy database configuration settings contain a complete URI (username, password, servername, and database).
 db_admin: !Secret
