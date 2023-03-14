@@ -66,8 +66,8 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Now that you have some new blocks, decide what you'd like to draw with them.",
     "thumbnail_url": "https://images.code.org/3cb9633d3a1ec7c35440ec2a08291014-image-1593529043865.2020-06-30 10_57_17.gif",
-    "preload_asset_list": null,
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 50,
   "published": true,
@@ -75,7 +75,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:14.716+00:00\",\"changed\":[\"cloned from \\\"CSD U3 parameters shape scene_2022\\\"\"],\"cloned_from\":\"CSD U3 parameters shape scene_2022\"},{\"changed_at\":\"2022-10-12 19:52:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"teacher_markdown\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:14.716+00:00\",\"changed\":[\"cloned from \\\"CSD U3 parameters shape scene_2022\\\"\"],\"cloned_from\":\"CSD U3 parameters shape scene_2022\"},{\"changed_at\":\"2022-10-12 19:52:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"teacher_markdown\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-14 20:43:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Animal Adaptations</strong></summary>
 
-<img src="https://images.code.org/34bede0fe356ba31cea2862bd38e0263-image-1678821828301.png" alt="Image of a bird in the sky and a deer in a green field" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/34bede0fe356ba31cea2862bd38e0263-image-1678821828301.png" alt="Image of a bird in the sky and a deer in a green field" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Module Overview:**
 
@@ -23,7 +23,7 @@ Students will explore examples of evolution, adaptation, migration, natural sele
 **By the end of the module, students will be able to:** 
 * 
 
-**Suggest time to complete this module:  XX days**
+**Suggested time to complete this module:  XX days**
 The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 </details>
@@ -35,14 +35,17 @@ The suggested time is based on XXX instructional minutes per week. Visit the <a 
 
 <summary><strong>Time Capsules</strong></summary>
 
-<img src="https://images.code.org/3df14392372d770ff2d4dfae050c6e29-image-1635957745827.41.42 AM.png" alt="Image of a student activity guide" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/bf401cb75daf38c2da827dcdde631dbb-image-1678826775976.png" alt="Image of a student activity guide" width="300px" style="float:left; margin: 0 0 80px 80px;  padding-right: 30px;">
 
 **Module Overview:**
 
-In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+Students will learn the basics of Sprite Lab by coding the mood and imagery of a short poem written about a specific, important moment in time. To begin, students will choose from various examples of poems ranging from 1905 - 2023.  To end, students will run each other's apps and share their time capsule stories.
 
 **By the end of the module, students will be able to:**
-* Describe how Artificial Intelligence is having an impact on society
+* Define mood and imagery
+* Code "events" in Sprite Lab
+* Animate their time capsule poems
+
 
 **Suggest time to complete this module:  XX days**
 The suggested time is based on XXX instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">XXXX</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
@@ -83,9 +86,9 @@ The suggested time is based on XXX instructional minutes per week. Visit the <a 
 Students learn social studies concepts by creating a map with code as they learn to create and animate sprites on a map. To begin, students will examine several examples of maps and discuss what features make up the map. To end, students .
 
 **By the end of the module, students will be able to:** 
-* Develop and use a project plan
+* Develop a project plan for their app
+* Create a Tour Guide App
 * Code "events" in Sprite Lab
-* Use tips for effective presentations
 
 **Suggest time to complete this module:  XX days**
 
@@ -142,4 +145,5 @@ The suggested time is based on XXX instructional minutes per week. Visit the <a 
 
 
 <div style="clear:both"/>
+
 MARKDOWN
