@@ -25,7 +25,7 @@
   h2 {
     color: $neutral_dark;
     margin-top: 32px;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.5em;
     border-bottom: 1px solid $neutral_dark20;
     line-height: 1.2;
   }
@@ -91,7 +91,7 @@
     height: 40px; // h2 line-height
     line-height: 40px; // h2 line-height
     position: relative;
-    top: -52px; // h2 height+margins
+    top: -56px; // h2 height+margins
   }
 
   .studentsSubmittedLeft {
