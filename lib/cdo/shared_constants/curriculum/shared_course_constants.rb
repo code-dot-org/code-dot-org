@@ -120,6 +120,28 @@ module Curriculum
       }
     )
 
+    # CS topic field values for course offerings
+    COURSE_OFFERING_CS_TOPICS = %w(
+      art_and_design
+      app_design
+      artificial_intelligence
+      cybersecurity
+      data
+      games_and_animations
+      internet
+      physical_computing
+      web_design
+      programming
+    ).freeze
+
+    # School subject field values for course offerings
+    COURSE_OFFERING_SCHOOL_SUBJECTS = %w(
+      math
+      science
+      english_language_arts
+      history
+    ).freeze
+
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be
     # participants in the course. There this will tell you give the participant_audience of the
