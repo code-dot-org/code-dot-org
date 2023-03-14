@@ -27,21 +27,3 @@ Overview.args = {
   },
   onClose: action('onClose callback')
 };
-
-/*
-export default storybook =>
-  storybook.storiesOf('SchoolInfoInterstitial', module).add
-    'overview',
-    () => (
-        <SchoolInfoInterstitial
-          scriptData={{
-            formUrl: '',
-            authTokenName: 'auth_token',
-            authTokenValue: 'fake_auth_token',
-            existingSchoolInfo: {}
-          }}
-          onClose={action('onClose callback')}
-        />
-    )
-  );
-*/
