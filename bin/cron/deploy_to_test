@@ -38,10 +38,10 @@ def main
     color: 'green'
   )
   Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::AUTOMATIC)
-rescue Exception => e
+rescue Exception => exception
   ChatClient.message(
     'infra-test',
-    "EXCEPTION: #{e.message}\n```\n#{e.class}\n#{e.backtrace}\n```",
+    "EXCEPTION: #{exception.message}\n```\n#{exception.class}\n#{exception.backtrace}\n```",
     color: 'red'
   )
   DevelopersTopic.set_dtt TOPIC_DTT_FAILED
