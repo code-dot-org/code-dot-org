@@ -39,7 +39,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test "create regional partner with programs offered cleans empties" do
     regional_partner = RegionalPartner.new
     assert_creates RegionalPartner do
-      regional_partner.update(name: "valid regional partner", pl_programs_offered: ['', 'Fish'])
+      regional_partner.update(name: "valid regional partner", pl_programs_offered: ['', 'Fish'], is_active: true)
     end
     assert regional_partner.valid?
     assert_includes regional_partner.pl_programs_offered, "Fish"
