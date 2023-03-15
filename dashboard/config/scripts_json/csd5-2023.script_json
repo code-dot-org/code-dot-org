@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-03-13 17:42:28 UTC",
+    "serialized_at": "2023-03-14 17:50:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4651,6 +4651,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5547,7 +5550,7 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
+      "url": "https://docs.google.com/document/d/1uk54ffts0mvoMoo1aM_9WQxhB_i9dVbperk3V5NZgv4/edit?usp=sharing",
       "key": "create_a_representation",
       "properties": {
         "audience": "Verified Teacher",
@@ -5896,12 +5899,11 @@
       }
     },
     {
-      "name": "Number Cards",
-      "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy",
+      "name": "Number Cards - Digital Manipulative",
+      "url": "https://docs.google.com/presentation/d/1cBJrrEm4P5zyz4to07ol1l_AtPcS5QamNXAlS06gObk/edit?usp=sharing",
       "key": "number_cards",
       "properties": {
-        "audience": "Teacher",
-        "type": "Digital Manipulative"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "number_cards"

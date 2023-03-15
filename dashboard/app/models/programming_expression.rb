@@ -131,7 +131,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.seed_all
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/programming_expressions/{applab,gamelab,weblab,spritelab}/*.json")).each do |path|
+    Dir.glob(Rails.root.join("config/programming_expressions/**/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
     where(id: removed_records).destroy_all
