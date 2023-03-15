@@ -3,18 +3,27 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# CS Concepts and Skills
+# Meeting student needs
 
-##### In the next section of this professional learning module, you will be introduced to lesson levels and have the opportunity to practice using key computer science concepts in CS Connections modules.
 
-## You will:
+## Review
 
-* ##### Preview CS Connections lesson levels.
-* ##### Code using Sprite Lab.
-* ##### Code using different types of events.
-* ##### Identify skills your students will develop.
+### What did you notice and wonder? 
+### How about...
 
-### **Suggested time:** 20 minutes
+* ##### You can choose among different sprites.
+* ##### You can give sprites a location and move them.
+* ##### An event can happen with a click.
+* ##### An event can happen when two sprites touch.
+* ##### An event can happen during a set amount of time.
+
+## Summary
+
+### What skills will your students need to develop? 
+### How about...
+
+* ##### Placing blocks in a specific order.
+* ##### 
 
 ## Let's keep learning! 
 
