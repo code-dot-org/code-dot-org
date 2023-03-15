@@ -26,8 +26,8 @@ class VocabulariesController < ApplicationController
       vocabulary.save!
       vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
-    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => e
-      render status: :bad_request, json: {error: e.message.to_json}
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
+      render status: :bad_request, json: {error: exception.message.to_json}
     end
   end
 

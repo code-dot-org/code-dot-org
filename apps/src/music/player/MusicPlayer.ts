@@ -1,3 +1,10 @@
+import {Effects} from './interfaces/Effects';
+import {FunctionContext} from './interfaces/FunctionContext';
+import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
+import {PlaybackEvent} from './interfaces/PlaybackEvent';
+import {SkipContext} from './interfaces/SkipContext';
+import {SoundEvent} from './interfaces/SoundEvent';
+import {TrackMetadata} from './interfaces/TrackMetadata';
 import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 
@@ -7,71 +14,6 @@ const soundApi = require('./sound');
 // Default to 4/4 time
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
-
-export interface PlaybackEvent {
-  /** Type of event */
-  type: 'sound' | 'pattern';
-  /** Measure when this event occurs */
-  when: number;
-  /** Whether this event was triggered or scheduled via standard playback */
-  triggered: boolean;
-  /** ID of the track this event belongs to (only used in Tracks mode) */
-  trackId?: string;
-  /** Function context this event belongs to (only used in Simple2 mode) */
-  functionContext?: FunctionContext;
-  skipContext?: SkipContext;
-  effects?: Effects;
-}
-
-interface FunctionContext {
-  /** Name of the function */
-  name: string;
-  /** Unique ID corresponding to each invocation */
-  uniqueInvocationId: number;
-}
-
-export interface SkipContext {
-  insideRandom: boolean;
-  skipSound: boolean;
-}
-
-export type EffectValue = 'normal' | 'medium' | 'low';
-export interface Effects {
-  volume?: EffectValue;
-  filter?: EffectValue;
-  delay?: EffectValue;
-}
-
-export interface SoundEvent extends PlaybackEvent {
-  type: 'sound';
-  id: string;
-}
-
-export interface PatternTickEvent {
-  tick: number;
-  src: string;
-}
-
-export interface PatternEventValue {
-  kit: string;
-  events: PatternTickEvent[];
-}
-
-export interface PatternEvent extends PlaybackEvent {
-  type: 'pattern';
-  value: PatternEventValue;
-}
-
-interface TrackMetadata {
-  /** Display name of the track */
-  name: string;
-  /** Whether this track was triggered or scheduled via standard playback */
-  insideWhenRun: boolean;
-  /** The current last measure of the track, i.e. the measure at which new sounds or rests will be added */
-  currentMeasure: number;
-  /** The maximum number of concurrent sounds in this track */
-  maxConcurrentSounds: number;
-}
 
 /**
  * Main music player component which maintains the list of playback events and
@@ -468,17 +410,12 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
-    if (event.skipContext && event.skipContext.skipSound) {
+    if (event.skipContext?.skipSound) {
       return [];
     }
-    
+
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
-
-      if (soundEvent.skipContext && soundEvent.skipContext.skipSound) {
-        return [];
-      }
-
       return [
         {
           sampleId: soundEvent.id,
@@ -498,7 +435,7 @@ export default class MusicPlayer {
         const resultEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
-            patternEvent.when + event.tick / 16
+            patternEvent.when + (event.tick - 1) / 16
           ),
           triggered: patternEvent.triggered,
           effects: patternEvent.effects

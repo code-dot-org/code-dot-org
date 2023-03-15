@@ -40,7 +40,8 @@ describe('animationPicker', function() {
       uploadError: null,
       isSpriteLab: false,
       isBackground: false,
-      selectedAnimations: {}
+      selectedAnimations: {},
+      uploadWarningShowing: false
     };
 
     it('has expected default state', function() {

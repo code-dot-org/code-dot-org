@@ -59,9 +59,9 @@ class RakeTaskEventLogger
           }.to_json
         }
       )
-    rescue => e
+    rescue => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to log rake task information",
         context: {
           event: event

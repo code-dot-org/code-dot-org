@@ -100,7 +100,7 @@ const styles = {
     display: 'flex'
   },
   defaultText: {
-    color: color.charcoal
+    color: color.neutral_white
   },
   text: {
     textOverflow: 'ellipsis',
@@ -110,10 +110,10 @@ const styles = {
     color: color.lightest_cyan
   },
   highlighted: {
-    color: color.default_text
+    color: color.neutral_white
   },
   highlightedWrapper: {
-    borderBottom: '2px solid ' + color.default_text
+    borderBottom: '2px solid ' + color.neutral_white
   },
   teacherHighlighted: {
     color: color.white

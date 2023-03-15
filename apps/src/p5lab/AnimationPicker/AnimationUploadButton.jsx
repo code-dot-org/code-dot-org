@@ -8,6 +8,10 @@ import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
 import {refreshInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux.js';
+import {
+  exitedUploadWarning,
+  showingUploadWarning
+} from '../redux/animationPicker.js';
 
 /**
  * Render the animation upload button. If the project should restrict uploads
@@ -21,7 +25,9 @@ export function UnconnectedAnimationUploadButton({
   shouldRestrictAnimationUpload,
   isBackgroundsTab,
   inRestrictedShareMode,
-  refreshInRestrictedShareMode
+  refreshInRestrictedShareMode,
+  showingUploadWarning,
+  exitedUploadWarning
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [
@@ -43,8 +49,8 @@ export function UnconnectedAnimationUploadButton({
         onClick={
           showRestrictedUploadWarning
             ? project.isPublished()
-              ? () => setIsPublishedWarningModalOpen(true)
-              : () => setIsUploadModalOpen(true)
+              ? showPublishedWarning
+              : showUploadModal
             : onUploadClick
         }
         isBackgroundsTab={isBackgroundsTab}
@@ -56,10 +62,7 @@ export function UnconnectedAnimationUploadButton({
   // and you confirm you will not upload PII.
   function renderUploadModal() {
     return (
-      <BaseDialog
-        isOpen={isUploadModalOpen}
-        handleClose={() => setIsUploadModalOpen(false)}
-      >
+      <BaseDialog isOpen={isUploadModalOpen} handleClose={cancelUpload}>
         <div>
           <h1 className={styles.modalHeader}>
             {msg.animationPicker_restrictedShareRulesHeader()}
@@ -112,7 +115,7 @@ export function UnconnectedAnimationUploadButton({
     return (
       <BaseDialog
         isOpen={isPublishedWarningModalOpen}
-        handleClose={() => setIsPublishedWarningModalOpen(false)}
+        handleClose={closePublishedWarning}
       >
         <div>
           <h1 className={styles.modalHeader}>
@@ -124,7 +127,7 @@ export function UnconnectedAnimationUploadButton({
           <button
             className={classNames(styles.modalButton, styles.confirmButton)}
             type="button"
-            onClick={() => setIsPublishedWarningModalOpen(false)}
+            onClick={closePublishedWarning}
           >
             {msg.dialogOK()}
           </button>
@@ -139,12 +142,29 @@ export function UnconnectedAnimationUploadButton({
     // redux setting, for use in share/remix
     refreshInRestrictedShareMode();
     onUploadClick();
+    exitedUploadWarning();
+  }
+
+  function showUploadModal() {
+    setIsUploadModalOpen(true);
+    showingUploadWarning();
+  }
+
+  function showPublishedWarning() {
+    setIsPublishedWarningModalOpen(true);
+    showingUploadWarning();
+  }
+
+  function closePublishedWarning() {
+    setIsPublishedWarningModalOpen(false);
+    exitedUploadWarning();
   }
 
   function cancelUpload() {
     setRestrictedShareConfirmed(false);
     setNoPIIConfirmed(false);
     setIsUploadModalOpen(false);
+    exitedUploadWarning();
   }
 
   return (
@@ -162,7 +182,9 @@ UnconnectedAnimationUploadButton.propTypes = {
   isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
-  refreshInRestrictedShareMode: PropTypes.func.isRequired
+  refreshInRestrictedShareMode: PropTypes.func.isRequired,
+  showingUploadWarning: PropTypes.func.isRequired,
+  exitedUploadWarning: PropTypes.func.isRequired
 };
 
 export default connect(
@@ -171,6 +193,8 @@ export default connect(
   }),
   dispatch => ({
     refreshInRestrictedShareMode: inRestrictedShareMode =>
-      dispatch(refreshInRestrictedShareMode(inRestrictedShareMode))
+      dispatch(refreshInRestrictedShareMode(inRestrictedShareMode)),
+    showingUploadWarning: () => dispatch(showingUploadWarning()),
+    exitedUploadWarning: () => dispatch(exitedUploadWarning())
   })
 )(UnconnectedAnimationUploadButton);

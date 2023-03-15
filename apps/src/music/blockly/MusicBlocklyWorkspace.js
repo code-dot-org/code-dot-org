@@ -1,7 +1,7 @@
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockTypes} from './blockTypes';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import musicLabDarkTheme from '@cdo/apps/blockly/themes/musicLabDark';
+import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
@@ -73,7 +73,7 @@ export default class MusicBlocklyWorkspace {
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
-      theme: musicLabDarkTheme,
+      theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
         ? 'cdo_renderer_zelos'
         : 'cdo_renderer_thrasos',
