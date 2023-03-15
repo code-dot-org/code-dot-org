@@ -59,11 +59,11 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
+    "teacher_markdown": "During this discussion, encourage students to use the vocabulary they saw in the previous video, referring to `xPosition` and `whatsTheY` as variables and describing the equal sign as \"gets the value of\". The concept is the same as the first predict level, with the added emphasis on using correct vocabulary. For example: \"I see that the variable `xPosition` gets the value of 300, so I know it will be drawn on the right side of the screen\"",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "teacher_markdown": "During this discussion, encourage students to use the vocabulary they saw in the previous video, referring to `xPosition` and `whatsTheY` as variables and describing the equal sign as \"gets the value of\". The concept is the same as the first predict level, with the added emphasis on using correct vocabulary. For example: \"I see that the variable `xPosition` gets the value of 300, so I know it will be drawn on the right side of the screen\""
+    ]
   },
   "game_id": 50,
   "published": true,
@@ -71,7 +71,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:40.223+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Predict Where XY_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables Predict Where XY_2022\"},{\"changed_at\":\"2022-10-13 12:58:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:40.223+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Predict Where XY_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables Predict Where XY_2022\"},{\"changed_at\":\"2022-10-13 12:58:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-14 20:39:50 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
