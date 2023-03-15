@@ -649,6 +649,7 @@ describe('entry tests', () => {
     'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
     'levels/_teacher_markdown':
       './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':

@@ -18,8 +18,8 @@ class CourseOfferingsController < ApplicationController
     end
 
     render json: @course_offering.summarize_for_edit
-  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def quick_assign_course_offerings
