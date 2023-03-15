@@ -22,6 +22,7 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+    config.autoload_paths << 'app/graphql'
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.0
 
