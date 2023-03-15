@@ -98,6 +98,9 @@ const Controls = ({
         <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
           <FontAwesome
             icon={'question-circle-o'}
+            onClick={() => {
+              analyticsReporter.onButtonClicked('documentation-link');
+            }}
             className={classNames(
               moduleStyles.iconButton,
               moduleStyles.iconButtonLink
