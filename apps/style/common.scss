@@ -249,8 +249,9 @@ button.arrow:focus {
   outline-style: none;
 }
 button.arrow:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
+  border: 1px solid $neutral_dark20;
+  background-color: $neutral_dark20;
+  color: $neutral_dark20;
 }
 
 #soft-buttons {
@@ -566,13 +567,19 @@ label.img-upload {
   color: $black;
 }
 button.launch {
-  border: 1px solid $orange;
-  background-color: $orange;
-  color: $white;
+  border: 1px solid $brand_secondary_default;
+  background-color: $brand_secondary_default;
+  color: $neutral_white;
   font-size: large;
   min-width: 96px;
   margin-left: 0;
   margin-right: 10px;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    border-color: $brand_secondary_dark;
+    box-shadow: none;
+  }
 
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
@@ -592,8 +599,15 @@ button.blocklyLaunch {
   &.hide {
     display: none;
   }
-  border: 1px solid $orange;
-  background-color: $orange;
+
+  border: 1px solid $brand_secondary_default;
+  background-color: $brand_secondary_default;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    border-color: $brand_secondary_dark;
+    box-shadow: none;
+  }
 
   @media screen and (min-width: 1051px) {
     min-width: 111px;
@@ -622,9 +636,16 @@ button.blocklyLaunch {
   html[dir="RTL"] & {
     margin-right: 0;
   }
+
   &#resetButton {
-    border: 1px solid $cyan;
-    background-color: $cyan;
+    border: 1px solid $brand_secondary_default;
+    background-color: $brand_secondary_default;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
   }
 
   &.hideText {
@@ -1087,9 +1108,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    #show-toolbox-click-target:hover .fa {
-      color: $white;
-    }
 
     & > span {
       margin: auto auto auto 18px;
@@ -1101,8 +1119,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   #clear-puzzle-header:hover {
-    background-color: $red;
+    background-color: $product_negative_default;
+    color: $neutral_white;
   }
+
   .block-counter-overflow {
     color: $yellow;
   }
@@ -1254,15 +1274,20 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     p {
       font-size: 14px;
       line-height: inherit;
-      color: $charcoal;
+      color: $neutral_dark;
       margin-bottom: 10px;
 
+      &.caption-text {
+        font-family: $gotham-bold;
+      }
+
       a {
-        font-family: $gotham-extra-bold;
+        font-family: $gotham-regular;
         font-weight: normal;
-        color: $purple;
+        color: $brand_secondary_default;
+        text-decoration: underline;
         &:hover {
-          text-decoration: underline;
+          color: $brand_secondary_dark;
         }
       }
     }
@@ -1271,6 +1296,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-size: 14px;
     overflow: scroll;
     max-height: 400px;
+    margin: 12px 0;
   }
 }
 

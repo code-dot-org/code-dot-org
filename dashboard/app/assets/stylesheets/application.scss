@@ -1304,9 +1304,9 @@ body.iframe_embed_app_and_code {
 
 .reference_area {
   margin-top: 20px;
+  color: $neutral_dark;
 
   .help_title {
-    color: $dark_charcoal;
     font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;
@@ -1320,11 +1320,13 @@ body.iframe_embed_app_and_code {
 
   .video_link {
     display: inline-block;
-    margin: 6px;
-  }
+    margin: 6px 0;
+    color: $brand_secondary_default;
+    text-decoration: underline;
 
-  .video_name {
-    text-align: center;
+    &:hover {
+      color: $brand_secondary_dark;
+    }
   }
 
   .help_subtitle {
@@ -1366,12 +1368,22 @@ body.iframe_embed_app_and_code {
     li {
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
+      border: 0;
+      background: transparent;
+      margin-bottom: 2px;
 
       a {
-        background: $dark_color;
-        color: $white;
+        background: $brand_secondary_default;
+        border: 2px solid $brand_secondary_default;
+        border-radius: 6px;
+        color: $neutral_white;
+        font-family: $gotham-bold;
+        cursor: pointer !important;
+
         &:hover {
-          color: $green;
+          background-color: $brand_secondary_dark;
+          border-color: $brand_secondary_dark;
+          color: $neutral_white;
         }
         &:focus {
           outline: 0;
@@ -1385,10 +1397,13 @@ body.iframe_embed_app_and_code {
 
     li.ui-state-active {
       a {
-        background: $white;
-        color: $orange;
+        background: $neutral_white;
+        color: $neutral_dark;
+        border: 2px solid $neutral_dark;
+
         &:hover {
-          color: $orange;
+          color: $neutral_dark;
+          background-color: $neutral_dark20;
         }
       }
     }
@@ -1476,7 +1491,7 @@ body.iframe_embed_app_and_code {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: $purple;
+  color: $neutral_dark;
   font-family: $gotham-bold;
   font-weight: normal;
   padding-right: 25px;
@@ -1514,10 +1529,18 @@ a.download-video {
   z-index: 1;
   cursor: pointer;
   width: 40px;
-  height: 36px;
+  height: 34px;
+  font-size: 36px;
+  background-color: $neutral_white;
+  color: $neutral_dark;
+  border: 2px solid $neutral_dark;
+  padding: 0;
+  line-height: 40px;
+
   &:hover {
-    background: none;
+    background: $neutral_dark20;
   }
+
   img {
     width: 40px;
     height: 41px;
@@ -3010,6 +3033,10 @@ $modal-no-icon-gap: 22px;
   font-weight: normal;
 }
 
+h5.dialog-title {
+  font-size: 1.25em;
+}
+
 #ok-button {
   background-color: $orange;
   border: 1px solid $orange;
@@ -3795,27 +3822,43 @@ html[dir=rtl] {
 
 .immersive-reader-button {
   /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
-  background-color: $lightest_purple !important;
+  background-color: $neutral_white !important;
   float: right;
+  border: 2px solid $neutral_dark;
   margin-top: 1px !important;
-  height: 16px !important;
-  padding: 8px !important;
-  border-radius: 4px !important;
+  margin-right: 2px;
+  height: 28px;
+  padding: 0 !important;
+  border-radius: 4px 0 0 4px !important;
+
+  i {
+    font-size: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
+    line-height: 26px;
+    color: $neutral_dark;
+  }
 
   html[dir=rtl] & {
     float: left;
   }
 
   &:hover {
-    background-color: $cyan !important;
-    border-radius: 4px !important;
+    background-color: $brand_primary_default !important;
+    border-color: $brand_primary_default;
+    border-radius: 4px 0 0 4px !important;
 
     /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
     position: relative;
     z-index: 1000;
+
+    i {
+      color: $neutral_white;
+    }
   }
 
   img {
+    display: none;
     filter: grayscale(1);
   }
 }
