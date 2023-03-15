@@ -7,6 +7,7 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import PropTypes from 'prop-types';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -83,7 +84,8 @@ const saveSection = (e, section) => {
 };
 
 // TO DO: Add a prop to indicate if this is a new section or an existing section
-export default function SectionsSetUpContainer() {
+export default function SectionsSetUpContainer(props) {
+  const {isNewSection} = props;
   const [sections, updateSection] = useSections();
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
 
@@ -94,15 +96,27 @@ export default function SectionsSetUpContainer() {
     setAdvancedSettingsOpen(!advancedSettingsOpen);
   };
 
+  if (isNewSection === undefined) {
+    return null;
+  }
+
   return (
     <form id={FORM_ID}>
-      <h1>{i18n.setUpClassSectionsHeader()}</h1>
-      <p>{i18n.setUpClassSectionsSubheader()}</p>
-      <p>
-        <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
-          {i18n.setUpClassSectionsSubheaderLink()}
-        </a>
-      </p>
+      <h1>
+        {isNewSection
+          ? i18n.setUpClassSectionsHeader()
+          : i18n.editSectionDetails()}
+      </h1>
+      {isNewSection && (
+        <div>
+          <p>{i18n.setUpClassSectionsSubheader()}</p>
+          <p>
+            <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+              {i18n.setUpClassSectionsSubheaderLink()}
+            </a>
+          </p>
+        </div>
+      )}
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
@@ -141,17 +155,22 @@ export default function SectionsSetUpContainer() {
         )}
       </div>
       <div className={moduleStyles.buttonsContainer}>
+        {isNewSection && (
+          <Button
+            icon="plus"
+            text={i18n.addAnotherClassSection()}
+            color="white"
+            onClick={e => {
+              e.preventDefault();
+              console.log('Add Another Class Section clicked');
+            }}
+          />
+        )}
+        {/* currently this button just changes text if it is a "new" or "editied"
+        screen, depending on how we want the functionality of this button to work,
+        this might mean creating a different button for the "edit" page */}
         <Button
-          icon="plus"
-          text={i18n.addAnotherClassSection()}
-          color="white"
-          onClick={e => {
-            e.preventDefault();
-            console.log('Add Another Class Section clicked');
-          }}
-        />
-        <Button
-          text={i18n.finishCreatingSections()}
+          text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
           color="purple"
           onClick={e => saveSection(e, sections[0])}
         />
@@ -171,4 +190,8 @@ const style = {
     cursor: 'pointer',
     flexGrow: 1
   }
+};
+
+SectionsSetUpContainer.propTypes = {
+  isNewSection: PropTypes.boolean
 };
