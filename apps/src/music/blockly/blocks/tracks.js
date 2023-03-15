@@ -54,9 +54,6 @@ export const newTrackAtStart = {
     Sequencer.createTrack("${ctx.id}", "${ctx.getFieldValue(
       TRACK_NAME_FIELD
     )}", 1, false);\n
-    MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
-      TRACK_NAME_FIELD
-    )}", 1, true);\n
     `;
   }
 };
@@ -91,14 +88,7 @@ export const newTrackAtMeasure = {
       ctx,
       'measure',
       Blockly.JavaScript.ORDER_ASSIGNMENT
-    )}, false);\n
-    MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
-      TRACK_NAME_FIELD
-    )}", ${Blockly.JavaScript.valueToCode(
-      ctx,
-      'measure',
-      Blockly.JavaScript.ORDER_ASSIGNMENT
-    )}, true);\n`;
+    )}, false);\n`;
   }
 };
 
@@ -130,12 +120,7 @@ export const newTrackOnTrigger = {
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
       TRACK_NAME_FIELD
-    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), true);\n
-    MusicPlayer.createTrack("${
-      ctx.id
-    }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
-      TRACK_NAME_FIELD
-    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), false);\n`;
+    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), true);\n`;
   }
 };
 
@@ -179,9 +164,7 @@ export const playSoundInTrack = {
     Sequencer.addSoundsToTrack(${getCurrentTrackId(ctx)}, ${allSounds.join(
       ','
     )});\n
-    MusicPlayer.addSoundsToTrack(${getCurrentTrackId(ctx)}, ${allSounds.join(
-      ','
-    )});\n`;
+    `;
   }
 };
 
@@ -198,9 +181,6 @@ export const restInTrack = {
   generator: ctx =>
     `
     Sequencer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
-      FIELD_REST_DURATION_NAME
-    )});\n
-    MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
       FIELD_REST_DURATION_NAME
     )});\n`
 };

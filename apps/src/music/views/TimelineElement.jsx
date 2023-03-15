@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-import {PlayerUtilsContext, PlayingContext} from '../context';
+import {PlayingContext} from '../context';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';
-import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 // TODO: Unify type constants and colors with those SoundPanel.jsx
 const typeToColorClass = {
@@ -27,13 +26,9 @@ const TimelineElement = ({
   skipContext,
   currentPlayheadPosition
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
   const playingContext = useContext(PlayingContext);
 
-  const length =
-    eventData.type === 'pattern'
-      ? DEFAULT_PATTERN_LENGTH
-      : playerUtils.getLengthForId(eventData.id);
+  const length = eventData.length;
 
   const isInsideRandom = skipContext?.insideRandom;
   const isSkipSound = playingContext.isPlaying && skipContext?.skipSound;
@@ -45,9 +40,7 @@ const TimelineElement = ({
     currentPlayheadPosition < when + length;
 
   const colorType =
-    eventData.type === 'pattern'
-      ? 'pattern'
-      : playerUtils.getTypeForId(eventData.id);
+    eventData.type === 'pattern' ? 'pattern' : eventData.soundType;
   const colorClass = typeToColorClass[colorType];
 
   return (

@@ -23,7 +23,9 @@ import SoundUploader from '../utils/SoundUploader';
 import Video from './Video';
 import Simple2Sequencer from '../player/sequencers/Simple2Sequencer';
 import TracksSequencer from '../player/sequencers/TracksSequencer';
+import BasicSequencer from '../player/sequencers/BasicSequencer';
 import PlaybackUIEventManager from '../PlaybackUIEventManager';
+import MusicLibrary from '../player/MusicLibrary';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -80,10 +82,20 @@ class UnconnectedMusicView extends React.Component {
     }
 
     const blockMode = getBlockMode();
-    this.sequencer =
-      blockMode === BlockMode.SIMPLE2
-        ? new Simple2Sequencer(this.player)
-        : new TracksSequencer(this.player);
+    switch (blockMode) {
+      case BlockMode.SIMPLE2: {
+        this.sequencer = new Simple2Sequencer();
+        break;
+      }
+      case BlockMode.TRACKS: {
+        this.sequencer = new TracksSequencer();
+        break;
+      }
+      default: {
+        this.sequencer = new BasicSequencer();
+      }
+    }
+
     this.playbackUIEventManager = new PlaybackUIEventManager();
 
     this.state = {
@@ -121,10 +133,12 @@ class UnconnectedMusicView extends React.Component {
         this.onBlockSpaceChange,
         this.player
       );
-      this.player.initialize(library);
+      const musicLibrary = new MusicLibrary(library);
+      this.sequencer.setLibrary(musicLibrary);
+      this.player.initialize(musicLibrary);
       setInterval(this.updateTimer, 1000 / 30);
 
-      Globals.setLibrary(library);
+      Globals.setLibrary(musicLibrary);
       Globals.setPlayer(this.player);
     });
 
@@ -290,7 +304,7 @@ class UnconnectedMusicView extends React.Component {
     );
 
     if (this.state.isPlaying) {
-      this.player.clearWhenRunEvents();
+      this.player.stopAllSoundsStillToPlay();
       this.player.playEvents(this.sequencer.getPlaybackEvents());
     }
   };
@@ -427,8 +441,6 @@ class UnconnectedMusicView extends React.Component {
             getPlaybackEvents: () =>
               this.playbackUIEventManager.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
-            getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id),
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >

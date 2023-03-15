@@ -1,4 +1,6 @@
-import MusicPlayer, {PlaybackEvent, SoundEvent} from '../MusicPlayer';
+import {PlaybackEvent} from '../interfaces/PlaybackEvent';
+import {SoundEvent} from '../interfaces/SoundEvent';
+import MusicLibrary from '../MusicLibrary';
 import Sequencer from './Sequencer';
 
 interface Track {
@@ -10,13 +12,17 @@ interface Track {
 }
 
 export default class TracksSequencer extends Sequencer {
-  private player: MusicPlayer;
   private tracks: {[trackId: string]: Track};
+  private library: MusicLibrary | null;
 
-  constructor(player: MusicPlayer) {
+  constructor() {
     super();
-    this.player = player;
     this.tracks = {};
+    this.library = null;
+  }
+
+  setLibrary(library: MusicLibrary) {
+    this.library = library;
   }
 
   reset() {
@@ -57,15 +63,13 @@ export default class TracksSequencer extends Sequencer {
         id: soundId,
         type: 'sound',
         when: currentTrack.currentMeasure,
-        triggered: currentTrack.triggered
+        triggered: currentTrack.triggered,
+        length: this.getLengthForId(soundId)
       };
 
       currentTrack.playbackEvents.push(soundEvent);
 
-      maxSoundLength = Math.max(
-        maxSoundLength,
-        this.getLengthForId(soundId) || 0
-      );
+      maxSoundLength = Math.max(maxSoundLength, soundEvent.length || 0);
     }
 
     currentTrack.currentMeasure += maxSoundLength;
@@ -90,7 +94,12 @@ export default class TracksSequencer extends Sequencer {
       .flat();
   }
 
-  getLengthForId(id: string): number {
-    return this.player.getLengthForId(id) || 0;
+  private getLengthForId(id: string): number {
+    if (this.library === null) {
+      return 0;
+    }
+
+    const soundData = this.library.getSoundForId(id);
+    return soundData ? soundData.length : 0;
   }
 }
