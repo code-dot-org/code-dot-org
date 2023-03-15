@@ -65,11 +65,6 @@ const BLOCK_PADDING = 7; // Calculated from difference between block height and 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
-// Users can change their active theme using the context menu. Use this setting, if present.
-function chooseTheme(themeOption) {
-  return Blockly.themes[localStorage.blocklyTheme] || themeOption || CdoTheme;
-}
-
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -505,7 +500,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
 
     createReadOnlyBlockSpace: (container, xml, options) => {
-      const theme = chooseTheme(options.theme);
+      const theme = cdoUtils.chooseTheme(options.theme);
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
         theme: theme,
@@ -562,7 +557,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: chooseTheme(opt_options.theme),
+      theme: cdoUtils.chooseTheme(opt_options.theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
