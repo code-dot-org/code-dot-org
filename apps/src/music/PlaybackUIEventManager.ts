@@ -1,4 +1,4 @@
-import {PlaybackEvent} from './player/MusicPlayer';
+import {PlaybackEvent} from './player/interfaces/PlaybackEvent';
 
 /**
  * This should all just be done in Redux -

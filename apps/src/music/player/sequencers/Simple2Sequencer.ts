@@ -1,12 +1,9 @@
-import MusicPlayer, {
-  Effects,
-  EffectValue,
-  PatternEvent,
-  PatternEventValue,
-  PlaybackEvent,
-  SkipContext,
-  SoundEvent
-} from '../MusicPlayer';
+import {Effects, EffectValue} from '../interfaces/Effects';
+import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
+import {PlaybackEvent} from '../interfaces/PlaybackEvent';
+import {SkipContext} from '../interfaces/SkipContext';
+import {SoundEvent} from '../interfaces/SoundEvent';
+import MusicLibrary from '../MusicLibrary';
 import Sequencer from './Sequencer';
 
 const DEFAULT_PATTERN_LENGTH = require('../../constants')
@@ -40,11 +37,11 @@ export default class Simple2Sequencer extends Sequencer {
 
   private functionMap: {[id: string]: FunctionContext};
   private uniqueInvocationIdUpTo: number;
-  private player: MusicPlayer; // Hack to access getLengthForId - pull that function into common helper
   private startMeasure: number;
   private inTrigger: boolean;
+  private library: MusicLibrary | null;
 
-  constructor(player: MusicPlayer) {
+  constructor() {
     super();
     this.stack = [];
     this.functionStack = [];
@@ -53,9 +50,13 @@ export default class Simple2Sequencer extends Sequencer {
 
     this.functionMap = {};
     this.uniqueInvocationIdUpTo = 0;
-    this.player = player;
     this.startMeasure = 1;
     this.inTrigger = false;
+    this.library = null;
+  }
+
+  setLibrary(library: MusicLibrary) {
+    this.library = library;
   }
 
   reset(startMeasure = 1, inTrigger = false) {
@@ -170,18 +171,21 @@ export default class Simple2Sequencer extends Sequencer {
     }
 
     const currentFunction = this.functionMap[currentFunctionId];
+    const soundData = this.library && this.library.getSoundForId(id);
     const soundEvent: SoundEvent = {
       id,
       type: 'sound',
       triggered: this.inTrigger,
       when: this.getCurrentMeasure(),
       effects: {...this.getCurrentEffects()} || undefined,
-      skipContext: this.getCurrentSkipContext()
+      skipContext: this.getCurrentSkipContext(),
+      length: this.getLengthForId(id),
+      soundType: (soundData && soundData.type) || undefined
     };
 
     currentFunction.playbackEvents.push(soundEvent);
 
-    this.updateMeasureForPlayByLength(this.getLengthForId(id));
+    this.updateMeasureForPlayByLength(soundEvent.length);
     currentFunction.endMeasure = this.getCurrentMeasure();
   }
 
@@ -199,7 +203,8 @@ export default class Simple2Sequencer extends Sequencer {
       triggered: this.inTrigger,
       when: this.getCurrentMeasure(),
       effects: {...this.getCurrentEffects()} || undefined,
-      skipContext: this.getCurrentSkipContext()
+      skipContext: this.getCurrentSkipContext(),
+      length: DEFAULT_PATTERN_LENGTH
     };
 
     currentFunction.playbackEvents.push(patternEvent);
@@ -334,6 +339,11 @@ export default class Simple2Sequencer extends Sequencer {
   }
 
   private getLengthForId(id: string): number {
-    return this.player.getLengthForId(id) || 0;
+    if (this.library === null) {
+      return 0;
+    }
+
+    const soundData = this.library.getSoundForId(id);
+    return soundData ? soundData.length : 0;
   }
 }

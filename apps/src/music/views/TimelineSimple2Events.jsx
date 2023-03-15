@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import {PlayerUtilsContext} from '../context';
 import TimelineElement from './TimelineElement';
-import {DEFAULT_PATTERN_LENGTH} from '../constants';
 
 /**
  * Renders timeline events for the simple2 model.
@@ -50,10 +49,7 @@ const TimelineSimple2Events = ({
   for (const soundEvent of soundEvents) {
     const soundId = soundEvent.id;
     const functionName = soundEvent.functionContext.name;
-    const length =
-      soundEvent.type === 'pattern'
-        ? DEFAULT_PATTERN_LENGTH
-        : playerUtils.getLengthForId(soundId);
+    const length = soundEvent.length;
     const positionLeft = soundEvent.when;
     const positionRight = positionLeft + length;
     const positionTop = getVerticalOffsetForEventId(

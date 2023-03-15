@@ -27,7 +27,7 @@ export default class MusicPlayer {
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
-  private library: MusicLibrary;
+  private library: MusicLibrary | null;
 
   constructor(bpm: number = DEFAULT_BPM) {
     this.bpm = bpm;
@@ -35,7 +35,7 @@ export default class MusicPlayer {
     this.tracksMetadata = {};
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
-    this.library = {groups: []};
+    this.library = null;
     this.lastTriggeredMeasure = 0;
     this.lastWhenRunMeasure = 0;
   }
@@ -61,102 +61,6 @@ export default class MusicPlayer {
   }
 
   /**
-   * Schedule a given sound (identified by its ID) for playback, at a given measure.
-   * If playback is in progress, the sound will be played by the {@link SamplePlayer}
-   *
-   * @param id unique ID of the sound
-   * @param measure when the sound should be played
-   * @param insideWhenRun whether the sound was scheduled via normal playback, or triggered
-   * @param trackId (optional) track ID this sound belongs to
-   * @param functionContext (optional) function context this sound belongs to
-   */
-  playSoundAtMeasureById(
-    id: string,
-    measure: number,
-    insideWhenRun: boolean,
-    trackId?: string,
-    functionContext?: FunctionContext,
-    skipContext?: SkipContext,
-    effects?: Effects
-  ) {
-    if (!this.samplePlayer.initialized()) {
-      console.log('MusicPlayer not initialized');
-      return;
-    }
-    const soundData = this.getSoundForId(id);
-    if (!id || soundData === null || !measure) {
-      console.log(`Invalid input. id: ${id} measure: ${measure}`);
-      return;
-    }
-
-    const endingMeasure = measure + soundData.length - 1;
-    if (insideWhenRun) {
-      this.lastWhenRunMeasure = Math.max(
-        endingMeasure,
-        this.lastWhenRunMeasure
-      );
-    } else {
-      this.lastTriggeredMeasure = Math.max(
-        endingMeasure,
-        this.lastTriggeredMeasure
-      );
-    }
-
-    const soundEvent: SoundEvent = {
-      type: 'sound',
-      id,
-      triggered: !insideWhenRun,
-      when: measure,
-      trackId,
-      functionContext,
-      skipContext,
-      effects
-    };
-
-    this.playbackEvents.push(soundEvent);
-
-    if (this.samplePlayer.playing()) {
-      this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
-    }
-  }
-
-  playPatternAtMeasureById(
-    value: PatternEventValue,
-    measure: number,
-    insideWhenRun: boolean,
-    trackId?: string,
-    functionContext?: FunctionContext,
-    skipContext?: SkipContext,
-    effects?: Effects
-  ) {
-    if (!this.samplePlayer.initialized()) {
-      console.log('MusicPlayer not initialized');
-      return;
-    }
-    if (!value || !measure) {
-      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
-      return;
-    }
-
-    const patternEvent: PatternEvent = {
-      type: 'pattern',
-      value,
-      triggered: !insideWhenRun,
-      when: measure,
-      trackId,
-      functionContext,
-      skipContext,
-      effects
-    };
-
-    this.playbackEvents.push(patternEvent);
-
-    if (this.samplePlayer.playing()) {
-      this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
-    }
-  }
-
-  /**
    * Preview the given sound. Plays immediately.
    *
    * @param id unique ID of the sound
@@ -171,19 +75,6 @@ export default class MusicPlayer {
    */
   cancelPreviews() {
     this.samplePlayer.cancelPreviews();
-  }
-
-  /**
-   * Start playback. Schedules all queued playback events for playback
-   * and tells the {@link SamplePlayer} to start playing.
-   */
-  playSong() {
-    const sampleEvents = [];
-    for (const event of this.playbackEvents) {
-      sampleEvents.push(...this.convertEventToSamples(event));
-    }
-
-    this.samplePlayer.startPlayback(sampleEvents);
   }
 
   startPlaybackWithEvents(events: PlaybackEvent[]) {
@@ -203,30 +94,16 @@ export default class MusicPlayer {
    */
   stopSong() {
     this.samplePlayer.stopPlayback();
-    this.clearTriggeredEvents();
   }
 
   /**
    * Clear all non-triggered events from the list of playback events, and stop
    * any sounds that have not yet been played, if playback is in progress.
    */
-  clearWhenRunEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => playbackEvent.triggered
-    );
-    Object.keys(this.tracksMetadata).forEach(trackId => {
-      if (this.tracksMetadata[trackId].insideWhenRun) {
-        delete this.tracksMetadata[trackId];
-      }
-    });
-
+  stopAllSoundsStillToPlay() {
     // If playing, stop all non-triggered samples that have not yet been played.
     this.samplePlayer.stopAllSamplesStillToPlay();
     this.lastWhenRunMeasure = 0;
-  }
-
-  getPlaybackEvents(): PlaybackEvent[] {
-    return this.playbackEvents;
   }
 
   getLastMeasure(): number {
@@ -260,113 +137,8 @@ export default class MusicPlayer {
     return (60 / this.bpm) * BEATS_PER_MEASURE;
   }
 
-  /**
-   * Create a new track.
-   *
-   * @param id unique ID of this track
-   * @param name display name of the track (does not have to be unique)
-   * @param measureStart starting measure of the track
-   * @param insideWhenRun whether the track was scheduled via standard playback, or triggered
-   */
-  createTrack(
-    id: string,
-    name: string,
-    measureStart: number,
-    insideWhenRun: boolean
-  ) {
-    if (id === null) {
-      console.warn(`Invalid track ID`);
-      return;
-    }
-
-    if (this.tracksMetadata[id]) {
-      console.warn(`Track ${id}: ${name} already exists!`);
-      return;
-    }
-
-    this.tracksMetadata[id] = {
-      name,
-      insideWhenRun,
-      currentMeasure: measureStart,
-      maxConcurrentSounds: 0
-    };
-  }
-
-  /**
-   * Add the given sounds to the track identified by the track Id
-   *
-   * @param trackId
-   * @param soundIds
-   */
-  addSoundsToTrack(trackId: string, ...soundIds: string[]) {
-    if (!this.tracksMetadata[trackId]) {
-      console.warn('No track with ID: ' + trackId);
-      return;
-    }
-
-    const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
-    let maxSoundLength = 0;
-
-    for (let soundId of soundIds) {
-      this.playSoundAtMeasureById(
-        soundId,
-        currentMeasure,
-        insideWhenRun,
-        trackId
-      );
-      maxSoundLength = Math.max(
-        maxSoundLength,
-        this.getLengthForId(soundId) || 0
-      );
-    }
-
-    this.tracksMetadata[trackId].currentMeasure += maxSoundLength;
-    this.tracksMetadata[trackId].maxConcurrentSounds = Math.max(
-      soundIds.length,
-      this.tracksMetadata[trackId].maxConcurrentSounds
-    );
-  }
-
-  /**
-   * Add a rest of the given length to the track identified by the track ID.
-   *
-   * @param trackId
-   * @param lengthMeasures
-   */
-  addRestToTrack(trackId: string, lengthMeasures: number) {
-    if (!this.tracksMetadata[trackId]) {
-      console.warn('No track with ID: ' + trackId);
-      return;
-    }
-
-    this.tracksMetadata[trackId].currentMeasure += lengthMeasures;
-  }
-
-  clearTracksData() {
-    this.tracksMetadata = {};
-  }
-
   getTracksMetadata(): {[trackId: string]: TrackMetadata} {
     return this.tracksMetadata;
-  }
-
-  getLengthForId(id: string): number | null {
-    const sound = this.getSoundForId(id);
-    if (sound === null) {
-      console.warn(`Could not find sound with ID: ${id}`);
-      return null;
-    }
-    return sound.length;
-  }
-
-  getTypeForId(id: string): SoundType | null {
-    const sound = this.getSoundForId(id);
-    if (sound === null) {
-      console.warn(`Could not find sound with ID: ${id}`);
-      return null;
-    }
-
-    return sound.type;
   }
 
   // Called by interpreted code in the simple2 model, this returns
@@ -374,39 +146,6 @@ export default class MusicPlayer {
   // a function, so that the timeline renderer can group relevant events.
   getUniqueInvocationId() {
     return this.uniqueInvocationIdUpto++;
-  }
-
-  /**
-   * Clear all triggered events from the list of playback events.
-   */
-  private clearTriggeredEvents() {
-    this.playbackEvents = this.playbackEvents.filter(
-      playbackEvent => !playbackEvent.triggered
-    );
-
-    Object.keys(this.tracksMetadata).forEach(trackId => {
-      if (!this.tracksMetadata[trackId].insideWhenRun) {
-        delete this.tracksMetadata[trackId];
-      }
-    });
-
-    this.lastTriggeredMeasure = 0;
-  }
-
-  private getSoundForId(id: string): SoundData | null {
-    const splitId = id.split('/');
-    const path = splitId[0];
-    const src = splitId[1];
-
-    const folder = this.library.groups[0].folders.find(
-      folder => folder.path === path
-    );
-
-    if (folder) {
-      return folder.sounds.find(sound => sound.src === src) || null;
-    }
-
-    return null;
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
