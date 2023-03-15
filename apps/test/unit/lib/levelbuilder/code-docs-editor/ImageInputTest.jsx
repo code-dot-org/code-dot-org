@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import ImageInput from '@cdo/apps/lib/levelbuilder/code-docs-editor/ImageInput';
+import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
 
 describe('ImageInput', () => {
   it('displays image upload dialog when upload image button is pressed', () => {

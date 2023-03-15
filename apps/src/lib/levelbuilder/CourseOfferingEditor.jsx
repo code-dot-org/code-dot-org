@@ -23,7 +23,7 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDeviceCompatibilityLevels
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import ImageInput from './code-docs-editor/ImageInput';
+import ImageInput from './ImageInput';
 
 const translatedNoneOption = `(${i18n.none()})`;
 
