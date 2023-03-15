@@ -1,3 +1,10 @@
+@import "color.scss";
+@import "font.scss";
+
+body {
+  color: $neutral_dark;
+}
+
 .dance-party-h2 {
   font-size: 20px;
 }
@@ -27,12 +34,16 @@ div[dir='rtl'] .img-dance-stars{
   background-color: white;
   border-color: white;
   color: #4d575f;
+  font-family: $gotham-bold;
+
+  &:hover {
+    background-color: $neutral_light;
+  }
 }
 
 .foot-note-text {
-  text-align: center;
   position: absolute;
-  bottom: 0;
+  bottom: -11px;
   color: white;
   text-align: center;
   margin-bottom: 10px;
@@ -50,16 +61,8 @@ div[dir='rtl'] .img-dance-stars{
   padding: 5px;
 }
 
-a.translate-link {
-  transition: 600ms opacity;
-}
-
-a.translate-link:hover {
-  opacity: 0.7;
-}
-
 .dance-translate-link-text {
-  color: rgb(0, 173, 188);
+  color: $neutral_dark;
   font-size: 16px;
   display: inline;
 }
@@ -73,11 +76,16 @@ a.translate-link:hover {
 .dance-text-versions-container {
   margin-top: 10px;
   text-align: right;
+
+  a {
+    text-decoration: underline;
+    color: $brand_secondary_default
+  }
 }
 
 .dance-chevron-icon {
   display: inline;
-  color: rgb(0, 173, 188);
+  color: $neutral_dark;
   font-size: 13px;
   font-weight: bold;
   margin-left: 10px;
@@ -118,6 +126,11 @@ a:hover {
   margin-bottom: 85px;
   margin-left: 18%;
   margin-right: 18%;
+
+  a {
+    text-decoration: underline;
+    color: $brand_secondary_default
+  }
 }
 
 .artist-name, .and-more {
@@ -328,4 +341,17 @@ a:hover {
 
 .new-announcement-mobile .highlight-word {
   color: rgb(89, 202, 211);
+}
+
+.full-resource-block {
+  .tutorial-info {
+    a {
+      text-decoration: underline;
+      color: $brand_secondary_default;
+
+      &:hover {
+        color: $brand_secondary_dark;
+      }
+    }
+  }
 }
