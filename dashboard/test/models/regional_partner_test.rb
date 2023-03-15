@@ -173,11 +173,11 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     future_partner_workshops = [
       create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.today),
-      create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.tomorrow)
+      create(:workshop, organizer: partner_organizer, sessions_from: Date.tomorrow)
     ]
 
     # excluded (past or ended) partner workshops
-    create :workshop, organizer: partner_organizer, sessions_from: Time.zone.yesterday
+    create :workshop, organizer: partner_organizer, sessions_from: Date.yesterday
     create :workshop, :ended, organizer: partner_organizer, sessions_from: Time.zone.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
@@ -190,11 +190,11 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     future_partner_workshops = [
       create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.today),
-      create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.tomorrow)
+      create(:workshop, organizer: partner_organizer, sessions_from: Date.tomorrow)
     ]
 
     # excluded (past or ended) partner workshops
-    create :workshop, organizer: partner_organizer, sessions_from: Time.zone.yesterday
+    create :workshop, organizer: partner_organizer, sessions_from: Date.yesterday
     create :workshop, :ended, organizer: partner_organizer, sessions_from: Time.zone.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized

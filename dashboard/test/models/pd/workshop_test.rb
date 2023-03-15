@@ -864,7 +864,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'workshop date range string for multi session workshop' do
     workshop = create :workshop, num_sessions: 2
-    assert_equal "#{Time.zone.today.strftime('%B %e, %Y')} - #{Time.zone.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
+    assert_equal "#{Time.zone.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do
@@ -1509,5 +1509,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   def session_on(day_offset, start_offset, end_offset)
     day = today + day_offset.days
     create :pd_session, start: day + start_offset, end: day + end_offset
+  end
+
+  def today
+    Time.zone.today
   end
 end

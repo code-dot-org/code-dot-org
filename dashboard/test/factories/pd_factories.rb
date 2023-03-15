@@ -19,8 +19,8 @@ FactoryGirl.define do
   # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_teacher {(Time.zone.current - 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Time.zone.current - 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -38,15 +38,15 @@ FactoryGirl.define do
   # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_teacher {(Time.zone.current + 5.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Time.zone.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
-    apps_open_date_teacher {(Time.zone.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Time.zone.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
@@ -61,7 +61,7 @@ FactoryGirl.define do
       duration_hours 6
     end
     association :workshop, factory: :workshop
-    start {Time.zone.current + 9.hours}
+    start {Date.current + 9.hours}
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
@@ -70,7 +70,7 @@ FactoryGirl.define do
   end
 
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Time.zone.current}
+    start_date {Date.current}
     fixed_payment 50
   end
 
