@@ -54,12 +54,14 @@ class InitialSectionCreationInterstitial extends Component {
               <Button
                 id="uitest-abandon-section-creation"
                 text={i18n.goToMyDashboard()}
+                style={styles.leftButton}
                 color={Button.ButtonColor.neutralDark}
                 onClick={this.abandonEditingSection}
               />
               <Button
                 id="uitest-accept-section-creation"
                 text={i18n.createClassSections()}
+                style={styles.rightButton}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={this.beginEditingSection}
               />
@@ -91,6 +93,12 @@ const styles = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between'
+  },
+  leftButton: {
+    marginLeft: 0
+  },
+  rightButton: {
+    marginRight: 0
   }
 };
 
