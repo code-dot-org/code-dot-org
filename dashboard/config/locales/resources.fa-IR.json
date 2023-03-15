@@ -2387,12 +2387,12 @@
           "type": "اسلایدها"
         },
         "sprite_properties/csd/2022": {
-          "name": "",
+          "name": "ویژگی‌های اسپرایت",
           "url": "",
           "type": "منبع"
         },
         "sprite_properties_1/csd/2022": {
-          "name": "",
+          "name": "ویژگی‌های اسپرایت",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2584,12 +2584,12 @@
           "type": "اسلایدها"
         },
         "collision_detection/csd/2022": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": ""
         },
         "collision_detection_1/csd/2022": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": "منبع"
         },
@@ -2604,7 +2604,7 @@
           "type": ""
         },
         "collision_detection_2/csd/2022": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": "اسلایدها"
         },
@@ -8082,7 +8082,7 @@
           "type": "منبع"
         },
         "sprite_properties/csd/2021": {
-          "name": "",
+          "name": "ویژگی‌های اسپرایت",
           "url": "",
           "type": "منبع"
         },
@@ -8224,7 +8224,7 @@
           "type": "منبع"
         },
         "collision-detection-exemplar-2020/csd/2021": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": ""
         },
@@ -8239,7 +8239,7 @@
           "type": ""
         },
         "collision_detection/csd/2021": {
-          "name": "",
+          "name": "تشخیص تصادم",
           "url": "",
           "type": "منبع"
         },

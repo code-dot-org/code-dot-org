@@ -150,9 +150,9 @@ module Pd
 
                 last_processed_submission_id = submission_id
                 imported += 1 if res == IMPORTED
-              rescue => e
+              rescue => exception
                 # Store message and first line of backtrace for context
-                errors_per_form[form_id][submission_id] = "#{e.message}, #{e.backtrace.first}"
+                errors_per_form[form_id][submission_id] = "#{exception.message}, #{exception.backtrace.first}"
                 batch_error_count += 1
                 all_sync_results[form_id][ERROR] ||= 0
                 all_sync_results[form_id][ERROR] += 1
@@ -297,9 +297,9 @@ module Pd
           end
 
           count += 1
-        rescue => e
+        rescue => exception
           # Store message and first line of backtrace for context
-          errors[placeholder.submission_id] = "#{e.message}, #{e.backtrace.first}"
+          errors[placeholder.submission_id] = "#{exception.message}, #{exception.backtrace.first}"
         end
 
         CDO.log.info "#{count} placeholders filled."
@@ -428,12 +428,12 @@ module Pd
       @form_data_hash ||= {}
       @form_data_hash[show_hidden_questions ? 'all' : 'visible'] ||= begin
         questions.process_answers(answers_hash, show_hidden_questions: show_hidden_questions)
-      rescue => e
-        raise e, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{e}", e.backtrace
+      rescue => exception
+        raise exception, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{exception}", exception.backtrace
       end
     end
 
-    def sanitize_form_data_hash
+    def sanitized_form_data_hash
       @sanitized_form_data_hash ||=
         form_data_hash.transform_keys {|key| key.underscore.to_sym}
     end

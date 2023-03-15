@@ -61,11 +61,6 @@ class FilesApiTestHelper
     post_object filename, body, headers
   end
 
-  def patch_abuse(abuse_score)
-    patch "/v3/#{@endpoint}/#{@channel_id}/?abuse_score=#{abuse_score}"
-    last_response.body
-  end
-
   def copy_object(source_filename, dest_filename)
     put "/v3/#{@endpoint}/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}"
     last_response.body

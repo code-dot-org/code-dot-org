@@ -1,4 +1,4 @@
-/** @file Test maker command behavior */
+/** @file Test maker command behavior for Circuit Playground and Micro:Bit*/
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
@@ -14,9 +14,11 @@ import {
   pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import {MicrobitStubBoard} from './boards/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
-describe('maker/commands.js', () => {
+describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;
 
   beforeEach(() => {
@@ -162,6 +164,40 @@ describe('maker/commands.js', () => {
         onBoardEvent({component, event: 'doubleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:double', callback);
       });
+    });
+  });
+});
+
+describe('maker/commands.js - MicroBit', () => {
+  let stubBoardController, errorHandler;
+
+  beforeEach(() => {
+    stubBoardController = sinon.createStubInstance(MicroBitBoard);
+    stubBoardController.boardClient_ = new MicrobitStubBoard();
+    injectBoardController(stubBoardController);
+    errorHandler = {
+      outputWarning: sinon.spy(),
+      outputError: sinon.stub()
+    };
+    injectErrorHandler(errorHandler);
+  });
+
+  afterEach(() => {
+    injectBoardController(undefined);
+    injectErrorHandler(null);
+  });
+
+  describe('pinMode(pin, mode)', () => {
+    it('delegates to makerBoard.pinMode with mapped mode id', () => {
+      pinMode({pin: 1, mode: 'input'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(1, 0);
+    });
+
+    it('display error when invalid pin 3 is used', () => {
+      pinMode({pin: 3, mode: 'input'});
+      expect(errorHandler.outputError).to.have.been.calledWith(
+        'pinMode() pin parameter value (3) is not a valid pinid. Please use a different pinid.'
+      );
     });
   });
 });

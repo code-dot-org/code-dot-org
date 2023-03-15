@@ -3,5 +3,13 @@
   "display_name": "Course E",
   "category": "csf",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": "CSF",
+  "grade_levels": "4,5",
+  "header": "CS Fundamentals",
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null
 }

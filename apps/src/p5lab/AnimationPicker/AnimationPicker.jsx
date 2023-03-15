@@ -51,12 +51,12 @@ class AnimationPicker extends React.Component {
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
-    is13Plus: PropTypes.bool,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     onClose: PropTypes.func.isRequired,
     onPickNewAnimation: PropTypes.func.isRequired,
@@ -65,7 +65,8 @@ class AnimationPicker extends React.Component {
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    onAnimationSelectionComplete: PropTypes.func.isRequired
+    onAnimationSelectionComplete: PropTypes.func.isRequired,
+    uploadWarningShowing: PropTypes.bool.isRequired
   };
 
   state = {
@@ -109,7 +110,6 @@ class AnimationPicker extends React.Component {
     return (
       <div>
         <AnimationPickerBody
-          is13Plus={this.props.is13Plus}
           onDrawYourOwnClick={this.props.onPickNewAnimation}
           onPickLibraryAnimation={this.props.onPickLibraryAnimation}
           onUploadClick={this.onUploadClick}
@@ -124,6 +124,9 @@ class AnimationPicker extends React.Component {
           hideCostumes={this.props.hideCostumes}
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
+          shouldRestrictAnimationUpload={
+            this.props.shouldRestrictAnimationUpload
+          }
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -163,7 +166,9 @@ class AnimationPicker extends React.Component {
       <BaseDialog
         isOpen
         handleClose={this.onClose}
-        uncloseable={this.props.uploadInProgress}
+        uncloseable={
+          this.props.uploadInProgress || this.props.uploadWarningShowing
+        }
         fullWidth={true}
         style={styles.dialog}
       >
@@ -196,9 +201,9 @@ export default connect(
     visible: state.animationPicker.visible,
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
-    is13Plus: state.pageConstants.is13Plus,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
-    selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
+    selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
+    uploadWarningShowing: state.animationPicker.uploadWarningShowing
   }),
   dispatch => ({
     onClose() {

@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org 과정은 전 세계 수천만명의 학생과 백만명의 교사가 사용하고 있습니다.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## 역사
 
 Code.org는 2013년에 쌍둥이 형제인 Hadi와 Ali Partovi가 [컴퓨터 과학을 홍보하는 동영상](https://www.youtube.com/watch?v=nKIu9yen5nc)으로 시작했습니다. 이 동영상은 유튜브에서 하루 동안 1위를 했고, 15,000 개의 학교들이 도움을 요청했습니다. 그 이후로, 우리는 자원봉사자들에게 의존했던 규모에서 세계적인 운동을 지원하기 위한 완전한 조직을 구축하기 위해 확장되고 있습니다 우리는 운 좋은 일부 학생들만이 아니라 모든 어린이들이 질 좋은 컴퓨터 과학을 배워야 한다고 믿습니다.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## 우리가 하는 일
 

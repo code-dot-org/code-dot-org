@@ -36,12 +36,6 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if has_permission?('project_validator') || new_score.nil?
-
-    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
-  end
-
   def can_view_abusive_assets?(encrypted_channel_id)
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
@@ -421,8 +415,8 @@ class FilesApi < Sinatra::Base
     if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
-      rescue OpenURI::HTTPError => e
-        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      rescue OpenURI::HTTPError => exception
+        return file_too_large(endpoint) if exception.message == "414 Request-URI Too Large"
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
@@ -622,27 +616,8 @@ class FilesApi < Sinatra::Base
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_channel_id|
-    dont_cache
-
-    abuse_score = request.GET['abuse_score']
-    not_modified if abuse_score.nil?
-
-    buckets = get_bucket_impl(endpoint).new
-
-    begin
-      files = buckets.list(encrypted_channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    files.each do |file|
-      not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
-      buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
-    end
-
-    content_type :json
-    {abuse_score: abuse_score}.to_json
-  end
+  # Endpoint removed. Functionality moved to ReportAbuseController.
+  #
 
   #
   # DELETE /v3/(animations|assets|sources|libraries)/<channel-id>/<filename>
@@ -669,7 +644,11 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+    begin
+      get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #

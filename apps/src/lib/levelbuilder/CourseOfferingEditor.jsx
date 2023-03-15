@@ -1,11 +1,30 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import i18n from '@cdo/locale';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCategories,
+  CourseOfferingHeaders,
+  CourseOfferingCurriculumTypes,
+  CourseOfferingMarketingInitiatives,
+  CourseOfferingCsTopics,
+  CourseOfferingSchoolSubjects,
+  DeviceTypes,
+  DeviceCompatibilityLevels
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
+import {
+  translatedCourseOfferingCsTopics,
+  translatedCourseOfferingSchoolSubjects,
+  translatedCourseOfferingDeviceTypes,
+  translatedCourseOfferingDeviceCompatibilityLevels
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+
+const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
@@ -50,6 +69,49 @@ export default function CourseOfferingEditor(props) {
         setError(error.responseText);
         setIsSaving(false);
       });
+  };
+
+  // Converts selected options within the given fieldName into a string for the table
+  const handleMultipleSelected = (e, fieldName) => {
+    var options = e.target.options;
+    var selectedOptions = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected && options[i].value !== '') {
+        selectedOptions.push(options[i].value);
+      }
+    }
+    updateCourseOffering(fieldName, selectedOptions.join(','));
+  };
+
+  // Converts selected device compatibility options into a string for the table
+  const updateDeviceCompatibilities = (device, compatibilityLevel) => {
+    let updatedDeviceCompatibilities = {};
+    let deviceCompatibilities = courseOffering.device_compatibility;
+
+    // Initialize device compatibility values if empty, otherwise update given device compatibility level.
+    if (!deviceCompatibilities) {
+      DeviceTypes.forEach(currDevice => {
+        updatedDeviceCompatibilities[currDevice] =
+          currDevice === device ? compatibilityLevel : '';
+      });
+    } else {
+      updatedDeviceCompatibilities = JSON.parse(deviceCompatibilities);
+      updatedDeviceCompatibilities[device] = compatibilityLevel;
+    }
+
+    // Update device_compatibility field
+    updateCourseOffering(
+      'device_compatibility',
+      JSON.stringify(updatedDeviceCompatibilities)
+    );
+  };
+
+  // Gets the current device compatibility dropdown value
+  const getDeviceCompatibility = device => {
+    let deviceCompatibilities = courseOffering.device_compatibility;
+    return deviceCompatibilities
+      ? JSON.parse(deviceCompatibilities)[device]
+      : translatedNoneOption;
   };
 
   return (
@@ -115,6 +177,150 @@ export default function CourseOfferingEditor(props) {
           onChange={e => updateCourseOffering('assignable', e.target.checked)}
         />
       </label>
+      <h2>Curriculum Catalog Settings</h2>
+      <label>
+        Grade Levels
+        <HelpTip>
+          <p>
+            Select all recommended grade levels. Shift-click or cmd-click to
+            select multiple.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={courseOffering.grade_levels?.split(',')}
+          style={styles.dropdown}
+          onChange={e => handleMultipleSelected(e, 'grade_levels')}
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.values(StudentGradeLevels).map(level => (
+            <option key={level} value={level}>
+              {level}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Curriculum Type
+        <HelpTip>
+          <p>
+            These may not map exactly to our current curriculum model. For
+            instance, Course A is implemented as a standalong unit but will be
+            considered a Course.
+          </p>
+        </HelpTip>
+        <select
+          value={courseOffering.curriculum_type}
+          style={styles.dropdown}
+          onChange={e =>
+            updateCourseOffering('curriculum_type', e.target.value)
+          }
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.values(CourseOfferingCurriculumTypes).map(type => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Header
+        <HelpTip>
+          <p>This represents the subHeader in curriculum quick assign.</p>
+        </HelpTip>
+        <select
+          value={courseOffering.header}
+          style={styles.dropdown}
+          onChange={e => updateCourseOffering('header', e.target.value)}
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.values(CourseOfferingHeaders).map(header => (
+            <option key={header} value={header}>
+              {header}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Marketing Initiative
+        <select
+          value={courseOffering.marketing_initiative}
+          style={styles.dropdown}
+          onChange={e =>
+            updateCourseOffering('marketing_initiative', e.target.value)
+          }
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.values(CourseOfferingMarketingInitiatives).map(initiative => (
+            <option key={initiative} value={initiative}>
+              {initiative}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        CS Topic
+        <HelpTip>
+          <p>
+            Select all related CS topics. Shift-click or cmd-click to select
+            multiple.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={courseOffering.cs_topic?.split(',')}
+          style={styles.dropdown}
+          onChange={e => handleMultipleSelected(e, 'cs_topic')}
+        >
+          <option value="">{translatedNoneOption}</option>
+          {CourseOfferingCsTopics.map(topic => (
+            <option key={topic} value={topic}>
+              {translatedCourseOfferingCsTopics[topic]}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        School Subject
+        <HelpTip>
+          <p>
+            Select all related school subjects. Shift-click or cmd-click to
+            select multiple.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={courseOffering.school_subject?.split(',')}
+          style={styles.dropdown}
+          onChange={e => handleMultipleSelected(e, 'school_subject')}
+        >
+          <option value="">{translatedNoneOption}</option>
+          {CourseOfferingSchoolSubjects.map(subject => (
+            <option key={subject} value={subject}>
+              {translatedCourseOfferingSchoolSubjects[subject]}
+            </option>
+          ))}
+        </select>
+      </label>
+      <h3>Device Compatibility</h3>
+      {DeviceTypes.map(device => (
+        <label key={device}>
+          {translatedCourseOfferingDeviceTypes[device]}
+          <select
+            value={getDeviceCompatibility(device)}
+            style={styles.dropdown}
+            onChange={e => updateDeviceCompatibilities(device, e.target.value)}
+          >
+            <option value="">{translatedNoneOption}</option>
+            {DeviceCompatibilityLevels.map(compLevel => (
+              <option key={compLevel} value={compLevel}>
+                {translatedCourseOfferingDeviceCompatibilityLevels[compLevel]}
+              </option>
+            ))}
+          </select>
+        </label>
+      ))}
 
       <SaveBar
         handleSave={handleSave}
@@ -133,7 +339,14 @@ CourseOfferingEditor.propTypes = {
     is_featured: PropTypes.bool,
     category: PropTypes.string,
     display_name: PropTypes.string,
-    assignable: PropTypes.bool
+    assignable: PropTypes.bool,
+    grade_levels: PropTypes.string,
+    curriculum_type: PropTypes.string,
+    header: PropTypes.string,
+    marketing_initiative: PropTypes.string,
+    cs_topic: PropTypes.string,
+    school_subject: PropTypes.string,
+    device_compatibility: PropTypes.string
   })
 };
 

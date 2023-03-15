@@ -18,6 +18,7 @@
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
 #  properties         :text(65535)
+#  is_active          :boolean
 #
 
 require 'state_abbr'
@@ -207,9 +208,9 @@ class RegionalPartner < ApplicationRecord
               state = Geocoder.search(zip_code, params: {country: 'us'})&.first&.state_code
             end
           end
-        rescue StandardError => e
+        rescue StandardError => exception
           # Log geocoding errors to honeybadger but don't fail
-          Honeybadger.notify(e,
+          Honeybadger.notify(exception,
             error_message: 'Error geocoding regional partner workshop zip_code',
             context: {
               zip_code: zip_code

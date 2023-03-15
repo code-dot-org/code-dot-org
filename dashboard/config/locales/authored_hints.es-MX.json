@@ -3518,20 +3518,20 @@
           "courseC_PlayLab_events3_c": "Añade este bloque al bloque `cuando se ejecuta`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2018": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2019": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2020": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events5": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",
@@ -9547,8 +9547,8 @@
           "courseC_PlayLab_events3_c": "Añade este bloque al bloque `cuando se ejecuta`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",
@@ -11628,8 +11628,8 @@
           "courseC_PlayLab_events3_c": "Añade este bloque al bloque `cuando se ejecuta`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events42022": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events52022": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",

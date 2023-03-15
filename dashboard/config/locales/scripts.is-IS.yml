@@ -3116,6 +3116,12 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3214,3 +3220,13 @@ is:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök
+            lessonGroup-4:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inntök og Úttök

@@ -200,7 +200,7 @@ class LevelsController < ApplicationController
     should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
-      toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
+      toolbox_blocks = "<xml>#{blocks.join}</xml>"
     end
 
     validation = @level.respond_to?(:validation) ? @level.validation : nil
@@ -288,14 +288,19 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
 
     if @level.save
-      redirect = params["redirect"] || level_url(@level, show_callouts: 1)
+      reset = !!params[:reset]
+      redirect = if reset
+                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                 else
+                   params["redirect"] || level_url(@level, show_callouts: 1)
+                 end
       render json: {redirect: redirect}
     else
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
-  rescue ArgumentError, ActiveRecord::RecordInvalid => e
-    render status: :not_acceptable, plain: e.message
+  rescue ArgumentError, ActiveRecord::RecordInvalid => exception
+    render status: :not_acceptable, plain: exception.message
   end
 
   # POST /levels/:id/update_start_code
@@ -359,10 +364,10 @@ class LevelsController < ApplicationController
 
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
-    rescue ArgumentError => e
-      render(status: :not_acceptable, plain: e.message) && return
-    rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, plain: invalid) && return
+    rescue ArgumentError => exception
+      render(status: :not_acceptable, plain: exception.message) && return
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception) && return
     end
     if params[:do_not_redirect]
       render json: @level
@@ -439,10 +444,10 @@ class LevelsController < ApplicationController
     else
       render json: {redirect: edit_level_url(@new_level)}
     end
-  rescue ArgumentError => e
-    render(status: :not_acceptable, plain: e.message)
-  rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, plain: invalid)
+  rescue ArgumentError => exception
+    render(status: :not_acceptable, plain: exception.message)
+  rescue ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception)
   end
 
   # GET /levels/:id/embed_level
@@ -503,6 +508,9 @@ class LevelsController < ApplicationController
       {if_block_options: []},
       {place_block_options: []},
       {play_sound_options: []},
+
+      # Poetry-specific
+      {available_poems: []},
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -515,6 +523,7 @@ class LevelsController < ApplicationController
       :play_sound_options,
       :helper_libraries,
       :block_pools,
+      :available_poems
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array

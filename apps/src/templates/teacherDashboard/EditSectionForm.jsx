@@ -174,7 +174,7 @@ class EditSectionForm extends Component {
         sectionCurriculumLocalizedName: courseName,
         sectionCurriculum: courseId, //this is course Offering id
         sectionCurriculumVersionYear: versionYear,
-        sectionGrade: section.grade,
+        sectionGrade: section.grades ? section.grades[0] : null,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed
@@ -272,8 +272,8 @@ class EditSectionForm extends Component {
           />
           {section.participantType === ParticipantAudience.student && (
             <GradeField
-              value={section.grade || ''}
-              onChange={grade => editSectionProperties({grade})}
+              value={section.grades ? section.grades[0] : ''}
+              onChange={grade => editSectionProperties({grades: [grade]})}
               disabled={isSaveInProgress}
             />
           )}

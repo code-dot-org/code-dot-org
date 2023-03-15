@@ -2192,7 +2192,8 @@
           "name": "Refleksja"
         },
         "3dcc5ff1-9cad-46cc-985e-e92e1989a304": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie d Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Pętle, Instrukcje warunkowe (jeśli ... to ... w przeciwnycm razie), Wejścia i Wyjścia, Zadarzenia i Zmienne."
         },
         "5284ed91-ecd3-477a-8e48-cec21b3822f4": {
           "name": "Słownictwo kluczowe",
@@ -2740,7 +2741,8 @@
           "description": "Jeśli Twoi uczniowie czują się swobodnie z koncepcjami kodowania, spróbuj skłonić ich do tworzenia swoich projektów w innej platformie, takiej jak [Scratch](https://scratch.mit.edu/) lub [Alice](http://www.alice.org/index.php)."
         },
         "d7eee78e-d5fd-418e-9dce-3cb0f1be8122": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie F Podstaw Informatyki kliknij [here](http://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zmienne, Dane, Zdarzenia, Symulacja, Pętle, i Instrukcje warunkowe."
         },
         "b01367f6-8c61-4417-9d29-193fd67ddac0": {
           "name": "Słownictwo kluczowe"
@@ -3162,7 +3164,8 @@
           "name": "Przemyśl"
         },
         "be35b565-6d45-46fa-ae1a-c5d1aeb2f901": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie E Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zdarzenia, Wpływ informatyki, Projektowanie dla dostępnosci, Pętle, Instrukcje warunkowe (jeśli ... to), i Funkcje."
         },
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
           "name": "Słownik kluczowy: ",
@@ -6111,7 +6114,8 @@
           "name": "Refleksja"
         },
         "e79ff65f-c393-4328-8530-e40474ddbca1": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie C Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zdarzenia, Wejścia i Wyjścia, Sekwencjonowanie, Pętle, Dane i Zmienne."
         },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "name": "Dziennik",
@@ -7166,6 +7170,9 @@
             null
           ]
         },
+        "0fbb6687-edd1-44b6-b9fc-a98b0921d929": {
+          "name": "Rysowanie za pomocą komputera"
+        },
         "4b5a1abe-5e14-4ee2-989f-dce58df4d3c5": {
           "tips": [
             null
@@ -7508,6 +7515,9 @@
         "8d77cdeb-94a3-4e11-8443-6f0f4011df27": {
           "progression_name": "Dodaj tekst"
         },
+        "bff1cfcd-57b8-40c2-8eaf-ba25b654b71a": {
+          "progression_name": "Przejrzyj swoją scenę"
+        },
         "a3005adc-9fdc-44c5-b692-236229a2d521": {
           "tips": [
             null
@@ -7628,7 +7638,8 @@
         "37116129-33c9-43a6-be07-a81b0bf2f8b5": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Zaplanuj swoją scenę"
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
@@ -7638,6 +7649,9 @@
         },
         "cf6e179d-f1d7-427d-8eff-8e47893e30d3": {
           "progression_name": "Dodaj tekst"
+        },
+        "aa2fee6c-82b3-427e-98ad-61cb4bef5324": {
+          "progression_name": "Przejrzyj swoją animowaną scenę"
         },
         "40657117-7d56-4a65-b054-6e21c1ee2d40": {
           "tips": [
@@ -7791,7 +7805,8 @@
         "c0090e7c-168b-4591-9c94-d636a0033dbe": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Stwórz interaktywną kartę"
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
@@ -7901,6 +7916,9 @@
             null
           ]
         },
+        "3c60ea9f-1a3c-4317-a612-25306d8c2e11": {
+          "progression_name": "Przejrzyj swoją grę"
+        },
         "fb103c70-07e6-49be-a12a-ce480a70c199": {
           "tips": [
             null
@@ -7987,8 +8005,14 @@
             null
           ]
         },
+        "d5166021-114c-426a-b036-04fe7db2388e": {
+          "progression_name": "Zrób swoje duszki"
+        },
         "1f891879-1df5-43fa-8960-39d2465556c7": {
           "progression_name": "Ruch duszka"
+        },
+        "b7f340e2-9a25-45ae-b6cf-2c66c7974d11": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "ae1e06e8-299e-4d75-beba-a0c0bf96af15": {
           "tips": [
@@ -8100,7 +8124,8 @@
         "2f874f2f-5f9e-4d5a-a84f-61151378280c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przykładowe Gry"
         },
         "b8798164-0848-4f12-b1c2-4e41799cda93": {
           "tips": [
@@ -8120,6 +8145,9 @@
         },
         "e2bfdd8b-2cbb-41be-b227-37e15a8fef70": {
           "progression_name": "Projekt - Duszki i Interakcje"
+        },
+        "3d65a24a-c99b-400e-a632-249258bbe645": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "6a47a229-617f-41c5-a439-47dacbf2aeb4": {
           "tips": [
@@ -8154,6 +8182,9 @@
           "tips": [
             null
           ]
+        },
+        "6f6470cd-6589-428d-b3fc-30fbdd935e19": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
         },
         "cd25afa1-2718-46ab-870d-64e47ec1e98f": {
           "name": "Odkrywanie stron",
@@ -8318,10 +8349,16 @@
             null
           ]
         },
+        "a96783a3-24ab-4300-9a2d-971a7dbb6736": {
+          "progression_name": "Recenzja: HTML"
+        },
         "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15": {
           "tips": [
             null
           ]
+        },
+        "6794e1bb-c4bc-48f1-9957-438a70f052ce": {
+          "progression_name": "Przejrzyj swoją stronę"
         },
         "a92fcb8d-a3c4-4b52-ac57-33b2773a6085": {
           "name": "Dziennik"
@@ -8360,7 +8397,8 @@
         "d3fdeb5c-af82-4887-8b01-8451380d7778": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przykładowa strona internetowa"
         },
         "08c20944-96bb-4de7-b140-3eeb37a24f73": {
           "tips": [
@@ -8436,6 +8474,9 @@
             null
           ]
         },
+        "e5b8047c-d4b5-4312-9f2b-07c6d524a651": {
+          "progression_name": "Recenzja: CSS"
+        },
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
             null
@@ -8443,6 +8484,9 @@
         },
         "6fe582a0-4693-4d62-9b6c-2f9f4a753e8e": {
           "progression_name": "Dodaj styl do swojej strony"
+        },
+        "dcbcd03b-5df0-4aba-8f2d-0b90c9f30a7a": {
+          "progression_name": "Przejrzyj swoją stronę"
         },
         "93c4939e-a948-4c3a-9420-8f6fae1a712b": {
           "name": "Wzajemne opinie"
@@ -8531,6 +8575,9 @@
             null
           ]
         },
+        "7142f3bf-61aa-495e-87a3-743053edcc07": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
         "5d19329e-49ff-4735-8518-d27891d66e6b": {
           "tips": [
             null
@@ -8550,6 +8597,9 @@
           "tips": [
             null
           ]
+        },
+        "8eec073a-68eb-4b40-a842-51b58a4e1e2b": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "f458746f-0808-4e96-96d3-aaf56317b668": {
           "progression_name": "Eksploracja"
@@ -8721,6 +8771,9 @@
           "tips": [
             null
           ]
+        },
+        "50267ce0-8ebd-4e17-ad3d-5e44db1604da": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "6b2aedee-56b9-4dfe-a890-ddd497d10554": {
           "progression_name": "Eksploracja"
@@ -10170,15 +10223,24 @@
             null
           ]
         },
+        "9ff3e329-8841-4909-813d-c4b83b4fa2d5": {
+          "progression_name": "Rozpoznawanie ryb"
+        },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
           "tips": [
             null
           ]
         },
+        "5471d717-ebc3-4f44-91b5-61c6cebe964d": {
+          "progression_name": "Rozpoznawanie cech ryb"
+        },
         "0fc5594e-5acc-46b7-b061-532e27fce958": {
           "tips": [
             null
           ]
+        },
+        "514d167e-9739-4856-9308-39bce3beb983": {
+          "progression_name": "Rozpoznawanie wyrażeń"
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
           "tips": [
@@ -10295,10 +10357,16 @@
             null
           ]
         },
+        "72104e9d-9e83-4499-b7bc-4d8f201d2917": {
+          "name": "Rozpoznawanie kształtów"
+        },
         "5f3fc63f-1b69-4c63-9503-69acceb95d5f": {
           "tips": [
             null
           ]
+        },
+        "eeaf3264-8784-4ffd-982a-b01f9356dcd4": {
+          "progression_name": "Rozpoznawanie kształtów"
         },
         "a9e96adb-531c-4cc1-a706-4d3994fd5e57": {
           "tips": [
@@ -10354,7 +10422,8 @@
         "c7870490-6b34-4571-be3e-07cc39510cc1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importuj model"
         },
         "6407eeff-4883-4d4a-9541-0caa24fab54c": {
           "tips": [
@@ -10439,6 +10508,7 @@
           ]
         },
         "63de58d5-8dcb-4fff-8335-5edfa4439eee": {
+          "name": "Importowanie Twojego modelu",
           "tips": [
             null
           ]
@@ -10446,7 +10516,8 @@
         "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importowanie Twojego modelu"
         },
         "bf7d70a4-6c11-4059-b69f-7b3a7d157c91": {
           "name": "Dziennik "
@@ -10537,6 +10608,9 @@
         "48946537-7e1a-4b55-9ea6-3a7da44e2cae": {
           "name": "Dziennik "
         },
+        "5b875746-5d5a-436f-8847-fb51a2fdc84b": {
+          "progression_name": "Model Safari"
+        },
         "ced9350a-0ee3-4e2c-9cff-f60a54cc04b5": {
           "tips": [
             null
@@ -10552,6 +10626,9 @@
             null,
             null
           ]
+        },
+        "2e06a5c6-3994-467d-ab86-08d721f8a779": {
+          "progression_name": "Aplikacja Safari"
         },
         "f3f34694-9ca8-40ba-9ca5-58acb28a3d6f": {
           "name": "Dziennik"
@@ -10643,7 +10720,8 @@
           ]
         },
         "08020742-2f96-4a09-8d5a-c3034a4b8962": {
-          "name": "Ankieta"
+          "name": "Ankieta",
+          "progression_name": "Ankieta Kima"
         },
         "218c7165-58fd-4f8f-b70d-52d564cb22a6": {
           "tips": [
@@ -10690,6 +10768,9 @@
         "5d73f27a-b5a4-4f10-938e-1960f88606d9": {
           "name": "Dziennik"
         },
+        "2c99edd9-27d0-4cf3-8ea2-63466bfe5aa0": {
+          "progression_name": "Importuj swój model"
+        },
         "7bfc84f7-0e36-4c21-9018-f7466303b041": {
           "progression_name": "Dodaj powitalny ekran"
         },
@@ -10701,7 +10782,8 @@
         "4b58eb8b-402c-4927-abf9-52bcbde90aea": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przejrzyj swoją aplikację"
         },
         "d6ee6aea-6b89-488f-b9ea-e3c53aaeedec": {
           "name": "Dziennik"
@@ -19513,15 +19595,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "Rozpoznawanie ryb"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "Rozpoznawanie cech ryb"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "Rozpoznawanie wyrażeń"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -19633,10 +19724,16 @@
             null
           ]
         },
+        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
+          "name": "Rozpoznawanie kształtów"
+        },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
           "tips": [
             null
           ]
+        },
+        "d6f29378-22de-403d-955a-f8e77800dd27": {
+          "progression_name": "Rozpoznawanie kształtów"
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
           "tips": [
@@ -19692,7 +19789,8 @@
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importuj model"
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
           "tips": [
@@ -19757,9 +19855,13 @@
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "Importowanie Twojego modelu",
           "tips": [
             null
           ]
+        },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "Importowanie Twojego modelu"
         },
         "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
           "name": "Dziennik "
@@ -19847,6 +19949,9 @@
         "bcdd8b8e-db28-42f7-9ddf-d24579e170d5": {
           "name": "Dziennik "
         },
+        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
+          "progression_name": "Model Safari"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -19862,6 +19967,9 @@
             null,
             null
           ]
+        },
+        "f0652a6f-7460-4715-90e1-1a022ca38631": {
+          "progression_name": "Aplikacja Safari"
         },
         "b45bc335-aa90-474a-a72e-d53cd598287f": {
           "name": "Dziennik"
@@ -19943,7 +20051,8 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "Ankieta"
+          "name": "Ankieta",
+          "progression_name": "Ankieta Kima"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
@@ -19990,13 +20099,17 @@
         "c4594eb3-a313-4824-a608-4558d7783967": {
           "name": "Dziennik"
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "Importuj swój model"
+        },
         "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
           "progression_name": "Dodaj powitalny ekran"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przejrzyj swoją aplikację"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "Rozgrzewka"
@@ -21720,6 +21833,9 @@
             null
           ]
         },
+        "f4a90ee4-9385-4001-b025-d6a179b0db97": {
+          "name": "Rysowanie za pomocą komputera"
+        },
         "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
           "tips": [
             null
@@ -22018,6 +22134,9 @@
         "c0fc532b-e6eb-4858-af5b-5032cd917616": {
           "progression_name": "Dodaj tekst"
         },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Przejrzyj swoją scenę"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -22122,11 +22241,17 @@
             null
           ]
         },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Zaplanuj swoją scenę"
+        },
         "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
           "progression_name": "Dodaj duszki"
         },
         "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
           "progression_name": "Dodaj tekst"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Przejrzyj swoją animowaną scenę"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -22270,7 +22395,8 @@
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Stwórz interaktywną kartę"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Praca Projektowa"
@@ -22362,6 +22488,9 @@
             null
           ]
         },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "Przejrzyj swoją grę"
+        },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
             null
@@ -22433,8 +22562,14 @@
             null
           ]
         },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "Zrób swoje duszki"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "Ruch duszka"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -22538,6 +22673,9 @@
             null
           ]
         },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "Przykładowe Gry"
+        },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
             null
@@ -22548,6 +22686,9 @@
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
           "progression_name": "Projekt - Duszki i Interakcje"
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -23039,6 +23180,9 @@
             null
           ]
         },
+        "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "Odkrywanie stron",
           "tips": [
@@ -23183,6 +23327,12 @@
             null
           ]
         },
+        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
+          "progression_name": "Recenzja: HTML"
+        },
+        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
+          "progression_name": "Przejrzyj swoją stronę"
+        },
         "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
           "name": "Wzajemne opinie"
         },
@@ -23219,6 +23369,9 @@
           "tips": [
             null
           ]
+        },
+        "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
@@ -23281,8 +23434,14 @@
             null
           ]
         },
+        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
+          "progression_name": "Recenzja: CSS"
+        },
         "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
           "progression_name": "Dodaj styl do swojej strony"
+        },
+        "30535418-4101-4313-b0f2-fb2afdde6b62": {
+          "progression_name": "Przejrzyj swoją stronę"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Wzajemne opinie"
@@ -23370,6 +23529,9 @@
             null
           ]
         },
+        "890f7764-695b-4258-acbb-9b7e29804fc5": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
           "tips": [
             null
@@ -23389,6 +23551,9 @@
           "tips": [
             null
           ]
+        },
+        "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
           "progression_name": "Eksploracja"
@@ -23554,6 +23719,9 @@
         },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
           "name": "Klasy"
+        },
+        "8d36fb80-6b63-4f51-a57c-76712a9d5d7d": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
           "progression_name": "Eksploracja"

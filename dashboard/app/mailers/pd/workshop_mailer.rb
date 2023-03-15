@@ -155,9 +155,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def facilitator_post_workshop(user, workshop)
     @user = user
     @workshop = workshop
-    survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"\
-                    "&survey_data[workshop_id]=#{workshop.id}"
-    @survey_url = CDO.studio_url "form/facilitator_post_survey?#{survey_params}", CDO.default_scheme
+    survey_params = "workshop_id=#{workshop.id}"
+    @survey_url = CDO.studio_url "pd/workshop_survey/facilitator_post_foorm?#{survey_params}", CDO.default_scheme
 
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
@@ -319,7 +318,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
         "See you soon for your upcoming #{workshop.course} workshop!"
       else
         # This is sent for the first enrollment, and also for the 3-day reminder.
-        "You’re enrolled! View details for your upcoming #{workshop.course} workshop"
+        "You're enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
       'Your upcoming Code.org workshop and next steps'

@@ -27,6 +27,14 @@ const optionsList = [
     ]
   },
   {
+    name: 'local-library',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use online library file.'},
+      {value: 'true', description: 'Use local library file.'}
+    ]
+  },
+  {
     name: 'library',
     type: 'string',
     description: 'Use a specific music library file.'
@@ -37,6 +45,22 @@ const optionsList = [
     values: [
       {value: 'false', description: "Don't show upload option."},
       {value: 'true', description: 'Show upload option.'}
+    ]
+  },
+  {
+    name: 'show-instructions',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't show instructions."},
+      {value: 'true', description: 'Show instructions.'}
+    ]
+  },
+  {
+    name: 'show-video',
+    type: 'radio',
+    values: [
+      {value: 'false', description: "Don't show video."},
+      {value: 'true', description: 'Show video.'}
     ]
   }
 ];

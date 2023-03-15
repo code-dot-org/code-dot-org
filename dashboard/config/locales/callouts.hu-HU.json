@@ -1457,6 +1457,9 @@
         "courseF_bee_functions_challenge1": {
           "courseF_bee_functions_challenge1_1": "Milyen kódot kell beírnod ebbe a függvénybe?",
           "courseF_bee_functions_challenge1_2": "Az \"nektár vagy méz ellenőrzése” függvényt felhasználhatod, ha átszerkeszted kicsit, hogy képes legyen több mézet is készíteni."
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "Kattints a \"szerkesztés” gombra a függvény frissítéséhez, hogy a magasság paramétert használja."
         }
       }
     }
