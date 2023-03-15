@@ -267,6 +267,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
+
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
