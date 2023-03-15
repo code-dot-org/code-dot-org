@@ -536,6 +536,10 @@ form {
   display: flex;
   align-content: baseline;
 
+  h3 {
+    width: 100%;
+  }
+
   p.overline {
     color: $brand_primary_default;
     width: 100%;

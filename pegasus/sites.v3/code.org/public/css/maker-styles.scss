@@ -1,0 +1,19 @@
+// Custom styles for code.org/maker/index.haml
+// — supplemental to shared/css/design-system-pegasus.scss
+
+section.why-physical-computing{
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  ul.icon-bullet-list {
+
+    li {
+      width: 100%;
+    }
+  }
+}

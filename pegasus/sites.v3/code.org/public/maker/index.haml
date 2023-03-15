@@ -1,0 +1,113 @@
+---
+title: Become a Maker | Learn about Physical Computing
+theme: responsive_full_width
+---
+
+%script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
+%link{href: 'shared/css/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: '/css/generated/maker-styles.css', rel: 'stylesheet'}
+
+-# Import FontAwesome Pro
+%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
+
+-# FontAwesome icons
+- icon_microchip = "fa-solid fa-microchip"
+- icon_hands_clapping = "fa-solid fa-hands-clapping"
+- icon_face_smile = "fa-solid fa-face-smile"
+
+%section.hero-banner-basic{style: "background: #00736E"}
+  .wrapper
+    .text-wrapper.col-40
+      %h1{style: "color: white"} Become a Maker
+      %p{style: "color: white"} Explore your creativity with physical computing.
+    .clear
+    %img{src: "/images/maker/maker-banner-image.svg", alt: ""}
+
+%section
+  .wrapper
+    %h2 What is a Maker?
+    %p Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more. Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking.
+
+-#
+  = view :section_divider_line
+
+%section
+  .wrapper
+    %h2 Explore devices
+    %p We have curriculum options that support two different devices — see available options below. <strong>Need a device?</strong> Explore details of each device by clicking <em>Learn more about the device</em> below.
+    = view :maker_devices
+
+%section.bg-neutral-light.why-physical-computing
+  .wrapper
+    %h2 Why physical computing?
+    %p Learning about physical computing requires time on and off the computer. As a result of this different learning dynamic, there are some unique benefits of learning computer science through physical computing.
+    %div.flex-container
+      %ul.icon-bullet-list.col-45
+        %li
+          %div
+            %i{class: "#{icon_microchip}"}
+          .text-wrapper
+            %h3 Real-world applications
+            %p Using a physical device can help students engage and connect the actions on a screen to their impact in the real world.
+        %li
+          %div
+            %i{class: "#{icon_hands_clapping}"}
+          .text-wrapper
+            %h3 Inclusion and engagement
+            %p According to a BBC survey, female students described feeling more confident after exposure to physical computing.
+        %li
+          %div
+            %i{class: "#{icon_face_smile}"}
+          .text-wrapper
+            %h3 Social and emotional learning
+            %p Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning. (<a href="https://www.microsoft.com/en-us/research/uploads/prod/2020/04/physical-computing.pdf" target="_blank" rel="noopener noreferrer">Source</a>)
+      %figure.col-50
+        %img{src: "/images/maker/maker-girls-with-devices.png", alt: "", style: "width: 100%"}
+    .clear
+
+%section
+  .wrapper
+    %h2 Curriculum using the Circuit Playground
+    = view :maker_curriculum_circuit_playground
+
+-#
+  = view :section_divider_line
+
+%section
+  .wrapper
+    %h2 Curriculum using the micro:bit
+    = view :maker_curriculum_microbit
+
+%section.bg-neutral-light
+  .wrapper
+    %div.col-45{style: "margin-bottom: 1em"}
+      %h2 Maker careers
+      %h3 Meet Jerome Morrison at Meow Wolf
+      %p Jerome is a design technologist at Meow Wolf who works on amazing interactive art installations. With technology, he helps create portals to imaginative worlds at Meow Wolf's location in Santa Fe, New Mexico.
+    %div.col-50{style: "float: right"}
+      %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dhvQ7L5UScs", title: "Careers with Computer Science: Design Technologist at Meow Wolf", allowfullscreen: "true", frameborder: "0"}
+    .clear
+
+%section
+  .wrapper
+    %h2 Additional activities
+    .action-block.action-block--two-col
+      %img{src: "/shared/images/announcement/announcement_special_hoc2022.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %p <strong>Looking for more activity options?</strong>
+        %p There are many Maker activities available in the Hour of Code activities list.
+        %a{href: "/learn?platform=robotics", class: "link-button", target: "_blank", rel: "noopener noreferrer"} Find an activity
+  .clear
+
+-#
+  = view :section_divider_line
+
+%section
+  .wrapper
+    %h2 Subscribe to the latest news
+    %p Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker.
+    %iframe.col-50{:allowtransparency => "true", :frameborder => "0", :height => "450", :scrolling => "yes", :src => "http://go.pardot.com/l/153401/2023-01-10/pqf2sr", :style => "overflow:hidden; float: none", :type => "text/html", :width => "100%"}
+
+= view :visit_partial_event_logger
