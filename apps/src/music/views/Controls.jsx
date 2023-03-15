@@ -65,13 +65,6 @@ const Controls = ({
     </div>
   );
 
-  const documentationLinkIconSection = renderIconButton(
-    'question-circle-o',
-    () => {
-      analyticsReporter.onButtonClicked('documentation-link');
-      window.open(documentationUrl, '_blank', 'noopener,noreferrer');
-    }
-  );
   const beatPadIconSection = renderIconButton('th', () => {
     analyticsReporter.onButtonClicked('show-hide-beatpad', {
       showing: !isShowingBeatPad
@@ -99,7 +92,19 @@ const Controls = ({
           className={moduleStyles.iconButton}
         />
       </div>
-      {documentationLinkIconSection}
+      <div
+        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
+      >
+        <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
+          <FontAwesome
+            icon={'question-circle-o'}
+            className={classNames(
+              moduleStyles.iconButton,
+              moduleStyles.iconButtonLink
+            )}
+          />
+        </a>
+      </div>
       {rightIcon}
     </div>
   );
