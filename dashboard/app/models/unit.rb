@@ -514,8 +514,8 @@ class Unit < ApplicationRecord
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?
     level
-  rescue => e
-    raise e, "Error finding level #{level_identifier}: #{e}"
+  rescue => exception
+    raise exception, "Error finding level #{level_identifier}: #{exception}"
   end
 
   def cached
@@ -1243,10 +1243,10 @@ class Unit < ApplicationRecord
 
         copied_unit
       end
-    rescue => e
+    rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
       File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
-      raise e, "Error: #{e.message}"
+      raise exception, "Error: #{exception.message}"
     end
   end
 
@@ -1345,8 +1345,8 @@ class Unit < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         Unit.merge_and_write_i18n(i18n, unit_name, metadata_i18n, log_event_type: 'write_script')
       end
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
     update_teacher_resources(general_params[:resourceIds])
@@ -1359,8 +1359,8 @@ class Unit < ApplicationRecord
         unit.write_script_json
       end
       true
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
   end

@@ -415,8 +415,8 @@ class FilesApi < Sinatra::Base
     if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
-      rescue OpenURI::HTTPError => e
-        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      rescue OpenURI::HTTPError => exception
+        return file_too_large(endpoint) if exception.message == "414 Request-URI Too Large"
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
