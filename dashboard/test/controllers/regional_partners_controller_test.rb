@@ -47,7 +47,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   test 'create regional partner creates regional partner' do
     sign_in @workshop_admin
     assert_creates RegionalPartner do
-      post :create, params: {regional_partner: {name: "Test Regional Partner"}}
+      post :create, params: {regional_partner: {name: "Test Regional Partner", is_active: true}}
     end
     regional_partner = RegionalPartner.last
     assert_redirected_to regional_partner
@@ -61,6 +61,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     end
     assert_template :new
     assert_select '#error_explanation > ul > li', text: 'Phone number is invalid'
+    assert_select '#error_explanation > ul > li', text: 'Is active is not included in the list'
   end
 
   test 'update regional partner updates regional partner' do

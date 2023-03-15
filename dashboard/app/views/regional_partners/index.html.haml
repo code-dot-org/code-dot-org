@@ -48,4 +48,4 @@
           %td= regional_partner.contact_email_with_backup
           - if can? :update, regional_partner
             %td= link_to t('crud.edit'), edit_regional_partner_path(regional_partner)
-            %td= link_to t('crud.show'), @regional_partner
+            %td= link_to t('crud.show'), regional_partner
