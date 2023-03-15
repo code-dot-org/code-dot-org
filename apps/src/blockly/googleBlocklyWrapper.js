@@ -500,7 +500,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
 
     createReadOnlyBlockSpace: (container, xml, options) => {
-      const theme = cdoUtils.chooseTheme(options.theme);
+      const theme = cdoUtils.getUserTheme(options.theme);
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
         theme: theme,
@@ -557,7 +557,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: cdoUtils.chooseTheme(opt_options.theme),
+      theme: cdoUtils.getUserTheme(opt_options.theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,

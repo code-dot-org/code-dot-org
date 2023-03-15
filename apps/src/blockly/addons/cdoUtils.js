@@ -99,6 +99,6 @@ export function getField(type) {
  * @returns {?Blockly.Field}
  */
 // Users can change their active theme using the context menu. Use this setting, if present.
-export function chooseTheme(themeOption) {
+export function getUserTheme(themeOption) {
   return Blockly.themes[localStorage.blocklyTheme] || themeOption || cdoTheme;
 }
