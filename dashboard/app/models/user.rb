@@ -85,6 +85,13 @@ class User < ApplicationRecord
   include UserPermissionGrantee
   include PartialRegistration
   include Rails.application.routes.url_helpers
+  include GraphqlRails::Model
+
+  graphql do |c|
+    # most common attributes, like :id, :name, :title has default type, so you don't have to specify it (but you can!)
+    c.attribute(:id)
+    c.attribute(:email).type('String')
+  end
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
