@@ -68,6 +68,25 @@ section.bg-secondary { background-color: $brand_secondary_light; }
   -webkit-font-smoothing: antialiased;
 }
 
+// Line divider for use between sections
+// Use .no-margin-bottom to remove extra space above
+// a section that starts with an h2
+div.divider {
+  max-width: 960px;
+  margin: 1em auto 0;
+
+  @media screen and (max-width: $width-md) {
+    padding: 0 2em;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid $neutral_dark60;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 // Paragraphs
 p {
   color: $neutral-dark;
@@ -513,13 +532,15 @@ form {
 
 .action-block__wrapper--three-col {
   justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 960px;
 
   & > .action-block--one-col {
     width: 32%;
+    margin-top: 1.25em;
 
     @media screen and (max-width: $width-md) {
       width: 49%;
-      margin-top: 1em;
     }
 
     @media screen and (max-width: $width-sm) {
@@ -710,5 +731,18 @@ form {
       background: none;
       border: none;
     }
+  }
+}
+
+// Video series
+// - see example: code.org/blockchain
+.video-series {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  figure {
+    width: 49%;
+    margin-top: 1.25em;
   }
 }
