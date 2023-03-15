@@ -267,6 +267,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
+
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -500,9 +501,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
 
     createReadOnlyBlockSpace: (container, xml, options) => {
+      const theme = cdoUtils.getUserTheme(options.theme);
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: options.theme || CdoTheme,
+        theme: theme,
         plugins: {},
         RTL: options.rtl
       });
@@ -513,7 +515,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: 'geras-renderer modern-theme readOnlyBlockSpace'
+          class: 'geras-renderer modern-theme readOnlyBlockSpace injectionDiv'
         },
         null
       );
@@ -548,6 +550,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         'style',
         `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
       );
+      workspace.setTheme(theme);
       return workspace;
     }
   };
@@ -555,7 +558,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: opt_options.theme || CdoTheme,
+      theme: cdoUtils.getUserTheme(opt_options.theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -572,11 +575,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       renderer: opt_options.renderer || 'cdo_renderer',
       comments: false
     };
-    // Users can change their active theme using the context menu. Use this setting, if present.
-    // Music Lab doesn't look good without its custom theme, so we prevent others from being used.
-    if (localStorage.blocklyTheme) {
-      options.theme = this.themes[localStorage.blocklyTheme] || options.theme;
-    }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-13 17:39:29 UTC",
+    "serialized_at": "2023-03-15 00:39:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3214,7 +3214,7 @@
       "key": "d1c9ed2c-04bf-454a-9fbc-60403662fdd3",
       "position": 2,
       "properties": {
-        "description": "You've learned how to do some really cool things in Game Lab. Today you'll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else's idea, you get to come up with an idea of your own. Your robot face can be as creative as you want since you can add lots of unique and different features from the shape of its head to the number of eyes or mouths or if it has antennas … the sky’s the limit so it's time to get creative!\n",
+        "description": "You've learned how to do some really cool things in Game Lab. Today you'll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else's idea, you get to come up with an idea of your own. Your robot face can be as creative as you want since you can add lots of unique and different features from the shape of its head to the number of eyes or mouths or if it has antennas … the sky’s the limit, so it's time to get creative!\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3337,7 +3337,7 @@
       "key": "1e934931-bc5e-45b6-b064-756f73811322",
       "position": 8,
       "properties": {
-        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. They will have a chance to review all of the blocks they have learned before they start on their robot faces, as some may help them create the features of their robot faces and features. They can complete these activities as a review or use them as resources while they work on their projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
+        "description": "After you have checked the designs, allow students to log into Code Studio and code their programs. They will have a chance to review all of the blocks they have learned before they start on their robot faces, as some may help them create the features of their robot faces. They can complete these activities as a review or use them as resources while they work on their projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio. \n",
         "progression_name": "Review Shape Blocks"
       },
       "seeding_key": {
@@ -3600,13 +3600,7 @@
       "position": 12,
       "properties": {
         "name": "Challenges",
-        "progression_name": "Challenges",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Level 11e - Finding an Image Online**: Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)"
-          }
-        ]
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "aedcf92f-9a8c-451c-b17c-2b9d4cef55fe",
@@ -7707,6 +7701,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd3_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -18737,6 +18734,16 @@
       }
     },
     {
+      "key": "0a840172-61ef-4be8-abc1-1f1213fe47f3",
+      "properties": {
+        "description": "Create a prototype of an animation or game design to meet the needs of a user using the problem-solving process"
+      },
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "objective.key": "0a840172-61ef-4be8-abc1-1f1213fe47f3"
+      }
+    },
+    {
       "key": "0aaeeba7-74d2-422d-b603-5b32cfdc2774",
       "properties": {
         "description": "Explain how individual programming constructs can be combined to create more complex behavior"
@@ -19079,7 +19086,7 @@
     {
       "key": "bfe358fc-38a1-4001-b4d1-5c61972d301b",
       "properties": {
-        "description": "Create a prototype of an animation or game design to meet the needs of a user "
+        "description": "Understand the steps of the problem-solving process "
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -19599,7 +19606,7 @@
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
+        "standard.shortcode": "2-AP-13"
       }
     },
     {
@@ -20097,6 +20104,27 @@
         "lesson.key": "Velocity",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
       }
     }
   ],
