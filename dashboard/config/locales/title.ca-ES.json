@@ -31,8 +31,8 @@
         "PaperPlanes_2018": "Algoritmes de la vida quotidiana: Avions de paper",
         "PlantASeed": "Algoritmes reals: Planta una llavor",
         "PlantASeed_2018": "Algoritmes reals: Planta una llavor",
-        "RelayProgramming": "Programació en relleus",
-        "RelayProgramming_2018": "Programació en relleus",
+        "RelayProgramming": "Programació amb relleus",
+        "RelayProgramming_2018": "Programació amb relleus",
         "SongwritingParameters": "Composició de cançons",
         "SongwritingWithParameters": "Composició de cançons Amb Paràmetres",
         "TangramAlgorithms": "Algoritmes de Tàngram",
@@ -45,7 +45,8 @@
         "courseC_Unplugged_ScreenOutTheMean_2018": "Activitat sense connexió",
         "courseD_unplugged_digitalCitizenship": "Activitat sense connexió",
         "courseD_unplugged_digitalCitizenship_2018": "Activitat sense connexió",
-        "courseF_unplugged_powerOfWords": "Activitat sense connexió"
+        "courseF_unplugged_powerOfWords": "Activitat sense connexió",
+        "courseE_unplugged_CnC_2018": "Compartir continguts digitals"
       }
     }
   }

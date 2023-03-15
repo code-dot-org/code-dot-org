@@ -378,6 +378,7 @@ pl:
       help_us: "Pomóż nam"
       teach: "Ucz"
       about: "O programie"
+      incubator: "Inkubator"
       legal: "Prywatność i legalność"
       legal_privacy: "Polityka prywatności"
       legal_cookie_notice: "Informacja o plikach cookie"
@@ -989,6 +990,7 @@ pl:
           age: 'Proszę określić wiek'
           abuse_type: 'Proszę odpowiedzieć, jak ta treść narusza regulamin'
           abuse_detail: 'Proszę podać szczegóły dotyczące treści, które zgłaszasz'
+          captcha: 'Wypełnij CAPTCHA, aby zgłosić tę zawartość.'
         abusive_url: 'Adres URL zgłaszanych treści'
         abuse_type:
           question: 'Jak te treści naruszają %{link_start}Terms of Service%{link_end}?'

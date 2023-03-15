@@ -42,8 +42,6 @@ class UserPermission < ApplicationRecord
     # Granted to regional partner program managers.
     # Initially has the same abilities as workshop organizer.
     PROGRAM_MANAGER = 'program_manager'.freeze,
-    # Grants access to review reported inaccuracies in census data
-    CENSUS_REVIEWER = 'census_reviewer'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
   ].freeze

@@ -7,6 +7,7 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rails-accessibility
+  - './tools/customLinters/rubocop_only_allowed_characters.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -26,20 +27,15 @@ Rails:
 
 # BEGIN CODE.ORG OVERRIDES
 
-Layout/ParameterAlignment:
-  EnforcedStyle: with_fixed_indentation
+CustomCops/OnlyAllowedCharacters:
+  Include:
+    - '**/*_mailer.rb'
 
 Layout/DotPosition:
   EnforcedStyle: trailing
 
-Style/EmptyElse:
-  EnforcedStyle: empty
-
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
-
-Style/EmptyMethod:
-  EnforcedStyle: expanded
 
 Layout/FirstParameterIndentation:
   EnforcedStyle: consistent
@@ -47,11 +43,8 @@ Layout/FirstParameterIndentation:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
-Style/NumericLiterals:
-  MinDigits: 7
-
-Style/Semicolon:
-  AllowAsExpressionSeparator: true
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
 
 Layout/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
@@ -60,12 +53,27 @@ Layout/SpaceInsideBlockBraces:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/NumericLiterals:
+  MinDigits: 7
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
 Style/WordArray:
   MinSize: 5
 
 # END CODE.ORG OVERRIDES
 
-# BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
+# BEGIN BLOCKLIST: Below are rules we don't plan to enable in the forseeable
 # future. Rules we plan to fix (but are currently failing) belong in
 # .rubocop_todo.yml.
 Metrics/BlockLength:
@@ -122,4 +130,4 @@ Style/SymbolArray:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# END BLACKLIST
+# END BLOCKLIST

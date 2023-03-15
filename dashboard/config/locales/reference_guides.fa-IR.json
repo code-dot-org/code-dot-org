@@ -74,7 +74,7 @@
           "content": ""
         },
         "csd-2022/collision-detection": {
-          "display_name": "",
+          "display_name": "تشخیص تصادم",
           "content": ""
         },
         "csd-2022/color-lights": {
@@ -102,6 +102,10 @@
           "content": ""
         },
         "csd-2022/data-and-change-events": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/debugging-html": {
           "display_name": "",
           "content": ""
         },
@@ -322,7 +326,7 @@
           "content": ""
         },
         "csd-2022/sprite-properties": {
-          "display_name": "",
+          "display_name": "ویژگی‌های اسپرایت",
           "content": ""
         },
         "csd-2022/sprites": {
@@ -395,6 +399,10 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "الگوی شمارشگر و سرعت",
+          "content": ""
+        },
+        "csd-2022/web-lab": {
+          "display_name": "آزمایشگاه شبکه",
           "content": ""
         },
         "csd-2022/when-to-make-a-function": {

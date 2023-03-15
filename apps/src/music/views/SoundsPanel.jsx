@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
+/*
+ * Renders a UI for previewing and choosing samples. This is currently used within a
+ * custom Blockly Field {@link FieldSounds}
+ */
+
 const getIcon = type => {
   const typeToIcon = {
     beat: 'volume-up',
@@ -16,6 +21,14 @@ const getIcon = type => {
 
 const getIconClassName = type => {
   return styles['icon-' + type];
+};
+
+const getLengthRepresentation = length => {
+  const lengthToSymbol = {
+    0.5: '\u00bd',
+    0.25: '\u00bc'
+  };
+  return lengthToSymbol[length] || length;
 };
 
 const SoundsPanelRow = ({
@@ -46,19 +59,24 @@ const SoundsPanelRow = ({
       </div>
       <div className={styles.soundRowMiddle}>{sound.name}</div>
       <div className={styles.soundRowRight}>
-        <FontAwesome
-          icon={'play-circle'}
-          className={classNames(
-            styles.preview,
-            isPlayingPreview && styles.previewPlaying
-          )}
-          onClick={e => {
-            if (!isPlayingPreview) {
-              onPreview(folder.path + '/' + sound.src);
-            }
-            e.stopPropagation();
-          }}
-        />
+        <div className={styles.length}>
+          {getLengthRepresentation(sound.length)}
+        </div>
+        <div className={styles.previewContainer}>
+          <FontAwesome
+            icon={'play-circle'}
+            className={classNames(
+              styles.preview,
+              isPlayingPreview && styles.previewPlaying
+            )}
+            onClick={e => {
+              if (!isPlayingPreview) {
+                onPreview(folder.path + '/' + sound.src);
+              }
+              e.stopPropagation();
+            }}
+          />
+        </div>
       </div>
     </div>
   );
@@ -84,26 +102,28 @@ const SoundsPanel = ({
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders.map((folder, folderIndex) => {
-        return (
-          <div className={styles.folder} key={folderIndex}>
-            <div className={styles.folderName}>{folder.name}</div>
-            {folder.sounds.map((sound, soundIndex) => {
-              return (
-                <SoundsPanelRow
-                  key={soundIndex}
-                  currentValue={currentValue}
-                  playingPreview={playingPreview}
-                  folder={folder}
-                  sound={sound}
-                  onSelect={onSelect}
-                  onPreview={onPreview}
-                />
-              );
-            })}
-          </div>
-        );
-      })}
+      {group.folders
+        .filter(folder => folder.type !== 'kit')
+        .map((folder, folderIndex) => {
+          return (
+            <div className={styles.folder} key={folderIndex}>
+              <div className={styles.folderName}>{folder.name}</div>
+              {folder.sounds.map((sound, soundIndex) => {
+                return (
+                  <SoundsPanelRow
+                    key={soundIndex}
+                    currentValue={currentValue}
+                    playingPreview={playingPreview}
+                    folder={folder}
+                    sound={sound}
+                    onSelect={onSelect}
+                    onPreview={onPreview}
+                  />
+                );
+              })}
+            </div>
+          );
+        })}
     </div>
   );
 };

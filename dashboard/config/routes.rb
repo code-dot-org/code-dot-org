@@ -38,7 +38,8 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
-    get "/musiclab", to: "musiclab#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
@@ -206,7 +207,6 @@ Dashboard::Application.routes.draw do
       passwords: 'passwords'
     }
     get 'discourse/sso' => 'discourse_sso#sso'
-    post '/auth/lti', to: 'lti_provider#sso'
 
     root to: "home#index"
     get '/home_insert', to: 'home#home_insert'
@@ -327,7 +327,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :course_offerings, only: [:edit, :update], param: 'key'
+    resources :course_offerings, only: [:edit, :update], param: 'key' do
+      collection do
+        get 'quick_assign_course_offerings'
+      end
+    end
 
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
@@ -564,8 +568,6 @@ Dashboard::Application.routes.draw do
     put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
     get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
     post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
-    get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
-    post '/census/review', to: 'census_reviewers#create'
 
     get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -656,7 +658,6 @@ Dashboard::Application.routes.draw do
         post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
         post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
-        post :workshop_surveys, to: 'workshop_surveys#create'
         post :teachercon_surveys, to: 'teachercon_surveys#create'
         post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
         post :international_opt_ins, to: 'international_opt_ins#create'
@@ -727,8 +728,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
-      post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
@@ -1017,6 +1017,12 @@ Dashboard::Application.routes.draw do
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
+
+    # partial ports of legacy v3 APIs
+    get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
+    delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
+    post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
+    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').

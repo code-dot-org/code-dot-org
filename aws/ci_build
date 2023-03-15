@@ -54,9 +54,10 @@ def upload_log_and_get_link(key, body, metadata)
         body,
         {metadata: metadata}
       )
-  " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+  permalink = AWS::S3.get_console_link_from_presigned(log_url)
+  " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -93,8 +94,8 @@ def build
       end
 
       result
-    rescue => e
-      CDO.backtrace e
+    rescue => exception
+      CDO.backtrace exception
     end
 
     FileUtils.rm STARTED if File.file?(STARTED)
@@ -109,8 +110,8 @@ def main
   status = 0
   log = RakeUtils.capture do
     status = build
-  rescue => e
-    status = "Error: #{e.message}\n#{CDO.backtrace e}"
+  rescue => exception
+    status = "Error: #{exception.message}\n#{CDO.backtrace exception}"
   end
   return status if status == 0 && log.empty?
 
@@ -272,9 +273,9 @@ def emit_deploy_metric(deployment_stage, successful)
       }]
     }
   )
-rescue => error
+rescue => exception
   ChatClient.log 'Unable to emit metrics', color: 'red'
-  ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
+  ChatClient.log "/quote #{exception}", color: 'gray', message_format: 'text'
 end
 
 main

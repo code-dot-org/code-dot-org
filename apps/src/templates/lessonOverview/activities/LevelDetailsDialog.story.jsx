@@ -1,8 +1,8 @@
 import React from 'react';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from './LevelDetailsDialog';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/code-studio/redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const defaultProps = {
   handleClose: () => {
@@ -128,80 +128,51 @@ const levelWithContainedLevel = {
   }
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('LevelDetailsDialog', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'StandaloneVideo',
-        story: () => (
-          <LevelDetailsDialog
-            {...defaultProps}
-            scriptLevel={standaloneVideoScriptLevel}
-          />
-        )
-      },
-      {
-        name: 'External',
-        story: () => (
-          <LevelDetailsDialog
-            {...defaultProps}
-            scriptLevel={externalMarkdownScriptLevel}
-          />
-        )
-      },
-      {
-        name: 'LevelGroup',
-        story: () => (
-          <LevelDetailsDialog
-            {...defaultProps}
-            scriptLevel={levelGroupScriptLevel}
-          />
-        )
-      },
-      {
-        name: 'BubbleChoice',
-        story: () => (
-          <LevelDetailsDialog
-            {...defaultProps}
-            scriptLevel={bubbleChoiceScriptLevel}
-          />
-        )
-      },
-      {
-        name: 'Contained Levels',
-        story: () => (
-          <Provider store={getStore()}>
-            <LevelDetailsDialog
-              {...defaultProps}
-              scriptLevel={levelWithContainedLevel}
-            />
-          </Provider>
-        )
-      },
-      {
-        name: 'TopInstructions',
-        story: () => (
-          <Provider store={getStore()}>
-            <LevelDetailsDialog
-              {...defaultProps}
-              scriptLevel={levelWithInstructions}
-            />
-          </Provider>
-        )
-      },
-      {
-        name: 'TopInstructions RTL',
-        story: () => (
-          <Provider store={getStore()}>
-            <LevelDetailsDialog
-              {...defaultProps}
-              isRtl
-              scriptLevel={levelWithInstructions}
-            />
-          </Provider>
-        )
-      }
-    ]);
+export default {
+  title: 'LevelDetailsDialog',
+  component: LevelDetailsDialog
+};
+
+const Template = args => {
+  return (
+    <Provider store={reduxStore()}>
+      <LevelDetailsDialog {...defaultProps} {...args} />
+    </Provider>
+  );
+};
+
+export const StandaloneVideoExample = Template.bind({});
+StandaloneVideoExample.args = {
+  scriptLevel: standaloneVideoScriptLevel
+};
+
+export const ExternalExample = Template.bind({});
+ExternalExample.args = {
+  scriptLevel: externalMarkdownScriptLevel
+};
+
+export const LevelGroupExample = Template.bind({});
+LevelGroupExample.args = {
+  scriptLevel: levelGroupScriptLevel
+};
+
+export const BubbleChoiceExample = Template.bind({});
+BubbleChoiceExample.args = {
+  scriptLevel: bubbleChoiceScriptLevel
+};
+
+export const ContainedExample = Template.bind({});
+ContainedExample.args = {
+  scriptLevel: levelWithContainedLevel
+};
+
+export const TopInstructionsExample = Template.bind({});
+TopInstructionsExample.args = {
+  scriptLevel: levelWithInstructions
+};
+
+export const TopInstructionsRTLExample = Template.bind({});
+TopInstructionsRTLExample.args = {
+  scriptLevel: levelWithInstructions,
+  isRtl: true
 };

@@ -1024,6 +1024,10 @@ eu:
           lessons:
             lesson-3:
               name: For begiztak
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Ausazkoa
         csp4-2023:
           lesson_groups:
             csp_variables:
