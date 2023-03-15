@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-03-13 20:41:16 UTC",
+    "serialized_at": "2023-03-14 19:40:27 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -41,9 +41,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. First, students will read and detect the mood of a famous poem. Then, they will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate new images in a poem.\n",
-        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
-        "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
+        "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. First, students will read and detect the mood of a famous poem. Then, they will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate new images in a poem.",
+        "preparation": "- Review and complete the **Animate a Poem** tutorial yourself\n- Determine in advance which levels might be challenging for students.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n#####Optional\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
+        "student_overview": "Poetry is making art with words. You will use code to add visual effects and images to animate a poem. "
       },
       "seeding_key": {
         "lesson.key": "Poem Art",
@@ -59,9 +59,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students will plan and write their own time capsule poem. Students will reflect on their life and personal experiences to select an important idea for a short poem about the current time period. Students should imagine what someone 50 years in the future would want to know about today.",
-        "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Time Capsule Poem Handout** for each student.\n",
-        "purpose": "Today you will write your own time capsule poem. As you plan, think about what someone in the future would want to learn about your life. Imagine your future grandchildren asking you what it was like when you were young. They want to see life through your eyes. Next class you will code your time capsule poem. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
+        "overview": "In this lesson, students will plan and write their own poem. Students will reflect on their life and personal experiences to select an important idea for a short poem that they can animate. In the next lesson, students will code their poems, so it is important that they have drafted a short poem.",
+        "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Poem Handout** for each student.\n",
+        "student_overview": "Today you will write your own poem. As you plan, think about what topics are important to you. What do you want to share with readers?. Next class you will code your poem. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
       },
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
@@ -78,7 +78,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students will warm up by reading time capsule poem examples. Then they will start coding their own time capsule poems. Students will use the “Enter My Own” feature to input their completed poems from the handout they completed last class. Last, students will use code blocks to animate and enhance their projects. To do so, they will review the skills they learned in Lesson 1.",
-        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Make sure students have their Write Your Time Capsule Poem handout from last class.\n- Print one ***[Time Capsule Poem Checklist](https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview)** for each student.\n- Consider the need for headphones if students plan to add sounds to their projects\n- Create your own time capsule poem as an example for students\n\n",
+        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Make sure students have their Write Your Time Capsule Poem handout from last class.\n- Print one ***[Code Your Own Poem Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview)** for each student.\n- Consider the need for headphones if students plan to add sounds to their projects\n- Create your own time capsule poem as an example for students\n\n",
         "purpose": "Students will be able to personalize their poems by choosing what effects they want to add to their programs. They will curate their projects according to their own interests and personal experiences.\n",
         "student_overview": "Today, you will be able to personalize your poem by choosing what effects you want to add to your time capsule. "
       },
@@ -96,7 +96,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Note:** This is an **optional** lesson in the module.\n\nIn this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
+        "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
         "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
         "student_overview": "Share your new poem apps with your friends! "
       },
@@ -126,7 +126,7 @@
       "key": "c54ef9e6-6b5a-481e-b77d-7e446171e8b0",
       "position": 2,
       "properties": {
-        "duration": 45,
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -458,7 +458,7 @@
       "key": "de9f9de3-8721-41e9-a96b-5ca3bb25041f",
       "position": 3,
       "properties": {
-        "description": "You have two sticky notes. On one, write one thing you learned about coding today. \nOn the second, write one thing you learned about poetry today. \n\nLet’s share with the whole class by raising your hand to answer this question: What else do you hope you can learn about coding and computer science next? ",
+        "description": "You have two sticky notes. On one, write one thing you learned about coding today. On the second, write one thing you learned about poetry today. \n\nLet’s share with the whole class by raising your hand to answer this question: What else do you hope you can learn about coding and computer science next? ",
         "remarks": true
       },
       "seeding_key": {
@@ -467,11 +467,22 @@
       }
     },
     {
-      "key": "aa2b8af4-d941-4f4b-8b5c-2b0462df453e",
+      "key": "08a4766f-c941-4770-9bb4-019389604584",
       "position": 1,
       "properties": {
-        "description": "Last time, you learned how to code another person’s Time Capsule poem. Today,  you will write your own Time Capsule poem. First, let’s get inspired and look at some of the ways time capsules have changed over time. What are some of the pros and cons of using each of these different kinds of time capsules? ",
-        "name": "Unique Time Capsules",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discussion Goal**: Use this warm-up activity to activate prior knowledge and discuss why we write poetry. This discussion should get students ready to write their own poems later in the lesson.\n",
+        "name": "Writing a Poem"
+      },
+      "seeding_key": {
+        "activity_section.key": "08a4766f-c941-4770-9bb4-019389604584",
+        "lesson_activity.key": "f3ff3f84-baa4-4480-9970-252a7478e738"
+      }
+    },
+    {
+      "key": "aa2b8af4-d941-4f4b-8b5c-2b0462df453e",
+      "position": 2,
+      "properties": {
+        "description": "Last time, we learned how to detect the mood of a poem and use code to animate it. In that activity, you chose another author’s poem to animate. Today, you’re going to write your own poems and think about what blocks you would use to animate the words of your poem on the screen. Next class, you’ll get to animate your poem using what you know about coding effects, sprites, and events.\n\nBefore we start writing our own poems, let’s think back to the activity we did last class.\n\n- _Why do we write poetry?_\n- _What are some of your favorite poems from the last lesson?_\n- _What makes a good poem?_\n",
         "remarks": true
       },
       "seeding_key": {
@@ -480,21 +491,10 @@
       }
     },
     {
-      "key": "08a4766f-c941-4770-9bb4-019389604584",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "08a4766f-c941-4770-9bb4-019389604584",
-        "lesson_activity.key": "f3ff3f84-baa4-4480-9970-252a7478e738"
-      }
-    },
-    {
       "key": "8e76a45c-4ef0-49db-9839-ed7e5323a7f1",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: _What are the pros and cons of using computer science to create a time capsule?_ \n\n**Discussion Goal**: The purpose of this warm up question is to shift student thinking to computer science and this specific project. Students should activate background knowledge from Lesson 1 – computer science is a powerful tool for a time capsule because you can add complexity and details to really bring it to life. Reading a poem becomes an immersive experience when you use computer science."
+        "description": "**Discussion Goal:** Encourage students to come up with answers like “poetry is making art with words” or “we write poetry to express a feeling.” While discussing what students like about certain poems, encourage students to talk about the way the poem made them feel or what images came to mind while they read the poem. While discussing what makes a good poem, ask students if poems need to rhyme or be a certain length. Can a good poem make you laugh? Look for answers like “a good poem is one that uses your imagination” or “a good poem makes you feel something.”\n"
       },
       "seeding_key": {
         "activity_section.key": "8e76a45c-4ef0-49db-9839-ed7e5323a7f1",
@@ -502,12 +502,13 @@
       }
     },
     {
-      "key": "e7e8f171-2b17-44fe-b968-01122af2c366",
+      "key": "1d723fa3-6aec-4dd5-a864-ee117b0272e8",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss\" slide\n\n**Discuss:** _What are the pros and cons of using computer science to create a poem?_\n\n**Discussion Goal:** The purpose of this warm-up question is to shift student thinking to computer science and this specific project. Students should activate background knowledge from Lesson 1 – computer science is a powerful tool for coding a poem because you can add complexity and details to really bring it to life. Reading a poem becomes an immersive experience when you use computer science.\n"
       },
       "seeding_key": {
-        "activity_section.key": "e7e8f171-2b17-44fe-b968-01122af2c366",
+        "activity_section.key": "1d723fa3-6aec-4dd5-a864-ee117b0272e8",
         "lesson_activity.key": "f3ff3f84-baa4-4480-9970-252a7478e738"
       }
     },
@@ -528,12 +529,23 @@
       }
     },
     {
-      "key": "e650d5df-ec03-4080-870f-70516508f4ec",
+      "key": "ebbed86c-9d52-42cd-ba0b-658476a564df",
       "position": 1,
       "properties": {
-        "description": " Now that we have some inspiration, let’s use this graphic organizer to plan your Time Capsule poem. You will find a partner to help you brainstorm what your poem will say. Remember that a poem is made up of several lines that can rhyme but don't have to. Use the sentence stems or “grab bag questions” to get started. \n\nWhen you’re brainstorming, it’s helpful to write down as many ideas as you can think of. Then, when all your ideas are on paper, choose the best ones and use that in your final version. Let’s get started. On the count of three, you will find your partner and begin. 1…2…3. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  \"Plan Your Poem: Sentence Stems\" slide or \"Plan Your Poem: Topics\" slide\n",
         "duration": "10",
-        "name": "Brainstorming",
+        "name": "Brainstorming"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebbed86c-9d52-42cd-ba0b-658476a564df",
+        "lesson_activity.key": "e9cbffab-836c-44c6-91e3-fe51eb49cd13"
+      }
+    },
+    {
+      "key": "e650d5df-ec03-4080-870f-70516508f4ec",
+      "position": 2,
+      "properties": {
+        "description": "Now that we have some inspiration, we’ll use a graphic organizer to plan our poems. You will find a partner to help you brainstorm what your poem will say. Remember that a poem is made up of several lines that can rhyme but don't have to. Use the sentence stems or poetry topics to get started.\n\nWhen you’re brainstorming, it’s helpful to write down as many ideas as you can think of. Then, when all your ideas are on paper, choose the best ones and use that in your final version. Let’s get started. On the count of three, you will find your partner and begin. 1…2…3.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -543,9 +555,9 @@
     },
     {
       "key": "34ce2240-3936-4e06-9ed1-7f877e98d742",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Plan Your Time Capsule Poem: Sentence Stems\" slide or \"Plan Your Time Capsule Poem: Question Grab Bag\" slide\n\n**Do this**: Have students pair up with a partner and read through the brainstorming questions. Students should tell their partner which questions they are going to pick and how they are going to answer those questions.\n\n***Sentence Stems:*** Have students answer all 7 sentence stems.\n\n***Question Grab Bag:*** Have students choose 1 or 2 questions from each section (Me, My Community, and My World). They should answer 3-6 questions in total.\n\nOnce students have had a chance to discuss with a partner, pass out the brainstorming handout. "
+        "description": "**Do this**:  Give each student a Write My Own Poem handout. Have students pair up with a partner and read through the handout. Students should discuss with their partner how they are going to answer the questions before they begin writing.\n\n***Sentence Stems:*** Have students answer all 8 sentence stems.\n\n***Poetry Topics:*** Have students choose 1 topic and draft a poem on the lines below."
       },
       "seeding_key": {
         "activity_section.key": "34ce2240-3936-4e06-9ed1-7f877e98d742",
@@ -554,9 +566,9 @@
     },
     {
       "key": "63a8df80-5449-402f-ada3-514840f5b47c",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "***Me:***\n- _I love to…._\n- _I just learned…_\n- _I’m thinking about…_\n\n***My community:***\n- _In my neighborhood…_\n- _People I know like to…_\n\n***My world:***\n- _Something happening right now is…_\n- _…is something popular._",
+        "description": "- _I love to…_\n- _I feel happy when…_\n- _Someone special is…_\n- _My favorite time of day is…_\n- _My favorite spot is…_\n- _I know how to…_\n- _I want to learn…_\n- _One day, I will…_",
         "name": "Sentence Stems"
       },
       "seeding_key": {
@@ -566,10 +578,10 @@
     },
     {
       "key": "2f14b146-337f-4c9b-85d4-b5032d0b6291",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "***Me:***\n- _What is your favorite thing to do?_\n- _What is something you have recently learned how to do?_\n- _What do you like to talk about?_\n- _What is something you worry about?_\n- _What is an accomplishment you are proud of?_\n\n***My Community:***\n- _What do people around you like to do?_\n- _What is something your class has accomplished?_\n- _What is something happening in your neighborhood or school that you want others to know about?_\n- _What is something special about where you live?_\n\n***My World:***\n- _What is an event that is happening in the world today?_\n- _What is something popular?_\n- _What is different about this year from last year?_\n- _What is something new that was recently invented or discovered?_\n",
-        "name": "Question Grab Bag"
+        "description": "_You can write about:_  \n1. _The best day ever_\n2. _A happy memory_\n3. _A sad memory_\n4. _Your favorite food_\n5. _A dream_\n6. _A topic of your choice_\n",
+        "name": "Poetry Topics"
       },
       "seeding_key": {
         "activity_section.key": "2f14b146-337f-4c9b-85d4-b5032d0b6291",
@@ -578,7 +590,7 @@
     },
     {
       "key": "8c133a86-8097-4356-9f81-1caa501a07d8",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Unplugged Activity"
       },
@@ -589,12 +601,12 @@
     },
     {
       "key": "5e0ddc43-3c1c-4f35-a143-0363caba2bf7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As students are discussing in pairs, walk around the room and notice how they are engaging with each other. What are they saying? How do their lives compare to one another?\n\nMake sure students are actively listening to one another and responding to each question. Remind students that this activity serves as the foundation for their time capsule stories."
+            "markdown": "As students are discussing in pairs, walk around the room and notice how they are engaging with each other. \n\nMake sure students are actively listening to one another and planning a response to each question. Remind students that this activity serves as the foundation for their poems.\n"
           }
         ]
       },
@@ -604,12 +616,35 @@
       }
     },
     {
-      "key": "3a652598-cf63-4947-a18d-e061b8ea0b78",
-      "position": 7,
+      "key": "b0fcdd5c-80a1-43e0-a3c6-29a6f915cd9b",
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule Poem” slide\n\n**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their time capsule poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their time capsule poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule poem?_\n\n- _What **text effects** might go with your time capsule poem?_\n\n- _What **sounds** might go with your time capsule poem?_\n\n- _What **sprites** might go with your time capsule poem?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Own Poem” slide\n",
         "duration": "20",
-        "name": "Write Your Time Capsule Poem"
+        "name": "Write Your Own Poem"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0fcdd5c-80a1-43e0-a3c6-29a6f915cd9b",
+        "lesson_activity.key": "e9cbffab-836c-44c6-91e3-fe51eb49cd13"
+      }
+    },
+    {
+      "key": "0bc81311-f866-41f7-b704-dc3dfa994528",
+      "position": 9,
+      "properties": {
+        "description": "Now it’s time for us to write our own poems. Use the sentence stems or choose one of the topics listed and write a poem about it that is between three and seven lines long. Use descriptive language to paint a picture in the reader’s mind.\n\nTake 10 minutes to write your poem. The timer starts now.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0bc81311-f866-41f7-b704-dc3dfa994528",
+        "lesson_activity.key": "e9cbffab-836c-44c6-91e3-fe51eb49cd13"
+      }
+    },
+    {
+      "key": "3a652598-cf63-4947-a18d-e061b8ea0b78",
+      "position": 10,
+      "properties": {
+        "description": "**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Circulate:** While students are writing their poems, circulate the room to see who might need extra help getting started. Here are some guiding questions to help a student who feels stuck:\n\n- Are any of these topics interesting to you?\n- Could you describe some of the things that come to mind when you think about the topic?\n\nEncourage a student who is stuck to write down all the words that come to mind. They can edit later.\n\n**Regroup:** Have students pause and make sure they give their poem a title before continuing.\n"
       },
       "seeding_key": {
         "activity_section.key": "3a652598-cf63-4947-a18d-e061b8ea0b78",
@@ -617,13 +652,24 @@
       }
     },
     {
+      "key": "bf6156f8-6307-4af9-8f3a-53c3633a1002",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” and “Bring Your Poem to Life” slides \n\n- _What **background** might go with your time capsule poem?_\n\n- _What **text effects** might go with your time capsule poem?_\n\n- _What **sounds** might go with your time capsule poem?_\n\n- _What **sprites** might go with your time capsule poem?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf6156f8-6307-4af9-8f3a-53c3633a1002",
+        "lesson_activity.key": "e9cbffab-836c-44c6-91e3-fe51eb49cd13"
+      }
+    },
+    {
       "key": "665743fa-bed1-498f-bfb5-feb2b6baf6c0",
-      "position": 8,
+      "position": 12,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students read over their poem a few times to help them imagine how it would look with visual effects and images. If students are having trouble thinking of words or phrases to animate, have them reflect on the examples they saw in the Poem Art lesson."
+            "markdown": "Have students read over their poem a few times to help them imagine how it would look with visual effects and images. If students are having trouble thinking of words or phrases to animate, have them reflect on the examples they saw in the previous lesson."
           }
         ]
       },
@@ -636,7 +682,7 @@
       "key": "2522adc1-9ff5-4d94-a789-85795f238c16",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your poem to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital time capsule. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your poem to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital poem app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -691,7 +737,7 @@
       "key": "dbc698a1-7ac4-4226-9347-749ad12885ac",
       "position": 2,
       "properties": {
-        "description": "Now it is time to start coding our time capsule poems. You are going to take the poem you wrote last class and code it as a time capsule app. As you add blocks to your program, refer to your completed handout to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go to the choice level in this lesson to refresh your skills.\n\nAs you work, make sure to reference your [Time Capsule Poem Checklist](https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview) to make sure that your app meets all of the requirements.",
+        "description": "Now it is time to start coding our time capsule poems. You are going to take the poem you wrote last class and code it as a time capsule app. As you add blocks to your program, refer to your completed handout to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go to the choice level in this lesson to refresh your skills.\n\nAs you work, make sure to reference your [Code Your Own Poem Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview) to make sure that your app meets all of the requirements.",
         "remarks": true
       },
       "seeding_key": {
@@ -703,7 +749,7 @@
       "key": "58facfa2-d6e2-48c8-8a9b-42e9e3e95730",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule poem. Students should use their Write Your Time Capsule Poem handout and Time Capsule Poem Checklist as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule poems. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their time capsule poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short [video](https://www.youtube.com/watch?v=oKPgbzdpTSA) explanation before beginning.\n\n\n",
+        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule poem. Students should use their Write Your Own Poem handout and Code Your Own Checklist as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule poems. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their time capsule poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short [video](https://www.youtube.com/watch?v=oKPgbzdpTSA) explanation before beginning.\n\n\n",
         "progression_name": "My Time Capsule"
       },
       "seeding_key": {
@@ -927,6 +973,16 @@
       }
     },
     {
+      "key": "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0",
+        "lesson_activity.key": "6974a2ee-1e66-4ea4-8a37-6e1f5eebdc42"
+      }
+    },
+    {
       "key": "2dcbda3b-7097-42b0-89d1-84091d493be7",
       "position": 1,
       "properties": {
@@ -948,7 +1004,7 @@
       "key": "cc314410-d132-409f-b998-ae854e485b82",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Poetry Circle” slide\n\n**Do This:** Read the Poetry Circle slide aloud. Ask one student to volunteer to share their poem app with the class. \n\n**Display:** Project the student volunteer’s poem app \n\n**Do This:** Have the rest of the class vote on options to create a new \"class generated\" poem. Have the volunteer student read their original poem aloud. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Class Discussion\" slide.\n\n**Discuss:**\n\n- For the Class Discussion:\n  -  *Which word changed the meaning or feeling of the poem the most?* \n  -  *How did the visuals or the audio contribute to the poem’s mood?* \n\n- For the poet/programmer\n  - *Did the class interact with your app in the way you predicted?*\n  - *Is there anything you still need to debug or change?*\n\n**Discussion Goal:** This is a final wrap-up of the Computer Science and Poetry Unit. Students should understand how specific word choices shape the meaning or tone of a poem. They should also be able to make connections between the content of the poem and the visual and audio effects used.  \n\n[Optional] **Do This:** If you have time, ask for more student volunteers to share their apps and repeat the class discussion. \n\n\n"
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Poetry Circle” slide\n\n**Do This:** Read the Poetry Circle slide aloud. Ask one student to volunteer to share their poem app with the class. \n\n**Display:** Project the student volunteer’s poem app \n\n**Do This:** Have the rest of the class vote on options to create a new \"class generated\" poem. Have the volunteer student read their original poem aloud. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Class Discussion\" slide.\n\n**Discuss:**\n\n- For the Class Discussion:\n  -  *Which word changed the meaning or feeling of the poem the most?* \n  -  *How did the visuals or the audio contribute to the poem’s mood?* \n\n- For the poet/programmer\n  - *Did the class interact with your app in the way you predicted?*\n  - *Is there anything you still need to debug or change?*\n\n**Discussion Goal:** This is a final wrap-up of the Coding with Poetry Unit. Students should understand how specific word choices shape the meaning or tone of a poem. They should also be able to make connections between the content of the poem and the visual and audio effects used. \n\n[Optional] **Do This:** If you have time, ask for more student volunteers to share their apps and repeat the class discussion. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "cc314410-d132-409f-b998-ae854e485b82",
@@ -1249,6 +1305,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_l3_finish up_ -l3"
+        ],
         "progression": "My Time Capsule"
       },
       "bonus": false,
@@ -1271,6 +1330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_choice_lesson_3_ -l3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1317,15 +1379,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_modeling_exemple_2023"
-        ],
         "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetry_module_modeling_exemple_2023"
+          "poetry_circle_example_2023"
         ],
         "lesson.key": "Poetry Circle",
         "lesson_group.key": "",
@@ -1333,7 +1392,28 @@
         "activity_section.key": "2f6b0e78-8580-4da8-bf5f-f425eff9b958"
       },
       "level_keys": [
-        "poetry_module_modeling_exemple_2023"
+        "poetry_circle_example_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_codingwithpoetry_markdown_lesson_4"
+        ],
+        "lesson.key": "Poetry Circle",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023",
+        "activity_section.key": "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0"
+      },
+      "level_keys": [
+        "csc_codingwithpoetry_markdown_lesson_4"
       ]
     }
   ],
@@ -1496,14 +1576,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_module_modeling_exemple_2023",
+        "level.key": "poetry_circle_example_2023",
         "script_level.level_keys": [
-          "poetry_module_modeling_exemple_2023"
+          "poetry_circle_example_2023"
         ],
         "lesson.key": "Poetry Circle",
         "lesson_group.key": "",
         "script.name": "poetry-2023",
         "activity_section.key": "2f6b0e78-8580-4da8-bf5f-f425eff9b958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_codingwithpoetry_markdown_lesson_4",
+        "script_level.level_keys": [
+          "csc_codingwithpoetry_markdown_lesson_4"
+        ],
+        "lesson.key": "Poetry Circle",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023",
+        "activity_section.key": "3f1e4652-e9d2-4fa5-944a-1f5fe9e9a5b0"
       }
     }
   ],
@@ -1531,6 +1623,18 @@
       },
       "seeding_key": {
         "resource.key": "coding_with_poetry_lesson_1"
+      }
+    },
+    {
+      "name": "Coding with Poetry Rubric",
+      "url": "https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview",
+      "key": "coding_with_poetry_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_rubric"
       }
     },
     {
@@ -1644,7 +1748,7 @@
     },
     {
       "name": "Share Your App!",
-      "url": "https://docs.google.com/document/d/1CW-IkOnFTTPD038tVzGrifGVoMZKUgzrGecP5jsZo8I/template/preview",
+      "url": "https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview",
       "key": "share_your_app_",
       "properties": {
         "audience": "Teacher",
@@ -1668,12 +1772,12 @@
       }
     },
     {
-      "name": "Time Capsule Checklist",
-      "url": "https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview",
+      "name": "Code Your Poem Checklist",
+      "url": "https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview",
       "key": "time_capsule_checklist",
       "properties": {
         "audience": "Student",
-        "download_url": "https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/export/pdf",
+        "download_url": "https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/export/pdf",
         "type": "Handout"
       },
       "seeding_key": {
@@ -1681,19 +1785,7 @@
       }
     },
     {
-      "name": "Time Capsule Rubric",
-      "url": "https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview",
-      "key": "time_capsule_rubric",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "time_capsule_rubric"
-      }
-    },
-    {
-      "name": "Write Your Own Poem",
+      "name": "Write Your Own Poem - Sentence Stems",
       "url": "https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview",
       "key": "write_your_own_poem",
       "properties": {
@@ -1702,6 +1794,18 @@
       },
       "seeding_key": {
         "resource.key": "write_your_own_poem"
+      }
+    },
+    {
+      "name": "Write Your Own Poem - Topics",
+      "url": "https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview",
+      "key": "write_your_own_poem_-_topics",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "write_your_own_poem_-_topics"
       }
     }
   ],
@@ -1805,19 +1909,25 @@
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
+        "resource.key": "coding_with_poetry_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing My Time Capsule Poem",
         "resource.key": "helpful_hints"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "resource.key": "time_capsule_rubric"
+        "resource.key": "write_your_own_poem"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "resource.key": "write_your_own_poem"
+        "resource.key": "write_your_own_poem_-_topics"
       }
     }
   ],
@@ -1871,11 +1981,21 @@
     {
       "key": "mood",
       "word": "Mood",
-      "definition": "the expression of a feeling, atmosphere, or emotion in art or writing.",
+      "definition": "The expression of a feeling, atmosphere, or emotion in art or writing.",
       "properties": {
       },
       "seeding_key": {
         "vocabulary.key": "mood"
+      }
+    },
+    {
+      "key": "poem",
+      "word": "Poem",
+      "definition": "Lines of writing that use words to create pictures, feelings, and ideas in the reader's mind.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "poem"
       }
     },
     {
@@ -1961,7 +2081,37 @@
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "vocabulary.key": "time_capsule"
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing My Time Capsule Poem",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing My Time Capsule Poem",
+        "vocabulary.key": "line"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing My Time Capsule Poem",
+        "vocabulary.key": "mood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing My Time Capsule Poem",
+        "vocabulary.key": "poem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing My Time Capsule Poem",
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -1972,7 +2122,7 @@
     {
       "key": "0ed93c2b-8a4a-4876-8851-80cc7964c4ab",
       "properties": {
-        "description": "Illustrate shifts in the mood of a poem."
+        "description": " Use code to animate shifts in the mood of a poem."
       },
       "seeding_key": {
         "lesson.key": "Poem Art",
@@ -2002,7 +2152,7 @@
     {
       "key": "4b7b140c-b345-48c6-b81b-eea3c37f2a0b",
       "properties": {
-        "description": "Develop programs that respond to timed events."
+        "description": "Use event blocks to trigger an action to occur at specific lines of the poem."
       },
       "seeding_key": {
         "lesson.key": "Poem Art",
@@ -2012,7 +2162,7 @@
     {
       "key": "521bc123-9d0a-4588-9b39-a3cc94229a64",
       "properties": {
-        "description": "Plan and write their own time capsule poems"
+        "description": "Plan and write their own poems"
       },
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
@@ -2042,7 +2192,7 @@
     {
       "key": "e4a5634d-653c-4a30-975d-182ef5272dc2",
       "properties": {
-        "description": "Define a time capsule"
+        "description": "Define a poem"
       },
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
