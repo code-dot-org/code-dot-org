@@ -643,6 +643,8 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
     filename.downcase! if endpoint == 'files'
     begin
       get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
