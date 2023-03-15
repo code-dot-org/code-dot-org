@@ -7,11 +7,16 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 
+/**
+ * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
+ * and show/hide instructions button.
+ */
 const Controls = ({
   isPlaying,
   setPlaying,
   playTrigger,
   top,
+  instructionsAvailable,
   toggleInstructions,
   instructionsOnRight
 }) => {
@@ -64,7 +69,9 @@ const Controls = ({
     });
     setBeatPadShowing(!isShowingBeatPad);
   });
-  const infoIconSection = renderIconButton('info-circle', toggleInstructions);
+  const infoIconSection = instructionsAvailable
+    ? renderIconButton('info-circle', toggleInstructions)
+    : null;
 
   const [leftIcon, rightIcon] = instructionsOnRight
     ? [beatPadIconSection, infoIconSection]
@@ -93,6 +100,7 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
+  instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
   instructionsOnRight: PropTypes.bool.isRequired
 };

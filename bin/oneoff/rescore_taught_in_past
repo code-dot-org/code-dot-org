@@ -8,7 +8,7 @@ ActiveRecord::Base.transaction do
   rescored_applications = []
   puts "Rescoring taught_in_past for teacher 1920 applications..."
   Pd::Application::TeacherApplication.find_each do |application|
-    responses = application.sanitize_form_data_hash
+    responses = application.sanitized_form_data_hash
     response_scores = JSON.parse(application.response_scores)
 
     old_taught_in_past_score = response_scores["bonus_points_scores"] ? response_scores["bonus_points_scores"]["taught_in_past"] : nil
@@ -26,8 +26,8 @@ ActiveRecord::Base.transaction do
         rescored_applications << update_string
       end
     end
-  rescue => e
-    puts "Failure on application #{application.id}:\n#{e.message}\n#{application&.errors&.messages}"
+  rescue => exception
+    puts "Failure on application #{application.id}:\n#{exception.message}\n#{application&.errors&.messages}"
     raise
   end
 

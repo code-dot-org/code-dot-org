@@ -29,7 +29,7 @@ class PiskelEditor extends React.Component {
     // Provided by Redux
     animationList: shapes.AnimationList.isRequired,
     currentAnimation: shapes.AnimationKey,
-    channelId: PropTypes.string.isRequired,
+    channelId: PropTypes.string,
     editAnimation: PropTypes.func.isRequired,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
     onNewFrameClick: PropTypes.func.isRequired,

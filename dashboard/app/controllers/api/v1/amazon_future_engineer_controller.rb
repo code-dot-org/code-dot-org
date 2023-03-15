@@ -26,7 +26,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       zip: afe_params['zip'],
       marketing_kit: afe_params['inspirationKit'],
       csta_plus: afe_params['csta'],
-      aws_educate: afe_params['awsEducate'],
       amazon_terms: afe_params['consentAFE'],
       new_code_account: current_user.created_at > 5.minutes.ago
     )
@@ -67,9 +66,9 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )
     end
-  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => e
-    Honeybadger.notify e
-    render json: e.to_s, status: :bad_request
+  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => exception
+    Honeybadger.notify exception
+    render json: exception.to_s, status: :bad_request
   end
 
   private
@@ -81,7 +80,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     schoolId
     inspirationKit
     csta
-    awsEducate
     consentAFE
   )
 

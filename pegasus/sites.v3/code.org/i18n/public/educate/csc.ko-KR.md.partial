@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>CS 커넥션 활동이 끝났습니다. 학급을 위한 옵션을 더 찾고 계세요? 더 많은 레슨을 위해 <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">피드백</a>과 아이디어를 여기서 공유해 주십시오!</em>
+
+{{ visit_partial_event_logger }}

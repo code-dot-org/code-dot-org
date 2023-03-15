@@ -92,7 +92,7 @@ def storage_encrypt_channel_id(storage_id, project_id)
 end
 
 def get_storage_id
-  @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
+  @get_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
 def storage_id_cookie_name

@@ -7,6 +7,7 @@ require 'yaml'
 require 'erb'
 require 'digest'
 require 'highline'
+require 'aws-sdk-ec2'
 
 module AWS
   # Manages configuration and deployment of AWS CloudFormation stacks.
@@ -34,6 +35,29 @@ module AWS
     TEMPLATE_MAX = 51_200
     # Max size of template body you can pass in an S3 object with a template URL.
     TEMPLATE_S3_MAX = 460_800
+
+    EC2_METADATA_SERVICE_URL = URI('http://169.254.169.254/latest/meta-data/instance-id')
+
+    # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
+    # @return [String]
+    def self.current_stack_name
+      metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
+      # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
+      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
+      ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
+      ec2_client = Aws::EC2::Client.new
+      ec2_client.
+        describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+        tags.
+        select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
+        first.
+        value
+    rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
+      nil
+    rescue StandardError => error
+      CDO.log.info error.message
+      nil
+    end
 
     # @param [Cdo::CloudFormation::StackTemplate] stack
     # @param [Logger] log
@@ -250,9 +274,9 @@ module AWS
       begin
         result = cfn.method("#{method}_stack").call(stack_options)
         @stack_id ||= result.stack_id if result.respond_to?(:stack_id)
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        if e.message == 'No updates are to be performed.'
-          log.info e.message
+      rescue Aws::CloudFormation::Errors::ValidationError => exception
+        if exception.message == 'No updates are to be performed.'
+          log.info exception.message
           return
         else
           raise
@@ -270,8 +294,8 @@ module AWS
           cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
             @stack_id = stack.stack_id
           end
-        rescue Aws::CloudFormation::Errors::ValidationError => e
-          raise e unless e.message == "Stack with id #{stack_name} does not exist"
+        rescue Aws::CloudFormation::Errors::ValidationError => exception
+          raise exception unless exception.message == "Stack with id #{stack_name} does not exist"
           false
         end
       @stack_resource && !%w(REVIEW_IN_PROGRESS DELETE_COMPLETE).include?(@stack_resource.stack_status)

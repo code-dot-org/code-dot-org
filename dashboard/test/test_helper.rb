@@ -319,9 +319,9 @@ class ActiveSupport::TestCase
   def assert_raises_matching(matcher)
     assert_raises do
       yield
-    rescue => err
-      assert_match matcher, err.to_s
-      raise err
+    rescue => exception
+      assert_match matcher, exception.message
+      raise exception
     end
   end
 

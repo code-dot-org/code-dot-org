@@ -157,45 +157,45 @@ module Pd::Application
     end
 
     def save_partner
-      self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
+      self.regional_partner_id = sanitized_form_data_hash[:regional_partner_id]
     end
 
     def program
-      sanitize_form_data_hash[:program]
+      sanitized_form_data_hash[:program]
     end
 
     def zip_code
-      sanitize_form_data_hash[:zip_code]
+      sanitized_form_data_hash[:zip_code]
     end
 
     def state_name
-      sanitize_form_data_hash[:state]
+      sanitized_form_data_hash[:state]
     end
 
     def district_name
       school ?
         school.try(:school_district).try(:name).try(:titleize) :
-        sanitize_form_data_hash[:school_district_name]
+        sanitized_form_data_hash[:school_district_name]
     end
 
     def school_name
-      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+      school ? school.name.try(:titleize) : sanitized_form_data_hash[:school_name]
     end
 
     def school_zip_code
-      school ? school.zip : sanitize_form_data_hash[:zip_code]
+      school ? school.zip : sanitized_form_data_hash[:zip_code]
     end
 
     def school_state
       if school
         school.state.try(:upcase)
       else
-        STATE_ABBR_WITH_DC_HASH.key(sanitize_form_data_hash[:state]).try(:to_s)
+        STATE_ABBR_WITH_DC_HASH.key(sanitized_form_data_hash[:state]).try(:to_s)
       end
     end
 
     def school_city
-      school ? school.city.try(:titleize) : sanitize_form_data_hash[:city]
+      school ? school.city.try(:titleize) : sanitized_form_data_hash[:city]
     end
 
     def school_address
@@ -212,22 +212,22 @@ module Pd::Application
         end
         address.titleize
       else
-        sanitize_form_data_hash[:address]
+        sanitized_form_data_hash[:address]
       end
     end
 
     def school_type
-      school ? school.try(:school_type).try(:titleize) : sanitize_form_data_hash[:school_type]
+      school ? school.try(:school_type).try(:titleize) : sanitized_form_data_hash[:school_type]
     end
 
     def first_name
-      hash = sanitize_form_data_hash
+      hash = sanitized_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
     end
     alias_method :teacher_first_name, :first_name
 
     def last_name
-      sanitize_form_data_hash[:last_name]
+      sanitized_form_data_hash[:last_name]
     end
 
     def state_code
@@ -239,12 +239,12 @@ module Pd::Application
     end
 
     def principal_email
-      sanitize_form_data_hash[:principal_email]
+      sanitized_form_data_hash[:principal_email]
     end
 
     # Title & last name, or full name if no title was provided.
     def principal_greeting
-      hash = sanitize_form_data_hash
+      hash = sanitized_form_data_hash
       title = hash[:principal_title]
       "#{title.presence || hash[:principal_first_name]} #{hash[:principal_last_name]}"
     end
@@ -255,12 +255,12 @@ module Pd::Application
 
     # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
-    def sanitize_form_data_hash
+    def sanitized_form_data_hash
       super.merge(account_email: user.email)
     end
 
     def school_id
-      raw_school_id = sanitize_form_data_hash[:school]
+      raw_school_id = sanitized_form_data_hash[:school]
 
       # -1 designates custom school info, in which case return nil
       raw_school_id.to_i == -1 ? nil : raw_school_id
@@ -272,12 +272,12 @@ module Pd::Application
           school_id: school_id
         }
       else
-        hash = sanitize_form_data_hash
+        hash = sanitized_form_data_hash
         return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
-          school_type: hash[:school_type].split(' ').first.downcase,
+          school_type: hash[:school_type].split.first.downcase,
           state: hash[:school_state],
           zip: hash[:school_zip_code],
           school_name: hash[:school_name],
@@ -293,7 +293,7 @@ module Pd::Application
     end
 
     def get_first_selected_workshop
-      hash = sanitize_form_data_hash
+      hash = sanitized_form_data_hash
       return nil if hash[:teachercon]
 
       workshop_ids = hash[:regional_partner_workshop_ids]
@@ -752,14 +752,14 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently awaiting_admin_approval, pending, or pending_space_availability.
-      return false unless awaiting_admin_approval? || pending? || pending_space_availability?
-
       # Only if the principal approval is required.
       return false if principal_approval_not_required
 
       # Only if we haven't gotten a principal response yet.
       return false if response
+
+      # Only if this teacher application has a status that allows it
+      return false unless SEND_ADMIN_APPROVAL_EMAIL_STATUSES.include?(status)
 
       # Only if it's been more than 5 days since we last created an email for the principal.
       return false if last_principal_approval_email_created_at && last_principal_approval_email_created_at > 5.days.ago
@@ -772,9 +772,8 @@ module Pd::Application
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
-      # Only if this teacher application is currently awaiting_admin_approval or pending.
-      # (Unlike allow_sending_principal_email?, don't allow for pending_space_availability.)
-      return false unless awaiting_admin_approval? || pending?
+      # Only if this teacher application has a status that allows it
+      return false unless SEND_ADMIN_APPROVAL_EMAIL_STATUSES.include?(status)
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
@@ -969,7 +968,7 @@ module Pd::Application
     # principal approval application. It is idempotent, and will not override existing
     # scores on this application
     def auto_score!
-      responses = sanitize_form_data_hash
+      responses = sanitized_form_data_hash
 
       options = self.class.options(year)
       principal_options = Pd::Application::PrincipalApprovalApplication.options(year)
@@ -1126,7 +1125,7 @@ module Pd::Application
     # form data has here, as well as send emails
     def on_successful_principal_approval_create(principal_approval)
       # Approval application created, now score corresponding teacher application
-      principal_response = principal_approval.sanitize_form_data_hash
+      principal_response = principal_approval.sanitized_form_data_hash
 
       replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
 

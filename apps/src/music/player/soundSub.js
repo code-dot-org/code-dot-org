@@ -1,3 +1,5 @@
+import {InsertEffects} from './soundEffects';
+
 // audio
 var audioContext = null;
 
@@ -95,13 +97,22 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   id,
   when,
   loop,
+  effects,
   callback
 ) {
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  // connect the source direct to the destination
-  source.connect(audioContext.destination);
+  let lastNode;
+  if (effects) {
+    // Insert effects, attaching them to source.
+    lastNode = InsertEffects(audioContext, effects, source);
+  } else {
+    lastNode = source;
+  }
+
+  // Connect the last node to output.
+  lastNode.connect(audioContext.destination);
 
   source.onended = callback.bind(this, id);
 

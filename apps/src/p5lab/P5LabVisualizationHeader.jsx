@@ -82,6 +82,7 @@ class P5LabVisualizationHeader extends React.Component {
             <ToggleGroup
               selected={interfaceMode}
               onChange={this.changeInterfaceMode}
+              flex={true}
             >
               <button
                 style={styles.buttonFocus}
@@ -105,7 +106,7 @@ class P5LabVisualizationHeader extends React.Component {
               )}
               {allowAnimationMode &&
                 this.props.isBlockly &&
-                experiments.isEnabled('backgroundsTab') && (
+                experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD) && (
                   <button
                     style={{
                       ...styles.buttonFocus,

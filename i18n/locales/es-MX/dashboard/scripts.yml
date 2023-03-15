@@ -4030,7 +4030,7 @@ es-MX:
             lessonGroup-7:
               display_name: Impactos de la computación
           name: Curso E - 2021
-          student_description: Comienza a codificar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
+          student_description: Comienza a programar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
         coursef-2021:
           title: Curso F (2021)
           description: Hemos creado el Curso F para estudiantes en el 5° grado. Al comenzar este curso los estudiantes aprenderán sobre las decisiones que la gente toma cuando utilizan las aplicaciones. Luego, los estudiantes aprenderán a crear diferentes tipos de aplicaciones con multiples opciones para los usuarios usando el Laboratorio de Sprites. En las próximas lecciones del curso, los estudiantes aprenderán conceptos mas avanzados, como los variables y los bucles "para". Los estudiantes tendrán más autonomía y la oportunidad de tomar sus propias decisiones a través del curso. Los estudiantes terminaran el curso con proyectos interactivos y obras de arte que podrán compartir con sus amigos/as y familiares.
@@ -4058,7 +4058,7 @@ es-MX:
             lessonGroup-7:
               display_name: Ciudadanía digital
           name: Curso F - 2021
-          student_description: Aprende a codificar con sprites, variables y bucles y discute el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+          student_description: Aprende a programar con sprites, variables y bucles y discute el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
         express-2021:
           title: Curso Express (2021)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -5369,7 +5369,7 @@ es-MX:
               display_name: Obsoleto
           title: Curso E (2022)
           description: Hemos creado el curso E para los alumnos de cuarto curso. El curso comienza con una introducción a la herramienta de programación Laboratorio de Sprite. Los alumnos aprenderán a realizar proyectos divertidos e interactivos que refuerzan lo que aprenderán sobre la seguridad en línea. Después de estas lecciones, los estudiantes se involucrarán en una codificación más compleja. Los estudiantes aprenderán sobre bucles anidados, funciones y condicionales. Al final del curso, los estudiantes combinarán estos conceptos para resolver desafiantes rompecabezas. El curso termina con un proyecto abierto en el que los alumnos crean un juego o un dibujo.
-          student_description: Comienza a codificar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
+          student_description: Comienza a programar con algoritmos, eventos, bucles, condicionales y funciones. Al final de este curso, diseña y crea un juego o dibujo que puedas compartir con tus amigos y familiares.
           description_short: Aprende los fundamentos de los sprites, los bucles anidados y las funciones.
           description_audience: De 8 a 12 años
           name: cursoe-2022
@@ -5389,7 +5389,7 @@ es-MX:
               display_name: Proyecto de fin de curso
           title: Curso F (2022)
           description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
-          student_description: Aprende a codificar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+          student_description: Aprende a programar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
           description_audience: De 9 a 13 años
           name: cursof-2022
@@ -5574,8 +5574,8 @@ es-MX:
           title: Curso F (2022)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
-          description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
-          student_description: Aprende a codificar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
+          description: "Creamos el Curso F para alumnos de quinto grado. El curso comienza por observar cómo los usuarios toman decisiones en las aplicaciones que utilizan. Luego, los estudiantes aprenden a hacer una variedad de aplicaciones de Sprite Lab que también ofrecen opciones para el usuario. En las lecciones posteriores del curso, los estudiantes aprenderán sobre variables en una variedad de contextos. A lo largo de este curso se les da mayor autonomía y más opciones a lo largo de este curso. Al finalizar el curso, los alumnos habrán creado proyectos interactivos para compartir con sus amigos y familiares.\n\n## Primavera 2022 Open Preview\n\nEsta nueva versión del Curso F incluye tres nuevas lecciones, ¡y necesitamos tus comentarios! Las nuevas lecciones son:\n\n-   Lección 9 - Muchos sprites - [dar comentarios](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)\n-   Lección 10 - Contar con variables - [dar comentarios](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)\n-   Lección 11 - Mini-proyecto: Juego de coleccionista - [dar comentarios](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)\n\nTenga en cuenta que estas nuevas lecciones pueden cambiar entre ahora y julio de 2022. Agradecemos cualquier comentario. Los cursos A-E de Fundamentos de CS (2022) se lanzarán en julio de 2022.\n\nTambién hemos agregado una cubierta de diapositivas completa que cubre todas las lecciones del Curso F. ¡También damos la bienvenida a su [feedback](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) en las diapositivas de la lección!"
+          student_description: Aprende a programar con sprites y variables, así como a debatir el impacto social de la informática e Internet. Al final de este curso, diseña y crea un proyecto que puedas compartir con tus amigos y familiares.
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -6392,6 +6392,16 @@ es-MX:
               display_name: Lecciones alternativas
           title: Arrays y Algoritmos
         csa4-2023:
+          lessons:
+            lesson-9:
+              name: Aleatorio
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
           title: Condiciones y Lógica
         csa5-2023:
           title: Arrays Bidimensionales
@@ -6803,3 +6813,48 @@ es-MX:
               display_name: 'Parte 1: Sesión Sincrónica'
             lessonGroup-3:
               display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Contenido del Taller
+            lesson-1:
+              name: Apertura del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-2:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparación para Enseñar la Unidad 1
+          title: Preparación para Enseñar la Unidad 1
+          description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+          student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"

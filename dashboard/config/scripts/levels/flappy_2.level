@@ -56,19 +56,19 @@
             <block type="flappy_flap"/>
           </next>
         </block>
-        <block type="flappy_whenCollideGround" deletable="false"/>
+        <block type="flappy_whenCollideGround" deletable="false" id="whenCollideGround"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
         <block type="flappy_flap"/>
-        <block type="flappy_endGame"/>
+        <block type="flappy_endGame" id="endGame"/>
         <block type="flappy_playSound"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="flappy_endGame"/>
+        <block type="flappy_endGame" id="endGame"/>
       </xml>
     </required_blocks>
   </blocks>

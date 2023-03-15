@@ -1,76 +1,26 @@
 import GoogleBlockly from 'blockly/core';
+import msg from '@cdo/locale';
+import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
 
-/**
- * Adds a copy command to the block context menu. After switching to v7,
- * we can replace this with:
- * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
- */
-const registerBlockCopyToStorage = function() {
-  const copyToStorageOption = {
-    displayText: function() {
-      return 'Copy';
-    },
-    preconditionFn: function(scope) {
-      if (scope.block.isDeletable() && scope.block.isMovable()) {
-        return 'enabled';
-      } else {
-        return 'disabled';
-      }
-    },
-    callback: function(scope) {
-      const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
-      localStorage.setItem('blocklyStash', copyData);
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
-    id: 'blockCopyToStorage',
-    weight: 0
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(copyToStorageOption);
-};
+const dark = 'dark';
 
-/**
- * Adds a paste command to the block context menu. After switching to v7,
- * we can replace this with:
- * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
- */
-const registerBlockPasteFromStorage = function() {
-  const pasteFromStorageOption = {
-    displayText: function() {
-      return 'Paste';
-    },
-    preconditionFn: function(scope) {
-      const copyData = localStorage.getItem('blocklyStash');
-      if (copyData) {
-        return 'enabled';
-      }
-      return 'disabled';
-    },
-    callback: function(scope) {
-      const copyData = localStorage.getItem('blocklyStash');
-      Blockly.mainBlockSpace.paste(JSON.parse(copyData));
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: 'blockPasteFromStorage',
-    weight: 0
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(pasteFromStorageOption);
-};
-
+// Some options are only available to levelbuilders via start mode.
+// Literal strings are used for display text instead of translatable strings
+// as Levelbuilder can only be used in English.
 const registerDeletable = function() {
   const deletableOption = {
     displayText: function(scope) {
-      // isDeletale is a built in Blockly function that checks whether the block
+      // isDeletable is a built in Blockly function that checks whether the block
       // is deletable, is not a shadow, and if the workspace is readonly.
-      const displayText = scope.block.isDeletable()
+      return scope.block.isDeletable()
         ? 'Make Undeletable to Users'
         : 'Make Deletable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return MenuOptionStates.ENABLED;
       }
-      return 'hidden';
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setDeletable(!scope.block.isDeletable());
@@ -87,16 +37,15 @@ const registerMovable = function() {
     displayText: function(scope) {
       // isMovable is a built in Blockly function that checks whether the block
       // is movable or not.
-      const displayText = scope.block.isMovable()
+      return scope.block.isMovable()
         ? 'Make Immovable to Users'
         : 'Make Movable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return MenuOptionStates.ENABLED;
       }
-      return 'hidden';
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setMovable(!scope.block.isMovable());
@@ -113,16 +62,15 @@ const registerEditable = function() {
     displayText: function(scope) {
       // isEditable is a built in Blockly function that checks whether the block
       // is editable or not.
-      const displayText = scope.block.isEditable()
+      return scope.block.isEditable()
         ? 'Make Uneditable to Users'
         : 'Make Editable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return MenuOptionStates.ENABLED;
       }
-      return 'hidden';
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setEditable(!scope.block.isEditable());
@@ -141,9 +89,9 @@ const registerShadow = function() {
       if (Blockly.isStartMode && canBeShadow(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return 'enabled';
+        return MenuOptionStates.ENABLED;
       }
-      return 'hidden';
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setShadow(true);
@@ -170,9 +118,9 @@ const registerUnshadow = function() {
       if (Blockly.isStartMode && hasShadowChildren(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return 'enabled';
+        return MenuOptionStates.ENABLED;
       }
-      return 'hidden';
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
@@ -184,14 +132,125 @@ const registerUnshadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerKeyboardNavigation = function() {
+  const keyboardNavigationOption = {
+    displayText: function(scope) {
+      return scope.workspace.keyboardAccessibilityMode
+        ? msg.blocklyKBNavOff()
+        : msg.blocklyKBNavOn();
+    },
+    preconditionFn: function() {
+      return Blockly.navigationController
+        ? MenuOptionStates.ENABLED
+        : MenuOptionStates.HIDDEN;
+    },
+    callback: function(scope) {
+      const controller = Blockly.navigationController;
+      scope.workspace.keyboardAccessibilityMode
+        ? controller.disable(scope.workspace)
+        : controller.enable(scope.workspace);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'keyboardNavigation',
+    weight: 11
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
+};
+
+/**
+ * Toggle workspace theme between light/dark components
+ */
+const registerDarkMode = function() {
+  const toggleDarkModeOption = {
+    displayText: function(scope) {
+      return isDarkTheme(scope.workspace)
+        ? msg.blocklyTurnOffDarkMode()
+        : msg.blocklyTurnOnDarkMode();
+    },
+    preconditionFn: function() {
+      return MenuOptionStates.ENABLED;
+    },
+    callback: function(scope) {
+      const themeName =
+        baseName(scope.workspace?.getTheme().name) +
+        (isDarkTheme(scope.workspace) ? '' : dark);
+      localStorage.setItem(BLOCKLY_THEME, themeName);
+      scope.workspace.setTheme(Blockly.themes[themeName]);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'toggleDarkMode',
+    weight: 12
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(toggleDarkModeOption);
+};
+
+const themes = [
+  {
+    name: Themes.MODERN,
+    label: msg.blocklyModernTheme()
+  },
+  {
+    name: Themes.HIGH_CONTRAST,
+    label: msg.blocklyHighContrastTheme()
+  },
+  {
+    name: Themes.PROTANOPIA,
+    label: msg.blocklyProtanopiaTheme()
+  },
+  {
+    name: Themes.DEUTERANOPIA,
+    label: msg.blocklyDeuteranopiaTheme()
+  },
+  {
+    name: Themes.TRITANOPIA,
+    label: msg.blocklyTritanopiaTheme()
+  }
+];
+/**
+ * Change workspace theme to specified theme
+ */
+const registerTheme = function(name, label, index) {
+  const themeOption = {
+    displayText: function(scope) {
+      return (
+        (isCurrentTheme(name, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        label
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isCurrentTheme(name, scope.workspace)) {
+        return MenuOptionStates.DISABLED;
+      } else {
+        return MenuOptionStates.ENABLED;
+      }
+    },
+    callback: function(scope) {
+      const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
+      localStorage.setItem(BLOCKLY_THEME, themeName);
+      scope.workspace.setTheme(Blockly.themes[themeName]);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: name + 'ThemeOption',
+    weight: 13 + index
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(themeOption);
+};
+
+function registerThemes(themes) {
+  themes.forEach((theme, index) => {
+    registerTheme(theme.name, theme.label, index);
+  });
+}
+
 const registerAllContextMenuItems = function() {
-  registerBlockCopyToStorage();
-  registerBlockPasteFromStorage();
   registerDeletable();
   registerMovable();
   registerEditable();
   registerShadow();
   registerUnshadow();
+  registerKeyboardNavigation();
+  registerDarkMode();
+  registerThemes(themes);
 };
 
 function canBeShadow(block) {
@@ -214,4 +273,15 @@ function hasShadowChildren(block) {
   return shadowChildCount(block) > 0;
 }
 
+function isCurrentTheme(theme, workspace) {
+  return baseName(workspace?.getTheme().name) === baseName(theme);
+}
+
+function isDarkTheme(workspace) {
+  return workspace?.getTheme().name.includes(dark);
+}
+
+function baseName(themeName) {
+  return themeName.replace(dark, '');
+}
 exports.registerAllContextMenuItems = registerAllContextMenuItems;

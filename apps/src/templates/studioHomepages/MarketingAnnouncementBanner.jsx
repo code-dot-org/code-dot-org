@@ -130,13 +130,14 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 
 const styles = {
   container: {
-    position: 'relative'
+    position: 'relative',
+    marginTop: '16px'
   },
   dismissButtonStyle: {
     position: 'absolute',
     top: '6px',
     right: '10px',
-    color: color.white,
+    color: color.neutral_dark60,
     fontSize: '22px',
     fontWeight: 'bold'
   }

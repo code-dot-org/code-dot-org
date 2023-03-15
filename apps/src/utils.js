@@ -157,6 +157,16 @@ export function stripQuotes(inputString) {
 }
 
 /**
+ * Removes double quotes surrounding a string, if they exist
+ * If they don't exist, just return the string
+ * Does not touch quotes that don't match the pattern "..."
+ * @param {string} inputString
+ * @returns {string} inputString with double quotes in first and last position removed, if they exist
+ */
+export const stripEncapsulatingDoubleQuotes = inputString =>
+  inputString.replace(/^"(.*)"$/, '$1');
+
+/**
  * Defines an inheritance relationship between parent class and this class.
  */
 Function.prototype.inherits = function(parent) {
