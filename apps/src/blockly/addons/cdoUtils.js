@@ -104,5 +104,7 @@ export function getUserTheme(themeOption) {
 }
 
 export function getCode(workspace) {
-  return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+  return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+  // After supporting JSON block sources, change to:
+  // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
