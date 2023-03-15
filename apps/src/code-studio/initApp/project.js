@@ -720,9 +720,6 @@ var projects = (module.exports = {
         sourceHandler.setTeacherHasConfirmedUploadWarning(
           currentSources.teacherHasConfirmedUploadWarning
         );
-        // ensure restrictedShareMode is set correctly in redux
-        // so we hide publish and remix correctly.
-        // update
         getStore().dispatch(refreshTeacherHasConfirmedUploadWarning());
       }
 

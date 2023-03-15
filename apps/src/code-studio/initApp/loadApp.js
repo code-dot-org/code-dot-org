@@ -473,7 +473,6 @@ const sourceHandler = {
   setTeacherHasConfirmedUploadWarning(teacherHasConfirmedUploadWarning) {
     getAppOptions().level.teacherHasConfirmedUploadWarning = teacherHasConfirmedUploadWarning;
   },
-  // maybe rename to get
   teacherHasConfirmedUploadWarning() {
     return getAppOptions().level.teacherHasConfirmedUploadWarning;
   },

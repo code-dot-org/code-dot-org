@@ -20,7 +20,7 @@ import {
  * Render the animation upload button. If the project should warn on upload
  * (which occurs for Sprite Lab projects), and the project has not already seen
  * the warning (see details on warnings by user type below), we show a warning modal
- * before allowing uploads. If the project should restrict uploads and is already
+ * before allowing uploads. For students, if the project should restrict uploads and is already
  * published, we will not allow uploads until the project is un-published.
  */
 export function UnconnectedAnimationUploadButton({
