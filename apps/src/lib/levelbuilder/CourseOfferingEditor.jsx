@@ -260,17 +260,12 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
-      <label>
-        Image
-        <HelpTip>
-          <p>Image used to market the curriculum around the site.</p>
-        </HelpTip>
-        <ImageInput
-          initialImageUrl={courseOffering.image}
-          updateImageUrl={img => updateCourseOffering('image', img)}
-          showPreview={true}
-        />
-      </label>
+      <ImageInput
+        initialImageUrl={courseOffering.image}
+        updateImageUrl={img => updateCourseOffering('image', img)}
+        showPreview={true}
+        helpTipText={'Image used to market the curriculum around the site.'}
+      />
       <label>
         CS Topic
         <HelpTip>
