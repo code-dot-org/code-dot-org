@@ -468,6 +468,10 @@ GEM
       multi_json (~> 1.11)
       os (>= 0.9, < 2.0)
       signet (~> 0.15)
+    graphql (1.13.19)
+    graphql_rails (2.3.0)
+      activesupport (>= 4)
+      graphql (~> 1.12, >= 1.12.4)
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
@@ -976,6 +980,7 @@ DEPENDENCIES
   google-apis-core
   google-apis-youtube_v3
   google_drive
+  graphql_rails
   haml (~> 5.2.0)
   haml-rails
   haml_lint
