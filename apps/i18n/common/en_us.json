@@ -127,6 +127,7 @@
   "animationPicker_uploadImage": "Upload image",
   "animationPicker_uploading": "Uploading...",
   "animationPicker_warning": "Warning: Do not upload anything that contains personal information.",
+  "animationPicker_warnNoPublishShare": "Note: projects with images uploaded by students cannot be published or remixed.",
   "animationSearchPlaceholder": "Search for images...",
   "announcements": "Announcements",
   "announcementHeadingBackToSchool": "Get set up for the new school year",
