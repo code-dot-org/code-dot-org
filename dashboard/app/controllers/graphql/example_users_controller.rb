@@ -3,13 +3,13 @@
 module Graphql
   # base class of all GraphqlControllers
   class ExampleUsersController < GraphqlApplicationController
-    model('String')
+    model('User')
 
     action(:show).permit(id: :ID!).returns_single
     action(:update).permit(id: :ID!).returns_single
 
     def show
-      'this is example show action. Remove it and write something real'
+      User.find(params[:id])
     end
 
     def update
