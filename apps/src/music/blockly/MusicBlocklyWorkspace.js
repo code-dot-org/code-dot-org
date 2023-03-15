@@ -88,6 +88,9 @@ export default class MusicBlocklyWorkspace {
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
 
+    // Rename the new function placeholder text for Music Lab specifically.
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] = 'make new block';
+
     Blockly.setInfiniteLoopTrap();
 
     this.resizeBlockly();
