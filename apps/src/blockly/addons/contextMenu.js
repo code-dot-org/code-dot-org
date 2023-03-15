@@ -288,6 +288,8 @@ function baseName(themeName) {
 
 function unregisterDefaultOptions() {
   // Remove some default context menu options, if they are present.
+  // This needs to be wrapped in a try for now because our GoogleBlocklyWrapperTest.js
+  // is not correctly cleaning up its state.
   try {
     // cleanUp() doesn't currently account for immovable blocks.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
