@@ -435,7 +435,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def cannot_create_user_with_email(*args)
-    assert_fails_email_uniqueness_validation FactoryGirl.build(*args)
+    assert_fails_email_uniqueness_validation FactoryBot.build(*args)
   end
 
   test "cannot update multi-auth user with duplicate of multi-auth user's email" do
@@ -476,7 +476,7 @@ class UserTest < ActiveSupport::TestCase
 
   def cannot_give_user_additional_email(type, email)
     user = create type
-    user.authentication_options << FactoryGirl.build(:google_authentication_option, user: user, email: email)
+    user.authentication_options << FactoryBot.build(:google_authentication_option, user: user, email: email)
     refute user.save
     assert_fails_email_uniqueness_validation user
   end
