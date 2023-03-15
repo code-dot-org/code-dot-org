@@ -99,7 +99,6 @@ class RakeTaskEventLogger
                      total_dependencies: task_chain.split(',').count,
                      is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
-
       Cdo::Metrics.flush!
       ChatClient.log "\nBEGIN rake task information --------", color: 'green'
       ChatClient.log @rake_task.name, color: 'green'
