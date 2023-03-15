@@ -96,8 +96,8 @@ module Pd
 
           form_data = begin
             question.process_answer(answer_data)
-          rescue => e
-            raise e, "Error processing answer #{question_id}: #{e.message}", e.backtrace
+          rescue => exception
+            raise exception, "Error processing answer #{question_id}: #{exception.message}", exception.backtrace
           end
 
           {

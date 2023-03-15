@@ -649,6 +649,7 @@ describe('entry tests', () => {
     'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
     'levels/_teacher_markdown':
       './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
@@ -717,6 +718,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_droplet.js',
     'levels/editors/fields/_grid':
       './src/sites/studio/pages/levels/editors/fields/_grid.js',
+    'levels/editors/fields/_poetry_fields':
+      './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
     'levels/editors/fields/_preload_assets':
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
@@ -784,6 +787,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/public/administrators':
+      './src/sites/code.org/pages/public/administrators.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':

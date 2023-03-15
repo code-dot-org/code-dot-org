@@ -8,8 +8,8 @@ class Api::V1::FoormSimpleSurveySubmissionsController < ApplicationController
     )
     begin
       submission.save_with_foorm_submission(answers.to_json, params[:form_name], params[:form_version])
-    rescue ActiveRecord::ActiveRecordError => e
-      render json: {error: e.message}, status: :bad_request
+    rescue ActiveRecord::ActiveRecordError => exception
+      render json: {error: exception.message}, status: :bad_request
       return
     end
 

@@ -18,7 +18,9 @@ end
 gem 'rails', '6.0.6'
 gem 'rails-controller-testing', '~> 1.0.5'
 
-gem 'sprockets', '4.0.3'
+# Compile Sprockets assets concurrently in `assets:precompile`.
+# Ref: https://github.com/rails/sprockets/pull/470
+gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
 gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
@@ -153,8 +155,6 @@ gem 'cancancan', '~> 3.1.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/instructure/ims-lti/pull/90
-gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
 gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
 gem 'omniauth-facebook', '~> 4.0.0'
@@ -269,7 +269,7 @@ gem 'daemons'
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
-gem 'oj'
+gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 
@@ -336,9 +336,6 @@ gem 'scenic'
 gem 'scenic-mysql_adapter'
 
 gem 'colorize'
-
-gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
-gem 'hammerspace'
 
 gem 'require_all', require: false
 

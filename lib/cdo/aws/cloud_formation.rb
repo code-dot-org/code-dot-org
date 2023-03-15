@@ -274,9 +274,9 @@ module AWS
       begin
         result = cfn.method("#{method}_stack").call(stack_options)
         @stack_id ||= result.stack_id if result.respond_to?(:stack_id)
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        if e.message == 'No updates are to be performed.'
-          log.info e.message
+      rescue Aws::CloudFormation::Errors::ValidationError => exception
+        if exception.message == 'No updates are to be performed.'
+          log.info exception.message
           return
         else
           raise
@@ -294,8 +294,8 @@ module AWS
           cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
             @stack_id = stack.stack_id
           end
-        rescue Aws::CloudFormation::Errors::ValidationError => e
-          raise e unless e.message == "Stack with id #{stack_name} does not exist"
+        rescue Aws::CloudFormation::Errors::ValidationError => exception
+          raise exception unless exception.message == "Stack with id #{stack_name} does not exist"
           false
         end
       @stack_resource && !%w(REVIEW_IN_PROGRESS DELETE_COMPLETE).include?(@stack_resource.stack_status)
