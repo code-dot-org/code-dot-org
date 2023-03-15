@@ -116,6 +116,9 @@ export default class SamplePlayer {
       // Note that we still don't play sounds older than that, because they might
       // have been scheduled for some time ago, and Web Audio will play a
       // sound immediately if its target time is in the past.
+      // We have a similar, but smaller, grace period for non-triggered sounds,
+      // since it might take a little time to start playing all the sounds in a
+      // complex song.
       const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
