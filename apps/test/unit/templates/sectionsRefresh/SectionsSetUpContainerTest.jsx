@@ -37,6 +37,38 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
 
+  it('renders advanced settings', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    wrapper
+      .find('FontAwesome')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
+  });
+
+  it('updates caret direction when Advacned Settings is clicked', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    expect(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon
+    ).to.equal('caret-right');
+    wrapper
+      .find('FontAwesome')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon
+    ).to.equal('caret-down');
+  });
+
   it('validates the form when save is clicked', () => {
     const reportSpy = sinon.spy();
     sinon

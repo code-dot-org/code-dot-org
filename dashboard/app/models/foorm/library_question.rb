@@ -52,8 +52,8 @@ class Foorm::LibraryQuestion < ApplicationRecord
     end
 
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
-  rescue StandardError => e
-    errors.add(:question, e.message)
+  rescue StandardError => exception
+    errors.add(:question, exception.message)
   end
 
   def write_to_file
