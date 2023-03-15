@@ -6,5 +6,8 @@ import {Themes} from '../constants.js';
 // https://github.com/google/blockly-samples/blob/master/plugins/theme-dark/src/index.js
 export default GoogleBlockly.Theme.defineTheme(Themes.DARK, {
   base: DarkTheme,
-  blockStyles: cdoBlockStyles
+  blockStyles: cdoBlockStyles,
+  fontStyle: {
+    family: '"Gotham 4r", sans-serif'
+  }
 });
