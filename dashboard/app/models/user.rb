@@ -90,7 +90,18 @@ class User < ApplicationRecord
   graphql do |c|
     # most common attributes, like :id, :name, :title has default type, so you don't have to specify it (but you can!)
     c.attribute(:id)
+
+    # database attribute
     c.attribute(:email).type('String')
+
+    # serialized attribute
+    c.attribute(:using_text_mode).type('bool')
+
+    # aliased verified_instructor? method
+    c.attribute(:is_verified_instructor).type('bool')
+
+    # method with return type converted to json
+    c.attribute(:owned_section_ids).type('json')
   end
 
   # Notes:
@@ -1397,6 +1408,9 @@ class User < ApplicationRecord
       permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
       permission?(UserPermission::LEVELBUILDER)
   end
+
+  # GraphQL API logic lives in rails model
+  alias :is_verified_instructor :verified_instructor?
 
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
