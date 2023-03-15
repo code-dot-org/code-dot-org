@@ -12,23 +12,6 @@ class VideosController < ApplicationController
     redirect_to CDO.code_org_url('/educate/it')
   end
 
-  def embed
-    set_video_by_key
-    if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
-      params[:fallback_only] = true
-      begin
-        require 'cdo/video/youtube'
-        Youtube.process @video.key
-      rescue Exception => exception
-        render(layout: false, plain: "Error processing video: #{exception}. Contact an engineer for support.", status: :internal_server_error) && return
-      end
-    end
-    video_info = @video.summarize(params.key?(:autoplay))
-    video_info[:enable_fallback] = !params.key?(:youtube_only)
-    video_info[:force_fallback] = params.key?(:fallback_only)
-    render layout: false, locals: {video_info: video_info}
-  end
-
   def index
     @videos = Video.all
   end
