@@ -112,25 +112,24 @@
 # Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
 # populate CDO.* application configuration settings.
 # TODO: Transition these configuration settings to AWS Systems Manager Parameter Store.
-# TODO: Add Stack name to the Secret name to support multiple deployments with the same environment type.
   DBClusterIDConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
-      Name: '<%=environment%>/cdo/db_cluster_id'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
       SecretString: <%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>
   DBWriterEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_writer_endpoint'
-      Name: '<%=environment%>/cdo/db_writer_endpoint'
+      Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_endpoint_writer'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
       # Publish a placeholder string for production. We set the value of the Secret manually in production.
       SecretString: <%=rack_env?(:production) ? 'PLACEHOLDER' : '!GetAtt AuroraCluster.Endpoint.Address'%>
   DBProxyReportingEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_proxy_reporting_endpoint'
-      Name: '<%=environment%>/cdo/db_proxy_reporting_endpoint'
+      Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: !GetAtt ReportingDBProxyEndpoint.Endpoint
 
 
