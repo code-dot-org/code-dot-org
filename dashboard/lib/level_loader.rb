@@ -127,10 +127,10 @@ class LevelLoader
     else
       nil
     end
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in level: #{level_path}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in level: #{level_path}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 

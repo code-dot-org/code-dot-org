@@ -36,9 +36,9 @@ def sync_in
   redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
-rescue => e
-  puts "Sync in failed from the error: #{e}"
-  raise e
+rescue => exception
+  puts "Sync in failed from the error: #{exception}"
+  raise exception
 end
 
 # Takes strings describing and naming Framework, StandardCategory, and Standard
