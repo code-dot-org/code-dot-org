@@ -38,9 +38,9 @@ export default class DesignModeHeaders extends React.Component {
       lineHeight: styleConstants['workspace-headers-height'] + 'px',
       fontSize: 18,
       cursor: 'pointer',
-      color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
+      color: color.neutral_white,
       ':hover': {
-        color: color.white
+        color: color.neutral_dark20
       }
     };
 

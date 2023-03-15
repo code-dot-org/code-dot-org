@@ -5,6 +5,9 @@
 // It should be imported to the pages that are listed in Phase 1 updates.
 // Therefore never mind if you meet !important anywhere in this file. It will be used only if there is no other option than to overwrite styles
 // in a way that updating styles of shared elements would only affect Phase1 pages.
+html {
+  font-size: 100%;
+}
 
 body {
   font-size: 100%;
@@ -412,5 +415,24 @@ p {
 .newProject-button-tile {
   &:hover {
     border-color: $neutral_dark70 !important;
+  }
+}
+
+.tutorial-promo-container.dance-party-container {
+  .tutorial-description {
+    color: $neutral_white;
+  }
+}
+
+.full-resource-block .resource-title {
+  // Overwrite global full-resource-block styling for phase1 styles
+  color: $neutral_dark !important;
+}
+
+.featured-project {
+  > a {
+    > div {
+      background-color: $neutral_light;
+    }
   }
 }
