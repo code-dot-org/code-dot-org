@@ -1487,8 +1487,8 @@ FactoryGirl.define do
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_teacher {(Time.zone.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Time.zone.current + 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
@@ -1499,13 +1499,13 @@ FactoryGirl.define do
           :summer_workshop,
           location_name: "Training building",
           location_address: "3 Smith Street",
-          sessions_from: (Time.zone.current + 3.months)
+          sessions_from: (Date.current + 3.months)
         )
       ]
     end
 
     trait :with_apps_priority_deadline_date do
-      apps_priority_deadline_date {(Time.zone.current + 5.days).strftime("%Y-%m-%d")}
+      apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
     end
   end
 

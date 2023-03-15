@@ -218,7 +218,7 @@ module Pd::Application
         application = create :pd_teacher_application, status: 'incomplete'
         assert_nil application.applied_at
 
-        tomorrow = Time.zone.tomorrow.to_time
+        tomorrow = Date.tomorrow.to_time
         next_day = tomorrow + 1.day
 
         Timecop.freeze(tomorrow) do
