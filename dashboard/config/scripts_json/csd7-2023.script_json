@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd7",
-    "serialized_at": "2023-03-08 22:32:05 UTC",
+    "serialized_at": "2023-03-10 16:14:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -27,9 +27,22 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Intro to App Lab",
+        "description": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included below. If your students are already familiar with App Lab, you may decide to skip this lesson. [Click here to learn more about skipping this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Creating Apps for Devices."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 1"
       },
@@ -41,7 +54,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Chapter 2"
       },
@@ -53,12 +66,31 @@
   ],
   "lessons": [
     {
-      "key": "Introduction to Machine Learning",
-      "name": "Introduction to Machine Learning",
+      "key": "Intro to App Lab",
+      "name": "Intro to App Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included in this lesson. If your students are already familiar with App Lab, you may decide to skip this lesson, which requires hiding it from students in the unit overview page. [Click here to learn more about hiding this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Physical Computing\n\nThis tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. ",
+        "preparation": "- Review and complete the online tutorial yourself\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n",
+        "student_overview": "Learn about App Lab, which lets you create apps with code! You'll learn to create and control buttons, text, images, sounds, and screens. At the end of the lesson, you will be able to extend a project you started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. "
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "key": "Introduction to Machine Learning",
+      "name": "Introduction to Machine Learning",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
         "announcements": [
           {
@@ -83,10 +115,10 @@
     {
       "key": "Types of Machine Learning",
       "name": "Types of Machine Learning",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
         "announcements": [
           {
@@ -112,10 +144,10 @@
     {
       "key": "Innovations in AI",
       "name": "Innovations in AI",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "announcements": [
           {
@@ -140,10 +172,10 @@
     {
       "key": "Patterns in Data",
       "name": "Patterns in Data",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.\n\n**Question of the Day:** What strategies do computer models use to make decisions?",
@@ -159,10 +191,10 @@
     {
       "key": "Classification Models",
       "name": "Classification Models",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.\n\n**Question of the Day:** How do computers learn to classify data?",
@@ -178,10 +210,10 @@
     {
       "key": "Introduction to AI Lab",
       "name": "Introduction to AI Lab",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.\n\n**Question of the Day:** How can we use machine learning to make recommendations?",
@@ -197,10 +229,10 @@
     {
       "key": "Importing Models in App Lab",
       "name": "Importing Models in App Lab",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.\n\n**Question of the Day:** How can I create an app using machine learning?",
@@ -216,10 +248,10 @@
     {
       "key": "Model Cards",
       "name": "Model Cards",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.\n\n**Question of the Day:** How can we evaluate machine learning models once they've been trained?",
@@ -235,10 +267,10 @@
     {
       "key": "Saving Models in AI Lab",
       "name": "Saving Models in AI Lab",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab\n\n**Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?",
@@ -254,10 +286,10 @@
     {
       "key": "Model Cards in App Lab",
       "name": "Model Cards in App Lab",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.\n\n**Question of the Day:** How can I use a Model Card to improve my app?",
@@ -273,10 +305,10 @@
     {
       "key": "Numerical Models",
       "name": "Numerical Models",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.\n\n**Question of the Day:** How do computers learn to make predictions with numerical data?",
@@ -292,10 +324,10 @@
     {
       "key": "Numerical Data in AI Lab",
       "name": "Numerical Data in AI Lab",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.\n\n**Question of the Day:** How can we use AI Lab to predict numerical data?",
@@ -311,10 +343,10 @@
     {
       "key": "Customizing Apps",
       "name": "Customizing Apps",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.\n\n**Question of the Day:** How can I customize the code for a machine learning app?",
@@ -330,10 +362,10 @@
     {
       "key": "AI Code of Ethics",
       "name": "AI Code of Ethics",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\n**Question of the Day:** What are guidelines we can use to create ethical machine learning apps?",
@@ -349,10 +381,10 @@
     {
       "key": "Project: Make a Machine Learning App",
       "name": "Project: Make a Machine Learning App",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "overview": "In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -367,10 +399,10 @@
     {
       "key": "Issue Statements",
       "name": "Issue Statements",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "overview": "This is the first of a five-day sequence of lessons that prepare students for the final project. In this lesson, students meet a team of fictional students who want to use machine learning to address an issue in their community. Students participate in an issue brainstorm using the 5 Why's strategy, then they help evaluate the ideas that the other student team came up with. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day:** How can machine learning be used to address an issue in your community?\n\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -385,10 +417,10 @@
     {
       "key": "Survey Planning",
       "name": "Survey Planning",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "overview": "This is the second in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn that the other team of students would like to create a club recommender app based on the clubs at their school. Students imagine what questions would be most useful to help make this recommendation, then they learn how to use a Google Form template to create a survey. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day:** How can I create a survey to gather data for a machine learning app?",
         "preparation": "- Print copies of the activity guide for each student\n- Review the video on how to use a template to create a Google Form\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -403,10 +435,10 @@
     {
       "key": "Survey Data in AI Lab",
       "name": "Survey Data in AI Lab",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "overview": "This is the third in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn how to view survey data in Google Sheets and save the data to their computer as a csv file. Then, they upload the saved data to AI Lab and examine the survey results from one of the students to train a model using their data. Then, students use Google Sheets to examine data from another student where the data has errors and then try to fix the errors. The steps students take in this lesson are identical to the steps students will take in their final project, and the problem-solving strategies they develop will help them overcome challenges in their own final project.\n\n**Question of the Day**:  How can I import data into AI Lab to train a machine learning model?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -421,10 +453,10 @@
     {
       "key": "Troubleshooting Models",
       "name": "Troubleshooting Models",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
         "overview": "This is the fourth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students examine survey data from other members of the student team and analyze why their models are not working correctly. In examining the data, students develop strategies for avoiding these issues in the future and strategies for coping with these issues should they happen again. These are skills students will use in the final project as they develop their own surveys and collect data.\n\n**Question of the Day**:  What are strategies to make sure our data generates an accurate model?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -439,10 +471,10 @@
     {
       "key": "Creating an App",
       "name": "Creating an App",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
         "overview": "This is the fifth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students import the club recommender app into App Lab and begin customizing the app. Students add a welcome screen and update the descriptions of each feature, then they can decide how they would like to further customize the app. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -457,10 +489,10 @@
     {
       "key": "Project - Design an AI App",
       "name": "Project - Design an AI App",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
         "announcements": [
           {
@@ -486,6 +518,61 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "94150b12-745f-4dab-9186-1742e369f813",
+      "position": 1,
+      "properties": {
+        "name": "Before The Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94150b12-745f-4dab-9186-1742e369f813",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "key": "42de8aa2-92d7-4929-9f8f-e70663820e52",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42de8aa2-92d7-4929-9f8f-e70663820e52",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "key": "c0701e05-e403-4edc-8340-95d8e3bc652a",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023"
+      }
+    },
+    {
+      "key": "75b4a584-abbb-4398-87ef-0267ce0bf4de",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75b4a584-abbb-4398-87ef-0267ce0bf4de",
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023"
+      }
+    },
     {
       "key": "909da514-b3f9-470b-97a3-eeb810d976b2",
       "position": 1,
@@ -1463,10 +1550,142 @@
   ],
   "activity_sections": [
     {
+      "key": "ab10a6fc-bbd4-4fe4-b589-0bd0623c1ebd",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab10a6fc-bbd4-4fe4-b589-0bd0623c1ebd",
+        "lesson_activity.key": "94150b12-745f-4dab-9186-1742e369f813"
+      }
+    },
+    {
+      "key": "049d4e54-45f1-4414-8d05-a2c91b46f9ba",
+      "position": 1,
+      "properties": {
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them quickly make apps they can instantly send to themselves or friends to use. ",
+        "name": "Introduction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Hour of Code:** This lesson is mostly identical to the [App Lab Hour of Code activity](https://studio.code.org/s/applab-intro/reset), and many of the tips below reference the hour of code. It can be fun to lean-into the \"Hour of Code\" especially if it's your students first introduction to programming. You may decide to review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n\n**Slides and Videos:** This lesson is designed to be mostly self-paced and completed within Code Studio, so there isn't a Slide Deck for this lesson and the videos are included within the levels that students go through. In future lessons, we provide slide decks with the videos embedded to be watched as a class rather than interrupting a student experience."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "049d4e54-45f1-4414-8d05-a2c91b46f9ba",
+        "lesson_activity.key": "42de8aa2-92d7-4929-9f8f-e70663820e52"
+      }
+    },
+    {
+      "key": "a20a41ba-4428-454c-93d8-4ca66de5d2d3",
+      "position": 2,
+      "properties": {
+        "description": "**Video:** The first level of this activity is a video that should both motivate students to complete the activity and explain how it will work. Consider watching it as a class and quickly debriefing afterwards to answer questions.",
+        "progression_name": "App Lab Intro - Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "a20a41ba-4428-454c-93d8-4ca66de5d2d3",
+        "lesson_activity.key": "42de8aa2-92d7-4929-9f8f-e70663820e52"
+      }
+    },
+    {
+      "key": "9731b795-89e0-4dcd-b57b-f7718cef0623",
+      "position": 1,
+      "properties": {
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. Encourage students to use the target images and directions provided in every level to know if they are on the right track. If students want to move on past a particularly tricky level they can simply click \"Finish\" and continue on.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help.\n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\n* **Stuck? Click here:** Each level includes a GIF showing exactly how to complete the level. If students want help they can and should use these GIFs. If they only want to use them as a hint, just have them close the GIF once they've seen the first part.\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. Except for the \"Design Mode\" sequence, all levels are independent of one another, though they do rely to some degree on previously introduced concepts.",
+        "name": "Intro to App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "9731b795-89e0-4dcd-b57b-f7718cef0623",
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a"
+      }
+    },
+    {
+      "key": "b42547f8-0c61-4804-aebf-4074d2307f69",
+      "position": 2,
+      "properties": {
+        "description": "####Setting Properties - Levels 2-4\n\n\nThese levels are all about learning to use the `setProperty()` block. The dropdowns in this block make it easy to know exactly what it is capable of changing. That said, there's a couple tips that can help\n\n* **When to use Double Quotes:** The `setProperty()` block automatically changes the final dropdown when you select what properties you want to change, including whether they use double quotes. When in doubt, students should first change the first two dropdowns, then use the last one as a model for what values work there. The most common error is failing to use double quotes around a color name.\n* **Hover to Read IDs:** By hovering over an element in your app you can read its ID. This will help students when they're trying to change multiple elements on their screen.",
+        "progression_name": "Setting Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69",
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a"
+      }
+    },
+    {
+      "key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f",
+      "position": 3,
+      "properties": {
+        "description": "####Make It Interactive - Levels 5-7\n\nThis sequence introduces the `onEvent()` block. Here's some helpful tips if students are getting stuck.\n\n* **onEvents Don't Go Inside One Another:** Students just starting out may try to put one block inside of the others. This is never the intended behavior for this tutorial. Even though this is mentioned in the videos, a quick reminder might help get kids unstuck.\n* **Check Your IDs:** You need to change the `\"id\"` property in `onEvent()` so that it detects events with the correct element.\n* **You Can Use Multiple Blocks in an `onEvent()`:** If you want multiple things to happen when you click the same button, just add more blocks to the same `onEvent()`. You should never have a program that has two `onEvent()` blocks for the combination of element (e.g. \"button1\") and event type (e.g. \"click\").",
+        "progression_name": "Make it Interactive",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Finding Images:** Students do not need to search for images or sounds online in order to complete this lesson, but they may wish to. You'll likely want to prepare in advance to advise responsible and appropriate searching for images.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f",
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a"
+      }
+    },
+    {
+      "key": "d9aaa040-67c1-4748-82ef-11f03fc99565",
+      "position": 4,
+      "properties": {
+        "description": "This section has a single level that has students add an animal to a soundboard. This level is a little more involved that the previous ones, so expect that students may need to either rewatch the video beforehand or read instructions carefully to complete all the steps.\n####Images and Sounds - Levels 8-9 \n* **Images Use `setProprety()`:** To add an image to a screen element students can use the `\"image\"` property. There is no new block.\n* **Link to Images:** Students can copy the URL of images they find directly into the `setProperty()` block in order to add them to their apps. There's no need to download them to their computers and upload them to App Lab if they don't wish to.",
+        "progression_name": "Images and Sounds"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9aaa040-67c1-4748-82ef-11f03fc99565",
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a"
+      }
+    },
+    {
+      "key": "f2b1b458-1062-49e9-ae93-8723987335b4",
+      "position": 5,
+      "properties": {
+        "description": "\n####Design Mode - Levels 10-13\n\nIn the last sequence students are working on the same project for three bubbles in a row. They are now learning to add screen elements themselves which means that the total number of things they can do in App Lab has grown a lot. Assume that some students will spend some time exploring at this point as they try out all the new tools.\n\n* **Using Good IDs:** An important part of programming in App Lab is giving your elements good IDs. Up to this section students have had their IDs created for them, so they haven't had a chance to practice this skill. This is a useful reminder for the teacher to reinforce during this section.",
+        "progression_name": "Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4",
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a"
+      }
+    },
+    {
+      "key": "39ede729-16ed-453b-8472-025035e91ce0",
+      "position": 6,
+      "properties": {
+        "description": "####Share Your App - Levels 14-15\n\n\nThis section is very open-ended. The tutorial itself is designed to give students ample time to keep working on this project, either making Choose Your Own Adventure, or one of their own creation.\n\n* **Try the Samples:** Students are provided 3 sample apps that should help them brainstorm their own ideas.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Compared to other activities in this lesson, this section asks students to be much more creative. Ask students to think \"what will your story be about?\" or do a quick group brainstorm so that classmates can hear ideas from one another.",
+        "progression_name": "Share Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "39ede729-16ed-453b-8472-025035e91ce0",
+        "lesson_activity.key": "c0701e05-e403-4edc-8340-95d8e3bc652a"
+      }
+    },
+    {
+      "key": "054207fa-3724-4e8b-949e-9288ce440496",
+      "position": 1,
+      "properties": {
+        "description": "**code.org/applab:** At the end of the lesson encourage students to head to the App Lab home page where they can get ideas for more ways to keep their adventure with App Lab going.\n\n**Exit Ticket:** Distribute the Exit Tickets to collect feedback on how the day felt for students.\n\n**(Optional) Certificates:** You may decide to print certificates to celebrate students who completed the entire tutorial - printable certificates can be found here: http://code.org/certificates",
+        "name": "Celebrate and Keep Going!\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "054207fa-3724-4e8b-949e-9288ce440496",
+        "lesson_activity.key": "75b4a584-abbb-4398-87ef-0267ce0bf4de"
+      }
+    },
+    {
       "key": "beb4dbb5-5399-4e1d-a143-76ea0a32e5ec",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -7827,6 +8046,381 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_2023"
+        ],
+        "progression": "App Lab Intro - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "a20a41ba-4428-454c-93d8-4ca66de5d2d3"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Getting Started_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_2023"
+        ],
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Screen Color_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_2023"
+        ],
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Text 2_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_2023"
+        ],
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Full Text_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_2023"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Make It Interactive_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_2023"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent intro_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_2023"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent twoButtons_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_2023"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "d9aaa040-67c1-4748-82ef-11f03fc99565"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Images and Sounds_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_2023"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "d9aaa040-67c1-4748-82ef-11f03fc99565"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - playSound_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_2023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Design Mode_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_2023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddButton_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_2023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddScreen_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_2023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatSetScreen_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_2023"
+        ],
+        "progression": "Share Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "39ede729-16ed-453b-8472-025035e91ce0"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Share Your App_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_2023"
+        ],
+        "progression": "Share Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "39ede729-16ed-453b-8472-025035e91ce0"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatPersonalize_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "Oceans_FishVTrash_2023"
         ],
         "progression": "Recognizing Fish"
@@ -7846,7 +8440,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7871,7 +8465,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7896,7 +8490,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7921,7 +8515,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7946,7 +8540,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7971,7 +8565,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7996,7 +8590,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8021,7 +8615,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8046,7 +8640,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8071,7 +8665,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8096,7 +8690,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8121,7 +8715,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8146,7 +8740,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8171,7 +8765,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8196,7 +8790,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8221,7 +8815,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8246,7 +8840,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8271,7 +8865,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8296,7 +8890,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 4,
       "assessment": true,
@@ -8321,7 +8915,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8346,7 +8940,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8371,7 +8965,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8396,7 +8990,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8421,7 +9015,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8446,7 +9040,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8471,7 +9065,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8496,7 +9090,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8521,7 +9115,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8546,7 +9140,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8571,7 +9165,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8596,7 +9190,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8621,7 +9215,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8646,7 +9240,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8671,7 +9265,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8696,7 +9290,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8721,7 +9315,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8746,7 +9340,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -8771,7 +9365,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8796,7 +9390,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -8821,7 +9415,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 56,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -8846,7 +9440,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8871,7 +9465,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8896,7 +9490,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8921,7 +9515,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8946,7 +9540,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8971,7 +9565,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8996,7 +9590,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9021,7 +9615,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9046,7 +9640,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9071,7 +9665,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 6,
       "assessment": true,
@@ -9096,7 +9690,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9121,7 +9715,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9146,7 +9740,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9171,7 +9765,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -9196,7 +9790,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9221,7 +9815,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9246,7 +9840,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9271,7 +9865,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9296,7 +9890,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9321,7 +9915,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9346,7 +9940,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9371,7 +9965,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9396,7 +9990,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9421,7 +10015,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9446,7 +10040,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9471,7 +10065,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 82,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9496,7 +10090,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 83,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9521,7 +10115,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 84,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9546,7 +10140,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 85,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9571,7 +10165,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9596,7 +10190,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9621,7 +10215,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -9647,6 +10241,186 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Getting Started_2023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "a20a41ba-4428-454c-93d8-4ca66de5d2d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Screen Color_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Text 2_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Full Text_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "b42547f8-0c61-4804-aebf-4074d2307f69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Make It Interactive_2023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent intro_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent twoButtons_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "09438694-f962-4bb7-ac2c-89dc47a1fa9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Images and Sounds_2023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "d9aaa040-67c1-4748-82ef-11f03fc99565"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - playSound_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "d9aaa040-67c1-4748-82ef-11f03fc99565"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Design Mode_2023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddButton_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddScreen_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatSetScreen_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "f2b1b458-1062-49e9-ae93-8723987335b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Share Your App_2023",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "39ede729-16ed-453b-8472-025035e91ce0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatPersonalize_2023",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_2023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd7-2023",
+        "activity_section.key": "39ede729-16ed-453b-8472-025035e91ce0"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "Oceans_FishVTrash_2023",
@@ -10527,7 +11301,7 @@
   "resources": [
     {
       "name": "5 Why's - Activity Guide",
-      "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view",
+      "url": "https://docs.google.com/presentation/d/1u2BsNRx8ev5_zQ2Fv49SVQSiGlJTDs8d7O2-JuDZeHE/view",
       "key": "5_why_s_-_activity_guide",
       "properties": {
         "audience": "Student",
@@ -10539,7 +11313,7 @@
     },
     {
       "name": "[KEY] - Numerical Data in AI Lab",
-      "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
+      "url": "https://docs.google.com/document/d/1ChaLFrOmn56Obv_e7Ep54Yn7GSPHH9CSDDiKUVIS6yk/view",
       "key": "_key_-_numerical_data_in_ai_lab",
       "properties": {
         "audience": "Verified Teacher",
@@ -10551,7 +11325,7 @@
     },
     {
       "name": "[KEY] Classification Models",
-      "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
+      "url": "https://docs.google.com/document/d/1X9insuLdN9bxeBEWryrr_W0xr-ZseXn4I5bdBBtQMLY/view",
       "key": "_key_classification_models",
       "properties": {
         "audience": "Verified Teacher",
@@ -10563,7 +11337,7 @@
     },
     {
       "name": "[KEY] Numerical Accuracy",
-      "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
+      "url": "https://docs.google.com/document/d/1Mqq-0fwCIi-urnwqatu8_FKuGZmqa2RLFTLB6YbMEGk/view",
       "key": "_key_numerical_accuracy",
       "properties": {
         "audience": "Verified Teacher",
@@ -10575,7 +11349,7 @@
     },
     {
       "name": "[KEY] Patterns in Data",
-      "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
+      "url": "https://docs.google.com/document/d/1XYw_VE2B-yxIBEe8zir93crlOiT3Ry78kq3YZo_2FPg/view",
       "key": "_key_patterns_in_data",
       "properties": {
         "audience": "Verified Teacher",
@@ -10587,7 +11361,7 @@
     },
     {
       "name": "[KEY] Training a Model in AI Lab",
-      "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+      "url": "https://docs.google.com/document/d/1lc4m63AY7E6vd8SDogG9bFLnXFFhtNf31fmTdzPxpA4/view",
       "key": "_key_training_a_model_in_ai_lab",
       "properties": {
         "audience": "Verified Teacher",
@@ -10599,7 +11373,7 @@
     },
     {
       "name": "[KEY] Zombie Prediction",
-      "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
+      "url": "https://docs.google.com/document/d/10DEhYqysK5A7D5ZBI96AcKl4RtGyhC26qvu6gwV-ukI/view",
       "key": "_key_zombie_prediction",
       "properties": {
         "audience": "Verified Teacher",
@@ -10611,7 +11385,7 @@
     },
     {
       "name": "[KEY] Zoo Models",
-      "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
+      "url": "https://docs.google.com/document/d/1fD-5e1s2_fE3V19MphefDg41JY-N9Pog6O6hTyXJJoc/view",
       "key": "_key_zoo_models",
       "properties": {
         "audience": "Verified Teacher",
@@ -10623,7 +11397,7 @@
     },
     {
       "name": "[Template] 5 Why's",
-      "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
+      "url": "https://docs.google.com/presentation/d/1tmU3VoEL_L-GEPYjV3egM2NoPXK9X82BxC4QI3fMj90/view",
       "key": "_template_5_why_s",
       "properties": {
         "audience": "Student",
@@ -10659,11 +11433,12 @@
     },
     {
       "name": "AI Ethics Research Areas",
-      "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit",
+      "url": "https://docs.google.com/document/d/1ir5EPOnw2ZUsmSmf9AwTG4vzVGQy3VBPu_Vaq1SlP7I/view",
       "key": "ai_ethics_research_areas",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_areas"
@@ -10671,12 +11446,11 @@
     },
     {
       "name": "AI Ethics Research Reflection",
-      "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1STOrwXgubRtaDInE5OZZFoqIVONFiJ6MWSvJbwUS3Zg/view",
       "key": "ai_ethics_research_reflection",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_reflection"
@@ -10754,7 +11528,7 @@
     },
     {
       "name": "App Brainstorm - Activity Guide",
-      "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view",
+      "url": "https://docs.google.com/document/d/1T-gkuy-Tl-5fW4OoXPN2brtVDI5us3i61IOhnGoR13I/view",
       "key": "app_brainstorm_-_activity_guide",
       "properties": {
         "audience": "Student"
@@ -10765,7 +11539,7 @@
     },
     {
       "name": "Classification Models",
-      "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
+      "url": "https://docs.google.com/document/d/1hR_i4su2lxxpGZHoDNxDvKWyrDpn66MAIsi22iFVZNs/view",
       "key": "classification_models",
       "properties": {
         "audience": "Student",
@@ -10790,7 +11564,7 @@
     },
     {
       "name": "Classifying Fish",
-      "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
       "key": "classifying_fish",
       "properties": {
         "audience": "Student",
@@ -10815,7 +11589,7 @@
     },
     {
       "name": "Create an ML App",
-      "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+      "url": "https://docs.google.com/document/d/1vZrQXBaQclP25oPwNXCNSX1-CERz4vwNSIMl0ZyH4oc/view",
       "key": "create_an_ml_app",
       "properties": {
         "audience": "Student",
@@ -10827,7 +11601,7 @@
     },
     {
       "name": "Create an ML App - Project Guide",
-      "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
+      "url": "https://docs.google.com/document/d/1ySXUw0Lre1O6qvHS6zv3CN0BFBOKsZhE3PKE6D2hN60/view",
       "key": "create_an_ml_app_-_project_guide",
       "properties": {
         "audience": "Student",
@@ -10939,7 +11713,7 @@
     },
     {
       "name": "Design an AI App - Project Guide",
-      "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit",
+      "url": "https://docs.google.com/document/d/1-pPVR5sLB4lRXLkE9-wJCI2WrSK5WV852EhJXO8FXig/view",
       "key": "design_an_ai_app_-_project_guide",
       "properties": {
         "audience": "Student",
@@ -10951,7 +11725,7 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+      "url": "https://docs.google.com/document/d/1cCwvy69clrk4cSaweGUkC1Isee0aiuCtdZUUe69idzM/view",
       "key": "design_an_ai_app_1",
       "properties": {
         "audience": "Student",
@@ -10998,7 +11772,7 @@
     },
     {
       "name": "Exemplar - Design an AI App Model Card",
-      "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit",
+      "url": "https://docs.google.com/presentation/d/1Vc766dZ-q3Y2x6b39mKIMAGHk88ppxP-SjygFH3v5tE/view",
       "key": "exemplar_-_design_an_ai_app_model_card",
       "properties": {
         "audience": "Verified Teacher"
@@ -11032,7 +11806,7 @@
     },
     {
       "name": "Fruit & Veggie Cards",
-      "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
+      "url": "https://docs.google.com/document/d/1IEe5Wi6_7MmptyiPHnEwvtwQsKvcIfqHzXsS4qnhPUY/view",
       "key": "fruit_veggie_cards",
       "properties": {
         "audience": "Student",
@@ -11093,10 +11867,11 @@
     },
     {
       "name": "Innovations in AI - Activity Guide",
-      "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#",
+      "url": "https://docs.google.com/document/d/1GwSQtWmUvuGGTefN3jW0r5MtgJt361I9ESe_Zi9y6ws/view",
       "key": "innovations_in_ai_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "innovations_in_ai_-_activity_guide"
@@ -11104,11 +11879,12 @@
     },
     {
       "name": "Innovations in AI Research Areas - Student Resource",
-      "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#",
+      "url": "https://docs.google.com/document/d/1gJ9VpNdZWk05Ad7oEbuMal02MsYaZtnrLUqecmf8Obg/view",
       "key": "innovations_in_ai_research_areas_-_student_resource",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "innovations_in_ai_research_areas_-_student_resource"
@@ -11210,7 +11986,7 @@
     },
     {
       "name": "Model Card - Digital Template",
-      "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
+      "url": "https://docs.google.com/presentation/d/16m1cey8LBDAG7gO8D1_cGEnLO6K5LDWhiv2OzCRTgQ0/view",
       "key": "model_card_-_digital_template",
       "properties": {
         "audience": "Student",
@@ -11222,7 +11998,7 @@
     },
     {
       "name": "Model Card - Printable Template",
-      "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
+      "url": "https://docs.google.com/presentation/d/1R-QhIBO71FwchR8d5JVBcD5PbiOU5z7R_bP09mnRHkY/view",
       "key": "model_card_-_printable_template",
       "properties": {
         "audience": "Student",
@@ -11246,7 +12022,7 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/document/d/1I_y5dKeUe-84ao5B5yKqnMXVskx96h-H4TijVqiPs3A/view",
+      "url": "https://docs.google.com/document/d/19-PQFU3YYjjdWjVRUCMXpmRZnV_LNdVeM-sQrnpVLiU/view",
       "key": "model_cards_1",
       "properties": {
         "audience": "Student",
@@ -11283,7 +12059,7 @@
     },
     {
       "name": "Numerical Accuracy",
-      "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
+      "url": "https://docs.google.com/document/d/12upsaTZ3iqHrGyesBl-0KWLhznL42KlsJGZeF5PyPPI/view",
       "key": "numerical_accuracy",
       "properties": {
         "audience": "Student",
@@ -11308,7 +12084,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
+      "url": "https://docs.google.com/document/d/13I6pRYxTwoDEUeIXkglvG7rpMIsLjVKHu7R8rKOxT08/view",
       "key": "numerical_data_in_ai_lab_1",
       "properties": {
         "audience": "Student",
@@ -11369,7 +12145,7 @@
     },
     {
       "name": "Patterns in Data",
-      "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
+      "url": "https://docs.google.com/document/d/17l2oREzo8U-DsVkq_FlgujiG99swiGfKvC-53mYBwns/view",
       "key": "patterns_in_data_1",
       "properties": {
         "audience": "Student",
@@ -11382,11 +12158,10 @@
     },
     {
       "name": "Printable Model Cards",
-      "url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/edit",
+      "url": "https://docs.google.com/presentation/d/1Whie0DD0D81Wd9rUelsPxogrShY4TNo08r6Vi_hAqzo/view",
       "key": "printable_model_cards",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1e9SanMqNO12cpQoNlMYLxC4F35qhkJ20hVnZ_-E2TbM/export?format=pdf",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11443,7 +12218,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
+      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -11479,7 +12254,7 @@
     },
     {
       "name": "Survey Planning - Activity Guide",
-      "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view",
+      "url": "https://docs.google.com/document/d/1Z_diIi_5bK5hEf6zky_BYh-B0xVlWabwJEddK3CxSv8/view",
       "key": "survey_planning_-_activity_guide",
       "properties": {
         "audience": "Student",
@@ -11512,7 +12287,7 @@
     },
     {
       "name": "Training a Model in AI Lab",
-      "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
+      "url": "https://docs.google.com/document/d/1g2SnkvucCNybZEGOdid2Dlq0_XEm0sf4z0U3msUJLIM/view",
       "key": "training_a_model_in_ai_lab",
       "properties": {
         "audience": "Student",
@@ -11549,7 +12324,7 @@
     },
     {
       "name": "Troubleshooting Models - Activity Guide",
-      "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit",
+      "url": "https://docs.google.com/document/d/1CWOJ7PHNlO7Z-4C51KvZnu55EDKn1t33i-2oUw5Zc_g/view",
       "key": "troubleshooting_models_-_activity_guide",
       "properties": {
         "audience": "Student",
@@ -11573,7 +12348,7 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+      "url": "https://docs.google.com/document/d/1QxjxUn_X9RXolJfIMHVYYxxZB-9tAtJC067r__oQZfM/view",
       "key": "types_of_machine_learning_1",
       "properties": {
         "audience": "Student",
@@ -11586,7 +12361,7 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
+      "url": "https://docs.google.com/document/d/1EEHJruthZ3ObknGOaVsC2SKY5RaZp042ozgzGau5NWw/view",
       "key": "types_of_machine_learning_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -11634,7 +12409,7 @@
     },
     {
       "name": "Zombie Prediction",
-      "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
+      "url": "https://docs.google.com/document/d/14PIdGQ6YClxCMOetY8AGHcbpnCyYI2vffTTKGCqbNRw/view",
       "key": "zombie_prediction",
       "properties": {
         "audience": "Student",
@@ -11647,7 +12422,7 @@
     },
     {
       "name": "Zoo Models",
-      "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
+      "url": "https://docs.google.com/document/d/1gDbioUAySZZdDeWWbs0zg4X0-Dy392dJRo3splmeqW8/view",
       "key": "zoo_models",
       "properties": {
         "audience": "Student",
@@ -12661,6 +13436,16 @@
       }
     },
     {
+      "key": "550d0aba-fcca-4adf-985c-2955df143802",
+      "properties": {
+        "description": "Build and share their own apps in App Lab using features like buttons, text, images, sound, and screens."
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "objective.key": "550d0aba-fcca-4adf-985c-2955df143802"
+      }
+    },
+    {
       "key": "5574dcbf-224a-41bf-8e38-f00d8936c7ad",
       "properties": {
         "description": "Create an app that uses machine learning"
@@ -12945,6 +13730,13 @@
         "lesson.key": "Innovations in AI",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
       }
     },
     {
