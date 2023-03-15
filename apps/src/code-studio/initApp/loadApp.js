@@ -470,6 +470,13 @@ const sourceHandler = {
   inRestrictedShareMode() {
     return getAppOptions().level.inRestrictedShareMode;
   },
+  setTeacherHasConfirmedUploadWarning(teacherHasConfirmedUploadWarning) {
+    getAppOptions().level.teacherHasConfirmedUploadWarning = teacherHasConfirmedUploadWarning;
+  },
+  // maybe rename to get
+  teacherHasConfirmedUploadWarning() {
+    return getAppOptions().level.teacherHasConfirmedUploadWarning;
+  },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {
     return new Promise((resolve, reject) => {

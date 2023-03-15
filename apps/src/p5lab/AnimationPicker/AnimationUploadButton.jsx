@@ -7,7 +7,10 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
-import {refreshInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux.js';
+import {
+  refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning
+} from '@cdo/apps/code-studio/projectRedux.js';
 import {
   exitedUploadWarning,
   showingUploadWarning
@@ -22,12 +25,15 @@ import {
  */
 export function UnconnectedAnimationUploadButton({
   onUploadClick,
-  shouldRestrictAnimationUpload,
+  shouldWarnOnAnimationUpload,
   isBackgroundsTab,
+  teacherHasConfirmedUploadWarning,
   inRestrictedShareMode,
   refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning,
   showingUploadWarning,
-  exitedUploadWarning
+  exitedUploadWarning,
+  currentUserType
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [
@@ -38,8 +44,11 @@ export function UnconnectedAnimationUploadButton({
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] = useState(
     false
   );
+  // how does this work for signed out?
+  const isTeacher = currentUserType === 'teacher';
   const showRestrictedUploadWarning =
-    shouldRestrictAnimationUpload && !inRestrictedShareMode;
+    shouldWarnOnAnimationUpload &&
+    (isTeacher ? !teacherHasConfirmedUploadWarning : !inRestrictedShareMode);
 
   function renderUploadButton() {
     return (
@@ -75,17 +84,21 @@ export function UnconnectedAnimationUploadButton({
             />
             {msg.animationPicker_confirmNoPII()}
           </label>
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              checked={restrictedShareConfirmed}
-              onChange={() =>
-                setRestrictedShareConfirmed(!restrictedShareConfirmed)
-              }
-            />
-            {msg.animationPicker_confirmRestrictedShare()}
-          </label>
+          {!isTeacher && (
+            <label className={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                checked={restrictedShareConfirmed}
+                onChange={() =>
+                  setRestrictedShareConfirmed(!restrictedShareConfirmed)
+                }
+              />
+              {msg.animationPicker_confirmRestrictedShare()}
+            </label>
+          )}
+
           <p className={styles.modalDetails}>
+            {currentUserType}
             {msg.animationPicker_undoRestrictedShareInstructions()}
           </p>
         </div>
@@ -100,8 +113,8 @@ export function UnconnectedAnimationUploadButton({
           <button
             className={classNames(styles.modalButton, styles.confirmButton)}
             type="button"
-            onClick={confirmRestrictedUpload}
-            disabled={!(noPIIConfirmed && restrictedShareConfirmed)}
+            onClick={confirmUploadWarning}
+            disabled={!isConfirmButtonEnabled()}
           >
             {msg.dialogOK()}
           </button>
@@ -109,6 +122,11 @@ export function UnconnectedAnimationUploadButton({
       </BaseDialog>
     );
   }
+
+  const isConfirmButtonEnabled = () =>
+    currentUserType === 'teacher'
+      ? noPIIConfirmed
+      : noPIIConfirmed && restrictedShareConfirmed;
 
   // Warning dialog that you cannot upload until you un-publish your project.
   function renderPublishedWarningModal() {
@@ -136,11 +154,18 @@ export function UnconnectedAnimationUploadButton({
     );
   }
 
-  function confirmRestrictedUpload() {
-    project.setInRestrictedShareMode(true);
+  function confirmUploadWarning() {
+    if (isTeacher) {
+      project.setTeacherHasConfirmedUploadWarning(true);
+      // seems to be preventing popup (popup not appearning again), but can't find redux change in project object?
+      refreshTeacherHasConfirmedUploadWarning();
+    } else {
+      project.setInRestrictedShareMode(true);
+      // redux setting, for use in share/remix
+      refreshInRestrictedShareMode();
+    }
+
     setIsUploadModalOpen(false);
-    // redux setting, for use in share/remix
-    refreshInRestrictedShareMode();
     onUploadClick();
     exitedUploadWarning();
   }
@@ -178,22 +203,31 @@ export function UnconnectedAnimationUploadButton({
 
 UnconnectedAnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
-  shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+  shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
+  // why is this showing up undefined?
+  teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,
   refreshInRestrictedShareMode: PropTypes.func.isRequired,
+  refreshTeacherHasConfirmedUploadWarning: PropTypes.func.isRequired,
   showingUploadWarning: PropTypes.func.isRequired,
-  exitedUploadWarning: PropTypes.func.isRequired
+  exitedUploadWarning: PropTypes.func.isRequired,
+  currentUserType: PropTypes.string
 };
 
 export default connect(
   state => ({
-    inRestrictedShareMode: state.project.inRestrictedShareMode
+    inRestrictedShareMode: state.project.inRestrictedShareMode,
+    teacherHasConfirmedUploadWarning:
+      state.project.teacherHasConfirmedUploadWarning,
+    currentUserType: state.currentUser?.userType
   }),
   dispatch => ({
     refreshInRestrictedShareMode: inRestrictedShareMode =>
       dispatch(refreshInRestrictedShareMode(inRestrictedShareMode)),
+    refreshTeacherHasConfirmedUploadWarning: () =>
+      dispatch(refreshTeacherHasConfirmedUploadWarning()),
     showingUploadWarning: () => dispatch(showingUploadWarning()),
     exitedUploadWarning: () => dispatch(exitedUploadWarning())
   })

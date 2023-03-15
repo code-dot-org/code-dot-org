@@ -106,11 +106,7 @@ class P5LabView extends React.Component {
 
   // Teachers and users of non-blockly labs should always be allowed to upload animations
   // with no restrictions. Otherwise, if users upload animations we will disable publish and remix.
-  shouldRestrictAnimationUpload() {
-    if (this.props.currentUserType === 'teacher') {
-      return false;
-    }
-
+  shouldWarnOnAnimationUpload() {
     return this.props.isBlockly;
   }
 
@@ -170,7 +166,7 @@ class P5LabView extends React.Component {
               channelId={channelId}
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.shouldHideAnimationUpload()}
-              shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
+              shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -219,7 +215,7 @@ class P5LabView extends React.Component {
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}
-        shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
+        shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
         hideCostumes={isBackgroundMode}
