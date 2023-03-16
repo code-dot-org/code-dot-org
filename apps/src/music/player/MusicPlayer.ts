@@ -1,3 +1,4 @@
+import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {Effects} from './interfaces/Effects';
 import {FunctionContext} from './interfaces/FunctionContext';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
@@ -5,7 +6,7 @@ import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SkipContext} from './interfaces/SkipContext';
 import {SoundEvent} from './interfaces/SoundEvent';
 import {TrackMetadata} from './interfaces/TrackMetadata';
-import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
+import MusicLibrary, {SoundData, SoundFolder, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 
 // Using require() to import JS in TS files
@@ -156,6 +157,42 @@ export default class MusicPlayer {
     }
   }
 
+  playChordAtMeasure(
+    value: ChordEventValue,
+    measure: number,
+    insideWhenRun: boolean,
+    trackId?: string,
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
+  ) {
+    if (!this.samplePlayer.initialized()) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (!value || !measure) {
+      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
+      return;
+    }
+
+    const chordEvent: ChordEvent = {
+      type: 'chord',
+      value,
+      triggered: !insideWhenRun,
+      when: measure,
+      trackId,
+      functionContext,
+      skipContext,
+      effects
+    };
+
+    this.playbackEvents.push(chordEvent);
+
+    if (this.samplePlayer.playing()) {
+      this.samplePlayer.playSamples(this.convertEventToSamples(chordEvent));
+    }
+  }
+
   /**
    * Preview the given sound. Plays immediately.
    *
@@ -164,6 +201,19 @@ export default class MusicPlayer {
    */
   previewSound(id: string, onStop: () => any) {
     this.samplePlayer.previewSample(id, onStop);
+  }
+
+  previewChord(chordValue: ChordEventValue, onStop: () => any) {
+    const chordEvent: ChordEvent = {
+      type: 'chord',
+      when: 1,
+      value: chordValue,
+      triggered: false
+    };
+    this.samplePlayer.previewSamples(
+      this.convertEventToSamples(chordEvent),
+      onStop
+    );
   }
 
   /**
@@ -430,6 +480,64 @@ export default class MusicPlayer {
         };
 
         results.push(resultEvent);
+      }
+
+      return results;
+    } else if (event.type === 'chord') {
+      const chordEvent = event as ChordEvent;
+      const {instrument, notes, playStyle} = chordEvent.value;
+      if (notes.length === 0) {
+        return [];
+      }
+
+      const results: SampleEvent[] = [];
+
+      const folder: SoundFolder | null =
+        this.library.groups[0].folders.find(
+          folder => folder.path === instrument
+        ) || null;
+
+      if (folder === null) {
+        console.warn(`No instrument ${instrument}`);
+        return [];
+      }
+
+      if (playStyle === 'arpeggio-up') {
+        notes.sort();
+      } else if (playStyle === 'arpeggio-down') {
+        notes.sort().reverse();
+      } else if (playStyle === 'arpeggio-random') {
+        // Randomize using Fisher-Yates Algorithm
+        for (let i = notes.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = notes[i];
+          notes[i] = notes[j];
+          notes[j] = temp;
+        }
+      }
+
+      // Create the array of samples. If the play style is arpeggio, we play one
+      // sound every 16th note, repeating the sequence as many times as needed.
+      // If the play style is "together", then only add each note once, and have them
+      // all play at the start of the given measure.
+      for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
+        const note = notes[i % notes.length];
+        const sound = folder.sounds.find(sound => sound.note === note) || null;
+        if (sound === null) {
+          console.warn(
+            `No sound for note value ${note} on instrument ${instrument}`
+          );
+          continue;
+        }
+
+        const noteWhen =
+          playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
+
+        results.push({
+          sampleId: `${instrument}/${sound.src}`,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+          ...event
+        });
       }
 
       return results;
