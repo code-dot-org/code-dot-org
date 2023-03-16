@@ -1,4 +1,4 @@
-name 'SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_2023'
+name 'CSC-SelfPaced-lessonactivities_2023'
 title 'title'
 description 'description here'
 
@@ -7,12 +7,13 @@ markdown <<MARKDOWN
 
 ## Types of Levels
 
+Lessons are made up of levels.  There are different types of levels to best support students with learning computer science.  Here are some of the lesson levels in CS Connections.  Click continue to work through examples of these levels.
+
 ##### **Off the computer**
 * ##### Planning - 
 
 ##### **On the computer**
 * ##### Skill-building - 
-* ##### Videos - 
 * ##### Prediction - 
 * #####  Free Play - 
 * ##### Multiple Choice - 
