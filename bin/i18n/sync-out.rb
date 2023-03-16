@@ -36,9 +36,9 @@ def sync_out(upload_manifests=false)
   end
   clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
-rescue => e
-  puts "Sync out failed from the error: #{e}"
-  raise e
+rescue => exception
+  puts "Sync out failed from the error: #{exception}"
+  raise exception
 end
 
 # Cleans up any files the sync-out is responsible for managing. When this function is done running,
@@ -585,15 +585,15 @@ def restore_markdown_headers
     end
     begin
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    rescue Exception => err
+    rescue Exception => exception
       puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
-      raise err
+      raise exception
     end
     begin
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    rescue Exception => err
+    rescue Exception => exception
       puts "Error parsing yaml header path=#{path}"
-      raise err
+      raise exception
     end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)

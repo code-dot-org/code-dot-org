@@ -1,4 +1,6 @@
-import MusicPlayer, {PlaybackEvent, SoundEvent} from './player/MusicPlayer';
+import MusicPlayer from './player/MusicPlayer';
+import {PlaybackEvent} from './player/interfaces/PlaybackEvent';
+import {SoundEvent} from './player/interfaces/SoundEvent';
 
 // The two classes in this file handle student progress through steps.
 
