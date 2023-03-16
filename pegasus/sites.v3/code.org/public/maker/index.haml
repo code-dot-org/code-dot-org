@@ -17,11 +17,14 @@ theme: responsive_full_width
 
 %section.hero-banner-basic{style: "background: #00736E"}
   .wrapper
-    .text-wrapper.col-40
-      %h1{style: "color: white"} Become a Maker
-      %p{style: "color: white"} Explore your creativity with physical computing.
+    %div.flex-container
+      %div.text-wrapper.col-40
+        %h1{style: "color: white"} Become a Maker
+        %p{style: "color: white"} Explore your creativity with physical computing.
+      %div.col-60
+        %img{src: "/images/maker/maker-skinny-banner-img-left.svg", alt: ""}
+        %img{src: "/images/maker/maker-skinny-banner-img-right.svg", alt: ""}
     .clear
-    %img{src: "/images/maker/maker-banner-image.svg", alt: ""}
 
 %section
   .wrapper
