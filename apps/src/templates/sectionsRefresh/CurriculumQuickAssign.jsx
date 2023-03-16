@@ -20,6 +20,7 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
+  const [selectedCourseOffering, setSelectedCourseOffering] = useState(null);
 
   const showPlOfferings = queryParams('participantType') !== 'student';
 
@@ -87,6 +88,9 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
         <QuickAssignTable
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
+          setSelectedCourseOffering={offering =>
+            setSelectedCourseOffering(offering)
+          }
           updateCourse={course => updateSection('course', course)}
           sectionCourse={sectionCourse}
         />
@@ -95,18 +99,18 @@ export default function CurriculumQuickAssign({updateSection, sectionCourse}) {
         <QuickAssignTableHocPl
           marketingAudience={marketingAudience}
           courseOfferings={courseOfferings}
+          setSelectedCourseOffering={offering =>
+            setSelectedCourseOffering(offering)
+          }
           updateCourse={course => updateSection('course', course)}
           sectionCourse={sectionCourse}
         />
       )}
-      {(sectionCourse.versionId || sectionCourse.unitId) && (
-        <VersionUnitDropdowns
-          marketingAudience={marketingAudience}
-          courseOfferings={courseOfferings}
-          updateCourse={course => updateSection('course', course)}
-          sectionCourse={sectionCourse}
-        />
-      )}
+      <VersionUnitDropdowns
+        courseOffering={selectedCourseOffering}
+        updateCourse={course => updateSection('course', course)}
+        sectionCourse={sectionCourse}
+      />
     </div>
   );
 }

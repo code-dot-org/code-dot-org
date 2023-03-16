@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
+import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
 
 export default function VersionUnitDropdowns({
-  courseOfferings,
-  marketingAudience,
+  courseOffering,
   updateCourse,
   sectionCourse
 }) {
@@ -19,47 +19,36 @@ export default function VersionUnitDropdowns({
     updateCourse(sectionCourse);
   };
 
-  const versionList = () => {
-    return courseOfferings[marketingAudience][sectionCourse.id].course_versions;
-  };
-
   return (
     <div className={moduleStyles.buttonRow}>
       <div className={moduleStyles.buttonsInRow}>
-        {sectionCourse.versionId && (
-          <span>
-            <div>{i18n.assignmentSelectorCourse()}</div>
-            <select
-              id="uitest-version-dropdown"
-              value={courseOfferings[marketingAudience]}
-              onChange={updateCourseDetail(VERSION_ID, event.target.value)}
-            >
-              {versionList.map(cv => (
-                <option key={cv.id} value={cv.id}>
-                  {cv.key}
-                </option>
-              ))}
-            </select>
-          </span>
+        {courseOffering && (
+          <AssignmentVersionSelector
+            dropdownStyle={null}
+            selectedCourseVersionId={sectionCourse.versionId}
+            courseVersions={courseOffering.course_versions}
+            onChangeVersion={id => updateCourseDetail(VERSION_ID, id)}
+            disabled={true}
+          />
         )}
-        {sectionCourse.unitId && (
+        {sectionCourse?.unitId && (
           <span>
             <div>{i18n.assignmentSelectorCourse()}</div>
             <select
               id="uitest-unit-dropdown"
-              value={courseOfferings[marketingAudience]}
+              value={courseOffering}
               onChange={updateCourseDetail(UNIT_ID, event.target.value)}
             >
               <option key="default" value={noAssignment} />
               <option key="later" value={decideLater}>
                 {i18n.decideLater()}
               </option>
-              {courseOfferings.map(offering => (
+              {courseOffering.map(offering => (
                 <optgroup
                   key={offering.display_name}
                   label={offering.display_name}
                 >
-                  {courseOfferings[marketingAudience]?.map(courseOffering => (
+                  {courseOffering?.map(courseOffering => (
                     <option key={courseOffering.id} value={courseOffering.id}>
                       {courseOffering.display_name}
                     </option>
@@ -75,8 +64,7 @@ export default function VersionUnitDropdowns({
 }
 
 VersionUnitDropdowns.propTypes = {
-  courseOfferings: PropTypes.object.isRequired,
-  marketingAudience: PropTypes.string.isRequired,
+  courseOffering: PropTypes.object,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object
 };

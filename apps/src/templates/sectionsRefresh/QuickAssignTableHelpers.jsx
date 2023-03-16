@@ -11,16 +11,22 @@ QuickAssign tables, so that the GradeBand and Hoc/Pl tables don't repeat code.
   function to render the course offerings. This 'key=' uses the header as
   a unique identifier.
 */
-export function renderRows(courseData, sectionCourse, updateCourse) {
+export function renderRows(
+  courseData,
+  sectionCourse,
+  updateCourse,
+  setSelectedCourseOffering
+) {
   const headers = Object.keys(courseData);
   return headers.map(header => (
     <tr key={header}>
       <td className={moduleStyles.courseHeaders}>
         {header}
         {renderOfferings(
-          Object.values(courseData[header]),
+          courseData[header],
           sectionCourse,
-          updateCourse
+          updateCourse,
+          setSelectedCourseOffering
         )}
       </td>
     </tr>
@@ -31,24 +37,46 @@ export function renderRows(courseData, sectionCourse, updateCourse) {
   Renders all the radio type inputs within each table. Only one can be
   selected at a time. Selecting one immediately calls updateCourse.
 */
-function renderOfferings(courseValues, sectionCourse, updateCourse) {
-  const values = courseValues.map(cv => [cv.display_name, cv.id]);
-  return values.map(([display_name, id]) => (
-    <div className={moduleStyles.flexDisplay} key={display_name}>
+function renderOfferings(
+  courseData,
+  sectionCourse,
+  updateCourse,
+  setSelectedCourseOffering
+) {
+  const courseValues = Object.values(courseData);
+  return courseValues.map(course => (
+    <div className={moduleStyles.flexDisplay} key={course.display_name}>
       <input
-        id={display_name}
+        id={course.display_name}
         className={moduleStyles.radio}
         type="radio"
-        name={display_name}
-        value={display_name}
-        checked={sectionCourse?.displayName === display_name}
+        name={course.display_name}
+        value={course.display_name}
+        checked={sectionCourse?.displayName === course.display_name}
         onChange={() => {
-          updateCourse({displayName: display_name, courseOfferingId: id});
+          updateSectionCourse(updateCourse, course);
+          setSelectedCourseOffering(course);
         }}
       />
-      <label className={moduleStyles.label} htmlFor={display_name}>
-        {display_name}
+      <label className={moduleStyles.label} htmlFor={course.display_name}>
+        {course.display_name}
       </label>
     </div>
   ));
+}
+
+function updateSectionCourse(updateCourse, course) {
+  let courseVersionId;
+  if (Object.keys(course.course_versions).length === 1) {
+    courseVersionId = Object.values(course.course_versions)[0].id;
+  } else {
+    courseVersionId = Object.values(course.course_versions)?.find(
+      versions => versions.is_recommended
+    )?.id;
+  }
+  updateCourse({
+    displayName: course.display_name,
+    courseOfferingId: course.id,
+    versionId: courseVersionId
+  });
 }
