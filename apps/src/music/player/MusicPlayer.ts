@@ -486,6 +486,10 @@ export default class MusicPlayer {
     } else if (event.type === 'chord') {
       const chordEvent = event as ChordEvent;
       const {instrument, notes, playStyle} = chordEvent.value;
+      if (notes.length === 0) {
+        return [];
+      }
+
       const results: SampleEvent[] = [];
 
       const folder: SoundFolder | null =
@@ -512,6 +516,10 @@ export default class MusicPlayer {
         }
       }
 
+      // Create the array of samples. If the play style is arpeggio, we play one
+      // sound every 16th note, repeating the sequence as many times as needed.
+      // If the play style is "together", then only add each note once, and have them
+      // all play at the start of the given measure.
       for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
         const note = notes[i % notes.length];
         const sound = folder.sounds.find(sound => sound.note === note) || null;

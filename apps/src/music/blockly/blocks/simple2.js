@@ -173,7 +173,6 @@ export const playPatternAtCurrentLocationSimple2 = {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'play pattern %1',
     args0: [fieldPatternDefinition],
-
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
@@ -203,7 +202,6 @@ export const playChordAtCurrentLocationSimple2 = {
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
     message0: 'play chord %1',
     args0: [fieldChordDefinition],
-
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
