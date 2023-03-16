@@ -29,7 +29,7 @@ class WebPurifyTest < Minitest::Test
   end
 
   def test_find_potential_profanities_with_language
-    assert_nil WebPurify.find_potential_profanities('puta madre', ['en'])
+    assert_nil WebPurify.find_potential_profanities('scheiße', ['es'])
     assert_equal ['scheiße'], WebPurify.find_potential_profanities('scheiße', ['de'])
     assert_equal ['puta'], WebPurify.find_potential_profanities('puta madre', ['es'])
   end
