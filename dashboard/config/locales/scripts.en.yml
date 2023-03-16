@@ -10247,15 +10247,30 @@ en:
           description: |-
             These lessons supplement the [How Blockchain Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf) video series. Each lesson focused on a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an **immersive experience** for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around Blockchain technology and empathy with its users. Some lessons focus more on the technology behind Blockchain, while other lessons focus on the economic and societal impacts of Blockchain technologies.
 
-            The last lesson in the unit is for classrooms who only have a single day but would like to introduce students to Blockchain.
+            ### Implementation Options
+
+            Click one of the options below to expand and view more details.
+
+            ::: details [<span style="font-size: 1.2em; font-weight: bold;">"I want to teach them all!"</spa>]
+            Lessons 1-5 can be taught as a 5-day sequence, where each day focuses on an individual video from the video series and dives deeper into the concepts introduced. Classrooms that go this direction should hide Lesson 6, which does not fit in this sequence. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: details [<span style="font-size: 1.2em; font-weight: bold;">"I want to teach a specific lesson or integrate into another class"</span>]
+            Each lesson can stand on its own and be taught independently from the others. This is especially useful if you would like to integrate a lesson into another subject or an existing computer science, cybersecurity, or economics class. Classrooms that go this direction should hide all lessons except the one you want to teach. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            ::: details [<span style="font-size: 1.2em; font-weight: bold;">"I Only Have a Day"</span>]
+            Lesson 6 is designed for classrooms that want to introduce blockchain to students, but only have a day to do so. This lesson provides a notetaker for students as the class watches the entire video sequence. Classrooms that go this direction should hide all lessons except for Lesson 6. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            <br />
+            <br />
           student_description: ''
         self-paced-pl-csc-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching CS Connections
           title: Teaching CS Connections
-          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n* Get an overview of CS Connections.\n\n* Set up a plan to implement a CS Connections module.\n\n* Practice key concepts included in lessons.\n\n* Preview end of module projects.\n\n* Consider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\nPreview end of module projects.\n\nConsider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n* Get an overview of CS Connections.\n\n* Set up a plan to implement a CS Connections module.\n\n* Practice key concepts included in lessons.\n\n* Preview features and resources.\n\n* Consider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\n* Preview features and resources.\n\n\nConsider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
           description_short: ''
           description_audience: ''
           lessons: {}
