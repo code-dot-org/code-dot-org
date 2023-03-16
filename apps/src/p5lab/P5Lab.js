@@ -908,10 +908,12 @@ export default class P5Lab {
     } else {
       let textBlocks;
       if (Blockly.version === 'Google') {
-        // We're using Google Blockly, report the program as JSON
+        // Google Blockly labs don't have shared functions yet, so we can use
+        // util directly.
         textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
       } else {
-        // We're using CDO Blockly, report the program as xml
+        // We're using CDO Blockly, report the program as xml with any shared
+        // functions added in.
         var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
 
         // When SharedFunctions (aka shared behavior_definitions) are enabled, they
