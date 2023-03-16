@@ -10,11 +10,29 @@ export default class SoundEffects {
     this.generateBusses();
   }
 
+  // Generate a unique key string for a given set of effects.
+  generateKeyString(effects) {
+    let keyStrings = [];
+    if (effects.filter === 'medium') {
+      keyStrings.push('filter_medium');
+    }
+    if (effects.filter === 'low') {
+      keyStrings.push('filter_low');
+    }
+    if (effects.delay === 'medium') {
+      keyStrings.push('delay_medium');
+    }
+    if (effects.delay === 'low') {
+      keyStrings.push('delay_low');
+    }
+    return keyStrings.join('-');
+  }
+
   // Generates a set of busses.  Because these effects can be
   // expensive, we want to pre-generate the busses and then connect
   // sounds to the appropriate one.
   generateBusses() {
-    const busEffects = [
+    const busEffectsCombinations = [
       {filter: 'medium', delay: 'medium'},
       {filter: 'low', delay: 'low'},
       {filter: 'low', delay: 'medium'},
@@ -25,28 +43,14 @@ export default class SoundEffects {
       {delay: 'low'}
     ];
 
-    busEffects.forEach(busEffect => {
-      let keyStrings = [];
-      if (busEffect.filter === 'medium') {
-        keyStrings.push('filter_medium');
-      }
-      if (busEffect.filter === 'low') {
-        keyStrings.push('filter_low');
-      }
-      if (busEffect.delay === 'medium') {
-        keyStrings.push('delay_medium');
-      }
-      if (busEffect.delay === 'low') {
-        keyStrings.push('delay_low');
-      }
-
-      const {firstNode, lastNode} = this.generateBus(busEffect);
+    busEffectsCombinations.forEach(busEffects => {
+      const {firstNode, lastNode} = this.generateBus(busEffects);
 
       // The bus connects to our main output.
       lastNode.connect(this.audioContext.destination);
 
       // Save the pre-generated bus.
-      const keyString = keyStrings.join('-');
+      const keyString = this.generateKeyString(busEffects);
       this.busses[keyString] = firstNode;
     });
   }
@@ -138,20 +142,7 @@ export default class SoundEffects {
     }
 
     // For other effects, find the right bus to attach to.
-    let keyStrings = [];
-    if (effects.filter === 'medium') {
-      keyStrings.push('filter_medium');
-    }
-    if (effects.filter === 'low') {
-      keyStrings.push('filter_low');
-    }
-    if (effects.delay === 'medium') {
-      keyStrings.push('delay_medium');
-    }
-    if (effects.delay === 'low') {
-      keyStrings.push('delay_low');
-    }
-    const keyString = keyStrings.join('-');
+    const keyString = this.generateKeyString(effects);
     const bus = this.busses[keyString];
     if (bus) {
       // Attach the last node to that bus, which is already
