@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import handleLaunchImmersiveReader from '@cdo/apps/util/immersive_reader';
 import {renderButtons} from '@microsoft/immersive-reader-sdk';
 import cookies from 'js-cookie';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 class ImmersiveReaderButton extends Component {
   static propTypes = {
@@ -50,7 +51,9 @@ class ImmersiveReaderButton extends Component {
           handleLaunchImmersiveReader(locale, title, text);
         }}
         onKeyDown={e => this.handleKeyDown(e, locale, title, text)}
-      />
+      >
+        <FontAwesome icon={'assistive-listening-systems'} />
+      </div>
     );
   }
 

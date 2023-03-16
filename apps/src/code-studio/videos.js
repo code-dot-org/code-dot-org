@@ -198,8 +198,8 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   });
 
   var download = $('<a/>')
-    .append($('<img src="/shared/images/download_button.png"/>'))
-    .addClass('download-video')
+    .append($('<i class="fa fa-download" />'))
+    .addClass('download-video btn')
     .css('float', 'left')
     .attr('href', options.download)
     .click(function() {
