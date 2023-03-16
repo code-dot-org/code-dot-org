@@ -29,7 +29,7 @@ class WebPurifyTest < Minitest::Test
   end
 
   def test_find_potential_profanities_with_language
-    assert_nil WebPurify.find_potential_profanities('scheiße', ['en'])
+    assert_nil WebPurify.find_potential_profanities('puta madre', ['en'])
     assert_equal ['scheiße'], WebPurify.find_potential_profanities('scheiße', ['de'])
     assert_equal ['puta'], WebPurify.find_potential_profanities('puta madre', ['es'])
   end
@@ -38,12 +38,4 @@ class WebPurifyTest < Minitest::Test
     max_length_string = 'f' * WEBPURIFY_CHARACTER_LIMIT
     assert_nil WebPurify.find_potential_profanities(max_length_string)
   end
-
-  # def test_find_potential_profanities_exceed_character_limit
-  #   too_long_string = 'f' * (WEBPURIFY_CHARACTER_LIMIT + 1)
-  #   err = assert_raises OpenURI::HTTPError do
-  #     WebPurify.find_potential_profanities(too_long_string)
-  #   end
-  #   assert_match /414 Request-URI Too Large/, err.message
-  # end
 end
