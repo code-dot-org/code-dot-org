@@ -19,16 +19,22 @@ export default function VersionUnitDropdowns({
     updateCourse(sectionCourse);
   };
 
+  const prepareCourseVersions = () => {
+    const versionObject = {};
+    courseOffering.course_versions.map(cv => {
+      versionObject[cv[1].id] = cv[1];
+    });
+    return versionObject;
+  };
+
   return (
     <div className={moduleStyles.buttonRow}>
       <div className={moduleStyles.buttonsInRow}>
         {courseOffering && (
           <AssignmentVersionSelector
-            dropdownStyle={null}
             selectedCourseVersionId={sectionCourse.versionId}
-            courseVersions={courseOffering.course_versions}
+            courseVersions={prepareCourseVersions()}
             onChangeVersion={id => updateCourseDetail(VERSION_ID, id)}
-            disabled={true}
           />
         )}
         {sectionCourse?.unitId && (
