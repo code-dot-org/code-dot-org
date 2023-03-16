@@ -38,7 +38,7 @@ theme: responsive_full_width
   .wrapper
     %h2 Explore devices
     %p We have curriculum options that support two different devices — see available options below. <strong>Need a device?</strong> Explore details of each device by clicking <em>Learn more about the device</em> below.
-    = view :maker_devices
+    = view :maker_devices, curriculum_link_cp: "#curriculum_link_cp", curriculum_link_microbit: "#curriculum_link_microbit"
 
 %section.bg-neutral-light.why-physical-computing
   .wrapper
@@ -68,6 +68,7 @@ theme: responsive_full_width
         %img{src: "/images/maker/maker-girls-with-devices.png", alt: "", style: "width: 100%"}
     .clear
 
+%a{id: "curriculum_link_cp"}
 %section
   .wrapper
     %h2 Curriculum using the Circuit Playground
@@ -75,6 +76,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
+%a{id: "curriculum_link_microbit"}
 %section
   .wrapper
     %h2 Curriculum using the micro:bit
