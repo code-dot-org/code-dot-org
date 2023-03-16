@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poemmaker",
-    "serialized_at": "2023-03-10 17:32:03 UTC",
+    "serialized_at": "2023-03-16 00:27:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2801,15 +2801,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_share_2023"
-        ],
         "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "poetry_module_share_2023"
+          "poemmaker_module_share_2023"
         ],
         "lesson.key": "Poetry Circle",
         "lesson_group.key": "",
@@ -2817,7 +2814,7 @@
         "activity_section.key": "5e9f1235-26fd-4754-8bb0-2c9f5619eeb2"
       },
       "level_keys": [
-        "poetry_module_share_2023"
+        "poemmaker_module_share_2023"
       ]
     },
     {
@@ -3209,9 +3206,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_module_share_2023",
+        "level.key": "poemmaker_module_share_2023",
         "script_level.level_keys": [
-          "poetry_module_share_2023"
+          "poemmaker_module_share_2023"
         ],
         "lesson.key": "Poetry Circle",
         "lesson_group.key": "",
