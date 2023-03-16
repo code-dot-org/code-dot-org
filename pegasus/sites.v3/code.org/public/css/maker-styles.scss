@@ -58,3 +58,13 @@ section.why-physical-computing{
     }
   }
 }
+
+.newsletter-signup {
+  padding-bottom: 0;
+  margin-bottom: -4em;
+
+  @media screen and (max-width: $width-sm) {
+    padding-bottom: 4em;
+    margin-bottom: 2em;
+  }
+}
