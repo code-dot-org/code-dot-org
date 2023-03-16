@@ -1,5 +1,17 @@
 // Use this to maintain proper heading hierarchy
-// when the design calls for a different style
+// when design calls for a different style (semantic h3, h5 style).
+
+// Use @include mixin-name in stylesheets for widespread use.
+/* — example: all h3s in a ul need to look like a h5s
+    ul.icon-list {
+      h3 { @include h5-style }
+    }
+*/
+
+// Use .h1, .h2, etc classes on single elements in the markup.
+// - example: %h3.h5 This is heading text
+
+// Mixins
 @mixin h1-style {
   font-family: $barlowSemiCondensed-semibold;
   font-size: 3em;
@@ -30,6 +42,7 @@
   font-size: 1em;
 }
 
+// Heading styles
 h1, h2, h3, h4, h5, h6 {
   color: $neutral-dark;
   margin: 0 0 0.5em;
