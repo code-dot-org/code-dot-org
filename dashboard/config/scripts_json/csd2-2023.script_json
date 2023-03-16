@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-03-14 20:12:58 UTC",
+    "serialized_at": "2023-03-15 17:37:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -11699,7 +11699,7 @@
     {
       "key": "0d039da4-6026-442a-a61a-92cde155234a",
       "properties": {
-        "description": "Create a prototype of a web design to meet the needs of a user"
+        "description": "Create a prototype of a web design to meet the needs of a user using the problem-solving process"
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
@@ -11894,6 +11894,16 @@
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "objective.key": "aeed2f2f-07b9-4551-b6c0-77584842f223"
+      }
+    },
+    {
+      "key": "b2ea976a-9c50-4917-af46-a2a3dd3cf181",
+      "properties": {
+        "description": "Understand the steps of the problem-solving process"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "objective.key": "b2ea976a-9c50-4917-af46-a2a3dd3cf181"
       }
     },
     {

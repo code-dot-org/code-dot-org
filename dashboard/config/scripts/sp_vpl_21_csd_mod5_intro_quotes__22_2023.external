@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # CS Connections Modules
 
-##### The dropdown  menu below provides a quick overview of what CS Connections modules, the core content standards it addresses, and what the expected student learning outcomes are.
+##### The dropdown menu below provides a quick overview of CS Connections modules, connections to core content, and high level student learning objectives.
 
 ## Overview of Modules
 
-##### Click the dropdown arrows below to view lesson overviews.
+##### Click the dropdown arrows below to view module overviews.
 
 <details>
 <summary><strong>Animal Adaptations</strong></summary>
@@ -86,12 +86,12 @@ The suggested time is based on XXX instructional minutes per week. Visit the <a 
 
 **Module Overview:**
 
-Students use social studies concepts to create a Tour guide app using Sprite Lab. Students begin by examining several examples of maps and discussing what features make up the map. Students end with an app that provides a local tour.
+Students use social studies concepts to create a Tour Guide app using Sprite Lab. Students begin by examining several examples of maps and discussing what features make up the map. Students end with an app that provides a local tour.
 
 **By the end of the module, students will be able to:** 
 * Identify parts of a map such as a compass and landmark
 * Code "events" in Sprite Lab
-* Animate their Tour Guide Apps
+* Animate their Tour Guide app
 
 **Suggest time to complete this module:  XX days**
 
