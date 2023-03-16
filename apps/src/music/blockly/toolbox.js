@@ -88,15 +88,8 @@ const toolboxBlocks = {
   [BlockTypes.REPEAT_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.REPEAT_SIMPLE2,
-    inputs: {
-      times: {
-        shadow: {
-          type: 'math_number',
-          fields: {
-            NUM: 1
-          }
-        }
-      }
+    fields: {
+      times: 1
     }
   },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
