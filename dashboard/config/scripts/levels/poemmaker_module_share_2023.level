@@ -43,15 +43,14 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "project_template_level_name": "poetry_module_template_2023"
+    ]
   },
   "game_id": 69,
   "published": true,
-  "created_at": "2023-03-09T15:14:50.000Z",
+  "created_at": "2023-03-16T00:26:13.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:14:50.055+00:00\",\"changed\":[\"cloned from \\\"poetry_module_share\\\"\"],\"cloned_from\":\"poetry_module_share\"},{\"changed_at\":\"2023-03-16 00:24:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-16 00:25:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-16T00:26:13.004+00:00\",\"changed\":[\"cloned from \\\"poetry_module_share_2023\\\"\"],\"cloned_from\":\"poetry_module_share_2023\"},{\"changed_at\":\"2023-03-16 00:26:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-16 00:26:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
