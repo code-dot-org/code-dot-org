@@ -1,5 +1,7 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
+import {parseElement as parseXmlElement} from '../../xml';
+import experiments from '@cdo/apps/util/experiments';
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
@@ -104,7 +106,56 @@ export function getUserTheme(themeOption) {
 }
 
 export function getCode(workspace) {
-  return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
-  // After supporting JSON block sources, change to:
-  // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+  if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
+    const blocksJson = Blockly.serialization.workspaces.save(workspace);
+    console.log('blocks saved as JSON:', blocksJson);
+    return JSON.stringify(blocksJson);
+  } else {
+    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+  }
+}
+
+export function arrangeBlocksJson(startBlocksJson, arrangement) {
+  var code = JSON.parse(startBlocksJson);
+  var block;
+  for (var i = 0; i < code.blocks.blocks.length; i++) {
+    block = code.blocks.blocks[i];
+    if (arrangement[block.type]) {
+      if (arrangement[block.type].x && block.x) {
+        block.x = arrangement[block.type].x;
+      }
+      if (arrangement[block.type].y && block.y) {
+        block.y = arrangement[block.type].y;
+      }
+    }
+  }
+  return JSON.stringify(code);
+}
+
+export function arrangeBlocksXml(startBlocksXml, arrangement) {
+  var type, xmlChild;
+
+  var xml = parseXmlElement(startBlocksXml);
+
+  var xmlChildNodes = xml.childNodes || [];
+  arrangement = arrangement || {};
+
+  for (var j = 0; j < xmlChildNodes.length; j++) {
+    xmlChild = xmlChildNodes[j];
+
+    // Only look at element nodes
+    if (xmlChild.nodeType === 1) {
+      // look to see if we have a predefined arrangement for this type
+      type = xmlChild.getAttribute('type');
+      if (arrangement[type]) {
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
+      }
+    }
+  }
+  return Blockly.Xml.domToText(xml);
 }
