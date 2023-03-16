@@ -21,7 +21,7 @@ const SUBMISSION_STATUSES = {
   UNKNOWN_ERROR: 'error'
 };
 
-export default class WorkshopEnrollment extends React.Component {
+export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
