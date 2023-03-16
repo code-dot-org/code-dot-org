@@ -42,7 +42,9 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const MIN_HEIGHT = RESIZER_HEIGHT + 60;
+// Not sure what 60 stands for (was already there before I modified next line),
+// but +75 was added in order to prevent scroll instructions buttons to collide with borders of Instructions section
+const MIN_HEIGHT = RESIZER_HEIGHT + 60 + 75;
 
 export const TabType = {
   INSTRUCTIONS: 'instructions',
