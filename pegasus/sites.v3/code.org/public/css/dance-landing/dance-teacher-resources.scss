@@ -1,3 +1,6 @@
+@import "color.scss";
+@import "font.scss";
+
 .resources {
   margin-top: 45px;
 }
@@ -22,7 +25,8 @@
 .resource-text-box {
   width: 234px;
   height: 300px;
-  background-color: #00adbc;
+  background-color: $neutral_light;
+  border: 1px solid $neutral_dark20;
   position: absolute;
   padding: 20px;
   margin-left: 234px;
@@ -30,23 +34,47 @@
 div[dir='rtl'] .resource-text-box{
   direction: rtl;
  }
+
 .resource-title {
   font-size: 20px;
-  color: white;
+  color: $neutral_dark;
   font-family: 'Gotham 7r', sans-serif;
   margin-bottom: 20px;
 }
 
 .resource-description {
   font-size: 14px;
-  color: white;
+  color: $neutral_dark;
   margin-bottom: 20px;
 }
 
-.gray-button {
-  background-color: #e7e8ea;
-  border-color: #e7e8ea;
-  color: #5b6770;
+.purple-button {
+  align-self: flex-end;
+  background-color: $brand_secondary_default;
+  border: 2px solid $brand_secondary_default;
+  color: $neutral_white;
+  font-family: $gotham-bold;
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 16px;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    border-color: $brand_secondary_dark;
+    box-shadow: none;
+  }
+
+  &:focus {
+    border-color: $brand_primary_default;
+  }
+
+  &:disabled {
+    color: $neutral_white;
+    border-color: $neutral_dark20;
+    background-color: $neutral_dark20;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
 }
 
 #teacher-resources .col-50:nth-child(2) {
