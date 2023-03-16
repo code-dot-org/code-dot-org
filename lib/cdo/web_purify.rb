@@ -10,7 +10,12 @@ module WebPurify
     'ja' => 'jp'
   }.freeze
 
-  WEBPURIFY_URL = 'http://api1.webpurify.com/services/rest'.freeze
+  WEBPURIFY_URL = URI('http://api1.webpurify.com/services/rest').freeze
+
+  CONNECTION_OPTIONS = {
+    read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
+    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5)
+  }
 
   # Returns the all profanities in text (if any) or nil (if none).
   # @param [String] text The text to search for profanity within.
@@ -26,32 +31,21 @@ module WebPurify
       uniq.
       join(',')
 
-    # url = "http://api1.webpurify.com/services/rest/" \
-    #   "?api_key=#{CDO.webpurify_key}" \
-    #   "&method=webpurify.live.return" \
-    #   "&text=#{CGI.escape(text)}" \
-    #   "&lang=#{language_codes}" \
-    #   "&format=json"
-    # result = JSON.
-    #   parse(
-    #     URI.parse(url).
-    #     open(
-    #       open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
-    #       read_timeout: DCDO.get('webpurify_http_read_timeout', 10)
-    #     ).
-    #     read
-    #   )
-    params = {
-      'api_key' => CDO.webpurify_key,
-      'method' => 'webpurify.live.return',
-      'text' => CGI.escape(text),
-      'lang' => language_codes,
-      'format' => 'json'
-    }
+    form_data = [
+      ['api_key', CDO.webpurify_key],
+      ['format', 'json'],
+      ['lang', language_codes],
+      ['method', 'webpurify.live.return'],
+      ['text', text]
+    ]
 
-    response = Net::HTTP.post_form(URI(WEBPURIFY_URL), params)
-    body = JSON.parse(response.body)
+    response = Net::HTTP.start(WEBPURIFY_URL.host, WEBPURIFY_URL.port, CONNECTION_OPTIONS) do |http|
+      request = Net::HTTP::Post.new(WEBPURIFY_URL)
+      request.set_form form_data, 'multipart/form-data'
+      http.request(request)
+    end
 
+    body = JSON.parse(response.read_body)
     expletive = body['rsp'] && body['rsp']['expletive']
     return nil unless expletive
     expletive.is_a?(Array) ? expletive : [expletive]
