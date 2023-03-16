@@ -88,9 +88,7 @@ export function getStore() {
  */
 function createStoreWithReducers() {
   return createStore(
-    Object.keys(globalReducers).length > 0
-      ? redux.combineReducers(globalReducers)
-      : s => s
+    Object.keys(globalReducers).length > 0 ? globalReducers : {}
   );
 }
 
@@ -166,7 +164,6 @@ function createStore(reducer, initialState) {
       window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
         trace: true
       }) || redux.compose;
-
     return configureStore({
       reducer: reducer,
       preloadedState: initialState,
