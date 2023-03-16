@@ -65,13 +65,9 @@ export default class SoundEffects {
       filter.type = 'lowpass';
       filter.frequency.value = effects.filter === 'low' ? 800 : 3000;
 
-      if (lastNode) {
-        // Connect the last node to this one.
-        lastNode.connect(filter);
-      } else {
-        // This is the first node.
-        firstNode = filter;
-      }
+      // This is the first node.
+      firstNode = filter;
+
       // This is now the last node.
       lastNode = filter;
     }
