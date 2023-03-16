@@ -1575,8 +1575,7 @@ Artist.prototype.checkAnswer = function() {
 
 Artist.prototype.getUserCode = function() {
   if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    return Blockly.Xml.domToText(xml);
+    return Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
   } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
