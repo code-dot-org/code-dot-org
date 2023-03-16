@@ -1,4 +1,4 @@
-@import 'color', 'font', 'breakpoints', 'barlow-semi-condensed-font';
+@import 'color', 'font', 'headings', 'breakpoints', 'barlow-semi-condensed-font';
 
 // Variables
 $border-radius: 4px;
@@ -7,13 +7,6 @@ $border-radius: 4px;
 @mixin focus-outline {
   outline: $brand_primary_default solid 2px;
   outline-offset: 2px;
-}
-
-// Use this to maintain proper heading hierarchy
-// if the design calls for an h5 style
-@mixin h5-lookalike-style {
-  font-family: $gotham-bold, sans-serif;
-  font-size: 1.25em;
 }
 
 // Start styles
@@ -25,27 +18,6 @@ body {
   font-size: 14px !important; // this will be changed to 16px in Phase II of the rebrand launch
   color: $neutral-dark;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  color: $neutral-dark;
-  margin: 0 0 0.5em;
-  line-height: 1.2;
-}
-
-h1, h2, h3, h4 {
-  font-family: $barlowSemiCondensed-semibold;
-}
-
-h5, h6 {
-  font-family: $gotham-bold, sans-serif;
-}
-
-h1 { font-size: 3em; }
-h2 { font-size: 2.125em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
 
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
@@ -261,7 +233,7 @@ ul {
       }
 
       h3 {
-        @include h5-lookalike-style;
+        @include h5-style;
       }
     }
   }
@@ -294,7 +266,7 @@ ul {
       }
 
       h3 {
-        @include h5-lookalike-style;
+        @include h5-style;
       }
 
       &:after {
@@ -411,7 +383,7 @@ ol.steps-list {
   }
 
   h4 {
-    @include h5-lookalike-style;
+    @include h5-style;
     width: 100%;
   }
 }

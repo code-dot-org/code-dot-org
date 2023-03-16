@@ -1,0 +1,44 @@
+// Use this to maintain proper heading hierarchy
+// when the design calls for a different style
+@mixin h1-style {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 3em;
+}
+
+@mixin h2-style {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 2.125em;
+}
+
+@mixin h3-style {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 1.75em;
+}
+
+@mixin h4-style {
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 1.5em;
+}
+
+@mixin h5-style {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1.25em;
+}
+
+@mixin h6-style {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $neutral-dark;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+h1, .h1 { @include h1-style }
+h2, .h2 { @include h2-style }
+h3, .h3 { @include h3-style }
+h4, .h4 { @include h4-style }
+h5, .h5 { @include h5-style }
+h6, .h6 { @include h6-style }
