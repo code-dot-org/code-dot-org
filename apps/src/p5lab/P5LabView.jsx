@@ -104,10 +104,24 @@ class P5LabView extends React.Component {
     return this.props.isBlockly;
   }
 
-  // Teachers and users of non-blockly labs should always be allowed to upload animations
-  // with no restrictions. Otherwise, if users upload animations we will disable publish and remix.
+  // NOTE: this can be simplified to return this.props.blockly once we've removed the backgrounds_and_upload experiment
+  // Users of non-blockly labs should always be allowed to upload animations
+  // with no restrictions. Teachers in blockly labs (ie, sprite lab) can upload with a warning.
+  // If students upload animations we will disable publish and remix.
   shouldWarnOnAnimationUpload() {
-    return this.props.isBlockly;
+    if (!this.props.isBlockly) {
+      return false;
+    }
+
+    // hide warning modal for teachers until we've enabled this experiment for everyone
+    if (
+      this.props.currentUserType === 'teacher' &&
+      !experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+    ) {
+      return false;
+    }
+
+    return true;
   }
 
   renderCodeMode() {
