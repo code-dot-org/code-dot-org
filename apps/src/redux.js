@@ -29,6 +29,7 @@ import Immutable from 'immutable';
 import experiments from './util/experiments';
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
+import {configureStore} from '@reduxjs/toolkit';
 
 if (process.env.NODE_ENV !== 'production') {
   var createLogger = require('redux-logger');
@@ -133,6 +134,12 @@ function createStore(reducer, initialState) {
   // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
   // to your url
   var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
+  // We have some usage of redux that does not pass the serializable check.
+  // We should determine if we can fix this.
+  const middleware = getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false
+    });
   if (process.env.NODE_ENV !== 'production' && enableReduxDebugging) {
     var reduxLogger = createLogger({
       collapsed: true,
@@ -160,16 +167,20 @@ function createStore(reducer, initialState) {
         trace: true
       }) || redux.compose;
 
-    return redux.createStore(
-      reducer,
-      initialState,
-      composeEnhancers(redux.applyMiddleware(reduxThunk, reduxLogger))
-    );
+    return configureStore({
+      reducer: reducer,
+      preloadedState: initialState,
+      middleware: middleware,
+      enhancers: composeEnhancers(
+        redux.applyMiddleware(reduxThunk, reduxLogger)
+      )
+    });
   }
 
-  return redux.createStore(
-    reducer,
-    initialState,
-    redux.applyMiddleware(reduxThunk)
-  );
+  return configureStore({
+    reducer: reducer,
+    preloadedState: initialState,
+    middleware: middleware
+    // redux-thunk is included by default
+  });
 }
