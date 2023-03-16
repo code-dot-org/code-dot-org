@@ -4,7 +4,7 @@ import {SkipContext} from './SkipContext';
 
 export interface PlaybackEvent {
   /** Type of event */
-  type: 'sound' | 'pattern';
+  type: 'sound' | 'pattern' | 'chord';
   /** Measure when this event occurs */
   when: number;
   /** Whether this event was triggered or scheduled via standard playback */
