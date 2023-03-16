@@ -574,11 +574,6 @@
               "name": "Pluck B5",
               "src": "pluck-83",
               "note": 83
-            },
-            {
-              "name": "Pluck C6",
-              "src": "pluck-84",
-              "note": 84
             }
           ]
         },
@@ -766,11 +761,6 @@
               "name": "Rhodes B5",
               "src": "rhodes-83",
               "note": 83
-            },
-            {
-              "name": "Rhodes C6",
-              "src": "rhodes-84",
-              "note": 84
             }
           ]
         },
@@ -958,11 +948,6 @@
               "name": "Synth B5",
               "src": "synth-83",
               "note": 83
-            },
-            {
-              "name": "Synth C6",
-              "src": "synth-84",
-              "note": 84
             }
           ]
         },
