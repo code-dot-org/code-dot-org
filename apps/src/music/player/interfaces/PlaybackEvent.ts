@@ -17,4 +17,6 @@ export interface PlaybackEvent {
   skipContext?: SkipContext;
   /** Effects applied to this event */
   effects?: Effects;
+  /** length of the event in measures */
+  length: number;
 }
