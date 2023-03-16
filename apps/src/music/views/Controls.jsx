@@ -7,6 +7,8 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 
+const documentationUrl = '/docs/ide/projectbeats';
+
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
@@ -89,6 +91,22 @@ const Controls = ({
           onClick={() => setPlaying(!isPlaying)}
           className={moduleStyles.iconButton}
         />
+      </div>
+      <div
+        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
+      >
+        <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
+          <FontAwesome
+            icon={'question-circle-o'}
+            onClick={() => {
+              analyticsReporter.onButtonClicked('documentation-link');
+            }}
+            className={classNames(
+              moduleStyles.iconButton,
+              moduleStyles.iconButtonLink
+            )}
+          />
+        </a>
       </div>
       {rightIcon}
     </div>
