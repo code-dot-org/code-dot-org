@@ -11,7 +11,8 @@ const typeToColorClass = {
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
   fx: moduleStyles.timelineElementYellow,
-  pattern: moduleStyles.timelineElementPink
+  pattern: moduleStyles.timelineElementPink,
+  chord: moduleStyles.timelineElementOrange
 };
 
 /**
@@ -30,8 +31,9 @@ const TimelineElement = ({
   const playerUtils = useContext(PlayerUtilsContext);
   const playingContext = useContext(PlayingContext);
 
+  // TODO: Add length as field on PlaybackEvent to prevent duplicated lookup logic
   const length =
-    eventData.type === 'pattern'
+    eventData.type === 'pattern' || eventData.type === 'chord'
       ? DEFAULT_PATTERN_LENGTH
       : playerUtils.getLengthForId(eventData.id);
 
@@ -45,8 +47,8 @@ const TimelineElement = ({
     currentPlayheadPosition < when + length;
 
   const colorType =
-    eventData.type === 'pattern'
-      ? 'pattern'
+    eventData.type === 'pattern' || eventData.type === 'chord'
+      ? eventData.type
       : playerUtils.getTypeForId(eventData.id);
   const colorClass = typeToColorClass[colorType];
 

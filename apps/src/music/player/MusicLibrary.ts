@@ -9,11 +9,12 @@ export interface SoundData {
   src: string;
   length: number;
   type: SoundType;
+  note?: number;
 }
 
-interface SoundFolder {
+export interface SoundFolder {
   name: string;
-  type?: 'kit';
+  type?: 'kit' | 'instrument';
   path: string;
   imageSrc: string;
   sounds: SoundData[];

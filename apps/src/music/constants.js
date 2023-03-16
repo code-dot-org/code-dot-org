@@ -54,3 +54,12 @@ export const DEFAULT_PATTERN = {
 };
 
 export const DEFAULT_PATTERN_LENGTH = 1;
+
+// Type: ChordEventValue
+export const DEFAULT_CHORD = {
+  instrument: 'piano',
+  notes: [],
+  playStyle: 'arpeggio-up'
+};
+
+export const DEFAULT_CHORD_LENGTH = 1;
