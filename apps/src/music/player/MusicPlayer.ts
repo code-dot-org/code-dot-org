@@ -448,9 +448,9 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
-    // if (event.skipContext?.skipSound) {
-    //   return [];
-    // }
+    if (event.skipContext?.skipSound) {
+      return [];
+    }
 
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
