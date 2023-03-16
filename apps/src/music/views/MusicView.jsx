@@ -118,6 +118,9 @@ class UnconnectedMusicView extends React.Component {
     }
 
     Promise.all(promises).then(values => {
+      // Process library, which includes setting up the toolbox.
+      const library = values[0];
+
       // Process progression first, if there is one, since
       // it might affect the toolbox.
       if (AppConfig.getValue('load-progression') === 'true') {
@@ -126,10 +129,9 @@ class UnconnectedMusicView extends React.Component {
           progression: progression,
           showInstructions: !!progression
         });
-      }
 
-      // Process library, which includes setting up the toolbox.
-      const library = values[0];
+        this.setAllowedSoundsForProgress(this.state.progressStep);
+      }
 
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
@@ -192,6 +194,7 @@ class UnconnectedMusicView extends React.Component {
     this.stopSong();
     this.clearCode();
     this.setToolboxForProgress(nextProgressStep);
+    this.setAllowedSoundsForProgress(nextProgressStep);
   };
 
   getToolboxForProgress = step => {
@@ -205,6 +208,20 @@ class UnconnectedMusicView extends React.Component {
     if (this.state.progression) {
       const allowedToolbox = this.getToolboxForProgress(step);
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
+    }
+  };
+
+  getAllowedSoundsForProgress = step => {
+    return this.progressManager.getAllowedSoundsForProgress(
+      this.state.progression,
+      step
+    );
+  };
+
+  setAllowedSoundsForProgress = step => {
+    if (this.state.progression) {
+      const allowedSounds = this.getAllowedSoundsForProgress(step);
+      Globals.setAllowedSounds(allowedSounds);
     }
   };
 

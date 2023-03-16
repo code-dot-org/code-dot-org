@@ -6,6 +6,9 @@
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"]
       },
+      "sounds": {
+        "dance": ["disco_beat", "funky_bass"]
+      },
       "validations": [
         {
           "conditions": ["played_one_sound"],
@@ -20,6 +23,10 @@
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"],
         "Control": ["play_sounds_together"]
+      },
+      "sounds": {
+        "pop": ["cafe_beat", "acoustic_bass"],
+        "rock": ["arena_beat", "riff_guitar"]
       },
       "validations": [
         {

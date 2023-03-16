@@ -170,6 +170,11 @@ export default class ProgressManager {
     return progression.panels[step].toolbox;
   };
 
+  // Return the currently allowed sounds.
+  getAllowedSoundsForProgress = (progression: {[key: string]: any}, step: number) => {
+    return progression.panels[step].sounds;
+  };
+
   // Clears out the accumulated satisfied conditions; usually called when
   // moving to a new step.
   private clear = () => {
