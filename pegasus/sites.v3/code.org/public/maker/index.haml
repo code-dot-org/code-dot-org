@@ -72,7 +72,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Curriculum using the Circuit Playground
-    = view :maker_curriculum_circuit_playground
+    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
 
 = view :section_divider_line
 
@@ -80,7 +80,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Curriculum using the micro:bit
-    = view :maker_curriculum_microbit
+    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit"
 
 %section.bg-neutral-light
   .wrapper
@@ -102,7 +102,7 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %h3.h5-lookalike-style Looking for more activity options?
         %p There are many Maker activities available in the Hour of Code activities list.
-        %a{href: "/learn?platform=robotics", class: "link-button", target: "_blank", rel: "noopener noreferrer"} Find an activity
+        %a{href: "/learn?platform=robotics", class: "link-button"} Find an activity
   .clear
 
 = view :section_divider_line
