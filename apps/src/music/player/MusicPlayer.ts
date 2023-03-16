@@ -11,6 +11,7 @@ import SamplePlayer, {SampleEvent} from './SamplePlayer';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
+const constants = require('../constants');
 
 // Default to 4/4 time
 const BEATS_PER_MEASURE = 4;
@@ -111,7 +112,9 @@ export default class MusicPlayer {
       trackId,
       functionContext,
       skipContext,
-      effects
+      effects,
+      length: soundData.length,
+      soundType: soundData.type
     };
 
     this.playbackEvents.push(soundEvent);
@@ -147,7 +150,8 @@ export default class MusicPlayer {
       trackId,
       functionContext,
       skipContext,
-      effects
+      effects,
+      length: constants.DEFAULT_PATTERN_LENGTH
     };
 
     this.playbackEvents.push(patternEvent);
@@ -183,7 +187,8 @@ export default class MusicPlayer {
       trackId,
       functionContext,
       skipContext,
-      effects
+      effects,
+      length: constants.DEFAULT_CHORD_LENGTH
     };
 
     this.playbackEvents.push(chordEvent);
@@ -208,7 +213,8 @@ export default class MusicPlayer {
       type: 'chord',
       when: 1,
       value: chordValue,
-      triggered: false
+      triggered: false,
+      length: constants.DEFAULT_CHORD_LENGTH
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -395,16 +401,6 @@ export default class MusicPlayer {
       return null;
     }
     return sound.length;
-  }
-
-  getTypeForId(id: string): SoundType | null {
-    const sound = this.getSoundForId(id);
-    if (sound === null) {
-      console.warn(`Could not find sound with ID: ${id}`);
-      return null;
-    }
-
-    return sound.type;
   }
 
   // Called by interpreted code in the simple2 model, this returns

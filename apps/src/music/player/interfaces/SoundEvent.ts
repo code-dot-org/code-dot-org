@@ -1,3 +1,4 @@
+import {SoundType} from '../MusicLibrary';
 import {PlaybackEvent} from './PlaybackEvent';
 
 /**
@@ -6,4 +7,5 @@ import {PlaybackEvent} from './PlaybackEvent';
 export interface SoundEvent extends PlaybackEvent {
   type: 'sound';
   id: string;
+  soundType: SoundType;
 }
