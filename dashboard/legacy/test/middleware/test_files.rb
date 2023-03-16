@@ -470,6 +470,34 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_file_versions_non_owner
+    filename = @api.randomize_filename('test.png')
+    delete_all_file_versions(filename)
+    delete_all_manifest_versions
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    post_file_data(@api, filename, v1_file_data, 'image/png')
+    assert successful?
+
+    # Overwrite it.
+    v2_file_data = 'stub-v2-body'
+    post_file_data(@api, filename, v2_file_data, 'image/png')
+    assert successful?
+
+    with_session(:non_owner) do
+      # List project versions for a non-owner. They should only get the current version
+      non_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+      non_owner_project_versions = non_owner_api.list_object_versions(filename)
+      assert successful?
+      puts non_owner_project_versions
+      assert_equal 1, non_owner_project_versions.count
+      assert non_owner_project_versions[0]['isLatest']
+    end
+
+    delete_all_manifest_versions
+  end
+
   def test_invalid_file_extension
     @api.get_object('bad_extension.css%22')
     assert unsupported_media_type?
