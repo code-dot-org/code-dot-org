@@ -1,5 +1,5 @@
-// Use this to maintain proper heading hierarchy
-// when design calls for a different style (semantic h3, h5 style).
+// Use this to maintain proper heading hierarchy when design
+// calls for a different style (semantic h3, h5 styling).
 
 // Use @include mixin-name in stylesheets for widespread use.
 /* — example: all h3s in a ul need to look like a h5s
@@ -9,7 +9,7 @@
 */
 
 // Use .h1, .h2, etc classes on single elements in the markup.
-// - example: %h3.h5 This is heading text
+// - example: %h3.h5 This is heading text that will look like an h5
 
 // Mixins
 @mixin h1-style {
