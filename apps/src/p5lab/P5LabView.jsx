@@ -113,7 +113,6 @@ class P5LabView extends React.Component {
       return false;
     }
 
-    // hide warning modal for teachers until we've enabled this experiment for everyone
     if (
       this.props.currentUserType === 'teacher' &&
       !experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
