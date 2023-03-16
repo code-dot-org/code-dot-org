@@ -1228,7 +1228,7 @@ StudioApp.prototype.showNextHint = function() {
 /**
  * Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
  * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
+ * Blockly.cdoUtils.getCode(Blockly.mainBlockSpace).slice(5, -6)
  */
 StudioApp.prototype.initReadonly = function(options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
@@ -1242,11 +1242,20 @@ StudioApp.prototype.initReadonly = function(options) {
 
 /**
  * Load the editor with blocks.
- * @param {string} blocksXml Text representation of blocks.
+ * @param {string} blocks Text representation of blocks (XML or JSON).
  */
-StudioApp.prototype.loadBlocks = function(blocksXml) {
-  var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+StudioApp.prototype.loadBlocks = function(blocks) {
+  try {
+    Blockly.serialization.workspaces.load(
+      JSON.parse(blocks),
+      Blockly.mainBlockSpace
+    );
+    // Delete this log when we remove experiments.BLOCKLY_JSON
+    console.log('JSON used to load blocks');
+  } catch (error) {
+    var xml = parseXmlElement(blocks);
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  }
 };
 
 /**
@@ -1263,31 +1272,11 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
  *    block position.
  */
 StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
-  var type, xmlChild;
-
-  var xml = parseXmlElement(startBlocks);
-
-  var xmlChildNodes = xml.childNodes || [];
-  arrangement = arrangement || {};
-
-  for (var i = 0; i < xmlChildNodes.length; i++) {
-    xmlChild = xmlChildNodes[i];
-
-    // Only look at element nodes
-    if (xmlChild.nodeType === 1) {
-      // look to see if we have a predefined arrangement for this type
-      type = xmlChild.getAttribute('type');
-      if (arrangement[type]) {
-        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
-          xmlChild.setAttribute('x', arrangement[type].x);
-        }
-        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
-          xmlChild.setAttribute('y', arrangement[type].y);
-        }
-      }
-    }
+  try {
+    return Blockly.cdoUtils.arrangeBlocksJson(startBlocks, arrangement);
+  } catch (error) {
+    return Blockly.cdoUtils.arrangeBlocksXml(startBlocks, arrangement);
   }
-  return Blockly.Xml.domToText(xml);
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
