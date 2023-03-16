@@ -105,11 +105,11 @@ class PegasusTest < Minitest::Test
           queries = capture_queries(DB, DASHBOARD_DB) {get(uri)}
           break if queries.empty? || (attempts -= 1).zero?
         end
-      rescue Exception => e
+      rescue Exception => exception
         # Filter backtrace from current location.
-        index = e.backtrace.index(caller(2..2).first)
-        e.set_backtrace(e.backtrace[0..index - 1])
-        next "[#{url}] Render failed:\n#{e}\n#{e.backtrace.join("\n")}"
+        index = exception.backtrace.index(caller(2..2).first)
+        exception.set_backtrace(exception.backtrace[0..index - 1])
+        next "[#{url}] Render failed:\n#{exception}\n#{exception.backtrace.join("\n")}"
       end
       response = last_response
       status = response.status
