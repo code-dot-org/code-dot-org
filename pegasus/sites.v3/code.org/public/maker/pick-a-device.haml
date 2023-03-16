@@ -1,0 +1,12 @@
+---
+title: Become a Maker | Pick a Device
+theme: responsive_full_width
+---
+
+%link{href: 'shared/css/design-system-pegasus.css', rel: 'stylesheet'}
+
+%section
+  .wrapper
+    %h1 Pick a device
+    %p Creating apps with devices works with both the Circuit Playground and the micro:bit. Which device do you want to use with your classroom?
+    = view :maker_devices, curriculum_link_cp: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), curriculum_link_microbit: CDO.studio_url("/s/microbit-2023?viewAs=Instructor")
