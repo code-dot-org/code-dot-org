@@ -648,8 +648,7 @@ class FilesApi < Sinatra::Base
       versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
       return versions.to_json if owns_channel?(encrypted_channel_id)
       # only return the latest version if the user does not own the channel
-      latest_version = versions.select {|version| version[:isLatest]}
-      return latest_version.to_json
+      return versions.select {|version| version[:isLatest]}.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
