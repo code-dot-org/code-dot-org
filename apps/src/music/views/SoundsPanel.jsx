@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {getAllowedLibrarySounds} from '../utils/LibraryUtils';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -80,43 +81,43 @@ SoundsPanelRow.propTypes = {
 
 const SoundsPanel = ({
   library,
+  allowedSounds,
   currentValue,
   playingPreview,
   onSelect,
   onPreview
 }) => {
-  const group = library.groups[0];
+  const folders = getAllowedLibrarySounds(library, allowedSounds, undefined);
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders
-        .filter(folder => folder.type !== 'kit')
-        .map((folder, folderIndex) => {
-          return (
-            <div className={styles.folder} key={folderIndex}>
-              <div className={styles.folderName}>{folder.name}</div>
-              {folder.sounds.map((sound, soundIndex) => {
-                return (
-                  <SoundsPanelRow
-                    key={soundIndex}
-                    currentValue={currentValue}
-                    playingPreview={playingPreview}
-                    folder={folder}
-                    sound={sound}
-                    onSelect={onSelect}
-                    onPreview={onPreview}
-                  />
-                );
-              })}
-            </div>
-          );
-        })}
+      {folders.map((folder, folderIndex) => {
+        return (
+          <div className={styles.folder} key={folderIndex}>
+            <div className={styles.folderName}>{folder.name}</div>
+            {folder.sounds.map((sound, soundIndex) => {
+              return (
+                <SoundsPanelRow
+                  key={soundIndex}
+                  currentValue={currentValue}
+                  playingPreview={playingPreview}
+                  folder={folder}
+                  sound={sound}
+                  onSelect={onSelect}
+                  onPreview={onPreview}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };
 
 SoundsPanel.propTypes = {
   library: PropTypes.object.isRequired,
+  allowedSounds: PropTypes.object,
   currentValue: PropTypes.string.isRequired,
   playingPreview: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
