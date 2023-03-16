@@ -388,7 +388,7 @@ class UnconnectedMusicView extends React.Component {
       instructionPositionOrder[this.state.instructionsPosIndex];
 
     const showVideo =
-      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
