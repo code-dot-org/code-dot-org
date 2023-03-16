@@ -567,19 +567,13 @@ label.img-upload {
   color: $black;
 }
 button.launch {
-  border: 1px solid $brand_secondary_default;
-  background-color: $brand_secondary_default;
-  color: $neutral_white;
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: $white;
   font-size: large;
   min-width: 96px;
   margin-left: 0;
   margin-right: 10px;
-
-  &:hover {
-    background-color: $brand_secondary_dark;
-    border-color: $brand_secondary_dark;
-    box-shadow: none;
-  }
 
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
@@ -600,14 +594,8 @@ button.blocklyLaunch {
     display: none;
   }
 
-  border: 1px solid $brand_secondary_default;
-  background-color: $brand_secondary_default;
-
-  &:hover {
-    background-color: $brand_secondary_dark;
-    border-color: $brand_secondary_dark;
-    box-shadow: none;
-  }
+  border: 1px solid $orange;
+  background-color: $orange;
 
   @media screen and (min-width: 1051px) {
     min-width: 111px;
