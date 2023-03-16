@@ -23,6 +23,7 @@ import {GeneratorHelpersSimple2} from './blocks/simple2';
 import ProjectManager from '@cdo/apps/labs/ProjectManager';
 import {S3SourcesStore} from '@cdo/apps/labs/SourcesStore';
 import {S3ChannelsStore} from '@cdo/apps/labs/ChannelsStore';
+import FieldChord from './FieldChord';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -82,6 +83,7 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.fieldRegistry.register('field_sounds', FieldSounds);
     Blockly.fieldRegistry.register('field_pattern', FieldPattern);
+    Blockly.fieldRegistry.register('field_chord', FieldChord);
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(),

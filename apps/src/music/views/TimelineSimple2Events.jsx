@@ -50,8 +50,9 @@ const TimelineSimple2Events = ({
   for (const soundEvent of soundEvents) {
     const soundId = soundEvent.id;
     const functionName = soundEvent.functionContext.name;
+    // TODO: Add length as field on PlaybackEvent to prevent duplicated lookup logic
     const length =
-      soundEvent.type === 'pattern'
+      soundEvent.type === 'pattern' || soundEvent.type === 'chord'
         ? DEFAULT_PATTERN_LENGTH
         : playerUtils.getLengthForId(soundId);
     const positionLeft = soundEvent.when;

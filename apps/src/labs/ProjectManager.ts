@@ -8,6 +8,8 @@ export default class ProjectManager {
   channelsStore: ChannelsStore;
   getProject: () => Project;
 
+  private saveInProgress: boolean = false;
+
   constructor(
     channelId: string,
     sourcesStore: SourcesStore,
@@ -43,12 +45,20 @@ export default class ProjectManager {
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
   async save(): Promise<Response> {
+    if (this.saveInProgress) {
+      // Return a no-op response
+      return new Response(null, {status: 304});
+    }
+
+    this.saveInProgress = true;
     const project = this.getProject();
     const sourceResponse = await this.sourcesStore.save(
       this.channelId,
       project.source
     );
     if (!sourceResponse.ok) {
+      this.saveInProgress = false;
+
       // TODO: Should we wrap this response in some way?
       // Maybe add a more specific statusText to the response?
       return sourceResponse;
@@ -56,11 +66,14 @@ export default class ProjectManager {
 
     const channelResponse = await this.channelsStore.save(project.channel);
     if (!channelResponse.ok) {
+      this.saveInProgress = false;
+
       // TODO: Should we wrap this response in some way?
       // Maybe add a more specific statusText to the response?
       return channelResponse;
     }
 
+    this.saveInProgress = false;
     return new Response();
   }
 }
