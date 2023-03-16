@@ -82,7 +82,9 @@ module Curriculum
       {
         module: 'Module',
         course: 'Course',
-        standalone_unit: 'Standalone Unit'
+        standalone_unit: 'Standalone Unit',
+        hoc: 'Hour of Code',
+        pl: 'Professional Learning'
       }
     ).freeze
 
@@ -103,9 +105,9 @@ module Curriculum
         self_paced: 'Self-Paced',
         teacher_led: 'Teacher-Led',
         collections: 'Collections',
-        virtual_pl: 'Virtual Professional Learning',
-        self_paced_pl: 'Self Paced Professional Learning',
-        other_pl: 'Other Professional Learning'
+        workshops_k5: 'K-5 Workshops',
+        summer_workshops_612: '6-12 Summer Workshops',
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
       }
     ).freeze
 
@@ -117,6 +119,44 @@ module Curriculum
         csf: 'CSF'
       }
     )
+
+    # CS topic field values for course offerings
+    COURSE_OFFERING_CS_TOPICS = %w(
+      art_and_design
+      app_design
+      artificial_intelligence
+      cybersecurity
+      data
+      games_and_animations
+      internet
+      physical_computing
+      web_design
+      programming
+    ).freeze
+
+    # School subject field values for course offerings
+    COURSE_OFFERING_SCHOOL_SUBJECTS = %w(
+      math
+      science
+      english_language_arts
+      history
+    ).freeze
+
+    # Device types for course offerings
+    DEVICE_TYPES = %w(
+      computer
+      chromebook
+      tablet
+      mobile
+      no_device
+    ).freeze
+
+    # Device compatibility levels for course offerings
+    DEVICE_COMPATIBILITY_LEVELS = %w(
+      ideal
+      not_recommended
+      incompatible
+    ).freeze
 
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be

@@ -19,8 +19,8 @@ def handler(event:, context:)
     raise 'Unsupported type'
   end
   CfnResponse.send(event, context, 'SUCCESS', physical_resource_id: physical_resource_id)
-rescue => e
-  CfnResponse.send(event, context, 'FAILURE', message: e.message)
+rescue => exception
+  CfnResponse.send(event, context, 'FAILURE', message: exception.message)
 end
 
 EC2 = Aws::EC2::Client.new
@@ -56,6 +56,6 @@ def delete(properties)
     availability_zones: azs,
     source_snapshot_ids: snapshots
   )
-rescue => e
-  puts "Ignoring error on delete: #{e}"
+rescue => exception
+  puts "Ignoring error on delete: #{exception}"
 end

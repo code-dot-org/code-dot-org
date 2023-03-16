@@ -47,6 +47,11 @@ class Button extends React.Component {
     className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool
+    ]),
     children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.values(ButtonColor)),
@@ -92,6 +97,7 @@ class Button extends React.Component {
       tabIndex,
       isPending,
       pendingText,
+      value,
       __useDeprecatedTag
     } = this.props;
 
@@ -104,6 +110,12 @@ class Button extends React.Component {
 
     let buttonStyle = style;
     let Tag = 'button';
+    /*
+    TODO: Rework __useDeprecatedTag logic once the remaining instances are only
+    links. The tag is safe to remove from current <Button> implementations if
+    the button has an onClick() and no href. Such removal may require style
+    updates for margin and boxShadow to match page styling.
+    */
     if (__useDeprecatedTag) {
       Tag = href ? 'a' : 'div';
     } else {
@@ -156,6 +168,7 @@ class Button extends React.Component {
         style={{...buttonStyle}}
         href={disabled ? '#' : href}
         target={target}
+        value={value}
         rel={rel}
         disabled={disabled}
         download={download}

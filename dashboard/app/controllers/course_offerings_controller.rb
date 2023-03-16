@@ -18,20 +18,23 @@ class CourseOfferingsController < ApplicationController
     end
 
     render json: @course_offering.summarize_for_edit
-  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def quick_assign_course_offerings
     return head :forbidden unless current_user
 
-    offerings = QuickAssignHelper.course_offerings(current_user, request.locale)
+    participant_type = params[:participantType]
+    return head :bad_request unless participant_type
+
+    offerings = QuickAssignHelper.course_offerings(current_user, request.locale, participant_type)
     render :ok, json: offerings.to_json
   end
 
   private
 
   def course_offering_params
-    params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative).to_h
+    params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative, :cs_topic, :school_subject, :device_compatibility).to_h
   end
 end

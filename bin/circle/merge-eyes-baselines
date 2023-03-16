@@ -18,8 +18,8 @@ begin
   else
     puts 'Latest commit does not appear to be a merge commit, not performing any baseline copying.'
   end
-rescue => e
-  puts "Eyes baseline not merged: #{e.message}"
+rescue => exception
+  puts "Eyes baseline not merged: #{exception.message}"
 end
 
 exit(0)

@@ -3,6 +3,8 @@ title: Code.org District Partner Program
 theme: responsive_full_width
 ---
 
+%script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
+%script{src: webpack_asset_path('js/code.org/public/administrators.js')}
 %link{href: 'shared/css/design-system-pegasus.css', rel: 'stylesheet'}
 
 -# Import FontAwesome Pro
@@ -144,6 +146,8 @@ theme: responsive_full_width
     %h2 Take the next step!
     %p If you are interested in becoming a district partner or have questions about the partnership, fill out the form below and a member of the Code.org team and/or our Regional Partner will be in touch.
     = view :admins_email_signup_form
+
+= view :section_divider_line
 
 %section{style: "display: block !important"}
   .wrapper

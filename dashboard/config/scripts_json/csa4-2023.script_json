@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-22 18:39:47 UTC",
+    "serialized_at": "2023-03-10 18:50:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,7 +55,7 @@
       "position": 3,
       "properties": {
         "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Data for Social Good Project."
+        "description": "This section contains the one-day version of the Abstract Data Art Project."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -180,9 +180,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. Students consider scenarios where they would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. They then plan and implement an algorithm using nested `if` statements to test a combination of conditions.",
+        "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. They also learn how to use the `length()` method in the `String` class to find the length of a `String` object. Students consider scenarios where they would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. They then plan and implement an algorithm using nested `if` statements to test a combination of conditions.",
         "preparation": "* Print copies of the Writing Algorithms handout (one for each student)\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn how to use these to test a combination of conditions. You consider scenarios where you would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. You then plan and implement an algorithm using nested `if` statements to test a combination of conditions."
+        "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn how to use these to test a combination of conditions. You also learn how to use the `length()` method in the `String` class to find the length of a `String` object. You consider scenarios where you would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. You then plan and implement an algorithm using nested `if` statements to test a combination of conditions."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -1099,6 +1099,10 @@
           {
             "type": "assessmentOpportunity",
             "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of 1D array algorithms.\n\nThe practice levels can be used as a formative assessment to gauge understanding of using API documentation and calling methods from existing classes."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Since these levels are focused on providing students opportunities for creative exploration with The Theater, they do not have validation."
           }
         ]
       },
@@ -2842,13 +2846,7 @@
       "key": "9349cd31-411a-4261-8f1f-d6914b043f1e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***nested conditional statement*** and introduce the example code segment.\n\n**Do This:** Click through the animated slides to demonstrate the flowchart for the code segment:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First condition is `true`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second condition is `true`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `\"Both true!\"` is printed \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why would we have an `if` statement in the body of another `if` statement?*\n\n**Discussion Goal:** Students suggested using nested `if` statements to allow the program to check conditions within other conditions. Students may share scenarios where they would want to do this, such as checking if someone has enough money for a movie ticket and an available movie time.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nIf students don’t get to this on their own, ask the following guiding questions:\n* *What is meant by nested?*\n* *How is this nested statement similar to a nested loop?*\n* *What are some scenarios where you would need to check if multiple conditions were `true`?*"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***nested conditional statement*** and introduce the example code segment.\n\n**Do This:** Click through the animated slides to demonstrate the flowchart for the code segment:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First condition is `true`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second condition is `true`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `\"Both true!\"` is printed "
       },
       "seeding_key": {
         "activity_section.key": "9349cd31-411a-4261-8f1f-d6914b043f1e",
@@ -2856,19 +2854,31 @@
       }
     },
     {
-      "key": "753059b5-d9f8-49be-98c8-7679be3fbea5",
+      "key": "ba34e76f-9b7b-46f6-b7bf-2fad946f0cc8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the output of the code segment."
+        "description": "What if we wanted to find words in a list that met certain criteria, like words with a certain number of characters? Since a `String` is an object, the `String` class has a method to help us solve this problem!",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "753059b5-d9f8-49be-98c8-7679be3fbea5",
+        "activity_section.key": "ba34e76f-9b7b-46f6-b7bf-2fad946f0cc8",
+        "lesson_activity.key": "5c1e108e-7723-48ac-9613-57b6da4f5e8b"
+      }
+    },
+    {
+      "key": "8df19763-0fdc-47ba-8168-ee59d1f468c6",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that each character in a `String` is at an index which starts at `0`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the cause of an `IndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the length of the first `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the length of the second `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why does the `length()` method not return the last index in a `String`?*\n\n**Discussion Goal:** Students recall that the last index of a `String` object is one less than its size, so the value for `length()` is one more than the last index."
+      },
+      "seeding_key": {
+        "activity_section.key": "8df19763-0fdc-47ba-8168-ee59d1f468c6",
         "lesson_activity.key": "5c1e108e-7723-48ac-9613-57b6da4f5e8b"
       }
     },
     {
       "key": "b5d0a296-2a26-4ca8-b86b-372d6d389402",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "We can use nested `if` statements to check if multiple conditions are `true` before executing a block of code. When we are making decisions about how to visualize data, we might choose to display images and shapes based on multiple conditions.",
         "duration": "15",
@@ -2882,7 +2892,7 @@
     },
     {
       "key": "5d1cfa31-d69a-4344-99f8-49fccb58eef1",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
         "tips": [
@@ -2899,7 +2909,7 @@
     },
     {
       "key": "a026796a-38b0-4233-9fbd-fccc5c86f58c",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding on Level 4, then continue to Level 5 to implement their algorithm. On Level 6, students use nested `if` statements while traversing a one-dimensional (1D) array.",
         "progression_name": "Practice: Nested if Statements",
@@ -8929,7 +8939,7 @@
     {
       "key": "a240cabc-2fef-4a57-b3f8-83c7c3118a9e",
       "properties": {
-        "description": "Evaluate code segments using nested `if` statements"
+        "description": "Use the `length()` method in the `String` class to find the length of a `String` object"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",

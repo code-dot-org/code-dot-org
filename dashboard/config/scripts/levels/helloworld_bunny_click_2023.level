@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-22T20:19:41.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -54,27 +50,35 @@
     "block_pool": "gamelab",
     "name_suffix": "_2023",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "KatiesBlocks"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
-    "long_instructions": "*What's different here? Can you make these sprites talk?*\r\n\r\n- Read the code. What do you notice?\r\n- Click the *\"Run\"* button.\r\n- Click or tap the sprites.\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"9c787f77-5ab0-4fb2-9040-d73c53a9352c\",\r\n    \"4b99aebc-c7f6-417f-9a13-6961d6a01dad\",\r\n    \"e17050ec-5621-4558-a96f-d120102a522c\",\r\n    \"2e6a4574-fa42-4939-843c-86be70fa5aa7\",\r\n    \"4a3313b5-ccda-494e-a513-120ffe0bfa89\",\r\n    \"4a9587e1-1516-4cf0-a3cc-4ba0a6974948\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"9c787f77-5ab0-4fb2-9040-d73c53a9352c\": {\r\n      \"name\": \"meadow\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FCB1PYdRlycVjbBIg9tk9rpAeiKAp3bEN%252Fmeadow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"CB1PYdRlycVjbBIg9tk9rpAeiKAp3bEN\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"4b99aebc-c7f6-417f-9a13-6961d6a01dad\": {\r\n      \"name\": \"desert\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FYh15jDhuuZz8tUVr8WPGgk30OPrIpaJN%252Fdesert.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Yh15jDhuuZz8tUVr8WPGgk30OPrIpaJN\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"e17050ec-5621-4558-a96f-d120102a522c\": {\r\n      \"name\": \"background_landscape_28\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Fspritelab%252FLZXyNpSiLGKtdWSk1goqIUcASiThpg3E%252Fcategory_backgrounds%252Fbackground_landscape_28.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LZXyNpSiLGKtdWSk1goqIUcASiThpg3E\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"2e6a4574-fa42-4939-843c-86be70fa5aa7\": {\r\n      \"name\": \"rabbit-1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252F1XYApA5QwtK9jbb5DTYD_O175Kx_dO5F%252Frabbit-1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 189,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"1XYApA5QwtK9jbb5DTYD_O175Kx_dO5F\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"4a3313b5-ccda-494e-a513-120ffe0bfa89\": {\r\n      \"name\": \"rabbit-sandy\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FdhSmU6UM1GXSVeM8KTglPacniPc676g_%252Frabbit-sandy.png\",\r\n      \"frameSize\": {\r\n        \"x\": 189,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"dhSmU6UM1GXSVeM8KTglPacniPc676g_\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    },\r\n    \"4a9587e1-1516-4cf0-a3cc-4ba0a6974948\": {\r\n      \"name\": \"rabbit-snowy\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fapi%252Fv1%252Fanimation-library%252Flevel_animations%252FiDsTje0Jdf7hnUdcRRXRgh7yyQLBfapg%252Frabbit-snowy.png\",\r\n      \"frameSize\": {\r\n        \"x\": 189,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"iDsTje0Jdf7hnUdcRRXRgh7yyQLBfapg\",\r\n      \"categories\": [\r\n        \"\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "long_instructions": "**Birds have different beaks to do different things.**\r\n- Add a new bird sprite.\r\n- Connect a `say`(#5ED5DD) block to your code. \r\n- You can change the text to explain the bird’s beak! \r\n",
+    "start_animations": "{\"orderedKeys\":[\"d72e19d5-113b-4dca-93f3-af70f7f627c9\",\"d50aa48e-1d1c-4556-9fd6-c9f1f855c5eb\",\"99ac335e-b53b-48da-9526-9e8a472b9d7e\"],\"propsByKey\":{\"99ac335e-b53b-48da-9526-9e8a472b9d7e\":{\"name\":\"sky\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-11-10 23:25:16 UTC\",\"pngLastModified\":\"2021-11-10 23:25:16 UTC\",\"version\":\"smBM.6N1_VQSN5R827D9dM.cJ4vs0_Hv\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/smBM.6N1_VQSN5R827D9dM.cJ4vs0_Hv/category_backgrounds/sky.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"d50aa48e-1d1c-4556-9fd6-c9f1f855c5eb\":{\"name\":\"birdside_10\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":194},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-01-19 23:48:49 UTC\",\"pngLastModified\":\"2021-01-19 23:48:49 UTC\",\"version\":\"P1h8nS3fOJfhWsO9wJuMs4JximhGroIz\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/P1h8nS3fOJfhWsO9wJuMs4JximhGroIz/category_animals/birdside_10.png\",\"sourceSize\":{\"x\":400,\"y\":194}},\"d72e19d5-113b-4dca-93f3-af70f7f627c9\":{\"name\":\"birdside_05\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":294},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-01-19 23:48:42 UTC\",\"pngLastModified\":\"2021-01-19 23:48:43 UTC\",\"version\":\"mUnNO5ybkVP6iP77oXYK0LgQZrtyIHlw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/mUnNO5ybkVP6iP77oXYK0LgQZrtyIHlw/category_animals/birdside_05.png\",\"sourceSize\":{\"x\":400,\"y\":294}}}}\r\n\r\n",
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"hw_Run\",\r\n  \"callout_text\": \"Click here to run the code.\",\r\n  \"element_id\": \"[id='runButton']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 30,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "What makes these sprites talk?",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the sprites while the program is running.\",\"hint_id\":\"hw_click_sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5ccdc39ffb113caab99c572f56a16df/helloworld_food_click.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to change any of the code in this level.\",\"hint_id\":\"hw_no_changes\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ec039212f05e3efb2779a92da1ee94a/helloworld_food_click.mp3\"}]",
-    "instructions_icon": "rabbit",
-    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
+    "authored_hints": "[]",
+    "instructions_icon": "purplebunny",
     "skip_autosave": true,
-    "preload_asset_list": null
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2023-02-22T20:19:41.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-22T20:19:41.658+00:00\",\"changed\":[\"cloned from \\\"helloworld_bunny_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_bunny_click_ecosystems\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-22T20:19:41.658+00:00\",\"changed\":[\"cloned from \\\"helloworld_bunny_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_bunny_click_ecosystems\"},{\"changed_at\":\"2023-02-28 16:52:11 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"start_animations\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:52:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:54:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:57:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-28 16:59:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 18:22:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-01 18:25:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 18:16:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 18:17:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 18:19:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 18:20:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 21:33:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 21:34:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 21:35:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 23:17:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 23:21:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-08 23:24:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-09 17:20:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-14 17:17:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-03-14 17:19:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -84,70 +88,31 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="gamelab_setBackgroundImageAs" deletable="false" can_disconnect_from_parent="false">
-              <field name="IMG">"meadow"</field>
-              <next>
-                <block type="gamelab_makeNewSpriteAnon" deletable="false" can_disconnect_from_parent="false">
-                  <field name="ANIMATION_NAME">"rabbit-1"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker" deletable="false" movable="false" can_disconnect_from_parent="false">
-                      <field name="LOCATION">{"x":162,"y":286}</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_makeNewSpriteAnon" deletable="false" can_disconnect_from_parent="false">
-                      <field name="ANIMATION_NAME">"rabbit-snowy"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker" deletable="false" movable="false" can_disconnect_from_parent="false">
-                          <field name="LOCATION">{"x":275,"y":284}</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked" deletable="false" movable="false">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"rabbit-1"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay" deletable="false" can_disconnect_from_parent="false">
-              <field name="SPEECH">Hi!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
-                  <field name="ANIMATION">"rabbit-1"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked" deletable="false" movable="false">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"rabbit-snowy"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay" deletable="false" can_disconnect_from_parent="false">
-              <field name="SPEECH">Hello!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
-                  <field name="ANIMATION">"rabbit-snowy"</field>
-                </block>
-              </value>
+              <field name="IMG">"sky"</field>
             </block>
           </next>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"birdside_10"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="Katie'sBlocks_spriteBirdSay">
+          <field name="THOUGHT">"My beak is pointy and strong to find insects in tree bark."</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"birdside_10"</field>
+            </block>
+          </value>
+        </block>
+      </xml>
     </toolbox_blocks>
   </blocks>
 </GamelabJr>

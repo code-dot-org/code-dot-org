@@ -70,12 +70,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-
-  # Ref: https://github.com/e2/ruby_dep/issues/24
-  # https://github.com/e2/ruby_dep/issues/25
-  # https://github.com/e2/ruby_dep/issues/30
-  gem 'ruby_dep', '~> 1.3.1'
-
   gem 'shotgun'
   gem 'thin'
   # Use debugger
@@ -155,8 +149,6 @@ gem 'cancancan', '~> 3.1.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/instructure/ims-lti/pull/90
-gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
 gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
 gem 'omniauth-facebook', '~> 4.0.0'
@@ -271,7 +263,7 @@ gem 'daemons'
 gem 'httparty'
 gem 'net-scp'
 gem 'net-ssh'
-gem 'oj'
+gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 
@@ -338,9 +330,6 @@ gem 'scenic'
 gem 'scenic-mysql_adapter'
 
 gem 'colorize'
-
-gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
-gem 'hammerspace'
 
 gem 'require_all', require: false
 

@@ -1,0 +1,8 @@
+name 'csc_ecosystems_choice_freeplay_2023'
+display_name 'Survival in Groups!'
+description 'Practice your skills! Choose a project that models aquatic animals in groups to practice your coding skills.'
+
+sublevels
+level 'csc_ecosystems_marine_choice'
+level 'csc_ecosystems_rainforest_choice'
+level 'csc_ecosystems_desert_choice'

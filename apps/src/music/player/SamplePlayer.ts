@@ -1,3 +1,4 @@
+import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
 // Using require() to import JS in TS files
@@ -7,6 +8,7 @@ export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
+  effects?: Effects;
 }
 
 interface PlayingSample {
@@ -114,13 +116,19 @@ export default class SamplePlayer {
       // Note that we still don't play sounds older than that, because they might
       // have been scheduled for some time ago, and Web Audio will play a
       // sound immediately if its target time is in the past.
-      const delayCompensation = sampleEvent.triggered ? 0.1 : 0;
+      // We have a similar, but smaller, grace period for non-triggered sounds,
+      // since it might take a little time to start playing all the sounds in a
+      // complex song.
+      const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
         const uniqueId = soundApi.PlaySound(
           GROUP_PREFIX + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
-          eventStart
+          eventStart,
+          null,
+          false,
+          sampleEvent.effects
         );
 
         this.playingSamples.push({
@@ -144,6 +152,9 @@ export default class SamplePlayer {
     soundApi.StopSound(PREVIEW_GROUP);
   }
 
+  /**
+   * Stops all non-triggered samples that have not yet been played.
+   */
   stopAllSamplesStillToPlay() {
     if (!this.isPlaying) {
       return;

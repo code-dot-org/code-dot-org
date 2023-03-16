@@ -1,5 +1,9 @@
+import SoundEffects from './soundEffects';
+
 // audio
 var audioContext = null;
+
+var soundEffects = null;
 
 // var soundSourceIdUpto = 0;
 
@@ -37,7 +41,10 @@ function WebAudio() {
   } catch (e) {
     console.log('Web Audio API is not supported in this browser');
     audioContext = null;
+    return;
   }
+
+  soundEffects = new SoundEffects(audioContext);
 }
 
 WebAudio.prototype.getCurrentTime = function() {
@@ -95,14 +102,19 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   id,
   when,
   loop,
+  effects,
   callback
 ) {
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  // connect the source direct to the destination
-  source.connect(audioContext.destination);
-
+  if (effects) {
+    // Insert sound effects, which will connect to the output.
+    soundEffects.insertEffects(effects, source);
+  } else {
+    // No sound effects, so we will connect directly to the output.
+    source.connect(audioContext.destination);
+  }
   source.onended = callback.bind(this, id);
 
   source.loop = loop;

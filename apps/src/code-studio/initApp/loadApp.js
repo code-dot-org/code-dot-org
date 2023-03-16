@@ -464,6 +464,12 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
+  },
+  inRestrictedShareMode() {
+    return getAppOptions().level.inRestrictedShareMode;
+  },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {
     return new Promise((resolve, reject) => {

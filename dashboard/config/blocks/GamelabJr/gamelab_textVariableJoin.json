@@ -9,6 +9,7 @@
       0.32,
       0.62
     ],
+    "style": "variable_blocks",
     "args": [
       {
         "name": "VAR",
