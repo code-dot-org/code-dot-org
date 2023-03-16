@@ -1,4 +1,4 @@
-import { SoundType } from '../MusicLibrary';
+import {SoundType} from '../MusicLibrary';
 import {PlaybackEvent} from './PlaybackEvent';
 
 /**

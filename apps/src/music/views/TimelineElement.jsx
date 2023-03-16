@@ -39,9 +39,7 @@ const TimelineElement = ({
     currentPlayheadPosition < when + eventData.length;
 
   const colorType =
-    eventData.type === 'pattern' || eventData.type === 'chord'
-      ? eventData.type
-      : eventData.soundType;
+    eventData.type === 'sound' ? eventData.soundType : eventData.type;
   const colorClass = typeToColorClass[colorType];
 
   return (
