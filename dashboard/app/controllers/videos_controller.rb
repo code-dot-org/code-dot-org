@@ -1,9 +1,8 @@
 class VideosController < ApplicationController
-  before_action :authenticate_user!, except: [:test, :embed]
-  before_action :require_levelbuilder_mode, except: [:test, :embed, :index]
-  check_authorization except: [:test, :embed]
-  load_and_authorize_resource except: [:test, :embed]
-  after_action :allow_iframe, only: :embed
+  before_action :authenticate_user!, except: [:test]
+  before_action :require_levelbuilder_mode, except: [:test, :index]
+  check_authorization except: [:test]
+  load_and_authorize_resource except: [:test]
 
   before_action :set_video, only: [:edit, :update]
 
@@ -78,10 +77,6 @@ class VideosController < ApplicationController
       acl: 'public-read',
       no_random: true,
     )
-  end
-
-  def allow_iframe
-    response.headers['X-Frame-Options'] = 'ALLOWALL'
   end
 
   # Use callbacks to share common setup or constraints between actions.
