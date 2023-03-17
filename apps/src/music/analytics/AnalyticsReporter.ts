@@ -124,14 +124,18 @@ export default class AnalyticsReporter {
   }
 
   onButtonClicked(buttonName: string, properties: object) {
+    const logMessage = `Button clicked. Payload: ${JSON.stringify({
+      buttonName,
+      ...properties
+    })}`;
+
     if (!this.sessionInProgress) {
-      this.log('No session in progress');
+      this.log(`No session in progress.  (${logMessage})`);
       return;
+    } else {
+      this.log(logMessage);
     }
 
-    this.log(
-      `Button clicked. Payload: ${JSON.stringify({buttonName, ...properties})}`
-    );
     track('Button clicked', {buttonName, ...properties}).promise;
   }
 
@@ -139,7 +143,7 @@ export default class AnalyticsReporter {
     const logMessage = `Video closed. Id: ${id}. Duration: ${duration}}`;
 
     if (!this.sessionInProgress) {
-      this.log(`No session in progress.  (${logMessage}`);
+      this.log(`No session in progress.  (${logMessage})`);
       return;
     } else {
       this.log(logMessage);
