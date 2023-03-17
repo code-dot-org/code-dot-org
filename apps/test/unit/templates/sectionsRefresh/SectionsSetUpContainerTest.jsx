@@ -7,13 +7,13 @@ import * as utils from '@cdo/apps/code-studio/utils';
 
 describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     expect(wrapper.find('SingleSectionSetUp').length).to.equal(1);
   });
 
   it('renders headers and button', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     expect(wrapper.find('h1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(2);
@@ -31,14 +31,27 @@ describe('SectionsSetUpContainer', () => {
     ).to.equal('Finish creating sections');
   });
 
+  it('renders edit header and save button', () => {
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={false} />);
+
+    expect(wrapper.find('h1').length).to.equal(1);
+    expect(wrapper.find('Button').length).to.equal(1);
+    expect(
+      wrapper
+        .find('Button')
+        .at(0)
+        .props().text
+    ).to.equal('Save');
+  });
+
   it('renders curriculum quick assign', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
 
   it('renders advanced settings', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     wrapper
       .find('FontAwesome')
@@ -49,7 +62,7 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('updates caret direction when Advacned Settings is clicked', () => {
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     expect(
       wrapper
@@ -79,7 +92,7 @@ describe('SectionsSetUpContainer', () => {
         reportValidity: reportSpy
       });
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     wrapper
       .find('Button')
@@ -104,7 +117,7 @@ describe('SectionsSetUpContainer', () => {
       });
     const fetchSpy = sinon.spy(window, 'fetch');
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     wrapper
       .find('Button')
@@ -135,7 +148,7 @@ describe('SectionsSetUpContainer', () => {
       .returns('student');
     const fetchSpy = sinon.spy(window, 'fetch');
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer isNewSection={true} />);
 
     wrapper
       .find('Button')
