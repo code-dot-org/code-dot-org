@@ -3,7 +3,7 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import ImageInput from './ImageInput';
+import ImageInput from '../ImageInput';
 
 const APP_DISPLAY_OPTIONS = {
   embedAppWithCode: 'Embed app with code directly',
