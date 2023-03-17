@@ -16,7 +16,6 @@ export const fieldSoundsDefinition = {
   type: FIELD_SOUNDS_TYPE,
   name: FIELD_SOUNDS_NAME,
   getLibrary: Globals.getLibrary,
-  getAllowedSounds: Globals.getAllowedSounds,
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
