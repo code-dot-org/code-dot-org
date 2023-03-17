@@ -102,3 +102,9 @@ export function getField(type) {
 export function getUserTheme(themeOption) {
   return Blockly.themes[localStorage.blocklyTheme] || themeOption || cdoTheme;
 }
+
+export function getCode(workspace) {
+  return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+  // After supporting JSON block sources, change to:
+  // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+}

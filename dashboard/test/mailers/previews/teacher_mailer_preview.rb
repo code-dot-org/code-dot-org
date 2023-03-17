@@ -1,6 +1,6 @@
 # This can be viewed on non-production environments at /rails/mailers/teacher_mailer
 class TeacherMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def new_teacher_email_es_mx_preview
     teacher = build :teacher, email: 'teacher@gmail.com'
