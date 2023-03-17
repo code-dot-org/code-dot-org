@@ -13,7 +13,7 @@ ca:
       locked: "El teu compte està bloquejat."
       not_found_in_database: "Correu electrònic o contrasenya invàlids."
       timeout: "La teva sessió ha expirat, si us plau, inicia sessió novament per a continuar."
-      unauthenticated: "Necessites iniciar sessió o registrar-te abans de continuar."
+      unauthenticated: "Has d'iniciar sessió o registrar-te abans de continuar."
       unconfirmed: "Necessites confirmar el teu compte abans de continuar."
     mailer:
       confirmation_instructions:
