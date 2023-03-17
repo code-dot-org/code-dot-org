@@ -13,8 +13,8 @@
   }
 
   @media screen and (max-width: $width-sm) {
-    height: 230px;
-    padding: 1.5em 1.15em 0.5em;
+    height: 270px;
+    padding: 1.5em 1.15em 0;
     margin: 3em auto 0;
   }
 
@@ -24,7 +24,8 @@
 
   a:hover,
   a:active,
-  a:visited {
+  a:visited,
+  a:link {
     text-decoration: none;
   }
 
@@ -76,26 +77,7 @@
     }
   }
 
-  // There's a mysterious <p> tag being added around
-  // the right image on https://code.org/circuitplayground.
-  // This aligns it correctly to the bottom of the container.
-  p img {
-    margin-bottom: -32px;
-
-    @media screen and (max-width: $width-md) {
-      position: absolute;
-      right: 0;
-      top: 22px;
-      z-index: 0;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      display: none;
-    }
-  }
-
   .text-wrapper {
-    color: white;
     width: 370px;
     text-align: center;
 
@@ -123,6 +105,7 @@
       font-family: $gotham-regular;
       font-size: 1.15em;
       margin-bottom: 0;
+      color: $white;
 
       @media screen and (max-width: $width-sm) {
         font-size: 1em;
@@ -131,19 +114,8 @@
   }
 
   button {
-    height: unset;
-    font-family: $gotham-bold;
-    font-size: 16px;
-    color: white;
     background: #4E1598;
     border-color: #4E1598;
-    margin: 0;
-    padding: 0.65em 1.5em;
-    border-radius: 4px;
-
-    @media screen and (max-width: $width-md) {
-      padding: 0.5em 1em;
-    }
 
     @media screen and (max-width: $width-sm) {
       margin-top: 1em;

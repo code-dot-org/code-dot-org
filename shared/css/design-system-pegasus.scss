@@ -154,13 +154,12 @@ button,
 .btn,
 input[type=submit] {
   height: unset;
-  min-width: 200px;
   display: inline-block;
   color: white;
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625em 1em;
+  padding: .625em 2em;
   margin: 0.5em 0;
   font-size: 1em;
   font-family: 'Gotham 5r', sans-serif;
