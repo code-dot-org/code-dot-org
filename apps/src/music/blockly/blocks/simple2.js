@@ -161,7 +161,7 @@ export const playSoundAtCurrentLocationSimple2 = {
         __effects
       );
       ProgramSequencer.updateMeasureForPlayByLength(
-        MusicPlayer.getLengthForId(
+        MusicLibrary.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
         )
       );
