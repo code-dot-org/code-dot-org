@@ -723,7 +723,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_remove_under_13_comments
     comment_block_sources = JSON.parse(File.read(COMMENT_BLOCK_SOURCES))
-    birthdays = [Date.parse("1900-01-01"), Time.zone.today]
+    birthdays = [Date.parse("1900-01-01"), Date.today]
     sources = ["short_source_with_comments", "long_source_with_comments"]
     sessions = [:admin, :non_owner]
 
