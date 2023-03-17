@@ -67,10 +67,14 @@ function renderOfferings(
 
 function updateSectionCourse(updateCourse, course) {
   let courseVersionId;
-  if (Object.keys(course.course_versions).length === 1) {
-    courseVersionId = Object.values(course.course_versions)[0].id;
+  const courseVersions = {};
+  course.course_versions.map(cv => {
+    courseVersions[cv[1].id] = cv[1];
+  });
+  if (Object.keys(courseVersions).length === 1) {
+    courseVersionId = Object.values(courseVersions)[0].id;
   } else {
-    courseVersionId = Object.values(course.course_versions)?.find(
+    courseVersionId = Object.values(courseVersions)?.find(
       versions => versions.is_recommended
     )?.id;
   }
