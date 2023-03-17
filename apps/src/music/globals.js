@@ -8,7 +8,6 @@
 // this data.
 
 let libraryRef = null;
-let allowedSoundsRef = null;
 let playerRef = null;
 
 export default {
@@ -18,14 +17,6 @@ export default {
 
   getLibrary() {
     return libraryRef;
-  },
-
-  setAllowedSounds(allowedSounds) {
-    allowedSoundsRef = allowedSounds;
-  },
-
-  getAllowedSounds() {
-    return allowedSoundsRef;
   },
 
   setPlayer(player) {
