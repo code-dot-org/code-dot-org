@@ -1,1 +1,7 @@
---- {}
+---
+mr:
+  data:
+    course:
+      name:
+        mike-test:
+          title: संगणक शास्त्राची मूलतत्त्वे

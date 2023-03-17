@@ -42,7 +42,7 @@
           "display_name": "HTML formázás"
         },
         "csd-2022/functions": {
-          "display_name": "funkciók"
+          "display_name": "Függvények"
         },
         "csd-2022/game-lab": {
           "display_name": "Játék Labor"
@@ -100,6 +100,12 @@
         },
         "csd-2022/playing-notes": {
           "display_name": "Hangjegyek lejátszása"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "A probléma-megoldási folyamat"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "A probléma-megoldási folyamat"
         },
         "csd-2022/random-numbers": {
           "display_name": "Véletlen számok"

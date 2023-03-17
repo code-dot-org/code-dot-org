@@ -59,6 +59,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Пускане на Ноти"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Процеса за Решаване на Проблеми"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Процеса за Решаване на Проблеми"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "Свойства на Спрайта"
         },

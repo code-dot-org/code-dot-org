@@ -140,7 +140,7 @@
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Először a diákok szemetet próbálnak eltávolítani az óceánból és a tárgyakat \"hal\" vagy \"nem hal\" kategóriába sorolják. Ezután a tanulóknak ki kell bővíteniük az adathalmazt más tengeri élőlénnyel. A foglalkozás második részében a tanulók maguk választanak címkéket, amelyeket a véletlenszerűen generált halak képeire helyeznek. Ezeket az adatokat egy gépi tanuló modellben használják, amely ezután képes lesz arra, hogy önállóan címkézzen fel új képeket."
         },
         "k5-onlinepd-2019/Loops": {
-          "name": "hurkok"
+          "name": "Ciklusok"
         },
         "k5-onlinepd-2019/Events": {
           "name": "Események"
@@ -149,7 +149,7 @@
           "name": "Feltételek"
         },
         "k5-onlinepd-2019/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "k5-onlinepd-2019/Variables": {
           "name": "változók"
@@ -407,7 +407,7 @@
           "name": "Ütközések"
         },
         "csd3-2022/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "csd3-2022/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -449,7 +449,7 @@
           "name": "Zene Készítése"
         },
         "csd6-2022/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -644,7 +644,7 @@
           "name": "Ütközések"
         },
         "csd3-2018/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "csd3-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -893,7 +893,7 @@
           "name": "Ütközések"
         },
         "csd3-2019/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "csd6-2019/Board Events": {
           "name": "Táblás események"
@@ -1091,7 +1091,7 @@
           "name": "Ütközések"
         },
         "csd3-2017/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "csd6-2017/Board Events_": {
           "name": "Táblás események"
@@ -1274,7 +1274,7 @@
           "name": "A Művész 2"
         },
         "20-hour/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "20-hour/The Farmer": {
           "name": "A Farmer"
@@ -1832,7 +1832,7 @@
           "name": "Ütközések"
         },
         "csd3-2021/Functions": {
-          "name": "funkciók"
+          "name": "Függvények"
         },
         "csd3-2021/lesson-1": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"

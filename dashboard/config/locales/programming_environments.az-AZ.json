@@ -1645,7 +1645,7 @@
                 "timedLoop": {
                   "examples": {
                     "Seconds Elapsed": {
-                      "name": "Saniyələr keçdi"
+                      "name": "saniyə keçdi"
                     }
                   },
                   "palette_params": {

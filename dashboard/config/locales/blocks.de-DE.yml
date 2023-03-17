@@ -2424,6 +2424,16 @@ de:
             '"quarantining"': sich bei Krankheit in Quarantäne zu begeben
             '"avoiding"': sich sozial distanzieren
             '"none"': stillhalten
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): nach rechts drehen
+            new Behavior(spinning_left, []): nach links drehen
+            new Behavior(fluttering, []): flattern
+            new Behavior(jittering, []): zittern
+            new Behavior(wobbling, []): wackelnd
+            new Behavior(wandering, []): wandern
+            new Behavior(patrolling, []): patroullieren
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:

@@ -114,7 +114,7 @@
           "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
-          "description": "Desenvolver programas que respondam a eventos temporizados"
+          "description": "Desenvolver programas que respondam a eventos programados"
         },
         "efcad81f-908b-4e31-8602-02c5ef16ab26": {
           "description": "Desenvolver programas que respondam à entrada do usuário"
@@ -288,7 +288,7 @@
           "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Desenvolver programas que respondam a eventos temporizados"
+          "description": "Desenvolver programas que respondam a eventos programados"
         },
         "251fe027-d9b3-4384-99f6-53505275e4ce": {
           "description": "Desenvolver programas que respondam à entrada do usuário"
@@ -372,7 +372,7 @@
           "description": "Desenvolver programas que respondam à entrada do usuário"
         },
         "7728246b-7582-4624-a2b1-229b998fc2ae": {
-          "description": "Desenvolver programas que respondam a eventos temporizados"
+          "description": "Desenvolver programas que respondam a eventos programados"
         },
         "07bc7c07-d75a-45cc-9f98-74501813e5af": {
           "description": "Construir um programa usando estruturas que repetem partes do código"
@@ -780,7 +780,7 @@
           "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo ou monitorar sua felicidade."
         },
         "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
-          "description": "Desenvolver programas que respondam a eventos temporizados"
+          "description": "Desenvolver programas que respondam a eventos programados"
         },
         "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
           "description": "Criar animações de dança utilizando código"
@@ -911,6 +911,12 @@
         "546d4a38-5abb-402c-9e61-bef13a71001d": {
           "description": "Superar obstáculos, como restrições de tempo ou bugs."
         },
+        "8d8fffd3-6411-4778-95f5-76953d066786": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
+        },
         "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
           "description": "Modele comportamentos adequados de laboratório de informática"
         },
@@ -994,6 +1000,12 @@
         },
         "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
           "description": "Descubra que a internet pode ser usada para visitar lugares distantes e aprender coisas novas."
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
         },
         "42c68792-f472-4122-906c-67bef3edae73": {
           "description": "Transformar um algoritmo em um programa"
@@ -1210,6 +1222,12 @@
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Represente a linguagem literal e a figurativa através de um texto"
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
         },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Descreva a importância do usuário no processo de design."
@@ -1469,6 +1487,12 @@
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "Explique as regras para viajar com segurança pela internet."
         },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
+        },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Transformar um algoritmo em um programa"
         },
@@ -1725,7 +1749,7 @@
           "description": "Identificar ações que se correlacionem com eventos de entrada."
         },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
-          "description": "Desenvolver programas que respondam a eventos temporizados"
+          "description": "Desenvolver programas que respondam a eventos programados"
         },
         "18434de2-92be-4695-8dc7-4aed45243596": {
           "description": "Desenvolver programas que respondam à entrada do usuário"
@@ -1848,7 +1872,7 @@
           "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo ou monitorar sua felicidade."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
-          "description": "Desenvolver programas que respondam a eventos temporizados"
+          "description": "Desenvolver programas que respondam a eventos programados"
         },
         "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
           "description": "Desenvolver programas que respondam à entrada do usuário"
@@ -1978,6 +2002,12 @@
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
           "description": "Modele comportamentos adequados de laboratório de informática"

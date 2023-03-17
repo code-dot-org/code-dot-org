@@ -2,6 +2,8 @@
 zh-CN:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: 提示用户{QUESTION}变量{VAR}有选择{A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2376,6 +2378,17 @@ zh-CN:
             '"quarantining"': 生病时隔离
             '"avoiding"': 社交距离
             '"none"': 保持静止
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋转
+            new Behavior(spinning_left, []): 向左旋转
+            new Behavior(fluttering, []): 飘动
+            new Behavior(jittering, []): 抖动
+            new Behavior(wobbling, []): 摇摆
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡逻
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:

@@ -1,1 +1,7 @@
---- {}
+---
+my:
+  data:
+    course:
+      name:
+        mike-test:
+          title: ကွန်ပျူတာသိပ္ပံအခြေခံ။

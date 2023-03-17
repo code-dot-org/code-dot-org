@@ -497,6 +497,8 @@ fa:
               display_name: حلقه‌ها
             csf_conditionals:
               display_name: شرطی ها
+            csf_binary:
+              display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
             end_of_course_project:
@@ -544,6 +546,8 @@ fa:
               display_name: شهروندی دیجیتالی
             csf_sequencing:
               display_name: دنباله
+            csf_binary:
+              display_name: دو دویی
             csf_loops:
               display_name: حلقه‌ها
             csf_events:
@@ -879,6 +883,8 @@ fa:
               display_name: شهروندی دیجیتالی
             csf_sequencing:
               display_name: دنباله
+            csf_binary:
+              display_name: دو دویی
             csf_loops:
               display_name: حلقه‌ها
             csf_events:
@@ -898,6 +904,8 @@ fa:
               display_name: حلقه‌ها
             csf_conditionals:
               display_name: شرطی ها
+            csf_binary:
+              display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
             end_of_course_project:
@@ -962,6 +970,8 @@ fa:
           student_description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
             debugging:
@@ -1032,6 +1042,8 @@ fa:
               display_name: شهروندی دیجیتالی
             csf_sequencing:
               display_name: دنباله
+            csf_binary:
+              display_name: دو دویی
             csf_loops:
               display_name: حلقه‌ها
             csf_events:
@@ -1053,6 +1065,8 @@ fa:
               display_name: حلقه‌ها
             csf_conditionals:
               display_name: شرطی ها
+            csf_binary:
+              display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
             end_of_course_project:
@@ -1144,6 +1158,8 @@ fa:
           student_description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
             Sprites:
@@ -1152,6 +1168,12 @@ fa:
               display_name: متغیرها
         contagion-pilot:
           description_audience: رده ی سنی 5
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: مقدمه
+            Introduction:
+              display_name: مقدمه
         haikubot-pilot:
           lesson_groups:
             Lesson 3:
@@ -1418,6 +1440,8 @@ fa:
               name: متغیرها
         csa3-2023:
           lessons:
+            lesson-1:
+              name: آرایه‌های یک بعدی (1D)
             lesson-3:
               name: حلقه های "برای"
         csa4-2023:
@@ -1428,8 +1452,6 @@ fa:
           title: 'سلام دنیا: فضا'
         hello-world-soccer-2022:
           title: 'سلام دنیا: فوتبال'
-        csd1-2023:
-          title: حل مسأله
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -1460,3 +1482,9 @@ fa:
               display_name: حلقه‌ها
             lessonGroup-5:
               display_name: پروژه
+        drafting:
+          name: پیشنویس
+        tess-testing-problem-solving-2023:
+          title: حل مسأله
+        testing-focus-on-creativity1:
+          title: حل مسأله
