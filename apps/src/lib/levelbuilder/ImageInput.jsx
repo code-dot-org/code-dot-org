@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 
 export default function ImageInput({
   updateImageUrl,
   initialImageUrl,
-  showPreview = false
+  showPreview = false,
+  helpTipText
 }) {
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
@@ -23,6 +25,11 @@ export default function ImageInput({
       <div style={{display: 'flex'}}>
         <label>
           Image
+          {helpTipText && (
+            <HelpTip>
+              <p>{helpTipText}</p>
+            </HelpTip>
+          )}
           <input
             type="text"
             onChange={e => onImageUrlChange(e.target.value)}
@@ -56,7 +63,8 @@ export default function ImageInput({
 ImageInput.propTypes = {
   updateImageUrl: PropTypes.func.isRequired,
   initialImageUrl: PropTypes.string,
-  showPreview: PropTypes.bool
+  showPreview: PropTypes.bool,
+  helpTipText: PropTypes.string
 };
 
 const styles = {

@@ -29,7 +29,7 @@ export default class MusicPlayer {
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
-  private library: MusicLibrary;
+  private library: MusicLibrary | null;
 
   constructor(bpm: number = DEFAULT_BPM) {
     this.bpm = bpm;
@@ -37,7 +37,7 @@ export default class MusicPlayer {
     this.tracksMetadata = {};
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
-    this.library = {groups: []};
+    this.library = null;
     this.lastTriggeredMeasure = 0;
     this.lastWhenRunMeasure = 0;
   }
@@ -81,11 +81,11 @@ export default class MusicPlayer {
     skipContext?: SkipContext,
     effects?: Effects
   ) {
-    if (!this.samplePlayer.initialized()) {
+    if (!this.samplePlayer.initialized() || this.library === null) {
       console.log('MusicPlayer not initialized');
       return;
     }
-    const soundData = this.getSoundForId(id);
+    const soundData = this.library.getSoundForId(id);
     if (!id || soundData === null || !measure) {
       console.log(`Invalid input. id: ${id} measure: ${measure}`);
       return;
@@ -343,6 +343,11 @@ export default class MusicPlayer {
    * @param soundIds
    */
   addSoundsToTrack(trackId: string, ...soundIds: string[]) {
+    if (this.library === null) {
+      console.warn('MusicPlayer not initialized');
+      return;
+    }
+
     if (!this.tracksMetadata[trackId]) {
       console.warn('No track with ID: ' + trackId);
       return;
@@ -360,7 +365,7 @@ export default class MusicPlayer {
       );
       maxSoundLength = Math.max(
         maxSoundLength,
-        this.getLengthForId(soundId) || 0
+        this.library.getSoundForId(soundId)?.length || 0
       );
     }
 
@@ -394,15 +399,6 @@ export default class MusicPlayer {
     return this.tracksMetadata;
   }
 
-  getLengthForId(id: string): number | null {
-    const sound = this.getSoundForId(id);
-    if (sound === null) {
-      console.warn(`Could not find sound with ID: ${id}`);
-      return null;
-    }
-    return sound.length;
-  }
-
   // Called by interpreted code in the simple2 model, this returns
   // a unique value that is used to differentiate each invocation of
   // a function, so that the timeline renderer can group relevant events.
@@ -427,23 +423,12 @@ export default class MusicPlayer {
     this.lastTriggeredMeasure = 0;
   }
 
-  private getSoundForId(id: string): SoundData | null {
-    const splitId = id.split('/');
-    const path = splitId[0];
-    const src = splitId[1];
-
-    const folder = this.library.groups[0].folders.find(
-      folder => folder.path === path
-    );
-
-    if (folder) {
-      return folder.sounds.find(sound => sound.src === src) || null;
+  private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
+    if (this.library === null) {
+      console.warn('Music Player not initialized');
+      return [];
     }
 
-    return null;
-  }
-
-  private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (event.skipContext?.skipSound) {
       return [];
     }
@@ -488,10 +473,9 @@ export default class MusicPlayer {
 
       const results: SampleEvent[] = [];
 
-      const folder: SoundFolder | null =
-        this.library.groups[0].folders.find(
-          folder => folder.path === instrument
-        ) || null;
+      const folder: SoundFolder | null = this.library.getFolderForPath(
+        instrument
+      );
 
       if (folder === null) {
         console.warn(`No instrument ${instrument}`);

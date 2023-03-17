@@ -764,6 +764,7 @@ en:
         csa_welcome_to_the_theater: 'CSA: Welcome to The Theater'
         enter_your_own_poem: Enter Your Own Poem
         csa-example-solution-1: 'Live Coding an Example Solution '
+        csd_sprite_properties: Sprite Properties
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
