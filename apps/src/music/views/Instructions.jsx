@@ -10,7 +10,7 @@ import {AnalyticsContext} from '../context';
 const Instructions = ({
   progression,
   currentPanel,
-  lastMessage,
+  message,
   onNextPanel,
   baseUrl,
   vertical,
@@ -51,7 +51,7 @@ const Instructions = ({
       {progression && (
         <InstructionsPanel
           panel={progression.panels[currentPanel]}
-          lastMessage={lastMessage}
+          message={message}
           vertical={vertical}
           baseUrl={baseUrl}
           path={progression.path}
@@ -63,18 +63,6 @@ const Instructions = ({
       <div className={moduleStyles.bottom}>
         <div className={moduleStyles.progressText}>{progressText}</div>
         <div>
-          {/*
-          <button
-            type="button"
-            onClick={() => changePanel(false)}
-            className={classNames(
-              moduleStyles.button,
-              previousPanel !== null && moduleStyles.buttonActive
-            )}
-          >
-            Previous
-          </button>
-          */}
           {onNextPanel && (
             <button
               type="button"
@@ -97,7 +85,7 @@ const Instructions = ({
 Instructions.propTypes = {
   progression: PropTypes.object,
   currentPanel: PropTypes.number,
-  lastMessage: PropTypes.string,
+  message: PropTypes.string,
   onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
@@ -106,7 +94,7 @@ Instructions.propTypes = {
 
 const InstructionsPanel = ({
   panel,
-  lastMessage,
+  message,
   vertical,
   baseUrl,
   path,
@@ -168,7 +156,7 @@ const InstructionsPanel = ({
         )}
       >
         {panel.text}
-        <div className={moduleStyles.lastMessage}>{lastMessage}</div>
+        <div className={moduleStyles.message}>{message}</div>
       </div>
     </div>
   );
@@ -176,7 +164,7 @@ const InstructionsPanel = ({
 
 InstructionsPanel.propTypes = {
   panel: PropTypes.object.isRequired,
-  lastMessage: PropTypes.string,
+  message: PropTypes.string,
   baseUrl: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   imageClicked: PropTypes.func.isRequired,
