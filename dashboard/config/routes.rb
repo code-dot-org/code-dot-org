@@ -106,6 +106,8 @@ Dashboard::Application.routes.draw do
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
+    get '/catalog', to: 'curriculum_catalog#index'
+
     # User-facing section routes
     resources :sections, only: [:show, :new] do
       member do

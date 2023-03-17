@@ -585,6 +585,8 @@ describe('entry tests', () => {
     'courses/resources': './src/sites/studio/pages/courses/resources.js',
     'courses/code': './src/sites/studio/pages/courses/code.js',
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
+    'curriculum_catalog/index':
+      './src/sites/studio/pages/curriculum_catalog/index.js',
     'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
     'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
     'incubator/index': './src/sites/studio/pages/incubator/index.js',
