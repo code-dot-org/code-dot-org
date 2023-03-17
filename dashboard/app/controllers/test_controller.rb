@@ -192,7 +192,7 @@ class TestController < ApplicationController
   end
 
   # Use the same data from pd_teacher_application_hash_common
-  # We can't use the factory directly because FactoryGirl is not available on prod
+  # We can't use the factory directly because FactoryBot is not available on prod
   def teacher_form_data
     {
       school: School.first.id,
