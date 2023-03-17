@@ -13,7 +13,7 @@ $(document).ready(function() {
       <>
         <h1>Curriculum Catalog!</h1>
         {curriculaData.map(curriculum => (
-          <li key={curriculum.key}>{curriculum.key}</li>
+          <li key={curriculum.key}>{curriculum.display_name}</li>
         ))}
       </>
     </Provider>,
