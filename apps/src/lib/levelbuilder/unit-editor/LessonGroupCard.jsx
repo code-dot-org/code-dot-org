@@ -413,7 +413,5 @@ export default connect(
     setLessonGroup,
     reorderLesson,
     updateLessonGroupField
-  },
-  null,
-  {forwardRef: true}
+  }
 )(LessonGroupCard);

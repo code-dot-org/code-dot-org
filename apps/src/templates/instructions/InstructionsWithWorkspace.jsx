@@ -68,7 +68,9 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const INSTRUCTIONS_RESERVE = 150;
 
     const {instructionsHeight, setInstructionsMaxHeightAvailable} = this.props;
-    const codeWorkspaceHeight = this.codeWorkspaceContainer.getRenderedHeight();
+    const codeWorkspaceHeight = this.codeWorkspaceContainer
+      .getWrappedInstance()
+      .getRenderedHeight();
 
     // Continue here even if the workspace height is measured at zero. Workspace
     // height at zero is a somewhat common case after rotating the screen on

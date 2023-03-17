@@ -106,11 +106,6 @@ export class MapboxLocationSearchField extends React.Component {
   }
 }
 
-export default connect(
-  state => ({
-    mapboxAccessToken: state.mapbox.mapboxAccessToken
-  }),
-  undefined,
-  null,
-  {forwardRef: true}
-)(MapboxLocationSearchField);
+export default connect(state => ({
+  mapboxAccessToken: state.mapbox.mapboxAccessToken
+}))(MapboxLocationSearchField);

@@ -47,11 +47,9 @@ describe('InstructionsCSF', () => {
     );
 
     failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');
-    wrapper.update();
     assertFeedbackContainsText(wrapper, '>repeat</text>');
 
     failWithMessage('If block: <xml><block type="controls_if"/></xml>');
-    wrapper.update();
     assertFeedbackContainsText(wrapper, '>if</text>');
   });
 
@@ -60,11 +58,12 @@ describe('InstructionsCSF', () => {
   }
 
   function assertFeedbackContainsText(wrapper, text) {
-    const html = wrapper
-      .find('.uitest-topInstructions-inline-feedback')
-      .first()
-      .html();
-    assert.include(html, text);
+    assert.include(
+      wrapper
+        .getDOMNode()
+        .querySelector('.uitest-topInstructions-inline-feedback').innerHTML,
+      text
+    );
   }
 });
 

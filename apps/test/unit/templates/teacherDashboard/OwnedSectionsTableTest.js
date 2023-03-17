@@ -3,13 +3,8 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import * as Table from 'reactabular-table';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux
-} from '@cdo/apps/redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
@@ -19,9 +14,7 @@ import {
   COLUMNS
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
-import teacherSections, {
-  setSections
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();
 
@@ -219,28 +212,27 @@ const plSectionRowData = [
 ];
 
 // Scramble these for the table to start un-ordered
-const sections = [
-  sectionGradesRowData[5],
-  sectionGradesRowData[0],
-  sectionGradesRowData[2],
-  sectionGradesRowData[4],
-  sectionGradesRowData[3],
-  sectionGradesRowData[1],
-  sectionGradesRowData[6]
-];
+const initialState = {
+  teacherSections: {
+    sections: {
+      '1': sectionGradesRowData[5],
+      '2': sectionGradesRowData[0],
+      '3': sectionGradesRowData[2],
+      '4': sectionGradesRowData[4],
+      '5': sectionGradesRowData[3],
+      '6': sectionGradesRowData[1],
+      '7': sectionGradesRowData[6]
+    }
+  }
+};
 
 describe('OwnedSectionsTable Sorting', () => {
-  let store;
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({teacherSections});
-    store = getStore();
-    store.dispatch(setSections(sections));
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
+  const store = createStore(
+    combineReducers({
+      teacherSections
+    }),
+    initialState
+  );
 
   it('can be sorted correctly by grade', () => {
     const wrapper = mount(
