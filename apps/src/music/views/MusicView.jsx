@@ -152,7 +152,6 @@ class UnconnectedMusicView extends React.Component {
 
       Globals.setLibrary(this.library);
       Globals.setPlayer(this.player);
-
     });
   }
 
