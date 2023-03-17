@@ -239,14 +239,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "thumbnail_url": "https://images.code.org/dca509b6ec8f538632408e0133b0925e-M9B_titleCard.png"
   },
   "game_id": 41,
   "published": true,
   "created_at": "2023-03-10T18:16:52.000Z",
   "level_num": "custom",
   "user_id": 18603,
-  "audit_log": "[{\"changed_at\":\"2023-03-10T18:16:52.640+00:00\",\"changed\":[\"cloned from \\\"U6_L03_Lists Practice_Choice_2-2\\\"\"],\"cloned_from\":\"U6_L03_Lists Practice_Choice_2-2\"},{\"changed_at\":\"2023-03-10 18:16:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 21:30:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 21:32:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 16:04:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-10T18:16:52.640+00:00\",\"changed\":[\"cloned from \\\"U6_L03_Lists Practice_Choice_2-2\\\"\"],\"cloned_from\":\"U6_L03_Lists Practice_Choice_2-2\"},{\"changed_at\":\"2023-03-10 18:16:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 21:30:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-10 21:32:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 16:04:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-16 15:35:30 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
