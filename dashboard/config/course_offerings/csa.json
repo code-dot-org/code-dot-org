@@ -9,7 +9,7 @@
   "grade_levels": "9,10,11,12",
   "header": "Year Long",
   "image": null,
-  "cs_topic": null,
+  "cs_topic": "art_and_design,data,games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
 }

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-03-13 17:38:47 UTC",
+    "serialized_at": "2023-03-15 17:37:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2526,7 +2526,7 @@
       "key": "7366428e-49df-44d7-8482-22049b3a198e",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Project Guide."
+        "description": "**Distribute:** Give each student a copy of the [r html_web_page_2/csd2/2023]."
       },
       "seeding_key": {
         "activity_section.key": "7366428e-49df-44d7-8482-22049b3a198e",
@@ -2549,7 +2549,7 @@
       "key": "c549ac36-f55a-4c2e-b193-9eaffb25f5bc",
       "position": 3,
       "properties": {
-        "description": "As students answer questions about the design of the page, ensure that they are differentiating between the content of the page and the way that content is organized or structured.  After they have completed their designs, ensure that they can identify which tags will be needed for different text on the web pages.",
+        "description": "As students answer questions about the design of the page, ensure that they are differentiating between the content of the page and the way that content is organized or structured.  After they have completed a sketch of their designs, ensure that they can identify which tags will be needed for different text on the web pages.",
         "name": "Step 2: Prepare - Design your Page\r",
         "tips": [
           {
@@ -2580,7 +2580,7 @@
       "key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
       "position": 5,
       "properties": {
-        "description": "**Distribute:**  Hand out a copy of the Problem Solving Process with Programming to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic"
+        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd2/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
       },
       "seeding_key": {
         "activity_section.key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
@@ -3115,7 +3115,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\r\n"
+            "markdown": "<img src=\"https://images.code.org/3d122473886889443e423633d7346994-css properties 2.png\" style=\"margin-left:20px; width:200px; float:right\">\n\n**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\n"
           }
         ]
       },
@@ -3128,7 +3128,7 @@
       "key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their journals or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their new \"CSS Properties\" chart or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0eb9a233-a1ad-44ac-a565-c54dcd71a514",
@@ -5685,7 +5685,13 @@
       "key": "d331a5e4-050f-40fb-a895-45db32b5ac22",
       "position": 5,
       "properties": {
-        "progression_name": "Share Your Pages"
+        "progression_name": "Share Your Pages",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How Students Will Share Their HTML:** Due to the functionality of Web Lab, in order to share webpages to create a completed project, students will need to do some copy and pasting of teammates' code into their own project.\n\nThis will require students to complete the following steps:\n1) Click the \"Share\" button on their page, and give the link to teammates in a shared document, by email or however you have students collaborate and share with one another.\n2) Get the \"Share\" link of **each** teammate's webpage\n3) On each teammate's webpage click the \"View Code\" link at the bottom of the screen.\n4) Copy the HTML from each teammates' page into a new webpage in their project.\n5) Copy and paste the correct navigation bar onto each page.\n6) Check that all of the links and images work correctly.\n\n*Students will repeat steps 3-4 to get teammate's CSS code*"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d331a5e4-050f-40fb-a895-45db32b5ac22",
@@ -5944,6 +5950,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd2_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -11690,7 +11699,7 @@
     {
       "key": "0d039da4-6026-442a-a61a-92cde155234a",
       "properties": {
-        "description": "Create a prototype of a web design to meet the needs of a user"
+        "description": "Create a prototype of a web design to meet the needs of a user using the problem-solving process"
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
@@ -11885,6 +11894,16 @@
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "objective.key": "aeed2f2f-07b9-4551-b6c0-77584842f223"
+      }
+    },
+    {
+      "key": "b2ea976a-9c50-4917-af46-a2a3dd3cf181",
+      "properties": {
+        "description": "Understand the steps of the problem-solving process"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "objective.key": "b2ea976a-9c50-4917-af46-a2a3dd3cf181"
       }
     },
     {
