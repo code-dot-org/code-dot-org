@@ -2111,6 +2111,16 @@ he:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} אמור {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): להסתובב ימינה
+            new Behavior(spinning_left, []): להסתובב שמאלה
+            new Behavior(fluttering, []): להתרגש
+            new Behavior(jittering, []): לרעוד
+            new Behavior(wobbling, []): להתנדנד
+            new Behavior(wandering, []): לשוטט
+            new Behavior(patrolling, []): לסייר
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
