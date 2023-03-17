@@ -20,7 +20,8 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
-import ProgressManager from '../ProgressManager';
+import ProgressManager from '../progress/ProgressManager';
+import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -61,7 +62,6 @@ class UnconnectedMusicView extends React.Component {
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
-    this.progressManager = new ProgressManager();
 
     // Increments every time a trigger is pressed;
     // used to differentiate tracks created on the same trigger
@@ -86,11 +86,7 @@ class UnconnectedMusicView extends React.Component {
       timelineAtTop: false,
       showInstructions: false,
       instructionsPosIndex,
-      showingVideo: true,
-      progression: null,
-      progressMessage: null,
-      progressStep: 0,
-      progressSatisfied: false
+      showingVideo: true
     };
   }
 
@@ -125,21 +121,29 @@ class UnconnectedMusicView extends React.Component {
       // it might affect the toolbox.
       if (AppConfig.getValue('load-progression') === 'true') {
         const progression = values[1];
+
+        const musicValidator = new MusicValidator(
+          this.getIsPlaying,
+          this.player
+        );
+
+        this.progressManager = new ProgressManager(
+          progression,
+          musicValidator,
+          this.onProgresschange
+        );
         this.setState({
-          progression: progression,
           showInstructions: !!progression
         });
 
-        this.setAllowedSoundsForProgress(this.state.progressStep);
+        this.setAllowedSoundsForProgress();
       }
 
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
         this.player,
-        this.state.progression
-          ? this.getToolboxForProgress(this.state.progressStep)
-          : null
+        this.progressManager?.getCurrentToolbox()
       );
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -171,7 +175,8 @@ class UnconnectedMusicView extends React.Component {
       });
     }
 
-    if (this.state.progression) {
+    this.progressManager?.updateProgress();
+    /*
       this.progressManager.checkProgress({
         progression: this.state.progression,
         progressStep: this.state.progressStep,
@@ -182,45 +187,44 @@ class UnconnectedMusicView extends React.Component {
           this.setState(newState);
         }
       });
-    }
+      */
+  };
+
+  onProgresschange = () => {
+    // This is a way to tell React to re-render the scene, notably
+    // the instructions.
+    this.setState({updateNumber: this.state.updateNumber + 1});
+  };
+
+  getIsPlaying = () => {
+    return this.state.isPlaying;
   };
 
   onNextPanel = () => {
-    let nextProgressStep;
+    this.progressManager?.next();
+
+    /*  let nextProgressStep;
     this.progressManager.nextStep(this.state.progressStep, newState => {
       this.setState(newState);
       nextProgressStep = newState.progressStep;
-    });
+    });*/
+
     this.stopSong();
     this.clearCode();
-    this.setToolboxForProgress(nextProgressStep);
-    this.setAllowedSoundsForProgress(nextProgressStep);
+    this.setToolboxForProgress();
+    this.setAllowedSoundsForProgress();
   };
 
-  getToolboxForProgress = step => {
-    return this.progressManager.getToolboxForProgress(
-      this.state.progression,
-      step
-    );
-  };
-
-  setToolboxForProgress = step => {
-    if (this.state.progression) {
-      const allowedToolbox = this.getToolboxForProgress(step);
+  setToolboxForProgress = () => {
+    if (this.progressManager) {
+      const allowedToolbox = this.progressManager.getCurrentToolbox();
       this.musicBlocklyWorkspace.updateToolbox(allowedToolbox);
     }
   };
 
-  getAllowedSoundsForProgress = step => {
-    return this.progressManager.getAllowedSoundsForProgress(
-      this.state.progression,
-      step
-    );
-  };
-
-  setAllowedSoundsForProgress = step => {
-    if (this.state.progression) {
-      const allowedSounds = this.getAllowedSoundsForProgress(step);
+  setAllowedSoundsForProgress = () => {
+    if (this.progressManager) {
+      const allowedSounds = this.progressManager.getCurrentSounds();
       Globals.setAllowedSounds(allowedSounds);
     }
   };
@@ -410,6 +414,23 @@ class UnconnectedMusicView extends React.Component {
   };
 
   renderInstructions(position) {
+    if (!this.progressManager) {
+      return;
+    }
+
+    // The reason to give the instructions the entire progression, rather
+    // than just the current state, is that we might want to size the
+    // instructions area to fix the maximum possible text, which will
+    // require knowing all possible contents.  We did this in AI Lab,
+    // which allowed us to have a dynamic instructions panel which never
+    // required a resize, and was perfectly sized for the maximum case.
+    const progression = this.progressManager.getProgression();
+
+    const progressState = this.progressManager.getCurrentState();
+    const currentPanel = progressState.step;
+    const message = progressState.message;
+    const satisfied = progressState.satisfied;
+
     return (
       <div
         className={classNames(
@@ -424,10 +445,10 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <Instructions
-          progression={this.state.progression}
-          currentPanel={this.state.progressStep}
-          lastMessage={this.state.progressMessage}
-          onNextPanel={this.state.progressSatisfied ? this.onNextPanel : null}
+          progression={progression}
+          currentPanel={currentPanel}
+          message={message}
+          onNextPanel={satisfied ? this.onNextPanel : null}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
           right={position === InstructionsPositions.RIGHT}
