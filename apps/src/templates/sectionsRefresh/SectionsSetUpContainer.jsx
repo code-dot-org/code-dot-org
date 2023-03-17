@@ -193,5 +193,5 @@ const style = {
 };
 
 SectionsSetUpContainer.propTypes = {
-  isNewSection: PropTypes.boolean
+  isNewSection: PropTypes.bool.isRequired
 };

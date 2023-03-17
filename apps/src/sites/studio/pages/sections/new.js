@@ -4,7 +4,7 @@ import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/Sections
 
 $(document).ready(() => {
   ReactDOM.render(
-    <SectionsSetUpContainer isNewSection={false} />,
+    <SectionsSetUpContainer isNewSection={true} />,
     document.getElementById('form')
   );
 });
