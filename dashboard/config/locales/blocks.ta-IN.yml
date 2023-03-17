@@ -2209,6 +2209,16 @@ ta:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} சொல் {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): வலதுபுறம் சுழல்கிறது
+            new Behavior(spinning_left, []): இடதுபுறமாக சுழல்கிறது
+            new Behavior(fluttering, []): படபடக்கும்
+            new Behavior(jittering, []): நடுக்கம்
+            new Behavior(wobbling, []): தள்ளாட்டம்
+            new Behavior(wandering, []): அலைந்து திரிதல்
+            new Behavior(patrolling, []): ரோந்து
       binary_move:
         options:
           DIR:
