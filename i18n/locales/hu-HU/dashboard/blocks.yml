@@ -2262,6 +2262,16 @@ hu:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} mondja {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): forgatás jobbra
+            new Behavior(spinning_left, []): forgatás balra
+            new Behavior(fluttering, []): csapkodva
+            new Behavior(jittering, []): remegés
+            new Behavior(wobbling, []): kalimpálva
+            new Behavior(wandering, []): kóborlás
+            new Behavior(patrolling, []): járőrözés
       binary_drawBin:
         text: bináris {BIN} rajzolása
       binary_drawBinScreen:
