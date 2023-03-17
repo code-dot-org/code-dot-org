@@ -70,12 +70,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-
-  # Ref: https://github.com/e2/ruby_dep/issues/24
-  # https://github.com/e2/ruby_dep/issues/25
-  # https://github.com/e2/ruby_dep/issues/30
-  gem 'ruby_dep', '~> 1.3.1'
-
   gem 'shotgun'
   gem 'thin'
   # Use debugger
@@ -117,7 +111,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 4.8.2', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false

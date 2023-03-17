@@ -1185,8 +1185,7 @@ Bounce.onPuzzleComplete = function() {
       : TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
 
   Bounce.waitingForReport = true;
 

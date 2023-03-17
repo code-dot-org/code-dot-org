@@ -271,6 +271,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     getField: function(type) {
       return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
+    },
+    getCode: function(workspace) {
+      return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
     }
   };
   return blocklyWrapper;
