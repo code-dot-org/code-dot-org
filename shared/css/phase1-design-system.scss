@@ -76,6 +76,13 @@ a {
 
 p {
   color: $neutral_dark;
+
+  &.overline {
+    font-size: .75em;
+    font-family: $gotham-bold;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
 }
 
 #signin {
