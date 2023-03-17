@@ -96,10 +96,6 @@ export default function SectionsSetUpContainer(props) {
     setAdvancedSettingsOpen(!advancedSettingsOpen);
   };
 
-  if (isNewSection === undefined) {
-    return null;
-  }
-
   return (
     <form id={FORM_ID}>
       <h1>
