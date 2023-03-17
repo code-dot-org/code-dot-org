@@ -28,6 +28,7 @@ describe('CourseOfferingEditor', () => {
         curriculum_type: 'Module',
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
+        image: 'https://images.code.org/spritelab.JPG',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities)
@@ -65,6 +66,7 @@ describe('CourseOfferingEditor', () => {
         curriculum_type: 'Module',
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
+        image: 'https://images.code.org/spritelab.JPG',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities)
@@ -137,6 +139,7 @@ describe('CourseOfferingEditor', () => {
         curriculum_type: 'Course',
         header: 'Self-Paced',
         marketing_initiative: 'HOC',
+        image: 'https://images.code.org/spritelab.JPG',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities)
