@@ -115,7 +115,8 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          report.program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+          report.program = Blockly.Xml.domToText(xml);
         }
         report.callback = appOptions.report.callback;
       }
@@ -478,7 +479,9 @@ const sourceHandler = {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          : Blockly.Xml.domToText(
+              Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+            );
         resolve(source);
       } else if (appOptions.getCode) {
         source = appOptions.getCode();
@@ -539,7 +542,7 @@ export function getAppOptions() {
  * Loads the "appOptions" object from the dom and augments it with additional
  * information needed by apps to run.
  *
- * This should only be called once per page load, with appOptions specified as a
+ * This should only be called once per page load, with appoptions specified as a
  * data attribute on the script tag.
  *
  * @return {Promise.<AppOptionsConfig>} a Promise object which resolves to the fully populated appOptions

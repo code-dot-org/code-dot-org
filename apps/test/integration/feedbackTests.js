@@ -33,7 +33,9 @@ describe('checkForEmptyContainerBlockFailure_', function() {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = Blockly.Xml.domToText(
+      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    );
     assert(
       !args.blockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -307,7 +309,9 @@ describe('getUserBlocks_', function() {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = Blockly.Xml.domToText(
+      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    );
     assert(loaded, "we didn't correctly load our test blocks");
 
     var userBlocks = studioApp.feedback_.getUserBlocks_();
@@ -417,7 +421,9 @@ describe('getMissingBlocks_ tests', function() {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = Blockly.Xml.domToText(
+      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    );
     assert(
       !options.userBlockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
