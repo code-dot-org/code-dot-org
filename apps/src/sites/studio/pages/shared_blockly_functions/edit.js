@@ -101,7 +101,9 @@ document
         '#functionDescriptionText'
       ).value;
       if (stack) {
-        getInput('stack').value = Blockly.cdoUtils.getCode(stack);
+        getInput('stack').value = Blockly.Xml.domToText(
+          Blockly.Xml.blockToDom(stack)
+        );
       }
     } catch (error) {
       alert(`Error saving:\n\n${error}`);

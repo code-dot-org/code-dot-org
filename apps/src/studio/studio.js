@@ -3806,7 +3806,8 @@ Studio.sendPuzzleReport = function(onComplete = Studio.onReportComplete) {
 
     program = studioApp().getCode();
   } else {
-    program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
   }
 
   Studio.waitingForReport = true;

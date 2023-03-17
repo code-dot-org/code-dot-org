@@ -906,34 +906,27 @@ export default class P5Lab {
       program = encodeURIComponent(this.studioApp_.getCode());
       this.message = null;
     } else {
-      let textBlocks;
-      if (Blockly.version === 'Google') {
-        // We're using Google Blockly, report the program as JSON
-        textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
-      } else {
-        // We're using CDO Blockly, report the program as xml
-        var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      // We're using blockly, report the program as xml
+      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
 
-        // When SharedFunctions (aka shared behavior_definitions) are enabled, they
-        // are always appended to startBlocks on page load.
-        // See StudioApp -> setStartBlocks_
-        // Because of this, we need to remove the SharedFunctions when we are in
-        // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-        if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
-          var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
-          var toRemove = allBlocks.filter(element => {
-            return (
-              element.getAttribute('type') === 'behavior_definition' &&
-              element.getAttribute('usercreated') !== 'true'
-            );
-          });
-          toRemove.forEach(element => {
-            xml.removeChild(element);
-          });
-        }
-        textBlocks = Blockly.Xml.domToText(xml);
+      // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+      // are always appended to startBlocks on page load.
+      // See StudioApp -> setStartBlocks_
+      // Because of this, we need to remove the SharedFunctions when we are in
+      // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+      if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
+        var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+        var toRemove = allBlocks.filter(element => {
+          return (
+            element.getAttribute('type') === 'behavior_definition' &&
+            element.getAttribute('usercreated') !== 'true'
+          );
+        });
+        toRemove.forEach(element => {
+          xml.removeChild(element);
+        });
       }
-      program = encodeURIComponent(textBlocks);
+      program = encodeURIComponent(Blockly.Xml.domToText(xml));
     }
 
     if (this.testResults >= TestResults.FREE_PLAY) {

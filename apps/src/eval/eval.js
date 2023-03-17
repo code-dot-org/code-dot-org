@@ -496,7 +496,8 @@ Eval.execute = function() {
     }
   }
 
-  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
     app: 'eval',
