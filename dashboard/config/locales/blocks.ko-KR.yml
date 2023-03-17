@@ -2,6 +2,8 @@
 ko:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       AmysBlocks_spriteSayVar:
@@ -2284,6 +2286,17 @@ ko:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 오른쪽으로 회전
+            new Behavior(spinning_left, []): 왼쪽으로 회전
+            new Behavior(fluttering, []): 너울거림
+            new Behavior(jittering, []): 지터링
+            new Behavior(wobbling, []): 흔들림
+            new Behavior(wandering, []): 배회
+            new Behavior(patrolling, []): 순찰
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:

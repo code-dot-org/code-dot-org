@@ -13652,3 +13652,163 @@ ko-KR:
           **교사 단원말 설문조사: ** 학생들이 설문조사를 완료하는 동안 간단한 교사 설문조사를 작성해 주시면 감사하겠습니다.
 
           ## [교사 설문조사를 보려면 여기를 클릭하십시오] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+      aiml-ch1-pulse-survey_2021:
+        title: AI 및 머신 러닝 신속 설문조사!
+      aiml-ch1-pulse-survey_2022:
+        title: AI 및 머신 러닝 신속 설문조사!
+      aiml-intro-pulse-survey_2021:
+        title: AI 및 머신 러닝 신속 설문조사!
+      aiml-intro-pulse-survey_2022:
+        title: AI 및 머신 러닝 신속 설문조사!
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: 컴퓨터 과학 신속 설문조사!
+      ml-customize apps-practice choice-2021:
+        display_name: 앱 사용자 지정 연습하기
+      ml-customize apps-practice choice_2022:
+        display_name: 앱 사용자 지정 연습하기
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## 아이작의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy)
+      ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## 아이작의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy)
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## 김의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy)
+      ml-good data-kim data_2022:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## 김의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy)
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## 김의 설문조사에 참여하려면 [여기를 클릭하세요](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform)
+      ml-good data-kim survey_2022:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## 김의 설문조사에 참여하려면 [여기를 클릭하세요](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform)
+      ml-model card-medical-1-2021:
+        markdown: |
+          # ER 추천 V1
+
+          모델 카드를 클릭하여, 확대하여 더 큰 버전을 확인하세요.
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # ER 추천 V1
+
+          모델 카드를 클릭하여, 확대하여 더 큰 버전을 확인하세요.
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |-
+          # 노던 라이트 ER 우선순위
+
+          모델 카드를 클릭하여, 확대하여 더 큰 버전을 확인하세요.
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![] (
+          )
+      ml-model card-medical-2_2022:
+        markdown: |-
+          # 노던 라이트 ER 우선순위
+
+          모델 카드를 클릭하여, 확대하여 더 큰 버전을 확인하세요.
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![] (
+          )
+      ml-model card-medical-3-2021:
+        markdown: |
+          # AI 의료 추천기
+
+          모델 카드를 클릭하면 확대하여 더 큰 버전을 볼 수 있습니다.
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # AI 의료 추천기
+
+          모델 카드를 클릭하면 확대하여 더 큰 버전을 볼 수 있습니다.
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-models in applab-choice parent:
+        display_name: 모델 카드 연습
+      ml-models in applab-choice parent_2022:
+        display_name: 모델 카드 연습
+      ml-models-shoe survey:
+        markdown: |
+          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
+      ml-models-shoe survey_2022:
+        markdown: |
+          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
+      ml-plan survey-copy form:
+        markdown: |
+          # Google 양식 복사
+
+          ## [여기를 클릭] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) 하여 오늘 사용할 설문조사 기본서식의 사본을 만드세요
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # Google 양식 복사
+
+          ## [여기를 클릭] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) 하여 오늘 사용할 설문조사 기본서식의 사본을 만드세요
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # 반려동물 추천 모델 카드
+
+          **파트너와 함께: ** 모델 카드의 범주 특징과 수치상의 특징을 어떻게 구분할 수 있나요?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # 반려동물 추천 모델 카드
+
+          **파트너와 함께: ** 모델 카드의 범주 특징과 수치상의 특징을 어떻게 구분할 수 있나요?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: 앱 랩에서 모델을 사용해 연습
+      ml-use models applab-practice choice_2022:
+        display_name: 앱 랩에서 모델을 사용해 연습
