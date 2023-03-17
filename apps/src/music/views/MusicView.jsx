@@ -176,18 +176,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.progressManager?.updateProgress();
-    /*
-      this.progressManager.checkProgress({
-        progression: this.state.progression,
-        progressStep: this.state.progressStep,
-        isPlaying: this.state.isPlaying,
-        currentPlayheadPosition: this.state.currentPlayheadPosition,
-        player: this.player,
-        onChange: newState => {
-          this.setState(newState);
-        }
-      });
-      */
   };
 
   onProgresschange = () => {
@@ -202,13 +190,6 @@ class UnconnectedMusicView extends React.Component {
 
   onNextPanel = () => {
     this.progressManager?.next();
-
-    /*  let nextProgressStep;
-    this.progressManager.nextStep(this.state.progressStep, newState => {
-      this.setState(newState);
-      nextProgressStep = newState.progressStep;
-    });*/
-
     this.stopSong();
     this.clearCode();
     this.setToolboxForProgress();
