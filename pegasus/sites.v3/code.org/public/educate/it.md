@@ -101,7 +101,16 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 
 Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
 
-<%= view :video_with_fallback, video_code: 'ws8rmHcqXeM', download_path: "//videos.code.org/new/5-artist-intro.mp4" %>
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
