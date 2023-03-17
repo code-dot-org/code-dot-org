@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-03-13 17:45:11 UTC",
+    "serialized_at": "2023-03-16 21:04:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5250,6 +5250,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
