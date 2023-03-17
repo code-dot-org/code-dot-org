@@ -4,10 +4,10 @@ import {getStore} from '@cdo/apps/redux';
 // For proxying non-https assets
 const MEDIA_PROXY = '//' + location.host + '/media?u=';
 
-// Starts with http or https
+// starts with http or https
 export const ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
-// Absolute URL to curriculum.code.org (which doesn't require media proxy)
+// absolute URL to curriculum.code.org (which doesn't require media proxy)
 const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
   '^https://curriculum.code.org/',
   'i'
