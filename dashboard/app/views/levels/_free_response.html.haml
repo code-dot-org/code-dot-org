@@ -1,5 +1,7 @@
 :ruby
-  js_data = {}
+  js_data = {
+    responses: @responses
+  }
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
@@ -30,6 +32,9 @@
       }
     );
 
+- if is_contained_level
+  %div#summaryEntryPoint
+
 .free-response{:class => ('left-aligned' if left_align)}
   - title = level.get_property(:title)
   - if title.present? && (!in_level_group || is_contained_level)
@@ -58,3 +63,5 @@
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: js_data.to_json}}
+  -# TODO: remove the script tag below once we include FontAwesome Pro in the JS build.
+  %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}

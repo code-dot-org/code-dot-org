@@ -2164,6 +2164,7 @@
   "studentFreeResponseAnswers": "Student free response answers",
   "studentsInSection": "Students in section: ",
   "studentOverviewTableHeader": "Submission status",
+  "studentsAnswered": "students answered",
   "studentsSubmitted": "{numSubmissions}/{numStudents} students submitted",
   "studentsSuccessfullyMovedNotice": "Students successfully moved",
   "studentsSuccessfullyMovedDetails": "{numStudents} student(s) were successfully moved from this section to section \"{section}.\"",

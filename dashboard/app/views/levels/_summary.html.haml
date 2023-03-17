@@ -6,13 +6,12 @@
   end
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   left_align = local_assigns[:left_align]
-  responses = UserLevel.where(level: level, user: @section&.students)
-    .map do |response|
-      {
-        user_id: response.user_id,
-        text: response.level_source.data,
-      }
-    end
+  responses = @responses&.map do |response|
+    {
+      user_id: response.user_id,
+      text: response.level_source.data,
+    }
+  end
 
   teacher_markdown = if level.respond_to?(:solution) && level.solution.present? && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
     level.solution

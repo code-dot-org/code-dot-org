@@ -88,10 +88,8 @@ const CheckForUnderstanding = ({
           <p>
             <i className="fa fa-user" />
             <span>
-              {i18n.studentsSubmitted({
-                numSubmissions: data.responses.length,
-                numStudents: students.length
-              })}
+              {data.responses.length}/{students.length}{' '}
+              {i18n.studentsAnswered()}
             </span>
           </p>
         </div>
