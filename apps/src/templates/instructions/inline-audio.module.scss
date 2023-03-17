@@ -8,20 +8,22 @@
   display: flex;
 
   .iconWrapper {
-    background-color: $lightest_purple;
+    background-color: $neutral_white;
+    color: $neutral_dark;
+    border: 2px solid $neutral_dark;
     cursor: pointer;
     float: left;
-    border: none;
     outline: none;
     width: 33px;
     box-sizing: border-box;
 
     &Volume {
-      border-radius: 4px 0 0 4px;
+      border-right: none;
     }
 
     &PlayPause {
       border-radius: 0 4px 4px 0;
+      border-left: none;
     }
 
     .buttonImg {
@@ -29,14 +31,19 @@
       float: left;
       padding-right: 8px;
       padding-left: 8px;
-      color: $dark_charcoal;
+      color: $neutral_dark;
     }
   }
 
   &:hover,
   &:focus {
     .iconWrapper {
-      background-color: $cyan;
+      background-color: $brand_primary_default;
+      border-color: $brand_primary_default;
+
+      i {
+        color: $neutral_white;
+      }
     }
   }
 }

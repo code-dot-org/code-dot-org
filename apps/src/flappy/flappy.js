@@ -888,8 +888,7 @@ Flappy.onPuzzleComplete = function() {
 };
 
 function sendReport() {
-  const xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  const textBlocks = Blockly.Xml.domToText(xml);
+  const textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
 
   Flappy.waitingForReport = true;
 
