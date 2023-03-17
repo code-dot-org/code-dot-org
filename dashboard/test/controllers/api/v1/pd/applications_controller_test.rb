@@ -17,9 +17,13 @@ module Api::V1::Pd
         cohort_capacity_csd: 25,
         cohort_capacity_csp: 50
 
+      @hash_csd_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csd, regional_partner_id: @regional_partner.id
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
-      @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
-      @csd_incomplete_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner, status: 'incomplete'
+      @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY,
+          form_data_hash: @hash_csd_with_rp
+      @csd_incomplete_application_with_partner = create TEACHER_APPLICATION_FACTORY,
+          form_data_hash: @hash_csd_with_rp,
+          status: 'incomplete'
       @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
 
       @test_show_params = {
@@ -484,7 +488,7 @@ module Api::V1::Pd
         application = create(
           TEACHER_APPLICATION_FACTORY,
           course: 'csp',
-          regional_partner: @regional_partner,
+          form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
           pd_workshop_id: workshop.id
         )
@@ -495,7 +499,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @workshop_organizer
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -528,8 +532,7 @@ module Api::V1::Pd
       Timecop.freeze(time) do
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
+          form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
         )
 
@@ -539,7 +542,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @workshop_organizer
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -576,8 +579,7 @@ module Api::V1::Pd
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
+          form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
           pd_workshop_id: workshop.id
         )
@@ -589,7 +591,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -622,9 +624,8 @@ module Api::V1::Pd
       Timecop.freeze(time) do
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
+          form_data_hash: @hash_csd_with_rp,
+          user: @serializing_teacher
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
@@ -633,7 +634,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(

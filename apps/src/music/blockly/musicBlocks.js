@@ -11,7 +11,8 @@ import {
   playSoundsTogether,
   playSoundsSequential,
   playSoundsRandom,
-  repeatSimple2
+  repeatSimple2,
+  playChordAtCurrentLocationSimple2
 } from './blocks/simple2';
 import {
   newTrackAtMeasure,
@@ -40,6 +41,7 @@ const blockList = [
   playPatternAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
+  playChordAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
   playSoundsRandom,

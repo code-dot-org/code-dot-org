@@ -6,10 +6,10 @@
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",
-  "grade_levels": null,
+  "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
   "header": "Favorites",
   "image": null,
-  "cs_topic": null,
-  "school_subject": null,
-  "device_compatibility": null
+  "cs_topic": "art_and_design,games_and_animations,programming",
+  "school_subject": "english_language_arts",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }
