@@ -1,0 +1,26 @@
+name 'CSC-SelfPaced-lessonactivities_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Activities
+
+## Types of Levels
+
+Lessons are made up of levels.  There are different types of levels to best support students with learning computer science.  Here are some of the lesson levels in CS Connections.  Click continue to work through examples of these levels.
+
+##### **Off the computer**
+* ##### Planning - 
+
+##### **On the computer**
+* ##### Skill-building - 
+* ##### Prediction - 
+* #####  Free Play - 
+* ##### Multiple Choice - 
+
+
+
+## 
+
+<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+MARKDOWN

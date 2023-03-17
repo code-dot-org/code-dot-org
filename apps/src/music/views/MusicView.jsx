@@ -467,7 +467,7 @@ class UnconnectedMusicView extends React.Component {
       instructionPositionOrder[this.state.instructionsPosIndex];
 
     const showVideo =
-      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
@@ -475,8 +475,6 @@ class UnconnectedMusicView extends React.Component {
           value={{
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
-            getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id),
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >

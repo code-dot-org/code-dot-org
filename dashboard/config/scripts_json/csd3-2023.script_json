@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-03-15 00:39:46 UTC",
+    "serialized_at": "2023-03-15 17:34:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3214,7 +3214,7 @@
       "key": "d1c9ed2c-04bf-454a-9fbc-60403662fdd3",
       "position": 2,
       "properties": {
-        "description": "You've learned how to do some really cool things in Game Lab. Today you'll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else's idea, you get to come up with an idea of your own. Your robot face can be as creative as you want since you can add lots of unique and different features from the shape of its head to the number of eyes or mouths or if it has antennas … the sky’s the limit, so it's time to get creative!\n",
+        "description": "You’ve learned how to do some really cool things in Game Lab. Today you’ll have a chance to put them together to make a unique robot face to share with the world. That means instead of trying to recreate someone else’s idea, you get to come up with an idea of your own. You can make your robot look however you want; you can choose the shape of its head, how many eyes or mouths it has, if it has antennas, and more. There is no limit, so let’s come up with something original and unexpected!\n",
         "remarks": true
       },
       "seeding_key": {
