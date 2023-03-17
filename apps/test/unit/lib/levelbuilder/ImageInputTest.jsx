@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import ImageInput from '@cdo/apps/lib/levelbuilder/code-docs-editor/ImageInput';
+import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
 
 describe('ImageInput', () => {
   it('displays image upload dialog when upload image button is pressed', () => {
@@ -55,6 +55,21 @@ describe('ImageInput', () => {
     expect(wrapper.find('img').length).to.equal(1);
     expect(wrapper.find('img').props().src).to.equal(
       'code.org/images/spritelab.png'
+    );
+  });
+
+  it('shows HelpTip if text is passed in for it', () => {
+    const wrapper = shallow(
+      <ImageInput
+        updateImageUrl={() => {}}
+        initialImageUrl="code.org/images/spritelab.png"
+        showPreview
+        helpTipText="Sample help tip text."
+      />
+    );
+    expect(wrapper.find('HelpTip').length).to.equal(1);
+    expect(wrapper.find('HelpTip').props().children.props.children).to.equal(
+      'Sample help tip text.'
     );
   });
 });

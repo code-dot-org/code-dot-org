@@ -100,7 +100,7 @@ const SoundsPanel = ({
   onSelect,
   onPreview
 }) => {
-  const folders = getAllowedLibrarySounds(library, allowedSounds, undefined);
+  const folders = library.getAllowedSounds(undefined);
 
   return (
     <div className={styles.soundsPanel}>

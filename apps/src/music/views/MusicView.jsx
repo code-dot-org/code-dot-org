@@ -23,6 +23,7 @@ import SoundUploader from '../utils/SoundUploader';
 import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
+import MusicLibrary from '../player/MusicLibrary';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -115,7 +116,8 @@ class UnconnectedMusicView extends React.Component {
 
     Promise.all(promises).then(values => {
       // Process library, which includes setting up the toolbox.
-      const library = values[0];
+      const libraryJson = values[0];
+      this.library = new MusicLibrary(libraryJson);
 
       // Process progression first, if there is one, since
       // it might affect the toolbox.
@@ -145,11 +147,12 @@ class UnconnectedMusicView extends React.Component {
         this.player,
         this.progressManager?.getCurrentToolbox()
       );
-      this.player.initialize(library);
+      this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
 
-      Globals.setLibrary(library);
+      Globals.setLibrary(this.library);
       Globals.setPlayer(this.player);
+
     });
   }
 
@@ -205,8 +208,7 @@ class UnconnectedMusicView extends React.Component {
 
   setAllowedSoundsForProgress = () => {
     if (this.progressManager) {
-      const allowedSounds = this.progressManager.getCurrentSounds();
-      Globals.setAllowedSounds(allowedSounds);
+      this.library.setAllowedSounds(this.progressManager.getCurrentSounds());
     }
   };
 
@@ -316,7 +318,8 @@ class UnconnectedMusicView extends React.Component {
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
       RandomSkipManager: this.randomSkipManager,
-      getTriggerCount: () => this.triggerCount
+      getTriggerCount: () => this.triggerCount,
+      MusicLibrary: this.library
     });
   };
 
