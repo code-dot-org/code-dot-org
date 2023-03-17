@@ -53,7 +53,6 @@ Dashboard::Application.routes.draw do
     resources :videos do
       collection do
         get 'test'
-        get 'embed/:key', to: 'videos#embed', as: 'embed'
       end
     end
 

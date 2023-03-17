@@ -1,32 +1,14 @@
 class VideosController < ApplicationController
-  before_action :authenticate_user!, except: [:test, :embed]
-  before_action :require_levelbuilder_mode, except: [:test, :embed, :index]
-  check_authorization except: [:test, :embed]
-  load_and_authorize_resource except: [:test, :embed]
-  after_action :allow_iframe, only: :embed
+  before_action :authenticate_user!, except: [:test]
+  before_action :require_levelbuilder_mode, except: [:test, :index]
+  check_authorization except: [:test]
+  load_and_authorize_resource except: [:test]
 
   before_action :set_video, only: [:edit, :update]
 
   # This page is currently deprecated, so let's redirect to related content.
   def test
     redirect_to CDO.code_org_url('/educate/it')
-  end
-
-  def embed
-    set_video_by_key
-    if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
-      params[:fallback_only] = true
-      begin
-        require 'cdo/video/youtube'
-        Youtube.process @video.key
-      rescue Exception => exception
-        render(layout: false, plain: "Error processing video: #{exception}. Contact an engineer for support.", status: :internal_server_error) && return
-      end
-    end
-    video_info = @video.summarize(params.key?(:autoplay))
-    video_info[:enable_fallback] = !params.key?(:youtube_only)
-    video_info[:force_fallback] = params.key?(:fallback_only)
-    render layout: false, locals: {video_info: video_info}
   end
 
   def index
@@ -95,10 +77,6 @@ class VideosController < ApplicationController
       acl: 'public-read',
       no_random: true,
     )
-  end
-
-  def allow_iframe
-    response.headers['X-Frame-Options'] = 'ALLOWALL'
   end
 
   # Use callbacks to share common setup or constraints between actions.
