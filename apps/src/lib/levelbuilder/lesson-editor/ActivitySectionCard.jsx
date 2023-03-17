@@ -625,5 +625,7 @@ export default connect(
     moveActivitySection,
     removeActivitySection,
     updateActivitySectionField
-  }
+  },
+  null,
+  {forwardRef: true}
 )(ActivitySectionCard);

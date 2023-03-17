@@ -1,6 +1,6 @@
-FactoryGirl.allow_class_lookup = false
+FactoryBot.allow_class_lookup = false
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :plc_enrollment_unit_assignment, class: 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil

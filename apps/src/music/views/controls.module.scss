@@ -34,6 +34,10 @@
 .iconButton {
   cursor: pointer;
   font-size: 30px;
+
+  &Link {
+    color: white;
+  }
 }
 
 .startOverButton {

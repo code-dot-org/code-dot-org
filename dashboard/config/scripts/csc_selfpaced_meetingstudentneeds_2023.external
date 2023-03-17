@@ -3,21 +3,53 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# CS Concepts and Skills
+# Meeting student needs
 
-##### In the next section of this professional learning module, you will be introduced to lesson levels and have the opportunity to practice using key computer science concepts in CS Connections modules.
 
-## You will:
+## Review
 
-* ##### Preview CS Connections lesson levels.
-* ##### Code using Sprite Lab.
-* ##### Code using different types of events.
-* ##### Identify skills your students will develop.
+#### What did you notice and wonder? 
 
-### **Suggested time:** 20 minutes
+<details>
+
+<summary><strong>Did you notice...</strong></summary>
+
+<img src="https://images.code.org/0a52eec184a4ab28ce053899d85ed9eb-image-1678893361563.png" alt="Image of a shoe recommender app" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+* #### You can choose among different sprites.
+* #### You can give sprites a location and move them.
+* #### An event can happen with a click.
+* #### An event can happen when two sprites touch.
+* #### An event can happen during a set amount of time.
+
+</details>
+
+<div style="clear:both"/>
+
+## Reflection
+
+#### What challenges might your students face with sprites? 
+#### What challenges might your students face with events? 
+
+<details>
+
+<summary><strong>Potential challenges may include...</strong></summary>
+
+<img src="https://images.code.org/2ac6f6e2be36cb478b0e9067755cda2d-image-1678828359562.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+* #### You can choose among different sprites.
+* #### You can give sprites a location and move them.
+* #### An event can happen with a click.
+* #### An event can happen when two sprites touch.
+* #### An event can happen during a set amount of time.
+
+
+</details>
+
+<div style="clear:both"/>
+
+
 
 ## Let's keep learning! 
-
-
 
 MARKDOWN
