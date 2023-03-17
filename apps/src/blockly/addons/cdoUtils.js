@@ -116,37 +116,35 @@ export function getCode(workspace) {
 }
 
 export function arrangeBlocksJson(startBlocksJson, arrangement) {
-  var code = JSON.parse(startBlocksJson);
-  var block;
-  for (var i = 0; i < code.blocks.blocks.length; i++) {
-    block = code.blocks.blocks[i];
-    if (arrangement[block.type]) {
-      if (arrangement[block.type].x && block.x) {
-        block.x = arrangement[block.type].x;
+  const code = JSON.parse(startBlocksJson);
+  code.blocks.blocks.forEach(block => {
+    // look to see if we have a predefined arrangement for this type
+    const type = block.type;
+    if (arrangement[type]) {
+      if (arrangement[type].x && !block.x) {
+        block.x = arrangement[type].x;
       }
-      if (arrangement[block.type].y && block.y) {
-        block.y = arrangement[block.type].y;
+      if (arrangement[type].y && !block.y) {
+        block.y = arrangement[type].y;
       }
     }
-  }
+  });
   return JSON.stringify(code);
 }
 
 export function arrangeBlocksXml(startBlocksXml, arrangement) {
-  var type, xmlChild;
+  if (!arrangement) {
+    return;
+  }
 
-  var xml = parseXmlElement(startBlocksXml);
+  const xml = parseXmlElement(startBlocksXml);
+  const xmlChildNodes = xml.childNodes || [];
 
-  var xmlChildNodes = xml.childNodes || [];
-  arrangement = arrangement || {};
-
-  for (var j = 0; j < xmlChildNodes.length; j++) {
-    xmlChild = xmlChildNodes[j];
-
+  xmlChildNodes.forEach(xmlChild => {
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
       // look to see if we have a predefined arrangement for this type
-      type = xmlChild.getAttribute('type');
+      const type = xmlChild.getAttribute('type');
       if (arrangement[type]) {
         if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
           xmlChild.setAttribute('x', arrangement[type].x);
@@ -156,6 +154,6 @@ export function arrangeBlocksXml(startBlocksXml, arrangement) {
         }
       }
     }
-  }
+  });
   return Blockly.Xml.domToText(xml);
 }
