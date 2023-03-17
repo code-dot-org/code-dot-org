@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-03-11 17:28:57 UTC",
+    "serialized_at": "2023-03-16 21:04:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1630,6 +1630,19 @@
       },
       "seeding_key": {
         "activity_section.key": "8b70d000-ee7b-47ca-8115-738978d4ef7d",
+        "lesson_activity.key": "9604618b-1d7d-43f1-9917-04aa22835367"
+      }
+    },
+    {
+      "key": "1e7f5cbb-c755-4373-a6e3-7169f4595228",
+      "position": 3,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e7f5cbb-c755-4373-a6e3-7169f4595228",
         "lesson_activity.key": "9604618b-1d7d-43f1-9917-04aa22835367"
       }
     },
@@ -4863,6 +4876,406 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_csd62023"
+        ],
+        "progression": "App Lab Intro - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Getting Started_csd62023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_csd62023"
+        ],
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Screen Color_csd62023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_csd62023"
+        ],
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Text 2_csd62023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_csd62023"
+        ],
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Full Text_csd62023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_csd62023"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Make It Interactive_csd62023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_csd62023"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent intro_csd62023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_csd62023"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent twoButtons_csd62023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_csd62023"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Images and Sounds_csd62023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_csd62023"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - playSound_csd62023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_csd62023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Design Mode_csd62023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddButton_csd62023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+        ],
+        "progression": "Design Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_csd62023"
+        ],
+        "progression": "Share Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Share Your App_csd62023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+        ],
+        "progression": "Share Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2023",
+        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd6_2023"
+        ],
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2023",
+        "activity_section.key": "1e7f5cbb-c755-4373-a6e3-7169f4595228"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd6_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSDU6 Circuit Playground Test_2023"
         ],
         "progression": "Setup"
@@ -4882,7 +5295,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4907,7 +5320,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4932,7 +5345,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4957,7 +5370,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4982,7 +5395,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5007,7 +5420,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5032,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5057,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5082,7 +5495,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 26,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5107,7 +5520,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5132,7 +5545,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5157,7 +5570,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5182,7 +5595,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5207,7 +5620,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5232,7 +5645,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -5257,7 +5670,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5282,7 +5695,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5307,7 +5720,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5332,7 +5745,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5357,7 +5770,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5382,7 +5795,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5407,7 +5820,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5432,7 +5845,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5457,7 +5870,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5482,7 +5895,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5507,7 +5920,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5532,7 +5945,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5557,7 +5970,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5582,7 +5995,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5607,7 +6020,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5632,7 +6045,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5657,7 +6070,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5682,7 +6095,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5707,7 +6120,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5732,7 +6145,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5757,7 +6170,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 53,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5782,7 +6195,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 54,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5807,7 +6220,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5832,7 +6245,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5857,7 +6270,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5882,7 +6295,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -5907,7 +6320,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5932,7 +6345,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5957,7 +6370,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5982,7 +6395,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6007,7 +6420,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6032,7 +6445,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6057,7 +6470,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6082,7 +6495,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6107,7 +6520,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6132,7 +6545,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6157,7 +6570,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6182,7 +6595,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6207,7 +6620,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6232,7 +6645,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6257,7 +6670,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -6282,7 +6695,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6307,7 +6720,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 75,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6332,7 +6745,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 76,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6357,7 +6770,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6382,7 +6795,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6407,7 +6820,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6432,7 +6845,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6457,7 +6870,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6482,7 +6895,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6507,7 +6920,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6532,7 +6945,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6557,7 +6970,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6582,7 +6995,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6607,7 +7020,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6632,7 +7045,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -6657,7 +7070,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6682,7 +7095,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6707,7 +7120,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6732,7 +7145,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6757,7 +7170,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6782,7 +7195,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6807,7 +7220,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6832,7 +7245,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 96,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6857,7 +7270,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 97,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6882,7 +7295,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 98,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6907,7 +7320,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 99,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6932,7 +7345,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6957,7 +7370,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 101,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6982,7 +7395,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 102,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7007,7 +7420,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 103,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7032,7 +7445,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 104,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7057,7 +7470,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 105,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7082,7 +7495,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 106,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7107,7 +7520,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 107,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7132,7 +7545,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 108,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7157,7 +7570,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 109,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7182,7 +7595,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 110,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7207,7 +7620,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 111,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7232,7 +7645,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 112,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7257,7 +7670,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 113,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7282,7 +7695,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 114,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7307,7 +7720,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 115,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7332,7 +7745,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 116,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7357,7 +7770,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 117,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -7382,7 +7795,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 118,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -7407,7 +7820,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 119,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -7432,7 +7845,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 120,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7457,7 +7870,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7482,7 +7895,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7507,7 +7920,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7532,7 +7945,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7557,7 +7970,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7582,7 +7995,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7607,7 +8020,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7632,7 +8045,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7657,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -7682,7 +8095,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7707,7 +8120,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 131,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -7732,7 +8145,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7757,7 +8170,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 133,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7782,7 +8195,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 134,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -7807,7 +8220,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 135,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7832,7 +8245,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 136,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7857,7 +8270,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 137,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7882,7 +8295,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 138,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7907,7 +8320,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 139,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7932,7 +8345,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 140,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7957,7 +8370,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 141,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7982,7 +8395,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 142,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8007,7 +8420,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 143,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8032,7 +8445,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 144,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8057,7 +8470,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 145,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8082,7 +8495,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 146,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8107,7 +8520,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 147,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8132,7 +8545,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 148,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8157,7 +8570,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 149,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8182,7 +8595,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 150,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8207,7 +8620,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 151,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8232,7 +8645,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 152,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8257,7 +8670,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 153,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8282,7 +8695,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 154,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8307,7 +8720,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 155,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8329,17 +8742,12 @@
       "level_keys": [
         "CSD Physical Computing Post-Project Test_2023"
       ]
-    },
+    }
+  ],
+  "levels_script_levels": [
     {
-      "chapter": 140,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "App Lab Intro - Video"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Getting Started_csd62023",
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Getting Started_csd62023"
         ],
@@ -8347,21 +8755,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44"
-      },
-      "level_keys": [
-        "App Lab Intro 8 - Video Getting Started_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 141,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Setting Properties"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Screen Color_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Screen Color_csd62023"
         ],
@@ -8369,21 +8767,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - Change Screen Color_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 142,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Setting Properties"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Text 2_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - Change Text 2_csd62023"
         ],
@@ -8391,21 +8779,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - Change Text 2_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 143,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Setting Properties"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - Full Text_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - Full Text_csd62023"
         ],
@@ -8413,21 +8791,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - Full Text_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 144,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Make it Interactive"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Make It Interactive_csd62023",
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Make It Interactive_csd62023"
         ],
@@ -8435,21 +8803,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
-      },
-      "level_keys": [
-        "App Lab Intro 8 - Video Make It Interactive_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 145,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Make it Interactive"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent intro_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent intro_csd62023"
         ],
@@ -8457,21 +8815,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - onEvent intro_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 146,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Make it Interactive"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent twoButtons_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - onEvent twoButtons_csd62023"
         ],
@@ -8479,21 +8827,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - onEvent twoButtons_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 147,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Images and Sounds"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Images and Sounds_csd62023",
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Images and Sounds_csd62023"
         ],
@@ -8501,21 +8839,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
-      },
-      "level_keys": [
-        "App Lab Intro 8 - Video Images and Sounds_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 148,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Images and Sounds"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - playSound_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - playSound_csd62023"
         ],
@@ -8523,21 +8851,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - playSound_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 149,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Design Mode"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Design Mode_csd62023",
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Design Mode_csd62023"
         ],
@@ -8545,21 +8863,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      },
-      "level_keys": [
-        "App Lab Intro 8 - Video Design Mode_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 150,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Design Mode"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddButton_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddButton_csd62023"
         ],
@@ -8567,21 +8875,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - thisOrThatAddButton_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 151,
-      "position": 12,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Design Mode"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddScreen_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
         ],
@@ -8589,21 +8887,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 152,
-      "position": 13,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Design Mode"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatSetScreen_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
         ],
@@ -8611,21 +8899,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 153,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Share Your App"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Share Your App_csd62023",
         "script_level.level_keys": [
           "App Lab Intro 8 - Video Share Your App_csd62023"
         ],
@@ -8633,21 +8911,11 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
-      },
-      "level_keys": [
-        "App Lab Intro 8 - Video Share Your App_csd62023"
-      ]
+      }
     },
     {
-      "chapter": 154,
-      "position": 15,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Share Your App"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatPersonalize_csd62023",
         "script_level.level_keys": [
           "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
         ],
@@ -8655,13 +8923,20 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2023",
         "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
-      },
-      "level_keys": [
-        "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
-      ]
-    }
-  ],
-  "levels_script_levels": [
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd6_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd6_2023"
+        ],
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2023",
+        "activity_section.key": "1e7f5cbb-c755-4373-a6e3-7169f4595228"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSDU6 Circuit Playground Test_2023",
@@ -10328,186 +10603,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2023",
         "activity_section.key": "e91ea881-fb68-4ed1-be6a-ab3eaa3ae674"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "App Lab Intro 8 - Video Getting Started_csd62023",
-        "script_level.level_keys": [
-          "App Lab Intro 8 - Video Getting Started_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "a9d7cdc2-39c7-42eb-8094-da227c55aa44"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - Change Screen Color_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - Change Screen Color_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - Change Text 2_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - Change Text 2_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - Full Text_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - Full Text_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "0febbf15-49dd-4aaf-a296-6ee09d6d421e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "App Lab Intro 8 - Video Make It Interactive_csd62023",
-        "script_level.level_keys": [
-          "App Lab Intro 8 - Video Make It Interactive_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - onEvent intro_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - onEvent intro_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - onEvent twoButtons_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - onEvent twoButtons_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2ead8a0f-3eb4-4dea-a94e-6e3175867b71"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "App Lab Intro 8 - Video Images and Sounds_csd62023",
-        "script_level.level_keys": [
-          "App Lab Intro 8 - Video Images and Sounds_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - playSound_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - playSound_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "e6a2426f-87eb-4021-85cd-95a23d84c5f8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "App Lab Intro 8 - Video Design Mode_csd62023",
-        "script_level.level_keys": [
-          "App Lab Intro 8 - Video Design Mode_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - thisOrThatAddButton_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - thisOrThatAddButton_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - thisOrThatAddScreen_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - thisOrThatAddScreen_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - thisOrThatSetScreen_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - thisOrThatSetScreen_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "2f438309-45dd-440d-907a-8393497b83aa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "App Lab Intro 8 - Video Share Your App_csd62023",
-        "script_level.level_keys": [
-          "App Lab Intro 8 - Video Share Your App_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AppLab Intro 7 - thisOrThatPersonalize_csd62023",
-        "script_level.level_keys": [
-          "AppLab Intro 7 - thisOrThatPersonalize_csd62023"
-        ],
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csd6-2023",
-        "activity_section.key": "a29270bc-c5ea-420c-8929-e73665aa90b4"
       }
     }
   ],

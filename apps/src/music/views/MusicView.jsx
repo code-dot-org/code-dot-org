@@ -21,6 +21,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import Video from './Video';
+import MusicLibrary from '../player/MusicLibrary';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -105,7 +106,8 @@ class UnconnectedMusicView extends React.Component {
 
     document.body.addEventListener('keyup', this.handleKeyUp);
 
-    this.loadLibrary().then(library => {
+    this.loadLibrary().then(libraryJson => {
+      const library = new MusicLibrary(libraryJson);
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
@@ -116,6 +118,7 @@ class UnconnectedMusicView extends React.Component {
 
       Globals.setLibrary(library);
       Globals.setPlayer(this.player);
+      this.library = library;
     });
 
     // Only attempt to load instructions if configured to.
@@ -255,7 +258,8 @@ class UnconnectedMusicView extends React.Component {
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
       RandomSkipManager: this.randomSkipManager,
-      getTriggerCount: () => this.triggerCount
+      getTriggerCount: () => this.triggerCount,
+      MusicLibrary: this.library
     });
   };
 
@@ -388,7 +392,7 @@ class UnconnectedMusicView extends React.Component {
       instructionPositionOrder[this.state.instructionsPosIndex];
 
     const showVideo =
-      AppConfig.getValue('show-video') === 'true' && this.state.showingVideo;
+      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
@@ -396,8 +400,6 @@ class UnconnectedMusicView extends React.Component {
           value={{
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
             getTracksMetadata: () => this.player.getTracksMetadata(),
-            getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id),
             getLastMeasure: () => this.player.getLastMeasure()
           }}
         >

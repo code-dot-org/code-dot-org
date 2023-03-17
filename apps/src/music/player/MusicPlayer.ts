@@ -1,79 +1,21 @@
-import MusicLibrary, {SoundData, SoundType} from './MusicLibrary';
+import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
+import {Effects} from './interfaces/Effects';
+import {FunctionContext} from './interfaces/FunctionContext';
+import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
+import {PlaybackEvent} from './interfaces/PlaybackEvent';
+import {SkipContext} from './interfaces/SkipContext';
+import {SoundEvent} from './interfaces/SoundEvent';
+import {TrackMetadata} from './interfaces/TrackMetadata';
+import MusicLibrary, {SoundData, SoundFolder, SoundType} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
+const constants = require('../constants');
 
 // Default to 4/4 time
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
-
-interface PlaybackEvent {
-  /** Type of event */
-  type: 'sound' | 'pattern';
-  /** Measure when this event occurs */
-  when: number;
-  /** Whether this event was triggered or scheduled via standard playback */
-  triggered: boolean;
-  /** ID of the track this event belongs to (only used in Tracks mode) */
-  trackId?: string;
-  /** Function context this event belongs to (only used in Simple2 mode) */
-  functionContext?: FunctionContext;
-}
-
-interface FunctionContext {
-  /** Name of the function */
-  name: string;
-  /** Unique ID corresponding to each invocation */
-  uniqueInvocationId: number;
-}
-
-interface SkipContext {
-  insideRandom: boolean;
-  skipSound: boolean;
-}
-
-type EffectValue = 'normal' | 'medium' | 'low';
-export interface Effects {
-   volume?: EffectValue;
-   filter?: EffectValue;
-   delay?: EffectValue;
-}
-
-interface SoundEvent extends PlaybackEvent {
-  type: 'sound';
-  id: string;
-  skipContext?: SkipContext;
-  effects?: Effects;
-}
-
-interface PatternTickEvent {
-  tick: number;
-  src: string;
-}
-
-interface PatternEventValue {
-  kit: string;
-  events: PatternTickEvent[];
-}
-
-interface PatternEvent extends PlaybackEvent {
-  type: 'pattern';
-  value: PatternEventValue;
-  skipContext?: SkipContext;
-  effects?: Effects;
-}
-
-interface TrackMetadata {
-  /** Display name of the track */
-  name: string;
-  /** Whether this track was triggered or scheduled via standard playback */
-  insideWhenRun: boolean;
-  /** The current last measure of the track, i.e. the measure at which new sounds or rests will be added */
-  currentMeasure: number;
-  /** The maximum number of concurrent sounds in this track */
-  maxConcurrentSounds: number;
-}
 
 /**
  * Main music player component which maintains the list of playback events and
@@ -87,7 +29,7 @@ export default class MusicPlayer {
   private tracksMetadata: {[trackId: string]: TrackMetadata};
   private uniqueInvocationIdUpto: number;
   private samplePlayer: SamplePlayer;
-  private library: MusicLibrary;
+  private library: MusicLibrary | null;
 
   constructor(bpm: number = DEFAULT_BPM) {
     this.bpm = bpm;
@@ -95,7 +37,7 @@ export default class MusicPlayer {
     this.tracksMetadata = {};
     this.uniqueInvocationIdUpto = 0;
     this.samplePlayer = new SamplePlayer();
-    this.library = {groups: []};
+    this.library = null;
     this.lastTriggeredMeasure = 0;
     this.lastWhenRunMeasure = 0;
   }
@@ -139,11 +81,11 @@ export default class MusicPlayer {
     skipContext?: SkipContext,
     effects?: Effects
   ) {
-    if (!this.samplePlayer.initialized()) {
+    if (!this.samplePlayer.initialized() || this.library === null) {
       console.log('MusicPlayer not initialized');
       return;
     }
-    const soundData = this.getSoundForId(id);
+    const soundData = this.library.getSoundForId(id);
     if (!id || soundData === null || !measure) {
       console.log(`Invalid input. id: ${id} measure: ${measure}`);
       return;
@@ -170,7 +112,9 @@ export default class MusicPlayer {
       trackId,
       functionContext,
       skipContext,
-      effects
+      effects,
+      length: soundData.length,
+      soundType: soundData.type
     };
 
     this.playbackEvents.push(soundEvent);
@@ -193,10 +137,7 @@ export default class MusicPlayer {
       console.log('MusicPlayer not initialized');
       return;
     }
-    if (
-      !value ||
-      !measure
-    ) {
+    if (!value || !measure) {
       console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
       return;
     }
@@ -209,13 +150,51 @@ export default class MusicPlayer {
       trackId,
       functionContext,
       skipContext,
-      effects
+      effects,
+      length: constants.DEFAULT_PATTERN_LENGTH
     };
 
     this.playbackEvents.push(patternEvent);
 
     if (this.samplePlayer.playing()) {
       this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
+    }
+  }
+
+  playChordAtMeasure(
+    value: ChordEventValue,
+    measure: number,
+    insideWhenRun: boolean,
+    trackId?: string,
+    functionContext?: FunctionContext,
+    skipContext?: SkipContext,
+    effects?: Effects
+  ) {
+    if (!this.samplePlayer.initialized()) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (!value || !measure) {
+      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
+      return;
+    }
+
+    const chordEvent: ChordEvent = {
+      type: 'chord',
+      value,
+      triggered: !insideWhenRun,
+      when: measure,
+      trackId,
+      functionContext,
+      skipContext,
+      effects,
+      length: constants.DEFAULT_CHORD_LENGTH
+    };
+
+    this.playbackEvents.push(chordEvent);
+
+    if (this.samplePlayer.playing()) {
+      this.samplePlayer.playSamples(this.convertEventToSamples(chordEvent));
     }
   }
 
@@ -227,6 +206,20 @@ export default class MusicPlayer {
    */
   previewSound(id: string, onStop: () => any) {
     this.samplePlayer.previewSample(id, onStop);
+  }
+
+  previewChord(chordValue: ChordEventValue, onStop: () => any) {
+    const chordEvent: ChordEvent = {
+      type: 'chord',
+      when: 1,
+      value: chordValue,
+      triggered: false,
+      length: constants.DEFAULT_CHORD_LENGTH
+    };
+    this.samplePlayer.previewSamples(
+      this.convertEventToSamples(chordEvent),
+      onStop
+    );
   }
 
   /**
@@ -350,6 +343,11 @@ export default class MusicPlayer {
    * @param soundIds
    */
   addSoundsToTrack(trackId: string, ...soundIds: string[]) {
+    if (this.library === null) {
+      console.warn('MusicPlayer not initialized');
+      return;
+    }
+
     if (!this.tracksMetadata[trackId]) {
       console.warn('No track with ID: ' + trackId);
       return;
@@ -367,7 +365,7 @@ export default class MusicPlayer {
       );
       maxSoundLength = Math.max(
         maxSoundLength,
-        this.getLengthForId(soundId) || 0
+        this.library.getSoundForId(soundId)?.length || 0
       );
     }
 
@@ -401,25 +399,6 @@ export default class MusicPlayer {
     return this.tracksMetadata;
   }
 
-  getLengthForId(id: string): number | null {
-    const sound = this.getSoundForId(id);
-    if (sound === null) {
-      console.warn(`Could not find sound with ID: ${id}`);
-      return null;
-    }
-    return sound.length;
-  }
-
-  getTypeForId(id: string): SoundType | null {
-    const sound = this.getSoundForId(id);
-    if (sound === null) {
-      console.warn(`Could not find sound with ID: ${id}`);
-      return null;
-    }
-
-    return sound.type;
-  }
-
   // Called by interpreted code in the simple2 model, this returns
   // a unique value that is used to differentiate each invocation of
   // a function, so that the timeline renderer can group relevant events.
@@ -444,30 +423,18 @@ export default class MusicPlayer {
     this.lastTriggeredMeasure = 0;
   }
 
-  private getSoundForId(id: string): SoundData | null {
-    const splitId = id.split('/');
-    const path = splitId[0];
-    const src = splitId[1];
-
-    const folder = this.library.groups[0].folders.find(
-      folder => folder.path === path
-    );
-
-    if (folder) {
-      return folder.sounds.find(sound => sound.src === src) || null;
+  private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
+    if (this.library === null) {
+      console.warn('Music Player not initialized');
+      return [];
     }
 
-    return null;
-  }
+    if (event.skipContext?.skipSound) {
+      return [];
+    }
 
-  private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
-
-      if (soundEvent.skipContext?.skipSound) {
-        return [];
-      }
-
       return [
         {
           sampleId: soundEvent.id,
@@ -487,13 +454,70 @@ export default class MusicPlayer {
         const resultEvent = {
           sampleId: `${kit}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
-            patternEvent.when + (event.tick-1) / 16
+            patternEvent.when + (event.tick - 1) / 16
           ),
           triggered: patternEvent.triggered,
           effects: patternEvent.effects
         };
 
         results.push(resultEvent);
+      }
+
+      return results;
+    } else if (event.type === 'chord') {
+      const chordEvent = event as ChordEvent;
+      const {instrument, notes, playStyle} = chordEvent.value;
+      if (notes.length === 0) {
+        return [];
+      }
+
+      const results: SampleEvent[] = [];
+
+      const folder: SoundFolder | null = this.library.getFolderForPath(
+        instrument
+      );
+
+      if (folder === null) {
+        console.warn(`No instrument ${instrument}`);
+        return [];
+      }
+
+      if (playStyle === 'arpeggio-up') {
+        notes.sort();
+      } else if (playStyle === 'arpeggio-down') {
+        notes.sort().reverse();
+      } else if (playStyle === 'arpeggio-random') {
+        // Randomize using Fisher-Yates Algorithm
+        for (let i = notes.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = notes[i];
+          notes[i] = notes[j];
+          notes[j] = temp;
+        }
+      }
+
+      // Create the array of samples. If the play style is arpeggio, we play one
+      // sound every 16th note, repeating the sequence as many times as needed.
+      // If the play style is "together", then only add each note once, and have them
+      // all play at the start of the given measure.
+      for (let i = 0; i < (playStyle === 'together' ? notes.length : 16); i++) {
+        const note = notes[i % notes.length];
+        const sound = folder.sounds.find(sound => sound.note === note) || null;
+        if (sound === null) {
+          console.warn(
+            `No sound for note value ${note} on instrument ${instrument}`
+          );
+          continue;
+        }
+
+        const noteWhen =
+          playStyle === 'together' ? chordEvent.when : chordEvent.when + i / 16;
+
+        results.push({
+          sampleId: `${instrument}/${sound.src}`,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
+          ...event
+        });
       }
 
       return results;

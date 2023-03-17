@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2023-03-10 02:00:09 UTC",
+    "serialized_at": "2023-03-14 18:11:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1663,6 +1663,19 @@
       }
     },
     {
+      "key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c",
+        "lesson_activity.key": "77ec11ab-5d60-4e72-a198-8d1c6f1f28f0"
+      }
+    },
+    {
       "key": "7571ea51-b14b-47ad-b0d5-6041f530639f",
       "position": 1,
       "properties": {
@@ -1792,7 +1805,7 @@
       "key": "1fea07e1-eae0-41d3-ae12-970748f5d122",
       "position": 7,
       "properties": {
-        "description": "**Display**: The next three slides contain different products for each user group to react to - waterproof boots, a bicycle, and chocolate cupcakes. Students will react to each product as their user by filling out a row in the activity guide. The guide asks students to make a distinction between the _usability_ of an item for their user and whether a user likes or dislikes it. You may want to go through the first one as a group so you can model that a product may be aesthetically appealing, but not very usable, or usable but not aesthetically appealing.",
+        "description": "**Display**: The next three slides contain different products for each user profile to react to - waterproof boots, a bicycle, and chocolate cupcakes. Students will react to each product as their user by filling out a row in the activity guide. The guide asks students to make a distinction between the _usability_ of an item for their user and whether a user likes or dislikes it. You may want to go through the first one as a group so you can model that a product may be aesthetically appealing, but not very usable, or usable but not aesthetically appealing.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1948,7 +1961,7 @@
       "key": "7e238b95-4448-4c9b-b611-75e5cdf93bcc",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each group.",
+        "description": "**Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each team.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2028,7 +2041,7 @@
       "key": "3b0ebd21-ff67-4518-b773-5c82334daac7",
       "position": 10,
       "properties": {
-        "description": "**Choose Specific User:** Ask groups to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some groups choose similar user categories.\n\n**Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
+        "description": "**Choose Specific User:** Ask teams to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some teams choose similar user categories.\n\n**Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
       },
       "seeding_key": {
         "activity_section.key": "3b0ebd21-ff67-4518-b773-5c82334daac7",
@@ -2056,7 +2069,7 @@
       "key": "7cef88ed-001f-49e6-a8a0-ff21c5441788",
       "position": 12,
       "properties": {
-        "description": "**Choose Specific Need:** Ask groups to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\n\n**Share Out:** By this point, each group should have settled on a specific user group and a need or interest that group has. Ask groups to share their user group and need with the rest of the class."
+        "description": "**Choose Specific Need:** Ask teams to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\n\n**Share Out:** By this point, each team should have settled on a specific user group and a need or interest that group has. Ask teams to share their user group and need with the rest of the class."
       },
       "seeding_key": {
         "activity_section.key": "7cef88ed-001f-49e6-a8a0-ff21c5441788",
@@ -2079,7 +2092,7 @@
       "key": "c650328b-0bdd-4d21-9e12-dc349303107e",
       "position": 14,
       "properties": {
-        "description": "**Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their group and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
+        "description": "**Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their team and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2096,7 +2109,7 @@
       "key": "db516a06-c456-4c41-8668-b0a946bf0a6b",
       "position": 15,
       "properties": {
-        "description": "**Choose Specific Solution:** Have the group choose a specific solution they will focus on. They may decide to combine solutions from their discussion or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
+        "description": "**Choose Specific Solution:** Have the teams choose a specific solution they will focus on. They may decide to combine solutions from their discussion or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
       },
       "seeding_key": {
         "activity_section.key": "db516a06-c456-4c41-8668-b0a946bf0a6b",
@@ -2136,7 +2149,7 @@
       "key": "0cabc257-19f6-4027-a210-6f165580a029",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Today's activity involved a lot of brainstorming with your group. What is one example from today where a group member had an idea that you hadn't considered before? How did that idea affect some of the decisions you made?",
+        "description": "**Prompt:** Today's activity involved a lot of brainstorming with your team. What is one example from today where a team member had an idea that you hadn't considered before? How did that idea affect some of the decisions you made?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2148,7 +2161,7 @@
       "key": "b791db00-8437-45fe-8891-c46b99190326",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: Students should reflect on how different voices helped elevate the ideas the group had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others' ideas will be important throughout the unit as students work together to develop apps for others.\n\n"
+        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: Students should reflect on how different voices helped elevate the ideas the team had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others' ideas will be important throughout the unit as students work together to develop apps for others.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b791db00-8437-45fe-8891-c46b99190326",
@@ -2159,7 +2172,7 @@
       "key": "842f3beb-4bf8-44c6-a010-6933f7d46db8",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** As students enter the classroom, redistribute the activity guides from yesterday. If a student was absent, have them join an existing group and use the same user, needs, and solutions as that group."
+        "description": "**Distribute:** As students enter the classroom, redistribute the activity guides from yesterday. If a student was absent, have them join an existing team and use the same user, needs, and solutions as that team."
       },
       "seeding_key": {
         "activity_section.key": "842f3beb-4bf8-44c6-a010-6933f7d46db8",
@@ -2182,7 +2195,7 @@
       "key": "8df7b0f7-22c5-41d8-85d7-de65c112685b",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their groups from yesterday.\n\n**Discussion Goal**: This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a group in the first part of the activity.\n\n"
+        "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their teams from yesterday.\n\n**Discussion Goal**: This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a team in the first part of the activity.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8df7b0f7-22c5-41d8-85d7-de65c112685b",
@@ -2193,7 +2206,7 @@
       "key": "2c340e36-d35f-442a-89f0-3063d4cbd47a",
       "position": 4,
       "properties": {
-        "description": "There are a lot of different users and needs that we’re designing for. Today, we’ll complete the Try and Reflect stages of this activity. Your group will have a chance to design your own smart clothing product for your user, and share your ideas with the class.",
+        "description": "There are a lot of different users and needs that we’re designing for. Today, we’ll complete the Try and Reflect stages of this activity. Your team will have a chance to design your own smart clothing product for your user, and share your ideas with the class.",
         "remarks": true
       },
       "seeding_key": {
@@ -2232,7 +2245,7 @@
       "key": "51518c58-a74c-4e40-9a45-e04d51e0514b",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** The User Centered Design (Try & Reflect) Activity Guide to each group. If available, also distribute poster paper to each group.\n\n\n\n#### User Centered Design (Try & Reflect)"
+        "description": "**Distribute:** The User Centered Design (Try & Reflect) Activity Guide to each team If available, also distribute poster paper to each team.\n\n\n\n#### User Centered Design (Try & Reflect)"
       },
       "seeding_key": {
         "activity_section.key": "51518c58-a74c-4e40-9a45-e04d51e0514b",
@@ -2267,7 +2280,7 @@
       "key": "8f191079-75b9-46a5-96b6-efe624e51c6b",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Have students answer the questions on the second page of the activity guide and be prepared to share the results with their peers.\n\n**Circulate:** Check in with students as they summarize their thoughts on this reflection guide. As students answer these questions, they may decide to make last-minute changes to their product.\n\n\n\n**Share Out:** Have groups take turns sharing out the products they designed. They should be sure to share their intended user and their needs, and how the product addresses those needs. When they finish, encourage other groups to give feedback in the form of “I like…” and “I wish… statements.",
+        "description": "**Do This:** Have students answer the questions on the second page of the activity guide and be prepared to share the results with their peers.\n\n**Circulate:** Check in with students as they summarize their thoughts on this reflection guide. As students answer these questions, they may decide to make last-minute changes to their product.\n\n\n\n**Share Out:** Have groups take turns sharing out the products they designed. They should be sure to share their intended user and their needs, and how the product addresses those needs. When they finish, encourage other teams to give feedback in the form of “I like…” and “I wish… statements.",
         "name": "Reflect\r",
         "tips": [
           {
@@ -5776,6 +5789,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
+        "lesson.key": "Designing With Empathy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd4-2023",
+        "activity_section.key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd4_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2023"
         ],
         "progression": "Reflection"
@@ -5795,7 +5833,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5820,7 +5858,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5845,7 +5883,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5870,7 +5908,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5895,7 +5933,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5920,7 +5958,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5945,7 +5983,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5970,7 +6008,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5995,7 +6033,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6020,7 +6058,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6045,7 +6083,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6070,7 +6108,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6095,7 +6133,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6120,7 +6158,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6145,7 +6183,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6170,7 +6208,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -6195,7 +6233,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6220,7 +6258,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6245,7 +6283,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6270,7 +6308,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6295,7 +6333,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6320,7 +6358,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6345,7 +6383,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6370,7 +6408,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6395,7 +6433,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -6420,7 +6458,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6445,7 +6483,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -6470,7 +6508,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6495,7 +6533,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6520,7 +6558,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6545,6 +6583,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd4_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
+        "lesson.key": "Designing With Empathy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd4-2023",
+        "activity_section.key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "csd-pulse-check-survey-1-levelgroup U4Ch1_2023",

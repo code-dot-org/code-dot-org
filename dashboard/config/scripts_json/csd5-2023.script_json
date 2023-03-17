@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-03-10 02:00:28 UTC",
+    "serialized_at": "2023-03-14 17:50:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1385,6 +1385,19 @@
       },
       "seeding_key": {
         "activity_section.key": "6ec26c33-2a46-47be-9c48-e00ae71c4960",
+        "lesson_activity.key": "c252df07-d2cd-40e5-b4e7-c5817178ea81"
+      }
+    },
+    {
+      "key": "8af2da4c-4ffd-45af-a037-b33f23c1b346",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346",
         "lesson_activity.key": "c252df07-d2cd-40e5-b4e7-c5817178ea81"
       }
     },
@@ -4636,6 +4649,31 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd5-2023",
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd5_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4658,7 +4696,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4683,7 +4721,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4708,7 +4746,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4733,7 +4771,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4758,7 +4796,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4783,7 +4821,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4808,7 +4846,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4833,7 +4871,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4858,7 +4896,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4883,7 +4921,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4908,7 +4946,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4933,7 +4971,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4958,7 +4996,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4983,7 +5021,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5008,7 +5046,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5033,7 +5071,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5058,6 +5096,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd5_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd5-2023",
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD U5 black white images pixelation_2023",
@@ -5500,7 +5550,7 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
+      "url": "https://docs.google.com/document/d/1uk54ffts0mvoMoo1aM_9WQxhB_i9dVbperk3V5NZgv4/edit?usp=sharing",
       "key": "create_a_representation",
       "properties": {
         "audience": "Verified Teacher",
@@ -5849,12 +5899,11 @@
       }
     },
     {
-      "name": "Number Cards",
-      "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy",
+      "name": "Number Cards - Digital Manipulative",
+      "url": "https://docs.google.com/presentation/d/1cBJrrEm4P5zyz4to07ol1l_AtPcS5QamNXAlS06gObk/edit?usp=sharing",
       "key": "number_cards",
       "properties": {
-        "audience": "Teacher",
-        "type": "Digital Manipulative"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "number_cards"
