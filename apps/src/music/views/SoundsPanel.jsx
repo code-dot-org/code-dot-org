@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {getAllowedLibrarySounds} from '../utils/LibraryUtils';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -94,7 +93,6 @@ SoundsPanelRow.propTypes = {
 
 const SoundsPanel = ({
   library,
-  allowedSounds,
   currentValue,
   playingPreview,
   onSelect,
@@ -130,7 +128,6 @@ const SoundsPanel = ({
 
 SoundsPanel.propTypes = {
   library: PropTypes.object.isRequired,
-  allowedSounds: PropTypes.object,
   currentValue: PropTypes.string.isRequired,
   playingPreview: PropTypes.string,
   onSelect: PropTypes.func.isRequired,

@@ -90,7 +90,6 @@ class FieldSounds extends GoogleBlockly.Field {
     ReactDOM.render(
       <SoundsPanel
         library={this.options.getLibrary()}
-        allowedSounds={this.options.getAllowedSounds()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
         onPreview={value => {
