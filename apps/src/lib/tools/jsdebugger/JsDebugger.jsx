@@ -383,7 +383,8 @@ class JsDebugger extends React.Component {
    *  Handle mouse moves while dragging the debug resize bar.
    */
   onMouseMoveWatchersResizeBar = event => {
-    const watchersRect = this._watchers.scrollableContainer.getBoundingClientRect();
+    const watchers = this._watchers.getWrappedInstance();
+    const watchersRect = watchers.scrollableContainer.getBoundingClientRect();
     const movement = watchersRect.left - event.clientX;
     const newDesiredWidth = watchersRect.width + movement;
     const newWatchersWidth = Math.max(
@@ -393,8 +394,9 @@ class JsDebugger extends React.Component {
 
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
     const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
-    this._watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
-    this._debugConsole.root.style.right = newWatchersWidth + 'px';
+    watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
+    this._debugConsole.getWrappedInstance().root.style.right =
+      newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
     const headerLBorderWidth = 1;

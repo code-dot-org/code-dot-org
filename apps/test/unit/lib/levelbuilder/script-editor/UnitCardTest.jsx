@@ -106,9 +106,7 @@ describe('UnitCard', () => {
 
   it('displays UnitCard correctly when user facing lesson groups', () => {
     const wrapper = createWrapper({});
-    // There are 2 lesson groups, but they have forwardRefs which causes each component
-    // to be counted twice.
-    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(4);
+    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(2);
     expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
     expect(wrapper.find('textarea')).to.have.lengthOf(4);
 

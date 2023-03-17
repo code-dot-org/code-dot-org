@@ -131,5 +131,5 @@ export default connect(
   },
   null,
   null,
-  {forwardRef: true}
+  {withRef: true}
 )(InstructionsCsfLeftCol);
