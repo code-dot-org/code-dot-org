@@ -76,7 +76,7 @@
       "/courses/csd-2022/guides/shapes-and-parameters",
       "/courses/csd-2022/guides/sprite-interactions"
     ],
-    "video_key": "csd_gamelab_animation_tab",
+    "video_key": "csd_sprite_properties",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -96,7 +96,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:39.008+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties new_2022\\\"\"],\"cloned_from\":\"CSD Games properties new_2022\"},{\"changed_at\":\"2023-01-10 23:30:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:39.008+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties new_2022\\\"\"],\"cloned_from\":\"CSD Games properties new_2022\"},{\"changed_at\":\"2023-01-10 23:30:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-16 19:56:01 +0000\",\"changed\":[\"code_functions\",\"video_key\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
