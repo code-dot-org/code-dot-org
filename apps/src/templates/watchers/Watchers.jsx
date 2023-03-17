@@ -477,7 +477,7 @@ export default connect(
     remove
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(Watchers);
 
 // http://stackoverflow.com/a/7390612
