@@ -15,7 +15,7 @@ theme: responsive_full_width
 - icon_circle_check = "fa-solid fa-circle-check"
 - icon_circle_xmark = "fa-solid fa-circle-xmark"
 
-%section.no-padding-bottom
+%section.skinny-banner.no-padding-bottom
   .wrapper
     = view :maker_skinny_banner
 
@@ -31,14 +31,14 @@ theme: responsive_full_width
           .text-wrapper
             %h3 Designed specifically for novice programmers
             %p Enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry.
-        %li
+        %li.no-margin-bottom
           %div
             %i{class: "#{icon_puzzle_piece}"}
-          .text-wrapper.no-margin-bottom
+          .text-wrapper
             %h3 Works with App Lab
-            %p Using App Lab students can quickly build apps that communicate with external hardware using our block-to-text app development environment.
-      %figure.col-25
-        %img{src: "/images/maker/circuitplayground-no-bg.gif", alt: "", style: "width: 100%"}
+            %p.no-margin-bottom Using App Lab students can quickly build apps that communicate with external hardware using our block-to-text app development environment.
+      %figure.col-25{style: "margin-top: 2em; text-align: center"}
+        %img{src: "/images/maker/circuitplayground-no-bg.gif", alt: ""}
     .clear
 
 %section.bg-neutral-light.device-setup
@@ -73,12 +73,12 @@ theme: responsive_full_width
         %h3 Circuit Playground Classroom Kit
         %img{src: "/images/maker/maker-cp-kit.png", alt: "", style: "width: 100%"}
         %p Contains Circuit Playground boards and accessories necessary for using Code.org's curriculum with a class or 30 students.
-        %p All educators receive a 10% discount when they apply the code <strong>ADAEDU</strong> at checkout. <em>Note:</em> The ADAEDU code only applies to orders of $250 or greater.
+        %p{style: "height: 83px"} All educators receive a 10% discount when they apply the code <strong>ADAEDU</strong> at checkout. <em>Note:</em> The ADAEDU code only applies to orders of $250 or greater.
         %a.link-button{href: "https://www.adafruit.com/product/3399", target: "_blank", rel: "noopener noreferrer"} Get the classroom kit
       .action-block.action-block--one-col
         %h3 Circuit Playground Individual Kit
         %img{src: "/images/maker/maker-cp-individual.png", alt: "", style: "width: 100%"}
-        %p{style: "height: 140px"} For smaller classrooms, we recommend investing in a set of Circuit Playground Individual Kits. The individual kit is designed for a single or pair of students.
+        %p{style: "height: 160px"} For smaller classrooms, we recommend investing in a set of Circuit Playground Individual Kits. The individual kit is designed for a single or pair of students.
         %a.link-button{href: "https://www.adafruit.com/product/3795", target: "_blank", rel: "noopener noreferrer"} Get the individual kit
     %p{style: "margin-top: 1em"} Out of stock? Try looking at other approved <a href="https://www.adafruit.com/distributors#North_America" target="_blank" rel="noopener noreferrer">Adafruit distributors</a>.
 
