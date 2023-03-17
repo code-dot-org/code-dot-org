@@ -1,0 +1,25 @@
+name 'CSC-SelfPaced-landpage_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module landing page
+
+##### The module landing page gives an overview of the lesson, a preview of the level progression and links to the lesson plans.
+
+## Example module landing page
+
+##### Notice you can... 
+* get an overview of a lesson.
+* access lesson plans.
+* hide lessons to help with pacing.
+* go directly to lesson levels.
+
+<img src="https://images.code.org/3df594a4e454e039675486a6e1c4ba83-image-1678904395700.png" width="800px" style="border-radius:0px; float:center; margin: 0 0 40px 40px;">
+
+
+
+
+## Let's keep learning! 
+
+MARKDOWN

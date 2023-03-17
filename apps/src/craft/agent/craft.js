@@ -847,9 +847,7 @@ export default class Craft {
       testResult: testResultType,
       image: encodedImage,
       program: encodeURIComponent(
-        Blockly.Xml.domToText(
-          Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
-        )
+        Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
       ),
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
