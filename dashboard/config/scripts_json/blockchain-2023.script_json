@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-15 22:30:12 UTC",
+    "serialized_at": "2023-03-16 16:29:51 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4026,6 +4026,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/blockchain-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/blockchain-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Under the Hood",
       "url": "https://docs.google.com/presentation/d/1PT6NNzHnbEdoqI_VIWgU-lnmMgvYJr6Knwhwm90m4JE/template/preview",
       "key": "applied_blockchain_bitcoin",
@@ -4723,7 +4745,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "blockchain-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
