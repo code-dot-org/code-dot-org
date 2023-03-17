@@ -3,12 +3,23 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "#### Paghahanda\n\nI-welcome ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. Siguraduhing sabihin sa mga mag-aaral na maglaan ng kanilang oras at mag-eksperimento."
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
-            null
+            "Kung mayroon kang oras at nais mong ihanda ng iyong mga mag-aaral sa aktibidad na hindi naka-plug, isaalang-alang ang [\"Sayawan: Di naka-plug\"](https://studio.code.org/s/dance-unplugged/lessons/1) bago ang Hour of Code event mo. Nagpapakilala ang maikling araling ito sa mga mag-aaral sa ideya ng mga pangyayari na nagpapasimula sa iba't ibang pagkilos sa sayaw."
           ]
+        },
+        "73775ce2-2f05-4848-9b8c-9be7b6818903": {
+          "description": "Ipaliwanag na magkakaroon tayo ngayon ng isa pang pagkakataon na maging malikhain gamit ang \"code\", na nangangahulugan lamang ng hanay ng mga tagubilin na mauunawaan ng computer. Tulad ng pagpili kung aling mga kulay ang gagamitin, o kung anong mga salita ang isusulat mo na maaaring magpahayag ng pagkamalikhain, ang pagpili kung anong code ang isusulat mo at kung paano nakikipag-ugnayan ang mga tao dito ay maaaring maging pagkakataon upang ipahayag din ang iyong pagkamalikhain! \n\n**Tumayo at sumayaw:** Ihayag sa klase na ngayon ay titingnan natin kung paano pagsasamahin ang coding sa pagsasayaw sa mas malikhaing paraan. Hilingin sa mga anak mo na mag-floss, mag-dab, o gumawa ng sarili nilang malikhaing dance move sa loob ng 10 segundo para gaganahan sila. Maaari kang magpatugtog ng kanta sa Spotify Playlist na ito (lahat ng edad) para makatulong sa pagsisimula. Kunan ng video ang mga galaw ng klase mo.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
+        "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
+          "name": "Patuloy na Sumayaw",
+          "description": "#### Pagsasala ng Musika\n\nNagtatampok ang tutorial na ito ng mga kanta mula sa mga sikat na artist. Para makakuha ng preview ng listahan ng kanta sa tutorial na ito, tingnan itong [Spotify Playlist (lahat ng edad)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Gumagamit kami ng mga radio-safe na bersiyon ng lahat ng kanta. Sa mga mag-aaral na wala pang 13 taong gulang, nililimitahan namin ang musika sa nasalang listahang ito."
+        },
+        "69481dbf-6e15-4769-8840-992f641a75b1": {
+          "description": "#### Pangkalahatang Suporta\n\n**Pangkalahatang Suporta:** Bilang guro, ang tungkulin mo ay pangunahing suportahan ang mga mag-aaral habang ginagawa nila ang kanilang tutorial. Narito ang ilang mga tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang ginagawa:\n\n-   Hikayatin ang mga mag-aaral na lumipat sa iba't ibang \"mga ekstra\" sa anumang pagkakasunud-sunod na gusto nila. Maaari silang bumalik sa Antas 1 upang muling bisitahin ang menu. \n\n-   **Makipagtulungan sa Mga Katabi:** Hikayatin ang mga mag-aaral na magtanong sa katabi kapag natigil sila. Dahil may kasamang mga video ang tutorial na ito at maaaring may suot na headphone ang mga mag-aaral, madali silang \"magsarili.\" Tumulong na masira ang mga hadlang na iyon sa pamamagitan ng aktibong pagpapares ng mga mag-aaral kung mukhang kailangan nila ng tulong. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang na pormal na hatiin ang klase mo sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Ang mga tagubilin ay karaniwang nagbibigay ng mga kapaki-pakinabang na tip sa kung paano kumpletuhin ang antas. Bago kumpletuhin ang antas para sa mag-aaral tiyakin na talagang tiningnan nila nang mabuti ang target na imahe at nabasa ang lahat ng text doon.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Hindi makaalis? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may mga karagdagang detalye tungkol sa kung paano pumasa sa antas. Kung sinusubukan ng mga mag-aaral na ipasa ang mga palaisipan nang mabilisan, maaaring malaman nila na kailangan lamang nilang maghintay ng ilang oras sa lahat ng code bago magpatuloy. Maraming mga antas ang naglalaman ng pangalawang hint na may mga mungkahi ng mga paraan upang maging mas malikhain sa pamamagitan ng pagpapalawak ng gawain.\n\n-   **Magpatuloy at Bumalik:** Minsan mas higit na makikinabang ang mga mag-aaral na bumalik sa isang mahirap na antas. Independyente ang lahat ng antas sa isa't isa, kahit na umaasa sila sa ilang antas sa mga naunang ipinakilalang konsepto. Walang tama o maling sagot sa Mga Antas na ito. (Lahat ay libreng paglalaro!)\n\n-   **Maglaan ng oras at mag-eksperimento.** Kahit na ang unang pares na antas ay nagsasabi sa mga mag-aaral kung ano mismo ang kailangan nilang gawin upang makapasa, dapat din huwag silang mag-atubiling subukan ang kanilang sariling mga ideya.\n\n-   Basahing mabuti ang code."
         },
         "473c0737-e82d-49ec-bffa-5b738ba06438": {
           "progression_name": "Magpatuloy sa Pagsasayaw!"
@@ -31,76 +42,144 @@
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Bilisan Ito, Bagalan Ito"
         },
+        "42ec95b6-80f4-4012-8869-6850c7497008": {
+          "name": "Panayam",
+          "description": "-   Maglagay ng prompt na may maraming sagot tulad ng “Ano ang bagay na ikinatuwa mo tungkol sa aktibidad ngayon? ” o “Ano ang koneksiyon sa pagitan ng pagkamalikhain at computer science?\""
+        },
+        "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang [code.org/learn](<>) para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "499c1123-e663-43e7-b573-a59ffd946fc4": {
+          "description": "Ang Hour of Code ay tungkol sa pagkamalikhain, at hindi kami makapaghintay na makita kung ano ang nilikha mo! Ibahagi ang mga likha ng mag-aaral, mga larawan, at mga video sa social media! Mga guro, i-record ang iyong silid-aralan sa pag-coding ng sayaw, o pagsasayaw ng sayaw. Gawing espesyal ang video mo sa pamamagitan ng pagdaragdag ng [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nTiyaking isama ang #HourOfCode at i-tag kami sa Facebook, Twitter at Instagram. Bonus na puntos sa pag-tag sa artist ng musikang ginamit ng mga mag-aaral mo. Ang Code.org ay ibabahagi ang mga paborito naming post sa milyun-milyon naming tagasubaybay. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Siyempre, siguraduhing igalang ang patakaran sa social media ng iyong paaralan._"
         },
         "2c451b2f-6820-47bb-94e0-966633757f93": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
         },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   Ituro ang mga kursong [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Idinisenyo ang anim na kursong ito sa mga batang mag-aaral. Ang mga mag-aaral ay nakikibahagi sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   Bisitahin ang [You can Teach Computer Science](https://studio.code.org/courses?view=teacher) sa higit pang mga mungkahi sa kurso.\n-   Mag-imbita ng eksperto sa computer science na makipag-usap sa iyong klase tungkol sa kanyang trabaho. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at maikling ipakilala ang aktibidad sa araw na iyon. \n\nMatutuwa ang mga mag-aaral sa araling ito. Malamang na karamihan sa mga mag-aaral mo ay narinig na ang Minecraft, ngunit magbigay ng maikling panimula para sa mga hindi pa. Ang Minecraft ay laro ng mga cube. Maaari kang maglaro bilang Alex o Steve habang nagsisikap ka sa mga maze. Kakailanganin mong pumili ng mga item, at tuklasin ang mundong binubuo ng mga cube.\n\n_Sabihin: “Gugugol tayo ngayon ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\"? Ano ang ibig sabihin nito?”_\n\nMaaaring banggitin ng mga mag-aaral na ang isang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
+        },
+        "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming,\" \"events,\" \"loops\" at \"debugging.\"\n\nBigyang-kahulugan:\n\n-   **Coding** nangangahulugang magsulat ng code, o magsulat ng mga tagubilin sa computer.\n-   **Debugging** nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n-   **Event** ay aksyon na dahilan na mangyari ang isang bagay.\n-   **Loop** ay ang aksyon ng paggawa ng bagay na paulit-ulit.\n-   **Programming**, gayundin, nangangahulugang magsulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online tutorial) o gamit ang lapis at papel (kung gumagamit ka ng hindi naka-plug na aktibidad)."
         },
         "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto! "
           ]
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
-          "name": "Minecraft Hour of Code na Taga-disenyo"
+          "name": "Minecraft Hour of Code na Taga-disenyo",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin itong [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) na aktibidad.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Para sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Para sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Minecraft, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "307ffdf6-e274-484b-a10f-329ddfe568dc": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "70935a98-82e9-4553-94f7-90a4e615dd34": {
+          "name": "Panayam",
+          "description": "Hilingin ang mga mag-aaral na magbulay-bulay sa mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Sa pag-debug? Anong pakiramdam nila sa computer science at code pagkatapos gumugol ng isang oras sa pagtuklas nito?"
+        },
+        "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](https://studio.code.org/certificates/batch?course=bWM=) na may pangalan niya."
+        },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang [code.org/learn](<>) para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
+          "description": "Bigyan ang bawat mag-aaral ng [“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at sabihin sa kanila na ibuod ang kanilang natutunan ngayon, anong nadama nila, o kung ano ang kanilang naranasan. Ang mga mag-aaral ay maaaring gumuhit, magsulat o magpahayag ng kanilang sarili sa anumang paraan na sa tingin nila ay komportable. Mangolekta ng \"Exit Ticket\" mula sa bawat mag-aaral sa kanilang paglabas ng silid. Kung gusto mo, maaari mong i-post ang “Mga Exit Ticket” sa bulletin board o ilang lugar na kilala sa paaralan bilang paalala ng Hour of Code mo."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan para magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang mga ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa kanilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   **Bisitahin ang [Maaari kang Magturo ng Computer Science](https://studio.code.org/courses?view=teacher)** para sa higit pang mga mungkahi sa kurso.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [volunteer map](https://code.org/volunteer/local)"
+        },
+        "79f9bd46-60a5-4891-ad3b-8369879847fc": {
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at maikling ipakilala ang aktibidad sa araw na iyon. \n\nMatutuwa ang mga mag-aaral sa araling ito. Malamang na karamihan sa mga mag-aaral mo ay narinig na ang Minecraft, ngunit magbigay ng maikling panimula para sa mga hindi pa. Ang Minecraft ay laro ng mga cube. Maaari kang maglaro bilang Alex o Steve habang nagsisikap ka sa mga maze. Kakailanganin mong pumili ng mga item, at tuklasin ang mundong binubuo ng mga cube.\n\n_Sabihin: “Gugugol tayo ngayon ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\"? Ano ang ibig sabihin nito?”_\n\nMaaaring banggitin ng mga mag-aaral na ang isang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
+        },
+        "850945f6-6352-403b-a73f-3fb613f4728a": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na naiintindihan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming,\" \"functions\" at \"debugging.\"\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer. \n\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\n-   Ang **Function** ay isang piraso ng code na madali mong magagamit nang paulit-ulit.\n\n-   Ang **Programming**, gayundin, nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad)."
         },
         "4fd098be-b798-4e23-b091-e90c95344d97": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto! "
           ]
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
-          "name": "Minecraft: Ang Paglalakbay ng Bayani"
+          "name": "Minecraft: Ang Paglalakbay ng Bayani",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) na tutorial.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Para sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Para sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Minecraft, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
+        },
+        "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Ang Paglalakbay ng Bayani"
         },
+        "ae17edd9-ad82-47dc-95f5-368b58084998": {
+          "name": "Panayam",
+          "description": "Hilingin ang mga mag-aaral na magbulay-bulay sa mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Sa pag-debug? Anong pakiramdam nila sa computer science at code pagkatapos gumugol ng isang oras sa pagtuklas nito?"
+        },
+        "145782a9-a436-4615-9827-0f75d7e4b3a0": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](https://studio.code.org/certificates/batch?course=bWM=) na may pangalan niya."
+        },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang [code.org/learn](<>) para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
+          "description": "Bigyan ang bawat mag-aaral ng [“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at sabihin sa kanila na ibuod ang kanilang natutunan ngayon, anong nadama nila, o kung ano ang kanilang naranasan. Ang mga mag-aaral ay maaaring gumuhit, magsulat o magpahayag ng kanilang sarili sa anumang paraan na sa tingin nila ay komportable. Mangolekta ng \"Exit Ticket\" mula sa bawat mag-aaral sa kanilang paglabas ng silid. Kung gusto mo, maaari mong i-post ang “Mga Exit Ticket” sa bulletin board o ilang lugar na kilala sa paaralan bilang paalala ng Hour of Code mo."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan para magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang mga ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa kanilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   **Bisitahin ang [Maaari kang Magturo ng Computer Science](https://studio.code.org/courses?view=teacher)** para sa higit pang mga mungkahi sa kurso.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [volunteer map](https://code.org/volunteer/local)"
         },
         "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "description": "#### Paghahanda\n\nSalubungin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.",
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video](https://hourofcode.com/promote/resources#videos). Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
+        "9e8e36dc-d11e-463e-b628-c1cbcf994aac": {
+          "description": "Ngayon gagamitin natin ang ating pagkamalikhain habang natututong mag-code. Maraming mga paraan upang maging malikhain. Ano ang ilang paraan para maging malikhain ka? "
+        },
+        "29252927-11c0-44cc-b471-dfa8b1792c2b": {
+          "description": "Hikayatin ang mga mag-aaral na magbahagi ng mga paraan ng pagpapahayag nila ng pagkamalikhain, gaya ng sining, sayaw, musika, o pagsulat. Bilang susunod na tanong, tanungin ang mga mag-aaral kung ano ang ginagamit nila upang pukawin ang kanilang pagkamalikhain. "
+        },
+        "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
+          "description": "**Magbasa ng tula nang sama-sama:** Magbasa ng [ilang mga tula](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) na magkasama at magsanay sa pagbibigay ng pangalan sa mood ng bawat tula. Hikayatin ang mga mag-aaral na ibahagi ang kanilang interpretasyon, kahit na naiiba ito sa iba. "
+        },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
-          "name": "Sining ng Tula"
+          "name": "Sining ng Tula",
+          "description": "#### Pangkalahatang Suporta\n\nSa pagtatapos ng aktibidad na ito, magkakaroon ang mga mag-aaral ng animated na tula na kumakatawan sa kanilang visual interpretation ng tulang pinili nila. Idinisenyo ang araling ito upang bigyan ang mga mag-aaral ng pagkakataon na mag-usisa at hanapin ang mga visual effects na gusto nila. \n\nHabang umiikot sa silid, hikayatin ang mga mag-aaral na:\n\n-   **Huwag kang mag-madali:** Karamihan sa mga antas ay nangangailangan sa mga mag-aaral na mahanap ang perpektong mga epekto na tutugma sa kanilang interpretasyon sa mood ng tula. Ang pananatili sa isang antas at pag-usisa sa kanilang code ay lubos na hinihikayat. \n\n-   **Maghanap ng tula na gusto mo:** Ang tula na ipinapakita sa mag-aaral sa bagong antas ay mungkahi lamang. Mayroong dropdown menu ng tula na may mga paunang na-load na tula sa tuktok ng playspace. Hilingin sa mga mag-aaral na basahin ang ilan at hanapin ang isa na may dating sa kanila. Pagkatapos ay maaari nilang simulan ang pag-animate ng tula na napili gamit ang code. \n\n-   **Ipakita ang nakumpletong antas:** Anumang level bubble na ganap na berde ay nangangahulugang matagumpay na nakumpleto ng mag-aaral ang lahat ng mga kinakailangan sa antas na iyon. Hilingin sa mag-aaral na mag-click sa berdeng bula upang ipakita ang kanilang nilikha. \n\nPara sa mga pagkakataon na ang mag-aaral ay di makausad: \n\n-   **Basahin ang mga tagubilin:** Ang mga tagubilin ay mga puntong may bullet tungkol sa kung paano kumpletuhin ang antas. Kung ang mag-aaral ay di makausad, hilingin sa kaniya na basahin sa iyo nang malakas ang mga tagubilin at hilingin sa kaniya na ulitin ang sinasabi ng mga tagubilin sa kaniyang sariling mga salita. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Maaari ring i-click ng mga mag-aaral ang icon na text-to-speech upang marinig ang mga tagubilin.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Maghanap ng mga mungkahi**: Karamihan sa mga antas ay naglalaman ng hindi bababa sa isang pahiwatig na may mas malinaw na mga detalye tungkol sa kung paano pumasa sa antas. \n-   **Ipagdiwang ang mga bug:** Ang pagkakaroon ng bug sa code mo ay likas na bahagi ng proseso ng pag-coding. Kung hindi ginagawa ng program ang inaasahan, hilingin sa mag-aaral na sabihin muna sa iyo kung ano ang gusto nilang mangyari, i-click ang run para obserbahan kung ano ang aktwal na nangyayari, pagkatapos ay hanapin ang lugar sa kanilang code na naging sanhi ng pagkakaiba. Tandaan na ipagdiwang ang pagkakaroon ng mga bug at pag-aayos ng mga bug. Ang pagkakaroon ng bug ay nangangahulugang ang mga mag-aaral ay gumagawa ng mahusay na trabaho sa pagbuo ng mas kumplikadong programa. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
           "progression_name": "Pagbuo ng Kasanayan"
@@ -123,24 +202,62 @@
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
           "progression_name": "Libreng Laro"
         },
+        "a93e96cb-27d2-4d92-8321-57accd5addde": {
+          "description": "Kung nagustuhan mo ang pag-aaral ng pag-code ngayon, maaari kang magpatuloy sa pag-aaral sa pamamagitan ng pagbisita sa code.org/learn. Kung nais mong ibahagi ang ginawa mo sa iyong mga kaibigan at pamilya, i-click ang button na \"Ibahagi\" at ipadala ang link sa sinumang gusto mo!"
+        },
+        "eea48561-0080-4e47-8d51-048ab2d07048": {
+          "description": "#### (Opsyonal) Pagsusuri: Suriin Kung Naiintindihan (4 min.)\n\nMagbigay ng dalawang sticky note sa bawat mag-aaral. "
+        },
+        "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
+          "description": "Mayroon kang dalawang sticky note. Sa isa, isulat ang bagay na natutunan mo tungkol sa coding ngayon. Sa pangalawa, isulat ang bagay na natutunan mo tungkol sa tula ngayon. \n\nIbahagi natin ito sa buong klase sa pamamagitan ng pagtataas ng kamay upang sagutin ang tanong na ito: Ano pa ang inaasahan mong matutunan tungkol sa coding at computer science sa susunod? "
+        },
+        "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n_Sabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?”_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Kahit Sino Matututo](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
+        "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pag-isipan kung ano ang magiging mainam na susunod nilang hakbang pagkatapos ng graduation sa high school. Hilingin sa mga mag-aaral na itaas ang kanilang kamay kung naniniwala sila na ang susunod na hakbang ay nangangailangang gumamit sila ng computer. Dapat magtaas ng kamay ang lahat, dahil nasa paligid natin ang mga computer...sa ating mga telepono, sa ating mga sasakyan, kahit sa ating mga microwave at dishwasher!\n\nHilingin sa mga mag-aaral na hulaan kung ilang K12 na paaralan ang mayroon sa United States of America. Ang sagot ay humigit-kumulang 100,000. Ngayon hilingin sa mga mag-aaral na hulaan kung ilan sa mga K12 na paaralang iyon ang nag-aalok ng kurso sa computer science. Ang sagot ay mas mababa sa 1 sa 4 na paaralan. Nangangahulugan iyon na wala pang 25% ng populasyon ng US ang may pagkakataong matuto ng computer science sa paaralan. Itanong sa mga mag-aaral: paano ito nakakaapekto sa kakayahan ng kabataan na makuha ang kanilang pinapangarap na trabaho o makapasok sa kanilang gustong kolehiyo, kung wala silang karanasan sa computer? At ang problemang ito ay umiiral hindi lamang sa US, ngunit sa buong mundo.\n\nIpaliwanag na sa buong mundo, ang mga kabataan tulad ng mga mag-aaral mo ay nakikilahok sa Hour of Code bilang paraan upang magkaroon ng kamalayan sa kawalan ng hustisyang ito -- ang kawalan ng access sa edukasyon sa computer science. Ang klase mo ay makikibahagi, hindi lamang para matutunan ang mga pangunahing kaalaman sa CS at magkaroon ng kaunting kasiyahan -- ngunit pati na rin manindigan at gamitin ang boses upang magsalita tungkol sa kahalagahan ng CS para sa lahat."
+        },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
-          "name": "Flappy Code"
+          "name": "Flappy Code",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Gumawa ng Flappy Game](https://studio.code.org/flappy/1) na tutorial. \n\nDepende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang: \n\n-   Sa mga mag-aaral sa middle at high school, iminumungkahi naming pumili ka ng mga tutorial na nagbibigay-daan sa libreng paglalaro at paglikha ng mga app o laro. Maaari mong hayaang magtrabaho ang mga mag-aaral na nag-iisa o nang pares o maliliit na grupo. Maraming iba pang mga tutorial sa [code.org/learn](http://code.org/learn) na nagbibigay-daan sa libreng paggawa, kabilang ang [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) at ang aming bagong beta tool [AppLab](https://code.org/educate/applab).\n-   Sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares o napakaliit na grupo (tatlo hanggang apat na mag-aaral bawat isa) at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Sa mga nag-aaral na nasa hustong gulang, ang tutorial na [Isulat ang iyong unang computer program](https://studio.code.org/hoc/1) ay gumagana nang mahusay alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
+          "name": "Panayam",
+          "description": "Magsagawa ng \"Magpalitan at Makipag-usap.\" Hilingin sa mga mag-aaral na ibahagi ang kanilang laro, app o huling produkto sa kaibigan para sa feedback. Pagkatapos ay magpalitan at tingnan ang app o laro ng partner. Hilingin sa ilang grupo na ibahagi ang kanilang karanasan: ano ang natutunan mo tungkol sa kung paano gumagana ang mga app at laro ngayon? Anong pakiramdam mo na nagkaroon ng pagkakataong mag-aral ng computer science?"
+        },
+        "ca7d5e61-0396-4885-934c-0d70ab63b072": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng isang [sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
+          "name": "Magsalita",
+          "description": "Hamunin ang mga mag-aaral na magbahagi ng ilang aspeto ng kanilang karanasan sa Hour of Code sa social media gamit ang #hourofcode bilang paraan upang iparinig ang mga boses nila sa kilusang ito sa buong mundo. Maaaring ibahagi ng mga mag-aaral ang kanilang laro, mga larawan, mga video o ang kanilang mga saloobin."
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
+        },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
         },
         "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
@@ -149,6 +266,7 @@
           ]
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
@@ -162,75 +280,155 @@
           "name": "Pagmumuni-muni",
           "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
+        "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n_Sabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?”_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
+        },
+        "e841a687-1da5-46c7-b31e-42629fe0377c": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na naiintindihan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming,\" at \"debugging.\"\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer. \n-   Ang **Programming**, gayundin, nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error."
         },
         "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Sa mga batang nag-aaral, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto! "
           ]
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
-          "name": "Maze"
+          "name": "Maze",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Isulat ang iyong unang computer program](https://studio.code.org/hoc/1) na tutorial.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Para sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares o napakaliit na grupo (tatlo hanggang apat na mag-aaral bawat isa) at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Para sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Angry Birds, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Gumawa ng Flappy Game](https://studio.code.org/flappy/1) na mga tutorial.\n-   Para sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [Isulat ang iyong unang computer program](https://studio.code.org/hoc/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "50db3674-3387-4932-ba7e-c9f176ebd976": {
+          "name": "Panayam",
+          "description": "Hilingin ang mga mag-aaral na magbulay-bulay sa mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Sa pag-debug? Anong pakiramdam nila sa computer science at code pagkatapos gumugol ng isang oras sa pagtuklas nito?"
+        },
+        "46f387e2-c275-4c57-acec-c9709e7f44fc": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "c00f4730-69b0-4533-bf47-253647c6715f": {
+          "description": "Bigyan ang bawat mag-aaral ng [“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at sabihin sa kanila na ibuod ang kanilang natutunan ngayon, anong nadama nila, o kung ano ang kanilang naranasan. Ang mga mag-aaral ay maaaring gumuhit, magsulat o magpahayag ng kanilang sarili sa anumang paraan na sa tingin nila ay komportable. Mangolekta ng \"Exit Ticket\" mula sa bawat mag-aaral sa kanilang paglabas ng silid. Kung gusto mo, maaari mong i-post ang “Mga Exit Ticket” sa bulletin board o ilang lugar na kilala sa paaralan bilang paalala ng Hour of Code mo."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang mga kursong [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5)**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanilang mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal."
+        },
+        "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
+          "name": "Mga Pagsasaayos para sa mga Guro ng K-2",
+          "description": "-   Ilabas na ang unang antas ng aktibidad sa mga screen ng computer ng mga mag-aaral kapag sinimulan na nila ang aktibidad.\n-   Kung maaari, paupuin ang mga mag-aaral na malayo sa mga computer habang ipinapaliwanag ang mga direksiyon sa aktibidad.\n-   Ipaliwanag ang 3 command na kayang gawin ng ibon: sumulong, lumiko pakanan, at lumiko pakaliwa.\n-   Gumawa ng live na halimbawa ng unang 3 antas. Subukang maglagay ng tape sa sahig para magmukha itong maze ng ibon. I-modelo ang mga command at pagkatapos ay pumili ng 1 o 2 boluntaryong mag-aaral na magmodelo sa klase.\n-   Hayaang mag pair program ang mga mag-aaral sa pamamagitan ng pagpapa-upo sa 2 mag-aaral sa parehong computer. Hayaang maging \"1\" ang taong kumokontrol sa mouse at keyboard at ang ibang mag-aaral na nagbibigay ng mga mungkahi, sinasabi ang mga error, at nagtatanong ay “2.\" Tuwing 5 minuto, hayaang magpalitan ng tungkulin ang mga mag-aaral.\n-   Magsanay sa pag-click at pag-drag ng mga block bago subukang lutasin ang alinman sa mga palaisipan. Gayundin, magsanay sa pag-drag ng mga block patungo sa basurahan."
+        },
+        "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            null
+            "Kung mayroon kang oras o kung kailangan ng mga mag-aaral mo ng kaunti pang background na impormasyon, maaari mong isaalang-alang ang pagbibigay ng [\"Ang Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher) bago ang iyong Hour of Code event. Ang maikling araling ito ay nagpapakilala sa mga mag-aaral sa ideya ng computer-assisted drawing, na magse-set up sa kanila sa higit pang tagumpay gamit ang [Code Kasama sina Anna at Elsa na tutorial](https://studio.code.org/s/frozen/stage/1/puzzle/1)."
           ]
+        },
+        "46e7088b-b207-46ae-be95-3ceacecc3f35": {
+          "description": "_Sabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?”_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video](https://hourofcode.com/us/resources#videos). Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
+        "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pangalanan ang ilang mga trabahong narinig nila na nauugnay sa coding. Maaaring banggitin ng mga mag-aaral ang mga bagay tulad ng \"programmer\", \"computer scientist\", \"developer ng software,\" o \"engineer\". Ilagay ang mga tugon ng mag-aaral sa board ng \"Computer Science\" mo, na gumagawa ng mind map ng impormasyong ibinabahagi ng mga mag-aaral.\n\n_Sabihin: “Tama kayo! Walang tama o maling sagot dito... halos anumang trabaho sa panahon ngayon ay mayroong ilang uri ng kaalaman sa code. Bagama't marami, maraming karera na nangangailangan ng kaalaman sa coding, ang pag-aaral sa code ay bagay na magagawa ng sinuman. At gagawin natin ito ngayon. Ang mga gagawin natin ngayon ay maaaring hindi kaagad ganoon, ngunit lahat ng natutunan mo ngayon ay maaaring humantong sa paggawa ng susunod na Angry Birds o Twitter.”_"
+        },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
-          "name": "Mag-code kasama sina Anna at Elsa"
+          "name": "Mag-code kasama sina Anna at Elsa",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Code Kasama sina Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) na tutorial.\n\nDepende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang: \n\n-   Para sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares o napakaliit na grupo (tatlo hanggang apat na mag-aaral bawat isa) at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q). Maaaring mahirapan ang mga mag-aaral sa mga baitang K-5 sa matematika sa tutorial (nangangailangan ito ng pangunahing kaalaman sa pagsukat ng anggulo). Kung ang mga mag-aaral mo ay mas bata, isaalang-alang ang pagbibigay ng suplementong lesson plan, [\"Ang Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher) upang ipakilala ang mga pangunahing kaalaman bago mo gawin ang Hour of Code mo.\n-   Para sa mga matatandang mag-aaral, nalaman namin na gumagana nang maayos ang pagtatrabaho nang independiyente sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Frozen, maaari silang makakuha ng katulad na karanasan sa tutorial na [Isulat ang Unang Computer Program Mo](https://studio.code.org/hoc/1).\n-   Para sa mga nag-aaral na nasa hustong gulang, ang [Code kasama sina Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) ay gumagana nang mahusay alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
-            null
+            "Siguraduhing laruin mo ang tutorial, bago hilingin sa mga mag-aaral mo na subukan ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "da8b52b2-8db6-440d-add3-8578161f59e2": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "38799019-2b81-4c28-a239-762b90e0f5e3": {
+          "name": "Panayam",
+          "description": "Bigyan ang bawat mag-aaral ng ilang sticky note o notecard. Magsagawa ng mabilisang aktibidad ng [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Magbigay ng prompt na maraming sagot gaya ng \"Ibahagi ang bagay na talagang nagustuhan mo tungkol sa aktibidad ng Hour of Code na iyong natapos\" o \"Ibahagi ang ilang mga kasanayang natutunan mo ngayon.\"\n-   Ipasulat sa mga mag-aaral ang pinakamaraming sagot hangga't maaari, isang ideya sa bawat sticky note o note card.\n    “Humagupit” sa paligid ng silid, na tumatawag sa isang mag-aaral ng paunti-unti. Hayaan ang mga mag-aaral na ibahagi ang isa sa kanilang mga sagot. Kapag tinawag, hindi dapat ulitin ng mga mag-aaral ang tugon; kailangan nilang magdagdag ng bago.\n-   Pagkatapos makumpleto ang pag-ikot, sabihin sa mga mag-aaral na talakayin kung aling mga ideya at tema ang higit na lumitaw sa kanilang mga tugon."
+        },
+        "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng isang [sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   Magsaliksik ng ilan sa mga karera sa coding na natukoy mo ngayon. Maghanap ng mga mapagkukunan sa pagpaplano ng mga proyekto sa pananaliksik sa karera sa [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
+        },
+        "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n**Sabihin:** _Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Kahit Sino Matututo](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
+        "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pag-isipan kung ano ang magiging mainam na susunod nilang hakbang pagkatapos ng graduation sa high school. Hilingin sa mga mag-aaral na itaas ang kanilang kamay kung naniniwala sila na ang susunod na hakbang ay nangangailangang gumamit sila ng computer. Dapat magtaas ng kamay ang lahat, dahil nasa paligid natin ang mga computer...sa ating mga telepono, sa ating mga sasakyan, kahit sa ating mga microwave at dishwasher!\n\nHilingin sa mga mag-aaral na hulaan kung ilang K12 na paaralan ang mayroon sa United States of America. Ang sagot ay humigit-kumulang 100,000. Ngayon hilingin sa mga mag-aaral na hulaan kung ilan sa mga K12 na paaralang iyon ang nag-aalok ng kurso sa computer science. Ang sagot ay mas mababa sa 1 sa 4 na paaralan. Nangangahulugan iyon na wala pang 25% ng populasyon ng US ang may pagkakataong matuto ng computer science sa paaralan. Itanong sa mga mag-aaral: paano ito nakakaapekto sa kakayahan ng kabataan na makuha ang kanilang pinapangarap na trabaho o makapasok sa kanilang gustong kolehiyo, kung wala silang karanasan sa computer? At ang problemang ito ay umiiral hindi lamang sa US, ngunit sa buong mundo.\n\nIpaliwanag na sa buong mundo, ang mga kabataan tulad ng mga mag-aaral mo ay nakikilahok sa Hour of Code bilang paraan upang magkaroon ng kamalayan sa kawalan ng hustisyang ito -- ang kawalan ng access sa edukasyon sa computer science. Ang klase mo ay makikibahagi, hindi lamang para matutunan ang mga pangunahing kaalaman sa CS at magkaroon ng kaunting kasiyahan -- ngunit pati na rin manindigan at gamitin ang boses upang magsalita tungkol sa kahalagahan ng CS para sa lahat."
+        },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
-          "name": "Ice Age na Play Lab"
+          "name": "Ice Age na Play Lab",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1)  na tutorial. \n\nDepende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang: \n\n-   Sa mga mag-aaral sa middle at high school, iminumungkahi naming pumili ka ng mga tutorial na nagbibigay-daan sa libreng paglalaro at paglikha ng mga app o laro. Maaari mong hayaang magtrabaho ang mga mag-aaral na nag-iisa o nang pares o maliliit na grupo. Maraming iba pang mga tutorial sa [code.org/learn](http://code.org/learn) na nagbibigay-daan sa libreng paggawa, kabilang na ang [Gumawa ng Flappy Game](https://studio.code.org/s/flappy) at ang aming bagong beta tool [AppLab](https://code.org/educate/applab).\n-   Sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares o napakaliit na grupo (tatlo hanggang apat na mag-aaral bawat isa) at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Sa mga nag-aaral na nasa hustong gulang, ang tutorial na [Isulat ang iyong unang computer program](https://studio.code.org/hoc/1) ay gumagana nang mahusay alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
-            null
+            "Siguraduhing laruin mo ang tutorial, bago hilingin sa mga mag-aaral mo na subukan ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
+          "name": "Panayam",
+          "description": "Magsagawa ng \"Magpalitan at Makipag-usap.\" Hilingin sa mga mag-aaral na ibahagi ang kanilang laro, app o huling produkto sa kaibigan para sa feedback. Pagkatapos ay magpalitan at tingnan ang app o laro ng partner. Hilingin sa ilang grupo na ibahagi ang kanilang karanasan: ano ang natutunan mo tungkol sa kung paano gumagana ang mga app at laro ngayon? Anong pakiramdam mo na nagkaroon ng pagkakataong mag-aral ng computer science?"
+        },
+        "3d63393a-9146-4027-8783-247e19637d25": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng isang [sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
+          "name": "Magsalita",
+          "description": "Hamunin ang mga mag-aaral na magbahagi ng ilang aspeto ng kanilang karanasan sa Hour of Code sa social media gamit ang #hourofcode bilang paraan upang iparinig ang mga boses nila sa kilusang ito sa buong mundo. Maaaring ibahagi ng mga mag-aaral ang kanilang laro, mga larawan, mga video o ang kanilang mga saloobin."
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang apat na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
+        },
+        "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
@@ -239,6 +437,7 @@
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
@@ -253,63 +452,166 @@
           "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n**Sabihin:** “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?\\_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan.",
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dd7bde99-d360-4587-8d30-75383b930808": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na naiintindihan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" “events” at \"debugging.\"\n\nBigyang-kahulugan:\n\n-   Ang Coding ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer. \n-   Ang Programming, gayundin, nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang Debugging ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.",
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto!"
           ]
         },
         "88489303-1952-49c3-914a-2cfa7a138778": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "Ipakita sa mga mag-aaral ang isa o pareho sa mga sumusunod na video bilang panimula sa mga anggulo:\n\n**Introduksiyon ng Artist - Video ng Mag-aaral** (1.5 minuto ang haba)\n\n**Mga Pagliko at Anggulo - Video ng Mag-aaral** (2 minuto ang haba) \n\nGamitin ang **Mga Pagliko at Anggulo - Student Handout** upang ipakita sa mga mag-aaral ang panloob kumpara sa panlabas na mga anggulo sa iba't ibang hugis. Ang dokumentong ito ay maaaring gamitin bilang hand out o maaari mong piliing i-print ito bilang poster para sanggunian ng mga mag-aaral. \n\nTalakayin ang mga parisukat at tatsulok na hugis mula sa dokumento. \n\n-   Paano mo iko-code ang computer para iguhit ang hugis na iyon? \n-   Anong pagkakasunud-sunod ang kailangan ng mga tagubilin? \n\nSabihin sa mga mag-aaral na sa mga palaisipang ito ay magpapagalaw sila ng karakter na nag-iiwan ng linya saanman siya magpunta. Ang mga mag-aaral ay magsusulat ng code na makakakuha ng karakter upang gumuhit ng iba't ibang mga hugis, kabilang ang parisukat."
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
-          "name": "Artista"
+          "name": "Artista",
+          "description": "Sa hanay ng mga puzzle na ito, ang artist ay hindi malilimitahan sa 90 degree na mga anggulo. Ang pagkakaroon ng mga protractor ay makakatulong sa mga mag-aaral na mas mailarawan ang mga anggulo na kailangan nila. Kung hindi, ang entablado ay nagbibigay ng mga larawan ng mga anggulo habang pinipili ng mag-aaral kung aling anggulo ang gagamitin. (Pakitandaan: Ang mga pagpipilian sa anggulo ay limitado sa dalawa sa loob ng dropdown na menu, na binabawasan ang bilang ng mga opsyon na kailangang gawin ng mga mag-aaral.) \n\nBago papuntahin ang mga mag-aaral sa mga computer upang gumawa ng mga palaisipan, maaaring kapaki-pakinabang na magbigay ng maikling presentasyon kung paano gamitin ang mga tool sa antas na ito. Inirerekomenda namin ang palaisipan 5 bilang magandang palaisipan upang ipakita kung paano gamitin ang protractor online."
+        },
+        "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin itong [Artist](https://studio.code.org/s/artist/lessons/1/levels/1) na aktibidad.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Para sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Para sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Minecraft, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [Artist](https://studio.code.org/s/artist/lessons/1/levels/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o pares na aktibidad sa programming."
+        },
+        "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](<>)."
+        },
+        "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
+          "description": "#### Debrief\n\nHilingin sa mga mag-aaral na pagnilayan ang mga gawain sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Debugging?\n\n-   Ano ang mga panloob na anggulo na bumubuo sa isang parisukat. Paano ang tungkol sa isang tatsulok?\n-   Mag-sketch ng isang simpleng hugis sa iyong papel at isipin ang code na ginamit upang iguhit ito. Maaari mo bang isulat ang code na iyon sa tabi ng hugis?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa paggalugad?\n\n#### Ipagdiwang\n\nIpaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil ang linggong ito ay CS Education Week, at milyon-milyong iba pang mga mag-aaral sa buong mundo ang nakikilahok din sa Hour of Code ngayong linggo. Batiin ang mga mag-aaral sa pagiging bahagi ng kilusang ito sa buong mundo.\n\nBigyan ang bawat mag-aaral ng [sertipiko](https://studio.code.org/certificates/batch) na may pangalan niya.\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang mga opsyon sa pagpapatuloy sa pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano ang susunod sa silid-aralan mo."
+        },
+        "532c3e19-487f-44e0-97ff-a71886e169f2": {
+          "description": "#### Higit pa sa Hour of Code\n\nPagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa kanilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   **Bisitahin ang [Maaari kang Magturo ng Computer Science](https://studio.code.org/courses?view=teacher)** para sa higit pang mga mungkahi sa kurso.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa boluntaryo sa aming [mapa ng boluntaryo](https://code.org/volunteer/local)\n\nGamitin ang sumusunod na aktibidad upang mapahusay ang pagkatuto ng mag-aaral. Maaari itong gamitin bilang mga aktibidad sa labas ng klase o iba pang pagpapayaman.\n\n**Ang Copy Machine**\n\n-   Bigyan ang mga mag-aaral ng dalawang piraso ng papel\n-   Sa isang sheet gumuhit ng simpleng imahe, gamit lamang ang mga tuwid na linya.\n-   Sa pangalawang sheet gumuhit ng mga tagubilin para sa muling paglikha ng imaheng iyon ng mga utos na gumalaw nang tuwid at lumiko sa iba't ibang anggulo.\n-   Mga sheet ng tagubilin sa trade at subukan na muling likhain ang imahe gamit lamang ang ibinigay na mga tagubilin."
+        },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n**Sabihin:** _Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Kahit Sino Matututo](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
+        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pag-isipan kung ano ang magiging mainam na susunod nilang hakbang pagkatapos ng graduation sa high school. Hilingin sa mga mag-aaral na itaas ang kanilang kamay kung naniniwala sila na ang susunod na hakbang ay nangangailangang gumamit sila ng computer. Dapat magtaas ng kamay ang lahat, dahil nasa paligid natin ang mga computer...sa ating mga telepono, sa ating mga sasakyan, kahit sa ating mga microwave at dishwasher!\n\nHilingin sa mga mag-aaral na hulaan kung ilang K12 na paaralan ang mayroon sa United States of America. Ang sagot ay humigit-kumulang 100,000. Ngayon hilingin sa mga mag-aaral na hulaan kung ilan sa mga K12 na paaralang iyon ang nag-aalok ng kurso sa computer science. Ang sagot ay mas mababa sa 1 sa 4 na paaralan. Nangangahulugan iyon na wala pang 25% ng populasyon ng US ang may pagkakataong matuto ng computer science sa paaralan. Itanong sa mga mag-aaral: paano ito nakakaapekto sa kakayahan ng kabataan na makuha ang kanilang pinapangarap na trabaho o makapasok sa kanilang gustong kolehiyo, kung wala silang karanasan sa computer? At ang problemang ito ay umiiral hindi lamang sa US, ngunit sa buong mundo.\n\nIpaliwanag na sa buong mundo, ang mga kabataan tulad ng mga mag-aaral mo ay nakikilahok sa Hour of Code bilang paraan upang magkaroon ng kamalayan sa kawalan ng hustisyang ito -- ang kawalan ng access sa edukasyon sa computer science. Ang klase mo ay makikibahagi, hindi lamang para matutunan ang mga pangunahing kaalaman sa CS at magkaroon ng kaunting kasiyahan -- ngunit pati na rin manindigan at gamitin ang boses upang magsalita tungkol sa kahalagahan ng CS para sa lahat."
+        },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
-          "name": "Gumball na Play Lab"
+          "name": "Gumball na Play Lab",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1) na tutorial. \n\nDepende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang: \n\n-   Sa mga mag-aaral sa middle at high school, iminumungkahi naming pumili ka ng mga tutorial na nagbibigay-daan sa libreng paglalaro at paglikha ng mga app o laro. Maaari mong hayaang magtrabaho ang mga mag-aaral na nag-iisa o nang pares o maliliit na grupo. Maraming iba pang mga tutorial sa [code.org/learn](http://code.org/learn) na nagbibigay-daan sa libreng paggawa, kabilang na ang [Gumawa ng Flappy Game](https://studio.code.org/s/flappy) at ang aming bagong beta tool [AppLab](https://code.org/educate/applab).\n-   Sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares o napakaliit na grupo (tatlo hanggang apat na mag-aaral bawat isa) at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Sa mga nag-aaral na nasa hustong gulang, ang tutorial na [Isulat ang iyong unang computer program](https://studio.code.org/hoc/1) ay gumagana nang mahusay alinman bilang independiyenteng hamon o aktibidad sa pair programming."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
-            null
+            "Siguraduhing laruin mo ang tutorial, bago hilingin sa mga mag-aaral mo na subukan ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "Panayam",
+          "description": "Magsagawa ng \"Magpalitan at Makipag-usap.\" Hilingin sa mga mag-aaral na ibahagi ang kanilang laro, app o huling produkto sa kaibigan para sa feedback. Pagkatapos ay magpalitan at tingnan ang app o laro ng partner. Hilingin sa ilang grupo na ibahagi ang kanilang karanasan: ano ang natutunan mo tungkol sa kung paano gumagana ang mga app at laro ngayon? Anong pakiramdam mo na nagkaroon ng pagkakataong mag-aral ng computer science?"
+        },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng isang [sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "59cd05df-cb4d-4280-8700-840826c01845": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
+          "name": "Magsalita",
+          "description": "Hamunin ang mga mag-aaral na magbahagi ng ilang aspeto ng kanilang karanasan sa Hour of Code sa social media gamit ang #hourofcode bilang paraan upang iparinig ang mga boses nila sa kilusang ito sa buong mundo. Maaaring ibahagi ng mga mag-aaral ang kanilang laro, mga larawan, mga video o ang kanilang mga saloobin."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang apat na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
         },
         "acc2ced5-83ed-4926-9830-f5bd846136a1": {
           "tips": [
-            null
+            "Kung mayroon kang oras at nais mong ihanda ng iyong mga mag-aaral sa aktibidad na hindi naka-plug, isaalang-alang ang [\"Sayawan: Di naka-plug\"](https://studio.code.org/s/dance-unplugged/lessons/1) bago ang Hour of Code event mo. Nagpapakilala ang maikling araling ito sa mga mag-aaral sa ideya ng mga pangyayari na nagpapasimula sa iba't ibang pagkilos sa sayaw."
           ]
+        },
+        "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
+          "description": "Ngayon ay gagawa tayo ng bagay na talagang malikhain. Ano ang paborito mong paraan para maging malikhain?"
+        },
+        "ce2578c2-46c6-40c2-8ceb-d05fe1737802": {
+          "description": "Hikayatin ang mga mag-aaral na ibahagi ang mga paraan nila ng pagkamalikhain, tulad ng sining, sayaw, musika, pagsusulat."
         },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video](https://hourofcode.com/promote/resources#videos). Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
+        },
+        "e51e34df-5370-43a4-bae5-14d2ba49a932": {
+          "description": "Ipaliwanag na ngayon ay magiging malikhain tayo sa \"code\", na nangangahulugan lamang ng hanay ng mga tagubilin na mauunawaan ng computer. Tulad ng pagpili kung aling mga kulay ang gagamitin, o kung anong mga salita ang isusulat mo na maaaring magpahayag ng pagkamalikhain, ang pagpili kung anong code ang isusulat mo at kung paano nakikipag-ugnayan ang mga tao dito ay maaaring maging pagkakataon upang ipahayag din ang iyong pagkamalikhain! \n\n**Tumayo at sumayaw:** Ihayag sa klase na ngayon ay titingnan natin kung paano pagsasamahin ang coding sa pagsasayaw sa malikhaing mga paraan. Hilingin sa mga anak mo na mag-floss, mag-dab, o gumawa ng sarili nilang malikhaing dance move sa loob ng 10 segundo para gaganahan sila. Maaari kang magpatugtog ng kanta sa [Spotify Playlist (lahat ng edad)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) para makatulong sa pagsisimula. \n\nKunan ng video ang mga galaw ng klase mo.\n\n[](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw)"
+        },
+        "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a": {
+          "name": "Pag-filter ng Musika",
+          "description": "Nagtatampok ang tutorial na ito ng mga kanta mula sa mga sikat na artist. Para makakuha ng preview ng listahan ng kanta sa tutorial na ito, tingnan itong [Spotify Playlist (lahat ng edad)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Gumagamit kami ng mga radio-safe na bersyon ng lahat ng kanta sa mga mag-aaral na wala pang 13 taong gulang."
+        },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Pangkalahatang Suporta",
+          "description": "**Pangkalahatang Suporta:** Bilang guro, ang tungkulin mo ay pangunahing suportahan ang mga mag-aaral habang nagsusumikap sila sa tutorial. Narito ang ilang mga tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang ginagawa\n\n-   **Makipagtulungan sa Mga Katabi:** Hikayatin ang mga mag-aaral na makipag-usap sa katabi kapag sila ay nahirapan. Dahil ang tutorial ay may kasamang mga video at ang mga mag-aaral ay maaaring may suot na headphone, madali itong \"makapagsarili.\" Tumulong na masira ang mga hadlang na iyon sa pamamagitan ng aktibong pagpapares ng mga mag-aaral kung mukhang kailangan nila ng tulong. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang pormal na paghahati-hati ng iyong klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   **Basahin ang Mga Tagubilin:** Ang mga tagubilin ay karaniwang nagbibigay ng mga kapaki-pakinabang na tip sa kung paano kumpletuhin ang antas. Bago kumpletuhin ang antas sa isang mag-aaral tiyakin na aktwal nilang tiningnan nang mabuti ang target na imahe at nabasa ang lahat ng text doon.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Natigil? Maghanap ng mga hint:** Ang bawat antas ay may kasamang hint na may mga karagdagang detalye tungkol sa kung paano makapasa sa antas. Kung sinusubukan ng mga mag-aaral na maipasa ang mga palaisipan nang mabilis, baka makita nila na kailangan lang nilang maghintay ng ilang oras para gumana ang lahat ng code bago magpatuloy. Maraming mga antas ang naglalaman ng pangalawang hint na may mga mungkahi ng mga paraan upang maging mas malikhain sa pamamagitan ng pagpapatagal sa gawain.\n-   **Magpatuloy at Bumalik:** Minsan mas makikinabang ang mga mag-aaral kung babalik sila sa isang mahirap na antas. Ang lahat ng antas ay independyente sa isa't isa, kahit na umaasa ito sa ilang antas sa mga naunang ipinakilalang konsepto.\n-   **Maglaan ng oras at mag-eksperimento.** Kahit na ang unang mga antas ay nagsasabi sa mga mag-aaral kung ano ang kailangan nilang gawin upang makapasa, dapat din na malaya nilang subukan ang kanilang sariling mga ideya."
+        },
+        "4dee8e28-b791-4791-ae95-8276c0da6331": {
+          "description": "#### Antas 1\n\n-   I-drag ang pulang block na `gumawa ng bago` mula sa toolbox sa kaliwa patungo sa workspace sa kanan. Ikonekta ito sa loob ng `setup` na block.\n-   Naisulat mo na ngayon ang unang programa mo. Siguraduhing pindutin ang Run para makita kung ano ang mangyayari. Dapat kang makarinig ng musika at makakita ng karakter na nagsisimulang gumalaw sa lugar ng display."
         },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "description": "#### Antas 2\n\n-   Ang mga berdeng block ay mga block ng event. Ang mga block na ito ay nagsisimula ng bagong pagkakasunud-sunod ng code at hindi kailangang ikonekta sa loob ng `setup` na block. \n-   Ang pagkonekta sa lilang block sa ilalim ng berdeng block ng event ay dapat gawin ang karakter na sumayaw pagkatapos ng bilang ng mga hakbang na ipinakita mo.",
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ]
         },
+        "07b80de8-0e4b-442f-925b-28fcf2ad8760": {
+          "description": "#### Antas 3\n\n-   Tiyaking mailabas ng pangalawang berdeng block ng event. Dapat ay mayroon kang block na `pagkatapos ng 4 na hakbang` at `pagkatapos ng 6 na hakbang` na block sa workspace mo. Parehong dapat ay may purple block na konektado sa ilalim."
+        },
+        "81305b4b-d9a7-4ba2-b809-3ce383c146ab": {
+          "description": "#### Antas 4\n\n-   I-drag ang `itakda ang background effect` na block. \n-   Maaaring ikonekta ang block na ito sa loob ng `setup`, sa ilalim ng event block, o sa parehong lugar!"
+        },
+        "d4133014-cbc7-4f93-aa86-7d54ab8652fe": {
+          "description": "#### Antas 5\n\n-   Gamit ang tamang code, dapat mong makita ang cycle ng mananayaw sa ibang galaw sa bawat 2 hakbang.\n-   Tiyaking mayroong purple na `gawin magpakailanman` na block na konektado sa loob ng `kada 2 hakbang` na block.\n-   Tiyaking nakatakda ang `gawin magpakailanman` na block sa alinman sa (Susunod), (Nakaraan), o (Random). Kung hindi, ang dancer ay isasagawa lamang ang naka-set na galaw nang paulit-ulit."
+        },
+        "d164ed5b-5d98-4dd5-a9bf-e53c8c6ac675": {
+          "description": "#### Antas 6\n\n-   Mag-ingat na iwasang ilagay ang pulang block na `gumawa ng bago` sa loob ng block ng `bawat 2 hakbang`. Magiging sanhi ito ng programa mo na lumikha ng maraming magkakatulad na dancer sa parehong lokasyon. "
+        },
+        "200f7860-0f52-4bb6-b546-e4fa9701dad4": {
+          "description": "#### Antas 7\n\n-   Maraming mga mag-aaral ang magiging pamilyar sa ideya na maaari mong gawin ang bagay na tila mas malayo sa pamamagitan ng pagguhit nito ng mas maliit. Sa antas na ito, gagawa ka ng epektong ito sa pamamagitan ng pagpapaliit ng dalawang dancer sa mga dulo.\n-   Mahalagang tiyakin na ang teal `set` na block ay nakalagay sa sa program _pagkatapos_ nalikha ang dancer. Upang malutas ang palaisipang ito, maglagay ng `set backup_dancer2 laki 50` na block sa ilalim ng `gumawa ng bagong robot na tinatawag backup_dancer2` na block."
+        },
+        "0311d3fc-6b80-4bb1-ab32-34a35ec4f4ba": {
+          "description": "#### Antas 8\n\n-   Tulad ng nakaraang level, siguraduhing gamitin lang ang `itakda ang tint sa (kulay)` na block pagkatapos mong gawin ang dancer sa program mo. Halimbawa, ang paglalagay nito bilang unang hakbang sa lugar ng `setup` ng program mo ay walang epekto."
+        },
+        "cc4443ec-6def-485c-8824-393650850b8f": {
+          "description": "#### Antas 9\n\n-   Binibigyang-daan ng computer science na iproseso ang impormasyon ng input sa mga kagiliw-giliw na uri ng output. Sa antas na ito, matutuklasan ng mga mag-aaral kung paano awtomatikong maa-update ang mga katangian ng dancer batay sa aktwal na tunog ng musika."
+        },
+        "27cd3252-fb06-4b7b-9633-751d95810c95": {
+          "description": "#### Level 10-11\n\n-   Ang mga antas na ito ay tungkol sa paggawa ng sayaw na interactive. Subukan ang bagong event `kapag pinindot` para tumugon ang mga dancer sa mga pagpindot sa key.\n-   Maaari mong gamitin ang mga arrow key sa keyboard ng computer mo o i-click ang orange na mga button sa ilalim ng display area.\n-   Tandaan na ang **code na isinulat ng mga mag-aaral sa mga antas na ito ay hindi sinusuri kung tama**. Nangangahulugan ito na palagi silang papasa sa antas, kahit na hindi nila binago ang program. Hikayatin ang mga mag-aaral na tukuyin sa kanilang sarili kung ginagawa ng code ang inaasahan nila bago magpatuloy."
+        },
+        "f78380b1-0666-40a6-ac50-7adf09cda880": {
+          "name": "Panayam",
+          "description": "-   Maglagay ng prompt na may maraming sagot tulad ng “Ano ang bagay na ikinatuwa mo tungkol sa aktibidad ngayon? ” o “Ano ang koneksiyon sa pagitan ng pagkamalikhain at computer science?\""
+        },
+        "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "456b1d51-129d-43ff-aab9-727995464e36": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang [code.org/learn](<>) para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
         },
         "0600e9df-03bd-4d61-9876-7516a87c2d30": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
+        },
+        "ddc23577-3255-4a14-a11e-77259abc2810": {
+          "description": "Ang Hour of Code ay tungkol sa pagkamalikhain, at hindi kami makapaghintay na makita kung ano ang nilikha mo! Ibahagi ang mga likha ng mag-aaral, mga larawan, at mga video sa social media! Mga guro, i-record ang iyong silid-aralan sa pag-coding ng sayaw, o pagsasayaw ng sayaw. Gawing espesyal ang video mo sa pamamagitan ng pagdaragdag ng [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nTiyaking isama ang #HourOfCode at i-tag kami sa Facebook, Twitter at Instagram. Bonus na puntos sa pag-tag sa artist ng musikang ginamit ng mga mag-aaral mo. Ang Code.org ay ibabahagi ang mga paborito naming post sa milyun-milyon naming tagasubaybay. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Siyempre, siguraduhing igalang ang patakaran sa social media ng iyong paaralan._"
+        },
+        "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
@@ -318,6 +620,7 @@
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
@@ -332,16 +635,17 @@
           "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
         "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at maikling ipakilala ang aktibidad sa araw na iyon. \n\nMatutuwa ang mga mag-aaral sa araling ito. Malamang na karamihan sa mga mag-aaral mo ay narinig na ang Minecraft, ngunit magbigay ng maikling panimula para sa mga hindi pa. Ang Minecraft ay laro ng mga cube. Maaari kang maglaro bilang Alex o Steve habang nagsisikap ka sa mga maze. Kakailanganin mong pumili ng mga item, at tuklasin ang mundong binubuo ng mga cube.\n\n_Sabihin: “Gugugol tayo ngayon ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\"? Ano ang ibig sabihin nito?”_\n\nMaaaring banggitin ng mga mag-aaral na ang isang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto! "
           ]
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
@@ -349,14 +653,30 @@
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
+          "name": "Panayam",
+          "description": "Hilingin ang mga mag-aaral na magbulay-bulay sa mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Sa pag-debug? Anong pakiramdam nila sa computer science at code pagkatapos gumugol ng isang oras sa pagtuklas nito?"
+        },
+        "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](https://studio.code.org/certificates/batch?course=bWM=) na may pangalan niya."
+        },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang [code.org/learn](<>) para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
+          "description": "Bigyan ang bawat mag-aaral ng [“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at sabihin sa kanila na ibuod ang kanilang natutunan ngayon, anong nadama nila, o kung ano ang kanilang naranasan. Ang mga mag-aaral ay maaaring gumuhit, magsulat o magpahayag ng kanilang sarili sa anumang paraan na sa tingin nila ay komportable. Mangolekta ng \"Exit Ticket\" mula sa bawat mag-aaral sa kanilang paglabas ng silid. Kung gusto mo, maaari mong i-post ang “Mga Exit Ticket” sa bulletin board o ilang lugar na kilala sa paaralan bilang paalala ng Hour of Code mo."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan para magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang mga ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa kanilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o personal.\n-   **Bisitahin ang [Maaari kang Magturo ng Computer Science](https://studio.code.org/courses?view=teacher)** para sa higit pang mga mungkahi sa kurso.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [volunteer map](https://code.org/volunteer/local)"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -412,6 +732,10 @@
             null
           ]
         },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
         "3711e1c5-c206-4510-b260-99ee8f061a4c": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
           "tips": [
@@ -419,6 +743,7 @@
           ]
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
@@ -432,6 +757,10 @@
           "name": "Pagmumuni-muni",
           "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
+        "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
           "tips": [
@@ -439,6 +768,7 @@
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
@@ -452,9 +782,13 @@
           "name": "Pagmumuni-muni",
           "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n**Sabihin:** _Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
+        },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
@@ -462,61 +796,113 @@
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "Panayam",
+          "description": "Bigyan ang bawat mag-aaral ng ilang sticky note o notecard. Magsagawa ng mabilisang aktibidad ng [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Magbigay ng prompt na maraming sagot gaya ng \"Ibahagi ang bagay na talagang nagustuhan mo tungkol sa aktibidad ng Hour of Code na iyong natapos\" o \"Ibahagi ang ilang mga kasanayang natutunan mo ngayon.\"\n-   Ipasulat sa mga mag-aaral ang pinakamaraming sagot hangga't maaari, isang ideya sa bawat sticky note o note card.\n    “Humagupit” sa paligid ng silid, na tumatawag sa isang mag-aaral ng paunti-unti. Hayaan ang mga mag-aaral na ibahagi ang isa sa kanilang mga sagot. Kapag tinawag, hindi dapat ulitin ng mga mag-aaral ang tugon; kailangan nilang magdagdag ng bago.\n-   Pagkatapos makumpleto ang pag-ikot, sabihin sa mga mag-aaral na talakayin kung aling mga ideya at tema ang higit na lumitaw sa kanilang mga tugon."
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng isang [sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   Magsaliksik ng ilan sa mga karera sa coding na natukoy mo ngayon. Maghanap ng mga mapagkukunan sa pagpaplano ng mga proyekto sa pananaliksik sa karera sa [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
-          "name": "Panimula"
+          "name": "Panimula",
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n_Sabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?”_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
+        },
+        "3fee530c-6d5f-44da-89f7-cfae73040787": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na naiintindihan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming,\" at \"debugging.\"\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer. \n-   Ang **Programming**, gayundin, nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error."
         },
         "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto! "
           ]
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Tagapaglakbay sa Minecraft",
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "1766511d-3639-46a3-911f-acc7f8c4b922": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "8c990fee-4a0f-4d70-a635-ab66a8195193": {
+          "description": "Bigyan ang bawat mag-aaral ng [“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at sabihin sa kanila na ibuod ang kanilang natutunan ngayon, anong nadama nila, o kung ano ang kanilang naranasan. Ang mga mag-aaral ay maaaring gumuhit, magsulat o magpahayag ng kanilang sarili sa anumang paraan na sa tingin nila ay komportable. Mangolekta ng \"Exit Ticket\" mula sa bawat mag-aaral sa kanilang paglabas ng silid. Kung gusto mo, maaari mong i-post ang “Mga Exit Ticket” sa bulletin board o ilang lugar na kilala sa paaralan bilang paalala ng Hour of Code mo."
+        },
+        "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
+          "name": "Panayam",
+          "description": "Hilingin ang mga mag-aaral na magbulay-bulay sa mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Programming? Sa pag-debug? Anong pakiramdam nila sa computer science at code pagkatapos gumugol ng isang oras sa pagtuklas nito?"
+        },
+        "6b574c8b-2319-4244-acc8-fb8405fa5737": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](https://studio.code.org/certificates/batch?course=bWM=) na may pangalan niya."
+        },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Higit pa sa isang Hour of Code"
         },
+        "366afa8a-feff-4dd4-a415-03a04e01e897": {
+          "name": "Paghahanda"
+        },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Kahit Sino Matututo](https://youtu.be/qYZF6oIZtfc).”"
           ]
+        },
+        "2d643de7-7994-4220-8bd4-095aab85e9ec": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pag-isipan kung ano ang magiging mainam na susunod nilang hakbang pagkatapos ng graduation sa high school. Hilingin sa mga mag-aaral na itaas ang kanilang kamay kung naniniwala sila na ang susunod na hakbang ay nangangailangang gumamit sila ng computer. Dapat magtaas ng kamay ang lahat, dahil nasa paligid natin ang mga computer...sa ating mga telepono, sa ating mga sasakyan, kahit sa ating mga microwave at dishwasher!\n\nHilingin sa mga mag-aaral na hulaan kung ilang K12 na paaralan ang mayroon sa United States of America. Ang sagot ay humigit-kumulang 100,000. Ngayon hilingin sa mga mag-aaral na hulaan kung ilan sa mga K12 na paaralang iyon ang nag-aalok ng kurso sa computer science. Ang sagot ay mas mababa sa 1 sa 4 na paaralan. Nangangahulugan iyon na wala pang 25% ng populasyon ng US ang may pagkakataong matuto ng computer science sa paaralan. Itanong sa mga mag-aaral: paano ito nakakaapekto sa kakayahan ng kabataan na makuha ang kanilang pinapangarap na trabaho o makapasok sa kanilang gustong kolehiyo, kung wala silang karanasan sa computer? At ang problemang ito ay umiiral hindi lamang sa US, ngunit sa buong mundo.\n\nIpaliwanag na sa buong mundo, ang mga kabataan tulad ng mga mag-aaral mo ay nakikilahok sa Hour of Code bilang paraan upang magkaroon ng kamalayan sa kawalan ng hustisyang ito -- ang kawalan ng access sa edukasyon sa computer science. Ang klase mo ay makikibahagi, hindi lamang para matutunan ang mga pangunahing kaalaman sa CS at magkaroon ng kaunting kasiyahan -- ngunit pati na rin manindigan at gamitin ang boses upang magsalita tungkol sa kahalagahan ng CS para sa lahat."
         },
         "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
           "name": "Play Lab"
         },
         "d430e170-dccc-4c02-bcfe-5084169a154b": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "e3b1f4b9-8255-4d48-a28b-f08a1ed7afde": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
+          "name": "Panayam",
+          "description": "Magsagawa ng \"Magpalitan at Makipag-usap.\" Hilingin sa mga mag-aaral na ibahagi ang kanilang laro, app o huling produkto sa kaibigan para sa feedback. Pagkatapos ay magpalitan at tingnan ang app o laro ng partner. Hilingin sa ilang grupo na ibahagi ang kanilang karanasan: ano ang natutunan mo tungkol sa kung paano gumagana ang mga app at laro ngayon? Anong pakiramdam mo na nagkaroon ng pagkakataong mag-aral ng computer science?"
+        },
+        "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "513a07e1-551a-45d3-bd35-7e1de49293a2": {
+          "name": "Magsalita",
+          "description": "Hamunin ang mga mag-aaral na magbahagi ng ilang aspeto ng kanilang karanasan sa Hour of Code sa social media gamit ang #hourofcode bilang paraan upang iparinig ang mga boses nila sa kilusang ito sa buong mundo. Maaaring ibahagi ng mga mag-aaral ang kanilang laro, mga larawan, mga video o ang kanilang mga saloobin."
         },
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Panimula",
@@ -543,6 +929,10 @@
         "2113da19-595f-418e-be70-5219f0b47aa8": {
           "progression_name": "Ibahagi ang App Mo"
         },
+        "9d3ef78a-4043-489e-898b-f407c914f698": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
           "tips": [
@@ -550,6 +940,7 @@
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
@@ -563,21 +954,35 @@
           "name": "Pagmumuni-muni",
           "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
+        "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "Paghahanda",
+          "description": "#### Paghahanda\n\nBatiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n**Sabihin:** “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?\\_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
+        },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
-            null
+            "Siguraduhing laruin mo ang tutorial, bago hilingin sa mga mag-aaral mo na subukan ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "Panayam",
+          "description": "Bigyan ang bawat mag-aaral ng ilang sticky note o notecard. Magsagawa ng mabilisang aktibidad ng [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Magbigay ng prompt na maraming sagot gaya ng \"Ibahagi ang bagay na talagang nagustuhan mo tungkol sa aktibidad ng Hour of Code na iyong natapos\" o \"Ibahagi ang ilang mga kasanayang natutunan mo ngayon.\"\n-   Ipasulat sa mga mag-aaral ang pinakamaraming sagot hangga't maaari, isang ideya sa bawat sticky note o note card.\n    “Humagupit” sa paligid ng silid, na tumatawag sa isang mag-aaral ng paunti-unti. Hayaan ang mga mag-aaral na ibahagi ang isa sa kanilang mga sagot. Kapag tinawag, hindi dapat ulitin ng mga mag-aaral ang tugon; kailangan nilang magdagdag ng bago.\n-   Pagkatapos makumpleto ang pag-ikot, sabihin sa mga mag-aaral na talakayin kung aling mga ideya at tema ang higit na lumitaw sa kanilang mga tugon."
+        },
+        "16a6a4db-d853-478e-9945-3f0d17865e80": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng isang [sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang anim na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   Magsaliksik ng ilan sa mga karera sa coding na natukoy mo ngayon. Maghanap ng mga mapagkukunan sa pagpaplano ng mga proyekto sa pananaliksik sa karera sa [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
@@ -641,12 +1046,12 @@
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Panimula",
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto!"
           ]
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
@@ -660,34 +1065,58 @@
             null
           ]
         },
+        "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon. \n\n_Sabihin: “Ngayon ay maglalaan tayo ng isang oras sa pag-aaral ng code. May nakarinig na ba dito ng terminong \"code\" dati? Ano ang ibig sabihin nito?”_ \n\nMaaaring banggitin ng mga mag-aaral na ang “code” ay parang lihim na mensahe, o may kaugnayan ito sa mga computer sa ilang paraan."
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Kahit Sino Matututo](https://youtu.be/qYZF6oIZtfc).”"
           ]
+        },
+        "82e4a494-65fb-40ac-b2c2-323044e15b77": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay hanay ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming\" at \"debugging\".\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin para sa computer.\n-   Ang **Programming**, gayundin, ay nangangahulugang sumulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online na tutorial) o gamit ang panulat at papel (kung gumagamit ka ng hindi naka-plug na aktibidad).\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n\nHilingin sa mga mag-aaral na pag-isipan kung ano ang magiging mainam na susunod nilang hakbang pagkatapos ng graduation sa high school. Hilingin sa mga mag-aaral na itaas ang kanilang kamay kung naniniwala sila na ang susunod na hakbang ay nangangailangang gumamit sila ng computer. Dapat magtaas ng kamay ang lahat, dahil nasa paligid natin ang mga computer...sa ating mga telepono, sa ating mga sasakyan, kahit sa ating mga microwave at dishwasher!\n\nHilingin sa mga mag-aaral na hulaan kung ilang K12 na paaralan ang mayroon sa United States of America. Ang sagot ay humigit-kumulang 100,000. Ngayon hilingin sa mga mag-aaral na hulaan kung ilan sa mga K12 na paaralang iyon ang nag-aalok ng kurso sa computer science. Ang sagot ay mas mababa sa 1 sa 4 na paaralan. Nangangahulugan iyon na wala pang 25% ng populasyon ng US ang may pagkakataong matuto ng computer science sa paaralan. Itanong sa mga mag-aaral: paano ito nakakaapekto sa kakayahan ng kabataan na makuha ang kanilang pinapangarap na trabaho o makapasok sa kanilang gustong kolehiyo, kung wala silang karanasan sa computer? At ang problemang ito ay umiiral hindi lamang sa US, ngunit sa buong mundo.\n\nIpaliwanag na sa buong mundo, ang mga kabataan tulad ng mga mag-aaral mo ay nakikilahok sa Hour of Code bilang paraan upang magkaroon ng kamalayan sa kawalan ng hustisyang ito -- ang kawalan ng access sa edukasyon sa computer science. Ang klase mo ay makikibahagi, hindi lamang para matutunan ang mga pangunahing kaalaman sa CS at magkaroon ng kaunting kasiyahan -- ngunit pati na rin manindigan at gamitin ang boses upang magsalita tungkol sa kahalagahan ng CS para sa lahat."
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney Infinity na Play Lab"
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
-            null
+            "Siguraduhing laruin mga napili mong tutorial, bago hilingin sa iyong mga mag-aaral na subukan ang mga ito. Sa ganoong paraan malalaman mo kung ano ang aasahan at makakagawa ka ng mga pagpapasya kung hahayaan ang mga mag-aaral na pumili ng sarili nilang tutorial, o kung gusto mong magtalaga ng mga tutorial batay sa mga pangangailangan ng mag-aaral."
           ]
         },
+        "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, maaari silang sumubok ng isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](http://code.org/learn)."
+        },
+        "a0530acf-3bce-4de9-b392-fe8725044086": {
+          "name": "Panayam",
+          "description": "Magsagawa ng \"Magpalitan at Makipag-usap.\" Hilingin sa mga mag-aaral na ibahagi ang kanilang laro, app o huling produkto sa kaibigan para sa feedback. Pagkatapos ay magpalitan at tingnan ang app o laro ng partner. Hilingin sa ilang grupo na ibahagi ang kanilang karanasan: ano ang natutunan mo tungkol sa kung paano gumagana ang mga app at laro ngayon? Anong pakiramdam mo na nagkaroon ng pagkakataong mag-aral ng computer science?"
+        },
+        "ceaf9d96-e806-48e1-9a95-30566999264e": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "2742e426-46e4-46d9-8e04-314c3469f15e": {
+          "name": "Magsalita",
+          "description": "Hamunin ang mga mag-aaral na magbahagi ng ilang aspeto ng kanilang karanasan sa Hour of Code sa social media gamit ang #hourofcode bilang paraan upang iparinig ang mga boses nila sa kilusang ito sa buong mundo. Maaaring ibahagi ng mga mag-aaral ang kanilang laro, mga larawan, mga video o ang kanilang mga saloobin."
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
-          "name": "Higit pa sa isang Hour of Code"
+          "name": "Higit pa sa isang Hour of Code",
+          "description": "Pagkatapos ng Hour of Code mo, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   **Ituro ang [Mga Batayan ng Code Studio Computer Science](http://code.org/educate/k5) na mga kurso**. Ang apat na kursong ito ay idinisenyo para sa mga batang mag-aaral. Ang mga mag-aaral ay nagsusumikap sa sarili nilang paraan sa pamamagitan ng serye ng mga palaisipan na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyong mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad para sa mga kursong ito, online o personal.\n-   **Mag-imbita ng eksperto sa computer science na makipag-usap sa klase mo tungkol sa kanyang trabaho**. Walang kakilalang boluntaryo, makipag-ugnayan sa iilan sa [mapa ng boluntaryo](https://code.org/volunteer/local)."
         },
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Panimula",
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa aming [inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
           "tips": [
-            null
+            "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto!"
           ]
         },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
@@ -701,9 +1130,21 @@
             null
           ]
         },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "Paghahanda"
+        },
+        "25621525-b6e8-47f3-bd9b-e574fc307993": {
+          "description": "Hikayatin ang mga mag-aaral na ibahagi ang mga paraan nila ng pagkamalikhain, tulad ng sining, sayaw, musika, pagsusulat."
+        },
+        "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
+          "name": "Pag-filter ng Musika"
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Pangkalahatang Suporta"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ]
         },
         "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
@@ -733,29 +1174,69 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Bilisan Ito, Bagalan Ito"
         },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "name": "Panayam",
+          "description": "-   Maglagay ng prompt na may maraming sagot tulad ng “Ano ang bagay na ikinatuwa mo tungkol sa aktibidad ngayon? ” o “Ano ang koneksiyon sa pagitan ng pagkamalikhain at computer science?\""
+        },
+        "2458fd7f-011d-4251-8877-2e90d5d55684": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Mga susunod na Hakbang"
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
         },
+        "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
-            null
+            "Kung mayroon kang oras at nais mong ihanda ng iyong mga mag-aaral sa aktibidad na hindi naka-plug, isaalang-alang ang [\"Sayawan: Di naka-plug\"](https://curriculum.code.org/hoc/unplugged/4/) bago ang Hour of Code event mo. Nagpapakilala ang maikling araling ito sa mga mag-aaral sa ideya ng mga pangyayari na nagpapasimula sa iba't ibang pagkilos sa sayaw."
           ]
+        },
+        "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
+          "description": "Ngayon ay gagawa tayo ng bagay na talagang malikhain. Ano ang paborito mong paraan para maging malikhain?"
+        },
+        "a88ec05c-98e3-425a-a066-4cbbf37e4af6": {
+          "description": "Hikayatin ang mga mag-aaral na ibahagi ang mga paraan nila ng pagkamalikhain, tulad ng sining, sayaw, musika, pagsusulat."
         },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
-            null
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video](https://hourofcode.com/promote/resources#videos). Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin [Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw)."
           ]
+        },
+        "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
+          "name": "Pag-filter ng Musika"
+        },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Pangkalahatang Suporta",
+          "description": "**Pangkalahatang Suporta:** Bilang guro, ang tungkulin mo ay pangunahing suportahan ang mga mag-aaral habang nagsusumikap sila sa tutorial. Narito ang ilang mga tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang ginagawa\n\n-   **Makipagtulungan sa Mga Katabi:** Hikayatin ang mga mag-aaral na makipag-usap sa katabi kapag sila ay nahirapan. Dahil ang tutorial ay may kasamang mga video at ang mga mag-aaral ay maaaring may suot na headphone, madali itong \"makapagsarili.\" Tumulong na masira ang mga hadlang na iyon sa pamamagitan ng aktibong pagpapares ng mga mag-aaral kung mukhang kailangan nila ng tulong. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang pormal na paghahati-hati ng iyong klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   **Basahin ang Mga Tagubilin:** Ang mga tagubilin ay karaniwang nagbibigay ng mga kapaki-pakinabang na tip sa kung paano kumpletuhin ang antas. Bago kumpletuhin ang antas sa isang mag-aaral tiyakin na aktwal nilang tiningnan nang mabuti ang target na imahe at nabasa ang lahat ng text doon.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Natigil? Maghanap ng mga hint:** Ang bawat antas ay may kasamang hint na may mga karagdagang detalye tungkol sa kung paano makapasa sa antas. Kung sinusubukan ng mga mag-aaral na maipasa ang mga palaisipan nang mabilis, baka makita nila na kailangan lang nilang maghintay ng ilang oras para gumana ang lahat ng code bago magpatuloy. Maraming mga antas ang naglalaman ng pangalawang hint na may mga mungkahi ng mga paraan upang maging mas malikhain sa pamamagitan ng pagpapatagal sa gawain.\n-   **Magpatuloy at Bumalik:** Minsan mas makikinabang ang mga mag-aaral kung babalik sila sa isang mahirap na antas. Ang lahat ng antas ay independyente sa isa't isa, kahit na umaasa ito sa ilang antas sa mga naunang ipinakilalang konsepto.\n-   **Maglaan ng oras at mag-eksperimento.** Kahit na ang unang mga antas ay nagsasabi sa mga mag-aaral kung ano ang kailangan nilang gawin upang makapasa, dapat din na malaya nilang subukan ang kanilang sariling mga ideya."
+        },
+        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "description": "#### Antas 1\n\n-   I-drag ang pulang block na `gumawa ng bago` mula sa toolbox sa kaliwa patungo sa workspace sa kanan. Ikonekta ito sa loob ng `setup` na block.\n-   Naisulat mo na ngayon ang unang programa mo. Siguraduhing pindutin ang Run para makita kung ano ang mangyayari. Dapat kang makarinig ng musika at makakita ng karakter na nagsisimulang gumalaw sa lugar ng display."
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ]
         },
+        "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
+          "name": "Panayam",
+          "description": "-   Maglagay ng prompt na may maraming sagot tulad ng “Ano ang bagay na ikinatuwa mo tungkol sa aktibidad ngayon? ” o “Ano ang koneksiyon sa pagitan ng pagkamalikhain at computer science?\""
+        },
+        "f6bcac9d-cd44-435f-8565-57a5926542f8": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
+        },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
-          "name": "Mga susunod na Hakbang"
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
+          "description": "Ang Hour of Code ay tungkol sa pagkamalikhain, at hindi kami makapaghintay na makita kung ano ang nilikha mo! Ibahagi ang mga likha ng mag-aaral, mga larawan, at mga video sa social media! Mga guro, i-record ang iyong silid-aralan sa pag-coding ng sayaw, o pagsasayaw ng sayaw. Gawing espesyal ang video mo sa pamamagitan ng pagdaragdag ng [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nTiyaking isama ang #HourOfCode at i-tag kami sa Facebook, Twitter at Instagram. Bonus na puntos sa pag-tag sa artist ng musikang ginamit ng mga mag-aaral mo. Ang Code.org ay ibabahagi ang mga paborito naming post sa milyun-milyon naming tagasubaybay. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Siyempre, siguraduhing igalang ang patakaran sa social media ng iyong paaralan._"
         },
         "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
           "description": "Sabihin sa mga estudyante na idagdag ang kanilang “Whip Around” sticky notes o note cards sa iyong \"Computer Science\" mind map kapag lalabas na sila ng pintuan. Subukang sulatan ang board ng magagandang mga ideya tungkol sa kung ano ang CS at bakit mahalaga ito."
@@ -802,8 +1283,8 @@
           "name": "Tapusin Na"
         },
         "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "",
-          "description": ""
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
@@ -812,7 +1293,7 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "",
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n- **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming][0].\n\n- **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n**Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n- **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
@@ -997,10 +1478,20 @@
         "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f": {
           "name": "Pagmumuni-muni"
         },
+        "87103c82-3389-4983-b9dd-d8ecce58ed92": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
         "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
           "tips": [
             null
           ]
+        },
+        "607ec054-729f-402a-9c5b-2adba3adb822": {
+          "description": "Ngayon ay gagawa tayo ng bagay na talagang malikhain. Ano ang paborito mong paraan para maging malikhain?"
+        },
+        "62aac1c8-7601-454f-be68-0e7f16664f69": {
+          "description": "Hikayatin ang mga mag-aaral na ibahagi ang mga paraan nila ng pagkamalikhain, tulad ng sining, sayaw, musika, pagsusulat."
         },
         "b272663e-4596-4ddd-b25e-b3a5a0c165f7": {
           "name": "Bukabularyo"
@@ -1034,7 +1525,7 @@
         },
         "63a3dd77-4375-473b-baa6-45c56d551354": {
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ]
         },
         "b8360827-fb73-4afe-ae5d-ee12b5ed6dde": {
@@ -1745,10 +2236,14 @@
         "470b57f7-12df-47d0-acc3-63cb72051541": {
           "name": "Pagmumuni-muni"
         },
+        "66c1f19a-bfc9-4569-8b6c-c0eb3b6336ae": {
+          "name": "Paghahanda"
+        },
         "0dfd76e3-4d45-4581-b98f-141d1fcfc804": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._"
         },
         "59a9f2f9-23f8-4562-a6ed-09063806bcff": {
+          "name": "Pangkalahatang Suporta",
           "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
@@ -2558,6 +3053,12 @@
         "fe969166-bb8d-4f28-b0a6-44222f2743bd": {
           "name": "Pagmumuni-muni"
         },
+        "76c17257-496f-4d15-a3a8-55d4cde71f32": {
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
+        "d7c09666-3349-4d9b-9c00-0755d08d3165": {
+          "description": "Ngayon ay gagawa tayo ng bagay na talagang malikhain. Ano ang paborito mong paraan para maging malikhain?"
+        },
         "9a3fff4a-420a-45fd-9409-ec6cecaf15b9": {
           "progression_name": "Video: Warm Up ng Dance Party"
         },
@@ -2581,7 +3082,7 @@
         },
         "22d25455-4f87-44cb-aa36-b5adc00e1ba1": {
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ],
           "progression_name": "Mga katangian"
         },
@@ -11442,38 +11943,38 @@
           "progression_name": "Pagmumuni-muni"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "",
+          "description": "#### Paghahanda\n\nSalubungin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.",
           "tips": [
-            ""
+            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video][0]. Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin [Ang Hour of Code na Narito][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": ""
+          "description": "Ngayon gagamitin natin ang ating pagkamalikhain habang natututong mag-code. Maraming mga paraan upang maging malikhain. Ano ang ilang paraan para maging malikhain ka? "
         },
         "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": ""
+          "description": "Hikayatin ang mga mag-aaral na magbahagi ng mga paraan ng pagpapahayag nila ng pagkamalikhain, gaya ng sining, sayaw, musika, o pagsulat. Bilang susunod na tanong, tanungin ang mga mag-aaral kung ano ang ginagamit nila upang pukawin ang kanilang pagkamalikhain. "
         },
         "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": ""
+          "description": "Alam mo ba na maaaring maging napakamalikhain ng computer science? Sa katunayan, maaari kang gumawa ng sining gamit ang code. Bilang paalala, ang code ay set ng mga tagubilin na maiintindihan ng computer. Tulad ng pagpili kung aling mga kulay ng pintura ang gagamitin, ang pagpili ng kung anong code ang isusulat mo ay maaaring maging pagkakataon upang ipahayag ang pagkamalikhain mo! \n\nGagamitin natin ang tula upang magbigay-inspirasyon sa ating creative coding ngayon. May nakakaalam ba kung ano ang tula? Mayroon ka bang paboritong tula o makata? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": ""
+          "description": "**Magbasa ng tula nang sama-sama:** Magbasa ng [ilang mga tula][0] na magkasama at magsanay sa pagbibigay ng pangalan sa mood ng bawat tula. Hikayatin ang mga mag-aaral na ibahagi ang kanilang interpretasyon, kahit na naiiba ito sa iba. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Sining ng Tula",
-          "description": ""
+          "description": "#### Pangkalahatang Suporta\n\nSa pagtatapos ng aktibidad na ito, magkakaroon ang mga mag-aaral ng animated na tula na kumakatawan sa kanilang visual interpretation ng tulang pinili nila. Idinisenyo ang araling ito upang bigyan ang mga mag-aaral ng pagkakataon na mag-usisa at hanapin ang mga visual effects na gusto nila. \n\nHabang umiikot sa silid, hikayatin ang mga mag-aaral na:\n\n- **Huwag kang mag-madali:** Karamihan sa mga antas ay nangangailangan sa mga mag-aaral na mahanap ang perpektong mga epekto na tutugma sa kanilang interpretasyon sa mood ng tula. Ang pananatili sa isang antas at pag-usisa sa kanilang code ay lubos na hinihikayat. \n\n- **Maghanap ng tula na gusto mo:** Ang tula na ipinapakita sa mag-aaral sa bagong antas ay mungkahi lamang. Mayroong dropdown menu ng tula na may mga paunang na-load na tula sa tuktok ng playspace. Hilingin sa mga mag-aaral na basahin ang ilan at hanapin ang isa na may dating sa kanila. Pagkatapos ay maaari nilang simulan ang pag-animate ng tula na napili gamit ang code. \n\n- **Ipakita ang nakumpletong antas:** Anumang level bubble na ganap na berde ay nangangahulugang matagumpay na nakumpleto ng mag-aaral ang lahat ng mga kinakailangan sa antas na iyon. Hilingin sa mag-aaral na mag-click sa berdeng bula upang ipakita ang kanilang nilikha. \n\nPara sa mga pagkakataon na ang mag-aaral ay di makausad: \n\n- **Basahin ang mga tagubilin:** Ang mga tagubilin ay mga puntong may bullet tungkol sa kung paano kumpletuhin ang antas. Kung ang mag-aaral ay di makausad, hilingin sa kaniya na basahin sa iyo nang malakas ang mga tagubilin at hilingin sa kaniya na ulitin ang sinasabi ng mga tagubilin sa kaniyang sariling mga salita. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Maaari ring i-click ng mga mag-aaral ang icon na text-to-speech upang marinig ang mga tagubilin.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Maghanap ng mga mungkahi**: Karamihan sa mga antas ay naglalaman ng hindi bababa sa isang pahiwatig na may mas malinaw na mga detalye tungkol sa kung paano pumasa sa antas. \n- **Ipagdiwang ang mga bug:** Ang pagkakaroon ng bug sa code mo ay likas na bahagi ng proseso ng pag-coding. Kung hindi ginagawa ng program ang inaasahan, hilingin sa mag-aaral na sabihin muna sa iyo kung ano ang gusto nilang mangyari, i-click ang run para obserbahan kung ano ang aktwal na nangyayari, pagkatapos ay hanapin ang lugar sa kanilang code na naging sanhi ng pagkakaiba. Tandaan na ipagdiwang ang pagkakaroon ng mga bug at pag-aayos ng mga bug. Ang pagkakaroon ng bug ay nangangahulugang ang mga mag-aaral ay gumagawa ng mahusay na trabaho sa pagbuo ng mas kumplikadong programa. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": ""
+          "description": "#### Antas-sa-Antas na Suporta\n\n**Antas 1:** Hikayatin ang mga mag-aaral na basahin ang tula. Pagkatapos ay hilingin sa mga mag-aaral na hanapin ang kulay ng background o effect na tumutugma sa tono ng tula na pinili nila. \n\n**Antas 2:** Sa halimbawang ito, dapat basahin muna ng mga mag-aaral ang tula nang mag-isa, pagkatapos ay pindutin ang Run. Maaari mong tanungin ang mag-aaral kung ang tunog at mga epekto na pinili ng programmer ay kahawig ng mood ng tula. Hilingin sa mga mag-aaral na ipaliwanag ang sagot nila. \n\n**Antas 3:** Nagpapakilala ng tunog ang antas na ito, ang mga mag-aaral ay maaaring gumamit ng mga headphone kung mayroon sila. \n\n**Antas 4:** Hilingin sa mga mag-aaral na basahin ang tula at hanapin ang linya kung saan nagbabago ang mood ng tula o kung may bagong imaheng ipinakilala ang makata. Gamitin ang block ng kaganapan upang magdagdag ng katumbas na mga epekto sa nakikitang mga linya ng tula. \n\n**Antas 5:** Sa halimbawang ito, dapat basahin muna ng mga mag-aaral ang tula nang mag-isa, pagkatapos ay pindutin ang Run. Tanungin ang mag-aaral kung ang mga larawan ay kahawig ng mga salita ng tula. Hilingin sa kanila na ipaliwanag ang kanilang sagot. \n\n**Antas 6, 7, 8:** Tingnan ang “Ipagdiwang ang mga bug” sa ilalim ng seksiyong Pangkalahatang Suporta. Hikayatin ang mga mag-aaral na bumuo ng mga programa na may higit sa isang transisyon sa kanilang mga block ng kaganapan. \n\n**Antas 9:** Hikayatin ang mga mag-aaral na basahin ang lahat ng tula sa dropdown menu upang makahanap ng gusto nila. Sabihin sa mga mag-aaral na maaari nilang ibahagi ang kanilang nagawa sa huling antas na ito sa kanilang mga kaibigan at pamilya. Ngayon ang oras upang pagsamahin ang lahat ng mga kasanayan sa pag-coding at ELA! "
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": ""
+          "description": "Kung nagustuhan mo ang pag-aaral ng pag-code ngayon, maaari kang magpatuloy sa pag-aaral sa pamamagitan ng pagbisita sa code.org/learn. Kung nais mong ibahagi ang ginawa mo sa iyong mga kaibigan at pamilya, i-click ang button na \"Ibahagi\" at ipadala ang link sa sinumang gusto mo!"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": ""
+          "description": "#### (Opsyonal) Pagsusuri: Suriin Kung Naiintindihan (4 min.) \n\nMagbigay ng dalawang sticky note sa bawat mag-aaral. "
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": ""
+          "description": "Mayroon kang dalawang sticky note. Sa isa, isulat ang bagay na natutunan mo tungkol sa coding ngayon. Sa pangalawa, isulat ang bagay na natutunan mo tungkol sa tula ngayon. \n\nIbahagi natin ito sa buong klase sa pamamagitan ng pagtataas ng kamay upang sagutin ang tanong na ito: Ano pa ang inaasahan mong matutunan tungkol sa coding at computer science sa susunod? "
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Naihanda ang Kalagayan\n\nI-welcome ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.\n\nSabihin: _Ngayon ay gumugugol tayo ng isang oras sa pagtatrabaho sa ilang mga online na puzzle at pag-aaral ng mga kaugalian sa computer lab._\nAng layunin ng talakayang ito ay turuan ang mga mag-aaral kung ano ang aasahan at kung paano kumilos kapag pumasok sila sa computer lab."
@@ -13024,10 +13525,17 @@
         "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
           "name": "Pagmumuni-muni"
         },
+        "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
+          "name": "Paghahanda",
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
             null
           ]
+        },
+        "270c3845-697d-42f7-b720-f6926aceff03": {
+          "description": "Ngayon ay gagawa tayo ng bagay na talagang malikhain. Ano ang paborito mong paraan para maging malikhain?"
         },
         "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
           "progression_name": "Video: Warm Up"
@@ -13055,7 +13563,7 @@
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ]
         },
         "19a261df-276b-4f57-98db-a694c8dc0b40": {
@@ -13068,7 +13576,8 @@
           "progression_name": "Mga Ekstrang Aralin"
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
-          "name": "Pagmumuni-muni"
+          "name": "Pagmumuni-muni",
+          "description": "-   Maglagay ng prompt na may maraming sagot tulad ng “Ano ang bagay na ikinatuwa mo tungkol sa aktibidad ngayon? ” o “Ano ang koneksiyon sa pagitan ng pagkamalikhain at computer science?\""
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Pagtatasa",
@@ -13531,6 +14040,12 @@
         "8970ddea-49ba-429a-9607-6239c33e06be": {
           "name": "Pagmumuni-muni"
         },
+        "9886bd75-e2c9-419e-8818-f4373a296270": {
+          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
+        },
+        "af98f91b-4ac2-4500-97b0-2437e960cb76": {
+          "description": "Ngayon ay gagawa tayo ng bagay na talagang malikhain. Ano ang paborito mong paraan para maging malikhain?"
+        },
         "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
           "progression_name": "Video: Warm Up ng Dance Party"
         },
@@ -13554,7 +14069,7 @@
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
-            null
+            "Sa puntong ito ng aralin mapapansin mo na ang mga tagubilin ay hindi gaanong nakatakda. Hikayatin ang mga mag-aaral na maging malikhain at tuklasin ang mga bagong block na ipinakilala. Mula sa puntong ito, ang code ng mag-aaral ay **hindi sinusuri kung tama** upang hikayatin ang pag-eksperimento sa halip na lutasin ang partikular na task."
           ],
           "progression_name": "Mga katangian"
         },

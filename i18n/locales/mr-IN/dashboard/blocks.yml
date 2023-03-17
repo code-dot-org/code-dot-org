@@ -2092,6 +2092,16 @@ mr:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} {SPEECH} म्हणा"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): उजवीकडे स्पिन होणे
+            new Behavior(spinning_left, []): डावीकडे स्पिन होणे
+            new Behavior(fluttering, []): फडफडणे
+            new Behavior(jittering, []): थरथरणे
+            new Behavior(wobbling, []): डगमगणे
+            new Behavior(wandering, []): भटकणे
+            new Behavior(patrolling, []): गस्त घालणे
       binary_move:
         options:
           DIR:

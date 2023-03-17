@@ -2,6 +2,8 @@
 vi:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2329,6 +2331,17 @@ vi:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} nói {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): xoay phải
+            new Behavior(spinning_left, []): xoay trái
+            new Behavior(fluttering, []): rung rinh
+            new Behavior(jittering, []): phập phồng
+            new Behavior(wobbling, []): nhúc nhích
+            new Behavior(wandering, []): lang thang
+            new Behavior(patrolling, []): tuần tra
       binary_drawBin:
         text: vẽ nhị phân {BIN}
       binary_drawBinScreen:

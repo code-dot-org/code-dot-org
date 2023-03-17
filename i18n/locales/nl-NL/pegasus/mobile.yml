@@ -1486,6 +1486,7 @@
   compatibility_hide_this_warning: "Verberg deze waarschuwing"
   compatibility_unsupported_browser: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
   compatibility_unsupported_browser_markdown: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
+  hourofcode_shortcode: "Code"
   flappy_shortcode: "flapperen"
   header_home: "Home"
   header_my_dashboard: "Mijn Dashboard"

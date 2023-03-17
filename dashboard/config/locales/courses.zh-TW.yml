@@ -54,3 +54,20 @@ zh-TW:
           description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
           description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
           description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+        csd-pilot:
+          title: CSD 試行課程
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+        csp-2020:
+          description_short: 學習計算機科學的基礎概念。
+        csd-2020:
+          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+        csp-2021:
+          description_short: 學習計算機科學的基礎概念。
+        mike-test:
+          title: 計算機科學基礎
+        csp-2022:
+          description_short: 學習計算機科學的基礎概念。
+        csp-2023:
+          description_short: 學習計算機科學的基礎概念。

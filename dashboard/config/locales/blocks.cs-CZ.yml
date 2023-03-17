@@ -2331,6 +2331,16 @@ cs:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} říká {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): otáčení doprava
+            new Behavior(spinning_left, []): otáčení doleva
+            new Behavior(fluttering, []): třepotání
+            new Behavior(jittering, []): komíhání
+            new Behavior(wobbling, []): kymácení
+            new Behavior(wandering, []): potulování se
+            new Behavior(patrolling, []): patrolování
       binary_drawBin:
         text: nakreslit binární {BIN}
       binary_drawBinScreen:

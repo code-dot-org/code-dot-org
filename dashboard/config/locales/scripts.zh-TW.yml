@@ -4891,6 +4891,12 @@ zh-TW:
               display_name: 內容
             lessonGroup-4:
               display_name: 替代課程
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
@@ -4898,10 +4904,9 @@ zh-TW:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 第1章
+              display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
-              display_name: 第2章
-          title: 問題解決
+              display_name: 第 2 章：計算機與問題解決能力
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4909,38 +4914,49 @@ zh-TW:
             lessonGroup-3:
               display_name: '第2章: 多網頁網站'
           title: Web 開發
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：用戶為中心的設計
             lessonGroup-3:
               display_name: 第 2 章︰ 應用程式原型
-          title: 設計流程
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：表達信息
             lessonGroup-3:
               display_name: 第 2 章：解決數據問題
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：圖像和動畫
             lessonGroup-3:
               display_name: 第 2 章：創建遊戲
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 第1章
             lessonGroup-3:
-              display_name: 第2章
-          title: 實體運算
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第1章
             lessonGroup-3:
               display_name: 第2章
+            lessonGroup-4:
+              display_name: App Lab 入門
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -5056,3 +5072,22 @@ zh-TW:
               display_name: App Lab 入門
             lessonGroup-3:
               display_name: 輸入與輸出
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 問題解決
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+          title: 問題解決
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-4:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發

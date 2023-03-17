@@ -370,7 +370,7 @@
   "makerSetupFollowInstructions": "Sigue las instrucciones de la lista de comprobación de configuración interactiva.",
   "makerSetupInstallSerialConnector": "Por favor, instala el [Code.org Serial Connector Chrome App]({webstoreURL}).",
   "makerSetupInstallFirmataCP": "Debes asegurarte de que tienes instalado el firmware correcto. Puedes instalar el Firmata sketch [para placas Circuit Playground Express con estas instrucciones]({firmataURLExpress}) y [para placas Circuit Playground Classic con estas instrucciones]({firmataURLClassic}).",
-  "makerSetupInstallFirmataMB": "Debes asegurarte de que tiene la aplicación Firmata correcta ejecutándose en él. Puedes [instalar la aplicación Firmata correcta con estas instrucciones]({firmataURL}).",
+  "makerSetupInstallFirmataMB": "Debes asegurarte de que tiene la aplicación Firmata correcta ejecutándose en él. Puedes [instalar la aplicación Firmata correcta con estas instrucciones][0].",
   "makerSetupInstallFirmataOther": "Debes asegurarte de que tiene instalado el sketch de firmata correcto. Puedes instalar el Firmata sketch [para placas Circuit Playground Express con estas instrucciones]({firmataURLExpress}) y [para placas Circuit Playground Classic con estas instrucciones]({firmataURLClassic}). Puedes instalar el Firmata sketch [para micro:bit con estas instrucciones]({firmataURLMB}).",
   "makerSetupLinuxAddDialout": "Si no perteneces a 'dialout', deberás añadirte a ese grupo:",
   "makerSetupLinuxAlternative": "Instaladores Alternativos",

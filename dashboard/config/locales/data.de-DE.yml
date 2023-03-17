@@ -772,7 +772,7 @@ de:
         CSF_StarWars_ProjectIntro: Einführung in das Star Wars Projekt
         mc_2018_intro: 'Minecraft: Voyage Aquatic Einführung'
         MC_2018_loops: 'Minecraft: Voyage Aquatic wiederholen bis'
-        mc_2018_conditionals: 'Minecraft: Voyage Aquatic Bedingungen'
+        mc_2018_conditionals: 'Minecraft: Aquatische Bedingungen Reise'
         mc_2018_closing: 'Minecraft: Voyage Aquatic Glückwunsch'
         hoc_dance_warmup: Tanzparty- Aufwärmen
         hoc_dance_events: Tanzparty - Ereignisse
@@ -839,15 +839,32 @@ de:
         codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
+        csd_teamwork_and_disagreement: Teamarbeit — Umgang mit Meinungsverschiedenheiten
         codebreak_e10: 'Folge 10.0: Künstliche Intelligenz mit Kat Graham und Kate
           Park'
         csf21pilot_events: 'Video: Grafikobjekte in Aktion'
         csf21pilot_prompts: 'Grafikobjekte-Labor: Text und Aufforderungen'
         outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
+        csd_ml_intro_to_ai_lab: Einführung in das KI-Spielelabor
         csd_ml_import_model: Importieren eines KI-Modells
         csf_lots_of_sprites: 'Video: Jede Menge Grafikobjekte'
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
+        csp_defining_calling_functions: Funktionen definieren und aufrufen
+        csp_tutorial_datatab: Registerkarte „Daten“ im App Labor
+        csp_tutorial_libraries: Bibliotheken im App Labor
+        PL-Video-21: Willkommen bei Code.org Professional Learning!
+        csp_tutorial_datavis1: Datenvisualisierer in App Labor — Teil 1
+        csp_tutorial_datavis2: Datenvisualisierer in App Labor — Teil 2
+        csd_ml_intro_ai_lab_july2021: Einführung in das KI-Spielelabor
+        csd_ml_training_testing_ai_lan: Training und Testen im KI-Labor
+        csd_ml_model_cards_july2021: Modellkarten im KI Labor
+        csd_ml_numerical_ai_lab: Numerische Daten im KI-Labor
+        Gettting_Started_Progress: Fortschritt, Feedback und Bewertung
+        Gettting_Started_ClassSection: Einen Klassenabschnitt erstellen
+        Gettting_Started_StudentExperience: Die Studentenerfahrung
+        Getting_Started_BasicFeatures: Grundfunktionen von Code.org
+        PL_overview_CSD: Was sind Informatik-Entdeckungen?
         PL_CSD_TeacherTips_Advise: Tipps für Lehrer – Ratschläge für neue Lehrer
         PL_CSD_TeacherTips_IntroToCSD: Tipps für Lehrer – Einführung zu "Erkenntnisse
           aus der Informatik" (CS Discoveries)
@@ -861,6 +878,7 @@ de:
         hello_world_intro: Hallo Welt – Willkommen bei Sprite Lab
         hello_world_events: Hallo Welt – Programmieren mit Ereignissen
         hello_world_congrats: Hallo Welt – Mach was du willst
+        csp_global_vs_local: Debuggen globaler vs. lokaler Variablen
         rough_poemart_intro: v1 Gedichtkunst/Poesie Einführung
         rough_poemart_events: v1 Gedichtkunst/Poesie Ereignisse
         rough_poemart_imagery: v1 Gedichtkunst/Poesie Bildliche Sprache
@@ -873,7 +891,21 @@ de:
           mit Poesie
         poetry_module_conditionals: Bedingungen - Programmieren mit Poesie
         poemart_intro: Einführung in die Gedichtkunst
+        poemart_events: Veranstaltungen im Bereich Gedichts-Kunst
+        poemart_imagery: Gedichts-Kunst, Bildsprache
+        poemart_celebration: Feiern der Gedichts-Kunst
+        csd_u6_variables_part2: Variablen - Teil 2
+        csd_ml_ethics_ai: 'Ethik und KI '
+        outbreak_intro: 'Ausbruchssimulation: Einführung'
+        outbreak_events: 'Ausbruchs-Simulator: Ereignisse'
+        outbreak_scientist: 'Ausbruchs-Simulator: Denken wie ein Wissenschaftler'
+        outbreak_outro: 'Ausbruchs-Simulator: Freies spielen'
+        PL_overview_CSP: Was sind die Prinzipien der Informatik?
+        PL_CSP_EIPMOverview: Leitfaden für den EIPM-Unterricht
         CSA-PL-debugging-temp: Einführung in die Fehlerbehebung in Java – Temp
+        csd_app_lab_design_mode: CSD App Labor Entwurfsmodus
+        csd_app_lab_events: Veranstaltungen im CSD App Labor
+        PL_CSD_Unit4_AppTesting: Testen von Papierprototypen
         csd_u6_circuit_playground: Physische Datenverarbeitung
         csd_u6_input_output: Input und Output
         CSA-PL-for-loops: For-Schleifen in Java
@@ -894,8 +926,55 @@ de:
         CSA-PL-two-way-selection: Zweifach-Auswahl
         CSA-PL-Printing-in-Java: Drucken in Java
         CSA-PL-multi-selection-statements: Mehrfachauswahl-Anweisungen
+        PL_CSP_TeacherTips_Advice: 'Tipps für Lehrer: Ratschläge für neue CS-Lehrer'
+        PL_CSP_TeacherTips_IntroToCSP: 'Tipps für Lehrer: Einführung in die CS-Prinzipien'
+        PL_CSP_TeacherTips_Debugging: 'Tipps für Lehrer: Hilfe beim Debuggen'
+        PL_CSP_TeacherTips_LeadLearner: 'Tipps für Lehrer: Wie man zu einem führenden
+          Lernenden wird'
+        PL_CSP_TeacherTips_APExam: 'Tipps für Lehrer: Vorbereitung auf die AP-Prüfung'
+        PL_CSP_TeacherTips_EIPM: 'Tipps für Lehrer: Der EIPM-Prozess'
+        PL_CSD_CircuitPlayground_Overview: Leiterplatten Spielplatz Überblick
+        CSA-PL-debugging-22: Debuggen im Java Labor
+        CSD_Unit6_InteractiveArtExemplar: Interaktives Kunstbeispiel
         CS_Changing_Everything: Informatik verändert alles
+        csa-alias-video: Gleichheitszeichen und Aliase
+        csa-equals-video: Die Equals () -Methode
+        csa-user-stories: Anwenderberichte aus der Softwaretechnik
+        csa-pl-vpl-m1-unit-3: Softwaretechnik in Einheit 3
+        csa-pl-intro-to-equality: Einführung in die Gleichberechtigung
+        csa-pl-intro-to-equals-method: Einführung in die Methode .equals ()
+        csa-pl-equals-book: Die Methode equals () für die Bücher-Klasse schreiben
+        csa-multi-select-pl: Mehrfachauswahl-Anweisungen in Java
+        csc_timecapsule_intro: Einführung in die Zeitkapsel
+        PL_Equity_in_CS_Education: Chancengleichheit im Informatikunterricht
+        csc_fm_pilot: Funktion Maschinen (Pilot)
+        csc_fm_pilot_v2: Funktion Maschinen Einführung
         csc-sprite-lab-pixel-editor: Zeichne dein eigenes Grafikobjekt
+        csa-pl-intro-to-strings: Einführung in Zeichenketten in Java
+        csa-pl-compareTo: Die compareTo () -Methode
+        csc-event-short-intro: Kurze Einführung zu den Veranstaltungen
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Überblick über die Leiterplatten-Spielplatz
+          Einheit
+        csa-day-in-pm-pl: Was macht ein Projektmanager?
+        csa-pl-intro-to-pm: Einführung in das Projektmanagement
+        PL_CSD_CircuitPlayground_Setup: Einrichtung des Leiterplatten-Spielplatzes
+        csa_object_oriented_programming: 'CSA: Objektorientierte Programmierung'
+        csa_creating_objects: 'CSA: Objekte erstellen'
+        csa_calling_methods: 'CSA: Methoden aufrufen'
+        csa_while_loops: 'CSA: While -Schleifen'
+        csa_inheritance: 'CSA: Vererbung'
+        csa_writing_a_method: 'CSA: Eine Methode schreiben'
+        csa_software_engineering_code_reviews: 'CSA: Softwareentwicklung — Codekontrollen'
+        csa_conditional_statements: 'CSA: Bedingte Aussagen'
+        csa_printing_in_java: 'CSA: Drucken in Java'
+        csa_two_way_selection_and_not: 'CSA: Bidirektionale Auswahl und NICHT'
+        csa-pl-intro-to-oop: Einführung in die objektorientierte Programmierung
+        csa-pl-welcome-to-Neighborhood: Willkommen in Die Nachbarschaft
+        csa-pl-calling-methods: Methoden in Java aufrufen
+        csa-pl-creating-objects: Objekte erstellen
+        csa_accessor_methods: 'CSA: Accessor-Methoden'
+        csa_constructors: 'CSA: Konstruktoren'
+        csa_creating_a_scanner_object: 'CSA: Ein Scanner-Objekt erstellen'
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den
