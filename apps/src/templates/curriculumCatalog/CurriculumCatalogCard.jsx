@@ -4,6 +4,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import {cardImageNamesToSrc} from '@cdo/apps/templates/curriculumCatalog/cardImageNamesToSrc';
 import '../../../../shared/css/phase1-design-system.scss';
+import '../../../style/code-studio/curriculum_catalog_card.scss';
 
 const CurriculumCatalogCard = ({
   assignButtonDescription,
@@ -15,41 +16,39 @@ const CurriculumCatalogCard = ({
   topic,
   quickViewButtonDescription
 }) => (
-  <div className="curriculumCatalogContainer">
+  <div className="curriculumCatalogCardContainer">
     <img src={cardImageNamesToSrc[imageName]} alt={imageAltText} />
-    {/*topic should have color $brand_primary_default */}
-    <p className="overline">{topic}</p>
-    <h4>{courseName}</h4>
-    {/* display: flex for divs with icons*/}
-    <div className="gradeOrAge">
-      {/* add right padding to icons */}
-      <FontAwesome icon={'user'} className={'fa-solid'} />
-      <div>{gradeOrAgeRange}</div>
-    </div>
-    <div className="duration">
-      {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-      <FontAwesome icon={'clock-o'} />
-      <div>{duration}</div>
-    </div>
-    {/* display: flex; justify-content: space-between for buttons*/}
-    <div className="quickViewAndAssignButtonContainer">
-      {/* each button should be same fixed size */}
-      <Button
-        color={Button.ButtonColor.neutralDark}
-        type="button"
-        onClick={() => {}}
-        aria-label={quickViewButtonDescription}
-      >
-        Quick View
-      </Button>
-      <Button
-        color={Button.ButtonColor.brandSecondaryDefault}
-        type="button"
-        onClick={() => {}}
-        aria-label={assignButtonDescription}
-      >
-        Assign
-      </Button>
+    <div className="infoContainer">
+      <p className="overline">{topic}</p>
+      <h4>{courseName}</h4>
+      <div className={'iconWithDescription'}>
+        <FontAwesome icon={'user'} className={'fa-solid'} />
+        <p className={'iconDescription'}>{gradeOrAgeRange}</p>
+      </div>
+      <div className={'iconWithDescription'}>
+        {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
+        <FontAwesome icon={'clock-o'} />
+        <p className={'iconDescription'}>{duration}</p>
+      </div>
+      <div className="buttonsContainer">
+        {/* each button should be same fixed size */}
+        <Button
+          color={Button.ButtonColor.neutralDark}
+          type="button"
+          onClick={() => {}}
+          aria-label={quickViewButtonDescription}
+        >
+          Quick View
+        </Button>
+        <Button
+          color={Button.ButtonColor.brandSecondaryDefault}
+          type="button"
+          onClick={() => {}}
+          aria-label={assignButtonDescription}
+        >
+          Assign
+        </Button>
+      </div>
     </div>
   </div>
 );
@@ -70,7 +69,7 @@ CurriculumCatalogCard.propTypes = {
 };
 
 CurriculumCatalogCard.defaultProps = {
-  imageAltText: '' // for decorative images.
+  imageAltText: '' // for decorative images
 };
 
 export default CurriculumCatalogCard;

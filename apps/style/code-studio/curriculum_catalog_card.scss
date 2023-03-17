@@ -1,0 +1,58 @@
+@import "color";
+@import "font";
+
+.curriculumCatalogCardContainer {
+  display: flex;
+  flex-flow: column;
+  background-color: $neutral_white;
+  stroke: $neutral_dark20;
+  stroke-width: 1px;
+  border-radius: 4px;
+  height: 384px;
+  width: 309px;
+
+  img {
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .infoContainer {
+    margin: 20px 16px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+
+    .overline {
+      color: $brand_primary_default;
+      margin-bottom: 8px;
+    }
+
+    h4 {
+      margin-bottom: 12px;
+      color: $neutral_dark;
+    }
+
+    .iconWithDescription {
+      display: flex;
+
+      .iconDescription {
+        margin-left: 8px;
+        font-size: 14px;
+        color: $neutral_dark80;
+      }
+    }
+
+    .buttonsContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+
+      button {
+        height: 40px;
+        margin: 0;
+        width: 132px; // calculated: (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
+        font-size: 16px;
+      }
+    }
+  }
+}
