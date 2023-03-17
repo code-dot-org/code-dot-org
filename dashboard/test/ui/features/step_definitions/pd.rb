@@ -34,7 +34,7 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1)
 
   email, password = generate_user(pm_name)
-  FactoryGirl.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+  FactoryBot.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
 
   steps %Q{
     And I sign in as "#{pm_name}"
@@ -74,8 +74,8 @@ Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, 
 
   email, password = generate_user(name)
 
-  FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
-    FactoryGirl.create(:facilitator, name: name, email: email, password: password)
+  FactoryBot.create(:pd_course_facilitator, course: course, facilitator:
+    FactoryBot.create(:facilitator, name: name, email: email, password: password)
   )
 end
 
@@ -130,7 +130,7 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
     And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
   }
 
-  enrollment = FactoryGirl.create(
+  enrollment = FactoryBot.create(
     :pd_enrollment,
     :with_attendance,
     :from_user,
@@ -247,7 +247,7 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryGirl.create :summer_workshop,
+  workshop = FactoryBot.create :summer_workshop,
     :ended,
     num_sessions: 5,
     enrolled_and_attending_users: 10,
@@ -481,7 +481,7 @@ def create_enrollment(workshop, name=nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryGirl.create :teacher
+    FactoryBot.create :teacher
   end
   Pd::Enrollment.create!(
     first_name: first_name,
@@ -521,7 +521,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     end
 
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryGirl.create(:workshop, :funded,
+    FactoryBot.create(:workshop, :funded,
       on_map: true,
       course: course,
       organizer_id: organizer.id,

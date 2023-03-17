@@ -1,4 +1,4 @@
-include FactoryGirl::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
 class MegaSection
   SAMPLE_TEACHER_EMAIL = 'mega_section_teacher@code.org'.freeze
