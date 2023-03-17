@@ -2,8 +2,34 @@
 en:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: moving NESW with arrow keys
+      AmysBlocks_addTarget:
+        text: "[TARGET][0] [OPT][1] [SPRITE][2] "
+        options:
+          OPT:
+            '"follows"': follows
+            '"avoids"': avoids
+      AmysBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           if too much[SPRITE][0]
+          [STATEMENT][1]else if just right
+          [STATEMENT3][2]else if too little
+          [STATEMENT2][3]
+      AmysBlocks_makeNumSprites:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites [LOCATION][2]
+      AmysBlocks_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving NSEW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       AmysBlocks_spriteSayVar:
@@ -1722,6 +1748,12 @@ en:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      KatiesBlocks_spriteBirdSay:
+        text: "[SPRITE][0] says [SPEECH][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
       Mikelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       Mikelab_addTrainingData:
@@ -2534,6 +2566,17 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      adaptations_adaptationBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
