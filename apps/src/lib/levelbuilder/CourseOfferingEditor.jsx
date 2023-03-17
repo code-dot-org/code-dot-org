@@ -23,6 +23,7 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDeviceCompatibilityLevels
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import ImageInput from './ImageInput';
 
 const translatedNoneOption = `(${i18n.none()})`;
 
@@ -259,6 +260,12 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
+      <ImageInput
+        initialImageUrl={courseOffering.image}
+        updateImageUrl={img => updateCourseOffering('image', img)}
+        showPreview={true}
+        helpTipText={'Image used to market the curriculum around the site.'}
+      />
       <label>
         CS Topic
         <HelpTip>
@@ -344,6 +351,7 @@ CourseOfferingEditor.propTypes = {
     curriculum_type: PropTypes.string,
     header: PropTypes.string,
     marketing_initiative: PropTypes.string,
+    image: PropTypes.string,
     cs_topic: PropTypes.string,
     school_subject: PropTypes.string,
     device_compatibility: PropTypes.string

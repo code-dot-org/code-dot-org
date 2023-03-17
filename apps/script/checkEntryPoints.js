@@ -69,7 +69,6 @@ const SILENCED = [
 
   // referenced by embedded multi/match levels
   'embedBlocks',
-  'embedVideo',
 
   // referenced from dashboard/public
   'publicKeyCryptography',
