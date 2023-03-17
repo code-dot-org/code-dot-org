@@ -12,7 +12,7 @@ end
 #
 # Factories for different types of PD workshops
 #
-FactoryGirl.define do
+FactoryBot.define do
   factory :workshop, class: 'Pd::Workshop', aliases: [:pd_workshop] do
     transient do
       num_sessions 1

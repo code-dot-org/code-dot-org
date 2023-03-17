@@ -243,6 +243,7 @@ function registerThemes(themes) {
 }
 
 const registerAllContextMenuItems = function() {
+  unregisterDefaultOptions();
   registerDeletable();
   registerMovable();
   registerEditable();
@@ -284,4 +285,18 @@ function isDarkTheme(workspace) {
 function baseName(themeName) {
   return themeName.replace(dark, '');
 }
+
+function unregisterDefaultOptions() {
+  // Remove some default context menu options, if they are present.
+  // This needs to be wrapped in a try for now because our GoogleBlocklyWrapperTest.js
+  // is not correctly cleaning up its state.
+  try {
+    // cleanUp() doesn't currently account for immovable blocks.
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('collapseWorkspace');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('expandWorkspace');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('workspaceDelete');
+  } catch (error) {}
+}
+
 exports.registerAllContextMenuItems = registerAllContextMenuItems;
