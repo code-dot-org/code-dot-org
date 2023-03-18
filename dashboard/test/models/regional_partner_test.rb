@@ -33,7 +33,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_includes regional_partner.errors.full_messages, "Name is too short (minimum is 1 character)"
     assert_includes regional_partner.errors.full_messages, "Group is not a number"
     assert_includes regional_partner.errors.full_messages, "Phone number is invalid"
-    assert_includes regional_partner.errors.full_messages, "Is active is not included in the list"
+    assert_includes regional_partner.errors.full_messages, "Is active is required"
   end
 
   test "create regional partner with programs offered cleans empties" do

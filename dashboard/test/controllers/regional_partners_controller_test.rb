@@ -61,7 +61,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     end
     assert_template :new
     assert_select '#error_explanation > ul > li', text: 'Phone number is invalid'
-    assert_select '#error_explanation > ul > li', text: 'Is active is not included in the list'
+    assert_select '#error_explanation > ul > li', text: 'Is active is required'
   end
 
   test 'update regional partner updates regional partner' do
