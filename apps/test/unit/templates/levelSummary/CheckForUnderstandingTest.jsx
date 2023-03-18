@@ -90,7 +90,7 @@ describe('CheckForUnderstanding', () => {
     expect(wrapper.find('textarea').length).to.eq(1);
     // Student responses.
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).text()).to.eq(
-      '1/1 students submitted'
+      '1/1 students answered'
     );
     expect(wrapper.find(`div.${styles.studentAnswer}`).length).to.eq(1);
     // Section selector, with one section.
