@@ -3,22 +3,22 @@
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
 export default class ConditionsChecker {
-  private currentSatisfiedConditions: {[key: string]: boolean};
-  private knownConditions: Object;
+  private currentSatisfiedConditions: string[];
+  private knownConditions: KnownConditions;
 
-  constructor(knownConditions: Object) {
-    this.currentSatisfiedConditions = {};
+  constructor(knownConditions: KnownConditions) {
+    this.currentSatisfiedConditions = [];
     this.knownConditions = knownConditions;
   }
 
   // Reset the accumulated conditions.
   clear() {
-    this.currentSatisfiedConditions = {};
+    this.currentSatisfiedConditions = [];
   }
 
   // Accumulate a satisfied condition.
-  addSatisfiedCondition(id: string, value: boolean) {
-    this.currentSatisfiedConditions[id] = value;
+  addSatisfiedCondition(id: string) {
+    this.currentSatisfiedConditions.push(id);
   }
 
   // Check whether the current set of satisfied conditions satisfy the given
@@ -31,7 +31,7 @@ export default class ConditionsChecker {
       }
 
       // Not satisfying a required condition is a fail.
-      if (!this.currentSatisfiedConditions[requiredCondition]) {
+      if (!this.currentSatisfiedConditions.includes(requiredCondition)) {
         return false;
       }
     }
@@ -39,4 +39,8 @@ export default class ConditionsChecker {
     // All conditions are satisfied.
     return true;
   }
+}
+
+export interface KnownConditions {
+  [key: string]: string
 }

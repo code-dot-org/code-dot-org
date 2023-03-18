@@ -1,6 +1,7 @@
+
 export default class MusicLibrary {
   groups: FolderGroup[];
-  private allowedSounds: any;
+  private allowedSounds: Sounds | null;
 
   constructor(libraryJson: any) {
     if (!libraryJson.groups || libraryJson.groups.length === 0) {
@@ -34,13 +35,13 @@ export default class MusicLibrary {
   }
 
   // A progression step might specify a smaller set of allowed sounds.
-  setAllowedSounds(allowedSounds : Object):void {
+  setAllowedSounds(allowedSounds : Sounds):void {
     this.allowedSounds = allowedSounds;
   }
 
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
-  getAllowedSounds(folderType: string) {
+  getAllowedSounds(folderType: string) : Sounds {
       const folders = this.groups[0].folders;
 
     // Let's just do a deep copy and then do filtering in-place.
@@ -50,11 +51,11 @@ export default class MusicLibrary {
     foldersCopy = foldersCopy.filter((folder :any) => folder.type === folderType);
 
     if (this.allowedSounds) {
-      foldersCopy = foldersCopy.filter((folder : any) => this.allowedSounds[folder.path]);
+      foldersCopy = foldersCopy.filter((folder : any) => this.allowedSounds?.[folder.path]);
 
       foldersCopy.forEach((folder : any) => {
         folder.sounds = folder.sounds.filter((sound:any) =>
-          this.allowedSounds[folder.path]?.includes(sound.src)
+          this.allowedSounds?.[folder.path]?.includes(sound.src)
         );
       });
     }
@@ -88,4 +89,8 @@ interface FolderGroup {
   imageSrc: string;
   path: string;
   folders: SoundFolder[];
+}
+
+interface Sounds {
+  [index: string]: [string];
 }

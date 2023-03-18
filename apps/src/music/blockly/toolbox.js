@@ -304,7 +304,7 @@ function generateToolbox(categoryBlocksMap, options) {
 
   for (const category of Object.keys(categoryBlocksMap)) {
     // Skip if we aren't allowing anything from this category.
-    if (options?.allowList && !options?.allowList[category]) {
+    if (options?.allowList && !options.allowList[category]) {
       continue;
     }
 
@@ -314,8 +314,8 @@ function generateToolbox(categoryBlocksMap, options) {
       // Skip if we aren't allowing this block.
       if (
         options?.allowList &&
-        options?.allowList[category] &&
-        !options?.allowList[category].includes(blockName)
+        options.allowList[category] &&
+        !options.allowList[category].includes(blockName)
       ) {
         continue;
       }
@@ -388,7 +388,7 @@ export function getToolbox(allowList) {
             BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2
           ]
         },
-        {includeFunctions: true, allowList: allowList}
+        {includeFunctions: true, allowList}
       );
     case BlockMode.TRACKS:
       return generateToolbox({
