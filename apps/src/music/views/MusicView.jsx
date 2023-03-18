@@ -401,12 +401,14 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    // The reason to give the instructions the entire progression, rather
-    // than just the current state, is that we might want to size the
-    // instructions area to fix the maximum possible text, which will
-    // require knowing all possible contents.  We did this in AI Lab,
-    // which allowed us to have a dynamic instructions panel which never
-    // required a resize, and was perfectly sized for the maximum case.
+    // For now, the instructions are intended for use with a
+    // progression.  We might decide to make them agnostic at
+    // some point.
+    // One advantage of passing everything through is that the
+    // instructions can potentially size themselves to the
+    // maximum possible content size, requiring no dynamic
+    // resizing or user scrolling.  We did this for the dynamic
+    // instructions in AI Lab.
     const progression = this.progressManager.getProgression();
 
     const progressState = this.progressManager.getCurrentState();

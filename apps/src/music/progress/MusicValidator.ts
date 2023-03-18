@@ -1,11 +1,11 @@
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';
-import ConditionsChecker from './ConditionsChecker';
+import ConditionsChecker, {KnownConditions} from './ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Validator} from './ProgressManager';
 
-const KnownConditions = {
+const KnownConditions: KnownConditions = {
   PLAYED_ONE_SOUND: 'played_one_sound',
   PLAYED_TWO_SOUNDS_TOGETHER: 'played_two_sounds_together',
   PLAYED_THREE_SOUNDS_TOGETHER: 'played_three_sounds_together'
@@ -31,8 +31,7 @@ export default class MusicValidator extends Validator {
   checkConditions() {
     if (this.player.getPlaybackEvents().length > 0) {
       this.conditionsChecker.addSatisfiedCondition(
-        KnownConditions.PLAYED_ONE_SOUND,
-        true
+        KnownConditions.PLAYED_ONE_SOUND
       );
     }
 
@@ -54,14 +53,12 @@ export default class MusicValidator extends Validator {
 
     if (currentNumberSounds === 3) {
       this.conditionsChecker.addSatisfiedCondition(
-        KnownConditions.PLAYED_THREE_SOUNDS_TOGETHER,
-        true
+        KnownConditions.PLAYED_THREE_SOUNDS_TOGETHER
       );
     }
     if (currentNumberSounds === 2) {
       this.conditionsChecker.addSatisfiedCondition(
-        KnownConditions.PLAYED_TWO_SOUNDS_TOGETHER,
-        true
+        KnownConditions.PLAYED_TWO_SOUNDS_TOGETHER
       );
     }
   }

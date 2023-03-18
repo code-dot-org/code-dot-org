@@ -10,9 +10,25 @@ export abstract class Validator {
   abstract clear(): void;
 }
 
+// A validation inside the progression.
+interface Validation {
+  conditions: string[];
+  message: string;
+  next: boolean;
+}
+
 // The definition of the progression.
 interface Progression extends Object {
-  panels: any;
+  panels: {
+    text: string;
+    toolbox: {
+      [key: string]: string;
+    };
+    sounds: {
+      [key: string]: string;
+    };
+    validations: Validation[];
+  }[];
 }
 
 // The current progress state.
