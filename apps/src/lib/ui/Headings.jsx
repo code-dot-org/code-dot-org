@@ -46,6 +46,13 @@ export class Heading2 extends Component {
 
 export const h3Style = {
   ...baseHeadingStyle,
+  fontFamily: '"Gotham 5r", sans-serif',
+  fontSize: 16,
+  lineHeight: '24px'
+};
+
+export const h3RebrandingStyle = {
+  ...baseHeadingStyle,
   fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
   fontSize: '1.75em',
   lineHeight: '1.2'
@@ -53,9 +60,18 @@ export const h3Style = {
 
 export class Heading3 extends Component {
   static propTypes = {
-    style: PropTypes.object
+    style: PropTypes.object,
+    isRebranded: PropTypes.bool
   };
   render() {
-    return <h3 {...this.props} style={{...h3Style, ...this.props.style}} />;
+    return (
+      <h3
+        {...this.props}
+        style={{
+          ...(this.props.isRebranded ? h3RebrandingStyle : h3Style),
+          ...this.props.style
+        }}
+      />
+    );
   }
 }

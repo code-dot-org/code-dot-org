@@ -44,7 +44,7 @@ export default class ParticipantTypePicker extends Component {
 
     return (
       <div style={style.container} className="uitest-participant-type-picker">
-        <Heading3>{title}</Heading3>
+        <Heading3 isRebranded>{title}</Heading3>
         <p style={style.bodyText}>
           {i18n.professionalLearningParticipantQuestion()}
         </p>

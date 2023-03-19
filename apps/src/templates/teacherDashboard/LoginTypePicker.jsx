@@ -121,7 +121,7 @@ class LoginTypePicker extends Component {
 
     return (
       <div style={style.container}>
-        <Heading3>{title}</Heading3>
+        <Heading3 isRebranded>{title}</Heading3>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
         <div style={style.scroll}>
           <CardContainer>
