@@ -56,6 +56,7 @@ const SILENCED = [
   'javalab',
   'jigsaw',
   'maze',
+  'music',
   'netsim',
   'poetry',
   'spritelab',
