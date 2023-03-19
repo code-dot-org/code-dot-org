@@ -1,0 +1,179 @@
+{
+  "script": {
+    "name": "music-2023",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2022"
+    },
+    "new_name": null,
+    "family_name": "music",
+    "serialized_at": "2022-08-17 05:38:15 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "music-2022"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "music-2022"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Getting started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-2022"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "6b087416-391a-4469-9abd-7641fd3d09cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b087416-391a-4469-9abd-7641fd3d09cc",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-2022"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f3d7011e-ef36-4857-a42b-2d9b13610452",
+      "position": 1,
+      "properties": {
+        "name": "Getting started with music"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3d7011e-ef36-4857-a42b-2d9b13610452",
+        "lesson_activity.key": "6b087416-391a-4469-9abd-7641fd3d09cc"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MusicLevel1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-2022",
+        "activity_section.key": "f3d7011e-ef36-4857-a42b-2d9b13610452"
+      },
+      "level_keys": [
+        "MusicLevel1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MusicLevel2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-2022",
+        "activity_section.key": "f3d7011e-ef36-4857-a42b-2d9b13610452"
+      },
+      "level_keys": [
+        "MusicLevel2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "MusicLevel1",
+        "script_level.level_keys": [
+          "MusicLevel1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-2022",
+        "activity_section.key": "f3d7011e-ef36-4857-a42b-2d9b13610452"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MusicLevel2",
+        "script_level.level_keys": [
+          "MusicLevel2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-2022",
+        "activity_section.key": "f3d7011e-ef36-4857-a42b-2d9b13610452"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

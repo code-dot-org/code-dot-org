@@ -10530,3 +10530,14 @@ en:
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+        music-2022:
+          lessons:
+            lesson-1:
+              name: Getting started
+          lesson_groups: {}
+          name: music-2022
+          title: Music
+          description_audience: ''
+          description_short: Let's make music.
+          description: ''
+          student_description: ''
