@@ -127,6 +127,10 @@ WebAudio.prototype.PlaySoundByBuffer = function(
 
   source.start(when); // play the source now
 
+  if (['suspended', 'interrupted'].includes(source.context.state)) {
+    source.context.resume();
+  }
+
   return source;
 };
 
