@@ -64,14 +64,12 @@ export class Heading3 extends Component {
     isRebranded: PropTypes.bool
   };
   render() {
-    return (
-      <h3
-        {...this.props}
-        style={{
-          ...(this.props.isRebranded ? h3RebrandingStyle : h3Style),
-          ...this.props.style
-        }}
-      />
-    );
+    const {isRebranded, style, ...restProps} = this.props;
+    const headingStyles = {
+      ...(isRebranded ? h3RebrandingStyle : h3Style),
+      ...style
+    };
+
+    return <h3 {...restProps} style={headingStyles} />;
   }
 }
