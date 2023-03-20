@@ -1875,3 +1875,69 @@ et:
               display_name: Loendid
             lessonGroup-3:
               display_name: Tsüklid
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+            csf_data:
+              display_name: Andmed
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            ramp_up:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Tingimuslaused
