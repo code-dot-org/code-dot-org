@@ -1077,6 +1077,8 @@ tr:
         text: hedeflerden kaçınmak
       gamelab_beginCollectingData:
         text: değeri {VALUE} olan {LABEL} etiketli {BREAK} verisi toplamaya başla
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{TARGET}'in {SPRITE} sekmeleri"
       gamelab_changePropBy:
