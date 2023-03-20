@@ -88,7 +88,7 @@ export function getStore() {
  */
 function createStoreWithReducers() {
   return createStore(
-    Object.keys(globalReducers).length > 0 ? globalReducers : {}
+    Object.keys(globalReducers).length > 0 ? globalReducers : s => s
   );
 }
 
@@ -162,6 +162,7 @@ function createStore(reducer, initialState) {
   return configureStore({
     reducer: reducer,
     preloadedState: initialState,
-    middleware: [reduxThunk]
+    middleware: [reduxThunk],
+    devTools: process.env.NODE_ENV === 'development' // only enable devTools in development
   });
 }
