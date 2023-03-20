@@ -61,13 +61,6 @@ GIT
     full-name-splitter (0.1.2)
 
 GIT
-  remote: https://github.com/wjordan/gctools.git
-  revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
-  ref: ruby-2.5
-  specs:
-    gctools (0.2.4)
-
-GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -967,7 +960,6 @@ DEPENDENCIES
   firebase_token_generator
   font-awesome-rails (~> 4.7.0.8)
   full-name-splitter!
-  gctools!
   gemoji
   geocoder
   google-apis-analytics_v3
