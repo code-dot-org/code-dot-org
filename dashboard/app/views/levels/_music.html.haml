@@ -1,0 +1,22 @@
+#codeApp{style: "position: absolute; top: 60px; bottom: 10px; left: 10px; right: 10px"}
+  #musiclab-container{style: "height: 100%"}
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/googleblockly.js')}
+  %script{src: webpack_asset_path('js/musiclab/index.js')}
+
+-#
+  -# Ensure Font Awesome is loaded for use in apps
+  %span{style: 'font: 1px FontAwesome; position: absolute;', id: 'fa-preload'} &nbsp;
+
+  #musicApp
+
+  :javascript
+    //<![CDATA[
+    var script_path = "#{@script_level && build_script_level_path(@script_level)}";
+    var appOptions = #{app_options.to_json};
+    appOptions.locale = '#{js_locale}';
+    //]]>
+
+  -#- content_for :body_scripts do
+  -#  = render_app_dependencies

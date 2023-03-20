@@ -195,6 +195,10 @@ class Game < ApplicationRecord
     app == LEVEL_GROUP
   end
 
+  def fish?
+    app == FISH
+  end
+
   def supports_sharing?
     [
       TURTLE,

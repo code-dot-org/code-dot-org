@@ -32,6 +32,8 @@ import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 
+import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
+
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -117,6 +119,7 @@ header.build = function(
           scriptData={scriptData}
           currentLevelId={currentLevelId}
         />
+        <LabContainer />
       </Provider>,
       document.querySelector('.header_level')
     );
