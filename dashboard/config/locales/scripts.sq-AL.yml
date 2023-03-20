@@ -1539,3 +1539,69 @@ sq:
               display_name: Listat
             lessonGroup-3:
               display_name: cikle
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_conditionals:
+              display_name: Kushtet
+            csf_functions:
+              display_name: funksione
+            csf_variables:
+              display_name: variabla
+            csf_for_loops:
+              display_name: Për Ciklet
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+            csf_data:
+              display_name: të dhëna
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_conditionals:
+              display_name: Kushtet
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            ramp_up:
+              display_name: Përsëritjet e Mbivendosura
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Kushtet
