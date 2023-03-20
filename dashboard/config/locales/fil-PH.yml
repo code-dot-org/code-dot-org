@@ -2,7 +2,7 @@
 fil:
   errors:
     messages:
-      not_saved: 'Pakiwasto ang mga sumusunod na error:'
+      not_saved: 'Pakiwasto ang mga sumusunod na mga error:'
       too_young: May limitadong edad ito at hindi pwedeng ibigay sa nakababatang mga
         estudyante.
       teacher_must_accept_terms: Ang content na ito ay may nakalagay na restrikyon

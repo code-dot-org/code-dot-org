@@ -34,6 +34,7 @@
     "CONTROLS_FOREACH_INPUT_INLIST": "loendis",
     "CONTROLS_FOREACH_INPUT_ITEM": "iga elemendi jaoks",
     "CONTROLS_FOREACH_TOOLTIP": "Väärtusta muutuja '%1' iga järjestikuse elemendiga loendis ja täida sellega käske.",
+    "CONTROLS_FOR_INPUT_COUNTER": "%1 alates %2 kuni %3 loendada %4",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "alates %1 kuni %2 sammuga %3",
     "CONTROLS_FOR_INPUT_WITH": "millegi jaoks",
     "CONTROLS_FOR_TOOLTIP": "Muutuja %1 saab väärtusi alates algusarvust kuni lõpuarvuni ning väärtusi suurendatakse antud sammu võrra. Iga väärtuse kohta täidetakse käskude plokk.",

@@ -82,6 +82,9 @@
         "conditionals/coursed/2022": {
           "word": "Tingimuslaused"
         },
+        "behavior/coursef/2022": {
+          "word": "Käitumine"
+        },
         "variable/coursef/2022": {
           "word": "Muutuja"
         },
@@ -90,6 +93,9 @@
         },
         "define/coursef/2022": {
           "word": "Määra"
+        },
+        "behavior/coursee/2022": {
+          "word": "Käitumine"
         },
         "function/coursee/2022": {
           "word": "Funktsioon"
@@ -111,6 +117,9 @@
         },
         "debugging/express/2022": {
           "word": "Debugimine"
+        },
+        "behavior/express/2022": {
+          "word": "Käitumine"
         },
         "conditionals/express/2022": {
           "word": "Tingimuslaused"
@@ -138,6 +147,9 @@
         },
         "debugging/coursec/2022": {
           "word": "Debugimine"
+        },
+        "data/coursec/2022": {
+          "word": "Andmed"
         },
         "binary/coursec/2022": {
           "word": "Binaarne"
@@ -180,6 +192,9 @@
           "word": "",
           "definition": ""
         },
+        "behavior/coursef/2021": {
+          "word": "Käitumine"
+        },
         "variable/coursef/2021": {
           "word": "Muutuja"
         },
@@ -216,6 +231,9 @@
         "debugging/express/2021": {
           "word": "Debugimine"
         },
+        "behavior/express/2021": {
+          "word": "Käitumine"
+        },
         "conditionals/express/2021": {
           "word": "Tingimuslaused"
         },
@@ -233,6 +251,9 @@
         },
         "debugging/pre-express/2021": {
           "word": "Debugimine"
+        },
+        "behavior/coursee/2021": {
+          "word": "Käitumine"
         },
         "copyright/coursee/2021": {
           "word": "Autoriõigus"

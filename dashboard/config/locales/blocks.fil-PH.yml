@@ -2,6 +2,8 @@
 fil:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: prompt user {QUESTION} sa variable {VAR} na may pagpipiliang {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2308,6 +2310,17 @@ fil:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} sabihin ang {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): umiikot pakanan
+            new Behavior(spinning_left, []): umiikot pakaliwa
+            new Behavior(fluttering, []): pumapagaspas
+            new Behavior(jittering, []): nanginginig
+            new Behavior(wobbling, []): gumulong-gulong
+            new Behavior(wandering, []): gumagala
+            new Behavior(patrolling, []): nagpapatrolya
       binary_drawBin:
         text: Gumuhit ng binary {BIN}
       binary_drawBinScreen:

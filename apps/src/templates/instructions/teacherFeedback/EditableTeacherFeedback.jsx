@@ -318,5 +318,7 @@ export default connect(
       dispatch(queryUserProgress(userId));
       dispatch(loadLevelsWithProgress());
     }
-  })
+  }),
+  null,
+  {forwardRef: true}
 )(EditableTeacherFeedback);

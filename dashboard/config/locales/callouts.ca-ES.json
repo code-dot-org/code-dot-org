@@ -1948,6 +1948,120 @@
         },
         "courseE_aboutme_2_2021": {
           "": "Fes clic aquí!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Fes clic aquí per expandir el bloc.",
+          "pointerlocation": "Arrossega un bloc de \"subjecte\" aquí."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Fes clic aquí per expandir el bloc.",
+          "pointerlocation": "Arrossega un bloc de \"subjecte\" aquí."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Fes clic per fer un vestit nou"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Aquí trobaràs el bloc d'escriure text!",
+          "text_print_finish": "El teu missatge ha aparegut imprès a dalt? Si és així, fes clic a \"Acabar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "run_button": "Prova la teva animació amb aquest botó. "
         }
       }
     }

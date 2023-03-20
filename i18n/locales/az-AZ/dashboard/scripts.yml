@@ -3313,6 +3313,10 @@ az:
             lessonGroup-2:
               display_name: Məzmun
           title: Şərtlər və Məntiq
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
         csa8-2023:
           title: Axtarış və Çeşidləmə
         csa-magpie-lab:
@@ -3328,37 +3332,30 @@ az:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 1-ci Fəsil
+              display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
-              display_name: 2-ci Fəsil
+              display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
-          title: Problemin həlli
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
-        csd4-2023:
-          title: Dizayn Prosesi
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
             lessonGroup-3:
               display_name: '2-ci fəsil: Oyunlar yaratmaq'
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 1-ci Fəsil
-            lessonGroup-3:
-              display_name: 2-ci Fəsil
-          title: Fiziki Hesablama
+          student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 1-ci Fəsil
             lessonGroup-3:
               display_name: 2-ci Fəsil
+            lessonGroup-4:
+              display_name: Proqram laboratoriyasına giriş
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -3438,3 +3435,23 @@ az:
             lessonGroup-2:
               display_name: 1 -ci hissənin tədrisinə hazırlıq
           title: 1 -ci hissənin tədrisinə hazırlıq
+        drafting:
+          name: qaralama
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+            lessonGroup-3:
+              display_name: 2-ci Fəsil
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+          title: Problemin həlli
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+          title: Problemin həlli
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: veb-səhifələrin yaradılması'

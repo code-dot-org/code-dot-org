@@ -228,22 +228,28 @@
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "سکرین بھر میں حق کے لئے ایک سپرائٹ منتقل کریں. جب یہ اسکرین کے دائیں جانب سے چلا جاتا ہے، تو اسے اسکرین کے بائیں جانب واپس منتقل کریں."
         },
         "CourseF_outbreak1": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak1_-2022-2": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak2": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak2_-2022-2": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak3": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak3_-2022-2": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak4": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -256,7 +262,8 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite to the left across the screen": "سکرین بھر میں بائیں طرف ایک سپرائٹ منتقل",
-          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے"
+          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak4_-2022-2": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -269,19 +276,24 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite to the left across the screen": "سکرین بھر میں بائیں طرف ایک سپرائٹ منتقل",
-          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے"
+          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak5": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak5_-2022-2": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak6": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak6_-2022-2": {
-          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل"
+          "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak7": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -294,7 +306,8 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite to the left across the screen": "سکرین بھر میں بائیں طرف ایک سپرائٹ منتقل",
-          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے"
+          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak7_-2022-2": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -307,7 +320,8 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite to the left across the screen": "سکرین بھر میں بائیں طرف ایک سپرائٹ منتقل",
-          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے"
+          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak8": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -320,7 +334,8 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite to the left across the screen": "سکرین بھر میں بائیں طرف ایک سپرائٹ منتقل",
-          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے"
+          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "CourseF_outbreak8_-2022-2": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -333,7 +348,8 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite to the left across the screen": "سکرین بھر میں بائیں طرف ایک سپرائٹ منتقل",
-          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے"
+          "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
+          "gradually recover from sickness": "آہستہ آہستہ بیماری سے بحال"
         },
         "Dance Party 2": {
           "rotate a sprite to its left": "اس کے بائیں طرف ایک سپرائٹ باری دکھائے",
@@ -1147,7 +1163,9 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
-          "move a sprite if the user is pressing the arrow keys": "صارف تیر چابیاں دبانے رہا ہے تو سپرائٹ منتقل"
+          "move a sprite if the user is pressing the arrow keys": "صارف تیر چابیاں دبانے رہا ہے تو سپرائٹ منتقل",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "سکرین بھر میں بائیں کرنے کے لئے ایک سپرائٹ منتقل کریں. اگر یہ اسکرین کے بائیں جانب سے چلا جاتا ہے تو یہ اسکرین کے دائیں جانب چلا جاتا ہے۔",
+          "randomly move the sprite up or down": "تصادفی سپرائٹ اوپر یا نیچے منتقل"
         },
         "courseF_apps_collector2022": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -1161,7 +1179,9 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
-          "move a sprite if the user is pressing the arrow keys": "صارف تیر چابیاں دبانے رہا ہے تو سپرائٹ منتقل"
+          "move a sprite if the user is pressing the arrow keys": "صارف تیر چابیاں دبانے رہا ہے تو سپرائٹ منتقل",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "سکرین بھر میں بائیں کرنے کے لئے ایک سپرائٹ منتقل کریں. اگر یہ اسکرین کے بائیں جانب سے چلا جاتا ہے تو یہ اسکرین کے دائیں جانب چلا جاتا ہے۔",
+          "randomly move the sprite up or down": "تصادفی سپرائٹ اوپر یا نیچے منتقل"
         },
         "courseF_apps_collector_-2022-2": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",
@@ -1175,7 +1195,9 @@
           "move a sprite upwards across the screen": "سکرین بھر میں اوپر کی طرف ایک سپرائٹ منتقل",
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
-          "move a sprite if the user is pressing the arrow keys": "صارف تیر چابیاں دبانے رہا ہے تو سپرائٹ منتقل"
+          "move a sprite if the user is pressing the arrow keys": "صارف تیر چابیاں دبانے رہا ہے تو سپرائٹ منتقل",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "سکرین بھر میں بائیں کرنے کے لئے ایک سپرائٹ منتقل کریں. اگر یہ اسکرین کے بائیں جانب سے چلا جاتا ہے تو یہ اسکرین کے دائیں جانب چلا جاتا ہے۔",
+          "randomly move the sprite up or down": "تصادفی سپرائٹ اوپر یا نیچے منتقل"
         },
         "courseF_apps_collector_drag_-2022-2": {
           "move a sprite, changing its direction randomly": "تصادفی اس کی سمت کو تبدیل کرنے، ایک سپرائٹ منتقل",

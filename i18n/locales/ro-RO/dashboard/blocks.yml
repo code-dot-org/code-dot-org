@@ -2242,6 +2242,16 @@ ro:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}spune{SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): învârtit spre dreapta
+            new Behavior(spinning_left, []): învârtit spre stânga
+            new Behavior(fluttering, []): fluturat
+            new Behavior(jittering, []): tremurat
+            new Behavior(wobbling, []): clătinat
+            new Behavior(wandering, []): rătăcit
+            new Behavior(patrolling, []): patrulare
       binary_drawBin:
         text: trage binar {BIN}
       binary_drawDec:

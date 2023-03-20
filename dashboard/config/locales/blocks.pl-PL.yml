@@ -2,8 +2,33 @@
 pl:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: przesuwanie NESW za pomocą klawiszy strzałek
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': następuje
+            '"avoids"': unika
+      AmysBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           jeśli za dużo{SPRITE}
+          {STATEMENT}w przeciwnym razie jeśli w sam raz
+          {STATEMENT3}w przeciwnym razie za mało
+          {STATEMENT2}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): przenoszenie NSEW za pomocą
+              klawiszy strzałek
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -1737,6 +1762,8 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2519,6 +2546,17 @@ pl:
             '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
             '"none"': nie ruszać się
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:

@@ -2759,6 +2759,18 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2777,6 +2789,14 @@ ga:
               display_name: 'Caibidil 1: Íomhánna agus Beochan'
             lessonGroup-3:
               display_name: 'Caibidil 2: Tógáil Cluichí'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Buneolas ar an tSaotharlann Aipeanna
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
