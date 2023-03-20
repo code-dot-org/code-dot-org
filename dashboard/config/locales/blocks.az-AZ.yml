@@ -1029,6 +1029,8 @@ az:
         text: hədəflərdən qaçınmaq
       gamelab_beginCollectingData:
         text: "{BREAK} dəyəri {VALUE} {LABEL} etiketi ilə data toplamağa başlayın"
+      gamelab_behaviorPicker:
+        text: davranış
       gamelab_bounceOff:
         text: SPRITE][0] {TARGET} üzərindən sıçrayır
       gamelab_changePropBy:
