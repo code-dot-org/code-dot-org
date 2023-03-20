@@ -32,6 +32,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       }
     elsif !current_user
       render :logged_out
+    elsif missing_application?
+      render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
       render '/pd/application/teacher_application/no_teacher_email'
     else
@@ -208,5 +210,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :school_name,
       :full_address,
     )
+  end
+
+  private def missing_application?
+    @workshop.require_application? && !current_user.pd_applications.where(type: 'TeacherApplication').any?
   end
 end

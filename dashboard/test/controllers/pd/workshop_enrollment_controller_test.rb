@@ -75,6 +75,19 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
+  test 'teacher with missing application gets missing application view' do
+    teacher = create :teacher
+
+    # see Pd::Workshop#require_application? for the logic that determines whether a workshop requires an application
+    rp = create :regional_partner
+    workshop = create :summer_workshop, regional_partner: rp
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :missing_application
+  end
+
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollment form' do
     # Note - organizers can see the form, but cannot enroll in their own workshops.
