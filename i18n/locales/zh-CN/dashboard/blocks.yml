@@ -1053,6 +1053,8 @@ zh-CN:
         text: 避开目标
       gamelab_beginCollectingData:
         text: 开始收集数据{BREAK}值{VALUE}带标签{LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} 弹开 {TARGET}"
       gamelab_changePropBy:
