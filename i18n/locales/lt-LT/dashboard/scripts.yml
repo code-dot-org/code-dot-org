@@ -1432,3 +1432,67 @@ lt:
               display_name: Sąrašai
             lessonGroup-3:
               display_name: Kartojimas
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_variables:
+              display_name: Kintamieji
+            csf_for_loops:
+              display_name: Kartojimas
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Virtuali pilietybė
+            csf_events:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            ramp_up:
+              display_name: Kartojimas kartojime
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_nested_loops:
+              display_name: Sąlyginiai sakiniai
