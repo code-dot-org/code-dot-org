@@ -1489,6 +1489,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'CSA summer workshops must require teacher application' do
+    workshop = create :pd_workshop, course: COURSE_CSA, subject: SUBJECT_SUMMER_WORKSHOP
+    assert workshop.require_application?
+  end
+
+  test 'CSP academic year workshop must require teacher application' do
+    workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1
+    assert workshop.require_application?
+  end
+
+  test 'CSF workshop must not require teacher application' do
+    workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101
+    refute workshop.require_application?
+  end
+
+  test 'virtual CSD workshop must not require teacher application' do
+    workshop = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_VIRTUAL_KICKOFF, virtual: true
+    refute workshop.require_application?
+  end
+
   private
 
   def session_on_day(day_offset)
