@@ -2538,3 +2538,85 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Hoofdstuk 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          description_audience: 'Leeftijden: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+          description_audience: 'Leeftijden: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
+          description_short: Een inleiding tot informatica voor pre-readers.
+          description_audience: 'Leeftijden: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
+          description_audience: 'Leeftijden: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_data:
+              display_name: Data
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
+          description_short: Leer de basisprincipes van informatica en creëer je eigen kunst, verhalen en games.
+          description_audience: 'Leeftijden: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaal Burgerschap
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+          description_audience: 'Leeftijden: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
+            csf_nested_loops:
+              display_name: Voorwaardelijke instructies
+          description_audience: 'Leeftijden: 8-12'
