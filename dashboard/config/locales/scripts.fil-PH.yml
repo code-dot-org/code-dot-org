@@ -3785,3 +3785,105 @@ fil:
             lessonGroup-2:
               display_name: Kabanata 1
           title: Paglutas ng Problema
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
+          description_short: 'Isang introduksyon sa computer science para sa mga hindi
+            marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
+            unang baitang na mga kurso.'
+          description_audience: 'Mga Edad: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Mga Sprites
+            lessonGroup-9:
+              display_name: Mga event
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_functions:
+              display_name: Mga function
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+          description_short: 'Isang introduksyon sa computer science: pinagsama ang
+            pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang
+            mga estudyante.'
+          description_audience: 'Mga Edad: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
+          student_description: Alamin ang mga pangunahing alituntunin sa computer
+            science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
+            iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga hindi
+            pa marunong magbasa.
+          description_audience: 'Mga Edad: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            csf_events:
+              display_name: Mga event
+          student_description: Alamin ang mga pangunahing alituntunin sa computer
+            science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
+            iyong sariling laro o istorya na maaari mong ibahagi.
+          description_audience: 'Mga Edad: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
+            csf_data:
+              display_name: Data
+          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga
+            loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin
+            ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung
+            paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong
+            laro o istorya na maaari mong ibahagi!
+          description_short: Alamin ang mga pangunahing alituntunin ng computer science
+            at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+          description_audience: 'Mga Edad: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital na Pagkamamamayan
+            csf_events:
+              display_name: Mga event
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+          description_audience: 'Mga Edad: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_sprites:
+              display_name: Mga Sprites
+            ramp_up:
+              display_name: Mga Loops na naka-nest
+            csf_functions:
+              display_name: Mga function
+            csf_nested_loops:
+              display_name: Mga conditional
+            lessonGroup-7:
+              display_name: Epekto ng Pag-Compute
+          description_audience: 'Mga Edad: 8-12'

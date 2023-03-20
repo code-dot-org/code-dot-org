@@ -149,8 +149,13 @@
         "code/aquatic/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
+        "condition/aquatic/unversioned": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "debugging/aquatic/unversioned": {
           "word": "Pagdedebug",
@@ -305,7 +310,12 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "behavior/coursef/2022": {
           "word": "Paggawi"
@@ -347,8 +357,12 @@
         "function/coursee/2022": {
           "word": "Function"
         },
+        "condition/coursee/2022": {
+          "word": "Condition"
+        },
         "conditionals/coursee/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "copyright/coursee/2022": {
           "word": "Karapatang-ari"
@@ -394,8 +408,13 @@
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
+        "condition/express/2022": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2022": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2022": {
           "word": "Function",
@@ -483,6 +502,9 @@
         },
         "variable/csd/2022": {
           "word": "Variable"
+        },
+        "condition/csd/2022": {
+          "word": "Condition"
         },
         "conditionals/csd/2022": {
           "word": "Mga conditional"
@@ -636,7 +658,12 @@
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
         "conditionals/coursed/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "condition/coursed/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "debugging/express/2021": {
           "word": "Pagdedebug",
@@ -657,8 +684,13 @@
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
+        "condition/express/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/express/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "function/express/2021": {
           "word": "Function",
@@ -707,8 +739,13 @@
           "word": "Function",
           "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
+        "condition/coursee/2021": {
+          "word": "Condition",
+          "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
         "conditionals/coursee/2021": {
-          "word": "Mga conditional"
+          "word": "Mga conditional",
+          "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
         "define/coursee/2021": {
           "word": "magtakda"
@@ -729,6 +766,9 @@
         },
         "variable/csd/2021": {
           "word": "Variable"
+        },
+        "condition/csd/2021": {
+          "word": "Condition"
         },
         "conditionals/csd/2021": {
           "word": "Mga conditional"

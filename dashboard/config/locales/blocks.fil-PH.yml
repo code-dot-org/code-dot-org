@@ -1055,6 +1055,8 @@ fil:
         text: iniiwasan ang mga target
       gamelab_beginCollectingData:
         text: simulan ang pagkolekta ng data {BREAK} value {VALUE} may label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} tumalbog sa {TARGET}"
       gamelab_changePropBy:

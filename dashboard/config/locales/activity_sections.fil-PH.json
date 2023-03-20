@@ -591,6 +591,12 @@
         "27cd3252-fb06-4b7b-9633-751d95810c95": {
           "description": "#### Level 10-11\n\n-   Ang mga antas na ito ay tungkol sa paggawa ng sayaw na interactive. Subukan ang bagong event `kapag pinindot` para tumugon ang mga dancer sa mga pagpindot sa key.\n-   Maaari mong gamitin ang mga arrow key sa keyboard ng computer mo o i-click ang orange na mga button sa ilalim ng display area.\n-   Tandaan na ang **code na isinulat ng mga mag-aaral sa mga antas na ito ay hindi sinusuri kung tama**. Nangangahulugan ito na palagi silang papasa sa antas, kahit na hindi nila binago ang program. Hikayatin ang mga mag-aaral na tukuyin sa kanilang sarili kung ginagawa ng code ang inaasahan nila bago magpatuloy."
         },
+        "767f8d69-82af-43d0-a4d7-7f3bd7438424": {
+          "description": "#### Antas 12\n\n-   Ang nangungunang anim na block sa tool box na ito ay mukhang pamilyar ngunit lahat ay gumagana sa ibang paraan. Sa halip na lumikha o kontrolin ang isang dancer, gumagana ang mga ito sa mga grupo ng dancer.\n-   Tulad ng mga nakaraang antas, **ang code ay hindi sinusuri para sa kawastuhan dito**. Ang mga mag-aaral ay dapat malayang mag-eksperimento sa mga grupo sa mga paraan na kawili-wili sa kanila."
+        },
+        "7dcf383e-a583-4aa0-99f2-102652fbbb67": {
+          "description": "#### Antas 13\n\n-   Ang huling antas na ito ay napaka-open-ended. Ang tutorial mismo ay idinisenyo upang bigyan ang mga mag-aaral ng sapat na oras upang patuloy na magtrabaho sa sarili nilang sayaw.\n-   **Hikayatin ang Pagbabahagi:** Kung ang mga mag-aaral ay may mga cell phone na may data plan maaari silang mabilis na mag-text ng link sa kanilang mga proyekto sa sariling telepono o sa kaibigan. Kung pinapayagan ito ng patakaran sa paaralan mo, hikayatin silang gawin ito.\n-   **Hikayatin ang Pagkamalikhain:** Ang pagkamalikhain ay mahalaga sa buong araling ito, higit itong totoo dito kaysa saanman! "
+        },
         "f78380b1-0666-40a6-ac50-7adf09cda880": {
           "name": "Panayam",
           "description": "-   Maglagay ng prompt na may maraming sagot tulad ng “Ano ang bagay na ikinatuwa mo tungkol sa aktibidad ngayon? ” o “Ano ang koneksiyon sa pagitan ng pagkamalikhain at computer science?\""
@@ -643,13 +649,17 @@
             "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ang pagpapakita ng isa sa [aming inspirational videos](https://hourofcode.com/us/resources#videos). Piliin ang isa na sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo, at ibahagi ito ngayon. Para sa mga bata, iminumungkahi namin ang “[Ang Hour of Code na Narito](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
+        "f96053ea-387e-47d5-a018-65619ec093b0": {
+          "description": "Ipaliwanag na sa computer science, ang ibig sabihin ng “code” ay set ng mga tagubilin na mauunawaan ng computer. Ipaalam sa mga mag-aaral na ngayon, magsasanay sila ng \"coding,\" \"programming,\" at \"debugging.\"\n\nBigyang-kahulugan:\n\n-   Ang **Coding** ay nangangahulugang magsulat ng code, o magsulat ng mga tagubilin sa computer.\n-   Ang **Condition** ay isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang aksiyon.\n-   **Ang mga Conditional** ay mga pahayag na tumatakbo lamang sa ilalim ng ilang partikular na condition.\n-   Ang **Debugging** ay nangangahulugang suriin ang code para sa mga pagkakamali at subukang ayusin ang mga error.\n-   Ang **Loop** ay ang aksyon ng paggawa ng bagay na paulit-ulit.\n-   Ang **Programming** ay nangangahulugang magsulat ng code o mga tagubilin. Ngayon, magpo-program ka gamit ang mga block sa computer (kung gumagamit ka ng online tutorial) o gamit ang lapis at papel (kung gumagamit ka ng hindi naka-plug na aktibidad)."
+        },
         "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
           "tips": [
             "Baka gusto mong gumugol ng kaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga bata, pinakamahusay na kumilos sa lalong madaling panahon. Sobrang paliwanag o lektyur sa simula ay may posibilidad na sumira sa kasiyahan, at ang kasiyahan ang buong punto! "
           ]
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
-          "name": "Minecraft: Paglalakbay sa Aquatic"
+          "name": "Minecraft: Paglalakbay sa Aquatic",
+          "description": "Hamunin ang mga mag-aaral mo na kumpletuhin ang [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) na tutorial.\n\nDepende sa edad at kakayahan ng iyong mga mag-aaral, maaari mong isaalang-alang ang: \n\n-   Para sa mas batang mga mag-aaral, iminumungkahi naming hatiin mo ang iyong klase sa mga pares at hilingin sa bawat grupo na magtulungan upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Para sa mga mag-aaral sa gitnang baitang, nalaman naming gumagana nang maayos ang independiyenteng paggawa sa mga tutorial. Minsan nakakatulong na payagan ang mga mag-aaral na pumili ng sarili nilang tutorial. Kung ang mga mag-aaral ay hindi interesado sa Minecraft, maaari silang makakuha ng katulad na karanasan sa mga tutorial na [Code kasama si Anna at Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para sa mga mas matanda o nasa hustong gulang na mag-aaral, ang tutorial na [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) ay gumagana nang mahusay sa alinman bilang independiyenteng hamon o sa pair programming."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -680,23 +690,47 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            null
+            "Kung kinakailangan magbigay ng konteksto ng ilang mga katotohanan tungkol sa Internet:\n\n-   Ang Internet ay hindi likas na ligtas. \n-   Ang mga packet na naglalakbay sa Internet ay dumadaan sa maraming router, na ang bawat isa ay maaaring pagmamay-ari ng iba't ibang tao o organisasyon.\n-   Kaya dapat nating _ipagpalagay_ na ang lahat ng impormasyong naglalakbay sa Internet ay pampubliko, na parang nakasulat sa postcard at ipinadala sa pamamagitan ng mail."
           ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": "Ang pagkasekreto ay mahalagang bahagi ng ating buhay, sa mga importanteng paraan. Habang patuloy na isinasagawa ang ating buhay sa Internet, gusto nating makatiyak na mapapanatili natin ang pagkapribado ng ating impormasyon at kontrolin kung sino ang may access sa mga kompidensiyal na impormasyon. \n\nAng digital commerce, negosyo, mga operasyon ng gobyerno, at maging ang mga social network ay umaasa lahat sa ating kakayahang pigilan ang impormasyon na mahulog sa maling mga kamay.\n\nKailangan natin ng paraan para magpadala ng mga lihim na mensahe..."
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "Klasikong Encryption - Ang Caesar Cipher",
+          "description": "**Background:**\n\n\\*Marami sa mga ideyang ginagamit natin para magtago ng mga sekreto sa digital age ay mas luma kaysa sa Internet. Ang proseso ng pag-encode ng plain text message sa ilang lihim na paraan ay tinatawag na **Encryption\\*** \n\n_Halimbawa noong panahon ng Roman, si Julius Caesar ay iniulat na may mga naka-encrypt na mensahe sa kanyang mga sundalo at heneral sa pamamagitan ng paggamit ng simpleng alphabetic shift - bawat karakter ay na-encrypt sa pamamagitan ng pagpapalit nito ng karakter na ilang nakapirming bilang ng mga titik ang layo sa alpabeto._\n\n\\*Bilang resulta ang alphabetic shift ay madalas na tinutukoy bilang ang **Caesar Cipher**.\\*\n\n**Prompt:** \n\n-   Ang mensaheng ito ay naka-encrypt gamit ang Caesar Cipher (isang \"alphabetic shift\").\n-   Tingnan natin kung gaano katagal mo bago **ma-decode ang mensaheng ito** (tandaan na ito ay paglilipat lamang ng alpabeto):"
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            null
+            "Labanan ang pagnanais na bigyan ang mga mag-aaral ng tool o device para tumulong sa pag-crack ng mensaheng ito -- darating iyon sa susunod na bahagi ng aralin! Bahagi ng punto dito ay posible ito na walang mga tool. Sa mga tool, nagiging walang kuwenta ito, gaya ng makikita natin sa susunod.\n\nKung ang mga mag-aaral ay nahihirapang magsimula, narito ang ilang mga mungkahi sa diskarte: \n\n-   Maghanap ng maikling salita at subukan ang mga pagbabago sa alpabeto hanggang sa maging malinaw na ito ay salitang Ingles\n-   Tandaan na ang mga titik ay hindi random na pinapalitan\n-   ang alpabeto ay inilipat lamang.\n-   Kapag nahanap mo na ang halaga ng shift, ang iba ay madali na lang. \t\t  "
           ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": "_Ipakita o isulat ito sa pisara_\n\n    \tserr cvmmn va gur pnsrgrevn\n\n-   **Bigyan ang mga mag-aaral ng humigit-kumulang 3-5 minuto** upang magtrabaho sa pag-crack ng mensahe.\n    -   _SAGOT: \"libreng pizza sa cafeteria\" - ang alpabeto ng AZ ay inilipat ng 13 karakter._ \n\n**Recap:**\n\n-   Sa simpleng pamamaraan ng pag-encrypt na ito, tumagal lamang ng ilang minuto upang ma-decode ang maiksing mensahe.\n-   Paano kung mas mahaba ang mensahe PERO mayroon kang computational tool na tutulong sa iyo?!"
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            null
+            "Kung gusto mong magbasa ng kaunti ang mga mag-aaral mo tungkol sa **Historical Cryptography** at cracking ciphers, tingnan ang 'Substitution Ciphers at Frequency Analaysis' sa [Blown to Bits, Kabanata 5 - Pagbabasa](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf) pp. 165- 169."
           ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": "Sa hanay ng mga aktibidad na ito, gagamit ang mga mag-aaral ng dalawang magkaibang bersiyon ng simpleng widget sa Code Studio upang \"i-crack\" ang mga mensaheng naka-encode na may mga substitution cipher, kabilang ang alphabetic shift at random na pagpapalit.\n\n![](https://code.org/curriculum/docs/csp/code-studio-icon.png) **Paglipat sa Code Studio**: [Mga Widget ng Encryption sa Code Studio](https://studio.code.org/s/hoc-encryption)"
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "Bahagi 1 - Pag-crack ng Caesar Cipher",
+          "description": "-   Hayaan ang mga mag-aaral na mag-click sa una (sa dalawang) mga tool sa pag-encrypt sa Code Studio sa araling ito. Ito ay may label na \"Alphabetic Shift Widget\"."
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            null
+            "Huwag magmadali, ngunit huwag magtagal sa pag-crack ng caesar ciphers. Ang pagpapakita at pag-crack ng caesar cipher ay dapat maging **medyo mabilis**.\n\n**Ang widget** ay medyo maliwanag. Hayaang malaman ng mga mag-aaral sa kanilang sarili kung paano ito gagamitin.\n\nAng layunin dito ay gumawa ng mga punto tungkol sa pag-crack ng encryption gamit ang mga computational tool, at simulang gumamit ng ilang karaniwang termino.\n\nDapat kang magpatuloy sa pag-crack ng random na pagpapalit nang medyo mabilis."
           ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": "Ang mga tagubilin sa aktibidad na ito ay simple - walang handout:\n\n-   Ilagay sa pares-pares/partner ang mga mag-aaral\n\n**Layunin:** Pumili ng mensaheng naka-encrypt gamit ang caesar cipher at gamitin ang ibinigay na widget para \"i-crack\" ito.\n\n-   Mag-eksperimento gamit ang tool - I-click ang mga bagay, sumundot, alamin kung ano ang ginagawa nito.\n-   **Pumili ng isa sa mga mensahe mula sa pull down na menu at subukang i-crack ito** gamit ang tool.\n-   Kung gusto mo, ilagay ang sarili mong mensahe, i-encrypt ito, at hayaan ang kaibigang i-decrypt ito. \n\n**Bigyan ang mga mag-aaral ng humigit-kumulang 5 minuto** upang makapasok sa tool at magbasa ng ilang mensahe\n\n-   Sa tulong ng tool, ang pag-crack ng alphabetic shift ay walang kabuluhan.\n-   Kapag nagawa mo na ang isa, kailangan lang ng ilang segundo para magawa ang iba. \n\n**Opsyonal - I-pause at I-recap:**\n\nMay page sa Code studio na nagre-recap ng terminolohiya (encryption, decryption, crack, cipher, Caesar ciper) at nagdudulot ng susunod na problema.\n\nMaaari kang mag-pause dito upang mag-recap at pag-usapan ang mga tuntunin kung gusto mo o hayaan ang mga mag-aaral na magpatuloy (tingnan ang bahagi ng aktibidad 2 sa ibaba)."
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "Bahagi 2 - Mag-crack ng Random Substitution Cipher",
+          "description": "Matapos muling i-cap ang unang aktibidad tiyaking **naiintindihan ng mga mag-aaral ang sumusunod bago magpatuloy:**\n\n-   _Madali ang pag-crack ng Caesar cipher...walang kabuluhan sa computational tool tulad ng ginamit namin._\n-   _Ang susunod na hakbang ay gawing bahagyang mas mahirap ang pag-encrypt..._\n\n**Bagong Hamon:**\n\n-   \\*Paano kung sa halip na ilipat ang buong alpabeto, na-map namin ang bawat titik ng alpabeto sa random na magkakaibang titik ng alpabeto? Ito ay tinatawag na **random substitution cipher.\\***\n\n-   \\*Ang **bagong bersiyon ng widget** na makikita mo ay mas sopistikadong bersiyon ng tool sa pag-encrypt na nagpapakita sa iyo ng maraming iba't ibang bagay.\\*\n\n-   **Ngunit ang ginagawa nito ay medyo misteryo!** Tingnan natin ito..."
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
