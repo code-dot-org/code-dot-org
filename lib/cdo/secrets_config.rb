@@ -42,8 +42,6 @@ module Cdo
       end
     end
 
-    private
-
     # Stores a reference to a secret so it can be resolved later.
     Secret = Struct.new(:key) do
       def to_s
@@ -55,7 +53,7 @@ module Cdo
     YAML.add_domain_type('', 'Secret') {Secret.new}
 
     # Processes `Secret` references in the provided config hash.
-    def process_secrets!(config)
+    private def process_secrets!(config)
       return if config.nil?
       config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
         secret.key ||= SecretsConfig.secret_path(env, key)
@@ -63,7 +61,7 @@ module Cdo
     end
 
     # Resolve secret references to lazy-loaded values.
-    def lazy_load_secrets!
+    private def lazy_load_secrets!
       self.cdo_secrets ||= Cdo.lazy do
         require 'cdo/secrets'
         Cdo::Secrets.new(logger: log)
@@ -89,7 +87,7 @@ module Cdo
 
     # Returns a YAML fragment clearing all secrets by overriding their values to `nil`.
     # Any exceptions or defaults can be re-added later in the YAML document, after secrets have been cleared.
-    def clear_secrets
+    private def clear_secrets
       @secrets ||= []
       @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
       @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')
