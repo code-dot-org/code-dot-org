@@ -754,6 +754,17 @@ en:
         csa_nested_loops: 'CSA: Nested Loops'
         csa_one_dimensional_arrays: 'CSA: One-Dimensional (1D) Arrays'
         csa_polymorphism: 'CSA: Polymorphism'
+        csa_casting: 'CSA: Casting'
+        csa_equals_and_aliases: 'CSA: Equals and Aliases'
+        csa_multi-selection_statements: 'CSA: Multi-Selection Statements'
+        csa_random_numbers: 'CSA: Random Numbers'
+        csa_static_methods: 'CSA: Static Methods'
+        csa_static_variables: 'CSA: Static Variables'
+        csa_the_equals_method: 'CSA: The equals() Method'
+        csa_welcome_to_the_theater: 'CSA: Welcome to The Theater'
+        enter_your_own_poem: Enter Your Own Poem
+        csa-example-solution-1: 'Live Coding an Example Solution '
+        csd_sprite_properties: Sprite Properties
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
