@@ -1173,3 +1173,69 @@ bs:
               display_name: Liste
             lessonGroup-3:
               display_name: Petlje
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno Državljanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            ramp_up:
+              display_name: Ugniježdene Petlje
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
