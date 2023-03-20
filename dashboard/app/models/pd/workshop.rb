@@ -130,10 +130,10 @@ class Pd::Workshop < ApplicationRecord
 
   # Whether enrollment in this workshop requires an application
   def require_application?
-    return false if regional_partner&.link_to_partner_application.blank?
     courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
     subjects = ACADEMIC_YEAR_SUBJECTS.concat([SUBJECT_SUMMER_WORKSHOP])
-    courses.include?(course) && subjects.include?(subject)
+    courses.include?(course) && subjects.include?(subject) &&
+      regional_partner&.link_to_partner_application.present?
   end
 
   def self.organized_by(organizer)
