@@ -1032,3 +1032,53 @@ ur:
           lesson_groups:
             lessonGroup-2:
               display_name: باب 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+          title: کورس D (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_nested_loops:
+              display_name: شرائط
