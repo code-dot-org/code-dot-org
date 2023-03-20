@@ -1124,6 +1124,8 @@ pl:
         text: unikając celów
       gamelab_beginCollectingData:
         text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -2501,6 +2503,8 @@ pl:
             new Behavior(wobbling, []): chybotanie
             new Behavior(wandering, []): wędrowanie
             new Behavior(patrolling, []): patrolowanie
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:

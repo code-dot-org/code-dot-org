@@ -7818,3 +7818,148 @@ pl:
         dlp-core-2023:
           name: dlp-core-2023
           title: 2023 Podstawy głębszego uczenia się
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+          description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
+            tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w
+            zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          student_description: Ucz się informatyki wypróbowując poniższe lekcje w
+            swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
+            w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          description_short: 'Wprowadzenie do informatyki dla nie umiejących czytać:
+            łączy najlepsze elementy z naszych kursów dla przedszkoli i pierwszej
+            klasy.'
+          description_audience: W wieku 4-8
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_sprites:
+              display_name: Duszki
+            lessonGroup-9:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_functions:
+              display_name: Funkcje
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
+            tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w
+            zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          student_description: Ucz się informatyki wypróbowując poniższe lekcje w
+            swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
+            w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy
+            nauczania w szkole podstawowej dla starszych uczniów.'
+          description_audience: W wieku 9-18
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+            lessonGroup-5:
+              display_name: Koniec projektu kursu
+          student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
+            Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+            udostępnić.
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          description_audience: W wieku 4-7
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_impacts:
+              display_name: Wplywy informatyki
+            csf_events:
+              display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+          student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
+            Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+            udostępnić.
+          description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze
+            czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
+          description_audience: W wieku 5-8
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+            csf_data:
+              display_name: Dane
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          student_description: Twórz programy z sekwencjami, pętlami i zdarzeniami.
+            Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania
+            problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz
+            swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne
+            dzieła, opowiadania i gry.
+          description_audience: W wieku 6-10
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_events:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          title: Kurs D (2021)
+          description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
+            grafikę, gry, a nawet potańcówkę.
+          description_audience: W wieku 7-11
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sprites:
+              display_name: Duszki
+            ramp_up:
+              display_name: Zagnieżdżające się  pętle
+            csf_functions:
+              display_name: Funkcje
+            csf_nested_loops:
+              display_name: Zdania z warunkami
+            lessonGroup-7:
+              display_name: Wplywy informatyki
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          title: Kurs E (2022)
+          description_audience: W wieku 8-12
