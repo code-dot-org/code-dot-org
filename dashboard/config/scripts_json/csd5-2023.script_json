@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2023-03-14 17:50:48 UTC",
+    "serialized_at": "2023-03-17 22:43:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2168,7 +2168,13 @@
       "key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd5/2023] video in the slides.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd5/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
@@ -3938,7 +3944,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Accessing Videos:** These videos are embedded in the slides for this lesson and can also be downloaded from within this lesson plan. They can also be found in their own levels on Code Studio so students have access to these videos if they wish to them on their own or if they are absent for this lesson.\r\n"
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4126,7 +4132,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4140,7 +4146,13 @@
       "position": 2,
       "properties": {
         "description": "Machine learning refers to a computer that can recognize patterns and make decisions without being explicitly programmed. In this activity you’re going to supply the data to train your own machine learning model. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\n\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\n\n\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f22b4e3e-3fcd-495f-94ba-10ae93f4c1d9",
