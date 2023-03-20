@@ -23,7 +23,7 @@
 
     .overline {
       color: $brand_primary_default;
-      margin-bottom: 8px;
+      margin: 0 0 8px 0;
     }
 
     h4 {
@@ -35,9 +35,11 @@
       display: flex;
       font-size: 14px;
       color: $neutral_dark80;
+      margin: 0 0 8px 0;
+      align-items: center;
 
       .iconDescription {
-        margin-left: 8px;
+        margin: 0 0 0 8px;
         color: $neutral_dark;
       }
     }
