@@ -278,18 +278,40 @@
     },
     "abalone": {
       "fields": {
+        "Sex": {
+          "id": "Geschlecht"
+        },
         "Length": {
           "id": "Länge"
         },
+        "Diameter": {
+          "id": "Durchmesser",
+          "description": "Der Durchmesser in Millimetern."
+        },
         "Height": {
           "id": "Höhe"
+        },
+        "Whole weight": {
+          "id": "Gesamtes Gewicht"
+        },
+        "Viscera weight": {
+          "id": "Gewicht der Eingeweide"
+        },
+        "Shell weight": {
+          "id": "Gewicht der Schale"
+        },
+        "Rings": {
+          "id": "Ringe",
+          "description": "Das Alter in Jahren."
         }
       },
       "card": {
         "context": {
+          "potentialUses": "Ermittele das Alter eines Seeohrs.",
           "potentialMisuses": " "
         }
-      }
+      },
+      "name": "Seeohren"
     },
     "basketball_shots": {
       "card": {
@@ -363,6 +385,9 @@
       "fields": {
         "Age": {
           "id": "Alter"
+        },
+        "Sex": {
+          "id": "Geschlecht"
         }
       },
       "card": {

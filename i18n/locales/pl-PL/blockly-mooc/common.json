@@ -206,7 +206,6 @@
   "beta": "beta",
   "betterThanPerfectDescription": "WOW!",
   "bigQuestions": "Wielkie pytania",
-  "blocklyDarkTheme": "Ciemny motyw",
   "blocklyHighContrastTheme": "Wysoki kontrast Theme",
   "blocklyKBNavOn": "Włącz nawigację klawiaturą",
   "blocklyKBNavOff": "Wyłącz nawigację klawiaturą",
@@ -1350,6 +1349,7 @@
   "missingRecommendedBlocksErrorMsg": "Niezupełnie. Spróbuj użyć bloku, którego jeszcze nie użyłeś.",
   "missingRequiredBlocksErrorMsg": "Niezupełnie. Musisz użyć bloku, którego jeszcze nie użyłeś.",
   "missionStatement": "**Code.org®** jest organizacją nonprofit dedykowaną udostępnieniu informatyki w szkołach i poszerzaniu udziału kobiet i innych mniejszości. Naszą wizją jest to, żeby każdy uczeń w każdej szkole mógł uczyć się informatyki, tak samo jak biologii, chemii lub matematyki. Code.org oferuje wiodący program nauczania informatyki dla K-12 w największych dystryktach szkół w Stanach Zjednoczonych. Code.org organizuje również co roczne kampanie Godziny Kodowania, które angażuj 15% populacji uczniów na całym świecie. Code.org jest wspierane przez hojnych darczyńców jak: Amazon, Facebook, Google, Infosys Fundation, Microsoft i wielu innych.",
+  "modules": "Moduły",
   "more": "Więcej",
   "moreAllCaps": "WIĘCEJ",
   "moreInfo": "Więcej informacji.",
@@ -1792,7 +1792,6 @@
   "saveAndClose": "Zapisz i Zamknij",
   "saveAndPublish": "Zapisz i Publikuj",
   "saveAndShare": "Zapisz i udostępnij",
-  "saveClassSections": "Zapisz sekcje klasy",
   "savedToGallery": "Zapisane",
   "saving": "Zapisywanie...",
   "scanQRCode": "Zeskanuj ten kod za pomocą aparatu w telefonie:",
@@ -2311,5 +2310,6 @@
   "yourSchoolTeacherButton": "Zacznij uczyć",
   "yourSchoolTeacherDesc": "Zacznij uczyć już dziś. Doświadczenie informatyczne nie jest do tego niezbędne",
   "yourSchoolTellUs": "Opowiedz nam o nauce informatyki w Twojej szkole",
+  "yourSectionsList": "Twoje sekcje",
   "zipOrCountry": "Kod pocztowy lub kraj"
 }

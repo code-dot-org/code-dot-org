@@ -113,3 +113,30 @@ de:
             einführender Informatikkurs, der die Studenten befähigt, authentische
             Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
             Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        csd-pilot:
+          title: Erkenntnisse aus der Informatik - Pilotkurs
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        csp-2020:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        csd-2020:
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
+            echte Produkte zu erzeugen.
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        csp-2021:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        mike-test:
+          title: Informatik Grundlagen
+        csp-2022:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        csp-2023:
+          description_short: Lerne grundlegende Konzepte der Informatik!

@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
@@ -7,9 +7,14 @@ import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import i18n from '@cdo/locale';
-
-// This * import allows us to stub out the SectionSelector component
-import * as SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Provider} from 'react-redux';
 
 const fakeSectionId = 42;
 const fakeUnitId = 1;
@@ -27,30 +32,30 @@ const MINIMUM_PROPS = {
 const getStudentRows = wrapper => wrapper.find(StudentRow);
 
 describe('LessonLockDialog with stubbed section selector', () => {
-  // Stub out <SectionSelector> so we can test without Redux.
-  let sectionSelectorStub;
+  let store;
   beforeEach(() => {
-    sectionSelectorStub = sinon.stub(SectionSelector, 'default');
-    sectionSelectorStub.callsFake(props => null);
+    stubRedux();
+    registerReducers({teacherSections});
+    store = getStore();
   });
 
   afterEach(() => {
-    sectionSelectorStub.restore();
+    restoreRedux();
   });
 
   it('renders with minimal props', () => {
-    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper).not.to.be.null;
     expect(wrapper.text()).not.to.be.empty;
   });
 
   it('does not display hidden warning if lesson not hidden', () => {
-    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper.text()).not.to.include(i18n.hiddenAssessmentWarning());
   });
 
   it('displays hidden warning if lesson is hidden', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <LessonLockDialog {...MINIMUM_PROPS} lessonIsHidden={true} />
     );
     expect(wrapper.text().includes(i18n.hiddenAssessmentWarning()));
@@ -62,7 +67,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
       serverLockState: [{name: 'fakeName', lockStatus: LockStatus.Locked}]
     });
 
-    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = mount(
+      <Provider store={store}>
+        <LessonLockDialog {...MINIMUM_PROPS} />
+      </Provider>
+    );
 
     expect(getStudentRows(wrapper)).to.have.length(1);
     const studentRow = getStudentRows(wrapper).at(0);
@@ -81,7 +90,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
       ]
     });
 
-    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = mount(
+      <Provider store={store}>
+        <LessonLockDialog {...MINIMUM_PROPS} />
+      </Provider>
+    );
 
     getStudentRows(wrapper).forEach(row => {
       expect(row.props().lockStatus).to.equal(LockStatus.Locked);
@@ -108,7 +121,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
       ]
     });
 
-    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = mount(
+      <Provider store={store}>
+        <LessonLockDialog {...MINIMUM_PROPS} />
+      </Provider>
+    );
 
     getStudentRows(wrapper).forEach(row => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
@@ -135,7 +152,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
       ]
     });
 
-    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = mount(
+      <Provider store={store}>
+        <LessonLockDialog {...MINIMUM_PROPS} />
+      </Provider>
+    );
 
     getStudentRows(wrapper).forEach(row => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
@@ -158,7 +179,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
     afterEach(() => window.open.restore());
 
     it('opens a window to the section assessments page', () => {
-      const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+      const wrapper = mount(
+        <Provider store={store}>
+          <LessonLockDialog {...MINIMUM_PROPS} />
+        </Provider>
+      );
 
       const viewSectionButton = wrapper.find('button').at(4);
       expect(viewSectionButton.text() === 'View section');
@@ -187,11 +212,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
     const handleCloseSpy = sinon.spy();
 
     const wrapper = mount(
-      <LessonLockDialog
-        {...MINIMUM_PROPS}
-        refetchSectionLockStatus={refetchStub}
-        handleClose={handleCloseSpy}
-      />
+      <Provider store={store}>
+        <LessonLockDialog
+          {...MINIMUM_PROPS}
+          refetchSectionLockStatus={refetchStub}
+          handleClose={handleCloseSpy}
+        />
+      </Provider>
     );
 
     const lockLessonButton = wrapper.find('button').at(1);
@@ -231,11 +258,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
     const handleCloseSpy = sinon.spy();
 
     const wrapper = mount(
-      <LessonLockDialog
-        {...MINIMUM_PROPS}
-        refetchSectionLockStatus={refetchStub}
-        handleClose={handleCloseSpy}
-      />
+      <Provider store={store}>
+        <LessonLockDialog
+          {...MINIMUM_PROPS}
+          refetchSectionLockStatus={refetchStub}
+          handleClose={handleCloseSpy}
+        />
+      </Provider>
     );
 
     const lockLessonButton = wrapper.find('button').at(1);
@@ -280,11 +309,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
     const handleCloseSpy = sinon.spy();
 
     const wrapper = mount(
-      <LessonLockDialog
-        {...MINIMUM_PROPS}
-        refetchSectionLockStatus={refetchStub}
-        handleClose={handleCloseSpy}
-      />
+      <Provider store={store}>
+        <LessonLockDialog
+          {...MINIMUM_PROPS}
+          refetchSectionLockStatus={refetchStub}
+          handleClose={handleCloseSpy}
+        />
+      </Provider>
     );
 
     const lockLessonButton = wrapper.find('button').at(1);

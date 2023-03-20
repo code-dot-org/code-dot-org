@@ -36,7 +36,7 @@ fr:
   africa_campaign_date_full: Du 1er octobre au 18 décembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
-  hoc2022_header: Explores, joues, crées !
+  hoc2022_header: Explore, joue, crée !
   social_hoc2022_explore_play_create: Utilisez l'informatique pour découvrir, jouer
     et créer !
   codeorg_homepage_hoc2022_body: 'Explorez l''univers, marquez des buts, bougez :
@@ -172,7 +172,8 @@ fr:
   social_maker_title: I'm a Maker!
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
   pl_superhero_title: Help students become superheroes!
-  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
+  pl_superhero_desc: Join our highly supportive Professional Learning Program for
+    middle and high school educators.
   hoc_live: Lévènement "Une heure de code" en direct
   hoc_live_sign_up_title: S'inscrire à "Une heure de Code" en direct
   hoc_live_learn_title: Apprenez avec L'Heure du code en direct
@@ -1818,7 +1819,7 @@ fr:
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
+  tutorial_ai4all_name: 'AI4ALL: AI & Drawing'
   tutorial_cldata_name: Welcome to Data Superpower
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
   tutorial_edisoncount_name: Teach Edison to count to 9

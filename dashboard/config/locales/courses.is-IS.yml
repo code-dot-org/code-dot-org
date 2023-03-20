@@ -59,3 +59,26 @@ is:
           description_teacher: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið
             í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota
             tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+        csd-pilot:
+          description_student: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið
+            í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota
+            tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+        csp-2020:
+          description_short: Kennir grunnhugtök í tölvunarfræði.
+        csd-2020:
+          description_short: Inngangsnámskeið í tölvunarfræði sem gerir nemendur færa
+            um að búa til eigin verk.
+          description_student: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið
+            í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota
+            tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+          description_teacher: Uppgötvanir í tölvunarfræði (CS Discoveries) er inngangsnámskeið
+            í tölvunarfræði sem gerir nemendur færa um að búa til eigin verk og nota
+            tölvunarfræði sem tæki til sköpunar, samskipta, þrautalausna og gamans.
+        csp-2021:
+          description_short: Kennir grunnhugtök í tölvunarfræði.
+        mike-test:
+          title: Grunnatriði tölvunarfræði
+        csp-2022:
+          description_short: Kennir grunnhugtök í tölvunarfræði.
+        csp-2023:
+          description_short: Kennir grunnhugtök í tölvunarfræði.

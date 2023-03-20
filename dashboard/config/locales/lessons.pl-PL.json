@@ -1304,7 +1304,8 @@
           "name": "Pamięć"
         },
         "csd1-2022/Project - Propose an App": {
-          "name": "Projekt - Zaproponuj aplikację"
+          "name": "Projekt - Zaproponuj aplikację",
+          "assessment_opportunities": "Użyj rubryki projektu dołączonej do tej lekcji, aby ocenić opanowanie przez uczniów celów uczenia się tej jednostki. Możesz także przypisać test po projekcie za pośrednictwem code studio."
         },
         "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
           "name": "Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna lekcja 1)"
@@ -5499,7 +5500,8 @@
           "name": "Pamięć"
         },
         "csd1-2021/Project - Propose an App": {
-          "name": "Projekt - Zaproponuj aplikację"
+          "name": "Projekt - Zaproponuj aplikację",
+          "assessment_opportunities": "Użyj rubryki projektu dołączonej do tej lekcji, aby ocenić opanowanie przez uczniów celów uczenia się tej jednostki. Możesz także przypisać test po projekcie za pośrednictwem code studio."
         },
         "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
           "name": "Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna lekcja 1)"

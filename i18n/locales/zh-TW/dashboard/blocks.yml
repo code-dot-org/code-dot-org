@@ -2,6 +2,8 @@
 zh-TW:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: 提示用戶{QUESTION}變量{VAR}，選項{A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2340,6 +2342,17 @@ zh-TW:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}說{SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋轉
+            new Behavior(spinning_left, []): 向左旋轉
+            new Behavior(fluttering, []): 飄移
+            new Behavior(jittering, []): 抖動
+            new Behavior(wobbling, []): 搖晃
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡邏
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:
