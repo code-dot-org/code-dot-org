@@ -6122,3 +6122,197 @@ fr:
             lessonGroup-2:
               display_name: Chapitre 1
           title: Résolution de problèmes
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_events:
+              display_name: Événements
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
+            conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
+          description_audience: 'Âges : 4 à 8 ans'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Séquencement
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Événements
+            csf_loops:
+              display_name: Boucles
+            csf_conditionals:
+              display_name: Instructions conditionnelles
+            csf_functions:
+              display_name: Fonctions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Les Boucles « Pour »
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours Express (2022)
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          description_short: 'Une introduction à l''informatique : elle combine le
+            meilleur de notre programme pour l''école primaire à destination des élèves
+            plus âgés.'
+          description_audience: 'Âges : de 9 à 18 ans'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_events:
+              display_name: Événements
+            lessonGroup-5:
+              display_name: Projet de fin de cours
+          title: Cours A (2022)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
+          student_description: Apprends les bases de l'informatique et de la sécurité
+            sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
+            que tu peux partager.
+          description_short: Une initiation à l’informatique pour les pré-lecteurs.
+          description_audience: 'Âges : 4 à 7 ans'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_impacts:
+              display_name: L'impact de l'informatique
+            csf_events:
+              display_name: Événements
+            lessonGroup-6:
+              display_name: Projet de fin de cours
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
+          student_description: Apprends les bases de l'informatique et de la sécurité
+            sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
+            que tu peux partager.
+          description_short: Une introduction à l'informatique pour les pré-lecteurs.
+            Similaire au cours A, mais avec une profondeur de concept accrue.
+          description_audience: 'Âges : 5 à 8 ans'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_events:
+              display_name: Événements
+            csf_data:
+              display_name: Données
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours C (2022)
+          description: Nous avons développé le Cours C pour des élèves de CE1. Les
+            élèves créeront des programmes avec du séquençage, des boucles et des
+            événements. Ils examineront des techniques de résolution de problèmes
+            et élaboreront des stratégies pour créer des communautés positives en
+            ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs
+            qu'ils pourront partager.
+          student_description: Crée des programmes avec séquençage, boucles et événements.
+            Traduis tes initiales en binaire, étudie différentes techniques de résolution
+            de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
+            crée ton propre jeu ou ta propre histoire que tu peux partager !
+          description_short: Apprendre les rudiments de l’informatique et de créer
+            vos propres œuvres d’art, vos histoires et vos jeux.
+          description_audience: 'Âges: 6 à 10 ans'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_events:
+              display_name: Événements
+            csf_loops:
+              display_name: Boucles
+            csf_conditionals:
+              display_name: Instructions conditionnelles
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours D (2022)
+          description: Nous avons créé le cours D pour les élèves de CE2. Le cours
+            commence par un examen des notions abordées dans les cours précédents,
+            dont les boucles et les événements. Par la suite, les élèves développeront
+            leur compréhension des algorithmes, des boucles imbriquées, des boucles
+            « tant que », des instructions conditionnelles, et bien plus encore.
+          student_description: Découvre les boucles, les instructions conditionnelles
+            et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
+          description_short: Learn about conditional statements. Create your own art,
+            games, and even a dance party.
+          description_audience: 'Àges : 7 à 11 ans'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Boucles Imbriquées
+            csf_functions:
+              display_name: Fonctions
+            csf_nested_loops:
+              display_name: Instructions conditionnelles
+            lessonGroup-7:
+              display_name: L'impact de l'informatique
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours E (2022)
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours
+            commence par une introduction à l'outil de programmation Labo des Sprites.
+            Les élèves apprendront à créer des projets amusants et interactifs qui
+            renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
+            de ces leçons, les élèves se mettront à faire du codage plus complexe.
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
+            conditionnelles. À la fin du cours, les élèves associeront ces notions
+            pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
+            libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          student_description: Mets-toi à coder avec les algorithmes, les événements,
+            les boucles, les instructions conditionnelleset les fonctions ! À la fin
+            de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
+            partager avec tes amis et ta famille.
+          description_audience: 'Âge : 8 à 12 ans'
