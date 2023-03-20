@@ -1364,6 +1364,16 @@ kn:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} ಹೇಳಿ {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            new Behavior(spinning_left, []): ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            new Behavior(fluttering, []): ಬೀಸುತ್ತಿದೆ
+            new Behavior(jittering, []): ನಡುಗುತ್ತಿದೆ
+            new Behavior(wobbling, []): ಒದ್ದಾಡುವುದು
+            new Behavior(wandering, []): ಅಲೆದಾಡುವುದು
+            new Behavior(patrolling, []): ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ
       binary_move:
         options:
           DIR:

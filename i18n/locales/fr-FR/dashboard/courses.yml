@@ -48,3 +48,20 @@ fr:
           description_short: Un cours d’initiation à l’informatique qui permet aux élèves de créer d’authentiques artéfacts.
           description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
           description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+        csd-pilot:
+          title: CSD Cours Pilote
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+        csp-2020:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        csd-2020:
+          description_short: Un cours d’initiation à l’informatique qui permet aux élèves de créer d’authentiques artéfacts.
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+        csp-2021:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        mike-test:
+          title: Les bases de l'Informatique
+        csp-2022:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        csp-2023:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.

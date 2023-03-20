@@ -1,1 +1,7 @@
---- {}
+---
+th:
+  data:
+    course:
+      name:
+        mike-test:
+          title: พื้นฐานด้านวิทยาการคอมพิวเตอร์

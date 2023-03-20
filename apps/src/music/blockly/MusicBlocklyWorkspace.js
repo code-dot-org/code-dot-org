@@ -20,6 +20,7 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
+import FieldChord from './FieldChord';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -69,6 +70,7 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.fieldRegistry.register('field_sounds', FieldSounds);
     Blockly.fieldRegistry.register('field_pattern', FieldPattern);
+    Blockly.fieldRegistry.register('field_chord', FieldChord);
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(),
@@ -87,6 +89,9 @@ export default class MusicBlocklyWorkspace {
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
+
+    // Rename the new function placeholder text for Music Lab specifically.
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] = 'my function';
 
     Blockly.setInfiniteLoopTrap();
 

@@ -2,6 +2,8 @@
 pt:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: pedir ao usuário {QUESTION} que informe a variável {VAR} com opções {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -370,6 +372,7 @@ pt:
             '"right"': coluna da direita
             '"x"': linhas cruzadas
             '"plus"': mais
+            '"spiral"': espiral
             '"infinity"': linha infinita
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
@@ -500,6 +503,7 @@ pt:
             '"right"': coluna da direita
             '"x"': linhas cruzadas
             '"plus"': mais
+            '"spiral"': espiral
             '"infinity"': linha infinita
             '"random"': aleatório
       Dancelab_mixColors:
@@ -1258,6 +1262,7 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+            '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_makeNumSprites:
@@ -1336,7 +1341,9 @@ pt:
             "'sound://category_nature/thunderstorm_1.mp3'": trovoada
             "'sound://category_animals/chick.mp3'": pintinho
             "'sound://category_animals/dog.mp3'": cachorro
+            "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_collect/trill_stings.mp3'": vibrar
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": toque
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": toque tonal
             "'sound://category_transition/trippy_robotic_transition.mp3'": transição robótica
@@ -2010,6 +2017,7 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+            '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       Poetry_makeNumSprites:
@@ -2283,6 +2291,17 @@ pt:
             '"congregating"': congregando
             '"avoiding"': distanciamento social
             '"none"': ficar parado
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando para a direita
+            new Behavior(spinning_left, []): girando para a esquerda
+            new Behavior(fluttering, []): tremulando
+            new Behavior(jittering, []): tremendo
+            new Behavior(wobbling, []): balançando
+            new Behavior(wandering, []): vagando
+            new Behavior(patrolling, []): patrulhando
       binary_drawBin:
         text: desenhar o binário {BIN}
       binary_drawBinScreen:

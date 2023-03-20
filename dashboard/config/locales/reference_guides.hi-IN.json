@@ -83,6 +83,12 @@
         "csd-2022/playing-notes": {
           "display_name": "नोट्स प्ले करना"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "सवाल हल करने की प्रक्रिया"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "सवाल हल करने की प्रक्रिया"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "स्प्राइट्स की विशेषताएं"
         },

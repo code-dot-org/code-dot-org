@@ -3,118 +3,118 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "لیست پخش Spotify (تمام سنین)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
-          "name": "",
-          "url": "",
+          "name": "هنر شعر HoC",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
           "type": "اسلایدها"
         },
         "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": "",
+          "name": "هنر شعر 4 - جشن",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
           "type": "ویدیو"
         },
         "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": "",
+          "name": "هنر شعر 2 - رویدادها",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
           "type": "ویدیو"
         },
         "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": "",
+          "name": "هنر شعر 3 - تصویرسازی",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
           "type": "ویدیو"
         },
         "poem_art_introduction/poem-art/2021": {
-          "name": "",
-          "url": "",
+          "name": "هنر شعر 1 - مقدمه",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "ویدیو"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "معرفی هنرمند\n",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "فیلم دانش‌آموز"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "چرخش‌ها و زاویه‌ها\n",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "جزوه دانش‌آموزی"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "فیلم دانش‌آموز"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "لیست پخش Spotify (تمام سنین)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "رمزنگاری و کلیدهای عمومی",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "ویدیو"
         },
         "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "ویجت‌های رمزنگاری در Code Studio",
+          "url": "https://studio.code.org/s/hoc-encryption"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "راهنمای فعالیت - فشرده‌سازی متن",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/",
           "type": ""
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "خلاصه فعالیت - این پیام را رمزگشایی کنید",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
+          "type": "خلاصه فعالیت"
         },
         "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "این پیام را رمزگشایی کنید",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/",
           "type": ""
         },
         "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "ویجت فشرده‌سازی متن در Code Studio",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
+          "type": "ویجت"
         },
         "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "ویدیو: فشرده‌سازی متن با Aloe Blacc",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "ویدیو"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
+          "name": "رویدادها در پرش - چگونه اتفاق می‌افتند؟",
           "url": "https://docs.google.com/presentation/d/11DzVtRaK1FtnI6wppsPBFNOnVFU1P-Jx_HNd0FYR11g/edit?usp=share_link",
           "type": ""
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "",
+          "name": "رویدادها در پرش - چگونه اتفاق می‌افتند؟",
           "url": "https://docs.google.com/presentation/d/11DzVtRaK1FtnI6wppsPBFNOnVFU1P-Jx_HNd0FYR11g/edit?usp=share_link",
           "type": ""
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "لیست پخش Spotify (تمام سنین)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "لیست پخش Spotify (تمام سنین)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: یادگیری ماشینی",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدیو"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: تأثیر بر جامعه",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "ویدیو"
         },
         "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: داده‌های آموزشی و سوگیری",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ویدیو"
         },
         "2022_change_log/coursed/2022": {
@@ -322,8 +322,8 @@
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/coursed/2022": {
-          "name": "",
-          "url": ""
+          "name": "لیست پخش Spotify (تمام سنین)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "feeling_faces/coursed/2022": {
           "name": "چهره‌های احساسی",
@@ -515,18 +515,18 @@
           "type": "کاربرگ"
         },
         "ai_impact_on_society/coursef/2022": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: تأثیر بر جامعه",
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "ویدیو"
         },
         "ai_machine_learning/coursef/2022": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: یادگیری ماشینی",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدیو"
         },
         "ai_training_data_bias/coursef/2022": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: داده‌های آموزشی و سوگیری",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ویدیو"
         },
         "get-site-ip-com/coursef/2022": {
@@ -639,7 +639,7 @@
         "private_and_personal_information_exit_ticket/coursee/2022": {
           "name": "اطلاعات خصوصی و شخصی: Exit Ticket",
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "private_and_personal_information_lesson_quiz/coursee/2022": {
           "name": "اطلاعات خصوصی و شخصی: امتحان درس",
@@ -687,13 +687,13 @@
           "type": "ویدیو"
         },
         "turns_angles/coursee/2022": {
-          "name": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
           "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "turns_angles_1/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "فیلم دانش‌آموز"
         },
         "functions_unplugged_songwriting/coursee/2022": {
@@ -808,12 +808,12 @@
         "digital_trails_animal_tracks/courseb/2022": {
           "name": "مسیرهای دیجیتالی: مسیرهای حیوانات",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
           "name": "مسیرهای دیجیتالی: مربع‌های مسیر دیجیتال (Digital Trail Squares)",
           "url": "https://docs.google.com/document/d/14yPXFPCm6RSeD7NAyEQUiqEZmK8AMWuSnt8b4BL176c/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "digital_trails_follow_the_digital_trail/courseb/2022": {
           "name": "مسیرهای دیجیتالی: مسیر دیجیتالی را دنبال کنید",
@@ -899,12 +899,12 @@
           "type": "دستکاری‌ها"
         },
         "stevie_and_the_big_project/courseb/2022": {
-          "name": "",
+          "name": "استیوی و پروژه بزرگ",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "منبع"
         },
         "unspotted_bugs/courseb/2022": {
-          "name": "",
+          "name": "باگ‌های دیده‌نشده",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ویدیو"
         },
@@ -1008,17 +1008,17 @@
           "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "artist_introduction/express/2022": {
-          "name": "",
-          "url": "",
+          "name": "معرفی هنرمند\n",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "ویدیو"
         },
         "turns_angles/express/2022": {
-          "name": "",
-          "url": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "ویدیو"
         },
         "turns_angles_1/express/2022": {
-          "name": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
           "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": "جزوه"
         },
@@ -1052,8 +1052,8 @@
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/express/2022": {
-          "name": "",
-          "url": ""
+          "name": "لیست پخش Spotify (تمام سنین)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pair_programming_video/express/2022": {
           "name": "ویدئو برنامه‌نویسی دو نفره",
@@ -1202,7 +1202,7 @@
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
           "name": "ایمنی در محله بر خط من: لحظه مکث و فکر کردن",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
           "name": "ایمنی در محله برخط من: ایمنی: اداره می‌کند!",
@@ -1410,7 +1410,7 @@
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
           "name": "قرار دادن توقفی برای پستی برخط: متوقف کردن پستی برخط",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
           "name": "",
@@ -1472,19 +1472,19 @@
           "type": "دستکاری‌ها"
         },
         "artist_introduction/coursec/2022": {
-          "name": "",
-          "url": "",
+          "name": "معرفی هنرمند\n",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "فیلم دانش‌آموز"
         },
         "turns_angles/coursec/2022": {
-          "name": "",
-          "url": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "فیلم دانش‌آموز"
         },
         "turns_angles_1/coursec/2022": {
-          "name": "",
+          "name": "چرخش‌ها و زاویه‌ها\n",
           "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "the_big_event/coursec/2022": {
           "name": "رویداد بزرگ",
@@ -1906,8 +1906,8 @@
           "type": "ویدیو"
         },
         "video_machine_learning/csd/2022": {
-          "name": "",
-          "url": "",
+          "name": "ویدیو: یادگیری ماشینی",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدیو"
         },
         "video_training_data_and_bias/csd/2022": {
@@ -2010,12 +2010,12 @@
           "url": ""
         },
         "the_problem_solving_process/csd/2022": {
-          "name": "",
+          "name": "فرایند حل مسئله",
           "url": "",
           "type": ""
         },
         "the_problem_solving_process_1/csd/2022": {
-          "name": "",
+          "name": "فرایند حل مسئله",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2040,7 +2040,7 @@
           "type": "ویدیو"
         },
         "what_is_a_computer_/csd/2022": {
-          "name": "",
+          "name": "کامپیوتر چیست؟",
           "url": "",
           "type": ""
         },
@@ -2377,7 +2377,7 @@
           "type": "منبع"
         },
         "the_animation_tab/csd/2022": {
-          "name": "",
+          "name": "زبانه انیمیشن",
           "url": "",
           "type": "ویدیو"
         },
@@ -2485,7 +2485,7 @@
           "type": "اسلایدها"
         },
         "boolean_expressions/csd/2022": {
-          "name": "",
+          "name": "عبارات بولی",
           "url": "",
           "type": "ویدیو"
         },
@@ -2495,7 +2495,7 @@
           "type": "منبع"
         },
         "conditional_statements/csd/2022": {
-          "name": "",
+          "name": "گزاره‌های شرطی",
           "url": "",
           "type": "ویدیو"
         },
@@ -2520,7 +2520,7 @@
           "type": "منبع"
         },
         "if_else_statements/csd/2022": {
-          "name": "",
+          "name": "گزاره‌های If/Else",
           "url": "",
           "type": "ویدیو"
         },
@@ -2569,17 +2569,17 @@
           "type": "اسلایدها"
         },
         "velocity/csd/2022": {
-          "name": "",
+          "name": "سرعت",
           "url": "",
           "type": "ویدیو"
         },
         "velocity_1/csd/2022": {
-          "name": "",
+          "name": "سرعت",
           "url": "",
           "type": "منبع"
         },
         "velocity_2/csd/2022": {
-          "name": "",
+          "name": "سرعت",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2868,12 +2868,12 @@
           "type": ""
         },
         "intro_to_css_-_part_1/csd/2022": {
-          "name": "",
+          "name": "معرفی CSS - بخش 1",
           "url": "",
           "type": "ویدیو"
         },
         "intro_to_css_-_part_2/csd/2022": {
-          "name": "",
+          "name": "معرفی CSS - بخش 2",
           "url": "",
           "type": "ویدیو"
         },
@@ -3659,7 +3659,7 @@
           "url": ""
         },
         "computer_science_is_changing_everything/csd/2022": {
-          "name": "",
+          "name": "علم کامپیوتر همه چیز را تغییر می‌دهد",
           "url": "",
           "type": "ویدیو"
         },
@@ -3903,7 +3903,7 @@
           "type": "منبع"
         },
         "introduction_to_arrays/csd/2022": {
-          "name": "",
+          "name": "معرفی آرایه‌ها",
           "url": "",
           "type": "ویدیو"
         },
@@ -4063,7 +4063,7 @@
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "name": "",
-          "url": "",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدیو"
         },
         "classifying_fish/csd/2022": {
@@ -4165,12 +4165,12 @@
           "type": "منبع"
         },
         "introduction_to_ai_lab/csd/2022": {
-          "name": "",
+          "name": "معرفی آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "اسلایدها"
         },
         "introduction_to_ai_lab_1/csd/2022": {
-          "name": "",
+          "name": "معرفی آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -4185,7 +4185,7 @@
           "type": ""
         },
         "training_and_testing_in_ai_lab/csd/2022": {
-          "name": "",
+          "name": "آموزش و آزمایش در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -4205,8 +4205,8 @@
           "type": "اسلایدها"
         },
         "ai_training_data_bias/csd/2022": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: داده‌های آموزشی و سوگیری",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ویدیو"
         },
         "model_cards/csd/2022": {
@@ -4225,7 +4225,7 @@
           "type": "کلید پاسخ"
         },
         "model_cards_in_ai_lab/csd/2022": {
-          "name": "",
+          "name": "کارت‌های مدل در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -4290,17 +4290,17 @@
           "type": "کلید پاسخ"
         },
         "numerical_data_in_ai_lab/csd/2022": {
-          "name": "",
+          "name": "داده‌های عددی در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "اسلایدها"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
-          "name": "",
+          "name": "داده‌های عددی در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": ""
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
-          "name": "",
+          "name": "داده‌های عددی در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -4326,7 +4326,7 @@
         "ai_ethics_research_reflection/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "name": "",
@@ -5031,8 +5031,8 @@
           "url": ""
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "فهرست اشعار",
+          "url": "[https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O\\_ZNaX5RqHyuvBso/edit?usp=sharing][0]",
           "type": "اسلایدها"
         },
         "2021_change_log/coursef/2021": {
@@ -6657,7 +6657,7 @@
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "name": "",
-          "url": "",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدیو"
         },
         "types_of_machine_learning/csd/2021": {
@@ -6739,12 +6739,12 @@
           "type": "منبع"
         },
         "introduction_to_ai_lab/csd/2021": {
-          "name": "",
+          "name": "معرفی آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "اسلایدها"
         },
         "introduction_to_ai_lab_1/csd/2021": {
-          "name": "",
+          "name": "معرفی آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -6754,7 +6754,7 @@
           "type": ""
         },
         "training_and_testing_in_ai_lab/csd/2021": {
-          "name": "",
+          "name": "آموزش و آزمایش در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -6789,8 +6789,8 @@
           "type": "منبع"
         },
         "ai_training_data_bias/csd/2021": {
-          "name": "",
-          "url": "",
+          "name": "هوش مصنوعی: داده‌های آموزشی و سوگیری",
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ویدیو"
         },
         "model_cards/csd/2021": {
@@ -6804,7 +6804,7 @@
           "type": ""
         },
         "model_cards_in_ai_lab/csd/2021": {
-          "name": "",
+          "name": "کارت‌های مدل در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -6864,17 +6864,17 @@
           "type": "کلید پاسخ"
         },
         "numerical_data_in_ai_lab/csd/2021": {
-          "name": "",
+          "name": "داده‌های عددی در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "اسلایدها"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
-          "name": "",
+          "name": "داده‌های عددی در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": ""
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
-          "name": "",
+          "name": "داده‌های عددی در آزمایشگاه هوش مصنوعی",
           "url": "",
           "type": "ویدیو"
         },
@@ -6905,7 +6905,7 @@
         "ai_ethics_research_reflection/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "جزوه دانش‌آموزی"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "name": "",
@@ -7436,7 +7436,7 @@
           "type": "ویدیو"
         },
         "innovation-video-1-1/csd/2021": {
-          "name": "",
+          "name": "علم کامپیوتر همه چیز را تغییر می‌دهد",
           "url": "",
           "type": "ویدیو"
         },
@@ -7461,7 +7461,7 @@
           "type": "منبع"
         },
         "how_computers_word_hardware_software/csd/2021": {
-          "name": "",
+          "name": "نحوه کار کامپیوترها: سخت‌افزار و نرم‌افزار",
           "url": "",
           "type": "ویدیو"
         },
@@ -7555,7 +7555,7 @@
           "type": ""
         },
         "introduction_to_arrays/csd/2021": {
-          "name": "",
+          "name": "معرفی آرایه‌ها",
           "url": "",
           "type": "ویدیو"
         },
@@ -7610,7 +7610,7 @@
           "type": "منبع"
         },
         "circuits-logic-video/csd/2021": {
-          "name": "",
+          "name": "نحوه کار کامپیوترها: مدارها و منطق",
           "url": "",
           "type": "ویدیو"
         },
@@ -7908,8 +7908,8 @@
           "type": "ویدیو"
         },
         "video_machine_learning/csd/2021": {
-          "name": "",
-          "url": "",
+          "name": "ویدیو: یادگیری ماشینی",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدیو"
         },
         "video_training_data_and_bias/csd/2021": {
@@ -8067,7 +8067,7 @@
           "type": "ویدیو"
         },
         "the_animation_tab/csd/2021": {
-          "name": "",
+          "name": "زبانه انیمیشن",
           "url": "",
           "type": "ویدیو"
         },
@@ -8150,12 +8150,12 @@
           "type": ""
         },
         "boolean_expressions/csd/2021": {
-          "name": "",
+          "name": "عبارات بولی",
           "url": "",
           "type": "ویدیو"
         },
         "conditional_statements/csd/2021": {
-          "name": "",
+          "name": "گزاره‌های شرطی",
           "url": "",
           "type": "ویدیو"
         },
@@ -8175,7 +8175,7 @@
           "type": "منبع"
         },
         "if_else_statements/csd/2021": {
-          "name": "",
+          "name": "گزاره‌های If/Else",
           "url": "",
           "type": "ویدیو"
         },
@@ -8214,12 +8214,12 @@
           "type": "منبع"
         },
         "velocity_1/csd/2021": {
-          "name": "",
+          "name": "سرعت",
           "url": "",
           "type": "ویدیو"
         },
         "velocity_2/csd/2021": {
-          "name": "",
+          "name": "سرعت",
           "url": "",
           "type": "منبع"
         },
@@ -8372,7 +8372,7 @@
           "type": "ویدیو"
         },
         "the-problem-solving-process/csd/2021": {
-          "name": "",
+          "name": "فرایند حل مسئله",
           "url": "",
           "type": ""
         },
@@ -8391,7 +8391,7 @@
           "type": ""
         },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "",
+          "name": "کامپیوتر چیست؟",
           "url": "",
           "type": ""
         },
@@ -8660,12 +8660,12 @@
           "type": ""
         },
         "intro_to_css_-_part_1/csd/2021": {
-          "name": "",
+          "name": "معرفی CSS - بخش 1",
           "url": "",
           "type": "ویدیو"
         },
         "intro_to_css_-_part_2/csd/2021": {
-          "name": "",
+          "name": "معرفی CSS - بخش 2",
           "url": "",
           "type": "ویدیو"
         },

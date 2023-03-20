@@ -2930,7 +2930,7 @@
           "iceage_warn_ice_age_b": "הוסיפו את שני הבלוקים החדשים מתחת לאירוע \"התחל ריצה\" כדי שיתרחשו מייד לאחר תחילת התוכנית."
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "לכל דמות יש \"מיקום\". תוכלו לקבוע את המיקום בלחיצה על הסיכה שעל הבלוק הזה:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\nלחצו על הסיכה ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) בבלוק המיקום ואז בחרו מקום חדש לדמות שלכם על המסך.\nלחצו על \"הרץ\" כשהקוד שלכם מוכן.",
+          "location_hint": "לכל דמות יש \"מיקום\". תוכלו לקבוע את המיקום בלחיצה על הסיכה שעל הבלוק הזה:\n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\nלחצו על הסיכה ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) בבלוק המיקום ואז בחרו מקום חדש לדמות שלכם על המסך.\nלחצו על \"הרץ\" כשהקוד שלכם מוכן.",
           "remove_hint": "אתם יכולים להסיר דמות במספר שורה מסוים. תוכלו להוסיף דמות חדשה שתתפוס את מקומה:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {

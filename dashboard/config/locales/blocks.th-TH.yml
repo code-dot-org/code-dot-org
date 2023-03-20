@@ -2,6 +2,8 @@
 th:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR} พร้อมตัวเลือก {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2248,6 +2250,17 @@ th:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} พูด {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): หมุนไปทางขวา
+            new Behavior(spinning_left, []): หมุนไปทางซ้าย
+            new Behavior(fluttering, []): กระพือปีก
+            new Behavior(jittering, []): กระสับกระส่าย
+            new Behavior(wobbling, []): โยกเยก
+            new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(patrolling, []): เดินลาดตระเวน
       binary_drawBin:
         text: วาดเลขฐานสอง {BIN}
       binary_drawBinScreen:

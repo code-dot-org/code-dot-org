@@ -398,6 +398,7 @@
   volunteer_engineer_submission_field_email: "E-posti aadress"
   volunteer_engineer_submission_field_email_desc: "Sinu emaili ei jagata kunagi, kuid me saadame sulle õpetajate poolt päringuid."
   volunteer_engineer_submission_field_email_placeholder: "E-posti aadress"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Vaata privaatsusreegleid)"
   volunteer_engineer_submission_field_email_preference_yes: 'Jah'
   volunteer_engineer_submission_field_email_preference_no: 'Ei'
   volunteer_engineer_submission_final_paragraph: "Sind märgitakse kaardil kohalike õpetajate jaoks, kes võtavad Sinuga ühendust seoses KoodiTunni või muu vabatahtliku võimaluste raames. Sinu email ja täpset aadressi ei jagata KUNAGI meie poolt. Kuid kõik muu info (Kaasa arvatud ligikaudne asukoht) on avalikult nähtav kohalikele õpetajatele."
