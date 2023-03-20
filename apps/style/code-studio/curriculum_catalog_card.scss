@@ -1,12 +1,10 @@
-@import "color";
-@import "font";
+@import "phase1-design-system";
 
 .curriculumCatalogCardContainer {
   display: flex;
   flex-flow: column;
-  background-color: $neutral_white;
-  stroke: $neutral_dark20;
-  stroke-width: 1px;
+  background-color: $neutral_light;
+  border-color: $neutral_dark20;
   border-radius: 4px;
   height: 384px;
   width: 309px;
@@ -14,9 +12,10 @@
   img {
     height: 140px;
     object-fit: cover;
+    border-radius: 4px 4px 0 0;
   }
 
-  .infoContainer {
+  .curriculumInfoContainer {
     margin: 20px 16px;
     height: 100%;
     display: flex;
@@ -34,11 +33,12 @@
 
     .iconWithDescription {
       display: flex;
+      font-size: 14px;
+      color: $neutral_dark80;
 
       .iconDescription {
         margin-left: 8px;
-        font-size: 14px;
-        color: $neutral_dark80;
+        color: $neutral_dark;
       }
     }
 
@@ -50,7 +50,7 @@
       button {
         height: 40px;
         margin: 0;
-        width: 132px; // calculated: (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
+        min-width: 132px; // calculated: (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
         font-size: 16px;
       }
     }

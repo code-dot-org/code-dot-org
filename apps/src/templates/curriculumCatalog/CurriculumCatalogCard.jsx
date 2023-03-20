@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 import {cardImageNamesToSrc} from '@cdo/apps/templates/curriculumCatalog/cardImageNamesToSrc';
-import '../../../../shared/css/phase1-design-system.scss';
 import '../../../style/code-studio/curriculum_catalog_card.scss';
 
 const CurriculumCatalogCard = ({
@@ -18,7 +17,7 @@ const CurriculumCatalogCard = ({
 }) => (
   <div className="curriculumCatalogCardContainer">
     <img src={cardImageNamesToSrc[imageName]} alt={imageAltText} />
-    <div className="infoContainer">
+    <div className="curriculumInfoContainer">
       <p className="overline">{topic}</p>
       <h4>{courseName}</h4>
       <div className={'iconWithDescription'}>
