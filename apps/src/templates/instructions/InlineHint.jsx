@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-//import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
+import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {connect} from 'react-redux';
@@ -10,7 +10,6 @@ import {convertXmlToBlockly} from './utils';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
 import SafeMarkdown from '../SafeMarkdown';
-import ReadOnlyBlockSpaceFunction from '../ReadOnlyBlockSpaceFunction';
 
 class InlineHint extends React.Component {
   static propTypes = {
@@ -57,7 +56,7 @@ class InlineHint extends React.Component {
       >
         <SafeMarkdown markdown={this.props.markdown} />
         {this.props.block && (
-          <ReadOnlyBlockSpaceFunction
+          <ReadOnlyBlockSpace
             block={this.props.block}
             isRtl={this.props.isRtl}
           />

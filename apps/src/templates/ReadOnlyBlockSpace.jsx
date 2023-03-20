@@ -50,20 +50,6 @@ export default class ReadOnlyBlockSpace extends React.Component {
 
   componentDidUpdate() {
     if (this.state.blockSpace) {
-      console.log('about to resize readonly block space');
-      const currentContainer = this.container;
-      console.log(currentContainer);
-      console.log(currentContainer['clientWidth']);
-      console.log(
-        `clientWidth of container is: ${currentContainer.clientWidth}`
-      );
-      console.log(
-        `offsetWidth of container is: ${currentContainer.offsetWidth}`
-      );
-      console.log(
-        `scrollWidth of container is: ${currentContainer.scrollWidth}`
-      );
-      console.log(currentContainer.getBoundingClientRect());
       Blockly.cdoUtils.workspaceSvgResize(this.state.blockSpace);
     }
   }
@@ -71,7 +57,8 @@ export default class ReadOnlyBlockSpace extends React.Component {
   render() {
     const style = {
       maxHeight: this.state.height,
-      paddingBottom: 10
+      paddingBottom: 10,
+      overflow: 'hidden'
     };
 
     return (
