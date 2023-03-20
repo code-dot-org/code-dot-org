@@ -57,7 +57,8 @@ export default class ReadOnlyBlockSpace extends React.Component {
   render() {
     const style = {
       maxHeight: this.state.height,
-      paddingBottom: 10
+      paddingBottom: 10,
+      overflow: 'hidden'
     };
 
     return (
