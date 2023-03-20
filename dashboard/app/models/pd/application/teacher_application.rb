@@ -361,7 +361,7 @@ module Pd::Application
     end
 
     def should_send_decision_email?
-      if regional_partner.nil? || regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+      if regional_partner.nil? || regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
         false
       else
         AUTO_EMAIL_STATUSES.include?(status)
