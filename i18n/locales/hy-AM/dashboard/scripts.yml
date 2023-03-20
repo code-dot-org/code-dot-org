@@ -1473,3 +1473,67 @@ hy:
           lesson_groups:
             csp_unit9_2020:
               display_name: CS Principles Unit 9
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            csf_conditionals:
+              display_name: conditionals
+            csf_functions:
+              display_name: գործառույթները
+            csf_variables:
+              display_name: փոփոխականների
+            csf_for_loops:
+              display_name: For Loops
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            csf_conditionals:
+              display_name: conditionals
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: nested Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: conditionals
