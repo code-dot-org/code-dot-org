@@ -89,3 +89,21 @@
 .label {
   margin: 10px 10px 0 5px;
 }
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  color: gray;
+}
+
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  max-width: 450px;
+}
