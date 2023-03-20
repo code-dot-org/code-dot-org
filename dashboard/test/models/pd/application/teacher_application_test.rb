@@ -450,16 +450,26 @@ module Pd::Application
       assert_equal 3, application.status_log.count
     end
 
-    test 'setting an auto-email status queues up an email' do
-      application = create :pd_teacher_application
+    test 'setting an auto-email status queues up an email if associated with an RP' do
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
       application.expects(:queue_email).with('accepted')
       application.update!(status: 'accepted')
     end
 
-    test 'setting an non auto-email status does not queue up a status email' do
+    test 'setting an auto-email status does not queue up an email if no RP' do
       application = create :pd_teacher_application
+      assert_empty application.emails
+
+      application.expects(:queue_email).never
+      application.update!(status: 'accepted')
+    end
+
+    test 'setting a non auto-email status does not queue up a status email even if associated with an RP' do
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
       assert_empty application.emails
 
       application.expects(:queue_email).never
@@ -526,17 +536,15 @@ module Pd::Application
     end
 
     test 'should_send_decision_email?' do
-      application = build :pd_teacher_application, status: :pending
+      partner = create :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: partner.id
+      application = create :pd_teacher_application, form_data_hash: application_hash
 
       # no auto-email status: no email
       refute application.should_send_decision_email?
 
-      # auto-email status with no partner: yes email
+      # auto-email status with partner emails sent_by_system: yes email
       application.status = :accepted
-      assert application.should_send_decision_email?
-
-      # auto-email status, partner with sent_by_system: yes email
-      application.regional_partner = build(:regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM)
       assert application.should_send_decision_email?
 
       # auto-email status, partner with sent_by_partner: no email
