@@ -1,0 +1,52 @@
+{
+  "path": "initial-progression",
+  "panels": [
+    {
+      "text": "First, please play a sound.",
+      "toolbox": {
+        "Play": ["play_sound_at_current_location_simple2"]
+      },
+      "sounds": {
+        "dance": ["disco_beat", "funky_bass"]
+      },
+      "validations": [
+        {
+          "conditions": ["played_one_sound"],
+          "message": "Nice work.",
+          "next": "true"
+        },
+        {"message": "Please play a sound."}
+      ]
+    },
+    {
+      "text": "Second, please play three sounds at the same time.",
+      "toolbox": {
+        "Play": ["play_sound_at_current_location_simple2"],
+        "Control": ["play_sounds_together"]
+      },
+      "sounds": {
+        "pop": ["cafe_beat", "acoustic_bass"],
+        "rock": ["arena_beat", "riff_guitar"]
+      },
+      "validations": [
+        {
+          "conditions": ["played_three_sounds_together", "used_together_block"],
+          "message": "Nice work.",
+          "next": "true"
+        },
+        {
+          "conditions": ["played_two_sounds_together"],
+          "message": "It's good that you played two sounds, but you need to play another one."
+        },
+        {
+          "conditions": ["played_one_sound"],
+          "message": "It's good that you played one sound, but you need to play two more."
+        },
+        {"message": "Please play three sounds together."}
+      ]
+    },
+    {
+      "text": "Try everything!"
+    }
+  ]
+}

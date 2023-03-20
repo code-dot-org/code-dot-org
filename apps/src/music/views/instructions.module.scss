@@ -88,6 +88,11 @@
         padding: 0 10px;
         margin: 10px 0;
       }
+
+      .message {
+        margin-top: 30px;
+        color: #ffa400;
+      }
     }
   }
 
@@ -114,6 +119,12 @@
       &.buttonActive {
         opacity: 1;
         pointer-events: auto;
+      }
+
+      &.buttonNext {
+        color: white;
+        border-color: #ffa400;
+        background-color: #ffa400;
       }
     }
   }
