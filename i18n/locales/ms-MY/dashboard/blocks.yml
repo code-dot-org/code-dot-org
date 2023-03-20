@@ -1044,6 +1044,8 @@ ms:
         text: mengelak sasaran
       gamelab_beginCollectingData:
         text: mula mengumpul data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} melantun {TARGET}"
       gamelab_changePropBy:
