@@ -101,15 +101,25 @@ Nous utilisons [YouTube](https://www.youtube.com) pour intégrer des vidéos dan
 
 Avant de commencer les cours en ligne de Code.org, essayez de lire la vidéo ci-dessous pour être sûr d'être prêt.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-C'est le lecteur qui sera utilisé tout au long de la formation. Il vous permettra de lire la vidéo sur YouTube et, si YouTube est bloqué, il vous affichera la vidéo hébergée par Code.org en utilisant notre lecteur "de secours" en lieu et place.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Impossible de lire les vidéos ?
 
-Si vous ne parvenez pas à lire la vidéo, envoyez-nous un courriel à support@code.org.
+If video does not work, you can email us at support@code.org.
 
-Cependant, vous pouvez toujours utiliser nos tutoriels sans vidéo.
+However, you can still use our tutorials without video.
 
 1. Nous mettons à votre disposition toutes nos vidéos [disponibles en téléchargement ensemble](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Si votre établissement a une faible bande passante, nous vous recommandons de télécharger les vidéos et de les montrer aux élèves en partageant l'écran.
 2. Intégrée à nos tutoriels, nous avons ajouté une icône verte de téléchargement <img src="/images/green-download.png" width=25 height=25 /> pour chaque vidéo, pour permettre aux apprenants de télécharger des vidéos de formation individuelles.
@@ -119,8 +129,8 @@ Cependant, vous pouvez toujours utiliser nos tutoriels sans vidéo.
 
 ## Paramètres spéciaux des utilisateurs de Google Apps/G-Suite
 
-Si vous êtes un administrateur G-suite, consultez vos paramètres de restriction sur YouTube. Si vous avez défini le paramètre "Accès restreint strict à YouTube" ou si le message "cette vidéo a été restreinte" s'affiche, vous pourrez ajouter notre chaîne à la liste des chaînes approuvées. Consultez [ce guide](https://support.google.com/a/answer/6245597) de Google pour savoir comment ajouter notre chaîne à la liste approuvée. Vous pouvez également consulter [ce guide](https://support.google.com/a/answer/6212415?hl=en) pour en savoir plus sur les différents paramètres et sur celui qui convient le mieux à votre classe.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Rencontrez-vous toujours des problèmes ?
 
-Nous sommes à votre disposition - veuillez nous envoyer un courriel à support@code.org !
+We'll help you out - just email us at support@code.org!

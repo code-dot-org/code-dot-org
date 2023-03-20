@@ -18,7 +18,7 @@ social:
 
 在《電腦科學入門》中，多數學生創建的第一個程式便是一個簡單的程式，能夠輸出一行標誌性的文本：「Hello World!」 通過這個介紹活動，向電腦科學的世界問好，讓學生們具備基本的程式設計技能和創建應用程式的信心。 從六個有趣的主題中選擇，在你創建的世界中為交互式角色編碼！
 
-# 選擇你的你好世界主題
+## Choose your Hello World theme
 
 {{ spritelab_module, title: "新的！ Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", alt_text: "Two cute astronaut and corgi characters floating in space", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 {{ spritelab_module, title: "新的！ Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", alt_text: "Three giraffe, tiger, and rhino characters on a field about to start a game of soccer", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
@@ -37,3 +37,5 @@ social:
 {{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", alt_text: "A student project featuring an animated gif of an underwater scene with dolphin, fish, and jellyfish characters in front of a shipwreck", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", alt_text: "A student project featuring an animated gif of a game of tag with two alien characters on a distant planet", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}
+
+{{ helloworld }}

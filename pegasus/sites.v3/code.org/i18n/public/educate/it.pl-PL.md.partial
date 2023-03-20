@@ -101,15 +101,25 @@ Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.or
 
 Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Jest to odtwarzacz używany w całym programie nauczania. Spróbuje wyświetlić wideo przez YouTube, a jeśli YouTube jest zablokowany, pokaże wideo hostowane na Code.org, korzystając z naszego odtwarzacza „zastępczego”.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Film się nie odtwarza?
 
-Jeśli wideo nie działa, możesz wysłać do nas e-mail na adres support@code.org.
+If video does not work, you can email us at support@code.org.
 
-Jednak nadal możesz korzystać z naszych samouczków bez wideo.
+However, you can still use our tutorials without video.
 
 1. Zrobiliśmy wszystkie nasze filmy [dostępne do pobrania razem](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jeśli Twoja szkoła ma niską przepustowość, zalecamy pobieranie filmów i pokazywanie ich uczniom na wspólnym ekranie.
 2. Zintegrowane z naszymi samouczkami, dodaliśmy zieloną ikonę łącza pobierania <img src="/images/green-download.png" width=25 height=25 /> dla każdego filmu, umożliwiając uczniom indywidualne pobieranie filmów instruktażowych.
@@ -119,8 +129,8 @@ Jednak nadal możesz korzystać z naszych samouczków bez wideo.
 
 ## Specjalne ustawienia dla użytkowników Google Apps/G-Suite
 
-Jeśli jesteś administratorem G-suite, sprawdź, jakie są Twoje ustawienia ograniczeń dla YouTube. Jeśli określiłeś ustawienie „Ścisły ograniczony dostęp do YouTube” lub jeśli widzisz komunikat „ten film wideo został ograniczony”, możesz dodać nasz kanał do zatwierdzonej listy kanałów. Zapoznaj się z [tym przewodnikiem](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do zatwierdzonej listy. Możesz też zapoznać się z [tym przewodnikiem](https://support.google.com/a/answer/6212415?hl=pl), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Czy nadal masz problemy?
 
-Pomożemy Ci — po prostu napisz do nas na adres support@code.org!
+We'll help you out - just email us at support@code.org!
