@@ -92,6 +92,7 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
     start_html
+    start_blocks
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

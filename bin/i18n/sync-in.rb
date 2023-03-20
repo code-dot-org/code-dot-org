@@ -17,24 +17,24 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
-  Services::I18n::CurriculumSyncUtils.sync_in
-  HocSyncUtils.sync_in
+  # Services::I18n::CurriculumSyncUtils.sync_in
+  # HocSyncUtils.sync_in
   localize_level_and_project_content
-  localize_block_content
-  localize_animation_library
-  localize_shared_functions
-  localize_course_offerings
-  localize_standards
-  localize_docs
-  puts "Copying source files"
-  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-  localize_external_sources
-  redact_level_content
-  redact_block_content
-  redact_docs
-  redact_script_and_course_content
-  redact_labs_content
-  localize_markdown_content
+  # localize_block_content
+  # localize_animation_library
+  # localize_shared_functions
+  # localize_course_offerings
+  # localize_standards
+  # localize_docs
+  # puts "Copying source files"
+  # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  # localize_external_sources
+  # redact_level_content
+  # redact_block_content
+  # redact_docs
+  # redact_script_and_course_content
+  # redact_labs_content
+  # localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
   puts "Sync in failed from the error: #{e}"
@@ -325,6 +325,12 @@ def get_i18n_strings(level)
       start_html.xpath('//*[text()[normalize-space()]]').each do |element|
         i18n_strings['start_html'][element.text] = element.text
       end
+    end
+
+    if level.start_blocks
+      puts level.name
+      # start_blocks = level.start_blocks.dup
+      puts level.type
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
