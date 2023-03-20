@@ -132,12 +132,6 @@ function createStore(reducer, initialState) {
   // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
   // to your url
   var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
-  // We have some usage of redux that does not pass the serializable check.
-  // We should determine if we can fix this.
-  const middleware = getDefaultMiddleware =>
-    getDefaultMiddleware({
-      serializableCheck: false
-    });
   if (process.env.NODE_ENV !== 'production' && enableReduxDebugging) {
     var reduxLogger = createLogger({
       collapsed: true,
@@ -158,26 +152,16 @@ function createStore(reducer, initialState) {
       }
     });
 
-    // load with dev tools extension, if present
-    // https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup
-    const composeEnhancers =
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        trace: true
-      }) || redux.compose;
     return configureStore({
       reducer: reducer,
       preloadedState: initialState,
-      middleware: middleware,
-      enhancers: composeEnhancers(
-        redux.applyMiddleware(reduxThunk, reduxLogger)
-      )
+      middleware: [reduxThunk, reduxLogger]
     });
   }
 
   return configureStore({
     reducer: reducer,
     preloadedState: initialState,
-    middleware: middleware
-    // redux-thunk is included by default
+    middleware: [reduxThunk]
   });
 }
