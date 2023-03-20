@@ -157,7 +157,8 @@ sl:
   social_maker_title: I'm a Maker!
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
   pl_superhero_title: Help students become superheroes!
-  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
+  pl_superhero_desc: Join our highly supportive Professional Learning Program for
+    middle and high school educators.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -1689,7 +1690,7 @@ sl:
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
+  tutorial_ai4all_name: 'AI4ALL: AI & Drawing'
   tutorial_cldata_name: Welcome to Data Superpower
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
   tutorial_edisoncount_name: Teach Edison to count to 9

@@ -103,7 +103,7 @@ const SoundsPanel = ({
   return (
     <div className={styles.soundsPanel}>
       {group.folders
-        .filter(folder => folder.type !== 'kit')
+        .filter(folder => folder.type !== 'kit' && folder.type !== 'instrument')
         .map((folder, folderIndex) => {
           return (
             <div className={styles.folder} key={folderIndex}>

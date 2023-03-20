@@ -3312,6 +3312,12 @@ sk:
               display_name: Obsah
             lessonGroup-4:
               display_name: Alternatívne lekcie
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
         hello-world-space-2022:
           title: 'Ahoj Svet: Vesmír'
         hello-world-soccer-2022:
@@ -3319,10 +3325,10 @@ sk:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Kapitola 1
+              display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
-              display_name: Kapitola 2
-          title: Riešenie problémov
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3335,7 +3341,6 @@ sk:
               display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
             lessonGroup-3:
               display_name: 'Kapitola 2: Prototypovanie aplikácií'
-          title: Nadizajnuj svoj projekt
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3350,17 +3355,16 @@ sk:
               display_name: 'Kapitola 2: Tvorba hier'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitola 1
             lessonGroup-3:
-              display_name: Kapitola 2
-          title: Fyzické výpočty
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1
             lessonGroup-3:
               display_name: Kapitola 2
+            lessonGroup-4:
+              display_name: Úvod do App Labu
           title: Umelá inteligencia a strojové učenie
         physcomp-temp:
           lesson_groups:
@@ -3458,3 +3462,21 @@ sk:
               display_name: Úvod do App Labu
             lessonGroup-3:
               display_name: Vstupy a výstupy
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Riešenie problémov
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+          title: Riešenie problémov
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Viacstránkové weby'

@@ -113,3 +113,46 @@ es:
             que permite a los estudiantes crear artefactos auténticos e interactuar
             con las Ciencias de la Computación como un medio para la creatividad,
             comunicación, resolución de problemas y diversión.
+        csd-pilot:
+          title: Curso piloto de CSD
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+        csp-2020:
+          description_short: Aprender los conceptos básicos de la Informática.
+        csd-2020:
+          description_short: Un curso de introducción a la informática que permite
+            a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+        csp-2021:
+          description_short: Aprender los conceptos básicos de la Informática.
+        mike-test:
+          title: Fundamentos de la informatica
+        self-paced-pl-csd-2021:
+          title: autodidáctico-pl-csd-2021
+        self-paced-pl-csp-2021:
+          title: autodidáctico-pl-csp-2021
+        csa-pilot-facilitator:
+          title: Organizadores del Proyecto Piloto CSA
+        csp-2022:
+          description_short: Aprender los conceptos básicos de la Informática.
+        vpl-csd-summer-pilot-ci-2022:
+          title: vpl-csd-verano-piloto-ci
+        self-paced-pl-csa-2022:
+          title: autodidáctico-pl-csa
+        self-paced-pl-csd-2022:
+          title: autodidáctico-pl-csd-2021
+        self-paced-pl-csp-2022:
+          title: autodidáctico-pl-csp-2021
+        csp-2023:
+          description_short: Aprender los conceptos básicos de la Informática.
+        self-paced-pl-csa-2023:
+          title: autodidáctico-pl-csa

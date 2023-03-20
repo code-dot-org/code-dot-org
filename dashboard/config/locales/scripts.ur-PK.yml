@@ -990,18 +990,6 @@ ur:
           title: 'ہیلو ورلڈ: خلائی'
         hello-world-soccer-2022:
           title: 'ہیلو ورلڈ: فٹ بال'
-        csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-3:
-              display_name: باب 2
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-3:
-              display_name: باب 2
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1034,3 +1022,13 @@ ur:
           description_audience: نصاب کے مصنفین
           description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے
             لیے
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: باب 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1

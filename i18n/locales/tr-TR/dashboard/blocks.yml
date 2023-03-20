@@ -2,8 +2,8 @@
 tr:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: ok tuşlarıyla KDGB (Kuzey-Doğu-Güney-Batı) yönünde hareket ettirmek
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya sor"
       AmysBlocks_spriteSayVar:
@@ -2456,6 +2456,17 @@ tr:
             '"quarantining"': hasta olduğunda karantinaya
             '"avoiding"': sosyal mesafeli
             '"none"': hala kalıyor
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa dönme
+            new Behavior(spinning_left, []): sola dönme
+            new Behavior(fluttering, []): çırpınma
+            new Behavior(jittering, []): kararsızlık
+            new Behavior(wobbling, []): sallanma
+            new Behavior(wandering, []): gezinme
+            new Behavior(patrolling, []): kontrol sağlama
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:

@@ -2962,7 +2962,7 @@ et-EE:
         - text: koer
         - text: pingviin
         - text: Konn
-        - {}
+        - text: kaelkirjak
         - {}
         questions:
         - {}
@@ -2971,7 +2971,7 @@ et-EE:
         - text: koer
         - text: pingviin
         - text: Konn
-        - {}
+        - text: kaelkirjak
         - {}
         questions:
         - {}
@@ -2980,7 +2980,7 @@ et-EE:
         - text: koer
         - text: pingviin
         - text: Konn
-        - {}
+        - text: kaelkirjak
         - {}
         questions:
         - {}
@@ -2989,7 +2989,7 @@ et-EE:
         - text: koer
         - text: pingviin
         - text: Konn
-        - {}
+        - text: kaelkirjak
         - {}
         questions:
         - {}
@@ -2998,7 +2998,7 @@ et-EE:
         - text: koer
         - text: pingviin
         - text: Konn
-        - {}
+        - text: kaelkirjak
         - {}
         questions:
         - {}
@@ -3007,7 +3007,7 @@ et-EE:
         - text: koer
         - text: pingviin
         - text: Konn
-        - {}
+        - text: kaelkirjak
         - {}
         questions:
         - {}
@@ -8873,9 +8873,9 @@ et-EE:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Vale. Scrat ei jõua tammetõruni, sest ta pöörab vales suunas.
+        - feedback: Õige! Scrat pöörab vales suunas ja ei jõua tammetõruni.
+        - feedback: Vale. Scrat ei jõua tammetõruni, sest ta pöörab vales suunas.
         - {}
         questions:
         - {}
@@ -9096,3 +9096,78 @@ et-EE:
         - {}
         questions:
         - {}
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Hea töö siiani! Vali järgmine tegevus. Täida nii palju kui võimalik.
+          Jätka harjutamist funktsioonidega ja Artist -iga!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Hea töö siiani! Vali järgmine tegevus. Täida nii palju kui võimalik.
+          Jätka harjutamist pesastatud tsüklitega ja Artist -iga!
+      Dance_Party_extras_intro:
+        markdown: |
+          # Jätka tantsimist!
+
+          Sest osas 2, Sa lood oma projekti. Siin pole mõistatusi - selle asemel on hulk projekte, mis näitavad erinevaid viise keerukamate tantsupidude tegemiseks.
+
+          Saate teha neid tasemeid _mis tahes järjekorras_. Liikuge ringi, et vaadata, kuidas midagi eelmisel tasandil tehti, või kombineerida kontsepte erinevate projektide vahel. Proovige neid kõiki, vali oma lemmik ja veeda aega töötades selle projekti kasvatamisega, et muuta see enda omaks.
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Moodustage formatsioon
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Kuhu nad kadusid?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Tantsumeeskonnad
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Veerandnoodid
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Bass, Keskmised, Kõrged
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Kiiremaks, Aeglasemaks
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
