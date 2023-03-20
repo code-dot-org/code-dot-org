@@ -3747,3 +3747,118 @@ hi:
             lessonGroup-2:
               display_name: अध्याय 1
           title: सवाल हल करना
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
+          description_short: 'प्री-रीडर के लिए कंप्यूटर विज्ञान का एक परिचय: हमारे किंडरगार्टन और पहली कक्षा के पाठ्यक्रमों में सर्वश्रेष्ठ को एक साथ जोड़ती है।'
+          description_audience: 'आयु: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_sprites:
+              display_name: स्प्राइट्स
+            lessonGroup-9:
+              display_name: घटनाएँ
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_functions:
+              display_name: कार्य
+            csf_variables:
+              display_name: चर
+            csf_for_loops:
+              display_name: फॉर लूप्स
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_short: 'कंप्यूटर विज्ञान का एक परिचय: पुराने छात्रों के लिए हमारे प्राथमिक स्कूल पाठ्यक्रम का सबसे अच्छा संयोजन करता है।'
+          description_audience: 'आयु: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
+            lessonGroup-5:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा कर सकते हैं।
+          description_short: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+          description_audience: 'आयु: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            csf_events:
+              display_name: घटनाएँ
+            lessonGroup-6:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा कर सकते हैं।
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय। कोर्स A से मिलता-जुलता, लेकिन इसमें अवधारणा को गहराई से शामिल किया गया है।
+          description_audience: 'उम्र: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
+            csf_data:
+              display_name: डेटा
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          student_description: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स और सापेक्षों का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें, सवाल हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का जवाब कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें, जिसे आप साझा कर सकें।
+          description_short: कंप्यूटर साइंस के मूल सिद्धांत सीखें और अपनी खुद की कला, कहानियां या गेम्स बनाएं।
+          description_audience: 'उम्र: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_events:
+              display_name: घटनाएँ
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          title: कोर्स D (2021)
+          description_short: सापेक्ष स्टेटमेंट्स के बारे में सीखें और अपनी खुद की कलाकृति, गेम और यहां तक कि डांस पार्टी बनाएं।
+          description_audience: 'उम्र: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sprites:
+              display_name: स्प्राइट्स
+            ramp_up:
+              display_name: नेस्टड लूप्स
+            csf_functions:
+              display_name: कार्य
+            csf_nested_loops:
+              display_name: कंडीशनल्स
+            lessonGroup-7:
+              display_name: कंप्यूटिंग के प्रभाव
+            end_of_course_project:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_audience: 'उम्र: 8-12'
