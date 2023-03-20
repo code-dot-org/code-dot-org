@@ -2,8 +2,8 @@
 it:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: muovi NESW con i tasti freccia
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2323,6 +2323,17 @@ it:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rotazione oraria
+            new Behavior(spinning_left, []): rotazione anti-oraria
+            new Behavior(fluttering, []): ondeggiamento
+            new Behavior(jittering, []): pulsazione
+            new Behavior(wobbling, []): barcollamento
+            new Behavior(wandering, []): movimento casuale
+            new Behavior(patrolling, []): pattugliamento
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:

@@ -492,6 +492,16 @@ mk:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): се врти десно
+            new Behavior(spinning_left, []): врти лево
+            new Behavior(fluttering, []): разлетувањето
+            new Behavior(jittering, []): нервоза
+            new Behavior(wobbling, []): колебливи
+            new Behavior(wandering, []): талкање
+            new Behavior(patrolling, []): патролирање
       craft_ifPath:
         options:
           DIR:

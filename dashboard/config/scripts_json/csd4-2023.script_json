@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2023-03-14 18:11:01 UTC",
+    "serialized_at": "2023-03-17 22:37:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1908,12 +1908,12 @@
       "key": "d29b9554-5efb-4071-b8c4-bab2a3decabe",
       "position": 1,
       "properties": {
-        "description": "**Video:** Watch the Design Thinking Process video with students. Stop the video after Step 5 (around 3:10).",
+        "description": "**Video:** Show students the [r the_design_thinking_process/csd4/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
         "name": "Introduce Design Thinking\r",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Design Thinking:** Today's activity, as well as this entire unit, are heavily influenced by Design Thinking. This is a very open-ended, creative process that may be hard to visualize if you've never participated in a design thinking activity yourself. The resources below can help you imagine what your classroom will look like during these design thinking activities. \r\n\r\n* [What is Design Thinking? A Handy Guide for Educators](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\r\n* [Design Thinking: Lessons for the Classroom](https://www.edutopia.org/blog/design-thinking-betty-ray)\r\n* [Design Thinking Teacher Training (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\r\n\r\nSome of these resources are framed around science classrooms or physical prototypes, which is different from this unit which ultimately focuses on creating apps. Regardless, they should offer some clarity on what the entire process looks like from start-to-finish and what your classroom may look-and-sound like during these activities.\r\n"
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -1938,7 +1938,13 @@
       "position": 3,
       "properties": {
         "description": "The Design Thinking Process is very similar to our Problem Solving Process - both are centered around empathy, and both have a similar cycle for defining, preparing, trying, and reflecting. Over the next few weeks, we’re going to practice this process so we can design products and apps for people in our communities and around the world. Today and tomorrow, we’re going to practice a shorter version of this process by brainstorming different groups of people and their needs, then designing smart clothing products to meet those needs.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Thinking:** Today's activity, as well as this entire unit, are heavily influenced by Design Thinking. This is a very open-ended, creative process that may be hard to visualize if you've never participated in a design thinking activity yourself. The resources below can help you imagine what your classroom will look like during these design thinking activities. \n\n* [What is Design Thinking? A Handy Guide for Educators](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n* [Design Thinking: Lessons for the Classroom](https://www.edutopia.org/blog/design-thinking-betty-ray)\n* [Design Thinking Teacher Training (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nSome of these resources are framed around science classrooms or physical prototypes, which is different from this unit which ultimately focuses on creating apps. Regardless, they should offer some clarity on what the entire process looks like from start-to-finish and what your classroom may look-and-sound like during these activities.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9edfdc5d-b944-4084-9b53-237d7b9a6dd0",
@@ -4094,8 +4100,14 @@
       "key": "90c03622-4771-4660-8c57-c38aa3e03cdd",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n",
-        "name": "Preparing for Testing\r"
+        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd4/2023] video in the slides. This gives a model for what the testing process should look like.",
+        "name": "Preparing for Testing\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "90c03622-4771-4660-8c57-c38aa3e03cdd",
@@ -4106,7 +4118,7 @@
       "key": "c1b7c6cb-d645-4b38-a555-2eff5174842f",
       "position": 2,
       "properties": {
-        "description": "**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd4/2023] video in the slides. This gives a model for what the testing process should look like.\n\n**Discuss:** What did you notice about how this test was run? Ask students to share in their teams, then call out a few responses for the class. Specifically, highlight the following observations:\n\n- The user is the person who is testing the app in the form of the paper prototype. They should pretend to execute the “app” by pressing on the prototype with their fingers in the way that makes the most sense.\n- The user speaks through what they are thinking-out-loud. They can also offer helpful suggestions in our critiquing form with sentences starting with “I like…”, “I wish…”, and “I wonder… “\n- The computer reacts to what the user does. If the user tries something that isn’t a part of the app navigation diagram, then the computer doesn’t react.\n- The narrator is the person who is running the test. This person will introduce the team members, the app, and its purpose.\n- The observers are the other students in the team. They will watch the interaction and write down in their notes what they see the user do in response to the computer. They don’t make any comments themselves - they just take notes.\n\n**Assign Roles:** Read through the (2) Assign Roles for Testing section of the activity guide. Have students discuss in their teams which roles they will take on in the first round of testing. There should be only one narrator and only one computer, and all other team members can be observers. \n\n**Create Test Cases:** Read through the (3) Create Test Cases section of the activity guide. Students will work in the User Test Cases Activity Guide for this section, filling in the App Introduction section and completing the left-column of the table. They should not fill in the rest of the table - the user will do this instead.\n\n**Circulate:** Monitor students as they fill in the User Test Cases Activity Guide. Make sure they are only filling in the left-most column with the tasks they want their user to test - the rest of the chart should be blank."
+        "description": "\n**Discuss:** What did you notice about how this test was run? Ask students to share in their teams, then call out a few responses for the class. Specifically, highlight the following observations:\n\n- The user is the person who is testing the app in the form of the paper prototype. They should pretend to execute the “app” by pressing on the prototype with their fingers in the way that makes the most sense.\n- The user speaks through what they are thinking-out-loud. They can also offer helpful suggestions in our critiquing form with sentences starting with “I like…”, “I wish…”, and “I wonder… “\n- The computer reacts to what the user does. If the user tries something that isn’t a part of the app navigation diagram, then the computer doesn’t react.\n- The narrator is the person who is running the test. This person will introduce the team members, the app, and its purpose.\n- The observers are the other students in the team. They will watch the interaction and write down in their notes what they see the user do in response to the computer. They don’t make any comments themselves - they just take notes.\n\n**Assign Roles:** Read through the (2) Assign Roles for Testing section of the activity guide. Have students discuss in their teams which roles they will take on in the first round of testing. There should be only one narrator and only one computer, and all other team members can be observers. \n\n**Create Test Cases:** Read through the (3) Create Test Cases section of the activity guide. Students will work in the User Test Cases Activity Guide for this section, filling in the App Introduction section and completing the left-column of the table. They should not fill in the rest of the table - the user will do this instead.\n\n**Circulate:** Monitor students as they fill in the User Test Cases Activity Guide. Make sure they are only filling in the left-most column with the tasks they want their user to test - the rest of the chart should be blank."
       },
       "seeding_key": {
         "activity_section.key": "c1b7c6cb-d645-4b38-a555-2eff5174842f",
@@ -4272,7 +4284,13 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd4/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
-        "progression_name": "Video: Intro to Design Mode"
+        "progression_name": "Video: Intro to Design Mode",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "072b8b4e-3063-4d54-aeab-bd0d22f0b11b",
@@ -4659,7 +4677,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd4/2023] video in the slides.\n",
-        "progression_name": "Video: Events in App Lab"
+        "progression_name": "Video: Events in App Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a825d3ec-41aa-46d7-a8b1-ae7cf48017db",

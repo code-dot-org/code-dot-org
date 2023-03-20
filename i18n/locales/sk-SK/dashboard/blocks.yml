@@ -2277,6 +2277,16 @@ sk:
             '"quarantining"': karanténa pri chorobe
             '"avoiding"': sociálny odstup
             '"none"': zostať v pokoji
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): točenie vpravo
+            new Behavior(spinning_left, []): točenie vľavo
+            new Behavior(fluttering, []): chvenie
+            new Behavior(jittering, []): chvieť sa
+            new Behavior(wobbling, []): kolísanie
+            new Behavior(wandering, []): túlať sa
+            new Behavior(patrolling, []): hliadkovať
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:

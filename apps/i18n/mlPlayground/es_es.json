@@ -21,10 +21,90 @@
   "predictButton": "Predecir",
   "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      },
+      "name": "Prioridad Médica"
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "clima"
+        },
+        "day": {
+          "id": "día"
+        },
+        "shoe": {
+          "id": "zapato"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "cebolla"
+        },
+        "avocado": {
+          "id": "aguacate"
+        },
+        "corn": {
+          "id": "maíz"
+        },
+        "beans": {
+          "id": "alubias"
+        },
+        "lime": {
+          "id": "lima"
+        }
+      }
+    },
+    "auto_mpg": {
+      "fields": {
+        "mpg": {
+          "id": "mpg",
+          "description": "Millas por galón."
+        }
+      }
+    },
     "bike_sharing": {
       "fields": {
         "Year": {
           "id": "Año"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "setas"
+        },
+        "lobster": {
+          "id": "langosta"
+        },
+        "bacon": {
+          "id": "beicon"
+        },
+        "cheese": {
+          "id": "queso"
+        },
+        "meat": {
+          "id": "carne"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "color"
+        },
+        "music": {
+          "id": "música"
+        },
+        "food": {
+          "id": "comida"
         }
       }
     },
@@ -45,6 +125,69 @@
         }
       }
     },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "fresa"
+        },
+        "lime": {
+          "id": "lima"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "lados"
+        },
+        "size": {
+          "id": "tamaño"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "tomate"
+        },
+        "avocado": {
+          "id": "aguacate"
+        },
+        "chicken": {
+          "id": "pollo"
+        },
+        "fruit": {
+          "id": "fruta"
+        },
+        "beans": {
+          "id": "alubias"
+        },
+        "cheese": {
+          "id": "queso"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Rank": {
+          "id": "Posición",
+          "description": "Su rango de riqueza para el año de este récord."
+        },
+        "Year": {
+          "id": "Año"
+        },
+        "Company Founding Year": {
+          "id": "Año de fundación de la empresa",
+          "description": "El año en que se fundó su empresa."
+        },
+        "Age": {
+          "id": "Edad"
+        },
+        "Gender": {
+          "id": "Sexo"
+        }
+      }
+    },
     "student_alcohol_consumption": {
       "fields": {
         "school": {
@@ -55,6 +198,39 @@
         },
         "health": {
           "id": "salud"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "pollo"
+        },
+        "lamb": {
+          "id": "cordero"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "cheese": {
+          "id": "queso"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escribir"
         }
       }
     },
@@ -86,6 +262,26 @@
           "id": "Año"
         }
       }
+    },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "personas"
+        },
+        "rhino": {
+          "id": "rinoceronte"
+        },
+        "elephant": {
+          "id": "elefante"
+        },
+        "alligator": {
+          "id": "caimán"
+        },
+        "trees": {
+          "id": "árboles"
+        }
+      },
+      "name": "Safari"
     },
     "abalone": {
       "fields": {
@@ -131,6 +327,77 @@
         }
       }
     },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Aquatic"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "aguacate"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "ginger": {
+          "id": "pelirroja"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Dance": {
+          "id": "Baile"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escribir"
+        },
+        "Empathy": {
+          "id": "Empatía"
+        },
+        "Achievements": {
+          "id": "Logros"
+        },
+        "Age": {
+          "id": "Edad",
+          "description": "Edad"
+        },
+        "Height": {
+          "id": "Alto",
+          "description": "Alto"
+        },
+        "Gender": {
+          "id": "Sexo",
+          "description": "Sexo"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "plátano"
+        }
+      }
+    },
+    "global_happiness_raw": {
+      "fields": {
+        "Year": {
+          "id": "Año"
+        }
+      }
+    },
     "heart": {
       "fields": {
         "Age": {
@@ -138,6 +405,29 @@
         },
         "Sex": {
           "id": "género"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "lados"
+        },
+        "size": {
+          "id": "tamaño"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Dance": {
+          "id": "Baile"
+        },
+        "Country": {
+          "id": "País"
         }
       }
     }

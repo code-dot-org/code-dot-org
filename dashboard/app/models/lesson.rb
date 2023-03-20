@@ -891,12 +891,10 @@ class Lesson < ApplicationRecord
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
-  private
-
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]
-  def fetch_activity(activity)
+  private def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
       return lesson_activity if lesson_activity

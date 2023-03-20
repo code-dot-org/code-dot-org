@@ -2,8 +2,8 @@
 es:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: moviendo NESW con las teclas de flecha
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2486,6 +2486,17 @@ es:
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
             '"none"': quedarse quieto
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando a la derecha
+            new Behavior(spinning_left, []): girando a la izquierda
+            new Behavior(fluttering, []): revoloteando
+            new Behavior(jittering, []): nerviosismo
+            new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): deambulando
+            new Behavior(patrolling, []): patrullando
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:
