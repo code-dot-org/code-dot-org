@@ -4103,3 +4103,123 @@ ja:
               display_name: '第1章: ウェブページの作成'
             lessonGroup-4:
               display_name: '第2章: マルチページのウェブサイト'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description_audience: '年齢: 4～8才'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_sprites:
+              display_name: スプライト
+            lessonGroup-9:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_functions:
+              display_name: 関数(かんすう)
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
+          description_audience: '年齢: 9～18才'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+            lessonGroup-5:
+              display_name: コース最後のプロジェクト
+          title: コース A (2021)
+          student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: 4-7 才
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_impacts:
+              display_name: コンピューティングの影響
+            csf_events:
+              display_name: イベント
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
+          student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
+          description_audience: 5-8 才
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+            csf_data:
+              display_name: データ
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          student_description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_events:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          title: コース D (2021)
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description_audience: '年齢: 7～11才'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sprites:
+              display_name: スプライト
+            ramp_up:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう)
+            csf_nested_loops:
+              display_name: 条件
+            lessonGroup-7:
+              display_name: コンピューティングの影響
+            end_of_course_project:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 8～12才'

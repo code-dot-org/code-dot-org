@@ -1058,6 +1058,8 @@ ja:
         text: ターゲットを避ける
       gamelab_beginCollectingData:
         text: "{LABEL} でデータ{BREAK} 値 {VALUE} を収集し始める"
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE}が{TARGET}を跳ね返す"
       gamelab_changePropBy:
