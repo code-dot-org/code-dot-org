@@ -122,6 +122,7 @@
   "noSpriteStoppedMoving": "Cap dels teus sprites han deixat de moure's. Connecta un bloc \"aturar tot\" sota el bloc d'esdeveniment nou.",
   "noTitleScreen": "No ha aparegut la pantalla de títol.",
   "noVarUse": "Has de fer servir la variable de la teva pregunta al text que posis a la pantalla.",
+  "object": "objecte",
   "objectSprite": "sprite objecte",
   "outbreakChangeHealthy": "Prova de canviar el nombre d'sprites monstres.",
   "outbreakChangeSize": "Prova de definir tots els sprites perquè siguin d'una mida diferent.",
