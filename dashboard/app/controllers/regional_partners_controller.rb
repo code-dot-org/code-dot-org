@@ -149,6 +149,7 @@ class RegionalPartnersController < ApplicationController
   def regional_partner_params
     params.require(:regional_partner).permit(
       :name,
+      :is_active,
       :group,
       :urban,
       :cohort_capacity_csd,
