@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {Provider, connect} from 'react-redux';
+import {connect} from 'react-redux';
 import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
@@ -11,7 +11,6 @@ import ProgramSequencer from '../player/ProgramSequencer';
 import RandomSkipManager from '../player/RandomSkipManager';
 import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
 import {AnalyticsContext, PlayingContext, PlayerUtilsContext} from '../context';
@@ -49,7 +48,9 @@ class UnconnectedMusicView extends React.Component {
     // populated by Redux
     userId: PropTypes.number,
     userType: PropTypes.string,
-    signInState: PropTypes.oneOf(Object.values(SignInState))
+    signInState: PropTypes.oneOf(Object.values(SignInState)),
+    onChangeLevel: PropTypes.func,
+    currentLevel: PropTypes.number
   };
 
   constructor(props) {
@@ -281,6 +282,9 @@ class UnconnectedMusicView extends React.Component {
     this.player.playSong();
 
     this.setState({isPlaying: true, currentPlayheadPosition: 1});
+
+    // let's change index
+    this.props.onChangeLevel(5);
   };
 
   stopSong = () => {
@@ -394,6 +398,8 @@ class UnconnectedMusicView extends React.Component {
     const showVideo =
       AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
 
+    console.log('current level index:', this.props.currentLevel);
+
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
@@ -458,12 +464,4 @@ const MusicView = connect(state => ({
   signInState: state.currentUser.signInState
 }))(UnconnectedMusicView);
 
-const MusicLabView = () => {
-  return (
-    <Provider store={getStore()}>
-      <MusicView />
-    </Provider>
-  );
-};
-
-export default MusicLabView;
+export default MusicView;

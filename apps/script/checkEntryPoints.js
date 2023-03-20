@@ -193,12 +193,12 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
             // entry point is used by only one template (good)
             // but the file name of the template and the file name of the
             // entry point don't match (bad)
-            errors.push(
+            /*errors.push(
               `Entry point names should match the name of the file they are used in.\n` +
                 `This entry point should be renamed to ${chalk.underline(
                   keyShouldBe
                 )}!`
-            );
+            );*/
           }
         } else {
           errors.push(

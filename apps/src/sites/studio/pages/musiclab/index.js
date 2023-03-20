@@ -1,11 +1,13 @@
+/*
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MusicLabView from '@cdo/apps/music/views/MusicView';
+import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
 
 $(document).ready(function() {
   ReactDOM.render(
-    <MusicLabView />,
+    <LabContainer />,
     document.getElementById('musiclab-container')
   );
 });
+*/

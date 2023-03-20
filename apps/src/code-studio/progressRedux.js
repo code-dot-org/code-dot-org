@@ -18,6 +18,7 @@ import {authorizeLockable} from './lessonLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+const SET_CURRENT_LEVEL_ID = 'progress/SET_CURRENT_LEVEL_ID';
 const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
@@ -109,6 +110,13 @@ export default function reducer(state = initialState, action) {
       hasFullProgress: action.isFullProgress,
       isLessonExtras: action.isLessonExtras,
       currentPageNumber: action.currentPageNumber
+    };
+  }
+
+  if (action.type === SET_CURRENT_LEVEL_ID) {
+    return {
+      ...state,
+      currentLevelId: action.levelId
     };
   }
 
@@ -421,6 +429,11 @@ export const initProgress = ({
   isFullProgress,
   isLessonExtras,
   currentPageNumber
+});
+
+export const setCurrentLevelId = levelId => ({
+  type: SET_CURRENT_LEVEL_ID,
+  levelId: levelId
 });
 
 /**

@@ -65,6 +65,9 @@
         = render partial: "levels/#{@level.class.to_s.underscore}"
       - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
         = render partial: 'levels/reference_area'
+    - elsif @game.fish?
+      -# = render partial: 'levels/music'
+      %script{src: webpack_asset_path('js/googleblockly.js')}
     - else
       = render partial: 'levels/blockly'
 

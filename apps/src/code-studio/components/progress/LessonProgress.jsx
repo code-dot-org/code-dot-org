@@ -5,7 +5,8 @@ import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import {
   levelsForLessonId,
-  lessonExtrasUrl
+  lessonExtrasUrl,
+  setCurrentLevelId
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
@@ -24,7 +25,8 @@ class LessonProgress extends Component {
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
-    currentLevelId: PropTypes.string
+    currentLevelId: PropTypes.string,
+    onLevelChanged: PropTypes.func
   };
 
   getFullWidth() {
@@ -52,6 +54,9 @@ class LessonProgress extends Component {
       levelIndex < this.props.levels.length;
       levelIndex++
     ) {
+      const currentLevelChanged =
+        this.props.currentLevelId !== nextProps.currentLevelId;
+
       const statusChanged =
         this.props.levels[levelIndex].status !==
         nextProps.levels[levelIndex].status;
@@ -60,7 +65,7 @@ class LessonProgress extends Component {
         this.props.levels[levelIndex].teacherFeedbackReviewState !==
         nextProps.levels[levelIndex].teacherFeedbackReviewState;
 
-      if (statusChanged || badgeChanged) {
+      if (currentLevelChanged || statusChanged || badgeChanged) {
         return true;
       }
     }
@@ -172,6 +177,10 @@ class LessonProgress extends Component {
                     disabled={false}
                     smallBubble={!isCurrent}
                     lessonName={lessonName}
+                    onClick={() => {
+                      console.log('bubble clicked');
+                      this.props.onLevelChanged(level.id);
+                    }}
                   />
                 </div>
               );
@@ -253,13 +262,20 @@ const styles = {
 
 export const UnconnectedLessonProgress = LessonProgress;
 
-export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
-  lessonExtrasUrl: lessonExtrasUrl(
-    state.progress,
-    state.progress.currentLessonId
-  ),
-  isLessonExtras: state.progress.isLessonExtras,
-  currentPageNumber: state.progress.currentPageNumber,
-  currentLevelId: state.progress.currentLevelId
-}))(LessonProgress);
+export default connect(
+  state => ({
+    levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+    lessonExtrasUrl: lessonExtrasUrl(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    isLessonExtras: state.progress.isLessonExtras,
+    currentPageNumber: state.progress.currentPageNumber,
+    currentLevelId: state.progress.currentLevelId
+  }),
+  dispatch => ({
+    onLevelChanged(levelId) {
+      dispatch(setCurrentLevelId(levelId));
+    }
+  })
+)(LessonProgress);
