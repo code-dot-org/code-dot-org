@@ -5825,3 +5825,148 @@ id:
             lessonGroup-2:
               display_name: Chapter 1
           title: Pemecahan Masalah
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di
+            bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
+            keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
+            dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan
+            guru.
+          student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran
+            di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
+            keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
+            dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan
+            guru.
+          description_short: 'Pengenalan ilmu komputer bagi prabaca: menggabungkan
+            kursus terbaik kami untuk taman kanak-kanak dan kelas satu SD.'
+          description_audience: 'Usia: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_functions:
+              display_name: fungsi
+            csf_variables:
+              display_name: variabel
+            csf_for_loops:
+              display_name: For Loop
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di
+            bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
+            keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
+            dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan
+            guru.
+          student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran
+            di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
+            keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
+            dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan
+            guru.
+          description_short: 'Pengenalan ilmu komputer: menggabungkan kurikulum terbaik
+            sekolah dasar bagi murid yang lebih tua usianya.'
+          description_audience: 'Usia: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            lessonGroup-5:
+              display_name: Proyek Akhir Kursus
+          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet.
+            Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+          description_audience: 'Usia: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_events:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet.
+            Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus
+            A, tetapi dengan tambahan konsep 'pendalaman'.
+          description_audience: 'Usia: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          student_description: Buat program dengan pengurutan, loop, dan event. Terjemahkan
+            inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah,
+            dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir
+            kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+          description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita,
+            dan permainan Anda sendiri.
+          description_audience: 'Usia: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_events:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          title: Kursus D (2021)
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni,
+            permainan, dan bahkan pesta dansa.
+          description_audience: 'Usia: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Nested Loop
+            csf_functions:
+              display_name: fungsi
+            csf_nested_loops:
+              display_name: Kondisi
+            lessonGroup-7:
+              display_name: Dampak dari Komputasi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 8-12'

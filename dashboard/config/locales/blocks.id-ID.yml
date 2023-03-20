@@ -1058,6 +1058,8 @@ id:
         text: menghindari target
       gamelab_beginCollectingData:
         text: mulai mengumpulkan data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} memantulkan {TARGET}"
       gamelab_changePropBy:
