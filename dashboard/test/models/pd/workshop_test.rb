@@ -1491,34 +1491,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
-  test 'CSA summer workshops must require teacher application' do
-    workshop = create :pd_workshop, course: COURSE_CSA, subject: SUBJECT_SUMMER_WORKSHOP, regional_partner: @regional_partner
+  test 'CSP summer workshop must require teacher application' do
+    workshop = create :csp_summer_workshop, regional_partner: @regional_partner
     assert workshop.require_application?
   end
 
-  test 'CSP academic year workshop must require teacher application' do
-    workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1, regional_partner: @regional_partner
+  test 'CSD academic year workshop must require teacher application' do
+    workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
+    assert workshop.require_application?
+  end
+
+  test 'CSA summer workshop must require teacher application' do
+    workshop = create :csa_summer_workshop, regional_partner: @regional_partner
     assert workshop.require_application?
   end
 
   test 'CSF workshop must not require teacher application' do
-    workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101, regional_partner: @regional_partner
+    workshop = create :csf_workshop, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 
   test 'virtual CSD workshop must not require teacher application' do
-    workshop = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_VIRTUAL_KICKOFF, virtual: true, regional_partner: @regional_partner
+    workshop = create :csd_virtual_workshop, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 
-  test 'CSA summer workshop without regional partner must not require teacher application' do
-    workshop = create :pd_workshop, course: COURSE_CSA, subject: SUBJECT_SUMMER_WORKSHOP
+  test 'workshop without regional partner must not require teacher application' do
+    workshop = create :csp_summer_workshop
     refute workshop.require_application?
   end
 
   test 'regional partner with partner application must not require teacher application' do
     rp = create :regional_partner, link_to_partner_application: 'https://example.com'
-    workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1, regional_partner: rp
+    workshop = create :csp_summer_workshop, regional_partner: rp
     refute workshop.require_application?
   end
 
