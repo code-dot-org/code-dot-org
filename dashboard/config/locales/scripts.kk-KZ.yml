@@ -1456,3 +1456,67 @@ kk:
               display_name: Тізімдер
             lessonGroup-3:
               display_name: Ілмек
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Айнымалылар
+            csf_for_loops:
+              display_name: For ілмектері
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            ramp_up:
+              display_name: Кіріккен Циклдер
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шарттар
