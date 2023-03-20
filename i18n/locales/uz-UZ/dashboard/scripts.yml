@@ -3709,3 +3709,121 @@ uz:
               display_name: Intro to App Lab
             lessonGroup-3:
               display_name: Inputs and Outputs
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+          description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          description_short: 'Kichik yoshdagi o''quvchilar uchun informatika faniga kirish: bolalar bog''chasi va birinchi sinf uchun o''quv kurslarimizning eng saralarini birlashtiradi.'
+          description_audience: 'Yosh: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Spraytlar
+            lessonGroup-9:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Ekspress Kurs (2020)
+          description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          description_short: 'Kompyuter fanlariga kirish: boshlang''ich o''quv dasturlarining eng saralarini birlashtiradi.'
+          description_audience: 'Yosh: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+            lessonGroup-5:
+              display_name: End of Course Project
+          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+          description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
+          description_audience: 'Yosh: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_impacts:
+              display_name: Kompyuterlar ta'siri
+            csf_events:
+              display_name: Hodisalar
+            lessonGroup-6:
+              display_name: End of Course Project
+          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+          description_short: Maktabgacha yoshdagi o‘quvchilar uchun kompyuter fanlariga kirish. (A kursiga o‘xshash, ammo tushunchalar chuqurroq o‘rganilgan).
+          description_audience: 'Yosh: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+            end_of_course_project:
+              display_name: End of Course Project
+          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
+          description_audience: 'Yosh: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Kurs D (2021)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Yosh: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sprites:
+              display_name: Spraytlar
+            ramp_up:
+              display_name: Ichma-ich sikllar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_nested_loops:
+              display_name: Shartli bayonotlar
+            lessonGroup-7:
+              display_name: Kompyuterlar ta'siri
+            end_of_course_project:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 8-12'
