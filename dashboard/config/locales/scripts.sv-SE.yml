@@ -2068,3 +2068,69 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitel 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_functions:
+              display_name: funktioner
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: "'För' loopar"
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+            csf_data:
+              display_name: Data
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
