@@ -1062,6 +1062,8 @@ it:
       gamelab_beginCollectingData:
         text: inizia a raccogliere i dati {BREAK} del valore {VALUE} con l'etichetta
           {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rimbalza su {TARGET}"
       gamelab_changePropBy:
