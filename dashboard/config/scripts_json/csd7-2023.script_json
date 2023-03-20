@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd7",
-    "serialized_at": "2023-03-10 16:14:57 UTC",
+    "serialized_at": "2023-03-17 23:49:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1760,7 +1760,13 @@
       "key": "53c187a6-d9c3-48f4-bcc3-64fd77c43b7a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd7/2023] video in the slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd7/2023] video in the slides\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "53c187a6-d9c3-48f4-bcc3-64fd77c43b7a",
@@ -1768,8 +1774,19 @@
       }
     },
     {
-      "key": "bb2381e7-91b7-4dce-8ab1-d13666ca2a69",
+      "key": "5eb7862c-6c7f-4adc-9962-75cffce63f79",
       "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+      },
+      "seeding_key": {
+        "activity_section.key": "5eb7862c-6c7f-4adc-9962-75cffce63f79",
+        "lesson_activity.key": "5acea0a7-720f-487a-8d77-15e067cc2b8a"
+      }
+    },
+    {
+      "key": "bb2381e7-91b7-4dce-8ab1-d13666ca2a69",
+      "position": 8,
       "properties": {
         "description": "Machine learning helps us solve important problems in society. In the next few weeks, we’ll look at how we can create our own machine learning apps to solve problems. To help accomplish our goals, we will use the Problem Solving Process - Define, Prepare, Try, Reflect, and always Empathize. Let's take a look at how these steps appear for Machine Learning in particular",
         "remarks": true
@@ -1781,7 +1798,7 @@
     },
     {
       "key": "4d35075c-8cfa-44b2-bfc0-4a31220f9398",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** How can we use the Problem Solving Process to solve a problem with machine learning?"
       },
@@ -2938,7 +2955,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -3527,7 +3544,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4246,7 +4263,13 @@
       "key": "7d86b193-0a1a-4179-b5dc-9f3834fffbd9",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai_training_data_bias/csd7/2023] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai_training_data_bias/csd7/2023] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7d86b193-0a1a-4179-b5dc-9f3834fffbd9",
@@ -4437,7 +4460,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"black boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
+            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"black boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4824,7 +4847,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -5434,11 +5457,28 @@
       }
     },
     {
-      "key": "1252d395-a94d-4da3-b791-53166b69774e",
+      "key": "2b2c3c49-4b05-4d27-890e-f87305fb4b00",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/csd7/2023] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab/csd7/2023] to each student.",
-        "name": "Investigating Data\r",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/csd7/2023] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.",
+        "name": "Investigating Data",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2b2c3c49-4b05-4d27-890e-f87305fb4b00",
+        "lesson_activity.key": "fbb14890-9ccf-4851-b029-79867422e49a"
+      }
+    },
+    {
+      "key": "1252d395-a94d-4da3-b791-53166b69774e",
+      "position": 6,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab/csd7/2023] to each student.",
         "progression_name": "Safari Model"
       },
       "seeding_key": {
@@ -5448,7 +5488,7 @@
     },
     {
       "key": "ab7f46b9-587d-4db0-8f71-9db920625b54",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Do This**: Have students click on the antelopes column. This column represents how many antelopes were seen in the park on a given day. Look at the graph that appears in AI Lab, which lets you compare the antelope data with the lion data",
         "name": "Feature #1: Antelopes",
@@ -5466,7 +5506,7 @@
     },
     {
       "key": "d37b15ae-927c-40f9-9047-dee77f1d4b04",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n- _If there are a low number of antelopes in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high number of antelopes in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_\n\n\n**Discussion Goal:** Students should notice the less antelopes there are, the less lions there are and vice versa. They may imagine this has to do with predator / prey relationships - the lions eat the antelope, so if there are less antelope, there are less lions. Students should record their responses on their activity guide, even if the class discussed the answers together."
       },
@@ -5477,7 +5517,7 @@
     },
     {
       "key": "57c146a1-62b7-4ca9-9227-17dd77a83bff",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students click on the people column. This column represents how many people were seen in the park on a given day. Have students answer the questions on their activity guide first before discussing as a group.\n\n**Circulate:** Check in with students and help them interpret the graphs. Encourage students to use sentence starters like \"When the number of people are... then the number of lions are...\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low number of people in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high number of people in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_",
         "name": "Feature #2: People",
@@ -5495,7 +5535,7 @@
     },
     {
       "key": "a50f1dc6-5a83-4770-9c59-cbbaacaeedc4",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": " **Discussion Goal:** Students should notice the less people there are, the more lions there are and vice versa. They may imagine this has to do with natural behavior and they may think back to their own experiences visiting zoos or wildlife - if there are more strangers in the park, they are less likely to come out. The opposite may also be true - the less people around, the more they may roam free.\r\n\r"
       },
@@ -5506,7 +5546,7 @@
     },
     {
       "key": "51463602-c1b9-4507-b59d-6db71c13ff71",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the dayOfMonth column. This column represents what day of the month you went to the park. Have students answer the questions in their activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _What happens if you visit on a day early in the month? How many lions do you think you’ll see?_\n- _What happens if you visit on a day late in the month? How many lions do you think you’ll see?_",
         "name": "Feature #3: Day of the Month"
@@ -5518,7 +5558,7 @@
     },
     {
       "key": "8f8bd48c-ce4b-4c33-8b76-9e041bf61549",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": " **Discussion Goal:** Students may get a little stumped with this one because there is no pattern in this data. You might see a lot of lions early in the month and you might also see a lot of lions late in the month, and vice versa. Students may imagine this is because the day of the month doesn’t change the lions behaviors, especially compared to some of the other features."
       },
@@ -5529,7 +5569,7 @@
     },
     {
       "key": "0ed7fb1b-c7b5-4229-bf21-36d0d4e8e659",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the temperature column. This column represents the weather that day and how hot or cold it was. Have students answer the questions on their activity guide before discussing as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low temperature in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high temperature in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_",
         "name": "Feature #4: Temperature"
@@ -5541,7 +5581,7 @@
     },
     {
       "key": "4dd1e0e6-23f4-49ba-91ba-75d31cf4bb4e",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": " **Discussion Goal:** Students should notice that both high temperatures and low temperatures mean you won’t see very many lions. Instead, midrange temperatures lead you to seeing a lot of lions. This may be because lions won’t come out in extreme temperatures and instead prefer nicer weather. The same can also be said for human beings - we avoid extreme weather."
       },
@@ -5552,7 +5592,7 @@
     },
     {
       "key": "f4309e71-889f-4ca8-92c4-df24f8280f53",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "We can use AI Lab to train a machine learning model to predict how many lions we’ll see when visiting the park. We want to make sure we use features that have a relationship with our lions. Based on the ones we’ve seen so far, which column would not make a good feature?",
         "remarks": true
@@ -5564,7 +5604,7 @@
     },
     {
       "key": "37e4d65f-b9fd-43e7-b7a0-b895761522db",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which graph would not make a good feature?_"
       },
@@ -5575,7 +5615,7 @@
     },
     {
       "key": "ba44d329-5e5e-447a-94ca-635dd3de9e93",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": " **Discussion Goal:** Students should explain that the dayOfMonth column is not a good candidate because the data appears random. Instead, the other columns have a relationship with the label that they can describe, almost like a story within the data."
       },
@@ -5586,7 +5626,7 @@
     },
     {
       "key": "0cd7c08c-3b5e-474d-b969-09379b280eb7",
-      "position": 17,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Continue to explore the data by clicking on the remaining features in the dataset. Record your observations on your activity guide.\n\n\n**Circulate:** Check in with students as they explore data, making sure to check with any students who appeared to be struggling to read graphs during the previous exercises. Ask students to explain why they think certain columns could be good features.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using our investigation, train a model with 80% accuracy.",
         "duration": "10",
@@ -5609,7 +5649,7 @@
     },
     {
       "key": "a97a0429-7513-4033-981a-5083e53cb5fa",
-      "position": 18,
+      "position": 19,
       "properties": {
         "description": "**Code Studio:** Students who finish training their model can import into App Lab and begin customizing their app. They won't have enough time to truly finish their app, but the next lesson focuses more on App Lab where they will be able to customize their apps more completely.",
         "progression_name": "Safari App"
@@ -5925,7 +5965,13 @@
       "key": "eae60534-cb15-4ca3-9c9b-00af3cf271cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/csd7/2023] video to setup the activity they will complete today."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/csd7/2023] video to setup the activity they will complete today.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "eae60534-cb15-4ca3-9c9b-00af3cf271cd",
@@ -6815,7 +6861,13 @@
       "key": "1357a167-3772-4593-aaa2-6b64d7242014",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the video on how to create a Google Form from the provided template. Students will need to be careful about using the template questions so they can make sure their data is usable in AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the video on how to create a Google Form from the provided template. Students will need to be careful about using the template questions so they can make sure their data is usable in AI Lab.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1357a167-3772-4593-aaa2-6b64d7242014",
@@ -6973,7 +7025,13 @@
       "key": "71e374ca-dda6-42e3-9364-a3b32196d5f8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r view_and_download_survey_data/csd7/2023] video in the alides. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r view_and_download_survey_data/csd7/2023] video in the alides. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "71e374ca-dda6-42e3-9364-a3b32196d5f8",
