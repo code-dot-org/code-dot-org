@@ -18,8 +18,6 @@ type PlayerUtils = Pick<
   MusicPlayer,
   | 'getPlaybackEvents'
   | 'getTracksMetadata'
-  | 'getLengthForId'
-  | 'getTypeForId'
   | 'getLastMeasure'
 >;
 
@@ -29,7 +27,5 @@ export const PlayerUtilsContext: React.Context<
 > = React.createContext<PlayerUtils>({
   getPlaybackEvents: () => [],
   getTracksMetadata: () => ({}),
-  getLengthForId: () => 0,
-  getTypeForId: () => null,
   getLastMeasure: () => 0
 });
