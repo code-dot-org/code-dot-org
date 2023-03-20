@@ -1754,3 +1754,43 @@ se:
           lesson_groups:
             lessonGroup-3:
               display_name: Input:at ja Output:at
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
