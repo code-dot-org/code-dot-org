@@ -4243,3 +4243,106 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+          description_short: 'Uma introdução à ciência da computação para pré-leitores: combina o melhor do nosso jardim de infância e cursos de primeira série.'
+          description_audience: 'Idades: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_sprites:
+              display_name: Sprite
+            lessonGroup-9:
+              display_name: Eventos
+            csf_loops:
+              display_name: Ciclos
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funções
+            csf_variables:
+              display_name: Variáveis
+            csf_for_loops:
+              display_name: Ciclos "for"
+          description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
+          description_audience: 9-18 anos de idade
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+          student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+          description_audience: 'Idade: de 4 a 7 anos'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: Ciclos
+            csf_impacts:
+              display_name: Impacto da computação
+            csf_events:
+              display_name: Eventos
+          student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
+          description_audience: 'Idades: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Dados
+          student_description: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
+          description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description_audience: 'Idades: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Ciclos
+            csf_conditionals:
+              display_name: Condicionais
+          title: Curso D (2021)
+          description_short: Aprenda sobre declarações condicionais. Crie sua própria arte, jogos e até uma festa de dança.
+          description_audience: 'Idades: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sprites:
+              display_name: Sprite
+            ramp_up:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: Funções
+            csf_nested_loops:
+              display_name: Condicionais
+            lessonGroup-7:
+              display_name: Impacto da computação
+          description_audience: De 8 a 12 anos
