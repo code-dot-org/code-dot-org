@@ -2091,3 +2091,72 @@ he:
           lesson_groups:
             lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
