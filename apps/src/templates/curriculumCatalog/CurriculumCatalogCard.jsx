@@ -7,13 +7,15 @@ import '../../../style/code-studio/curriculum_catalog_card.scss';
 
 const CurriculumCatalogCard = ({
   assignButtonDescription,
+  assignButtonText,
   courseName,
   duration,
   gradeOrAgeRange,
   imageAltText,
   imageName,
   topic,
-  quickViewButtonDescription
+  quickViewButtonDescription,
+  quickViewButtonText
 }) => (
   <div className="curriculumCatalogCardContainer">
     <img src={cardImageNamesToSrc[imageName]} alt={imageAltText} />
@@ -32,20 +34,22 @@ const CurriculumCatalogCard = ({
       <div className="buttonsContainer">
         {/* each button should be same fixed size */}
         <Button
+          className="leftButton"
           color={Button.ButtonColor.neutralDark}
           type="button"
           onClick={() => {}}
           aria-label={quickViewButtonDescription}
         >
-          Quick View
+          {quickViewButtonText}
         </Button>
         <Button
+          className="rightButton"
           color={Button.ButtonColor.brandSecondaryDefault}
           type="button"
           onClick={() => {}}
           aria-label={assignButtonDescription}
         >
-          Assign
+          {assignButtonText}
         </Button>
       </div>
     </div>
@@ -60,6 +64,8 @@ CurriculumCatalogCard.propTypes = {
   gradeOrAgeRange: PropTypes.string.isRequired,
   imageName: PropTypes.string.isRequired,
   topic: PropTypes.string.isRequired,
+  quickViewButtonText: PropTypes.string.isRequired,
+  assignButtonText: PropTypes.string.isRequired,
 
   // for screenreaders
   imageAltText: PropTypes.string,
