@@ -1034,6 +1034,8 @@ fa:
         text: دوری از هدفها
       gamelab_beginCollectingData:
         text: آغاز جمع‌آوری داده [BREAK][0] با مقدار [VALUE][1] با برچسب [LABEL][2]
+      gamelab_behaviorPicker:
+        text: "[BEHAVIOR][0]"
       gamelab_bounceOff:
         text: "[SPRITE][0] به [TARGET][1] می‌رسد و برمی‌گردد"
       gamelab_changePropBy:
