@@ -5091,3 +5091,118 @@ zh-TW:
             lessonGroup-4:
               display_name: '第2章: 多網頁網站'
           title: Web 開發
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+          description_short: 為學前兒童提供的電腦科學簡介：結合我們的最佳幼稚園與一年級課程。
+          description_audience: 年齡：4-8
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_sprites:
+              display_name: 角色
+            lessonGroup-9:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_functions:
+              display_name: 函式
+            csf_variables:
+              display_name: 變數
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            end_of_course_project:
+              display_name: 課程結束專案
+          description_short: 電腦科學簡介：結合我們最優秀的國小課程內容，供年齡較大的學生學習。
+          description_audience: 年齡 9-18
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            lessonGroup-5:
+              display_name: 課程結束專案
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學齡前兒童設計的計算機科學指引。
+          description_audience: 年齡：4-7
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_impacts:
+              display_name: 運算的影響
+            csf_events:
+              display_name: 事件
+            lessonGroup-6:
+              display_name: 課程結束專案
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學前兒童準備的電腦科學介紹。類似課程 A，但採用更深入的概念。
+          description_audience: 年齡 5-8
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            csf_data:
+              display_name: 數據
+            end_of_course_project:
+              display_name: 課程結束專案
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+          description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
+          description_audience: 年齡 6-10
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            end_of_course_project:
+              display_name: 課程結束專案
+          title: 課程 D（2021）
+          description_short: 學習條件式陳述句。你可製作自己的藝術品、遊戲，甚至舞蹈派對！
+          description_audience: 年齡 7-11
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sprites:
+              display_name: 角色
+            ramp_up:
+              display_name: 巢狀迴圈
+            csf_functions:
+              display_name: 函式
+            csf_nested_loops:
+              display_name: 條件判斷（Conditionals）
+            lessonGroup-7:
+              display_name: 運算的影響
+            end_of_course_project:
+              display_name: 課程結束專案
+          description_audience: 年齡 8-12

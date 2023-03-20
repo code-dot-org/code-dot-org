@@ -1062,6 +1062,8 @@ zh-TW:
         text: 避開目標
       gamelab_beginCollectingData:
         text: 開始收集數據{BREAK}，值{VALUE}，標籤{LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
