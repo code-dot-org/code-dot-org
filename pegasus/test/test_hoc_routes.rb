@@ -295,29 +295,27 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
-    private
-
     # Extracts the sampling weight from a hoc_activity row. We would like to add
     # a separate column for maintaining this but this is too expensive/risky before
     # Hour of Code 2015, so it is current embedded in the session id. For example,
     # _2_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.
-    def get_sampling_weight(row)
+    private def get_sampling_weight(row)
       row[:session].split('_')[1].to_i
     end
 
-    def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
+    private def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
       assert (before_begin_time..after_begin_time).cover?(after_start_time)
     end
 
-    def now_in_sequel_datetime
+    private def now_in_sequel_datetime
       Sequel.string_to_datetime(Time.now.utc.to_s)
     end
 
-    def get_session_hoc_activity_entry
+    private def get_session_hoc_activity_entry
       DB[:hoc_activity].where(session: @mock_session.cookie_jar['hour_of_code']).first
     end
 
-    def with_test_company(name)
+    private def with_test_company(name)
       remove_test_company(name)
       DB[:forms].insert(kind: 'CompanyProfile',
                         name: name,
@@ -332,41 +330,41 @@ class HocRoutesTest < Minitest::Test
       )
     end
 
-    def remove_test_company(name)
+    private def remove_test_company(name)
       DB[:forms].where(kind: 'CompanyProfile', name: name).delete
     end
 
-    def make_certificate
+    private def make_certificate
       assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       CGI.parse(@pegasus.last_request.query_string)['i'][0]
     end
 
-    def assert_redirects_from_to(from, to)
+    private def assert_redirects_from_to(from, to)
       @pegasus.get from
       assert_equal 302, @pegasus.last_response.status
       @pegasus.follow_redirect!
       assert_includes @pegasus.last_request.url, to
     end
 
-    def assert_successful_get(path)
+    private def assert_successful_get(path)
       assert_code_on_get(200, path)
     end
 
-    def assert_successful_png_get(path)
+    private def assert_successful_png_get(path)
       assert_code_on_get(200, path)
       assert_equal 'image/png', @pegasus.last_response['Content-Type']
     end
 
-    def assert_successful_jpeg_get(path)
+    private def assert_successful_jpeg_get(path)
       assert_code_on_get(200, path)
       assert_equal 'image/jpeg', @pegasus.last_response['Content-Type']
     end
 
-    def assert_not_found_get(path)
+    private def assert_not_found_get(path)
       assert_code_on_get(404, path)
     end
 
-    def assert_code_on_get(code, path)
+    private def assert_code_on_get(code, path)
       @pegasus.get path
       assert_equal code, @pegasus.last_response.status
     end
