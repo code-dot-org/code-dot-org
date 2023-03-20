@@ -4017,3 +4017,128 @@ sk:
               display_name: 'Kapitola 1: Tvorba webových stránok'
             lessonGroup-4:
               display_name: 'Kapitola 2: Viacstránkové weby'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje
+            to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
+          description_audience: 'Vek: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_sprites:
+              display_name: Sprajty
+            lessonGroup-9:
+              display_name: Udalosti
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmienené príkazy
+            csf_functions:
+              display_name: Funkcie
+            csf_variables:
+              display_name: Premenné
+            csf_for_loops:
+              display_name: Cykly "Pre"
+            end_of_course_project:
+              display_name: Záverečný projekt
+          description_audience: 'Vek: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+            lessonGroup-5:
+              display_name: Záverečný projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
+          description_short: Predstavenie informatiky pre predškolákov.
+          description_audience: 'Vek: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_impacts:
+              display_name: Vplyv Informatiky
+            csf_events:
+              display_name: Udalosti
+            lessonGroup-6:
+              display_name: Záverečný projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať.
+            Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
+          description_audience: Vek 5-8
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+            csf_data:
+              display_name: Dáta
+            end_of_course_project:
+              display_name: Záverečný projekt
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
+            príbehy a hry.
+          description_audience: 'Vek: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_events:
+              display_name: Udalosti
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmienené príkazy
+            end_of_course_project:
+              display_name: Záverečný projekt
+          title: Kurz D (2021)
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
+          description_audience: Vek 7-11
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sprites:
+              display_name: Sprajty
+            ramp_up:
+              display_name: Vnorené cykly
+            csf_functions:
+              display_name: Funkcie
+            csf_nested_loops:
+              display_name: Podmienené príkazy
+            lessonGroup-7:
+              display_name: Vplyv Informatiky
+            end_of_course_project:
+              display_name: Záverečný projekt
+          description_audience: Vek 8-12
