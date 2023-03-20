@@ -1524,3 +1524,81 @@ kn:
           lesson_groups:
             lessonGroup-2:
               display_name: ಅಧ್ಯಾಯ 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_variables:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-5:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ
+            ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+            csf_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+          title: ಕೋರ್ಸ್‌ ಡಿ (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            ramp_up:
+              display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            csf_nested_loops:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
