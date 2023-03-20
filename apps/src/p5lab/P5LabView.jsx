@@ -104,14 +104,23 @@ class P5LabView extends React.Component {
     return this.props.isBlockly;
   }
 
-  // Teachers and users of non-blockly labs should always be allowed to upload animations
-  // with no restrictions. Otherwise, if users upload animations we will disable publish and remix.
-  shouldRestrictAnimationUpload() {
-    if (this.props.currentUserType === 'teacher') {
+  // NOTE: this can be simplified to return this.props.blockly once we've removed the backgrounds_and_upload experiment
+  // Users of non-blockly labs should always be allowed to upload animations
+  // with no restrictions. Teachers in blockly labs (ie, sprite lab) can upload with a warning.
+  // If students upload animations we will disable publish and remix.
+  shouldWarnOnAnimationUpload() {
+    if (!this.props.isBlockly) {
       return false;
     }
 
-    return this.props.isBlockly;
+    if (
+      this.props.currentUserType === 'teacher' &&
+      !experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+    ) {
+      return false;
+    }
+
+    return true;
   }
 
   renderCodeMode() {
@@ -170,7 +179,7 @@ class P5LabView extends React.Component {
               channelId={channelId}
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.shouldHideAnimationUpload()}
-              shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
+              shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -219,7 +228,7 @@ class P5LabView extends React.Component {
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}
-        shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
+        shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
         hideCostumes={isBackgroundMode}
