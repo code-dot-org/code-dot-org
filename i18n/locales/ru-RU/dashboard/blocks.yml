@@ -1058,6 +1058,8 @@ ru:
         text: избегание целей
       gamelab_beginCollectingData:
         text: начать сбор данных {BREAK} значение {VALUE} с меткой {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} отскакивает от {TARGET}"
       gamelab_changePropBy:
