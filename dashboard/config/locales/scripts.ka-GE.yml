@@ -3076,3 +3076,97 @@ ka:
               display_name: შესავალი აპლიკაციების ლაბორატორიაში
             lessonGroup-3:
               display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          description_audience: 'ასაკი: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: სპრაიტები
+            lessonGroup-9:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
+            სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+          description_audience: 'ასაკი: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
+            არ იცის.
+          description_audience: 'ასაკი: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          description_audience: 'ასაკი: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+            csf_data:
+              display_name: მონაცემები
+          student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა
+            მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის
+            გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
+            კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
+            შეძლებთ!
+          description_short: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები და შექმნათ
+            თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+          description_audience: 'ასაკი: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ციფრული მოქალაქეობა
+            csf_events:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+          description_audience: 'ასაკი: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_sprites:
+              display_name: სპრაიტები
+            ramp_up:
+              display_name: ჩასმული ციკლები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_nested_loops:
+              display_name: პირობითი ბრძანებები
+          description_audience: 'ასაკი: 8-12'
