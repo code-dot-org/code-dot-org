@@ -1045,6 +1045,8 @@ vi:
         text: tránh mục tiêu
       gamelab_beginCollectingData:
         text: bắt đầu thu thập dữ liệu {BREAK} giá trị {VALUE} với nhãn {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} bật khỏi {TARGET}"
       gamelab_changePropBy:
