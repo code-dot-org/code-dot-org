@@ -14,6 +14,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     @workshop_organizer = create(:workshop_organizer)
     @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
+
+    @regional_partner = create(:regional_partner)
   end
   setup do
     @workshop.reload
@@ -1490,26 +1492,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSA summer workshops must require teacher application' do
-    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
-    workshop = create :pd_workshop, course: COURSE_CSA, subject: SUBJECT_SUMMER_WORKSHOP, regional_partner: rp
+    workshop = create :pd_workshop, course: COURSE_CSA, subject: SUBJECT_SUMMER_WORKSHOP, regional_partner: @regional_partner
     assert workshop.require_application?
   end
 
   test 'CSP academic year workshop must require teacher application' do
-    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
-    workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1, regional_partner: rp
+    workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1, regional_partner: @regional_partner
     assert workshop.require_application?
   end
 
   test 'CSF workshop must not require teacher application' do
-    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
-    workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101, regional_partner: rp
+    workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 
   test 'virtual CSD workshop must not require teacher application' do
-    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
-    workshop = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_VIRTUAL_KICKOFF, virtual: true, regional_partner: rp
+    workshop = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_VIRTUAL_KICKOFF, virtual: true, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 
@@ -1518,8 +1516,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.require_application?
   end
 
-  test 'regional partner without link must not require teacher application' do
-    rp = create :regional_partner, link_to_partner_application: nil
+  test 'regional partner with partner application must not require teacher application' do
+    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
     workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1, regional_partner: rp
     refute workshop.require_application?
   end
