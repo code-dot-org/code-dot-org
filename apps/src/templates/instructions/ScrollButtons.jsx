@@ -109,7 +109,7 @@ class ScrollButtons extends React.Component {
 
     let upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: 16,
+      top: this.props.isMinecraft ? '10px' : 16,
       margin: '0 0 3px 0',
       left: centerItems ? '50%' : 25,
       transform: 'translateX(-50%)'
@@ -117,7 +117,7 @@ class ScrollButtons extends React.Component {
 
     const downStyle = {
       opacity: this.props.visible ? 1 : 0,
-      bottom: 16,
+      bottom: this.props.isMinecraft ? '10px' : 16,
       right: centerItems ? '50%' : 25,
       transform: 'translateX(50%)'
     };
