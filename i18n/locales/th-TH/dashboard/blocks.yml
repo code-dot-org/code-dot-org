@@ -1048,6 +1048,8 @@ th:
         text: หลบเป้าหมาย
       gamelab_beginCollectingData:
         text: เริ่มต้นเก็บข้อมูล {BREAK} ค่า {VALUE} ด้วยป้าย {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} กระโดดไปที่ {TARGET}"
       gamelab_changePropBy:
