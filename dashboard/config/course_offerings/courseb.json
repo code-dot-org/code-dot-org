@@ -9,7 +9,7 @@
   "grade_levels": "1,2",
   "header": "CS Fundamentals",
   "image": null,
-  "cs_topic": null,
+  "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }
