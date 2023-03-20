@@ -4846,3 +4846,128 @@ de:
         poetry-2023: {}
         poemmaker-2023: {}
         dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger: Kombiniert das Beste aus unseren Kursen für die Vorschule und für Erstklässler.'
+          description_audience: 'Alter: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            csf_functions:
+              display_name: Funktionen
+            csf_variables:
+              display_name: Variablen
+            csf_for_loops:
+              display_name: Schleifen mit dem Wiederhol-Block
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik: kombiniert das Beste aus unserem Grundschullehrplan für ältere SchülerInnen.'
+          description_audience: 'Alter: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-5:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs A (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_impacts:
+              display_name: Auswirkungen der Datenverarbeitung
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs B (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
+          description_audience: 'Alter: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            csf_data:
+              display_name: Daten
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs C (2021)
+          student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+          description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description_audience: 'Alter: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs D (2021)
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
+          description_audience: 'Alter: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Verschachtelte Schleifen
+            csf_functions:
+              display_name: Funktionen
+            csf_nested_loops:
+              display_name: Bedingungen
+            lessonGroup-7:
+              display_name: Auswirkungen der Datenverarbeitung
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested Loops und Funktionen.
+          description_audience: 'Alter: 8-12'
