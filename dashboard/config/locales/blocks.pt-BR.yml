@@ -1053,6 +1053,8 @@ pt:
         text: evitando alvos
       gamelab_beginCollectingData:
         text: comece a coletar dados {BREAK} com valor {VALUE} e identificador {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rebater desativado {TARGET}"
       gamelab_changePropBy:
