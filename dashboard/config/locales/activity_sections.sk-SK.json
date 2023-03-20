@@ -7147,7 +7147,7 @@
         },
         "562abbaf-9fb5-42a3-8451-6dd77ea03954": {
           "name": "Analýza aplikácie (Výber oblečenia)",
-          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania. Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
         },
         "f4a0fbbd-2d29-4de8-b325-f08c12c9abcf": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
@@ -10303,7 +10303,7 @@
           "description": "Kým si žiaci navzájom ohodnotia prácu, každý žiak by mal v hornej časti sprievodcu vyplniť, k čomu by sa im spätná väzba zišla najviac."
         },
         "65f20593-180e-4ad7-a3d2-5c724d83874b": {
-          "name": "Sekcia kontroly",
+          "name": "Sekcia pre hodnotiteľa",
           "description": "Keď si žiaci vymenia sprievodcov, vyhodnotia, do akej miery projekty splnili kritériá uvedené v hodnotiacej tabuľke. Motivujte žiakov k tomu, aby v projekte spolužiaka hľadali dôkazy o tom, že ich spolužiak sa naučil niečo nové, a zároveň poskytli návrhy, ako by sa dali projekty ešte zlepšiť. Môže byť potrebné, aby ste žiakom pomáhali poskytovať si navzájom konštruktívnu spätnú väzbu."
         },
         "9f41899b-b6c3-4bac-8af2-1a55ec025c8a": {
@@ -12242,7 +12242,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Čo nové ste sa dnes dozvedeli o strojovom učení? Akú novú otázku máte o strojovom učení?_\n\nPožiadajte žiakov, aby si vybrali jednu z nich a podelili sa s vami o ňu pri odchode z triedy alebo aby svoje odpovede napísali na lístok, ktorý môžete vystaviť v triede. Ak je to možné, sledujte tieto body počas celého tematického celku a vráťte sa k nim na ďalších hodinách, keď sa nimi budete zaoberať."
         },
         "7077c8e1-5038-47f2-b105-0382592d319d": {
-          "name": "Zapíšte si do zápisníka",
+          "name": "Zapíšte si do denníka",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Premýšľajte o zručnosti, ktorú bežne používate, napríklad rozprávanie, zaväzovanie topánok, varenie alebo hranie hier. Ako ste sa túto zručnosť naučili?_\n\nDajte žiakom minútu alebo dve na napísanie odpovedí a potom požiadajte dobrovoľníkov, aby sa o svoje nápady podelili s triedou. Kým budú žiaci hovoriť, zapisujte na tabuľu témy, ktoré sa objavia."
         },
         "9c2d4592-3cae-43c0-aa8a-55be8e4ac0f6": {
@@ -23108,7 +23108,7 @@
           "description": "Našli ste preklep? Boli niektoré pokyny nejasné? Máte návrh, ako zlepšiť chod tejto lekcie? **Radi si ich vypočujeme!** Použite odkazy nižšie a poskytnite nám spätnú väzbu k tejto lekcii.\n\n-   [\\*\\*Nahlásiť preklep / chybu / nejasné pokyny\\*\\*](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%201%20studio.code.org/s/aiml-2021/lessons/1)\n-   [\\*\\*Všeobecná spätná väzba k lekcii\\*\\*](https://docs.google.com/forms/d/e/1FAIpQLSfb7oK-vvnMV2nRlN7h_xp8-P-KGuBxb8iOhmqDrUwZkNBdWg/viewform?usp=sf_link)"
         },
         "2ec7a348-a9d4-4ce7-942e-98fc411303bd": {
-          "name": "Zapíšte si do zápisníka",
+          "name": "Zapíšte si do denníka",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Premýšľajte o zručnosti, ktorú bežne používate, napríklad rozprávanie, zaväzovanie topánok, varenie alebo hranie hier. Ako ste sa túto zručnosť naučili?_\n\nDajte žiakom minútu alebo dve na napísanie odpovedí a potom požiadajte dobrovoľníkov, aby sa o svoje nápady podelili s triedou. Kým budú žiaci hovoriť, zapisujte na tabuľu témy, ktoré sa objavia."
         },
         "f895faf7-ea01-42c7-a485-35e30336038d": {
@@ -28709,7 +28709,7 @@
         },
         "49fca890-c067-42b3-9982-6a30352b21d3": {
           "name": "Analýza aplikácie (Výber oblečenia)",
-          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania? Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
+          "description": "**Zapíšte si do denníka**: Otvorte si Code Studio a pozrite si v rozhraní aplikáciu Výber oblečenia. Skúste v aplikácii identifikovať jeden vstup, jeden výstup a jeden typ spracúvania. Predstavte si, že túto aplikáciu používate každý deň. Aké informácie by ste chceli, aby si táto aplikácia pamätala?"
         },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
           "description": "**Monitorovanie:** Prvá časť tejto reflexie je určená na to, aby si žiaci zopakovali, čo už vedia o vstupoch, výstupoch a spracúvaní. Kým sa zamýšľajú nad vašimi otázkami, kontrolujte ich odpovede, aby ste sa uistili, či rozumejú tomu, ako sa v aplikácii využívajú vstupy, výstupy a spracúvanie.",
@@ -30211,7 +30211,7 @@
           "description": "Kým si žiaci navzájom ohodnotia prácu, každý žiak by mal v hornej časti sprievodcu vyplniť, k čomu by sa im spätná väzba zišla najviac."
         },
         "4c77683d-f5ce-4793-a6b2-7b99901aaa77": {
-          "name": "Sekcia kontroly",
+          "name": "Sekcia pre hodnotiteľa",
           "description": "Keď si žiaci vymenia sprievodcov, vyhodnotia, do akej miery projekty splnili kritériá uvedené v hodnotiacej tabuľke. Motivujte žiakov k tomu, aby v projekte spolužiaka hľadali dôkazy o tom, že ich spolužiak sa naučil niečo nové, a zároveň poskytli návrhy, ako by sa dali projekty ešte zlepšiť. Môže byť potrebné, aby ste žiakom pomáhali poskytovať si navzájom konštruktívnu spätnú väzbu."
         },
         "0792fa5e-646b-4a0f-b83d-19d7683ecaed": {

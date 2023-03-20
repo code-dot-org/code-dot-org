@@ -3,5 +3,13 @@
   "display_name": "Time Capsule Module",
   "category": "csc",
   "is_featured": true,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
+  "grade_levels": "3,4,5,6,7,8",
+  "header": "CS Connections",
+  "image": null,
+  "cs_topic": "art_and_design,games_and_animations,programming",
+  "school_subject": "english_language_arts,history",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

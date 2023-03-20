@@ -2952,27 +2952,54 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: შემთხვევითი
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
         hello-world-soccer-2022:
           title: 'გამარჯობა მსოფლიო: ფეხბურთი'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-3:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
             lessonGroup-3:
               display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
-          title: დიზაინის პროცესი
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
             lessonGroup-3:
               display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: სურათები და ანიმაციები'
             lessonGroup-3:
               display_name: 'თავი 2: თამაშების შექმნა'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:

@@ -5162,9 +5162,59 @@ pl:
           name: csa3-2023
           title: Tablice i Algorytmy
         csa4-2023:
+          lessons:
+            lesson-2:
+              name: Projekt abstrakcyjnych danych sztuki
+            lesson-3:
+              name: BingoCaller FRQ
+            lesson-4:
+              name: Jednostka 4 Sprawdzian
+            lesson-1:
+              name: Projekt abstrakcyjnych danych sztuki [wersja 1-dniowa]
+            lesson-5:
+              name: Teatr
+            lesson-6:
+              name: Statyczne zmienne i metody
+            lesson-7:
+              name: Klasa matematyki
+            lesson-8:
+              name: Odcinanie i zaokrąglanie
+            lesson-10:
+              name: Aliasy obiektów i równość
+            lesson-11:
+              name: Zagnieżdżone instrukcje 'jeżeli'
+            lesson-12:
+              name: Operatory logiczne
+            lesson-13:
+              name: Prawa De Morgana
+            lesson-14:
+              name: Instrukcje wielokrotnego wyboru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa4-2023
           title: Warunki i Logika
         csa5-2023:
+          lessons:
+            lesson-1:
+              name: Tablice dwuwymiarowe (2D)
+            lesson-2:
+              name: Elementy tablicy 2D
+            lesson-5:
+              name: Ulepszone dla pętli
+            lesson-9:
+              name: Wpływ programów
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa5-2023
           title: Tablice dwuwymiarowe
         csa6-2023:
@@ -5250,12 +5300,11 @@ pl:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Rozdział 1
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
-              display_name: Rozdział 2
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
-          title: Rozwiązywanie problemów
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5263,13 +5312,14 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Wielostronicowe witryny'
           title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie jak debugowanie, korzystanie  z zasobów i praca zespołowa.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
             lessonGroup-3:
               display_name: 'Rozdział 2: Prototypowanie aplikacji'
-          title: Proces projektowania
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5277,6 +5327,8 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
           title: Dane i społeczeństwo
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów, aby rozwiązywać problemy z danymi.
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie danych są używane do rozwiązywania problemów i jak komputery pomagają w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem, jak proces rozwiązywania problemu z danym może być stosowany w wybranym przez siebie obszarze.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5284,19 +5336,22 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie gier'
           title: Interaktywne animacje i gry
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny.
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Rozdział 1
+              display_name: 'Rozdział 1: Dane i wyniki'
             lessonGroup-3:
-              display_name: Rozdział 2
-          title: Oiczenia fizyczne
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Rozdział 1
             lessonGroup-3:
               display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Wprowadzenie do App Lab
           title: AI i uczenie maszynowe
         physcomp-temp:
           lesson_groups:
@@ -5376,15 +5431,18 @@ pl:
               display_name: Ankieta
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
           title: Internet ('21-'22)
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -5395,6 +5453,7 @@ pl:
               display_name: Funkcje
             csp_project:
               display_name: Projekt
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -5434,6 +5493,7 @@ pl:
               display_name: Biblioteki
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5581,3 +5641,98 @@ pl:
               display_name: Budowanie fizycznych prototypów
           name: mikrobit-temp
           title: 'Micro: Bit Temp'
+        csc-timecapsule-2023:
+          name: csc-timecapsule-2023
+          title: Kapsuła czasu (2023)
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Planowanie na przyszły rok
+            lesson-4:
+              name: Bez konferencji
+            lesson-6:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd7-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 7
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Zobowiązanie się do sprawiedliwych praktyk dydaktycznych
+            lesson-4:
+              name: Łączenie się ze społecznością w przyszłości
+            lesson-6:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd8-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 8
+        csc-mappinglandmarks-2023:
+          name: csc-mappinglandmarks-2023
+          title: Mapowanie punktów orientacyjnych (2023)
+        blockchain-2023:
+          lessons:
+            lesson-1:
+              name: Przegląd Blockchain
+            lesson-2:
+              name: Zastosowane Blockchain i Bitcoin
+            lesson-3:
+              name: Poza walutami
+            lesson-4:
+              name: Wartość w Blockchain
+            lesson-5:
+              name: Wpływ społeczny
+          name: blockchain-2023
+          title: Blockchain
+          description: To jest jednostka na Blockchain!
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do uczenia Jednostki 1
+          title: Przygotowanie do uczenia Jednostki 1
+          name: self-paced-pl-csc-2023
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Koduj swój własny ekosystem (2023)
+          name: csc-ecosystems-2023
+          title: Zrównoważone ekosystemy
+        csc-adaptations-2023:
+          lessons:
+            lesson-2:
+              name: Zachowania zwierząt dla przetrwania
+            lesson-3:
+              name: Koduj własną adaptację
+          name: csc-adaptations-2023
+        drafting:
+          name: redakcja
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+          name: tess-testing-problem-solving-2023
+          title: Rozwiązywanie problemów
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+          name: testing-focus-on-creativity1
+          title: Rozwiązywanie problemów
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          name: testing-focus-on-creativity2
+          title: Opracowywaniem stron internetowych
+        poetry-2023:
+          name: poetry-2023
+          title: Kodowanie z poezją (2023)
+        poemmaker-2023:
+          name: poemmaker-2023
+          title: Kreator wiersza
+        dlp-core-2023:
+          name: dlp-core-2023
+          title: 2023 Podstawy głębszego uczenia się

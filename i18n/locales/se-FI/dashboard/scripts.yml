@@ -1603,6 +1603,20 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

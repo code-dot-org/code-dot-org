@@ -7,11 +7,18 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 
+const documentationUrl = '/docs/ide/projectbeats';
+
+/**
+ * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
+ * and show/hide instructions button.
+ */
 const Controls = ({
   isPlaying,
   setPlaying,
   playTrigger,
   top,
+  instructionsAvailable,
   toggleInstructions,
   instructionsOnRight
 }) => {
@@ -64,7 +71,9 @@ const Controls = ({
     });
     setBeatPadShowing(!isShowingBeatPad);
   });
-  const infoIconSection = renderIconButton('info-circle', toggleInstructions);
+  const infoIconSection = instructionsAvailable
+    ? renderIconButton('info-circle', toggleInstructions)
+    : null;
 
   const [leftIcon, rightIcon] = instructionsOnRight
     ? [beatPadIconSection, infoIconSection]
@@ -83,6 +92,22 @@ const Controls = ({
           className={moduleStyles.iconButton}
         />
       </div>
+      <div
+        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
+      >
+        <a href={documentationUrl} target="_blank" rel="noopener noreferrer">
+          <FontAwesome
+            icon={'question-circle-o'}
+            onClick={() => {
+              analyticsReporter.onButtonClicked('documentation-link');
+            }}
+            className={classNames(
+              moduleStyles.iconButton,
+              moduleStyles.iconButtonLink
+            )}
+          />
+        </a>
+      </div>
       {rightIcon}
     </div>
   );
@@ -93,6 +118,7 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
+  instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
   instructionsOnRight: PropTypes.bool.isRequired
 };

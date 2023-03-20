@@ -67,8 +67,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
         send_as_csv_attachment workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
       end
     end
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   # GET /api/v1/pd/workshops/upcoming_teachercons
@@ -104,8 +104,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   def to_geojson(workshops)
@@ -236,9 +236,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
   end
 
-  private
-
-  def load_workshops
+  private def load_workshops
     # Load the workshop collection through scopes that include all associated users, not just the current user.
     #
     # Since CanCanCan filters collections with INNER JOIN on associations, loading a workshop
@@ -258,11 +256,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       end
   end
 
-  def should_notify?
+  private def should_notify?
     ActiveRecord::Type::Boolean.new.deserialize(params[:notify])
   end
 
-  def notify
+  private def notify
     @workshop.enrollments.each do |enrollment|
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
     end
@@ -272,7 +270,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
   end
 
-  def adjust_facilitators
+  private def adjust_facilitators
     supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)
     return unless supplied_facilitator_ids
 
@@ -294,7 +292,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
   end
 
-  def workshop_params(can_update_regional_partner = true)
+  private def workshop_params(can_update_regional_partner = true)
     allowed_params = [
       :location_name,
       :location_address,

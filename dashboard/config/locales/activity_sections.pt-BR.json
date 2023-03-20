@@ -110,7 +110,7 @@
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Além da Hora do Código",
-          "description": "Ao final do Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n-   \\*\\*Ensine no curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos forem projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais vívida. O Code.org oferece desenvolvimento profissional gratuitos nesses cursos, sejam eles on-line ou presenciais. \n-   \\*_Visite [Você pode ensinar ciência da computação](https://studio.code.org/courses?view=teacher)_para ver mais sugestões de cursos. \n-   **Convide um especialista em ciência da computação para discursar para sua classe sobre o trabalho**. Não conhece nenhum especialista em cientista da computação na sua região? Procure um voluntário no nosso [mapa de voluntários](https://code.org/volunteer/local)"
+          "description": "Após finalizado o Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n-   \\*\\*Ensine o curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos foram projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais interessante. O Code.org oferece desenvolvimento profissional gratuitos para esses cursos, sejam eles on-line ou presenciais. \n-   \\*_Visite [Você pode ensinar ciência da computação](https://studio.code.org/courses?view=teacher)_para ver mais sugestões de cursos. \n-   **Convide um especialista em ciência da computação para discursar para sua classe sobre o seu trabalho**. Não conhece nenhum especialista em cientista da computação na sua região? Procure um voluntário no nosso [mapa de voluntários](https://code.org/volunteer/local)"
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Configuração da etapa\n\nDê as boas-vindas aos alunos para a classe e apresentação resumida das atividades do dia. \n\nOs alunos estão prestes a ter uma surpresa nesta lição. É provável que a maioria dos seus alunos já tenha ouvido falar do Minecraft, mas faça uma breve introdução para os que podem não conhecê-lo. \nO Minecraft é um jogo de cubos. Você pode jogar como Alex ou Steve, à medida que vai passando pelos labirintos. Você precisa apanhar itens e explorar um mundo feito de coisas cúbicas. \n\n\\_Diga: \"Hoje vamos aprender a codificar por uma hora. Alguém aqui já ouvi o termo \"código\" antes? O que significa\"? \\_ \n\nOs alunos podem citar que um \"código\" é como uma mensagem secreta ou que está relacionado a computadores de alguma maneira."
@@ -121,7 +121,7 @@
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
-          "description": "Explique que em ciência da computação, \"código\" significa um conjunto de instruções que um computador pode compreender. Informe aos alunos que hoje eles vão praticar \"codificação\", \"programação\", \"eventos\", \"circuitos\" e \"depuração\". \n\nDefina: \n\n– \\*\\*Codificação é escrever um código ou instruções para um computador. \n\n– \\*\\*Depuração é a verificação do código para ver se há erros e tentar repará-los. \n\n– \\*\\*Função é uma parte do código que você pode acionar facilmente e reiteradamente. \n\n– \\*\\*Programação também é o ato de escrever código ou instruções. Hoje, vocês vão programar com blocos no computador (se você estiver utilizando um tutorial on-line) ou com caneta e papel (se você estiver utilizando uma atividade desconectada)."
+          "description": "Explique que em ciência da computação, \"código\" significa um conjunto de instruções que um computador pode compreender. Informe aos alunos que hoje eles vão praticar \"codificação\", \"programação\", \"funções\", \"circuitos\" e \"depuração\". \n\nDefina: \n\n– \\*\\*Codificação é escrever um código ou instruções para um computador. \n\n– \\*\\*Depuração é a verificação do código para ver se há erros e tentar repará-los. \n\n– \\*\\*Função é uma parte do código que você pode acionar facilmente e reiteradamente. \n\n– **Programação** é também o ato de escrever códigos ou instruções. Hoje, vocês vão programar com blocos no computador (se você estiver utilizando um tutorial on-line) ou com caneta e papel (se você estiver utilizando uma atividade desconectada)."
         },
         "4fd098be-b798-4e23-b091-e90c95344d97": {
           "tips": [
@@ -130,7 +130,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Jornada do Herói",
-          "description": "Desafie seus alunos a concluírem a atividade no tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1). \n\nConforme a idade e a capacidade de seus alunos, você pode considerar: \n\n– Para alunos mais jovens, sugerimos que você divida a turma em pares e peça a cada par para trabalhar em conjunto para concluir o tutorial, utilizando a [programação em pares](https://youtu.be/vgkahOzFH2Q). \n– Para alunos das séries intermediárias, constatamos que trabalhar individualmente é uma boa opção. Às vezes é útil permitir aos alunos que escolham seu próprio tutorial. Se os alunos não estiverem interessados no Minecraft, eles podem ter uma experiência semelhante com os tutoriais [Codificação com Anna e Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) ou [Guerra nas Estrelas](https://code.org/starwars). \n– Para alunos mais velhos ou adultos, o tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) funciona extremamente bem, tanto como um desafio independente quanto como uma atividade de programação em pares."
+          "description": "Desafie seus alunos a concluír a atividade no tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1). \n\nConforme a idade e a capacidade de seus alunos, você pode considerar: \n\n– Para alunos mais jovens, sugerimos que você divida a turma em duplas e peça a cada grupo para trabalhar em conjunto para concluir o tutorial, utilizando a [programação em pares](https://youtu.be/vgkahOzFH2Q). \n– Para alunos das séries intermediárias, constatamos que trabalhar individualmente é uma boa opção. Às vezes é útil permitir aos alunos que escolham seu próprio tutorial. Se os alunos não estiverem interessados no Minecraft, eles podem ter uma experiência semelhante com os tutoriais [Codificação com Anna e Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) ou [Guerra nas Estrelas](https://code.org/starwars). \n– Para alunos mais velhos ou adultos, o tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) funciona extremamente bem, tanto como um desafio independente quanto como uma atividade de programação em pares."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -152,7 +152,7 @@
           "description": "Explique que você vai gastar uma hora codificando hoje, porque esta semana é a Semana da Educação em CC, e milhões de outros alunos em todo o mundo também estão aprendendo o Hour of Code esta semana. Parabenize os alunos por fazerem parte deste movimento mundial. \n\nDê a cada aluno [um certificado](https://studio.code.org/certificates/batch?course=bWM=) com seu nome impresso."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
-          "name": "Próximas etapas",
+          "name": "Próximas Passos",
           "description": "Informe aos alunos que, se eles tiverem gostado da atividade do dia, eles terão muitas opções para continuar gerando códigos. Incentive os alunos a visitarem o [code.org/learn](<>) para verem uma lista de opções ou, se você estiver planejando qualquer atividade de extensão na sequência, diga aos alunos o que vem pela frente na sua sala de aula."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
@@ -160,7 +160,7 @@
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Além da Hora do Código",
-          "description": "Ao final do Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n-   \\*\\*Ensine no curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos forem projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais vívida. O Code.org oferece desenvolvimento profissional gratuitos nesses cursos, sejam eles on-line ou presenciais. \n-   \\*_Visite [Você pode ensinar ciência da computação](https://studio.code.org/courses?view=teacher)_para ver mais sugestões de cursos. \n-   **Convide um especialista em ciência da computação para discursar para sua classe sobre o trabalho**. Não conhece nenhum especialista em cientista da computação na sua região? Procure um voluntário no nosso [mapa de voluntários](https://code.org/volunteer/local)"
+          "description": "Após finalizado o Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n-   \\*\\*Ensine o curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos foram projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais interessante. O Code.org oferece desenvolvimento profissional gratuitos para esses cursos, sejam eles on-line ou presenciais. \n-   \\*_Visite [Você pode ensinar ciência da computação](https://studio.code.org/courses?view=teacher)_para ver mais sugestões de cursos. \n-   **Convide um especialista em ciência da computação para discursar para sua classe sobre o seu trabalho**. Não conhece nenhum especialista em cientista da computação na sua região? Procure um voluntário no nosso [mapa de voluntários](https://code.org/volunteer/local)"
         },
         "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
           "description": "#### Preparação do Terreno   Dê as boas vindas aos alunos para a aula e introduza a atividade do dia.",
@@ -554,7 +554,7 @@
         },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
-            "Caso você não tenha experiência com codificação, você pode mostrar um dos [nossos vídeos inspiradores](https://hourofcode.com/promote/resources#videos) para te ajudar a introduzir a Hora do Código. Escolha um que os seus alunos acharam inspirador e compartilhe com eles. Para alunos do ensino médio, recomendamos [A Hora do Código Chegou](https://youtu.be/FC5FbmsH4fw)."
+            "Caso você não tenha experiência com codificação, você pode mostrar um dos [nossos vídeos inspiradores](https://hourofcode.com/promote/resources#videos) para te ajudar a introduzir a Hora do Código. Escolha um que os seus alunos achem inspirador e compartilhe com eles. Para alunos do ensino médio, recomendamos [A Hora do Código Chegou](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e51e34df-5370-43a4-bae5-14d2ba49a932": {
@@ -566,7 +566,7 @@
         },
         "ddf59331-16dc-488f-8170-6d12869fbb9f": {
           "name": "Suporte Geral",
-          "description": "\\*\\* Suporte geral:\\*\\* Como professor, o seu papel principal é ajudar os alunos enquanto eles fazem o tutorial. Aqui estão algumas dicas que podem ajudar os alunos, independentemente do nível que estão estudando.\n\n-   **Colabore com os Colegas:** Incentive os alunos a se ajudarem quando estiverem com dificuldade. Como este tutorial utiliza vídeos e os alunos talvez estejam usando fones de ouvido, eles podem se isolar facilmente. Quebre esses obstáculos colocando os alunos lado a lado, se eles parecerem precisar de ajuda. Dependendo da idade e capacidade de seus alunos, você pode considerar dividir a sua turma em pares para realizarem o tutorial usando [programação em par](https://youtu.be/vgkahOzFH2Q). \n-   **Leia as instruções:** As instruções geralmente fornecem dicas úteis sobre como completar o nível. Antes de finalizar um nível para um aluno, certifique-se de que ele realmente olhou atentamente para a imagem e leu todo o texto.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Com dificuldades? Procure por dicas:** Cada nível possui uma dica com detalhes sobre como concluir o nível. Se os alunos tentarem acabar os quebra-cabeças muito rapidamente, talvez eles percebam que só precisam esperar um pouco para que o código seja executado completamente antes de continuarem. Vários níveis contêm uma segunda dica sugerindo formas de ser ainda mais criativo, através da prolongação da tarefa.\n-   **Faça e Refaça:** Às vezes, os alunos se beneficiarão mais se refizerem um nível difícil. Todos os níveis são independentes entre si, embora dependam um pouco de conceitos introduzidos anteriormente.\n-   Experimente sem pressa.\\*\\* Apesar dos primeiros níveis dizerem aos alunos exatamente o que eles precisam fazer, os alunos devem se sentir livres para experimentar suas próprias ideias."
+          "description": "\\*\\* Suporte geral:\\*\\* Como professor, o seu principal papel é ajudar os alunos enquanto durante o tutorial. Aqui estão algumas dicas que podem ajudar os alunos, independentemente do nível que estão estudando.\n\n-   **Colabore com os Colegas:** Incentive os alunos a se ajudar quando estiverem com dificuldade. Como este tutorial utiliza vídeos e os alunos talvez estejam usando fones de ouvido, eles podem se facilmente se isolar. Quebre esses obstáculos colocando os alunos lado a lado, caso pareçam precisar de ajuda. Dependendo da idade e capacidade de seus alunos, você pode considerar dividir a sua turma em pares para realizar o tutorial usando [programação em par](https://youtu.be/vgkahOzFH2Q). \n-   **Leia as instruções:** As instruções geralmente fornecem dicas úteis sobre como completar o nível. Antes de finalizar um nível para um aluno, certifique-se de que ele realmente olhou atentamente para a imagem e leu todo o texto.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Com dificuldades? Procure por dicas:** Cada nível possui uma dica com detalhes sobre como concluir o nível. Se os alunos tentarem acabar os quebra-cabeças muito rapidamente, talvez eles percebam que só precisam esperar um pouco para que o código seja executado completamente antes de continuarem. Vários níveis contêm uma segunda dica sugerindo formas de ser ainda mais criativo, através da prolongação da tarefa.\n-   **Faça e Refaça:** Às vezes, os alunos se beneficiarão mais se refizerem um nível difícil. Todos os níveis são independentes entre si, embora dependam um pouco dos conceitos introduzidos anteriormente.\n-   **Experimente sem pressa.** Apesar dos primeiros níveis dizerem aos alunos exatamente o que eles precisam fazer para passar, os alunos devem se sentir livres para experimentar suas próprias ideias."
         },
         "4dee8e28-b791-4791-ae95-8276c0da6331": {
           "description": "#### Nível 1\n\n-   Arraste o bloco vermelho chamado `criar novo`  da caixa de ferramentas à esquerda para a área de trabalho à direita. Conecte-o dentro do bloco `configuração`.\n-   Você acaba de escrever seu primeiro programa. Não se esqueça de pressionar Executar para ver o que acontece. Você ouvirá uma música e verá um personagem se mover na área de exibição."
@@ -696,7 +696,7 @@
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Além da Hora do Código",
-          "description": "Ao final do Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n-   \\*\\*Ensine no curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos forem projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais vívida. O Code.org oferece desenvolvimento profissional gratuitos nesses cursos, sejam eles on-line ou presenciais. \n-   \\*_Visite [Você pode ensinar ciência da computação](https://studio.code.org/courses?view=teacher)_para ver mais sugestões de cursos. \n-   **Convide um especialista em ciência da computação para discursar para sua classe sobre o trabalho**. Não conhece nenhum especialista em cientista da computação na sua região? Procure um voluntário no nosso [mapa de voluntários](https://code.org/volunteer/local)"
+          "description": "Após finalizado o Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n-   \\*\\*Ensine o curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos foram projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais interessante. O Code.org oferece desenvolvimento profissional gratuitos para esses cursos, sejam eles on-line ou presenciais. \n-   \\*_Visite [Você pode ensinar ciência da computação](https://studio.code.org/courses?view=teacher)_para ver mais sugestões de cursos. \n-   **Convide um especialista em ciência da computação para discursar para sua classe sobre o seu trabalho**. Não conhece nenhum especialista em cientista da computação na sua região? Procure um voluntário no nosso [mapa de voluntários](https://code.org/volunteer/local)"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -1369,7 +1369,7 @@
         },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
-            "Caso você não tenha experiência com codificação, você pode mostrar um dos [nossos vídeos inspiradores](https://hourofcode.com/promote/resources#videos) para te ajudar a introduzir a Hora do Código. Escolha um que os seus alunos acharam inspirador e compartilhe com eles. Para alunos do ensino médio, recomendamos [A Hora do Código Chegou](https://youtu.be/FC5FbmsH4fw)."
+            "Caso você não tenha experiência com codificação, você pode mostrar um dos [nossos vídeos inspiradores](https://hourofcode.com/promote/resources#videos) para te ajudar a introduzir a Hora do Código. Escolha um que os seus alunos achem inspirador e compartilhe com eles. Para alunos do ensino médio, recomendamos [A Hora do Código Chegou](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "468ba876-6a73-42cb-94c6-a8dfa5bff320": {
@@ -1381,7 +1381,7 @@
         },
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Suporte Geral",
-          "description": "\\*\\* Suporte geral:\\*\\* Como professor, o seu papel principal é ajudar os alunos enquanto eles fazem o tutorial. Aqui estão algumas dicas que podem ajudar os alunos, independentemente do nível que estão estudando.\n\n-   **Colabore com os Colegas:** Incentive os alunos a se ajudarem quando estiverem com dificuldade. Como este tutorial utiliza vídeos e os alunos talvez estejam usando fones de ouvido, eles podem se isolar facilmente. Quebre esses obstáculos colocando os alunos lado a lado, se eles parecerem precisar de ajuda. Dependendo da idade e capacidade de seus alunos, você pode considerar dividir a sua turma em pares para realizarem o tutorial usando [programação em par](https://youtu.be/vgkahOzFH2Q). \n-   **Leia as instruções:** As instruções geralmente fornecem dicas úteis sobre como completar o nível. Antes de finalizar um nível para um aluno, certifique-se de que ele realmente olhou atentamente para a imagem e leu todo o texto.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Com dificuldades? Procure por dicas:** Cada nível possui uma dica com detalhes sobre como concluir o nível. Se os alunos tentarem acabar os quebra-cabeças muito rapidamente, talvez eles percebam que só precisam esperar um pouco para que o código seja executado completamente antes de continuarem. Vários níveis contêm uma segunda dica sugerindo formas de ser ainda mais criativo, através da prolongação da tarefa.\n-   **Faça e Refaça:** Às vezes, os alunos se beneficiarão mais se refizerem um nível difícil. Todos os níveis são independentes entre si, embora dependam um pouco de conceitos introduzidos anteriormente.\n-   Experimente sem pressa.\\*\\* Apesar dos primeiros níveis dizerem aos alunos exatamente o que eles precisam fazer, os alunos devem se sentir livres para experimentar suas próprias ideias."
+          "description": "\\*\\* Suporte geral:\\*\\* Como professor, o seu principal papel é ajudar os alunos durante o tutorial. Aqui estão algumas dicas que podem ajudar os alunos, independentemente do nível que estão estudando:\n\n-   **Colabore com os Colegas:** Incentive os alunos a se ajudar quando estiverem com dificuldade. Como este tutorial utiliza vídeos e os alunos talvez estejam usando fones de ouvido, eles podem se facilmente se isolar. Quebre esses obstáculos colocando os alunos lado a lado, caso pareçam precisar de ajuda. Dependendo da idade e capacidade de seus alunos, você pode considerar dividir a sua turma em pares para realizar o tutorial usando [programação em par](https://youtu.be/vgkahOzFH2Q). \n-   **Leia as instruções:** As instruções geralmente fornecem dicas úteis sobre como completar o nível. Antes de finalizar um nível para um aluno, certifique-se de que ele realmente olhou atentamente para a imagem e leu todo o texto.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Com dificuldades? Procure por dicas:** Cada nível possui uma dica com detalhes sobre como concluir o nível. Se os alunos tentarem acabar os quebra-cabeças muito rapidamente, talvez eles percebam que só precisam esperar um pouco para que o código seja executado completamente antes de continuarem. Vários níveis contêm uma segunda dica sugerindo formas de ser ainda mais criativo, através da prolongação da tarefa.\n-   **Faça e Refaça:** Às vezes, os alunos se beneficiarão mais se refizerem um nível difícil. Todos os níveis são independentes entre si, embora dependam um pouco dos conceitos introduzidos anteriormente.\n-   **Experimente sem pressa.** Apesar dos primeiros níveis dizerem aos alunos exatamente o que eles precisam fazer para passar, os alunos devem se sentir livres para experimentar suas próprias ideias."
         },
         "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
           "name": "Nível a nível",
@@ -2995,7 +2995,7 @@
         "70f8bf21-fc6d-4fac-b850-7c1a1694ce57": {
           "name": "Sequenciando com Angry Birds",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "eabe75fb-4111-49c1-900c-dd18d6ec996d": {
@@ -4311,8 +4311,9 @@
           "description": "Coloque as crianças em pares e peça-lhes que assistam ao vídeo de programação do par em classe ou em suas estações. Isso deve ajudar os alunos a começar na direção certa."
         },
         "e7ff4d51-6bd2-4e1b-9da4-71c9c010c069": {
+          "description": "Os professores desempenham um papel vital no ensino da ciência da computação e no apoio a um ambiente de sala de aula colaborativo e vibrante. Durante os quebra-cabeças on-line, o papel do professor é principalmente o de incentivo e apoio. Os quebra-cabeças on-line devem ser centrados no aluno, portanto, os professores devem evitar intervir quando os alunos ficam presos. Algumas ideias sobre como fazer isso são:",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "99491ad7-d0e6-4752-9f6b-01236e762005": {
@@ -4344,7 +4345,7 @@
         "eb919624-2302-4134-8c74-8b0dbf96bd33": {
           "name": "Programação com blocos",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "3e42b388-9f08-4d81-bbaa-9add431d3de6": {
@@ -4686,8 +4687,9 @@
           ]
         },
         "4297e33f-2028-4d9e-bfe0-76e774c504a5": {
+          "description": "Os professores desempenham um papel vital no ensino da ciência da computação e no apoio a um ambiente de sala de aula colaborativo e vibrante. Durante os quebra-cabeças on-line, o papel do professor é principalmente o de incentivo e apoio. Os quebra-cabeças on-line devem ser centrados no aluno, portanto, os professores devem evitar intervir quando os alunos ficam presos. Algumas ideias sobre como fazer isso são:",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "b1e6ef4c-a3bc-4e05-8cb4-e02e93c90bad": {
@@ -14438,25 +14440,43 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   Fiquem calmos no laboratório\n-   Lembre-se de não mascar chiclete ou balas\n-   Higienize suas mãos\n-   Sente-se com seu parceiro em um computador\n-   Certifique-se de que o primeiro “motorista” consiga alcançar o mouse\n-   Quando estiver frustrado, não bata nem sacuda o computador ou o monitor\n-   Siga a [Regra 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Como lidar com o [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) a cada 20-30 minutos (requer um login gratuito no GoNoodle).\n-   Pergunte ao seu parceiro antes de perguntar ao professor\n-   Mantenha o volume baixo para que todos possam ouvir seus parceiros\n-   Use seu diário para acompanhar sentimentos e soluções"
           ]
         },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "\\*\\*Discutir: \\*\\*\nTenha uma boa discussão sobre as expectativas do laboratório de informática para garantir que os alunos entendam as regras. Alguns tópicos de discussão podem incluir:\n\n-   É bom correr no laboratório de informática?\n-   Devemos andar com passos altos quando estamos no laboratório de informática?\n-   O que você deve fazer se ficar preso em um quebra-cabeça?\n-   Se você ficar frustrado, será útil bater no computador?\n-   Quando estamos prestes a ir ao laboratório de informática, como devemos nos preparar?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Pré-visualize quebra-cabeças online\n\nProjete um quebra-cabeça da lição. Mostre à classe como clicar na imagem e colocá-la no local correto arrastando e soltando. Cometa erros propositalmente, como clicar no plano de fundo ou soltar a imagem antes que ela esteja no lugar certo. Peça ajuda aos voluntários da classe quando tiver esses problemas."
+        },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Quebra-cabeça"
+          "name": "Quebra-cabeça",
+          "description": "_Objetivo:_ Isso ensinará os alunos a usar o Code.org para completar quebra-cabeças on-line.\n\nEsta etapa foi projetada para dar aos alunos a oportunidade de praticar as habilidades de coordenação olho-mão, clicar e arrastar e soltar. Os alunos também jogarão com sequências.\n\nPeça aos alunos que descrevam as etapas de arrastar e soltar e as registrem no quadro. Por exemplo: \n\n1.  Mova a seta para o bloco. \n2.  Clique e segure o botão do mouse. \n3.  Mova o mouse. \n4.  Solte o botão.\n\nFazer isso fará com que os alunos pratiquem a criação de um _algoritmo_, que é um conceito que será explorado nas próximas aulas."
         },
         "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
           "description": "Leve um tempo para explicar explicitamente aos estudantes como devem clicar, arrastar e soltar. Introduza a linguagem dos dispositivos que os estudantes estarão usando enquanto trabalham nos quebra-cabeças. Se você tiver tablets, os estudantes usarão uma tela _sensível ao toque_. Se você usar laptops, eles provavelmente usarão o \"touchpad\". Computadores de mesa como os que você encontra em laboratórios de informática, farão uso do \"mouse\"."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Os professores desempenham um papel vital no ensino da ciência da computação e no apoio a um ambiente de sala de aula colaborativo e vibrante. Durante os quebra-cabeças on-line, o papel do professor é principalmente o de incentivo e apoio. Os quebra-cabeças on-line devem ser centrados no aluno, portanto, os professores devem evitar intervir quando os alunos ficam presos. Algumas ideias sobre como fazer isso são:",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Desafie seus alunos a concluírem o tutorial [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1) .\n\n-   Incentive os alunos com perguntas/desafios a começarem perguntando ao parceiro.\n-   As perguntas não respondidas podem ser encaminhadas para um grupo próximo, que talvez já conheça a solução.\n-   Peça aos alunos que descrevam o problema que estão vendo. O que isso deveria fazer? O que isso faz? O que isso te diz?\n-   Lembre aos alunos frustrados que a frustração é um passo no caminho do aprendizado e que a persistência valerá a pena.\n-   Se um aluno ainda estiver preso depois de tudo isso, faça perguntas importantes para que o aluno identifique um erro sozinho."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Níveis"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Reflexão"
+          "name": "Reflexão",
+          "description": "Peça aos alunos que escrevam ou desenhem sobre o que aprenderam ou como se sentiram ao terminarem os quebra-cabeças.\n\n\\*\\*Solicitações: \\*\\*\n\n-   Você pode desenhar uma sequência para se preparar para ir ao laboratório de informática?\n-   Desenhe em um laboratório de informática “Faça” e um “Não faça”\n-   Desenhe e rotule o nome da peça do computador que você usou ao clicar e arrastar durante os quebra-cabeças. (botão do mouse, tela sensível ao toque, painel tátil \"touchpad\")"
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Dê a cada aluno um [“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) e peça que resumam o que aprenderam hoje, como se sentiram ou o que experimentaram. Os alunos podem desenhar, escrever ou se expressar da maneira como preferirem. Recolha o “Bilhete de saída” de cada aluno quando saírem da sala. Se desejar, você pode colocar os “Bilhetes de saída” em um mural ou em algum lugar de destaque na escola como um lembrete da Hora do Código."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "### Após uma Hora do Código\n\nDepois que sua Hora do Código terminar, existem muitas formas de continuar ensinando ciência da computação na sua sala de aula do ensino fundamental. Aqui vão algumas ideias:\n\n-   **Lecione os cursos [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Esses quatro cursos foram feitos para alunos pequenos. Os alunos trabalham em uma série de quebra-cabeças que os ensinam a codificar, e os educadores têm acesso a planos de aula envolventes que ajudam a dar vida ao aprendizado. A Code.org oferece desenvolvimento profissional gratuito para esses cursos, on-line ou pessoalmente.\n-   **Convide um especialista em ciência da computação para dar uma palestra à sua classe sobre o trabalho dele**. Não conhece nenhum cientista da computação na região? Entre em contato com um voluntário no nosso [volunteer map](https://code.org/volunteer/local)"
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Pesquisa Pós-curso do CS Discoveries",
@@ -15213,7 +15233,7 @@
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Sequenciando com Angry Birds",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
@@ -15630,8 +15650,9 @@
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "Os professores desempenham um papel vital no ensino da ciência da computação e no apoio a um ambiente de sala de aula colaborativo e vibrante. Durante os quebra-cabeças on-line, o papel do professor é principalmente o de incentivo e apoio. Os quebra-cabeças on-line devem ser centrados no aluno, portanto, os professores devem evitar intervir quando os alunos ficam presos. Algumas ideias sobre como fazer isso são:",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
@@ -18086,8 +18107,9 @@
           "description": "Coloque as crianças em pares e peça-lhes que assistam ao vídeo de programação do par em classe ou em suas estações. Isso deve ajudar os alunos a começar na direção certa."
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Os professores desempenham um papel vital no ensino da ciência da computação e no apoio a um ambiente de sala de aula colaborativo e vibrante. Durante os quebra-cabeças on-line, o papel do professor é principalmente o de incentivo e apoio. Os quebra-cabeças on-line devem ser centrados no aluno, portanto, os professores devem evitar intervir quando os alunos ficam presos. Algumas ideias sobre como fazer isso são:",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
@@ -18119,7 +18141,7 @@
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "name": "Programação com blocos",
           "tips": [
-            null
+            "Mostre aos alunos a maneira correta de ajudar os colegas:\n\n-   Não se sente na cadeira do colega\n-   Não use o teclado do colega\n-   Não toque no mouse do colega\n-   Certifique-se de que o colega possa descrever a solução para você em voz alta antes de você ir embora"
           ]
         },
         "20e998a3-d920-48f1-9d92-ec4102990042": {

@@ -238,7 +238,7 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Compresión sin pérdidas",
+          "word": "Compresión sin Pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
         },
         "event/outbreak/unversioned": {
@@ -801,11 +801,16 @@
           "definition": "poner los comandos en el orden correcto para que las computadoras puedan leerlos."
         },
         "persistence/coursec/2022": {
-          "word": "Perseverancia"
+          "word": "Perseverancia",
+          "definition": "No te rindas."
         },
         "programming/coursec/2022": {
           "word": "Programación",
           "definition": "el arte de crear un programa."
+        },
+        "angle/coursec/2022": {
+          "word": "Ángulo",
+          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
         },
         "loop/coursec/2022": {
           "word": "Bucle",
@@ -820,7 +825,12 @@
           "definition": "una acción que hace que algo suceda."
         },
         "data/coursec/2022": {
-          "word": "Datos"
+          "word": "Datos",
+          "definition": "Una recopilación de información"
+        },
+        "graph/coursec/2022": {
+          "word": "Gráfico",
+          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
         },
         "binary/coursec/2022": {
           "word": "Binario",
@@ -987,7 +997,8 @@
           "word": "Pantalla de Usuario"
         },
         "innovation/csd/2022": {
-          "word": "Innovación"
+          "word": "Innovación",
+          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
         },
         "circuit/csd/2022": {
           "word": "Circuito",

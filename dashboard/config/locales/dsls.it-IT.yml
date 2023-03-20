@@ -10081,8 +10081,8 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
-        - text: Archiviazione
+        - text: Output
+        - text: Memoria
         - text: Elaborazione
       CSD U1 IOSP match_2021:
         answers:
@@ -10092,8 +10092,8 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
-        - text: Archiviazione
+        - text: Output
+        - text: Memoria
         - text: Elaborazione
       CSD U1 IOSP match_2022:
         answers:
@@ -10103,8 +10103,8 @@ it-IT:
         - {}
         questions:
         - text: Input
-        - {}
-        - text: Archiviazione
+        - text: Output
+        - text: Memoria
         - text: Elaborazione
       CSD U1 Test PSP match:
         answers:

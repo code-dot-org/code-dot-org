@@ -24,6 +24,8 @@ import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -57,6 +59,18 @@ export function setupApp(appOptions) {
     position: {blockYCoordinateInterval: 25},
     onInitialize: function() {
       createCallouts(this.level.callouts || this.callouts);
+      const isTeacher =
+        getStore().getState().currentUser?.userType === 'teacher';
+      const isViewingStudent = !!queryParams('user_id');
+      const teacherViewingStudentWork = isTeacher && isViewingStudent;
+      if (teacherViewingStudentWork) {
+        analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
+          unitId: appOptions.serverScriptId,
+          levelId: appOptions.serverLevelId,
+          sectionId: queryParams('section_id')
+        });
+      }
+
       if (
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
@@ -67,12 +81,9 @@ export function setupApp(appOptions) {
       ) {
         $('#clear-puzzle-header').hide();
         // Only show version history if user is project owner, or teacher viewing student work
-        const isTeacher =
-          getStore().getState().currentUser?.userType === 'teacher';
-        const isViewingStudent = !!queryParams('user_id');
         if (
           project.isOwner() ||
-          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+          (teacherViewingStudentWork && appOptions.level.isStarted)
         ) {
           $('#versions-header').show();
         }
@@ -104,8 +115,7 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-          report.program = Blockly.Xml.domToText(xml);
+          report.program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
         }
         report.callback = appOptions.report.callback;
       }
@@ -453,6 +463,18 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
+  },
+  inRestrictedShareMode() {
+    return getAppOptions().level.inRestrictedShareMode;
+  },
+  setTeacherHasConfirmedUploadWarning(teacherHasConfirmedUploadWarning) {
+    getAppOptions().level.teacherHasConfirmedUploadWarning = teacherHasConfirmedUploadWarning;
+  },
+  teacherHasConfirmedUploadWarning() {
+    return getAppOptions().level.teacherHasConfirmedUploadWarning;
+  },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {
     return new Promise((resolve, reject) => {
@@ -462,9 +484,7 @@ const sourceHandler = {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
-          : Blockly.Xml.domToText(
-              Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
-            );
+          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
         resolve(source);
       } else if (appOptions.getCode) {
         source = appOptions.getCode();
@@ -525,7 +545,7 @@ export function getAppOptions() {
  * Loads the "appOptions" object from the dom and augments it with additional
  * information needed by apps to run.
  *
- * This should only be called once per page load, with appoptions specified as a
+ * This should only be called once per page load, with appOptions specified as a
  * data attribute on the script tag.
  *
  * @return {Promise.<AppOptionsConfig>} a Promise object which resolves to the fully populated appOptions

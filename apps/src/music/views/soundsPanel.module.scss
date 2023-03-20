@@ -60,15 +60,28 @@
 }
 
 .soundRowMiddle {
-  width: calc(100% - 23px - 30px);
+  width: calc(100% - 23px - 55px);
   float: left;
 }
 
 .soundRowRight {
   float: right;
-  width: 15px;
+  width: 40px;
   margin-right: 15px;
-  font-size: 16px;
+
+  .length {
+    display: inline-block;
+    font-size: 13px;
+    width: 15px;
+    margin-right: 10px;
+    color: $gray-400;
+    text-align: right;
+  }
+
+  .previewContainer {
+    display: inline-block;
+    font-size: 16px;
+  }
 }
 
 .preview {

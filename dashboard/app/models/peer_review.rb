@@ -300,9 +300,7 @@ class PeerReview < ApplicationRecord
     classes.join(' ')
   end
 
-  private
-
-  def append_audit_trail(message)
+  private def append_audit_trail(message)
     self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
   end
 end

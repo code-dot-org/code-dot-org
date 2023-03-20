@@ -3267,6 +3267,21 @@ it:
               display_name: Contenuto
             lessonGroup-4:
               display_name: Lezioni alternative
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Casuale
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
         hello-world-space-2022:
           title: Ciao mondo - Spazio
         hello-world-soccer-2022:
@@ -3274,16 +3289,15 @@ it:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Capitolo 1
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
-              display_name: Capitolo 2
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Design a cura dell''Utente'
             lessonGroup-3:
               display_name: 'Capitolo 2: Prototipazione di App'
-          title: Il Processo di Progettazione
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3298,16 +3312,16 @@ it:
               display_name: 'Capitolo 2: Costruzione di Giochi'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Capitolo 1
             lessonGroup-3:
-              display_name: Capitolo 2
+              display_name: 'Capitolo 2: Input Hardware'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1
             lessonGroup-3:
               display_name: Capitolo 2
+            lessonGroup-4:
+              display_name: Introduzione a Sviluppo App
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -3402,3 +3416,15 @@ it:
               display_name: Introduzione a Sviluppo App
             lessonGroup-3:
               display_name: Ingressi e uscite
+        drafting:
+          name: drafting
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1

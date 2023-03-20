@@ -2701,6 +2701,14 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         hello-world-space-2022:
           title: 'Hello World: Prostora'
         hello-world-soccer-2022:
@@ -2708,15 +2716,13 @@ cs:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Kapitola 1
+              display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
-              display_name: Kapitola 2
-          title: Řešení problémů
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
         csd4-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Prototypování aplikací'
-          title: Proces návrhu
         csd5-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2729,16 +2735,16 @@ cs:
               display_name: 'Kapitola 2: Tvorba her'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitola 1
             lessonGroup-3:
-              display_name: Kapitola 2
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1
             lessonGroup-3:
               display_name: Kapitola 2
+            lessonGroup-4:
+              display_name: Úvod do App Lab
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -2800,3 +2806,15 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Úvod do App Lab
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Řešení problémů
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+          title: Řešení problémů

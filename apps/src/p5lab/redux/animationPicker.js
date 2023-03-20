@@ -28,6 +28,8 @@ const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
+const SHOWING_UPLOAD_WARNING = 'AnimationPicker/SHOWING_UPLOAD_WARNING';
+const EXITED_UPLOAD_WARNING = 'AnimationPicker/EXITED_UPLOAD_WARNING';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -39,7 +41,8 @@ const initialState = {
   isSpriteLab: false,
   isBackground: false,
   // List of animations selected to be added through multiselect
-  selectedAnimations: {}
+  selectedAnimations: {},
+  uploadWarningShowing: false
 };
 
 export default function reducer(state, action) {
@@ -68,6 +71,18 @@ export default function reducer(state, action) {
   }
   if (action.type === HIDE) {
     return initialState;
+  }
+  if (action.type === SHOWING_UPLOAD_WARNING) {
+    return {
+      ...state,
+      uploadWarningShowing: true
+    };
+  }
+  if (action.type === EXITED_UPLOAD_WARNING) {
+    return {
+      ...state,
+      uploadWarningShowing: false
+    };
   }
   if (action.type === BEGIN_UPLOAD) {
     return _.assign({}, state, {
@@ -143,6 +158,26 @@ export function beginUpload(filename) {
 }
 
 /**
+ * We are showing the pre-upload warning.
+ * @returns  {{type: string}}
+ */
+export function showingUploadWarning() {
+  return {
+    type: SHOWING_UPLOAD_WARNING
+  };
+}
+
+/**
+ * The user exited the upload warning.
+ * @returns  {{type: string}}
+ */
+export function exitedUploadWarning() {
+  return {
+    type: EXITED_UPLOAD_WARNING
+  };
+}
+
+/**
  * An upload completed successfully.  This concludes our picking process.
  * Dispatch a root gamelab action to add appropriate metadata and then close
  * the animation picker.
@@ -160,6 +195,8 @@ export function handleUploadComplete(result) {
   });
 
   return function(dispatch, getState) {
+    const isBackgroundMode =
+      getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
@@ -171,7 +208,8 @@ export function handleUploadComplete(result) {
           name: uploadFilename,
           sourceUrl: sourceUrl,
           size: result.size,
-          version: result.versionId
+          version: result.versionId,
+          categories: [isBackgroundMode ? 'backgrounds' : '']
         });
 
         if (goal === Goal.NEW_ANIMATION) {
@@ -255,10 +293,14 @@ export function pickNewAnimation() {
     const state = getState();
     const goal = state.animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      if (state.interfaceMode !== P5LabInterfaceMode.ANIMATION) {
+      if (
+        ![P5LabInterfaceMode.ANIMATION, P5LabInterfaceMode.BACKGROUND].includes(
+          state.interfaceMode
+        )
+      ) {
         dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
       }
-      dispatch(addBlankAnimation());
+      dispatch(addBlankAnimation(state.interfaceMode));
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendBlankFrame());
     }

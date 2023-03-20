@@ -3,41 +3,6 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  heading: {
-    marginTop: 25
-  },
-  button: {
-    marginLeft: 7,
-    marginRight: 7,
-    marginTop: 15
-  },
-  clear: {
-    clear: 'both'
-  },
-  header: {
-    marginTop: 10,
-    marginBottom: 5,
-    marginLeft: 20,
-    marginRight: 20
-  },
-  main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.teal,
-    minHeight: 72,
-    backgroundColor: color.white,
-    overflowWrap: 'break-word'
-  },
-  message: {
-    marginTop: 0,
-    marginBottom: 20,
-    marginLeft: 20,
-    marginRight: 20,
-    fontSize: 14
-  }
-};
-
 function TeacherInfoBanner({header, primaryButton, secondaryButton, children}) {
   return (
     <div style={styles.main}>
@@ -88,3 +53,38 @@ TeacherInfoBanner.propTypes = {
 };
 
 export default TeacherInfoBanner;
+
+const styles = {
+  heading: {
+    marginTop: 25
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 15
+  },
+  clear: {
+    clear: 'both'
+  },
+  header: {
+    marginTop: 10,
+    marginBottom: 5,
+    marginLeft: 20,
+    marginRight: 20
+  },
+  main: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.teal,
+    minHeight: 72,
+    backgroundColor: color.white,
+    overflowWrap: 'break-word'
+  },
+  message: {
+    marginTop: 0,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    fontSize: 14
+  }
+};

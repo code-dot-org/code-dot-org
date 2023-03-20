@@ -1277,6 +1277,14 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csp4-2023:
           lesson_groups:
             csp_variables:

@@ -104,6 +104,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Notalarni ijro etish"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Muammoni yechish jarayoni"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Muammoni yechish jarayoni"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Tasodifiy sonlar"
         },
@@ -118,6 +124,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Tezlik"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         },
         "csd-2022/which-type-of-chart": {
           "content": "\\[] [0]"

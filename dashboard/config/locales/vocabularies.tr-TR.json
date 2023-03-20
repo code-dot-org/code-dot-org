@@ -820,11 +820,16 @@
           "definition": "Bilgisayarların komutları okuyabilmesi için komutları doğru sırada dizme."
         },
         "persistence/coursec/2022": {
-          "word": "Israr"
+          "word": "Israr",
+          "definition": "Vazgeçmek yok."
         },
         "programming/coursec/2022": {
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
+        },
+        "angle/coursec/2022": {
+          "word": "Açı",
+          "definition": "Bir şeklin iki tarafının bir araya geldiği yer, derece cinsinden ölçülür."
         },
         "loop/coursec/2022": {
           "word": "Döngü",
@@ -839,7 +844,12 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "data/coursec/2022": {
-          "word": "Veri"
+          "word": "Veri",
+          "definition": "Bir bilgi koleksiyonu"
+        },
+        "graph/coursec/2022": {
+          "word": "Grafik",
+          "definition": "Verileri veya değerleri organize bir şekilde temsil eden bir resim veya diyagram"
         },
         "binary/coursec/2022": {
           "word": "İkili",

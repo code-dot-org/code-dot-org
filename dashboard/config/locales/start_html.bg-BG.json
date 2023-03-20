@@ -156,7 +156,8 @@
           "38": "38",
           "39": "39",
           "40": "40",
-          "text": "текст"
+          "text": "текст",
+          "90": "90"
         },
         "CSD U1 processing guess_2022": {
           "2": "2",
@@ -198,7 +199,8 @@
           "38": "38",
           "39": "39",
           "40": "40",
-          "text": "текст"
+          "text": "текст",
+          "90": "90"
         },
         "CSD U1 processing live_2021": {
           "walking": "ходене",
@@ -421,7 +423,9 @@
           "slow": "бавно",
           "short": "късо",
           "long": "дълго",
-          "on": "включен"
+          "on": "включен",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Red": "Червено",
@@ -447,7 +451,9 @@
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "short": "късо",
@@ -629,7 +635,9 @@
           "0": "0"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "текст"
+          "text": "текст",
+          "high": "висок",
+          "low": "нисък"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Актуализиране"
@@ -796,35 +804,51 @@
         },
         "CSD U6 frequency": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 frequency_2018": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 frequency_2019": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 frequency_2021": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 get toggle": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 get toggle_2018": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 get toggle_2019": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 get toggle_2021": {
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 getProperty Demo": {
           "Name:": "Име:",
@@ -870,25 +894,33 @@
           "slow": "бавно",
           "fast": "бързо",
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 getters debug_2018": {
           "fast": "бързо",
           "slow": "бавно",
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 getters debug_2019": {
           "fast": "бързо",
           "slow": "бавно",
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 getters debug_2021": {
           "fast": "бързо",
           "slow": "бавно",
           "short": "късо",
-          "long": "дълго"
+          "long": "дълго",
+          "low": "нисък",
+          "high": "висок"
         },
         "CSD U6 interval": {
           "short": "късо",
@@ -947,16 +979,24 @@
           "Success!": "Успешно!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "текст"
+          "text": "текст",
+          "high": "висок",
+          "low": "нисък"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "текст"
+          "text": "текст",
+          "high": "висок",
+          "low": "нисък"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "текст"
+          "text": "текст",
+          "high": "висок",
+          "low": "нисък"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "текст"
+          "text": "текст",
+          "high": "висок",
+          "low": "нисък"
         },
         "CSD U6 setProperty predict app": {
           "title": "Заглавие"
@@ -1211,7 +1251,18 @@
         },
         "csa widget test2": {
           "8": "8",
-          "32": "32"
+          "32": "32",
+          "Categories": "Категории",
+          "Benches": "Пейки",
+          "Blue House": "Синя Къща",
+          "Food Truck": "Камион за Храна",
+          "Landscape": "Пейзаж",
+          "Painter": "Художник",
+          "Red House": "Червена Къща",
+          "Sidewalk": "Тротоар",
+          "Taxi": "Такси",
+          "Wall": "Стена",
+          "Other Objects": "Други Обекти"
         },
         "csd u5 recommender sample": {
           "Start": "Старт"
@@ -1543,7 +1594,8 @@
           "snow": "сняг",
           "cloudy": "облачен",
           "night": "нощ",
-          "Predict": "Предсказване"
+          "Predict": "Предсказване",
+          "dusk": "здрач"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Система За Предупреждение на Шофъор",
@@ -1551,7 +1603,8 @@
           "snow": "сняг",
           "cloudy": "облачен",
           "night": "нощ",
-          "Predict": "Предсказване"
+          "Predict": "Предсказване",
+          "dusk": "здрач"
         },
         "CSD U6 - Combine Inputs - PracB_2222": {
           "bright": "светло"
@@ -1587,6 +1640,12 @@
         "CSD U6 light show_2021": {
           "on": "включен",
           "off": "изключен"
+        },
+        "AllTheThings Applab DesignModeDefault": {
+          "Login": "Вход"
+        },
+        "allthethings_moviebot": {
+          "Ask me a question.": "Попитайте ме въпрос."
         }
       }
     }

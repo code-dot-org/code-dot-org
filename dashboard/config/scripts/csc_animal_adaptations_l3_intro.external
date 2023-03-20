@@ -1,0 +1,16 @@
+name 'csc_animal_adaptations_L3_intro'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Make your own behavoir!
+
+This level could look like...
+
+>**Markdown info w gifs?**
+
+>**Behaviors video?**
+
+>**Example projects?**
+</div>
+MARKDOWN

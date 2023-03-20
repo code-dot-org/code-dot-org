@@ -111,6 +111,7 @@ bg:
           description: Научете функционално програмиране чрез алгебра.
           description_short: Научете функционално програмиране чрез алгебра.
           student_description: Научете функционално програмиране чрез алгебра.
+          name: алгебра
         infinity:
           title: Дисни Инфинити Игрална лаборатория
           description: Използвайте "Игрална лаборатория", за да създадете история
@@ -508,10 +509,13 @@ bg:
         gradeKinder:
           description_audience: Възраст 5 + (необходими са умения за четене)
         grade4:
+          title: Клас 4
           description_audience: Възраст 9-99
         grade1:
+          title: Клас 1
           description_audience: Възраст 5 + (необходими са умения за четене)
         grade5:
+          title: Клас 5
           description_audience: Възраст 10-110
         ecs-unit2:
           description: 'Раздел 2: Решаване на проблеми'
@@ -530,6 +534,7 @@ bg:
           description_short: 'Раздел 6: роботика'
           student_description: 'Раздел 6: роботика'
         grade3:
+          title: Клас 3
           description_audience: Възраст 5 + (необходими са умения за четене)
         alltheplcthings:
           lesson_groups:
@@ -544,6 +549,7 @@ bg:
             cspSurvey:
               display_name: Проучване
         grade2:
+          title: Клас 2
           description_audience: Възраст 5 + (необходими са умения за четене)
         algebrapdnext:
           description: Научи алгебра чрез функционално програмиране
@@ -1256,6 +1262,7 @@ bg:
             required:
               display_name: Общ преглед
         time4csdemo:
+          description_audience: 4ти клас
           lesson_groups:
             csf_sprites:
               display_name: Спрайт
@@ -1951,6 +1958,10 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+        contagion-pilot:
+          description_audience: Клас 5
+        contagion-guided-practice:
+          description_audience: 5ти клас
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -2001,6 +2012,9 @@ bg:
               display_name: Урок 4
             Lesson 5:
               display_name: Урок 5
+          description_audience: Клас 4, Клас 5
+        fancygeometry-pilot:
+          description_audience: Клас 3, Клас 4
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -2094,6 +2108,8 @@ bg:
               display_name: Съдържание
             lessonGroup-2:
               display_name: Съдържание
+        ai-ethics:
+          description_audience: класове 6-12
         spelling-bee:
           title: Правопис
         outbreak-csc:
@@ -2429,8 +2445,17 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
-        csd1-2023:
-          title: Разрешаване на Проблеми
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Случаен
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         csd7-2023:
           title: AI и Машинно Обучение
         csp1-2023:
@@ -2473,3 +2498,7 @@ bg:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
+        tess-testing-problem-solving-2023:
+          title: Разрешаване на Проблеми
+        testing-focus-on-creativity1:
+          title: Разрешаване на Проблеми

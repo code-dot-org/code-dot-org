@@ -10,11 +10,11 @@
 - if @workshop.local_summer?
   %p
     Thanks for enrolling in
-    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
+    = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
     5-day Summer workshop on the Code.org
     = @workshop.course
     curriculum.
-- elsif Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
+- elsif Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course && Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO == @workshop.subject
   %p
     Thank you so much for enrolling in the School Leadership
     Program for 2023-2024! This program is part of the Equity
@@ -24,10 +24,10 @@
     state of computer science education at your school. To
     complete the survey prior to the Introduction Workshop, visit
     = link_to 'https://studio.code.org/form/2022_baseline_school_leadership.', 'https://studio.code.org/form/2022_baseline_school_leadership', target: "_blank", rel: "noopener noreferrer"
-- elsif @workshop.ayw?
+- elsif @workshop.ayw? || Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
   %p
     Thanks for enrolling in
-    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
+    = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
     = @workshop.subject
     on the Code.org
     = @workshop.course
@@ -38,7 +38,7 @@
     forward to seeing you there!
 - else
   %p
-    Thanks for enrolling in Code.org’s
+    Thanks for enrolling in Code.org's
     = @workshop.course_name
     = @workshop.subject
     workshop. We look forward to seeing you there!

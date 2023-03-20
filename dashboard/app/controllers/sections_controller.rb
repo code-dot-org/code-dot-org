@@ -4,6 +4,8 @@ class SectionsController < ApplicationController
 
   def new
     return head :forbidden unless current_user&.admin
+
+    redirect_to '/home' unless params[:loginType] && params[:participantType]
   end
 
   def show
@@ -22,9 +24,7 @@ class SectionsController < ApplicationController
     end
   end
 
-  private
-
-  def redirect_to_section_script_or_course
+  private def redirect_to_section_script_or_course
     if @section.script
       redirect_to script_path(@section.script)
     elsif @section.unit_group
@@ -34,7 +34,7 @@ class SectionsController < ApplicationController
     end
   end
 
-  def load_section_by_code
+  private def load_section_by_code
     @section = Section.find_by!(
       code: params[:id],
       login_type: [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD]

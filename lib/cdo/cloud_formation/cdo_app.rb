@@ -131,7 +131,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     # S3 path to bootstrap script.
     # Note: Uploads bootstrap script to S3 as a side effect.
     def bootstrap_script_path
-      @bootstrap_script ||= begin
+      @bootstrap_script_path ||= begin
         unless dry_run
           Aws::S3::Client.new.put_object(
             bucket: S3_BUCKET,
@@ -146,7 +146,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     # S3 path to subdomain SSL certificate.
     # Note: uploads certificate to S3 as a side effect.
     def ssl_certs_path
-      @certs_path ||= begin
+      @ssl_certs_path ||= begin
         unless dry_run
           Dir.chdir(aws_dir('cloudformation')) do
             RakeUtils.bundle_exec './update_certs',
@@ -195,9 +195,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       )
     end
 
-    private
-
-    def get_binding
+    private def get_binding
       binding
     end
   end

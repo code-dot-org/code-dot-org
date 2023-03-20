@@ -2,6 +2,8 @@
 ja:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: ユーザーに変数 {VAR} について選択肢 {A}{B}{C} を使って {QUESTION} をプロンプト表示する
       AmysBlocks_spriteSayVar:
@@ -2398,6 +2400,17 @@ ja:
             '"quarantining"': 病気のときに自主隔離する
             '"avoiding"': ソーシャル・ディスタンス
             '"none"': じっとしている
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 右に回す
+            new Behavior(spinning_left, []): 左に回す
+            new Behavior(fluttering, []): パタパタさせる
+            new Behavior(jittering, []): ブルブルさせる
+            new Behavior(wobbling, []): ぐらぐらさせる
+            new Behavior(wandering, []): あちこちに動かす
+            new Behavior(patrolling, []): パトロール
       binary_drawBin:
         text: バイナリを描画する {BIN}
       binary_drawBinScreen:

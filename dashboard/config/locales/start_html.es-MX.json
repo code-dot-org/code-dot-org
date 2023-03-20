@@ -178,7 +178,7 @@
           "29": "29",
           "30": "30",
           "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
+          "Choose your Birthday!": "¡Introduce tu fecha de nacimiento!",
           "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
           "January": "Enero",
           "February": "Febrero",
@@ -228,7 +228,7 @@
           "29": "29",
           "30": "30",
           "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
+          "Choose your Birthday!": "¡Introduce tu fecha de nacimiento!",
           "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
           "January": "Enero",
           "February": "Febrero",
@@ -572,9 +572,9 @@
           "Yellowstone": "Yellowstone",
           "Acadia": "Acadia",
           "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
+          "Which is the largest national park?": "¿Cuál es el parque nacional más grande?",
           "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
+          "Death Valley": "Valle de la Muerte",
           "Denali": "Denali",
           "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
           "Grand Canyon": "Gran Cañón",
@@ -588,7 +588,7 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Play Again": "¡Juega otra vez!"
         },
         "CSD U1 processing npark_2022": {
           "Correct!": "¡Correcto!",
@@ -600,9 +600,9 @@
           "Yellowstone": "Yellowstone",
           "Acadia": "Acadia",
           "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
+          "Which is the largest national park?": "¿Cuál es el parque nacional más grande?",
           "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
+          "Death Valley": "Valle de la Muerte",
           "Denali": "Denali",
           "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
           "Grand Canyon": "Gran Cañón",
@@ -616,7 +616,7 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Play Again": "¡Juega otra vez!"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -686,7 +686,7 @@
           "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
           "You were born on a": "Naciste en un",
           "Monday": "Lunes",
-          "just like": "igual que",
+          "just like": "al igual que",
           "N. Scott Momaday": "N. Scott Momaday",
           "public domain image": "imagen de dominio público",
           "Tuesday": "Martes",
@@ -774,7 +774,7 @@
           "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
           "You were born on a": "Naciste en un",
           "Monday": "Lunes",
-          "just like": "igual que",
+          "just like": "al igual que",
           "N. Scott Momaday": "N. Scott Momaday",
           "public domain image": "imagen de dominio público",
           "Tuesday": "Martes",
@@ -2932,7 +2932,7 @@
           "What is your favorite food?": "¿Cuál es tu comida favorita?",
           "What is the best superpower?": "¿Cuál es el mejor superpoder?",
           "invisibility": "invisibilidad",
-          "super strength": "superfuerza",
+          "super strength": "super fuerza",
           "teleport": "teletransportarse",
           "Which animal do you like the best?": "¿Qué animal te gusta más?",
           "You should go to the beach!": "¡Deberías ir a la playa!",
@@ -2947,7 +2947,7 @@
           "What is your favorite food?": "¿Cuál es tu comida favorita?",
           "What is the best superpower?": "¿Cuál es el mejor superpoder?",
           "invisibility": "invisibilidad",
-          "super strength": "superfuerza",
+          "super strength": "super fuerza",
           "teleport": "teletransportarse",
           "Which animal do you like the best?": "¿Qué animal te gusta más?",
           "You should go to the beach!": "¡Deberías ir a la playa!",
@@ -2962,7 +2962,7 @@
           "What is your favorite food?": "¿Cuál es tu comida favorita?",
           "What is the best superpower?": "¿Cuál es el mejor superpoder?",
           "invisibility": "invisibilidad",
-          "super strength": "superfuerza",
+          "super strength": "super fuerza",
           "teleport": "teletransportarse",
           "Which animal do you like the best?": "¿Qué animal te gusta más?",
           "You should go to the beach!": "¡Deberías ir a la playa!",
@@ -2977,7 +2977,7 @@
           "What is your favorite food?": "¿Cuál es tu comida favorita?",
           "What is the best superpower?": "¿Cuál es el mejor superpoder?",
           "invisibility": "invisibilidad",
-          "super strength": "superfuerza",
+          "super strength": "super fuerza",
           "teleport": "teletransportarse",
           "Which animal do you like the best?": "¿Qué animal te gusta más?",
           "You should go to the beach!": "¡Deberías ir a la playa!",
@@ -2994,8 +2994,8 @@
           "Spanish": "Español",
           "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
           "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de conservar el agua es tomar duchas más cortas. ¡Intenta configurar un temporizador de cinco minutos!",
+          "Click on the timer": "Haga clic en el temporizador"
         },
         "csd-apps for good-2_2022": {
           "Next": "Siguiente",
@@ -3006,8 +3006,8 @@
           "Spanish": "Español",
           "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
           "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de conservar el agua es tomar duchas más cortas. ¡Intenta configurar un temporizador de cinco minutos!",
+          "Click on the timer": "Haga clic en el temporizador"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -3016,11 +3016,11 @@
           "4": "4",
           "???": "???",
           "4-Square = 4 Times the Fun": "4 cuadrados = 4 veces más divertido",
-          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "¿Has querido aprender a jugar al divertido y social juego del 4 x 4 pero no sabías por dónde empezar? ¡Esta es tu aplicación!",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "¿Has querido aprender a jugar el divertido juego social de los 4 cuadrados, pero no sabías por dónde empezar? ¡Esta es la app para ti! ",
           "More Info": "Más información",
-          "How many players do you need to play 4-Square? Click to find out!": "¿Cuántos jugadores hacen falta para jugar al 4 x 4? ¡Pulsa para averiguarlo!",
+          "How many players do you need to play 4-Square? Click to find out!": "¿Cuántos jugadores hacen falta para jugar 4 cuadros? ¡Pulsa para averiguarlo!",
           "Start Again": "Volver a empezar",
-          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jugar al 4 x 4, cada jugador se coloca cerca de una de las cuatro casillas marcadas en el suelo. Las casillas están ordenadas del 1 al 4, siendo una la casilla \"superior\". El jugador de la casilla 1 comienza el juego botando la pelota en su casilla y luego golpeándola o dándole un manotazo en otra casilla. La pelota no debe volver a tocar la casilla del jugador original después del bote inicial. Si la pelota bota en la casilla de un jugador, éste debe golpear la pelota en otra casilla antes de que vuelva a botar. Sólo pueden golpear la pelota una vez. Pero, ¿qué ocurre si la pelota golpea la línea? Hay muchas reglas diferentes sobre lo que hay que hacer si la pelota toca la línea: debes acordar con tus amigos si las líneas están dentro o fuera. Si golpeas la pelota fuera de los límites o rebota dos veces en tu casilla, estás fuera. Todo el mundo pasa a la siguiente casilla más alta disponible (el objetivo es permanecer en la primera casilla el mayor tiempo posible). Si quedas fuera, pasas al final de la fila y un nuevo jugador ocupa la plaza vacía en la casilla 4. "
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jugar 4 cuadrados, cada jugador se para cerca de una de las cuatro casillas marcadas en el suelo. Las cajas se ordenan de 1 a 4, siendo una la caja “superior”. El jugador en el cuadro 1 comienza a jugar rebotando la pelota en su casilla y luego abofeteando o golpeando la pelota en otra casilla. El balón no debe volver a tocar el cuadro original de los jugadores después del rebote inicial. Si la pelota rebota en la plaza de un jugador, entonces deben golpear la pelota en otra casilla antes de que la pelota vuelva a rebotar. Es posible que sólo golpeen la pelota una vez. Pero, ¿y si llega a la línea, podrías preguntar? Hay muchas reglas diferentes sobre qué hacer si la pelota golpea la línea; debes estar de acuerdo con tus amigos si las líneas están dentro o fuera. Si golpeas la pelota fuera de límites o rebota dos veces en tu plaza estás fuera. Todos se mueven al siguiente cuadro más alto disponible (el objetivo es permanecer en el primer cuadro el mayor tiempo posible). Si estás fuera, vas al fondo de la línea y un nuevo jugador toma el lugar vacío en la casilla 4. "
         },
         "csd-apps for good-3_2022": {
           "1": "1",
@@ -3029,11 +3029,11 @@
           "4": "4",
           "???": "???",
           "4-Square = 4 Times the Fun": "4 cuadrados = 4 veces más divertido",
-          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "¿Has querido aprender a jugar al divertido y social juego del 4 x 4 pero no sabías por dónde empezar? ¡Esta es tu aplicación!",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "¿Has querido aprender a jugar el divertido juego social de los 4 cuadrados, pero no sabías por dónde empezar? ¡Esta es la app para ti! ",
           "More Info": "Más información",
-          "How many players do you need to play 4-Square? Click to find out!": "¿Cuántos jugadores hacen falta para jugar al 4 x 4? ¡Pulsa para averiguarlo!",
+          "How many players do you need to play 4-Square? Click to find out!": "¿Cuántos jugadores hacen falta para jugar 4 cuadros? ¡Pulsa para averiguarlo!",
           "Start Again": "Volver a empezar",
-          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jugar al 4 x 4, cada jugador se coloca cerca de una de las cuatro casillas marcadas en el suelo. Las casillas están ordenadas del 1 al 4, siendo una la casilla \"superior\". El jugador de la casilla 1 comienza el juego botando la pelota en su casilla y luego golpeándola o dándole un manotazo en otra casilla. La pelota no debe volver a tocar la casilla del jugador original después del bote inicial. Si la pelota bota en la casilla de un jugador, éste debe golpear la pelota en otra casilla antes de que vuelva a botar. Sólo pueden golpear la pelota una vez. Pero, ¿qué ocurre si la pelota golpea la línea? Hay muchas reglas diferentes sobre lo que hay que hacer si la pelota toca la línea: debes acordar con tus amigos si las líneas están dentro o fuera. Si golpeas la pelota fuera de los límites o rebota dos veces en tu casilla, estás fuera. Todo el mundo pasa a la siguiente casilla más alta disponible (el objetivo es permanecer en la primera casilla el mayor tiempo posible). Si quedas fuera, pasas al final de la fila y un nuevo jugador ocupa la plaza vacía en la casilla 4. "
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jugar 4 cuadrados, cada jugador se para cerca de una de las cuatro casillas marcadas en el suelo. Las cajas se ordenan de 1 a 4, siendo una la caja “superior”. El jugador en el cuadro 1 comienza a jugar rebotando la pelota en su casilla y luego abofeteando o golpeando la pelota en otra casilla. El balón no debe volver a tocar el cuadro original de los jugadores después del rebote inicial. Si la pelota rebota en la plaza de un jugador, entonces deben golpear la pelota en otra casilla antes de que la pelota vuelva a rebotar. Es posible que sólo golpeen la pelota una vez. Pero, ¿y si llega a la línea, podrías preguntar? Hay muchas reglas diferentes sobre qué hacer si la pelota golpea la línea; debes estar de acuerdo con tus amigos si las líneas están dentro o fuera. Si golpeas la pelota fuera de límites o rebota dos veces en tu plaza estás fuera. Todos se mueven al siguiente cuadro más alto disponible (el objetivo es permanecer en el primer cuadro el mayor tiempo posible). Si estás fuera, vas al fondo de la línea y un nuevo jugador toma el lugar vacío en la casilla 4. "
         },
         "csd-explore ui-2": {
           "Next": "Siguiente",
@@ -3044,8 +3044,8 @@
           "Spanish": "Español",
           "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
           "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de conservar el agua es tomar duchas más cortas. ¡Intenta configurar un temporizador de cinco minutos!",
+          "Click on the timer": "Haga clic en el temporizador"
         },
         "csd-explore ui-2_2022": {
           "Next": "Siguiente",
@@ -3056,8 +3056,8 @@
           "Spanish": "Español",
           "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
           "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de conservar el agua es tomar duchas más cortas. ¡Intenta configurar un temporizador de cinco minutos!",
+          "Click on the timer": "Haga clic en el temporizador"
         },
         "csd-explore ui-3": {
           "1": "1",
@@ -3091,7 +3091,7 @@
           "29": "29",
           "30": "30",
           "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
+          "Choose your Birthday!": "¡Introduce tu fecha de nacimiento!",
           "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
           "January": "Enero",
           "February": "Febrero",
@@ -3141,7 +3141,7 @@
           "29": "29",
           "30": "30",
           "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
+          "Choose your Birthday!": "¡Introduce tu fecha de nacimiento!",
           "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
           "January": "Enero",
           "February": "Febrero",
@@ -3169,9 +3169,9 @@
           "Yellowstone": "Yellowstone",
           "Acadia": "Acadia",
           "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
+          "Which is the largest national park?": "¿Cuál es el parque nacional más grande?",
           "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
+          "Death Valley": "Valle de la Muerte",
           "Denali": "Denali",
           "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
           "Grand Canyon": "Gran Cañón",
@@ -3185,7 +3185,7 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Play Again": "¡Juega otra vez!"
         },
         "csd-explore ui-4_2022": {
           "Correct!": "¡Correcto!",
@@ -3197,9 +3197,9 @@
           "Yellowstone": "Yellowstone",
           "Acadia": "Acadia",
           "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
+          "Which is the largest national park?": "¿Cuál es el parque nacional más grande?",
           "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
+          "Death Valley": "Valle de la Muerte",
           "Denali": "Denali",
           "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
           "Grand Canyon": "Gran Cañón",
@@ -3213,7 +3213,7 @@
           "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
           "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
           "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Play Again": "¡Juega otra vez!"
         },
         "csd-explore ui-5": {
           "1": "1",
@@ -3283,7 +3283,7 @@
           "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
           "You were born on a": "Naciste en un",
           "Monday": "Lunes",
-          "just like": "igual que",
+          "just like": "al igual que",
           "N. Scott Momaday": "N. Scott Momaday",
           "public domain image": "imagen de dominio público",
           "Tuesday": "Martes",
@@ -3371,7 +3371,7 @@
           "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
           "You were born on a": "Naciste en un",
           "Monday": "Lunes",
-          "just like": "igual que",
+          "just like": "al igual que",
           "N. Scott Momaday": "N. Scott Momaday",
           "public domain image": "imagen de dominio público",
           "Tuesday": "Martes",
@@ -3393,23 +3393,23 @@
         },
         "csd-explore ui-6": {
           "Next": "Siguiente",
-          "Mad Libs!": "¡Mad Libs!",
+          "Mad Libs!": "Mad Libs!",
           "Learning to Drive": "Aprendiendo a Conducir",
           "Plural Noun": "Sustantivo plural",
           "Noun": "Sustantivo",
           "Song": "Canción",
           "Verb": "Verbo",
-          "Play again": "Reproducir de nuevo"
+          "Play again": "¡Juega otra vez!"
         },
         "csd-explore ui-6_2022": {
           "Next": "Siguiente",
-          "Mad Libs!": "¡Mad Libs!",
+          "Mad Libs!": "Mad Libs!",
           "Learning to Drive": "Aprendiendo a Conducir",
           "Plural Noun": "Sustantivo plural",
           "Noun": "Sustantivo",
           "Song": "Canción",
           "Verb": "Verbo",
-          "Play again": "Reproducir de nuevo"
+          "Play again": "¡Juega otra vez!"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Green Glass Door": "Puerta de Cristal Verde",
@@ -4910,7 +4910,7 @@
           "roll:": "balanceo:"
         },
         "csd-apps for good-1": {
-          "Do More Durham": "Más en Durham",
+          "Do More Durham": "Haz más Durham",
           "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Participa en los espacios ajardinados de Durham. Puedes cultivar tus propios alimentos y contribuir al estilo de vida saludable de Durham. ",
           "Seeds": "Semillas",
           "Briggs Avenue Community Garden": "Huerto Comunitario de Briggs Avenue",
@@ -4919,7 +4919,7 @@
           "Durham Central Park": "Parque Central de Durham"
         },
         "csd-apps for good-1_2022": {
-          "Do More Durham": "Más en Durham",
+          "Do More Durham": "Haz más Durham",
           "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Participa en los espacios ajardinados de Durham. Puedes cultivar tus propios alimentos y contribuir al estilo de vida saludable de Durham. ",
           "Seeds": "Semillas",
           "Briggs Avenue Community Garden": "Huerto Comunitario de Briggs Avenue",
@@ -4928,22 +4928,22 @@
           "Durham Central Park": "Parque Central de Durham"
         },
         "csd-explore ui-1": {
-          "Chinese": "Chino",
-          "Italian": "Italiano",
+          "Chinese": "China",
+          "Italian": "Italiana",
           "Breakfast": "Desayuno",
           "Type of Restaurant": "Tipo de restaurante",
-          "Dollars per person": "Euros por persona",
-          "Where Should I Eat?": "¿Dónde comer?",
-          "$15": "15 €"
+          "Dollars per person": "Dólares por persona",
+          "Where Should I Eat?": "¿Dónde debo comer?",
+          "$15": "$15"
         },
         "csd-explore ui-1_2022": {
-          "Chinese": "Chino",
-          "Italian": "Italiano",
+          "Chinese": "China",
+          "Italian": "Italiana",
           "Breakfast": "Desayuno",
           "Type of Restaurant": "Tipo de restaurante",
-          "Dollars per person": "Euros por persona",
-          "Where Should I Eat?": "¿Dónde comer?",
-          "$15": "15 €"
+          "Dollars per person": "Dólares por persona",
+          "Where Should I Eat?": "¿Dónde debo comer?",
+          "$15": "$15"
         }
       }
     }

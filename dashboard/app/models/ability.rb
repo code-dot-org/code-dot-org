@@ -205,7 +205,7 @@ class Ability
           !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
+        can [:new, :create, :show, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
@@ -445,10 +445,9 @@ class Ability
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
-    end
-
-    if user.permission?(UserPermission::CENSUS_REVIEWER)
-      can :manage, Census::CensusInaccuracyInvestigation
+      # let them change abuse scores
+      can :destroy_abuse, :all
+      can :update_file_abuse, :all
     end
 
     if user.admin?

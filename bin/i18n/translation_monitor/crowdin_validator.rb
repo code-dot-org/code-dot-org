@@ -90,9 +90,9 @@ class CrowdinValidator
             puts "Wrote history to file #{history_file}"
           end
         end
-      rescue Exception => e
-        puts "Error: #{e.message}"
-        puts e.backtrace
+      rescue Exception => exception
+        puts "Error: #{exception.message}"
+        puts exception.backtrace
       end
     end
   end

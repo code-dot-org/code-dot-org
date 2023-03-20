@@ -18,10 +18,12 @@ import experiments from '@cdo/apps/util/experiments';
  */
 class AnimationTab extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired,
+    channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
+    // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
     hideUploadOption: PropTypes.bool.isRequired,
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
@@ -52,7 +54,8 @@ class AnimationTab extends React.Component {
       labType,
       libraryManifest,
       onColumnWidthsChange,
-      pickerType
+      pickerType,
+      shouldWarnOnAnimationUpload
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
     if (currentAnimation) {
@@ -60,9 +63,11 @@ class AnimationTab extends React.Component {
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      labType === 'SPRITELAB' && experiments.isEnabled('backgroundsTab')
+      labType !== P5LabType.GAMELAB &&
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
+
     return (
       <div>
         <ResizablePanes
@@ -96,6 +101,7 @@ class AnimationTab extends React.Component {
             hideCostumes={hideCostumes}
             pickerType={pickerType}
             defaultQuery={defaultQuery}
+            shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
           />
         )}
       </div>

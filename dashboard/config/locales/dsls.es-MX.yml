@@ -12064,7 +12064,7 @@ es-MX:
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
-        - text: La planta rodadora comenzará a caer
+        - text: " La planta rodadora comenzará a rodar"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
@@ -12739,7 +12739,7 @@ es-MX:
       CSD User Centered Design Post-Project Test_2021:
         title: 'Diseño Centrado en el Usuario: Prueba Fin de Proyecto'
       CSD Web Development Post-Project Test_pilot_2021:
-        title: Prueba Final del Proyecto Desarrollo Web
+        title: Prueba Final del Proyecto de Desarrollo Web
       CSD games cake challenge choice_2021:
         display_name: Desafíos
         description: "\nHaz el Tuyo \nAcabas de ver el plan de otra persona para la
@@ -17753,7 +17753,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -17915,7 +17915,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -18563,7 +18563,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -19373,7 +19373,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -20183,7 +20183,7 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
@@ -20993,12 +20993,12 @@ es-MX:
           correct: true
         - text: Ligeramente en desacuerdo
           correct: true
-        - text: Desacuerdo
+        - text: En desacuerdo
           correct: true
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - text: Quiero estudiar más clases de informática en el futuro.
+        - text: Quiero tomar más clases de informática en el futuro.
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
         answers:
         - text: Totalmente de acuerdo
@@ -21250,7 +21250,7 @@ es-MX:
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - text: Quiero estudiar más clases de informática en el futuro.
+        - text: Quiero tomar más clases de informática en el futuro.
       csd-pulse-check-survey-1-q5 U6Ch1:
         answers:
         - text: Totalmente de acuerdo
@@ -25690,7 +25690,7 @@ es-MX:
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
-        - text: " La planta rodadora comenzará a dar vueltas"
+        - text: " La planta rodadora comenzará a rodar"
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.

@@ -3,5 +3,13 @@
   "display_name": "AI Ethics Activity",
   "category": "csc",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
+  "grade_levels": "5,6,7,8,9,10,11,12",
+  "header": "CS Connections",
+  "image": null,
+  "cs_topic": "artificial_intelligence,data,programming",
+  "school_subject": "history",
+  "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}"
 }

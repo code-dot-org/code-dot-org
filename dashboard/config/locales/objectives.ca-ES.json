@@ -26,6 +26,12 @@
         "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Il·lustrar els canvis en l'estat d'ànim que transmet un poema."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Representar el llenguatge literal i figurat en un text."
+        },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats."
         },
@@ -218,6 +224,15 @@
         "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
           "description": "Crear animacions de ball amb codi"
         },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": ""
         },
@@ -344,6 +359,15 @@
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
         },
+        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
+          "description": "Decidir quines coses està bé dir a internet i quines no."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Descriure la importància de l'usuari en el procés de disseny."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Identificar els sprites d'un programa d'ordinador en execució."
+        },
         "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
           "description": "Crear una animació fent sprites i comportaments."
         },
@@ -359,11 +383,95 @@
         "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
           "description": "Crear una animació interactiva fent servir esdeveniments."
         },
+        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la."
+        },
+        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
+          "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments i elements gràfics personalitzats."
+        },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Determinar la relació entre com es defineix, s'emmagatzema i es recupera una variable quan premem “Executar” en un programa."
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Cridar una variable diverses vegades en un programa."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "Assignar un valor a una variable"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "Fer servir variables en combinació amb indicadors o preguntes."
+        },
+        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
+          "description": "Fer servir variables per contenir paraules i frases."
+        },
+        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
+          "description": "Crear un programa informàtic interactiu que respongui a la informació introduïda per l'usuari."
+        },
+        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
+          "description": "Fer servir variables per contenir paraules i frases."
+        },
+        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
+          "description": "Fer servir variables en combinació amb indicadors o preguntes."
+        },
+        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
+          "description": "Fer i posar a prova una predicció modificant les variables de la simulació"
+        },
+        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
+          "description": "Crear un gràfic de doble línia per comparar dades de dues fonts diferents"
+        },
+        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
+          "description": "Utilitzar una simulació per ordinador per recopilar dades sobre un model"
+        },
+        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
+          "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
+        },
+        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "ba631251-039e-4f7a-9320-158390f318c2": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
+        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
+          "description": "Traduir URL a adreces IP."
+        },
+        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
+          "description": "Entendre la complexitat que implica enviar missatges per internet."
+        },
+        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
+          "description": "Ser capaços d'explicar com les limitacions del sistema poden afectar el disseny del projecte."
+        },
+        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
+          "description": "Redactar i implementar plans per resoldre qualsevol incidència del codi."
+        },
+        "505fcab3-063d-4c18-9ce1-83077359307d": {
+          "description": "Explicar el procés de disseny i com ha ajudat a donar forma al projecte acabat."
+        },
+        "88fa834a-0717-4422-a6df-a6af49a1e928": {
+          "description": "Descriure com sacrificar certes parts pot ajudar a fer que un projecte avanci i a despertar la creativitat."
+        },
+        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
+          "description": "Planificar-se amb antelació de cara a una tasca en curs."
+        },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Explicar la diferència entre informació privada i personal."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Explicar per què és arriscat compartir informació privada a internet."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Identificar les raons per les quals les persones comparteixen informació sobre si mateixes en línia."
+        },
         "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
           "description": "Crear sprites nous i assignar-los vestits i comportaments."
         },
         "bf11a11b-35be-4fdc-a266-9f192e141760": {
           "description": "Definir un \"sprite\" com un caràcter o objecte que apareix a la pantalla i que poden moure i modificar."
+        },
+        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
+          "description": "Triar quina informació sobre si mateixos és segura de compartir a internet."
+        },
+        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
+          "description": "Crear un programa informàtic interactiu que expressi qui són amb text i imatges personalitzades."
         },
         "62ffafea-c5f4-4942-b283-9462c41d52cd": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
@@ -377,6 +485,9 @@
         "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
           "description": "Desglossar tasques complexes en seccions repetibles més petites."
         },
+        "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
+          "description": "Combinar formes senzilles per formar dissenys complexos amb bucles imbricats."
+        },
         "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
           "description": "Explicar quan cal utilitzar un bucle, un bucle imbricat, o cap bucle."
         },
@@ -385,6 +496,15 @@
         },
         "feae5f14-f531-4db9-b746-9582df08da12": {
           "description": "Desglossar el codi en les seqüències repetibles més grans fent servir bucles i bucles imbricats."
+        },
+        "020afd03-339c-4b70-af23-62f495f2088f": {
+          "description": "Identificar seccions d'una cançó per incloure-les en una funció."
+        },
+        "386901b7-db20-4705-90ee-391a42d76d3a": {
+          "description": "Explicar en quin sentit les funcions poden fer que els programes siguin més fàcils d'escriure."
+        },
+        "887412d7-6f80-42df-98b4-6ef39bb4f09c": {
+          "description": "Trobar les frases que es repeteixen a les lletres de les cançons."
         },
         "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
           "description": "Fer servir funcions predeterminades per duur a terme tasques que es repeteixen habitualment."
@@ -415,6 +535,36 @@
         },
         "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
           "description": "Fer servir funcions predeterminades per duur a terme tasques que es repeteixen habitualment."
+        },
+        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
+          "description": "Millorar el disseny d'aplicacions existents tenint en compte les necessitats d'accessibilitat dels usuaris."
+        },
+        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
+          "description": "Explicar per què l'accessibilitat és una part important del disseny d'una aplicació de cara als usuaris."
+        },
+        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
+          "description": "Descriure l'impacte de les aplicacions mòbils en el món modern."
+        },
+        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
+          "description": "Entendre els seus drets pel que fa als materials de creació pròpia"
+        },
+        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
+          "description": "Distingir quan l'intercanvi de continguts protegits per drets d'autor és ètic i quan no ho és"
+        },
+        "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
+          "description": "Explicar com les limitacions del sistema poden afectar el disseny del projecte."
+        },
+        "5d3b2774-424f-487f-b119-05254b043b89": {
+          "description": "Descriure com sacrificar certes parts pot ajudar a fer que un projecte avanci i a despertar la creativitat."
+        },
+        "78939802-f928-4ec5-89cb-3e2aef29d9ce": {
+          "description": "Explicar el procés de disseny i com ha ajudat a donar forma al projecte acabat."
+        },
+        "82992d38-7821-4608-92a1-bd4fd05d7226": {
+          "description": "Redactar i implementar plans per resoldre qualsevol incidència del codi."
+        },
+        "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
+          "description": "Planificar-se amb antelació de cara a una tasca en curs."
         },
         "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
           "description": "Aprendre que la informació que comparteixen a internet deixa una petjada digital o \"rastre\"."
@@ -576,7 +726,7 @@
           "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments, variables i elements gràfics personalitzats."
         },
         "eb7e84c2-0694-4b77-90a0-747270409a09": {
-          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta-"
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta."
         },
         "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats"
@@ -674,8 +824,38 @@
         "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
           "description": "Reconèixer quan una funció podria ajudar a simplificar un programa."
         },
+        "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
+          "description": "Fer servir variables en combinació amb indicadors o preguntes."
+        },
         "fc585f17-d535-4c1d-aaba-65e878894373": {
           "description": "Fer servir variables per contenir paraules i frases."
+        },
+        "75953ae5-c4fa-40d3-85e1-deb508c32847": {
+          "description": "Assignar valors a variables existents."
+        },
+        "ba1c8ef0-b9fa-4784-9951-6999428d1bbc": {
+          "description": "Utilitzar variables per canviar els valors dins d'un bucle."
+        },
+        "e17081b3-65af-4076-afc7-e8aa69da02f2": {
+          "description": "Fer servir variables en lloc de valors repetitius dins d'un programa."
+        },
+        "4df8eb31-02ee-4e5d-ae28-368a29da7142": {
+          "description": "Examinar el codi per trobar punts en què les variables es poden substituir per valors específics."
+        },
+        "d800c885-0e72-4325-a176-68612c826131": {
+          "description": "Identificar en quins casos poden fer servir variables per modificar quantitats mentre s'executa el programa."
+        },
+        "61ae46d2-2f10-4073-935c-b46ab9fae340": {
+          "description": "Reconèixer quan cal fer servir un bucle \"for\" i quan cal utilitzar altres bucles, com ara de repetició i \"while\"."
+        },
+        "ec3dab8e-cfb2-4b3a-9b33-dace79bba6c6": {
+          "description": "Determinar el valor d'inici, de final i de pas d'un bucle \"for\"."
+        },
+        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
+          "description": "Fer servir bucles \"for\" per canviar el bucle diverses vegades amb valors diferents."
+        },
+        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
+          "description": "Reconèixer quan cal fer servir un bucle \"for\" i quan cal utilitzar altres bucles, com ara de repetició i \"while\"."
         },
         "546d4a38-5abb-402c-9e61-bef13a71001d": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
@@ -977,20 +1157,32 @@
         "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
           "description": "Fer servir un disseny planificat com a plànol per crear projectes."
         },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats."
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": ""
+          "description": "Il·lustrar els canvis en l'estat d'ànim que transmet un poema."
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": ""
+          "description": "Representar el llenguatge literal i figurat en un text."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Saber com s'han de comportar quan van al laboratori d'informàtica."
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Fer servir la terminologia correcta per referir-se al ratolí, al ratolí tàctil o a la pantalla tàctil."
+        },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Descriure la importància de l'usuari en el procés de disseny."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identificar els sprites d'un programa d'ordinador en execució."
         },
         "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
           "description": "Crear sprites nous i assignar-los vestits i comportaments."
@@ -1007,11 +1199,53 @@
         "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
           "description": "Crear una animació interactiva fent servir esdeveniments."
         },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments i elements gràfics personalitzats."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Decidir quines coses està bé dir a internet i quines no."
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Assignar un valor a una variable"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Cridar una variable diverses vegades en un programa."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Determinar la relació entre com es defineix, s'emmagatzema i es recupera una variable quan premem “Executar” en un programa."
+        },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Fer servir variables per contenir paraules i frases."
+        },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Fer servir variables en combinació amb indicadors o preguntes."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Fer servir variables per contenir paraules i frases."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Fer servir variables en combinació amb indicadors o preguntes."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Crear un programa informàtic interactiu que respongui a la informació introduïda per l'usuari."
+        },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
         },
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Assignar valors a variables existents."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Fer servir variables en lloc de valors repetitius dins d'un programa."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Utilitzar variables per canviar els valors dins d'un bucle."
         },
         "dd570e3f-8340-4838-8ba1-de856546f834": {
           "description": "Desglossar tasques complexes en seccions repetibles més petites."
@@ -1021,6 +1255,69 @@
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Identificar en quins casos poden fer servir variables per modificar quantitats mentre s'executa el programa."
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Examinar el codi per trobar punts en què les variables es poden substituir per valors específics."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Determinar el valor d'inici, de final i de pas d'un bucle \"for\"."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Il·lustrar els valors del comptador que s'obtenen a través d'un bucle \"for\" mentre s'executa."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Determinar el valor d'inici, de final i de pas d'un bucle \"for\"."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Reconèixer quan cal fer servir un bucle \"for\" i quan cal utilitzar altres bucles, com ara de repetició i \"while\"."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Fer servir bucles \"for\" per canviar el bucle diverses vegades amb valors diferents."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Reconèixer quan cal fer servir un bucle \"for\" i quan cal utilitzar altres bucles, com ara de repetició i \"while\"."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Utilitzar una simulació per ordinador per recopilar dades sobre un model"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Crear un gràfic de doble línia per comparar dades de dues fonts diferents"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Fer i posar a prova una predicció modificant les variables de la simulació"
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Entendre la complexitat que implica enviar missatges per internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Traduir URL a adreces IP."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Planificar-se amb antelació de cara a una tasca en curs."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Ser capaços d'explicar com les limitacions del sistema poden afectar el disseny del projecte."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Descriure com sacrificar certes parts pot ajudar a fer que un projecte avanci i a despertar la creativitat."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Redactar i implementar plans per resoldre qualsevol incidència del codi."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Explicar el procés de disseny i com ha ajudat a donar forma al projecte acabat."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
           "description": "Aprendre que la informació que comparteixen a internet deixa una petjada digital o \"rastre\"."
@@ -1518,7 +1815,7 @@
           "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments, variables i elements gràfics personalitzats."
         },
         "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta-"
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats"
@@ -1619,6 +1916,36 @@
         "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
           "description": "Fer servir variables per contenir paraules i frases."
         },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Fer servir variables en combinació amb indicadors o preguntes."
+        },
+        "16854174-125c-4c79-9a42-064ef84535e3": {
+          "description": "Assignar valors a variables existents."
+        },
+        "4fe2cf70-9f34-41b0-bae1-9c5af60706de": {
+          "description": "Fer servir variables en lloc de valors repetitius dins d'un programa."
+        },
+        "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
+          "description": "Utilitzar variables per canviar els valors dins d'un bucle."
+        },
+        "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
+          "description": "Identificar en quins casos poden fer servir variables per modificar quantitats mentre s'executa el programa."
+        },
+        "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
+          "description": "Examinar el codi per trobar punts en què les variables es poden substituir per valors específics."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Determinar el valor d'inici, de final i de pas d'un bucle \"for\"."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Reconèixer quan cal fer servir un bucle \"for\" i quan cal utilitzar altres bucles, com ara de repetició i \"while\"."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Fer servir bucles \"for\" per canviar el bucle diverses vegades amb valors diferents."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Reconèixer quan cal fer servir un bucle \"for\" i quan cal utilitzar altres bucles, com ara de repetició i \"while\"."
+        },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
         },
@@ -1703,6 +2030,9 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacte creatiu amb els companys."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "Començar a establir connexions sobre una forma nova d'escriure programes"
+        },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Definir un \"sprite\" com un caràcter o objecte que apareix a la pantalla i que poden moure i modificar."
         },
@@ -1712,11 +2042,38 @@
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
         },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Crear una animació interactiva utilitzant sprites, comportaments i esdeveniments."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identificar les raons per les quals les persones comparteixen informació sobre si mateixes en línia."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Explicar la diferència entre informació privada i personal."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Explicar per què és arriscat compartir informació privada a internet."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Triar quina informació sobre si mateixos és segura de compartir a internet."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Crear un programa informàtic interactiu que expressi qui són amb text i imatges personalitzades."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Distingir quan l'intercanvi de continguts protegits per drets d'autor és ètic i quan no ho és"
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Entendre els seus drets pel que fa als materials de creació pròpia"
+        },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Combinar formes senzilles per formar dissenys complexos amb bucles imbricats."
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Comptar quantes vegades s'hauria de repetir una acció i representar-la en forma de bucle."
@@ -1732,6 +2089,15 @@
         },
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
           "description": "Desglossar el codi en les seqüències repetibles més grans fent servir bucles i bucles imbricats."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Trobar les frases que es repeteixen a les lletres de les cançons."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Identificar seccions d'una cançó per incloure-les en una funció."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Explicar en quin sentit les funcions poden fer que els programes siguin més fàcils d'escriure."
         },
         "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
           "description": "Fer servir funcions per simplificar programes complexos."
@@ -1762,6 +2128,36 @@
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "Fer servir funcions predeterminades per duur a terme tasques que es repeteixen habitualment."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Descriure l'impacte de les aplicacions mòbils en el món modern."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Explicar per què l'accessibilitat és una part important del disseny d'una aplicació de cara als usuaris."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Millorar el disseny d'aplicacions existents tenint en compte les necessitats d'accessibilitat dels usuaris."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Planificar-se amb antelació de cara a una tasca en curs."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Explicar com les limitacions del sistema poden afectar el disseny del projecte."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Descriure com sacrificar certes parts pot ajudar a fer que un projecte avanci i a despertar la creativitat."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Redactar i implementar plans per resoldre qualsevol incidència del codi."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Explicar el procés de disseny i com ha ajudat a donar forma al projecte acabat."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
         }
       }
     }

@@ -57,8 +57,6 @@ class AzureContentModerator
     rating
   end
 
-  private
-
   #
   # Sends a request to Azure to moderate the image.
   #
@@ -68,7 +66,7 @@ class AzureContentModerator
   # @raise [AzureContentModerator::RequestFailed] when the request is not
   #   successful.
   #
-  def make_request(image_data, content_type)
+  private def make_request(image_data, content_type)
     uri = URI(@endpoint + '/moderate/v1.0/ProcessImage/Evaluate')
     request = Net::HTTP::Post.new(uri.request_uri)
     request['Content-Type'] = content_type
@@ -92,7 +90,7 @@ class AzureContentModerator
   # @param [Hash] the parsed response from Auzre
   # @returns [:everyone|:racy|:adult]
   #
-  def rating_from_azure_result(result)
+  private def rating_from_azure_result(result)
     if result[ADULT_SCORE] >= adult_threshold
       :adult
     elsif result[RACY_SCORE] >= racy_threshold
@@ -103,7 +101,7 @@ class AzureContentModerator
   end
 
   # Report to Firehose that we're about to make a request to Azure
-  def report_request(image_url)
+  private def report_request(image_url)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -118,7 +116,7 @@ class AzureContentModerator
   end
 
   # Report the response we got from Azure to Firehose
-  def report_response(image_url, rating, data, request_duration)
+  private def report_response(image_url, rating, data, request_duration)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -144,7 +142,7 @@ class AzureContentModerator
   # @param [Net::HTTPResponse] response
   # @return [String]
   #
-  def error_details(response)
+  private def error_details(response)
     result = JSON.parse(response.body)
     <<~ERROR
       Request to Azure failed with status #{response.code}
@@ -164,24 +162,24 @@ class AzureContentModerator
   #   limited_project_gallery: true
 
   # The minimum "racy" score that earns a :racy rating.
-  def racy_threshold
+  private def racy_threshold
     # 0.32 is Azure's default threshold for racy content.
     dynamic_config['racy_threshold'] || 0.32
   end
 
   # The minimum "adult" score that earns an :adult rating.
-  def adult_threshold
+  private def adult_threshold
     # 0.48 is Azure's default threshold for adult content.
     dynamic_config['adult_threshold'] || 0.48
   end
 
   # If true, we only show featured projects in the App Lab and Game Lab
   # sections of the public project gallery.
-  def limited_project_gallery?
+  private def limited_project_gallery?
     dynamic_config['limited_project_gallery'] || true
   end
 
-  def dynamic_config
+  private def dynamic_config
     DCDO.get('image_moderation', {})
   end
 end

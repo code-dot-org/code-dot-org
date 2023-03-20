@@ -9020,6 +9020,25 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Rastgele
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Alternatif Dersler
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Alternatif Dersler
         csa6-2023:
           description: |-
             Bu ünite, öğrencilere 'ArrayList' sınıfını kullanarak liste oluşturmayı öğretmek için veri yapılarını genişletmeye devam ediyor. Bu süreçte öğrenciler "Tamsayı" ve "Double" sınıflarını öğrenirler ve yöntemlerini metin dosyalarından verileri ayrıştırmak ve tamsayı değerlerinin sınırlarını keşfetmek için kullanırlar. Öğrenciler, bir "ArrayList"in yapısını ve işlevselliğini öğrenirken, her bir veri yapısının ne zaman kullanılacağını ayırt eder. Öğrenciler, sayısal ve nesne verilerinden oluşan bir "ArrayList" içindeki verileri bulmak ve işlemek için standart algoritmaları uygular. Ünite boyunca öğrenciler, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirler. Ayrıca öğrenciler, programları için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerini daha da geliştirirler.
@@ -9110,10 +9129,18 @@ tr:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Bölüm 1
+              display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
-              display_name: Bölüm 2
-          title: Problem Çözme
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
+            arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
+            etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
+            zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme
+            sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları
+            çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini,
+            çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz
+            bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje
+            ile sona erer.
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -9121,39 +9148,73 @@ tr:
             lessonGroup-3:
               display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
           title: Web Geliştirme
+          student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl
+            oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği
+            paylaşmak istediğinize karar verdikten sonra, HTML ve CSS kullanarak sayfalarınızı
+            nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Ayrıca
+            hata ayıklama, kaynakları kullanma ve ekip çalışması gibi değerli programlama
+            becerilerini de uygulayacaksınız.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
             lessonGroup-3:
               display_name: 'Bölüm 2: Uygulama prototipleme'
-          title: Tasarım işlemi
+          student_description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini
+            tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken
+            diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz.
+            Birimin ikinci yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt
+            üzerinde hem de Uygulama Laboratuarında prototip çözümler üretme ve gerçek
+            kullanıcılar ile geribildirim almak ve ilerlemek için çözümler test etme
+            imkanı sağlayan bir tekrarlayıcı takım projesinden oluşur.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Bilgileri gösterme'
             lessonGroup-3:
               display_name: 'Bölüm 2: Veri problemlerini çözme'
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı
+            nasıl kullandıklarını öğrenin.
+          student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır
+            ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır.
+            Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı
+            sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve
+            eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin
+            nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede
+            nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede
+            seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Resim ve animasyon'
             lessonGroup-3:
               display_name: 'Bölüm 2: Oyun geliştirme'
+          student_description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli
+            sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın.
+            Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük
+            kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
+            daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
+            kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Bölüm 1
             lessonGroup-3:
-              display_name: Bölüm 2
-          title: Fiziksel Bilişim
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Bölüm 1
             lessonGroup-3:
               display_name: Bölüm 2
+            lessonGroup-4:
+              display_name: Uygulama Labına Giriş
           title: Yapay Zeka ve Makine Öğrenimi
+          student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli
+            geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar
+            vermek için verilerden nasıl öğrendiğini keşfedecek, ardından gerçek dünya
+            verileri etrafında kendi makine öğrenimi projelerinizi geliştireceksiniz.
+            Ünite, kişisel olarak ilgili bir sorunu çözmek için kendi makine öğrenimi
+            uygulamanızı tasarlamakla sona erer.
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -9409,3 +9470,47 @@ tr:
               display_name: Uygulama Labına Giriş
             lessonGroup-3:
               display_name: Girdiler ve çıktılar
+        self-paced-pl-csc-2023:
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bölüm 1
+            lessonGroup-3:
+              display_name: Bölüm 2
+          title: Problem Çözme
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bölüm 1
+          title: Problem Çözme
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            lessonGroup-4:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme

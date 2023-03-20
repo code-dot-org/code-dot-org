@@ -1,6 +1,6 @@
-FactoryGirl.allow_class_lookup = false
+FactoryBot.allow_class_lookup = false
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :foorm_form, class: 'Foorm::Form' do
     sequence(:name) {|n| "FormName#{n}"}
     version 0
@@ -294,6 +294,16 @@ FactoryGirl.define do
     trait :answers_high do
       association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_high]
     end
+  end
+
+  factory :facilitator_post_survey_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :foorm_submission, factory: :facilitator_post_survey_foorm_submission
+  end
+
+  factory :facilitator_post_survey_foorm_submission, class: 'Foorm::Submission' do
+    form_name 'surveys/pd/csd_csp_facilitator_post_survey'
+    foorm_submission_metadata
+    answers '{}'
   end
 
   factory :csf_intro_post_foorm_submission, class: 'Foorm::Submission' do

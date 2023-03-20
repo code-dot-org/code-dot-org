@@ -6,7 +6,7 @@
           "display_name": "가속도계 이벤트"
         },
         "csd-2022/accuracy-in-ai-lab": {
-          "display_name": "AI 랩에서의 정확도"
+          "display_name": "AI Lab에서의 정확도"
         },
         "csd-2022/ai-lab": {
           "display_name": "AI 랩"
@@ -54,7 +54,7 @@
           "display_name": "HTML 태그"
         },
         "csd-2022/importing-a-model-in-app-lab": {
-          "display_name": "앱 랩에서 모델 가져오기"
+          "display_name": "App Lab에서 모델 가져오기"
         },
         "csd-2022/introduction-to-ai-lab": {
           "display_name": "AI 연구실 소개"
@@ -92,6 +92,12 @@
         "csd-2022/playing-notes": {
           "display_name": "플레잉 노트 "
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "문제 해결 과정"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "문제 해결 과정"
+        },
         "csd-2022/selecting-a-label": {
           "display_name": "라벨 선택"
         },
@@ -118,6 +124,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "속도 및 카운터 패턴"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "웹 랩"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

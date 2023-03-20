@@ -309,7 +309,9 @@ export const LevelToken = connect(
   state => ({}),
   {
     toggleExpand
-  }
+  },
+  null,
+  {forwardRef: true}
 )(UnconnectedLevelToken);
 
 export default LevelToken;

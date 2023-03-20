@@ -109,7 +109,7 @@ class ScrollButtons extends React.Component {
 
     let upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: 0,
+      top: '10px',
       margin: '0 0 3px 0',
       left: centerItems ? '50%' : 25,
       transform: 'translateX(-50%)'
@@ -117,7 +117,7 @@ class ScrollButtons extends React.Component {
 
     const downStyle = {
       opacity: this.props.visible ? 1 : 0,
-      bottom: MARGIN,
+      bottom: '10px',
       right: centerItems ? '50%' : 25,
       transform: 'translateX(50%)'
     };
@@ -212,7 +212,7 @@ const styles = {
   },
   arrowGlyph: {
     fontSize: 50,
-    color: color.purple,
+    color: color.neutral_dark,
     cursor: 'pointer'
   }
 };

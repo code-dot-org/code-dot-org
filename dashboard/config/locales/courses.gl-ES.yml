@@ -33,3 +33,8 @@ gl:
         csd-2019:
           description_short: Un curso introdutorio da ciencias da información que
             permite os estudantes crear artefactos auténticos.
+        csd-2020:
+          description_short: Un curso introdutorio da ciencias da información que
+            permite os estudantes crear artefactos auténticos.
+        mike-test:
+          title: Fundamentos de Informática

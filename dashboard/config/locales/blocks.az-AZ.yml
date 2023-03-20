@@ -2,8 +2,8 @@
 az:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: ox düymələri ilə hərəkət edən NESW
+      AmysBlocks_playerBehaviors:
+        text: davranış
       AmysBlocks_setPromptWithChoices:
         text: istifadəçidən {QUESTION} seçimlər {A}{B}{C} ilə dəyişən {VAR} soruş
       BadGuys_makeNewBadGuysSprite:
@@ -2333,6 +2333,19 @@ az:
             '"quarantining"': xəstələnəndə karantin
             '"avoiding"': sosial məsafə
             '"none"': hərəkətsiz qalmaq
+      adaptations_adaptationBehaviors:
+        text: davranış
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa fırlanır
+            new Behavior(spinning_left, []): sola fırlanır
+            new Behavior(fluttering, []): çırpınan
+            new Behavior(jittering, []): |-
+              titrəmək
+              (hər hansı cihazın titrəməsi)
+            new Behavior(wobbling, []): titrəmə(titrəmək)
+            new Behavior(wandering, []): gəzən
+            new Behavior(patrolling, []): patrul
       binary_drawBinScreen:
         text: |-
           ekranı çəkin

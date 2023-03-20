@@ -2,6 +2,8 @@
 fr:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: demander à l'utilisateur {QUESTION} pour le variable {VAR} de choisir entre {A}{B}{C}.
       AmysBlocks_spriteSayVar:
@@ -2371,6 +2373,17 @@ fr:
             '"quarantining"': mise en quarantaine en cas de maladie
             '"avoiding"': distanciation sociale
             '"none"': rester immobile
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): tournoyer à droite
+            new Behavior(spinning_left, []): tournoyer à gauche
+            new Behavior(fluttering, []): voleter
+            new Behavior(jittering, []): gigoter
+            new Behavior(wobbling, []): chanceler
+            new Behavior(wandering, []): se balader
+            new Behavior(patrolling, []): patrouiller
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:

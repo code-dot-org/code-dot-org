@@ -3,5 +3,13 @@
   "display_name": "Ecosystems Module",
   "category": "csc",
   "is_featured": true,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
+  "grade_levels": "3,4,5,6,7,8",
+  "header": "CS Connections",
+  "image": null,
+  "cs_topic": "programming",
+  "school_subject": "science",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
 }

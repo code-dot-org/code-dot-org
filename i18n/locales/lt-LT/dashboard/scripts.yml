@@ -1406,6 +1406,14 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csp4-2023:
           lesson_groups:
             csp_variables:

@@ -155,9 +155,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def facilitator_post_workshop(user, workshop)
     @user = user
     @workshop = workshop
-    survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"\
-                    "&survey_data[workshop_id]=#{workshop.id}"
-    @survey_url = CDO.studio_url "form/facilitator_post_survey?#{survey_params}", CDO.default_scheme
+    survey_params = "workshop_id=#{workshop.id}"
+    @survey_url = CDO.studio_url "pd/workshop_survey/facilitator_post_foorm?#{survey_params}", CDO.default_scheme
 
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
@@ -266,14 +265,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
-  private
-
-  def save_timestamp
+  private def save_timestamp
     return unless @enrollment&.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 
-  def generate_csf_certificate
+  private def generate_csf_certificate
     image = Pd::CertificateRenderer.render_workshop_certificate @enrollment
     image.format = 'jpg'
     image.to_blob
@@ -281,35 +278,35 @@ class Pd::WorkshopMailer < ActionMailer::Base
     image.try :destroy!
   end
 
-  def email_address(display_name, email)
+  private def email_address(display_name, email)
     Mail::Address.new(email).tap do |address|
       address.display_name = display_name
     end.format
   end
 
-  def from_teacher
+  private def from_teacher
     email_address('Code.org', 'teacher@code.org')
   end
 
-  def from_facilitators
+  private def from_facilitators
     email_address('Code.org', 'facilitators@code.org')
   end
 
-  def from_no_reply
+  private def from_no_reply
     email_address('Code.org', 'noreply@code.org')
   end
 
-  def from_survey
+  private def from_survey
     email_address('Code.org', 'survey@code.org')
   end
 
-  def get_details_partial(course, subject)
+  private def get_details_partial(course, subject)
     return 'csf' if course == Pd::Workshop::COURSE_CSF
     return DETAILS_PARTIALS[course][subject] if DETAILS_PARTIALS[course] && DETAILS_PARTIALS[course][subject]
     nil
   end
 
-  def teacher_enrollment_subject(workshop)
+  private def teacher_enrollment_subject(workshop)
     if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
@@ -319,14 +316,14 @@ class Pd::WorkshopMailer < ActionMailer::Base
         "See you soon for your upcoming #{workshop.course} workshop!"
       else
         # This is sent for the first enrollment, and also for the 3-day reminder.
-        "You’re enrolled! View details for your upcoming #{workshop.course} workshop"
+        "You're enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
       'Your upcoming Code.org workshop and next steps'
     end
   end
 
-  def detail_change_notification_subject(workshop)
+  private def detail_change_notification_subject(workshop)
     if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
@@ -341,7 +338,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   # "Remember that you can always reach out to us for support at teacher@code.org, to your regional partner at
   # patty@we_teach_code.ex.net, or to your facilitator(s) at
   # fiona_facilitator@example.net or fred_facilitator@example.net.""
-  def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
+  private def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
     has_partner = !!regional_partner&.contact_email
     has_facilitator = !facilitators.empty?
     after_teacher_contact = '.'
@@ -370,7 +367,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     contact_text
   end
 
-  def email_tag(email)
+  private def email_tag(email)
     "<a href=mailto:#{email}>#{email}</a>"
   end
 end

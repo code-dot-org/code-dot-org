@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2023-01-30 21:06:02 UTC",
+    "serialized_at": "2023-03-17 19:15:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -32,7 +32,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Chapter 1"
+        "display_name": "Chapter 1: The Problem Solving Process"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -44,7 +44,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Chapter 2"
+        "display_name": "Chapter 2: Computers and Problem Solving"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -74,7 +74,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. Students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Newspaper Table](/s/csd1-2022/lessons/9/)\n* [Spaghetti Bridge](/s/csd1-2022/lessons/10/)\n* [Paper Tower](/s/csd1-2022/lessons/11/)",
+        "overview": "\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. Students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Newspaper Table](/s/csd1-2023/lessons/9/)\n* [Spaghetti Bridge](/s/csd1-2023/lessons/10/)\n* [Paper Tower](/s/csd1-2023/lessons/11/)",
         "preparation": "**For each group**\n\n* 2 sheets of aluminum foil, 5x5 inches in length each\n* 1 container that can hold 3-5 inches of water \n* Several paper towels or rags that can be placed under the container \n* 15 pennies\n* One copy of the activity guide\n\n**For the teacher**\n\n* 1 container that can hold 3-5 inches of water \n* 50 pennies \n* Extra paper towels or rags \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
         "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nYou will work with a group to design and test an aluminum foil boat that will support as many pennies as possible. \n"
       },
@@ -1079,7 +1079,7 @@
       "key": "74e9e64d-7599-413b-bf0b-713efdb5896a",
       "position": 2,
       "properties": {
-        "description": "## Before class\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers."
+        "description": "## Preparing for the Unit\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). "
       },
       "seeding_key": {
         "activity_section.key": "74e9e64d-7599-413b-bf0b-713efdb5896a",
@@ -1366,6 +1366,19 @@
       }
     },
     {
+      "key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01",
+      "position": 5,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01",
+        "lesson_activity.key": "9e786f9e-9ab6-4979-87a8-36fa84b7bfe1"
+      }
+    },
+    {
       "key": "08acf852-f955-4746-b3dd-2301cef8ca03",
       "position": 1,
       "properties": {
@@ -1446,7 +1459,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r problem_solving_process_1/csd1/2023] video in the slides.\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.\n",
         "name": "The Problem Solving Process\r",
-        "progression_name": "Video: Problem Solving Process"
+        "progression_name": "Video: Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
@@ -1982,7 +2001,13 @@
       "key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
@@ -2758,7 +2783,7 @@
       "key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
         "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
@@ -2774,7 +2799,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals\r\n"
+            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals. \n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**.\n"
           }
         ]
       },
@@ -3034,7 +3059,7 @@
       "key": "3b38408b-4718-4567-894b-20be8c605f2f",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
       },
       "seeding_key": {
         "activity_section.key": "3b38408b-4718-4567-894b-20be8c605f2f",
@@ -3066,7 +3091,7 @@
       "key": "616fa312-173f-4817-8d18-21fe619630de",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -3392,7 +3417,7 @@
       "key": "e62adeca-af8a-42b4-9c29-6e088c60f6f1",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -3731,7 +3756,7 @@
       "key": "2207f2c6-4c68-48e8-b2cf-4a883c4d6648",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5).",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5).",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -4456,6 +4481,31 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd1-2023",
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd1_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4478,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4503,7 +4553,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4528,7 +4578,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4553,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4578,7 +4628,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4603,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4628,7 +4678,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4703,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4678,7 +4728,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4703,7 +4753,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4728,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4753,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4778,7 +4828,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4803,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4828,7 +4878,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4853,6 +4903,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd1_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd1_2023"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd1-2023",
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD U1 IO Pet Chooser_2023",
@@ -5048,6 +5110,39 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csd1-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd1-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd1-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Aluminum Boats",
       "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
       "key": "aluminum_boats",
@@ -5151,7 +5246,7 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/16-FcZlbn-DXr_BcDncQwUJvwAy24mT4JOuxTQAHzDOE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DS3DtZOeqkkFPx25ujdJ_LB68Wxj_yNBWUquVAo1Tis/template/preview",
       "key": "apps_with_processing_2",
       "properties": {
         "audience": "Teacher",
@@ -5188,7 +5283,7 @@
     },
     {
       "name": "Apps with Storage",
-      "url": "https://docs.google.com/presentation/d/1YX99Zyb1-Mwgl9TiY5P2DEx9Wb4_xffJUDu05VxTh_I/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bXivMZwN5wWZxnmlaSO2M81twsZf_JgXBWWdrSccghE/template/preview",
       "key": "apps_with_storage_2",
       "properties": {
         "audience": "Teacher",
@@ -5259,8 +5354,38 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
+      "key": "csd_curriculum_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
+      "key": "csd_implementation_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
+      "key": "csd_learning_frameworks",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "Exploring Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qEiI3VfO04CKhzpucsXmcrTLcV3wHYCyvwsOdiSoI5k/template/preview",
       "key": "exploring_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -5296,7 +5421,7 @@
     },
     {
       "name": "Exploring Problem Solving (Animals)",
-      "url": "https://docs.google.com/presentation/d/1QGTKTq86hJ8TLZl3mc4_WucYHE4sHkgSVp9Bif56Sxk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HrzXZUsvtHJjfU2XI5FOkDQCkkxzFJ1354F6iPG2hp4/template/preview",
       "key": "exploring_problem_solving_animals_",
       "properties": {
         "audience": "Teacher",
@@ -5308,7 +5433,7 @@
     },
     {
       "name": "Exploring Problem Solving (Games)",
-      "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
+      "url": "https://docs.google.com/presentation/d/11Qw-SNahzSYo-9zX4SQhOiRgvtQN6mL8zwFeaf2gTqk/template/preview",
       "key": "exploring_problem_solving_games_",
       "properties": {
         "audience": "Teacher",
@@ -5345,7 +5470,7 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://docs.google.com/presentation/d/10ew9kAUGnO0gMSr6sW5sFLB0bYfjdwQgiX-cJyzPQ9w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uoMxf--EQrDqG_bmoqYWn6KraKCmWy9gC1LFOlz4OO8/template/preview",
       "key": "input_and_output_2",
       "properties": {
         "audience": "Teacher",
@@ -5357,7 +5482,7 @@
     },
     {
       "name": "Intro to Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1TuN5qOfjgSxNjZccb6o4sUZbfaXGOSDeUolDojrJ0pM/template/preview",
       "key": "intro_to_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -5381,7 +5506,7 @@
     },
     {
       "name": "Intro to Problem Solving (Newspapers)",
-      "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1EY9Qy_ufSUgtdyfDdoEjDXfbepoW4o-66y5nkNDY_-0/template/preview",
       "key": "intro_to_problem_solving_newspapers_",
       "properties": {
         "audience": "Teacher",
@@ -5393,7 +5518,7 @@
     },
     {
       "name": "Intro to Problem Solving (Paper Towels)",
-      "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1x9Zx8mdqlNkYnFcK0-uff_sv53v1_MWTHwpXdW6eJJo/template/preview",
       "key": "intro_to_problem_solving_paper_towels_",
       "properties": {
         "audience": "Teacher",
@@ -5405,7 +5530,7 @@
     },
     {
       "name": "Intro to Problem Solving (Spaghetti)",
-      "url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GOd3_LgR4y4EeYqOVx6yjdIvx_mhJ4cJAMwu0NAkovA/template/preview",
       "key": "intro_to_problem_solving_spaghetti_",
       "properties": {
         "audience": "Teacher",
@@ -5478,7 +5603,7 @@
     },
     {
       "name": "Project - Propose an App",
-      "url": "https://docs.google.com/presentation/d/1wkcHClx2M7iHLvZa4yO0Mj9FuRxZgqA8WyxkFD5wP60/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dFjAAwty7BeGHTDB7X8VXyCmMJ9Fh5mEs_JNZwlf9XM/template/preview",
       "key": "project_-_propose_an_app",
       "properties": {
         "audience": "Teacher",
@@ -5602,6 +5727,16 @@
       }
     },
     {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
       "name": "The Problem Solving Process",
       "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
       "key": "the_problem_solving_process",
@@ -5616,7 +5751,7 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ISxsRTRVG9D0BYkfRHYHWFHiP_HNYIvlzfkCULvxYnA/template/preview",
       "key": "the_problem_solving_process_1",
       "properties": {
         "audience": "Teacher",
@@ -5666,7 +5801,7 @@
     },
     {
       "name": "What is a Computer",
-      "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qc6_t0IdvXD_jSZ84gXvNA7LvLCr94WHKC6SKPtq2po/template/preview",
       "key": "what_is_a_computer_1",
       "properties": {
         "audience": "Teacher",
@@ -6036,7 +6171,48 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd1-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -91,9 +91,7 @@ class HttpDocument
     apply_theme!(locals)
   end
 
-  private
-
-  def apply_encoding!
+  private def apply_encoding!
     # Ruby can't always detect utf-8 encoded data so if the content type indicates that this is
     # utf-8, FORCE Ruby to consider it such.
     if charset?('utf-8')
@@ -102,7 +100,7 @@ class HttpDocument
     end
   end
 
-  def apply_theme!(locals)
+  private def apply_theme!(locals)
     theme = headers['X-Pegasus-Theme'] || 'theme'
     return if theme == 'none'
 
@@ -136,7 +134,7 @@ class HttpDocument
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
-  def apply_view!(locals)
+  private def apply_view!(locals)
     view = headers['X-Pegasus-View']
     return if view.nil? || view == 'none'
 
@@ -170,11 +168,11 @@ class HttpDocument
     content_type_from_extname(File.extname(path))
   end
 
-  def default_charset
+  private def default_charset
     'utf-8'
   end
 
-  def resolve_template(site, view)
+  private def resolve_template(site, view)
     FileUtility.find_first_existing(
       String.multiply_concat(
         [
@@ -186,7 +184,7 @@ class HttpDocument
     )
   end
 
-  def to_html_from_haml!(locals, options)
+  private def to_html_from_haml!(locals, options)
     header, haml = YAML.parse_yaml_header(@body, locals)
     header['social'] = social_metadata(locals[:request], header)
 
@@ -200,7 +198,7 @@ class HttpDocument
     @headers['X-Pegasus-Header'] = header.to_json
   end
 
-  def to_html_from_markdown!(locals, options)
+  private def to_html_from_markdown!(locals, options)
     header, markdown = YAML.parse_yaml_header(@body)
     header['social'] = social_metadata(locals[:request], header)
 
@@ -364,8 +362,8 @@ module Pegasus
         content_type :json
         cache_control :private, :must_revalidate, max_age: 0
         kind.submit(request, params).to_json
-      rescue FormError => e
-        halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+      rescue FormError => exception
+        halt 400, {'Content-Type' => 'text/json'}, exception.errors.to_json
       end
     end
   end

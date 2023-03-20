@@ -32,6 +32,9 @@
         "csd-2022/collision-detection": {
           "display_name": "Toqquşmanın Aşkarlanması"
         },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Sorğu yaratmaq"
+        },
         "csd-2022/creative-commons-search": {
           "display_name": "Yaradıcı ümumi araşdırma"
         },
@@ -131,6 +134,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Notları Çalmaq"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Məsələnin həlli prosesi"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Məsələnin həlli prosesi"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Təsadufi rəqəmlər"
         },
@@ -157,6 +166,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Sürət"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Veb Laboratoriyası"
         }
       }
     }

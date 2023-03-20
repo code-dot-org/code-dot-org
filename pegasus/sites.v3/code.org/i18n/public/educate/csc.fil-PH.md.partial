@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Natapos ang isang aktibidad sa Koneksiyon sa CS at/o naghahanap ng higit pang mga opsyon sa silid-aralan mo? Mangyaring <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">ibahagi ang puna mo</a> at mga ideya sa higit pang mga aralin dito!</em>
+
+{{ visit_partial_event_logger }}

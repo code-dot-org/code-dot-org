@@ -3,16 +3,23 @@
     "data": {
       "announcements": {
         "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
+          "notice": "micro:bit ile Uzatma Dersleri",
           "buttonText": "Daha fazlasını öğren"
         },
         "a3109564-513f-47c8-bdf3-d69a19f5149e": {
+          "notice": "micro:bit ile Uzatma Dersleri",
           "buttonText": "Daha fazlasını öğren"
         },
         "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
+          "notice": "micro:bit ile Uzatma Dersleri",
           "buttonText": "Daha fazlasını öğren"
         },
         "26f29937-fd4e-4738-8dfe-459f286636f4": {
+          "notice": "micro:bit ile Uzatma Dersleri",
           "buttonText": "Daha fazlasını öğren"
+        },
+        "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
+          "buttonText": "Daha Fazla Bilgi Edinin"
         }
       }
     }

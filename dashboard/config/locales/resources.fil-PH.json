@@ -3,7 +3,8 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "poem_art_celebration/poem-art/2021": {
           "type": "Video"
@@ -19,8 +20,22 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Video"
         },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Introduksiyon ng Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Handout ng Mag-aaral"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Video"
@@ -29,10 +44,12 @@
           "type": "Video"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "type": "Video"
@@ -99,7 +116,8 @@
           "type": "Video"
         },
         "spotify_playlist_all_ages_/coursed/2022": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "conditionals_with_cards/coursed/2022": {
           "name": "Mga Conditional gamit ang mga Card"
@@ -185,8 +203,19 @@
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
         },
+        "private_and_personal_information_exit_ticket/coursee/2022": {
+          "type": "Handout ng Mag-aaral"
+        },
         "pause_and_think_online/coursee/2022": {
           "type": "Video"
+        },
+        "turns_angles/coursee/2022": {
+          "name": "Mga Pagliko at Anggulo",
+          "type": "Handout ng Mag-aaral"
+        },
+        "turns_angles_1/coursee/2022": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "functions_unplugged_songwriting_2/coursee/2022": {
           "type": "Pagtatasa"
@@ -208,6 +237,12 @@
         },
         "virtual_lesson_modifications/courseb/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "digital_trails_animal_tracks/courseb/2022": {
+          "type": "Handout ng Mag-aaral"
+        },
+        "digital_trails_digital_trail_squares/courseb/2022": {
+          "type": "Handout ng Mag-aaral"
         },
         "move_it_move_it/courseb/2022": {
           "name": "Galawin ito, Galawin ito"
@@ -268,10 +303,17 @@
           "type": "Video"
         },
         "artist_introduction/express/2022": {
+          "name": "Introduksiyon ng Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video"
         },
         "turns_angles/express/2022": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
+        },
+        "turns_angles_1/express/2022": {
+          "name": "Mga Pagliko at Anggulo"
         },
         "sprite_lab_documentation/express/2022": {
           "name": "Dokumentasyon ng Sprite Lab"
@@ -283,7 +325,8 @@
           "type": "Video"
         },
         "spotify_playlist_all_ages_/express/2022": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pair_programming_video/express/2022": {
           "type": "Video"
@@ -323,6 +366,9 @@
         },
         "virtual_lesson_modifications/coursea/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "type": "Handout ng Mag-aaral"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "type": "Video"
@@ -370,6 +416,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
         },
+        "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
+          "type": "Handout ng Mag-aaral"
+        },
         "my_robotic_friends/coursec/2022": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
@@ -388,6 +437,18 @@
         "pair_programming/coursec/2022": {
           "name": "Pair programming",
           "type": "Video"
+        },
+        "artist_introduction/coursec/2022": {
+          "name": "Introduksiyon ng Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/coursec/2022": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/coursec/2022": {
+          "name": "Mga Pagliko at Anggulo",
+          "type": "Handout ng Mag-aaral"
         },
         "the_big_event/coursec/2022": {
           "name": "The Big Event"
@@ -1041,7 +1102,11 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Introduksiyon sa AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introduksiyon sa AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
@@ -1067,6 +1132,9 @@
         "numerical_data_in_ai_lab_2/csd/2022": {
           "name": "Numerical Data sa Ai Lab",
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "type": "Handout ng Mag-aaral"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "Video"
@@ -1513,8 +1581,8 @@
           "name": "Bukabularyo"
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
+          "name": "Listahan ng mga Tula",
+          "url": "[https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O\\_ZNaX5RqHyuvBso/edit?usp=sharing][0]",
           "type": ""
         },
         "curriculum_guide_1/coursef/2021": {
@@ -1609,6 +1677,12 @@
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "type": "Handout ng Mag-aaral"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "type": "Handout ng Mag-aaral"
+        },
         "mimi-activity/courseb/2021": {
           "name": "Galawin ito, Galawin ito"
         },
@@ -1674,6 +1748,9 @@
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "type": "Handout ng Mag-aaral"
+        },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
@@ -1721,6 +1798,9 @@
           "name": "Mga Pagbabago sa Virtual Lesson",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "type": "Handout ng Mag-aaral"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
@@ -1739,6 +1819,18 @@
         "pair-programming-vid/coursec/2021": {
           "name": "Pair programming",
           "type": "Video"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Introduksiyon ng Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "Mga Pagliko at Anggulo",
+          "type": "Handout ng Mag-aaral"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "The Big Event"
@@ -1826,7 +1918,8 @@
           "type": "Video"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pause_and_think_online_1/coursed/2021": {
           "type": "Video"
@@ -1858,10 +1951,17 @@
           "type": "Video"
         },
         "artist_introduction/express/2021": {
+          "name": "Introduksiyon ng Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video"
         },
         "turns_angles/express/2021": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "Mga Pagliko at Anggulo"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
@@ -1876,7 +1976,8 @@
           "type": "Video"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Spotify Playlist (lahat ng edad)"
+          "name": "Spotify Playlist (lahat ng edad)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "pair_programming_video/express/2021": {
           "type": "Video"
@@ -1924,11 +2025,22 @@
         "sprite_lab_documentation/coursee/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "type": "Handout ng Mag-aaral"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Video"
         },
         "digital-sharing-video/coursee/2021": {
           "type": "Video"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Mga Pagliko at Anggulo",
+          "type": "Handout ng Mag-aaral"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Mga Pagliko at Anggulo",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Pagtatasa"
@@ -1949,7 +2061,11 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Video"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Introduksiyon sa AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introduksiyon sa AI Lab",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
@@ -1975,6 +2091,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "name": "Numerical Data sa Ai Lab",
           "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Handout ng Mag-aaral"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"

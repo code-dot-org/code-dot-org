@@ -249,8 +249,9 @@ button.arrow:focus {
   outline-style: none;
 }
 button.arrow:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
+  border: 1px solid $neutral_dark20;
+  background-color: $neutral_dark20;
+  color: $neutral_dark20;
 }
 
 #soft-buttons {
@@ -592,6 +593,7 @@ button.blocklyLaunch {
   &.hide {
     display: none;
   }
+
   border: 1px solid $orange;
   background-color: $orange;
 
@@ -622,9 +624,16 @@ button.blocklyLaunch {
   html[dir="RTL"] & {
     margin-right: 0;
   }
+
   &#resetButton {
-    border: 1px solid $cyan;
-    background-color: $cyan;
+    border: 1px solid $brand_secondary_default;
+    background-color: $brand_secondary_default;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
   }
 
   &.hideText {
@@ -1087,9 +1096,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    #show-toolbox-click-target:hover .fa {
-      color: $white;
-    }
 
     & > span {
       margin: auto auto auto 18px;
@@ -1101,8 +1107,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   #clear-puzzle-header:hover {
-    background-color: $red;
+    background-color: $product_negative_default;
+    color: $neutral_white;
   }
+
   .block-counter-overflow {
     color: $yellow;
   }
@@ -1201,11 +1209,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   .goog-menuitem-hover {
     background-color: rgb(255 255 255 / 0.35);
   }
-  &:not(.blocklyGridDropdownMenu) {
-    border-color: rgb(84 84 84) !important;
-  }
+  border-color: rgb(84 84 84) !important;
   &.blocklyGridDropdownMenu {
-    background-color: white !important;
+    background-color: white;
     padding-top: 5px !important;
 
     .goog-menuitem {
@@ -1256,15 +1262,20 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     p {
       font-size: 14px;
       line-height: inherit;
-      color: $charcoal;
+      color: $neutral_dark;
       margin-bottom: 10px;
 
+      &.caption-text {
+        font-family: $gotham-bold;
+      }
+
       a {
-        font-family: $gotham-extra-bold;
+        font-family: $gotham-regular;
         font-weight: normal;
-        color: $purple;
+        color: $brand_secondary_default;
+        text-decoration: underline;
         &:hover {
-          text-decoration: underline;
+          color: $brand_secondary_dark;
         }
       }
     }
@@ -1273,6 +1284,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-size: 14px;
     overflow: scroll;
     max-height: 400px;
+    margin: 12px 0;
   }
 }
 

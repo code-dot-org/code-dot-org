@@ -446,23 +446,23 @@ class Pd::Workshop < ApplicationRecord
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
 
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
-        rescue => e
-          errors << "facilitator #{facilitator.id} - #{e.message}"
+        rescue => exception
+          errors << "facilitator #{facilitator.id} - #{exception.message}"
         end
       end
 
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
-      rescue => e
-        errors << "organizer workshop #{workshop.id} - #{e.message}"
+      rescue => exception
+        errors << "organizer workshop #{workshop.id} - #{exception.message}"
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
@@ -471,8 +471,8 @@ class Pd::Workshop < ApplicationRecord
         next unless facilitator.email
         begin
           Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
-        rescue => e
-          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        rescue => exception
+          errors << "pre email for facilitator #{facilitator.id} - #{exception.message}"
         end
       end
     end
@@ -485,8 +485,8 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     should_have_ended.each do |workshop|
       Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
-    rescue => e
-      errors << "organizer should close workshop #{workshop.id} - #{e.message}"
+    rescue => exception
+      errors << "organizer should close workshop #{workshop.id} - #{exception.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
@@ -505,9 +505,9 @@ class Pd::Workshop < ApplicationRecord
 
         email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
         email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
-        Honeybadger.notify(e,
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+        Honeybadger.notify(exception,
           error_message: 'Failed to send follow up email to teacher',
           context: {pd_enrollment_id: enrollment.id}
         )
@@ -583,9 +583,9 @@ class Pd::Workshop < ApplicationRecord
             result = Geocoder.search(location_address).try(:first)
           end
         end
-      rescue StandardError => e
+      rescue StandardError => exception
         # Log geocoding errors to honeybadger but don't fail
-        Honeybadger.notify(e,
+        Honeybadger.notify(exception,
           error_message: 'Error geocoding workshop location_address',
           context: {
             pd_workshop_id: id,

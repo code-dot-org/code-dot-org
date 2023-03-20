@@ -14,12 +14,22 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید</a>'
   csedweek_banner_teachers_text: "آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید"
   n_have_learned_an_hoc: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه شده</h3>"
+  try_hoc_num_served: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید%{num} ارائه شده</h3>"
+  try_hoc_num_served_markdown: |-
+    # یک ساعت
+    ## کدنویسی را امتحان کنید
+    ###%{num} ارائه‌شده #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "هر کسی می تواند یاد بگیرند."
   learn_now: "همین حالا یاد بگیرید"
   petition_message: "هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته باشد"
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به پیوندید.'
   petition_sign_message_num: "اگر موافق هستید ، نام خود را امضا کنید و به همراه %{num} نفر دیگر به لیست نامه های پست الکترونیکی ما بپیوندید."
   petition_join_others: 'به #دیگران ملحق شوید'
+  petition_join_others_num: "به دیگران %{num} بپیوندید"
   name: "نام"
   email: "ایمیل"
   zipcode: "کدپستی یا کشور"
@@ -44,6 +54,7 @@
   hoc2014_support: "حمایتش کن &#x25BE;"
   hoc2014_whatishoc: "ساعتِ کدنویسی چيست؟"
   csedweek_map_header: "#CSEdWeek / رویداد \"ساعت کدنویسی\" در سرار جهان"
+  csedweek_map_header_num: "%{num} CSEdWeek / رویداد «ساعت کدنویسی» در سرار جهان"
   csedweek_map_signup: "رویدادتان را ثبت کنید"
   csedweek_map_search_placeholder: "جست و جو برای رویداد های \"ساعت کدنویسی\""
   csedweek_map_search_search: "جستجو کن"
@@ -341,6 +352,7 @@
   minecraft_designer_button: "شروع"
   minecraft_adventurer_button: "شروع"
   sports_watch_video: "فیلم را تماشا کنید"
+  video_title_cs_is_everything: "علم کامپیوتر همه چیز را تغییر می‌دهد"
   speak_another_language: "به یک زبان دیگر صحبت کنید?"
   help_translate: "کمک به ما در ترجمه."
   are_you_teacher: "آیا شما یک معلم هستید؟"
@@ -1120,6 +1132,7 @@
   hoc2022_mc_educators_box3_button: "ثبت‌نام كنيد"
   hoc2022_mc_educators_box4_desc: "علاقه به STEM را در دانش‌آموزان K-12 با 200 ساعت دوره آموزشی علوم کامپیوتر (از یادگیری بلوکها تا زبان پایتون) که به شکل حرفه‌ای ایجاد شده بیدار کنید."
   hoc2022_mc_educators_box4_button: "ادامه آموزش"
+  hoc2018_mc_video_title_cs_is_everything: "علم کامپیوتر همه چیز را تغییر می‌دهد"
   hoc2018_mc_homepage_join_us: "به ما بپیوندید"
   hoc2018_mc_homepage_try_it: "آن را امتحان کنید"
   hoc2018_mc_back: "ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!"

@@ -30,7 +30,12 @@ var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
-import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+  refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning
+} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -112,7 +117,9 @@ var currentSources = {
   makerAPIsEnabled: null,
   animations: null,
   selectedSong: null,
-  selectedPoem: null
+  selectedPoem: null,
+  inRestrictedShareMode: false,
+  teacherHasConfirmedUploadWarning: false
 };
 
 /**
@@ -137,7 +144,9 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
-    libraries: data.libraries
+    libraries: data.libraries,
+    inRestrictedShareMode: data.inRestrictedShareMode,
+    teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning
   };
 }
 
@@ -698,6 +707,22 @@ var projects = (module.exports = {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
+      if (currentSources.inRestrictedShareMode !== undefined) {
+        sourceHandler.setInRestrictedShareMode(
+          currentSources.inRestrictedShareMode
+        );
+        // ensure restrictedShareMode is set correctly in redux
+        // so we hide publish and remix correctly.
+        getStore().dispatch(refreshInRestrictedShareMode());
+      }
+
+      if (currentSources.teacherHasConfirmedUploadWarning !== undefined) {
+        sourceHandler.setTeacherHasConfirmedUploadWarning(
+          currentSources.teacherHasConfirmedUploadWarning
+        );
+        getStore().dispatch(refreshTeacherHasConfirmedUploadWarning());
+      }
+
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
@@ -952,7 +977,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode, teacherHasConfirmedUploadWarning} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1201,6 +1226,26 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    this.sourceHandler.setInRestrictedShareMode(inRestrictedShareMode);
+    return this.save();
+  },
+
+  inRestrictedShareMode() {
+    return this.sourceHandler.inRestrictedShareMode();
+  },
+
+  setTeacherHasConfirmedUploadWarning(hasConfirmedUploadWarning) {
+    this.sourceHandler.setTeacherHasConfirmedUploadWarning(
+      hasConfirmedUploadWarning
+    );
+    return this.save();
+  },
+
+  teacherHasConfirmedUploadWarning() {
+    return this.sourceHandler.teacherHasConfirmedUploadWarning();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1277,6 +1322,8 @@ var projects = (module.exports = {
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
           const libraries = this.sourceHandler.getLibrariesList();
+          const inRestrictedShareMode = this.sourceHandler.inRestrictedShareMode();
+          const teacherHasConfirmedUploadWarning = this.sourceHandler.teacherHasConfirmedUploadWarning();
           callback({
             source,
             html,
@@ -1284,7 +1331,9 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            libraries
+            libraries,
+            inRestrictedShareMode,
+            teacherHasConfirmedUploadWarning
           });
         })
         .catch(error => callback({error}))

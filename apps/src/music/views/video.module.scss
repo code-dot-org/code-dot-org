@@ -1,0 +1,50 @@
+@import "./theme/tokens-dark";
+@import "color.scss";
+@import "./music-view.module.scss";
+
+.container {
+  background-color: rgba(0 0 0 / 0.5);
+  position: absolute;
+  z-index: 75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+
+  position: relative;
+}
+
+.video {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: solid 2px white;
+  box-sizing: border-box;
+}
+
+.closeContainer {
+  position: absolute;
+  right: -20px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  border: solid 2px white;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.closeIcon {
+  position: absolute;
+  font-size: 35px;
+  left: 6px;
+  top: 1px;
+}

@@ -2,6 +2,8 @@
 id:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -2322,6 +2324,17 @@ id:
         options:
           BEHAVIOR:
             '"avoiding"': jaga jarak
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(fluttering, []): sempoyongan
+            new Behavior(jittering, []): gugup
+            new Behavior(wobbling, []): terhuyung-huyung
+            new Behavior(wandering, []): pengembaraan
+            new Behavior(patrolling, []): perondaan
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:

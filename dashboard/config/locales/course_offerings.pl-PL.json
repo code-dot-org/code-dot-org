@@ -380,7 +380,16 @@
         "allthevalidation": "allthevalidation",
         "katies-playground": "katies-playground",
         "microbit": "microbit",
-        "microbit-temp": "mikrobit-temp"
+        "microbit-temp": "mikrobit-temp",
+        "csc-mappinglandmarks": "csc-mappinglandmarks",
+        "blockchain": "Blockchain",
+        "self-paced-pl-csc": "self-paced-pl-csc",
+        "csc-adaptations": "csc-adaptations",
+        "poemmaker": "poeta",
+        "testing-digital-information": "testing-digital-information",
+        "dlp-core": "dlp-core",
+        "tess-testing-problem-solving": "tess-testing-problem-solving",
+        "tess-testing-focus-on-creativity": "tess-testing-focus-on-creativity"
       }
     }
   }

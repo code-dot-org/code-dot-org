@@ -74,7 +74,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       email: this.props.email,
       inspirationKit: false,
       csta: false,
-      awsEducate: false,
       consentAFE: false,
       consentCSTA: false,
       gradeBands: [false, false, false],
@@ -107,7 +106,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       'lastName',
       'inspirationKit',
       'csta',
-      'awsEducate',
       'consentAFE'
     ]);
 
@@ -361,14 +359,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
               )}
             </div>
           )}
-          <SingleCheckbox
-            name="awsEducate"
-            label="Send me a free membership to Amazon Web Services Educate to access
-              free content and cloud computing credits to help my students learn
-              to build in the cloud."
-            onChange={this.handleChange}
-            value={this.state.awsEducate}
-          />
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="consentAFE"
