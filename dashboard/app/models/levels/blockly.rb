@@ -302,7 +302,7 @@ class Blockly < Level
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
         set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
-        # set_unless_nil(level_options, 'startBlocks', localized_start_blocks(level_options['startBlocks']))
+        set_unless_nil(level_options, 'startBlocks', localized_start_blocks(level_options['startBlocks']))
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
@@ -473,6 +473,7 @@ class Blockly < Level
   end
 
   def localized_start_blocks(start_blocks)
+    puts start_blocks
     return unless start_blocks
     localized_blocks = start_blocks.dup
     start_blocks_text = start_blocks.scan(/"([^"]*)"/)
