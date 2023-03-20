@@ -3248,3 +3248,117 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Inntök og Úttök
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+          description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir
+            að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta
+            bekk.'
+          description_audience: 'Aldur: 4 - 8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_sprites:
+              display_name: Kvikar
+            lessonGroup-9:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            csf_functions:
+              display_name: Föll
+            csf_variables:
+              display_name: Breytur
+            csf_for_loops:
+              display_name: Frá lykkjur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni
+            okkar fyrir eldri nemendur í grunnskóla.'
+          description_audience: 'Aldur: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            lessonGroup-5:
+              display_name: Lokaverkefni námskeiðs
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            lessonGroup-6:
+              display_name: Lokaverkefni námskeiðs
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_audience: 'Aldur: 5 - 8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            csf_data:
+              display_name: Gögn
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
+            myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_events:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          title: Námskeið D (2021)
+          description_audience: 'Aldur: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sprites:
+              display_name: Kvikar
+            ramp_up:
+              display_name: Innri lykkjur
+            csf_functions:
+              display_name: Föll
+            csf_nested_loops:
+              display_name: Skilyrði
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 8 - 12'
