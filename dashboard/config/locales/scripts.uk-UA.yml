@@ -3343,3 +3343,97 @@ uk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          description_audience: 'Вік: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_sprites:
+              display_name: Спрайти
+            lessonGroup-9:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: Функції
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+          description_audience: 'Вік: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті.
+            At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+            csf_data:
+              display_name: Дані
+          description_audience: 'Вік: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+          title: Курс D (2021)
+          description_audience: 'Вік: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sprites:
+              display_name: Спрайти
+            ramp_up:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: Функції
+            csf_nested_loops:
+              display_name: Умови
+          description_audience: 'Вік: 8-12'
