@@ -1058,6 +1058,8 @@ es-MX:
         text: evitando objetivos
       gamelab_beginCollectingData:
         text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rebota {TARGET}"
       gamelab_changePropBy:
