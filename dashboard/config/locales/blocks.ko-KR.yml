@@ -1046,6 +1046,8 @@ ko:
         text: 대상 피하기
       gamelab_beginCollectingData:
         text: 데이터 {BREAK} 값 {VALUE}을 라벨 {LABEL}로 수집하기 시작합니다
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE}가 {TARGET}에서 벗어나 튕겨집니다"
       gamelab_changePropBy:

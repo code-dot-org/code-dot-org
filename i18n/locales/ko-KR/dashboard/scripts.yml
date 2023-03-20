@@ -4370,3 +4370,131 @@ ko:
               display_name: '챕터 1: 웹페이지 만들기'
             lessonGroup-4:
               display_name: '챕터 2: 멀티 페이지 웹페이지 '
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+          description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          student_description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          description_short: '아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개: 유치원과 1학년 과정의 최고 교육 부분을 결합.'
+          description_audience: '나이: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_sprites:
+              display_name: 스프라이트
+            lessonGroup-9:
+              display_name: 이벤트
+            csf_loops:
+              display_name: 반복
+            csf_conditionals:
+              display_name: 조건
+            csf_functions:
+              display_name: 함수
+            csf_variables:
+              display_name: 변수
+            csf_for_loops:
+              display_name: 반복을 위한
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          student_description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          description_short: '컴퓨터 과학 소개: 고학년 학생을 위해 초등학교 커리큘럼 중 최고의 커리큘럼을 결합합니다.'
+          description_audience: '나이: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+            lessonGroup-5:
+              display_name: 과정말 프로젝트
+          title: 과정 A (2022)
+          description: '코스 A는 유치원 학생을 포함한 초보 독자를 위한 컴퓨터 공학 커리큘럼을 제공합니다.학생들은 루프 및 이벤트와 같은 명령을 사용하여 프로그래밍하는 방법을 배웁니다.이 과정에서 제공되는 수업은 또한 학생들이 다른 사람들과 의미 있게 협업하고, 다양한 문제 해결 기술을 연구하고, 어려운 과제에 직면하여 끈질기게 대처하고, 인터넷 안전에 대해 배우도록 가르칩니다. '
+          student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+          description_audience: '나이: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_impacts:
+              display_name: 컴퓨팅의 영향
+            csf_events:
+              display_name: 이벤트
+            lessonGroup-6:
+              display_name: 과정말 프로젝트
+          title: 과정 B (2022)
+          description: 우리는 1학년생을 염두에 두고 코스 B를 개발했습니다.코스 B의 개념은 코스 A의 개념과 유사하지만, 학생들은 보다 정교한 언플러그드 활동을 배우고 더 다양한 퍼즐을 풀게 됩니다.학생들은 프로그래밍, 협업 기술, 조사 및 비판적 사고 기술, 어려움에 직면한 끈기, 인터넷 안전의 기초를 배우게 됩니다.이 강좌를 마치면 학생들은 Play Lab 프로그래밍 환경에서 게임을 제작하게 됩니다.
+          student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개. 과정 A와 유사하지만 개념의 깊이가 추가되었습니다.
+          description_audience: '나이: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+            csf_data:
+              display_name: 데이터
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          title: 과정 C (2022)
+          description: 우리는 2학년 학생들을 위해 코스 C를 개발했습니다.학생들은 시퀀싱, 루프 및 이벤트가 포함된 프로그램을 만들 것입니다.문제 해결 기법을 연구하고 온라인과 오프라인 모두에서 긍정적인 커뮤니티를 구축하기 위한 전략을 개발할 것입니다.강좌를 마치면 학생들은 공유할 수 있는 인터랙티브 게임을 만들게 됩니다.
+          student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
+          description_short: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+          description_audience: '나이: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_events:
+              display_name: 이벤트
+            csf_loops:
+              display_name: 반복
+            csf_conditionals:
+              display_name: 조건
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          title: 과정 D (2022)
+          description: '3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에 대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다. '
+          description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
+          description_audience: '나이: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sprites:
+              display_name: 스프라이트
+            ramp_up:
+              display_name: 중첩 반복
+            csf_functions:
+              display_name: 함수
+            csf_nested_loops:
+              display_name: 조건
+            lessonGroup-7:
+              display_name: 컴퓨팅의 영향
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          title: 과정 E (2022)
+          description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로 시작됩니다.학생들은 온라인 안전에 대해 배우게 될 내용을 강화하는 재미있고 인터랙티브한 프로젝트를 만드는 방법을 배우게 됩니다.이 수업을 마친 후 학생들은 더 복잡한 코딩에 참여하게 됩니다.학생들은 중첩 루프, 함수 및 조건문에 대해 배우게 됩니다.강좌를 마치면 학생들은 이러한 개념을 결합하여 어려운 퍼즐을 풀게 됩니다.이 과정은 학생들이 게임이나 그림을 만드는 개방형 프로젝트로 끝납니다.
+          description_audience: '나이: 8-12'
