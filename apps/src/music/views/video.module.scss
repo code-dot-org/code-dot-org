@@ -24,6 +24,8 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+  border: solid 2px white;
+  box-sizing: border-box;
 }
 
 .closeContainer {
@@ -35,7 +37,7 @@
   background-color: black;
   color: white;
   border-radius: 50%;
-  border: solid 1px white;
+  border: solid 2px white;
   z-index: 20;
   cursor: pointer;
 }
