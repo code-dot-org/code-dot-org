@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 20:26:16 UTC",
+    "serialized_at": "2023-03-17 17:26:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -243,6 +243,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Congratulations, you completed Unit 5! Assess your progress through the Unit 5 Assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -363,6 +366,33 @@
       "seeding_key": {
         "lesson_activity.key": "5666db3c-ef23-416a-a500-1530ecb006df",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "100e1eb6-78e3-421a-8965-2358c7ef7874",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "100e1eb6-78e3-421a-8965-2358c7ef7874",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "dc08eb9a-a305-499d-9916-011cabd95d12",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc08eb9a-a305-499d-9916-011cabd95d12",
+        "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2023"
       }
@@ -1089,6 +1119,48 @@
       }
     },
     {
+      "key": "e7226add-9754-44cd-8fc0-fc242b1dee8b",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 5! You learned a lot about using 2D arrays, pixels, and standard algorithms to create image filters in The Theater. Today, you will each complete a multiple-choice assessment to put your skills to the test.",
+        "name": "Unit 5 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e7226add-9754-44cd-8fc0-fc242b1dee8b",
+        "lesson_activity.key": "100e1eb6-78e3-421a-8965-2358c7ef7874"
+      }
+    },
+    {
+      "key": "e659d8a5-512e-423f-8819-65df3768a163",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 5 Assessment on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "e659d8a5-512e-423f-8819-65df3768a163",
+        "lesson_activity.key": "100e1eb6-78e3-421a-8965-2358c7ef7874"
+      }
+    },
+    {
+      "key": "3268fe99-92eb-4949-8c33-590907db35dd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3268fe99-92eb-4949-8c33-590907db35dd",
+        "lesson_activity.key": "dc08eb9a-a305-499d-9916-011cabd95d12"
+      }
+    },
+    {
       "key": "a7fb7960-8762-4988-ad4b-4db772cf49c7",
       "position": 1,
       "properties": {
@@ -1222,10 +1294,44 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Unit 5 Assessment",
+      "url": "https://docs.google.com/presentation/d/1YAACBBZKLHnp9Wan0C5RaeLxtjjSCF6o4KDAslMcPok/edit?usp=share_link",
+      "key": "unit_5_assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_assessment"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_5_assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "scripts_resources": [
 
