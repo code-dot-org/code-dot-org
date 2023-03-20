@@ -1435,3 +1435,67 @@ ne:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(old) Unit 9: Data"
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
