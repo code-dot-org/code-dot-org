@@ -1066,6 +1066,8 @@ ar:
         text: تجنب الأهداف
       gamelab_beginCollectingData:
         text: البدء في جمع قيمة {BREAK} البيانات  {VALUE} مع تسمية {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} الارتدادات {TARGET}"
       gamelab_changePropBy:
