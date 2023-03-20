@@ -97,25 +97,23 @@ class LevelStarterAssetsController < ApplicationController
     bucket.object(path)
   end
 
-  private
-
-  def set_level
+  private def set_level
     @level = Level.cache_find(params[:level_name])
   end
 
-  def file_mime_type(extension)
+  private def file_mime_type(extension)
     MIME::Types.type_for(extension)&.first&.raw_media_type
   end
 
-  def file_content_type(extension)
+  private def file_content_type(extension)
     MIME::Types.type_for(extension)&.first&.content_type
   end
 
-  def prefix(key)
+  private def prefix(key)
     S3_PREFIX + key
   end
 
-  def bucket
+  private def bucket
     Aws::S3::Bucket.new(S3_BUCKET)
   end
 end
