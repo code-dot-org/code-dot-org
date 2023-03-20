@@ -984,6 +984,8 @@ bg:
         text: избягване на цели
       gamelab_beginCollectingData:
         text: започни да събираш данни {BREAK} стойност {VALUE} с етикет {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} отскача от {TARGET}"
       gamelab_changePropBy:
