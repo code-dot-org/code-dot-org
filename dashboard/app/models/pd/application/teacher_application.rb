@@ -136,17 +136,14 @@ module Pd::Application
     end
 
     def set_status_from_admin_approval
-      # Do not modify status is application is not incomplete.
       return if status == 'incomplete'
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
 
       # Do not modify status if admin approval status has not changed.
       # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
       # API easily –– instead, use the Dirty API to look at the properties attribute.
       return if properties_change.include?(nil)
       return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
-
-      # Do not modify status if the principal approval has already been completed.
-      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
 
       if !principal_approval_not_required && status != 'awaiting_admin_approval'
         self.status = 'awaiting_admin_approval'
@@ -364,7 +361,7 @@ module Pd::Application
     end
 
     def should_send_decision_email?
-      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+      if regional_partner.nil? || regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
         false
       else
         AUTO_EMAIL_STATUSES.include?(status)
