@@ -77,15 +77,13 @@ class HomeController < ApplicationController
     render partial: 'home/tos_and_privacy'
   end
 
-  private
-
   # Determine where student should be redirected upon logging in:
   # true (redirect to script overview page) - if the user is a student && can access the script
   #   they were most recently assigned && they either have no recorded recent progress, their most
   #   recent progress was in the most recently assigned script, or they were assigned the script
   #   more recently than their last progress in another section.
   # false (redirect to student homepage) - otherwise.
-  def should_redirect_to_script_overview?
+  private def should_redirect_to_script_overview?
     current_user.student? &&
     current_user.can_access_most_recently_assigned_script? &&
     current_user.most_recent_assigned_script_in_live_section? &&
@@ -98,7 +96,7 @@ class HomeController < ApplicationController
 
   # Set all local variables needed to render the signed-in homepage.
   # @raise if called when the user is not signed in.
-  def init_homepage
+  private def init_homepage
     raise 'init_homepage can only be called when there is a current_user' unless current_user
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
