@@ -1,13 +1,30 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
+require 'cdo/github'
+require 'cdo/git_utils'
 class RakeTaskEventLogger
+  CLOUD_WATCH_NAMESPACE = 'Infrastructure'
   STUDY_TABLE = 'rake_performance'.freeze
-  CURRENT_LOGGING_VERSION = 'v0'.freeze
+  CURRENT_LOGGING_VERSION = 'v1'.freeze
+  @@depth = 0
 
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = !([:development, :test].include?(rack_env))
+    @enabled_firehose = !([:development, :test].include?(rack_env))
+    @enable_cloudwatch = true
+  end
+
+  def self.depth
+    @@depth
+  end
+
+  def self.increase_depth
+    @@depth += 1
+  end
+
+  def self.decrease_depth
+    @@depth -= 1
   end
 
   def start_task_logging
@@ -17,31 +34,29 @@ class RakeTaskEventLogger
   end
 
   def exception_task_logging(exception)
+    ChatClient.log exception
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'exception'.freeze
-    log_event(event, duration, exception)
+    log_event(event, duration_ms, exception)
   end
 
   def end_task_logging
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'end'.freeze
-    log_event(event, duration)
+    log_event(event, duration_ms)
   end
 
   def task_chain
-    pre_requisites_split = @rake_task.inspect.split('=>')
-    unless pre_requisites_split.empty?
-      return pre_requisites_split[1]
-    end
-    return nil
+    @rake_task.prerequisites.join(', ')
   end
 
-  def log_event(event, duration = nil, exception = nil)
-    if @enabled == false
+  def log_firehose(event, duration_ms, exception)
+    if @enabled_firehose == false
       return
     end
+
     begin
       FirehoseClient.instance.put_record(
         :analysis,
@@ -52,7 +67,7 @@ class RakeTaskEventLogger
             task_name: @rake_task.name,
             pid: Process.pid,
             invocation_chain: task_chain,
-            duration: duration,
+            duration_ms: duration_ms,
             exception: exception&.to_s,
             exception_backtrace: exception&.backtrace,
             version: CURRENT_LOGGING_VERSION,
@@ -62,11 +77,49 @@ class RakeTaskEventLogger
     rescue => exception
       Honeybadger.notify(
         exception,
-        error_message: "Failed to log rake task information",
+        error_message: "Failed to log rake task information in firehose",
         context: {
           event: event
         }
       )
     end
+  end
+
+  def log_cloud_watch(event, duration_ms)
+    unless @enable_cloudwatch
+      return
+    end
+    begin
+      metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{event}"
+      metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
+      dimensions = {environment: rack_env,
+                    commit_hash: RakeUtils.git_revision,
+                    task_name: @rake_task.name,
+                    depth: @@depth.to_s,
+                    total_dependencies: task_chain.split(',').count,
+                    is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
+      Cdo::Metrics.put(metric_name, metric_value, dimensions)
+      Cdo::Metrics.flush!
+      ChatClient.log "\nBEGIN rake task information --------", color: 'green'
+      ChatClient.log @rake_task.name, color: 'green'
+      ChatClient.log task_chain, color: 'green'
+      ChatClient.log @@depth.to_s, color: 'green'
+      ChatClient.log task_chain.split(',').count.to_s, color: 'green'
+      ChatClient.log "END rake task information --------\n", color: 'green'
+      puts "Metric flushed ---------------------------e-d-----e3-2--"
+    rescue => exception
+      Honeybadger.notify(
+        exception,
+        error_message: "Failed to log rake task information in cloudwatch",
+        context: {
+          event: event
+        }
+      )
+    end
+  end
+
+  def log_event(event, duration = nil, exception = nil)
+    log_firehose(event, duration, exception)
+    log_cloud_watch(event, duration)
   end
 end
