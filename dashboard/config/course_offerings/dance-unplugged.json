@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "2,3,4,5,6,7,8",
   "header": null,
-  "image": null,
+  "image": "https://images.code.org/69acbeda01df34c1380817e338765cf9-Dance Party Unplugged.png",
   "cs_topic": "data,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}"

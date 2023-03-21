@@ -8,7 +8,7 @@
   "marketing_initiative": "CSF",
   "grade_levels": "3,4,5,6,7,8",
   "header": "Express",
-  "image": null,
+  "image": "https://images.code.org/aaee14231592a91f7ca063867bc7454c-ExpressCourse.png",
   "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
