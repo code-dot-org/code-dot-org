@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "Teacher-Led",
-  "image": null,
+  "image": "https://images.code.org/a064570e370ae5651c19d7cd50665124-Circuit Playground.png",
   "cs_topic": "art_and_design,app_design,physical_computing,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"

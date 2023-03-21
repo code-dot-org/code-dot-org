@@ -8,7 +8,7 @@
   "marketing_initiative": "CSC",
   "grade_levels": "3,4,5",
   "header": "CS Connections",
-  "image": null,
+  "image": "https://images.code.org/8a6f12ecc488af8d3eff04aef49c57e9-CSCLanding_StoryMoralsProject.png",
   "cs_topic": "programming",
   "school_subject": "english_language_arts",
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
