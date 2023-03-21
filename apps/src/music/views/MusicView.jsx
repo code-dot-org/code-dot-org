@@ -169,6 +169,9 @@ class UnconnectedMusicView extends React.Component {
         this.props.signInState
       );
     }
+    if (prevProps.currentLevel !== this.props.currentLevel) {
+      this.progressManager?.next(this.props.currentLevel);
+    }
   }
 
   updateTimer = () => {
@@ -197,6 +200,10 @@ class UnconnectedMusicView extends React.Component {
     this.clearCode();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
+
+    const progressState = this.progressManager.getCurrentState();
+    const currentPanel = progressState.step;
+    this.props.onChangeLevel(currentPanel);
   };
 
   setToolboxForProgress = () => {
@@ -343,7 +350,7 @@ class UnconnectedMusicView extends React.Component {
     this.setState({isPlaying: true, currentPlayheadPosition: 1});
 
     // let's change index
-    this.props.onChangeLevel(5);
+    //this.props.onChangeLevel(5);
   };
 
   stopSong = () => {

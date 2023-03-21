@@ -116,11 +116,15 @@ export default class ProgressManager {
 
   // Advance to the next step.  Advances the state internally and calls
   // the change handler.
-  next(): void {
+  next(specificStep = null): void {
     // Give the lab the chance to clear accumulated satisfied conditions.
     this.validator.clear();
 
-    this.currentProgressState.step++;
+    if (specificStep !== null) {
+            this.currentProgressState.step = specificStep;
+          } else {
+            this.currentProgressState.step++;
+          }
     this.currentProgressState.satisfied = false;
     this.currentProgressState.message = null;
 

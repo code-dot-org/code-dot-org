@@ -47,6 +47,8 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
     return rows;
   };
 
+  return null;
+
   return (
     <div className={styles.container}>
       <div className={styles.labelContainer}>
