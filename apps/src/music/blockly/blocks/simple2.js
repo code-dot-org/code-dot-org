@@ -158,7 +158,8 @@ export const playSoundAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicLibrary.getLengthForId(

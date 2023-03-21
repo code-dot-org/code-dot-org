@@ -79,7 +79,8 @@ export default class MusicPlayer {
     trackId?: string,
     functionContext?: FunctionContext,
     skipContext?: SkipContext,
-    effects?: Effects
+    effects?: Effects,
+    blockId?: string
   ) {
     if (!this.samplePlayer.initialized() || this.library === null) {
       console.log('MusicPlayer not initialized');
@@ -114,7 +115,8 @@ export default class MusicPlayer {
       skipContext,
       effects,
       length: soundData.length,
-      soundType: soundData.type
+      soundType: soundData.type,
+      blockId
     };
 
     this.playbackEvents.push(soundEvent);
@@ -404,6 +406,34 @@ export default class MusicPlayer {
   // a function, so that the timeline renderer can group relevant events.
   getUniqueInvocationId() {
     return this.uniqueInvocationIdUpto++;
+  }
+
+  getCurrentlyPlayingsounds():Object {
+    const playbackEvents = this.getPlaybackEvents();
+    const currentPlayheadPosition = this.getCurrentPlayheadPosition();
+
+    const playingSounds :string[]= [];
+    const notPlayingSounds :string[]= [];
+
+    playbackEvents.forEach((playbackEvent:PlaybackEvent) => {
+      const currentlyPlaying = currentPlayheadPosition !== 0 &&
+      currentPlayheadPosition >= playbackEvent.when &&
+      currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
+
+      if (currentlyPlaying) {
+        playingSounds.push(playbackEvent.blockId || "");
+      } else {
+        notPlayingSounds.push(playbackEvent.blockId || "");
+      }
+    });
+
+    return {playingSounds, notPlayingSounds};
+    /*
+    return this.playbackEvents.filter(eventData =>
+      currentPlayheadPosition !== 0 &&
+      currentPlayheadPosition >= eventData.when &&
+      currentPlayheadPosition < eventData.when + eventData.length);
+      */
   }
 
   /**
