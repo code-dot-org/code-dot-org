@@ -292,6 +292,15 @@ export default class MusicBlocklyWorkspace {
     return this.workspace.getAllBlocks();
   }
 
+  updateHighlightedBlocks(playing, notPlaying) {
+    notPlaying.forEach(blockId => {
+      Blockly.mainBlockSpace.highlightBlock(blockId, false);
+    });
+    playing.forEach(blockId => {
+      Blockly.mainBlockSpace.highlightBlock(blockId, true);
+    });
+  }
+
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.

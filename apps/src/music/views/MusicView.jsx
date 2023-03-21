@@ -152,6 +152,16 @@ class UnconnectedMusicView extends React.Component {
       this.setState({
         currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
       });
+
+      const {
+        playingSounds,
+        notPlayingSounds
+      } = this.player.getCurrentlyPlayingsounds();
+
+      this.musicBlocklyWorkspace.updateHighlightedBlocks(
+        playingSounds,
+        notPlayingSounds
+      );
     }
   };
 
