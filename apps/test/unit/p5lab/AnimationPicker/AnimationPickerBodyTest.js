@@ -33,7 +33,7 @@ describe('AnimationPickerBody', function() {
     selectedAnimations: [],
     onAnimationSelectionComplete: emptyFunction,
     pickerType: PICKER_TYPE.gamelab,
-    shouldRestrictAnimationUpload: false
+    shouldWarnOnAnimationUpload: false
   };
 
   describe('upload warning', function() {
