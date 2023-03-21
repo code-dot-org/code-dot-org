@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-16 17:04:15 UTC",
+    "serialized_at": "2023-03-20 16:33:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3911,6 +3911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 1"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3933,6 +3936,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 2"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3955,6 +3961,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 3"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3977,6 +3986,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 4"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3999,6 +4011,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 5"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -4021,6 +4036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_2-1"
+        ],
         "progression": "Magic 9 Ball"
       },
       "bonus": false,
@@ -4043,6 +4061,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_2-2"
+        ],
         "progression": "Magic 9 Ball"
       },
       "bonus": false,
@@ -4065,6 +4086,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_2-3"
+        ],
         "progression": "Magic 9 Ball"
       },
       "bonus": false,
@@ -4087,6 +4111,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_2-4"
+        ],
         "progression": "Magic 9 Ball"
       },
       "bonus": false,
@@ -4109,6 +4136,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_2-5"
+        ],
         "progression": "Magic 9 Ball"
       },
       "bonus": false,
@@ -4131,6 +4161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_1-1"
+        ],
         "progression": "Birds of a Feather"
       },
       "bonus": false,
@@ -4153,6 +4186,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_1-2"
+        ],
         "progression": "Birds of a Feather"
       },
       "bonus": false,
@@ -4175,6 +4211,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_1-3"
+        ],
         "progression": "Birds of a Feather"
       },
       "bonus": false,
@@ -4197,6 +4236,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_1-4"
+        ],
         "progression": "Birds of a Feather"
       },
       "bonus": false,
@@ -4219,6 +4261,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_1-5"
+        ],
         "progression": "Birds of a Feather"
       },
       "bonus": false,
@@ -4241,6 +4286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_3-1"
+        ],
         "progression": "EmojiMaker"
       },
       "bonus": false,
@@ -4263,6 +4311,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_3-2"
+        ],
         "progression": "EmojiMaker"
       },
       "bonus": false,
@@ -4285,6 +4336,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_3-3"
+        ],
         "progression": "EmojiMaker"
       },
       "bonus": false,
@@ -4307,6 +4361,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_3-4"
+        ],
         "progression": "EmojiMaker"
       },
       "bonus": false,
@@ -4329,6 +4386,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Choice_3-5"
+        ],
         "progression": "EmojiMaker"
       },
       "bonus": false,
