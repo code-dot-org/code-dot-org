@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "CSA Self Paced PL",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-17 14:11:41 UTC",
+    "serialized_at": "2023-03-20 22:06:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
