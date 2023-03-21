@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": null,
-  "image": null,
+  "image": "https://images.code.org/bf8e51399e71e4f42c020cf88f77c461-Pixelation.png",
   "cs_topic": "art_and_design",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
