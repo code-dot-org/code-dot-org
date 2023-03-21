@@ -108,7 +108,7 @@ class RakeTaskEventLogger
       ChatClient.log "END rake task information --------\n", color: 'green'
       puts "Metric flushed ---------------------------e-d-----e3-2--"
     rescue => exception
-      ChatClient.log "SOMETHIGN WENT WRONG --------\n", color: 'green'
+      ChatClient.log "SOMETHIGN WENT WRONG ?--------\n", color: 'green'
       Honeybadger.notify(
         exception,
         error_message: "Failed to log rake task information in cloudwatch",
